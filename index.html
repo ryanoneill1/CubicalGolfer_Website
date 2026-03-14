@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cubical Golfer – Escape the Cubicle. Find the Fairway.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green-dark: #1E3A28;
+      --green-mid: #264D33;
+      --green-card: #2A5038;
+      --gold: #C8A84B;
+      --cream: #F4F1EA;
+      --cream-dark: #EAE6DD;
+      --text-dark: #1A2B1F;
+      --text-muted: #6B7C72;
+      --white: #ffffff;
+      --tag-buying: #C8A84B;
+      --tag-listicle: #8B6A3A;
+      --tag-comparison: #4A6741;
+      --tag-tutorial: #5B4A7A;
+      --tag-lifestyle: #3A6B5B;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid #e0dbd0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2rem; height: 64px;
+    }
+    .nav-brand { display: flex; align-items: center; gap: 10px; }
+    .nav-logo {
+      width: 38px; height: 38px; border-radius: 8px;
+      background: var(--green-dark);
+      color: var(--white); font-weight: 700; font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-brand-text h1 { font-size: 15px; font-weight: 700; color: var(--text-dark); }
+    .nav-brand-text p { font-size: 11px; color: var(--text-muted); }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a {
+      padding: 6px 14px; border-radius: 20px;
+      font-size: 13.5px; font-weight: 500; color: var(--text-dark);
+      transition: background 0.2s;
+    }
+    .nav-links a:hover { background: var(--cream); }
+    .nav-links a.active {
+      background: var(--green-dark); color: var(--white);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--green-dark);
+      padding: 72px 4rem 60px;
+      display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 20px; padding: 6px 14px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.8); margin-bottom: 24px;
+    }
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(44px, 5vw, 60px); line-height: 1.05;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .hero h2 em {
+      font-style: italic; color: var(--gold);
+    }
+    .hero-sub {
+      font-size: 16px; color: rgba(255,255,255,0.75); line-height: 1.6;
+      max-width: 480px; margin-bottom: 36px;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-gold {
+      background: var(--gold); color: var(--text-dark);
+      border: none; padding: 13px 24px; border-radius: 8px;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.9; }
+    .btn-outline {
+      background: transparent; color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.5);
+      padding: 13px 24px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--white); background: rgba(255,255,255,0.05); }
+    .hero-stats {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 48px;
+    }
+    .hero-stat { font-size: 14px; color: rgba(255,255,255,0.75); }
+    .hero-stat strong { color: var(--white); font-size: 18px; font-weight: 700; }
+
+    .hero-card {
+      background: var(--green-card);
+      border-radius: 16px; padding: 28px 32px;
+    }
+    .hero-card h3 { color: var(--white); font-size: 20px; font-weight: 700; margin-bottom: 20px; }
+    .hero-card ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .hero-card li {
+      display: flex; align-items: flex-start; gap: 10px;
+      color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.4;
+    }
+    .check-icon {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+    .check-icon::after { content: '✓'; font-size: 11px; color: var(--text-dark); font-weight: 700; }
+
+    /* ── ICON ROW ── */
+    .icon-row {
+      background: var(--white); border-bottom: 1px solid #e0dbd0;
+      display: flex; justify-content: center; gap: 0;
+    }
+    .icon-row-item {
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      padding: 20px 40px;
+      font-size: 12px; font-weight: 600; color: var(--text-muted);
+      border-right: 1px solid #e0dbd0; transition: color 0.2s;
+      cursor: pointer;
+    }
+    .icon-row-item:last-child { border-right: none; }
+    .icon-row-item:hover { color: var(--text-dark); }
+    .icon-row-item .icon { font-size: 24px; }
+
+    /* ── SECTION HEADER ── */
+    .section-header { margin-bottom: 32px; }
+    .section-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      color: var(--text-muted); text-transform: uppercase; margin-bottom: 8px;
+    }
+    .section-header h2 {
+      font-size: clamp(26px, 3vw, 36px); font-weight: 700; color: var(--text-dark);
+      margin-bottom: 10px;
+    }
+    .section-header p { font-size: 15px; color: var(--text-muted); }
+
+    /* ── CATEGORIES ── */
+    .categories-section { padding: 64px 4rem; background: var(--cream); }
+    .categories-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .cat-card {
+      background: var(--white); border-radius: 16px; overflow: hidden;
+      border: 1px solid #e0dbd0; display: flex; flex-direction: column;
+      transition: box-shadow 0.2s;
+    }
+    .cat-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .cat-card-header {
+      background: var(--green-dark); padding: 18px 22px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .cat-card-header .cat-icon { font-size: 22px; }
+    .cat-card-header h3 { color: var(--white); font-size: 17px; font-weight: 700; }
+    .cat-card-body { padding: 22px; flex: 1; }
+    .cat-card-body p { font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 18px; }
+    .cat-links { display: flex; flex-direction: column; gap: 0; }
+    .cat-link {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 0; font-size: 13px; font-weight: 500; color: var(--text-dark);
+      border-bottom: 1px solid #eee; transition: color 0.2s;
+      cursor: pointer;
+    }
+    .cat-link:last-child { border-bottom: none; }
+    .cat-link:hover { color: var(--green-dark); }
+    .cat-link::before { content: '→'; font-size: 13px; color: var(--text-muted); }
+    .cat-card-footer { padding: 16px 22px; border-top: 1px solid #eee; }
+    .cat-footer-link {
+      font-size: 13px; font-weight: 700; color: var(--text-dark);
+      display: flex; align-items: center; gap: 6px; cursor: pointer;
+    }
+    .cat-footer-link:hover { color: var(--green-dark); }
+    .cat-row-2 {
+      grid-column: span 3;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+      margin-top: 0;
+    }
+
+    /* ── ARTICLES ── */
+    .articles-section { padding: 64px 4rem; background: var(--cream-dark); }
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .article-card {
+      background: var(--white); border-radius: 16px; overflow: hidden;
+      border: 1px solid #e0dbd0; transition: box-shadow 0.2s;
+    }
+    .article-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+    .article-thumb {
+      height: 160px; position: relative;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 48px;
+    }
+    .article-thumb.green { background: #2A5038; }
+    .article-thumb.brown { background: #6B4423; }
+    .article-thumb.navy  { background: #2A3A5A; }
+    .article-thumb.purple{ background: #3A2A5A; }
+    .article-thumb.teal  { background: #1A4A44; }
+    .article-tag {
+      position: absolute; top: 12px; left: 12px;
+      padding: 4px 10px; border-radius: 4px; font-size: 10px;
+      font-weight: 700; letter-spacing: 0.08em; color: var(--white);
+    }
+    .tag-buying   { background: var(--tag-buying); }
+    .tag-listicle { background: var(--tag-listicle); }
+    .tag-comparison { background: #4A5A3A; }
+    .tag-tutorial { background: var(--tag-tutorial); }
+    .tag-lifestyle { background: var(--tag-lifestyle); }
+    .article-body { padding: 20px; }
+    .article-body h3 { font-size: 15px; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+    .article-body p { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 16px; }
+    .article-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 12px;
+    }
+    .word-count { color: var(--text-muted); font-weight: 500; letter-spacing: 0.05em; }
+    .read-link { font-weight: 700; color: var(--text-dark); cursor: pointer; }
+    .read-link:hover { color: var(--green-dark); }
+
+    /* ── TRUST SECTION ── */
+    .trust-section { background: var(--green-dark); padding: 72px 4rem; }
+    .trust-section .section-eyebrow { color: rgba(255,255,255,0.5); }
+    .trust-section .section-header h2 { color: var(--white); font-size: clamp(28px,3vw,40px); }
+    .trust-section .section-header p { color: rgba(255,255,255,0.7); max-width: 500px; }
+    .trust-stats { display: flex; gap: 16px; margin: 36px 0 40px; flex-wrap: wrap; }
+    .trust-stat {
+      background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 12px; padding: 20px 28px; min-width: 130px; text-align: center;
+    }
+    .trust-stat-num { font-size: 28px; font-weight: 800; color: var(--white); }
+    .trust-stat-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.55); text-transform: uppercase; margin-top: 4px;
+    }
+    .partners-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.45); text-transform: uppercase; margin-bottom: 14px;
+    }
+    .partner-tags { display: flex; gap: 10px; flex-wrap: wrap; }
+    .partner-tag {
+      padding: 7px 16px; border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 13px; color: rgba(255,255,255,0.8); font-weight: 500;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner {
+      background: var(--green-mid); padding: 48px 4rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    }
+    .cta-banner h2 { font-size: 26px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .cta-banner p { font-size: 14px; color: rgba(255,255,255,0.7); max-width: 520px; }
+
+    /* ── POPUP ── */
+    .popup {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      background: var(--white); border-radius: 14px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+      padding: 20px 22px; width: 340px;
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .popup-header { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+    .popup-icon {
+      width: 40px; height: 40px; border-radius: 10px; background: var(--green-dark);
+      display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+    }
+    .popup-header h4 { font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+    .popup-header p  { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+    .popup-close {
+      position: absolute; top: 12px; right: 14px;
+      background: none; border: none; font-size: 16px; cursor: pointer;
+      color: var(--text-muted);
+    }
+    .popup-input-row { display: flex; gap: 8px; margin-bottom: 8px; }
+    .popup-input {
+      flex: 1; padding: 10px 14px; border-radius: 8px;
+      border: 1.5px solid #ddd; font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .popup-input:focus { outline: none; border-color: var(--green-dark); }
+    .btn-popup {
+      background: var(--green-dark); color: var(--white);
+      border: none; padding: 10px 16px; border-radius: 8px;
+      font-size: 13px; font-weight: 700; cursor: pointer; white-space: nowrap;
+    }
+    .popup-fine { font-size: 11px; color: var(--text-muted); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--text-dark); color: rgba(255,255,255,0.5);
+      text-align: center; padding: 24px; font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">CG</div>
+    <div class="nav-brand-text">
+      <h1>Cubical Golfer</h1>
+      <p>Escape the cubicle. Find the fairway.</p>
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#" class="active">Home</a>
+    <a href="#">Golf Gear Reviews</a>
+    <a href="#">Golf Tech</a>
+    <a href="#">Golf Accessories</a>
+    <a href="#">Improve Your Golf Game</a>
+    <a href="#">Golf Lifestyle</a>
+    <a href="#">About</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-badge">🏌️ FOR THE CUBICLE GOLFER</div>
+    <h2>Escape the Cubicle.<br><em>Play Better Golf.</em></h2>
+    <p class="hero-sub">Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better.</p>
+    <div class="hero-btns">
+      <button class="btn-gold">Best Golf Gear →</button>
+      <button class="btn-outline">Improve Your Game</button>
+      <button class="btn-outline">Golf Tech</button>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><strong>62+</strong> Buying guides &amp; tutorials</div>
+      <div class="hero-stat"><strong>5</strong> Content categories</div>
+      <div class="hero-stat"><strong>6</strong> Affiliate partners</div>
+      <div class="hero-stat"><strong>100%</strong> Weekend golfer tested</div>
+    </div>
+  </div>
+  <div class="hero-card">
+    <h3>Built for Real Golfers</h3>
+    <ul>
+      <li><span class="check-icon"></span>Gear recommendations that fit real budgets</li>
+      <li><span class="check-icon"></span>No gear-head jargon — just what actually helps</li>
+      <li><span class="check-icon"></span>Comparison tables for fast decision-making</li>
+      <li><span class="check-icon"></span>Guides mapped to your current skill level</li>
+      <li><span class="check-icon"></span>Pinterest-ready content every weekend golfer will share</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ICON ROW -->
+<div class="icon-row">
+  <div class="icon-row-item"><span class="icon">🏌️</span>Golf Gear Reviews</div>
+  <div class="icon-row-item"><span class="icon">🔭</span>Golf Tech</div>
+  <div class="icon-row-item"><span class="icon">🎒</span>Golf Accessories</div>
+  <div class="icon-row-item"><span class="icon">🎯</span>Improve Your Golf Game</div>
+  <div class="icon-row-item"><span class="icon">🌿</span>Golf Lifestyle</div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="categories-section">
+  <div class="section-header">
+    <div class="section-eyebrow">EXPLORE THE SITE</div>
+    <h2>Top Gear Categories</h2>
+    <p>Handpicked roundups and buyer guides for every part of your bag.</p>
+  </div>
+
+  <div class="categories-grid">
+    <!-- Golf Gear Reviews -->
+    <div class="cat-card">
+      <div class="cat-card-header">
+        <span class="cat-icon">🏌️</span>
+        <h3>Golf Gear Reviews</h3>
+      </div>
+      <div class="cat-card-body">
+        <p>Hands-on style roundups for drivers, putters, irons, bags, rangefinders, and GPS watches with buyer-focused recommendations.</p>
+        <div class="cat-links">
+          <span class="cat-link">11 Best Golf Rangefinders in 2026 (Tested &amp; Ranked)</span>
+          <span class="cat-link">Best Golf GPS Watches for Smarter Rounds</span>
+          <span class="cat-link">Best Golf Drivers for Forgiveness and Distance</span>
+        </div>
+      </div>
+      <div class="cat-card-footer">
+        <span class="cat-footer-link">View all Golf Gear Reviews →</span>
+      </div>
+    </div>
+
+    <!-- Golf Tech -->
+    <div class="cat-card">
+      <div class="cat-card-header">
+        <span class="cat-icon">🔭</span>
+        <h3>Golf Tech</h3>
+      </div>
+      <div class="cat-card-body">
+        <p>Golf apps, shot trackers, AI tools, simulators, and swing analyzers to help weekend golfers make faster improvement decisions.</p>
+        <div class="cat-links">
+          <span class="cat-link">Best Golf Swing Analyzers for Instant Feedback</span>
+          <span class="cat-link">Best Golf Apps for Tracking Your Game</span>
+          <span class="cat-link">Best AI Golf Training Tools for Home Practice</span>
+        </div>
+      </div>
+      <div class="cat-card-footer">
+        <span class="cat-footer-link">View all Golf Tech →</span>
+      </div>
+    </div>
+
+    <!-- Golf Accessories -->
+    <div class="cat-card">
+      <div class="cat-card-header">
+        <span class="cat-icon">🎒</span>
+        <h3>Golf Accessories</h3>
+      </div>
+      <div class="cat-card-body">
+        <p>Affordable and practical gear upgrades including gloves, towels, travel bags, push carts, and training aids.</p>
+        <div class="cat-links">
+          <span class="cat-link">25 Golf Accessories Every Golfer Should Own</span>
+          <span class="cat-link">Best Golf Accessories Under $50</span>
+          <span class="cat-link">Best Golf Gloves for Hot Weather Rounds</span>
+        </div>
+      </div>
+      <div class="cat-card-footer">
+        <span class="cat-footer-link">View all Golf Accessories →</span>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="cat-row-2">
+      <div class="cat-card">
+        <div class="cat-card-header">
+          <span class="cat-icon">🎯</span>
+          <h3>Improve Your Golf Game</h3>
+        </div>
+        <div class="cat-card-body">
+          <p>Actionable tutorials on breaking scoring barriers, fixing slices, building practice plans, and choosing beginner setups.</p>
+          <div class="cat-links">
+            <span class="cat-link">How to Break 90: A Weekend Golfer's Roadmap</span>
+            <span class="cat-link">How to Fix Your Slice for Good</span>
+            <span class="cat-link">Best Beginner Golf Club Sets for New Players</span>
+          </div>
+        </div>
+        <div class="cat-card-footer">
+          <span class="cat-footer-link">View all Improvement Guides →</span>
+        </div>
+      </div>
+
+      <div class="cat-card">
+        <div class="cat-card-header">
+          <span class="cat-icon">🌿</span>
+          <h3>Golf Lifestyle</h3>
+        </div>
+        <div class="cat-card-body">
+          <p>Shareable content for golfers balancing office life, fitness, travel planning, and quick weekend golf escapes.</p>
+          <div class="cat-links">
+            <span class="cat-link">Best Golf Courses Within 2 Hours of Any Major City</span>
+            <span class="cat-link">Golf Fitness Routines for the Office Golfer</span>
+            <span class="cat-link">How to Sneak in More Golf Rounds This Year</span>
+          </div>
+        </div>
+        <div class="cat-card-footer">
+          <span class="cat-footer-link">View all Golf Lifestyle →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-section">
+  <div class="section-header">
+    <div class="section-eyebrow">FRESH PICKS</div>
+    <h2>Latest Buying Guides &amp; Tutorials</h2>
+    <p>The most useful gear and improvement content for your next round.</p>
+  </div>
+
+  <div class="articles-grid">
+    <div class="article-card">
+      <div class="article-thumb green">
+        <span class="article-tag tag-buying">BUYING GUIDE</span>
+        🏌️
+      </div>
+      <div class="article-body">
+        <h3>11 Best Golf Rangefinders in 2026 (Tested &amp; Ranked)</h3>
+        <p>From premium optics to budget picks, these are the top rangefinders for office golfers who want exact yardages and faster decisions.</p>
+        <div class="article-footer">
+          <span class="word-count">2,600 WORDS</span>
+          <span class="read-link">Read guide →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="article-thumb brown">
+        <span class="article-tag tag-listicle">LISTICLE</span>
+        🎒
+      </div>
+      <div class="article-body">
+        <h3>25 Golf Accessories Every Golfer Should Own</h3>
+        <p>Useful upgrades for cleaner rounds, better prep, and fewer frustrating mistakes on the course.</p>
+        <div class="article-footer">
+          <span class="word-count">2,200 WORDS</span>
+          <span class="read-link">Read guide →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="article-thumb green">
+        <span class="article-tag tag-comparison">COMPARISON POST</span>
+        🏌️
+      </div>
+      <div class="article-body">
+        <h3>Best Golf GPS Watches for Smarter Rounds</h3>
+        <p>Find the right GPS watch for accurate yardages, score tracking, and shot planning from tee to green.</p>
+        <div class="article-footer">
+          <span class="word-count">2,100 WORDS</span>
+          <span class="read-link">Read guide →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="article-thumb navy">
+        <span class="article-tag tag-buying">BUYING GUIDE</span>
+        📡
+      </div>
+      <div class="article-body">
+        <h3>Best Golf Swing Analyzers for Instant Feedback</h3>
+        <p>Wearable and clip-on analyzers that give you data-driven feedback without a coach on the range.</p>
+        <div class="article-footer">
+          <span class="word-count">1,900 WORDS</span>
+          <span class="read-link">Read guide →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="article-thumb purple">
+        <span class="article-tag tag-tutorial">TUTORIAL</span>
+        🎯
+      </div>
+      <div class="article-body">
+        <h3>How to Fix Your Slice: The Weekend Golfer's Guide</h3>
+        <p>Step-by-step drills and gear adjustments that actually stick — no range bucket required.</p>
+        <div class="article-footer">
+          <span class="word-count">1,800 WORDS</span>
+          <span class="read-link">Read guide →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-card">
+      <div class="article-thumb teal">
+        <span class="article-tag tag-lifestyle">LIFESTYLE</span>
+        🌿
+      </div>
+      <div class="article-body">
+        <h3>How to Sneak in More Golf Rounds This Year</h3>
+        <p>Practical strategies for busy office workers to play more golf without losing your job or your marriage.</p>
+        <div class="article-footer">
+          <span class="word-count">1,500 WORDS</span>
+          <span class="read-link">Read guide →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST SECTION -->
+<section class="trust-section">
+  <div class="section-header">
+    <div class="section-eyebrow">WHY TRUST US</div>
+    <h2>Real Weekend Golfers. Honest Picks.</h2>
+    <p>Every recommendation comes from an office golfer's perspective — budget-conscious, time-limited, and endlessly optimistic about Saturday's round.</p>
+  </div>
+
+  <div class="trust-stats">
+    <div class="trust-stat">
+      <div class="trust-stat-num">62+</div>
+      <div class="trust-stat-label">Articles</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-stat-num">6</div>
+      <div class="trust-stat-label">Partners</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-stat-num">5</div>
+      <div class="trust-stat-label">Categories</div>
+    </div>
+    <div class="trust-stat">
+      <div class="trust-stat-num">100%</div>
+      <div class="trust-stat-label">Independent</div>
+    </div>
+  </div>
+
+  <div class="partners-label">AFFILIATE PARTNERS</div>
+  <div class="partner-tags">
+    <span class="partner-tag">Amazon Associates</span>
+    <span class="partner-tag">PGA Superstore</span>
+    <span class="partner-tag">Global Golf</span>
+    <span class="partner-tag">Golf Galaxy</span>
+    <span class="partner-tag">TaylorMade</span>
+    <span class="partner-tag">Callaway</span>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div>
+    <h2>Ready to Break 90?</h2>
+    <p>Our weekend golfer improvement guides cover everything from fixing your slice to dialing in your short game.</p>
+  </div>
+  <button class="btn-gold" style="white-space:nowrap; font-size:15px; padding:15px 32px;">Start Improving →</button>
+</section>
+
+<!-- EMAIL POPUP -->
+<div class="popup" id="popup">
+  <button class="popup-close" onclick="document.getElementById('popup').style.display='none'">✕</button>
+  <div class="popup-header">
+    <div class="popup-icon">⛳</div>
+    <div>
+      <h4>Free Golf Gear Buying Guide</h4>
+      <p>The cheat sheet every weekend golfer needs before buying anything.</p>
+    </div>
+  </div>
+  <div class="popup-input-row">
+    <input class="popup-input" type="email" placeholder="Your email address"/>
+    <button class="btn-popup">Get It Free</button>
+  </div>
+  <p class="popup-fine">+ Bonus: 10 Drills That Instantly Fix Your Slice. No spam, ever.</p>
+</div>
+
+<footer>
+  © 2026 Cubical Golfer · Escape the cubicle. Find the fairway.
+</footer>
+
+</body>
+</html>
