@@ -9,7 +9,6 @@
 <meta name="description" content="Golf gear reviews, buying guides, swing tips, and improvement tutorials for everyday golfers. We test rangefinders, GPS watches, drivers, and more — so you can play better on weekends."/>
 <meta name="keywords" content="golf gear reviews, best golf rangefinder, golf GPS watch, golf swing tips, how to break 90, fix your slice, best golf driver, golf accessories, weekend golfer, golf improvement"/>
 <meta name="robots" content="index, follow"/>
-<meta name="google-site-verification" content="6cfff6b98efe1da4"/>
 <link rel="canonical" href="https://www.cubicalgolfer.com/"/>
 
 <!-- ── OPEN GRAPH ── -->
@@ -205,25 +204,6 @@ nav{
 }
 .check-icon::after{content:'✓';font-size:11px;color:var(--text-dark);font-weight:700}
 
-/* ── ICON ROW ── */
-.icon-row{
-  background:var(--white);border-bottom:1px solid var(--border);
-  display:flex;justify-content:center;overflow-x:auto;
-  -webkit-overflow-scrolling:touch;
-  scrollbar-width:none;
-}
-.icon-row::-webkit-scrollbar{display:none}
-.icon-row a{
-  display:flex;flex-direction:column;align-items:center;gap:6px;
-  padding:20px 32px;
-  font-size:12px;font-weight:600;color:var(--text-muted);
-  border-right:1px solid var(--border);
-  transition:color .2s,background .2s;
-  flex-shrink:0;
-}
-.icon-row a:last-child{border-right:none}
-.icon-row a:hover{color:var(--green-dark);background:var(--cream)}
-.icon-row a .icon{font-size:24px;line-height:1;margin-bottom:2px}
 
 /* ── SECTION HEADER ── */
 .section-header{margin-bottom:36px}
@@ -533,8 +513,6 @@ footer{background:var(--text-dark);padding:56px clamp(1.5rem,5vw,4rem) 32px}
   .hero-card{display:none}
   .hero-btns{flex-direction:column}
   .hero-btns .btn-gold,.hero-btns .btn-outline{width:100%;text-align:center;padding:15px}
-
-  .icon-row{justify-content:flex-start}
 
   .categories-grid{grid-template-columns:1fr 1fr}
   .cat-row-2{grid-column:span 2}
@@ -1222,14 +1200,6 @@ function renderHome() {
       </ul>
     </aside>
   </section>
-
-  <nav class="icon-row" aria-label="Browse by category">
-    <a href="#gear-reviews" aria-label="Golf Gear Reviews"><span class="icon" aria-hidden="true">🏌️</span>Golf Gear Reviews</a>
-    <a href="#golf-tech" aria-label="Golf Tech"><span class="icon" aria-hidden="true">🔭</span>Golf Tech</a>
-    <a href="#golf-accessories" aria-label="Golf Accessories"><span class="icon" aria-hidden="true">🎒</span>Golf Accessories</a>
-    <a href="#improve-game" aria-label="Improve Your Golf Game"><span class="icon" aria-hidden="true">🎯</span>Improve Your Golf Game</a>
-    <a href="#golf-lifestyle" aria-label="Golf Lifestyle"><span class="icon" aria-hidden="true">🌿</span>Golf Lifestyle</a>
-  </nav>
 
   <section class="categories-section">
     <div class="section-header">
