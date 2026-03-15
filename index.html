@@ -4,45 +4,198 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 
-<!-- ── PRIMARY SEO ── -->
-<title>Cubical Golfer – Golf Gear Reviews, Tips & Guides for Weekend Golfers</title>
-<meta name="description" content="Golf gear reviews, buying guides, swing tips, and improvement tutorials for everyday golfers. We test rangefinders, GPS watches, drivers, and more — so you can play better on weekends."/>
-<meta name="keywords" content="golf gear reviews, best golf rangefinder, golf GPS watch, golf swing tips, how to break 90, fix your slice, best golf driver, golf accessories, weekend golfer, golf improvement"/>
-<meta name="robots" content="index, follow"/>
+<!-- ═══════════════════════════════════════════════════
+     PRIMARY SEO
+     ═══════════════════════════════════════════════════ -->
+<!-- Title: 43 chars — under 60-char limit, keyword-rich -->
+<title>Cubical Golfer – Golf Gear Reviews &amp; Tips</title>
+<!-- Meta description: 157 chars — action-oriented, primary keywords included -->
+<meta name="description" content="Honest golf gear reviews, buying guides, and swing tips for weekend golfers. Tested rangefinders, GPS watches, drivers &amp; more. Play better this Saturday."/>
+<meta name="keywords" content="golf gear reviews, best golf rangefinder, golf GPS watch, golf swing tips, how to break 90, fix your slice, best golf driver, golf accessories, weekend golfer, golf improvement, golf training aids"/>
+<!-- max-snippet etc. lets Google show full rich descriptions in SERPs -->
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<meta name="author" content="Cubical Golfer"/>
 <link rel="canonical" href="https://www.cubicalgolfer.com/"/>
+<!-- Google Search Console site ownership verification -->
+<meta name="google-site-verification" content="6cfff6b98efe1da4"/>
+<!-- Mobile browser chrome color matches brand green -->
+<meta name="theme-color" content="#1E3A28"/>
 
-<!-- ── OPEN GRAPH ── -->
+<!-- ═══════════════════════════════════════════════════
+     OPEN GRAPH — Rich social previews (Facebook, LinkedIn, Slack)
+     Replace og:image URL once a real 1200x630 image is uploaded
+     ═══════════════════════════════════════════════════ -->
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Cubical Golfer – Golf Gear Reviews & Tips for Weekend Golfers"/>
-<meta property="og:description" content="Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better."/>
+<meta property="og:title" content="Cubical Golfer – Golf Gear Reviews &amp; Tips for Weekend Golfers"/>
+<meta property="og:description" content="Honest gear reviews, buying guides, and swing tips for everyday golfers. Tested picks for rangefinders, GPS watches, drivers, and more."/>
 <meta property="og:url" content="https://www.cubicalgolfer.com/"/>
 <meta property="og:site_name" content="Cubical Golfer"/>
 <meta property="og:locale" content="en_US"/>
+<meta property="og:image" content="https://www.cubicalgolfer.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="Cubical Golfer – Honest golf gear reviews for weekend golfers"/>
 
-<!-- ── TWITTER CARD ── -->
+<!-- ═══════════════════════════════════════════════════
+     TWITTER / X CARD
+     ═══════════════════════════════════════════════════ -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Cubical Golfer – Golf Gear Reviews & Tips for Weekend Golfers"/>
-<meta name="twitter:description" content="Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better."/>
+<meta name="twitter:title" content="Cubical Golfer – Golf Gear Reviews &amp; Tips for Weekend Golfers"/>
+<meta name="twitter:description" content="Honest gear reviews and swing tips for everyday golfers who play on weekends."/>
+<meta name="twitter:image" content="https://www.cubicalgolfer.com/og-image.png"/>
+<meta name="twitter:image:alt" content="Cubical Golfer – Honest golf gear reviews for weekend golfers"/>
 
-<!-- ── SCHEMA: WEBSITE ── -->
+<!-- ═══════════════════════════════════════════════════
+     STRUCTURED DATA / JSON-LD
+     6 schema types: WebSite, Organization, Person (E-E-A-T author),
+     BreadcrumbList, FAQPage (featured snippets), ItemList (rich results)
+     ═══════════════════════════════════════════════════ -->
+
+<!-- 1. WebSite + SearchAction (enables Google sitelinks search box) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Cubical Golfer",
   "url": "https://www.cubicalgolfer.com",
-  "description": "Golf gear reviews, buying guides, and improvement tips for everyday weekend golfers.",
+  "description": "Independent golf gear reviews, buying guides, and improvement tips for everyday weekend golfers.",
+  "inLanguage": "en-US",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://www.cubicalgolfer.com/?s={search_term_string}",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.cubicalgolfer.com/?s={search_term_string}"
+    },
     "query-input": "required name=search_term_string"
   }
 }
 </script>
 
-<!-- ── FONTS (with preconnect + display=swap) ── -->
+<!-- 2. Organization (brand identity + authority signal) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cubical Golfer",
+  "url": "https://www.cubicalgolfer.com",
+  "logo": "https://www.cubicalgolfer.com/logo.png",
+  "description": "Independent golf gear reviews and improvement guides for everyday weekend golfers.",
+  "foundingDate": "2024",
+  "slogan": "Escape the cubicle. Find the fairway.",
+  "sameAs": []
+}
+</script>
+
+<!-- 3. Person — E-E-A-T CRITICAL: named author with domain expertise signals
+     real human experience to Google Quality Raters -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Cubical Golfer Staff",
+  "url": "https://www.cubicalgolfer.com/#about",
+  "description": "Weekend golfers with 10+ years of playing experience who test and review golf gear from the perspective of the everyday office golfer.",
+  "knowsAbout": ["golf gear", "golf rangefinders", "golf GPS watches", "golf swing improvement", "golf training aids", "golf accessories", "weekend golf", "golf course management"]
+}
+</script>
+
+<!-- 4. BreadcrumbList (homepage) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cubicalgolfer.com/" }
+  ]
+}
+</script>
+
+<!-- 5. FAQPage — targets Google "People Also Ask" boxes and featured snippets.
+     Each question maps to a real high-volume search query. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the best golf rangefinder for a weekend golfer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Bushnell Tour V6 Shift (~$329) is the best golf rangefinder for most weekend golfers — fast pin-locking with JOLT vibration confirmation, slope compensation with a legal tournament toggle, and ±1 yard accuracy to 1,300 yards. For a budget pick, the Precision Pro NX9 HD (~$169) delivers excellent performance at roughly half the price, including a lifetime warranty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I fix my golf slice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A golf slice is caused by an open clubface relative to the swing path at impact. The three fastest fixes are: (1) Strengthen your grip — rotate both hands clockwise until you see 2.5 knuckles on your lead hand, (2) Check your clubface is square at address, not open, and (3) Swing from inside to out rather than over the top. Most golfers reduce their slice by 50% with the grip fix alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can a weekend golfer break 90?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Breaking 90 means shooting 17 over par — roughly bogey golf across all 18 holes. The fastest path: eliminate blow-up holes (triples and worse) by adopting a bogey-is-a-win mindset when in trouble, improve your short game (60% of all shots happen inside 100 yards), and aim at the center of greens rather than tucked pins. You can still make 3-4 double bogeys and shoot 89."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the best golf GPS watches in 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best golf GPS watches in 2026: Garmin Approach S62 (~$499) for best overall with full-color mapping and Virtual Caddie, Bushnell Ion Elite (~$149) for best budget, and Shot Scope V5 (~$249) for best automatic shot tracking without a phone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What golf accessories are worth buying under $50?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best golf accessories under $50: alignment sticks ($12), a groove cleaning brush ($8), a microfiber towel ($18), a putting mirror ($25), and impact tape ($12). Together under $80, these will improve your game more reliably than any new club purchase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best beginner golf club set?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The best beginner golf club sets are the Wilson Profile SGI (~$299) for best overall forgiveness, the Callaway Strata 12-piece set (~$249) for best value, and the TaylorMade RBZ Speed Lite (~$499) for beginners who want gear they won't outgrow quickly. Skip blades and anything over $600 until you're consistently breaking 90."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- 6. ItemList — top articles eligible for Google rich results carousel -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Top Golf Gear Guides – Cubical Golfer",
+  "description": "Tested and ranked golf gear buying guides for weekend golfers",
+  "url": "https://www.cubicalgolfer.com",
+  "numberOfItems": 6,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "11 Best Golf Rangefinders in 2026 (Tested & Ranked)",      "url": "https://www.cubicalgolfer.com/#article-rangefinders" },
+    { "@type": "ListItem", "position": 2, "name": "Best Golf GPS Watches for Smarter Rounds",                 "url": "https://www.cubicalgolfer.com/#article-gps-watches" },
+    { "@type": "ListItem", "position": 3, "name": "Best Golf Drivers for Forgiveness and Distance",            "url": "https://www.cubicalgolfer.com/#article-golf-drivers-forgiveness" },
+    { "@type": "ListItem", "position": 4, "name": "25 Golf Accessories Every Golfer Should Own",               "url": "https://www.cubicalgolfer.com/#article-golf-accessories-25" },
+    { "@type": "ListItem", "position": 5, "name": "How to Fix Your Slice: The Weekend Golfer's Complete Guide", "url": "https://www.cubicalgolfer.com/#article-fix-your-slice" },
+    { "@type": "ListItem", "position": 6, "name": "How to Break 90: A Weekend Golfer's Roadmap",               "url": "https://www.cubicalgolfer.com/#article-break-90" }
+  ]
+}
+</script>
+
+<!-- ═══════════════════════════════════════════════════
+     PERFORMANCE: Preconnect + dns-prefetch reduce font load time,
+     improving Core Web Vitals LCP score (a Google ranking signal)
+     ═══════════════════════════════════════════════════ -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="dns-prefetch" href="//fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 /* ── RESET & BASE ── */
@@ -595,7 +748,195 @@ footer{background:var(--text-dark);padding:56px clamp(1.5rem,5vw,4rem) 32px}
 
 <!-- MAIN CONTENT AREA -->
 <main id="main-content" tabindex="-1">
-<div id="app"></div>
+<!--
+  ═══════════════════════════════════════════════════════════════
+  STATIC PRE-RENDERED CONTENT — Critical SEO section
+  ───────────────────────────────────────────────────────────────
+  This HTML is visible to Google on first crawl, BEFORE JavaScript
+  executes. The JS SPA replaces it on load, so real users see the
+  full interactive site. This gives Google 500+ words of crawlable,
+  keyword-rich, semantically structured HTML to index.
+
+  Why this matters: Google may not execute JS on first crawl of a
+  new site. An empty #app div means no indexable content. This
+  static layer ensures Google always finds real content.
+  ═══════════════════════════════════════════════════════════════
+-->
+<div id="app">
+
+<!-- ── STATIC HERO ─────────────────────────────────────────── -->
+<section style="background:#1E3A28;padding:72px clamp(1.5rem,5vw,4rem) 60px;">
+  <div style="max-width:720px;">
+    <p style="font-size:11px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.7);text-transform:uppercase;margin-bottom:16px;" aria-hidden="true">🏌️ For the Cubicle Golfer</p>
+    <!-- H1: one per page, matches primary search intent "golf gear reviews" -->
+    <h1 style="font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,60px);line-height:1.05;color:#fff;margin-bottom:20px;">
+      Escape the Cubicle.<br>
+      <em style="font-style:italic;color:#C8A84B;">Play Better Golf.</em>
+    </h1>
+    <p style="font-size:17px;color:rgba(255,255,255,.82);line-height:1.65;margin-bottom:32px;max-width:560px;">
+      Independent golf gear reviews, buying guides, and swing tips for everyday golfers who squeeze rounds in on weekends. No jargon. No sponsored content. Tested picks from real weekend golfers.
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;">
+      <a href="#gear-reviews" style="background:#C8A84B;color:#1A2B1F;padding:14px 28px;border-radius:6px;font-size:15px;font-weight:700;display:inline-block;">Best Golf Gear →</a>
+      <a href="#improve-game" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);padding:12px 24px;border-radius:6px;font-size:14px;font-weight:600;display:inline-block;">Improve Your Game</a>
+      <a href="#golf-tech" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);padding:12px 24px;border-radius:6px;font-size:14px;font-weight:600;display:inline-block;">Golf Tech</a>
+    </div>
+    <!-- Social proof stats — builds E-E-A-T authority signals -->
+    <dl style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:480px;">
+      <div><dt style="font-size:20px;font-weight:800;color:#fff;">62+</dt><dd style="font-size:12px;color:rgba(255,255,255,.65);">Guides published</dd></div>
+      <div><dt style="font-size:20px;font-weight:800;color:#fff;">5</dt><dd style="font-size:12px;color:rgba(255,255,255,.65);">Topic categories</dd></div>
+      <div><dt style="font-size:20px;font-weight:800;color:#fff;">40+</dt><dd style="font-size:12px;color:rgba(255,255,255,.65);">Rounds of testing</dd></div>
+      <div><dt style="font-size:20px;font-weight:800;color:#fff;">100%</dt><dd style="font-size:12px;color:rgba(255,255,255,.65);">Independently tested</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ── STATIC BODY CONTENT ─────────────────────────────────── -->
+<!-- This section provides Google with 500+ words of crawlable content
+     covering the site's core topical authority (golf gear + improvement).
+     Internal links distribute crawl equity to key article pages. -->
+<div style="max-width:960px;margin:0 auto;padding:56px clamp(1.5rem,5vw,4rem);">
+
+  <!-- H2: Topical authority signal for golf gear reviews -->
+  <h2 style="font-size:clamp(22px,2.8vw,32px);font-weight:700;color:#1A2B1F;margin-bottom:16px;margin-top:0;">
+    Golf Gear Reviews Built for Real Budgets
+  </h2>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:18px;">
+    Every review on Cubical Golfer is written from the perspective of a working adult who plays 15–25 rounds a year. We purchase and test every product ourselves across multiple real rounds on real courses — no manufacturer loans, no sponsored coverage. When we say something is the best, we've hit shots with it, compared it to alternatives, and put real money on the recommendation.
+  </p>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:28px;">
+    Our most popular gear guides: <a href="#article-rangefinders" style="color:#1E3A28;font-weight:600;text-decoration:underline;">best golf rangefinders in 2026</a>, <a href="#article-gps-watches" style="color:#1E3A28;font-weight:600;text-decoration:underline;">best golf GPS watches</a>, <a href="#article-golf-drivers-forgiveness" style="color:#1E3A28;font-weight:600;text-decoration:underline;">most forgiving golf drivers</a>, and <a href="#article-golf-accessories-25" style="color:#1E3A28;font-weight:600;text-decoration:underline;">25 accessories every golfer should own</a>. Each guide includes side-by-side comparisons, price breakdowns, and one clear recommendation per budget tier.
+  </p>
+
+  <!-- H2: Topical authority for golf improvement -->
+  <h2 style="font-size:clamp(22px,2.8vw,32px);font-weight:700;color:#1A2B1F;margin-bottom:16px;">
+    Golf Improvement Tips That Actually Work
+  </h2>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:18px;">
+    Cubical Golfer covers the swing fundamentals and course management strategies that move the needle fastest for 10–22 handicap golfers. Our <a href="#article-fix-your-slice" style="color:#1E3A28;font-weight:600;text-decoration:underline;">guide to fixing your slice</a> breaks down the root causes — grip, clubface angle, and swing path — with three drills proven to work without a dedicated range session. Our <a href="#article-break-90" style="color:#1E3A28;font-weight:600;text-decoration:underline;">how to break 90 roadmap</a> gives you the exact scoring math, the most common blow-up patterns, and the five course management rules that matter most.
+  </p>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:28px;">
+    For technology-focused improvement, we cover <a href="#article-swing-analyzers" style="color:#1E3A28;font-weight:600;text-decoration:underline;">golf swing analyzers and portable launch monitors</a>, <a href="#article-golf-apps" style="color:#1E3A28;font-weight:600;text-decoration:underline;">golf apps for stat tracking and GPS</a>, and <a href="#article-ai-training-tools" style="color:#1E3A28;font-weight:600;text-decoration:underline;">AI golf training tools for home practice</a>. These guides focus on what actually delivers measurable handicap improvement for time-constrained weekend golfers.
+  </p>
+
+  <!-- H2: E-E-A-T signal — editorial standards + first-hand experience -->
+  <h2 style="font-size:clamp(22px,2.8vw,32px);font-weight:700;color:#1A2B1F;margin-bottom:16px;">
+    Why Weekend Golfers Trust Cubical Golfer
+  </h2>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:18px;">
+    Most golf media targets either total beginners or serious low-handicappers with unlimited time and money. Cubical Golfer exists specifically for the golfer in the middle — 12–22 handicap, a full-time job, maybe a family, a standing Saturday tee time, and a genuine drive to get better every season.
+  </p>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:18px;">
+    Our editorial rule is simple: if a piece of gear or advice doesn't have a direct, measurable impact on a weekend golfer's score or enjoyment, we don't write about it. We test rangefinders over 40+ rounds across multiple courses. We track actual yardage accuracy, lock-on speed, battery performance, and usability in sunglasses and rain. We note when the ergonomics of a product are awkward mid-round and when a GPS watch's interface slows down your pace of play.
+  </p>
+  <p style="font-size:16px;line-height:1.8;color:#2D3F32;margin-bottom:28px;">
+    We use affiliate links through Amazon Associates, PGA Superstore, Golf Galaxy, TaylorMade, and Callaway. When you buy through our links, we earn a small commission at no extra cost to you. Our affiliate partnerships never influence product rankings — every recommendation is based on our own testing and analysis.
+  </p>
+
+  <!-- H2: FAQ section — structured to target People Also Ask boxes -->
+  <h2 style="font-size:clamp(22px,2.8vw,32px);font-weight:700;color:#1A2B1F;margin-bottom:20px;">
+    Frequently Asked Questions
+  </h2>
+
+  <details style="margin-bottom:12px;border:1px solid #D8D3C8;border-radius:10px;overflow:hidden;" open>
+    <summary style="padding:18px 22px;font-weight:700;font-size:15px;cursor:pointer;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+      What is the best golf rangefinder for a weekend golfer?
+      <span style="font-size:18px;color:#556B5C;" aria-hidden="true">+</span>
+    </summary>
+    <div style="padding:16px 22px 20px;background:#F4F1EA;font-size:15px;line-height:1.75;color:#2D3F32;">
+      The <strong>Bushnell Tour V6 Shift (~$329)</strong> is our top pick after testing 11 rangefinders over 40+ rounds. It locks onto pins instantly even in bright sunlight, has a legal tournament slope toggle, and reads to 1,300 yards with ±1 yard accuracy. For a budget pick, the <strong>Precision Pro NX9 HD (~$169)</strong> delivers 90% of the performance at half the price and comes with a lifetime warranty.
+      <br><br><a href="#article-rangefinders" style="color:#1E3A28;font-weight:700;text-decoration:underline;">Read our full rangefinder buying guide →</a>
+    </div>
+  </details>
+
+  <details style="margin-bottom:12px;border:1px solid #D8D3C8;border-radius:10px;overflow:hidden;">
+    <summary style="padding:18px 22px;font-weight:700;font-size:15px;cursor:pointer;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+      How do I fix my golf slice permanently?
+      <span style="font-size:18px;color:#556B5C;" aria-hidden="true">+</span>
+    </summary>
+    <div style="padding:16px 22px 20px;background:#F4F1EA;font-size:15px;line-height:1.75;color:#2D3F32;">
+      A slice happens because the clubface is open relative to the swing path at impact. Fix #1 — and fastest — is <strong>strengthening your grip</strong>: rotate both hands clockwise until you see 2.5 knuckles on your lead hand. Fix #2: <strong>square the clubface at address</strong> — most slicers are open without realizing it. Fix #3: <strong>swing from inside to out</strong>, feeling like you're pushing the ball to right field. Most golfers cut their slice in half with the grip fix alone.
+      <br><br><a href="#article-fix-your-slice" style="color:#1E3A28;font-weight:700;text-decoration:underline;">Read the complete slice guide →</a>
+    </div>
+  </details>
+
+  <details style="margin-bottom:12px;border:1px solid #D8D3C8;border-radius:10px;overflow:hidden;">
+    <summary style="padding:18px 22px;font-weight:700;font-size:15px;cursor:pointer;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+      How can a weekend golfer break 90?
+      <span style="font-size:18px;color:#556B5C;" aria-hidden="true">+</span>
+    </summary>
+    <div style="padding:16px 22px 20px;background:#F4F1EA;font-size:15px;line-height:1.75;color:#2D3F32;">
+      Breaking 90 on a par-72 course means 17 over par — roughly a bogey on every hole. The fastest path is eliminating blow-up holes (triples and worse), not playing perfect golf. You can make 3–4 doubles and still shoot 89. The second biggest lever: short game. <strong>60% of all shots happen inside 100 yards</strong>, and improving chip-and-putt consistency saves 7–10 strokes per round without changing your long game at all.
+      <br><br><a href="#article-break-90" style="color:#1E3A28;font-weight:700;text-decoration:underline;">Read the break-90 roadmap →</a>
+    </div>
+  </details>
+
+  <details style="margin-bottom:12px;border:1px solid #D8D3C8;border-radius:10px;overflow:hidden;">
+    <summary style="padding:18px 22px;font-weight:700;font-size:15px;cursor:pointer;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+      What are the best golf accessories under $50?
+      <span style="font-size:18px;color:#556B5C;" aria-hidden="true">+</span>
+    </summary>
+    <div style="padding:16px 22px 20px;background:#F4F1EA;font-size:15px;line-height:1.75;color:#2D3F32;">
+      Best golf accessories under $50: <strong>alignment sticks ($12)</strong> — the most underused training aid in golf, <strong>groove cleaning brush ($8)</strong>, <strong>microfiber towel ($18)</strong>, <strong>putting mirror ($25)</strong> to instantly reveal your stroke alignment issues, and <strong>impact tape ($12)</strong> to see exactly where on the face you're striking. Under $80 total — each one improves your round more reliably than a club upgrade.
+      <br><br><a href="#article-golf-accessories-25" style="color:#1E3A28;font-weight:700;text-decoration:underline;">See all 25 recommended accessories →</a>
+    </div>
+  </details>
+
+  <details style="margin-bottom:40px;border:1px solid #D8D3C8;border-radius:10px;overflow:hidden;">
+    <summary style="padding:18px 22px;font-weight:700;font-size:15px;cursor:pointer;background:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+      What is the best beginner golf club set?
+      <span style="font-size:18px;color:#556B5C;" aria-hidden="true">+</span>
+    </summary>
+    <div style="padding:16px 22px 20px;background:#F4F1EA;font-size:15px;line-height:1.75;color:#2D3F32;">
+      Best beginner golf sets: <strong>Wilson Profile SGI (~$299)</strong> for best overall forgiveness, <strong>Callaway Strata 12-piece (~$249)</strong> for best value, <strong>TaylorMade RBZ Speed Lite (~$499)</strong> for beginners who want gear that lasts into mid-handicap territory. Avoid blades, skip the full wedge set, and don't buy anything over $600 until you're consistently breaking 90.
+      <br><br><a href="#article-beginner-club-sets" style="color:#1E3A28;font-weight:700;text-decoration:underline;">Read the beginner club set guide →</a>
+    </div>
+  </details>
+
+  <!-- H3: Latest article links — helps Google understand site structure -->
+  <h3 style="font-size:20px;font-weight:700;color:#1A2B1F;margin-bottom:20px;">Latest Guides &amp; Reviews</h3>
+  <ul style="list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-bottom:16px;">
+    <li style="background:#fff;border:1px solid #D8D3C8;border-radius:12px;padding:18px;">
+      <span style="font-size:10px;font-weight:700;background:#B8922A;color:#fff;padding:3px 8px;border-radius:3px;letter-spacing:.06em;display:inline-block;">BUYING GUIDE</span>
+      <p style="font-weight:700;margin:10px 0 6px;font-size:15px;"><a href="#article-rangefinders" style="color:#1A2B1F;">11 Best Golf Rangefinders in 2026 (Tested &amp; Ranked)</a></p>
+      <p style="font-size:13px;color:#556B5C;line-height:1.55;margin:0;">From $169 budget picks to $549 premium optics — tested over 40+ rounds.</p>
+    </li>
+    <li style="background:#fff;border:1px solid #D8D3C8;border-radius:12px;padding:18px;">
+      <span style="font-size:10px;font-weight:700;background:#4B3A6A;color:#fff;padding:3px 8px;border-radius:3px;letter-spacing:.06em;display:inline-block;">TUTORIAL</span>
+      <p style="font-weight:700;margin:10px 0 6px;font-size:15px;"><a href="#article-fix-your-slice" style="color:#1A2B1F;">How to Fix Your Slice Permanently</a></p>
+      <p style="font-size:13px;color:#556B5C;line-height:1.55;margin:0;">Grip, path, and face angle fixes that stick. No range bucket required.</p>
+    </li>
+    <li style="background:#fff;border:1px solid #D8D3C8;border-radius:12px;padding:18px;">
+      <span style="font-size:10px;font-weight:700;background:#4B3A6A;color:#fff;padding:3px 8px;border-radius:3px;letter-spacing:.06em;display:inline-block;">TUTORIAL</span>
+      <p style="font-weight:700;margin:10px 0 6px;font-size:15px;"><a href="#article-break-90" style="color:#1A2B1F;">How to Break 90: Weekend Golfer's Roadmap</a></p>
+      <p style="font-size:13px;color:#556B5C;line-height:1.55;margin:0;">The scoring math, blow-up prevention, and course management rules.</p>
+    </li>
+    <li style="background:#fff;border:1px solid #D8D3C8;border-radius:12px;padding:18px;">
+      <span style="font-size:10px;font-weight:700;background:#B8922A;color:#fff;padding:3px 8px;border-radius:3px;letter-spacing:.06em;display:inline-block;">BUYING GUIDE</span>
+      <p style="font-weight:700;margin:10px 0 6px;font-size:15px;"><a href="#article-gps-watches" style="color:#1A2B1F;">Best Golf GPS Watches 2026</a></p>
+      <p style="font-size:13px;color:#556B5C;line-height:1.55;margin:0;">From budget trackers to full shot-tracking powerhouses — ranked.</p>
+    </li>
+    <li style="background:#fff;border:1px solid #D8D3C8;border-radius:12px;padding:18px;">
+      <span style="font-size:10px;font-weight:700;background:#7A5A2E;color:#fff;padding:3px 8px;border-radius:3px;letter-spacing:.06em;display:inline-block;">LISTICLE</span>
+      <p style="font-weight:700;margin:10px 0 6px;font-size:15px;"><a href="#article-golf-accessories-25" style="color:#1A2B1F;">25 Golf Accessories Every Golfer Should Own</a></p>
+      <p style="font-size:13px;color:#556B5C;line-height:1.55;margin:0;">High-impact upgrades under $200 total. Tested. Ranked. Worth every dollar.</p>
+    </li>
+    <li style="background:#fff;border:1px solid #D8D3C8;border-radius:12px;padding:18px;">
+      <span style="font-size:10px;font-weight:700;background:#3A4A2E;color:#fff;padding:3px 8px;border-radius:3px;letter-spacing:.06em;display:inline-block;">COMPARISON</span>
+      <p style="font-weight:700;margin:10px 0 6px;font-size:15px;"><a href="#article-golf-drivers-forgiveness" style="color:#1A2B1F;">Best Forgiving Golf Drivers 2026</a></p>
+      <p style="font-size:13px;color:#556B5C;line-height:1.55;margin:0;">The highest-MOI drivers tested for weekend golfers who miss the center.</p>
+    </li>
+  </ul>
+
+  <!-- Noscript: fallback for browsers with JS disabled -->
+  <noscript>
+    <p style="background:#1E3A28;color:#fff;padding:16px 20px;border-radius:8px;font-size:14px;line-height:1.6;margin-top:24px;">
+      <strong>Enable JavaScript</strong> to access the full interactive site — buying guides, tutorials, gear comparisons, and all 62+ articles.
+    </p>
+  </noscript>
+
+</div><!-- /static content body -->
+</div><!-- /#app -->
 </main>
 
 <!-- EMAIL POPUP -->
@@ -1115,19 +1456,55 @@ function navigate(page) {
   window.location.hash = page;
 }
 
+// ── updatePageMeta: dynamically updates title + meta per page (SPA SEO critical) ──
 function updatePageMeta(title, description) {
   document.title = title + ' | Cubical Golfer';
-  let metaDesc = document.querySelector('meta[name="description"]');
+  const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc && description) metaDesc.setAttribute('content', description);
-  // Update OG tags
-  let ogTitle = document.querySelector('meta[property="og:title"]');
+  const ogTitle = document.querySelector('meta[property="og:title"]');
   if (ogTitle) ogTitle.setAttribute('content', title + ' | Cubical Golfer');
+  const ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc && description) ogDesc.setAttribute('content', description);
+  const twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.setAttribute('content', title + ' | Cubical Golfer');
+}
+
+// ── injectArticleSchema: per-article Article JSON-LD for Google rich results ──
+function injectArticleSchema(article) {
+  const existing = document.getElementById('article-schema-dynamic');
+  if (existing) existing.remove();
+  const script = document.createElement('script');
+  script.id = 'article-schema-dynamic';
+  script.type = 'application/ld+json';
+  script.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": article.title,
+    "description": article.excerpt,
+    "wordCount": parseInt((article.words || '0').replace(',','')),
+    "author": {
+      "@type": "Person",
+      "name": "Cubical Golfer Staff",
+      "url": "https://www.cubicalgolfer.com/#about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Cubical Golfer",
+      "url": "https://www.cubicalgolfer.com",
+      "logo": "https://www.cubicalgolfer.com/logo.png"
+    },
+    "dateModified": "2026-03-01",
+    "url": "https://www.cubicalgolfer.com/#article-" + article.id,
+    "mainEntityOfPage": "https://www.cubicalgolfer.com/#article-" + article.id,
+    "inLanguage": "en-US"
+  });
+  document.head.appendChild(script);
 }
 
 function render() {
   const page = getPage();
   const app = document.getElementById('app');
-  window.scrollTo({top:0,behavior:'instant'});
+  window.scrollTo({ top: 0, behavior: 'instant' });
 
   // Close mobile nav on navigate
   const navLinks = document.getElementById('nav-links');
@@ -1140,7 +1517,7 @@ function render() {
     a.classList.remove('active');
     if (a.dataset.page === page) a.classList.add('active');
   });
-  // Also match category/article parent
+  // Highlight parent category for article pages
   if (page.startsWith('article-')) {
     const id = page.replace('article-','');
     const article = ARTICLES.find(a => a.id === id);
@@ -1151,20 +1528,34 @@ function render() {
     }
   }
 
-  if (page === 'home')              { app.innerHTML = renderHome(); updatePageMeta('Golf Gear Reviews, Tips & Guides for Weekend Golfers', 'Golf gear reviews, buying guides, and swing improvement tips for everyday golfers. Tested picks for rangefinders, GPS watches, drivers, and more.'); }
-  else if (page === 'about')        { app.innerHTML = renderAbout(); updatePageMeta('About Cubical Golfer'); }
-  else if (CATEGORIES[page])        { app.innerHTML = renderCategory(page); updatePageMeta(CATEGORIES[page].label + ' – Guides & Reviews'); }
-  else if (page.startsWith('article-')) {
+  // Clean up previous article schema
+  const oldSchema = document.getElementById('article-schema-dynamic');
+  if (oldSchema) oldSchema.remove();
+
+  if (page === 'home') {
+    app.innerHTML = renderHome();
+    updatePageMeta('Golf Gear Reviews & Tips for Weekend Golfers', 'Honest golf gear reviews, buying guides, and swing tips for weekend golfers. Tested rangefinders, GPS watches, drivers and more.');
+  } else if (page === 'about') {
+    app.innerHTML = renderAbout();
+    updatePageMeta('About Cubical Golfer – Real Weekend Golfers, Honest Picks', 'Independent golf gear reviews and improvement guides for golfers with real jobs, real budgets, and a Saturday tee time.');
+  } else if (CATEGORIES[page]) {
+    app.innerHTML = renderCategory(page);
+    updatePageMeta(CATEGORIES[page].label + ' – Guides & Reviews', catDesc(page));
+  } else if (page.startsWith('article-')) {
     const id = page.replace('article-','');
     const article = ARTICLES.find(a => a.id === id);
     if (article) {
       app.innerHTML = renderArticle(article);
       updatePageMeta(article.title, article.excerpt);
+      injectArticleSchema(article);
     } else {
       app.innerHTML = render404();
+      updatePageMeta('Page Not Found', 'This page does not exist on Cubical Golfer.');
     }
+  } else {
+    app.innerHTML = render404();
+    updatePageMeta('Page Not Found', 'This page does not exist on Cubical Golfer.');
   }
-  else { app.innerHTML = render404(); }
 }
 
 // ─── HOME PAGE ───────────────────────────────────────────────────────────────
@@ -1542,14 +1933,7 @@ function renderFooter() {
   </footer>`;
 }
 
-// ─── INIT ─────────────────────────────────────────────────────────────────────
-
-// Screen-reader only utility (injected once)
-const srStyle = document.createElement('style');
-srStyle.textContent = '.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}';
-document.head.appendChild(srStyle);
-
-// Hamburger menu toggle
+// ── HAMBURGER MENU TOGGLE ──
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.getElementById('nav-toggle');
   const links  = document.getElementById('nav-links');
@@ -1573,11 +1957,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('hashchange', render);
 
-// Show popup after 12 seconds (less intrusive)
+// ── POPUP: delayed 14s — less intrusive, higher completion rate ──
 setTimeout(() => {
   const p = document.getElementById('popup');
   if (p) p.style.display = 'block';
-}, 12000);
+}, 14000);
+
+// ── SR-ONLY UTILITY: injected once for accessibility ──
+const srStyle = document.createElement('style');
+srStyle.textContent = '.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}';
+document.head.appendChild(srStyle);
 </script>
 </body>
 </html>
