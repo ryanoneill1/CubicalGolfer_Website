@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# XML Sitemap — tells Google where to find all 22 pages
 Sitemap: https://www.cubicalgolfer.com/sitemap.xml
