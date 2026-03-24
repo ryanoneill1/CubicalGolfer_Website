@@ -1,18 +1,18 @@
-# Netlify redirects — map old JS hash routes to new static pages
-/#home                          /                      301
-/#about                         /about/                301
-/#gear-reviews                  /gear-reviews/         301
-/#golf-tech                     /golf-tech/            301
-/#golf-accessories              /golf-accessories/     301
-/#improve-game                  /improve-your-golf-game/ 301
-/#golf-lifestyle                /golf-lifestyle/       301
+# Netlify redirects — map old SPA hash routes to new static pages
+/#home                              /                           301
+/#about                             /about/                     301
+/#gear-reviews                      /gear-reviews/              301
+/#golf-tech                         /golf-tech/                 301
+/#golf-accessories                  /golf-accessories/          301
+/#improve-game                      /improve-your-golf-game/    301
+/#golf-lifestyle                    /golf-lifestyle/            301
 /#article-rangefinders                        /best-golf-rangefinders-2026/           301
-/#article-golf-accessories-25                 /25-golf-accessories-every-golfer-should-own/           301
 /#article-gps-watches                         /best-golf-gps-watches/           301
-/#article-fix-your-slice                      /how-to-fix-your-slice/           301
-/#article-break-90                            /how-to-break-90/           301
+/#article-golf-accessories-25                 /25-golf-accessories-every-golfer-should-own/           301
 /#article-swing-analyzers                     /best-golf-swing-analyzers/           301
+/#article-fix-your-slice                      /how-to-fix-your-slice/           301
 /#article-sneak-more-rounds                   /how-to-sneak-in-more-golf-rounds/           301
+/#article-break-90                            /how-to-break-90/           301
 /#article-golf-apps                           /best-golf-apps/           301
 /#article-ai-training-tools                   /best-ai-golf-training-tools/           301
 /#article-accessories-under-50                /best-golf-accessories-under-50/           301
