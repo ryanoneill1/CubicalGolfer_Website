@@ -1,5 +1,0 @@
-# Cloudflare Workers _redirects
-# Note: hash fragments (#home, #gear-reviews etc.) never reach the server
-# so they cannot be redirected here — handled client-side.
-# www enforcement is handled via Cloudflare dashboard (Custom Domains).
-/index.html  /  301
