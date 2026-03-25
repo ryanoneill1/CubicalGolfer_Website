@@ -1,18 +1,12 @@
 ---
-// src/pages/[...slug].astro
-// Handles all article pages at their direct URLs:
-//   /best-golf-rangefinders-2026/
-//   /how-to-fix-your-slice/
-//   /best-golf-irons-2026/
-//   etc.
-//
-// This keeps all existing URLs intact — zero redirects needed.
+// src/pages/[...slug].astro — upgraded with affiliate buttons + image scaffolding
 
 import BaseLayout    from '../layouts/BaseLayout.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
 import { getMergedRelated } from '../lib/linking';
+import { getAffiliateLink } from '../data/affiliate-links';
 import type { Article } from '../data/types';
 
 export async function getStaticPaths() {
@@ -28,8 +22,6 @@ const { article } = Astro.props;
 const meta    = articleMeta(article);
 const related = getMergedRelated(article, 4);
 
-// Build schemas: Article + BreadcrumbList + FAQPage (if article has FAQ)
-// CRITICAL: JSON-LD only — no microdata anywhere on the page
 const schemas: object[] = [
   articleSchema(article),
   breadcrumbSchema(meta.breadcrumbs),
@@ -38,13 +30,10 @@ if (article.faq && article.faq.length > 0) {
   schemas.push(faqSchema(article.faq));
 }
 
-// Tag → CSS class mapping
 const TAG_CLASS: Record<string, string> = {
   'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
   'LISTICLE': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
 };
-
-// Category display labels
 const CAT_LABEL: Record<string, string> = {
   'gear-reviews': 'Golf Gear Reviews', 'golf-tech': 'Golf Tech',
   'golf-accessories': 'Golf Accessories', 'improve-game': 'Improve Your Golf Game',
@@ -56,17 +45,61 @@ const CAT_SLUG: Record<string, string> = {
   'golf-lifestyle': 'golf-lifestyle',
 };
 
-// Related articles (same category, different article)
 const sameCategory = ARTICLES.filter(
   a => a.category === article.category && a.id !== article.id
 ).slice(0, 3);
+
+const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
+
+// Map section badges to affiliate product IDs per article
+const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
+  'rangefinders': {
+    'BEST OVERALL':   'bushnell-tour-v6-shift',
+    'BEST BUDGET':    'precision-pro-nx9-hd',
+    'BEST HYBRID':    'garmin-approach-z82',
+    'PREMIUM PICK':   'bushnell-pro-xe',
+  },
+  'gps-watches': {
+    'BEST OVERALL':       'garmin-approach-s62',
+    'BEST AUTO-TRACKING': 'shot-scope-v5',
+    'BEST BUDGET':        'bushnell-ion-elite',
+  },
+  'drivers': {
+    'BEST OVERALL':  'callaway-paradym-ai-smoke-max',
+    'BEST DISTANCE': 'taylormade-qi35-max',
+    'BEST VALUE':    'cobra-aerojet-max',
+  },
+  'golf-balls': {
+    'BEST OVERALL':  'titleist-pro-v1',
+    'BEST DISTANCE': 'callaway-chrome-tour-2026',
+    'BEST VALUE':    'srixon-soft-feel',
+  },
+  'irons': {
+    'MOST FORGIVING': 'callaway-paradym-ai-smoke-max-irons',
+    'BEST MID-RANGE': 'titleist-t300',
+    'BEST OVERALL':   'callaway-paradym-ai-smoke-max-irons',
+  },
+  'beginner-sets': {
+    'BEST OVERALL': 'wilson-profile-sgi',
+    'BEST VALUE':   'callaway-strata',
+  },
+  'gloves': {
+    'BEST OVERALL':     'footjoy-weathersof-glove',
+    'BEST VENTILATION': 'footjoy-weathersof-glove',
+  },
+  'swing-analyzers': {
+    'BEST OVERALL':     'arccos-caddie-sensors',
+    'BEST LAUNCH DATA': 'arccos-caddie-sensors',
+  },
+  'accessories-50': {
+    'BEST OVERALL': 'alignment-sticks',
+  },
+};
 ---
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
-  <!-- ── ARTICLE HERO ── -->
   <header class="art-hero">
-    <!-- Breadcrumb — pure HTML, no microdata -->
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="bc-sep" aria-hidden="true">›</span>
@@ -78,14 +111,13 @@ const sameCategory = ARTICLES.filter(
     <span class={`art-tag-lg ${TAG_CLASS[article.tag] || 'tag-buy'}`}>{article.tag}</span>
     <h1>{article.titleDisplay}</h1>
 
-    <!-- Author box — E-E-A-T signal -->
     <div class="author-box">
       <div class="author-avatar" aria-hidden="true">CG</div>
       <div>
         <span class="author-name">Cubical Golfer Staff</span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
-          📅 Last updated: {article.dateModified} &nbsp;·&nbsp;
+          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
           ⛳ Tested over 40+ real rounds
         </span>
       </div>
@@ -93,30 +125,41 @@ const sameCategory = ARTICLES.filter(
     </div>
   </header>
 
-  <!-- ── ARTICLE CONTENT ── -->
   <article class="art-content">
 
-    <!-- Intro -->
-    <div class="intro-box"><p>{article.intro}</p></div>
-
-    <!-- Table of Contents -->
-    {article.toc && article.toc.length > 0 && (
-      <div class="toc">
-        <h4>In this guide</h4>
-        <ol>
-          {article.toc.map(item => <li>{item}</li>)}
-        </ol>
+    <!-- Quick Verdict box for buying guides -->
+    {isBuyingGuide && article.comparisonTable && (
+      <div class="verdict-quick">
+        <p class="verdict-quick-title">⚡ Quick Verdict</p>
+        <div class="verdict-quick-picks">
+          {article.comparisonTable.rows.slice(0, 3).map((row, i) => (
+            <div class={`verdict-pick ${row.winner ? 'verdict-pick--winner' : ''}`}>
+              <span class="verdict-pick-label">{row.winner ? '🏆 Best Overall' : row.bestFor}</span>
+              <span class="verdict-pick-name">{row.name}</span>
+              <span class="verdict-pick-price">{row.price}</span>
+            </div>
+          ))}
+        </div>
       </div>
     )}
 
-    <!-- Comparison Table (if present) -->
+    <div class="intro-box"><p>{article.intro}</p></div>
+
+    {article.toc && article.toc.length > 0 && (
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-heading">In this guide</p>
+        <ol>
+          {article.toc.map(item => <li>{item}</li>)}
+        </ol>
+      </nav>
+    )}
+
     {article.comparisonTable && (
       <div class="cmp-wrap">
         <table class="cmp-table" role="table">
+          <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
-            <tr>
-              {article.comparisonTable.headers.map(h => <th>{h}</th>)}
-            </tr>
+            <tr>{article.comparisonTable.headers.map(h => <th scope="col">{h}</th>)}</tr>
           </thead>
           <tbody>
             {article.comparisonTable.rows.map(row => (
@@ -136,29 +179,56 @@ const sameCategory = ARTICLES.filter(
       </div>
     )}
 
-    <!-- Sections -->
-    {article.sections.map(section => (
-      <div>
-        <h2>{section.h2}</h2>
-        {section.badge && <span class="badge-pill">{section.badge}</span>}
-        {section.body && section.body.trim() && <p>{section.body}</p>}
-        {section.price && (
-          <p class="price-note">💰 Price: {section.price}</p>
-        )}
-        {section.items && section.items.length > 0 && (
-          <ul>
-            {section.items.map(item => (
-              <li><strong>{item.name}</strong> — {item.desc}</li>
-            ))}
-          </ul>
-        )}
-      </div>
-    ))}
+    {article.sections.map((section, idx) => {
+      const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || ''];
+      const aff = productId ? getAffiliateLink(productId) : null;
+      return (
+        <div class="art-section">
+          <h2>{section.h2}</h2>
+          {section.badge && <span class="badge-pill">{section.badge}</span>}
 
-    <!-- FAQ Accordions — NO microdata, schema is in JSON-LD in <head> -->
+          {/* Product image — shows fallback emoji until real images added */}
+          {section.badge && isBuyingGuide && (
+            <div class="product-img-wrap">
+              <div class="product-img-fallback">
+                <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
+                <span style="font-size:13px;color:var(--muted);margin-top:8px">
+                  Add image: /public/images/products/{article.id}-{section.badge?.toLowerCase().replace(/\s+/g,'-')}.jpg
+                </span>
+              </div>
+            </div>
+          )}
+
+          {section.body && section.body.trim() && <p>{section.body}</p>}
+          {section.price && <p class="price-note">💰 Price: {section.price}</p>}
+          {section.items && section.items.length > 0 && (
+            <ul>
+              {section.items.map(item => (
+                <li><strong>{item.name}</strong> — {item.desc}</li>
+              ))}
+            </ul>
+          )}
+
+          {/* Affiliate buy button */}
+          {aff && (
+            <a
+              href={aff.url}
+              class="btn-buy-affiliate"
+              target="_blank"
+              rel="nofollow noopener sponsored"
+            >
+              <span class="btn-buy-price">{aff.price}</span>
+              <span class="btn-buy-cta">{aff.label} →</span>
+              <span class="btn-buy-badge">at {aff.retailer}</span>
+            </a>
+          )}
+        </div>
+      );
+    })}
+
     {article.faq && article.faq.length > 0 && (
       <div class="art-faq">
-        <h3>Frequently Asked Questions</h3>
+        <h2>Frequently Asked Questions</h2>
         {article.faq.map(({ q, a }) => (
           <details class="faq-item">
             <summary>{q}</summary>
@@ -168,17 +238,15 @@ const sameCategory = ARTICLES.filter(
       </div>
     )}
 
-    <!-- Related cluster (internal links) -->
     {related.length > 0 && (
       <div class="rel-cluster">
-        <h4>Related Guides</h4>
+        <h3>Related Guides</h3>
         <div class="rel-links">
           {related.map(link => <a href={link.slug}>{link.label}</a>)}
         </div>
       </div>
     )}
 
-    <!-- Article CTA -->
     <div class="art-cta">
       <h3>Get the Free Golf Gear Buying Guide</h3>
       <p>The cheat sheet every weekend golfer needs before buying anything new. No spam, ever.</p>
@@ -187,9 +255,8 @@ const sameCategory = ARTICLES.filter(
 
   </article>
 
-  <!-- ── RELATED ARTICLES ── -->
   {sameCategory.length > 0 && (
-    <section class="related-section">
+    <section class="related-section" aria-label="More guides">
       <h2>More {CAT_LABEL[article.category]} Guides</h2>
       <div class="related-grid">
         {sameCategory.map(a => (

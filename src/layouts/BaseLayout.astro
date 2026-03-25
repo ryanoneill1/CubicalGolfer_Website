@@ -1,8 +1,11 @@
 ---
 // src/layouts/BaseLayout.astro
-// Every page on the site extends this layout.
-// Handles: <head>, nav, footer, schema tags, Google verification.
-// ZERO microdata on schema — JSON-LD only to avoid duplicate field errors.
+// Fixes in this version:
+//   - Added font preload to eliminate render-blocking (LCP improvement)
+//   - Added preconnect for fonts with crossorigin
+//   - Added og:image:type and og:locale
+//   - Homepage gets H1 via this layout (not the nav brand)
+//   - Removed render-blocking font request, replaced with display=swap preload
 
 import type { PageMeta } from '../data/types';
 import { VERIFICATION_TAG } from '../lib/seo';
@@ -10,8 +13,8 @@ import '../styles/global.css';
 
 interface Props {
   meta:    PageMeta;
-  schemas: object[];   // JSON-LD schema objects — injected as <script> tags
-  activeNav?: string;  // matches nav item slug
+  schemas: object[];
+  activeNav?: string;
 }
 
 const { meta, schemas, activeNav = 'home' } = Astro.props;
@@ -51,7 +54,9 @@ const NAV_ITEMS = [
   <meta property="og:image"       content={meta.ogImage} />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:type"   content="image/png" />
   <meta property="og:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
+  <meta property="og:locale"      content="en_US" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
@@ -59,28 +64,44 @@ const NAV_ITEMS = [
   <meta name="twitter:description" content={meta.description} />
   <meta name="twitter:image"       content={meta.ogImage} />
 
-  <!-- Article dates (when applicable) -->
+  <!-- Article dates -->
   {meta.datePublished && <meta property="article:published_time" content={meta.datePublished} />}
   {meta.dateModified  && <meta property="article:modified_time"  content={meta.dateModified}  />}
 
-  <!-- JSON-LD schemas — injected here, NOWHERE else on the page -->
-  <!-- This prevents the "Duplicate field" Google Search Console errors -->
+  <!-- JSON-LD schemas — injected here ONLY (prevents duplicate field errors) -->
   {schemas.map(schema => (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
 
-  <!-- Fonts -->
+  <!-- 
+    Font loading strategy:
+    1. preconnect for DNS early resolution
+    2. Preload the CSS itself with low-priority async load (display=swap)
+    3. <noscript> fallback
+    This eliminates render-blocking font impact on LCP.
+  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   <link
+    rel="preload"
+    as="style"
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
   />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    />
+  </noscript>
 </head>
 
 <body>
-  <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip">Skip to main content</a>
 
   <!-- ── NAVIGATION ── -->
@@ -149,21 +170,18 @@ const NAV_ITEMS = [
         <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/">Bushnell vs Precision Pro</a>
         <a href="/compare/garmin-approach-s62-vs-shot-scope-v5/">Garmin vs Shot Scope</a>
         <a href="/compare/arccos-vs-shot-scope/">Arccos vs Shot Scope</a>
-        <a href="/compare/callaway-paradym-vs-taylormade-qi35/">Callaway vs TaylorMade Driver</a>
+        <a href="/compare/callaway-paradym-vs-taylormade-qi35/">Callaway vs TaylorMade</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cubical Golfer · Escape the cubicle. Find the fairway. ·
-        <a href="/about/" style="color:rgba(255,255,255,.5);text-decoration:underline;">Editorial Policy</a>
-      </p>
+      <p>© 2026 Cubical Golfer · <a href="/about/" style="color:rgba(255,255,255,.5);text-decoration:underline;">Editorial Policy</a></p>
       <p class="footer-disc">
-        ⚖️ Affiliate disclosure: some links earn us a small commission at no extra cost to you.
+        ⚖️ Affiliate disclosure: we earn commissions from qualifying purchases at no extra cost to you.
         All products independently purchased &amp; tested. Last updated March 2026.
       </p>
     </div>
   </footer>
 
-  <!-- Hamburger nav JavaScript — only JS on the entire site -->
   <script>
     (function () {
       const toggle = document.getElementById('nav-toggle');

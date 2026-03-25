@@ -145,3 +145,11 @@ export interface PageMeta {
   dateModified?:  string;
   breadcrumbs: Array<{ label: string; href: string }>;
 }
+
+// ── Affiliate link type ────────────────────────────────────────────────────────
+export interface AffiliateLink {
+  label:    string;   // "Buy at Amazon", "See Price at Golf Galaxy"
+  url:      string;   // Full affiliate URL with tracking tag
+  price?:   string;   // "~$329"
+  retailer: string;   // "Amazon", "Golf Galaxy", "Garmin"
+}
