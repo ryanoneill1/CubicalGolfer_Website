@@ -1,0 +1,152 @@
+// src/data/cities.ts
+// Powers /courses/[city]/ programmatic local SEO pages.
+// "best golf courses in [city]" keywords get 500–5,000 monthly searches each.
+// Add cities here — each one auto-generates a fully SEO-optimised page.
+
+import type { GolfCity } from './types';
+
+export const CITIES: GolfCity[] = [
+  {
+    slug: 'chicago-il',
+    city: 'Chicago',
+    state: 'IL',
+    stateFullName: 'Illinois',
+    population: 2696555,
+    nearbyAirport: "O'Hare (ORD) or Midway (MDW)",
+    bestSeason: 'May through October',
+    intro: "Chicago has some of the best public golf in the Midwest. From challenging lakefront layouts to classic parkland courses within 30 minutes of the city, there's a round here for every budget and skill level.",
+    courses: [
+      { name: 'Harborside International Golf Center', type: 'public', price: '$40–$80', holes: 36, rating: '72.4 / 73.1', notes: 'Two 18-hole championship courses on the south side. Best kept secret in Chicago public golf.' },
+      { name: 'Sydney R. Marovitz Golf Course', type: 'public', price: '$20–$45', holes: 9, rating: '35.5', notes: 'Stunning lakefront views. Short 9-hole layout perfect for a quick round after work.' },
+      { name: 'Cog Hill Golf & Country Club', type: 'semi-private', price: '$55–$150', holes: 72, rating: '75.3', notes: 'Former home of the BMW Championship on the PGA Tour. The No. 4 course (Dubsdread) is a must-play for any serious golfer near Chicago.' },
+      { name: 'Cantigny Golf', type: 'public', price: '$50–$90', holes: 27, rating: '71.9', notes: '27 holes in Wheaton, 30 minutes west. Beautiful parkland course, excellent conditions.' },
+      { name: 'Kemper Lakes Golf Club', type: 'semi-private', price: '$80–$130', holes: 18, rating: '73.5', notes: 'Hosted the 1989 PGA Championship. 45 minutes northwest of Chicago.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'atlanta-ga',
+    city: 'Atlanta',
+    state: 'GA',
+    stateFullName: 'Georgia',
+    population: 498715,
+    nearbyAirport: 'Hartsfield-Jackson Atlanta International (ATL)',
+    bestSeason: 'March through November (year-round possible)',
+    intro: "Atlanta's mild climate means year-round golf. From parkland layouts in the suburbs to resort courses in the nearby mountains, the Atlanta metro has outstanding public golf within a short drive.",
+    courses: [
+      { name: 'Bobby Jones Golf Course', type: 'public', price: '$25–$50', holes: 9, rating: '34.2', notes: 'Historic Atlanta course, recently renovated. Named after the legendary Bobby Jones. Excellent value in Buckhead.' },
+      { name: 'Mystery Valley Golf Course', type: 'public', price: '$30–$60', holes: 18, rating: '70.8', notes: 'Challenging layout in Lithonia, 20 minutes east of Atlanta. Excellent conditions for a public course.' },
+      { name: 'White Columns Country Club', type: 'semi-private', price: '$65–$110', holes: 18, rating: '72.5', notes: 'Tom Fazio design in Alpharetta. One of the best semi-private options near Atlanta.' },
+      { name: 'Reynolds Lake Oconee', type: 'resort', price: '$100–$200', holes: 108, rating: 'varies', notes: 'Six courses on Lake Oconee, 75 miles east of Atlanta. Weekend golf trip destination. Ritz-Carlton resort on-site.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'dallas-tx',
+    city: 'Dallas',
+    state: 'TX',
+    stateFullName: 'Texas',
+    population: 1304379,
+    nearbyAirport: 'DFW International or Love Field (DAL)',
+    bestSeason: 'October through May (summers are very hot)',
+    intro: "Dallas has exceptional public golf, with the city maintaining several quality municipal courses alongside a range of semi-private options. The weather makes fall through spring the prime golf season.",
+    courses: [
+      { name: "Stevens Park Golf Course", type: 'public', price: '$20–$40', holes: 18, rating: '69.8', notes: "Dallas city-owned course in Oak Cliff with views of the downtown skyline. Recently renovated greens." },
+      { name: 'Tenison Highlands Golf Course', type: 'public', price: '$25–$55', holes: 27, rating: '71.2', notes: 'Historic East Dallas municipal course. 27 holes, good conditions for the price.' },
+      { name: 'Stonebriar Country Club', type: 'semi-private', price: '$80–$140', holes: 18, rating: '73.6', notes: 'Tom Fazio design in Frisco. Former home of the Nationwide Tour event.' },
+      { name: 'Tribute Golf Club', type: 'public', price: '$60–$100', holes: 18, rating: '72.8', notes: 'Public course in The Colony designed as a tribute to famous Scottish links holes. Unique experience.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'phoenix-az',
+    city: 'Phoenix',
+    state: 'AZ',
+    stateFullName: 'Arizona',
+    population: 1608139,
+    nearbyAirport: 'Phoenix Sky Harbor (PHX)',
+    bestSeason: 'October through April (desert golf paradise)',
+    intro: "Phoenix is one of the premier golf destinations in the US. With 300+ days of sunshine and world-class desert courses, it's a golfer's paradise from October through April. Dozens of top-rated public courses within 30 minutes of downtown.",
+    courses: [
+      { name: 'Papago Golf Course', type: 'public', price: '$30–$65', holes: 18, rating: '71.3', notes: "Phoenix's best-kept public golf secret. Stunning red rock backdrop, excellent conditions, unbeatable value." },
+      { name: 'Wigwam Golf Resort', type: 'resort', price: '$80–$200', holes: 54, rating: '72.4', notes: 'Three courses in Litchfield Park. The Gold Course has hosted multiple PGA Tour events.' },
+      { name: 'We-Ko-Pa Golf Club', type: 'semi-private', price: '$100–$200', holes: 36, rating: '73.9', notes: 'Two stunning desert courses in Fort McDowell. Among the best public-access golf in Arizona.' },
+      { name: 'Scottsdale Silverado Golf Club', type: 'public', price: '$40–$90', holes: 18, rating: '71.6', notes: 'Well-maintained Scottsdale course with great views of the McDowell Mountains.' },
+      { name: 'Talking Stick Golf Club', type: 'public', price: '$55–$120', holes: 36, rating: '72.1', notes: 'Two courses (North & South) owned by the Salt River Pima-Maricopa Indian Community. Consistently great conditions.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'new-york-ny',
+    city: 'New York',
+    state: 'NY',
+    stateFullName: 'New York',
+    population: 8336817,
+    nearbyAirport: 'JFK, LaGuardia (LGA), or Newark (EWR)',
+    bestSeason: 'April through October',
+    intro: "Public golf in New York City is more accessible than most people think. The city operates 13 public golf courses across the five boroughs, and some of the best public golf on the East Coast is within 90 minutes of Midtown.",
+    courses: [
+      { name: 'Bethpage State Park — Black Course', type: 'public', price: '$40–$75', holes: 18, rating: '76.6', notes: "Legendary public course. Host of the 2002 and 2009 US Opens. Weekend tee times require overnight queueing. Worth every bit of it." },
+      { name: 'Bethpage State Park — Red Course', type: 'public', price: '$35–$65', holes: 18, rating: '72.7', notes: "Sister course to the Black. Slightly easier but still challenging. No overnight queue needed for weekday rounds." },
+      { name: 'Pelham Bay & Split Rock Golf Courses', type: 'public', price: '$35–$55', holes: 36, rating: '70.5', notes: 'Two Bronx courses with excellent conditions for NYC municipal golf. 36 holes total.' },
+      { name: 'Trump Golf Links at Ferry Point', type: 'public', price: '$100–$200', holes: 18, rating: '74.3', notes: 'Jack Nicklaus design in the Bronx with views of the Whitestone Bridge. The most spectacular setting of any NYC public course.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'los-angeles-ca',
+    city: 'Los Angeles',
+    state: 'CA',
+    stateFullName: 'California',
+    population: 3898747,
+    nearbyAirport: 'LAX or Burbank (BUR)',
+    bestSeason: 'Year-round (mild climate)',
+    intro: "Los Angeles has year-round golf and some of California's best public courses. From the Santa Monica Mountains to the coast, the LA metro has exceptional golf within 30 minutes of almost anywhere in the city.",
+    courses: [
+      { name: 'Rancho Park Golf Course', type: 'public', price: '$25–$45', holes: 18, rating: '71.0', notes: 'City of LA course that hosted the 1961 Los Angeles Open on the PGA Tour. Classic layout, great value near West Hollywood.' },
+      { name: 'Hansen Dam Golf Course', type: 'public', price: '$20–$40', holes: 18, rating: '69.3', notes: 'Best value public golf in the San Fernando Valley. Good conditions for the price.' },
+      { name: 'Riviera Country Club', type: 'semi-private', price: 'Member/Guest only', holes: 18, rating: '75.8', notes: "Home of the Genesis Invitational, 'The Riviera of Golf.' Host of the 1948 and 1995 US Opens. Private — only accessible via member invitation or tournament." },
+      { name: 'Brookside Golf Course', type: 'public', price: '$30–$60', holes: 36, rating: '70.9', notes: 'Two courses adjacent to the Rose Bowl in Pasadena. Great value and consistently good conditions.' },
+      { name: 'Palos Verdes Golf Club', type: 'semi-private', price: '$80–$150', holes: 18, rating: '72.4', notes: 'Stunning clifftop setting above the Pacific in Palos Verdes. Semi-private with occasional public access.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'houston-tx',
+    city: 'Houston',
+    state: 'TX',
+    stateFullName: 'Texas',
+    population: 2304580,
+    nearbyAirport: 'George Bush Intercontinental (IAH) or Hobby (HOU)',
+    bestSeason: 'October through May',
+    intro: "Houston has abundant public golf at excellent prices. The flat terrain means fast rounds, and the warm climate makes October through May the prime season. Some of the best-value public golf in the South is within 30 minutes of downtown.",
+    courses: [
+      { name: 'Hermann Park Golf Course', type: 'public', price: '$20–$35', holes: 18, rating: '68.4', notes: 'Classic parkland layout in the museum district. Great value for a quick round.' },
+      { name: 'Memorial Park Golf Course', type: 'public', price: '$40–$70', holes: 18, rating: '72.1', notes: 'Completely renovated in 2020. Former home of the Houston Open. Now one of the best public courses in Texas.' },
+      { name: 'Wildcat Golf Club', type: 'public', price: '$45–$80', holes: 36, rating: '71.8', notes: '36 holes in southwest Houston. Excellent conditions and challenging layout at a fair price.' },
+      { name: 'Tour 18 Houston', type: 'public', price: '$60–$100', holes: 18, rating: '72.6', notes: 'Holes modeled after famous tour venues including Augusta National, Pebble Beach, and more. Unique experience.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+  {
+    slug: 'miami-fl',
+    city: 'Miami',
+    state: 'FL',
+    stateFullName: 'Florida',
+    population: 442241,
+    nearbyAirport: 'Miami International (MIA) or Fort Lauderdale (FLL)',
+    bestSeason: 'November through April (summer is very hot and humid)',
+    intro: "South Florida is one of the most golf-dense regions in the US. Dozens of top-quality public and resort courses within 30 minutes of Miami, with year-round play possible and perfect conditions from November through April.",
+    courses: [
+      { name: 'Crandon Golf at Key Biscayne', type: 'public', price: '$55–$100', holes: 18, rating: '72.9', notes: "Former host of the PGA Tour's Honda Classic. Stunning bayfront setting on Key Biscayne. One of the best public courses in South Florida." },
+      { name: 'Palmetto Golf Course', type: 'public', price: '$35–$65', holes: 18, rating: '70.5', notes: "Miami-Dade County's best municipal course. Good conditions and excellent value." },
+      { name: 'Trump National Doral — Blue Monster', type: 'resort', price: '$150–$300', holes: 18, rating: '74.6', notes: 'Former home of the WGC-Cadillac Championship. The Blue Monster is legendary. Resort stay gives best tee time access.' },
+      { name: 'Don Shula\'s Hotel & Golf Club', type: 'resort', price: '$60–$110', holes: 18, rating: '70.8', notes: 'Named after the legendary Miami Dolphins coach. Good conditions and reasonable rates for the area.' },
+    ],
+    dateModified: '2026-03-24',
+  },
+];
+
+export function getCityBySlug(slug: string): GolfCity | undefined {
+  return CITIES.find(c => c.slug === slug);
+}

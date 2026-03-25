@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const meta = {
+  title: 'Page Not Found — Cubical Golfer',
+  description: 'The page you were looking for has moved or does not exist. Find our best golf guides below.',
+  canonical: 'https://www.cubicalgolfer.com/404/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
+  ogType: 'website' as const,
+  robots: 'noindex,follow',
+  breadcrumbs: [],
+};
+---
+
+<BaseLayout {meta} schemas={[]} activeNav="home">
+  <div class="not-found">
+    <div class="not-found-emoji" aria-hidden="true">⛳</div>
+    <h1>OB — Page Not Found</h1>
+    <p>That page doesn't exist. Take a drop and try one of these:</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px">
+      <a href="/" class="btn-green">← Go Home</a>
+      <a href="/gear-reviews/" class="btn-green">Golf Gear Reviews</a>
+      <a href="/improve-your-golf-game/" class="btn-green">Improve Your Game</a>
+    </div>
+    <div style="max-width:600px;margin:0 auto;text-align:left">
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:16px">Popular Guides</h2>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+        <li><a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600">Best Golf Rangefinders 2026 →</a></li>
+        <li><a href="/best-golf-gps-watches/" style="color:var(--green);font-weight:600">Best Golf GPS Watches 2026 →</a></li>
+        <li><a href="/how-to-fix-your-slice/" style="color:var(--green);font-weight:600">How to Fix Your Slice →</a></li>
+        <li><a href="/how-to-break-90/" style="color:var(--green);font-weight:600">How to Break 90 →</a></li>
+        <li><a href="/best-golf-irons-2026/" style="color:var(--green);font-weight:600">Best Golf Irons 2026 →</a></li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

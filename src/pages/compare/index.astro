@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { COMPARISONS } from '../../data/comparisons';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Product Comparisons 2026 — Side-by-Side Reviews',
+  description: 'Head-to-head golf product comparisons for weekend golfers. Bushnell vs Precision Pro, Garmin vs Shot Scope, Callaway vs TaylorMade and more — tested side-by-side.',
+  canonical: 'https://www.cubicalgolfer.com/compare/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
+  ogType: 'website' as const,
+  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Comparisons', href: '/compare/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="home">
+
+  <header class="compare-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Comparisons</span>
+    </nav>
+    <h1>Golf Product Comparisons</h1>
+    <p>Head-to-head tested comparisons for weekend golfers who want to know: which one is actually worth buying?</p>
+  </header>
+
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {COMPARISONS.map(c => (
+        <a href={`/compare/${c.slug}/`} class="article-card">
+          <div class="art-thumb navy">
+            <span class="art-badge tag-cmp">COMPARISON</span>
+            <span aria-hidden="true">⚖️</span>
+          </div>
+          <div class="art-body">
+            <h3>{c.title}</h3>
+            <p>{c.intro.substring(0, 120)}…</p>
+            <div class="art-foot">
+              <span class="art-words">Tested · Updated 2026</span>
+              <span class="art-read">See comparison →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</BaseLayout>

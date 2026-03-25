@@ -1,0 +1,93 @@
+---
+// src/pages/compare/[slug].astro
+// Generates one page per comparison: /compare/bushnell-tour-v6-vs-precision-pro-nx9/ etc.
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { COMPARISONS } from '../../data/comparisons';
+import { comparisonMeta } from '../../lib/seo';
+import { comparisonSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import type { Comparison } from '../../data/types';
+
+export async function getStaticPaths() {
+  return COMPARISONS.map(c => ({
+    params: { slug: c.slug },
+    props: { comparison: c },
+  }));
+}
+
+interface Props { comparison: Comparison }
+const { comparison: c } = Astro.props;
+
+const meta = comparisonMeta(c);
+const schemas: object[] = [
+  comparisonSchema(c),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+if (c.faq && c.faq.length > 0) {
+  schemas.push(faqSchema(c.faq));
+}
+---
+
+<BaseLayout {meta} {schemas} activeNav="home">
+
+  <header class="compare-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/compare/">Comparisons</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{c.title}</span>
+    </nav>
+    <span class="art-tag-lg tag-cmp">COMPARISON</span>
+    <h1>{c.title}</h1>
+    <div class="author-box">
+      <div class="author-avatar" aria-hidden="true">CG</div>
+      <div>
+        <span class="author-name">Cubical Golfer Staff</span>
+        <span class="author-meta">📅 Updated: {c.dateModified} &nbsp;·&nbsp; ⛳ Tested side-by-side</span>
+      </div>
+      <span class="verified-badge">✅ Independently Tested</span>
+    </div>
+  </header>
+
+  <div class="compare-body">
+
+    <div class="intro-box">
+      <p>{c.intro}</p>
+    </div>
+
+    <h2>The Verdict</h2>
+    <div class="verdict-box">
+      <h3>🏆 Winner: {c.winner.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</h3>
+      <p>{c.winnerReason}</p>
+    </div>
+
+    <h2>Full Comparison</h2>
+    <p>{c.verdict}</p>
+
+    <!-- FAQ — no microdata, schema in JSON-LD in head -->
+    {c.faq && c.faq.length > 0 && (
+      <div class="art-faq">
+        <h3>Frequently Asked Questions</h3>
+        {c.faq.map(({ q, a }) => (
+          <details class="faq-item">
+            <summary>{q}</summary>
+            <div class="faq-answer">{a}</div>
+          </details>
+        ))}
+      </div>
+    )}
+
+    <div class="rel-cluster" style="margin-top:40px">
+      <h4>Related Comparisons</h4>
+      <div class="rel-links">
+        <a href="/compare/">All Golf Product Comparisons →</a>
+        <a href="/gear-reviews/">All Gear Reviews →</a>
+        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
+      </div>
+    </div>
+
+  </div>
+
+</BaseLayout>

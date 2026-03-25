@@ -1,0 +1,59 @@
+---
+// src/pages/gear-reviews/index.astro
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { categoryMeta } from '../../lib/seo';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { getCategoryArticles } from '../../lib/linking';
+
+const cat     = 'gear-reviews';
+const articles = getCategoryArticles(cat);
+const meta    = categoryMeta(cat, articles.length);
+const schemas = [
+  breadcrumbSchema(meta.breadcrumbs),
+  faqSchema([
+    { q: 'What is the best golf gear for a weekend golfer?', a: 'Start with a quality rangefinder ($150–$350) and a GPS watch ($150–$500). These two devices provide yardage data that improves decision-making on every hole. Gear upgrades beyond clubs matter less than these two tools for most weekend golfers.' },
+    { q: 'How much should a weekend golfer spend on golf gear?', a: 'Most weekend golfers need $300–$600 in gear beyond clubs: a rangefinder (~$200), a GPS watch (~$150), and a few training aids (~$50). Everything else is optional.' },
+  ]),
+];
+
+const TAG_CLASS: Record<string, string> = {
+  'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
+  'LISTICLE': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
+};
+---
+
+<BaseLayout {meta} {schemas} activeNav="gear-reviews">
+
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Golf Gear Reviews</span>
+    </nav>
+    <h1>🏌️ Golf Gear Reviews</h1>
+    <p>Tested rangefinders, GPS watches, drivers, irons, golf balls, and more —
+      ranked by how much they actually improve your game, not by spec sheets.</p>
+  </header>
+
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {articles.map(a => (
+        <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+          <div class={`art-thumb ${a.thumb}`}>
+            <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
+            <span aria-hidden="true">{a.emoji}</span>
+          </div>
+          <div class="art-body">
+            <h3>{a.titleDisplay}</h3>
+            <p>{a.excerpt}</p>
+            <div class="art-foot">
+              <span class="art-words">{a.words} · Updated 2026</span>
+              <span class="art-read">Read guide →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { categoryMeta } from '../../lib/seo';
+import { breadcrumbSchema } from '../../lib/schema';
+import { getCategoryArticles } from '../../lib/linking';
+const cat = 'golf-accessories';
+const articles = getCategoryArticles(cat);
+const meta = categoryMeta(cat, articles.length);
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const TAG_CLASS: Record<string, string> = {
+  'BUYING GUIDE':'tag-buy','COMPARISON':'tag-cmp','TUTORIAL':'tag-tut',
+  'LISTICLE':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
+};
+---
+<BaseLayout {meta} {schemas} activeNav="golf-accessories">
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Golf Accessories</span>
+    </nav>
+    <h1>🎒 Golf Accessories</h1>
+    <p>Affordable accessories that improve every round — gloves, towels, training aids, and more. Every pick tested and ranked by impact.</p>
+  </header>
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {articles.map(a => (
+        <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+          <div class={`art-thumb ${a.thumb}`}>
+            <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
+            <span aria-hidden="true">{a.emoji}</span>
+          </div>
+          <div class="art-body">
+            <h3>{a.titleDisplay}</h3>
+            <p>{a.excerpt}</p>
+            <div class="art-foot">
+              <span class="art-words">{a.words} · Updated 2026</span>
+              <span class="art-read">Read guide →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
