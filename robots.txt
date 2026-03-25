@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.cubicalgolfer.com/sitemap.xml
+# Sitemap
+Sitemap: https://www.cubicalgolfer.com/sitemap-index.xml
+
+# Disallow admin and draft paths
+Disallow: /drafts/
+Disallow: /admin/
