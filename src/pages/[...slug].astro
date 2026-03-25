@@ -52,6 +52,19 @@ const sameCategory = ARTICLES.filter(
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
 
 // Map section badges to affiliate product IDs per article
+// ── Affiliate buy-button mapping ──────────────────────────────────────────────
+// Maps article-id → section badge → affiliate product key.
+//
+// FIXES applied March 2026:
+//   • swing-analyzers + ai-tools: BEST LAUNCH DATA was 'arccos-caddie-sensors'
+//     → corrected to 'rapsodo-mlm2pro' (ASIN B0BTPZMCSF)
+//   • gloves: BEST VENTILATION was 'footjoy-weathersof-glove'
+//     → corrected to 'titleist-players-flex' (its own search link)
+//   • ai-tools: added BEST PUTTING → blast-motion-sensor
+//   • ai-tools: added BEST SIMULATOR → skytrak-plus
+//   • swing-analyzers: added BEST BUDGET → swing-caddie-sc4-pro (SC4 PRO 2024)
+//   • golf-apps: BEST FOR STATS → arccos-caddie-sensors (sensors that power the app)
+// ─────────────────────────────────────────────────────────────────────────────
 const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   'rangefinders': {
     'BEST OVERALL':   'bushnell-tour-v6-shift',
@@ -80,19 +93,67 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST OVERALL':   'callaway-paradym-ai-smoke-max-irons',
   },
   'beginner-sets': {
-    'BEST OVERALL': 'wilson-profile-sgi',
-    'BEST VALUE':   'callaway-strata',
+    'BEST OVERALL':  'wilson-profile-sgi',
+    'BEST VALUE':    'callaway-strata',
+    'BEST STEP-UP':  'taylormade-rbz-lite',
   },
   'gloves': {
     'BEST OVERALL':     'footjoy-weathersof-glove',
-    'BEST VENTILATION': 'footjoy-weathersof-glove',
+    // FIXED: was 'footjoy-weathersof-glove' — Titleist Players Flex is a distinct product
+    'BEST VENTILATION': 'titleist-players-flex',
   },
   'swing-analyzers': {
     'BEST OVERALL':     'arccos-caddie-sensors',
-    'BEST LAUNCH DATA': 'arccos-caddie-sensors',
+    // FIXED: was 'arccos-caddie-sensors' — Rapsodo MLM2PRO is a separate product (ASIN B0BTPZMCSF)
+    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    // ADDED: Swing Caddie SC4 PRO (2024 current model)
+    'BEST BUDGET':      'swing-caddie-sc4-pro',
+  },
+  'ai-tools': {
+    // Swing AI is an app-only subscription — no Amazon product, no button
+    'BEST AI COACH':    '',
+    // FIXED: was 'arccos-caddie-sensors' — Rapsodo MLM2PRO is the product reviewed here
+    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    // ADDED: Blast Motion putter/swing sensor
+    'BEST PUTTING':     'blast-motion-sensor',
+    // ADDED: SkyTrak+ home simulator
+    'BEST SIMULATOR':   'skytrak-plus',
+  },
+  'golf-apps': {
+    'BEST FREE':       '',   // The Grint — free app, no Amazon product
+    'BEST ALL-IN-ONE': '',   // 18Birdies — free app, no Amazon product
+    // Arccos Caddie is the app; the sensors are the physical product
+    'BEST FOR STATS':  'arccos-caddie-sensors',
   },
   'accessories-50': {
-    'BEST OVERALL': 'alignment-sticks',
+    // No badge-driven sections on this page; links added inline via items
+  },
+  'golf-putters': {
+    'BEST OVERALL': 'odyssey-white-hot-og',
+    'BEST BLADE':   'scotty-cameron-phantom',
+    'BEST BUDGET':  'cleveland-hb-soft-milled',
+  },
+  'golf-bags': {
+    'BEST CARRY':  'sun-mountain-25-plus',
+    'BEST STAND':  'titleist-players-4',
+    'BEST CART':   'callaway-fairway-14',
+    'BEST BUDGET': 'callaway-chev-dry',
+  },
+  'golf-ball-compression': {
+    'BEST VALUE':   'srixon-soft-feel',
+    'BEST OVERALL': 'titleist-pro-v1',
+  },
+  'pro-v1-vs-pro-v1x': {
+    'BEST OVERALL':  'titleist-pro-v1',
+    'BEST DISTANCE': 'titleist-pro-v1x',
+  },
+  'golf-gifts': {
+    // Items use affiliateKey directly — no badge-driven sections
+  },
+  'golf-shoes-walking': {
+    'BEST OVERALL': 'footjoy-flex-xp',
+    'BEST PREMIUM': 'ecco-biom-c4',
+    'BEST BUDGET':  'skechers-go-golf',
   },
 };
 ---
@@ -159,21 +220,42 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
         <table class="cmp-table" role="table">
           <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
-            <tr>{article.comparisonTable.headers.map(h => <th scope="col">{h}</th>)}</tr>
+            <tr>
+              {article.comparisonTable.headers.map((h: string) => <th scope="col">{h}</th>)}
+              <th scope="col" class="cmp-th-buy">Buy</th>
+            </tr>
           </thead>
           <tbody>
-            {article.comparisonTable.rows.map(row => (
-              <tr class={row.winner ? 'cmp-winner' : ''}>
-                <td>
-                  {row.name}
-                  {row.winner && <span class="badge-best">BEST PICK</span>}
-                </td>
-                <td>{row.bestFor}</td>
-                <td>{row.price}</td>
-                <td>{row.feature1}</td>
-                <td>{row.feature2}</td>
-              </tr>
-            ))}
+            {article.comparisonTable.rows.map((row: any) => {
+              const rowAff = row.affiliateKey ? getAffiliateLink(row.affiliateKey) : null;
+              return (
+                <tr class={row.winner ? 'cmp-winner' : ''}>
+                  <td>
+                    {row.name}
+                    {row.winner && <span class="badge-best">BEST PICK</span>}
+                  </td>
+                  <td>{row.bestFor}</td>
+                  <td>{row.price}</td>
+                  <td>{row.feature1}</td>
+                  <td>{row.feature2}</td>
+                  <td class="cmp-td-buy">
+                    {rowAff ? (
+                      <a
+                        href={rowAff.url}
+                        class="cmp-buy-btn"
+                        target="_blank"
+                        rel="nofollow noopener sponsored"
+                        aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}
+                      >
+                        {rowAff.price} →
+                      </a>
+                    ) : (
+                      <span class="cmp-no-link">—</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>
@@ -203,8 +285,21 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
           {section.price && <p class="price-note">💰 Price: {section.price}</p>}
           {section.items && section.items.length > 0 && (
             <ul>
-              {section.items.map(item => (
-                <li><strong>{item.name}</strong> — {item.desc}</li>
+              {section.items.map((item: any) => (
+                <li>
+                  {item.affiliateKey ? (
+                    <>
+                      <a
+                        href={getAffiliateLink(item.affiliateKey).url}
+                        target="_blank"
+                        rel="nofollow noopener sponsored"
+                        style="font-weight:700;color:var(--green)"
+                      >{item.name}</a>{' '}— {item.desc}
+                    </>
+                  ) : (
+                    <><strong>{item.name}</strong> — {item.desc}</>
+                  )}
+                </li>
               ))}
             </ul>
           )}
