@@ -1,14 +1,5 @@
-# Netlify _redirects
-# Enforces www canonical and handles old SPA hash routes
-
-# Old SPA hash routes → proper static pages
-/#home            /              301
-/#gear-reviews    /gear-reviews/ 301
-/#golf-tech       /golf-tech/    301
-/#golf-accessories /golf-accessories/ 301
-/#improve-game    /improve-your-golf-game/ 301
-/#golf-lifestyle  /golf-lifestyle/ 301
-/#about           /about/        301
-
-# www enforcement (Netlify also handles this via domain settings)
-https://cubicalgolfer.com/* https://www.cubicalgolfer.com/:splat 301!
+# Cloudflare Workers _redirects
+# Note: hash fragments (#home, #gear-reviews etc.) never reach the server
+# so they cannot be redirected here — handled client-side.
+# www enforcement is handled via Cloudflare dashboard (Custom Domains).
+/index.html  /  301
