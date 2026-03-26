@@ -45,7 +45,9 @@ export interface Section {
   badge?: string;
   body:   string;
   price?: string;
-  items?: Array<{ name: string; desc: string }>;
+  items?: Array<{ name: string; desc: string; affiliateKey?: string }>;
+  rating?: number;       // 1-5 stars
+  ratingCount?: string;  // e.g. "2,847" Amazon reviews
 }
 
 export interface RelatedLink {
@@ -152,4 +154,6 @@ export interface AffiliateLink {
   url:      string;   // Full affiliate URL with tracking tag
   price?:   string;   // "~$329"
   retailer: string;   // "Amazon", "Golf Galaxy", "Garmin"
+  imgSrc?:  string;   // Product image URL
+  imgAlt?:  string;   // Alt text for product image
 }

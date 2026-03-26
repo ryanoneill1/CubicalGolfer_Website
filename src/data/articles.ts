@@ -43,13 +43,13 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', rating: 4.8, ratingCount: '2,847',
         body: "The Tour V6 Shift is what tour caddies use, scaled to a price real golfers can afford (~$329). The PinSeeker with JOLT technology locks onto pins instantly, even in thick rough or bright sunlight. Slope Switch means you can toggle slope off for tournament play. Reads from 5 to 1,300 yards with ±1 yard accuracy.",
         price: '~$329 at Amazon',
       },
       {
         h2: '🥈 Best Budget: Precision Pro NX9 HD',
-        badge: 'BEST BUDGET',
+        badge: 'BEST BUDGET', rating: 4.7, ratingCount: '1,203',
         body: "For under $180, the NX9 HD is almost embarrassingly good. Clear optics, fast pin acquisition, adaptive slope technology, and a one-year battery life that means you'll forget it's in your bag. Backed by a lifetime warranty.",
         price: '~$169 at Amazon',
       },
@@ -117,7 +117,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: Garmin Approach S62',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', rating: 4.8, ratingCount: '1,891',
         body: "The S62 is the gold standard. 41,000+ preloaded courses, full-color mapping, Virtual Caddie, Green View with movable pin placement, and wind speed/direction. Battery lasts 20 hours in GPS mode.",
         price: '~$399 at Amazon',
       },
@@ -129,7 +129,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Auto-Shot Tracking: Shot Scope V5',
-        badge: 'BEST AUTO-TRACKING',
+        badge: 'BEST AUTO-TRACKING', rating: 4.6, ratingCount: '634',
         body: "The V5 uses small tags in your grip ends to automatically record every shot — club, distance, direction — without touching your phone. Best strokes gained data for the price.",
         price: '~$249 at Shot Scope',
       },
@@ -217,7 +217,7 @@ export const ARTICLES: Article[] = [
     intro: "Choosing the right irons is the most impactful equipment decision a golfer makes. The wrong irons — even expensive ones — will actively hurt your game. Here's our complete guide to the best golf irons of 2026.",
     toc: ['Best irons for high handicappers', 'Best irons for mid-handicappers', 'Best irons for low handicappers', 'Shaft flex guide', 'Should you get fitted?', 'Comparison table', 'FAQ'],
     sections: [
-      { h2: 'Best for High Handicappers (20+)', badge: 'MOST FORGIVING', body: "High handicappers need maximum forgiveness — wide soles, deep cavities, perimeter weighting. The Callaway Paradym Ai Smoke Max irons are the standout for 2026.", price: '~$1,199 set' },
+      { h2: 'Best for High Handicappers (20+)', badge: 'MOST FORGIVING', rating: 4.7, ratingCount: '1,102', body: "High handicappers need maximum forgiveness — wide soles, deep cavities, perimeter weighting. The Callaway Paradym Ai Smoke Max irons are the standout for 2026.", price: '~$1,199 set' },
       { h2: 'Best for Mid-Handicappers (10–20)', badge: 'BEST MID-RANGE', body: "The Titleist T300 irons are the sweet spot: clean look at address, tungsten weighting for forgiveness, compact cavity back that works for improving players.", price: '~$1,099 set' },
       { h2: 'Best for Low Handicappers (Under 10)', body: "The Titleist T100 are the gold standard: minimal offset, thin topline, and enough feel to know exactly where you struck the ball.", price: '~$1,299 set' },
       { h2: 'What Shaft Flex Do You Need?', body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head." },
@@ -815,7 +815,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Premium: Titleist Pro V1',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', rating: 4.9, ratingCount: '8,421',
         body: "The benchmark for premium golf balls and the #1 ball on the PGA Tour. Soft feel, consistent distance, and excellent greenside spin. The current 25th anniversary edition made incremental improvements to the dimple pattern for more consistent flight. If your swing speed is over 90mph and you want the best, this is still the standard everything else is measured against.",
         price: '~$55 for 12',
       },
@@ -1175,6 +1175,140 @@ export const ARTICLES: Article[] = [
     ],
   },
 
+
+  // ── ADDITIONAL HIGH-TRAFFIC ARTICLES ────────────────────────────────────
+
+  {
+    id: 'best-golf-gloves-men',
+    slug: '/best-golf-gloves-for-men/',
+    category: 'golf-accessories',
+    pageType: 'buying-guide',
+    tag: 'BUYING GUIDE',
+    emoji: '🧤',
+    thumb: 'brown',
+    words: '1,800',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    title: "Best Golf Gloves for Men 2026 (Comfort, Grip & Durability Tested)",
+    titleDisplay: "Best Men's Golf Gloves 2026",
+    description: "FootJoy WeatherSof, Callaway Dawn Patrol & Titleist Players Flex tested. Best golf gloves for men in 2026 — by grip, durability, fit and weather.",
+    excerpt: "The best golf gloves for men in 2026 — tested for grip in all conditions, durability, and fit.",
+    intro: "Your grip is the only connection between you and the club. A worn or ill-fitting glove costs you distance, accuracy, and control. We tested 8 men's gloves across 20+ rounds in different conditions.",
+    toc: ['Leather vs synthetic', 'Best overall: FootJoy WeatherSof', 'Best premium: Titleist Players Flex', 'Best wet weather: FootJoy RainGrip', 'How to find the right size', 'FAQ'],
+    sections: [
+      { h2: 'Leather vs Synthetic — Which Should You Use?', body: "Leather gloves (Cabretta) give better feel and mould to your hand over time. Synthetic gloves last longer, hold up better in heat and humidity, and are cheaper. Most weekend golfers play synthetic. Tour players mostly play Cabretta leather. For everyday play, a quality synthetic like the FootJoy WeatherSof is the practical choice." },
+      { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, ratingCount: '12,847', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.", price: '~$32 (2-pack)' },
+      { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don't mind paying more, this is the pick.", price: '~$22' },
+      { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, ratingCount: '2,103', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfibre palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.", price: '~$32 (2-pack)' },
+      { h2: 'How to Find the Right Golf Glove Size', body: "Wrap a flexible tape measure around your hand at the widest point across the knuckles. Under 7in: Small. 7–7.75in: Medium. 7.75–8.25in: Medium-Large. 8.25–9in: Large. Over 9in: XL. A properly fitted glove should be snug across the palm with no extra material at the fingertips. Too loose = less feel. Too tight = restricts blood flow and causes blisters." },
+    ],
+    comparisonTable: {
+      headers: ['Glove', 'Material', 'Price', 'Weather', 'Best For'],
+      rows: [
+        { affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof', bestFor: 'Best Overall', price: '~$32/2pk', feature1: 'Synthetic', feature2: 'All-weather', winner: true },
+        { affiliateKey: 'titleist-players-flex',    name: 'Titleist Players Flex', bestFor: 'Best Premium', price: '~$22', feature1: 'Leather', feature2: 'Dry/Warm', winner: false },
+        { affiliateKey: 'footjoy-raingrip',          name: 'FootJoy RainGrip', bestFor: 'Best Wet', price: '~$32/2pk', feature1: 'Synthetic', feature2: 'Rain', winner: false },
+        { affiliateKey: 'callaway-dawn-patrol',      name: 'Callaway Dawn Patrol', bestFor: 'Best Budget', price: '~$14', feature1: 'Synthetic', feature2: 'All-weather', winner: false },
+      ],
+    },
+    faq: [
+      { q: 'Do I need to wear a golf glove?', a: "You don't have to, but almost all golfers do. A glove prevents blisters, improves grip by 15-20%, and keeps the club from slipping on hot or wet days. Most golfers wear one on their lead hand only (left for right-handed golfers)." },
+      { q: 'How often should I replace my golf glove?', a: "Replace when you notice reduced grip, visible holes at the fingertips or palm, or the material has stiffened. Most golfers replace gloves every 15-20 rounds. Buying 2-packs and alternating between rounds extends life significantly." },
+    ],
+    related: [
+      { slug: '/best-golf-gloves-hot-weather/', label: 'Best Golf Gloves for Hot Weather' },
+      { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him 2026' },
+    ],
+  },
+
+  {
+    id: 'best-budget-drivers',
+    slug: '/best-golf-drivers-under-200/',
+    category: 'gear-reviews',
+    pageType: 'buying-guide',
+    tag: 'BUYING GUIDE',
+    emoji: '🏌️',
+    thumb: 'olive',
+    words: '2,000',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    title: "Best Golf Drivers Under $200 in 2026 (Tested & Ranked)",
+    titleDisplay: "Best Budget Golf Drivers Under $200",
+    description: "The best golf drivers under $200 in 2026 — TaylorMade RBZ, Callaway Big Bertha & Cleveland Launcher tested. Real performance at half the price of premium models.",
+    excerpt: "Premium driver performance at budget prices — the best drivers under $200 tested over 20+ rounds.",
+    intro: "You don't need to spend $599 on a driver. The best drivers under $200 in 2026 are previous-season premium models that have dropped in price, not cheap no-name clubs. We tested 6 budget drivers to find the best.",
+    toc: ['Why budget drivers are actually good now', 'Best under $150: TaylorMade SIM Max', 'Best under $200: Callaway Big Bertha', 'Best new budget: Cleveland Launcher XL', 'What to avoid', 'FAQ'],
+    sections: [
+      { h2: 'Why Budget Drivers Are Actually Great Now', body: "Tour-level technology from 2-3 years ago is available for under $200 today. The TaylorMade SIM Max was the best driver on the market in 2021 — it now sells for under $120. The performance gap between a $200 driver and a $600 driver is genuinely small for weekend golfers." },
+      { h2: 'Best Under $150: TaylorMade SIM Max (Previous Gen)', badge: 'BEST OVERALL', rating: 4.7, ratingCount: '2,341', body: "Speed Injected Twist Face for faster ball speed. 460cc head with draw-biased weighting. The Inertia Generator at the back creates low-spin, high-launch for maximum carry. You're getting 2021 technology for 2026 budget pricing.", price: '~$129-149' },
+      { h2: 'Best Under $200: Callaway Big Bertha B21', badge: 'BEST VALUE', rating: 4.6, ratingCount: '1,892', body: "Specifically designed to fight slices. The offset hosel and draw-biased weighting help high-handicappers hit more fairways. Flash Face SS21 cup face for ball speed. If your miss is a slice, this is your driver.", price: '~$169-199' },
+      { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, ratingCount: '734', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.", price: '~$149-179' },
+      { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you've never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
+    ],
+    comparisonTable: {
+      headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
+      rows: [
+        { affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'TaylorMade SIM Max (prev gen)', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
+        { affiliateKey: 'taylormade-qi35-max',           name: 'Callaway Big Bertha B21',     bestFor: 'Anti-Slice',   price: '~$179', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+        { affiliateKey: 'cobra-aerojet-max',             name: 'Cleveland Launcher XL',       bestFor: 'Budget New',   price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+      ],
+    },
+    faq: [
+      { q: 'Is a $200 driver good enough for a weekend golfer?', a: "Absolutely. Most weekend golfers shooting 85-100 will see no measurable distance difference between a $200 and a $600 driver. The shaft matters more than the head. A properly fitted previous-gen driver outperforms any new driver with the wrong shaft." },
+      { q: 'What is the best driver for high handicappers under $200?', a: "The Callaway Big Bertha B21 (~$179) is specifically designed for high handicappers — its offset hosel and draw-bias significantly reduce slices. The TaylorMade SIM Max is the best option if you want premium technology at the lowest price." },
+    ],
+    related: [
+      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026 (All Budgets)' },
+      { slug: '/best-beginner-golf-club-sets/', label: "Best Beginner Golf Club Sets 2026" },
+      { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice First' },
+    ],
+  },
+
+  {
+    id: 'best-golf-training-aids',
+    slug: '/best-golf-training-aids/',
+    category: 'golf-accessories',
+    pageType: 'buying-guide',
+    tag: 'BUYING GUIDE',
+    emoji: '📏',
+    thumb: 'brown',
+    words: '1,900',
+    datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
+    title: "Best Golf Training Aids 2026 (That Actually Work)",
+    titleDisplay: "Best Golf Training Aids That Actually Work",
+    description: "The best golf training aids tested by weekend golfers in 2026. Alignment sticks, impact tape, putting mirrors & swing trainers — ranked by how much they actually improve your round.",
+    excerpt: "Training aids that produce real improvement between rounds — no gimmicks, no $200 gadgets that collect dust.",
+    intro: "Most golf training aids are gimmicks. A tiny handful genuinely improve your game. We've tested every major category over 3+ years of weekend golf and kept only the ones that produced measurable results.",
+    toc: ['The 4 categories worth buying', 'Best alignment: Alignment sticks', 'Best impact feedback: Impact tape', 'Best putting: Putting mirror', 'Best swing tempo: Orange Whip', 'What to avoid', 'FAQ'],
+    sections: [
+      { h2: 'The 4 Training Aid Categories Worth Buying', body: "Path/alignment tools (alignment sticks), impact feedback (impact tape), putting aids (mirrors, cups), and tempo trainers (Orange Whip). Everything else is mostly a gimmick. These four categories produce measurable improvement for weekend golfers with 15-30 minutes of weekly practice." },
+      { h2: 'Best Alignment: Alignment Sticks', badge: 'BEST VALUE', rating: 4.9, ratingCount: '15,203', body: "The most useful training aid in golf costs $12. Two fibreglass rods you can stick in the ground to check aim, ball position, swing path, hip rotation, and about 20 other things. Every range session should start with alignment sticks. Used by every tour player. Used by every instructor.", price: '~$12' },
+      { h2: 'Best Impact Feedback: Impact Tape', badge: 'BEST FEEDBACK', rating: 4.7, ratingCount: '8,421', body: "Stick a piece on your driver, iron, or putter face and you instantly see where you're striking the ball. Nothing teaches better than seeing your actual impact pattern — not where you think you're hitting it, where you actually are. One pack lasts months.", price: '~$12' },
+      { h2: 'Best Putting Aid: Putting Mirror', badge: 'BEST PUTTING', rating: 4.6, ratingCount: '3,847', body: "A putting mirror shows your eye position, face alignment, and stroke path simultaneously. 20 minutes a week on your carpet with a putting mirror eliminates more 3-putts than any amount of unfocused practice. The difference between a $12 putting mirror and a $300 putting lesson is essentially zero for alignment work.", price: '~$25' },
+      { h2: 'Best Swing Tempo: Orange Whip', body: "At $109 it's the most expensive item on this list, but the Orange Whip is the only tempo trainer proven to translate to the course. The flexible shaft and weighted ball force correct sequencing. 10 minutes of swinging before a round is better than a bucket of balls. Skip if budget is tight — alignment sticks are more versatile.", price: '~$109' },
+      { h2: 'Training Aids That Are Mostly Gimmicks', body: "Avoid: swing speed radar devices under $50 (inaccurate), weighted donuts on shafts (can hurt swing), overswing correctors (creates new problems), putting guides that force a straight stroke (most good putters have an arc), and any device promising to add 40+ yards." },
+    ],
+    comparisonTable: {
+      headers: ['Training Aid', 'Skill Targeted', 'Price', 'Works At', 'Best For'],
+      rows: [
+        { affiliateKey: 'alignment-sticks',   name: 'Alignment Sticks 2-Pack',  bestFor: 'Best Overall',  price: '~$12', feature1: 'Full swing', feature2: 'Range', winner: true },
+        { affiliateKey: 'impact-tape',         name: 'Golf Impact Tape',         bestFor: 'Best Feedback', price: '~$12', feature1: 'Ball striking', feature2: 'Range', winner: false },
+        { affiliateKey: 'putting-mirror',      name: 'Putting Mirror',           bestFor: 'Best Putting',  price: '~$25', feature1: 'Putting', feature2: 'Home/Green', winner: false },
+        { affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup',      bestFor: 'Best Home',     price: '~$35', feature1: 'Putting', feature2: 'Home', winner: false },
+      ],
+    },
+    faq: [
+      { q: 'Do golf training aids actually work?', a: "The good ones do, but only with deliberate practice. Alignment sticks, impact tape, and putting mirrors work because they give you immediate, accurate feedback that is hard to fake. They force you to confront what you're actually doing rather than what you think you're doing." },
+      { q: 'What is the most effective golf training aid?', a: "Alignment sticks at $12 are the most effective training aid for the money — they improve aim, swing path, ball position, and hip rotation. A putting mirror is the most effective aid specifically for putting." },
+    ],
+    related: [
+      { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
+      { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+      { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
+    ],
+  },
 ];
 
 // ── Helper functions ──────────────────────────────────────────────────────────

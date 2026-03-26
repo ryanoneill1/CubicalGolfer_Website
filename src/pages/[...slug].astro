@@ -304,6 +304,17 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
         <div class="art-section">
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
+          {(section as any).rating && (
+            <div class="product-rating" aria-label={`Rated ${(section as any).rating} out of 5 stars`}>
+              <span class="stars" aria-hidden="true">
+                {'★'.repeat(Math.floor((section as any).rating))}{'☆'.repeat(5 - Math.floor((section as any).rating))}
+              </span>
+              <span class="rating-score">{(section as any).rating}/5</span>
+              {(section as any).ratingCount && (
+                <span class="rating-count">({(section as any).ratingCount} reviews)</span>
+              )}
+            </div>
+          )}
 
           {/* Product image — real if available, emoji fallback otherwise */}
           {section.badge && isBuyingGuide && (() => {
