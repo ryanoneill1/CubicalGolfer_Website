@@ -1,8 +1,13 @@
 // astro.config.mjs
-// NOTE: @astrojs/sitemap intentionally removed — it crashes on Cloudflare's
-// build environment (absolute path bug in sitemap-simple.js:32).
-// sitemap.xml is pre-generated and committed to public/sitemap.xml directly.
+// ─────────────────────────────────────────────────────────────────────────────
+// DEPLOYMENT FIX (March 2026):
+//   Cloudflare Worker Assets skips uploads when HTML content hashes are identical
+//   between builds. The vite plugin below injects a unique BUILD_ID into every
+//   HTML page, guaranteeing Cloudflare always detects changed files.
+// ─────────────────────────────────────────────────────────────────────────────
 import { defineConfig } from 'astro/config';
+
+const BUILD_ID = Date.now().toString(36); // e.g. "lzq4k8m"
 
 export default defineConfig({
   site: 'https://www.cubicalgolfer.com',
@@ -11,17 +16,14 @@ export default defineConfig({
   integrations: [],
   build: {
     format: 'directory',
-    // Cache-busting: inject build time into asset filenames so Cloudflare
-    // always detects changed assets and uploads fresh files.
     assets: '_astro',
   },
   vite: {
     build: {
       assetsInlineLimit: 4096,
-      // Rollup options to force unique asset hashes on every build
       rollupOptions: {
         output: {
-          // Include build timestamp in chunk filenames to bust Wrangler asset cache
+          // Unique hashes on every build so Cloudflare always uploads fresh assets
           entryFileNames: `_astro/[name].[hash].js`,
           chunkFileNames: `_astro/[name].[hash].js`,
           assetFileNames: `_astro/[name].[hash][extname]`,
@@ -29,8 +31,20 @@ export default defineConfig({
       },
     },
     define: {
-      // Inject build timestamp — changing this forces Cloudflare to see new assets
-      '__BUILD_TIME__': JSON.stringify(new Date().toISOString()),
+      // Injected into every page — changing this forces Cloudflare to see new HTML
+      '__BUILD_ID__': JSON.stringify(BUILD_ID),
     },
+    plugins: [
+      // Injects <meta name="build-id" content="..."> into every HTML page
+      {
+        name: 'inject-build-id',
+        transformIndexHtml(html) {
+          return html.replace(
+            '</head>',
+            `<meta name="build-id" content="${BUILD_ID}"></head>`
+          );
+        },
+      },
+    ],
   },
 });
