@@ -37,7 +37,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Bushnell',
     price: '~$329',
     label: 'Check Price at Bushnell',
-    imgSrc: 'https://m.media-amazon.com/images/I/71q3yjZ2m-L._AC_SL1500_.jpg',
+    imgSrc: '/images/products/bushnell-tour-v6-shift.svg',
     imgAlt: 'Bushnell Tour V6 Shift Golf Rangefinder',
   },
 
@@ -48,7 +48,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$169',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61vXXMvzGaL._AC_SL1000_.jpg',
+    imgSrc: '/images/products/precision-pro-nx9-hd.svg',
     imgAlt: 'Precision Pro NX9 HD Golf Rangefinder',
   },
 
@@ -58,7 +58,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$149',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71e4OaipjRL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/blue-tees-series-3-max.svg',
     imgAlt: 'Blue Tees Series 3 Max Golf Rangefinder',
   },
 
@@ -69,7 +69,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/81DEbNpTPYL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/garmin-approach-z82.svg',
     imgAlt: 'Garmin Approach Z82 GPS Laser Rangefinder',
   },
 
@@ -79,7 +79,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Bushnell',
     price: '~$499',
     label: 'Check Price at Bushnell',
-    imgSrc: 'https://m.media-amazon.com/images/I/71Pv3nxbqpL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/bushnell-pro-xe.svg',
     imgAlt: 'Bushnell Pro XE Golf Rangefinder',
   },
 
@@ -92,7 +92,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$399',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71pYCXj3G1L._AC_SL1500_.jpg',
+    imgSrc: '/images/products/garmin-approach-s62.svg',
     imgAlt: 'Garmin Approach S62 GPS Golf Watch',
   },
 
@@ -111,7 +111,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$249',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61JHLBKh9oL._AC_SL1000_.jpg',
+    imgSrc: '/images/products/shot-scope-v5.svg',
     imgAlt: 'Shot Scope V5 GPS Golf Watch',
   },
 
@@ -121,7 +121,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Bushnell',
     price: '~$149',
     label: 'Check Price at Bushnell',
-    imgSrc: 'https://m.media-amazon.com/images/I/71hcMrqnFbL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/bushnell-ion-elite.svg',
     imgAlt: 'Bushnell Ion Elite GPS Golf Watch',
   },
 
@@ -133,7 +133,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61CZjjmqoaL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-paradym-ai-smoke-max.svg',
     imgAlt: 'Callaway Paradym AI Smoke Max Driver',
   },
 
@@ -143,7 +143,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$599',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61aY1iXhPaL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/taylormade-qi35-max.svg',
     imgAlt: 'TaylorMade Qi35 Max Driver',
   },
 
@@ -153,7 +153,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$399',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71O1L7rGaXL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/cobra-aerojet-max.svg',
     imgAlt: 'Cobra Aerojet Max Golf Driver',
   },
 
@@ -163,7 +163,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$449',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61g0VNEqdLL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/ping-g430-max-driver.svg',
     imgAlt: 'Ping G430 Max Golf Driver',
   },
 
@@ -176,7 +176,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$55/dozen',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71vxQZaqzNL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/titleist-pro-v1.svg',
     imgAlt: 'Titleist Pro V1 Golf Balls 2025',
   },
 
@@ -186,7 +186,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$58/dozen',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71n9L8I4KsL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-chrome-tour-2026.svg',
     imgAlt: 'Callaway Chrome Tour 2026 Golf Balls',
   },
 
@@ -196,7 +196,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$50/dozen',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71-EaM9rnOL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/taylormade-tp5.svg',
     imgAlt: 'TaylorMade TP5 Golf Balls',
   },
 
@@ -206,7 +206,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$27/dozen',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71h6yfU5iyL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/srixon-soft-feel.svg',
     imgAlt: 'Srixon Soft Feel Golf Balls',
   },
 
@@ -216,7 +216,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Vice Golf',
     price: '~$33/dozen',
     label: 'Check Price at Vice Golf',
-    imgSrc: 'https://images.vicegolf.com/img/product/gallery/vice-pro-white-yellow.jpg',
+    imgSrc: '/images/products/vice-pro.svg',
     imgAlt: 'Vice Pro Golf Balls',
   },
 
@@ -236,7 +236,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$899',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/51M7rwmj8sL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-paradym-ai-smoke-max-irons.svg',
     imgAlt: 'Callaway Paradym AI Smoke Max Irons',
   },
 
@@ -246,7 +246,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$999',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/51OmfPHdgYL._AC_SL1000_.jpg',
+    imgSrc: '/images/products/titleist-t300.svg',
     imgAlt: 'Titleist T300 Golf Irons',
   },
 
@@ -256,7 +256,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$1,099',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/51UlPJxKTAL._AC_SL1000_.jpg',
+    imgSrc: '/images/products/titleist-t100.svg',
     imgAlt: 'Titleist T100 Golf Irons',
   },
 
@@ -266,7 +266,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$999',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/51qSi38kCaL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/ping-g430-irons.svg',
     imgAlt: 'Ping G430 Golf Irons',
   },
 
@@ -276,7 +276,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$599',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71A4MzgSVgL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/wilson-d9-irons.svg',
     imgAlt: 'Wilson D9 Golf Irons',
   },
 
@@ -289,7 +289,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$299',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/81RuoS1BNAL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/wilson-profile-sgi.svg',
     imgAlt: 'Wilson Profile SGI Complete Golf Set',
   },
 
@@ -299,7 +299,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$249',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/81x9cM6AsiL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-strata.svg',
     imgAlt: 'Callaway Strata Complete Golf Set',
   },
 
@@ -309,7 +309,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61k5KpM6TGL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/taylormade-rbz-lite.svg',
     imgAlt: 'TaylorMade RBZ Speed Lite Golf Set',
   },
 
@@ -322,7 +322,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$18',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71kp1Fc8DzL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/footjoy-weathersof-glove.svg',
     imgAlt: 'FootJoy WeatherSof Golf Glove',
   },
 
@@ -333,7 +333,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$22',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71-D0MxBcJL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/titleist-players-flex.svg',
     imgAlt: 'Titleist Players Flex Golf Glove',
   },
 
@@ -343,7 +343,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$12',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/51kpzr4WFZL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-dawn-patrol.svg',
     imgAlt: 'Callaway Dawn Patrol Golf Glove',
   },
 
@@ -353,7 +353,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$16/pair',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61bE5V6v4VL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/footjoy-raingrip.svg',
     imgAlt: 'FootJoy RainGrip Golf Gloves 2-Pack',
   },
 
@@ -366,7 +366,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$179 + $99/yr',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61JkENq4+tL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/arccos-caddie-sensors.svg',
     imgAlt: 'Arccos Caddie Smart Sensors 3rd Gen',
   },
 
@@ -378,7 +378,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$699',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61YmoBx9Q4L._AC_SL1500_.jpg',
+    imgSrc: '/images/products/rapsodo-mlm2pro.svg',
     imgAlt: 'Rapsodo MLM2PRO Golf Launch Monitor',
   },
 
@@ -389,7 +389,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$99',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71o7Gu+gvdL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/blast-motion-sensor.svg',
     imgAlt: 'Blast Motion Golf Swing Sensor',
   },
 
@@ -402,7 +402,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71mWxq7rqTL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/swing-caddie-sc4-pro.svg',
     imgAlt: 'Voice Caddie Swing Caddie SC4 PRO Launch Monitor',
   },
 
@@ -412,7 +412,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$2,995',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71K9l2LT6YL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/skytrak-plus.svg',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
   },
 
@@ -424,7 +424,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$12',
     label: 'See Options on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71b3jtE39cL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/alignment-sticks.svg',
     imgAlt: 'Golf Alignment Sticks 2-Pack Training Aid',
   },
 
@@ -434,7 +434,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$8',
     label: 'See Options on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71F6sSSVy4L._AC_SL1500_.jpg',
+    imgSrc: '/images/products/groove-cleaning-brush.svg',
     imgAlt: 'Golf Groove Cleaning Brush',
   },
 
@@ -444,7 +444,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$8',
     label: 'See Options on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/714AxHF3tWL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/magnetic-ball-markers.svg',
     imgAlt: 'Magnetic Golf Hat Clip Ball Markers',
   },
 
@@ -454,7 +454,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$18',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71dXX5g-9gL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/frogger-amphibian-towel.svg',
     imgAlt: 'Frogger Amphibian Golf Towel',
   },
 
@@ -464,7 +464,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$25',
     label: 'See Options on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71yLqLCqhOL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/putting-mirror.svg',
     imgAlt: 'Golf Putting Mirror Training Aid',
   },
 
@@ -474,7 +474,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$12',
     label: 'See Options on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71lMIrFY6gL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/impact-tape.svg',
     imgAlt: 'Golf Club Face Impact Tape',
   },
 
@@ -484,7 +484,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$35',
     label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71K-LkzE9AL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/eyeline-putting-cup.svg',
     imgAlt: 'Eyeline Golf Edge Putting Cup',
   },
 
@@ -499,25 +499,25 @@ export const AFFILIATE: Record<string, {
   'odyssey-white-hot-og': {
     url: 'https://www.amazon.com/s?k=Odyssey+White+Hot+OG+putter&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$199', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71UZyQ0KVZL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/odyssey-white-hot-og.svg',
     imgAlt: 'Odyssey White Hot OG Putter',
   },
   'scotty-cameron-phantom': {
     url: 'https://www.amazon.com/s?k=Scotty+Cameron+Phantom+X+putter+2024&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$399', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/51tOqYdBvHL._AC_SL1000_.jpg',
+    imgSrc: '/images/products/scotty-cameron-phantom.svg',
     imgAlt: 'Scotty Cameron Phantom X Putter',
   },
   'cleveland-hb-soft-milled': {
     url: 'https://www.amazon.com/s?k=Cleveland+HB+Soft+Milled+putter&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71OL4MtLp0L._AC_SL1500_.jpg',
+    imgSrc: '/images/products/cleveland-hb-soft-milled.svg',
     imgAlt: 'Cleveland HB Soft Milled Putter',
   },
   'taylormade-spider-tour': {
     url: 'https://www.amazon.com/s?k=TaylorMade+Spider+Tour+putter+2024&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$349', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71DPzw5LXEL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/taylormade-spider-tour.svg',
     imgAlt: 'TaylorMade Spider Tour Putter',
   },
 
@@ -525,25 +525,25 @@ export const AFFILIATE: Record<string, {
   'sun-mountain-25-plus': {
     url: 'https://www.amazon.com/s?k=Sun+Mountain+2.5+Plus+carry+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$249', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71MipTfMknL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/sun-mountain-25-plus.svg',
     imgAlt: 'Sun Mountain 2.5+ Carry Golf Bag',
   },
   'titleist-players-4': {
     url: 'https://www.amazon.com/s?k=Titleist+Players+4+StaDry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$279', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71bEVKynSZL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/titleist-players-4.svg',
     imgAlt: 'Titleist Players 4 StaDry Golf Bag',
   },
   'callaway-fairway-14': {
     url: 'https://www.amazon.com/s?k=Callaway+Fairway+14+cart+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$179', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/61tCFP3VD5L._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-fairway-14.svg',
     imgAlt: 'Callaway Fairway 14 Cart Bag',
   },
   'callaway-chev-dry': {
     url: 'https://www.amazon.com/s?k=Callaway+Chev+Dry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71MFJGtRKQL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/callaway-chev-dry.svg',
     imgAlt: 'Callaway Chev Dry Stand Bag',
   },
 
@@ -551,7 +551,7 @@ export const AFFILIATE: Record<string, {
   'titleist-pro-v1x': {
     url: 'https://www.amazon.com/s?k=Titleist+Pro+V1x+golf+balls+2025&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$55/dozen', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71vGR+B4maL._AC_SL1500_.jpg',
+    imgSrc: '/images/products/titleist-pro-v1x.svg',
     imgAlt: 'Titleist Pro V1x Golf Balls 2025',
   },
 
@@ -559,25 +559,25 @@ export const AFFILIATE: Record<string, {
   'footjoy-flex-xp': {
     url: 'https://www.amazon.com/s?k=FootJoy+Flex+XP+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$120', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71PqREGQD4L._AC_UX500_.jpg',
+    imgSrc: '/images/products/footjoy-flex-xp.svg',
     imgAlt: 'FootJoy Flex XP Golf Shoes',
   },
   'ecco-biom-c4': {
     url: 'https://www.amazon.com/s?k=ECCO+Biom+C4+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$220', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71kQ-yYpJ-L._AC_UX500_.jpg',
+    imgSrc: '/images/products/ecco-biom-c4.svg',
     imgAlt: 'ECCO Biom C4 Golf Shoes',
   },
   'skechers-go-golf': {
     url: 'https://www.amazon.com/s?k=Skechers+Go+Golf+Pro+5+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$85', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71rHi7lQnzL._AC_UX500_.jpg',
+    imgSrc: '/images/products/skechers-go-golf.svg',
     imgAlt: 'Skechers Go Golf Pro 5 Golf Shoes',
   },
   'footjoy-tour-alpha': {
     url: 'https://www.amazon.com/s?k=FootJoy+Tour+Alpha+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$200', label: 'Check Price on Amazon',
-    imgSrc: 'https://m.media-amazon.com/images/I/71FWEKvQqaL._AC_UX500_.jpg',
+    imgSrc: '/images/products/footjoy-tour-alpha.svg',
     imgAlt: 'FootJoy Tour Alpha Golf Shoes',
   },
 

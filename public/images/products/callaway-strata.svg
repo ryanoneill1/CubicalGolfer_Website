@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c41230"/>
+      <stop offset="100%" stop-color="#8b0000"/>
+    </linearGradient>
+  </defs>
+  <rect width="280" height="200" fill="url(#bg)" rx="8"/>
+  <text x="140" y="90" text-anchor="middle" font-family="system-ui,sans-serif" 
+        font-size="52" fill="white" opacity="0.9">🏌️</text>
+  <text x="140" y="130" text-anchor="middle" font-family="system-ui,sans-serif" 
+        font-size="11" font-weight="600" fill="white" opacity="0.85" letter-spacing="1">CLUB SET</text>
+  <text x="140" y="150" text-anchor="middle" font-family="system-ui,sans-serif" 
+        font-size="10" fill="white" opacity="0.6">Image coming soon</text>
+</svg>

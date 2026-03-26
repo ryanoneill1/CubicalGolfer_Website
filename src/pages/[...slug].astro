@@ -320,6 +320,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                     loading="lazy"
                     decoding="async"
                     class="product-section-img"
+                    onerror="this.style.display='none'"
                   />
                 ) : (
                   <div class="product-img-fallback">

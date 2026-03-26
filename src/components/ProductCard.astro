@@ -67,7 +67,11 @@ const badgeClass = badge?.toLowerCase().replace(/\s+/g, '-') ?? '';
         loading="lazy"
         decoding="async"
         class="product-card__img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
       />
+      <div class="product-card__img-fallback" aria-hidden="true" style="display:none">
+        <span style="font-size:56px">{emoji}</span>
+      </div>
     ) : (
       <div class="product-card__img-fallback" aria-hidden="true">
         <span style="font-size:56px">{emoji}</span>
