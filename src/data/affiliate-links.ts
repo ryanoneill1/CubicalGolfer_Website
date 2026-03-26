@@ -33,11 +33,10 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Tour V6 Shift — ASIN B0C4PN57LJ ✅ verified
   'bushnell-tour-v6-shift': {
-    asin: 'B0C4PN57LJ',
-    url: 'https://www.amazon.com/dp/B0C4PN57LJ/?tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://bushnell.pxf.io/DWWLOa',
+    retailer: 'Bushnell',
     price: '~$329',
-    label: 'Check Price on Amazon',
+    label: 'Check Price at Bushnell',
   },
 
   // Precision Pro NX9 HD (slope switch model) — ASIN B0DP3GL8RN ✅ verified
@@ -68,10 +67,10 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Pro XE — search (multiple bundle variants)
   'bushnell-pro-xe': {
-    url: 'https://www.amazon.com/s?k=Bushnell+Pro+XE+rangefinder&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://bushnell.pxf.io/DWWLOa',
+    retailer: 'Bushnell',
     price: '~$499',
-    label: 'Check Price on Amazon',
+    label: 'Check Price at Bushnell',
   },
 
   // ── GPS WATCHES ──────────────────────────────────────────────────────────
@@ -104,10 +103,10 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Ion Elite — search (colourway/strap variants)
   'bushnell-ion-elite': {
-    url: 'https://www.amazon.com/s?k=Bushnell+Ion+Elite+GPS+golf+watch&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://bushnell.pxf.io/DWWLOa',
+    retailer: 'Bushnell',
     price: '~$149',
-    label: 'Check Price on Amazon',
+    label: 'Check Price at Bushnell',
   },
 
   // ── DRIVERS ──────────────────────────────────────────────────────────────
