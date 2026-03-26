@@ -1,0 +1,201 @@
+---
+// src/pages/courses/[city].astro
+// Generates: /courses/chicago-il/, /courses/phoenix-az/, etc.
+// These target "best golf courses in [city]" searches (500–5,000/mo each).
+// At 8 cities now → scales to all 50+ major metros by adding rows to cities.ts
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CITIES } from '../../data/cities';
+import { cityMeta } from '../../lib/seo';
+import { cityPageSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import type { GolfCity } from '../../data/types';
+
+export async function getStaticPaths() {
+  return CITIES.map(city => ({
+    params: { city: city.slug },
+    props: { city },
+  }));
+}
+
+interface Props { city: GolfCity }
+const { city } = Astro.props;
+
+const meta = cityMeta(city);
+const schemas: object[] = [
+  cityPageSchema(city),
+  breadcrumbSchema(meta.breadcrumbs),
+  faqSchema([
+    {
+      q: `What are the best public golf courses in ${city.city}?`,
+      a: `The best public golf courses in ${city.city} include: ${city.courses.filter(c => c.type === 'public').slice(0,3).map(c => c.name).join(', ')}. These offer the best combination of course quality, conditions, and value for weekend golfers.`,
+    },
+    {
+      q: `What is the best time of year to play golf in ${city.city}?`,
+      a: `The best golf season in ${city.city} is ${city.bestSeason}. ${city.bestSeason.includes('year') ? 'The mild climate allows year-round play.' : 'Outside of this window, weather can significantly impact your round.'}`,
+    },
+    {
+      q: `How much does it cost to play golf in ${city.city}?`,
+      a: `Public golf in ${city.city} ranges from $20–$200 depending on the course and time of day. Municipal courses typically run $20–$55. Semi-private and resort courses range from $60–$200. Twilight rates (after 3pm) can reduce costs by 30–50%.`,
+    },
+  ]),
+];
+
+const PUBLIC    = city.courses.filter(c => c.type === 'public');
+const SEMI_PRI  = city.courses.filter(c => c.type === 'semi-private');
+const RESORT    = city.courses.filter(c => c.type === 'resort');
+---
+
+<BaseLayout {meta} {schemas} activeNav="golf-lifestyle">
+
+  <header class="local-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/courses/">Golf Courses</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{city.city}, {city.state}</span>
+    </nav>
+    <span class="art-tag-lg tag-life">LOCAL GUIDE</span>
+    <h1>Best Golf Courses in {city.city}, {city.state} (2026)</h1>
+    <div class="author-box">
+      <div class="author-avatar" aria-hidden="true">CG</div>
+      <div>
+        <span class="author-name">Cubical Golfer Staff</span>
+        <span class="author-meta">
+          ⛳ {city.courses.length} courses reviewed &nbsp;·&nbsp;
+          📅 Updated: {city.dateModified} &nbsp;·&nbsp;
+          ✈️ Nearest airport: {city.nearbyAirport}
+        </span>
+      </div>
+      <span class="verified-badge">✅ Local Golf Guide</span>
+    </div>
+  </header>
+
+  <div class="local-body">
+
+    <div class="intro-box">
+      <p>{city.intro}</p>
+    </div>
+
+    <!-- Quick stats row -->
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px;">
+      <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;">
+        <strong style="font-size:28px;display:block;color:var(--green)">{city.courses.length}</strong>
+        <span style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em">Courses Reviewed</span>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;">
+        <strong style="font-size:16px;display:block;color:var(--green)">{city.bestSeason}</strong>
+        <span style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em">Best Season</span>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;">
+        <strong style="font-size:14px;display:block;color:var(--green)">{city.nearbyAirport}</strong>
+        <span style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em">Nearest Airport</span>
+      </div>
+    </div>
+
+    <!-- Public courses -->
+    {PUBLIC.length > 0 && (
+      <section aria-labelledby="public-h">
+        <h2 id="public-h" style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--text);">
+          🟢 Public Golf Courses in {city.city}
+        </h2>
+        {PUBLIC.map(course => (
+          <div class="course-card">
+            <h3>{course.name}</h3>
+            <div class="course-meta">
+              <span class="course-type">🏌️ {course.type}</span>
+              <span>💰 {course.price}</span>
+              <span>⛳ {course.holes} holes</span>
+              {course.rating && <span>📊 Rating: {course.rating}</span>}
+            </div>
+            <p class="course-notes">{course.notes}</p>
+          </div>
+        ))}
+      </section>
+    )}
+
+    <!-- Semi-private courses -->
+    {SEMI_PRI.length > 0 && (
+      <section aria-labelledby="semi-h" style="margin-top:40px">
+        <h2 id="semi-h" style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--text);">
+          🔵 Semi-Private Courses Near {city.city}
+        </h2>
+        {SEMI_PRI.map(course => (
+          <div class="course-card">
+            <h3>{course.name}</h3>
+            <div class="course-meta">
+              <span class="course-type">🏌️ {course.type}</span>
+              <span>💰 {course.price}</span>
+              <span>⛳ {course.holes} holes</span>
+              {course.rating && <span>📊 Rating: {course.rating}</span>}
+            </div>
+            <p class="course-notes">{course.notes}</p>
+          </div>
+        ))}
+      </section>
+    )}
+
+    <!-- Resort courses -->
+    {RESORT.length > 0 && (
+      <section aria-labelledby="resort-h" style="margin-top:40px">
+        <h2 id="resort-h" style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--text);">
+          ⭐ Resort Golf Near {city.city}
+        </h2>
+        {RESORT.map(course => (
+          <div class="course-card">
+            <h3>{course.name}</h3>
+            <div class="course-meta">
+              <span class="course-type">🏌️ {course.type}</span>
+              <span>💰 {course.price}</span>
+              <span>⛳ {course.holes} holes</span>
+              {course.rating && <span>📊 Rating: {course.rating}</span>}
+            </div>
+            <p class="course-notes">{course.notes}</p>
+          </div>
+        ))}
+      </section>
+    )}
+
+    <!-- FAQ — HTML only, schema in JSON-LD <head> -->
+    <div class="art-faq" style="margin-top:48px">
+      <h3>Frequently Asked Questions</h3>
+      <details class="faq-item">
+        <summary>What are the best public golf courses in {city.city}?</summary>
+        <div class="faq-answer">
+          The best public golf courses in {city.city} include:
+          {PUBLIC.slice(0,3).map((c,i) => <span>{i > 0 ? ', ' : ''}{c.name}</span>)}.
+          All offer excellent conditions and value for weekend golfers.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>What is the best time of year to play golf in {city.city}?</summary>
+        <div class="faq-answer">
+          The best golf season in {city.city} is {city.bestSeason}.
+          Plan tee times in advance during peak months — popular courses book up
+          2–4 weeks ahead.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>How much does it cost to play golf in {city.city}?</summary>
+        <div class="faq-answer">
+          Public golf in {city.city} ranges from $20–$200 depending on the course and tee time.
+          Municipal courses run $20–$55. Semi-private courses $60–$150.
+          Twilight rates after 3pm can cut peak pricing by 30–50%.
+        </div>
+      </details>
+    </div>
+
+    <!-- Internal links -->
+    <div class="rel-cluster" style="margin-top:36px">
+      <h4>Related Golf Guides</h4>
+      <div class="rel-links">
+        <a href="/courses/">Golf Courses in Other US Cities →</a>
+        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders for Your Round</a>
+        <a href="/best-golf-gps-watches/">Best Golf GPS Watches 2026</a>
+        <a href="/how-to-break-90/">How to Break 90 This Season</a>
+      </div>
+    </div>
+
+  </div>
+
+</BaseLayout>

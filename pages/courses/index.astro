@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CITIES } from '../../data/cities';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Best Golf Courses by City 2026 — Public Golf Near You',
+  description: 'Best public and semi-private golf courses in Chicago, Atlanta, Dallas, Phoenix, New York, LA, Houston & Miami. Prices, ratings and local tips for 2026.',
+  canonical: 'https://www.cubicalgolfer.com/courses/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
+  ogType: 'website' as const,
+  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Golf Courses', href: '/courses/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="golf-lifestyle">
+
+  <header class="local-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Golf Courses by City</span>
+    </nav>
+    <h1>Best Golf Courses Near You</h1>
+    <p>The best public and semi-private golf courses in major US cities — reviewed by weekend golfers who actually play them.</p>
+  </header>
+
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {CITIES.map(city => (
+        <a href={`/courses/${city.slug}/`} class="article-card">
+          <div class="art-thumb teal">
+            <span class="art-badge tag-life">LOCAL GUIDE</span>
+            <span aria-hidden="true">⛳</span>
+          </div>
+          <div class="art-body">
+            <h3>Best Golf Courses in {city.city}, {city.state}</h3>
+            <p>{city.courses.length} reviewed courses · Best season: {city.bestSeason}</p>
+            <div class="art-foot">
+              <span class="art-words">{city.courses.length} courses · Updated 2026</span>
+              <span class="art-read">See courses →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</BaseLayout>

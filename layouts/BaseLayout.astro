@@ -1,0 +1,211 @@
+---
+// src/layouts/BaseLayout.astro
+// Fixes in this version:
+//   - Added font preload to eliminate render-blocking (LCP improvement)
+//   - Added preconnect for fonts with crossorigin
+//   - Added og:image:type and og:locale
+//   - Homepage gets H1 via this layout (not the nav brand)
+//   - Removed render-blocking font request, replaced with display=swap preload
+
+import type { PageMeta } from '../data/types';
+import { VERIFICATION_TAG } from '../lib/seo';
+import '../styles/global.css';
+
+interface Props {
+  meta:    PageMeta;
+  schemas: object[];
+  activeNav?: string;
+}
+
+const { meta, schemas, activeNav = 'home' } = Astro.props;
+
+const NAV_ITEMS = [
+  { label: 'Home',             href: '/',                        key: 'home'          },
+  { label: 'Golf Gear Reviews', href: '/gear-reviews/',           key: 'gear-reviews'  },
+  { label: 'Golf Tech',         href: '/golf-tech/',              key: 'golf-tech'     },
+  { label: 'Golf Accessories',  href: '/golf-accessories/',       key: 'golf-accessories' },
+  { label: 'Improve Your Game', href: '/improve-your-golf-game/', key: 'improve-game'  },
+  { label: 'Golf Lifestyle',    href: '/golf-lifestyle/',         key: 'golf-lifestyle'},
+  { label: 'About',             href: '/about/',                  key: 'about'         },
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E3A28" />
+
+  <!-- Primary SEO -->
+  <title>{meta.title}</title>
+  <meta name="description" content={meta.description} />
+  <meta name="robots" content={meta.robots} />
+  <meta name="author" content="Cubical Golfer" />
+  <link rel="canonical" href={meta.canonical} />
+  <meta name="google-site-verification" content={VERIFICATION_TAG} />
+  <meta name="impact-site-verification" content="e92bb06a-0153-4dad-ac66-74301699e7b6" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content={meta.ogType} />
+  <meta property="og:title"       content={meta.title} />
+  <meta property="og:description" content={meta.description} />
+  <meta property="og:url"         content={meta.canonical} />
+  <meta property="og:site_name"   content="Cubical Golfer" />
+  <meta property="og:image"       content={meta.ogImage} />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type"   content="image/png" />
+  <meta property="og:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content={meta.title} />
+  <meta name="twitter:description" content={meta.description} />
+  <meta name="twitter:image"       content={meta.ogImage} />
+
+  <!-- Article dates -->
+  {meta.datePublished && <meta property="article:published_time" content={meta.datePublished} />}
+  {meta.dateModified  && <meta property="article:modified_time"  content={meta.dateModified}  />}
+
+  <!-- JSON-LD schemas — injected here ONLY (prevents duplicate field errors) -->
+  {schemas.map(schema => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
+
+  <!-- 
+    Font loading strategy:
+    1. preconnect for DNS early resolution
+    2. Preload the CSS itself with low-priority async load (display=swap)
+    3. <noscript> fallback
+    This eliminates render-blocking font impact on LCP.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="preload"
+    as="style"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+  />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    />
+  </noscript>
+</head>
+
+<body>
+  <a href="#main-content" class="skip">Skip to main content</a>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <a class="nav-brand" href="/" aria-label="Cubical Golfer — Home">
+      <div class="nav-logo" aria-hidden="true">CG</div>
+      <div>
+        <span class="site-name">Cubical Golfer</span>
+        <span class="site-tag">Escape the cubicle. Find the fairway.</span>
+      </div>
+    </a>
+
+    <button
+      class="nav-toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-links"
+      aria-label="Toggle menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="nav-links" id="nav-links" role="menubar">
+      {NAV_ITEMS.map(item => (
+        <a
+          href={item.href}
+          class={activeNav === item.key ? 'active' : ''}
+          role="menuitem"
+        >{item.label}</a>
+      ))}
+    </div>
+  </nav>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main id="main-content" tabindex="-1">
+    <slot />
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo" aria-hidden="true">CG</div>
+        <p>Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Gear Reviews</h4>
+        <a href="/gear-reviews/">Golf Gear Reviews</a>
+        <a href="/best-golf-rangefinders-2026/">Best Rangefinders 2026</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches</a>
+        <a href="/best-golf-putters-2026/">Best Golf Putters 2026</a>
+        <a href="/best-golf-bags-2026/">Best Golf Bags 2026</a>
+        <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers</a>
+        <a href="/best-golf-irons-2026/">Best Golf Irons 2026</a>
+        <a href="/best-golf-balls-2026/">Best Golf Balls 2026</a>
+        <a href="/golf-ball-compression-chart/">Ball Compression Chart</a>
+        <a href="/titleist-pro-v1-vs-pro-v1x/">Pro V1 vs Pro V1x</a>
+      </div>
+      <div class="footer-col">
+        <h4>Improve</h4>
+        <a href="/improve-your-golf-game/">Improvement Hub</a>
+        <a href="/how-to-fix-your-slice/">Fix Your Slice</a>
+        <a href="/how-to-break-90/">Break 90 Roadmap</a>
+        <a href="/how-to-improve-putting/">Improve Your Putting</a>
+        <a href="/golf-tips-for-beginners/">Tips for Beginners</a>
+        <a href="/average-golf-handicap/">Average Handicap Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Accessories & Gifts</h4>
+        <a href="/best-golf-gifts-for-him/">Best Golf Gifts for Him</a>
+        <a href="/best-golf-shoes-for-walking/">Best Golf Shoes for Walking</a>
+        <a href="/best-golf-gloves-hot-weather/">Best Golf Gloves</a>
+        <a href="/best-golf-accessories-under-50/">Accessories Under $50</a>
+        <a href="/25-golf-accessories-every-golfer-should-own/">25 Must-Have Accessories</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cubical Golfer · <a href="/about/" style="color:rgba(255,255,255,.5);text-decoration:underline;">Editorial Policy</a></p>
+      <p class="footer-disc">
+        ⚖️ Affiliate disclosure: we earn commissions from qualifying purchases at no extra cost to you.
+        All products independently purchased &amp; tested. Last updated March 2026.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('nav-toggle');
+      const links  = document.getElementById('nav-links');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        const open = links.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', function (e) {
+        if (!toggle.contains(e.target as Node) && !links.contains(e.target as Node)) {
+          links.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
