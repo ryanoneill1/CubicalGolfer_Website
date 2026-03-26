@@ -56,6 +56,11 @@ nav.site-nav {
   color: #fff; font-weight: 700; font-size: 14px;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
+.nav-logo-img {
+  width: 44px; height: 44px; border-radius: 10px;
+  object-fit: cover; flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
 .site-name { font-size: 15px; font-weight: 700; display: block; line-height: 1.2; }
 .site-tag  { font-size: 11px; color: var(--muted); display: block; }
 .nav-links { display: flex; align-items: center; gap: 2px; flex-wrap: wrap; }
@@ -137,6 +142,11 @@ nav.site-nav {
   width: 36px; height: 36px; border-radius: 50%;
   background: var(--gold); color: var(--text); font-weight: 800; font-size: 14px;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.author-avatar-img {
+  width: 40px; height: 40px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 2px solid rgba(255,255,255,.3);
 }
 .author-name  { font-weight: 700; color: #fff; display: block; }
 .author-meta  { font-size: 12px; color: rgba(255,255,255,.65); }
@@ -426,6 +436,11 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   color: #fff; font-weight: 700; font-size: 14px;
   display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
 }
+.footer-logo-img {
+  width: 56px; height: 56px; border-radius: 12px;
+  object-fit: cover; margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+}
 .footer-brand p { font-size: 13px; color: rgba(255,255,255,.55); line-height: 1.75; max-width: 220px; }
 .footer-col h4  { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.45); text-transform: uppercase; margin-bottom: 16px; }
 .footer-col a   { display: block; font-size: 13.5px; color: rgba(255,255,255,.65); margin-bottom: 10px; transition: color .2s; }
@@ -688,3 +703,70 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   padding: 8px;
   border: 1px solid var(--border);
 }
+
+/* ── HERO QUICK LINKS (above-fold affiliate navigation) ── */
+.hero-quick-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 16px 0 0;
+}
+.hero-quick-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,.75);
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background .15s, color .15s;
+  white-space: nowrap;
+}
+.hero-quick-link:hover {
+  background: rgba(255,255,255,.2);
+  color: #fff;
+}
+
+/* ── PRODUCT STAR RATINGS ── */
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 12px;
+  flex-wrap: wrap;
+}
+.stars {
+  color: #f5a623;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.rating-score {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+}
+.rating-count {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── HOMEPAGE TOP PICKS GRID ── */
+.home-picks {
+  padding: 64px clamp(1.5rem,5vw,4rem);
+  background: var(--green);
+}
+.home-picks .section-header { color: #fff; }
+.home-picks .section-header h2 { color: #fff; }
+.home-picks .section-header p  { color: rgba(255,255,255,.7); }
+.home-picks .section-eyebrow   { color: var(--gold); }
+.home-picks__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+@media (max-width: 900px) { .home-picks__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .home-picks__grid { grid-template-columns: 1fr; } }
