@@ -752,3 +752,21 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   font-size: 12px;
   color: var(--muted);
 }
+
+/* ── HOMEPAGE TOP PICKS GRID ── */
+.home-picks {
+  padding: 64px clamp(1.5rem,5vw,4rem);
+  background: var(--green);
+}
+.home-picks .section-header { color: #fff; }
+.home-picks .section-header h2 { color: #fff; }
+.home-picks .section-header p  { color: rgba(255,255,255,.7); }
+.home-picks .section-eyebrow   { color: var(--gold); }
+.home-picks__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 32px;
+}
+@media (max-width: 900px) { .home-picks__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .home-picks__grid { grid-template-columns: 1fr; } }

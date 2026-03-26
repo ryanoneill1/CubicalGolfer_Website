@@ -39,6 +39,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Bushnell',
     imgSrc: '/images/products/bushnell-tour-v6-shift.svg',
     imgAlt: 'Bushnell Tour V6 Shift Golf Rangefinder',
+    benefits: [
+        'PinSeeker JOLT locks onto flag in <0.3 seconds',
+        'Slope Switch — legal toggle for tournament play',
+        '±1 yard accuracy to 1,300 yards',
+      ],
   },
 
   // Precision Pro NX9 HD (slope switch model) — ASIN B0DP3GL8RN ✅ verified
@@ -50,6 +55,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/precision-pro-nx9-hd.svg',
     imgAlt: 'Precision Pro NX9 HD Golf Rangefinder',
+    benefits: [
+        'Adaptive slope technology adjusts for incline',
+        '1-year battery life — forget it\'s in your bag',
+        'Backed by a lifetime warranty',
+      ],
   },
 
   // Blue Tees Series 3 Max — search (ASIN varies by colour variant)
@@ -71,6 +81,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/garmin-approach-z82.svg',
     imgAlt: 'Garmin Approach Z82 GPS Laser Rangefinder',
+    benefits: [
+        'GPS + laser in one device',
+        'Live green view with hazard distances',
+        'Slope-adjusted yardages from 42,000 courses',
+      ],
   },
 
   // Bushnell Pro XE — search (multiple bundle variants)
@@ -94,6 +109,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/garmin-approach-s62.svg',
     imgAlt: 'Garmin Approach S62 GPS Golf Watch',
+    benefits: [
+        '42,000 course database preloaded',
+        'Full-colour touchscreen with green view',
+        'Automatic shot tracking & club suggestions',
+      ],
   },
 
   // Garmin Approach S42 — search (multiple colourway variants)
@@ -113,6 +133,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/shot-scope-v5.svg',
     imgAlt: 'Shot Scope V5 GPS Golf Watch',
+    benefits: [
+        'Automatic shot tracking — no button presses',
+        'Performance analytics for every club',
+        '40,000+ courses, 14-hour battery',
+      ],
   },
 
   // Bushnell Ion Elite — search (colourway/strap variants)
@@ -178,6 +203,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/titleist-pro-v1.svg',
     imgAlt: 'Titleist Pro V1 Golf Balls 2025',
+    benefits: [
+        'Soft feel with exceptional greenside spin',
+        'Consistent distance across all shot types',
+        'The #1 ball on the PGA Tour',
+      ],
   },
 
   // Callaway Chrome Tour 2026 — search (very new Jan 2026, single ASIN not yet stable)
@@ -324,6 +354,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/footjoy-weathersof-glove.svg',
     imgAlt: 'FootJoy WeatherSof Golf Glove',
+    benefits: [
+        '#1 selling golf glove in the world',
+        'SofTrex material grips in heat and light moisture',
+        'FlexZone knuckles for full range of motion',
+      ],
   },
 
   // Titleist Players Flex — search (size/hand variants prevent single ASIN)
@@ -368,6 +403,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/arccos-caddie-sensors.svg',
     imgAlt: 'Arccos Caddie Smart Sensors 3rd Gen',
+    benefits: [
+        'AI caddie suggests clubs based on your stats',
+        'Automatic tracking — no phone in pocket needed',
+        'Works with any irons or wedges',
+      ],
   },
 
   // Rapsodo MLM2PRO — ASIN B0BTPZMCSF ✅ verified

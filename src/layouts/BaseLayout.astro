@@ -46,16 +46,26 @@ const NAV_ITEMS = [
   <meta name="google-site-verification" content={VERIFICATION_TAG} />
   <meta name="impact-site-verification" content="e92bb06a-0153-4dad-ac66-74301699e7b6" />
 
+  <!-- Favicons — replaces default globe icon in browser tabs and Google search -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#1E3A28" />
+  <meta name="msapplication-TileColor" content="#1E3A28" />
+  <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+
   <!-- Open Graph -->
   <meta property="og:type"        content={meta.ogType} />
   <meta property="og:title"       content={meta.title} />
   <meta property="og:description" content={meta.description} />
   <meta property="og:url"         content={meta.canonical} />
   <meta property="og:site_name"   content="Cubical Golfer" />
-  <meta property="og:image"       content={meta.ogImage} />
+  <meta property="og:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:type"   content="image/png" />
+  <meta property="og:image:type"   content="image/jpeg" />
   <meta property="og:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
   <meta property="og:locale"      content="en_US" />
 
@@ -63,7 +73,8 @@ const NAV_ITEMS = [
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image"       content={meta.ogImage} />
+  <meta name="twitter:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
+  <meta name="twitter:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
 
   <!-- Article dates -->
   {meta.datePublished && <meta property="article:published_time" content={meta.datePublished} />}

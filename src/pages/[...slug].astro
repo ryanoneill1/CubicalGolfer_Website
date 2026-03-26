@@ -4,6 +4,7 @@
 import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
+import StickyBar     from '../components/StickyBar.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
@@ -162,6 +163,22 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
+  {/* Sticky bar for buying guides — uses first product with affiliate key */}
+  {isBuyingGuide && (() => {
+    const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
+    const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
+    if (!topAff) return null;
+    return (
+      <StickyBar
+        name={topRow.name}
+        price={topAff.price ?? ''}
+        url={topAff.url}
+        retailer={topAff.retailer}
+        badge={topRow.winner ? 'BEST PICK' : topRow.bestFor}
+      />
+    );
+  })()}
+
   <header class="art-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -235,6 +252,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                 emoji={article.emoji}
                 imgSrc={(aff as any).imgSrc}
                 imgAlt={(aff as any).imgAlt ?? row.name}
+                benefits={(aff as any).benefits}
               />
             );
           })}
