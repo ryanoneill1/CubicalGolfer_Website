@@ -706,27 +706,49 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── HERO QUICK LINKS (above-fold affiliate navigation) ── */
 .hero-quick-links {
+  margin: 24px 0 0;
+}
+.hero-quick-links__label {
+  font-size: 11px !important;
+  font-weight: 900 !important;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  opacity: 1 !important;
+  margin: 0 0 8px;
+  padding: 0;
+}
+/* extra specificity to beat hero p inheritance */
+.hero .hero-quick-links__label,
+.hero-quick-links .hero-quick-links__label {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+.hero-quick-links__pills {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: wrap;
-  margin: 16px 0 0;
 }
 .hero-quick-link {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
   font-weight: 600;
-  color: rgba(255,255,255,.75);
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  padding: 4px 12px;
-  border-radius: 20px;
+  color: #fff;
+  background: rgba(255,255,255,.12);
+  border: 1.5px solid rgba(255,255,255,.3);
+  padding: 6px 14px;
+  border-radius: 24px;
   text-decoration: none;
-  transition: background .15s, color .15s;
+  transition: background .15s, border-color .15s, color .15s;
   white-space: nowrap;
 }
 .hero-quick-link:hover {
-  background: rgba(255,255,255,.2);
-  color: #fff;
+  background: var(--gold, #C9A84C);
+  border-color: var(--gold, #C9A84C);
+  color: #1a1a1a;
 }
 
 /* ── PRODUCT STAR RATINGS ── */
