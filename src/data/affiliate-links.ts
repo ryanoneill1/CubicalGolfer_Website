@@ -170,6 +170,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/taylormade-qi35-max.svg',
     imgAlt: 'TaylorMade Qi35 Max Driver',
+    benefits: [
+        '60X Carbon Twist Face for fast ball speed',
+        'Inertia Generator lowers spin for more distance',
+        'Lightweight titanium construction — 460cc head',
+      ],
   },
 
   // Cobra Aerojet Max — search (shaft/loft variants)
@@ -180,6 +185,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/cobra-aerojet-max.svg',
     imgAlt: 'Cobra Aerojet Max Golf Driver',
+    benefits: [
+        'H.O.T. Face Technology for consistent distance',
+        'Extreme draw bias reduces slices',
+        'PWR-COR Technology for fast face speeds',
+      ],
   },
 
   // Ping G430 Max Driver — search (shaft/loft variants)
@@ -370,6 +380,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/titleist-players-flex.svg',
     imgAlt: 'Titleist Players Flex Golf Glove',
+    benefits: [
+        'Pure Cabretta leather — tour-level feel',
+        'Perforated design — most breathable leather glove',
+        'Moulds to your hand after 3-4 rounds',
+      ],
   },
 
   // Callaway Dawn Patrol Glove — search (size variants)
@@ -390,6 +405,11 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price on Amazon',
     imgSrc: '/images/products/footjoy-raingrip.svg',
     imgAlt: 'FootJoy RainGrip Golf Gloves 2-Pack',
+    benefits: [
+        'Grips better wet than most gloves grip dry',
+        'FiberSof microfibre palm construction',
+        'Essential for rain or humid conditions',
+      ],
   },
 
   // ── TECH / LAUNCH MONITORS / ANALYZERS ───────────────────────────────────
@@ -466,6 +486,11 @@ export const AFFILIATE: Record<string, {
     label: 'See Options on Amazon',
     imgSrc: '/images/products/alignment-sticks.svg',
     imgAlt: 'Golf Alignment Sticks 2-Pack Training Aid',
+    benefits: [
+        'Improves aim, path, ball position & hip turn',
+        'Used by every tour player and instructor',
+        '20+ drills — most useful training aid in golf',
+      ],
   },
 
   // Groove cleaning brush
@@ -506,6 +531,11 @@ export const AFFILIATE: Record<string, {
     label: 'See Options on Amazon',
     imgSrc: '/images/products/putting-mirror.svg',
     imgAlt: 'Golf Putting Mirror Training Aid',
+    benefits: [
+        'Shows eye position, face angle & stroke path',
+        '20 min/week eliminates most 3-putts',
+        'As effective as a $300 alignment lesson',
+      ],
   },
 
   // Impact tape / face stickers
@@ -516,6 +546,11 @@ export const AFFILIATE: Record<string, {
     label: 'See Options on Amazon',
     imgSrc: '/images/products/impact-tape.svg',
     imgAlt: 'Golf Club Face Impact Tape',
+    benefits: [
+        'Shows exactly where on the face you strike',
+        'Works on driver, irons, wedges & putter',
+        'One pack lasts months of practice sessions',
+      ],
   },
 
   // Eyeline Golf Edge Putting Cup
