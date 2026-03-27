@@ -210,7 +210,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
   {/* Sticky bar for buying guides — uses first product with affiliate key */}
-  {isBuyingGuide && (() => {
+  {(isBuyingGuide || article.comparisonTable) && (() => {
     const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
     const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
     if (!topAff) return null;
@@ -237,21 +237,23 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     <span class={`art-tag-lg ${TAG_CLASS[article.tag] || 'tag-buy'}`}>{article.tag}</span>
     <h1>{article.titleDisplay}</h1>
 
+  </header>
+
+  <article class="art-content">
+
+    <!-- ── Author / Trust Box ── -->
     <div class="author-box">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer author" class="author-avatar-img" width="40" height="40" />
-      <div>
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer Staff" class="author-avatar-img" width="48" height="48" />
+      <div style="flex:1">
         <span class="author-name">Cubical Golfer Staff</span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
-          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
+          📅 Last updated: {article.dateModified} &nbsp;·&nbsp;
           ⛳ Tested over 40+ real rounds
         </span>
       </div>
       <span class="verified-badge">✅ Independently Tested</span>
     </div>
-  </header>
-
-  <article class="art-content">
 
     <!-- Quick Verdict box for buying guides -->
     {isBuyingGuide && article.comparisonTable && (
