@@ -279,15 +279,24 @@ export const ARTICLES: Article[] = [
         { name: 'Alignment sticks 2-pack (~$12)', desc: 'Place in the ground to see your swing path vs target line during range sessions.', affiliateKey: 'alignment-sticks' },
       ]},
     ],
+    comparisonTable: {
+      headers: ['Product', 'How It Fixes Your Slice', 'Price', 'Best For'],
+      rows: [
+        { affiliateKey: 'alignment-sticks', name: 'Alignment Sticks 2-Pack', bestFor: 'Best Swing Path Fix', price: '~$12', feature1: 'Corrects path + face angle visually', feature2: 'Range sessions', winner: true },
+        { affiliateKey: 'impact-tape', name: 'Golf Impact Tape', bestFor: 'Best Face Data', price: '~$12', feature1: 'Shows face contact on every swing', feature2: 'Immediate feedback', winner: false },
+        { affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Paradym AI Smoke Max', bestFor: 'Best Draw-Bias Driver', price: '~$399', feature1: 'AI face reduces sidespin on misses', feature2: 'Equipment fix', winner: false },
+      ],
+    },
     faq: [
       { q: 'What actually causes a golf slice?', a: "An open clubface relative to the swing path at impact. The ball starts in the direction of the path and curves toward the face direction. Fix the face angle first, then the path." },
       { q: 'How long does it take to fix a golf slice?', a: "Most weekend golfers see 50% reduction within 2–3 range sessions with grip and path fixes. A complete fix typically takes 4–6 weeks of deliberate practice." },
       { q: 'Should I get a draw-biased driver to fix my slice?', a: "Fix your grip and path first — those are free and permanent. A draw-biased driver is a useful band-aid but won't solve the root cause." },
+      { q: 'What is the cheapest way to fix a slice?', a: "Two alignment sticks ($12) placed on the ground showing your target line and swing path is the most effective and cheapest slice fix available. Used by every tour player and instructor worldwide." },
     ],
     related: [
       { slug: '/how-to-break-90/', label: "How to Break 90: Weekend Golfer's Roadmap" },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
-      { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
+      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids 2026' },
     ],
   },
 
@@ -323,15 +332,24 @@ export const ARTICLES: Article[] = [
         { name: 'Lag putt from over 30 feet', desc: 'Focus on a 3-foot circle, not the hole.' },
       ]},
     ],
+    comparisonTable: {
+      headers: ['Product', 'Why It Helps Break 90', 'Price', 'Best For'],
+      rows: [
+        { affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD Rangefinder', bestFor: 'Best Value Rangefinder', price: '~$169', feature1: 'Exact pin yardage every shot', feature2: 'Weekend golfers', winner: true },
+        { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall Rangefinder', price: '~$329', feature1: 'Slope-toggle for tournament play', feature2: 'Serious improvers', winner: false },
+        { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'Best Putting Aid', price: '~$25', feature1: 'Eliminates 3-putts fastest', feature2: 'Short game focus', winner: false },
+      ],
+    },
     faq: [
       { q: 'What score do you need to break 90 in golf?', a: "Breaking 90 means shooting 89 or lower. On a par-72 course, that's 17 over par. You can make 3–4 double bogeys and still shoot 89 as long as you eliminate triples." },
       { q: 'What handicap do you need to break 90?', a: "To consistently break 90, you typically need a handicap index of around 17–18 or lower." },
       { q: 'What is the fastest way to lower your golf score?', a: "Eliminate blow-up holes. Audit your last 5 scorecards and identify your disaster holes. On those holes, make bogey your target. Play safe. Chip out. Lay up." },
+      { q: 'Does a rangefinder help you break 90?', a: "Yes — significantly. Guessing yardages leads to wrong club selection, which causes blow-up holes. A rangefinder like the Precision Pro NX9 HD ($169) gives you exact pin distance on every shot, which typically saves 3–5 strokes per round for golfers in the 90–105 range." },
     ],
     related: [
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice First' },
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
-      { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
     ],
   },
 
@@ -360,14 +378,23 @@ export const ARTICLES: Article[] = [
       { h2: 'Fix 2: Tempo Training', body: "The ideal putting stroke has a 2:1 ratio of backswing to follow-through time. Use a free metronome app at 72 BPM — backstroke on beat 1, through-stroke on beats 2 and 3." },
       { h2: 'Fix 3: Distance Control — The Clock Drill', body: "Set up putts at 3, 6, 9, 12, 15, and 18 feet. Goal: leave every miss within 18 inches. All 6 'tap-ins' counts as a round of 12. This trains the distance calibration that eliminates 3-putts." },
     ],
+    comparisonTable: {
+      headers: ['Product', 'What It Fixes', 'Price', 'Best For'],
+      rows: [
+        { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'Best Alignment Aid', price: '~$25', feature1: 'Eye position + face angle', feature2: 'All handicaps', winner: true },
+        { affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup', bestFor: 'Best Home Drill', price: '~$35', feature1: 'Forces center-face contact', feature2: 'Indoor practice', winner: false },
+        { affiliateKey: 'odyssey-white-hot-og', name: 'Odyssey White Hot OG', bestFor: 'Best Putter Upgrade', price: '~$199', feature1: 'Most forgiving mallet head', feature2: 'Any stroke type', winner: false },
+      ],
+    },
     faq: [
       { q: 'How can I stop 3-putting in golf?', a: "On putts over 30 feet, focus on leaving the ball within 3 feet. Practice the clock drill to dial in distance control. On short putts, pick a specific spot on the back of the cup to aim at." },
       { q: 'How do I aim my putter correctly?', a: "Stand behind the ball and pick an intermediate target 6 inches in front of your ball. Set your putter face perpendicular to that target, then set your feet parallel. Most golfers aim right of target without realizing it." },
+      { q: 'What is the best training aid for putting?', a: "A putting mirror ($25) is the highest-ROI putting training aid available. It simultaneously shows your eye position, putter face angle, and stroke path — three things that most golfers have never seen in real time. Used daily by tour players and coaches." },
     ],
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Golf Putters 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 — Putting Is 40% of It' },
-      { slug: '/best-golf-accessories-under-50/', label: 'Putting Mirror — The $25 Fix' },
+      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice Next' },
     ],
   },
@@ -396,6 +423,14 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Step-Up: TaylorMade RBZ Speed Lite', badge: 'BEST STEP-UP', body: "For beginners who want something they won't outgrow for 3–4 years. The driver and fairway wood are proper TaylorMade equipment.", price: '~$499' },
       { h2: 'What to Skip Completely', body: "Avoid sets under $150 — shafts are too heavy and inconsistent. Skip blade irons until you break 90. Skip 1, 2, and 3 irons completely." },
     ],
+    comparisonTable: {
+      headers: ['Club Set', 'Best For', 'Price', 'Clubs Included', 'Bag'],
+      rows: [
+        { affiliateKey: 'wilson-profile-sgi', name: 'Wilson Profile SGI', bestFor: 'BEST OVERALL', price: '~$349', feature1: '13 clubs', feature2: 'Yes', winner: true },
+        { affiliateKey: 'callaway-strata', name: 'Callaway Strata', bestFor: 'BEST VALUE', price: '~$249', feature1: '12 clubs', feature2: 'Yes', winner: false },
+        { affiliateKey: 'taylormade-rbz-lite', name: 'TaylorMade RBZ Speed Lite', bestFor: 'BEST STEP-UP', price: '~$499', feature1: '11 clubs', feature2: 'Yes', winner: false },
+      ],
+    },
     faq: [
       { q: 'What golf clubs should a complete beginner buy?', a: "A complete beginner should start with a full set package: driver, 3-wood, 4-hybrid, 5–9 irons, pitching wedge, and putter. The Wilson Profile SGI (~$299) or Callaway Strata (~$249) are the best options." },
       { q: 'How much should a beginner spend on golf clubs?', a: "$200–$400 for a complete club set. If budget is tight, the Callaway Strata at $249 is excellent. If you can stretch to $350–$400, the Wilson Profile SGI is a step up." },
@@ -403,7 +438,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-bags-2026/', label: 'Best Golf Bags 2026 — What Beginners Need' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
-      { slug: '/average-golf-handicap/', label: 'Average Golf Handicap for Beginners' },
+      { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
     ],
   },
 
@@ -506,6 +541,14 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Portable Launch Monitor: Rapsodo MLM2PRO', badge: 'BEST LAUNCH DATA', body: "For $699 you get professional-grade launch monitor data: ball speed, club speed, launch angle, spin rate, carry, total, and shot shape — plus video overlay from your phone.", price: '~$699 at Rapsodo' },
       { h2: 'Best Budget: Voice Caddie Swing Caddie SC4 PRO', badge: 'BEST BUDGET', body: "The SC4 PRO (2024/2025 model) is a significant upgrade on the original SC4. Portable Doppler radar that tracks ball speed, swing speed, launch angle, spin rate, and carry distance. Built-in display with voice output — no phone required. Compatible with E6 Connect for simulator play. No ongoing subscription for core data.", price: '~$499' },
     ],
+    comparisonTable: {
+      headers: ['Analyzer', 'Best For', 'Price', 'Key Feature', 'Subscription'],
+      rows: [
+        { affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie Sensors', bestFor: 'BEST OVERALL', price: '~$179', feature1: 'Auto shot-tracking', feature2: '$99/yr', winner: true },
+        { affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'BEST LAUNCH DATA', price: '~$699', feature1: 'Real launch monitor data', feature2: 'None for core', winner: false },
+        { affiliateKey: 'swing-caddie-sc4-pro', name: 'Swing Caddie SC4 PRO', bestFor: 'BEST BUDGET', price: '~$499', feature1: 'Doppler radar + voice', feature2: 'None', winner: false },
+      ],
+    },
     faq: [
       { q: 'Is Arccos worth it for a weekend golfer?', a: "Yes, if you play 15+ rounds per year. Arccos becomes significantly more valuable after 10 rounds when its AI starts making personalized recommendations based on your actual shot patterns." },
       { q: 'What is the difference between Arccos and Shot Scope?', a: "Both automatically track every shot. Arccos uses your phone's GPS (more accurate, requires phone on course). Shot Scope V5 has its own GPS (no phone needed). Shot Scope is better for pure round tracking; Arccos for detailed analysis." },
@@ -885,14 +928,22 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Ventilation: Titleist Players Flex', badge: 'BEST VENTILATION', body: "Perforations cover nearly the entire back — most breathable glove tested. Pure Cabretta palm for excellent feel.", price: '~$22' },
       { h2: 'Best Value: Callaway Dawn Patrol', body: "Three for $35. Solidly made, breathable, grips well when warm.", price: '~$12 each / 3 for $35' },
     ],
+    comparisonTable: {
+      headers: ['Glove', 'Best For', 'Price', 'Material', 'Weather'],
+      rows: [
+        { affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof', bestFor: 'BEST OVERALL', price: '~$18', feature1: 'Synthetic', feature2: 'All-weather', winner: true },
+        { affiliateKey: 'titleist-players-flex', name: 'Titleist Players Flex', bestFor: 'BEST PREMIUM', price: '~$22', feature1: 'Cabretta leather', feature2: 'Dry/warm', winner: false },
+        { affiliateKey: 'callaway-dawn-patrol', name: 'Callaway Dawn Patrol', bestFor: 'BEST VALUE', price: '~$12', feature1: 'Synthetic', feature2: 'All conditions', winner: false },
+      ],
+    },
     faq: [
       { q: 'What type of golf glove is best for hot weather?', a: "Look for gloves with mesh or perforated panels on the back and moisture-wicking synthetic leather on the palm. The FootJoy WeatherSof and Titleist Players Flex are the top picks." },
       { q: 'How often should you replace a golf glove?', a: "Every 15–20 rounds, or when the grip starts slipping during the swing. In hot weather gloves wear out faster — keep 2–3 in your bag." },
     ],
     related: [
+      { slug: '/best-golf-gloves-for-men/', label: "Best Men's Golf Gloves 2026" },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Should Own' },
-      { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
     ],
   },
 

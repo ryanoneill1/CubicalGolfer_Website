@@ -102,8 +102,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   },
   'gloves': {
     'BEST OVERALL':     'footjoy-weathersof-glove',
-    // FIXED: was 'footjoy-weathersof-glove' — Titleist Players Flex is a distinct product
-    'BEST VENTILATION': 'titleist-players-flex',
+    'BEST VENTILATION': 'footjoy-weathersof-glove',
+    'BEST PREMIUM':     'titleist-players-flex',
+    'BEST VALUE':       'callaway-dawn-patrol',
   },
   'swing-analyzers': {
     'BEST OVERALL':     'arccos-caddie-sensors',
@@ -158,10 +159,40 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST FEEDBACK': 'impact-tape',
     'BEST PUTTING':  'putting-mirror',
   },
+  'fix-slice': {
+    'BEST SWING PATH FIX': 'alignment-sticks',
+    'BEST FACE DATA':      'impact-tape',
+    'BEST DRAW-BIAS DRIVER': 'callaway-paradym-ai-smoke-max',
+  },
+  'break-90': {
+    'BEST VALUE RANGEFINDER':   'precision-pro-nx9-hd',
+    'BEST OVERALL RANGEFINDER': 'bushnell-tour-v6-shift',
+    'BEST PUTTING AID':         'putting-mirror',
+  },
+  'improve-putting': {
+    'BEST ALIGNMENT AID': 'putting-mirror',
+    'BEST HOME DRILL':    'eyeline-putting-cup',
+    'BEST PUTTER UPGRADE': 'odyssey-white-hot-og',
+  },
   'best-golf-gloves-men': {
     'BEST OVERALL':   'footjoy-weathersof-glove',
     'BEST PREMIUM':   'titleist-players-flex',
     'BEST WET WEATHER': 'footjoy-raingrip',
+  },
+  'beginner-sets': {
+    'BEST OVERALL': 'wilson-profile-sgi',
+    'BEST VALUE':   'callaway-strata',
+    'BEST STEP-UP': 'taylormade-rbz-lite',
+  },
+  'swing-analyzers': {
+    'BEST OVERALL':     'arccos-caddie-sensors',
+    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    'BEST BUDGET':      'swing-caddie-sc4-pro',
+  },
+  'gloves': {
+    'BEST OVERALL':     'footjoy-weathersof-glove',
+    'BEST PREMIUM':     'titleist-players-flex',
+    'BEST VALUE':       'callaway-dawn-patrol',
   },
   'best-budget-drivers': {
     'BEST OVERALL': 'callaway-paradym-ai-smoke-max',
@@ -332,7 +363,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
     {article.sections.map((section, idx) => {
       const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || ''];
-      const aff = productId ? getAffiliateLink(productId) : null;
+      const aff = (productId && productId.length > 0) ? getAffiliateLink(productId) : null;
       return (
         <div class="art-section">
           <h2>{section.h2}</h2>
@@ -349,10 +380,10 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </div>
           )}
 
-          {/* Product image — real if available, emoji fallback otherwise */}
-          {section.badge && isBuyingGuide && (() => {
-            const sectionImgSrc = aff ? (aff as any).imgSrc : null;
-            const sectionImgAlt = aff ? (aff as any).imgAlt ?? section.h2 : section.h2;
+          {/* Product image — only render when product is mapped and has an image */}
+          {section.badge && isBuyingGuide && aff && (() => {
+            const sectionImgSrc = (aff as any).imgSrc ?? null;
+            const sectionImgAlt = (aff as any).imgAlt ?? section.h2;
             return (
               <div class="product-img-wrap">
                 {sectionImgSrc ? (
