@@ -9,6 +9,12 @@ import { CITIES } from '../../data/cities';
 import { cityMeta } from '../../lib/seo';
 import { cityPageSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 import type { GolfCity } from '../../data/types';
+import { getAffiliateLink } from '../../data/affiliate-links';
+
+// Top gear picks for golf trips
+const rangefinder = getAffiliateLink('precision-pro-nx9-hd');
+const gpsWatch    = getAffiliateLink('garmin-approach-s42');
+const bestRanger  = getAffiliateLink('bushnell-tour-v6-shift');
 
 export async function getStaticPaths() {
   return CITIES.map(city => ({
@@ -47,6 +53,34 @@ const RESORT    = city.courses.filter(c => c.type === 'resort');
 
 <BaseLayout {meta} {schemas} activeNav="golf-lifestyle">
 
+  {/* Sticky bar — rangefinder recommendation */}
+  <div class="sticky-bar" id="sticky-bar" aria-label="Gear recommendation" role="complementary">
+    <div class="sticky-bar__inner">
+      <div class="sticky-bar__label">
+        <span class="sticky-bar__badge">TRIP ESSENTIAL</span>
+        <span class="sticky-bar__name">Precision Pro NX9 HD Rangefinder</span>
+      </div>
+      <div class="sticky-bar__right">
+        <span class="sticky-bar__price">{rangefinder.price}</span>
+        <a href={rangefinder.url} class="sticky-bar__btn" target="_blank" rel="nofollow noopener sponsored">
+          See Current Price →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const csBar = document.getElementById('sticky-bar');
+    if (csBar) {
+      const onS = () => {
+        const y = window.scrollY, dh = document.body.scrollHeight, wh = window.innerHeight;
+        csBar.style.opacity = (y > 400 && y < dh - wh - 200) ? '1' : '0';
+        csBar.style.pointerEvents = (y > 400 && y < dh - wh - 200) ? 'auto' : 'none';
+      };
+      window.addEventListener('scroll', onS, { passive: true });
+    }
+  </script>
+
   <header class="local-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -57,21 +91,64 @@ const RESORT    = city.courses.filter(c => c.type === 'resort');
     </nav>
     <span class="art-tag-lg tag-life">LOCAL GUIDE</span>
     <h1>Best Golf Courses in {city.city}, {city.state} (2026)</h1>
+  </header>
+
+  <div class="local-body">
+
+    <!-- ── Author Box — white content area ── -->
     <div class="author-box">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer author" class="author-avatar-img" width="40" height="40" />
-      <div>
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer Staff" class="author-avatar-img" width="48" height="48" />
+      <div style="flex:1">
         <span class="author-name">Cubical Golfer Staff</span>
         <span class="author-meta">
           ⛳ {city.courses.length} courses reviewed &nbsp;·&nbsp;
-          📅 Updated: {city.dateModified} &nbsp;·&nbsp;
+          📅 Last updated: {city.dateModified} &nbsp;·&nbsp;
           ✈️ Nearest airport: {city.nearbyAirport}
         </span>
       </div>
       <span class="verified-badge">✅ Local Golf Guide</span>
     </div>
-  </header>
 
-  <div class="local-body">
+    <!-- ── Gear for your golf trip ── -->
+    <div style="overflow-x:auto;margin:0 0 32px">
+      <table class="cmp-table" style="width:100%;border-collapse:collapse;">
+        <caption style="text-align:left;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:8px">Essential Gear for Your {city.city} Golf Trip</caption>
+        <thead>
+          <tr>
+            <th style="text-align:left;padding:10px 12px;background:var(--green);color:#fff;border-radius:8px 0 0 0;font-size:13px">Product</th>
+            <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;font-size:13px">Price</th>
+            <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;font-size:13px">Why You Need It</th>
+            <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;border-radius:0 8px 0 0;font-size:13px">Buy</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f9f6ef">
+            <td style="padding:10px 12px;font-weight:700;font-size:13px">Precision Pro NX9 HD Rangefinder</td>
+            <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{rangefinder.price}</td>
+            <td style="padding:10px 12px;text-align:center;font-size:12px">Exact yardages on unfamiliar courses</td>
+            <td style="padding:10px 12px;text-align:center">
+              <a href={rangefinder.url} class="product-card__cta" style="display:inline-block;padding:7px 13px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Price →</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:10px 12px;font-weight:700;font-size:13px">Garmin Approach S42 GPS Watch</td>
+            <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{gpsWatch.price}</td>
+            <td style="padding:10px 12px;text-align:center;font-size:12px">Course maps + hazard distances</td>
+            <td style="padding:10px 12px;text-align:center">
+              <a href={gpsWatch.url} class="product-card__cta" style="display:inline-block;padding:7px 13px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Price →</a>
+            </td>
+          </tr>
+          <tr style="background:#f9f6ef">
+            <td style="padding:10px 12px;font-weight:700;font-size:13px">Bushnell Tour V6 Shift</td>
+            <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{bestRanger.price}</td>
+            <td style="padding:10px 12px;text-align:center;font-size:12px">Best-in-class for bucket-list rounds</td>
+            <td style="padding:10px 12px;text-align:center">
+              <a href={bestRanger.url} class="product-card__cta" style="display:inline-block;padding:7px 13px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Price →</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="intro-box">
       <p>{city.intro}</p>

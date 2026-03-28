@@ -56,6 +56,41 @@ const PRODUCT_NAMES: Record<string, string> = {
 
 <BaseLayout {meta} {schemas} activeNav="home">
 
+  {/* Sticky bar — shows winner with buy link */}
+  {PRODUCT_AFFILIATE_MAP[c.winner] && (() => {
+    const winAff = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]);
+    const winName = PRODUCT_NAMES[c.winner] || c.winner;
+    return (
+      <div class="sticky-bar" id="sticky-bar" aria-label="Winner quick access" role="complementary">
+        <div class="sticky-bar__inner">
+          <div class="sticky-bar__label">
+            <span class="sticky-bar__badge">🏆 WINNER</span>
+            <span class="sticky-bar__name">{winName}</span>
+          </div>
+          <div class="sticky-bar__right">
+            <span class="sticky-bar__price">{winAff.price}</span>
+            <a href={winAff.url} class="sticky-bar__btn" target="_blank" rel="nofollow noopener sponsored"
+               aria-label={`Buy ${winName}`}>
+              See Current Price →
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  })()}
+
+  <script>
+    const bar2 = document.getElementById('sticky-bar');
+    if (bar2) {
+      const onS = () => {
+        const y = window.scrollY, dh = document.body.scrollHeight, wh = window.innerHeight;
+        bar2.style.opacity = (y > 400 && y < dh - wh - 200) ? '1' : '0';
+        bar2.style.pointerEvents = (y > 400 && y < dh - wh - 200) ? 'auto' : 'none';
+      };
+      window.addEventListener('scroll', onS, { passive: true });
+    }
+  </script>
+
   <header class="compare-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -66,17 +101,60 @@ const PRODUCT_NAMES: Record<string, string> = {
     </nav>
     <span class="art-tag-lg tag-cmp">COMPARISON</span>
     <h1>{c.title}</h1>
-    <div class="author-box">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer author" class="author-avatar-img" width="40" height="40" />
-      <div>
-        <span class="author-name">Cubical Golfer Staff</span>
-        <span class="author-meta">📅 Updated: {c.dateModified} &nbsp;·&nbsp; ⛳ Tested side-by-side</span>
-      </div>
-      <span class="verified-badge">✅ Independently Tested</span>
-    </div>
   </header>
 
   <div class="compare-body">
+
+    <!-- ── Author Box — in white content area ── -->
+    <div class="author-box">
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer Staff" class="author-avatar-img" width="48" height="48" />
+      <div style="flex:1">
+        <span class="author-name">Cubical Golfer Staff</span>
+        <span class="author-meta">📅 Last updated: {c.dateModified} &nbsp;·&nbsp; ⛳ Tested side-by-side</span>
+      </div>
+      <span class="verified-badge">✅ Independently Tested</span>
+    </div>
+
+    <!-- ── Side-by-side comparison table ── -->
+    {(affA || affB) && (
+      <div style="overflow-x:auto;margin:0 0 32px">
+        <table class="cmp-table" style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:10px 12px;background:var(--green);color:#fff;border-radius:8px 0 0 0;font-size:13px;">Feature</th>
+              <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;font-size:13px;">{PRODUCT_NAMES[c.productA] || c.productA}</th>
+              <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;border-radius:0 8px 0 0;font-size:13px;">{PRODUCT_NAMES[c.productB] || c.productB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f9f6ef">
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Price</td>
+              <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{affA?.price ?? '—'}</td>
+              <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{affB?.price ?? '—'}</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Retailer</td>
+              <td style="padding:10px 12px;text-align:center;font-size:13px">{affA?.retailer ?? '—'}</td>
+              <td style="padding:10px 12px;text-align:center;font-size:13px">{affB?.retailer ?? '—'}</td>
+            </tr>
+            <tr style="background:#f9f6ef">
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Winner?</td>
+              <td style="padding:10px 12px;text-align:center">{c.winner === c.productA ? '🏆 Winner' : '—'}</td>
+              <td style="padding:10px 12px;text-align:center">{c.winner === c.productB ? '🏆 Winner' : '—'}</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Buy Now</td>
+              <td style="padding:10px 12px;text-align:center">
+                {affA && <a href={affA.url} class="product-card__cta" style="display:inline-block;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Price →</a>}
+              </td>
+              <td style="padding:10px 12px;text-align:center">
+                {affB && <a href={affB.url} class="product-card__cta" style="display:inline-block;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Price →</a>}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    )}
 
     <!-- Buy both options — above the fold -->
     {(affA || affB) && (
