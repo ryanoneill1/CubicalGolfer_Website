@@ -64,7 +64,7 @@ export function comparisonMeta(c: Comparison): PageMeta {
 }
 
 export function cityMeta(city: GolfCity): PageMeta {
-  const title = truncateTitle(`Best Golf Courses in ${city.city}, ${city.state} (2026)`);
+  const title = truncateTitle(`Best Public Golf Courses Near ${city.city}, ${city.stateFullName} 2026`);
   const description = clampDesc(
     `${city.courses.length} best public & semi-private golf courses in ${city.city}, ${city.stateFullName} — reviewed with prices, ratings & local tips for 2026.`
   );

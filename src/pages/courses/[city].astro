@@ -262,6 +262,31 @@ const RESORT    = city.courses.filter(c => c.type === 'resort');
       </details>
     </div>
 
+    <!-- Final Recommendation -->
+    <div class="verdict-box" style="margin:40px 0 32px">
+      <h2 style="font-size:20px;font-weight:800;color:var(--green);margin-bottom:12px">
+        🏁 Final Recommendation — Gear for Your {city.city} Golf Trip
+      </h2>
+      <p style="font-size:15px;line-height:1.65;margin-bottom:16px">
+        On an unfamiliar course, the right gear matters more than anywhere else.
+        A rangefinder gives you exact pin distances every shot — the <strong>Precision Pro NX9 HD (~$169)</strong> is the best value pick with a lifetime warranty.
+        For course maps and hazard distances on your wrist, the <strong>Garmin Approach S42 (~$249)</strong> covers 42,000+ courses worldwide.
+        Bring three fresh gloves for a two-day trip — <strong>FootJoy WeatherSof (~$18/pair)</strong> handles any weather.
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href={rangefinder.url} class="product-card__cta"
+           style="display:inline-flex;align-items:center;padding:11px 20px;background:var(--gold);color:#1a1a1a;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px"
+           target="_blank" rel="nofollow noopener sponsored">
+          Precision Pro NX9 HD — {rangefinder.price} →
+        </a>
+        <a href={gpsWatch.url} class="product-card__cta"
+           style="display:inline-flex;align-items:center;padding:11px 20px;background:var(--green);color:#fff;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px"
+           target="_blank" rel="nofollow noopener sponsored">
+          Garmin S42 — {gpsWatch.price} →
+        </a>
+      </div>
+    </div>
+
     <!-- Internal links -->
     <div class="rel-cluster" style="margin-top:36px">
       <h4>Related Golf Guides</h4>

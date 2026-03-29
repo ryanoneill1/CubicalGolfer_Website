@@ -224,6 +224,25 @@ const PRODUCT_NAMES: Record<string, string> = {
     <h2>Full Comparison</h2>
     <p>{c.verdict}</p>
 
+    <!-- ── Final Recommendation ── -->
+    <div class="verdict-box" style="margin:32px 0">
+      <h2 style="font-size:20px;font-weight:800;color:var(--green);margin-bottom:12px">
+        🏁 Final Recommendation
+      </h2>
+      <p style="font-size:15px;line-height:1.65;margin-bottom:16px">{c.winnerReason}</p>
+      {PRODUCT_AFFILIATE_MAP[c.winner] && (() => {
+        const winAff = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]);
+        const winName = PRODUCT_NAMES[c.winner] || c.winner;
+        return (
+          <a href={winAff.url} class="product-card__cta"
+             style="display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:var(--green);color:#fff;border-radius:8px;text-decoration:none;font-weight:800;font-size:15px"
+             target="_blank" rel="nofollow noopener sponsored">
+            Buy {winName} — {winAff.price} →
+          </a>
+        );
+      })()}
+    </div>
+
     <!-- FAQ — JSON-LD only, no microdata -->
     {c.faq && c.faq.length > 0 && (
       <div class="art-faq">
