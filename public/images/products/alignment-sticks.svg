@@ -1,15 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#e87722"/>
-      <stop offset="100%" stop-color="#b55a00"/>
-    </linearGradient>
-  </defs>
-  <rect width="280" height="200" fill="url(#bg)" rx="8"/>
-  <text x="140" y="90" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="52" fill="white" opacity="0.9">📏</text>
-  <text x="140" y="130" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="11" font-weight="600" fill="white" opacity="0.85" letter-spacing="1">TRAINING AID</text>
-  <text x="140" y="150" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="10" fill="white" opacity="0.6">Image coming soon</text>
+  <rect width="280" height="200" fill="#f8f9fa" rx="8"/>
+  <!-- Two alignment sticks crossing for training setup -->
+  <!-- Stick 1 - horizontal (target line) -->
+  <rect x="30" y="93" width="220" height="8" fill="#e63946" rx="4"/>
+  <!-- Stick 2 - parallel (foot line) -->
+  <rect x="30" y="113" width="220" height="8" fill="#f4a261" rx="4"/>
+  <!-- Golf ball position marker -->
+  <circle cx="110" cy="97" r="6" fill="white" stroke="#ccc" stroke-width="1"/>
+  <!-- Feet position indicators -->
+  <rect x="98" y="118" width="14" height="5" fill="#aaa" rx="2" opacity="0.5"/>
+  <rect x="118" y="118" width="14" height="5" fill="#aaa" rx="2" opacity="0.5"/>
+  <!-- Small arrow showing target direction -->
+  <polygon points="240,97 252,93 252,101" fill="#e63946"/>
+  <!-- Label -->
+  <text x="62" y="89" font-family="system-ui,sans-serif" font-size="9" fill="#e63946" font-weight="600">TARGET LINE</text>
+  <text x="62" y="132" font-family="system-ui,sans-serif" font-size="9" fill="#f4a261" font-weight="600">FOOT LINE</text>
+  <text x="140" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#333">Alignment Sticks 2-Pack</text>
+  <text x="140" y="176" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#666">Golf Training Aid</text>
 </svg>

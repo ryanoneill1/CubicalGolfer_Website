@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#002868"/>
-      <stop offset="100%" stop-color="#0040a0"/>
-    </linearGradient>
-  </defs>
-  <rect width="280" height="200" fill="url(#bg)" rx="8"/>
-  <text x="140" y="90" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="52" fill="white" opacity="0.9">⛳</text>
-  <text x="140" y="130" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="11" font-weight="600" fill="white" opacity="0.85" letter-spacing="1">IRONS</text>
-  <text x="140" y="150" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="10" fill="white" opacity="0.6">Image coming soon</text>
+  <rect width="280" height="200" fill="#f8f9fa" rx="8"/>
+  <rect x="134" y="25" width="7" height="122" fill="#bbb" rx="2" transform="rotate(-2,137,86)"/>
+  <rect x="103" y="128" width="66" height="28" fill="#1a1a1a" rx="3"/>
+  <rect x="103" y="128" width="66" height="18" fill="#2a2a2a" rx="3 3 0 0"/>
+  <rect x="106" y="131" width="58" height="14" fill="#1a1a1a" rx="2"/>
+  <line x1="108" y1="133" x2="162" y2="133" stroke="#444" stroke-width="0.8"/>
+  <line x1="108" y1="136" x2="162" y2="136" stroke="#444" stroke-width="0.8"/>
+  <line x1="108" y1="139" x2="162" y2="139" stroke="#444" stroke-width="0.8"/>
+  <line x1="108" y1="142" x2="162" y2="142" stroke="#444" stroke-width="0.8"/>
+  <text x="136" y="122" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#c8102e">T</text>
+  <text x="136" y="143" font-family="system-ui,sans-serif" font-size="7" fill="#aaa" font-weight="700">T100</text>
+  <text x="140" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#c8102e">Titleist T100</text>
+  <text x="140" y="192" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#666">Players Irons</text>
 </svg>

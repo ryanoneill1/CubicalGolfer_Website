@@ -1,15 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#333333"/>
-      <stop offset="100%" stop-color="#111111"/>
-    </linearGradient>
-  </defs>
-  <rect width="280" height="200" fill="url(#bg)" rx="8"/>
-  <text x="140" y="90" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="52" fill="white" opacity="0.9">📊</text>
-  <text x="140" y="130" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="11" font-weight="600" fill="white" opacity="0.85" letter-spacing="1">TRAINING AID</text>
-  <text x="140" y="150" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="10" fill="white" opacity="0.6">Image coming soon</text>
+  <rect width="280" height="200" fill="#f8f9fa" rx="8"/>
+  <!-- Driver face with impact marks -->
+  <rect x="70" y="50" width="140" height="100" fill="#2a2a2a" rx="6"/>
+  <rect x="76" y="56" width="128" height="88" fill="#f5f0e8" rx="4"/>
+  <!-- Grid lines on tape -->
+  <line x1="76" y1="86" x2="204" y2="86" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="76" y1="102" x2="204" y2="102" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="76" y1="118" x2="204" y2="118" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="116" y1="56" x2="116" y2="144" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="140" y1="56" x2="140" y2="144" stroke="#ddd" stroke-width="0.5"/>
+  <line x1="164" y1="56" x2="164" y2="144" stroke="#ddd" stroke-width="0.5"/>
+  <!-- Sweet spot circle -->
+  <circle cx="140" cy="100" r="18" fill="none" stroke="#e63946" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <!-- Impact marks (various positions) -->
+  <ellipse cx="135" cy="98" rx="6" ry="5" fill="#c8102e" opacity="0.7"/>
+  <ellipse cx="152" cy="108" rx="4" ry="3" fill="#e63946" opacity="0.5"/>
+  <ellipse cx="122" cy="88" rx="3" ry="2.5" fill="#e63946" opacity="0.4"/>
+  <!-- Sweet spot label -->
+  <text x="168" y="100" font-family="system-ui,sans-serif" font-size="7" fill="#e63946">SWEET</text>
+  <text x="168" y="109" font-family="system-ui,sans-serif" font-size="7" fill="#e63946">SPOT</text>
+  <text x="140" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#333">Golf Impact Tape</text>
+  <text x="140" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#666">Training Aid</text>
 </svg>

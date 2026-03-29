@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
+  <rect width="280" height="200" fill="#f8f9fa" rx="8"/>
+  <circle cx="140" cy="95" r="58" fill="white"/>
+  <g fill="none" stroke="#ddd" stroke-width="0.8" opacity="0.7">
+    <circle cx="140" cy="44" r="3"/><circle cx="118" cy="50" r="3"/><circle cx="140" cy="50" r="3"/>
+    <circle cx="162" cy="50" r="3"/><circle cx="103" cy="62" r="3"/><circle cx="122" cy="58" r="3"/>
+    <circle cx="140" cy="57" r="3"/><circle cx="158" cy="58" r="3"/><circle cx="177" cy="62" r="3"/>
+    <circle cx="90" cy="78" r="3"/><circle cx="108" cy="72" r="3"/><circle cx="127" cy="68" r="3"/>
+    <circle cx="140" cy="67" r="3"/><circle cx="153" cy="68" r="3"/><circle cx="172" cy="72" r="3"/>
+    <circle cx="187" cy="78" r="3"/><circle cx="88" cy="95" r="3"/><circle cx="192" cy="95" r="3"/>
+    <circle cx="90" cy="112" r="3"/><circle cx="108" cy="118" r="3"/><circle cx="127" cy="122" r="3"/>
+    <circle cx="140" cy="123" r="3"/><circle cx="153" cy="122" r="3"/><circle cx="172" cy="118" r="3"/>
+  </g>
+  <text x="140" y="88" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#ba0c2f">CALLAWAY</text>
+  <text x="140" y="101" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#333">Supersoft</text>
+  <text x="140" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#ba0c2f">Callaway Supersoft</text>
+  <text x="140" y="192" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#666">Low-Compression Ball</text>
+</svg>

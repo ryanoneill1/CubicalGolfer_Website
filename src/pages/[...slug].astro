@@ -312,7 +312,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     </div>
 
     <!-- Quick Verdict box for buying guides -->
-    {isBuyingGuide && article.comparisonTable && (
+    {article.comparisonTable && (
       <div class="verdict-quick">
         <p class="verdict-quick-title">⚡ Quick Verdict</p>
         <div class="verdict-quick-picks">
@@ -337,7 +337,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     )}
 
     {/* ── Above-the-fold ProductCard grid (top 3 picks) ── */}
-    {isBuyingGuide && article.comparisonTable && (() => {
+    {article.comparisonTable && (() => {
       const topRows = article.comparisonTable.rows.slice(0, 3).filter((r: any) => r.affiliateKey);
       if (!topRows.length) return null;
       return (
@@ -439,7 +439,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
           )}
 
           {/* Product image — only render when product is mapped and has an image */}
-          {section.badge && isBuyingGuide && aff && (() => {
+          {section.badge && aff && (() => {
             const sectionImgSrc = (aff as any).imgSrc ?? null;
             const sectionImgAlt = (aff as any).imgAlt ?? section.h2;
             return (

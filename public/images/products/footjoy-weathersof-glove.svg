@@ -1,15 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1e3a28"/>
-      <stop offset="100%" stop-color="#2d5e3d"/>
-    </linearGradient>
-  </defs>
-  <rect width="280" height="200" fill="url(#bg)" rx="8"/>
-  <text x="140" y="90" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="52" fill="white" opacity="0.9">🧤</text>
-  <text x="140" y="130" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="11" font-weight="600" fill="white" opacity="0.85" letter-spacing="1">GLOVE</text>
-  <text x="140" y="150" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="10" fill="white" opacity="0.6">Image coming soon</text>
+  <rect width="280" height="200" fill="#f8f9fa" rx="8"/>
+  <!-- Glove palm -->
+  <path d="M90 160 Q85 100 95 70 Q105 45 125 42 Q145 40 155 45 Q165 50 168 70 Q170 85 165 160 Z" fill="#e8e0d0"/>
+  <!-- Thumb -->
+  <path d="M90 110 Q75 105 72 88 Q70 72 80 65 Q90 60 95 70 Z" fill="#e8e0d0"/>
+  <!-- Fingers outlines -->
+  <path d="M110 42 Q108 28 113 25 Q118 22 120 30 Q122 38 122 42" fill="#e8e0d0" stroke="#ccc" stroke-width="1"/>
+  <path d="M127 40 Q126 26 131 23 Q136 21 137 29 Q138 37 138 41" fill="#e8e0d0" stroke="#ccc" stroke-width="1"/>
+  <path d="M143 41 Q143 27 148 24 Q153 22 154 30 Q155 38 154 42" fill="#e8e0d0" stroke="#ccc" stroke-width="1"/>
+  <!-- Back of glove - perforations -->
+  <circle cx="115" cy="80" r="2" fill="#d4c9b0"/>
+  <circle cx="128" cy="76" r="2" fill="#d4c9b0"/>
+  <circle cx="141" cy="75" r="2" fill="#d4c9b0"/>
+  <circle cx="154" cy="78" r="2" fill="#d4c9b0"/>
+  <circle cx="120" cy="95" r="2" fill="#d4c9b0"/>
+  <circle cx="133" cy="91" r="2" fill="#d4c9b0"/>
+  <circle cx="146" cy="90" r="2" fill="#d4c9b0"/>
+  <!-- Wrist strap -->
+  <rect x="88" y="148" width="80" height="20" fill="#002855" rx="4"/>
+  <rect x="138" y="148" width="12" height="20" fill="#a8996e" rx="2"/>
+  <!-- Velcro tab -->
+  <rect x="152" y="150" width="20" height="16" fill="#c8b87e" rx="3"/>
+  <!-- FJ Logo area -->
+  <text x="155" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="12" font-weight="700" fill="#002855" opacity="0.4">FJ</text>
+  <text x="140" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#002855">FootJoy WeatherSof</text>
+  <text x="140" y="192" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#666">Golf Glove</text>
 </svg>

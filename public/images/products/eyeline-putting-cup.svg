@@ -1,15 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#1e3a28"/>
-      <stop offset="100%" stop-color="#2d5e3d"/>
-    </linearGradient>
-  </defs>
-  <rect width="280" height="200" fill="url(#bg)" rx="8"/>
-  <text x="140" y="90" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="52" fill="white" opacity="0.9">🏒</text>
-  <text x="140" y="130" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="11" font-weight="600" fill="white" opacity="0.85" letter-spacing="1">TRAINING AID</text>
-  <text x="140" y="150" text-anchor="middle" font-family="system-ui,sans-serif" 
-        font-size="10" fill="white" opacity="0.6">Image coming soon</text>
+  <rect width="280" height="200" fill="#f8f9fa" rx="8"/>
+  <!-- Putting cup with gate rails -->
+  <rect x="80" y="128" width="120" height="12" fill="#2d4a3e" rx="3"/>
+  <!-- Two gate posts -->
+  <rect x="118" y="80" width="8" height="50" fill="#e63946" rx="2"/>
+  <rect x="154" y="80" width="8" height="50" fill="#e63946" rx="2"/>
+  <!-- Gate bar (tension) -->
+  <rect x="118" y="80" width="44" height="5" fill="#cc2233" rx="2"/>
+  <!-- Hole cup opening -->
+  <ellipse cx="140" cy="136" rx="26" ry="6" fill="#1a1a1a"/>
+  <ellipse cx="140" cy="134" rx="22" ry="5" fill="#2a2a2a"/>
+  <!-- Ball approaching -->
+  <circle cx="140" cy="72" r="8" fill="white" stroke="#ddd" stroke-width="1"/>
+  <!-- Ball path line -->
+  <line x1="140" y1="80" x2="140" y2="128" stroke="#aaa" stroke-width="1" stroke-dasharray="3,3"/>
+  <!-- Gate width labels -->
+  <text x="108" y="100" text-anchor="end" font-family="system-ui,sans-serif" font-size="7" fill="#e63946">⟵</text>
+  <text x="172" y="100" font-family="system-ui,sans-serif" font-size="7" fill="#e63946">⟶</text>
+  <text x="140" y="100" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7" fill="#2d4a3e">GATE</text>
+  <text x="140" y="168" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#2d4a3e">EyeLine Putting Cup</text>
+  <text x="140" y="183" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#666">Putting Training Aid</text>
 </svg>
