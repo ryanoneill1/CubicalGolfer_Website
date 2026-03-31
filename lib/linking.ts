@@ -81,6 +81,7 @@ export function buildLinkingGraph(): Record<string, string[]> {
  * manually specified + auto-computed, deduplicated, max 4.
  */
 export function getMergedRelated(article: Article, limit = 4): RelatedLink[] {
+  if (!article?.related) return [];
   const manual  = article.related.map(r => r.slug);
   const auto    = getAutoRelated(article.id, limit + 2)
     .filter(r => !manual.includes(r.slug));
