@@ -32,7 +32,7 @@ export function articleMeta(article: Article): PageMeta {
     title:         truncateTitle(article.title),
     description:   clampDesc(article.description),
     canonical,
-    ogImage:       article.ogImage || OG_IMG,
+    ogImage:       (article as any).ogImage || OG_IMG,
     ogType:        'article',
     robots:        ROBOTS,
     datePublished: article.datePublished,
