@@ -26,6 +26,7 @@ function clampDesc(d: string): string {
 }
 
 export function articleMeta(article: Article): PageMeta {
+  if (!article?.slug) return homeMeta();
   const canonical = `${DOMAIN}${article.slug}`;
   return {
     title:         truncateTitle(article.title),
