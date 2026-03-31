@@ -81,6 +81,7 @@ export function organizationSchema(): object {
 // ── Article schema ────────────────────────────────────────────────────────────
 // FIXED: Now includes image field — required by Google for Article rich results
 export function articleSchema(article: Article): object {
+  if (!article?.slug) return {};
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -102,7 +103,7 @@ export function articleSchema(article: Article): object {
     // Use article-specific image if available, otherwise OG image
     image: {
       '@type': 'ImageObject',
-      url: article.ogImage || OG_IMAGE,
+      url: (article as any).ogImage || OG_IMAGE,
       width: 1200,
       height: 630,
     },
@@ -181,7 +182,7 @@ export function featuredArticlesSchema(articles: Article[]): object {
     name: 'Top Golf Guides 2026 — Cubical Golfer',
     url: `${DOMAIN}/`,
     numberOfItems: articles.length,
-    itemListElement: articles.map((a, i) => ({
+    itemListElement: articles.filter(a => a?.slug).map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: a.titleDisplay,
