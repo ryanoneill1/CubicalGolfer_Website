@@ -42,8 +42,8 @@ function scoreRelation(a: Article, b: Article): number {
   }
 
   // Manually specified related links (highest intent)
-  if (a.related.some(r => r.slug === b.slug)) score += 20;
-  if (b.related.some(r => r.slug === a.slug)) score += 15;
+  if (a.related?.some(r => r.slug === b.slug)) score += 20;
+  if (b.related?.some(r => r.slug === a.slug)) score += 15;
 
   return score;
 }
@@ -81,6 +81,7 @@ export function buildLinkingGraph(): Record<string, string[]> {
  * manually specified + auto-computed, deduplicated, max 4.
  */
 export function getMergedRelated(article: Article, limit = 4): RelatedLink[] {
+  if (!article?.related) return [];
   const manual  = article.related.map(r => r.slug);
   const auto    = getAutoRelated(article.id, limit + 2)
     .filter(r => !manual.includes(r.slug));
@@ -112,6 +113,7 @@ export function getCategoryArticles(category: string): Article[] {
  */
 export function getFeaturedArticles(count = 6): Article[] {
   return [...ARTICLES]
+    .filter(a => a != null && a.slug != null)
     .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
     .slice(0, count);
 }
