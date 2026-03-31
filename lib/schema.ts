@@ -23,7 +23,9 @@ const AUTHOR = {
   '@type': 'Person',
   name: 'Cubical Golfer Staff',
   url: `${DOMAIN}/about/`,
-  // Add real author name here when available for stronger E-E-A-T
+  description: 'Weekend golfer with 15+ years experience. Tests all gear over a minimum of 10 real rounds before recommending.',
+  image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
+  '@id': `${DOMAIN}/about/#author`,
 };
 
 export function schemaTag(obj: object): string {
@@ -65,6 +67,7 @@ export function organizationSchema(): object {
     description: 'Independent golf gear reviews and improvement guides for everyday weekend golfers.',
     foundingDate: '2024',
     slogan: 'Escape the cubicle. Find the fairway.',
+    image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
     // Add your real social profiles here for stronger entity signals:
     sameAs: [
       // 'https://www.youtube.com/@CubicalGolfer',
@@ -78,6 +81,7 @@ export function organizationSchema(): object {
 // ── Article schema ────────────────────────────────────────────────────────────
 // FIXED: Now includes image field — required by Google for Article rich results
 export function articleSchema(article: Article): object {
+  if (!article?.slug) return {};
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -178,7 +182,7 @@ export function featuredArticlesSchema(articles: Article[]): object {
     name: 'Top Golf Guides 2026 — Cubical Golfer',
     url: `${DOMAIN}/`,
     numberOfItems: articles.length,
-    itemListElement: articles.map((a, i) => ({
+    itemListElement: articles.filter(a => a?.slug).map((a, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: a.titleDisplay,
