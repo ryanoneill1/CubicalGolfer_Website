@@ -505,14 +505,6 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'Why Beginners Need It', 'Price', 'Impact'],
-      rows: [
-        { affiliateKey: 'wilson-profile-sgi', name: 'Wilson Profile SGI Set', bestFor: 'BEST BEGINNER SET', price: '~$349', feature1: 'Full 13-club set + bag', feature2: 'Maximum forgiveness', winner: true },
-        { affiliateKey: 'alignment-sticks', name: 'Alignment Sticks 2-Pack', bestFor: 'BEST TRAINING AID', price: '~$12', feature1: 'Grip, stance, alignment', feature2: 'Every practice session', winner: false },
-        { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'BEST PUTTING TOOL', price: '~$25', feature1: 'Eye position + face angle', feature2: 'Short game is 40% of score', winner: false },
-      ],
-    },
-    comparisonTable: {
       headers: ['Gear', 'Why Beginners Need It', 'Price', 'Priority'],
       rows: [
         { affiliateKey: 'callaway-strata',       name: 'Callaway Strata Set',        bestFor: 'BEST STARTER SET',    price: '~$249', feature1: 'Complete 12-pc set + bag', feature2: 'Must-have', winner: true },
@@ -565,14 +557,6 @@ export const ARTICLES: Article[] = [
         body: "The three fastest handicap reducers: (1) A rangefinder (~$169) eliminates wrong-club selection — the #1 cause of blow-up holes. (2) Arccos Caddie sensors (~$179) identify your actual weaknesses from real round data, not practice range assumptions. (3) A putting mirror (~$25) is the highest-ROI training aid for the 40% of strokes that happen on the green. If you only buy one thing: the Precision Pro NX9 HD rangefinder will drop your handicap faster than any club purchase.",
       },
     ],
-    comparisonTable: {
-      headers: ['Product', 'How It Lowers Your Handicap', 'Price', 'Category'],
-      rows: [
-        { affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'BEST RANGEFINDER', price: '~$169', feature1: 'Exact yardage every shot', feature2: 'Eliminates wrong-club errors', winner: true },
-        { affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie Sensors', bestFor: 'BEST STAT TRACKER', price: '~$179 + $99/yr', feature1: 'Tracks every shot automatically', feature2: 'AI-powered recommendations', winner: false },
-        { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'BEST PRACTICE AID', price: '~$25', feature1: '3-putts account for most handicap creep', feature2: 'Fastest ROI of any training tool', winner: false },
-      ],
-    },
     comparisonTable: {
       headers: ['Tool', 'What It Does', 'Price', 'Best For'],
       rows: [
