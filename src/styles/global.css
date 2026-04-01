@@ -144,7 +144,7 @@ nav.site-nav {
   font-size: 11px; font-weight: 700; letter-spacing: .08em; color: #fff; margin-bottom: 16px;
 }
 .tag-buy  { background: #B8922A; }
-.tag-list { background: #7A5A2E; }
+.tag-list { background: #7A5A2E; } /* ROUNDUP */
 .tag-cmp  { background: #3A4A2E; }
 .tag-tut  { background: var(--tag-tutorial); }
 .tag-life { background: var(--tag-lifestyle); }
@@ -401,7 +401,7 @@ nav.site-nav {
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero-sub { font-size: 17px; color: rgba(255,255,255,.82); line-height: 1.65; max-width: 480px; margin-bottom: 36px; }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
-.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 40px; }
+.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 40px; margin-top: 32px; }
 .hero-stat { font-size: 14px; color: rgba(255,255,255,.75); }
 .hero-stat strong { color: #fff; font-size: 19px; font-weight: 700; display: block; }
 .hero-card { background: var(--green-card); border-radius: var(--r3); padding: 28px 32px; }
@@ -746,18 +746,18 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── HERO QUICK LINKS (above-fold affiliate navigation) ── */
 .hero-quick-links {
-  margin: 28px 0 0;
+  margin: 36px 0 0;
 }
 .hero-quick-links__label {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 12px;
+  gap: 12px;
+  font-size: 14px;
   font-weight: 800;
-  letter-spacing: .18em;
+  letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--gold, #C9A84C);
-  margin: 0 0 10px;
+  margin: 0 0 16px;
   padding: 0;
   width: fit-content;
 }
@@ -765,7 +765,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .hero-quick-links__label::after {
   content: '';
   display: block;
-  width: 20px;
+  width: 28px;
   height: 2px;
   background: var(--gold, #C9A84C);
   border-radius: 2px;
@@ -774,20 +774,20 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .hero-quick-links__pills {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .hero-quick-link {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
-  font-size: 13px;
+  gap: 6px;
+  font-size: 14px;
   font-weight: 600;
   color: rgba(255,255,255,.9);
   background: rgba(255,255,255,.1);
   border: 1.5px solid rgba(255,255,255,.25);
-  padding: 6px 16px;
-  border-radius: 24px;
+  padding: 9px 20px;
+  border-radius: 28px;
   text-decoration: none;
   transition: background .15s, border-color .15s, color .15s;
   white-space: nowrap;
