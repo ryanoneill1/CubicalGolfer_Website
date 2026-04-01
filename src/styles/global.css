@@ -23,6 +23,25 @@ html { scroll-behavior: smooth; font-size: 16px; }
   --r2:         12px;
   --r3:         16px;
   --nav-h:      64px;
+  /* ── Extended palette tokens (v2) ── */
+  --blue-badge:   #2A3A5A;
+  --purple-badge: #3A2A5A;
+  --teal-badge:   #1A4A44;
+  --olive-badge:  #4A5A28;
+  --brown-badge:  #6B4423;
+  --navy-badge:   #2A3A5A;
+  --tag-tutorial: #4B3A6A;
+  --tag-lifestyle:#2E5A4A;
+  --tag-review:   #2A4A6A;
+  /* ── Typography scale ── */
+  --fs-xs:   11px;
+  --fs-sm:   13px;
+  --fs-base: 16px;
+  --fs-md:   18px;
+  --fs-lg:   22px;
+  --fs-xl:   clamp(20px, 2.5vw, 28px);
+  --fs-2xl:  clamp(24px, 3vw, 34px);
+  --fs-3xl:  clamp(28px, 4vw, 46px);
 }
 
 body {
@@ -127,9 +146,9 @@ nav.site-nav {
 .tag-buy  { background: #B8922A; }
 .tag-list { background: #7A5A2E; }
 .tag-cmp  { background: #3A4A2E; }
-.tag-tut  { background: #4B3A6A; }
-.tag-life { background: #2E5A4A; }
-.tag-rev  { background: #2A4A6A; }
+.tag-tut  { background: var(--tag-tutorial); }
+.tag-life { background: var(--tag-lifestyle); }
+.tag-rev  { background: var(--tag-review); }
 
 /* Author box */
 /* ── AUTHOR BOX — Prominent trust-signal card ── */
@@ -306,11 +325,11 @@ nav.site-nav {
   display: flex; align-items: center; justify-content: center; font-size: 52px;
 }
 .art-thumb.green  { background: #2A5038; }
-.art-thumb.brown  { background: #6B4423; }
-.art-thumb.navy   { background: #2A3A5A; }
-.art-thumb.purple { background: #3A2A5A; }
-.art-thumb.teal   { background: #1A4A44; }
-.art-thumb.olive  { background: #4A5A28; }
+.art-thumb.brown  { background: var(--brown-badge); }
+.art-thumb.navy   { background: var(--navy-badge); }
+.art-thumb.purple { background: var(--purple-badge); }
+.art-thumb.teal   { background: var(--teal-badge); }
+.art-thumb.olive  { background: var(--olive-badge); }
 .art-badge {
   position: absolute; top: 12px; left: 12px; padding: 5px 10px;
   border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: .08em; color: #fff;
@@ -679,7 +698,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 .cmp-buy-btn:hover { background: var(--gold-dark); }
 .cmp-winner .cmp-buy-btn { background: var(--green); color: #fff; }
-.cmp-winner .cmp-buy-btn:hover { background: #1a5c35; }
+.cmp-winner .cmp-buy-btn:hover { background: var(--green-mid); }
 .cmp-no-link { color: var(--muted); font-size: 12px; }
 @media (max-width: 700px) {
   .cmp-th-buy, .cmp-td-buy { display: none; }
