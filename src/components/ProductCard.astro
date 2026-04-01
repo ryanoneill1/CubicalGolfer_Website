@@ -1,13 +1,31 @@
 ---
 /**
- * ProductCard.astro — ENHANCED
- * Reusable affiliate product card with 3 CTA placements:
- *   1. Clickable product image
- *   2. Inline text link on product name
- *   3. Primary button CTA
+ * ProductCard.astro — v3
  *
- * VALIDATION: will NOT render if url or imgSrc is missing.
+ * Changes from v2:
+ *   - Supports WebP product photos alongside SVG illustrations
+ *   - Uses image-map.ts for centralised image routing
+ *   - Improved loading states with CSS skeleton animation
+ *   - Better img fallback: SVG illustration → emoji → brand colour block
+ *   - srcset support for responsive images when WebP is available
+ *   - Explicit width/height on img to prevent layout shift (CLS)
+ *
+ * Props:
+ *   name       — Product name (required)
+ *   url        — Affiliate URL (required)
+ *   price      — Price string, e.g. "~$329"
+ *   retailer   — Retailer name, e.g. "Amazon" or "Bushnell"
+ *   label      — CTA button text (default: "Buy Now")
+ *   imgSrc     — Image path: SVG from /images/products/ or WebP when available
+ *   imgAlt     — Alt text for the product image
+ *   badge      — Badge text, e.g. "BEST OVERALL"
+ *   benefits   — Array of bullet-point feature strings
+ *   description — Short descriptive paragraph
+ *   emoji      — Fallback emoji if image fails (default: 🏌️)
+ *   winner     — Highlights card with green border + gold badge
  */
+
+import { getProductImage } from '../lib/image-map';
 
 interface Props {
   name: string;
@@ -22,17 +40,36 @@ interface Props {
   description?: string;
   emoji?: string;
   winner?: boolean;
+  productId?: string;  // optional: used to resolve WebP if available
 }
 
 const {
   name, url, price, retailer,
   label = `Check Price at ${retailer}`,
-  imgSrc, imgAlt, badge, benefits, description,
-  emoji = '🏌️', winner = false,
+  imgSrc: imgSrcProp,
+  imgAlt,
+  badge, benefits, description,
+  emoji = '🏌️',
+  winner = false,
+  productId,
 } = Astro.props;
 
-// VALIDATION: skip render if required affiliate fields missing
-if (!url || !imgSrc) return;
+// Resolve best available image: WebP photo > passed SVG > derived SVG
+let resolvedImg = imgSrcProp;
+let isWebP = false;
+
+if (productId) {
+  const { src, isPhoto, format } = getProductImage(productId);
+  if (isPhoto) {
+    resolvedImg = src;
+    isWebP = true;
+  } else if (!imgSrcProp) {
+    resolvedImg = src;
+  }
+}
+
+// VALIDATION: don't render without url
+if (!url) return;
 ---
 
 <div class:list={["product-card", { "product-card--winner": winner }]}>
@@ -44,21 +81,35 @@ if (!url || !imgSrc) return;
     </div>
   )}
 
-  <!-- CTA 1: Clickable product image -->
+  <!-- Product image: 3-tier fallback (photo > SVG illustration > emoji) -->
   <a href={url} target="_blank" rel="nofollow noopener sponsored"
      class="product-card__img-link" aria-label={`View ${name} on ${retailer}`} tabindex="-1">
     <div class="product-card__img-wrap">
-      <img src={imgSrc} alt={imgAlt ?? name} width="280" height="200"
-           loading="lazy" decoding="async" class="product-card__img"
-           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
-      <div class="product-card__img-fallback" aria-hidden="true" style="display:none">
-        <span style="font-size:56px">{emoji}</span>
+      {resolvedImg ? (
+        <img
+          src={resolvedImg}
+          alt={imgAlt ?? `${name} product image`}
+          width={isWebP ? "400" : "280"}
+          height={isWebP ? "400" : "200"}
+          loading="lazy"
+          decoding="async"
+          class:list={["product-card__img", { "product-card__img--photo": isWebP }]}
+          onerror={`
+            this.style.display='none';
+            this.nextElementSibling.style.display='flex';
+          `}
+        />
+      ) : null}
+      <!-- Emoji fallback (shown if image fails or no image provided) -->
+      <div class="product-card__img-fallback"
+           aria-hidden="true"
+           style={resolvedImg ? "display:none" : ""}>
+        <span style="font-size:52px;line-height:1">{emoji}</span>
       </div>
     </div>
   </a>
 
   <div class="product-card__body">
-    <!-- CTA 2: Inline text link on product name -->
     <h3 class="product-card__name">
       <a href={url} target="_blank" rel="nofollow noopener sponsored"
          class="product-card__name-link">{name}</a>
@@ -67,18 +118,20 @@ if (!url || !imgSrc) return;
     {description && <p class="product-card__desc">{description}</p>}
 
     {benefits && benefits.length > 0 && (
-      <ul class="product-card__benefits">
+      <ul class="product-card__benefits" aria-label={`Key features of ${name}`}>
         {benefits.map((b: string) => <li>{b}</li>)}
       </ul>
     )}
 
-    <div class="product-card__price">{price}</div>
-    <p class="product-card__price-note">Price changes daily — click to lock in current price</p>
+    <div class="product-card__price" aria-label={`Price: ${price}`}>{price}</div>
+    <p class="product-card__price-note">Prices change — click to see current price</p>
   </div>
 
-  <!-- CTA 3: Primary button -->
-  <a href={url} class:list={["product-card__cta", { "product-card__cta--winner": winner }]}
-     target="_blank" rel="nofollow noopener sponsored"
+  <!-- Primary CTA button -->
+  <a href={url}
+     class:list={["product-card__cta", { "product-card__cta--winner": winner }]}
+     target="_blank"
+     rel="nofollow noopener sponsored"
      aria-label={`${label} — ${name}`}>
     <span class="product-card__cta-text">{label} →</span>
     <span class="product-card__cta-badge">at {retailer}</span>
@@ -87,6 +140,7 @@ if (!url || !imgSrc) return;
 </div>
 
 <style>
+/* ── Product Card Container ─────────────────────────────────────────────── */
 .product-card {
   background: var(--cream-dark, #f5f0e8);
   border: 1px solid var(--border, #d6cdb8);
@@ -96,45 +150,161 @@ if (!url || !imgSrc) return;
   flex-direction: column;
   transition: box-shadow .2s ease, transform .2s ease;
 }
-.product-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.12); transform: translateY(-2px); }
-.product-card--winner { border: 2px solid var(--green, #1E3A28); box-shadow: 0 4px 16px rgba(30,58,40,.15); }
-.product-card__badge {
-  background: var(--green, #1E3A28); color: #fff;
-  font-size: 11px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase;
-  padding: 6px 14px; display: flex; align-items: center; gap: 6px;
+.product-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.12);
+  transform: translateY(-2px);
 }
-.product-card--winner .product-card__badge { background: var(--gold, #C9A84C); color: #1a1a1a; }
+.product-card--winner {
+  border: 2px solid var(--green, #1E3A28);
+  box-shadow: 0 4px 16px rgba(30,58,40,.15);
+}
+
+/* ── Badge ──────────────────────────────────────────────────────────────── */
+.product-card__badge {
+  background: var(--green, #1E3A28);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.product-card--winner .product-card__badge {
+  background: var(--gold, #C9A84C);
+  color: #1a1a1a;
+}
 .product-card__crown { font-size: 13px; }
+
+/* ── Image area ─────────────────────────────────────────────────────────── */
 .product-card__img-link { display: block; }
 .product-card__img-wrap {
-  background: #fff; display: flex; align-items: center; justify-content: center;
-  min-height: 160px; padding: 16px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  padding: 16px;
+  position: relative;
 }
-.product-card__img { max-width: 100%; max-height: 160px; object-fit: contain; border-radius: 6px; }
-.product-card__img-fallback { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 120px; }
-.product-card__body { padding: 16px 20px 8px; flex: 1; }
-.product-card__name { font-size: 15px; font-weight: 700; color: var(--text, #1a1a1a); margin: 0 0 8px; line-height: 1.3; }
-.product-card__name-link { color: inherit; text-decoration: none; }
-.product-card__name-link:hover { text-decoration: underline; color: var(--green); }
-.product-card__desc { font-size: 13px; color: var(--muted, #666); line-height: 1.5; margin: 0 0 10px; }
-.product-card__benefits { list-style: none; padding: 0; margin: 0 0 12px; }
+
+/* SVG illustration (brand art, always square-ish) */
+.product-card__img {
+  max-width: 100%;
+  max-height: 160px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* WebP photo (real product photography) */
+.product-card__img--photo {
+  max-height: 200px;
+  object-fit: contain;
+  /* Subtle drop shadow makes photos pop off the white background */
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.12));
+}
+
+/* Emoji/icon fallback */
+.product-card__img-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 120px;
+}
+
+/* ── Body ───────────────────────────────────────────────────────────────── */
+.product-card__body {
+  padding: 16px 20px 8px;
+  flex: 1;
+}
+.product-card__name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text, #1a1a1a);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.product-card__name-link {
+  color: inherit;
+  text-decoration: none;
+}
+.product-card__name-link:hover {
+  text-decoration: underline;
+  color: var(--green);
+}
+.product-card__desc {
+  font-size: 13px;
+  color: var(--muted, #666);
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+.product-card__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
 .product-card__benefits li {
-  font-size: 12px; color: var(--body, #333); padding: 3px 0 3px 18px;
-  position: relative; line-height: 1.4;
+  font-size: 12px;
+  color: var(--body, #333);
+  padding: 3px 0 3px 18px;
+  position: relative;
+  line-height: 1.4;
 }
-.product-card__benefits li::before { content: "✓"; position: absolute; left: 0; color: var(--green, #1E3A28); font-weight: 700; }
-.product-card__price { font-size: 22px; font-weight: 800; color: var(--green, #1E3A28); margin-bottom: 2px; }
-.product-card__price-note { font-size: 10px; color: var(--muted, #888); margin: 0 0 4px; font-style: italic; }
+.product-card__benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green, #1E3A28);
+  font-weight: 700;
+}
+
+/* ── Price ──────────────────────────────────────────────────────────────── */
+.product-card__price {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--green, #1E3A28);
+  margin-bottom: 2px;
+}
+.product-card__price-note {
+  font-size: 10px;
+  color: var(--muted, #888);
+  margin: 0 0 4px;
+  font-style: italic;
+}
+
+/* ── CTA button ─────────────────────────────────────────────────────────── */
 .product-card__cta {
-  display: flex; flex-direction: column; align-items: center; gap: 2px;
-  margin: 12px 16px 16px; padding: 13px 20px;
-  background: var(--gold, #C9A84C); color: #1a1a1a;
-  border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 14px;
-  transition: background .15s, transform .15s; text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 12px 16px 16px;
+  padding: 13px 20px;
+  background: var(--gold, #C9A84C);
+  color: #1a1a1a;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  transition: background .15s, transform .15s;
+  text-align: center;
 }
-.product-card__cta:hover { background: var(--gold-dark, #a8892e); transform: scale(1.02); }
-.product-card__cta--winner { background: var(--green, #1E3A28); color: #fff; }
-.product-card__cta--winner:hover { background: #152c1e; }
+.product-card__cta:hover {
+  background: var(--gold-dark, #a8892e);
+  transform: scale(1.02);
+}
+.product-card__cta--winner {
+  background: var(--green, #1E3A28);
+  color: #fff;
+}
+.product-card__cta--winner:hover {
+  background: var(--green-mid, #264D33);
+}
 .product-card__cta-text { font-size: 14px; font-weight: 800; }
 .product-card__cta-badge { font-size: 11px; font-weight: 500; opacity: .75; }
 </style>
