@@ -95,10 +95,10 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Pro XE — search (multiple bundle variants)
   'bushnell-pro-xe': {
-    url: 'https://bushnell.pxf.io/DWWLOa',
-    retailer: 'Bushnell',
+    url: 'https://www.amazon.com/s?k=Bushnell+Pro+XE+golf+rangefinder&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$499',
-    label: 'Buy at Bushnell',
+    label: 'Buy Now',
     imgSrc: '/images/products/bushnell-pro-xe.webp',
     imgAlt: 'Bushnell Pro XE Golf Rangefinder',
     benefits: [
@@ -157,10 +157,10 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Ion Elite — search (colourway/strap variants)
   'bushnell-ion-elite': {
-    url: 'https://bushnell.pxf.io/DWWLOa',
-    retailer: 'Bushnell',
+    url: 'https://www.amazon.com/s?k=Bushnell+iON+Elite+GPS+watch&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$149',
-    label: 'Buy at Bushnell',
+    label: 'Buy Now',
     imgSrc: '/images/products/bushnell-ion-elite.webp',
     imgAlt: 'Bushnell Ion Elite GPS Golf Watch',
     benefits: [
