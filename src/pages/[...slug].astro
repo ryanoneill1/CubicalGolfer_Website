@@ -354,7 +354,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                 label={aff.label}
                 winner={row.winner}
                 emoji={article.emoji}
-                imgSrc={(aff as any).imgSrc}
+                productId={row.affiliateKey}
                 imgAlt={(aff as any).imgAlt ?? row.name}
                 benefits={(aff as any).benefits}
               />

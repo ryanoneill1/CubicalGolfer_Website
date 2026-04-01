@@ -1,118 +1,97 @@
 /**
  * src/lib/image-map.ts
  * ─────────────────────────────────────────────────────────────────────────────
- * Centralized image management for all product and article images.
+ * Centralized product image routing.
  *
- * ARCHITECTURE:
- *   Product images  → /public/images/products/{id}.svg  (branded SVG illustrations)
- *   Article thumbs  → color + emoji system (CSS art-thumb classes)
- *   Real photos     → /public/images/products/{id}.webp (when available)
+ * IMAGE FORMAT: WebP  (400 × 400 px, 85% quality)
+ * IMAGE PATH:   /public/images/products/{product-id}.webp
  *
- * TO ADD REAL PRODUCT PHOTOS:
- *   1. Place WebP image at /public/images/products/{product-id}.webp
- *   2. Add the product-id to PRODUCTS_WITH_PHOTOS below
- *   3. The getProductImage() function automatically prefers WebP over SVG
+ * HOW TO ADD REAL PHOTOS:
+ *   1. Download product photo (any format)
+ *   2. Resize to 400×400, export as WebP 85%
+ *   3. Name it exactly: {product-id}.webp  (e.g. titleist-pro-v1.webp)
+ *   4. Upload to /public/images/products/ in GitHub
+ *   5. Done — the site uses it automatically, no code changes needed
  *
- * AMAZON IMAGE POLICY:
- *   Amazon's ToS prohibits hotlinking product images from their CDN.
- *   All product images must be self-hosted. Download originals and convert to WebP.
- *   Recommended: 400×400px WebP at 85% quality (~20-40KB per image).
+ * FALLBACK CHAIN (in ProductCard.astro):
+ *   WebP photo  →  emoji (if image fails to load)
  *
- * ARTICLE THUMBNAIL SYSTEM:
- *   Art-thumbs are colored divs (CSS classes) with an emoji overlay.
- *   This is intentional — emoji are accessible (aria-hidden), zero-byte, and consistent.
- *   The thumb color is defined per-article in articles.ts (thumb: 'green' | 'brown' | etc.)
+ * ALL 57 PRODUCT IDs:
+ * ─────────────────────────────────────────────────────────────────────────────
+ * RANGEFINDERS:  bushnell-tour-v6-shift, precision-pro-nx9-hd,
+ *                blue-tees-series-3-max, garmin-approach-z82,
+ *                bushnell-pro-xe, bushnell-ion-elite
+ *
+ * GPS WATCHES:   garmin-approach-s62, garmin-approach-s42, shot-scope-v5
+ *
+ * DRIVERS:       callaway-paradym-ai-smoke-max, taylormade-qi35-max,
+ *                cobra-aerojet-max, ping-g430-max-driver
+ *
+ * IRONS:         callaway-paradym-ai-smoke-max-irons, titleist-t300,
+ *                titleist-t100, ping-g430-irons, wilson-d9-irons,
+ *                wilson-profile-sgi, callaway-strata, taylormade-rbz-lite
+ *
+ * GOLF BALLS:    titleist-pro-v1, titleist-pro-v1x, taylormade-tp5,
+ *                callaway-chrome-tour-2026, srixon-soft-feel,
+ *                callaway-supersoft, vice-pro
+ *
+ * PUTTERS:       odyssey-white-hot-og, scotty-cameron-phantom,
+ *                cleveland-hb-soft-milled, taylormade-spider-tour
+ *
+ * BAGS:          sun-mountain-25-plus, titleist-players-4,
+ *                callaway-fairway-14, callaway-chev-dry
+ *
+ * GLOVES:        footjoy-weathersof-glove, titleist-players-flex,
+ *                callaway-dawn-patrol, footjoy-raingrip
+ *
+ * SHOES:         footjoy-flex-xp, ecco-biom-c4, skechers-go-golf,
+ *                footjoy-tour-alpha
+ *
+ * TECH:          arccos-caddie-sensors, rapsodo-mlm2pro, blast-motion-sensor,
+ *                swing-caddie-sc4-pro, skytrak-plus
+ *
+ * ACCESSORIES:   alignment-sticks, groove-cleaning-brush, magnetic-ball-markers,
+ *                frogger-amphibian-towel, putting-mirror, impact-tape,
+ *                eyeline-putting-cup, gustbuster-umbrella
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
-/** Product IDs that have real WebP photos available in /public/images/products/ */
-export const PRODUCTS_WITH_PHOTOS: ReadonlySet<string> = new Set([
-  // Add product IDs here as real photos become available, e.g.:
-  // 'bushnell-tour-v6-shift',
-  // 'titleist-pro-v1',
-]);
-
 /**
- * Returns the best available image source for a product.
- * Prefers WebP photos over SVG illustrations when available.
+ * Returns the WebP image path for a product.
+ * Replace the .webp file in /public/images/products/ to update the image.
  */
-export function getProductImage(productId: string): {
-  src: string;
-  isPhoto: boolean;
-  format: 'webp' | 'svg';
-} {
-  if (PRODUCTS_WITH_PHOTOS.has(productId)) {
-    return {
-      src: `/images/products/${productId}.webp`,
-      isPhoto: true,
-      format: 'webp',
-    };
-  }
-  return {
-    src: `/images/products/${productId}.svg`,
-    isPhoto: false,
-    format: 'svg',
-  };
+export function getProductImage(productId: string): string {
+  return `/images/products/${productId}.webp`;
 }
 
 /**
- * Category-to-hero-image mapping for category index pages.
- * Currently uses CSS gradient backgrounds.
- * Replace values with real image paths when photography is available.
+ * All 57 product IDs — for reference and validation.
  */
-export const CATEGORY_IMAGES: Record<string, { bg: string; alt: string }> = {
-  'gear-reviews':         { bg: 'var(--green)',       alt: 'Golf gear on a course' },
-  'golf-tech':            { bg: 'var(--navy-badge)',   alt: 'Golf technology devices' },
-  'golf-accessories':     { bg: 'var(--brown-badge)',  alt: 'Golf accessories' },
-  'improve-game':         { bg: 'var(--purple-badge)', alt: 'Golfer practising' },
-  'golf-lifestyle':       { bg: 'var(--teal-badge)',   alt: 'Golf lifestyle' },
-};
-
-/**
- * Article emoji semantic mapping.
- * Documents the intended meaning of each emoji used in art-thumb cards.
- * These are aria-hidden decorative elements — changing these is purely aesthetic.
- */
-export const ARTICLE_EMOJI_MEANINGS: Record<string, string> = {
-  '🏌️': 'Golfer — general golf content',
-  '⛳':  'Golf hole — general golf / balls / course',
-  '🎯':  'Target — improvement / scoring / technique',
-  '🎒':  'Bag — bags / accessories / gear',
-  '⌚':  'Watch — GPS watches / wearables',
-  '🧤':  'Glove — golf gloves',
-  '📊':  'Chart — stats / handicap / data',
-  '📡':  'Radar — launch monitors / tech',
-  '📱':  'Phone — apps / mobile / software',
-  '🤖':  'Robot — AI tools',
-  '💰':  'Money — budget / value guides',
-  '🌿':  'Plant — lifestyle / wellness',
-  '💪':  'Muscle — fitness',
-  '🎁':  'Gift — gift guides',
-  '👟':  'Shoe — golf shoes',
-  '📏':  'Ruler — training aids / measurement',
-  '🏗️':  'Construction — build guides / simulators',
-  '✋':  'Hand — grip training',
-  '🥅':  'Net — indoor nets / practice',
-  '📖':  'Book — how-to guides',
-};
-
-/**
- * Generates an accessible img element string for a product.
- * For use when rendering product images outside of ProductCard component.
- */
-export function productImgAttrs(productId: string, productName: string, size = 400): {
-  src: string;
-  alt: string;
-  width: number;
-  height: number;
-  loading: 'lazy' | 'eager';
-} {
-  const { src } = getProductImage(productId);
-  return {
-    src,
-    alt: `${productName} product image`,
-    width: size,
-    height: size,
-    loading: 'lazy',
-  };
-}
+export const ALL_PRODUCT_IDS: readonly string[] = [
+  // Rangefinders
+  'bushnell-tour-v6-shift', 'precision-pro-nx9-hd', 'blue-tees-series-3-max',
+  'garmin-approach-z82', 'bushnell-pro-xe', 'bushnell-ion-elite',
+  // GPS Watches
+  'garmin-approach-s62', 'garmin-approach-s42', 'shot-scope-v5',
+  // Drivers
+  'callaway-paradym-ai-smoke-max', 'taylormade-qi35-max', 'cobra-aerojet-max', 'ping-g430-max-driver',
+  // Irons
+  'callaway-paradym-ai-smoke-max-irons', 'titleist-t300', 'titleist-t100',
+  'ping-g430-irons', 'wilson-d9-irons', 'wilson-profile-sgi', 'callaway-strata', 'taylormade-rbz-lite',
+  // Golf Balls
+  'titleist-pro-v1', 'titleist-pro-v1x', 'taylormade-tp5', 'callaway-chrome-tour-2026',
+  'srixon-soft-feel', 'callaway-supersoft', 'vice-pro',
+  // Putters
+  'odyssey-white-hot-og', 'scotty-cameron-phantom', 'cleveland-hb-soft-milled', 'taylormade-spider-tour',
+  // Bags
+  'sun-mountain-25-plus', 'titleist-players-4', 'callaway-fairway-14', 'callaway-chev-dry',
+  // Gloves
+  'footjoy-weathersof-glove', 'titleist-players-flex', 'callaway-dawn-patrol', 'footjoy-raingrip',
+  // Shoes
+  'footjoy-flex-xp', 'ecco-biom-c4', 'skechers-go-golf', 'footjoy-tour-alpha',
+  // Tech
+  'arccos-caddie-sensors', 'rapsodo-mlm2pro', 'blast-motion-sensor', 'swing-caddie-sc4-pro', 'skytrak-plus',
+  // Accessories
+  'alignment-sticks', 'groove-cleaning-brush', 'magnetic-ball-markers', 'frogger-amphibian-towel',
+  'putting-mirror', 'impact-tape', 'eyeline-putting-cup', 'gustbuster-umbrella',
+];
