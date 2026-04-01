@@ -300,7 +300,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'How It Fixes Your Slice', 'Price', 'Best For'],
+      headers: ['Product', 'How It Fixes Your Slice', 'Price', 'Best For', 'When to Use'],
       rows: [
         { affiliateKey: 'alignment-sticks', name: 'Alignment Sticks 2-Pack', bestFor: 'Best Swing Path Fix', price: '~$12', feature1: 'Corrects path + face angle visually', feature2: 'Range sessions', winner: true },
         { affiliateKey: 'impact-tape', name: 'Golf Impact Tape', bestFor: 'Best Face Data', price: '~$12', feature1: 'Shows face contact on every swing', feature2: 'Immediate feedback', winner: false },
@@ -357,7 +357,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'Why It Helps Break 90', 'Price', 'Best For'],
+      headers: ['Product', 'What It Does', 'Price', 'Best For', 'When to Use'],
       rows: [
         { affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD Rangefinder', bestFor: 'Best Value Rangefinder', price: '~$169', feature1: 'Exact pin yardage every shot', feature2: 'Weekend golfers', winner: true },
         { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall Rangefinder', price: '~$329', feature1: 'Slope-toggle for tournament play', feature2: 'Serious improvers', winner: false },
@@ -407,7 +407,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'What It Fixes', 'Price', 'Best For'],
+      headers: ['Product', 'What It Fixes', 'Price', 'Best For', 'Who It Suits'],
       rows: [
         { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'Best Alignment Aid', price: '~$25', feature1: 'Eye position + face angle', feature2: 'All handicaps', winner: true },
         { affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup', bestFor: 'Best Home Drill', price: '~$35', feature1: 'Forces center-face contact', feature2: 'Indoor practice', winner: false },
@@ -505,7 +505,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Gear', 'Why Beginners Need It', 'Price', 'Priority'],
+      headers: ['Gear', 'Why Beginners Need It', 'Price', 'Priority', 'Best For'],
       rows: [
         { affiliateKey: 'callaway-strata',       name: 'Callaway Strata Set',        bestFor: 'BEST STARTER SET',    price: '~$249', feature1: 'Complete 12-pc set + bag', feature2: 'Must-have', winner: true },
         { affiliateKey: 'alignment-sticks',      name: 'Alignment Sticks',            bestFor: 'BEST TRAINING AID',   price: '~$12',  feature1: 'Fixes aim instantly',     feature2: 'Must-have', winner: false },
@@ -558,7 +558,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Tool', 'What It Does', 'Price', 'Best For'],
+      headers: ['Tool', 'What It Does', 'Price', 'Best For', 'Who It Suits'],
       rows: [
         { affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62',   bestFor: 'BEST GPS WATCH',    price: '~$399', feature1: 'Score + stat tracking', feature2: 'Serious improvers', winner: true },
         { affiliateKey: 'arccos-caddie-sensors',  name: 'Arccos Caddie Sensors', bestFor: 'BEST SHOT TRACKER', price: '~$179', feature1: 'Auto shot-tracking',    feature2: 'Data-driven golfers', winner: false },
@@ -653,7 +653,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'What It Does', 'Price', 'Best For'],
+      headers: ['Product', 'What It Does', 'Price', 'Best For', 'Key Advantage'],
       rows: [
         { affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie Sensors', bestFor: 'BEST FOR STATS', price: '~$179 + $99/yr', feature1: 'Auto shot-tracking with AI caddie', feature2: 'Pairs with Arccos app', winner: true },
         { affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5 Watch', bestFor: 'BEST NO-PHONE GPS', price: '~$249', feature1: 'Full GPS + auto shot tracking', feature2: 'No phone needed on course', winner: false },
@@ -699,7 +699,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['AI Tool', 'What It Does', 'Price', 'Best For'],
+      headers: ['AI Tool', 'What It Does', 'Price', 'Best For', 'Key Feature'],
       rows: [
         { affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'BEST LAUNCH DATA', price: '~$699', feature1: 'Ball speed, spin, launch angle', feature2: 'Range or backyard use', winner: true },
         { affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie Sensors', bestFor: 'BEST AI CADDIE', price: '~$179 + $99/yr', feature1: 'AI recommends clubs per shot', feature2: 'Learns your game over time', winner: false },
@@ -756,7 +756,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Accessory', 'Why You Need It', 'Price', 'Category'],
+      headers: ['Accessory', 'Why You Need It', 'Price', 'Category', 'Who It Suits'],
       rows: [
         { affiliateKey: 'alignment-sticks', name: 'Alignment Sticks 2-Pack', bestFor: 'BEST UNDER $15', price: '~$12', feature1: '20+ drills for path, aim, stance', feature2: 'Used by every tour player', winner: true },
         { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'BEST UNDER $30', price: '~$25', feature1: 'Eye position, face angle, path', feature2: 'Saves 2–4 putts per round', winner: false },
@@ -813,7 +813,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Accessory', 'What It Does', 'Price', 'Budget Tier'],
+      headers: ['Accessory', 'What It Does', 'Price', 'Budget Tier', 'Use Case'],
       rows: [
         { affiliateKey: 'alignment-sticks', name: 'Alignment Sticks 2-Pack', bestFor: 'BEST UNDER $15', price: '~$12', feature1: 'Versatile — 20+ drills', feature2: 'Range or backyard use', winner: true },
         { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'BEST UNDER $30', price: '~$25', feature1: 'Fix eye position and aim instantly', feature2: 'Fastest short game improvement', winner: false },
@@ -861,7 +861,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'How It Speeds Up Your Round', 'Price', 'Best For'],
+      headers: ['Product', 'How It Speeds Up Your Round', 'Price', 'Best For', 'Key Feature'],
       rows: [
         { affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5 GPS Watch', bestFor: 'BEST FOR FAST ROUNDS', price: '~$249', feature1: 'GPS distances instantly on wrist', feature2: 'No phone needed — saves 5+ min/round', winner: true },
         { affiliateKey: 'garmin-approach-s42', name: 'Garmin Approach S42', bestFor: 'BEST TOUCHSCREEN GPS', price: '~$249', feature1: '42,000 courses preloaded', feature2: 'Touchscreen green view', winner: false },
@@ -912,7 +912,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'How It Improves Your Golf Fitness', 'Price', 'Best For'],
+      headers: ['Product', 'How It Improves Your Golf Fitness', 'Price', 'Best For', 'Key Feature'],
       rows: [
         { affiliateKey: 'alignment-sticks', name: 'Alignment Sticks 2-Pack', bestFor: 'BEST MOBILITY TOOL', price: '~$12', feature1: 'Hip rotation drills + shoulder turns', feature2: 'Works as stretching guide too', winner: true },
         { affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie Sensors', bestFor: 'BEST STAT TRACKER', price: '~$179 + $99/yr', feature1: 'Track if fitness gains = more distance', feature2: 'Auto shot-tracking on course', winner: false },
@@ -959,7 +959,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Product', 'Why It Enhances Your Golf Trip', 'Price', 'Best For'],
+      headers: ['Product', 'Why It Enhances Your Golf Trip', 'Price', 'Best For', 'Key Feature'],
       rows: [
         { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'BEST RANGEFINDER', price: '~$329', feature1: 'Locks onto unfamiliar course pins instantly', feature2: 'Slope toggle for tournament play', winner: true },
         { affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'BEST BUDGET PICK', price: '~$169', feature1: 'Accurate on any course nationwide', feature2: 'Lifetime warranty — travel-proof', winner: false },
@@ -1352,7 +1352,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Gift', 'Why Golfers Love It', 'Price', 'Budget'],
+      headers: ['Gift', 'Why Golfers Love It', 'Price', 'Budget', 'Best For'],
       rows: [
         { affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1 Golf Balls', bestFor: 'BEST PREMIUM GIFT', price: '~$55/dozen', feature1: 'The #1 ball on tour — every golfer wants it', feature2: 'Appreciated at any skill level', winner: true },
         { affiliateKey: 'putting-mirror', name: 'Golf Putting Mirror', bestFor: 'BEST UNDER $30', price: '~$25', feature1: 'Saves strokes immediately', feature2: 'Something they would not buy themselves', winner: false },
