@@ -37,7 +37,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Bushnell',
     price: '~$329',
     label: 'Buy at Bushnell',
-    imgSrc: '/images/products/bushnell-tour-v6-shift.webp',
+    imgSrc: '/images/products/bushnell-tour-v6-shift.svg',
     imgAlt: 'Bushnell Tour V6 Shift Golf Rangefinder',
     benefits: [
         'PinSeeker JOLT locks onto flag in <0.3 seconds',
@@ -53,7 +53,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$169',
     label: 'Buy Now',
-    imgSrc: '/images/products/precision-pro-nx9-hd.webp',
+    imgSrc: '/images/products/precision-pro-nx9-hd.svg',
     imgAlt: 'Precision Pro NX9 HD Golf Rangefinder',
     benefits: [
         'Adaptive slope technology adjusts for incline',
@@ -68,7 +68,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$149',
     label: 'Buy Now',
-    imgSrc: '/images/products/blue-tees-series-3-max.webp',
+    imgSrc: '/images/products/blue-tees-series-3-max.svg',
     imgAlt: 'Blue Tees Series 3 Max Golf Rangefinder',
     benefits: [
         'Dual-display shows slope + actual distance simultaneously',
@@ -84,7 +84,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Buy Now',
-    imgSrc: '/images/products/garmin-approach-z82.webp',
+    imgSrc: '/images/products/garmin-approach-z82.svg',
     imgAlt: 'Garmin Approach Z82 GPS Laser Rangefinder',
     benefits: [
         'GPS + laser in one device',
@@ -98,8 +98,8 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/s?k=Bushnell+Pro+XE+golf+rangefinder&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$499',
-    label: 'Buy Now',
-    imgSrc: '/images/products/bushnell-pro-xe.webp',
+    label: 'Buy at Bushnell',
+    imgSrc: '/images/products/bushnell-pro-xe.svg',
     imgAlt: 'Bushnell Pro XE Golf Rangefinder',
     benefits: [
         'Elements compensation: altitude + temperature + slope',
@@ -117,7 +117,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$399',
     label: 'Buy Now',
-    imgSrc: '/images/products/garmin-approach-s62.webp',
+    imgSrc: '/images/products/garmin-approach-s62.svg',
     imgAlt: 'Garmin Approach S62 GPS Golf Watch',
     benefits: [
         '42,000 course database preloaded',
@@ -146,7 +146,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$249',
     label: 'Buy Now',
-    imgSrc: '/images/products/shot-scope-v5.webp',
+    imgSrc: '/images/products/shot-scope-v5.svg',
     imgAlt: 'Shot Scope V5 GPS Golf Watch',
     benefits: [
         'Automatic shot tracking — no button presses',
@@ -160,8 +160,8 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/s?k=Bushnell+iON+Elite+GPS+watch&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$149',
-    label: 'Buy Now',
-    imgSrc: '/images/products/bushnell-ion-elite.webp',
+    label: 'Buy at Bushnell',
+    imgSrc: '/images/products/bushnell-ion-elite.svg',
     imgAlt: 'Bushnell Ion Elite GPS Golf Watch',
     benefits: [
         'Auto-course recognition — no manual selection needed',
@@ -178,7 +178,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Buy Now',
-    imgSrc: '/images/products/callaway-paradym-ai-smoke-max.webp',
+    imgSrc: '/images/products/callaway-paradym-ai-smoke-max.svg',
     imgAlt: 'Callaway Paradym AI Smoke Max Driver',
     benefits: [
         'AI-designed face — maximises ball speed across the face',
@@ -193,7 +193,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$599',
     label: 'Buy Now',
-    imgSrc: '/images/products/taylormade-qi35-max.webp',
+    imgSrc: '/images/products/taylormade-qi35-max.svg',
     imgAlt: 'TaylorMade Qi35 Max Driver',
     benefits: [
         '60X Carbon Twist Face for fast ball speed',
@@ -208,7 +208,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$399',
     label: 'Buy Now',
-    imgSrc: '/images/products/cobra-aerojet-max.webp',
+    imgSrc: '/images/products/cobra-aerojet-max.svg',
     imgAlt: 'Cobra Aerojet Max Golf Driver',
     benefits: [
         'H.O.T. Face Technology for consistent distance',
@@ -223,7 +223,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$449',
     label: 'Buy Now',
-    imgSrc: '/images/products/ping-g430-max-driver.webp',
+    imgSrc: '/images/products/ping-g430-max-driver.svg',
     imgAlt: 'Ping G430 Max Golf Driver',
     benefits: [
         'Moveable weight: draw or neutral trajectory adjustment',
@@ -241,7 +241,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$55/dozen',
     label: 'Buy Now',
-    imgSrc: '/images/products/titleist-pro-v1.webp',
+    imgSrc: '/images/products/titleist-pro-v1.svg',
     imgAlt: 'Titleist Pro V1 Golf Balls 2025',
     benefits: [
         'Soft feel with exceptional greenside spin',
@@ -256,7 +256,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$58/dozen',
     label: 'Buy Now',
-    imgSrc: '/images/products/callaway-chrome-tour-2026.webp',
+    imgSrc: '/images/products/callaway-chrome-tour-2026.svg',
     imgAlt: 'Callaway Chrome Tour 2026 Golf Balls',
     benefits: [
         'Tour Fast Mantle — faster ball speed off driver',
@@ -271,7 +271,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$50/dozen',
     label: 'Buy Now',
-    imgSrc: '/images/products/taylormade-tp5.webp',
+    imgSrc: '/images/products/taylormade-tp5.svg',
     imgAlt: 'TaylorMade TP5 Golf Balls',
     benefits: [
         '5-layer construction — tour performance every club',
@@ -286,7 +286,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$27/dozen',
     label: 'Buy Now',
-    imgSrc: '/images/products/srixon-soft-feel.webp',
+    imgSrc: '/images/products/srixon-soft-feel.svg',
     imgAlt: 'Srixon Soft Feel Golf Balls',
     benefits: [
         'Low-compression — benefits slower swing speeds most',
@@ -301,7 +301,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Vice Golf',
     price: '~$33/dozen',
     label: 'Buy at Vice Golf',
-    imgSrc: '/images/products/vice-pro.webp',
+    imgSrc: '/images/products/vice-pro.svg',
     imgAlt: 'Vice Pro Golf Balls',
     benefits: [
         'Direct-to-consumer pricing: tour ball at half the cost',
@@ -326,7 +326,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$899',
     label: 'Buy Now',
-    imgSrc: '/images/products/callaway-paradym-ai-smoke-max-irons.webp',
+    imgSrc: '/images/products/callaway-paradym-ai-smoke-max-irons.svg',
     imgAlt: 'Callaway Paradym AI Smoke Max Irons',
     benefits: [
         'AI-designed Flash Face Cup — consistent across the set',
@@ -341,7 +341,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$999',
     label: 'Buy Now',
-    imgSrc: '/images/products/titleist-t300.webp',
+    imgSrc: '/images/products/titleist-t300.svg',
     imgAlt: 'Titleist T300 Golf Irons',
     benefits: [
         'Maximum forgiveness in Titleist T-series lineup',
@@ -356,7 +356,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$1,099',
     label: 'Buy Now',
-    imgSrc: '/images/products/titleist-t100.webp',
+    imgSrc: '/images/products/titleist-t100.svg',
     imgAlt: 'Titleist T100 Golf Irons',
   },
 
@@ -366,7 +366,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$999',
     label: 'Buy Now',
-    imgSrc: '/images/products/ping-g430-irons.webp',
+    imgSrc: '/images/products/ping-g430-irons.svg',
     imgAlt: 'Ping G430 Golf Irons',
   },
 
@@ -376,7 +376,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: 'from ~$599',
     label: 'Buy Now',
-    imgSrc: '/images/products/wilson-d9-irons.webp',
+    imgSrc: '/images/products/wilson-d9-irons.svg',
     imgAlt: 'Wilson D9 Golf Irons',
   },
 
@@ -389,7 +389,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$299',
     label: 'Buy Now',
-    imgSrc: '/images/products/wilson-profile-sgi.webp',
+    imgSrc: '/images/products/wilson-profile-sgi.svg',
     imgAlt: 'Wilson Profile SGI Complete Golf Set',
     benefits: [
         'Ultra game-improvement — designed for complete beginners',
@@ -404,7 +404,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$249',
     label: 'Buy Now',
-    imgSrc: '/images/products/callaway-strata.webp',
+    imgSrc: '/images/products/callaway-strata.svg',
     imgAlt: 'Callaway Strata Complete Golf Set',
     benefits: [
         'Best-selling beginner set worldwide — 16-piece complete',
@@ -419,7 +419,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Buy Now',
-    imgSrc: '/images/products/taylormade-rbz-lite.webp',
+    imgSrc: '/images/products/taylormade-rbz-lite.svg',
     imgAlt: 'TaylorMade RBZ Speed Lite Golf Set',
     benefits: [
         'RocketBallZ technology for easy driver launch',
@@ -437,7 +437,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$18',
     label: 'Buy Now',
-    imgSrc: '/images/products/footjoy-weathersof-glove.webp',
+    imgSrc: '/images/products/footjoy-weathersof-glove.svg',
     imgAlt: 'FootJoy WeatherSof Golf Glove',
     benefits: [
         '#1 selling golf glove in the world',
@@ -453,7 +453,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$22',
     label: 'Buy Now',
-    imgSrc: '/images/products/titleist-players-flex.webp',
+    imgSrc: '/images/products/titleist-players-flex.svg',
     imgAlt: 'Titleist Players Flex Golf Glove',
     benefits: [
         'Pure Cabretta leather — tour-level feel',
@@ -468,7 +468,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$12',
     label: 'Buy Now',
-    imgSrc: '/images/products/callaway-dawn-patrol.webp',
+    imgSrc: '/images/products/callaway-dawn-patrol.svg',
     imgAlt: 'Callaway Dawn Patrol Golf Glove',
     benefits: [
         '#1 synthetic glove on tour by volume sold',
@@ -483,7 +483,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$16/pair',
     label: 'Buy Now',
-    imgSrc: '/images/products/footjoy-raingrip.webp',
+    imgSrc: '/images/products/footjoy-raingrip.svg',
     imgAlt: 'FootJoy RainGrip Golf Gloves 2-Pack',
     benefits: [
         'Grips better wet than most gloves grip dry',
@@ -501,7 +501,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$179 + $99/yr',
     label: 'Buy Now',
-    imgSrc: '/images/products/arccos-caddie-sensors.webp',
+    imgSrc: '/images/products/arccos-caddie-sensors.svg',
     imgAlt: 'Arccos Caddie Smart Sensors 3rd Gen',
     benefits: [
         'AI caddie suggests clubs based on your stats',
@@ -518,7 +518,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$699',
     label: 'Buy Now',
-    imgSrc: '/images/products/rapsodo-mlm2pro.webp',
+    imgSrc: '/images/products/rapsodo-mlm2pro.svg',
     imgAlt: 'Rapsodo MLM2PRO Golf Launch Monitor',
     benefits: [
         'Real launch monitor data: ball speed, spin, launch angle',
@@ -534,7 +534,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$99',
     label: 'Buy Now',
-    imgSrc: '/images/products/blast-motion-sensor.webp',
+    imgSrc: '/images/products/blast-motion-sensor.svg',
     imgAlt: 'Blast Motion Golf Swing Sensor',
     benefits: [
         'Attaches to grip — tracks tempo, backswing, impact speed',
@@ -552,7 +552,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'Buy Now',
-    imgSrc: '/images/products/swing-caddie-sc4-pro.webp',
+    imgSrc: '/images/products/swing-caddie-sc4-pro.svg',
     imgAlt: 'Voice Caddie Swing Caddie SC4 PRO Launch Monitor',
     benefits: [
         'Doppler radar — same technology as $2,000+ units',
@@ -567,7 +567,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$2,995',
     label: 'Buy Now',
-    imgSrc: '/images/products/skytrak-plus.webp',
+    imgSrc: '/images/products/skytrak-plus.svg',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
     benefits: [
         'Photometric camera captures ball flight at impact',
@@ -584,7 +584,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$12',
     label: 'Buy Now',
-    imgSrc: '/images/products/alignment-sticks.webp',
+    imgSrc: '/images/products/alignment-sticks.svg',
     imgAlt: 'Golf Alignment Sticks 2-Pack Training Aid',
     benefits: [
         'Improves aim, path, ball position & hip turn',
@@ -599,7 +599,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$8',
     label: 'Buy Now',
-    imgSrc: '/images/products/groove-cleaning-brush.webp',
+    imgSrc: '/images/products/groove-cleaning-brush.svg',
     imgAlt: 'Golf Groove Cleaning Brush',
     benefits: [
         'Keeps grooves clean for maximum spin and ball control',
@@ -614,7 +614,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$8',
     label: 'Buy Now',
-    imgSrc: '/images/products/magnetic-ball-markers.webp',
+    imgSrc: '/images/products/magnetic-ball-markers.svg',
     imgAlt: 'Magnetic Golf Hat Clip Ball Markers',
     benefits: [
         'Hat clip built in — no pocket digging on the green',
@@ -629,7 +629,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$18',
     label: 'Buy Now',
-    imgSrc: '/images/products/frogger-amphibian-towel.webp',
+    imgSrc: '/images/products/frogger-amphibian-towel.svg',
     imgAlt: 'Frogger Amphibian Golf Towel',
     benefits: [
         'Dual-surface: waffle side scrubs, microfibre side dries',
@@ -644,7 +644,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$25',
     label: 'Buy Now',
-    imgSrc: '/images/products/putting-mirror.webp',
+    imgSrc: '/images/products/putting-mirror.svg',
     imgAlt: 'Golf Putting Mirror Training Aid',
     benefits: [
         'Shows eye position, face angle & stroke path',
@@ -659,7 +659,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$12',
     label: 'Buy Now',
-    imgSrc: '/images/products/impact-tape.webp',
+    imgSrc: '/images/products/impact-tape.svg',
     imgAlt: 'Golf Club Face Impact Tape',
     benefits: [
         'Shows exactly where on the face you strike',
@@ -674,7 +674,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$35',
     label: 'Buy Now',
-    imgSrc: '/images/products/eyeline-putting-cup.webp',
+    imgSrc: '/images/products/eyeline-putting-cup.svg',
     imgAlt: 'Eyeline Golf Edge Putting Cup',
     benefits: [
         'Tension-based gate forces center-face contact',
@@ -694,7 +694,7 @@ export const AFFILIATE: Record<string, {
   'odyssey-white-hot-og': {
     url: 'https://www.amazon.com/s?k=Odyssey+White+Hot+OG+putter&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$199', label: 'Buy Now',
-    imgSrc: '/images/products/odyssey-white-hot-og.webp',
+    imgSrc: '/images/products/odyssey-white-hot-og.svg',
     imgAlt: 'Odyssey White Hot OG Putter',
     benefits: [
         'White Hot insert — soft, consistent, clear feedback',
@@ -705,7 +705,7 @@ export const AFFILIATE: Record<string, {
   'scotty-cameron-phantom': {
     url: 'https://www.amazon.com/s?k=Scotty+Cameron+Phantom+X+putter+2024&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$399', label: 'Buy Now',
-    imgSrc: '/images/products/scotty-cameron-phantom.webp',
+    imgSrc: '/images/products/scotty-cameron-phantom.svg',
     imgAlt: 'Scotty Cameron Phantom X Putter',
     benefits: [
         'Stainless/aluminium multi-material — pure, firm feel',
@@ -716,7 +716,7 @@ export const AFFILIATE: Record<string, {
   'cleveland-hb-soft-milled': {
     url: 'https://www.amazon.com/s?k=Cleveland+HB+Soft+Milled+putter&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129', label: 'Buy Now',
-    imgSrc: '/images/products/cleveland-hb-soft-milled.webp',
+    imgSrc: '/images/products/cleveland-hb-soft-milled.svg',
     imgAlt: 'Cleveland HB Soft Milled Putter',
     benefits: [
         'Milled face creates consistent roll at under $130',
@@ -727,7 +727,7 @@ export const AFFILIATE: Record<string, {
   'taylormade-spider-tour': {
     url: 'https://www.amazon.com/s?k=TaylorMade+Spider+Tour+putter+2024&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$349', label: 'Buy Now',
-    imgSrc: '/images/products/taylormade-spider-tour.webp',
+    imgSrc: '/images/products/taylormade-spider-tour.svg',
     imgAlt: 'TaylorMade Spider Tour Putter',
     benefits: [
         'Pure Roll insert — high-friction face promotes topspin',
@@ -740,7 +740,7 @@ export const AFFILIATE: Record<string, {
   'sun-mountain-25-plus': {
     url: 'https://www.amazon.com/s?k=Sun+Mountain+2.5+Plus+carry+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$249', label: 'Buy Now',
-    imgSrc: '/images/products/sun-mountain-25-plus.webp',
+    imgSrc: '/images/products/sun-mountain-25-plus.svg',
     imgAlt: 'Sun Mountain 2.5+ Carry Golf Bag',
     benefits: [
         '4-point dual strap — weight evenly distributed over both shoulders',
@@ -751,7 +751,7 @@ export const AFFILIATE: Record<string, {
   'titleist-players-4': {
     url: 'https://www.amazon.com/s?k=Titleist+Players+4+StaDry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$279', label: 'Buy Now',
-    imgSrc: '/images/products/titleist-players-4.webp',
+    imgSrc: '/images/products/titleist-players-4.svg',
     imgAlt: 'Titleist Players 4 StaDry Golf Bag',
     benefits: [
         'Ultra-lightweight — under 4 lbs with clubs',
@@ -762,7 +762,7 @@ export const AFFILIATE: Record<string, {
   'callaway-fairway-14': {
     url: 'https://www.amazon.com/s?k=Callaway+Fairway+14+cart+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$179', label: 'Buy Now',
-    imgSrc: '/images/products/callaway-fairway-14.webp',
+    imgSrc: '/images/products/callaway-fairway-14.svg',
     imgAlt: 'Callaway Fairway 14 Cart Bag',
     benefits: [
         '14-way top with full-length club dividers',
@@ -773,7 +773,7 @@ export const AFFILIATE: Record<string, {
   'callaway-chev-dry': {
     url: 'https://www.amazon.com/s?k=Callaway+Chev+Dry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129', label: 'Buy Now',
-    imgSrc: '/images/products/callaway-chev-dry.webp',
+    imgSrc: '/images/products/callaway-chev-dry.svg',
     imgAlt: 'Callaway Chev Dry Stand Bag',
     benefits: [
         'Waterproof bag — fully sealed from heavy rain',
@@ -786,7 +786,7 @@ export const AFFILIATE: Record<string, {
   'titleist-pro-v1x': {
     url: 'https://www.amazon.com/s?k=Titleist+Pro+V1x+golf+balls+2025&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$55/dozen', label: 'Buy Now',
-    imgSrc: '/images/products/titleist-pro-v1x.webp',
+    imgSrc: '/images/products/titleist-pro-v1x.svg',
     imgAlt: 'Titleist Pro V1x Golf Balls 2025',
     benefits: [
         'Higher compression than Pro V1 — benefits 105mph+ swing speeds',
@@ -799,7 +799,7 @@ export const AFFILIATE: Record<string, {
   'footjoy-flex-xp': {
     url: 'https://www.amazon.com/s?k=FootJoy+Flex+XP+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$120', label: 'Buy Now',
-    imgSrc: '/images/products/footjoy-flex-xp.webp',
+    imgSrc: '/images/products/footjoy-flex-xp.svg',
     imgAlt: 'FootJoy Flex XP Golf Shoes',
     benefits: [
         'Waterproof guarantee — full round in any weather',
@@ -810,7 +810,7 @@ export const AFFILIATE: Record<string, {
   'ecco-biom-c4': {
     url: 'https://www.amazon.com/s?k=ECCO+Biom+C4+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$220', label: 'Buy Now',
-    imgSrc: '/images/products/ecco-biom-c4.webp',
+    imgSrc: '/images/products/ecco-biom-c4.svg',
     imgAlt: 'ECCO Biom C4 Golf Shoes',
     benefits: [
         'ECCO FLUIDFORM™ sole — cushioning without extra weight',
@@ -821,7 +821,7 @@ export const AFFILIATE: Record<string, {
   'skechers-go-golf': {
     url: 'https://www.amazon.com/s?k=Skechers+Go+Golf+Pro+5+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$85', label: 'Buy Now',
-    imgSrc: '/images/products/skechers-go-golf.webp',
+    imgSrc: '/images/products/skechers-go-golf.svg',
     imgAlt: 'Skechers Go Golf Pro 5 Golf Shoes',
     benefits: [
         'H2GO Shield — weather-resistant without full waterproofing cost',
@@ -832,8 +832,53 @@ export const AFFILIATE: Record<string, {
   'footjoy-tour-alpha': {
     url: 'https://www.amazon.com/s?k=FootJoy+Tour+Alpha+golf+shoes&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$200', label: 'Buy Now',
-    imgSrc: '/images/products/footjoy-tour-alpha.webp',
+    imgSrc: '/images/products/footjoy-tour-alpha.svg',
     imgAlt: 'FootJoy Tour Alpha Golf Shoes',
+  },
+
+
+  // ── BUDGET DRIVERS (best-golf-drivers-under-200 article) ────────────────
+
+  'taylormade-sim-max': {
+    url: 'https://www.amazon.com/s?k=TaylorMade+SIM+Max+driver&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$129-149',
+    label: 'Buy Now',
+    imgSrc: '/images/products/taylormade-sim-max.webp',
+    imgAlt: 'TaylorMade SIM Max Golf Driver',
+    benefits: [
+      'Speed Injected Twist Face for faster ball speed',
+      '460cc head with draw-biased weighting',
+      '2021 tour tech at 2026 budget pricing',
+    ],
+  },
+
+  'callaway-big-bertha-b21': {
+    url: 'https://www.amazon.com/s?k=Callaway+Big+Bertha+B21+driver&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$169-199',
+    label: 'Buy Now',
+    imgSrc: '/images/products/callaway-paradym-ai-smoke-max.webp',
+    imgAlt: 'Callaway Big Bertha B21 Golf Driver',
+    benefits: [
+      'Offset hosel fights slices for high-handicappers',
+      'Flash Face SS21 for maximum ball speed',
+      'Draw-bias weighting keeps shots in the fairway',
+    ],
+  },
+
+  'cleveland-launcher-xl': {
+    url: 'https://www.amazon.com/s?k=Cleveland+Launcher+XL+driver&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$149-179',
+    label: 'Buy Now',
+    imgSrc: '/images/products/cobra-aerojet-max.webp',
+    imgAlt: 'Cleveland Launcher XL Golf Driver',
+    benefits: [
+      'Rebound Frame for fast, flexible face',
+      'HiBore Crown lowers CG for high launch',
+      'Most forgiving Cleveland driver at this price',
+    ],
   },
 
 };
