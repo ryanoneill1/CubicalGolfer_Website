@@ -281,5 +281,161 @@
       });
     })();
   </script>
+
+  <!-- ── EXIT-INTENT POPUP ─────────────────────────────── -->
+  <div class="cg-popup-backdrop" id="cg-popup-backdrop" role="dialog" aria-modal="true" aria-labelledby="popup-heading" hidden> <div class="cg-popup"> <button class="cg-popup__close" id="cg-popup-close" aria-label="Close newsletter popup">✕</button> <p class="cg-popup__eyebrow">FREE FOR WEEKEND GOLFERS</p> <h2 class="cg-popup__heading" id="popup-heading">
+The Gear Cheat Sheet<br>Every Office Golfer Needs
+</h2> <p class="cg-popup__sub">
+Best pick in every category — rangefinder, ball, GPS watch, glove, putter — 
+        based on 40+ real rounds. One PDF. No opinions. Just the answer.
+</p> <form class="cg-popup__form" id="popup-form" action="https://app.convertkit.com/forms/CONVERTKIT_FORM_ID/subscriptions" method="post" novalidate> <!-- Replace action URL ↑ with your ConvertKit / Mailchimp endpoint --> <label for="popup-email" class="sr-only">Your email address</label> <input type="email" id="popup-email" name="email_address" placeholder="your@email.com" required autocomplete="email" class="cg-popup__input"> <button type="submit" class="cg-popup__btn">Send Me the Cheat Sheet →</button> </form> <div class="cg-popup__thanks" id="popup-thanks" hidden>
+✅ &nbsp;Check your inbox — it's on the way!
+</div> <p class="cg-popup__no-thanks"> <button class="cg-popup__skip" id="cg-popup-skip">No thanks, I'll keep guessing yardages</button> </p> </div> </div>
+
+  <!-- ── EXIT POPUP STYLES ────────────────────────────── -->
+  <style>
+
+  </style>
+
+  <!-- ── EXIT POPUP SCRIPT ────────────────────────────── -->
+  <script>
+    (function () {
+      /* ── Nav toggle ── */
+      const toggle = document.getElementById('nav-toggle');
+      const links  = document.getElementById('nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', function () {
+          const open = links.classList.toggle('open');
+          toggle.classList.toggle('open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+        });
+        document.addEventListener('click', function (e) {
+          if (!toggle.contains(e.target as Node) && !links.contains(e.target as Node)) {
+            links.classList.remove('open');
+            toggle.classList.remove('open');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      /* ══════════════════════════════════════════════════════════════
+         PART 2 — Email capture JS
+         Handles:
+           1. Inline strip form (above footer)
+           2. Exit-intent popup (mouseleave toward top of viewport)
+         Both post to the same ConvertKit / Mailchimp action URL.
+         On success: show thank-you message, hide form.
+         Popup: shown once per session via sessionStorage flag.
+         ══════════════════════════════════════════════════════════════ */
+
+      /* ── Utility: submit a form via fetch (JSON) ── */
+      function submitEmailForm(form: HTMLFormElement, thankEl: HTMLElement) {
+        const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement;
+        if (!emailInput || !emailInput.checkValidity()) {
+          emailInput?.focus();
+          return;
+        }
+
+        const action = form.getAttribute('action') || '';
+        /* If action is still the placeholder, fall back to a graceful no-op */
+        if (action.includes('CONVERTKIT_FORM_ID')) {
+          thankEl.hidden = false;
+          (form.querySelector('.email-strip__field, .cg-popup__form') as HTMLElement
+            || form).style.display = 'none';
+          return;
+        }
+
+        const data = new FormData(form);
+        fetch(action, { method: 'POST', body: data, headers: { Accept: 'application/json' } })
+          .then(() => {
+            form.style.display  = 'none';
+            thankEl.hidden = false;
+          })
+          .catch(() => {
+            thankEl.hidden = false; /* Show thanks anyway — don't block on network */
+          });
+      }
+
+      /* ── 1. Inline strip form ── */
+      const stripForm   = document.getElementById('email-capture-form') as HTMLFormElement;
+      const stripThanks = document.getElementById('strip-thanks') as HTMLElement;
+      if (stripForm && stripThanks) {
+        stripForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          submitEmailForm(stripForm, stripThanks);
+        });
+      }
+
+      /* ── 2. Popup ── */
+      const backdrop   = document.getElementById('cg-popup-backdrop') as HTMLElement;
+      const popupClose = document.getElementById('cg-popup-close') as HTMLButtonElement;
+      const popupSkip  = document.getElementById('cg-popup-skip') as HTMLButtonElement;
+      const popupForm  = document.getElementById('popup-form') as HTMLFormElement;
+      const popupThanks= document.getElementById('popup-thanks') as HTMLElement;
+
+      const POPUP_KEY  = 'cg_popup_seen';
+
+      function openPopup() {
+        if (!backdrop) return;
+        backdrop.hidden = false;
+        backdrop.offsetHeight; /* force reflow for CSS transition */
+        backdrop.classList.add('visible');
+        /* Focus management for a11y */
+        const firstInput = backdrop.querySelector('input') as HTMLElement;
+        if (firstInput) firstInput.focus();
+      }
+
+      function closePopup() {
+        if (!backdrop) return;
+        backdrop.classList.remove('visible');
+        sessionStorage.setItem(POPUP_KEY, '1');
+        setTimeout(() => { backdrop.hidden = true; }, 300);
+      }
+
+      /* Only show popup if not already seen this session */
+      if (backdrop && !sessionStorage.getItem(POPUP_KEY)) {
+        /* Exit-intent: cursor leaves viewport toward browser chrome */
+        let triggered = false;
+        document.addEventListener('mouseleave', function (e) {
+          if (triggered || e.clientY > 20) return;
+          triggered = true;
+          /* Small delay so it doesn't flash on accidental movements */
+          setTimeout(openPopup, 400);
+        });
+
+        /* Mobile fallback: show after 45 seconds of engagement */
+        setTimeout(function () {
+          if (!triggered && !sessionStorage.getItem(POPUP_KEY)) {
+            triggered = true;
+            openPopup();
+          }
+        }, 45000);
+      }
+
+      if (popupClose) popupClose.addEventListener('click', closePopup);
+      if (popupSkip)  popupSkip.addEventListener('click', closePopup);
+
+      /* Close on backdrop click */
+      if (backdrop) {
+        backdrop.addEventListener('click', function (e) {
+          if (e.target === backdrop) closePopup();
+        });
+      }
+
+      /* Close on Escape */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && backdrop && !backdrop.hidden) closePopup();
+      });
+
+      /* Popup form submit */
+      if (popupForm && popupThanks) {
+        popupForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          submitEmailForm(popupForm, popupThanks);
+        });
+      }
+    })();
+  </script>
+
 </body>
 </html>
