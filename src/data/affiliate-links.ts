@@ -132,6 +132,8 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$249',
     label: 'Buy Now',
+    imgSrc: '/images/products/garmin-approach-s42.webp',
+    imgAlt: 'Garmin Approach S42 GPS Golf Watch',
     benefits: [
         '42,000 preloaded courses worldwide',
         'Score tracking and stat collection built in',
@@ -316,6 +318,13 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$25/dozen',
     label: 'Buy Now',
+    imgSrc: '/images/products/callaway-supersoft.webp',
+    imgAlt: 'Callaway Supersoft Golf Balls',
+    benefits: [
+        'Ultra-low 38 compression — softest Callaway ball',
+        'HEX Aerodynamics for consistently straight flight',
+        'Best choice for swing speeds under 80mph',
+      ]
   },
 
   // ── IRONS ────────────────────────────────────────────────────────────────
@@ -358,6 +367,11 @@ export const AFFILIATE: Record<string, {
     label: 'Buy Now',
     imgSrc: '/images/products/titleist-t100.webp',
     imgAlt: 'Titleist T100 Golf Irons',
+    benefits: [
+        'Tour-blade feel with mid-handicap forgiveness',
+        'Max Impact Technology boosts ball speed on thin hits',
+        'Preferred iron on the PGA Tour — tour-validated playability',
+      ]
   },
 
   // Ping G430 Irons — search (shaft variants)
@@ -368,6 +382,11 @@ export const AFFILIATE: Record<string, {
     label: 'Buy Now',
     imgSrc: '/images/products/ping-g430-irons.webp',
     imgAlt: 'Ping G430 Golf Irons',
+    benefits: [
+        'Spinsistency technology for tighter shot dispersion',
+        'Hydropearl 2.0 chrome finish resists turf drag',
+        'Consistent distance gaps set to set — all-around iron',
+      ]
   },
 
   // Wilson D9 Irons — search (shaft variants)
@@ -378,6 +397,11 @@ export const AFFILIATE: Record<string, {
     label: 'Buy Now',
     imgSrc: '/images/products/wilson-d9-irons.webp',
     imgAlt: 'Wilson D9 Golf Irons',
+    benefits: [
+        'Urethane-filled cavity reduces harsh vibration at impact',
+        'Irons ship as a complete 7-piece set with steel or graphite',
+        'Best-value full iron set for 15–25 handicappers',
+      ]
   },
 
   // ── BEGINNER SETS ─────────────────────────────────────────────────────────
@@ -689,6 +713,13 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$45',
     label: 'Buy Now',
+    imgSrc: '/images/products/gustbuster-umbrella.webp',
+    imgAlt: 'GustBuster Pro Series Golf Umbrella',
+    benefits: [
+        'Wind-tested to 55mph — vented canopy releases gusts',
+        '62-inch arc covers you and your bag fully',
+        'Fibreglass frame won\'t bend or snap in strong wind',
+      ]
   },
   // ── PUTTERS ───────────────────────────────────────────────────────────────
   'odyssey-white-hot-og': {
@@ -831,9 +862,16 @@ export const AFFILIATE: Record<string, {
   },
   'footjoy-tour-alpha': {
     url: 'https://www.amazon.com/s?k=FootJoy+Tour+Alpha+golf+shoes&tag=cubicalgolfer-20',
-    retailer: 'Amazon', price: '~$200', label: 'Buy Now',
+    retailer: 'Amazon',
+    price: '~$200',
+    label: 'Buy Now',
     imgSrc: '/images/products/footjoy-tour-alpha.webp',
     imgAlt: 'FootJoy Tour Alpha Golf Shoes',
+    benefits: [
+        'BOA Fit System — micro-adjustable fit in seconds',
+        'Pulsar outsole cleats for maximum traction and stability',
+        'Tour-level waterproof upper worn by PGA Tour pros',
+      ]
   },
 
 
