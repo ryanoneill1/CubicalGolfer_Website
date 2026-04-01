@@ -199,6 +199,9 @@
   .conclusion p{color:rgba(255,255,255,.85);font-size:15px;line-height:1.75;
     margin-bottom:16px}
   .conclusion p:last-child{margin-bottom:0}
+  .conclusion strong,.conclusion b{color:#fff;font-weight:700}
+  .conclusion a{color:var(--gold);text-decoration:underline;font-weight:600}
+  .conclusion a:hover{color:#fff}
 
   /* ── FOOTER ── */
   footer{background:var(--text);padding:52px clamp(1.5rem,5vw,4rem) 28px}
