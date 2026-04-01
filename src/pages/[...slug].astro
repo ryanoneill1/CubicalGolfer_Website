@@ -35,7 +35,7 @@ if (article.faq && article.faq.length > 0) {
 
 const TAG_CLASS: Record<string, string> = {
   'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
-  'LISTICLE': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
+  'ROUNDUP': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
 };
 const CAT_LABEL: Record<string, string> = {
   'gear-reviews': 'Golf Gear Reviews', 'golf-tech': 'Golf Tech',
@@ -93,12 +93,12 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   'irons': {
     'MOST FORGIVING': 'callaway-paradym-ai-smoke-max-irons',
     'BEST MID-RANGE': 'titleist-t300',
-    'BEST OVERALL':   'callaway-paradym-ai-smoke-max-irons',
+    'BEST OVERALL':   'ping-g430-irons',
   },
   'beginner-sets': {
-    'BEST OVERALL':  'wilson-profile-sgi',
-    'BEST VALUE':    'callaway-strata',
-    'BEST STEP-UP':  'taylormade-rbz-lite',
+    'BEST OVERALL': 'wilson-profile-sgi',
+    'BEST VALUE':   'callaway-strata',
+    'BEST STEP-UP': 'taylormade-rbz-lite',
   },
   'gloves': {
     'BEST OVERALL':     'footjoy-weathersof-glove',
@@ -108,29 +108,25 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   },
   'swing-analyzers': {
     'BEST OVERALL':     'arccos-caddie-sensors',
-    // FIXED: was 'arccos-caddie-sensors' — Rapsodo MLM2PRO is a separate product (ASIN B0BTPZMCSF)
     'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
-    // ADDED: Swing Caddie SC4 PRO (2024 current model)
     'BEST BUDGET':      'swing-caddie-sc4-pro',
   },
   'ai-tools': {
-    // Swing AI is an app-only subscription — no Amazon product, no button
-    'BEST AI COACH':    '',
-    // FIXED: was 'arccos-caddie-sensors' — Rapsodo MLM2PRO is the product reviewed here
+    'BEST AI COACH':    'arccos-caddie-sensors',
     'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
-    // ADDED: Blast Motion putter/swing sensor
     'BEST PUTTING':     'blast-motion-sensor',
-    // ADDED: SkyTrak+ home simulator
+    'BEST PUTTING AI':  'blast-motion-sensor',
     'BEST SIMULATOR':   'skytrak-plus',
+    'BEST OVERALL':     'arccos-caddie-sensors',
+    'BEST BUDGET':      'blast-motion-sensor',
+    'BEST AI CADDIE':   'arccos-caddie-sensors',
   },
   'golf-apps': {
-    'BEST FREE':       '',   // The Grint — free app, no Amazon product
-    'BEST ALL-IN-ONE': '',   // 18Birdies — free app, no Amazon product
-    // Arccos Caddie is the app; the sensors are the physical product
-    'BEST FOR STATS':  'arccos-caddie-sensors',
-  },
-  'accessories-50': {
-    // No badge-driven sections on this page; links added inline via items
+    'BEST FREE':         'shot-scope-v5',
+    'BEST ALL-IN-ONE':   'garmin-approach-s42',
+    'BEST FOR STATS':    'arccos-caddie-sensors',
+    'BEST NO-PHONE GPS': 'shot-scope-v5',
+    'BEST GPS WATCH':    'garmin-approach-s42',
   },
   'golf-putters': {
     'BEST OVERALL': 'odyssey-white-hot-og',
@@ -152,7 +148,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST DISTANCE': 'titleist-pro-v1x',
   },
   'golf-gifts': {
-    // Items use affiliateKey directly — no badge-driven sections
+    'BEST PREMIUM GIFT':     'titleist-pro-v1',
+    'BEST UNDER $30':        'putting-mirror',
+    'BEST STOCKING STUFFER': 'alignment-sticks',
   },
   'best-golf-training-aids': {
     'BEST VALUE':    'alignment-sticks',
@@ -160,9 +158,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST PUTTING':  'putting-mirror',
   },
   'fix-slice': {
-    'BEST SWING PATH FIX': 'alignment-sticks',
-    'BEST FACE DATA':      'impact-tape',
-    'BEST DRAW-BIAS DRIVER': 'callaway-paradym-ai-smoke-max',
+    'BEST SWING PATH FIX':    'alignment-sticks',
+    'BEST FACE DATA':         'impact-tape',
+    'BEST DRAW-BIAS DRIVER':  'callaway-paradym-ai-smoke-max',
   },
   'break-90': {
     'BEST VALUE RANGEFINDER':   'precision-pro-nx9-hd',
@@ -170,29 +168,14 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST PUTTING AID':         'putting-mirror',
   },
   'improve-putting': {
-    'BEST ALIGNMENT AID': 'putting-mirror',
-    'BEST HOME DRILL':    'eyeline-putting-cup',
+    'BEST ALIGNMENT AID':  'putting-mirror',
+    'BEST HOME DRILL':     'eyeline-putting-cup',
     'BEST PUTTER UPGRADE': 'odyssey-white-hot-og',
   },
   'best-golf-gloves-men': {
-    'BEST OVERALL':   'footjoy-weathersof-glove',
-    'BEST PREMIUM':   'titleist-players-flex',
-    'BEST WET WEATHER': 'footjoy-raingrip',
-  },
-  'beginner-sets': {
-    'BEST OVERALL': 'wilson-profile-sgi',
-    'BEST VALUE':   'callaway-strata',
-    'BEST STEP-UP': 'taylormade-rbz-lite',
-  },
-  'swing-analyzers': {
-    'BEST OVERALL':     'arccos-caddie-sensors',
-    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
-    'BEST BUDGET':      'swing-caddie-sc4-pro',
-  },
-  'gloves': {
     'BEST OVERALL':     'footjoy-weathersof-glove',
     'BEST PREMIUM':     'titleist-players-flex',
-    'BEST VALUE':       'callaway-dawn-patrol',
+    'BEST WET WEATHER': 'footjoy-raingrip',
   },
   'best-budget-drivers': {
     'BEST OVERALL': 'callaway-paradym-ai-smoke-max',
@@ -204,8 +187,6 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST PREMIUM': 'ecco-biom-c4',
     'BEST BUDGET':  'skechers-go-golf',
   },
-
-  // Tutorial / lifestyle / listicle pages with featured product tables
   'tips-beginners': {
     'BEST BEGINNER SET': 'wilson-profile-sgi',
     'BEST TRAINING AID': 'alignment-sticks',
@@ -215,20 +196,6 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST RANGEFINDER':  'precision-pro-nx9-hd',
     'BEST STAT TRACKER': 'arccos-caddie-sensors',
     'BEST PRACTICE AID': 'putting-mirror',
-  },
-  'golf-apps': {
-    'BEST FOR STATS':    'arccos-caddie-sensors',
-    'BEST NO-PHONE GPS': 'shot-scope-v5',
-    'BEST GPS WATCH':    'garmin-approach-s42',
-  },
-  'ai-tools': {
-    'BEST LAUNCH DATA':  'rapsodo-mlm2pro',
-    'BEST AI CADDIE':    'arccos-caddie-sensors',
-    'BEST PUTTING AI':   'blast-motion-sensor',
-    // keep legacy mappings too
-    'BEST OVERALL':      'arccos-caddie-sensors',
-    'BEST BUDGET':       'blast-motion-sensor',
-    'BEST SIMULATOR':    'skytrak-plus',
   },
   'accessories-25': {
     'BEST UNDER $15': 'alignment-sticks',
@@ -255,13 +222,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST BUDGET PICK': 'precision-pro-nx9-hd',
     'BEST GPS WATCH':   'shot-scope-v5',
   },
-  'golf-gifts': {
-    'BEST PREMIUM GIFT':     'titleist-pro-v1',
-    'BEST UNDER $30':        'putting-mirror',
-    'BEST STOCKING STUFFER': 'alignment-sticks',
-  },
-};
----
+};---
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
