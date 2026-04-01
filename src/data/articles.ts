@@ -1500,9 +1500,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
       rows: [
-        { affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'TaylorMade SIM Max (prev gen)', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
-        { affiliateKey: 'taylormade-qi35-max',           name: 'Callaway Big Bertha B21',     bestFor: 'Anti-Slice',   price: '~$179', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
-        { affiliateKey: 'cobra-aerojet-max',             name: 'Cleveland Launcher XL',       bestFor: 'Budget New',   price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+        { affiliateKey: 'taylormade-sim-max',       name: 'TaylorMade SIM Max (prev gen)', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
+        { affiliateKey: 'callaway-big-bertha-b21', name: 'Callaway Big Bertha B21',      bestFor: 'Anti-Slice',  price: '~$179', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+        { affiliateKey: 'cleveland-launcher-xl',   name: 'Cleveland Launcher XL',        bestFor: 'Budget New',  price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
       ],
     },
     faq: [
