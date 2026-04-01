@@ -1115,7 +1115,7 @@ export const ARTICLES: Article[] = [
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
-    emoji: '🏒',
+    emoji: '⛳',
     thumb: 'olive',
     words: '2,200',
     datePublished: '2026-03-25',
