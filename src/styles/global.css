@@ -852,8 +852,6 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .home-picks .section-header h2 { color: #fff; }
 .home-picks .section-header p  { color: rgba(255,255,255,.7); }
 .home-picks .section-eyebrow   { color: var(--gold); }
-/* On dark background, winner card needs visible border — use gold accent */
-.home-picks .product-card--winner { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), 0 4px 20px rgba(0,0,0,.30); }
 
 /* Hero TOP PICKS — force gold regardless of hero p inheritance */
 .hero .hero-quick-links__label { color: var(--gold, #C9A84C) !important; }
