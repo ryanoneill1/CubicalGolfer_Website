@@ -30,6 +30,11 @@ html { scroll-behavior: smooth; font-size: 16px; }
   --olive-badge:  #4A5A28;
   --brown-badge:  #6B4423;
   --navy-badge:   #2A3A5A;
+  /* ── Article tag badge colors ── */
+  --green-tint:   var(--green-tint);  /* Light green for winner row backgrounds */
+  --tag-buy:      #B8922A;
+  --tag-list:     #7A5A2E;
+  --tag-cmp:      #3A4A2E;
   --tag-tutorial: #4B3A6A;
   --tag-lifestyle:#2E5A4A;
   --tag-review:   #2A4A6A;
@@ -144,7 +149,7 @@ nav.site-nav {
   font-size: 11px; font-weight: 700; letter-spacing: .08em; color: #fff; margin-bottom: 16px;
 }
 .tag-buy  { background: #B8922A; }
-.tag-list { background: #7A5A2E; } /* ROUNDUP */
+.tag-list { background: var(--tag-list); }
 .tag-cmp  { background: #3A4A2E; }
 .tag-tut  { background: var(--tag-tutorial); }
 .tag-life { background: var(--tag-lifestyle); }
@@ -251,7 +256,7 @@ nav.site-nav {
 .cmp-table tr:last-child td { border-bottom: none; }
 .cmp-table tr:nth-child(even) td { background: #fafaf8; }
 .cmp-table td:first-child { font-weight: 700; color: var(--text); }
-.cmp-winner td { background: #f0f7f2 !important; }
+.cmp-winner td { background: var(--green-tint) !important; }
 .cmp-winner td:first-child { color: var(--green); }
 .badge-best {
   display: inline-block; background: var(--gold); color: var(--text);
@@ -504,7 +509,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .compare-body { max-width: 900px; margin: 0 auto; padding: 56px clamp(1rem,4vw,4rem); }
 .verdict-box {
-  background: #f0f7f2; border: 2px solid var(--green); border-radius: 12px;
+  background: var(--green-tint); border: 2px solid var(--green); border-radius: 12px;
   padding: 28px; margin: 36px 0;
 }
 .verdict-box h3 { font-size: 18px; font-weight: 700; color: var(--green); margin-bottom: 10px; }
@@ -585,7 +590,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── QUICK VERDICT BOX ── */
 .verdict-quick {
-  background: #f0f7f2; border: 2px solid var(--green);
+  background: var(--green-tint); border: 2px solid var(--green);
   border-radius: var(--r2); padding: 24px; margin-bottom: 32px;
 }
 .verdict-quick-title {
@@ -710,6 +715,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   margin: 28px 0;
+  align-items: stretch;  /* all cards in a row stretch to equal height */
 }
 @media (max-width: 800px) { .product-card-grid { grid-template-columns: 1fr; } }
 @media (min-width: 501px) and (max-width: 800px) {
@@ -846,6 +852,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .home-picks .section-header h2 { color: #fff; }
 .home-picks .section-header p  { color: rgba(255,255,255,.7); }
 .home-picks .section-eyebrow   { color: var(--gold); }
+/* On dark background, winner card needs visible border — use gold accent */
+.home-picks .product-card--winner { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), 0 4px 20px rgba(0,0,0,.30); }
 
 /* Hero TOP PICKS — force gold regardless of hero p inheritance */
 .hero .hero-quick-links__label { color: var(--gold, #C9A84C) !important; }
@@ -854,6 +862,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   margin-top: 32px;
+  align-items: stretch;
 }
 @media (max-width: 900px) { .home-picks__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .home-picks__grid { grid-template-columns: 1fr; } }
