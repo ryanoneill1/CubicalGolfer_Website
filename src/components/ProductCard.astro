@@ -50,7 +50,6 @@ if (!url) return;
 
   {badge && (
     <div class="product-card__badge">
-      {winner && <span class="product-card__crown" aria-hidden="true">🏆</span>}
       {badge}
     </div>
   )}
@@ -133,10 +132,7 @@ if (!url) return;
   transform: translateY(-2px);
 }
 /* Winner gets a green border — same thickness as all other cards */
-.product-card--winner {
-  border: 2px solid var(--gold);
-  box-shadow: 0 0 0 2px rgba(255,255,255,.30), 0 4px 20px rgba(0,0,0,.18);
-}
+/* All cards use identical border — no winner highlight */
 
 /* ── Badge ─────────────────────────────────────────────────── */
 .product-card__badge {
@@ -152,7 +148,6 @@ if (!url) return;
   gap: 6px;
   flex-shrink: 0;
 }
-.product-card__crown { font-size: 13px; }
 
 /* ── Image zone: FIXED 220px so all cards align ────────────── */
 .product-card__img-link { display: block; flex-shrink: 0; }
