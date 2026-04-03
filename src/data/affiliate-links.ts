@@ -910,7 +910,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$149-179',
     label: 'Buy Now',
-    imgSrc: '/images/products/cobra-aerojet-max.webp',
+    imgSrc: '/images/products/placeholder-none.webp',
     imgAlt: 'Cleveland Launcher XL Golf Driver',
     benefits: [
       'Rebound Frame for fast, flexible face',
