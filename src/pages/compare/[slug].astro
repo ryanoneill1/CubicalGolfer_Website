@@ -161,6 +161,19 @@ const PRODUCT_NAMES: Record<string, string> = {
       <div class="compare-buy-row">
         {affA && (
           <div class="compare-buy-card">
+            <div class="compare-product-img">
+              <img
+                src={(affA as any).imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productA]}.webp`}
+                alt={PRODUCT_NAMES[c.productA]}
+                width="160" height="160"
+                loading="lazy"
+                class="compare-prod-photo"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="compare-prod-fallback" style="display:none">
+                <span style="font-size:48px">⚖️</span>
+              </div>
+            </div>
             <span class="compare-buy-label">{PRODUCT_NAMES[c.productA] || c.productA}</span>
             <span class="compare-buy-price">{affA.price}</span>
             <a
@@ -177,6 +190,19 @@ const PRODUCT_NAMES: Record<string, string> = {
         )}
         {affB && (
           <div class="compare-buy-card">
+            <div class="compare-product-img">
+              <img
+                src={(affB as any).imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productB]}.webp`}
+                alt={PRODUCT_NAMES[c.productB]}
+                width="160" height="160"
+                loading="lazy"
+                class="compare-prod-photo"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="compare-prod-fallback" style="display:none">
+                <span style="font-size:48px">⚖️</span>
+              </div>
+            </div>
             <span class="compare-buy-label">{PRODUCT_NAMES[c.productB] || c.productB}</span>
             <span class="compare-buy-price">{affB.price}</span>
             <a
