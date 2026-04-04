@@ -9,7 +9,7 @@ const meta = categoryMeta(cat, articles.length);
 const schemas = [breadcrumbSchema(meta.breadcrumbs)];
 const TAG_CLASS: Record<string, string> = {
   'BUYING GUIDE':'tag-buy','COMPARISON':'tag-cmp','TUTORIAL':'tag-tut',
-  'LISTICLE':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
+  'ROUNDUP':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
 };
 ---
 <BaseLayout {meta} {schemas} activeNav="golf-lifestyle">
@@ -40,6 +40,13 @@ const TAG_CLASS: Record<string, string> = {
           </div>
         </a>
       ))}
+    </div>
+    <div class="cat-section-card" style="margin-top:40px;background:var(--green-card);border-radius:var(--r2);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <div>
+        <h3 style="color:var(--cream);font-size:20px;margin-bottom:8px">⛳ Find Golf Courses Near You</h3>
+        <p style="color:rgba(255,255,255,.7);font-size:14px;max-width:480px">Weekend-friendly courses in major cities — curated for golfers who can only sneak away on Saturdays.</p>
+      </div>
+      <a href="/courses/" class="btn-gold" style="flex-shrink:0;white-space:nowrap">Browse Courses →</a>
     </div>
   </div>
 </BaseLayout>

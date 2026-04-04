@@ -9,7 +9,7 @@ const meta = categoryMeta(cat, articles.length);
 const schemas = [breadcrumbSchema(meta.breadcrumbs)];
 const TAG_CLASS: Record<string, string> = {
   'BUYING GUIDE':'tag-buy','COMPARISON':'tag-cmp','TUTORIAL':'tag-tut',
-  'LISTICLE':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
+  'ROUNDUP':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
 };
 ---
 <BaseLayout {meta} {schemas} activeNav="improve-game">
@@ -41,21 +41,7 @@ const TAG_CLASS: Record<string, string> = {
         </a>
       ))}
     </div>
-    <div class="articles-grid" style="margin-top:40px">
-      <p style="grid-column:1/-1;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-transform:uppercase;margin-bottom:-8px">More Guides</p>
-        <a href="/best-golf-grip-trainers.html" class="article-card" aria-label="Read: Best Golf Grip Trainers">
-          <div class="art-thumb green">
-            <span class="art-badge tag-buy">BUYING GUIDE</span>
-            <span aria-hidden="true">✋</span>
-          </div>
-          <div class="art-body">
-            <h3>Best Golf Grip Trainers</h3>
-            <p>Five trainers that build repeatable grip pressure through feel and physical feedback — not just tips.</p>
-            <div class="art-foot">
-              <span class="art-words">2026 Guide</span>
-              <span class="art-read">Read guide →</span>
-            </div>
-          </div>
+    </div>
         </a>
         <a href="/best-indoor-golf-net-setup.html" class="article-card" aria-label="Read: Best Indoor Golf Net Setup">
           <div class="art-thumb olive">

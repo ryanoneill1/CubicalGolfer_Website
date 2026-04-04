@@ -2306,7 +2306,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-training-aids-home-practice',
     slug: '/best-golf-training-aids-home-practice/',
-    category: 'improve-your-golf-game',
+    category: 'improve-game',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
     emoji: '⛳',
