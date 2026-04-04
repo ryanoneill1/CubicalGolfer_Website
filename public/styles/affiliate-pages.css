@@ -420,3 +420,8 @@
   .cg-popup { padding: 32px 20px 24px; }
   .cg-popup__heading { font-size: 22px; }
 }
+
+  /* Product image zone */
+  .product-card__img-wrap{position:relative;width:220px;min-width:220px;height:180px;background:var(--cream-dark);border-radius:var(--r2);overflow:hidden;flex-shrink:0}
+  .product-card__img{width:100%;height:100%;object-fit:contain;display:block}
+  .product-card__img-fallback{width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--cream-dark)}

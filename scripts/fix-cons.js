@@ -115,11 +115,22 @@ function walkHtml(dir) {
       const original = readFileSync(full, 'utf8');
       let fixed = fixSingleCharLis(original);
       fixed = fixProductImages(fixed);
+      fixed = normalizePlaceholderImages(fixed);
       if (fixed !== original) {
         writeFileSync(full, fixed, 'utf8');
       }
     }
   }
+}
+
+// ── NORMALIZE ALL PRODUCT IMAGES TO PLACEHOLDER ──────────────────────────
+// Since no real product photos exist yet, replace all SVG-converted WebP
+// images with placeholder-none so the fallback UI shows correctly
+function normalizePlaceholderImages(html) {
+  return html.replace(
+    /(<img[^>]+class="product-card__img"[^>]+)src="\/images\/products\/(?!placeholder-none)[^"]+\.webp"/g,
+    '$1src="/images/products/placeholder-none.webp"'
+  );
 }
 
 walkHtml(DIST);
