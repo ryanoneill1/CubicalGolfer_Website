@@ -1,0 +1,561 @@
+---
+// src/pages/[...slug].astro — upgraded with affiliate buttons + image scaffolding
+
+import BaseLayout    from '../layouts/BaseLayout.astro';
+import ProductCard   from '../components/ProductCard.astro';
+import AffiliateCTA  from '../components/AffiliateCTA.astro';
+import StickyBar     from '../components/StickyBar.astro';
+import { ARTICLES }  from '../data/articles';
+import { articleMeta } from '../lib/seo';
+import { articleSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+import { getMergedRelated } from '../lib/linking';
+import { getAffiliateLink } from '../data/affiliate-links';
+import type { Article } from '../data/types';
+
+export async function getStaticPaths() {
+  return ARTICLES.map(article => ({
+    params: { slug: article.slug.replace(/^\/|\/$/g, '') },
+    props: { article },
+  }));
+}
+
+interface Props { article: Article }
+const { article } = Astro.props;
+
+const meta    = articleMeta(article);
+const related = getMergedRelated(article, 4);
+
+const schemas: object[] = [
+  articleSchema(article),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+if (article.faq && article.faq.length > 0) {
+  schemas.push(faqSchema(article.faq));
+}
+
+const TAG_CLASS: Record<string, string> = {
+  'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
+  'ROUNDUP': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
+};
+const CAT_LABEL: Record<string, string> = {
+  'gear-reviews': 'Golf Gear Reviews', 'golf-tech': 'Golf Tech',
+  'golf-accessories': 'Golf Accessories', 'improve-game': 'Improve Your Golf Game',
+  'golf-lifestyle': 'Golf Lifestyle',
+};
+const CAT_SLUG: Record<string, string> = {
+  'gear-reviews': 'gear-reviews', 'golf-tech': 'golf-tech',
+  'golf-accessories': 'golf-accessories', 'improve-game': 'improve-your-golf-game',
+  'golf-lifestyle': 'golf-lifestyle',
+};
+
+const sameCategory = ARTICLES.filter(
+  a => a.category === article.category && a.id !== article.id
+).slice(0, 3);
+
+const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
+
+// Map section badges to affiliate product IDs per article
+// ── Affiliate buy-button mapping ──────────────────────────────────────────────
+// Maps article-id → section badge → affiliate product key.
+//
+// FIXES applied March 2026:
+//   • swing-analyzers + ai-tools: BEST LAUNCH DATA was 'arccos-caddie-sensors'
+//     → corrected to 'rapsodo-mlm2pro' (ASIN B0BTPZMCSF)
+//   • gloves: BEST VENTILATION was 'footjoy-weathersof-glove'
+//     → corrected to 'titleist-players-flex' (its own search link)
+//   • ai-tools: added BEST PUTTING → blast-motion-sensor
+//   • ai-tools: added BEST SIMULATOR → skytrak-plus
+//   • swing-analyzers: added BEST BUDGET → swing-caddie-sc4-pro (SC4 PRO 2024)
+//   • golf-apps: BEST FOR STATS → arccos-caddie-sensors (sensors that power the app)
+// ─────────────────────────────────────────────────────────────────────────────
+const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
+  'rangefinders': {
+    'BEST OVERALL':   'bushnell-tour-v6-shift',
+    'BEST BUDGET':    'precision-pro-nx9-hd',
+    'BEST HYBRID':    'garmin-approach-z82',
+    'PREMIUM PICK':   'bushnell-pro-xe',
+  },
+  'gps-watches': {
+    'BEST OVERALL':       'garmin-approach-s62',
+    'BEST AUTO-TRACKING': 'shot-scope-v5',
+    'BEST BUDGET':        'bushnell-ion-elite',
+  },
+  'drivers': {
+    'BEST OVERALL':  'callaway-paradym-ai-smoke-max',
+    'BEST DISTANCE': 'taylormade-qi35-max',
+    'BEST VALUE':    'cobra-aerojet-max',
+  },
+  'golf-balls': {
+    'BEST OVERALL':  'titleist-pro-v1',
+    'BEST DISTANCE': 'callaway-chrome-tour-2026',
+    'BEST VALUE':    'srixon-soft-feel',
+  },
+  'irons': {
+    'MOST FORGIVING': 'callaway-paradym-ai-smoke-max-irons',
+    'BEST MID-RANGE': 'titleist-t300',
+    'BEST OVERALL':   'ping-g430-irons',
+  },
+  'beginner-sets': {
+    'BEST OVERALL': 'wilson-profile-sgi',
+    'BEST VALUE':   'callaway-strata',
+    'BEST STEP-UP': 'taylormade-rbz-lite',
+  },
+  'gloves': {
+    'BEST OVERALL':     'footjoy-weathersof-glove',
+    'BEST VENTILATION': 'titleist-players-flex',
+    'BEST PREMIUM':     'titleist-players-flex',
+    'BEST VALUE':       'callaway-dawn-patrol',
+  },
+  'swing-analyzers': {
+    'BEST OVERALL':     'arccos-caddie-sensors',
+    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    'BEST BUDGET':      'swing-caddie-sc4-pro',
+  },
+  'ai-tools': {
+    'BEST AI COACH':    '',
+    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    'BEST PUTTING':     'blast-motion-sensor',
+    'BEST PUTTING AI':  'blast-motion-sensor',
+    'BEST SIMULATOR':   'skytrak-plus',
+    'BEST OVERALL':     'arccos-caddie-sensors',
+    'BEST BUDGET':      'blast-motion-sensor',
+    'BEST AI CADDIE':   'arccos-caddie-sensors',
+  },
+  'golf-apps': {
+    'BEST FREE':         '',
+    'BEST ALL-IN-ONE':   '',
+    'BEST FOR STATS':    'arccos-caddie-sensors',
+    'BEST NO-PHONE GPS': 'shot-scope-v5',
+    'BEST GPS WATCH':    'garmin-approach-s42',
+  },
+  'golf-putters': {
+    'BEST OVERALL': 'odyssey-white-hot-og',
+    'BEST BLADE':   'scotty-cameron-phantom',
+    'BEST BUDGET':  'cleveland-hb-soft-milled',
+  },
+  'golf-bags': {
+    'BEST CARRY':  'sun-mountain-25-plus',
+    'BEST STAND':  'titleist-players-4',
+    'BEST CART':   'callaway-fairway-14',
+    'BEST BUDGET': 'callaway-chev-dry',
+  },
+  'golf-ball-compression': {
+    'BEST VALUE':   'srixon-soft-feel',
+    'BEST OVERALL': 'titleist-pro-v1',
+  },
+  'pro-v1-vs-pro-v1x': {
+    'BEST OVERALL':  'titleist-pro-v1',
+    'BEST DISTANCE': 'titleist-pro-v1x',
+  },
+  'golf-gifts': {
+    'BEST PREMIUM GIFT':     'titleist-pro-v1',
+    'BEST UNDER $30':        'putting-mirror',
+    'BEST STOCKING STUFFER': 'alignment-sticks',
+  },
+  'best-golf-training-aids': {
+    'BEST VALUE':    'alignment-sticks',
+    'BEST FEEDBACK': 'impact-tape',
+    'BEST PUTTING':  'putting-mirror',
+  },
+  'fix-slice': {
+    'BEST SWING PATH FIX':    'alignment-sticks',
+    'BEST FACE DATA':         'impact-tape',
+    'BEST DRAW-BIAS DRIVER':  'callaway-paradym-ai-smoke-max',
+  },
+  'break-90': {
+    'BEST VALUE RANGEFINDER':   'precision-pro-nx9-hd',
+    'BEST OVERALL RANGEFINDER': 'bushnell-tour-v6-shift',
+    'BEST PUTTING AID':         'putting-mirror',
+  },
+  'improve-putting': {
+    'BEST ALIGNMENT AID':  'putting-mirror',
+    'BEST HOME DRILL':     'eyeline-putting-cup',
+    'BEST PUTTER UPGRADE': 'odyssey-white-hot-og',
+  },
+  'best-golf-gloves-men': {
+    'BEST OVERALL':     'footjoy-weathersof-glove',
+    'BEST PREMIUM':     'titleist-players-flex',
+    'BEST WET WEATHER': 'footjoy-raingrip',
+  },
+  'best-budget-drivers': {
+    'BEST OVERALL': 'taylormade-sim-max',
+    'BEST VALUE':   'callaway-big-bertha-b21',
+    'BEST NEW':     'cleveland-launcher-xl',
+  },
+  'golf-shoes-walking': {
+    'BEST OVERALL': 'footjoy-flex-xp',
+    'BEST PREMIUM': 'ecco-biom-c4',
+    'BEST BUDGET':  'skechers-go-golf',
+  },
+  'tips-beginners': {
+    'BEST BEGINNER SET': 'wilson-profile-sgi',
+    'BEST TRAINING AID': 'alignment-sticks',
+    'BEST PUTTING TOOL': 'putting-mirror',
+  },
+  'handicap': {
+    'BEST RANGEFINDER':  'precision-pro-nx9-hd',
+    'BEST STAT TRACKER': 'arccos-caddie-sensors',
+    'BEST PRACTICE AID': 'putting-mirror',
+  },
+  'accessories-25': {
+    'BEST UNDER $15': 'alignment-sticks',
+    'BEST UNDER $30': 'putting-mirror',
+    'BEST UNDER $20': 'frogger-amphibian-towel',
+  },
+  'accessories-50': {
+    'BEST UNDER $15': 'alignment-sticks',
+    'BEST UNDER $30': 'putting-mirror',
+    'BEST UNDER $40': 'eyeline-putting-cup',
+  },
+  'sneak-rounds': {
+    'BEST FOR FAST ROUNDS': 'shot-scope-v5',
+    'BEST TOUCHSCREEN GPS': 'garmin-approach-s42',
+    'BEST RANGEFINDER':     'precision-pro-nx9-hd',
+  },
+  'fitness': {
+    'BEST MOBILITY TOOL': 'alignment-sticks',
+    'BEST STAT TRACKER':  'arccos-caddie-sensors',
+    'BEST POWER TRACKER': 'rapsodo-mlm2pro',
+  },
+  'courses': {
+    'BEST RANGEFINDER': 'bushnell-tour-v6-shift',
+    'BEST BUDGET PICK': 'precision-pro-nx9-hd',
+    'BEST GPS WATCH':   'shot-scope-v5',
+  },
+};---
+
+<BaseLayout {meta} {schemas} activeNav={article.category}>
+
+  {/* Sticky bar for buying guides — uses first product with affiliate key */}
+  {(isBuyingGuide || article.comparisonTable) && (() => {
+    const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
+    const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
+    if (!topAff) return null;
+    return (
+      <StickyBar
+        name={topRow.name}
+        price={topAff.price ?? ''}
+        url={topAff.url}
+        retailer={topAff.retailer}
+        badge={topRow.winner ? 'BEST PICK' : topRow.bestFor}
+      />
+    );
+  })()}
+
+  <header class="art-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href={`/${CAT_SLUG[article.category]}/`}>{CAT_LABEL[article.category]}</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{article.titleDisplay}</span>
+    </nav>
+
+    <span class={`art-tag-lg ${TAG_CLASS[article.tag] || 'tag-buy'}`}>{article.tag}</span>
+    <h1>{article.titleDisplay}</h1>
+
+  </header>
+
+  <article class="art-content">
+
+    <!-- ── Author / Trust Box ── -->
+    <div class="author-box">
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer Staff" class="author-avatar-img" width="48" height="48" />
+      <div style="flex:1">
+        <span class="author-name">Cubical Golfer Staff</span>
+        <span class="author-meta">
+          📖 {article.words} words &nbsp;·&nbsp;
+          📅 Last updated: {article.dateModified} &nbsp;·&nbsp;
+          ⛳ Tested over 40+ real rounds
+        </span>
+      </div>
+      <span class="verified-badge">✅ Independently Tested</span>
+    </div>
+
+    <!-- Quick Verdict box for buying guides -->
+    {article.comparisonTable && (
+      <div class="verdict-quick">
+        <p class="verdict-quick-title">⚡ Quick Verdict</p>
+        <div class="verdict-quick-picks">
+          {article.comparisonTable.rows.slice(0, 3).map((row, i) => (
+            <div class={`verdict-pick ${row.winner ? 'verdict-pick--winner' : ''}`}>
+              <span class="verdict-pick-label">{row.winner ? '🏆 Best Overall' : row.bestFor}</span>
+              <span class="verdict-pick-name">{row.name}</span>
+              <span class="verdict-pick-price">{row.price}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    )}
+
+    <div class="intro-box"><p>{article.intro}</p></div>
+
+    {/* ── Inline affiliate disclosure ── */}
+    {isBuyingGuide && (
+      <p class="inline-disclosure">
+        ⚖️ <em>This page contains affiliate links — we earn a small commission if you buy through them, at no extra cost to you. <a href="/about/">Editorial Policy →</a></em>
+      </p>
+    )}
+
+    {/* ── Above-the-fold ProductCard grid (top 3 picks) ── */}
+    {article.comparisonTable && (() => {
+      const topRows = article.comparisonTable.rows.slice(0, 3).filter((r: any) => r.affiliateKey);
+      if (!topRows.length) return null;
+      return (
+        <div class="product-card-grid" aria-label="Top picks">
+          {topRows.map((row: any) => {
+            const aff = getAffiliateLink(row.affiliateKey);
+            return (
+              <ProductCard
+                name={row.name}
+                badge={row.winner ? 'BEST PICK' : row.bestFor}
+                price={aff.price}
+                retailer={aff.retailer}
+                url={aff.url}
+                label={aff.label}
+                winner={row.winner}
+                emoji={article.emoji}
+                productId={row.affiliateKey}
+                imgAlt={(aff as any).imgAlt ?? row.name}
+                benefits={(aff as any).benefits}
+              />
+            );
+          })}
+        </div>
+      );
+    })()}
+
+    {article.toc && article.toc.length > 0 && (
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-heading">In this guide</p>
+        <ol>
+          {article.toc.map(item => <li>{item}</li>)}
+        </ol>
+      </nav>
+    )}
+
+    {article.comparisonTable && (
+      <div class="cmp-wrap">
+        <table class="cmp-table" role="table">
+          <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
+          <thead>
+            <tr>
+              {article.comparisonTable.headers.map((h: string) => <th scope="col">{h}</th>)}
+              <th scope="col" class="cmp-th-buy">Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            {article.comparisonTable.rows.map((row: any) => {
+              const rowAff = row.affiliateKey ? getAffiliateLink(row.affiliateKey) : null;
+              return (
+                <tr class={row.winner ? 'cmp-winner' : ''}>
+                  <td>
+                    {row.name}
+                    {row.winner && <span class="badge-best">BEST PICK</span>}
+                  </td>
+                  <td>{row.bestFor}</td>
+                  <td>{row.price}</td>
+                  <td>{row.feature1}</td>
+                  <td>{row.feature2}</td>
+                  <td class="cmp-td-buy">
+                    {rowAff ? (
+                      <a
+                        href={rowAff.url}
+                        class="cmp-buy-btn"
+                        target="_blank"
+                        rel="nofollow noopener sponsored"
+                        aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}
+                      >
+                        {rowAff.price} →
+                      </a>
+                    ) : (
+                      <span class="cmp-no-link">—</span>
+                    )}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    )}
+
+    {article.sections.map((section, idx) => {
+      const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || ''];
+      const aff = (productId && productId.length > 0) ? getAffiliateLink(productId) : null;
+      return (
+        <div class="art-section">
+          <h2>{section.h2}</h2>
+          {section.badge && <span class="badge-pill">{section.badge}</span>}
+          {(section as any).rating && (
+            <div class="product-rating" aria-label={`Rated ${(section as any).rating} out of 5 stars`}>
+              <span class="stars" aria-hidden="true">
+                {'★'.repeat(Math.floor((section as any).rating))}{'☆'.repeat(5 - Math.floor((section as any).rating))}
+              </span>
+              <span class="rating-score">{(section as any).rating}/5</span>
+              {(section as any).ratingCount && (
+                <span class="rating-count">({(section as any).ratingCount} reviews)</span>
+              )}
+            </div>
+          )}
+
+          {/* Product image — show for any section with a badge (mapped or migrated) */}
+          {section.badge && (() => {
+            const sectionImgSrc = aff ? ((aff as any).imgSrc ?? null) : null;
+            const sectionImgAlt = aff ? ((aff as any).imgAlt ?? section.h2) : section.h2;
+            return (
+              <div class="product-img-wrap">
+                {sectionImgSrc && sectionImgSrc !== '/images/products/placeholder-none.webp' ? (
+                  <img
+                    src={sectionImgSrc}
+                    alt={sectionImgAlt}
+                    width="280"
+                    height="200"
+                    loading="lazy"
+                    decoding="async"
+                    class="product-section-img"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+                  />
+                ) : null}
+                <div class="product-img-fallback" style={sectionImgSrc && sectionImgSrc !== '/images/products/placeholder-none.webp' ? 'display:none' : ''}>
+                  <span aria-hidden="true" style="font-size:52px">{article.emoji}</span>
+                  <span style="font-size:12px;color:var(--muted);margin-top:8px;text-align:center">Photo coming soon</span>
+                </div>
+              </div>
+            );
+          })()}
+
+          {section.body && section.body.trim() && <p>{section.body}</p>}
+          {section.price && <p class="price-note">💰 Price: {section.price}</p>}
+          {section.items && section.items.length > 0 && (
+            <ul>
+              {section.items.map((item: any) => (
+                <li>
+                  {item.affiliateKey ? (
+                    <>
+                      <a
+                        href={getAffiliateLink(item.affiliateKey).url}
+                        target="_blank"
+                        rel="nofollow noopener sponsored"
+                        style="font-weight:700;color:var(--green)"
+                      >{item.name}</a>{' '}— {item.desc}
+                    </>
+                  ) : (
+                    <><strong>{item.name}</strong> — {item.desc}</>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+
+          {/* Pros / Cons — rendered when section has direct pros/cons arrays (migrated pages) */}
+          {((section as any).pros?.length > 0 || (section as any).cons?.length > 0) && (
+            <div class="pros-cons">
+              {(section as any).pros?.length > 0 && (
+                <div class="pros">
+                  <h4>Pros</h4>
+                  <ul>
+                    {(section as any).pros.map((p: string) => <li>{p}</li>)}
+                  </ul>
+                </div>
+              )}
+              {(section as any).cons?.length > 0 && (
+                <div class="cons">
+                  <h4>Cons</h4>
+                  <ul>
+                    {(section as any).cons.map((c: string) => <li>{c}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Why Buy — shown when section has a why field */}
+          {(section as any).why && (section as any).why.trim() && (
+            <div class="why-buy">
+              <strong>Why a weekend golfer buys this:</strong> {(section as any).why}
+            </div>
+          )}
+
+          {/* Direct URL CTA — for sections with a url field but no affiliateKey */}
+          {(section as any).url && (section as any).url !== '#' && !aff && (
+            <a
+              href={(section as any).url}
+              target="_blank"
+              rel="nofollow noopener sponsored"
+              class="btn-cta btn-cta--primary"
+            >
+              Check Price on Amazon →
+            </a>
+          )}
+
+          {/* Affiliate buy button — using AffiliateCTA component */}
+          {aff && (
+            <AffiliateCTA
+              url={aff.url}
+              price={aff.price}
+              name={section.h2}
+              retailer={aff.retailer}
+              label={aff.label}
+              variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
+              disclosure={true}
+            />
+          )}
+        </div>
+      );
+    })}
+
+    {article.faq && article.faq.length > 0 && (
+      <div class="art-faq">
+        <h2>Frequently Asked Questions</h2>
+        {article.faq.map(({ q, a }) => (
+          <details class="faq-item">
+            <summary>{q}</summary>
+            <div class="faq-answer">{a}</div>
+          </details>
+        ))}
+      </div>
+    )}
+
+    {related.length > 0 && (
+      <div class="rel-cluster">
+        <h3>Related Guides</h3>
+        <div class="rel-links">
+          {related.map(link => <a href={link.slug}>{link.label}</a>)}
+        </div>
+      </div>
+    )}
+
+    <div class="art-cta">
+      <h3>Get the Free Golf Gear Buying Guide</h3>
+      <p>The cheat sheet every weekend golfer needs before buying anything new. No spam, ever.</p>
+      <a href="/" class="btn-gold" style="display:inline-block;margin-top:8px;">Browse All Guides →</a>
+    </div>
+
+  </article>
+
+  {sameCategory.length > 0 && (
+    <section class="related-section" aria-label="More guides">
+      <h2>More {CAT_LABEL[article.category]} Guides</h2>
+      <div class="related-grid">
+        {sameCategory.map(a => (
+          <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+            <div class={`art-thumb ${a.thumb}`}>
+              <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
+              <span aria-hidden="true">{a.emoji}</span>
+            </div>
+            <div class="art-body">
+              <h3>{a.titleDisplay}</h3>
+              <p>{a.excerpt}</p>
+              <div class="art-foot">
+                <span class="art-words">{a.words} · Updated 2026</span>
+                <span class="art-read">Read guide →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+</BaseLayout>

@@ -1,0 +1,21 @@
+{
+  "name": "cubicalgolfer",
+  "version": "2.0.0",
+  "description": "CubicalGolfer.com \u2014 Programmatic SEO Golf Media Engine",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node -e \"const fs=require('fs'); if(fs.existsSync('public/_redirects')) fs.copyFileSync('public/_redirects','dist/_redirects'); else fs.writeFileSync('dist/_redirects','')\" && node scripts/fix-cons.js && node scripts/stamp-build.js",
+    "preview": "astro preview",
+    "check": "astro check",
+    "generate": "node src/lib/generators.js",
+    "build:prod": "astro build && node --input-type=module < scripts/stamp-build.js && node -e \"require('fs').writeFileSync('dist/_redirects', '')\""
+  },
+  "dependencies": {
+    "astro": "^4.8.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

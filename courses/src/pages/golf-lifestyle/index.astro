@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { categoryMeta } from '../../lib/seo';
+import { breadcrumbSchema } from '../../lib/schema';
+import { getCategoryArticles } from '../../lib/linking';
+
+const cat      = 'golf-lifestyle';
+const articles = getCategoryArticles(cat);
+const meta     = categoryMeta(cat, articles.length);
+const schemas  = [
+  breadcrumbSchema(meta.breadcrumbs),
+];
+
+const TAG_CLASS: Record<string, string> = {
+  'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
+  'ROUNDUP': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
+};
+---
+
+<BaseLayout {meta} {schemas} activeNav="golf-lifestyle">
+
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Golf Lifestyle</span>
+    </nav>
+    <h1>🌿 Golf Lifestyle</h1>
+    <p>Golf travel, fitness, time management, and everything that makes a weekend golfer's life better — including playing more rounds.</p>
+  </header>
+
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {articles.map(a => (
+        <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+          <div class={`art-thumb ${a.thumb}`} role="img" aria-label={`${a.titleDisplay} thumbnail`}>
+            <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
+            <span aria-hidden="true">{a.emoji}</span>
+          </div>
+          <div class="art-body">
+            <h3>{a.titleDisplay}</h3>
+            <p>{a.excerpt}</p>
+            <div class="art-foot">
+              <span class="art-words">{a.words} · Updated 2026</span>
+              <span class="art-read">Read guide →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+
+  <div class="cat-page-body" style="padding-top:0">
+    <div class="cat-section-card" style="background:var(--green-card);border-radius:var(--r2);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:0">
+      <div>
+        <h3 style="color:var(--cream);font-size:20px;margin-bottom:8px">⛳ Find Golf Courses Near You</h3>
+        <p style="color:rgba(255,255,255,.7);font-size:14px;max-width:480px">Weekend-friendly courses in major cities — curated for golfers who can only sneak away on Saturdays.</p>
+      </div>
+      <a href="/courses/" class="btn-gold" style="flex-shrink:0;white-space:nowrap">Browse Courses →</a>
+    </div>
+  </div>
+
+</BaseLayout>
