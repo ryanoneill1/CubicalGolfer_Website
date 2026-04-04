@@ -316,6 +316,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                 winner={row.winner}
                 emoji={article.emoji}
                 productId={row.affiliateKey}
+                imgSrc={(aff as any).imgSrc ?? undefined}
                 imgAlt={(aff as any).imgAlt ?? row.name}
                 benefits={(aff as any).benefits}
               />
@@ -399,10 +400,11 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </div>
           )}
 
-          {/* Product image — only render when product is mapped and has an image */}
-          {section.badge && aff && (() => {
-            const sectionImgSrc = (aff as any).imgSrc ?? null;
-            const sectionImgAlt = (aff as any).imgAlt ?? section.h2;
+          {/* Product image — show for any section with a badge (mapped or migrated) */}
+          {section.badge && (() => {
+            const rawSectionImg = aff ? ((aff as any).imgSrc ?? null) : null;
+            const sectionImgSrc = (rawSectionImg && !rawSectionImg.includes('placeholder-none')) ? rawSectionImg : null;
+            const sectionImgAlt = aff ? ((aff as any).imgAlt ?? section.h2) : section.h2;
             return (
               <div class="product-img-wrap">
                 {sectionImgSrc ? (
@@ -414,16 +416,13 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                     loading="lazy"
                     decoding="async"
                     class="product-section-img"
-                    onerror="this.style.display='none'"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
                   />
-                ) : (
-                  <div class="product-img-fallback">
-                    <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
-                    <span style="font-size:13px;color:var(--muted);margin-top:8px">
-                      Add image: /public/images/products/{article.id}-{(section.badge ?? '').toLowerCase().replace(/\s+/g,'-')}.jpg
-                    </span>
-                  </div>
-                )}
+                ) : null}
+                <div class="product-img-fallback" style={sectionImgSrc ? 'display:none' : ''}>
+                  <span aria-hidden="true" style="font-size:52px">{article.emoji}</span>
+                  <span style="font-size:12px;color:var(--muted);margin-top:8px;text-align:center">Photo coming soon</span>
+                </div>
               </div>
             );
           })()}

@@ -135,6 +135,7 @@ const TAG_CLASSES: Record<string, string> = {
               label={aff.label}
               winner={pick.winner}
               productId={pick.key}
+              imgSrc={(aff as any).imgSrc ?? undefined}
               imgAlt={(aff as any).imgAlt ?? pick.name}
               benefits={(aff as any).benefits}
             />
@@ -276,9 +277,7 @@ const TAG_CLASSES: Record<string, string> = {
       <div class="aff-cards">
         <div class="aff-card">
           <div class="aff-card__badge">🏆 #1 RANGEFINDER</div>
-          <img src="/images/products/bushnell-tour-v6-shift.webp"
-               alt="Bushnell Tour V6 Shift golf rangefinder"
-               class="aff-card__img" width="180" height="180" loading="lazy" onerror="this.style.opacity='0.3'" />
+          <div class="aff-card__img" style="width:180px;height:180px;background:var(--cream-dark,#ede9e0);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin:0 auto"><span style="font-size:48px">🔭</span><span style="font-size:10px;color:#888;text-align:center">Photo coming soon</span></div>
           <h3 class="aff-card__name">Bushnell Tour V6 Shift</h3>
           <ul class="aff-card__features">
             <li>Locks onto flag in &lt;0.3 seconds</li>
@@ -297,9 +296,7 @@ const TAG_CLASSES: Record<string, string> = {
         <!-- Card 2 — Precision Pro NX9 HD (Amazon affiliate) -->
         <div class="aff-card">
           <div class="aff-card__badge aff-card__badge--value">💰 BEST VALUE</div>
-          <img src="/images/products/precision-pro-nx9-hd.webp"
-               alt="Precision Pro NX9 HD golf rangefinder"
-               class="aff-card__img" width="180" height="180" loading="lazy" onerror="this.style.opacity='0.3'" />
+          <div class="aff-card__img" style="width:180px;height:180px;background:var(--cream-dark,#ede9e0);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin:0 auto"><span style="font-size:48px">🔭</span><span style="font-size:10px;color:#888;text-align:center">Photo coming soon</span></div>
           <h3 class="aff-card__name">Precision Pro NX9 HD</h3>
           <ul class="aff-card__features">
             <li>Slope-adjusted distance display</li>
@@ -318,9 +315,7 @@ const TAG_CLASSES: Record<string, string> = {
         <!-- Card 3 — Arccos Caddie (Amazon affiliate, recurring subscription value) -->
         <div class="aff-card">
           <div class="aff-card__badge aff-card__badge--tech">⚡ TECH PICK</div>
-          <img src="/images/products/arccos-caddie-sensors.webp"
-               alt="Arccos Caddie Smart Sensors"
-               class="aff-card__img" width="180" height="180" loading="lazy" onerror="this.style.opacity='0.3'" />
+          <div class="aff-card__img" style="width:180px;height:180px;background:var(--cream-dark,#ede9e0);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;margin:0 auto"><span style="font-size:48px">📡</span><span style="font-size:10px;color:#888;text-align:center">Photo coming soon</span></div>
           <h3 class="aff-card__name">Arccos Caddie Sensors</h3>
           <ul class="aff-card__features">
             <li>AI caddie from your real round data</li>
