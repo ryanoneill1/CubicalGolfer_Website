@@ -930,5 +930,17 @@ export function getAffiliateLink(productId: string) {
     retailer: 'Amazon',
     price: 'Check price',
     label: 'Buy Now',
-  };
+  
+  // FlightScope Mevo+ — ASIN B09NXRX59M
+  'mevo-plus': {
+    url: 'https://www.amazon.com/dp/B09NXRX59M/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$1,999',
+    label: 'Check Price on Amazon',
+    asin: 'B09NXRX59M',
+    imgSrc: '/images/products/mevo-plus.webp',
+    imgAlt: 'FlightScope Mevo+ Golf Launch Monitor',
+    benefits: ['Doppler radar tracking', 'Indoor & outdoor use', 'Portable tripod mount', 'E6 + FS Golf simulator'],
+  },
+};
 }
