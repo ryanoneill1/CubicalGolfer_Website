@@ -1298,3 +1298,27 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 @media (max-width: 520px) {
   .aff-cards { grid-template-columns: 1fr; }
 }
+
+/* ── PROS / CONS (migrated standalone pages) ─────────────────────────────── */
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.pros, .cons { background: var(--cream-dark); border-radius: var(--r2); padding: 14px 16px; }
+.pros h4, .cons h4 { font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; margin-bottom: 8px; }
+.pros h4 { color: var(--green); }
+.cons h4 { color: #b44; }
+.pros ul, .cons ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+.pros li, .cons li { font-size: 13.5px; line-height: 1.5; color: var(--body);
+  padding-left: 16px; position: relative; }
+.pros li::before { content: '✓'; position: absolute; left: 0; color: var(--green); font-weight: 700; }
+.cons li::before { content: '✗'; position: absolute; left: 0; color: #b44; font-weight: 700; }
+.why-buy { background: var(--green-tint); border-radius: var(--r2); padding: 14px 16px;
+  margin: 16px 0; font-size: 14px; line-height: 1.6; color: var(--body); }
+.why-buy strong { color: var(--green); }
+@media (max-width: 600px) { .pros-cons { grid-template-columns: 1fr; } }
+
+/* ── DIRECT URL CTA (migrated pages without affiliateKey) ─────────────────── */
+.btn-cta { display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--text); border-radius: 6px;
+  padding: 12px 20px; font-size: 15px; font-weight: 700;
+  text-decoration: none; margin: 12px 0; transition: background .2s; }
+.btn-cta:hover { background: var(--gold-dark); color: var(--text); }
