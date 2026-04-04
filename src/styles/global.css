@@ -334,6 +334,7 @@ nav.site-nav {
 .art-thumb.navy   { background: var(--navy-badge); }
 .art-thumb.purple { background: var(--purple-badge); }
 .art-thumb.teal   { background: var(--teal-badge); }
+  .art-thumb.blue   { background: #1a3a5c; }
 .art-thumb.olive  { background: var(--olive-badge); }
 .art-badge {
   position: absolute; top: 12px; left: 12px; padding: 5px 10px;
@@ -349,6 +350,11 @@ nav.site-nav {
 .art-words { color: var(--muted); font-weight: 500; }
 .art-read  { font-weight: 700; color: var(--green); font-size: 13px; }
 .article-card:hover .art-read { text-decoration: underline; }
+  .art-body p { 
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+    overflow: hidden; font-size: 14px; color: var(--muted); line-height: 1.5; 
+    margin: 8px 0 0; flex: 1;
+  }
 
 /* ── SECTIONS ── */
 .section-eyebrow {

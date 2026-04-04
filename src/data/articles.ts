@@ -990,7 +990,7 @@ export const ARTICLES: Article[] = [
     title: 'Best Golf Balls 2026 — Tested & Ranked by Swing Speed',
     titleDisplay: 'Best Golf Balls for Weekend Golfers 2026',
     description: 'Titleist Pro V1, Callaway Chrome Tour 2026, Srixon Soft Feel tested side-by-side. Best golf balls by swing speed ranked. Updated for 2026 new releases.',
-    excerpt: 'The best golf balls for distance, feel, and scoring — updated for 2026 new Chrome Tour and Bridgestone Tour B X releases tested over 35+ rounds.',
+    excerpt: 'The best golf balls for distance, feel, and scoring — updated for 2026 new Chrome Tour and Bridgestone Tour B X.',
     intro: "The golf ball is the only piece of equipment used on every shot. 2026 has brought meaningful upgrades: the new Callaway Chrome Tour features a stiffer mantle layer for faster ball speed without a firmer feel, and the Bridgestone Tour B X already has two PGA Tour wins this season. We tested 14 balls over 35+ rounds to find the best for every swing speed and budget.",
     toc: [
       'How to choose by swing speed',
@@ -1586,7 +1586,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Bushnell Tour V6',
         badge: 'BEST OVERALL',
-        rating: 4.7, ratingCount: '2,812 reviews',
+        rating: 4.7, ratingCount: '2,812',
         price: '~$279',
         body: 'The Tour V6 (non-Shift) is the most straightforward rangefinder at this price. Point, press the button, the flag vibrates in your hand at 0.3 seconds. That feedback — called JOLT — tells you the laser has locked onto the pin. No guessing whether you have the tree or the flag. The non-slope version i',
         pros: ['PinSeeker JOLT technology locks to flag', 'Single-button simplicity', '±1 yard accuracy to 1,000 yards', 'Tournament legal without slope toggle'],
@@ -1597,7 +1597,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Precision Pro NX9',
         badge: 'BEST VALUE',
-        rating: 4.6, ratingCount: '1,902 reviews',
+        rating: 4.6, ratingCount: '1,902',
         price: '~$169',
         body: 'At $169 with slope adjustment, the Precision Pro NX9 is the most complete starter rangefinder for the money. The display is bright and clear, pin acquisition is reliable within ±1 yard, and Precision Pro backs it with a lifetime warranty — unusual at this price. Their customer service is frequently',
         pros: ['Slope adjustment included under $200', 'Lifetime warranty — unusual at this price', 'Bright clear display', 'Fast, accurate pin acquisition'],
@@ -1608,7 +1608,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'TecTecTec VPRO500',
         badge: 'BUDGET PICK',
-        rating: 4.1, ratingCount: '8,341 reviews',
+        rating: 4.1, ratingCount: '8,341',
         price: '~$89',
         body: 'The VPRO500 is the most-reviewed entry-level rangefinder on Amazon for a reason — at $89, it delivers reliable distances to 540 yards and works on almost every course. No slope, no vibration feedback, but the basics are solid. For a beginner who just wants to stop guessing distances without spending',
         pros: ['Under $100', 'Large buyer community', 'Reliable basic distances to 540 yards', 'Compact, lightweight design'],
@@ -1619,7 +1619,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Callaway 300 Pro',
         badge: 'SLOPE + VALUE',
-        rating: 4.2, ratingCount: '2,103 reviews',
+        rating: 4.2, ratingCount: '2,103',
         price: '~$149',
         body: 'The 300 Pro includes slope adjustment and basic pin stabilisation at under $150 — difficult competition at this price point. Slope-adjusted distances displayed in a contrasting colour. Maximum range 300 yards. The Callaway name provides reassurance for beginners who want a recognised brand.',
         pros: ['Slope adjustment under $150', 'Callaway brand recognition', 'Contrasting slope display colour', 'Solid basic accuracy'],
@@ -1630,7 +1630,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Nikon Coolshot 20i GII',
         badge: 'BEST OPTICS',
-        rating: 4.4, ratingCount: '1,456 reviews',
+        rating: 4.4, ratingCount: '1,456',
         price: '~$229',
         body: 'Nikon\'s optics background shows — the Coolshot 20i GII has the clearest, sharpest image of any rangefinder at this price. The Vibration Reduction technology reduces blur from an unsteady hand. ID Technology filters out background objects and locks onto the foreground target (the flag). If optical cl',
         pros: ['Exceptional optics — clearest viewfinder at this price', 'Nikon Vibration Reduction for unsteady hands', 'ID Technology filters background targets', 'Slope with tournament-legal toggle'],
@@ -1669,7 +1669,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Garmin Approach S12',
         badge: 'BEST VALUE',
-        rating: 4.5, ratingCount: '4,201 reviews',
+        rating: 4.5, ratingCount: '4,201',
         price: '~$179',
         body: 'The S12 gives you front, middle, and back distances, hazard yardages, and digital scorecard on a large, easy-to-read display. 42,000 preloaded courses. The interface is straightforward enough that you can navigate it mid-round without breaking focus. 30-hour GPS battery means multiple rounds without',
         pros: ['42,000 preloaded courses', '30-hour GPS battery', 'Large display for easy mid-round reading', 'Hazard distances included'],
@@ -1680,7 +1680,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Bushnell iON Elite',
         badge: 'SIMPLEST USE',
-        rating: 4.3, ratingCount: '1,823 reviews',
+        rating: 4.3, ratingCount: '1,823',
         price: '~$149',
         body: 'The iON Elite does one thing brilliantly — it shows front, middle, and back distances in large, clear numerals that are readable in bright sunlight. Auto Hole Advance moves to the next hole automatically. No distracting menus, no features you need to configure. For a high handicapper who wants the n',
         pros: ['Simplest interface available — no distracting features', 'Auto Hole Advance works reliably', 'Large, bright numerals in sunlight', 'Under $150'],
@@ -1691,7 +1691,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Shot Scope V5',
         badge: 'AUTO TRACKING',
-        rating: 4.4, ratingCount: '934 reviews',
+        rating: 4.4, ratingCount: '934',
         price: '~$249',
         body: 'Shot Scope V5 uses small sensors in your grip ends to automatically track every shot — club, distance, and location — without touching your phone or pressing buttons. After the round, you see a full shot map, strokes gained data, and club performance insights. For a high handicapper who wants to und',
         pros: ['Fully automatic shot tracking — no phone needed', 'Strokes gained analytics after every round', 'No monthly subscription', 'Shows exactly which areas of the game need work'],
@@ -1724,13 +1724,13 @@ export const ARTICLES: Article[] = [
     title: 'Best Golf Swing Analyzer for iPhone in 2026',
     titleDisplay: 'Best Golf Swing Analyzer for iPhone in 2026',
     description: 'Best golf swing analyzer for iPhone in 2026 — Arccos Caddie, Garmin CT10, and Shot Scope H4 compared. Automatic tracking and swing video for iOS.',
-    excerpt: 'iPhone owners have an advantage in golf technology — Apple\'s ARKit and camera APIs are better suppor',
+    excerpt: 'The best iPhone-compatible swing analyzers in 2026, ranked for automatic tracking, data quality, and value.',
     intro: 'iPhone owners have an advantage in golf technology — Apple\'s ARKit and camera APIs are better supported by swing analysis apps than Android, and several hardware sensors integrate directly with iOS. These five options range from clip-on sensors that automatically track every shot to apps that use yo',
     sections: [
       {
         h2: 'Arccos Caddie Smart Sensors',
         badge: 'BEST OVERALL',
-        rating: 4.5, ratingCount: '3,201 reviews',
+        rating: 4.5, ratingCount: '3,201',
         price: '~$179 + $99/yr',
         body: 'Arccos sensors screw into the grip end of each club and communicate with your iPhone via Bluetooth. They automatically detect every shot — club, location, distance — without any manual input. After the round, the Arccos app shows you a GPS shot map, club distances, strokes gained, and AI caddie reco',
         pros: ['Fully automatic — no button presses mid-round', 'AI caddie recommendations based on your real data', 'Strokes gained analytics by category', 'Works with any iPhone via Bluetooth'],
@@ -1741,7 +1741,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Garmin CT10 Club Sensors',
         badge: 'BEST FOR GARMIN',
-        rating: 4.4, ratingCount: '1,203 reviews',
+        rating: 4.4, ratingCount: '1,203',
         price: '~$329 (full set)',
         body: 'CT10 sensors attach to the shaft under the grip and sync with compatible Garmin GPS watches. If you already own an Approach S40, S60, or S70, CT10 adds automatic shot tracking to the round data your watch already collects. No phone required mid-round — all data syncs to the Garmin Golf app after the',
         pros: ['Integrates perfectly with Garmin watch ecosystem', 'No phone required during the round', 'Automatic shot detection and club ID', 'Full shot map and distance data in Garmin Golf app'],
@@ -1752,7 +1752,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Shot Scope H4',
         badge: 'BEST VALUE',
-        rating: 4.3, ratingCount: '892 reviews',
+        rating: 4.3, ratingCount: '892',
         price: '~$149',
         body: 'The H4 is a clip-on GPS device that attaches to your glove or cap and provides both front/middle/back distances AND automatic shot tracking. No phone needed during play. Post-round, the data uploads to the Shot Scope app for full analysis including strokes gained, club averages, and shot dispersion',
         pros: ['GPS + shot tracking under $150', 'No phone needed during play', 'Strong strokes gained analytics app', 'Shot Scope app has no monthly subscription'],
@@ -1763,7 +1763,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Zepp Golf 2',
         badge: 'SWING DATA',
-        rating: 4.1, ratingCount: '2,341 reviews',
+        rating: 4.1, ratingCount: '2,341',
         price: '~$99',
         body: 'The Zepp attaches to your golf glove and captures swing plane, tempo, club speed, backswing length, and hip rotation using a 3D sensor. The iOS app shows a 3D swing animation alongside the metrics. It won\'t track your on-course shots, but for practice sessions focused on swing mechanics, it provides',
         pros: ['Detailed swing mechanics data (tempo, plane, hip rotation)', '3D swing animation for visual feedback', 'Affordable at $99', 'No subscription required'],
@@ -1802,7 +1802,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Arccos Caddie',
         badge: 'BEST OVERALL',
-        rating: 4.6, ratingCount: '12,341 reviews',
+        rating: 4.6, ratingCount: '12,341',
         price: '$99/yr + $179 sensors (one-time)',
         body: 'Arccos requires hardware (grip-end sensors, ~$179 one-time) but delivers something no other app matches: fully automatic shot tracking with no input during the round. Every shot is captured, club-mapped, and uploaded automatically. Post-round analytics include strokes gained by category, true distan',
         pros: ['Zero mid-round input — fully automatic', 'Strokes gained analytics against handicap cohorts', 'AI caddie uses your personal data for club recommendations', 'GHIN handicap posting built-in'],
@@ -1813,7 +1813,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'The Grint',
         badge: 'BEST FREE',
-        rating: 4.4, ratingCount: '8,901 reviews',
+        rating: 4.4, ratingCount: '8,901',
         price: 'Free (premium $7.99/mo)',
         body: 'The Grint tracks rounds, maintains a USGA-compliant handicap index, and provides a social community for posting scores. The free tier is genuinely functional — you get a real handicap index, round history, and course search. The premium tier adds detailed stats breakdown, GPS, and advanced analytics',
         pros: ['Free tier includes a real USGA handicap index', 'Large community for social accountability', 'Course database is extensive', 'Premium is affordable at $7.99/mo'],
@@ -1824,7 +1824,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '18Birdies',
         badge: 'GPS + SCORING',
-        rating: 4.4, ratingCount: '15,201 reviews',
+        rating: 4.4, ratingCount: '15,201',
         price: 'Free (premium $4.99/mo)',
         body: '18Birdies combines GPS course maps, scoring, handicap tracking, and a social feed in a polished app that works well in the free tier. GPS yardages are available for 40,000+ courses. Shot tracking is available but manual. The AI caddie feature in premium suggests clubs based on your recorded data. Mo',
         pros: ['GPS + scoring + handicap in one free app', 'Polished, easy-to-navigate interface', '40,000+ courses preloaded', 'Social features for playing with friends'],
@@ -1835,7 +1835,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Garmin Golf',
         badge: 'FOR GARMIN USERS',
-        rating: 4.2, ratingCount: '6,421 reviews',
+        rating: 4.2, ratingCount: '6,421',
         price: '$9.99/mo',
         body: 'Garmin Golf is the companion app for Garmin GPS watches and CT10 club sensors. If you own either, the app elevates the data significantly — virtual caddie, full analytics, handicap tracking, and tournament scoring. Without Garmin hardware, the app is less compelling than free alternatives. With it,',
         pros: ['Best integration with Garmin watch and CT10 sensors', 'Virtual caddie powered by course and player data', 'Detailed club performance analytics', 'Tournament play features'],
@@ -1846,7 +1846,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Golf Pad GPS',
         badge: 'SIMPLE CHOICE',
-        rating: 4.3, ratingCount: '4,102 reviews',
+        rating: 4.3, ratingCount: '4,102',
         price: 'Free (premium $3.99/mo)',
         body: 'Golf Pad GPS is clean, simple, and works. Front, middle, back distances with a clear display that is easy to read while walking. Scoring, handicap, and basic stats are all covered. The interface is less polished than 18Birdies but faster to navigate for golfers who just want distances and a scorecar',
         pros: ['Clean, fast interface', 'Good GPS accuracy', 'Tags hardware option for auto-tracking ($29)', 'Lowest premium price at $3.99/mo'],
@@ -1886,7 +1886,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Garmin Approach R10',
         badge: 'BEST BUDGET PICK',
-        rating: 4.3, ratingCount: '2,341 reviews',
+        rating: 4.3, ratingCount: '2,341',
         price: '~$599',
         body: 'The R10 tracks ball speed, launch angle, launch direction, spin rate, height, carry distance, smash factor, and club speed — that\'s the core data set most weekend golfers need. It connects to E6 Connect for virtual course play and the Garmin Golf app for practice sessions. Outdoor range mode is reli',
         pros: ['10 launch parameters including spin rate', 'E6 Connect simulator included', 'Works outdoors at the range', 'Strong community and software support'],
@@ -1897,7 +1897,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Rapsodo MLM2PRO',
         badge: 'RUNNER-UP',
-        rating: 4.5, ratingCount: '1,102 reviews',
+        rating: 4.5, ratingCount: '1,102',
         price: '~$699',
         body: 'The MLM2PRO pairs a camera with radar to give you automatic swing video synced to your ball flight data — every shot has a face-on video clip alongside the numbers. This combination is unusually powerful at the price. It also connects to FS Golf for simulator play. The $100 premium over the R10 is j',
         pros: ['Automatic swing video paired with every shot\'s data', '15 data parameters including smash factor', 'FS Golf simulator included', 'Dual camera + radar for better accuracy'],
@@ -1908,7 +1908,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'FlightScope Mevo',
         badge: 'PORTABLE PICK',
-        rating: 4.1, ratingCount: '934 reviews',
+        rating: 4.1, ratingCount: '934',
         price: '~$499',
         body: 'The original Mevo measures 8 parameters — carry distance, total distance, ball speed, club speed, smash factor, spin rate, launch angle, and apex height. No simulator play, but for range sessions where you want instant feedback on each shot, it\'s excellent. Clips to your phone case or sits behind th',
         pros: ['Truly pocket-sized and portable', 'Clips to clothing for hands-free carry', 'Solid outdoors at the range', 'Good data for the price'],
@@ -1919,7 +1919,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Ernest Sports ES14',
         badge: 'BUDGET PICK',
-        rating: 4.0, ratingCount: '671 reviews',
+        rating: 4.0, ratingCount: '671',
         price: '~$249',
         body: 'The ES14 measures carry, total distance, and ball speed. That\'s it — but that\'s what most recreational golfers actually use most. If you just want to know whether your 7-iron is carrying 150 or 165 yards, the ES14 delivers accurate answers at an honest price. No frills, no subscription, no app requi',
         pros: ['No subscription or app required', 'Simple to use — just switch on and hit', 'Accurate carry and total distance', 'Most affordable reliable option'],
@@ -1953,7 +1953,7 @@ export const ARTICLES: Article[] = [
     title: 'SkyTrak+ vs Mevo+: Which Should You Buy?',
     titleDisplay: 'SkyTrak+ vs Mevo+: Which Should You Buy?',
     description: 'SkyTrak+ vs Mevo+ — detailed comparison of accuracy, software, space requirements, and value. Which launch monitor should weekend golfers choose in 2026?',
-    excerpt: 'SkyTrak+ vs Mevo+: Which Should You Buy?',
+    excerpt: 'SkyTrak+ and Mevo+ compared across price, accuracy, simulator software, and space requirements — which one is right for you.',
     intro: 'SkyTrak+ vs Mevo+: Which Should You Buy?',
     sections: [
       {
@@ -1988,7 +1988,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'SkyTrak+ Golf Launch Monitor',
         badge: 'BEST OVERALL',
-        rating: 4.7, ratingCount: '412 reviews',
+        rating: 4.7, ratingCount: '412',
         price: '~$2,995',
         body: 'The SkyTrak+ is the sweet spot between consumer and professional launch monitors. It uses photometric ball-tracking technology — no radar footprint — so it works in spaces as compact as 8×8 feet. Ball speed, launch angle, spin axis, spin rate, and carry distance are all captured with accuracy that r',
         pros: ['Photometric tracking works indoors with no radar clearance needed', 'Works with E6 Connect, WGT, and GSPro simulators', 'Compact unit sits beside the ball, not behind you', 'Accurate to within 1–2% of TrackMan on key metrics'],
@@ -1999,7 +1999,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'FlightScope Mevo+',
         badge: 'RUNNER-UP',
-        rating: 4.5, ratingCount: '867 reviews',
+        rating: 4.5, ratingCount: '867',
         price: '~$1,999',
         body: 'Mevo+ uses Doppler radar and needs 7–8 feet of ball flight before the screen — make that your minimum space requirement. It measures 16 data parameters including smash factor, spin loft, and dynamic loft, and connects to E6 Connect and FS Golf simulators. For a second-car-garage setup, it\'s the valu',
         pros: ['Comprehensive 16-parameter data set', 'E6 Connect and FS Golf included in Space package', 'Portable — takes to the range or a friend\'s garage', 'Strong outdoor range mode'],
@@ -2010,7 +2010,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Garmin Approach R10',
         badge: 'BEST VALUE',
-        rating: 4.2, ratingCount: '2,341 reviews',
+        rating: 4.2, ratingCount: '2,341',
         price: '~$599',
         body: 'The R10 democratised home launch monitoring. At $599, it measures 10 ball and club parameters, connects to the Garmin Golf app, and includes virtual rounds on E6 Connect courses. Radar-based, so allow 6–8 feet of ball flight. Accuracy is within acceptable range for improvement work — you won\'t use i',
         pros: ['Genuinely affordable entry point', 'E6 Connect simulator access included', 'Garmin Golf app integration for mobile play', 'Compact radar unit, easy to position'],
@@ -2021,7 +2021,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Net Return Pro Series',
         badge: 'TOP NET',
-        rating: 4.8, ratingCount: '1,203 reviews',
+        rating: 4.8, ratingCount: '1,203',
         price: '~$499',
         body: 'The Net Return is the gold standard for home golf nets — it returns the ball to your feet after each shot, which sounds small but makes a significant difference for solo practice flow. The frame is solid enough for driver shots, and the net doesn\'t degrade with regular driver use the way cheaper alt',
         pros: ['Ball return eliminates the pick-up interruption', 'Durable frame handles consistent driver use', 'Folds flat for storage', 'Compatible with most impact screens'],
@@ -2032,7 +2032,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Fiberbuilt Studio Mat',
         badge: 'BEST MAT',
-        rating: 4.6, ratingCount: '589 reviews',
+        rating: 4.6, ratingCount: '589',
         price: '~$599',
         body: 'Most hitting mats destroy your elbows and wrists within a few months because they\'re too firm. Fiberbuilt uses a fibrous construction that genuinely gives like real turf — your club goes through the mat rather than bouncing off it. This matters enormously for technique and for joint longevity. Used',
         pros: ['Fibre construction mimics real turf interaction', 'Far gentler on wrists and elbows than rubber mats', 'Allows proper divot-style contact', 'Durable — doesn\'t flatten with heavy use'],
@@ -2192,7 +2192,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Bushnell Tour V6 Shift',
         badge: 'BEST FOR SPEED',
-        rating: 4.8, ratingCount: '3,241 reviews',
+        rating: 4.8, ratingCount: '3,241',
         price: '~$329',
         body: 'The Tour V6 Shift locks onto the pin in under 0.3 seconds with PinSeeker JOLT technology — the fastest pin acquisition on the market. The Slope Switch lets you toggle slope mode on and off for tournament compliance. ±1 yard accuracy to 1,300 yards. Used by more tour caddies than any other rangefinde',
         pros: ['Fastest pin acquisition available (&lt;0.3 sec)', 'Tournament-legal slope toggle', 'CR2 battery lasts 6 months', 'No subscription or app needed'],
@@ -2202,7 +2202,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Garmin Approach Z82',
         badge: 'BEST FOR DATA',
-        rating: 4.5, ratingCount: '1,872 reviews',
+        rating: 4.5, ratingCount: '1,872',
         price: '~$499',
         body: 'The Z82 combines a laser rangefinder with a GPS course display visible through the eyepiece. You see course hazards, green shape, and pin position overlaid in the viewfinder — then fire the laser for exact pin distance. It\'s a fundamentally different product from a standard laser rangefinder, and fo',
         pros: ['GPS course map visible in the eyepiece', 'Hazard distances and green layout in real time', 'Tournament-legal slope toggle', '40,000 preloaded courses'],
@@ -2240,7 +2240,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'SKLZ Gold Flex',
         badge: 'BEST OVERALL',
-        rating: 4.6, ratingCount: '8,412 reviews',
+        rating: 4.6, ratingCount: '8,412',
         price: '~$32',
         body: 'The Gold Flex uses a heavy, flexible shaft to exaggerate the feeling of proper grip pressure and tempo. Squeeze too tight and the shaft resists and wobbles. Hold it correctly with light pressure and the shaft loads smoothly on the backswing and releases through impact. Ten minutes with this before a',
         pros: ['Immediate physical feedback on grip pressure', 'Excellent pre-round warm-up tool', 'Teaches tempo and sequencing simultaneously', 'Affordable at $32'],
@@ -2251,7 +2251,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Orange Whip Trainer',
         badge: 'PREMIUM PICK',
-        rating: 4.8, ratingCount: '6,821 reviews',
+        rating: 4.8, ratingCount: '6,821',
         price: '~$109',
         body: 'The Orange Whip is one of the most-used training aids on PGA Tour warm-up ranges. The flexible shaft and counterweighted orange ball force the golfer to swing in tempo — too fast and the ball wobbles out of sync. Correct timing produces a smooth, connected swing. It also doubles as an excellent fitn',
         pros: ['Immediate feedback on swing tempo and rhythm', 'Builds golf fitness alongside technique', 'Used by tour professionals as a warm-up tool', 'Available in multiple lengths/weights'],
@@ -2262,7 +2262,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Tour Striker PlaneMate',
         badge: 'TECHNIQUE BUILDER',
-        rating: 4.4, ratingCount: '1,243 reviews',
+        rating: 4.4, ratingCount: '1,243',
         price: '~$139',
         body: 'The PlaneMate attaches around the torso and connects to the lead arm via a resistance band. It physically prevents the arms from disconnecting from the body on the backswing — the most common cause of an over-the-top downswing and resulting slice. It\'s more of a swing trainer than a pure grip traine',
         pros: ['Physically enforces connected arm swing', 'Directly addresses the most common swing fault', 'Can use with full shots, chips, and putting'],
@@ -2273,7 +2273,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Callaway Swing Trainer',
         badge: 'BUDGET PICK',
-        rating: 4.0, ratingCount: '892 reviews',
+        rating: 4.0, ratingCount: '892',
         price: '~$29',
         body: 'Callaway\'s weighted swing trainer is a straightforward weighted club that teaches tempo and grip pressure through feel. Less technically sophisticated than the Gold Flex or Orange Whip, but effective as a warm-up tool and a way to practice grip position in front of a mirror. Good for beginners build',
         pros: ['Very affordable', 'Simple to use with no learning curve', 'Effective warm-up tool'],
@@ -2284,7 +2284,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Golf Pride Grip Aid',
         badge: 'GRIP SPECIFIC',
-        rating: 4.1, ratingCount: '543 reviews',
+        rating: 4.1, ratingCount: '543',
         price: '~$19',
         body: 'Golf Pride\'s grip training aid is a moulded grip that physically guides your hands into the correct position — fingers, pad placement, thumb position. It\'s the most direct way to learn where your hands should sit on the club. Best used with mirrors and slow-motion practice to ingrain the position be',
         pros: ['Most affordable grip-specific trainer', 'Physically moulds hands into correct position', 'Good for complete beginners'],
@@ -2323,7 +2323,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'SKLZ Accelerator Pro Putting Mat',
         badge: 'BEST OVERALL',
-        rating: 4.6, ratingCount: '12,431 reviews',
+        rating: 4.6, ratingCount: '12,431',
         price: '~$55',
         body: 'The Accelerator Pro is a 9-foot putting mat with a ball return channel and two hole positions. The mat simulates true green speed (11 on the stimpmeter) with a consistent, flat roll. The ball return brings each putt back to you, allowing high-repetition practice without interruption. Folds for stora',
         pros: ['True green speed simulation', 'Ball return for continuous practice flow', 'Two hole distances on one mat', 'Rolls up for compact storage'],
@@ -2334,7 +2334,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Putt-A-Bout Par 3 Putting Green',
         badge: 'BEST LAYOUT',
-        rating: 4.4, ratingCount: '4,201 reviews',
+        rating: 4.4, ratingCount: '4,201',
         price: '~$35',
         body: 'The Par 3 mat features three hole positions on a single green, simulating real putting green conditions. The undulating surface adds challenge not present on flat mats. Affordable at $35. The larger surface area allows longer putts and more varied practice scenarios.',
         pros: ['Three hole positions for varied practice', 'Undulating surface adds real challenge', 'Affordable starting price', 'Large enough for 8-10 foot putts'],
@@ -2345,7 +2345,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Tour Striker Smart Ball',
         badge: 'CONNECTION TRAINER',
-        rating: 4.4, ratingCount: '1,892 reviews',
+        rating: 4.4, ratingCount: '1,892',
         price: '~$49',
         body: 'The Smart Ball is an inflatable ball that fits between the forearms in the grip area and trains the feeling of keeping arms connected to the body through the swing. The most common cause of an over-the-top swing and resulting slice is arms separating from the torso — the Smart Ball physically preven',
         pros: ['Physical enforcement of arm-body connection', 'Works for chip shots, pitches, and full swing', 'Inflates/deflates for easy storage', 'Addresses the most common swing fault'],
@@ -2356,7 +2356,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Golf Alignment Stick Set (4-pack)',
         badge: 'BEST VALUE',
-        rating: 4.6, ratingCount: '18,321 reviews',
+        rating: 4.6, ratingCount: '18,321',
         price: '~$15',
         body: 'Alignment sticks are used by professional instructors daily because they provide immediate, visual feedback on ball position, target alignment, swing path, and foot position. There are dozens of drill applications: parallel alignment, swing plane channel, ball position rods, feet-together drills. A',
         pros: ['Dozens of drill applications', 'Used by professionals worldwide', 'Instant visual feedback', 'Most affordable effective training aid'],
@@ -2367,7 +2367,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Orange Whip Trainer',
         badge: 'TEMPO TRAINER',
-        rating: 4.8, ratingCount: '6,821 reviews',
+        rating: 4.8, ratingCount: '6,821',
         price: '~$109',
         body: 'The Orange Whip trains tempo through physical sensation — the counterweighted ball at the end of the flexible shaft requires a smooth, sequenced swing to stay in sync. Use it in the garage, yard, or even inside with a high enough ceiling. 10 minutes daily builds the timing and rhythm that transfers',
         pros: ['Immediate physical feedback on tempo', 'Works as a fitness tool for golf-specific muscles', 'Multiple lengths for different golfer heights', 'Used on PGA Tour warm-up ranges'],
@@ -2406,7 +2406,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Net Return Pro Series Net',
         badge: 'BEST OVERALL',
-        rating: 4.8, ratingCount: '1,934 reviews',
+        rating: 4.8, ratingCount: '1,934',
         price: '~$499',
         body: 'The Net Return Pro\'s ball return mechanism sends every shot back to your feet — seemingly minor, but profoundly important for practice flow. It\'s the difference between hitting 60 balls in 20 minutes vs. stopping every 3–4 shots to gather balls. The frame handles driver shots without frame flex or n',
         pros: ['Ball return delivers balls back to your feet', 'Heavy-duty frame handles repeated driver use', 'Folds flat — fits behind a door', 'Compatible with impact screen for projector setups'],
@@ -2417,7 +2417,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Rukket 10×7 Haack Net',
         badge: 'BEST VALUE',
-        rating: 4.3, ratingCount: '4,821 reviews',
+        rating: 4.3, ratingCount: '4,821',
         price: '~$129',
         body: 'The Haack net is co-designed with PGA coach Chris Haack and provides a solid, stable net at a fraction of the Net Return price. No ball return, but the 10×7 size catches everything including off-centre driver shots. Sets up in 5 minutes, disassembles for travel, and handles regular full-swing use. T',
         pros: ['Affordable entry point at $129', '10×7 size catches all off-centre hits', 'Fast 5-minute setup', 'Portable for backyard or range use'],
@@ -2428,7 +2428,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Fiberbuilt Studio Hitting Mat',
         badge: 'BEST MAT',
-        rating: 4.6, ratingCount: '589 reviews',
+        rating: 4.6, ratingCount: '589',
         price: '~$599',
         body: 'Most hitting mats are too firm — they absorb almost none of the impact force, sending it into your wrists and elbows instead. Fiberbuilt\'s fibre construction genuinely compresses on contact, protecting joints and allowing proper divot-style interaction. If you plan to use a net setup regularly, the',
         pros: ['Fibre construction absorbs impact — joint-safe', 'Allows proper descending contact on irons', 'Used in PGA Tour facilities', 'Durable — won\'t compact under heavy use'],
