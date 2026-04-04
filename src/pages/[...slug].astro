@@ -451,6 +451,47 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </ul>
           )}
 
+          {/* Pros / Cons — rendered when section has direct pros/cons arrays (migrated pages) */}
+          {((section as any).pros?.length > 0 || (section as any).cons?.length > 0) && (
+            <div class="pros-cons">
+              {(section as any).pros?.length > 0 && (
+                <div class="pros">
+                  <h4>Pros</h4>
+                  <ul>
+                    {(section as any).pros.map((p: string) => <li>{p}</li>)}
+                  </ul>
+                </div>
+              )}
+              {(section as any).cons?.length > 0 && (
+                <div class="cons">
+                  <h4>Cons</h4>
+                  <ul>
+                    {(section as any).cons.map((c: string) => <li>{c}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Why Buy — shown when section has a why field */}
+          {(section as any).why && (section as any).why.trim() && (
+            <div class="why-buy">
+              <strong>Why a weekend golfer buys this:</strong> {(section as any).why}
+            </div>
+          )}
+
+          {/* Direct URL CTA — for sections with a url field but no affiliateKey */}
+          {(section as any).url && (section as any).url !== '#' && !aff && (
+            <a
+              href={(section as any).url}
+              target="_blank"
+              rel="nofollow noopener sponsored"
+              class="btn-cta btn-cta--primary"
+            >
+              Check Price on Amazon →
+            </a>
+          )}
+
           {/* Affiliate buy button — using AffiliateCTA component */}
           {aff && (
             <AffiliateCTA
