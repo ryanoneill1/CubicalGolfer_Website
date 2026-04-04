@@ -42,7 +42,7 @@ const {
 } = Astro.props;
 
 const rawImg = imgSrcProp || (productId ? `/images/products/${productId}.webp` : null);
-const resolvedImg = (rawImg && !rawImg.includes('placeholder-none')) ? rawImg : null;
+const resolvedImg = rawImg ?? null;
 
 if (!url) return;
 ---

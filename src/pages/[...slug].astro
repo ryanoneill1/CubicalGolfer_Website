@@ -403,7 +403,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
           {/* Product image — show for any section with a badge (mapped or migrated) */}
           {section.badge && (() => {
             const rawSectionImg = aff ? ((aff as any).imgSrc ?? null) : null;
-            const sectionImgSrc = (rawSectionImg && !rawSectionImg.includes('placeholder-none')) ? rawSectionImg : null;
+            const sectionImgSrc = rawSectionImg ?? null;
             const sectionImgAlt = aff ? ((aff as any).imgAlt ?? section.h2) : section.h2;
             return (
               <div class="product-img-wrap">
