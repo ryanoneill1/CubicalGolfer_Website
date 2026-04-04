@@ -3,16 +3,22 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { categoryMeta } from '../../lib/seo';
 import { breadcrumbSchema } from '../../lib/schema';
 import { getCategoryArticles } from '../../lib/linking';
-const cat = 'improve-game';
+
+const cat      = 'improve-game';
 const articles = getCategoryArticles(cat);
-const meta = categoryMeta(cat, articles.length);
-const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const meta     = categoryMeta(cat, articles.length);
+const schemas  = [
+  breadcrumbSchema(meta.breadcrumbs),
+];
+
 const TAG_CLASS: Record<string, string> = {
-  'BUYING GUIDE':'tag-buy','COMPARISON':'tag-cmp','TUTORIAL':'tag-tut',
-  'ROUNDUP':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
+  'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
+  'ROUNDUP': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
 };
 ---
+
 <BaseLayout {meta} {schemas} activeNav="improve-game">
+
   <header class="cat-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -22,11 +28,12 @@ const TAG_CLASS: Record<string, string> = {
     <h1>🎯 Improve Your Golf Game</h1>
     <p>Tutorials and guides for breaking scoring barriers, fixing swing faults, and building a practice plan that actually works between rounds.</p>
   </header>
+
   <div class="cat-page-body">
     <div class="articles-grid">
       {articles.map(a => (
         <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
-          <div class={`art-thumb ${a.thumb}`}>
+          <div class={`art-thumb ${a.thumb}`} role="img" aria-label={`${a.titleDisplay} thumbnail`}>
             <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
             <span aria-hidden="true">{a.emoji}</span>
           </div>
@@ -41,50 +48,6 @@ const TAG_CLASS: Record<string, string> = {
         </a>
       ))}
     </div>
-    </div>
-        </a>
-        <a href="/best-indoor-golf-net-setup.html" class="article-card" aria-label="Read: Best Indoor Golf Net Setup">
-          <div class="art-thumb olive">
-            <span class="art-badge tag-buy">BUYING GUIDE</span>
-            <span aria-hidden="true">🥅</span>
-          </div>
-          <div class="art-body">
-            <h3>Best Indoor Golf Net Setup</h3>
-            <p>The right net removes the biggest barrier to home practice. Five setups ranked for any space and budget.</p>
-            <div class="art-foot">
-              <span class="art-words">2026 Guide</span>
-              <span class="art-read">Read guide →</span>
-            </div>
-          </div>
-        </a>
-        <a href="/best-golf-training-aids-home-practice.html" class="article-card" aria-label="Read: Best Golf Training Aids for Home Practice">
-          <div class="art-thumb green">
-            <span class="art-badge tag-buy">BUYING GUIDE</span>
-            <span aria-hidden="true">🏋️</span>
-          </div>
-          <div class="art-body">
-            <h3>Best Golf Training Aids for Home Practice</h3>
-            <p>Five training aids that deliver real improvement through regular 15-minute home sessions.</p>
-            <div class="art-foot">
-              <span class="art-words">2026 Guide</span>
-              <span class="art-read">Read guide →</span>
-            </div>
-          </div>
-        </a>
-        <a href="/how-to-use-golf-rangefinder.html" class="article-card" aria-label="Read: How to Use a Golf Rangefinder">
-          <div class="art-thumb brown">
-            <span class="art-badge tag-tut">TUTORIAL</span>
-            <span aria-hidden="true">📖</span>
-          </div>
-          <div class="art-body">
-            <h3>How to Use a Golf Rangefinder</h3>
-            <p>From powering on to locking onto the flag — everything you need for accurate yardages every round.</p>
-            <div class="art-foot">
-              <span class="art-words">2026 Guide</span>
-              <span class="art-read">Read guide →</span>
-            </div>
-          </div>
-        </a>
-    </div>
   </div>
+
 </BaseLayout>
