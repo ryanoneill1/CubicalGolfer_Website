@@ -61,6 +61,8 @@ const IMAGE_CORRECTIONS = {
   // Budget drivers with wrong image
   "Cleveland Launcher": 'placeholder-none',
   "Zepp Golf":          'placeholder-none',
+  "Garmin Approach R10": 'placeholder-none',
+  "Callaway 300 Pro":   'placeholder-none',
 };
 
 // ── CONS FIXER ──────────────────────────────────────────────────────────────
