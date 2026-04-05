@@ -400,8 +400,8 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </div>
           )}
 
-          {/* Product image — show for any section with a badge (mapped or migrated) */}
-          {section.badge && (() => {
+          {/* Product image — only for migrated articles (no comparisonTable). Articles with comparisonTable already show images in the top ProductCard grid. */}
+          {section.badge && !article.comparisonTable && (() => {
             const rawSectionImg = aff ? ((aff as any).imgSrc ?? null) : null;
             const sectionImgSrc = rawSectionImg ?? null;
             const sectionImgAlt = aff ? ((aff as any).imgAlt ?? section.h2) : section.h2;
