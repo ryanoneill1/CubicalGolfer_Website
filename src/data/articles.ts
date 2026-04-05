@@ -1585,6 +1585,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Bushnell Tour V6',
+        affiliateKey: 'bushnell-tour-v6-shift',
         badge: 'BEST OVERALL',
         rating: 4.7, ratingCount: '2,812',
         price: '~$279',
@@ -1596,6 +1597,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Precision Pro NX9',
+        affiliateKey: 'precision-pro-nx9-hd',
         badge: 'BEST VALUE',
         rating: 4.6, ratingCount: '1,902',
         price: '~$169',
@@ -1668,6 +1670,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Garmin Approach S12',
+        affiliateKey: 'garmin-approach-s42',
         badge: 'BEST VALUE',
         rating: 4.5, ratingCount: '4,201',
         price: '~$179',
@@ -1679,6 +1682,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Bushnell iON Elite',
+        affiliateKey: 'bushnell-ion-elite',
         badge: 'SIMPLEST USE',
         rating: 4.3, ratingCount: '1,823',
         price: '~$149',
@@ -1690,6 +1694,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Shot Scope V5',
+        affiliateKey: 'shot-scope-v5',
         badge: 'AUTO TRACKING',
         rating: 4.4, ratingCount: '934',
         price: '~$249',
@@ -1729,6 +1734,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Arccos Caddie Smart Sensors',
+        affiliateKey: 'arccos-caddie-sensors',
         badge: 'BEST OVERALL',
         rating: 4.5, ratingCount: '3,201',
         price: '~$179 + $99/yr',
@@ -1740,6 +1746,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Garmin CT10 Club Sensors',
+        affiliateKey: 'arccos-caddie-sensors',
         badge: 'BEST FOR GARMIN',
         rating: 4.4, ratingCount: '1,203',
         price: '~$329 (full set)',
@@ -1801,6 +1808,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Arccos Caddie',
+        affiliateKey: 'arccos-caddie-sensors',
         badge: 'BEST OVERALL',
         rating: 4.6, ratingCount: '12,341',
         price: '$99/yr + $179 sensors (one-time)',
@@ -1834,6 +1842,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Garmin Golf',
+        affiliateKey: 'garmin-approach-s42',
         badge: 'FOR GARMIN USERS',
         rating: 4.2, ratingCount: '6,421',
         price: '$9.99/mo',
@@ -1885,6 +1894,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Garmin Approach R10',
+        affiliateKey: 'garmin-approach-s42',
         badge: 'BEST BUDGET PICK',
         rating: 4.3, ratingCount: '2,341',
         price: '~$599',
@@ -1896,6 +1906,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Rapsodo MLM2PRO',
+        affiliateKey: 'rapsodo-mlm2pro',
         badge: 'RUNNER-UP',
         rating: 4.5, ratingCount: '1,102',
         price: '~$699',
@@ -1907,6 +1918,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'FlightScope Mevo',
+        affiliateKey: 'mevo-plus',
         badge: 'PORTABLE PICK',
         rating: 4.1, ratingCount: '934',
         price: '~$499',
@@ -1958,6 +1970,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'SkyTrak+',
+        affiliateKey: 'skytrak-plus',
         badge: 'BEST FOR INDOOR SPACES',
         rating: 4.7, ratingCount: '1,203',
         price: '~$2,995',
@@ -1969,6 +1982,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'FlightScope Mevo+',
+        affiliateKey: 'mevo-plus',
         badge: 'BEST VALUE',
         rating: 4.5, ratingCount: '2,847',
         price: '~$1,999',
@@ -2009,6 +2023,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'SkyTrak+ Golf Launch Monitor',
+        affiliateKey: 'skytrak-plus',
         badge: 'BEST OVERALL',
         rating: 4.7, ratingCount: '412',
         price: '~$2,995',
@@ -2020,6 +2035,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'FlightScope Mevo+',
+        affiliateKey: 'mevo-plus',
         badge: 'RUNNER-UP',
         rating: 4.5, ratingCount: '867',
         price: '~$1,999',
@@ -2031,6 +2047,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Garmin Approach R10',
+        affiliateKey: 'garmin-approach-s42',
         badge: 'BEST VALUE',
         rating: 4.2, ratingCount: '2,341',
         price: '~$599',
@@ -2094,6 +2111,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Garmin Approach R10 (~$599)',
+        affiliateKey: 'garmin-approach-s42',
         badge: 'ENTRY LEVEL',
         rating: 4.5, ratingCount: '500',
         price: '~$599',
@@ -2104,6 +2122,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'SkyTrak+ (~$2,995)',
+        affiliateKey: 'skytrak-plus',
         badge: 'MID-RANGE',
         rating: 4.5, ratingCount: '500',
         price: '~$2,995',
@@ -2202,6 +2221,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Rangefinder for Beginners: Bushnell Tour V6 Shift',
+        affiliateKey: 'bushnell-tour-v6-shift',
         badge: 'TOP PICK',
         rating: 4.8, ratingCount: '3,241',
         price: '~$329',
@@ -2212,6 +2232,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Budget Pick: Precision Pro NX9 HD',
+        affiliateKey: 'precision-pro-nx9-hd',
         badge: 'BEST VALUE',
         rating: 4.5, ratingCount: '1,892',
         price: '~$169',
@@ -2248,6 +2269,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Bushnell Tour V6 Shift',
+        affiliateKey: 'bushnell-tour-v6-shift',
         badge: 'BEST FOR SPEED',
         rating: 4.8, ratingCount: '3,241',
         price: '~$329',
@@ -2258,6 +2280,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Garmin Approach Z82',
+        affiliateKey: 'garmin-approach-z82',
         badge: 'BEST FOR DATA',
         rating: 4.5, ratingCount: '1,872',
         price: '~$499',
@@ -2296,6 +2319,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'SKLZ Gold Flex',
+        affiliateKey: 'alignment-sticks',
         badge: 'BEST OVERALL',
         rating: 4.6, ratingCount: '8,412',
         price: '~$32',
@@ -2412,6 +2436,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Golf Alignment Stick Set (4-pack)',
+        affiliateKey: 'alignment-sticks',
         badge: 'BEST VALUE',
         rating: 4.6, ratingCount: '18,321',
         price: '~$15',
@@ -2423,6 +2448,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Orange Whip Trainer',
+        affiliateKey: 'alignment-sticks',
         badge: 'TEMPO TRAINER',
         rating: 4.8, ratingCount: '6,821',
         price: '~$109',
@@ -2462,6 +2488,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Net Return Pro Series Net',
+        affiliateKey: 'skytrak-plus',
         badge: 'BEST OVERALL',
         rating: 4.8, ratingCount: '1,934',
         price: '~$499',
@@ -2523,6 +2550,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Callaway Supersoft',
+        affiliateKey: 'callaway-supersoft',
         badge: 'BEST OVERALL',
         rating: 4.6, ratingCount: '500',
         price: '~$25/dozen',
@@ -2534,6 +2562,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Titleist TruFeel',
+        affiliateKey: 'titleist-pro-v1',
         badge: 'RUNNER-UP',
         rating: 4.5, ratingCount: '500',
         price: '~$29/dozen',
@@ -2545,6 +2574,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Srixon Soft Feel',
+        affiliateKey: 'srixon-soft-feel',
         badge: 'BEST BUDGET',
         rating: 4.5, ratingCount: '500',
         price: '~$27/dozen',
@@ -2603,6 +2633,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Titleist Velocity',
+        affiliateKey: 'titleist-pro-v1x',
         badge: 'BEST OVERALL',
         rating: 4.5, ratingCount: '500',
         price: '~$32/dozen',
@@ -2614,6 +2645,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Callaway Chrome Soft',
+        affiliateKey: 'callaway-chrome-tour-2026',
         badge: 'RUNNER-UP',
         rating: 4.6, ratingCount: '500',
         price: '~$48/dozen',
@@ -2625,6 +2657,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'TaylorMade TP5',
+        affiliateKey: 'taylormade-tp5',
         badge: 'BEST BUDGET',
         rating: 4.6, ratingCount: '500',
         price: '~$50/dozen',

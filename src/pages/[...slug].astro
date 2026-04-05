@@ -382,7 +382,8 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     )}
 
     {article.sections.map((section, idx) => {
-      const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || ''];
+      const sectionAffKey = (section as any).affiliateKey;
+      const productId = sectionAffKey || BADGE_TO_PRODUCT[article.id]?.[section.badge || ''];
       const aff = (productId && productId.length > 0) ? getAffiliateLink(productId) : null;
       return (
         <div class="art-section">
