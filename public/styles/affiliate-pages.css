@@ -4,7 +4,7 @@
 
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;font-size:16px}
+  html{scroll-behavior:smooth;font-size:16px;overflow-x:hidden}body{overflow-x:hidden}
   :root{
     --green:#1E3A28;--green-mid:#264D33;--green-card:#2A5038;
     --gold:#C8A84B;--gold-dark:#A8882A;
@@ -425,3 +425,6 @@
   .product-card__img-wrap{position:relative;width:220px;min-width:220px;height:180px;background:var(--cream-dark);border-radius:var(--r2);overflow:hidden;flex-shrink:0}
   .product-card__img{width:100%;height:100%;object-fit:contain;display:block}
   .product-card__img-fallback{width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--cream-dark)}
+
+table{display:block;overflow-x:auto;width:100%;max-width:100%}
+*{box-sizing:border-box}img{max-width:100%}

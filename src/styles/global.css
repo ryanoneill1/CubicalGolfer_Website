@@ -2,7 +2,8 @@
 /* CubicalGolfer.com — Design System */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+body { overflow-x: hidden; }
 
 :root {
   --green:      #1E3A28;
@@ -397,7 +398,7 @@ nav.site-nav {
 .hero {
   background: var(--green);
   padding: 72px clamp(1.5rem,5vw,4rem) 60px;
-  display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center;
+  display: grid; grid-template-columns: 1fr minmax(280px, 420px); gap: 48px; align-items: center;
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
@@ -1354,3 +1355,10 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   display: flex; align-items: center; justify-content: center;
   background: var(--cream-dark);
 }
+
+/* ── PREVENT HORIZONTAL OVERFLOW ──────────────────────────────────────────── */
+.art-content table, .art-page table { 
+  display: block; overflow-x: auto; width: 100%; max-width: 100%;
+}
+* { box-sizing: border-box; max-width: 100%; }
+img, video, iframe { max-width: 100%; }
