@@ -26,6 +26,7 @@ const NAV_ITEMS = [
   { label: 'Golf Accessories',  href: '/golf-accessories/',       key: 'golf-accessories' },
   { label: 'Improve Your Game', href: '/improve-your-golf-game/', key: 'improve-game'  },
   { label: 'Golf Lifestyle',    href: '/golf-lifestyle/',         key: 'golf-lifestyle'},
+  { label: 'Golf Courses',      href: '/courses/',                key: 'courses'       },
   { label: 'About',             href: '/about/',                  key: 'about'         },
 ];
 ---
@@ -46,16 +47,26 @@ const NAV_ITEMS = [
   <meta name="google-site-verification" content={VERIFICATION_TAG} />
   <meta name="impact-site-verification" content="e92bb06a-0153-4dad-ac66-74301699e7b6" />
 
+  <!-- Favicons — replaces default globe icon in browser tabs and Google search -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="theme-color" content="#1E3A28" />
+  <meta name="msapplication-TileColor" content="#1E3A28" />
+  <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+
   <!-- Open Graph -->
   <meta property="og:type"        content={meta.ogType} />
   <meta property="og:title"       content={meta.title} />
   <meta property="og:description" content={meta.description} />
   <meta property="og:url"         content={meta.canonical} />
   <meta property="og:site_name"   content="Cubical Golfer" />
-  <meta property="og:image"       content={meta.ogImage} />
+  <meta property="og:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:type"   content="image/png" />
+  <meta property="og:image:type"   content="image/jpeg" />
   <meta property="og:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
   <meta property="og:locale"      content="en_US" />
 
@@ -63,7 +74,8 @@ const NAV_ITEMS = [
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image"       content={meta.ogImage} />
+  <meta name="twitter:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
+  <meta name="twitter:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
 
   <!-- Article dates -->
   {meta.datePublished && <meta property="article:published_time" content={meta.datePublished} />}
@@ -108,7 +120,7 @@ const NAV_ITEMS = [
   <!-- ── NAVIGATION ── -->
   <nav class="site-nav" role="navigation" aria-label="Main navigation">
     <a class="nav-brand" href="/" aria-label="Cubical Golfer — Home">
-      <div class="nav-logo" aria-hidden="true">CG</div>
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="nav-logo-img" width="48" height="48" />
       <div>
         <span class="site-name">Cubical Golfer</span>
         <span class="site-tag">Escape the cubicle. Find the fairway.</span>
@@ -141,13 +153,72 @@ const NAV_ITEMS = [
     <slot />
   </main>
 
+  <!-- ═══════════════════════════════════════════════════════════════
+       PART 2 — EMAIL CAPTURE STRIP (inline, above footer)
+       Lead magnet: "Weekend Golfer's Gear Cheat Sheet"
+       — a free PDF of the top-ranked pick in every category.
+       Replace ACTION_URL below with your ConvertKit or Mailchimp
+       form action URL. No backend required.
+       ═══════════════════════════════════════════════════════════════ -->
+  <section class="email-strip" aria-label="Newsletter signup">
+    <div class="email-strip__inner">
+      <div class="email-strip__copy">
+        <p class="email-strip__eyebrow">FREE DOWNLOAD</p>
+        <h2 class="email-strip__heading">Get the Weekend Golfer's Gear Cheat Sheet</h2>
+        <p class="email-strip__sub">
+          One-page PDF: the single best pick in every category — rangefinder, GPS watch,
+          ball, glove, putter — based on 40+ rounds of testing. No fluff. Just the answer.
+        </p>
+      </div>
+      <form
+        class="email-strip__form"
+        id="email-capture-form"
+        action="https://app.convertkit.com/forms/CONVERTKIT_FORM_ID/subscriptions"
+        method="post"
+        data-sv-form="CONVERTKIT_FORM_ID"
+        novalidate
+      >
+        <!-- Replace action URL ↑ with your ConvertKit / Mailchimp endpoint -->
+        <div class="email-strip__field">
+          <label for="strip-email" class="sr-only">Your email address</label>
+          <input
+            type="email"
+            id="strip-email"
+            name="email_address"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+            class="email-strip__input"
+          />
+          <button type="submit" class="email-strip__btn">
+            Send Me the PDF →
+          </button>
+        </div>
+        <p class="email-strip__disclaimer">
+          No spam. Unsubscribe any time. We email ~twice a month with gear updates.
+        </p>
+        <!-- Thank-you state — shown via JS on submit -->
+        <div class="email-strip__thanks" id="strip-thanks" hidden>
+          ✅ &nbsp;Check your inbox — the cheat sheet is on its way!
+        </div>
+      </form>
+    </div>
+  </section>
+
   <!-- ── FOOTER ── -->
   <footer>
     <div class="footer-grid">
+
+      <!-- PART 1 — Company email in footer-brand column -->
       <div class="footer-brand">
-        <div class="footer-logo" aria-hidden="true">CG</div>
+        <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="footer-logo-img" width="56" height="56" />
         <p>Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better.</p>
+        <!-- ── Contact email (Part 1) ── -->
+        <a href="mailto:hello@cubicalgolfer.com" class="footer-email" aria-label="Email us at hello@cubicalgolfer.com">
+          ✉️ hello@cubicalgolfer.com
+        </a>
       </div>
+
       <div class="footer-col">
         <h4>Gear Reviews</h4>
         <a href="/gear-reviews/">Golf Gear Reviews</a>
@@ -169,9 +240,11 @@ const NAV_ITEMS = [
         <a href="/how-to-improve-putting/">Improve Your Putting</a>
         <a href="/golf-tips-for-beginners/">Tips for Beginners</a>
         <a href="/average-golf-handicap/">Average Handicap Guide</a>
+        <a href="/best-golf-training-aids/">Best Training Aids</a>
+        <a href="/best-golf-grip-trainers/">Best Grip Trainers</a>
       </div>
       <div class="footer-col">
-        <h4>Accessories & Gifts</h4>
+        <h4>Accessories &amp; Gifts</h4>
         <a href="/best-golf-gifts-for-him/">Best Golf Gifts for Him</a>
         <a href="/best-golf-shoes-for-walking/">Best Golf Shoes for Walking</a>
         <a href="/best-golf-gloves-hot-weather/">Best Golf Gloves</a>
@@ -187,25 +260,3 @@ const NAV_ITEMS = [
       </p>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      const toggle = document.getElementById('nav-toggle');
-      const links  = document.getElementById('nav-links');
-      if (!toggle || !links) return;
-      toggle.addEventListener('click', function () {
-        const open = links.classList.toggle('open');
-        toggle.classList.toggle('open', open);
-        toggle.setAttribute('aria-expanded', String(open));
-      });
-      document.addEventListener('click', function (e) {
-        if (!toggle.contains(e.target as Node) && !links.contains(e.target as Node)) {
-          links.classList.remove('open');
-          toggle.classList.remove('open');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    })();
-  </script>
-</body>
-</html>
