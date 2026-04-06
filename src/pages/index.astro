@@ -135,9 +135,9 @@ const TAG_CLASSES: Record<string, string> = {
               label={aff.label}
               winner={pick.winner}
               productId={pick.key}
-              imgSrc={(aff as any).imgSrc ?? undefined}
-              imgAlt={(aff as any).imgAlt ?? pick.name}
-              benefits={(aff as any).benefits}
+              imgSrc={aff.imgSrc ?? undefined}
+              imgAlt={aff.imgAlt ?? pick.name}
+              benefits={aff.benefits}
             />
           );
         })}

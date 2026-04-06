@@ -27,6 +27,9 @@ export const AFFILIATE: Record<string, {
   price: string;
   label: string;
   asin?: string;
+  imgSrc?: string;
+  imgAlt?: string;
+  benefits?: string[];
 }> = {
 
   // ── RANGEFINDERS ─────────────────────────────────────────────────────────
@@ -942,5 +945,181 @@ export function getAffiliateLink(productId: string) {
     imgAlt: 'FlightScope Mevo+ Golf Launch Monitor',
     benefits: ['Doppler radar tracking', 'Indoor & outdoor use', 'Portable tripod mount', 'E6 + FS Golf simulator'],
   },
+
+  // ── TRAINING AIDS & GRIP TRAINERS ────────────────────────────────────────
+  'sklz-gold-flex': {
+    url: 'https://www.amazon.com/s?k=SKLZ+Gold+Flex+Golf+Swing+Trainer&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$32', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/sklz-gold-flex.webp',
+    imgAlt: 'SKLZ Gold Flex Golf Swing Trainer',
+  },
+  'orange-whip-trainer': {
+    url: 'https://www.amazon.com/s?k=Orange+Whip+Golf+Swing+Trainer&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$109', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/orange-whip-trainer.webp',
+    imgAlt: 'Orange Whip Golf Trainer',
+  },
+  'tour-striker-planeMate': {
+    url: 'https://www.amazon.com/s?k=Tour+Striker+PlaneMate&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$99', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/tour-striker-planeMate.webp',
+    imgAlt: 'Tour Striker PlaneMate Golf Training Aid',
+  },
+  'callaway-swing-trainer': {
+    url: 'https://www.amazon.com/s?k=Callaway+Swing+Trainer&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$29', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/callaway-swing-trainer.webp',
+    imgAlt: 'Callaway Golf Swing Trainer',
+  },
+  'golf-pride-grip-aid': {
+    url: 'https://www.amazon.com/s?k=Golf+Pride+grip+aid&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$15', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/golf-pride-grip-aid.webp',
+    imgAlt: 'Golf Pride Grip Aid',
+  },
+  'sklz-accelerator-putting-mat': {
+    url: 'https://www.amazon.com/s?k=SKLZ+Accelerator+Pro+Putting+Mat&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$49', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/sklz-accelerator-putting-mat.webp',
+    imgAlt: 'SKLZ Accelerator Pro Putting Mat',
+  },
+  'putt-a-bout-putting-green': {
+    url: 'https://www.amazon.com/s?k=Putt-A-Bout+Par+3+putting+green&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$39', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/putt-a-bout-putting-green.webp',
+    imgAlt: 'Putt-A-Bout Par 3 Putting Green',
+  },
+  'tour-striker-smart-ball': {
+    url: 'https://www.amazon.com/s?k=Tour+Striker+Smart+Ball&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$35', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/tour-striker-smart-ball.webp',
+    imgAlt: 'Tour Striker Smart Ball Training Aid',
+  },
+  // ── GOLF NETS & SIMULATOR COMPONENTS ─────────────────────────────────────
+  'net-return-pro': {
+    url: 'https://www.amazon.com/s?k=Net+Return+Pro+Series+Golf+Net&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$499', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/net-return-pro.webp',
+    imgAlt: 'Net Return Pro Series Golf Net',
+  },
+  'rukket-haack-net': {
+    url: 'https://www.amazon.com/s?k=Rukket+Haack+Golf+Net&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$129', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/rukket-haack-net.webp',
+    imgAlt: 'Rukket Haack Golf Net 10x7',
+  },
+  'fiberbuilt-studio-mat': {
+    url: 'https://www.amazon.com/s?k=Fiberbuilt+Studio+Golf+Mat&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$599', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/fiberbuilt-studio-mat.webp',
+    imgAlt: 'Fiberbuilt Studio Golf Hitting Mat',
+  },
+  'carls-place-screen': {
+    url: 'https://www.amazon.com/s?k=Carls+Place+Impact+Screen&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$299', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/carls-place-screen.webp',
+    imgAlt: "Carl's Place Impact Screen Golf Simulator",
+  },
+  'benq-tk850-projector': {
+    url: 'https://www.amazon.com/s?k=BenQ+TK850+projector&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$1,099', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/benq-tk850-projector.webp',
+    imgAlt: 'BenQ TK850 4K Golf Simulator Projector',
+  },
+  'garmin-approach-r10': {
+    url: 'https://www.amazon.com/dp/B09D45PB62/?tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$599', label: 'Check Price on Amazon',
+    asin: 'B09D45PB62',
+    imgSrc: '/images/products/garmin-approach-r10.webp',
+    imgAlt: 'Garmin Approach R10 Launch Monitor',
+  },
+  'ernest-sports-es14': {
+    url: 'https://www.amazon.com/s?k=Ernest+Sports+ES14+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$200', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/ernest-sports-es14.webp',
+    imgAlt: 'Ernest Sports ES14 Launch Monitor',
+  },
+  // ── GOLF BALLS ────────────────────────────────────────────────────────────
+  'titleist-truFeel': {
+    url: 'https://www.amazon.com/s?k=Titleist+TruFeel+golf+balls&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$32/doz', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/titleist-truFeel.webp',
+    imgAlt: 'Titleist TruFeel Golf Balls',
+  },
+  'titleist-velocity': {
+    url: 'https://www.amazon.com/s?k=Titleist+Velocity+golf+balls&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$32/doz', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/titleist-velocity.webp',
+    imgAlt: 'Titleist Velocity Golf Balls',
+  },
+  'callaway-chrome-soft': {
+    url: 'https://www.amazon.com/s?k=Callaway+Chrome+Soft+golf+balls&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$47/doz', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/callaway-chrome-soft.webp',
+    imgAlt: 'Callaway Chrome Soft Golf Balls',
+  },
+  'wilson-duo-soft': {
+    url: 'https://www.amazon.com/s?k=Wilson+Duo+Soft+golf+balls&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$22/doz', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/wilson-duo-soft.webp',
+    imgAlt: 'Wilson Duo Soft Golf Balls',
+  },
+  'taylormade-noodle': {
+    url: 'https://www.amazon.com/s?k=TaylorMade+Noodle+Long+Soft&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$20/doz', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/taylormade-noodle.webp',
+    imgAlt: 'TaylorMade Noodle Long and Soft Golf Balls',
+  },
+  'vice-pro-soft': {
+    url: 'https://www.amazon.com/s?k=Vice+Pro+Soft+golf+balls&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$35/doz', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/vice-pro-soft.webp',
+    imgAlt: 'Vice Pro Soft Golf Balls',
+  },
+  // ── RANGEFINDERS ──────────────────────────────────────────────────────────
+  'tectectec-vpro500': {
+    url: 'https://www.amazon.com/s?k=TecTecTec+VPRO500&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$99', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/tectectec-vpro500.webp',
+    imgAlt: 'TecTecTec VPRO500 Golf Rangefinder',
+  },
+  'callaway-300-pro': {
+    url: 'https://www.amazon.com/s?k=Callaway+300+Pro+rangefinder&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$179', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/callaway-300-pro.webp',
+    imgAlt: 'Callaway 300 Pro Golf Rangefinder',
+  },
+  'nikon-coolshot-20i': {
+    url: 'https://www.amazon.com/s?k=Nikon+Coolshot+20i+GII&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$169', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/nikon-coolshot-20i.webp',
+    imgAlt: 'Nikon Coolshot 20i GII Golf Rangefinder',
+  },
+  // ── GPS WATCHES & SWING ANALYZERS ─────────────────────────────────────────
+  'garmin-approach-s12': {
+    url: 'https://www.amazon.com/s?k=Garmin+Approach+S12+golf+watch&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$199', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/garmin-approach-s12.webp',
+    imgAlt: 'Garmin Approach S12 GPS Golf Watch',
+  },
+  'garmin-ct10-sensors': {
+    url: 'https://www.amazon.com/s?k=Garmin+CT10+club+tracking&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$199', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/garmin-ct10-sensors.webp',
+    imgAlt: 'Garmin CT10 Club Tracking Sensors',
+  },
+  'shot-scope-h4': {
+    url: 'https://www.amazon.com/s?k=Shot+Scope+H4+swing+analyzer&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$149', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/shot-scope-h4.webp',
+    imgAlt: 'Shot Scope H4 Swing Analyzer',
+  },
+  'zepp-golf-2': {
+    url: 'https://www.amazon.com/s?k=Zepp+Golf+2+swing+analyzer&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$99', label: 'Check Price on Amazon',
+    imgSrc: '/images/products/zepp-golf-2.webp',
+    imgAlt: 'Zepp Golf 2 Swing Analyzer',
+  },
+
 };
 }

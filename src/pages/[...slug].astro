@@ -316,9 +316,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                 winner={row.winner}
                 emoji={article.emoji}
                 productId={row.affiliateKey}
-                imgSrc={(aff as any).imgSrc ?? undefined}
-                imgAlt={(aff as any).imgAlt ?? row.name}
-                benefits={(aff as any).benefits}
+                imgSrc={aff.imgSrc ?? undefined}
+                imgAlt={aff.imgAlt ?? row.name}
+                benefits={aff.benefits}
               />
             );
           })}
@@ -403,9 +403,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
           {/* Product image — only for migrated articles (no comparisonTable). Articles with comparisonTable already show images in the top ProductCard grid. */}
           {section.badge && !article.comparisonTable && (() => {
-            const rawSectionImg = aff ? ((aff as any).imgSrc ?? null) : null;
+            const rawSectionImg = aff ? (aff.imgSrc ?? `/images/products/${productId}.webp`) : (productId ? `/images/products/${productId}.webp` : null);
             const sectionImgSrc = rawSectionImg ?? null;
-            const sectionImgAlt = aff ? ((aff as any).imgAlt ?? section.h2) : section.h2;
+            const sectionImgAlt = aff ? (aff.imgAlt ?? section.h2) : section.h2;
             return (
               <div class="product-img-wrap">
                 {sectionImgSrc ? (

@@ -1609,6 +1609,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'TecTecTec VPRO500',
+        affiliateKey: 'tectectec-vpro500',
         badge: 'BUDGET PICK',
         rating: 4.1, ratingCount: '8,341',
         price: '~$89',
@@ -1620,6 +1621,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Callaway 300 Pro',
+        affiliateKey: 'callaway-300-pro',
         badge: 'SLOPE + VALUE',
         rating: 4.2, ratingCount: '2,103',
         price: '~$149',
@@ -1631,6 +1633,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Nikon Coolshot 20i GII',
+        affiliateKey: 'nikon-coolshot-20i',
         badge: 'BEST OPTICS',
         rating: 4.4, ratingCount: '1,456',
         price: '~$229',
@@ -1758,6 +1761,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Shot Scope H4',
+        affiliateKey: 'shot-scope-h4',
         badge: 'BEST VALUE',
         rating: 4.3, ratingCount: '892',
         price: '~$149',
@@ -1769,6 +1773,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Zepp Golf 2',
+        affiliateKey: 'zepp-golf-2',
         badge: 'SWING DATA',
         rating: 4.1, ratingCount: '2,341',
         price: '~$99',
@@ -1930,6 +1935,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Ernest Sports ES14',
+        affiliateKey: 'ernest-sports-es14',
         badge: 'BUDGET PICK',
         rating: 4.0, ratingCount: '671',
         price: '~$249',
@@ -2059,6 +2065,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Net Return Pro Series',
+        affiliateKey: 'net-return-pro',
         badge: 'TOP NET',
         rating: 4.8, ratingCount: '1,203',
         price: '~$499',
@@ -2070,6 +2077,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Fiberbuilt Studio Mat',
+        affiliateKey: 'fiberbuilt-studio-mat',
         badge: 'BEST MAT',
         rating: 4.6, ratingCount: '589',
         price: '~$599',
@@ -2133,6 +2141,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Carl\'s Place Impact Screen',
+        affiliateKey: 'carls-place-screen',
         badge: 'BEST SCREEN',
         rating: 4.5, ratingCount: '500',
         price: '~$499–$899 depending on size',
@@ -2143,6 +2152,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Net Return Pro Series V2',
+        affiliateKey: 'net-return-pro',
         badge: 'EASIEST SETUP',
         rating: 4.5, ratingCount: '500',
         price: '~$499',
@@ -2153,6 +2163,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'BenQ TK850 4K Projector',
+        affiliateKey: 'benq-tk850-projector',
         badge: 'RECOMMENDED PROJECTOR',
         rating: 4.5, ratingCount: '500',
         price: '~$1,099',
@@ -2163,6 +2174,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Fiberbuilt Studio Mat',
+        affiliateKey: 'fiberbuilt-studio-mat',
         badge: 'BEST MAT',
         rating: 4.5, ratingCount: '500',
         price: '~$599',
@@ -2331,6 +2343,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Orange Whip Trainer',
+        affiliateKey: 'orange-whip-trainer',
         badge: 'PREMIUM PICK',
         rating: 4.8, ratingCount: '6,821',
         price: '~$109',
@@ -2342,6 +2355,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Tour Striker PlaneMate',
+        affiliateKey: 'tour-striker-planeMate',
         badge: 'TECHNIQUE BUILDER',
         rating: 4.4, ratingCount: '1,243',
         price: '~$139',
@@ -2353,6 +2367,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Callaway Swing Trainer',
+        affiliateKey: 'callaway-swing-trainer',
         badge: 'BUDGET PICK',
         rating: 4.0, ratingCount: '892',
         price: '~$29',
@@ -2364,6 +2379,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Golf Pride Grip Aid',
+        affiliateKey: 'golf-pride-grip-aid',
         badge: 'GRIP SPECIFIC',
         rating: 4.1, ratingCount: '543',
         price: '~$19',
@@ -2403,6 +2419,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'SKLZ Accelerator Pro Putting Mat',
+        affiliateKey: 'sklz-accelerator-putting-mat',
         badge: 'BEST OVERALL',
         rating: 4.6, ratingCount: '12,431',
         price: '~$55',
@@ -2414,6 +2431,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Putt-A-Bout Par 3 Putting Green',
+        affiliateKey: 'putt-a-bout-putting-green',
         badge: 'BEST LAYOUT',
         rating: 4.4, ratingCount: '4,201',
         price: '~$35',
@@ -2425,6 +2443,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Tour Striker Smart Ball',
+        affiliateKey: 'tour-striker-smart-ball',
         badge: 'CONNECTION TRAINER',
         rating: 4.4, ratingCount: '1,892',
         price: '~$49',
@@ -2500,6 +2519,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Rukket 10×7 Haack Net',
+        affiliateKey: 'rukket-haack-net',
         badge: 'BEST VALUE',
         rating: 4.3, ratingCount: '4,821',
         price: '~$129',
@@ -2511,6 +2531,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Fiberbuilt Studio Hitting Mat',
+        affiliateKey: 'fiberbuilt-studio-mat',
         badge: 'BEST MAT',
         rating: 4.6, ratingCount: '589',
         price: '~$599',
@@ -2586,6 +2607,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Wilson Duo Soft+',
+        affiliateKey: 'wilson-duo-soft',
         badge: 'ALSO GREAT',
         rating: 4.3, ratingCount: '500',
         price: '~$20/dozen',
@@ -2597,6 +2619,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'TaylorMade Noodle Long and Soft',
+        affiliateKey: 'taylormade-noodle',
         badge: 'ALSO GREAT',
         rating: 4.2, ratingCount: '500',
         price: '~$20/dozen',
@@ -2669,6 +2692,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Vice Pro Soft',
+        affiliateKey: 'vice-pro-soft',
         badge: 'ALSO GREAT',
         rating: 4.4, ratingCount: '500',
         price: '~$29/dozen',

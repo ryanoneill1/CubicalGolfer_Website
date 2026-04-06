@@ -163,7 +163,7 @@ const PRODUCT_NAMES: Record<string, string> = {
           <div class="compare-buy-card">
             <div class="compare-product-img">
               <img
-                src={(affA as any).imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productA]}.webp`}
+                src={affA.imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productA]}.webp`}
                 alt={PRODUCT_NAMES[c.productA]}
                 width="160" height="160"
                 loading="lazy"
@@ -192,7 +192,7 @@ const PRODUCT_NAMES: Record<string, string> = {
           <div class="compare-buy-card">
             <div class="compare-product-img">
               <img
-                src={(affB as any).imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productB]}.webp`}
+                src={affB.imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productB]}.webp`}
                 alt={PRODUCT_NAMES[c.productB]}
                 width="160" height="160"
                 loading="lazy"
