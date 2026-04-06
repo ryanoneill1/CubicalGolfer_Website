@@ -270,7 +270,7 @@
 
 /* ── EMAIL STRIP ─────────────────────────────────────────────────────────── */
 .email-strip{background:var(--green);padding:28px clamp(1rem,4vw,2rem)}
-.email-strip__inner{max-width:800px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.email-strip__inner{max-width:clamp(600px,90vw,1200px);margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
 .email-strip__copy{flex:1;min-width:200px;display:flex;flex-direction:column;gap:4px}
 .email-strip__copy strong{color:#fff;font-size:15px;font-weight:700}
 .email-strip__copy span{color:rgba(255,255,255,.7);font-size:13px}
@@ -426,5 +426,4 @@
   .product-card__img{width:100%;height:100%;object-fit:contain;display:block}
   .product-card__img-fallback{width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:6px;background:var(--cream-dark)}
 
-table{display:block;overflow-x:auto;width:100%;max-width:100%}
-*{box-sizing:border-box}img{max-width:100%}
+table{display:block;overflow-x:auto;max-width:100%}*,*::before,*::after{box-sizing:border-box}img,video,iframe{max-width:100%}
