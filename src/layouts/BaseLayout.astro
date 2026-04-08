@@ -42,6 +42,7 @@ const NAV_ITEMS = [
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
   <meta name="robots" content={meta.robots} />
+  {meta.keywords && meta.keywords.length > 0 && <meta name="keywords" content={meta.keywords.join(', ')} />}
   <meta name="author" content="Cubical Golfer" />
   <link rel="canonical" href={meta.canonical} />
   <meta name="google-site-verification" content={VERIFICATION_TAG} />
@@ -72,14 +73,19 @@ const NAV_ITEMS = [
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@CubicalGolfer" />
+  <meta name="twitter:creator"     content="@CubicalGolfer" />
   <meta name="twitter:title"       content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
   <meta name="twitter:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
   <meta name="twitter:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
 
-  <!-- Article dates -->
+  <!-- Article dates + author + section (Open Graph article enrichment) -->
   {meta.datePublished && <meta property="article:published_time" content={meta.datePublished} />}
   {meta.dateModified  && <meta property="article:modified_time"  content={meta.dateModified}  />}
+  {meta.ogType === 'article' && <meta property="article:author"  content="https://www.cubicalgolfer.com/about/" />}
+  {meta.ogType === 'article' && <meta property="article:publisher" content="https://www.cubicalgolfer.com/" />}
+  {meta.breadcrumbs && meta.breadcrumbs[1] && <meta property="article:section" content={meta.breadcrumbs[1].label} />}
 
   <!-- JSON-LD schemas — injected here ONLY (prevents duplicate field errors) -->
   {schemas.map(schema => (

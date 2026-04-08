@@ -37,6 +37,7 @@ export function articleMeta(article: Article): PageMeta {
     robots:        ROBOTS,
     datePublished: article.datePublished,
     dateModified:  article.dateModified,
+    keywords:      categoryKeywords(article.category),
     breadcrumbs: [
       { label: 'Home',                href: '/' },
       { label: categoryLabel(article.category), href: `/${categorySlug(article.category)}/` },
@@ -154,5 +155,17 @@ export const CATEGORY_ICONS: Record<string, string> = {
   'improve-game':     '🎯',
   'golf-lifestyle':   '🌿',
 };
+
+
+export function categoryKeywords(catId: string): string[] {
+  const map: Record<string, string[]> = {
+    'gear-reviews':     ['golf gear', 'golf equipment reviews', 'best golf gear 2026', 'golf product reviews', 'weekend golfer'],
+    'golf-tech':        ['golf technology', 'golf apps', 'golf swing analyzer', 'golf launch monitor', 'golf simulator'],
+    'golf-accessories': ['golf accessories', 'golf gifts', 'golf training aids', 'golf gloves', 'golf shoes'],
+    'improve-game':     ['golf tips', 'golf improvement', 'how to break 90', 'fix golf slice', 'lower golf handicap'],
+    'golf-lifestyle':   ['golf lifestyle', 'weekend golfer tips', 'golf fitness', 'golf travel'],
+  };
+  return map[catId] || ['golf', 'golf tips', 'golf gear', 'weekend golfer'];
+}
 
 export const VERIFICATION_TAG = 'lp3QNGFdaPGcztnM5Pjuu7QwBk7qOOsQWDEQ2Ns60c8';

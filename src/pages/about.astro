@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { breadcrumbSchema } from '../lib/schema';
+import { breadcrumbSchema , aboutPageSchema } from '../lib/schema';
 import { ARTICLES } from '../data/articles';
 
 const meta = {
   title: 'About Cubical Golfer — Our Editorial Policy & Testing Process',
-  description: 'Who we are, how we test golf gear, and why we started Cubical Golfer. Every recommendation is independently purchased, tested over 40+ real rounds, and written by weekend golfers.',
+  description: 'Independent golf gear reviews tested over 40+ real rounds — tested by real weekend golfers who buy every product themselves.',
   canonical: 'https://www.cubicalgolfer.com/about/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
   ogType: 'website' as const,
@@ -15,7 +15,7 @@ const meta = {
     { label: 'About', href: '/about/' },
   ],
 };
-const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const schemas = [breadcrumbSchema(meta.breadcrumbs), aboutPageSchema()];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="about">

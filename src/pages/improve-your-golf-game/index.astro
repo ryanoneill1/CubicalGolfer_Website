@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { categoryMeta } from '../../lib/seo';
-import { breadcrumbSchema } from '../../lib/schema';
+import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 import { getCategoryArticles } from '../../lib/linking';
 
 const cat      = 'improve-game';
@@ -9,6 +9,7 @@ const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat, articles.length);
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
+  collectionPageSchema('Improve Your Golf Game', 'improve-your-golf-game', meta.description, articles.length),
 ];
 
 const TAG_CLASS: Record<string, string> = {
