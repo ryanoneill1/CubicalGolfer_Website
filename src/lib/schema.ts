@@ -32,7 +32,7 @@ const AUTHOR = {
   '@id':         `${DOMAIN}/about/#author`,
   name:          'Cubical Golfer',
   url:           `${DOMAIN}/about/`,
-  description:   'The team at Cubical Golfer — weekend golfers with 15+ years of playing experience. Current USGA handicap index in the low teens. Tests all gear over a minimum of 10 real rounds before recommending.',
+  description:   'The Cubical Golfer team — weekend golfers with 15+ years of playing experience, low-teens USGA handicap. Every product independently purchased and tested over 10+ real rounds before recommending.',
   image:         { '@type': 'ImageObject', url: `${DOMAIN}/images/cubicalgolfer-logo.jpg` },
 
   knowsAbout:    ['Golf Equipment Reviews', 'Golf Rangefinders', 'GPS Golf Watches', 'Golf Training Aids', 'Golf Swing Analysis', 'Golf Ball Selection', 'Golf Simulators', 'Weekend Golf Improvement'],

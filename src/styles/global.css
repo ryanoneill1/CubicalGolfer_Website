@@ -1363,3 +1363,20 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 *, *::before, *::after { box-sizing: border-box; }
 img, video, iframe { max-width: 100%; }
+
+/* ── HOW-WE-TEST PAGE ───────────────────────────────────────────────────────── */
+.hwt-principles   { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.hwt-criteria-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hwt-donot-grid   { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.hwt-stats-grid   { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+@media (max-width: 900px) {
+  .hwt-principles  { grid-template-columns: 1fr 1fr; }
+  .hwt-stats-grid  { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hwt-principles  { grid-template-columns: 1fr; }
+  .hwt-criteria-grid { grid-template-columns: 1fr; }
+  .hwt-donot-grid  { grid-template-columns: 1fr; }
+  .hwt-stats-grid  { grid-template-columns: 1fr 1fr; }
+}
