@@ -1,0 +1,314 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema, websiteSchema } from '../lib/schema';
+
+const DOMAIN = 'https://www.cubicalgolfer.com';
+
+const meta = {
+  title: 'How We Test Golf Gear — Cubical Golfer Testing Methodology',
+  description: 'Every product on Cubical Golfer is independently purchased and tested over 10+ real rounds. Here is exactly how we evaluate rangefinders, GPS watches, balls, and more.',
+  canonical: `${DOMAIN}/how-we-test/`,
+  ogImage: `${DOMAIN}/images/og-image.jpg`,
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home',        href: '/' },
+    { label: 'How We Test', href: '/how-we-test/' },
+  ],
+};
+
+const howWeTestSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'How Cubical Golfer Tests Golf Gear',
+  description: 'Our methodology for testing and recommending golf gear — rangefinders, GPS watches, golf balls, training aids, and more.',
+  url: `${DOMAIN}/how-we-test/`,
+  author: {
+    '@type': 'Organization',
+    name: 'Cubical Golfer',
+    url: DOMAIN,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: 'Cubical Golfer',
+    url: DOMAIN,
+    logo: { '@type': 'ImageObject', url: `${DOMAIN}/images/cubicalgolfer-logo.jpg` },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': `${DOMAIN}/how-we-test/` },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.hwt-intro', '.hwt-principles'],
+  },
+};
+
+const schemas = [
+  breadcrumbSchema(meta.breadcrumbs),
+  howWeTestSchema,
+];
+
+const CATEGORIES = [
+  {
+    name: 'Rangefinders',
+    icon: '🔭',
+    rounds: 12,
+    criteria: [
+      { label: 'Pin acquisition speed', detail: 'How fast it locks to the flag — timed on 20+ approach shots per round across flat and hilly lies.' },
+      { label: 'Vibration lock confidence', detail: 'Whether the JOLT/feedback is clear enough that you never wonder if you ranged the flag or a tree behind it.' },
+      { label: 'Optics in bright sun', detail: 'Tested mid-afternoon in direct sunlight, which is when most weekend rounds reach the back nine.' },
+      { label: 'Slope accuracy', detail: 'Compared against known elevation changes on the same holes across multiple rounds.' },
+      { label: 'One-hand operability', detail: 'Can you range while holding your club with the other hand? How many button presses to get a reading?' },
+      { label: 'Battery life', detail: 'How many rounds before the battery needed replacing during actual use.' },
+    ],
+  },
+  {
+    name: 'GPS Watches',
+    icon: '⌚',
+    rounds: 12,
+    criteria: [
+      { label: 'Yardage accuracy', detail: 'Front/middle/back distances compared against a rangefinder reading on the same shot, 50+ times per round.' },
+      { label: 'Hazard and layup data', detail: 'Whether the watch identifies the hazards that actually affect scoring decisions, not just the aesthetically placed ones.' },
+      { label: 'Green view usefulness', detail: 'Does the green view actually show you where the pin usually sits vs where it was placed that day?' },
+      { label: 'Battery across a full round', detail: 'Tested on rounds that ran 4.5–5 hours to reflect realistic weekend golf pace.' },
+      { label: 'Ease of use mid-swing routine', detail: 'How many wrist glances or button presses to get the data you need without disrupting pre-shot routine.' },
+      { label: 'Shot tracking reliability', detail: 'Automatic tracking accuracy compared against manually logged shots post-round.' },
+    ],
+  },
+  {
+    name: 'Golf Balls',
+    icon: '⛳',
+    rounds: 5,
+    criteria: [
+      { label: 'Driver feel and distance', detail: 'Impact feel off the face, perceived ball speed, and carry compared across identical swing conditions.' },
+      { label: 'Iron feel and trajectory', detail: 'Mid-iron flight height, spin behaviour on firm greens, and feedback on mis-hits.' },
+      { label: 'Wedge spin and check', detail: 'Greenside spin on 30–60 yard pitch shots. Can you get the ball to check up? How many bounces before it stops?' },
+      { label: 'Putting feel', detail: 'Click versus soft feel at impact on short putts. Whether it rolls true or has noticeable deviation.' },
+      { label: 'Durability', detail: 'How the cover holds up after hitting trees, cart paths, and rough. Whether scuffs affect flight noticeably.' },
+    ],
+  },
+  {
+    name: 'Drivers & Irons',
+    icon: '🏌️',
+    rounds: 10,
+    criteria: [
+      { label: 'Forgiveness on heel/toe strikes', detail: 'Ball speed loss and directional error on off-centre hits measured across a full bucket at the range, then confirmed on-course.' },
+      { label: 'Launch and carry distance', detail: 'Compared against a baseline club using the same swing, not manufacturer spec sheets.' },
+      { label: 'Sound and feel at impact', detail: 'Subjective but important — does it feel solid or hollow? Do mis-hits feel punishing or forgiving?' },
+      { label: 'Workability', detail: 'Whether a weekend golfer can shape shots or if the club fights you. We are not scratch golfers; we note if a club feels "too demanding."' },
+    ],
+  },
+  {
+    name: 'Training Aids',
+    icon: '🎯',
+    rounds: 4,
+    detail: 'Training aids are tested over a 4-week period across practice sessions and rounds, not just on the range.',
+    criteria: [
+      { label: 'Does it fix the stated problem?', detail: 'We use it for the specific purpose advertised, then compare scoring metrics before and after.' },
+      { label: 'Practice-to-course transfer', detail: 'Improvements on the range do not count unless they show up in actual rounds. We track this explicitly.' },
+      { label: 'Setup and ease of use', detail: 'How long to set up at the range or at home. If it takes more than 3 minutes, most golfers will stop using it.' },
+      { label: 'Build quality', detail: 'Whether it holds up to repeated use or starts falling apart in week two.' },
+    ],
+  },
+  {
+    name: 'Golf Bags & Accessories',
+    icon: '🎒',
+    rounds: 8,
+    criteria: [
+      { label: 'Carry comfort over 18 holes', detail: 'Tested on courses with significant elevation changes, not just flat layouts.' },
+      { label: 'Organisation under pressure', detail: 'Can you find a tee, marker, or glove quickly when the group ahead is watching? Pocket access matters.' },
+      { label: 'Durability in real conditions', detail: 'Used in rain, heat, and rough conditions — not just mild spring mornings.' },
+      { label: 'Weight on a hot day', detail: 'Total loaded weight, and whether the strap system distributes it without causing shoulder fatigue by hole 14.' },
+    ],
+  },
+];
+---
+
+<BaseLayout {meta} {schemas} activeNav="">
+
+  <!-- Hero -->
+  <header class="about-hero" style="padding-bottom:48px">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">How We Test</span>
+    </nav>
+    <h1 style="margin-bottom:16px">How We Test Golf Gear</h1>
+    <p class="hwt-intro" style="font-size:17px;line-height:1.75;max-width:700px;color:rgba(255,255,255,.88)">
+      Every product recommended on this site was bought with our own money,
+      played with on real courses in real conditions, and evaluated against
+      a consistent set of criteria. Here is exactly what that looks like.
+    </p>
+  </header>
+
+  <div class="about-body">
+
+    <!-- Principles strip -->
+    <div class="hwt-principles" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px">
+      {[
+        { icon: '💰', title: 'Self-Funded', body: 'Every product is purchased by us. No manufacturer loans, no review units, no freebies.' },
+        { icon: '🏌️', title: '10+ Rounds Minimum', body: 'No gear gets published after a demo day. We need enough data to know what happens when the round is going badly, not just well.' },
+        { icon: '📊', title: 'Consistent Criteria', body: 'The same evaluation checklist is used for every product in a category, every time. You can compare our reviews directly.' },
+        { icon: '🔄', title: 'Updated on Re-Test', body: 'If we test a newer version or a competitor displaces our pick, the recommendation changes. We do not lock in conclusions.' },
+      ].map(p => (
+        <div style="background:var(--cream-dark);border-radius:12px;padding:22px;border-top:3px solid var(--gold)">
+          <span style="font-size:28px;display:block;margin-bottom:10px">{p.icon}</span>
+          <h3 style="font-size:14px;font-weight:800;margin:0 0 8px;text-transform:uppercase;letter-spacing:.06em;color:var(--green)">{p.title}</h3>
+          <p style="font-size:13px;line-height:1.65;color:var(--body);margin:0">{p.body}</p>
+        </div>
+      ))}
+    </div>
+
+    <!-- How a review actually happens -->
+    <section style="margin-bottom:48px">
+      <h2>What a Review Actually Looks Like</h2>
+      <p>
+        A typical product review at Cubical Golfer follows the same sequence every time,
+        regardless of category. The process takes anywhere from four weeks (balls, accessories)
+        to three months (rangefinders, GPS watches, drivers) depending on how many rounds
+        are needed to form a reliable opinion.
+      </p>
+      <ol style="padding-left:20px;display:flex;flex-direction:column;gap:20px;margin-top:24px">
+        <li>
+          <strong>Purchase and baseline round.</strong> The product is bought at retail
+          price from Amazon or the manufacturer's own store — the same options available
+          to any reader. On the first round it is used as a replacement for whatever
+          it is being compared against. No bias from reading the manual first.
+        </li>
+        <li>
+          <strong>Structured testing rounds.</strong> Rounds 2–8 use a consistent
+          evaluation sheet for the category. For a rangefinder that means logging
+          every pin acquisition in the round. For a GPS watch it means comparing
+          yardage readings against a rangefinder 50+ times per round.
+        </li>
+        <li>
+          <strong>Stress testing.</strong> At least one round specifically in poor
+          conditions — rain, heat, hard wind, or a course the reviewer doesn't know.
+          Gear that only performs well in ideal conditions gets noted.
+        </li>
+        <li>
+          <strong>Comparison against alternatives.</strong> Before recommending
+          anything, the product is compared directly against at least one alternative
+          at a similar price point. "Best overall" means best among tested options,
+          not best imaginable.
+        </li>
+        <li>
+          <strong>Writing and fact-checking.</strong> Claims in the review are cross-referenced
+          against the testing notes. If a claim cannot be supported by a specific round
+          or observation, it gets cut.
+        </li>
+        <li>
+          <strong>Price and availability check before publish.</strong> Prices change.
+          We confirm the product is available at the stated price before every article
+          goes live.
+        </li>
+      </ol>
+    </section>
+
+    <!-- Category breakdowns -->
+    <section style="margin-bottom:48px">
+      <h2>What We Evaluate by Category</h2>
+      <p>Different gear categories need different criteria. Here is the exact evaluation checklist for each type of product we review.</p>
+
+      <div style="display:flex;flex-direction:column;gap:28px;margin-top:28px">
+        {CATEGORIES.map(cat => (
+          <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden">
+            <div style="background:var(--green);padding:16px 24px;display:flex;align-items:center;gap:12px">
+              <span style="font-size:22px">{cat.icon}</span>
+              <h3 style="margin:0;color:#fff;font-size:16px;font-weight:800">{cat.name}</h3>
+              <span style="margin-left:auto;background:rgba(255,255,255,.15);border-radius:20px;padding:2px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">
+                {cat.rounds}+ rounds
+              </span>
+            </div>
+            <div style="padding:20px 24px">
+              {cat.detail && <p style="font-size:14px;color:var(--muted);margin:0 0 16px;font-style:italic">{cat.detail}</p>}
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                {cat.criteria.map(c => (
+                  <div style="background:var(--cream-dark);border-radius:8px;padding:14px">
+                    <p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 4px">{c.label}</p>
+                    <p style="font-size:12px;color:var(--muted);line-height:1.6;margin:0">{c.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- What we do not do -->
+    <section style="margin-bottom:48px">
+      <h2>What We Do Not Do</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px">
+        {[
+          { title: 'Accept manufacturer samples', body: 'We do not accept free gear for review. Products go back to the retailer if they are returned at all. Gear we keep, we paid for.' },
+          { title: 'Test on launch monitors only', body: 'Launch monitor data is useful but it is not golf. A rangefinder that reads perfectly indoors can be impossible to aim under on-course pressure. We test where the game is played.' },
+          { title: 'Copy manufacturer claims', body: 'If the packaging says "15% more distance," we test whether that holds for a 12-handicapper hitting it on a Tuesday afternoon, not under ideal launch conditions.' },
+          { title: 'Keep old picks past their relevance', body: 'When a newer model or a competitor becomes the better choice, the recommendation changes. We do not protect old conclusions.' },
+          { title: 'Rank products we have not tested', body: 'If a product appears in a roundup, it was tested. We do not fill category guides with untested gear to hit a minimum number of picks.' },
+          { title: 'Use affiliate income to influence rankings', body: 'Some products pay higher commissions than others. That is completely irrelevant to where a product ranks. Our picks are based on performance.' },
+        ].map(item => (
+          <div style="padding:18px 20px;background:var(--cream-dark);border-radius:10px;border-left:3px solid var(--gold)">
+            <h4 style="font-size:13px;font-weight:800;margin:0 0 6px;color:var(--text)">✕ {item.title}</h4>
+            <p style="font-size:13px;color:var(--body);line-height:1.65;margin:0">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Why trust us -->
+    <section style="margin-bottom:48px">
+      <h2>Why Trust Cubical Golfer</h2>
+      <p>
+        The honest answer: you should not trust any golf gear site unconditionally, including this one.
+        What you should do is look at what a site has done to earn credibility.
+      </p>
+      <p>
+        Here is what we have done. Every product we recommend was paid for out of pocket.
+        The testing notes that become our reviews are built on 10–12 rounds of actual use
+        per product, not a lunch break at a manufacturer demo day. The site was built for
+        golfers who play in the 80s and 90s, because that is what we shoot — not because
+        it is a convenient market segment to target.
+      </p>
+      <p>
+        We do earn affiliate commissions from some links. We disclose this on every page.
+        The commission structure does not influence which product ranks where — we have
+        passed on higher-commission products because a lower-commission option was
+        genuinely the better recommendation.
+      </p>
+      <div style="background:var(--green);border-radius:12px;padding:28px;margin-top:28px;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center">
+        {[
+          { num: '10+', label: 'rounds per product minimum' },
+          { num: '100%', label: 'independently purchased gear' },
+          { num: '$0', label: 'in sponsored content ever' },
+          { num: '44+', label: 'guides independently tested' },
+        ].map(stat => (
+          <div>
+            <p style="font-size:28px;font-weight:800;margin:0 0 4px;color:var(--gold)">{stat.num}</p>
+            <p style="font-size:12px;color:rgba(255,255,255,.75);margin:0;line-height:1.4">{stat.label}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Disclosure + contact -->
+    <section style="background:var(--cream-dark);border-radius:12px;padding:28px">
+      <h2 style="margin-top:0">Affiliate Disclosure &amp; Contact</h2>
+      <p style="font-size:15px;line-height:1.75;color:var(--body)">
+        Cubical Golfer earns a commission from qualifying purchases made through affiliate links
+        on this site — primarily Amazon Associates and the Bushnell affiliate program via Impact.
+        This comes at no extra cost to you and does not change our recommendations.
+        No manufacturer has ever paid to have a product ranked higher than it earned.
+      </p>
+      <p style="font-size:15px;line-height:1.75;color:var(--body);margin-bottom:20px">
+        If you find an error in a review, a product that has been discontinued,
+        or a better alternative we have missed, email us. We update recommendations
+        based on reader feedback and re-testing.
+      </p>
+      <a href="mailto:hello@cubicalgolfer.com"
+         style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;background:var(--green);color:#fff;border-radius:6px;font-size:14px;font-weight:700;text-decoration:none">
+        ✉️ hello@cubicalgolfer.com
+      </a>
+    </section>
+
+  </div>
+
+</BaseLayout>
