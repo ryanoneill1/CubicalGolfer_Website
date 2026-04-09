@@ -275,14 +275,21 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   <article class="art-content" itemscope itemtype="https://schema.org/Article" data-category={article.category} data-page-type={article.pageType}>
 
     <!-- ── Author / Trust Box ── -->
-    <div class="author-box">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer Staff" class="author-avatar-img" width="48" height="48" />
+    <div class="author-box" itemscope itemtype="https://schema.org/Person">
+      <a href="/about/" style="flex-shrink:0">
+        <img src="/images/cubicalgolfer-logo.jpg" alt="Ryan O'Neill — Founder, Cubical Golfer" class="author-avatar-img" width="48" height="48" itemprop="image" />
+      </a>
       <div style="flex:1">
-        <span class="author-name">Cubical Golfer Staff</span>
+        <span class="author-name">
+          <a href="/about/" style="color:inherit;text-decoration:none" itemprop="url">
+            <span itemprop="name">Ryan O'Neill</span>
+          </a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">13.4 hdcp · 17 yrs</span>
+        </span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
-          📅 Last updated: {article.dateModified} &nbsp;·&nbsp;
-          ⛳ Tested over 40+ real rounds
+          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
+          ⛳ Independently tested
         </span>
       </div>
       <span class="verified-badge">✅ Independently Tested</span>

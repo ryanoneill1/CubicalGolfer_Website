@@ -30,11 +30,15 @@ const PUBLISHER = {
 const AUTHOR = {
   '@type':       'Person',
   '@id':         `${DOMAIN}/about/#author`,
-  name:          'Cubical Golfer Staff',
+  name:          "Ryan O'Neill",
+  givenName:     'Ryan',
+  familyName:    "O'Neill",
   url:           `${DOMAIN}/about/`,
-  description:   'Weekend golfer with 15+ years of playing experience. Tests all gear over a minimum of 10 real rounds across multiple courses before recommending. Plays to a 14 handicap.',
+  description:   "Founder of Cubical Golfer. 17 years playing experience, current USGA handicap index 13.4. Tests all gear over a minimum of 10 real rounds across Chicagoland courses before recommending. Former college golf club captain.",
   image:         { '@type': 'ImageObject', url: `${DOMAIN}/images/cubicalgolfer-logo.jpg` },
-  knowsAbout:    ['Golf', 'Golf Equipment', 'Golf Rangefinders', 'GPS Golf Watches', 'Golf Training Aids', 'Golf Swing Analysis'],
+  jobTitle:      'Founder & Lead Reviewer',
+  worksFor:      { '@type': 'Organization', name: 'Cubical Golfer', url: DOMAIN },
+  knowsAbout:    ['Golf Equipment Reviews', 'Golf Rangefinders', 'GPS Golf Watches', 'Golf Training Aids', 'Golf Swing Analysis', 'Golf Ball Selection', 'Golf Simulators', 'Weekend Golf Improvement'],
   sameAs:        [],
 };
 
@@ -277,7 +281,7 @@ export function aboutPageSchema(): object {
     '@type':        'AboutPage',
     '@id':          `${DOMAIN}/about/#aboutpage`,
     name:           'About Cubical Golfer',
-    description:    'Cubical Golfer is an independent golf gear review site for weekend golfers. All products independently purchased and tested over 40+ real rounds.',
+    description:    "Ryan O'Neill's independent golf gear review site for weekend golfers. Every product independently purchased and tested over 40+ real rounds by a 13.4 handicap golfer.",
     url:            `${DOMAIN}/about/`,
     inLanguage:     'en-US',
     isPartOf:       { '@id': `${DOMAIN}/#website` },
@@ -317,7 +321,7 @@ export function homeFaqSchema(): object {
   return faqSchema([
     {
       q: 'What is the best golf rangefinder for a weekend golfer in 2026?',
-      a: 'The Bushnell Tour V6 Shift (~$329) is the best overall golf rangefinder for most weekend golfers in 2026. It locks onto the flag in under 0.3 seconds with JOLT vibration confirmation and has a legal slope toggle for competition use. We tested 11 models over 40+ real rounds. For budget golfers, the Precision Pro NX9 HD (~$169) delivers excellent performance at roughly half the price with a lifetime warranty.',
+      a: 'The Bushnell Tour V6 Shift (~$329) is the best overall golf rangefinder for most weekend golfers in 2026 — it\'s what I (Ryan O\'Neill, founder of Cubical Golfer) carry in my own bag. It locks onto the flag in under 0.3 seconds with JOLT vibration confirmation and has a legal slope toggle for competition use. We tested 11 models over 40+ real rounds. For budget golfers, the Precision Pro NX9 HD (~$169) delivers excellent performance at roughly half the price with a lifetime warranty.',
     },
     {
       q: 'How do I fix my golf slice permanently?',
