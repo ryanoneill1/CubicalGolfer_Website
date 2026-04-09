@@ -94,6 +94,9 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
+      { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder' },
+      { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Rangefinder' },
     ],
   },
 
@@ -160,6 +163,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps for Stat Tracking' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
+      { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+      { slug: '/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope Comparison' },
     ],
   },
 
@@ -208,6 +213,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice Permanently' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/best-golf-drivers-under-200/', label: 'Best Golf Drivers Under $200' },
     ],
   },
 
@@ -317,6 +323,8 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-break-90/', label: "How to Break 90: Weekend Golfer's Roadmap" },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
       { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids 2026' },
+      { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
+      { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
     ],
   },
 
@@ -374,6 +382,9 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice First' },
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Golf Watches 2026' },
+      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Golf Putters 2026' },
     ],
   },
 
@@ -424,6 +435,7 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-break-90/', label: 'How to Break 90 — Putting Is 40% of It' },
       { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice Next' },
+      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     ],
   },
 
@@ -523,6 +535,9 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-break-90/',               label: 'Break 90: Your First Goal' },
       { slug: '/best-golf-training-aids/',        label: 'Best Golf Training Aids 2026' },
       { slug: '/best-golf-rangefinders-2026/',      label: 'Best Rangefinders for New Golfers' },
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
+      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
     ],
   },
 
@@ -575,6 +590,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watches/',        label: 'Best GPS Watches for Handicap Tracking' },
       { slug: '/best-golf-rangefinders-2026/',  label: 'Best Rangefinders 2026' },
       { slug: '/how-to-improve-putting/',       label: 'How to Improve Your Putting' },
+      { slug: '/best-golf-apps-handicap-tracking/', label: 'Best Golf Apps for Tracking Handicap' },
     ],
   },
 
@@ -622,6 +638,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-apps/', label: 'Best Golf Apps for Tracking' },
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
+      { slug: '/best-golf-swing-analyzers-iphone/', label: 'Best Swing Analyzers for iPhone' },
     ],
   },
 
@@ -771,6 +788,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him 2026' },
       { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes for Walking 2026' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50 2026' },
+      { slug: '/accessories-50/', label: 'Best Golf Accessories Under $50' },
+      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids' },
     ],
   },
 
@@ -827,6 +846,8 @@ export const ARTICLES: Article[] = [
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Should Own' },
       { slug: '/best-golf-gloves-hot-weather/', label: 'Best Golf Gloves for Hot Weather' },
       { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Golf Club Sets' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him' },
+      { slug: '/accessories-25/', label: '25 Golf Accessories Every Golfer Should Own' },
     ],
   },
 
@@ -876,6 +897,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
       { slug: '/best-golf-courses-weekend-drive/', label: 'Best Golf Courses Within a Weekend Drive' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
+      { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
     ],
   },
 
@@ -927,6 +949,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
       { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes for Walking 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
+      { slug: '/best-golf-training-aids-home-practice/', label: 'Best Home Golf Training Aids' },
     ],
   },
 
@@ -973,6 +996,8 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
       { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders for Your Trip' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Golf Watches 2026' },
+      { slug: '/best-golf-bags-2026/', label: 'Best Golf Bags 2026' },
     ],
   },
 
@@ -1058,6 +1083,10 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Golf Balls for Slow Swing Speed' },
+      { slug: '/best-golf-balls-weekend-golfers/', label: 'Best Golf Balls for Weekend Golfers' },
+      { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x' },
     ],
   },
   {
@@ -1256,6 +1285,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Titleist Pro V1 vs Pro V1x' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
     ],
   },
 
@@ -1307,6 +1337,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
     ],
   },
 
@@ -1652,6 +1683,11 @@ export const ARTICLES: Article[] = [
       { q: 'Do I really need a rangefinder as a beginner?', a: 'Yes — more than experienced golfers, arguably. Beginners who know their distances hit the ball closer to the hole, which leads to fewer putts and lower scores immediately. The $169 Precision Pro NX9 will improve your scores faster than a $400 driver upgrade.' },
       { q: 'Are rangefinders allowed in competitions?', a: 'The Rules of Golf allow distance-measuring devices as a general rule. Slope-adjusted distances are not allowed in stroke play events unless the local rule permitting them has been adopted. All slope-capable rangefinders on this list can toggle slope off for tournament play.' },
     ],
+    related: [
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Rangefinder' },
+      { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder' },
+    ],
   },
 
   {
@@ -1715,6 +1751,11 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'Do I need a GPS watch if I already have a rangefinder?', a: 'They serve different purposes. A rangefinder gives you exact pin distance for the current shot. A GPS watch gives you front/middle/back yardages, hazard distances, and overall course layout without needing to aim and fire. Many golfers use a GPS watch for general course management and a rangefinder' },
       { q: 'Is Garmin or Bushnell better for high handicappers?', a: 'Garmin offers more features and a larger course database. Bushnell\'s iON Elite is simpler and more affordable. For a high handicapper who finds extra features distracting, Bushnell\'s clean interface is an advantage. For a golfer who wants to grow into more features, Garmin has more headroom.' },
+    ],
+    related: [
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Golf Watches 2026' },
+      { slug: '/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope Comparison' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
     ],
   },
 
@@ -1791,6 +1832,11 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'Do I need swing analysis hardware or can I just use my iPhone camera?', a: 'For beginners and intermediate golfers, your iPhone camera is excellent for swing analysis — especially at slow motion. Apps like Hudl Technique let you draw lines and compare swings for free. Hardware sensors add automatic tracking and shot-by-shot data that the camera alone can\'t provide, but the' },
       { q: 'Is Arccos worth the annual subscription?', a: 'For golfers who play 15+ rounds per year and want to understand their game, yes. The AI Caddie recommendations alone are worth the subscription cost if they prevent 2–3 wrong club decisions per round. The strokes gained breakdown typically reveals one area of the game that deserves focused practice' },
+    ],
+    related: [
+      { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
+      { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
+      { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
     ],
   },
 
@@ -1878,6 +1924,11 @@ export const ARTICLES: Article[] = [
       { q: 'Is Arccos worth the subscription for casual golfers?', a: 'For golfers who play 15+ rounds per year and genuinely want to understand where shots are lost, yes. For casual golfers who play 6–8 rounds per year, the free tier of The Grint or 18Birdies is sufficient. The Arccos value proposition scales with how often you play.' },
       { q: 'Can I use multiple golf apps at the same time?', a: 'You can, though battery drain during a round is a practical concern. Many golfers use one app for GPS yardages (18Birdies) and a separate device for shot tracking (Arccos sensors + background app). The apps don\'t conflict but using both actively drains phone battery faster.' },
     ],
+    related: [
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Golf Watches 2026' },
+      { slug: '/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope Comparison' },
+      { slug: '/average-golf-handicap/', label: 'Average Golf Handicap Guide' },
+    ],
   },
 
   {
@@ -1955,6 +2006,11 @@ export const ARTICLES: Article[] = [
       { q: 'What\'s the difference between Mevo and Mevo+?', a: 'The original Mevo measures 8 parameters and has no simulator capability in its base form. The Mevo+ measures 16 parameters and includes E6 Connect and FS Golf simulator software in the Space Package. The Mevo+ costs $1,500 more — significant but justified if simulator play is your goal.' },
       { q: 'Can I use a launch monitor at a public driving range?', a: 'Yes — the Garmin R10 and Rapsodo MLM2PRO both work outdoors at the range. Some ranges don\'t allow standalone devices in bays, so check policies first. Most outdoor ranges have no issue with portable launch monitors.' },
     ],
+    related: [
+      { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulator for Small Spaces' },
+      { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Comparison' },
+      { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Garage Golf Simulator' },
+    ],
   },
 
   {
@@ -2007,6 +2063,11 @@ export const ARTICLES: Article[] = [
       { q: 'Is SkyTrak+ worth the extra $1,000 over Mevo+?', a: 'For most weekend golfers, no — not unless you specifically need photometric accuracy in a small indoor space. The Mevo+ covers the improvement needs of recreational golfers at a more accessible price. The SkyTrak+ premium makes sense if you\'re doing serious club fitting or need photometric precision' },
       { q: 'Which has better software?', a: 'SkyTrak+ has a slightly wider software ecosystem (GSPro, WGT, E6). Mevo+ includes FS Golf, which has strong course content. Both include E6 Connect. For most golfers, the difference is minimal unless you have a preference for a specific platform.' },
       { q: 'Can Mevo+ work in a 9-foot-deep room?', a: 'It can, but accuracy suffers — particularly on spin measurements. FlightScope officially recommends 8+ feet of ball travel for reliable data. At 9 feet total room depth, you\'re likely operating at the lower bound of Mevo+\'s reliable range. SkyTrak+ is a better choice for this scenario.' },
+    ],
+    related: [
+      { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulator for Small Spaces' },
+      { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitor' },
+      { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Garage Golf Simulator' },
     ],
   },
 
@@ -2097,6 +2158,11 @@ export const ARTICLES: Article[] = [
       { q: 'Does SkyTrak+ work in a small garage?', a: 'Yes — the SkyTrak+ is specifically designed for small spaces because it uses photometric (camera-based) technology rather than radar. It sits beside the ball at ground level and doesn\'t need ball flight clearance. An 8×8 foot hitting bay is sufficient.' },
       { q: 'How much does a home golf simulator cost?', a: 'Entry-level setup (Garmin R10 + basic net + mat): $1,200–$1,500. Mid-range (Mevo+ + quality net + mat): $2,500–$3,000. Premium (SkyTrak+ + Net Return + Fiberbuilt + projector + screen): $5,000–$7,000. Most weekend golfers find the $2,500–$3,500 range delivers the best value.' },
       { q: 'Can I use a golf simulator with a standard TV?', a: 'Yes — the Garmin R10 and SkyTrak+ both connect to tablets and TVs via app. For a full projection setup, you\'ll need a short-throw projector and an impact screen. A 4K TV mounted on a swing arm works fine for data-focused practice.' },
+    ],
+    related: [
+      { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Comparison' },
+      { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitor' },
+      { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Garage Golf Simulator' },
     ],
   },
 
@@ -2193,6 +2259,11 @@ export const ARTICLES: Article[] = [
       { q: 'What\'s the minimum ceiling height for a driver swing?', a: '8.5–9 feet for most golfers. At 8 feet, you can practice irons safely. If you\'re tall or have a very upright swing, 9 feet is the safe minimum for driver. Measure your actual ceiling height — garage ceiling heights vary significantly.' },
       { q: 'How long does it take to build a garage simulator?', a: 'With pre-built components (Net Return frame, standard screen), a weekend is typically sufficient. Allow a day to mount the projector, hang the screen, and calibrate the launch monitor. First-time builds often take longer due to projector alignment and software configuration.' },
     ],
+    related: [
+      { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulator for Small Spaces' },
+      { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Comparison' },
+      { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitor' },
+    ],
   },
 
   {
@@ -2260,6 +2331,11 @@ export const ARTICLES: Article[] = [
       { q: 'How do I know I\'ve locked onto the flag and not the background?', a: 'Pin-seeker mode with vibration feedback (JOLT, buzz) is the confirmation. If you\'re in pin-seeker mode and the unit vibrates, it has locked onto the closest target in the crosshair — the flag. In standard mode without this feedback, you cannot confirm you have the pin vs. background trees.' },
       { q: 'Is a rangefinder or GPS watch better?', a: 'Different tools for different purposes. A GPS watch gives front/middle/back distances and course layout at a glance without aiming at anything — ideal for general course management. A rangefinder gives exact pin distance for precise club selection. Many serious recreational golfers use both.' },
     ],
+    related: [
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
+      { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Rangefinder' },
+    ],
   },
 
   {
@@ -2309,6 +2385,11 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'Is the Bushnell Tour V6 tournament legal?', a: 'Yes — the Slope Switch toggles slope off, making it legal for competition play. When slope is switched off, the unit shows a red band and displays non-slope-adjusted distances. The rules of golf allow slope measurement as a general rule; check your specific competition rules if unsure.' },
       { q: 'Does the Garmin Z82 work without a phone?', a: 'Yes — 40,000+ courses are preloaded on the device. The Garmin Golf app adds additional features but isn\'t required for the core GPS and laser functionality.' },
+    ],
+    related: [
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
+      { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder' },
     ],
   },
 
@@ -2398,6 +2479,11 @@ export const ARTICLES: Article[] = [
       { q: 'Do grip trainers actually work?', a: 'Yes — when used consistently. The key is repetition with correct feedback. Tools like the Gold Flex and Orange Whip give immediate physical feedback when you\'re doing something wrong, which accelerates the learning process compared to just reading about grip pressure.' },
       { q: 'How long does it take to develop a consistent golf grip?', a: 'With daily 10–15 minute practice sessions using a grip trainer, most golfers report feeling natural consistency in 3–4 weeks. The challenge is maintaining it under pressure — which is where the muscle memory built through trainer use becomes important.' },
     ],
+    related: [
+      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids' },
+      { slug: '/best-golf-training-aids-home-practice/', label: 'Best Home Golf Training Aids' },
+      { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
+    ],
   },
 
   {
@@ -2486,6 +2572,11 @@ export const ARTICLES: Article[] = [
       { q: 'What are the most important areas to practice at home?', a: 'Putting and short game produce the fastest score improvements for most recreational golfers. Putting is 35–40% of your round and requires no ball flight — making home practice on a mat directly transferable. Grip, alignment, and tempo are also trainable at home. Full swing mechanics are best practic' },
       { q: 'How long does it take to see improvement from training aids?', a: 'Consistent daily practice of 15–20 minutes typically produces noticeable improvement in 3–6 weeks. Putting improvements happen faster — 2–3 weeks of daily putting practice typically reduces three-putt frequency noticeably. Swing mechanics take longer because new movement patterns need time to become' },
     ],
+    related: [
+      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids' },
+      { slug: '/best-golf-grip-trainers/', label: 'Best Golf Grip Trainers' },
+      { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
+    ],
   },
 
   {
@@ -2549,6 +2640,11 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'What size net do I need for a driver?', a: 'For driver shots with any margin for off-centre hits, aim for at least 10 feet wide × 7 feet tall. The Rukket and Net Return both meet this requirement. Narrower nets risk ball escapement on heel or toe shots.' },
       { q: 'Can I hit full driver shots into a home net?', a: 'Yes, provided the net is rated for full-swing use. Never use a chipping net or target net for full driver shots. The Rukket Haack and Net Return Pro are both specifically built for full-swing use, including driver.' },
+    ],
+    related: [
+      { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulator for Small Spaces' },
+      { slug: '/best-golf-training-aids-home-practice/', label: 'Best Home Golf Training Aids' },
+      { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Garage Golf Simulator' },
     ],
   },
 
@@ -2635,6 +2731,11 @@ export const ARTICLES: Article[] = [
       { q: 'Does golf ball compression really make a difference for distance?', a: 'Yes — for slow swing speeds, low compression balls compress more fully at impact, producing more efficient energy transfer and more distance. The difference can be 5–15 yards for golfers with swing speeds under 80 mph. For fast swing speeds, the benefit is reduced or reversed.' },
       { q: 'What compression ball should a senior golfer use?', a: 'Most senior golfers benefit from balls in the 50–70 compression range — Callaway Supersoft (38), Srixon Soft Feel (60), or Titleist TruFeel (65) are the most popular choices. The softer ball will feel better on chips and putts as well as delivering more distance off the tee.' },
     ],
+    related: [
+      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x Comparison' },
+    ],
   },
 
   {
@@ -2718,6 +2819,11 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'Does golf ball compression really make a difference for distance?', a: 'Yes — for slow swing speeds, low compression balls compress more fully at impact, producing more efficient energy transfer and more distance. The difference can be 5–15 yards for golfers with swing speeds under 80 mph. For fast swing speeds, the benefit is reduced or reversed.' },
       { q: 'What compression ball should a senior golfer use?', a: 'Most senior golfers benefit from balls in the 50–70 compression range — Callaway Supersoft (38), Srixon Soft Feel (60), or Titleist TruFeel (65) are the most popular choices. The softer ball will feel better on chips and putts as well as delivering more distance off the tee.' },
+    ],
+    related: [
+      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
     ],
   },
 

@@ -23,7 +23,7 @@ interface Props { article: Article }
 const { article } = Astro.props;
 
 const meta    = articleMeta(article);
-const related = getMergedRelated(article, 4);
+const related = getMergedRelated(article, 5);
 
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
 
