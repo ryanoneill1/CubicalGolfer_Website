@@ -4,8 +4,8 @@ import { breadcrumbSchema, aboutPageSchema } from '../lib/schema';
 import { ARTICLES } from '../data/articles';
 
 const meta = {
-  title: 'About Cubical Golfer — How We Test & Editorial Policy',
-  description: 'How Cubical Golfer tests golf gear — every product independently purchased, tested over 10+ real rounds by weekend golfers with 15+ years of playing experience.',
+  title: 'About Cubical Golfer — Testing Standards & Editorial Policy',
+  description: 'Cubical Golfer publishes independent golf gear reviews for weekend golfers. Every product is purchased by us and tested over 10+ real rounds. No sponsored content, ever.',
   canonical: 'https://www.cubicalgolfer.com/about/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
@@ -35,101 +35,139 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), aboutPageSchema()];
         <div style="display:flex;gap:10px;flex-wrap:wrap">
           <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">Low-Teens Handicap</span>
           <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">15+ Years Playing</span>
-          <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">Chicagoland</span>
+          <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">All Gear Self-Purchased</span>
         </div>
       </div>
     </div>
-    <p style="font-size:17px;line-height:1.7;max-width:680px">
-      I started Cubical Golfer after a decade of wasting money on gear that disappointed,
-      and spending too many lunch breaks reading reviews written by people who'd clearly
-      never played a Saturday morning scramble.
+    <p style="font-size:17px;line-height:1.75;max-width:680px">
+      Cubical Golfer exists because most gear advice online is written for the wrong golfer —
+      or by someone who has never actually paid for the product they are recommending.
+      We fix that by buying everything ourselves and playing with it properly before saying a word.
     </p>
   </header>
 
   <div class="about-body">
     <div class="about-grid">
 
-      <!-- LEFT COLUMN: Bio + Credentials -->
+      <!-- LEFT COLUMN -->
       <div>
 
-        <h2>Our Story</h2>
+        <h2>Who This Site Is For</h2>
         <p>
-          The team plays seriously — between us we have been playing since our teens — club captain on my college golf team,
-          playing to a low-teens handicap, getting in 35–45 rounds a year,
-          mostly on public and semi-private courses across the Chicago area. By day I work
-          in marketing technology. The cubicle is very real.
+          The golfer who plays on weekends, maybe squeezes in a twilight round after work when
+          the season allows, and takes their handicap seriously even if nobody else does.
+          You are not a scratch golfer and you are not buying a new driver every season,
+          but you care about playing better and you want to spend your gear budget on things
+          that will actually move the needle.
         </p>
         <p>
-          The site was built because the gear review market is broken. Too many sites run
-          the same manufacturer photos and Amazon descriptions reworded into "reviews."
-          I wanted a place where recommendations came from someone who'd actually played
-          twelve rounds with the rangefinder, lost three sleeves of the ball, and had a
-          real opinion about whether it's worth the money.
+          If you have ever stood on an approach shot and had no idea what club to hit because
+          you were guessing the yardage, a rangefinder review on this site will tell you exactly
+          which model to buy and why. If you have lost count of how many "best golf balls"
+          articles you have read that say nothing about your swing speed or handicap,
+          our ball guides are written specifically for the 12–24 handicap range.
         </p>
         <p>
-          We've broken 80 exactly once — a 78 at a windy links-style course in Michigan.
-          we still talk about it. Most of the time I'm a bogey golfer trying to stay
-          out of the penalty areas and two-putt from inside 20 feet. Which means we review
-          gear for golfers who play golf, not for tour pros.
+          We cover rangefinders, GPS watches, golf balls, drivers and irons, putters,
+          training aids, golf bags, gloves, and shoes. Every category has a buying guide
+          built on actual rounds played, not manufacturer spec sheets.
         </p>
 
-        <!-- Credentials block -->
+        <!-- Testing Standards block -->
         <div style="background:var(--cream-dark);border-radius:12px;padding:24px;margin-top:28px;border-left:4px solid var(--gold)">
           <h3 style="font-size:15px;font-weight:800;margin:0 0 16px;text-transform:uppercase;letter-spacing:.06em;color:var(--green)">Testing Standards</h3>
           <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px"><span>⛳</span><span><strong>15+ years</strong> of playing experience, low-teens USGA handicap index</span></li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px"><span>🏌️</span><span><strong>35–45 rounds per year</strong> across public and semi-private courses</span></li>
-            
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px"><span>💰</span><span>Every product <strong>independently purchased</strong> — no manufacturer loans, no sponsored reviews</span></li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px"><span>🔁</span><span>Minimum <strong>10 full rounds of testing</strong> before any recommendation is published</span></li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px"><span>📊</span><span><strong>{ARTICLES.length}+ guides</strong> published, all updated quarterly</span></li>
+            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
+              <span>⛳</span>
+              <span><strong>15+ years</strong> of playing experience across the team, low-teens USGA handicap index</span>
+            </li>
+            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
+              <span>🏌️</span>
+              <span><strong>35–45 rounds per year</strong> on public and semi-private courses — not demo days, not driving ranges</span>
+            </li>
+            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
+              <span>💰</span>
+              <span>Every product <strong>independently purchased at retail price</strong> — no manufacturer loans, no gifted samples</span>
+            </li>
+            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
+              <span>🔁</span>
+              <span>Minimum <strong>10 full rounds</strong> before any recommendation is published — more for expensive gear</span>
+            </li>
+            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
+              <span>📊</span>
+              <span><strong>{ARTICLES.length}+ guides</strong> published, reviewed and updated quarterly</span>
+            </li>
           </ul>
         </div>
 
-        
-
       </div>
 
-      <!-- RIGHT COLUMN: Testing process + Policy + Contact -->
+      <!-- RIGHT COLUMN -->
       <div>
+
         <h2>How We Test Gear <a href="/how-we-test/" style="font-size:13px;font-weight:600;color:var(--gold);text-decoration:none;margin-left:8px">Full methodology →</a></h2>
         <div class="about-vals">
           <div class="about-val">
             <span class="vi">🏌️</span>
             <h4>Real Rounds, Not Demo Days</h4>
-            <p>Every piece of gear is used over a minimum of 10 full rounds before I write about it. I buy the gear, take it to the course, and play with it through good rounds and bad ones. Real conditions, real pressure shots.</p>
+            <p>
+              Every product is played with on an actual golf course, in normal playing conditions,
+              for a minimum of 10 rounds before we write anything. A rangefinder that reads
+              perfectly in a parking lot is not the same as one you can aim confidently at
+              a flag tucked left on a par three with trees behind it.
+            </p>
           </div>
           <div class="about-val">
             <span class="vi">💰</span>
-            <h4>My Own Money</h4>
-            <p>All products are independently purchased. No freebies, no manufacturer loans, no review units that go back after the article is written. If I recommend it, I paid for it.</p>
+            <h4>Our Own Money</h4>
+            <p>
+              Every product we recommend was bought at full retail price. We do not accept
+              manufacturer samples, review units, or loaner gear. There are no products
+              on this site that cost us nothing — which means there are no products here
+              we felt obligated to say nice things about.
+            </p>
           </div>
           <div class="about-val">
             <span class="vi">⛳</span>
-            <h4>Written for Bogey Golfers</h4>
-            <p>My target reader is a 12–22 handicapper with a real budget and limited practice time. I write for that person — not for scratch golfers, not for equipment collectors.</p>
+            <h4>Written for the 12–24 Handicapper</h4>
+            <p>
+              Our reviews are written for golfers who play in the 80s and 90s, have a real
+              equipment budget, and want to know what actually helps — not what looks good
+              on a spec sheet. We deliberately do not review gear we would never buy ourselves,
+              which cuts out a long tail of products that are popular but not genuinely useful.
+            </p>
           </div>
           <div class="about-val">
             <span class="vi">🔄</span>
-            <h4>Updated Quarterly</h4>
-            <p>Every guide is reviewed quarterly. Gear that no longer represents best value gets replaced. Prices are checked and updated. The dates on every article reflect when content was actually reviewed, not just published.</p>
+            <h4>Updated When It Matters</h4>
+            <p>
+              Guides are reviewed quarterly. When a newer model makes our current pick
+              obsolete, the recommendation changes — we do not keep stale picks because
+              they drive traffic. Every article shows the date it was last reviewed,
+              not just the date it was first published.
+            </p>
           </div>
         </div>
 
-        <!-- Editorial policy -->
-        <div style="background:var(--cream-dark);border-radius:12px;padding:24px;margin-top:24px">
-          <h3 style="font-size:15px;font-weight:800;margin:0 0 12px;color:var(--green);text-transform:uppercase;letter-spacing:.06em">Editorial Policy</h3>
-          <p style="font-size:14px;line-height:1.7;color:var(--body);margin:0 0 12px">
-            I earn affiliate commissions from some links on this site. If you click and buy,
-            I may earn a small commission at no extra cost to you. This does <strong>not</strong>
-            affect rankings or recommendations — I have turned down paid placements because
-            the product wasn't genuinely the best option.
+        <!-- Editorial independence -->
+        <div style="background:var(--cream-dark);border-radius:12px;padding:24px;margin-top:24px" id="affiliate">
+          <h3 style="font-size:15px;font-weight:800;margin:0 0 12px;color:var(--green);text-transform:uppercase;letter-spacing:.06em">Editorial Independence &amp; Affiliate Disclosure</h3>
+          <p style="font-size:14px;line-height:1.75;color:var(--body);margin:0 0 12px">
+            Cubical Golfer earns affiliate commissions through Amazon Associates and the
+            Bushnell affiliate programme via Impact. If you click a link and make a purchase,
+            we may earn a small commission at no extra cost to you. This is how the site
+            covers its costs.
           </p>
-          <p style="font-size:14px;line-height:1.7;color:var(--body);margin:0">
-            No manufacturer has advance review of content before publication.
-            No brand has ever paid to have a product ranked higher than it deserves.
-            If I don't like a product, I say so. If something is genuinely the best,
-            you'll know why — because it was tested over 12 rounds.
+          <p style="font-size:14px;line-height:1.75;color:var(--body);margin:0 0 12px">
+            Affiliate income does not influence which products we recommend or where they rank.
+            We have turned down paid placement requests. We have recommended lower-commission
+            products over higher-commission alternatives because they were the better choice.
+            If a product has a problem, we say so in the review.
+          </p>
+          <p style="font-size:14px;line-height:1.75;color:var(--body);margin:0">
+            No manufacturer has advance sight of any article before it is published.
+            No brand relationship has editorial influence over this site.
+            Recommendations are based entirely on what performed best during testing.
           </p>
         </div>
 
@@ -137,7 +175,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), aboutPageSchema()];
         <div style="background:var(--green);border-radius:12px;padding:28px;margin-top:20px;color:#fff">
           <h3 style="font-size:16px;font-weight:800;margin:0 0 8px;color:#fff">Get in Touch</h3>
           <p style="font-size:13px;line-height:1.65;margin:0 0 16px;color:rgba(255,255,255,.75)">
-            Questions about a review, a correction, or a partnership inquiry?
+            Questions about a review, a factual correction, or a partnership inquiry?
             We read every email and respond within 2 business days.
           </p>
           <a
