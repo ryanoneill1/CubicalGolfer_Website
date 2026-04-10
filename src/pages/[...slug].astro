@@ -288,9 +288,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     <!-- ── Author / Trust Box ── -->
     {(() => {
       // ── Page-type bio mapping ─────────────────────────────────────────────
-      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder'];
-      const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers'];
-      const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers'];
+      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder','rangefinder-worth-it','rangefinder-vs-gps'];
+      const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers','rangefinder-vs-gps'];
+      const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers','what-golf-ball-high-handicapper'];
 
       const isRangefinderPage = RANGEFINDER_IDS.includes(article.id);
       const isGpsPage         = GPS_IDS.includes(article.id);
@@ -394,9 +394,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
     {/* ── Trust line + Testing Standards badge (buying guides with specific page type) ── */}
     {isBuyingGuide && (() => {
-      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder'];
-      const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers'];
-      const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers'];
+      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder','rangefinder-worth-it','rangefinder-vs-gps'];
+      const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers','rangefinder-vs-gps'];
+      const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers','what-golf-ball-high-handicapper'];
 
       const isRangefinderPage = RANGEFINDER_IDS.includes(article.id);
       const isGpsPage         = GPS_IDS.includes(article.id);
