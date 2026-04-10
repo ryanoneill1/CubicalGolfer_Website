@@ -518,6 +518,13 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             })}
           </tbody>
         </table>
+        {/* ── Bottom Line — directs undecided readers ── */}
+        {(article as any).bottomLine && (
+          <div class="cmp-bottom-line"
+               aria-label="Our bottom-line recommendation"
+               set:html={(article as any).bottomLine}
+          />
+        )}
       </div>
     )}
 

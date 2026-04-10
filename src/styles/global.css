@@ -298,6 +298,17 @@ nav.site-nav {
   padding: 13px 16px; border-bottom: 1px solid var(--border);
   color: var(--body); line-height: 1.5; vertical-align: top;
 }
+/* "For You If..." column — readable sentence text */
+.cmp-table td:nth-child(2) {
+  font-size: 13px; color: var(--body); max-width: 240px;
+}
+/* Key Advantage column — highlight the benefit */
+.cmp-table td:nth-child(4) {
+  font-size: 13px; color: var(--text); font-style: italic;
+}
+/* Hide the empty feature2 column */
+.cmp-table th:nth-child(5):empty,
+.cmp-table td:nth-child(5):empty { display: none; }
 .cmp-table tr:last-child td { border-bottom: none; }
 .cmp-table tr:nth-child(even) td { background: #fafaf8; }
 .cmp-table td:first-child { font-weight: 700; color: var(--text); }
@@ -770,7 +781,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .cmp-winner .cmp-buy-btn:hover { background: var(--gold-dark); }
 .cmp-no-link { color: var(--muted); font-size: 12px; }
 @media (max-width: 700px) {
-  .cmp-th-buy, .cmp-td-buy { display: none; }
+  .cmp-th-buy, .cmp-td-buy { display: table-cell; }
 }
 
 /* ── PRODUCT CARD GRID (above-fold top picks) ── */
@@ -1436,3 +1447,21 @@ img, video, iframe { max-width: 100%; }
   .hwt-donot-grid  { grid-template-columns: 1fr; }
   .hwt-stats-grid  { grid-template-columns: 1fr 1fr; }
 }
+
+/* ── Comparison table Bottom Line ─────────────────────────────────────────── */
+.cmp-bottom-line {
+  margin: 0 0 32px;
+  padding: 16px 20px;
+  background: var(--green);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.cmp-bottom-line strong { color: var(--gold); }
+.cmp-bottom-line a {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+.cmp-bottom-line a:hover { text-decoration: underline; }
