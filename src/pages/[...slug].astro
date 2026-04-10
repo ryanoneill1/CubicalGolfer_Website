@@ -381,9 +381,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                 target="_blank"
                 rel="nofollow noopener sponsored"
                 class={`verdict-pick ${row.winner ? 'verdict-pick--winner' : ''}`}
-                aria-label={`${row.winner ? 'Best Overall' : row.bestFor}: ${row.name} — ${row.price}`}
+                aria-label={`${row.bestFor}: ${row.name} — ${row.price}`}
               >
-                <span class="verdict-pick-label">{row.winner ? '🏆 Best Overall' : row.bestFor}</span>
+                <span class="verdict-pick-label">{row.bestFor}</span>
                 <span class="verdict-pick-name">{row.name}</span>
                 <span class="verdict-pick-price">{row.price}</span>
                 <span class="verdict-pick-cta">{vpUrl !== '#' ? 'See price →' : ''}</span>

@@ -77,9 +77,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Winner?'],
       rows: [
-        { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Yes (toggle)', feature2: '6 months', winner: true },
-        { affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: 'Yes',          feature2: '12 months', winner: false },
-        { affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: 'Yes',    feature2: '12 months', winner: false },
+        { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: '🏆 Best Overall — Fastest Flag Lock', price: '~$329', feature1: 'Yes (toggle)', feature2: '6 months', winner: true },
+        { affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget — 1-Year Battery Life',  price: '~$169', feature1: 'Yes',          feature2: '12 months', winner: false },
+        { affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Budget Runner-Up — USB Rechargeable', price: '~$149', feature1: 'Yes',    feature2: '12 months', winner: false },
         { affiliateKey: 'garmin-approach-z82',    name: 'Garmin Approach Z82',   bestFor: 'Best Hybrid',   price: '~$499', feature1: 'Yes',         feature2: '14 hrs',  winner: false },
         { affiliateKey: 'bushnell-pro-xe',        name: 'Bushnell Pro XE',       bestFor: 'Best Premium',  price: '~$499', feature1: 'Elements',    feature2: '6 months', winner: false },
       ],
@@ -148,9 +148,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['GPS Watch', 'Best For', 'Price', 'Shot Tracking', 'Battery'],
       rows: [
-        { affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Best Overall',      price: '~$499', feature1: 'Via phone', feature2: '20 hrs', winner: true },
-        { affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$249', feature1: 'Automatic', feature2: '10 hrs', winner: false },
-        { affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget',        price: '~$149', feature1: 'No',        feature2: '16 hrs', winner: false },
+        { affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: '🏆 Best Overall — 42,000 Courses Loaded',      price: '~$499', feature1: 'Via phone', feature2: '20 hrs', winner: true },
+        { affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking — No Buttons Required', price: '~$249', feature1: 'Automatic', feature2: '10 hrs', winner: false },
+        { affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget — 14-Hour Battery',        price: '~$149', feature1: 'No',        feature2: '16 hrs', winner: false },
         { affiliateKey: 'garmin-approach-s42',    name: 'Garmin Approach S42', bestFor: 'Best Mid-Range',     price: '~$249', feature1: 'Via phone', feature2: '15 hrs', winner: false },
       ],
     },
@@ -199,9 +199,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'MOI', 'Bias'],
       rows: [
-        { affiliateKey: 'callaway-paradym-ai-smoke-max',  name: 'Callaway Paradym AI Smoke Max', bestFor: 'Best Overall', price: '~$499', feature1: 'Very High', feature2: 'Draw', winner: true },
-        { affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: 'Very High', feature2: 'Draw', winner: false },
-        { affiliateKey: 'cobra-aerojet-max',               name: 'Cobra Aerojet Max', bestFor: 'Best Value', price: '~$399', feature1: 'High', feature2: 'Draw', winner: false },
+        { affiliateKey: 'callaway-paradym-ai-smoke-max',  name: 'Callaway Paradym AI Smoke Max', bestFor: '🏆 Best Overall — Widest Sweet Spot', price: '~$499', feature1: 'Very High', feature2: 'Draw', winner: true },
+        { affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance — Carbon Twist Face', price: '~$499', feature1: 'Very High', feature2: 'Draw', winner: false },
+        { affiliateKey: 'cobra-aerojet-max',               name: 'Cobra Aerojet Max', bestFor: 'Best Value — Draw-Bias Built In', price: '~$399', feature1: 'High', feature2: 'Draw', winner: false },
         { affiliateKey: 'ping-g430-max-driver',            name: 'Ping G430 Max', bestFor: 'Most Forgiving', price: '~$499', feature1: 'Highest', feature2: 'Neutral', winner: false },
       ],
     },
@@ -247,9 +247,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Iron Model', 'Best For', 'Price (Set)', 'Forgiveness', 'Feel'],
       rows: [
-        { affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'High Handicappers', price: '~$1,199', feature1: 'Maximum', feature2: 'Good', winner: true },
-        { affiliateKey: 'titleist-t300',   name: 'Titleist T300', bestFor: 'Mid-Handicappers', price: '~$1,099', feature1: 'High', feature2: 'Very Good', winner: false },
-        { affiliateKey: 'ping-g430-irons', name: 'Ping G430', bestFor: 'All-Around', price: '~$999', feature1: 'High', feature2: 'Good', winner: false },
+        { affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: '🏆 Best Overall — Widest Forgiveness Window', price: '~$1,199', feature1: 'Maximum', feature2: 'Good', winner: true },
+        { affiliateKey: 'titleist-t300',   name: 'Titleist T300', bestFor: 'Mid-Handicappers — Tour Look Forgiveness', price: '~$1,099', feature1: 'High', feature2: 'Very Good', winner: false },
+        { affiliateKey: 'ping-g430-irons', name: 'Ping G430', bestFor: 'All-Around — Tightest Shot Dispersion', price: '~$999', feature1: 'High', feature2: 'Good', winner: false },
         { affiliateKey: 'titleist-t100',   name: 'Titleist T100', bestFor: 'Low Handicappers', price: '~$1,299', feature1: 'Medium', feature2: 'Excellent', winner: false },
         { affiliateKey: 'wilson-d9-irons', name: 'Wilson D9', bestFor: 'Best Value', price: '~$699', feature1: 'High', feature2: 'Good', winner: false },
       ],
@@ -1108,9 +1108,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Golf Ball', 'Best For', 'Price/Dozen', 'Compression', 'Cover'],
       rows: [
-        { affiliateKey: 'titleist-pro-v1',          name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: 'Urethane', winner: true },
-        { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour 2026', bestFor: 'Best New Release', price: '~$58', feature1: '75', feature2: 'Urethane', winner: false },
-        { affiliateKey: 'taylormade-tp5',            name: 'TaylorMade TP5', bestFor: 'Best All-Round', price: '~$50', feature1: '85', feature2: 'Urethane', winner: false },
+        { affiliateKey: 'titleist-pro-v1',          name: 'Titleist Pro V1', bestFor: '🏆 Best Overall — Tour Spin Control', price: '~$55', feature1: '87', feature2: 'Urethane', winner: true },
+        { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour 2026', bestFor: 'Best New Release — Lower Compression', price: '~$58', feature1: '75', feature2: 'Urethane', winner: false },
+        { affiliateKey: 'taylormade-tp5',            name: 'TaylorMade TP5', bestFor: 'Best All-Round — 5-Layer Construction', price: '~$50', feature1: '85', feature2: 'Urethane', winner: false },
         { affiliateKey: 'srixon-soft-feel',          name: 'Srixon Soft Feel', bestFor: 'Best Value', price: '~$27', feature1: '60', feature2: 'Ionomer', winner: false },
         { affiliateKey: 'vice-pro',                  name: 'Vice Pro', bestFor: 'Best Budget DTC', price: '~$33', feature1: '85', feature2: 'Urethane', winner: false },
       ],
@@ -1211,9 +1211,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Style', 'Price', 'Insert', 'Best For'],
       rows: [
-        { affiliateKey: 'odyssey-white-hot-og',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
-        { affiliateKey: 'scotty-cameron-phantom',    name: 'Scotty Cameron Phantom',   bestFor: 'Best Premium', price: '~$399', feature1: 'Milled',    feature2: 'Arc stroke',     winner: false },
-        { affiliateKey: 'cleveland-hb-soft-milled',  name: 'Cleveland HB Soft Milled', bestFor: 'Best Budget',  price: '~$129', feature1: 'Milled',    feature2: 'Any stroke',     winner: false },
+        { affiliateKey: 'odyssey-white-hot-og',      name: 'Odyssey White Hot OG',     bestFor: '🏆 Best Overall — Softest Insert Feel', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
+        { affiliateKey: 'scotty-cameron-phantom',    name: 'Scotty Cameron Phantom',   bestFor: 'Best Premium — Deep Milled Face', price: '~$399', feature1: 'Milled',    feature2: 'Arc stroke',     winner: false },
+        { affiliateKey: 'cleveland-hb-soft-milled',  name: 'Cleveland HB Soft Milled', bestFor: 'Best Budget — Milled Under $130',  price: '~$129', feature1: 'Milled',    feature2: 'Any stroke',     winner: false },
         { affiliateKey: 'taylormade-spider-tour',    name: 'TaylorMade Spider Tour',   bestFor: 'Best Mallet',  price: '~$349', feature1: 'Pure Roll', feature2: 'Straight stroke', winner: false },
       ],
     },

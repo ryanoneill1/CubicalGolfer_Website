@@ -671,7 +671,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .verdict-pick--winner { border-color: var(--gold); background: #fffbf0; }
 .verdict-pick-label {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
-  letter-spacing: .08em; color: var(--muted);
+  letter-spacing: .06em; color: var(--muted);
+  line-height: 1.4; display: block;
 }
 .verdict-pick-name  { font-size: 14px; font-weight: 700; color: var(--text); line-height: 1.3; }
 .verdict-pick-price { font-size: 13px; font-weight: 600; color: var(--green); }
