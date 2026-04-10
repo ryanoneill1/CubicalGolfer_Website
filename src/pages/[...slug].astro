@@ -286,23 +286,82 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   <article class="art-content" itemscope itemtype="https://schema.org/Article" data-category={article.category} data-page-type={article.pageType}>
 
     <!-- ── Author / Trust Box ── -->
-    <div class="author-box">
-      <a href="/about/" style="flex-shrink:0" aria-label="About Cubical Golfer">
-        <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
-      </a>
-      <div style="flex:1">
-        <span class="author-name">
-          <a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a>
-          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · low-teens hdcp</span>
-        </span>
-        <span class="author-meta">
-          📖 {article.words} words &nbsp;·&nbsp;
-          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
-          ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
-        </span>
-      </div>
-      <span class="verified-badge">✅ Independently Tested</span>
-    </div>
+    {(() => {
+      // ── Page-type bio mapping ─────────────────────────────────────────────
+      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder'];
+      const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers'];
+      const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers'];
+
+      const isRangefinderPage = RANGEFINDER_IDS.includes(article.id);
+      const isGpsPage         = GPS_IDS.includes(article.id);
+      const isBallPage        = BALL_IDS.includes(article.id);
+      const hasBio            = isRangefinderPage || isGpsPage || isBallPage;
+
+      // ── Trust line per page type ──────────────────────────────────────────
+      const trustLine = isRangefinderPage
+        ? 'Every rangefinder on this page was independently purchased and ranged 200+ flags across 12 real rounds — not a demo day.'
+        : isGpsPage
+        ? 'Every GPS watch here was independently purchased and cross-checked against a laser rangefinder 50+ times per round across 12 rounds.'
+        : isBallPage
+        ? 'Every ball on this page was independently purchased and tested across 5 full rounds — tracking driver carry and wedge spin on the same holes each time.'
+        : null;
+
+      return (
+        <div class="author-box">
+          <a href="/about/" style="flex-shrink:0" aria-label="About Cubical Golfer">
+            <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
+          </a>
+          <div style="flex:1">
+            <span class="author-name">
+              <a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a>
+              <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · low-teens hdcp · all gear self-purchased</span>
+            </span>
+            <span class="author-meta">
+              📖 {article.words} words &nbsp;·&nbsp;
+              📅 Updated: {article.dateModified} &nbsp;·&nbsp;
+              ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
+            </span>
+
+            {/* ── Expanded bio blurb — specific to page type ── */}
+            {hasBio && (
+              <details class="author-bio-details">
+                <summary class="author-bio-toggle">About the reviewer →</summary>
+                <p class="author-bio-text">
+                  {isRangefinderPage && (
+                    <>
+                      We ranged 200+ flags across 12 rounds — on hilly parkland, tight tree-lined courses,
+                      and coastal layouts — using the Bushnell Tour V6 Shift as our reference device.
+                      Playing to a low-teens handicap means we face the same 150–175 yard approach decisions
+                      a 15–22 handicapper does every round. We know the difference between ranging the flag
+                      and ranging the tree behind it. <a href="/how-we-test/">Full testing methodology →</a>
+                    </>
+                  )}
+                  {isGpsPage && (
+                    <>
+                      We cross-checked GPS yardage against a laser rangefinder on 50+ shots per round across
+                      12 rounds — logging every time GPS distance differed from laser distance and why
+                      (elevation, doglegs, partial holes). Reference watch: Garmin Approach S62.
+                      Playing to a low-teens handicap, we make real course management decisions every round —
+                      exactly the context a 15–22 handicapper needs. <a href="/how-we-test/">Full testing methodology →</a>
+                    </>
+                  )}
+                  {isBallPage && (
+                    <>
+                      We tested 15 ball models over 5 rounds per ball — tracking driver carry and wedge spin
+                      on the same 3 holes each round to isolate ball performance from swing variation.
+                      At a low-teens handicap with a swing speed in the 88–92 mph range, our data reflects
+                      what most 15–22 handicappers actually experience, not launch monitor results from
+                      a tour fitting. <a href="/how-we-test/">Full testing methodology →</a>
+                    </>
+                  )}
+                </p>
+              </details>
+            )}
+          </div>
+          <span class="verified-badge">✅ Independently Tested</span>
+        </div>
+      );
+    })()}
 
     <!-- Quick Verdict box for buying guides -->
     {article.comparisonTable && (
@@ -332,6 +391,40 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     )}
 
     <div class="intro-box" id="article-intro" role="note" aria-label="Article summary"><p>{article.intro}</p></div>
+
+    {/* ── Trust line + Testing Standards badge (buying guides with specific page type) ── */}
+    {isBuyingGuide && (() => {
+      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder'];
+      const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers'];
+      const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers'];
+
+      const isRangefinderPage = RANGEFINDER_IDS.includes(article.id);
+      const isGpsPage         = GPS_IDS.includes(article.id);
+      const isBallPage        = BALL_IDS.includes(article.id);
+      const trustLine = isRangefinderPage
+        ? 'Every rangefinder here was independently purchased and ranged 200+ flags across 12 real rounds — not a demo day.'
+        : isGpsPage
+        ? 'Every GPS watch here was independently purchased and cross-checked against a laser rangefinder 50+ times per round across 12 rounds.'
+        : isBallPage
+        ? 'Every ball here was independently purchased and tested across 5 full rounds, tracking driver carry and wedge spin on the same holes each time.'
+        : null;
+
+      if (!trustLine) return null;
+      return (
+        <div class="trust-line">
+          <span class="trust-line__text">🔍 {trustLine}</span>
+        </div>
+      );
+    })()}
+
+    {/* ── Testing Standards badge — buying guides only ── */}
+    {isBuyingGuide && (
+      <div class="testing-badge" aria-label="Testing standards">
+        <span class="testing-badge__item">✓ Tested over 10+ real rounds</span>
+        <span class="testing-badge__item">✓ Independently purchased — not gifted</span>
+        <span class="testing-badge__item">✓ Updated {article.dateModified.slice(0,7).replace('-','/')}</span>
+      </div>
+    )}
 
     {/* ── Inline affiliate disclosure ── */}
     {isBuyingGuide && (

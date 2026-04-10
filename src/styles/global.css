@@ -185,6 +185,49 @@ nav.site-nav {
 .author-name  { font-weight: 800; color: var(--green, #1E3A28); font-size: 14px; display: block; margin-bottom: 3px; }
 .author-name a:hover { text-decoration: underline; }
 .author-meta  { font-size: 12px; color: var(--muted, #666); line-height: 1.5; }
+
+/* ── Author bio expand/collapse ─────────────────────────────────────────── */
+.author-bio-details { margin-top: 8px; }
+.author-bio-toggle {
+  font-size: 11px; font-weight: 700; color: var(--green);
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 4px;
+  text-decoration: underline; text-underline-offset: 2px; padding: 0;
+}
+.author-bio-toggle::-webkit-details-marker { display: none; }
+.author-bio-text {
+  font-size: 12px; color: var(--body); line-height: 1.7;
+  margin: 8px 0 0; padding: 10px 12px;
+  background: rgba(0,0,0,.03); border-radius: 6px;
+  border-left: 3px solid var(--gold);
+}
+.author-bio-text a { color: var(--green); font-weight: 700; }
+
+/* ── Trust line ─────────────────────────────────────────────────────────── */
+.trust-line {
+  margin: 0 0 12px;
+  padding: 10px 16px;
+  background: #f0f7f2;
+  border: 1px solid #c8e0cf;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1a3d27;
+}
+.trust-line__text { font-weight: 600; }
+
+/* ── Testing Standards badge ────────────────────────────────────────────── */
+.testing-badge {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 16px;
+}
+.testing-badge__item {
+  font-size: 11px; font-weight: 700;
+  color: var(--green, #1E3A28);
+  background: #f0f7f2;
+  border: 1px solid #c8e0cf;
+  border-radius: 20px;
+  padding: 3px 12px;
+  white-space: nowrap;
+}
 .verified-badge {
   margin-left: auto;
   background: #e8f5e9;
