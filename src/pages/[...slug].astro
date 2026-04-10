@@ -243,17 +243,28 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
   {/* Sticky bar for buying guides — uses first product with affiliate key */}
-  {(isBuyingGuide || article.comparisonTable) && (() => {
+  {isBuyingGuide && (() => {
+    // Try comparisonTable winner first, fall back to first badged section
     const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
-    const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
+    const fallbackSection = !topRow
+      ? article.sections?.find((s: any) => s.badge && (s.affiliateKey || BADGE_TO_PRODUCT[article.id]?.[s.badge]))
+      : null;
+    const fallbackKey = fallbackSection
+      ? ((fallbackSection as any).affiliateKey || BADGE_TO_PRODUCT[article.id]?.[(fallbackSection as any).badge])
+      : null;
+    const topAff = topRow
+      ? getAffiliateLink(topRow.affiliateKey)
+      : (fallbackKey ? getAffiliateLink(fallbackKey) : null);
+    const topName = topRow ? topRow.name : (fallbackSection as any)?.h2?.replace(/^Best [^:]+:\s*/i, '') ?? '';
+    const topBadge = topRow ? (topRow.winner ? 'BEST PICK' : topRow.bestFor) : (fallbackSection as any)?.badge ?? 'TOP PICK';
     if (!topAff) return null;
     return (
       <StickyBar
-        name={topRow.name}
+        name={topName}
         price={topAff.price ?? ''}
         url={topAff.url}
         retailer={topAff.retailer}
-        badge={topRow.winner ? 'BEST PICK' : topRow.bestFor}
+        badge={topBadge}
       />
     );
   })()}
@@ -298,13 +309,24 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       <div class="verdict-quick" id="quick-verdict" aria-label="Quick Verdict — Top Picks" itemscope itemtype="https://schema.org/ItemList">
         <p class="verdict-quick-title">⚡ Quick Verdict</p>
         <div class="verdict-quick-picks">
-          {article.comparisonTable.rows.slice(0, 3).map((row, i) => (
-            <div class={`verdict-pick ${row.winner ? 'verdict-pick--winner' : ''}`}>
-              <span class="verdict-pick-label">{row.winner ? '🏆 Best Overall' : row.bestFor}</span>
-              <span class="verdict-pick-name">{row.name}</span>
-              <span class="verdict-pick-price">{row.price}</span>
-            </div>
-          ))}
+          {article.comparisonTable.rows.slice(0, 3).map((row, i) => {
+            const vpAff = row.affiliateKey ? getAffiliateLink(row.affiliateKey) : null;
+            const vpUrl = vpAff?.url || (row as any).url || '#';
+            return (
+              <a
+                href={vpUrl}
+                target="_blank"
+                rel="nofollow noopener sponsored"
+                class={`verdict-pick ${row.winner ? 'verdict-pick--winner' : ''}`}
+                aria-label={`${row.winner ? 'Best Overall' : row.bestFor}: ${row.name} — ${row.price}`}
+              >
+                <span class="verdict-pick-label">{row.winner ? '🏆 Best Overall' : row.bestFor}</span>
+                <span class="verdict-pick-name">{row.name}</span>
+                <span class="verdict-pick-price">{row.price}</span>
+                <span class="verdict-pick-cta">{vpUrl !== '#' ? 'See price →' : ''}</span>
+              </a>
+            );
+          })}
         </div>
       </div>
     )}
@@ -521,7 +543,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
               name={section.h2}
               retailer={aff.retailer}
               label={aff.label}
-              variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
+              variant={((section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK')) || (section.badge && article.sections.slice(0, idx).every((s: any) => !s.badge))) ? 'primary' : 'secondary'}
               disclosure={true}
             />
           )}

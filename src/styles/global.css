@@ -612,7 +612,19 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   background: #fff; border: 1px solid var(--border);
   border-radius: 8px; padding: 12px 14px;
   display: flex; flex-direction: column; gap: 4px;
+  text-decoration: none; color: inherit;
+  transition: border-color .15s, box-shadow .15s, transform .1s;
+  cursor: pointer;
 }
+.verdict-pick:hover {
+  border-color: var(--gold); box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  transform: translateY(-1px);
+}
+.verdict-pick-cta {
+  font-size: 11px; font-weight: 700; color: var(--green);
+  margin-top: 4px; letter-spacing: .02em;
+}
+.verdict-pick--winner .verdict-pick-cta { color: #7a6200; }
 .verdict-pick--winner { border-color: var(--gold); background: #fffbf0; }
 .verdict-pick-label {
   font-size: 10px; font-weight: 700; text-transform: uppercase;
