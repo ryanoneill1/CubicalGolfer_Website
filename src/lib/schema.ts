@@ -342,3 +342,43 @@ export function homeFaqSchema(): object {
     },
   ]);
 }
+
+// ── HowTo schema for "how to use a golf ball compression chart" ────────────
+export function compressionChartHowToSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type':    'HowTo',
+    name:       'How to Use a Golf Ball Compression Chart',
+    description: 'Match your driver swing speed to the right golf ball compression rating for maximum distance and feel.',
+    totalTime:  'PT2M',
+    tool: [
+      { '@type': 'HowToTool', name: 'Driver swing speed (mph) — measure at a range or estimate from carry distance' },
+    ],
+    step: [
+      {
+        '@type':  'HowToStep',
+        name:     'Find your driver swing speed',
+        text:     'Measure your driver swing speed at a range with a launch monitor, or estimate it from carry distance: 180-190 yards carry = ~83 mph; 200-215 yards = ~92 mph; 230-245 yards = ~102 mph.',
+        position: 1,
+      },
+      {
+        '@type':  'HowToStep',
+        name:     'Match your speed to the chart',
+        text:     'Find your swing speed band in the compression chart: under 70 mph → compression 30-50; 70-85 mph → compression 50-70; 85-95 mph → compression 70-85; 95-105 mph → compression 85-95; over 105 mph → compression 95+.',
+        position: 2,
+      },
+      {
+        '@type':  'HowToStep',
+        name:     'Choose a ball in your compression tier',
+        text:     'Select a ball whose compression rating falls within your recommended range. For under 85 mph, the Srixon Soft Feel (60) or Callaway Supersoft (38) are the top picks. For 85-95 mph, the Vice Pro (85) or TaylorMade Tour Response (75). For 95+ mph, the Titleist Pro V1 (87) or Callaway Chrome Tour (75).',
+        position: 3,
+      },
+      {
+        '@type':  'HowToStep',
+        name:     'Test and confirm',
+        text:     'Play 3 rounds with your new compression-matched ball and compare driver carry to your previous ball. Most golfers at 80-90 mph gain 5-10 yards switching from a 90-compression ball to a 60-70 compression ball.',
+        position: 4,
+      },
+    ],
+  };
+}

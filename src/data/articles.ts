@@ -579,7 +579,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinders-2026/',      label: 'Best Rangefinders for New Golfers' },
       { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart — Find Your Ball' },
     ],
   },
 
@@ -1125,7 +1125,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart by Swing Speed' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Golf Balls for Slow Swing Speed' },
       { slug: '/best-golf-balls-weekend-golfers/', label: 'Best Golf Balls for Weekend Golfers' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x' },
@@ -1291,7 +1291,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Golf Ball Compression Chart 2026 — Find Your Ball by Swing Speed',
     description: 'Find the right golf ball compression for your swing speed — our chart covers 15 ball models from 50 to 100+ compression. Updated for 2026. See your match →',
     excerpt: 'Match your swing speed to the right golf ball compression — the fastest way to gain distance without changing your swing.',
-    intro: "Golf ball compression is a number from 30 to 120 that measures how much force is needed to deform the ball at impact. Play a ball that matches your swing speed and you get maximum energy transfer — better distance, better feel. Play the wrong one and you lose yards without knowing why.",
+    intro: "Golf ball compression is a number from 30 to 120 that measures how much a ball deforms at impact. Low compression (30–70) suits swing speeds under 85 mph. Medium (70–90) suits 85–100 mph. High (90+) suits over 100 mph. This golf ball compression chart maps 15 ball models to the swing speed each was designed for.",
     toc: [
       'What is golf ball compression?',
       'Compression chart by swing speed',
@@ -1304,11 +1304,11 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'What Is Golf Ball Compression?',
-        body: "Compression measures how much a golf ball deforms when a clubhead hits it. The rating runs from 30 (very soft) to 120 (very firm). At impact, the ball compresses against the face for roughly 1/2000th of a second, stores energy, then springs back to launch the ball forward. A ball whose compression matches your swing speed transfers that energy efficiently. One that is too firm for your speed does not compress fully — you lose distance. One that is too soft over-compresses and balloons, costing you control on full shots.",
+        body: "Compression measures how much a golf ball deforms when a clubhead hits it. The rating runs from 30 (very soft) to 120 (very firm). At impact, the ball compresses against the face for roughly 1/2000th of a second, stores energy, then springs back to launch the ball forward. Use this golf balls comparison chart to find the right compression for your swing: a ball whose compression matches your speed transfers energy efficiently, a ball too firm does not compress fully and loses distance, and a ball too soft over-compresses and balloons. The compression chart below maps every major ball to the swing speed range it was designed for.",
       },
       {
         h2: 'Golf Ball Compression Chart by Swing Speed',
-        body: 'Use your driver swing speed — it is the standard benchmark used by every ball fitter and manufacturer.',
+        body: 'Use your driver swing speed to read this compression chart golf balls guide — it is the standard benchmark used by every ball fitter and manufacturer. Driver speed predicts the compression you need across every club in the bag.',
         items: [
           { name: 'Under 70 mph → Compression 30–50', desc: 'Balls: Callaway Supersoft (38), Wilson Duo Soft (29). These ultra-soft balls are designed specifically for the slowest swing speeds — they compress fully at lower impact forces, giving you the distance a firmer ball cannot.' },
           { name: '70–85 mph → Compression 50–70', desc: 'Balls: Srixon Soft Feel (60), Titleist Velocity (65), Bridgestone e6 (58). The sweet spot for most senior and casual golfers. Low-compression two-piece construction gives distance without needing tour swing speeds.' },
@@ -1373,15 +1373,15 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Does Temperature Affect Golf Ball Compression?',
-        body: "Yes, and more than most golfers realise. Cold temperatures make golf balls act firmer — at 40°F, a 75-compression ball effectively plays like an 85-compression ball. If you play in cold weather (under 55°F regularly), drop one compression tier. A Pro V1 player in cold weather may actually perform better with the Chrome Tour or Vice Pro. In warm conditions, compression plays exactly as rated. This is one reason golfers notice their ball flying differently in winter — it is not just the thicker air, it is the ball itself.",
+        body: "Yes, and more than most golfers realise — temperature is the one variable in the ball compression golf equation that most guides ignore. Cold temperatures make golf balls act firmer — at 40°F, a 75-compression ball effectively plays like an 85-compression ball. If you play in cold weather (under 55°F regularly), drop one compression tier. A Pro V1 player in cold weather may actually perform better with the Chrome Tour or Vice Pro. In warm conditions, compression plays exactly as rated. This is one reason golfers notice their ball flying differently in winter — it is not just the thicker air, it is the ball itself.",
       },
       {
         h2: 'Which Ball Fits Your Game? Final Recommendation',
-        body: "Under 85 mph swing speed: Srixon Soft Feel (~$27) or Titleist Velocity (~$32) — compression-matched balls give you more distance than a Pro V1 at this speed, and you save $23–28 per dozen. Link: if you want to see our full tested rankings → Best Golf Balls 2026. 85–95 mph: Vice Pro (~$33) direct or TaylorMade Tour Response (~$35) — urethane cover, mid-compression, 40% less than a Pro V1. 95–105 mph: Titleist Pro V1 (~$55) or Callaway Chrome Tour (~$58) — the premium is earned at this speed. Over 105 mph: Pro V1x or Callaway Chrome Tour X — high compression is not optional. One rule that applies across all ranges: if you lose more than 2 balls per round, play one tier cheaper until you stop losing them.",
+        body: "Reading this compression golf ball chart correctly means matching your driver swing speed to the right tier — not your perceived ability level. Under 85 mph swing speed: Srixon Soft Feel (~$27) or Titleist Velocity (~$32) — compression-matched balls give you more distance than a Pro V1 at this speed, and you save $23–28 per dozen. Link: if you want to see our full tested rankings → Best Golf Balls 2026. 85–95 mph: Vice Pro (~$33) direct or TaylorMade Tour Response (~$35) — urethane cover, mid-compression, 40% less than a Pro V1. 95–105 mph: Titleist Pro V1 (~$55) or Callaway Chrome Tour (~$58) — the premium is earned at this speed. Over 105 mph: Pro V1x or Callaway Chrome Tour X — high compression is not optional. One rule that applies across all ranges: if you lose more than 2 balls per round, play one tier cheaper until you stop losing them.",
       },
     ],
     comparisonTable: {
-      headers: ['Golf Ball', 'Compression', 'Best For (Swing Speed)', 'Cover', 'Price/Dozen'],
+      headers: ['Golf Ball', 'Best For (Swing Speed)', 'Price/Dozen', 'Compression', 'Cover'],
       rows: [
         { affiliateKey: 'srixon-soft-feel',         name: 'Srixon Soft Feel',         bestFor: 'Under 90 mph', price: '~$27',  feature1: '60',  feature2: 'Ionomer',  winner: false },
         { affiliateKey: 'titleist-velocity',         name: 'Titleist Velocity',         bestFor: '70–85 mph',   price: '~$32',  feature1: '65',  feature2: 'Ionomer',  winner: false },
@@ -1467,7 +1467,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart by Swing Speed' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
     ],
@@ -3212,7 +3212,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 — Full Guide' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart — Match Your Swing Speed' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Golf Balls for Slow Swing Speed' },
       { slug: '/best-golf-balls-weekend-golfers/', label: 'Best Golf Balls for Weekend Golfers' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x' },
