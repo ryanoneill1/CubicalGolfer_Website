@@ -292,7 +292,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     <!-- ── Author / Trust Box ── -->
     {(() => {
       // ── Page-type bio mapping ─────────────────────────────────────────────
-      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder','rangefinder-worth-it','rangefinder-vs-gps'];
+      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder','rangefinder-worth-it','rangefinder-vs-gps','best-golf-rangefinder-under-200'];
       const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers','rangefinder-vs-gps'];
       const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers','what-golf-ball-high-handicapper'];
 
@@ -398,7 +398,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
     {/* ── Trust line + Testing Standards badge (buying guides with specific page type) ── */}
     {isBuyingGuide && (() => {
-      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder','rangefinder-worth-it','rangefinder-vs-gps'];
+      const RANGEFINDER_IDS = ['rangefinders','best-golf-rangefinder-beginners','bushnell-vs-garmin-rangefinder','rangefinder-worth-it','rangefinder-vs-gps','best-golf-rangefinder-under-200'];
       const GPS_IDS         = ['gps-watches','best-gps-golf-watch-high-handicappers','rangefinder-vs-gps'];
       const BALL_IDS        = ['golf-balls','golf-ball-compression','pro-v1-vs-pro-v1x','best-golf-balls-slow-swing-speed','best-golf-balls-weekend-golfers','what-golf-ball-high-handicapper'];
 
@@ -577,6 +577,14 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
           {section.body && section.body.trim() && <p>{section.body}</p>}
           {section.price && <p class="price-note">💰 Price: {section.price}</p>}
+          {/* ── Inline HTML table (e.g. compression chart by swing speed) ── */}
+          {(section as any).tableHtml && (
+            <div class="cmp-wrap section-table" set:html={(section as any).tableHtml} />
+          )}
+          {/* ── Affiliate callout block (after chart) ── */}
+          {(section as any).calloutHtml && (
+            <div set:html={(section as any).calloutHtml} />
+          )}
           {section.items && section.items.length > 0 && (
             <ul>
               {section.items.map((item: any) => (

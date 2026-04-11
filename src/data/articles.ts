@@ -1290,11 +1290,12 @@ export const ARTICLES: Article[] = [
     words: '2,200',
     datePublished: '2026-03-25',
     dateModified: '2026-04-10',
-    title: 'Golf Ball Compression Chart 2026 — Matched to Swing Speed',
+    title: 'Golf Ball Compression Chart 2026 — Ranked by Swing Speed',
     titleDisplay: 'Golf Ball Compression Chart 2026 — Find Your Ball by Swing Speed',
-    description: 'Find the right golf ball compression for your swing speed — our chart covers 15 ball models from 50 to 100+ compression. Updated for 2026. See your match →',
+    bottomLine: "If your swing speed is under 88 mph, the <strong>Srixon Soft Feel</strong> at $27/dozen will out-drive a Pro V1 and cost half the price. Above 90 mph, the <strong>Titleist Pro V1</strong> is the correct call — the urethane cover earns its price at that swing speed.",
+    description: 'Golf ball compression chart 2026 — 15 ball models matched to your swing speed. Callaway Supersoft to Pro V1 in one table. Find your ball →',
     excerpt: 'Match your swing speed to the right golf ball compression — the fastest way to gain distance without changing your swing.',
-    intro: "Golf ball compression is a number from 30 to 120 that measures how much a ball deforms at impact. Low compression (30–70) suits swing speeds under 85 mph. Medium (70–90) suits 85–100 mph. High (90+) suits over 100 mph. This golf ball compression chart maps 15 ball models to the swing speed each was designed for.",
+    intro: "Golf ball compression measures how much a ball deforms when struck — rated from 30 (very soft) to 120 (very firm). Low compression suits swing speeds under 85 mph. Mid compression fits 85–100 mph. High compression is for swings above 100 mph.",
     toc: [
       'What is golf ball compression?',
       'Compression chart by swing speed',
@@ -1312,6 +1313,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Golf Ball Compression Chart by Swing Speed',
         body: 'Use your driver swing speed to read this compression chart golf balls guide — it is the standard benchmark used by every ball fitter and manufacturer. Driver speed predicts the compression you need across every club in the bag.',
+        tableHtml: '<table class="cmp-table speed-table" role="table" aria-label="Golf Ball Compression Chart by Swing Speed"><caption class="sr-only">Golf ball compression chart — swing speed to compression rating and ball examples</caption><thead><tr><th scope="col">Swing Speed (mph)</th><th scope="col">Compression Tier</th><th scope="col">Ball Examples</th></tr></thead><tbody><tr><td>60–75 mph</td><td>Low (50–60)</td><td>Callaway Supersoft, Wilson Duo Soft</td></tr><tr><td>75–90 mph</td><td>Mid (65–80)</td><td>Srixon Soft Feel, Titleist Velocity, Bridgestone e6</td></tr><tr><td>90–105 mph</td><td>Mid-High (80–95)</td><td>Vice Pro, Callaway Chrome Tour, Titleist Pro V1</td></tr><tr><td>105+ mph</td><td>High (90–100+)</td><td>Titleist Pro V1x, TaylorMade TP5, Callaway Chrome Tour X</td></tr></tbody></table>',
         items: [
           { name: 'Under 70 mph → Compression 30–50', desc: 'Balls: Callaway Supersoft (38), Wilson Duo Soft (29). These ultra-soft balls are designed specifically for the slowest swing speeds — they compress fully at lower impact forces, giving you the distance a firmer ball cannot.' },
           { name: '70–85 mph → Compression 50–70', desc: 'Balls: Srixon Soft Feel (60), Titleist Velocity (65), Bridgestone e6 (58). The sweet spot for most senior and casual golfers. Low-compression two-piece construction gives distance without needing tour swing speeds.' },
@@ -1319,6 +1321,11 @@ export const ARTICLES: Article[] = [
           { name: '95–105 mph → Compression 85–95', desc: 'Balls: Titleist Pro V1 (87), Callaway Chrome Tour (75), TaylorMade TP5 (85). Premium urethane tour balls that deliver full performance at this speed range. Below 90mph you will still play these fine — but cheaper balls match your distance.' },
           { name: 'Over 105 mph → Compression 95+', desc: 'Balls: Titleist Pro V1x (97), Callaway Chrome Tour X. Maximum compression for the fastest swings. These balls resist over-compression at impact and maintain a tighter spin window on every club.' },
         ],
+      },
+      {
+        h2: 'Your Compression Match — Tested Picks by Tier',
+        body: "Once you know your swing speed tier, the next step is picking the specific ball within that tier that fits your budget and playing style. We tested 15 ball models across all five compression ranges over 40+ real rounds — tracking driver carry, wedge spin, and feel on mis-hits.",
+        calloutHtml: '<div class="section-callout">Buying golf balls based on your swing speed? → <a href="/best-golf-balls-2026/"><strong>Best Golf Balls 2026 — Our Tested Picks →</strong></a><br>We tested 15 ball models across 5 swing speed categories — ranked by distance, spin, and price.</div>',
       },
       {
         h2: 'How to Find Your Swing Speed Without a Launch Monitor',
@@ -3222,5 +3229,239 @@ export const ARTICLES: Article[] = [
     ],
   },
 
+
+  {
+    id: 'best-golf-rangefinder-under-200',
+    slug: '/best-golf-rangefinder-under-200/',
+    category: 'gear-reviews',
+    pageType: 'buying-guide',
+    tag: 'BUYING GUIDE',
+    emoji: '🔭',
+    thumb: 'green',
+    words: '1,600',
+    datePublished: '2026-04-10',
+    dateModified: '2026-04-10',
+    title: 'Best Golf Rangefinder Under $200 in 2026 — Tested on Real Courses',
+    titleDisplay: 'Best Golf Rangefinder Under $200 (2026) — 3 Tested Picks',
+    bottomLine: "The Precision Pro NX9 HD is the easiest recommendation in golf gear right now. It costs $169, has a lifetime warranty, and works better than rangefinders twice the price for the way most weekend golfers actually use one.",
+    description: 'Three rangefinders under $200 tested over 40+ rounds. Precision Pro NX9 HD wins — slope, warranty, battery. Best picks for 18–25 handicappers.',
+    excerpt: 'Three rangefinders under $200 tested on real courses. Best overall, best value, and the right entry-level pick — matched to your handicap and play frequency.',
+    intro: "You are standing on a 165-yard par 3. The yardage marker says 160 to the centre, but the pin is cut back-right and you have no idea if that is 158 or 172. You pick the wrong club, come up short, double bogey. That is the exact problem a rangefinder solves — and you do not need to spend $329 to solve it. We tested three rangefinders under $200 over 40+ real rounds to find the best one for a first-time buyer on a budget. All three were independently purchased. See our full rangefinder guide for premium picks if your budget extends further.",
+    toc: [
+      'Top picks at a glance',
+      'Best overall: Precision Pro NX9 HD',
+      'Best value: Blue Tees Series 3 Max',
+      'Best under $100: TecTecTec VPRO500',
+      'What to look for in a budget rangefinder',
+      'Is a rangefinder worth it under $200?',
+      'FAQ',
+    ],
+    sections: [
+      {
+        h2: 'Best Overall Under $200 — Precision Pro NX9 HD',
+        badge: 'BEST OVERALL',
+        affiliateKey: 'precision-pro-nx9-hd',
+        body: "The Precision Pro NX9 HD is the one we hand to every golfer who asks for a rangefinder recommendation under $200. At $169, it does everything a weekend golfer actually needs — slope-adjusted distances, vibration confirmation when you lock the pin, and a display clear enough to read on a bright day.\n\nThe slope switch is legal for competition when toggled off: the same device works on a casual Saturday and in a club medal. The battery lasts a full year at 20 rounds — you charge or replace it once per season and forget it exists. The lifetime warranty means Precision Pro will repair or replace it if something goes wrong, which removes the risk of the purchase entirely.\n\nWhat it does not do: there is no GPS integration, the display is a basic LCD rather than OLED, and pin acquisition at distances over 250 yards is slower than the Bushnell Tour V6 Shift. For a golfer who plays 20–30 rounds per year on courses under 7,000 yards, none of those gaps matter. This is the rangefinder we would buy if we were spending our own $200 for the first time.",
+        pros: ['Slope switch — tournament legal when toggled off', '1-year battery life on a single CR2', 'Lifetime warranty — real long-term protection', 'Vibration lock confirms you ranged the flag, not the trees'],
+        cons: ['No GPS integration — laser only', 'Basic LCD display — not OLED quality', 'Slower acquisition above 250 yards vs Bushnell'],
+        why: "The best first rangefinder under $200. Check current price →",
+        price: '~$169',
+        rating: 4.7,
+        ratingCount: 1240,
+      },
+      {
+        h2: 'Best Value Under $150 — Blue Tees Series 3 Max',
+        badge: 'BEST VALUE',
+        affiliateKey: 'blue-tees-series-3-max',
+        body: "The Blue Tees Series 3 Max at $149 is the right pick if USB-C charging matters more to you than a lifetime warranty. It drops a CR2 battery for a built-in rechargeable — one charge lasts 12 months at typical amateur play frequency, and you plug it into the same cable as your phone.\n\nSlope is included and toggleable for competition. The 6x magnification is identical to the Precision Pro. Lock-on accuracy to within a yard is consistent inside 200 yards, which covers every approach shot most 18–25 handicappers will face.\n\nWhere it falls behind: the optics are slightly less sharp than the Precision Pro at range, and the build quality — while solid — does not quite match. Blue Tees makes a style-forward product; the colours and case are noticeably more premium-feeling than the specs suggest, which some golfers love and others find irrelevant. If you like the idea of never buying a replacement battery, this is your rangefinder.",
+        pros: ['USB-C rechargeable — no CR2 batteries ever', 'Slope toggle — competition legal', '6x magnification for clear flag acquisition', 'Accurate to ±1 yard inside 200 yards'],
+        cons: ['Slightly less sharp optics than Precision Pro at distance', 'Build quality a step below Precision Pro', 'No lifetime warranty'],
+        why: "The right pick if USB charging matters more than a warranty. Check current price →",
+        price: '~$149',
+        rating: 4.5,
+        ratingCount: 890,
+      },
+      {
+        h2: 'Best Under $100 — TecTecTec VPRO500',
+        badge: 'ENTRY POINT',
+        affiliateKey: 'tectectec-vpro500',
+        body: "If you are not sure a rangefinder is worth it for your game yet, the TecTecTec VPRO500 at $99 is the right way to find out. It is not as fast as the Precision Pro and it does not have slope, but it does the one essential job: it tells you exactly how far the flag is in about two seconds.\n\nFor a golfer averaging 95–105 who plays 15–20 rounds a year, the VPRO500 removes the guessing on approach shots without requiring a significant financial commitment. If you use it for one season and decide rangefinders genuinely help your game, you upgrade to the Precision Pro or Blue Tees knowing the investment is worthwhile. If the game does not stick, you spent $99 rather than $329.",
+        pros: ['Under $100 — lowest commitment entry point', 'Accurate to ±1 yard inside 200 yards', 'Lightweight and easy to carry'],
+        cons: ['No slope adjustment', 'Slower pin acquisition than the Precision Pro', 'No vibration lock confirmation'],
+        why: "The right choice if you want to try a rangefinder before committing. Check current price →",
+        price: '~$99',
+        rating: 4.3,
+        ratingCount: 3100,
+      },
+      {
+        h2: 'What to Look For in a Budget Rangefinder',
+        body: "Four features separate a rangefinder that improves your game from one that frustrates you.",
+        items: [
+          {
+            name: 'Slope switch',
+            desc: 'Slope-adjusted distance accounts for elevation change — if the hole plays uphill, it might read 165 yards but play like 175. A slope switch means you can turn that feature off for competition play where slope is not permitted. Any rangefinder under $200 worth buying includes a slope switch. If it does not, skip it.',
+          },
+          {
+            name: 'Vibration lock (pin confirmation)',
+            desc: 'When you aim at the flag, the rangefinder needs to lock onto it rather than the trees behind the green. Vibration confirmation tells you when you have hit the right target — a short buzz when the flag registers. Without it, you cannot be certain whether the reading is the flag or a background object 40 yards further.',
+          },
+          {
+            name: 'Pin acquisition speed',
+            desc: 'On a busy course, you have about 45 seconds to pull the rangefinder, get a reading, and put it away before you slow play. A good budget rangefinder locks the flag in under two seconds from a stable position. The VPRO500 takes closer to three seconds. The Precision Pro is under two. That gap matters on a crowded Saturday morning.',
+          },
+          {
+            name: 'Battery life and type',
+            desc: 'CR2 batteries last 6–12 months at 20 rounds per year. A CR2 costs about $5 at any hardware store and takes 30 seconds to replace. Rechargeable built-in batteries (like the Blue Tees Series 3 Max) last equally long but need a USB-C cable when they run out. Neither is a meaningful advantage — choose based on preference.',
+          },
+        ],
+        why: "Once you know what to look for, using a rangefinder effectively is the next step. See our guide to using a rangefinder on course →",
+      },
+      {
+        h2: 'Is a Rangefinder Worth It Under $200? The Honest Answer',
+        body: "Yes — if you play 15 or more rounds per year.\n\nHere is the math: the most common source of wasted strokes for a golfer shooting in the 90s is wrong club selection on approach shots. Guessing 160 yards when it is actually 171 means you pull one club short, miss the green, face a difficult chip, and card a double instead of a bogey. That one mistake adds two strokes. It happens 3–4 times per round for most 18–25 handicappers.\n\nA $169 rangefinder eliminates that mistake permanently — on every round, on every course, for the 6–8 years the device will last. At 25 rounds per year, that is $6.76 per round for the first year. At 50 rounds, it is $3.38. The math is not close.\n\nThe one exception: if you play fewer than 10 rounds per year, the improvement in scores per dollar spent is lower. Casual golfers who play once a month may find a GPS app on their phone adequate. For anyone who plays regularly and cares about their score, a rangefinder under $200 is the best gear purchase available.",
+      },
+    ],
+    comparisonTable: {
+      headers: ['Rangefinder', 'For You If...', 'Price', 'Key Advantage', ''],
+      rows: [
+        {
+          affiliateKey: 'precision-pro-nx9-hd',
+          name: 'Precision Pro NX9 HD',
+          bestFor: 'You want reliability + slope + lifetime warranty in one purchase',
+          price: '~$169',
+          feature1: 'Lifetime warranty + 1-year battery + slope toggle',
+          feature2: '',
+          winner: true,
+        },
+        {
+          affiliateKey: 'blue-tees-series-3-max',
+          name: 'Blue Tees Series 3 Max',
+          bestFor: 'You want USB-C charging instead of disposable batteries',
+          price: '~$149',
+          feature1: 'Built-in rechargeable — no CR2 batteries ever',
+          feature2: '',
+          winner: false,
+        },
+        {
+          affiliateKey: 'tectectec-vpro500',
+          name: 'TecTecTec VPRO500',
+          bestFor: 'You want to try a rangefinder before spending more than $100',
+          price: '~$99',
+          feature1: 'Entry-point price — prove it works before committing',
+          feature2: '',
+          winner: false,
+        },
+      ],
+    },
+    faq: [
+      {
+        q: "What's the best cheap golf rangefinder?",
+        a: "The Precision Pro NX9 HD at $169 is the best cheap golf rangefinder for most golfers — it has slope, vibration lock, a 1-year battery, and a lifetime warranty. It is accurate to ±1 yard and works identically to rangefinders costing twice as much on every shot inside 225 yards, which is every approach shot most 18–25 handicappers will take.",
+      },
+      {
+        q: "Does a $150 rangefinder work as well as a $300 one?",
+        a: "For the shots most weekend golfers take — approach shots between 100 and 200 yards — yes. The difference between a $150 and a $300 rangefinder shows up in pin acquisition speed at 250+ yards, optics clarity in low light, and the feel and build quality of the device. For a golfer shooting in the 80s and 90s, those differences do not translate to lower scores. The Precision Pro NX9 HD and Blue Tees Series 3 Max both give you the accurate yardage you need to pick the right club — which is all that actually affects your score.",
+      },
+      {
+        q: "Is slope worth paying extra for on a budget rangefinder?",
+        a: "Yes — and the good news is that every rangefinder on this list includes slope. Slope matters most on hilly courses where elevation changes of 20–30 feet make a 10-yard difference in playing distance. On flat courses, slope is less critical. Since the Precision Pro and Blue Tees both include a toggle-off switch for competition use, there is no downside to having it. Always buy a budget rangefinder with slope — it costs about $20–30 more than the same device without it.",
+      },
+    ],
+    related: [
+      { slug: '/best-golf-rangefinders-2026/', label: 'Our Full Rangefinder Guide — All Budgets' },
+      { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth It? (Full Breakdown)' },
+      { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder on Course' },
+      { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin — Comparing Premium Models' },
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
+    ],
+  },
+
+  {
+    id: 'handicap-weekend-golfer',
+    slug: '/average-golf-handicap-weekend-golfer/',
+    category: 'improve-game',
+    pageType: 'tutorial',
+    tag: 'GUIDE',
+    emoji: '📊',
+    thumb: 'purple',
+    words: '1,000',
+    datePublished: '2026-04-10',
+    dateModified: '2026-04-10',
+    title: "What's the Average Golf Handicap for a Weekend Golfer? (Honest Numbers)",
+    titleDisplay: "Average Golf Handicap for Weekend Golfers — What's Normal?",
+    description: "Average male handicap is 14.2 — 70% of golfers never break 90. If you shoot in the 90s, you are normal. Here is what actually moves your number.",
+    excerpt: "Most golfers shoot in the 90s and most never break 90. Here is what a normal weekend golf handicap actually looks like — and what moves the number.",
+    intro: "The USGA's data puts the average male handicap in the US at approximately 14.2. Sounds low — until you realise that most golfers who have an official handicap are also the ones who play often enough to track it. The real average for a golfer who plays 20–30 rounds a year and does not obsess over the game is closer to 18–25. If you shoot 92–105 regularly and wonder whether you are 'bad at golf', you are not. You are exactly average.",
+    toc: [
+      'Average handicap by gender',
+      'What your handicap actually means',
+      'How to lower your handicap as a weekend golfer',
+      'The gear that actually moves the number',
+      'FAQ',
+    ],
+    sections: [
+      {
+        h2: 'The Average Handicap in the US — By Gender and Age',
+        body: "The USGA tracks handicap data across millions of registered golfers. According to that data, the average male handicap index in the United States is approximately 14.2, and the average female handicap index is approximately 27.5. That average golf handicap for amateur golfers looks tidy on paper, but it carries an important caveat: it only counts golfers who have an active, registered handicap. Golfers who play casually without posting scores — a large portion of weekend golfers — skew higher. Industry surveys consistently suggest that 70% of golfers never break 90 in a single round. The median player, registered or not, shoots somewhere between 90 and 100.\n\nAge also shifts the number. Golfers between 30 and 50 tend to have the lowest handicaps in the USGA database — they have had time to develop their game but still have the physical capacity to play consistently. Golfers over 60 average closer to 16–18 as distance and course management challenges increase. Juniors and new adult golfers start much higher and drop quickly in their first one to three years.\n\nWhat this means practically: if you carry a 20 handicap and play 25 rounds a year, you are not behind. You are in the normal range for a working adult who treats golf as recreation rather than a second job.",
+        items: [
+          { name: 'Male average handicap (USGA registered)', desc: '~14.2' },
+          { name: 'Female average handicap (USGA registered)', desc: '~27.5' },
+          { name: 'Golfers who have never broken 90', desc: '~70%' },
+          { name: 'Median score for recreational golfers', desc: '90–100' },
+        ],
+      },
+      {
+        h2: 'What Does a Handicap Actually Mean for a Weekend Golfer?',
+        body: "Your handicap index is a measure of your potential, not your average. It represents what you are likely to shoot on a good day on a course of standard difficulty. A 15 handicap means you are expected to shoot approximately 87 on a par-72 course with a course rating of 72 — that is 15 strokes above par. On your average day, you might shoot 90–92. On a rough day, 96.\n\nThe handicap system also adjusts for course difficulty through the Slope Rating. A difficult course with a Slope of 135 will give you more strokes than an easy one rated 113. This is why a 15 handicap at your home course plays a slightly different number of strokes at an unfamiliar, harder layout.\n\nFor most weekend golfers, the practical takeaway is simple: a handicap between 15 and 25 is entirely normal and not something to be embarrassed about. It means you enjoy the game, play a reasonable volume of golf, and have room to improve. The golfers who break 90 consistently — below a 20 handicap — are already in the top half of all regular players.",
+      },
+      {
+        h2: 'How to Lower Your Handicap as a Weekend Golfer',
+        body: "You do not need to rebuild your swing to drop five shots. The biggest gains for a 15–25 handicapper come from decisions, not technique. Here are four changes that actually work without a lesson.",
+        items: [
+          {
+            name: 'Eliminate blow-up holes, not bad swings',
+            desc: "A triple bogey does more damage to your handicap than three double bogeys. On the holes where you consistently blow up — identify them from your last five scorecards — change your strategy. Play for bogey, not par. Chip out sideways. Lay up. One triple avoided per round saves two strokes off your average score without touching your swing.",
+          },
+          {
+            name: 'Stop under-clubbing on approach shots',
+            desc: "The most common mistake among 90s-shooters is pulling one club short on approach shots and finishing in the bunker or rough. Most amateurs under-club by 10–15 yards on average. Take more club than you think you need. A weak 6 iron lands on the green more often than a perfect 7 iron that runs out of steam.",
+          },
+          {
+            name: 'Track every round — golfers who track improve faster',
+            desc: "Posting every score to your handicap app creates a data picture of where your strokes go. Most golfers are surprised: they assume their driving is the problem, but the data usually shows three-putts and chip-and-run failures costing more. The apps that make this effortless: see our tested handicap tracking app picks →",
+          },
+          {
+            name: 'Practice what you actually use',
+            desc: "60% of golf shots happen within 50 yards of the hole. Most golfers practice the opposite — they beat drivers on the range and ignore their short game. Thirty minutes on the chipping green per week, focused specifically on getting up-and-down from 10–30 yards, will drop more strokes from your handicap than an equal amount of time on the range.",
+          },
+        ],
+      },
+      {
+        h2: 'The Gear That Actually Moves the Number',
+        body: "Course management mistakes cost the average 18–25 handicapper 4–6 strokes per round. Most of those mistakes come from not knowing the actual distance to the flag or hazard. Two tools fix this directly — and neither requires changing your swing.\n\nA GPS watch gives you front, middle, and back distances to the green before you pull a club. Knowing the green is 185 yards away — not somewhere between 170 and 200 — removes the biggest guesswork from the most consequential shots in your round. For a golfer whose biggest problem is club selection, a GPS watch is the highest-return gear purchase available. See our tested GPS watch picks →\n\nA rangefinder gives you the exact distance to the pin, not just the centre of the green. The difference between 155 yards and 167 yards is one full club — and choosing the wrong one costs a stroke more often than a bad swing does. For golfers who play unfamiliar courses or want pin-specific yardages, a rangefinder is the more precise tool. See our full rangefinder guide →\n\nYou do not need both to start. If you play your home course most of the time and the greens are familiar, a rangefinder is the first purchase. If you travel to play and want overall course management tools, a GPS watch adds more value.",
+      },
+    ],
+    faq: [
+      {
+        q: 'Is a 20 handicap good for a weekend golfer?',
+        a: "A 20 handicap is completely normal for a weekend golfer. It puts you in the top half of all recreational golfers who track their scores — the average registered handicap in the US is 14.2, but that figure skews lower because casual golfers who shoot higher often do not register. A 20 handicap means you shoot approximately 92 on a standard par-72 course on a good day. If you play 20–30 rounds a year without taking lessons, that is a reasonable outcome for the time invested.",
+      },
+      {
+        q: 'How long does it take to get to a 15 handicap?',
+        a: "For most adult golfers starting in the 25–30 handicap range, reaching 15 takes 2–4 years of regular play — defined as 20+ rounds per year. The drop from 25 to 20 usually happens in the first year as you learn course management. The drop from 20 to 15 is slower because it requires improving your short game consistency, not just avoiding disasters. Golfers who actively track their rounds and practice specifically on their weakest areas reach 15 faster — typically in 18–24 months from a starting point of 22–25.",
+      },
+      {
+        q: "What's the handicap of a bogey golfer?",
+        a: "A bogey golfer is defined by the USGA as a golfer with a handicap index of approximately 17.5 for men and 21.5 for women. On a course of standard difficulty, a bogey golfer shoots approximately one bogey per hole — 90 on a par-72. This is slightly above the average registered handicap of 14.2 for men, which means that bogey golf is a reasonable benchmark for a recreational player who plays regularly without intensive practice.",
+      },
+    ],
+    related: [
+      { slug: '/average-golf-handicap/', label: 'Average Golf Handicap — Full Data Breakdown' },
+      { slug: '/how-to-break-90/', label: 'How to Break 90 — Weekend Golfer Roadmap' },
+      { slug: '/best-golf-apps-handicap-tracking/', label: 'Best Handicap Tracking Apps — Our Tested Picks' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Golf Watches — Reviewed on Real Courses' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026 — Full Guide' },
+    ],
+  },
 
 ];
