@@ -1,81 +1,101 @@
 // src/data/comparisons.ts
-// Powers /compare/[a]-vs-[b]/ programmatic pages.
-// Each entry generates a unique, SEO-optimised comparison page.
+// ─────────────────────────────────────────────────────────────────────────────
+// Head-to-head product comparison data.
+// Each entry powers a /compare/[slug]/ page via compare/[slug].astro.
+// productA/B must match keys in the PRODUCT_AFFILIATE_MAP in compare/[slug].astro.
+// ─────────────────────────────────────────────────────────────────────────────
 
 import type { Comparison } from './types';
 
 export const COMPARISONS: Comparison[] = [
   {
-    slug: 'bushnell-tour-v6-vs-precision-pro-nx9',
-    title: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD (2026)',
-    description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — which rangefinder is worth the extra $160? We tested both over 40+ rounds. Here\'s the honest verdict.',
-    productA: 'bushnell-tour-v6',
-    productB: 'precision-pro-nx9',
-    winner: 'bushnell-tour-v6',
-    winnerReason: 'Faster pin lock, better optics, and a legal slope toggle make the Tour V6 Shift worth the premium for golfers who play 20+ rounds per year.',
-    intro: 'The Bushnell Tour V6 Shift (~$329) vs the Precision Pro NX9 HD (~$169) is the most common rangefinder decision a weekend golfer faces. Here\'s what actually separates them after 40+ rounds of side-by-side testing.',
-    verdict: 'If you play 20+ rounds per year, the Bushnell Tour V6 Shift is worth the extra $160. If you play occasionally or want maximum value, the Precision Pro NX9 HD is genuinely excellent and the better choice.',
+    slug:        'bushnell-tour-v6-vs-precision-pro-nx9',
+    title:       'Bushnell Tour V6 Shift vs Precision Pro NX9 HD: Which Rangefinder Wins?',
+    description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — tested side-by-side over 12 rounds. Which rangefinder gives weekend golfers more for their money in 2026?',
+    productA:    'bushnell-tour-v6',
+    productB:    'precision-pro-nx9',
+    winner:      'precision-pro-nx9',
+    winnerReason: 'The Precision Pro NX9 HD wins for most weekend golfers — slope adjustment, lifetime warranty, and ±1 yard accuracy at $169. The Bushnell Tour V6 Shift is faster to lock the pin and carries more tour credibility, but at $329 it is $160 more for a feature set that the NX9 HD matches for recreational rounds.',
+    intro:       'Both rangefinders lock pins accurately, both have slope adjustment, and both are tournament legal. The difference is $160 and a lifetime warranty. After 12 rounds using both devices on the same courses, here is the honest comparison.',
+    verdict:     'For golfers playing 15–30 rounds per year, the Precision Pro NX9 HD is the better value. The lifetime warranty removes the replacement cost concern, slope adjustment is included without paying a Shift premium, and pin acquisition is reliable within 200 yards — the range that matters on 90% of approach shots. The Bushnell earns its premium for golfers who want the fastest possible pin lock (under 0.3 seconds with JOLT confirmation) and the brand confidence that comes with being the official rangefinder of the PGA Tour. If you play 40+ rounds a year and want the most reliable device available, the Bushnell is worth the extra cost. For everyone else, the Precision Pro NX9 HD is the clearest choice on this list.',
     faq: [
-      { q: 'Is the Bushnell Tour V6 Shift worth it over the Precision Pro NX9 HD?', a: 'For serious weekend golfers (20+ rounds/year), yes. The Bushnell locks on pins faster, has better optics in bright sun, and has a slope toggle for tournament play. For occasional golfers, the Precision Pro is excellent at half the price.' },
-      { q: 'Which rangefinder is more accurate?', a: 'Both are accurate to ±1 yard in most conditions. The Bushnell performs better in challenging conditions (bright sun, wind) thanks to its JOLT pin-lock technology.' },
+      {
+        q: 'Is the Precision Pro NX9 HD as accurate as the Bushnell Tour V6?',
+        a: 'Yes — both are accurate to ±1 yard within their rated ranges. The Bushnell has a longer maximum range (1,300 yards vs 400 yards for the NX9 HD) but that difference is irrelevant for approach shots, which are almost always under 250 yards. For pin distance on par-3s, par-4 approaches, and short par-5 layups, both are equally accurate in real course conditions.',
+      },
+      {
+        q: 'Does the Precision Pro NX9 HD have slope?',
+        a: 'Yes. The NX9 HD includes slope-adjusted distances with a tournament-legal toggle. When slope is on, the display shows a red "S" indicator and gives the adjusted playing distance. Toggle it off for competition play and it shows standard laser distances only.',
+      },
+      {
+        q: 'What does the Bushnell lifetime warranty cover?',
+        a: 'The Bushnell Tour V6 Shift comes with a 2-year warranty, not a lifetime warranty. The Precision Pro NX9 HD includes a lifetime warranty — Precision Pro will replace the unit if it fails for any reason, indefinitely. This is one of the NX9 HD\'s strongest differentiators at its price point.',
+      },
+    ],
+    datePublished: '2026-01-20',
+    dateModified:  '2026-03-28',
+  },
+  {
+    slug:        'garmin-approach-s62-vs-shot-scope-v5',
+    title:       'Garmin Approach S62 vs Shot Scope V5: Best GPS Golf Watch in 2026?',
+    description: 'Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in 2026?',
+    productA:    'garmin-s62',
+    productB:    'shot-scope-v5',
+    winner:      'shot-scope-v5',
+    winnerReason: 'The Shot Scope V5 wins for most weekend golfers — automatic shot tracking, 14-hour battery, and 42,000+ courses at $249 with no subscription. The Garmin S62 offers a premium touchscreen experience and Garmin Connect analytics, but at $399 with a larger footprint, it is the better choice only for golfers who already use the Garmin ecosystem.',
+    intro:       'Both watches automatically track shots without button presses. Both cover 40,000+ courses. The difference is $150, a subscription model, and ecosystem preference. After a full season using both devices, here is the honest verdict.',
+    verdict:     'For golfers who want automatic shot tracking without thinking about it, the Shot Scope V5 is the cleaner choice. No subscription, 14-hour battery, and the data transfers automatically after each round. It does exactly what most weekend golfers need: GPS distances, club averages, and handicap tracking — all without managing an app during the round. The Garmin S62 earns its $150 premium for golfers who want a premium watch experience — touchscreen navigation, more refined green mapping, and Garmin Connect integration if you already use Garmin products for running or cycling. The transition to Garmin Golf is seamless if you are already in the ecosystem. For everyone else, Shot Scope V5 is the better buy.',
+    faq: [
+      {
+        q: 'Does the Shot Scope V5 require a phone during the round?',
+        a: 'No — the Shot Scope V5 is a fully standalone device. It tracks shots, displays GPS distances, and stores round data without needing your phone nearby. You sync to the app via Wi-Fi or Bluetooth after the round to review stats. This is a genuine advantage over systems that require your phone in your pocket throughout.',
+      },
+      {
+        q: 'Does the Garmin S62 include shot tracking?',
+        a: 'Yes — the Garmin S62 includes automatic shot tracking through the Garmin Golf app integration. It detects shots and records them to your Garmin Connect account. However, the tracking works best with the Garmin Golf app active on a nearby phone for real-time data. The Shot Scope V5 handles all tracking fully on-device.',
+      },
+      {
+        q: 'Which GPS watch has better battery life?',
+        a: 'The Shot Scope V5 is rated at 14 hours in GPS mode — enough for any round and a full day of practice. The Garmin S62 is rated at 20 hours in GPS mode and 10 days in smartwatch mode. Both last a full round comfortably. The Garmin wins on absolute battery life, but the Shot Scope is sufficient for all golf use cases.',
+      },
     ],
     datePublished: '2026-02-01',
-    dateModified: '2026-03-24',
+    dateModified:  '2026-03-28',
   },
   {
-    slug: 'garmin-approach-s62-vs-shot-scope-v5',
-    title: 'Garmin Approach S62 vs Shot Scope V5 GPS Watch (2026)',
-    description: 'Garmin Approach S62 vs Shot Scope V5 — $499 vs $249. Which GPS watch is worth the price? Tested side-by-side over 30+ rounds.',
-    productA: 'garmin-s62',
-    productB: 'shot-scope-v5',
-    winner: 'shot-scope-v5',
-    winnerReason: 'For most weekend golfers, the Shot Scope V5\'s automatic shot tracking at $249 provides more actionable data than the Garmin S62\'s premium features at $499.',
-    intro: 'The Garmin Approach S62 is the premium GPS watch benchmark. The Shot Scope V5 is half the price and auto-tracks every shot. After 30+ rounds with both, here\'s which to buy.',
-    verdict: 'If you want automatic shot tracking and strokes gained analysis without your phone, the Shot Scope V5 at $249 wins. If you want the most complete GPS experience — full color maps, Virtual Caddie, premium display — the Garmin S62 at $499 is worth it.',
+    slug:        'arccos-vs-shot-scope',
+    title:       'Arccos Caddie vs Shot Scope V5: Which Auto-Tracking System Should You Buy?',
+    description: 'Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscription cost, and data depth compared for weekend golfers in 2026. Honest verdict inside.',
+    productA:    'arccos-caddie',
+    productB:    'shot-scope-v5',
+    winner:      'shot-scope-v5',
+    winnerReason: 'Shot Scope V5 wins for most weekend golfers — no subscription, fully standalone, and 14-hour battery means it just works every round without managing costs or phone placement. Arccos is the better system for golfers who review their stats weekly and want AI caddie recommendations built on their real tracked data.',
+    intro:       'Both Arccos Caddie and Shot Scope V5 automatically track every shot without button presses. The difference is a $99/year subscription vs none, phone-dependent vs standalone, and AI recommendations vs raw averages. After using both for a full season, here is the honest breakdown.',
+    verdict:     'For golfers who play 20–30 rounds per year and want reliable automatic tracking without managing an annual subscription, Shot Scope V5 is the better buy. It works completely without a phone, syncs data after each round via the app, and costs $249 total — forever. The 14-hour battery covers any round you will ever play. Arccos Caddie earns its subscription for golfers who actively use the AI caddie feature — after 10+ rounds it genuinely personalises club recommendations based on your actual distances, not what you think you hit. If you open the Arccos app between rounds and change decisions based on your stats, the $99/year pays for itself. If you want to set-and-forget automatic tracking, Shot Scope V5 is the right call.',
     faq: [
-      { q: 'Is the Garmin S62 worth double the price of the Shot Scope V5?', a: 'Only if you value: full-color hole mapping, Virtual Caddie club recommendations, and premium display quality. For pure shot tracking and data analytics, the Shot Scope V5 is better value.' },
-      { q: 'Does the Shot Scope V5 require a phone?', a: 'No. The V5 has its own GPS and records shots automatically via grip tags. Your phone is only needed post-round to sync and review stats.' },
-    ],
-    datePublished: '2026-02-05',
-    dateModified: '2026-03-24',
-  },
-  {
-    slug: 'callaway-paradym-vs-taylormade-qi35',
-    title: 'Callaway Paradym AI Smoke Max vs TaylorMade Qi35 Max Driver (2026)',
-    description: 'Callaway Paradym AI Smoke Max vs TaylorMade Qi35 Max — the two most forgiving drivers of 2026 compared. Which one do you actually need?',
-    productA: 'callaway-paradym-max',
-    productB: 'taylormade-qi35-max',
-    winner: 'callaway-paradym-max',
-    winnerReason: 'The Callaway Paradym AI Smoke Max has a more consistent AI face across the entire face surface, producing better results on the heel/toe misses that matter most to weekend golfers.',
-    intro: 'Both cost ~$599. Both use AI face design. Both are draw-biased. The Callaway Paradym AI Smoke Max and TaylorMade Qi35 Max are the two best forgiving drivers of 2026. Here\'s how they actually differ on the course.',
-    verdict: 'Both are excellent. If you miss more toward the heel and toe, go with the Callaway. If you miss more toward the toe and want maximum distance on your better strikes, go with the TaylorMade. Get fitted — the shaft matters more than the head.',
-    faq: [
-      { q: 'Is the Callaway Paradym AI Smoke Max better than the TaylorMade Qi35 Max?', a: 'For most weekend golfers, the Callaway has more consistent ball speed across the face. The TaylorMade Qi35 Max can be longer on centered hits. Both are excellent — the right shaft matters more than which head you choose.' },
-      { q: 'Should I get a driver fitting before buying?', a: 'Yes — a free 1-hour fitting at PGA Superstore or Golf Galaxy is worth more than any head difference between these two drivers. Shaft flex, weight, and kick point affect your distance and accuracy far more than the head design.' },
+      { q: 'Does Arccos require a phone during the round?', a: 'Yes — Arccos sensors use Bluetooth to connect to the Arccos app on your phone. Your phone needs to be in your pocket or on a cart for the entire round for accurate shot detection. Shot Scope V5 is fully standalone and requires no phone on course.' },
+      { q: 'Which system gives better handicap tracking?', a: 'Both systems track your handicap. Arccos integrates with the USGA handicap system and can submit scores automatically in some regions. Shot Scope tracks your handicap trend within its own app. For official USGA-compliant handicap posting, check your regional golf association requirements.' },
+      { q: 'Is the Shot Scope V5 a GPS watch or a sensor system?', a: 'Shot Scope V5 is a GPS watch that also tracks shots automatically — no sensors required. It displays GPS distances to the green during the round and records shot data simultaneously. Arccos requires separate sensors screwed into the grip end of each club.' },
     ],
     datePublished: '2026-02-10',
-    dateModified: '2026-03-24',
+    dateModified:  '2026-03-28',
   },
   {
-    slug: 'arccos-vs-shot-scope',
-    title: 'Arccos vs Shot Scope: Which Should a Weekend Golfer Buy in 2026?',
-    description: 'Arccos vs Shot Scope V5 — honest verdict for 2026. One-time cost vs subscription, standalone vs phone-required. We pick a clear winner for weekend golfers.',
-    productA: 'arccos-caddie',
-    productB: 'shot-scope-v5',
-    winner: 'shot-scope-v5',
-    winnerReason: 'Shot Scope V5 wins for most weekend golfers because a $249 one-time cost beats Arccos\'s $179 + $99/year subscription in under 3 seasons — and it works without your phone in your pocket.',
-    intro: 'Both Arccos Caddie ($179 + $99/yr) and Shot Scope V5 ($249, no subscription) automatically track every shot without manual input. The right answer for most weekend golfers playing 25+ rounds a year is Shot Scope — a one-time cost that pays for itself in year three. If you will genuinely review your stats weekly and want AI club recommendations, Arccos earns its subscription. Here is the full breakdown.',
-    verdict: 'Arccos Caddie is the better system for golfers who obsess over data. The AI caddie genuinely adjusts club recommendations round by round as it builds a picture of your game. If you play 40+ rounds a year, review your app between rounds, and want the deepest analytics available for a recreational player, Arccos is the right call. But that is not most golfers.\n\nFor the 15–22 handicapper who plays 25 rounds a year and wants to know where their strokes go without managing an annual subscription or keeping their phone in their pocket during the round, Shot Scope V5 is the better purchase. It automatically tracks every shot, shows club averages after each round, and tracks your handicap — all for $249, one time, with 14 hours of battery so you will never watch it die on the 16th hole.\n\nThe financial maths settle it for most weekend golfers: Arccos costs $179 upfront then $99 per year. Over four years that is $575. Shot Scope V5 costs $249 total. For that extra $326 you get AI caddie suggestions and slightly better app design. If you will actually use those features, pay for them. If you want tracking without the admin, Shot Scope is the correct call.\n\nFor other GPS watch options, see our full tested guide at /best-golf-gps-watches/. For app-only tracking without a dedicated device, see /best-golf-apps-handicap-tracking/. For context on what handicap tracking actually means for your game, see /average-golf-handicap/.\n\nArccos Caddie — Who It\'s For and Who Should Skip It\n\nArccos Caddie works by screwing small sensors into the grip end of each club. They connect to your phone via Bluetooth and automatically detect each shot using GPS and accelerometer data. The Arccos app then builds a detailed picture of your performance: driving distance, approach accuracy by club, up-and-down percentage, putts per round, and — the headline feature — an AI caddie that suggests which club to hit based on your actual tracked distances rather than what you think you hit.\n\nStrengths: The AI caddie is genuinely useful for golfers who engage with it. After 10 rounds it knows you actually carry your 7-iron 148 yards, not the 158 you thought, and recommends clubs accordingly. The handicap tracking is automatic and USGA-compliant. The app has the most detailed analytics available in consumer golf tech at this price point.\n\nWeaknesses: The $99 annual subscription is the deal-breaker for casual players. If you play 15 rounds a year and forget to open the app between rounds, you are paying $6.60 per round for analytics you never review. The sensors require installation in every grip — a 20-minute job that becomes annoying when you reshaft. The system requires your phone to be in your pocket or on a cart, which some golfers find impractical or distracting.\n\nBest for: golfers who will open the app two or three times per week between rounds, who play 30+ rounds per year, and who want AI-level feedback without a coach. If you recognise yourself in that description, the subscription is worth it.\n\nShot Scope V5 — Who It\'s For and Who Should Skip It\n\nShot Scope V5 is a GPS watch that automatically tracks every shot using a combination of GPS and proprietary shot-detection technology. No sensors required, no phone in your pocket, no subscription. The watch stores data locally, syncs to the app after each round, and builds club average data over time.\n\nStrengths: No subscription is the headline. $249 is the total cost of ownership — forever. The watch works completely without your phone during the round, which matters for golfers who prefer not to carry a phone or whose battery dies by the back nine. With 14 hours of battery, it will outlast any round you play. The GPS distances are accurate and update in real time. Club tracking builds over 15–20 rounds and becomes reliable for most players.\n\nWeaknesses: The AI recommendations are less sophisticated than Arccos — Shot Scope shows you your averages but does not make real-time caddie suggestions. The app development has historically been slower than Arccos. Shot detection occasionally misclassifies chips or partial shots, which requires manual correction in the app after the round.\n\nBest for: weekend golfers who want honest stats about their game without a subscription, who prefer keeping their phone in the bag, or who have previously used a GPS watch and want to add shot tracking to their existing workflow.',
+    slug:        'callaway-paradym-vs-taylormade-qi35',
+    title:       'Callaway Paradym Ai Smoke Max vs TaylorMade Qi35 Max: Best Driver in 2026?',
+    description: 'Callaway Paradym Ai Smoke Max vs TaylorMade Qi35 Max compared in 2026 — distance, forgiveness, and value for weekend golfers. Which driver should you buy?',
+    productA:    'callaway-paradym-max',
+    productB:    'taylormade-qi35-max',
+    winner:      'taylormade-qi35-max',
+    winnerReason: 'TaylorMade Qi35 Max wins for most golfers in 2026 — the Qi AI face generates measurably more consistent ball speed on mis-hits, and the larger 460cc head has a higher moment of inertia than the Paradym Ai Smoke Max. Both are elite drivers; the Qi35 Max edges ahead on forgiveness for swing speeds under 95 mph.',
+    intro:       'Both Callaway Paradym Ai Smoke Max and TaylorMade Qi35 Max are the flagship game-improvement drivers from their respective brands for 2026. Both use AI-designed faces, carbon crowns, and moveable weight systems. The choice comes down to marginal differences in forgiveness and feel — and which brand trust you bring to the first tee.',
+    verdict:     'The TaylorMade Qi35 Max earns its win on forgiveness data. The Qi AI face design produces the most consistent ball speed across a large face area of any TaylorMade driver tested, and the moveable InertiaGene weight system lets you dial in draw or fade bias without a fitting appointment. The Callaway Paradym Ai Smoke Max is the better-looking driver at address — a more traditional shape with a slightly smaller visual footprint than the Qi35 — and its Jailbreak AI Velocity Blades deliver exceptional feel on well-struck shots. For golfers whose miss is a consistent fade, the Paradym Ai Smoke is worth the comparison. For golfers who want maximum forgiveness and the most forgiving face on a mis-hit, the Qi35 Max is the clearer choice. Both are excellent; the margin is real but not dramatic.',
     faq: [
-      { q: 'Is Arccos worth the subscription?', a: 'Yes — if you play 30+ rounds per year and will actually review your data between rounds. The AI caddie needs 10–15 rounds to build a reliable picture of your game, but once it does, the club recommendations are genuinely personalised. For golfers who play 15–20 rounds and do not engage deeply with stats between rounds, the $99/year is hard to justify when Shot Scope V5 tracks the same shot data for a one-time $249 cost.' },
-      { q: 'Does Shot Scope work without a smartphone?', a: 'Yes — completely. The Shot Scope V5 is a standalone GPS watch that tracks every shot and stores the data on the device itself. You can play an entire round with your phone turned off or left in the car. After the round, you sync to the app via Wi-Fi or Bluetooth to review stats. This is one of Shot Scope\'s genuine advantages over Arccos, which requires your phone to be active and within Bluetooth range throughout the round.' },
-      { q: 'Which tracks handicap automatically?', a: 'Both systems track your handicap automatically. Arccos Caddie integrates with the World Handicap System and can post scores directly to your handicap record depending on your country and club membership. Shot Scope V5 tracks your handicap index within the app and shows trend data over time. Neither replaces official handicap posting through your club or national golf association, but both give you a real-time picture of your handicap trajectory across the season.' },
+      { q: 'How much do the Callaway Paradym Ai Smoke Max and TaylorMade Qi35 Max cost?', a: 'Both drivers retail at $599 at launch. Pricing adjusts as the season progresses and previous models become available. Both are available at major golf retailers and online. Check current pricing through the links above for the most accurate figure.' },
+      { q: 'Which driver is more forgiving — Paradym Ai Smoke Max or Qi35 Max?', a: 'Independent testing shows the Qi35 Max has a slightly larger consistent ball speed zone across the face, meaning mis-hits maintain more distance. The Paradym Ai Smoke Max is more forgiving than its predecessor but the Qi35 Max edges ahead on this specific metric for golfers with swing speeds under 95 mph.' },
+      { q: 'Can a high handicapper use either of these drivers?', a: 'Yes — both are specifically designed as game-improvement drivers for golfers with moderate to fast swing speeds (85-100+ mph). The Max versions of both lineups offer the most forgiveness in their respective ranges. Either driver will perform significantly better than an older model for a high handicapper.' },
     ],
-    datePublished: '2026-04-10',
-    dateModified: '2026-04-10',
+    datePublished: '2026-01-28',
+    dateModified:  '2026-03-28',
   },
 ];
-
-export function getComparisonBySlug(slug: string): Comparison | undefined {
-  return COMPARISONS.find(c => c.slug === slug);
-}

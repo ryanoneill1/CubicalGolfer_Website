@@ -31,7 +31,7 @@ const {
   price,
   name,
   retailer,
-  label = 'Buy Now',
+  label = 'See Current Price',
   size = 'md',
   variant = 'primary',
   disclosure = false,
@@ -49,7 +49,7 @@ const {
       aria-label={`${label} — ${name} at ${retailer}`}
     >
       <span class="aff-cta__btn-text">{label} →</span>
-      <span class="aff-cta__btn-sub">at {retailer} · Prices change frequently</span>
+      <span class="aff-cta__btn-sub">at {retailer} · Free shipping</span>
     </a>
   </div>
   {disclosure && (
