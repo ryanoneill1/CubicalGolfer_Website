@@ -6,7 +6,12 @@
 
 import type { Article, Comparison, PageMeta } from '../data/types';
 
-const DOMAIN  = 'https://www.cubicalgolfer.com';
+const DOMAIN           = 'https://www.cubicalgolfer.com';
+
+// ── Google Search Console verification tag ─────────────────────────────────
+// Add your GSC verification code here (found in GSC → Settings → Ownership → HTML tag).
+// The BaseLayout renders this as: <meta name="google-site-verification" content={VERIFICATION_TAG} />
+export const VERIFICATION_TAG = '';   // ← paste your GSC code here if needed
 const OG_IMG  = `${DOMAIN}/images/og-image.jpg`;
 const SITE    = 'Cubical Golfer';
 
