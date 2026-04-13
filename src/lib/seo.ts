@@ -4,7 +4,7 @@
 // Consumed by [...slug].astro, compare/[slug].astro, and static pages.
 // ─────────────────────────────────────────────────────────────────────────────
 
-import type { Article, Comparison, PageMeta } from '../data/types';
+import type { Article, Comparison, GolfCity, PageMeta } from '../data/types';
 
 const DOMAIN           = 'https://www.cubicalgolfer.com';
 
@@ -85,6 +85,43 @@ export function staticMeta(opts: {
     breadcrumbs: [
       { label: 'Home', href: '/' },
       { label: opts.breadcrumb ?? opts.title, href: opts.slug },
+    ],
+  };
+}
+
+// ── City / golf courses page ─────────────────────────────────────────────────
+export function cityMeta(city: GolfCity): PageMeta {
+  const title       = `Best Golf Courses in ${city.city}, ${city.state} (2026 Guide)`;
+  const description = `The best public, semi-private, and resort golf courses in ${city.city}, ${city.state}. Reviewed and ranked for weekend golfers in 2026.`;
+  const canonical   = `${DOMAIN}/courses/${city.slug}/`;
+  return {
+    title,
+    description,
+    canonical,
+    ogImage:      OG_IMG,
+    ogType:       'article',
+    robots:       'index, follow',
+    dateModified: city.dateModified,
+    breadcrumbs: [
+      { label: 'Home',                       href: '/' },
+      { label: 'Golf Courses by City',        href: '/courses/' },
+      { label: `${city.city}, ${city.state}`, href: `/courses/${city.slug}/` },
+    ],
+  };
+}
+
+// ── Courses index page ────────────────────────────────────────────────────────
+export function coursesMeta(): PageMeta {
+  return {
+    title:       'Best Golf Courses by City — Weekend Golfer Picks 2026',
+    description: 'The best public and semi-private golf courses in major US cities, reviewed and ranked for weekend golfers.',
+    canonical:   `${DOMAIN}/courses/`,
+    ogImage:     OG_IMG,
+    ogType:      'website',
+    robots:      'index, follow',
+    breadcrumbs: [
+      { label: 'Home',                href: '/' },
+      { label: 'Golf Courses by City', href: '/courses/' },
     ],
   };
 }
