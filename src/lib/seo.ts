@@ -126,6 +126,36 @@ export function coursesMeta(): PageMeta {
   };
 }
 
+
+// ── Category index pages ──────────────────────────────────────────────────────
+const CATEGORY_CONFIG: Record<string, { label: string; slug: string; description: string }> = {
+  'gear-reviews':     { label: 'Golf Gear Reviews', slug: 'gear-reviews',          description: 'Independent golf gear reviews and buying guides for weekend golfers — rangefinders, GPS watches, irons, drivers, and more. Tested over 40+ real rounds.' },
+  'golf-tech':        { label: 'Golf Tech',          slug: 'golf-tech',             description: 'Golf apps, swing analyzers, launch monitors, and AI training tools reviewed for weekend golfers in 2026.' },
+  'golf-accessories': { label: 'Golf Accessories',   slug: 'golf-accessories',      description: 'The best affordable golf accessories for weekend golfers — gloves, bags, training aids, and everything else under $50.' },
+  'improve-game':     { label: 'Improve Your Game',  slug: 'improve-your-golf-game',description: 'Practical tips and guides to help weekend golfers break 90, fix their slice, and lower their handicap faster.' },
+  'golf-lifestyle':   { label: 'Golf Lifestyle',     slug: 'golf-lifestyle',        description: 'Golf fitness, gift guides, course recommendations, and everything else for the office golfer who plays on weekends.' },
+};
+
+export function categoryMeta(category: string): PageMeta {
+  const cfg = CATEGORY_CONFIG[category] ?? {
+    label: category,
+    slug:  category,
+    description: `Golf guides and reviews in the ${category} category from Cubical Golfer.`,
+  };
+  return {
+    title:       `${cfg.label} — Weekend Golfer Picks 2026 | ${SITE}`,
+    description: cfg.description,
+    canonical:   `${DOMAIN}/${cfg.slug}/`,
+    ogImage:     OG_IMG,
+    ogType:      'website',
+    robots:      'index, follow',
+    breadcrumbs: [
+      { label: 'Home',    href: '/' },
+      { label: cfg.label, href: `/${cfg.slug}/` },
+    ],
+  };
+}
+
 // ── Helpers ───────────────────────────────────────────────────────────────────
 function categoryLabel(cat: string): string {
   const map: Record<string, string> = {

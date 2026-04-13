@@ -70,3 +70,25 @@ export function getMergedRelated(article: Article, limit = 4): RelatedLink[] {
 export function getAllSlugs(): Set<string> {
   return new Set(ARTICLES.map(a => a.slug));
 }
+
+// ── Category article filter ───────────────────────────────────────────────────
+/**
+ * Returns all articles for a given category, sorted by dateModified descending.
+ * Used by category index pages (gear-reviews/index.astro, etc.)
+ */
+export function getCategoryArticles(category: string): Article[] {
+  return ARTICLES
+    .filter(a => a.category === category)
+    .sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+}
+
+// ── Featured articles for homepage ────────────────────────────────────────────
+/**
+ * Returns the top N articles across all categories, newest first.
+ * Used by index.astro and any "featured" widget.
+ */
+export function getFeaturedArticles(limit = 6): Article[] {
+  return ARTICLES
+    .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
+    .slice(0, limit);
+}
