@@ -314,7 +314,7 @@ export function howToSchema(article: any): object | null {
 }
 
 // ── Product schema per pick (for buying-guide sections with affiliate key) ────
-export function productSchema(section: any, affiliateUrl: string): object {
+export function buyingGuideProductSchema(section: any, affiliateUrl: string): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
