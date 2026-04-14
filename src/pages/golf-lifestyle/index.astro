@@ -9,7 +9,12 @@ const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat, articles.length);
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
-  collectionPageSchema('Golf Lifestyle Guides', 'golf-lifestyle', meta.description, articles.length),
+  collectionPageSchema({
+    title:       'Golf Lifestyle Guides',
+    description: meta.description,
+    url:         meta.canonical,
+    articles:    articles,
+  }),
 ];
 
 const TAG_CLASS: Record<string, string> = {
@@ -50,7 +55,6 @@ const TAG_CLASS: Record<string, string> = {
       ))}
     </div>
   </div>
-
 
   <div class="cat-page-body" style="padding-top:0">
     <div class="cat-section-card" style="background:var(--green-card);border-radius:var(--r2);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:0">
