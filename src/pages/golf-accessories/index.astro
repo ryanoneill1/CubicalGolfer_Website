@@ -1,26 +1,18 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { categoryMeta } from '../../lib/seo';
-import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
+// src/pages/golf-accessories/index.astro
+import BaseLayout        from '../../layouts/BaseLayout.astro';
+import { ARTICLES }      from '../../data/articles';
+import { categoryMeta }  from '../../lib/seo';
 import { getCategoryArticles } from '../../lib/linking';
+import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 
 const cat      = 'golf-accessories';
 const articles = getCategoryArticles(cat);
-const meta     = categoryMeta(cat, articles.length);
+const meta     = categoryMeta(cat);
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
-  collectionPageSchema({
-    title:       'Golf Accessories',
-    description: meta.description,
-    url:         meta.canonical,
-    articles:    articles,
-  }),
+  collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
 ];
-
-const TAG_CLASS: Record<string, string> = {
-  'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
-  'ROUNDUP': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
-};
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-accessories">
@@ -32,28 +24,40 @@ const TAG_CLASS: Record<string, string> = {
       <span aria-current="page">Golf Accessories</span>
     </nav>
     <h1>🎒 Golf Accessories</h1>
-    <p>Affordable accessories that improve every round — gloves, towels, training aids, bags, and gifts for every golfer.</p>
+    <p class="cat-subhead">Gloves, bags, training aids, towels, and the small purchases that make
+every round a little smoother — ranked by real value per round.</p>
   </header>
 
   <div class="cat-page-body">
-    <div class="articles-grid">
-      {articles.map(a => (
-        <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
-          <div class={`art-thumb ${a.thumb}`} role="img" aria-label={`${a.titleDisplay} thumbnail`}>
-            <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
-            <span aria-hidden="true">{a.emoji}</span>
-          </div>
-          <div class="art-body">
-            <h3>{a.titleDisplay}</h3>
-            <p>{a.excerpt}</p>
-            <div class="art-foot">
-              <span class="art-words">{a.words} · Updated 2026</span>
-              <span class="art-read">Read guide →</span>
+    {articles.length === 0 ? (
+      <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
+    ) : (
+      <div class="articles-grid">
+        {articles.map(a => (
+          <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+            <div class={`art-thumb ${a.thumb}`}>
+              <span class={
+                a.tag === 'BUYING GUIDE' ? 'art-badge tag-buy' :
+                a.tag === 'COMPARISON'   ? 'art-badge tag-cmp' :
+                a.tag === 'TUTORIAL'     ? 'art-badge tag-tut' :
+                a.tag === 'LISTICLE'     ? 'art-badge tag-list' :
+                a.tag === 'LIFESTYLE'    ? 'art-badge tag-life' :
+                'art-badge tag-rev'
+              }>{a.tag}</span>
+              <span aria-hidden="true">{a.emoji}</span>
             </div>
-          </div>
-        </a>
-      ))}
-    </div>
+            <div class="art-body">
+              <h3>{a.titleDisplay}</h3>
+              <p>{a.excerpt}</p>
+              <div class="art-foot">
+                <span class="art-words">{a.words} · Updated 2026</span>
+                <span class="art-read">Read guide →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
   </div>
 
 </BaseLayout>

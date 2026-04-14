@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node -e \"const fs=require('fs'); if(fs.existsSync('public/_redirects')) fs.copyFileSync('public/_redirects','dist/_redirects'); else fs.writeFileSync('dist/_redirects','')\" && node scripts/fix-cons.js && node scripts/stamp-build.js",
+    "build": "astro build && node -e \"require('fs').writeFileSync('dist/_redirects', '')\" && node scripts/stamp-build.js",
     "preview": "astro preview",
     "check": "astro check",
     "generate": "node src/lib/generators.js",

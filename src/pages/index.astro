@@ -16,7 +16,7 @@ const TOP_PICKS = [
   { key: 'arccos-caddie-sensors',     name: 'Arccos Caddie Sensors',  badge: 'BEST TECH UPGRADE', winner: false },
 ].filter(p => {
   const aff = getAffiliateLink(p.key);
-  return aff?.url;
+  return aff?.url && (aff as any)?.imgSrc;
 });
 
 const meta     = homeMeta();
@@ -70,7 +70,7 @@ const CATEGORIES = [
 
 const TAG_CLASSES: Record<string, string> = {
   'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
-  'ROUNDUP': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
+  'LISTICLE': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
 };
 ---
 
@@ -85,22 +85,26 @@ const TAG_CLASSES: Record<string, string> = {
         Independent gear reviews, buying guides, and swing tips for everyday golfers
         who squeeze rounds in on weekends. Tested by real weekend golfers — 40+ rounds of hands-on testing.
       </p>
-      <!-- Merged hero nav: primary CTAs + category quick-links in one row -->
-      <div class="hero-nav-merged">
-        <p class="hero-quick-links__label">TOP PICKS</p>
-        <div class="hero-nav-merged__row">
-          <a href="/best-golf-rangefinders-2026/" class="btn-gold hero-nav-merged__primary">Best Rangefinders 2026 →</a>
-          <a href="/best-golf-gifts-for-him/" class="btn-outline">Gift Guide 2026</a>
-          <a href="/compare/" class="btn-outline">Compare Products</a>
-        </div>
-        <div class="hero-quick-links__pills">
-          <a href="/best-golf-rangefinders-2026/" class="hero-quick-link">🔭 Rangefinders</a>
-          <a href="/best-golf-gps-watches/" class="hero-quick-link">⌚ GPS Watches</a>
-          <a href="/best-golf-putters-2026/" class="hero-quick-link">⛳ Putters</a>
-          <a href="/best-golf-balls-2026/" class="hero-quick-link">⛳ Golf Balls</a>
-          <a href="/best-golf-bags-2026/" class="hero-quick-link">🎒 Bags</a>
-        </div>
+      <div class="hero-btns">
+        <a href="/best-golf-rangefinders-2026/" class="btn-gold">Best Rangefinders 2026 →</a>
+        <a href="/best-golf-gifts-for-him/" class="btn-outline">Gift Guide 2026</a>
+        <a href="/compare/" class="btn-outline">Compare Products</a>
       </div>
+      <!-- Quick affiliate links above fold -->
+      <div class="hero-quick-links">
+        <span style="font-size:11px;font-weight:700;letter-spacing:.08em;opacity:.6;text-transform:uppercase">Top picks:</span>
+        <a href="/best-golf-rangefinders-2026/" class="hero-quick-link">Rangefinders</a>
+        <a href="/best-golf-gps-watches/" class="hero-quick-link">GPS Watches</a>
+        <a href="/best-golf-putters-2026/" class="hero-quick-link">Putters</a>
+        <a href="/best-golf-balls-2026/" class="hero-quick-link">Golf Balls</a>
+        <a href="/best-golf-bags-2026/" class="hero-quick-link">Bags</a>
+      </div>
+      <dl class="hero-stats">
+        <div class="hero-stat"><dt><strong>{ARTICLES.length}+</strong></dt><dd>In-depth guides</dd></div>
+        <div class="hero-stat"><dt><strong>40+</strong></dt><dd>Rounds of testing</dd></div>
+        <div class="hero-stat"><dt><strong>5</strong></dt><dd>Content categories</dd></div>
+        <div class="hero-stat"><dt><strong>100%</strong></dt><dd>Independently tested</dd></div>
+      </dl>
     </div>
     <aside class="hero-card" aria-label="Why Cubical Golfer">
       <h2>Built for Real Golfers</h2>
@@ -134,10 +138,9 @@ const TAG_CLASSES: Record<string, string> = {
               url={aff.url}
               label={aff.label}
               winner={pick.winner}
-              productId={pick.key}
-              imgSrc={aff.imgSrc ?? undefined}
-              imgAlt={aff.imgAlt ?? pick.name}
-              benefits={aff.benefits}
+              imgSrc={(aff as any).imgSrc}
+              imgAlt={(aff as any).imgAlt ?? pick.name}
+              benefits={(aff as any).benefits}
             />
           );
         })}
@@ -261,82 +264,6 @@ const TAG_CLASSES: Record<string, string> = {
         See Our Top Picks →
       </a>
       <span style="font-size:11px;color:rgba(255,255,255,.5)">Bushnell Tour V6 Shift ~$329 · NX9 HD ~$169</span>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════════════════════════
-       PART 3 — Affiliate revenue: dual product spotlight row
-       High-commission products surfaced between trust and FAQ.
-       Update hrefs to your affiliate links when you have them.
-       ══════════════════════════════════════════════════════════════ -->
-  <section class="aff-spotlight" aria-label="Top affiliate picks">
-    <div class="aff-spotlight__inner">
-      <p class="aff-spotlight__eyebrow">TESTED PICKS — AFFILIATE LINKS BELOW</p>
-      <h2 class="aff-spotlight__heading">Two Upgrades That Pay for Themselves in One Season</h2>
-      <!-- Card 1 — Bushnell Tour V6 Shift (10% commission via Impact) -->
-      <div class="aff-cards">
-        <div class="aff-card">
-          <div class="aff-card__badge">🏆 #1 RANGEFINDER</div>
-          <div class="aff-card__img-wrap" style="width:180px;height:180px;margin:0 auto;border-radius:8px;overflow:hidden;background:var(--cream-dark,#ede9e0)"><img src="/images/products/bushnell-tour-v6-shift.webp" alt="Bushnell Tour V6 Shift Golf Rangefinder" width="180" height="180" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div style="display:none;width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:48px">🔭</span><span style="font-size:10px;color:#888;text-align:center">Photo coming soon</span></div></div>
-          <h3 class="aff-card__name">Bushnell Tour V6 Shift</h3>
-          <ul class="aff-card__features">
-            <li>Locks onto flag in &lt;0.3 seconds</li>
-            <li>Legal slope toggle for tournaments</li>
-            <li>±1 yard to 1,300 yards</li>
-          </ul>
-          <div class="aff-card__price">~$329</div>
-          <a href="https://bushnell.pxf.io/DWWLOa"
-             class="aff-card__btn"
-             target="_blank" rel="nofollow noopener sponsored"
-             aria-label="Buy Bushnell Tour V6 Shift at Bushnell — affiliate link">
-            Buy at Bushnell →
-          </a>
-          <p class="aff-card__note">10% commission · Direct from manufacturer</p>
-        </div>
-        <!-- Card 2 — Precision Pro NX9 HD (Amazon affiliate) -->
-        <div class="aff-card">
-          <div class="aff-card__badge aff-card__badge--value">💰 BEST VALUE</div>
-          <div class="aff-card__img-wrap" style="width:180px;height:180px;margin:0 auto;border-radius:8px;overflow:hidden;background:var(--cream-dark,#ede9e0)"><img src="/images/products/precision-pro-nx9-hd.webp" alt="Precision Pro NX9 HD Golf Rangefinder" width="180" height="180" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div style="display:none;width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:48px">🔭</span><span style="font-size:10px;color:#888;text-align:center">Photo coming soon</span></div></div>
-          <h3 class="aff-card__name">Precision Pro NX9 HD</h3>
-          <ul class="aff-card__features">
-            <li>Slope-adjusted distance display</li>
-            <li>Lifetime warranty — no questions</li>
-            <li>Half the price of premium models</li>
-          </ul>
-          <div class="aff-card__price">~$169</div>
-          <a href="https://www.amazon.com/dp/B0DP3GL8RN/?tag=cubicalgolfer-20"
-             class="aff-card__btn aff-card__btn--secondary"
-             target="_blank" rel="nofollow noopener sponsored"
-             aria-label="Buy Precision Pro NX9 HD on Amazon — affiliate link">
-            Buy on Amazon →
-          </a>
-          <p class="aff-card__note">Amazon Associates · 3–5% commission</p>
-        </div>
-        <!-- Card 3 — Arccos Caddie (Amazon affiliate, recurring subscription value) -->
-        <div class="aff-card">
-          <div class="aff-card__badge aff-card__badge--tech">⚡ TECH PICK</div>
-          <div class="aff-card__img-wrap" style="width:180px;height:180px;margin:0 auto;border-radius:8px;overflow:hidden;background:var(--cream-dark,#ede9e0)"><img src="/images/products/arccos-caddie-sensors.webp" alt="Arccos Caddie Smart Sensors" width="180" height="180" loading="lazy" style="width:100%;height:100%;object-fit:contain;display:block" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" /><div style="display:none;width:100%;height:100%;flex-direction:column;align-items:center;justify-content:center;gap:6px"><span style="font-size:48px">📡</span><span style="font-size:10px;color:#888;text-align:center">Photo coming soon</span></div></div>
-          <h3 class="aff-card__name">Arccos Caddie Sensors</h3>
-          <ul class="aff-card__features">
-            <li>AI caddie from your real round data</li>
-            <li>Automatic shot tracking, no phone needed</li>
-            <li>Strokes gained analytics</li>
-          </ul>
-          <div class="aff-card__price">~$179 + $99/yr</div>
-          <a href="https://www.amazon.com/dp/B0B5TW3HNG/?tag=cubicalgolfer-20"
-             class="aff-card__btn aff-card__btn--secondary"
-             target="_blank" rel="nofollow noopener sponsored"
-             aria-label="Buy Arccos Caddie Sensors on Amazon — affiliate link">
-            Buy on Amazon →
-          </a>
-          <p class="aff-card__note">Amazon Associates · High LTV product</p>
-        </div>
-      </div>
-      <p class="aff-spotlight__disc">
-        ⚖️ Affiliate links above — we earn a commission at no extra cost to you.
-        All products independently purchased &amp; tested.
-        <a href="/about/">Full editorial policy →</a>
-      </p>
     </div>
   </section>
 

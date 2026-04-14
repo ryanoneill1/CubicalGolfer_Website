@@ -1,13 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { breadcrumbSchema, aboutPageSchema } from '../lib/schema';
+import { breadcrumbSchema } from '../lib/schema';
 import { ARTICLES } from '../data/articles';
 
 const meta = {
-  title: 'About Cubical Golfer — Testing Standards & Editorial Policy',
-  description: 'Cubical Golfer publishes independent golf gear reviews for weekend golfers. Every product is purchased by us and tested over 10+ real rounds. No sponsored content, ever.',
+  title: 'About Cubical Golfer — Our Editorial Policy & Testing Process',
+  description: 'Who we are, how we test golf gear, and why we started Cubical Golfer. Every recommendation is independently purchased, tested over 40+ real rounds, and written by weekend golfers.',
   canonical: 'https://www.cubicalgolfer.com/about/',
-  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
   ogType: 'website' as const,
   robots: 'index,follow',
   breadcrumbs: [
@@ -15,7 +15,7 @@ const meta = {
     { label: 'About', href: '/about/' },
   ],
 };
-const schemas = [breadcrumbSchema(meta.breadcrumbs), aboutPageSchema()];
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="about">
@@ -26,166 +26,83 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), aboutPageSchema()];
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">About</span>
     </nav>
-    <div style="display:flex;align-items:center;gap:24px;margin-bottom:24px;flex-wrap:wrap">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer"
-           width="80" height="80" style="border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.2);flex-shrink:0" />
+    <div style="display:flex;align-items:center;gap:20px;margin-bottom:20px;flex-wrap:wrap">
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" 
+           width="72" height="72" style="border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.2)" />
       <div>
-        <h1 style="margin:0 0 4px">About Cubical Golfer</h1>
-        <p style="margin:0 0 6px;font-size:16px;font-weight:600;color:rgba(255,255,255,.85)">Independent Golf Gear Reviews — by Weekend Golfers</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">Low-Teens Handicap</span>
-          <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">15+ Years Playing</span>
-          <span style="background:rgba(255,255,255,.15);border-radius:20px;padding:3px 12px;font-size:12px;font-weight:700;color:rgba(255,255,255,.9)">All Gear Self-Purchased</span>
-        </div>
+        <h1 style="margin:0">Built for the Office Golfer</h1>
+        <p style="margin:4px 0 0;font-size:14px;opacity:.7">Independent gear reviews by real weekend golfers</p>
       </div>
     </div>
-    <p style="font-size:17px;line-height:1.75;max-width:680px">
-      Cubical Golfer exists because most gear advice online is written for the wrong golfer —
-      or by someone who has never actually paid for the product they are recommending.
-      We fix that by buying everything ourselves and playing with it properly before saying a word.
+    <p>
+      Cubical Golfer is an independent golf media site for everyday players
+      who squeeze rounds in on weekends, obsess over their handicap on Monday,
+      and refuse to stop getting better.
     </p>
   </header>
 
   <div class="about-body">
     <div class="about-grid">
-
-      <!-- LEFT COLUMN -->
       <div>
-
-        <h2>Who This Site Is For</h2>
+        <h2>Who We Are</h2>
         <p>
-          The golfer who plays on weekends, maybe squeezes in a twilight round after work when
-          the season allows, and takes their handicap seriously even if nobody else does.
-          You are not a scratch golfer and you are not buying a new driver every season,
-          but you care about playing better and you want to spend your gear budget on things
-          that will actually move the needle.
+          We're weekend golfers with day jobs. We play 25–40 rounds a year on Saturday mornings
+          and occasional twilight rounds after work. We don't have tour coaches or sponsor budgets.
+          We have the same $300 to spend on gear that you do, and we want to know exactly what's worth it.
         </p>
         <p>
-          If you have ever stood on an approach shot and had no idea what club to hit because
-          you were guessing the yardage, a rangefinder review on this site will tell you exactly
-          which model to buy and why. If you have lost count of how many "best golf balls"
-          articles you have read that say nothing about your swing speed or handicap,
-          our ball guides are written specifically for the 12–24 handicap range.
+          Every piece of gear we recommend was purchased with our own money and tested over multiple
+          real rounds — not on a demo day, not in a manufacturer's testing facility. On actual golf courses,
+          in actual conditions, by actual 10–20 handicappers.
+        </p>
+
+        <h2 style="margin-top:36px">Our Editorial Policy</h2>
+        <p>
+          We earn affiliate commissions from some links on this site. This means if you click a link
+          and buy something, we may earn a small commission at no extra cost to you. This does NOT
+          affect our rankings or recommendations. We have declined to recommend products we were paid
+          to promote because they weren't genuinely the best option.
         </p>
         <p>
-          We cover rangefinders, GPS watches, golf balls, drivers and irons, putters,
-          training aids, golf bags, gloves, and shoes. Every category has a buying guide
-          built on actual rounds played, not manufacturer spec sheets.
+          We never accept manufacturer loans for reviews. Every product we test is purchased by us.
+          No manufacturer has editorial control or advance review of our content.
         </p>
-
-        <!-- Testing Standards block -->
-        <div style="background:var(--cream-dark);border-radius:12px;padding:24px;margin-top:28px;border-left:4px solid var(--gold)">
-          <h3 style="font-size:15px;font-weight:800;margin:0 0 16px;text-transform:uppercase;letter-spacing:.06em;color:var(--green)">Testing Standards</h3>
-          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
-              <span>⛳</span>
-              <span><strong>15+ years</strong> of playing experience across the team, low-teens USGA handicap index</span>
-            </li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
-              <span>🏌️</span>
-              <span><strong>35–45 rounds per year</strong> on public and semi-private courses — not demo days, not driving ranges</span>
-            </li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
-              <span>💰</span>
-              <span>Every product <strong>independently purchased at retail price</strong> — no manufacturer loans, no gifted samples</span>
-            </li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
-              <span>🔁</span>
-              <span>Minimum <strong>10 full rounds</strong> before any recommendation is published — more for expensive gear</span>
-            </li>
-            <li style="font-size:14px;color:var(--body);display:flex;gap:10px">
-              <span>📊</span>
-              <span><strong>{ARTICLES.length}+ guides</strong> published, reviewed and updated quarterly</span>
-            </li>
-          </ul>
-        </div>
-
       </div>
 
-      <!-- RIGHT COLUMN -->
       <div>
-
-        <h2>How We Test Gear <a href="/how-we-test/" style="font-size:13px;font-weight:600;color:var(--gold);text-decoration:none;margin-left:8px">Full methodology →</a></h2>
+        <h2>Our Testing Process</h2>
         <div class="about-vals">
           <div class="about-val">
             <span class="vi">🏌️</span>
-            <h4>Real Rounds, Not Demo Days</h4>
-            <p>
-              Every product is played with on an actual golf course, in normal playing conditions,
-              for a minimum of 10 rounds before we write anything. A rangefinder that reads
-              perfectly in a parking lot is not the same as one you can aim confidently at
-              a flag tucked left on a par three with trees behind it.
-            </p>
+            <h4>Tested Over Real Rounds</h4>
+            <p>Every piece of gear is used over a minimum of 5–10 rounds before we write about it. We don't form opinions from spec sheets.</p>
           </div>
           <div class="about-val">
             <span class="vi">💰</span>
-            <h4>Our Own Money</h4>
-            <p>
-              Every product we recommend was bought at full retail price. We do not accept
-              manufacturer samples, review units, or loaner gear. There are no products
-              on this site that cost us nothing — which means there are no products here
-              we felt obligated to say nice things about.
-            </p>
+            <h4>Independently Purchased</h4>
+            <p>All products are purchased by us. No freebies, no manufacturer loans, no sponsored content hidden as reviews.</p>
           </div>
           <div class="about-val">
             <span class="vi">⛳</span>
-            <h4>Written for the 12–24 Handicapper</h4>
-            <p>
-              Our reviews are written for golfers who play in the 80s and 90s, have a real
-              equipment budget, and want to know what actually helps — not what looks good
-              on a spec sheet. We deliberately do not review gear we would never buy ourselves,
-              which cuts out a long tail of products that are popular but not genuinely useful.
-            </p>
+            <h4>Written for Weekend Golfers</h4>
+            <p>Our target reader is a 12–22 handicapper with limited practice time and a real budget. We write for that person, not for tour players.</p>
           </div>
           <div class="about-val">
             <span class="vi">🔄</span>
-            <h4>Updated When It Matters</h4>
-            <p>
-              Guides are reviewed quarterly. When a newer model makes our current pick
-              obsolete, the recommendation changes — we do not keep stale picks because
-              they drive traffic. Every article shows the date it was last reviewed,
-              not just the date it was first published.
-            </p>
+            <h4>Regularly Updated</h4>
+            <p>Every guide is reviewed and updated at minimum annually. Gear that no longer represents best value is removed.</p>
           </div>
         </div>
 
-        <!-- Editorial independence -->
-        <div style="background:var(--cream-dark);border-radius:12px;padding:24px;margin-top:24px" id="affiliate">
-          <h3 style="font-size:15px;font-weight:800;margin:0 0 12px;color:var(--green);text-transform:uppercase;letter-spacing:.06em">Editorial Independence &amp; Affiliate Disclosure</h3>
-          <p style="font-size:14px;line-height:1.75;color:var(--body);margin:0 0 12px">
-            Cubical Golfer earns affiliate commissions through Amazon Associates and the
-            Bushnell affiliate programme via Impact. If you click a link and make a purchase,
-            we may earn a small commission at no extra cost to you. This is how the site
-            covers its costs.
-          </p>
-          <p style="font-size:14px;line-height:1.75;color:var(--body);margin:0 0 12px">
-            Affiliate income does not influence which products we recommend or where they rank.
-            We have turned down paid placement requests. We have recommended lower-commission
-            products over higher-commission alternatives because they were the better choice.
-            If a product has a problem, we say so in the review.
-          </p>
-          <p style="font-size:14px;line-height:1.75;color:var(--body);margin:0">
-            No manufacturer has advance sight of any article before it is published.
-            No brand relationship has editorial influence over this site.
-            Recommendations are based entirely on what performed best during testing.
-          </p>
+        <div style="background:var(--cream-dark);border-radius:12px;padding:24px;margin-top:24px;">
+          <h4 style="font-size:14px;font-weight:700;margin-bottom:12px;">By the Numbers</h4>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="font-size:14px;color:var(--body)">✅ <strong>{ARTICLES.length}+ guides</strong> published</li>
+            <li style="font-size:14px;color:var(--body)">✅ <strong>40+ rounds</strong> of hands-on testing</li>
+            <li style="font-size:14px;color:var(--body)">✅ <strong>$0</strong> in sponsored content</li>
+            <li style="font-size:14px;color:var(--body)">✅ <strong>100%</strong> independently purchased gear</li>
+          </ul>
         </div>
-
-        <!-- Contact -->
-        <div style="background:var(--green);border-radius:12px;padding:28px;margin-top:20px;color:#fff">
-          <h3 style="font-size:16px;font-weight:800;margin:0 0 8px;color:#fff">Get in Touch</h3>
-          <p style="font-size:13px;line-height:1.65;margin:0 0 16px;color:rgba(255,255,255,.75)">
-            Questions about a review, a factual correction, or a partnership inquiry?
-            We read every email and respond within 2 business days.
-          </p>
-          <a
-            href="mailto:hello@cubicalgolfer.com"
-            style="display:inline-flex;align-items:center;gap:8px;padding:11px 22px;background:var(--gold);color:var(--text);border-radius:6px;font-size:14px;font-weight:700;text-decoration:none;"
-          >
-            ✉️ hello@cubicalgolfer.com
-          </a>
-        </div>
-
       </div>
     </div>
   </div>
