@@ -23,6 +23,9 @@ html { scroll-behavior: smooth; font-size: 16px; }
   --r2:         12px;
   --r3:         16px;
   --nav-h:      64px;
+  --prose-w:     720px;
+  --content-w:  1140px;
+  --page-px: clamp(1.5rem, 5vw, 4rem);
 }
 
 body {
@@ -158,7 +161,22 @@ nav.site-nav {
 }
 
 /* Article content area */
-.art-content { max-width: 780px; margin: 0 auto; padding: 56px clamp(1rem,4vw,4rem); }
+/* ═══════════════════════════════════════════════════════════════
+   LAYOUT OVERHAUL — Wide container + prose cap system
+   Structural elements use full container width.
+   Reading text capped at --prose-w for comfortable line lengths.
+   ═══════════════════════════════════════════════════════════════ */
+:root {
+  --prose-w:     720px;   /* max width for body text — comfortable line length   */
+  --content-w:  1140px;   /* article / compare / city body container             */
+  --page-px: clamp(1.5rem, 5vw, 4rem);  /* horizontal page padding              */
+}
+
+.art-content {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 56px var(--page-px);
+}
 .art-content h2 {
   font-size: clamp(20px,2.5vw,26px); font-weight: 700;
   color: var(--text); margin: 44px 0 16px;
@@ -169,6 +187,24 @@ nav.site-nav {
 .art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 10px; }
+
+/* ── PROSE CAP: text inside art-section paragraphs stays at readable width ── */
+.art-section > h2,
+.art-section > h3,
+.art-section > p,
+.art-section > ul,
+.art-section > ol {
+  max-width: var(--prose-w);
+}
+/* Intro box, TOC, FAQ, disclosure, update stamp also stay prose-width */
+.intro-box,
+.toc,
+.art-faq,
+.disclosure-box,
+.update-stamp,
+.price-note {
+  max-width: var(--prose-w);
+}
 .intro-box {
   background: var(--cream-dark); border-left: 4px solid var(--gold);
   padding: 22px 26px; border-radius: 0 8px 8px 0; margin-bottom: 36px;
@@ -462,7 +498,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .compare-hero { background: var(--green); padding: 60px clamp(1.5rem,5vw,4rem); }
 .compare-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
-.compare-body { max-width: 900px; margin: 0 auto; padding: 56px clamp(1rem,4vw,4rem); }
+.compare-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
 .verdict-box {
   background: #f0f7f2; border: 2px solid var(--green); border-radius: 12px;
   padding: 28px; margin: 36px 0;
@@ -474,7 +510,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .local-hero { background: var(--green); padding: 60px clamp(1.5rem,5vw,4rem); }
 .local-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; }
 .local-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
-.local-body { max-width: 900px; margin: 0 auto; padding: 56px clamp(1rem,4vw,4rem); }
+.local-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
 .course-card {
   background: #fff; border: 1px solid var(--border); border-radius: 12px;
   padding: 24px; margin-bottom: 20px;
@@ -516,7 +552,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   .trust-stats { flex-direction: column; }
   .trust-stat { min-width: unset; width: 100%; }
   .about-vals { grid-template-columns: 1fr; }
-  .art-content { padding: 40px 1.25rem; }
+  .art-content, .compare-body, .local-body { padding: 40px 1.25rem; }
 }
 @media (max-width: 380px) {
   nav.site-nav { padding: 0 1rem; }
@@ -1050,4 +1086,184 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .breadcrumb a { color: rgba(255,255,255,.65); transition: color .2s; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.35); }
+
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   WIDE-LAYOUT COMPONENT UPGRADES — April 2026
+   All structural elements now use the full --content-w container.
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── ART-SECTION: two-column on wide screens ── */
+.art-section {
+  display: grid;
+  grid-template-columns: 1fr;   /* single col default — overridden below */
+  gap: 0;
+  padding-top: 36px;
+  border-top: 2px solid var(--cream-dark);
+  margin-bottom: 8px;
+}
+.art-section:first-of-type { border-top: none; padding-top: 0; }
+
+/* On wide screens: text + product image side by side */
+@media (min-width: 860px) {
+  .art-section.has-image {
+    grid-template-columns: 1fr 280px;
+    column-gap: 40px;
+    align-items: start;
+  }
+  /* Image floats to the right column */
+  .art-section.has-image .product-img-wrap {
+    grid-column: 2;
+    grid-row: 1 / 6;   /* spans multiple rows alongside text */
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+    margin: 0;
+  }
+  /* Text and structural elements stay in left column */
+  .art-section.has-image > h2,
+  .art-section.has-image > .badge-pill,
+  .art-section.has-image > .product-rating,
+  .art-section.has-image > p,
+  .art-section.has-image > ul,
+  .art-section.has-image > .price-note,
+  .art-section.has-image > .pros-cons-grid,
+  .art-section.has-image > .btn-buy-affiliate,
+  .art-section.has-image > [class*="affiliate"] {
+    grid-column: 1;
+  }
+}
+
+/* ── COMPARISON TABLE: full container width ── */
+.cmp-wrap {
+  overflow-x: auto;
+  margin: 32px 0;
+  border-radius: var(--r2);
+  box-shadow: var(--s1);
+}
+
+/* ── PRODUCT CARD GRID: 3 cols at full width ── */
+.product-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 28px 0;
+}
+@media (max-width: 860px) { .product-card-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .product-card-grid { grid-template-columns: 1fr; } }
+
+/* ── BOTTOM LINE BOX: full width, prominent ── */
+.bottom-line-box {
+  max-width: none;
+  border-left: 4px solid var(--gold);
+  background: var(--cream-dark);
+  border-radius: 0 var(--r2) var(--r2) 0;
+  padding: 24px 32px;
+  margin: 0 0 40px;
+}
+.bottom-line-box p { font-size: 16.5px; line-height: 1.75; max-width: none; margin: 0; }
+
+/* ── WHO BOX: full width, 2-col grid ── */
+.who-box {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 48px 0;
+  padding: 32px;
+  background: var(--cream-dark);
+  border-radius: var(--r2);
+  border: 1px solid var(--border);
+}
+.who-box-heading { grid-column: 1 / -1; }
+@media (max-width: 640px) { .who-box { grid-template-columns: 1fr; } }
+
+/* ── PROS/CONS GRID: full width ── */
+.pros-cons-grid {
+  max-width: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 20px 0 24px;
+}
+@media (max-width: 560px) { .pros-cons-grid { grid-template-columns: 1fr; } }
+
+/* ── ART CTA: full width, prominent ── */
+.art-cta {
+  max-width: none;
+  background: var(--green);
+  border-radius: var(--r3);
+  padding: 48px;
+  margin: 56px 0;
+  text-align: center;
+}
+.art-cta h3 { color: #fff; font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+.art-cta p  { color: rgba(255,255,255,.75); font-size: 16px; max-width: 480px; margin: 0 auto 24px; }
+
+/* ── RELATED LINKS CLUSTER: wider ── */
+.rel-cluster {
+  max-width: none;
+  background: var(--cream-dark);
+  border-radius: var(--r2);
+  padding: 28px;
+  margin: 40px 0;
+}
+.rel-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (max-width: 640px) { .rel-links { grid-template-columns: 1fr; } }
+
+/* ── TESTING NOTE + DISCLOSURE: full width ── */
+.testing-note { max-width: none; }
+
+/* ── VERDICT BOX (compare pages): full width, bolder ── */
+.verdict-box {
+  max-width: none;
+  background: #f0f7f2;
+  border: 2px solid var(--green);
+  border-radius: var(--r2);
+  padding: 32px;
+  margin: 36px 0;
+}
+
+/* ── COMPARE BUY ROW: full width ── */
+.compare-buy-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 28px 0;
+}
+@media (max-width: 560px) { .compare-buy-row { grid-template-columns: 1fr; } }
+
+/* ── LOCAL COURSE CARDS: 2-col on wide screens ── */
+@media (min-width: 720px) {
+  .local-body .course-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+
+/* ── CATEGORY HUB: wider grid ── */
+.cat-page-body { padding: 56px var(--page-px); background: var(--cream); }
+
+/* ── ABOUT / HOW-WE-TEST: use content-w ── */
+.about-body { max-width: var(--content-w); margin: 0 auto; padding: 64px var(--page-px); background: var(--cream); }
+
+/* ── RELATED SECTION (bottom of articles): full-bleed background ── */
+.related-section {
+  padding: 56px var(--page-px);
+  background: var(--cream-dark);
+}
+.related-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 28px; max-width: var(--content-w); margin-left: auto; margin-right: auto; }
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: var(--content-w);
+  margin: 0 auto;
+}
+@media (max-width: 860px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .related-grid { grid-template-columns: 1fr; } }
 
