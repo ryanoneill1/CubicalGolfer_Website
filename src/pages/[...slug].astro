@@ -1,4 +1,6 @@
 ---
+// src/pages/[...slug].astro — upgraded with affiliate buttons + image scaffolding
+
 import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
@@ -129,49 +131,88 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   'golf-shoes-walking': {
     'BEST OVERALL': 'footjoy-fury',
   },
-  // ... (rest of your BADGE_TO_PRODUCT map stays exactly the same)
 };
 
-// The rest of your file (the big template) is unchanged except for the image block below
+// Rest of your existing file stays exactly the same until the template part
 ---
 
 <BaseLayout {meta} {schemas} activeNav={CAT_SLUG[article.category] || 'gear-reviews'}>
 
-  <!-- Your existing header, content, sections, etc. stay exactly the same -->
+  <header class="article-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href={`/${CAT_SLUG[article.category]}/`}>{CAT_LABEL[article.category]}</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{article.titleDisplay}</span>
+    </nav>
+    <h1>{article.title}</h1>
+    <p>{article.description}</p>
+  </header>
 
-  <!-- ONLY THIS BLOCK WAS CHANGED — Product image now uses WebP -->
-  {section.badge && isBuyingGuide && (() => {
-    const aff = getAffiliateLink(BADGE_TO_PRODUCT[article.id]?.[section.badge] || '');
-    const sectionImgSrc = aff ? aff.imgSrc : null;
-    const sectionImgAlt = aff ? aff.imgAlt ?? section.h2 : section.h2;
+  {article.sections && article.sections.map((section: any) => (
+    <div class="article-section">
+      {section.h2 && <h2>{section.h2}</h2>}
+      {section.p && <p>{section.p}</p>}
 
-    return (
-      <div class="product-image">
-        {sectionImgSrc ? (
-          <img 
-            src={sectionImgSrc} 
-            alt={sectionImgAlt}
-            loading="lazy"
-            width="800"
-            height="600"
-          />
-        ) : (
-          <div class="image-placeholder">
-            <img 
-              src="/images/products/placeholder.webp" 
-              alt="Product image coming soon"
-              loading="lazy"
-            />
-            <p style="font-size:13px; color:#666; margin-top:8px;">
-              Missing image for this section.<br />
-              Add it as: <code>public/images/products/{article.id}-{(section.badge ?? '').toLowerCase().replace(/\s+/g,'-')}.webp</code>
-            </p>
+      <!-- PRODUCT IMAGE BLOCK — now safely inside the section loop -->
+      {section.badge && isBuyingGuide && (() => {
+        const aff = getAffiliateLink(BADGE_TO_PRODUCT[article.id]?.[section.badge] || '');
+        const sectionImgSrc = aff ? aff.imgSrc : null;
+        const sectionImgAlt = aff ? aff.imgAlt ?? section.h2 : section.h2;
+
+        return (
+          <div class="product-image">
+            {sectionImgSrc ? (
+              <img 
+                src={sectionImgSrc} 
+                alt={sectionImgAlt}
+                loading="lazy"
+                width="800"
+                height="600"
+              />
+            ) : (
+              <div class="image-placeholder">
+                <img 
+                  src="/images/products/placeholder.webp" 
+                  alt="Product image coming soon"
+                  loading="lazy"
+                />
+                <p style="font-size:13px; color:#666; margin-top:8px;">
+                  Missing image for this section.<br />
+                  Add it as: <code>public/images/products/{article.id}-{(section.badge ?? '').toLowerCase().replace(/\s+/g,'-')}.webp</code>
+                </p>
+              </div>
+            )}
           </div>
-        )}
-      </div>
-    );
-  })()}
+        );
+      })()}
 
-  <!-- Rest of your page (ProductCard, AffiliateCTA, related articles, etc.) remains unchanged -->
+      {section.content && <div set:html={section.content} />}
+
+      <!-- Affiliate CTA for this section -->
+      {section.badge && isBuyingGuide && (() => {
+        const aff = getAffiliateLink(BADGE_TO_PRODUCT[article.id]?.[section.badge] || '');
+        return aff ? <AffiliateCTA affiliate={aff} /> : null;
+      })()}
+
+    </div>
+  ))}
+
+  <!-- Rest of your page (related articles, sticky bar, etc.) remains unchanged -->
+  <StickyBar related={related} />
+
+  {related.length > 0 && (
+    <section class="related-section">
+      <h2>You may also like</h2>
+      <div class="related-grid">
+        {related.map(r => (
+          <a href={r.slug} class="related-card">
+            <h3>{r.label}</h3>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
 
 </BaseLayout>
