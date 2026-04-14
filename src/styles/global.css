@@ -950,6 +950,13 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   margin-top: 1px;
 }
 .disclosure-box a { color: var(--green); text-decoration: underline; }
+.disclosure-link {
+  display: block;          /* forces the link onto its own line */
+  margin-top: 6px;
+  color: var(--green);
+  text-decoration: underline;
+  font-weight: 600;
+}
 
 /* ── TESTING NOTES CALLOUT ── */
 .testing-note {
