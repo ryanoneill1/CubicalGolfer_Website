@@ -266,13 +266,15 @@ export function howWeTestSchema(): object {
   };
 }
 
-// ── Collection / category index page schema ────────────────────────────────────
+// ── Collection / category index page schema (UPDATED + BULLET-PROOF) ────────
 export function collectionPageSchema(opts: {
   title:       string;
   description: string;
   url:         string;
   articles:    Article[];
 }): object {
+  const articles = opts.articles ?? [];   // ← prevents crash if articles is missing
+
   return {
     '@context':         'https://schema.org',
     '@type':            'CollectionPage',
@@ -282,8 +284,8 @@ export function collectionPageSchema(opts: {
     url:                opts.url,
     mainEntity: {
       '@type':         'ItemList',
-      numberOfItems:    opts.articles.length,
-      itemListElement:  opts.articles.slice(0, 10).map((a, i) => ({
+      numberOfItems:    articles.length,
+      itemListElement:  articles.slice(0, 10).map((a, i) => ({
         '@type':    'ListItem',
         position:   i + 1,
         name:       a.title,
