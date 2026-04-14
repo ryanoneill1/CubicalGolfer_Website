@@ -2403,7 +2403,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     faq: [
-      { q: 'What is the minimum ceiling height for a golf simulator?', a: 'The minimum ceiling height for most golfers to swing a driver comfortably is 9 feet. 10 feet is recommended for full, unrestricted swings. Taller golfers (6'2"+) should aim for 10.5 feet minimum. At 9 feet, some golfers need to choke down on the driver to avoid hitting the ceiling on follow-through.' },
+      { q: 'What is the minimum ceiling height for a golf simulator?', a: 'The minimum ceiling height for most golfers to swing a driver comfortably is 9 feet. 10 feet is recommended for full, unrestricted swings. Taller golfers (6\'2"+) should aim for 10.5 feet minimum. At 9 feet, some golfers need to choke down on the driver to avoid hitting the ceiling on follow-through.' },
       { q: 'Can I use a regular projector for a golf simulator?', a: 'A standard long-throw projector will not work in a typical garage simulator — the room is not deep enough. You need a short-throw projector with a throw ratio under 0.7. The Optoma EH200ST and BenQ TH671ST are the most commonly recommended options and cost $350-$600.' },
     ],
     related: [
