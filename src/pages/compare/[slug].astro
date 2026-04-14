@@ -1,121 +1,317 @@
 ---
+// src/pages/compare/[slug].astro
+// Updated: added affiliate buy buttons for both products in each comparison.
+
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { comparisonMeta } from '../../lib/seo';
-import { comparisonSchema, breadcrumbSchema } from '../../lib/schema';
 import { COMPARISONS } from '../../data/comparisons';
+import { comparisonMeta } from '../../lib/seo';
+import { comparisonSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 import { getAffiliateLink } from '../../data/affiliate-links';
+import type { Comparison } from '../../data/types';
 
 export async function getStaticPaths() {
   return COMPARISONS.map(c => ({
     params: { slug: c.slug },
-    props: { c },
+    props: { comparison: c },
   }));
 }
 
-const { c } = Astro.props;
+interface Props { comparison: Comparison }
+const { comparison: c } = Astro.props;
+
 const meta = comparisonMeta(c);
+const schemas: object[] = [
+  comparisonSchema(c),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+if (c.faq && c.faq.length > 0) {
+  schemas.push(faqSchema(c.faq));
+}
 
-const PRODUCT_NAMES: Record<string, string> = {
-  'bushnell-tour-v6': 'Bushnell Tour V6 Shift',
-  'precision-pro-nx9': 'Precision Pro NX9 HD',
-  'garmin-s62': 'Garmin Approach S62',
-  'shot-scope-v5': 'Shot Scope V5',
-  'arccos-caddie': 'Arccos Caddie',
-  'callaway-paradym': 'Callaway Paradym AI Smoke Max',
-  'taylormade-qi35': 'TaylorMade Qi35 Max',
-  // add any others you need
-};
-
+// Map comparison productA/B keys → affiliate product IDs
 const PRODUCT_AFFILIATE_MAP: Record<string, string> = {
-  'bushnell-tour-v6': 'bushnell-tour-v6-shift',
-  'precision-pro-nx9': 'precision-pro-nx9-hd',
-  'garmin-s62': 'garmin-approach-s62',
-  'shot-scope-v5': 'shot-scope-v5',
-  'arccos-caddie': 'arccos-caddie-sensors',
-  'callaway-paradym': 'callaway-paradym',
-  'taylormade-qi35': 'taylormade-qi35',
-  // add any others you need
+  'bushnell-tour-v6':      'bushnell-tour-v6-shift',
+  'precision-pro-nx9':     'precision-pro-nx9-hd',
+  'garmin-s62':            'garmin-approach-s62',
+  'shot-scope-v5':         'shot-scope-v5',
+  'callaway-paradym-max':  'callaway-paradym-ai-smoke-max',
+  'taylormade-qi35-max':   'taylormade-qi35-max',
+  'arccos-caddie':         'arccos-caddie-sensors',
 };
 
-const affA = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA] || '');
-const affB = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB] || '');
-const winnerAff = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner] || '');
+const affA = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
+const affB = PRODUCT_AFFILIATE_MAP[c.productB] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB]) : null;
+
+// Human-readable product names for buy buttons
+const PRODUCT_NAMES: Record<string, string> = {
+  'bushnell-tour-v6':      'Bushnell Tour V6 Shift',
+  'precision-pro-nx9':     'Precision Pro NX9 HD',
+  'garmin-s62':            'Garmin Approach S62',
+  'shot-scope-v5':         'Shot Scope V5',
+  'callaway-paradym-max':  'Callaway Paradym AI Smoke Max',
+  'taylormade-qi35-max':   'TaylorMade Qi35 Max',
+  'arccos-caddie':         'Arccos Caddie Smart Sensors',
+};
 ---
 
-<BaseLayout {meta} schemas={[comparisonSchema(c), breadcrumbSchema(meta.breadcrumbs)]}>
+<BaseLayout {meta} {schemas} activeNav="home">
 
-  <h1>{c.title}</h1>
+  {/* Sticky bar — shows winner with buy link */}
+  {PRODUCT_AFFILIATE_MAP[c.winner] && (() => {
+    const winAff = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]);
+    const winName = PRODUCT_NAMES[c.winner] || c.winner;
+    return (
+      <div class="sticky-bar" id="sticky-bar" aria-label="Winner quick access" role="complementary">
+        <div class="sticky-bar__inner">
+          <div class="sticky-bar__label">
+            <span class="sticky-bar__badge">🏆 WINNER</span>
+            <span class="sticky-bar__name">{winName}</span>
+          </div>
+          <div class="sticky-bar__right">
+            <span class="sticky-bar__price">{winAff.price}</span>
+            <a href={winAff.url} class="sticky-bar__btn" target="_blank" rel="nofollow noopener sponsored"
+               aria-label={`Buy ${winName}`}>
+              See Current Price →
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  })()}
 
-  <p>{c.description}</p>
+  <script>
+    const bar2 = document.getElementById('sticky-bar');
+    if (bar2) {
+      const onS = () => {
+        const y = window.scrollY, dh = document.body.scrollHeight, wh = window.innerHeight;
+        bar2.style.opacity = (y > 400 && y < dh - wh - 200) ? '1' : '0';
+        bar2.style.pointerEvents = (y > 400 && y < dh - wh - 200) ? 'auto' : 'none';
+      };
+      window.addEventListener('scroll', onS, { passive: true });
+    }
+  </script>
 
-  {(affA || affB) && (
-    <div class="compare-prices">
-      {affA && (
-        <p>
-          {PRODUCT_NAMES[c.productA] || c.productA} {affA.price} 
-          <a href={affA.url}>[{affA.label} → at {affA.retailer}]</a>
-        </p>
-      )}
-      {affB && (
-        <p>
-          {PRODUCT_NAMES[c.productB] || c.productB} {affB.price} 
-          <a href={affB.url}>[{affB.label} → at {affB.retailer}]</a>
-        </p>
-      )}
+  <header class="compare-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/compare/">Comparisons</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{c.title}</span>
+    </nav>
+    <span class="art-tag-lg tag-cmp">COMPARISON</span>
+    <h1>{c.title}</h1>
+  </header>
+
+  <div class="compare-body">
+
+    <!-- ── Author Box — in white content area ── -->
+    <div class="author-box">
+      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
+      <div style="flex:1">
+        <span class="author-name"><a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a><span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · <a href="/how-we-test/" style="color:var(--muted)">how we test</a></span></span>
+        <span class="author-meta">📅 Last updated: {c.dateModified} &nbsp;·&nbsp; ⛳ Tested side-by-side</span>
+      </div>
+      <span class="verified-badge">✅ Independently Tested</span>
     </div>
-  )}
 
-  {c.intro}
+    <!-- ── Side-by-side comparison table ── -->
+    {(affA || affB) && (
+      <div style="overflow-x:auto;margin:0 0 32px">
+        <table class="cmp-table" style="width:100%;border-collapse:collapse;">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:10px 12px;background:var(--green);color:#fff;border-radius:8px 0 0 0;font-size:13px;">Feature</th>
+              <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;font-size:13px;">{PRODUCT_NAMES[c.productA] || c.productA}</th>
+              <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;border-radius:0 8px 0 0;font-size:13px;">{PRODUCT_NAMES[c.productB] || c.productB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f9f6ef">
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Price</td>
+              <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{affA?.price ?? '—'}</td>
+              <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{affB?.price ?? '—'}</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Retailer</td>
+              <td style="padding:10px 12px;text-align:center;font-size:13px">{affA?.retailer ?? '—'}</td>
+              <td style="padding:10px 12px;text-align:center;font-size:13px">{affB?.retailer ?? '—'}</td>
+            </tr>
+            <tr style="background:#f9f6ef">
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Winner?</td>
+              <td style="padding:10px 12px;text-align:center">{c.winner === c.productA ? '🏆 Winner' : '—'}</td>
+              <td style="padding:10px 12px;text-align:center">{c.winner === c.productB ? '🏆 Winner' : '—'}</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;font-weight:600;font-size:13px;color:var(--text)">Buy Now</td>
+              <td style="padding:10px 12px;text-align:center">
+                {affA && <a href={affA.url} class="product-card__cta" style="display:inline-block;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Current Price →</a>}
+              </td>
+              <td style="padding:10px 12px;text-align:center">
+                {affB && <a href={affB.url} class="product-card__cta" style="display:inline-block;padding:8px 14px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">See Current Price →</a>}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    )}
 
-  ## The Verdict
+    <!-- Buy both options — above the fold -->
+    {(affA || affB) && (
+      <div class="compare-buy-row">
+        {affA && (
+          <div class="compare-buy-card">
+            <div class="compare-product-img">
+              <img
+                src={affA.imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productA]}.webp`}
+                alt={PRODUCT_NAMES[c.productA]}
+                width="160" height="160"
+                loading="lazy"
+                class="compare-prod-photo"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="compare-prod-fallback" style="display:none">
+                <span style="font-size:48px">⚖️</span>
+              </div>
+            </div>
+            <span class="compare-buy-label">{PRODUCT_NAMES[c.productA] || c.productA}</span>
+            <span class="compare-buy-price">{affA.price}</span>
+            <a
+              href={affA.url}
+              class="btn-buy-affiliate"
+              target="_blank"
+              rel="nofollow noopener sponsored"
+              aria-label={`Check price for ${PRODUCT_NAMES[c.productA]}`}
+            >
+              <span class="btn-buy-cta">{affA.label} →</span>
+              <span class="btn-buy-badge">at {affA.retailer}</span>
+            </a>
+          </div>
+        )}
+        {affB && (
+          <div class="compare-buy-card">
+            <div class="compare-product-img">
+              <img
+                src={affB.imgSrc ?? `/images/products/${PRODUCT_AFFILIATE_MAP[c.productB]}.webp`}
+                alt={PRODUCT_NAMES[c.productB]}
+                width="160" height="160"
+                loading="lazy"
+                class="compare-prod-photo"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+              />
+              <div class="compare-prod-fallback" style="display:none">
+                <span style="font-size:48px">⚖️</span>
+              </div>
+            </div>
+            <span class="compare-buy-label">{PRODUCT_NAMES[c.productB] || c.productB}</span>
+            <span class="compare-buy-price">{affB.price}</span>
+            <a
+              href={affB.url}
+              class="btn-buy-affiliate"
+              target="_blank"
+              rel="nofollow noopener sponsored"
+              aria-label={`Check price for ${PRODUCT_NAMES[c.productB]}`}
+            >
+              <span class="btn-buy-cta">{affB.label} →</span>
+              <span class="btn-buy-badge">at {affB.retailer}</span>
+            </a>
+          </div>
+        )}
+      </div>
+    )}
 
-  ### 🏆 Winner: {PRODUCT_NAMES[c.winner] || c.winner}
-
-  {c.winnerReason}
-
-  <!-- Safe winner button -->
-  {winnerAff ? (
-    <a href={winnerAff.url} class="btn-primary">
-      {winnerAff.price} Buy the winner → {winnerAff.label} at {winnerAff.retailer}
-    </a>
-  ) : null}
-
-  {c.verdict}
-
-  <!-- Safe final recommendation block -->
-  {winnerAff ? (
-    <div class="final-rec">
-      <a href={winnerAff.url}>
-        {winnerAff.price} {PRODUCT_NAMES[c.winner] || c.winner} → at {winnerAff.retailer}
-      </a>
+    <div class="intro-box">
+      <p>{c.intro}</p>
     </div>
-  ) : null}
 
-  {c.faq && c.faq.length > 0 && (
-    <section>
-      <h2>Frequently Asked Questions</h2>
-      {c.faq.map(({ q, a }) => (
-        <details>
-          <summary>{q}</summary>
-          <p>{a}</p>
-        </details>
-      ))}
-    </section>
-  )}
-
-  {(affA || affB) && (
-    <div class="compare-ctas">
-      {affA && (
-        <a href={affA.url}>
-          {affA.price} {PRODUCT_NAMES[c.productA]} → at {affA.retailer}
-        </a>
-      )}
-      {affB && (
-        <a href={affB.url}>
-          {affB.price} {PRODUCT_NAMES[c.productB]} → at {affB.retailer}
-        </a>
-      )}
+    <h2>The Verdict</h2>
+    <div class="verdict-box">
+      <h3>🏆 Winner: {PRODUCT_NAMES[c.winner] || c.winner.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())}</h3>
+      <p>{c.winnerReason}</p>
+      {/* Buy winner button */}
+      {PRODUCT_AFFILIATE_MAP[c.winner] && (() => {
+        const winnerAff = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]);
+        return (
+          <a
+            href={winnerAff.url}
+            class="btn-buy-affiliate"
+            style="margin-top:16px"
+            target="_blank"
+            rel="nofollow noopener sponsored"
+          >
+            <span class="btn-buy-price">{winnerAff.price}</span>
+            <span class="btn-buy-cta">Buy the winner → {winnerAff.label}</span>
+            <span class="btn-buy-badge">at {winnerAff.retailer}</span>
+          </a>
+        );
+      })()}
     </div>
-  )}
+
+    <h2>Full Comparison</h2>
+    <p>{c.verdict}</p>
+
+    <!-- ── Final Recommendation ── -->
+    <div class="verdict-box" style="margin:32px 0">
+      <h2 style="font-size:20px;font-weight:800;color:var(--green);margin-bottom:12px">
+        🏁 Final Recommendation
+      </h2>
+      <p style="font-size:15px;line-height:1.65;margin-bottom:16px">{c.winnerReason}</p>
+      {PRODUCT_AFFILIATE_MAP[c.winner] && (() => {
+        const winAff = getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]);
+        const winName = PRODUCT_NAMES[c.winner] || c.winner;
+        return (
+          <a href={winAff.url} class="product-card__cta"
+             style="display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:var(--green);color:#fff;border-radius:8px;text-decoration:none;font-weight:800;font-size:15px"
+             target="_blank" rel="nofollow noopener sponsored">
+            Buy {winName} — {winAff.price} →
+          </a>
+        );
+      })()}
+    </div>
+
+    <!-- FAQ — JSON-LD only, no microdata -->
+    {c.faq && c.faq.length > 0 && (
+      <div class="art-faq">
+        <h2>Frequently Asked Questions</h2>
+        {c.faq.map(({ q, a }) => (
+          <details class="faq-item">
+            <summary>{q}</summary>
+            <div class="faq-answer">{a}</div>
+          </details>
+        ))}
+      </div>
+    )}
+
+    <!-- Bottom buy row repeated for long-scroll users -->
+    {(affA || affB) && (
+      <div class="compare-buy-row" style="margin-top:32px">
+        {affA && (
+          <a href={affA.url} class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
+            <span class="btn-buy-price">{affA.price}</span>
+            <span class="btn-buy-cta">{PRODUCT_NAMES[c.productA]} →</span>
+            <span class="btn-buy-badge">at {affA.retailer}</span>
+          </a>
+        )}
+        {affB && (
+          <a href={affB.url} class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
+            <span class="btn-buy-price">{affB.price}</span>
+            <span class="btn-buy-cta">{PRODUCT_NAMES[c.productB]} →</span>
+            <span class="btn-buy-badge">at {affB.retailer}</span>
+          </a>
+        )}
+      </div>
+    )}
+
+    <div class="rel-cluster" style="margin-top:40px">
+      <h3>Related Comparisons</h3>
+      <div class="rel-links">
+        <a href="/compare/">All Golf Product Comparisons →</a>
+        <a href="/gear-reviews/">All Gear Reviews →</a>
+        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
+      </div>
+    </div>
+
+  </div>
 
 </BaseLayout>
