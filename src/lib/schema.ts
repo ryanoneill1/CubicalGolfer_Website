@@ -211,8 +211,62 @@ export function homeFaqSchema(): object {
     },
   ]);
 }
+// ── Individual product / affiliate review schema ──────────────────────────────
+export function productSchema(opts: {
+  name:        string;
+  description: string;
+  image?:      string;
+  price?:      string;
+  url:         string;
+  brand?:      string;
+}): object {
+  return {
+    '@context':    'https://schema.org',
+    '@type':       'Product',
+    name:          opts.name,
+    description:   opts.description,
+    image:         opts.image ?? `https://www.cubicalgolfer.com/images/products/placeholder.svg`,
+    brand:         opts.brand ? { '@type': 'Brand', name: opts.brand } : undefined,
+    offers: {
+      '@type':      'Offer',
+      url:          opts.url,
+      priceCurrency:'USD',
+      price:         opts.price?.replace(/[^0-9.]/g, '') ?? '0',
+      availability: 'https://schema.org/InStock',
+    },
+  };
+}
 
-// ── Collection / category index page schema ───────────────────────────────────
+// ── About page schema ──────────────────────────────────────────────────────────
+export function aboutPageSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    '@id': `${DOMAIN}/about/#aboutpage`,
+    name: 'About Cubical Golfer',
+    description: 'Independent golf gear reviews tested by real weekend golfers over 40+ real rounds.',
+    url: `${DOMAIN}/about/`,
+    author: AUTHOR,
+    publisher: PUBLISHER,
+    inLanguage: 'en-US',
+  };
+}
+
+// ── How We Test page schema ────────────────────────────────────────────────────
+export function howWeTestSchema(): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${DOMAIN}/how-we-test/#webpage`,
+    name: 'How We Test Golf Gear — Cubical Golfer Testing Standards',
+    description: 'Every product tested over a minimum of 10 real rounds on real courses, independently purchased.',
+    url: `${DOMAIN}/how-we-test/`,
+    author: AUTHOR,
+    publisher: PUBLISHER,
+  };
+}
+
+// ── Collection / category index page schema ────────────────────────────────────
 export function collectionPageSchema(opts: {
   title:       string;
   description: string;
@@ -227,7 +281,7 @@ export function collectionPageSchema(opts: {
     description:        opts.description,
     url:                opts.url,
     mainEntity: {
-      '@type':          'ItemList',
+      '@type':         'ItemList',
       numberOfItems:    opts.articles.length,
       itemListElement:  opts.articles.slice(0, 10).map((a, i) => ({
         '@type':    'ListItem',

@@ -92,3 +92,8 @@ export function getFeaturedArticles(limit = 6): Article[] {
     .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
     .slice(0, limit);
 }
+
+// ── All articles sorted by date ────────────────────────────────────────────────
+export function getAllArticles(): Article[] {
+  return [...ARTICLES].sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+}

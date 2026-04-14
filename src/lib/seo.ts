@@ -178,3 +178,35 @@ function categorySlug(cat: string): string {
   };
   return map[cat] ?? cat;
 }
+
+// ── How We Test page ──────────────────────────────────────────────────────────
+export function howWeTestMeta(): PageMeta {
+  return {
+    title:       `How We Test Golf Gear — Our Testing Standards | ${SITE}`,
+    description: 'Every product we recommend is independently purchased and tested over a minimum of 10 real rounds. Here is how we evaluate golf gear.',
+    canonical:   `${DOMAIN}/how-we-test/`,
+    ogImage:     OG_IMG,
+    ogType:      'website',
+    robots:      'index, follow',
+    breadcrumbs: [
+      { label: 'Home',        href: '/' },
+      { label: 'How We Test', href: '/how-we-test/' },
+    ],
+  };
+}
+
+// ── About page meta ────────────────────────────────────────────────────────────
+export function aboutMeta(): PageMeta {
+  return {
+    title:       `About Cubical Golfer — Editorial Policy & Testing | ${SITE}`,
+    description: 'Who we are, how we test golf gear, and why we started Cubical Golfer. Independent reviews by real weekend golfers.',
+    canonical:   `${DOMAIN}/about/`,
+    ogImage:     OG_IMG,
+    ogType:      'website',
+    robots:      'index, follow',
+    breadcrumbs: [
+      { label: 'Home',  href: '/' },
+      { label: 'About', href: '/about/' },
+    ],
+  };
+}
