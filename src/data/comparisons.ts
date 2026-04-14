@@ -97,7 +97,7 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-01-28',
     dateModified:  '2026-03-28',
-  },,
+  },
 
   {
     slug: 'garmin-approach-s62-vs-s42',
