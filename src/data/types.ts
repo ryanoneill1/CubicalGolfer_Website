@@ -1,8 +1,7 @@
 // src/data/types.ts
 // ─────────────────────────────────────────────────────────────────────────────
-// Central TypeScript data model for the entire CubicalGolfer SEO engine.
-// Every programmatic page type derives from these interfaces.
-// Adding a new article = add one object to the relevant JSON array.
+// Central TypeScript data model for CubicalGolfer.com
+// Version 2.0 — April 2026 — Full consistency system
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type Category =
@@ -27,12 +26,13 @@ export interface FAQItem {
 }
 
 export interface ComparisonRow {
-  name:     string;
-  bestFor:  string;
-  price:    string;
-  feature1: string;
-  feature2: string;
-  winner:   boolean;
+  name:        string;
+  bestFor:     string;
+  price:       string;
+  feature1:    string;
+  feature2:    string;
+  winner:      boolean;
+  affiliateKey?: string;
 }
 
 export interface ComparisonTable {
@@ -41,13 +41,16 @@ export interface ComparisonTable {
 }
 
 export interface Section {
-  h2:     string;
-  badge?: string;
-  body:   string;
-  price?: string;
-  items?: Array<{ name: string; desc: string; affiliateKey?: string }>;
-  rating?: number;       // 1-5 stars
-  ratingCount?: string;  // e.g. "2,847" Amazon reviews
+  h2:           string;
+  badge?:       string;
+  body:         string;
+  price?:       string;
+  pros?:        string[];   // 3–5 bullet points on strengths
+  cons?:        string[];   // 2–3 bullet points on weaknesses
+  items?:       Array<{ name: string; desc: string; affiliateKey?: string }>;
+  rating?:      number;     // 1–5 stars
+  ratingCount?: string;     // e.g. "2,847" Amazon reviews
+  affiliateKey?: string;    // Direct affiliate key override for this section
 }
 
 export interface RelatedLink {
@@ -55,79 +58,84 @@ export interface RelatedLink {
   label: string;
 }
 
-// ── Core article type (powers /best/, /how-to/, /gear/, /fix/ routes) ────────
+// ── Core article type ─────────────────────────────────────────────────────────
 export interface Article {
-  id:           string;      // unique ID, also used for internal linking graph
-  slug:         string;      // URL path, e.g. "/best-golf-rangefinders-2026/"
-  category:     Category;
-  pageType:     PageType;
-  tag:          string;      // visible badge: "BUYING GUIDE" | "TUTORIAL" etc.
-  emoji:        string;
-  thumb:        'green' | 'brown' | 'navy' | 'purple' | 'teal' | 'olive';
-  words:        string;
-  datePublished: string;     // ISO: "2026-01-15"
-  dateModified:  string;     // ISO: "2026-03-24"
-  title:        string;      // <title> tag (≤60 chars)
-  titleDisplay: string;      // visible H1 (can be longer)
-  description:  string;      // meta description (150–160 chars)
-  excerpt:      string;      // card excerpt
-  intro:        string;
-  toc:          string[];
-  sections:     Section[];
+  id:            string;      // unique ID
+  slug:          string;      // URL path e.g. "/best-golf-rangefinders-2026/"
+  category:      Category;
+  pageType:      PageType;
+  tag:           string;      // "BUYING GUIDE" | "TUTORIAL" | "COMPARISON" etc.
+  emoji:         string;
+  thumb:         'green' | 'brown' | 'navy' | 'purple' | 'teal' | 'olive';
+  words:         string;
+  datePublished: string;      // ISO: "2026-01-15"
+  dateModified:  string;      // ISO: "2026-03-24"
+  title:         string;      // <title> tag (≤60 chars)
+  titleDisplay:  string;      // H1 (can be longer)
+  description:   string;      // meta description (150–160 chars)
+  excerpt:       string;      // card excerpt
+  // ── Content fields ──────────────────────────────────────────────────────────
+  bottomLine?:   string;      // 2–3 sentence verdict (required for buying-guide)
+  intro:         string;      // opening paragraph
+  toc:           string[];    // table of contents items
+  sections:      Section[];
   comparisonTable?: ComparisonTable;
-  faq?:         FAQItem[];
-  related:      RelatedLink[];
-  // Programmatic linking — auto-injected by linking.ts
+  whoFor?:       string[];    // "Who should buy" bullets (required for buying-guide)
+  whoSkip?:      string[];    // "Who should skip" bullets (required for buying-guide)
+  testingNotes?: string;      // Testing methodology summary
+  faq?:          FAQItem[];
+  related:       RelatedLink[];
+  // ── Auto-injected by linking.ts ─────────────────────────────────────────────
   internalLinks?: RelatedLink[];
 }
 
-// ── Product type (powers /compare/ and affiliate link sections) ──────────────
+// ── Product type ──────────────────────────────────────────────────────────────
 export interface Product {
   id:        string;
   name:      string;
   brand:     string;
-  category:  string;        // "rangefinder" | "gps-watch" | "driver" etc.
+  category:  string;
   price:     string;
-  priceNum:  number;        // for sorting
+  priceNum:  number;
   image?:    string;
-  affiliate: string;        // affiliate link URL
-  rating:    number;        // 1–10
+  affiliate: string;
+  rating:    number;
   bestFor:   string;
   pros:      string[];
   cons:      string[];
   specs:     Record<string, string>;
 }
 
-// ── Comparison type (powers /compare/[a]-vs-[b]/ routes) ────────────────────
+// ── Comparison type ───────────────────────────────────────────────────────────
 export interface Comparison {
-  slug:        string;     // "bushnell-tour-v6-vs-precision-pro-nx9"
-  title:       string;
-  description: string;
-  productA:    string;     // Product.id
-  productB:    string;     // Product.id
-  winner:      string;     // Product.id of recommended pick
-  winnerReason: string;
-  intro:       string;
-  verdict:     string;
-  faq:         FAQItem[];
+  slug:          string;
+  title:         string;
+  description:   string;
+  productA:      string;
+  productB:      string;
+  winner:        string;
+  winnerReason:  string;
+  intro:         string;
+  verdict:       string;
+  faq:           FAQItem[];
   datePublished: string;
   dateModified:  string;
 }
 
-// ── Local page type (powers /courses/[city]/ — programmatic local SEO) ───────
+// ── Local page type ───────────────────────────────────────────────────────────
 export interface GolfCity {
-  slug:          string;   // "chicago-il"
-  city:          string;   // "Chicago"
-  state:         string;   // "IL"
-  stateFullName: string;   // "Illinois"
+  slug:          string;
+  city:          string;
+  state:         string;
+  stateFullName: string;
   population:    number;
   courses: Array<{
-    name:     string;
-    type:     'public' | 'semi-private' | 'resort';
-    price:    string;
-    holes:    number;
-    rating?:  string;
-    notes:    string;
+    name:    string;
+    type:    'public' | 'semi-private' | 'resort';
+    price:   string;
+    holes:   number;
+    rating?: string;
+    notes:   string;
   }>;
   intro:         string;
   nearbyAirport: string;
@@ -135,25 +143,26 @@ export interface GolfCity {
   dateModified:  string;
 }
 
-// ── SEO page metadata (computed by seo.ts from Article or other types) ───────
+// ── SEO page metadata ─────────────────────────────────────────────────────────
 export interface PageMeta {
-  title:       string;
-  description: string;
-  canonical:   string;
-  ogImage:     string;
-  ogType:      'website' | 'article';
-  robots:      string;
+  title:         string;
+  description:   string;
+  canonical:     string;
+  ogImage:       string;
+  ogType:        'website' | 'article';
+  robots:        string;
   datePublished?: string;
   dateModified?:  string;
-  breadcrumbs: Array<{ label: string; href: string }>;
+  breadcrumbs:   Array<{ label: string; href: string }>;
 }
 
-// ── Affiliate link type ────────────────────────────────────────────────────────
+// ── Affiliate link type ───────────────────────────────────────────────────────
 export interface AffiliateLink {
-  label:    string;   // "Buy at Amazon", "See Price at Golf Galaxy"
-  url:      string;   // Full affiliate URL with tracking tag
-  price?:   string;   // "~$329"
-  retailer: string;   // "Amazon", "Golf Galaxy", "Garmin"
-  imgSrc?:  string;   // Product image URL
-  imgAlt?:  string;   // Alt text for product image
+  label:    string;
+  url:      string;
+  price?:   string;
+  retailer: string;
+  imgSrc?:  string;
+  imgAlt?:  string;
+  benefits?: string[];
 }

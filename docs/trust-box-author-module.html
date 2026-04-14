@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>CG — Trust Box + Author Module</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
 /* src/styles/global.css */
 /* CubicalGolfer.com — Design System */
 
@@ -1051,3 +1056,53 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.35); }
 
+
+.demo-wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+.demo-note { font-size: 13px; color: var(--muted); border: 1px dashed var(--border); padding: 10px 14px; border-radius: 6px; margin-bottom: 24px; }
+</style></head>
+<body style="background:var(--green);padding:40px">
+<div class="demo-wrap" style="background:var(--green)">
+<div class="demo-note" style="background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:rgba(255,255,255,.8)">
+📄 MODULE: Author + Trust Block — appears in hero of every article page
+</div>
+
+<!-- Author Block — Astro source: [...slug].astro -->
+<div class="author-box">
+  <a href="/about/" style="flex-shrink:0">
+    <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer"
+      class="author-avatar-img" width="48" height="48"
+      style="background:var(--green-card);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#fff" />
+  </a>
+  <div style="flex:1">
+    <span class="author-name">
+      <a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a>
+      <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · low-teens hdcp</span>
+    </span>
+    <span class="author-meta">
+      📖 2,400 words &nbsp;·&nbsp;
+      📅 Updated: 2026-04-14 &nbsp;·&nbsp;
+      ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
+    </span>
+  </div>
+  <span class="verified-badge">✅ Independently Tested</span>
+</div>
+
+<!-- Spacer -->
+<div style="height:40px"></div>
+
+<!-- Standalone disclosure box (appears in article body) -->
+<div style="background:var(--cream);padding:32px;border-radius:16px;margin-top:24px">
+<div class="disclosure-box">
+  Affiliate disclosure: some links on this page earn us a small commission at no extra
+  cost to you. We purchased all products independently — commissions never affect our
+  rankings or recommendations. <a href="/about/">Learn more about how we work →</a>
+</div>
+<div class="testing-note" style="margin-top:16px">
+  All products tested across 40+ real rounds at real courses. No manufacturer loans.
+  <a href="/how-we-test/">See our full testing process →</a>
+</div>
+<div class="update-stamp" style="margin-top:16px">Last updated: 2026-04-14</div>
+</div>
+</div>
+</body>
+</html>

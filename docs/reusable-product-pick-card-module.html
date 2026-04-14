@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>CG — Product Pick Card Module</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
 /* src/styles/global.css */
 /* CubicalGolfer.com — Design System */
 
@@ -1051,3 +1056,78 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.35); }
 
+
+.demo-wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+.demo-note { font-size: 13px; color: var(--muted); border: 1px dashed var(--border); padding: 10px 14px; border-radius: 6px; margin-bottom: 24px; }
+</style></head>
+<body style="background:var(--cream)">
+<div class="demo-wrap">
+<div class="demo-note">📄 MODULE: Product Pick Card (art-section) — one per product in buying guide</div>
+
+<!-- Full product section — maps to one section[] object in articles.ts -->
+<div class="art-section">
+  <h2>🥇 Best Overall: Bushnell Tour V6 Shift</h2>
+  <span class="badge-pill">BEST OVERALL</span>
+
+  <!-- Star rating (optional — only if rating field is set) -->
+  <div class="product-rating">
+    <span class="stars">★★★★★</span>
+    <span class="rating-score">4.7/5</span>
+    <span class="rating-count">(2,847 reviews)</span>
+  </div>
+
+  <!-- Product image (real .webp or fallback) -->
+  <div class="product-img-wrap">
+    <div class="product-img-fallback">
+      <span style="font-size:48px">⛳</span>
+      <span style="font-size:13px;color:var(--muted);margin-top:8px">
+        Add image: /public/images/products/rangefinders-best-overall.webp
+      </span>
+    </div>
+  </div>
+
+  <!-- Body copy -->
+  <p>The Tour V6 Shift is what tour caddies use, scaled to a price real golfers can afford (~$329). The PinSeeker with JOLT technology locks onto pins instantly. Slope Switch means you can toggle slope off for tournament play.</p>
+
+  <p class="price-note">💰 Price: ~$329 at Amazon</p>
+
+  <!-- PROS / CONS — required for buying guides -->
+  <div class="pros-cons-grid">
+    <ul class="pros-list">
+      <span class="pros-list-label">Pros</span>
+      <li>Fastest pin lock of any tested model</li>
+      <li>JOLT vibration confirms you hit the pin</li>
+      <li>Legal slope toggle for competition</li>
+      <li>Ergonomic, one-hand operation</li>
+    </ul>
+    <ul class="cons-list">
+      <span class="cons-list-label">Cons</span>
+      <li>$329 is premium vs. budget alternatives</li>
+      <li>No GPS course mapping</li>
+    </ul>
+  </div>
+
+  <!-- Affiliate CTA button -->
+  <a href="#" class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
+    <span class="btn-buy-price">~$329</span>
+    <span class="btn-buy-cta">Check Price at Amazon →</span>
+    <span class="btn-buy-badge">at Amazon</span>
+  </a>
+</div>
+
+<div style="margin-top:48px;padding:24px;background:var(--cream-dark);border-radius:12px">
+<h3 style="margin-bottom:16px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Section Rules</h3>
+<ul style="font-size:14px;line-height:1.8;color:var(--body);padding-left:20px">
+  <li>Each section maps to one product — one section[] object in articles.ts</li>
+  <li>Badge is required: BEST OVERALL / BEST BUDGET / BEST VALUE / PREMIUM PICK</li>
+  <li>Pros: 3–5 items. Specific trade-offs, not marketing copy.</li>
+  <li>Cons: 2–3 items. Real weaknesses that help the reader self-qualify.</li>
+  <li>Price: always approximate with ~ prefix. Verify monthly.</li>
+  <li>Image: real .webp preferred. Fallback shows file path to add.</li>
+  <li>Affiliate button: only appears when affiliateKey maps to a valid product.</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

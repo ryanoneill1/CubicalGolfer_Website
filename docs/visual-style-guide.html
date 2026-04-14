@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CubicalGolfer — Visual Style Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
 /* src/styles/global.css */
 /* CubicalGolfer.com — Design System */
 
@@ -1051,3 +1059,171 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.35); }
 
+
+/* Style guide extras */
+body { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+.sg-section { margin: 60px 0; border-top: 2px solid var(--border); padding-top: 40px; }
+.sg-section:first-child { border-top: none; padding-top: 0; }
+.sg-label { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.sg-row { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; align-items: flex-start; }
+.swatch { width: 80px; height: 80px; border-radius: 12px; border: 1px solid var(--border); }
+.swatch-label { font-size: 11px; color: var(--muted); margin-top: 6px; text-align: center; }
+</style>
+</head>
+<body>
+
+<h1 style="font-family:'Playfair Display',serif;font-size:40px;margin-bottom:8px">CubicalGolfer Visual Style Guide</h1>
+<p style="color:var(--muted);font-size:15px;margin-bottom:0">Version 1.0 · April 2026</p>
+
+<div class="sg-section">
+<h2>Color Tokens</h2>
+<div class="sg-row">
+  <div><div class="swatch" style="background:#1E3A28"></div><div class="swatch-label">--green<br>#1E3A28</div></div>
+  <div><div class="swatch" style="background:#264D33"></div><div class="swatch-label">--green-mid<br>#264D33</div></div>
+  <div><div class="swatch" style="background:#2A5038"></div><div class="swatch-label">--green-card<br>#2A5038</div></div>
+  <div><div class="swatch" style="background:#C8A84B"></div><div class="swatch-label">--gold<br>#C8A84B</div></div>
+  <div><div class="swatch" style="background:#A8882A"></div><div class="swatch-label">--gold-dark<br>#A8882A</div></div>
+  <div><div class="swatch" style="background:#F4F1EA;border:1px solid #D8D3C8"></div><div class="swatch-label">--cream<br>#F4F1EA</div></div>
+  <div><div class="swatch" style="background:#EAE6DD"></div><div class="swatch-label">--cream-dark<br>#EAE6DD</div></div>
+  <div><div class="swatch" style="background:#1A2B1F"></div><div class="swatch-label">--text<br>#1A2B1F</div></div>
+  <div><div class="swatch" style="background:#556B5C"></div><div class="swatch-label">--muted<br>#556B5C</div></div>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Typography Scale</h2>
+<h1 style="font-family:'Playfair Display',serif">H1 — Playfair Display 700 — clamp(26px, 3.5vw, 46px)</h1>
+<h2 style="margin-top:24px">H2 — DM Sans 700 — clamp(20px, 2.5vw, 26px)</h2>
+<h3>H3 — DM Sans 700 — 19px</h3>
+<p style="margin-top:16px">Body copy — DM Sans 400 — 16.5px — line-height 1.8. This is how article body text reads at standard size. Comfortable reading at all screen widths.</p>
+<p style="font-size:13px;color:var(--muted);margin-top:8px">Meta text — DM Sans 500 — 13px — Used for dates, word counts, and secondary labels.</p>
+<p style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:8px">EYEBROW TEXT — 11PX 700 UPPERCASE — CATEGORY LABELS</p>
+</div>
+
+<div class="sg-section">
+<h2>Tag Badges</h2>
+<div class="sg-row">
+  <span class="art-tag-lg tag-buy">BUYING GUIDE</span>
+  <span class="art-tag-lg tag-cmp">COMPARISON</span>
+  <span class="art-tag-lg tag-tut">TUTORIAL</span>
+  <span class="art-tag-lg tag-list">LISTICLE</span>
+  <span class="art-tag-lg tag-life">LIFESTYLE</span>
+  <span class="art-tag-lg tag-rev">GUIDE</span>
+  <span class="badge-pill">BEST OVERALL</span>
+  <span class="badge-best">BEST PICK</span>
+  <span class="verified-badge">✅ Independently Tested</span>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Bottom Line Box</h2>
+<div class="bottom-line-box">
+  <p class="bottom-line-label">Our Verdict</p>
+  <p>The Bushnell Tour V6 Shift is the best rangefinder for most weekend golfers at any budget above $200. If you play 10+ rounds a year, it pays for itself in better club selection within a season. On a budget, the Precision Pro NX9 HD is the only sub-$200 model we recommend without caveats.</p>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Pros / Cons Lists</h2>
+<div class="pros-cons-grid">
+  <ul class="pros-list"><span class="pros-list-label">Pros</span>
+    <li>Fastest pin acquisition of any model tested</li>
+    <li>JOLT vibration confirms pin lock — not just any object</li>
+    <li>Slope toggle legal for competition play</li>
+    <li>One-hand operation, ergonomic grip</li>
+  </ul>
+  <ul class="cons-list"><span class="cons-list-label">Cons</span>
+    <li>At $329, expensive vs. budget alternatives</li>
+    <li>No GPS course mapping (rangefinder only)</li>
+  </ul>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Who Should Buy / Skip</h2>
+<div class="who-box">
+  <h2 class="who-box-heading">Who Should Buy This — And Who Should Skip It</h2>
+  <div class="who-buy"><span class="who-label">Buy if you…</span>
+    <ul>
+      <li>Play 10+ rounds per year and want accurate yardages</li>
+      <li>Currently pacing off yardages or relying on sprinkler heads</li>
+      <li>Want pin-locking vibration feedback in sunlight</li>
+    </ul>
+  </div>
+  <div class="who-skip"><span class="who-label">Skip if you…</span>
+    <ul>
+      <li>Already have a quality rangefinder less than 3 years old</li>
+      <li>Primarily use a GPS watch on course</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>FAQ Accordion</h2>
+<div class="art-faq">
+  <details class="faq-item" open>
+    <summary>Do I need slope mode on a golf rangefinder?</summary>
+    <div class="faq-answer">For practice rounds, yes — slope-adjusted distances help you pick the right club. For tournament play you must toggle slope off.</div>
+  </details>
+  <details class="faq-item">
+    <summary>What is the difference between a laser rangefinder and a GPS watch?</summary>
+    <div class="faq-answer">A laser rangefinder measures exact distance to whatever you point at. A GPS watch gives pre-loaded front/middle/back yardages without aiming.</div>
+  </details>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Related Links Cluster</h2>
+<div class="rel-cluster">
+  <h3>Related Guides</h3>
+  <div class="rel-links">
+    <a href="#">Best Golf GPS Watches 2026</a>
+    <a href="#">Is a Rangefinder Worth It?</a>
+    <a href="#">Golf Rangefinder vs GPS Watch</a>
+    <a href="#">Best Golf Accessories Under $50</a>
+  </div>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Disclosure + Testing Callouts</h2>
+<div class="disclosure-box">Affiliate disclosure: some links on this page earn us a small commission at no extra cost to you. We purchased all products independently — commissions never affect our rankings. <a href="#">Learn more →</a></div>
+<div class="testing-note" style="margin-top:16px">We tested 11 rangefinders over 40+ rounds across 4 courses. All products purchased. No manufacturer loans. <a href="#">See full methodology →</a></div>
+<div class="update-stamp" style="margin-top:16px">Last updated: 2026-04-14</div>
+</div>
+
+<div class="sg-section">
+<h2>Verdict Box (Comparison Pages)</h2>
+<div class="verdict-box">
+  <h3>🏆 Winner: Bushnell Tour V6 Shift</h3>
+  <p>The V6 Shift locks onto pins faster and more reliably than anything in its price range. For weekend golfers who want one device that does it all, this is the pick.</p>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Comparison Table</h2>
+<div class="cmp-wrap">
+<table class="cmp-table">
+  <thead><tr><th>Rangefinder</th><th>Best For</th><th>Price</th><th>Slope</th><th class="cmp-th-buy">Buy</th></tr></thead>
+  <tbody>
+    <tr class="cmp-winner"><td>Bushnell Tour V6 Shift <span class="badge-best">BEST PICK</span></td><td>Best Overall</td><td>~$329</td><td>Yes (toggle)</td><td class="cmp-td-buy"><a href="#" class="cmp-buy-btn">~$329 →</a></td></tr>
+    <tr><td>Precision Pro NX9 HD</td><td>Best Budget</td><td>~$169</td><td>Yes</td><td class="cmp-td-buy"><a href="#" class="cmp-buy-btn">~$169 →</a></td></tr>
+    <tr><td>Garmin Approach Z82</td><td>Best Hybrid</td><td>~$599</td><td>Yes</td><td class="cmp-td-buy"><span class="cmp-no-link">—</span></td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="sg-section">
+<h2>Buttons</h2>
+<div class="sg-row">
+  <a href="#" class="btn-gold">Browse All Guides →</a>
+  <a href="#" class="btn-outline" style="background:var(--green)">Improve Your Game</a>
+  <a href="#" class="btn-green">Start Improving →</a>
+  <a href="#" class="btn-buy-affiliate"><span class="btn-buy-price">~$329</span><span class="btn-buy-cta">Check Price →</span><span class="btn-buy-badge">at Amazon</span></a>
+</div>
+</div>
+
+</body>
+</html>

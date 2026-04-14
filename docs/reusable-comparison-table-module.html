@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>CG — Comparison Table Module</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
 /* src/styles/global.css */
 /* CubicalGolfer.com — Design System */
 
@@ -1051,3 +1056,64 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.35); }
 
+
+.demo-wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+.demo-note { font-size: 13px; color: var(--muted); border: 1px dashed var(--border); padding: 10px 14px; border-radius: 6px; margin-bottom: 24px; }
+</style></head>
+<body style="background:var(--cream)">
+<div class="demo-wrap">
+<div class="demo-note">📄 MODULE: Comparison Table — required on all BUYING-GUIDE pages</div>
+
+<div class="cmp-wrap">
+<table class="cmp-table" role="table">
+  <caption class="sr-only">Best Golf Rangefinders 2026 Comparison</caption>
+  <thead>
+    <tr>
+      <th scope="col">Rangefinder</th>
+      <th scope="col">Best For</th>
+      <th scope="col">Price</th>
+      <th scope="col">Slope</th>
+      <th scope="col">Battery</th>
+      <th scope="col" class="cmp-th-buy">Buy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="cmp-winner">
+      <td>Bushnell Tour V6 Shift <span class="badge-best">BEST PICK</span></td>
+      <td>Best Overall</td><td>~$329</td><td>Yes (toggle)</td><td>1 year</td>
+      <td class="cmp-td-buy"><a href="#" class="cmp-buy-btn" target="_blank" rel="nofollow noopener sponsored">~$329 →</a></td>
+    </tr>
+    <tr>
+      <td>Precision Pro NX9 HD</td>
+      <td>Best Budget</td><td>~$169</td><td>Yes</td><td>1 year</td>
+      <td class="cmp-td-buy"><a href="#" class="cmp-buy-btn" target="_blank" rel="nofollow noopener sponsored">~$169 →</a></td>
+    </tr>
+    <tr>
+      <td>Garmin Approach Z82</td>
+      <td>Best GPS+Laser</td><td>~$599</td><td>Yes</td><td>10 hrs</td>
+      <td class="cmp-td-buy"><span class="cmp-no-link">—</span></td>
+    </tr>
+    <tr>
+      <td>Bushnell Pro XE</td>
+      <td>Premium Pick</td><td>~$549</td><td>Elements</td><td>1 year</td>
+      <td class="cmp-td-buy"><a href="#" class="cmp-buy-btn" target="_blank" rel="nofollow noopener sponsored">~$549 →</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div style="margin-top:48px;padding:24px;background:var(--cream-dark);border-radius:12px">
+<h3 style="margin-bottom:16px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em">Table Rules</h3>
+<ul style="font-size:14px;line-height:1.8;color:var(--body);padding-left:20px">
+  <li>Minimum 3 rows. Recommended 4–6 rows.</li>
+  <li>Winner row always uses .cmp-winner class</li>
+  <li>Buy column is always the last column</li>
+  <li>All affiliate links: rel="nofollow noopener sponsored"</li>
+  <li>Rows without affiliate keys get a — placeholder in Buy column</li>
+  <li>Tables scroll horizontally on mobile — never truncate content</li>
+  <li>On mobile ≤700px: Buy column is hidden (CSS: display:none)</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

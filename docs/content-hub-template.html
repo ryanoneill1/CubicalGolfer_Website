@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>CG — Category Hub Template</title><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
 /* src/styles/global.css */
 /* CubicalGolfer.com — Design System */
 
@@ -1051,3 +1056,56 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.35); }
 
+
+.demo-wrap { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+.demo-note { font-size: 13px; color: var(--muted); border: 1px dashed var(--border); padding: 10px 14px; border-radius: 6px; margin-bottom: 24px; }
+</style></head>
+<body style="background:var(--cream)">
+<div class="demo-wrap">
+<div class="demo-note">📄 TEMPLATE: Category Hub Page — replace [CATEGORY], [DESC], [ARTICLES]</div>
+
+<header class="cat-hero">
+  <nav class="breadcrumb"><a href="/">Home</a><span class="bc-sep">›</span><span aria-current="page">[CATEGORY LABEL]</span></nav>
+  <h1>⛳ [CATEGORY LABEL]</h1>
+  <p>[Category description — 1-2 sentences, unique value prop for this category]</p>
+</header>
+
+<div class="cat-page-body">
+  <!-- Featured article callout — always the strongest article in category -->
+  <div class="hub-featured">
+    <span class="hub-featured-emoji">🏆</span>
+    <div>
+      <h3>[Featured Article Title]</h3>
+      <p>[1-sentence excerpt — what the reader will learn]</p>
+      <a href="#" class="btn-gold">Read the Guide →</a>
+    </div>
+  </div>
+
+  <div class="section-header">
+    <p class="section-eyebrow">[N] GUIDES &amp; ARTICLES</p>
+    <h2>All [Category Label] Guides</h2>
+  </div>
+
+  <!-- Article card grid — loop all articles in category -->
+  <div class="art-list-grid">
+    <!-- Repeat for each article: -->
+    <a href="[SLUG]" class="article-card">
+      <div class="art-thumb green">
+        <span class="art-badge tag-buy">BUYING GUIDE</span>
+        <span>⛳</span>
+      </div>
+      <div class="art-body">
+        <h3>[Article Title]</h3>
+        <p>[Excerpt]</p>
+        <div class="art-foot">
+          <span class="art-words">[WORDS] · Updated 2026</span>
+          <span class="art-read">Read guide →</span>
+        </div>
+      </div>
+    </a>
+    <!-- End repeat -->
+  </div>
+</div>
+</div>
+</body>
+</html>

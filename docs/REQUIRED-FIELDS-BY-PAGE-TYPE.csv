@@ -1,0 +1,77 @@
+pageType,field,required,notes
+BUYING-GUIDE,id,Required,Unique slug-based ID
+BUYING-GUIDE,slug,Required,URL path with trailing slash
+BUYING-GUIDE,category,Required,One of 5 valid categories
+BUYING-GUIDE,pageType,Required,buying-guide
+BUYING-GUIDE,tag,Required,BUYING GUIDE
+BUYING-GUIDE,emoji,Required,Relevant emoji for card thumbnail
+BUYING-GUIDE,thumb,Required,Color class: green/brown/navy/purple/teal/olive
+BUYING-GUIDE,words,Required,"Word count string e.g. ""2,400"""
+BUYING-GUIDE,datePublished,Required,ISO date YYYY-MM-DD
+BUYING-GUIDE,dateModified,Required,ISO date YYYY-MM-DD - update on any change
+BUYING-GUIDE,title,Required,"SEO title max 60 chars, keyword first, year included"
+BUYING-GUIDE,titleDisplay,Required,"H1 text, can exceed 60 chars"
+BUYING-GUIDE,description,Required,"Meta desc 150-160 chars, specific claim + CTA"
+BUYING-GUIDE,excerpt,Required,Card excerpt 1-2 sentences
+BUYING-GUIDE,bottomLine,Required,"2-3 sentence verdict, names winner + budget pick"
+BUYING-GUIDE,intro,Required,3-5 sentence intro paragraph
+BUYING-GUIDE,toc,Required,Min 4 items
+BUYING-GUIDE,comparisonTable,Required,Min 3 rows with affiliateKey per row
+BUYING-GUIDE,sections,Required,Min 3 product picks
+BUYING-GUIDE,sections[].h2,Required,Product name in H2
+BUYING-GUIDE,sections[].badge,Required,BEST OVERALL / BEST BUDGET etc.
+BUYING-GUIDE,sections[].body,Required,Why we picked it - min 3 sentences
+BUYING-GUIDE,sections[].pros,Required,Array of 3-5 strings
+BUYING-GUIDE,sections[].cons,Required,Array of 2-3 strings
+BUYING-GUIDE,sections[].price,Required,Approximate price with ~ prefix
+BUYING-GUIDE,faq,Required,Min 3 FAQItem objects
+BUYING-GUIDE,related,Required,Min 4 RelatedLink objects
+BUYING-GUIDE,whoFor,Required,Array of 3-5 buyer qualifying statements
+BUYING-GUIDE,whoSkip,Required,Array of 3-5 disqualifying statements
+BUYING-GUIDE,testingNotes,Optional,Testing methodology summary
+BUYING-GUIDE,sections[].rating,Optional,1-5 star rating for product
+BUYING-GUIDE,sections[].ratingCount,Optional,Review count string
+COMPARISON,id,Required,
+COMPARISON,slug,Required,URL path
+COMPARISON,title,Required,Format: [A] vs [B]: [Year]
+COMPARISON,description,Required,"Names both products, states winner"
+COMPARISON,intro,Required,Who this comparison is for
+COMPARISON,verdict,Required,Full comparison body
+COMPARISON,winner,Required,Product ID of recommended pick
+COMPARISON,winnerReason,Required,1-2 sentence reason
+COMPARISON,productA,Required,Product A ID
+COMPARISON,productB,Required,Product B ID
+COMPARISON,faq,Required,Min 3 items
+COMPARISON,datePublished,Required,
+COMPARISON,dateModified,Required,
+TUTORIAL,id,Required,
+TUTORIAL,slug,Required,
+TUTORIAL,title,Required,Starts with How to or imperative verb
+TUTORIAL,description,Required,Answers the question in first sentence
+TUTORIAL,intro,Required,"Direct answer, no preamble"
+TUTORIAL,toc,Required,Min 3 items
+TUTORIAL,sections,Required,Min 3: direct answer + steps + mistakes
+TUTORIAL,faq,Required,Min 2 items
+TUTORIAL,related,Required,"Min 3 links, prefer commercial pages"
+TUTORIAL,dateModified,Required,
+LIFESTYLE,id,Required,
+LIFESTYLE,slug,Required,
+LIFESTYLE,title,Required,
+LIFESTYLE,intro,Required,Hook first - story or stat
+LIFESTYLE,sections,Required,Min 3 substantive sections
+LIFESTYLE,related,Required,Min 3 links
+LIFESTYLE,faq,Optional,Min 1 if included
+CATEGORY-HUB,category,Required,
+CATEGORY-HUB,All articles in category,Required,Must link to every article
+LOCAL-COURSES,slug,Required,city-state format
+LOCAL-COURSES,city,Required,
+LOCAL-COURSES,state,Required,
+LOCAL-COURSES,intro,Required,"Unique, not templated"
+LOCAL-COURSES,courses,Required,Min 4 course entries
+LOCAL-COURSES,courses[].name,Required,
+LOCAL-COURSES,courses[].type,Required,public/semi-private/resort
+LOCAL-COURSES,courses[].price,Required,
+LOCAL-COURSES,courses[].holes,Required,
+LOCAL-COURSES,courses[].notes,Required,Min 1 sentence
+LOCAL-COURSES,faq,Required,Min 2 city-specific questions
+LOCAL-COURSES,dateModified,Required,

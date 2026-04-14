@@ -1,5 +1,5 @@
 ---
-// src/pages/[...slug].astro — upgraded with affiliate buttons + image scaffolding
+// src/pages/[...slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
@@ -53,117 +53,86 @@ const sameCategory = ARTICLES.filter(
 ).slice(0, 3);
 
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
+const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
-// Map section badges to affiliate product IDs per article
-// ── Affiliate buy-button mapping ──────────────────────────────────────────────
-// Maps article-id → section badge → affiliate product key.
-//
-// FIXES applied March 2026:
-//   • swing-analyzers + ai-tools: BEST LAUNCH DATA was 'arccos-caddie-sensors'
-//     → corrected to 'rapsodo-mlm2pro' (ASIN B0BTPZMCSF)
-//   • gloves: BEST VENTILATION was 'footjoy-weathersof-glove'
-//     → corrected to 'titleist-players-flex' (its own search link)
-//   • ai-tools: added BEST PUTTING → blast-motion-sensor
-//   • ai-tools: added BEST SIMULATOR → skytrak-plus
-//   • swing-analyzers: added BEST BUDGET → swing-caddie-sc4-pro (SC4 PRO 2024)
-//   • golf-apps: BEST FOR STATS → arccos-caddie-sensors (sensors that power the app)
-// ─────────────────────────────────────────────────────────────────────────────
 const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   'rangefinders': {
-    'BEST OVERALL':   'bushnell-tour-v6-shift',
-    'BEST BUDGET':    'precision-pro-nx9-hd',
-    'BEST HYBRID':    'garmin-approach-z82',
-    'PREMIUM PICK':   'bushnell-pro-xe',
+    'BEST OVERALL': 'bushnell-tour-v6-shift', 'BEST BUDGET': 'precision-pro-nx9-hd',
+    'BEST HYBRID': 'garmin-approach-z82', 'PREMIUM PICK': 'bushnell-pro-xe',
   },
   'gps-watches': {
-    'BEST OVERALL':       'garmin-approach-s62',
-    'BEST AUTO-TRACKING': 'shot-scope-v5',
-    'BEST BUDGET':        'bushnell-ion-elite',
+    'BEST OVERALL': 'garmin-approach-s62', 'BEST AUTO-TRACKING': 'shot-scope-v5',
+    'BEST BUDGET': 'bushnell-ion-elite',
   },
   'drivers': {
-    'BEST OVERALL':  'callaway-paradym-ai-smoke-max',
-    'BEST DISTANCE': 'taylormade-qi35-max',
-    'BEST VALUE':    'cobra-aerojet-max',
+    'BEST OVERALL': 'callaway-paradym-ai-smoke-max', 'BEST DISTANCE': 'taylormade-qi35-max',
+    'BEST VALUE': 'cobra-aerojet-max',
   },
   'golf-balls': {
-    'BEST OVERALL':  'titleist-pro-v1',
-    'BEST DISTANCE': 'callaway-chrome-tour-2026',
-    'BEST VALUE':    'srixon-soft-feel',
+    'BEST OVERALL': 'titleist-pro-v1', 'BEST DISTANCE': 'callaway-chrome-tour-2026',
+    'BEST VALUE': 'srixon-soft-feel',
   },
   'irons': {
     'MOST FORGIVING': 'callaway-paradym-ai-smoke-max-irons',
-    'BEST MID-RANGE': 'titleist-t300',
-    'BEST OVERALL':   'callaway-paradym-ai-smoke-max-irons',
+    'BEST MID-RANGE': 'titleist-t300', 'BEST OVERALL': 'callaway-paradym-ai-smoke-max-irons',
   },
   'beginner-sets': {
-    'BEST OVERALL':  'wilson-profile-sgi',
-    'BEST VALUE':    'callaway-strata',
-    'BEST STEP-UP':  'taylormade-rbz-lite',
+    'BEST OVERALL': 'wilson-profile-sgi', 'BEST VALUE': 'callaway-strata',
+    'BEST STEP-UP': 'taylormade-rbz-lite',
   },
   'gloves': {
-    'BEST OVERALL':     'footjoy-weathersof-glove',
-    // FIXED: was 'footjoy-weathersof-glove' — Titleist Players Flex is a distinct product
-    'BEST VENTILATION': 'titleist-players-flex',
+    'BEST OVERALL': 'footjoy-weathersof-glove', 'BEST VENTILATION': 'titleist-players-flex',
   },
   'swing-analyzers': {
-    'BEST OVERALL':     'arccos-caddie-sensors',
-    // FIXED: was 'arccos-caddie-sensors' — Rapsodo MLM2PRO is a separate product (ASIN B0BTPZMCSF)
-    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
-    // ADDED: Swing Caddie SC4 PRO (2024 current model)
-    'BEST BUDGET':      'swing-caddie-sc4-pro',
+    'BEST OVERALL': 'arccos-caddie-sensors', 'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    'BEST BUDGET': 'swing-caddie-sc4-pro',
   },
   'ai-tools': {
-    // Swing AI is an app-only subscription — no Amazon product, no button
-    'BEST AI COACH':    '',
-    // FIXED: was 'arccos-caddie-sensors' — Rapsodo MLM2PRO is the product reviewed here
-    'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
-    // ADDED: Blast Motion putter/swing sensor
-    'BEST PUTTING':     'blast-motion-sensor',
-    // ADDED: SkyTrak+ home simulator
-    'BEST SIMULATOR':   'skytrak-plus',
+    'BEST AI COACH': '', 'BEST LAUNCH DATA': 'rapsodo-mlm2pro',
+    'BEST PUTTING': 'blast-motion-sensor', 'BEST SIMULATOR': 'skytrak-plus',
   },
   'golf-apps': {
-    'BEST FREE':       '',   // The Grint — free app, no Amazon product
-    'BEST ALL-IN-ONE': '',   // 18Birdies — free app, no Amazon product
-    // Arccos Caddie is the app; the sensors are the physical product
-    'BEST FOR STATS':  'arccos-caddie-sensors',
-  },
-  'accessories-50': {
-    // No badge-driven sections on this page; links added inline via items
+    'BEST FREE': '', 'BEST ALL-IN-ONE': '', 'BEST FOR STATS': 'arccos-caddie-sensors',
   },
   'golf-putters': {
-    'BEST OVERALL': 'odyssey-white-hot-og',
-    'BEST BLADE':   'scotty-cameron-phantom',
-    'BEST BUDGET':  'cleveland-hb-soft-milled',
+    'BEST OVERALL': 'odyssey-white-hot-og', 'BEST BLADE': 'scotty-cameron-phantom',
+    'BEST BUDGET': 'cleveland-hb-soft-milled',
   },
   'golf-bags': {
-    'BEST CARRY':  'sun-mountain-25-plus',
-    'BEST STAND':  'titleist-players-4',
-    'BEST CART':   'callaway-fairway-14',
-    'BEST BUDGET': 'callaway-chev-dry',
+    'BEST CARRY': 'sun-mountain-25-plus', 'BEST STAND': 'titleist-players-4',
+    'BEST CART': 'callaway-fairway-14', 'BEST BUDGET': 'callaway-chev-dry',
   },
   'golf-ball-compression': {
-    'BEST VALUE':   'srixon-soft-feel',
-    'BEST OVERALL': 'titleist-pro-v1',
+    'BEST VALUE': 'srixon-soft-feel', 'BEST OVERALL': 'titleist-pro-v1',
   },
   'pro-v1-vs-pro-v1x': {
-    'BEST OVERALL':  'titleist-pro-v1',
-    'BEST DISTANCE': 'titleist-pro-v1x',
-  },
-  'golf-gifts': {
-    // Items use affiliateKey directly — no badge-driven sections
+    'BEST OVERALL': 'titleist-pro-v1', 'BEST DISTANCE': 'titleist-pro-v1x',
   },
   'golf-shoes-walking': {
-    'BEST OVERALL': 'footjoy-flex-xp',
-    'BEST PREMIUM': 'ecco-biom-c4',
-    'BEST BUDGET':  'skechers-go-golf',
+    'BEST OVERALL': 'footjoy-flex-xp', 'BEST PREMIUM': 'ecco-biom-c4',
+    'BEST BUDGET': 'skechers-go-golf',
+  },
+  'arccos-vs-shot-scope': {
+    'BEST ANALYTICS': 'arccos-caddie-sensors', 'BEST VALUE': 'shot-scope-v5',
+  },
+  'skytrak-vs-mevo-plus': {
+    'BEST FOR HOME SETUPS': 'skytrak-plus', 'BEST FOR OUTDOOR USE': 'rapsodo-mlm2pro',
+  },
+  'golf-apps-handicap': {
+    'BEST FREE': '', 'BEST ALL-IN-ONE': '', 'BEST ANALYTICS': 'arccos-caddie-sensors',
+  },
+  'golf-grip-trainers': {
+    'BEST OVERALL NET': '',
+  },
+  'gps-watch-high-handicapper': {
+    'BEST OVERALL': 'bushnell-ion-elite', 'BUDGET PICK': 'garmin-approach-s42',
   },
 };
 ---
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
-  {/* Sticky bar for buying guides — uses first product with affiliate key */}
+  {/* Sticky bar for buying guides */}
   {isBuyingGuide && (() => {
     const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
     const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
@@ -179,6 +148,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     );
   })()}
 
+  {/* ── HERO ───────────────────────────────────────────────────────────────── */}
   <header class="art-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -210,39 +180,23 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     </div>
   </header>
 
+  {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
   <article class="art-content">
 
-    <!-- Quick Verdict box for buying guides -->
-    {isBuyingGuide && article.comparisonTable && (
-      <div class="verdict-quick">
-        <p class="verdict-quick-title">⚡ Quick Verdict</p>
-        <div class="verdict-quick-picks">
-          {article.comparisonTable.rows.slice(0, 3).map((row, i) => (
-            <div class={`verdict-pick ${row.winner ? 'verdict-pick--winner' : ''}`}>
-              <span class="verdict-pick-label">{row.winner ? '🏆 Best Overall' : row.bestFor}</span>
-              <span class="verdict-pick-name">{row.name}</span>
-              <span class="verdict-pick-price">{row.price}</span>
-            </div>
-          ))}
-        </div>
+    {/* BOTTOM LINE — required for buying guides */}
+    {article.bottomLine && (
+      <div class="bottom-line-box" role="note" aria-label="Our verdict">
+        <p class="bottom-line-label">Our Verdict</p>
+        <p>{article.bottomLine}</p>
       </div>
     )}
 
-    <div class="intro-box"><p>{article.intro}</p></div>
-
-    {/* ── Inline affiliate disclosure ── */}
-    {isBuyingGuide && (
-      <p class="inline-disclosure">
-        ⚖️ <em>This page contains affiliate links — we earn a small commission if you buy through them, at no extra cost to you. <a href="/about/">Editorial Policy →</a></em>
-      </p>
-    )}
-
-    {/* ── Above-the-fold ProductCard grid (top 3 picks) ── */}
-    {isBuyingGuide && article.comparisonTable && (() => {
-      const topRows = article.comparisonTable.rows.slice(0, 3).filter((r: any) => r.affiliateKey);
-      if (!topRows.length) return null;
+    {/* QUICK VERDICT CARDS — top picks at a glance */}
+    {isBuyingGuide && article.comparisonTable?.rows && (() => {
+      const topRows = article.comparisonTable.rows.filter((r: any) => r.affiliateKey).slice(0, 3);
+      if (topRows.length === 0) return null;
       return (
-        <div class="product-card-grid" aria-label="Top picks">
+        <div class="product-card-grid">
           {topRows.map((row: any) => {
             const aff = getAffiliateLink(row.affiliateKey);
             return (
@@ -265,6 +219,10 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       );
     })()}
 
+    {/* INTRO */}
+    <div class="intro-box"><p>{article.intro}</p></div>
+
+    {/* TABLE OF CONTENTS */}
     {article.toc && article.toc.length > 0 && (
       <nav class="toc" aria-label="Table of contents">
         <p class="toc-heading">In this guide</p>
@@ -274,6 +232,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       </nav>
     )}
 
+    {/* COMPARISON TABLE */}
     {article.comparisonTable && (
       <div class="cmp-wrap">
         <table class="cmp-table" role="table">
@@ -299,13 +258,9 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                   <td>{row.feature2}</td>
                   <td class="cmp-td-buy">
                     {rowAff ? (
-                      <a
-                        href={rowAff.url}
-                        class="cmp-buy-btn"
-                        target="_blank"
+                      <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
                         rel="nofollow noopener sponsored"
-                        aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}
-                      >
+                        aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}>
                         {rowAff.price} →
                       </a>
                     ) : (
@@ -320,13 +275,29 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       </div>
     )}
 
+    {/* TESTING NOTES */}
+    {article.testingNotes && (
+      <div class="testing-note" role="note">
+        {article.testingNotes} <a href="/how-we-test/">See full testing methodology →</a>
+      </div>
+    )}
+    {isCommercial && !article.testingNotes && (
+      <div class="testing-note" role="note">
+        All products on this page were independently purchased and tested across real rounds on actual golf courses.
+        No manufacturer loans. No sponsored placements. <a href="/how-we-test/">See our full testing process →</a>
+      </div>
+    )}
+
+    {/* INDIVIDUAL PRODUCT SECTIONS */}
     {article.sections.map((section, idx) => {
-      const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || ''];
+      const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || '']
+                     ?? (section as any).affiliateKey ?? '';
       const aff = productId ? getAffiliateLink(productId) : null;
       return (
         <div class="art-section">
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
+
           {(section as any).rating && (
             <div class="product-rating" aria-label={`Rated ${(section as any).rating} out of 5 stars`}>
               <span class="stars" aria-hidden="true">
@@ -339,28 +310,21 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </div>
           )}
 
-          {/* Product image — real if available, emoji fallback otherwise */}
+          {/* Product image */}
           {section.badge && isBuyingGuide && (() => {
             const sectionImgSrc = aff ? (aff as any).imgSrc : null;
             const sectionImgAlt = aff ? (aff as any).imgAlt ?? section.h2 : section.h2;
             return (
               <div class="product-img-wrap">
                 {sectionImgSrc ? (
-                  <img
-                    src={sectionImgSrc}
-                    alt={sectionImgAlt}
-                    width="280"
-                    height="200"
-                    loading="lazy"
-                    decoding="async"
-                    class="product-section-img"
-                    onerror="this.src='/images/products/placeholder.webp'"
-                  />
+                  <img src={sectionImgSrc} alt={sectionImgAlt} width="280" height="200"
+                    loading="lazy" decoding="async" class="product-section-img"
+                    onerror="this.src='/images/products/placeholder.webp'" />
                 ) : (
                   <div class="product-img-fallback">
                     <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
                     <span style="font-size:13px;color:var(--muted);margin-top:8px">
-                      Add image: /public/images/products/{article.id}-{(section.badge ?? '').toLowerCase().replace(/\s+/g,'-')}.jpg
+                      Add image: /public/images/products/{article.id}-{(section.badge ?? '').toLowerCase().replace(/\s+/g,'-')}.webp
                     </span>
                   </div>
                 )}
@@ -370,18 +334,35 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
           {section.body && section.body.trim() && <p>{section.body}</p>}
           {section.price && <p class="price-note">💰 Price: {section.price}</p>}
+
+          {/* PROS / CONS — new in v2 */}
+          {((section.pros && section.pros.length > 0) || (section.cons && section.cons.length > 0)) && (
+            <div class="pros-cons-grid">
+              {section.pros && section.pros.length > 0 && (
+                <ul class="pros-list" aria-label="Pros">
+                  <span class="pros-list-label">Pros</span>
+                  {section.pros.map(pro => <li>{pro}</li>)}
+                </ul>
+              )}
+              {section.cons && section.cons.length > 0 && (
+                <ul class="cons-list" aria-label="Cons">
+                  <span class="cons-list-label">Cons</span>
+                  {section.cons.map(con => <li>{con}</li>)}
+                </ul>
+              )}
+            </div>
+          )}
+
           {section.items && section.items.length > 0 && (
             <ul>
               {section.items.map((item: any) => (
                 <li>
                   {item.affiliateKey ? (
                     <>
-                      <a
-                        href={getAffiliateLink(item.affiliateKey).url}
-                        target="_blank"
-                        rel="nofollow noopener sponsored"
+                      <a href={getAffiliateLink(item.affiliateKey).url}
+                        target="_blank" rel="nofollow noopener sponsored"
                         style="font-weight:700;color:var(--green)"
-                      >{item.name}</a>{' '}— {item.desc}
+                      >{item.name}</a>{' — '}{item.desc}
                     </>
                   ) : (
                     <><strong>{item.name}</strong> — {item.desc}</>
@@ -391,14 +372,10 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </ul>
           )}
 
-          {/* Affiliate buy button — using AffiliateCTA component */}
           {aff && (
             <AffiliateCTA
-              url={aff.url}
-              price={aff.price}
-              name={section.h2}
-              retailer={aff.retailer}
-              label={aff.label}
+              url={aff.url} price={aff.price} name={section.h2}
+              retailer={aff.retailer} label={aff.label}
               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
               disclosure={true}
             />
@@ -407,6 +384,30 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       );
     })}
 
+    {/* WHO SHOULD BUY / SKIP — required on buying guides */}
+    {(article.whoFor || article.whoSkip) && (
+      <div class="who-box">
+        <h2 class="who-box-heading">Who Should Buy This — And Who Should Skip It</h2>
+        {article.whoFor && article.whoFor.length > 0 && (
+          <div class="who-buy">
+            <span class="who-label">Buy if you…</span>
+            <ul>
+              {article.whoFor.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+        )}
+        {article.whoSkip && article.whoSkip.length > 0 && (
+          <div class="who-skip">
+            <span class="who-label">Skip if you…</span>
+            <ul>
+              {article.whoSkip.map(item => <li>{item}</li>)}
+            </ul>
+          </div>
+        )}
+      </div>
+    )}
+
+    {/* FAQ */}
     {article.faq && article.faq.length > 0 && (
       <div class="art-faq">
         <h2>Frequently Asked Questions</h2>
@@ -419,6 +420,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       </div>
     )}
 
+    {/* RELATED GUIDES */}
     {related.length > 0 && (
       <div class="rel-cluster">
         <h3>Related Guides</h3>
@@ -428,6 +430,19 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
       </div>
     )}
 
+    {/* AFFILIATE DISCLOSURE — required on all commercial pages */}
+    {isCommercial && (
+      <div class="disclosure-box" role="note" aria-label="Affiliate disclosure">
+        Affiliate disclosure: some links on this page earn us a small commission at no extra
+        cost to you. We purchased all products independently — commissions never affect our
+        rankings or recommendations. <a href="/about/">Learn more about how we work →</a>
+      </div>
+    )}
+
+    {/* UPDATE STAMP */}
+    <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified}</div>
+
+    {/* BOTTOM CTA */}
     <div class="art-cta">
       <h3>Get the Free Golf Gear Buying Guide</h3>
       <p>The cheat sheet every weekend golfer needs before buying anything new. No spam, ever.</p>
@@ -436,6 +451,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
   </article>
 
+  {/* SAME-CATEGORY CARD GRID */}
   {sameCategory.length > 0 && (
     <section class="related-section" aria-label="More guides">
       <h2>More {CAT_LABEL[article.category]} Guides</h2>
