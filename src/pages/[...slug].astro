@@ -296,7 +296,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
         : (BADGE_TO_PRODUCT[article.id]?.[section.badge || ''] ?? '');
       const aff = productId ? getAffiliateLink(productId) : null;
       return (
-        <div class={`art-section${section.badge && isBuyingGuide ? ' has-image' : ''}`}>
+        <div class="art-section">
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
 

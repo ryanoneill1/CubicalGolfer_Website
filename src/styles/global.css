@@ -606,17 +606,22 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── PRODUCT IMAGE WRAPPER ── */
 .product-img-wrap {
-  border-radius: var(--r2); overflow: hidden;
-  margin: 12px 0 20px; background: var(--cream-dark);
+  display: block;
+  margin: 0 0 24px 0;
+  border-radius: var(--r2);
+  overflow: hidden;
+  background: var(--cream-dark);
   border: 1px solid var(--border);
+  float: none;
+  position: static;
 }
 .product-img-wrap img {
   width: 100%; height: auto; display: block;
 }
 .product-img-fallback {
-  min-height: 160px; display: flex; flex-direction: column;
+  min-height: 140px; display: flex; flex-direction: column;
   align-items: center; justify-content: center;
-  background: var(--cream-dark); padding: 24px;
+  background: var(--cream-dark); padding: 20px;
   text-align: center; gap: 8px;
 }
 
@@ -632,8 +637,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
 }
 
-/* ── ART SECTION wrapper ── */
-.art-section { margin-bottom: 8px; }
+/* art-section: see definitive rule below */
 
 @media (max-width: 600px) {
   .verdict-quick-picks { grid-template-columns: 1fr; }
@@ -727,17 +731,14 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── REAL PRODUCT SECTION IMAGES ── */
 .product-section-img {
-  max-width: 280px;
-  max-height: 200px;
   width: 100%;
   height: auto;
+  max-height: 260px;
   object-fit: contain;
   border-radius: 8px;
   display: block;
-  margin: 0 auto 12px;
   background: #fff;
-  padding: 8px;
-  border: 1px solid var(--border);
+  padding: 12px;
 }
 
 /* ── HERO QUICK LINKS (above-fold affiliate navigation) ── */
@@ -1020,14 +1021,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   flex-shrink: 0; margin-top: 2px;
 }
 
-/* ── ARTICLE SECTION DIVIDER ── */
-.art-section {
-  margin-bottom: 8px;
-  padding-top: 36px;
-  border-top: 2px solid var(--cream-dark);
-}
-.art-section:first-of-type { border-top: none; padding-top: 0; }
-.art-content h2:first-child { border-top: none; margin-top: 0; }
+/* art-section: see definitive rule below */
 
 /* ── SECTION VERDICT LABEL (inside art-section for winning picks) ── */
 .section-verdict {
@@ -1093,44 +1087,28 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
    All structural elements now use the full --content-w container.
    ═══════════════════════════════════════════════════════════════════════════ */
 
-/* ── ART-SECTION: two-column on wide screens ── */
+/* ── ART-SECTION: definitive rule — ONE rule, no duplicates ──────────────
+   display: block ensures natural top-to-bottom stacking of all children.
+   Images are in DOM before body text, so they always appear ON TOP.
+   No float, no grid-column, no position:sticky on any child image.
+   ─────────────────────────────────────────────────────────────────────── */
 .art-section {
-  display: grid;
-  grid-template-columns: 1fr;   /* single col default — overridden below */
-  gap: 0;
+  display: block;
   padding-top: 36px;
   border-top: 2px solid var(--cream-dark);
   margin-bottom: 8px;
 }
-.art-section:first-of-type { border-top: none; padding-top: 0; }
-
-/* On wide screens: text + product image side by side */
-@media (min-width: 860px) {
-  .art-section.has-image {
-    grid-template-columns: 1fr 280px;
-    column-gap: 40px;
-    align-items: start;
-  }
-  /* Image floats to the right column */
-  .art-section.has-image .product-img-wrap {
-    grid-column: 2;
-    grid-row: 1 / 6;   /* spans multiple rows alongside text */
-    position: sticky;
-    top: calc(var(--nav-h) + 24px);
-    margin: 0;
-  }
-  /* Text and structural elements stay in left column */
-  .art-section.has-image > h2,
-  .art-section.has-image > .badge-pill,
-  .art-section.has-image > .product-rating,
-  .art-section.has-image > p,
-  .art-section.has-image > ul,
-  .art-section.has-image > .price-note,
-  .art-section.has-image > .pros-cons-grid,
-  .art-section.has-image > .btn-buy-affiliate,
-  .art-section.has-image > [class*="affiliate"] {
-    grid-column: 1;
-  }
+.art-section:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+/* Guarantee image wrapper never floats or positions sideways */
+.art-section .product-img-wrap {
+  display: block !important;
+  float: none !important;
+  position: static !important;
+  width: 100%;
+  margin: 0 0 20px 0;
 }
 
 /* ── COMPARISON TABLE: full container width ── */
