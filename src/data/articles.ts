@@ -46,8 +46,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
         badge: 'BEST OVERALL', rating: 4.8, ratingCount: '2,847',
         body: "The Tour V6 Shift is what tour caddies use, scaled to a price real golfers can afford (~$329). The PinSeeker with JOLT technology locks onto pins instantly, even in thick rough or bright sunlight. Slope Switch means you can toggle slope off for tournament play. Reads from 5 to 1,300 yards with ±1 yard accuracy.",
-        pros: ['PinSeeker JOLT locks onto flag in under 0.3 seconds', 'Slope Switch is a physical toggle — tournament-legal without menu navigation', 'Magnetic BITE mount included for cart use', '±1 yard accuracy to 1,300 yards'],
-        cons: ['No GPS integration — laser only', 'CR2 battery requires occasional replacement'],
         price: '~$329 at Amazon',
         pros: [
           'Fastest pin lock of any model tested',
@@ -65,8 +63,6 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best Budget: Precision Pro NX9 HD',
         badge: 'BEST BUDGET', rating: 4.7, ratingCount: '1,203',
         body: "For under $180, the NX9 HD is almost embarrassingly good. Clear optics, fast pin acquisition, adaptive slope technology, and a one-year battery life that means you\'ll forget it\'s in your bag. Backed by a lifetime warranty.",
-        pros: ['Slope-adjusted distances at under $180', 'Lifetime warranty — exceptional for this price tier', '1-year battery life on a single CR2'],
-        cons: ['Brand less recognized than Bushnell', 'Pin acquisition slightly slower above 250 yards vs Bushnell'],
         price: '~$169 at Amazon',
         pros: [
           'Nearly as fast as Bushnell at half the price',
@@ -83,8 +79,6 @@ export const ARTICLES: Article[] = [
         h2: '🥉 Best GPS+Laser Hybrid: Garmin Approach Z82',
         badge: 'BEST HYBRID',
         body: "The Z82 combines laser ranging with built-in GPS that shows a live green view, hazard distances, and layup yardages. Slope-adjusted distances factor in incline/decline and green undulation from its 42,000-course database.",
-        pros: ['GPS course overlay visible through eyepiece while ranging', '40,000+ courses preloaded — works without phone', 'Tournament-legal slope toggle'],
-        cons: ['$499 — $170 more than Bushnell Tour V6', 'Slightly slower pin acquisition than pure laser units'],
         price: '~$499 at Amazon',
         pros: [
           'Live green view + hazard distances in viewfinder',
@@ -100,8 +94,6 @@ export const ARTICLES: Article[] = [
         h2: 'Best Premium: Bushnell Pro XE',
         badge: 'PREMIUM PICK',
         body: "The Pro XE factors in temperature and altitude in addition to incline — making it the most accurate distance tool available for recreational golfers. The magnetic cart mount keeps it accessible on every shot.",
-        pros: ['Elements compensation adjusts for wind, altitude, and temperature simultaneously', 'Most precise tournament conditions reading available for a handheld rangefinder', 'JOLT vibration confirmation on every flag lock'],
-        cons: ['$499+ — significant premium over Tour V6 for features most golfers will not use', 'Elements data adds minimal value for casual recreational rounds'],
         price: '~$499 at Amazon',
         pros: [
           'Factors temperature and altitude into distance',
@@ -995,8 +987,6 @@ export const ARTICLES: Article[] = [
         h2: 'Best Premium: Titleist Pro V1',
         badge: 'BEST OVERALL', rating: 4.9, ratingCount: '8,421',
         body: "The benchmark for premium golf balls and the #1 ball on the PGA Tour. Soft feel, consistent distance, and excellent greenside spin. The current 25th anniversary edition made incremental improvements to the dimple pattern for more consistent flight. If your swing speed is over 90mph and you want the best, this is still the standard everything else is measured against.",
-        pros: ['Industry benchmark for urethane spin and greenside control for over two decades', 'Consistent compression and feel across an entire dozen — no variation', 'Tour-validated by more professionals than any other ball'],
-        cons: ['$55/dozen — highest price on this list', 'Marginal performance benefit for swing speeds under 90 mph vs cheaper alternatives'],
         price: '~$55 for 12',
         pros: [
           'Benchmark for feel and greenside spin',
@@ -1013,8 +1003,6 @@ export const ARTICLES: Article[] = [
         h2: '2026 Callaway Chrome Tour — The New Benchmark for Distance',
         badge: 'BEST DISTANCE',
         body: "Callaway's biggest ball update in years, released January 2026. The new Tour Fast Mantle is a stiffer outer layer that generates more ball speed — like a tighter spring — without making the ball feel harder. Independent testing showed noticeably tighter spin variance on off-center hits, which helps weekend golfers more than pure speed. Already replacing the Chrome Soft X as Callaway's primary tour offering.",
-        pros: ['Lower compression than Pro V1 — better suited for 85-95 mph swing speeds', 'Tour Fast Mantle delivers consistent ball speed across the face', 'Premium urethane construction at slightly lower price than Titleist'],
-        cons: ['$58/dozen — premium tier pricing similar to Pro V1', 'Less greenside spin than Pro V1 for faster swing speeds above 95 mph'],
         price: '~$58 for 12',
         pros: [
           'More distance than Pro V1 off the driver',
@@ -1820,8 +1808,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Ball for 20-30 Handicap: Srixon Soft Feel',
         badge: 'BEST OVERALL',
         body: 'The Srixon Soft Feel is the single best recommendation for high handicappers. Compression 60 ensures it compresses fully at 75-85 mph swing speeds. The ionomer cover reduces slice spin compared to urethane alternatives. At under $25 a dozen, losing one on the third hole does not ruin your round budget. This ball was independently tested against a Pro V1 at 80 mph swing speed and carried 12 yards further on average.',
-        pros: ['Compression 60 — right match for most high handicappers', 'Lower spin off driver — straighter ball flight', 'Affordable enough to play freely without worrying about cost', 'Good feel off putter face'],
-        cons: ['Less greenside spin than tour balls', 'Not right for swing speeds above 95 mph'],
         price: '~$22/doz',
         pros: [
           'Low compression works with slower swing speeds',
@@ -1922,8 +1908,6 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best Budget: Blue Tees Series 3 Max',
         badge: 'BEST BUDGET',
         body: 'At $129, the Blue Tees Series 3 Max is the most affordable option with slope compensation. Optics are slightly below the Precision Pro but more than adequate for learning the game. Reliable pin lock within 200 yards covers everything from a short par-3 to a 150-yard approach.',
-        pros: ['Lowest price with slope', 'Simple single-button use', 'Reliable under 200 yards'],
-        cons: ['Display less bright in afternoon sun', 'No vibration feedback'],
         price: '~$129',
         pros: [
           'Best value rangefinder on the market at $169',
@@ -2070,8 +2054,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Overall: Srixon Soft Feel',
         badge: 'BEST OVERALL',
         body: 'Compression 60 compresses fully for most slower swingers. In testing against a Pro V1 at 80 mph, the Soft Feel carried 10 yards further with the driver. Ionomer cover means slightly less greenside spin than urethane — but the distance gain more than compensates at this skill level.',
-        pros: ['Compression 60 — correct range for under 85 mph', 'Measurably longer than tour balls at slow speeds', 'Under $25/dozen', 'Good feel off putter'],
-        cons: ['Less greenside spin than urethane cover', 'Not ideal above 90 mph'],
         price: '~$22/doz',
         pros: [
           '35 compression is the lowest of any major brand ball',
@@ -2162,8 +2144,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Overall: Callaway Chrome Tour 2026',
         badge: 'BEST OVERALL',
         body: 'The Chrome Tour 2026 gives a urethane cover at $38/dozen — real greenside spin without Pro V1 pricing. TRIPLE TRACK alignment aids putting setup. Tested against the Pro V1 across 5 rounds at 85 mph swing speed, the distance difference was 3-4 yards — not worth $17 more per dozen.',
-        pros: ['Urethane cover for greenside spin', 'TRIPLE TRACK alignment aid', 'Softer than previous Chrome Soft versions', '30% cheaper than Pro V1'],
-        cons: ['Slightly less consistent in wind vs Pro V1', 'Cover scuffs faster on cart paths'],
         price: '~$38/doz',
         pros: [
           'Tour-level urethane cover for excellent greenside spin',
@@ -2434,8 +2414,6 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best Under $150: Blue Tees Series 3 Max',
         badge: 'BEST BUDGET',
         body: 'At $129, the Blue Tees Series 3 Max delivers slope compensation and reliable pin acquisition under $150. Optics are slightly below the Precision Pro — less bright in direct afternoon sun — but more than adequate for golfers learning the game or playing casually. Battery lasts a full season.',
-        pros: ['Slope compensation at $129 price point', 'Simple operation', 'Good battery life'],
-        cons: ['Less bright display in direct sun', 'No vibration feedback'],
         price: '~$129',
         pros: [
           'Best rangefinder available for under $200',
@@ -2841,8 +2819,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Free: The Grint',
         badge: 'BEST FREE',
         body: 'The Grint is the cleanest, most capable free golf app available in 2026. Official USGA handicap index, GPS yardages for 40,000+ courses, score tracking, and a social feed. The UI is straightforward — score entry takes under 10 seconds per hole. The free tier has everything most weekend golfers need. Premium ($8/month) adds detailed analytics by club and shot type.',
-        pros: ['Free USGA handicap — no credit card required', 'Fast GPS with front/middle/back distances', 'Simple score entry interface', 'Used by over 1.5 million golfers'],
-        cons: ['Analytics locked behind paywall', 'Social feed can feel cluttered', 'Shot tracking requires phone each hole'],
         price: 'Free / $8 per month premium',
         pros: [
           'Full USGA handicap completely free forever',
@@ -2860,8 +2836,6 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best Premium: 18Birdies',
         badge: 'BEST ALL-IN-ONE',
         body: '18Birdies combines official handicap tracking, GPS (40,000+ courses), digital scorecards, leaderboards for your group, and a built-in rangefinder mode. The design is the best in the category. If you play with a regular group and want to track everyone\'s rounds together, 18Birdies handles it better than anything else. Free tier includes handicap and GPS; premium ($10/month) adds detailed stats and group features.',
-        pros: ['Best interface in the category', 'Group scoring and leaderboards', 'Built-in rangefinder mode', 'Clean, detailed performance stats'],
-        cons: ['Some features require premium subscription', 'Heavier battery usage than simpler apps'],
         price: 'Free / $10 per month premium',
         pros: [
           'Best interface design of any golf app',
@@ -2878,8 +2852,6 @@ export const ARTICLES: Article[] = [
         h2: '🥉 Best for Data Geeks: Arccos Caddie',
         badge: 'BEST ANALYTICS',
         body: 'Arccos is free as an app, but the full experience requires the $179 sensor kit. With sensors in all 14 clubs, the app automatically records every shot — club used, distance, location — without touching your phone. After 10+ rounds, the AI caddie gives personalized club recommendations for specific distances and situations. The strokes-gained analysis by category is the most detailed available outside of professional coaching.',
-        pros: ['Automatic shot tracking (no button presses)', 'AI club recommendations after 10+ rounds', 'Strokes gained analysis by category'],
-        cons: ['Requires $179 sensor investment + $99/yr subscription for full features', 'Phone must be accessible on course'],
         price: 'Free app / $179 sensors + $99/yr',
         pros: [
           'Most detailed shot analysis available on a smartphone',
@@ -2955,8 +2927,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Overall: SKLZ Golf Grip Trainer',
         badge: 'BEST OVERALL',
         body: 'The SKLZ Grip Trainer slips over any club grip and has molded indentations that guide your hands into the neutral grip position. At $15, it is the most practical training aid for fixing grip. Use it on an 8-iron for 10-15 minutes before practice sessions until the correct position becomes automatic — typically 2-3 weeks. Then remove it and verify the grip looks the same.',
-        pros: ['Works on any club — no special equipment', '$15 — lowest cost of any grip fix', 'Builds muscle memory quickly', 'Use at range or at home'],
-        cons: ['Does not diagnose the problem — just fixes position', 'Not suitable for full swing practice'],
         price: '~$15',
         pros: [
           'Physically molds hands into correct position -- no guesswork',
@@ -2975,8 +2945,6 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best for Connection Feedback: Tour Striker Smart Ball',
         badge: 'BEST FEEDBACK',
         body: 'The Smart Ball is an inflatable ball that fits between your forearms and teaches connection — keeping your arms unified through the swing. While not a grip trainer per se, poor grip is often connected to poor arm connection. At $29, it is the most versatile training aid for fixing multiple setup flaws simultaneously. Used by teaching pros for warm-up drills.',
-        pros: ['Teaches arm connection alongside grip', 'Works for chip shots and full swings', 'Used by PGA teaching professionals', 'Compact and portable'],
-        cons: ['Requires inflation and deflation', 'Not a direct grip position trainer'],
         price: '~$29',
         pros: [
           'Teaches arm connection alongside grip',
@@ -3056,8 +3024,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Overall: Bushnell Ion Elite',
         badge: 'BEST OVERALL',
         body: 'The Ion Elite at $149 is clean, simple, and accurate. Front/middle/back of green for 40,000+ courses. Hazard and layup distances. Auto-hole advance. Long battery life (16+ hours — a full round without worrying about charging). The display is easy to read in full sun. No subscription required. For a high handicapper who wants yardage data without thinking about the watch, this is the right buy.',
-        pros: ['$149 — lowest price with all core features', 'No subscription', '16-hour battery life', 'Simple single-screen interface'],
-        cons: ['No shot tracking', 'No green view or contour data', 'Basic display vs premium watches'],
         price: '~$149',
         pros: [
           'Simple focused feature set -- exactly what a high handicapper needs',
@@ -3075,8 +3041,6 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best Budget: Garmin Approach S12',
         badge: 'BUDGET PICK',
         body: 'The Garmin S12 at $169 adds a slightly cleaner interface and Garmin\'s reputation for GPS accuracy. It gives you 42,000 preloaded courses, front/middle/back, and a round timer. The slightly larger display makes it easier to read at a glance. If you prefer Garmin\'s ecosystem (you might have other Garmin devices), this is the entry point.',
-        pros: ['Garmin GPS accuracy', '42,000 preloaded courses', 'Clean interface', 'Connects to Garmin Connect app'],
-        cons: ['More expensive than Bushnell Ion Elite', 'No slope or wind data'],
         price: '~$169',
         pros: [
           'Garmin GPS accuracy -- trusted brand in the category',
@@ -3155,8 +3119,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Compact Setup: Garmin Approach R10 + Net',
         badge: 'BEST SMALL SPACE',
         body: 'The Garmin Approach R10 ($599) is a Doppler radar launch monitor that works behind the ball in as little as 6 feet from the net. It measures club speed, ball speed, launch angle, spin rate, and carry — all the data you need for practice. Pair it with a Rukket 10x7 Haack Golf Net ($200) and a Country Club Elite mat ($350) for a complete indoor practice setup in 8 feet of depth. The R10 connects to E6 Connect for simulation if you later add a projector and screen.',
-        pros: ['Works in 8 feet of depth', 'Full launch data — all clubs including wedges', 'Affordable entry point for home practice', 'Upgradeable to full simulator later'],
-        cons: ['No simulation without adding screen/projector', 'Net practice lacks visual feedback', 'Slightly less accurate than higher-end units at short distances'],
         price: '~$599 (launch monitor only)',
         pros: [
           'Works in 8 feet of depth -- smallest footprint of any launch monitor setup',
@@ -3242,8 +3204,6 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Net: Rukket 10x7 Haack Golf Net',
         badge: 'BEST OVERALL NET',
         body: 'The Rukket Haack Golf Net ($199) is the standard for home golf nets. At 10x7 feet, it is wide and tall enough for full driver shots without edge misses. The 7-layer impact barrier handles repeated full-speed shots without breaking down. Setup takes 5 minutes — no tools required. It has a target circle in the center for aim practice. Has survived 2+ years of regular use in testing.',
-        pros: ['10x7 feet — large enough for off-center shots', '7-layer impact barrier for durability', '5-minute setup, no tools', 'Freestanding — no wall mounting required'],
-        cons: ['Does not provide shot feedback without a launch monitor', 'Not rated for sand wedge shots at close range (the sand can damage the net)'],
         price: '~$199',
         pros: [
           '10x7 feet covers full swing arc including off-center driver shots',
