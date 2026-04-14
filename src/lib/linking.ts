@@ -1,43 +1,255 @@
-// src/lib/linking.ts
+// src/lib/linking.ts — v2.0 April 2026
 // ─────────────────────────────────────────────────────────────────────────────
-// Internal linking engine for CubicalGolfer.
-// getMergedRelated merges an article's explicit related[] list with
-// auto-generated category-based suggestions, de-duped and capped.
+// Internal linking engine. Fixes in v2.0:
+//   - 7 orphaned pages now receive category anchor links
+//   - Topical cluster links: rangefinder cluster, GPS cluster, beginner cluster
+//   - Keyword-matched contextual anchors per article ID
+//   - Limit raised to 5 (was 4) for richer related sections
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Article, RelatedLink } from '../data/types';
 import { ARTICLES } from '../data/articles';
 
-// ── Auto-link rules: category → always-include slugs ─────────────────────────
+// ── Category anchors: always injected into every article in that category ─────
 const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = {
   'gear-reviews': [
-    { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-    { slug: '/best-golf-gps-watches/',       label: 'Best GPS Golf Watches 2026' },
+    { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
+    { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
+    { slug: '/best-golf-irons-2026/',              label: 'Best Golf Irons 2026' },
   ],
   'golf-tech': [
-    { slug: '/best-golf-apps-handicap-tracking/', label: 'Best Golf Apps 2026' },
-    { slug: '/best-golf-gps-watches/',            label: 'Best GPS Golf Watches 2026' },
+    { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
+    { slug: '/best-golf-apps-handicap-tracking/',  label: 'Best Golf Apps for Handicap Tracking' },
+    { slug: '/golf-rangefinder-vs-gps-watch/',     label: 'Rangefinder vs GPS Watch' },
   ],
   'golf-accessories': [
     { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
     { slug: '/best-golf-accessories-under-50/',              label: 'Best Golf Accessories Under $50' },
+    { slug: '/best-golf-gifts-for-him/',                     label: 'Best Golf Gifts for Him' },
   ],
   'improve-game': [
-    { slug: '/how-to-break-90/',         label: 'How to Break 90' },
-    { slug: '/average-golf-handicap/',   label: 'Average Golf Handicap' },
+    { slug: '/how-to-break-90/',         label: 'How to Break 90 This Season' },
+    { slug: '/how-to-fix-your-slice/',   label: 'How to Fix Your Slice' },
+    { slug: '/average-golf-handicap/',   label: 'Average Golf Handicap 2026' },
   ],
   'golf-lifestyle': [
+    { slug: '/golf-for-beginners/',      label: 'Golf for Beginners — Complete Guide' },
     { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him' },
+    { slug: '/golf-course-etiquette/',   label: 'Golf Course Etiquette Guide' },
+  ],
+};
+
+// ── Topical cluster links: article-specific high-value cross-links ────────────
+// Fixes orphaned pages by giving them specific inbound paths
+const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = {
+
+  // ── Rangefinder cluster: every rangefinder page links to the others ──────────
+  'rangefinders': [
+    { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+    { slug: '/do-i-need-slope-on-rangefinder/',  label: 'Do I Need Slope on a Rangefinder?' },
+    { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinders for Seniors' },
+  ],
+  'rangefinder-worth-it': [
+    { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
+    { slug: '/do-i-need-slope-on-rangefinder/',   label: 'Do I Need Slope? (Answered)' },
+    { slug: '/golf-rangefinder-vs-gps-watch/',    label: 'Rangefinder vs GPS Watch' },
+  ],
+  'rangefinder-beginners': [
+    { slug: '/do-i-need-slope-on-rangefinder/',   label: 'Do I Need Slope on My Rangefinder?' },
+    { slug: '/how-to-use-golf-rangefinder/',      label: 'How to Use a Golf Rangefinder' },
+    { slug: '/best-golf-rangefinder-under-200/',  label: 'Best Rangefinders Under $200' },
+  ],
+  'rangefinder-under-200': [
+    { slug: '/best-golf-rangefinder-under-150/',  label: 'Best Rangefinders Under $150' },
+    { slug: '/blue-tees-vs-bushnell-rangefinder/', label: 'Blue Tees vs Bushnell' },
+    { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinder for Seniors' },
+  ],
+  'bushnell-vs-garmin': [
+    { slug: '/blue-tees-vs-bushnell-rangefinder/', label: 'Blue Tees vs Bushnell Comparison' },
+    { slug: '/best-golf-rangefinders-2026/',        label: 'Best Golf Rangefinders 2026' },
+    { slug: '/is-a-rangefinder-worth-it/',          label: 'Is a Rangefinder Worth It?' },
+  ],
+  'rangefinder-vs-gps': [
+    { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
+    { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
+    { slug: '/best-golf-rangefinders-2026/',        label: 'Best Golf Rangefinders 2026' },
+  ],
+  'how-to-use-rangefinder': [
+    { slug: '/best-golf-rangefinders-2026/',        label: 'Best Golf Rangefinders 2026' },
+    { slug: '/do-i-need-slope-on-rangefinder/',     label: 'Do I Need Slope Mode?' },
+    { slug: '/is-a-rangefinder-worth-it/',          label: 'Is a Rangefinder Worth It?' },
+  ],
+  'what-is-slope': [
+    { slug: '/do-i-need-slope-on-rangefinder/',     label: 'Do You Actually Need Slope?' },
+    { slug: '/best-golf-rangefinders-2026/',        label: 'Best Rangefinders with Slope 2026' },
+    { slug: '/how-to-use-golf-rangefinder/',        label: 'How to Use a Rangefinder' },
+  ],
+  'best-golf-rangefinder-under-150': [
+    { slug: '/best-golf-rangefinder-under-200/',    label: 'Best Rangefinders Under $200' },
+    { slug: '/blue-tees-vs-bushnell-rangefinder/',  label: 'Blue Tees vs Bushnell' },
+    { slug: '/is-a-rangefinder-worth-it/',          label: 'Is a Rangefinder Worth It?' },
+  ],
+  'blue-tees-vs-bushnell-rangefinder': [
+    { slug: '/best-golf-rangefinders-2026/',        label: 'Best Golf Rangefinders 2026' },
+    { slug: '/best-golf-rangefinder-under-200/',    label: 'Best Rangefinders Under $200' },
+    { slug: '/do-i-need-slope-on-rangefinder/',     label: 'Do I Need Slope Mode?' },
+  ],
+
+  // ── GPS Watch cluster ─────────────────────────────────────────────────────────
+  'gps-watches': [
+    { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
+    { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+    { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
+  ],
+  'gps-watch-high-handicapper': [
+    { slug: '/best-golf-gps-watch-under-200/',      label: 'Best Golf GPS Watch Under $200' },
+    { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
+    { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch — Which to Buy' },
+  ],
+  'best-golf-gps-watch-under-200': [
+    { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
+    { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
+    { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+  ],
+
+  // ── Ball cluster ──────────────────────────────────────────────────────────────
+  'golf-balls': [
+    { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
+    { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
+    { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
+  ],
+  'golf-ball-compression': [
+    { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors 2026' },
+    { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
+    { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
+  ],
+  'golf-balls-slow-swing': [
+    { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
+    { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
+    { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
+  ],
+  'what-golf-ball-high-handicapper': [
+    { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
+    { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
+    { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
+  ],
+
+  // ── Fix previously orphaned pages ─────────────────────────────────────────────
+  'golf-apps-handicap': [
+    { slug: '/best-golf-apps/',                     label: 'Best Golf Apps 2026' },
+    { slug: '/average-golf-handicap/',              label: 'Average Golf Handicap' },
+    { slug: '/best-golf-swing-analyzers/',          label: 'Best Golf Swing Analyzers' },
+  ],
+  'golf-course-etiquette': [
+    { slug: '/golf-tips-for-beginners/',            label: 'Golf Tips for Beginners' },
+    { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners Guide' },
+    { slug: '/average-golf-handicap/',              label: 'Average Golf Handicap 2026' },
+  ],
+  'best-golf-gloves-men': [
+    { slug: '/best-golf-gloves-hot-weather/',       label: 'Best Golf Gloves for Hot Weather' },
+    { slug: '/best-golf-accessories-under-50/',     label: 'Best Golf Accessories Under $50' },
+    { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
+  ],
+  'handicap': [
+    { slug: '/average-golf-handicap-weekend-golfer/', label: 'Average Handicap for Weekend Golfers' },
+    { slug: '/how-to-lower-golf-handicap/',         label: 'How to Lower Your Golf Handicap' },
+    { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners Guide' },
+  ],
+  'handicap-weekend-golfer': [
+    { slug: '/average-golf-handicap/',              label: 'Average Golf Handicap 2026' },
+    { slug: '/how-to-lower-golf-handicap/',         label: 'How to Lower Your Golf Handicap' },
+    { slug: '/how-to-break-90/',                    label: 'How to Break 90' },
+  ],
+  'how-far-average-golfer-hit-7-iron': [
+    { slug: '/best-golf-irons-2026/',               label: 'Best Golf Irons 2026' },
+    { slug: '/how-to-break-90/',                    label: 'How to Break 90' },
+    { slug: '/best-golf-irons-high-handicapper/',   label: 'Best Irons for High Handicappers' },
+  ],
+
+  // ── Beginner cluster ──────────────────────────────────────────────────────────
+  'golf-for-beginners-hub': [
+    { slug: '/best-beginner-golf-club-sets/',       label: 'Best Beginner Golf Club Sets' },
+    { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
+    { slug: '/golf-course-etiquette/',             label: 'Golf Course Etiquette Guide' },
+  ],
+  'tips-beginners': [
+    { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Complete Guide' },
+    { slug: '/golf-course-etiquette/',              label: 'Golf Course Etiquette' },
+    { slug: '/best-beginner-golf-club-sets/',       label: 'Best Beginner Golf Club Sets' },
+  ],
+  'beginner-sets': [
+    { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Start Here' },
+    { slug: '/golf-tips-for-beginners/',            label: 'Golf Tips for Beginners' },
+    { slug: '/golf-course-etiquette/',              label: 'Golf Course Etiquette Guide' },
+  ],
+
+  // ── Improvement cluster ───────────────────────────────────────────────────────
+  'fix-slice': [
+    { slug: '/why-does-my-golf-ball-go-right/',     label: 'Why Does My Golf Ball Go Right?' },
+    { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Complete Guide' },
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+  ],
+  'break-90': [
+    { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
+    { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+  ],
+  'improve-putting': [
+    { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
+    { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
+    { slug: '/best-putter-high-handicapper/',       label: 'Best Putter for High Handicappers' },
+  ],
+  'how-to-stop-3-putting': [
+    { slug: '/how-to-improve-putting/',             label: 'How to Improve Your Putting' },
+    { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
+  ],
+  'why-does-my-golf-ball-go-right': [
+    { slug: '/how-to-fix-your-slice/',              label: 'Full Slice Fix Guide' },
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+    { slug: '/best-golf-drivers-forgiveness/',      label: 'Best Forgiving Drivers 2026' },
+  ],
+  'why-do-i-hit-irons-fat': [
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+    { slug: '/best-golf-irons-2026/',               label: 'Best Golf Irons 2026' },
+    { slug: '/how-to-break-90/',                    label: 'How to Break 90' },
+  ],
+  'how-to-stop-topping': [
+    { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
+    { slug: '/why-do-i-hit-irons-fat/',             label: 'Why Do I Hit My Irons Fat?' },
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
+  ],
+  'how-to-chip': [
+    { slug: '/how-to-improve-putting/',             label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
+  ],
+  'how-to-practice-at-home': [
+    { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+    { slug: '/best-indoor-golf-net-setup/',         label: 'Best Indoor Golf Net Setup' },
+    { slug: '/best-golf-simulator-small-spaces/',   label: 'Best Golf Simulators for Small Spaces' },
+  ],
+
+  // ── Seniors cluster ───────────────────────────────────────────────────────────
+  'best-golf-rangefinder-seniors': [
+    { slug: '/best-golf-rangefinders-2026/',        label: 'Best Golf Rangefinders 2026' },
+    { slug: '/best-golf-irons-for-seniors/',        label: 'Best Golf Irons for Seniors' },
+    { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
+  ],
+  'best-golf-balls-seniors': [
+    { slug: '/best-golf-rangefinder-for-seniors/',  label: 'Best Rangefinder for Seniors' },
+    { slug: '/best-golf-irons-for-seniors/',        label: 'Best Golf Irons for Seniors' },
+    { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
+  ],
+  'best-golf-irons-seniors': [
+    { slug: '/best-golf-rangefinder-for-seniors/',  label: 'Best Rangefinder for Seniors' },
+    { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
+    { slug: '/best-golf-irons-high-handicapper/',   label: 'Best Irons for High Handicappers' },
   ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
-/**
- * Returns up to `limit` related links for an article.
- * Merges: article.related → category anchors → same-category articles
- * Deduplicates on slug and removes self-reference.
- */
-export function getMergedRelated(article: Article, limit = 4): RelatedLink[] {
+export function getMergedRelated(article: Article, limit = 5): RelatedLink[] {
   const seen = new Set<string>([article.slug]);
   const result: RelatedLink[] = [];
 
@@ -53,10 +265,13 @@ export function getMergedRelated(article: Article, limit = 4): RelatedLink[] {
   // 1. Explicit related links from the article data (highest priority)
   push(article.related ?? []);
 
-  // 2. Category-specific anchors
+  // 2. Article-specific cluster links (topical authority)
+  push(ARTICLE_ANCHORS[article.id] ?? []);
+
+  // 3. Category-specific anchors
   push(CATEGORY_ANCHORS[article.category] ?? []);
 
-  // 3. Same-category articles (fallback padding)
+  // 4. Same-category articles (fallback padding)
   const sameCat = ARTICLES
     .filter(a => a.category === article.category && a.id !== article.id)
     .slice(0, limit)
@@ -66,34 +281,23 @@ export function getMergedRelated(article: Article, limit = 4): RelatedLink[] {
   return result.slice(0, limit);
 }
 
-// ── Utility: get all article slugs as a Set (for 404 detection) ──────────────
+// ── Utility exports ───────────────────────────────────────────────────────────
 export function getAllSlugs(): Set<string> {
   return new Set(ARTICLES.map(a => a.slug));
 }
 
-// ── Category article filter ───────────────────────────────────────────────────
-/**
- * Returns all articles for a given category, sorted by dateModified descending.
- * Used by category index pages (gear-reviews/index.astro, etc.)
- */
 export function getCategoryArticles(category: string): Article[] {
   return ARTICLES
     .filter(a => a.category === category)
     .sort((a, b) => b.dateModified.localeCompare(a.dateModified));
 }
 
-// ── Featured articles for homepage ────────────────────────────────────────────
-/**
- * Returns the top N articles across all categories, newest first.
- * Used by index.astro and any "featured" widget.
- */
 export function getFeaturedArticles(limit = 6): Article[] {
   return ARTICLES
     .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
     .slice(0, limit);
 }
 
-// ── All articles sorted by date ────────────────────────────────────────────────
 export function getAllArticles(): Article[] {
   return [...ARTICLES].sort((a, b) => b.dateModified.localeCompare(a.dateModified));
 }

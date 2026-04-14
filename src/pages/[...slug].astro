@@ -7,7 +7,7 @@ import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
-import { articleSchema, faqSchema, breadcrumbSchema } from '../lib/schema';
+import { articleSchema, faqSchema, breadcrumbSchema, howToSchema } from '../lib/schema';
 import { getMergedRelated } from '../lib/linking';
 import { getAffiliateLink } from '../data/affiliate-links';
 import type { Article } from '../data/types';
@@ -31,6 +31,14 @@ const schemas: object[] = [
 ];
 if (article.faq && article.faq.length > 0) {
   schemas.push(faqSchema(article.faq));
+}
+if (article.pageType === 'tutorial' && article.toc && article.toc.length > 0) {
+  schemas.push(howToSchema({
+    name:        article.titleDisplay,
+    description: article.description,
+    url:         `https://www.cubicalgolfer.com${article.slug}`,
+    steps:       article.toc,
+  }));
 }
 
 const TAG_CLASS: Record<string, string> = {

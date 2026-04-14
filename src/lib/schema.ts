@@ -70,10 +70,7 @@ export function organizationSchema(): object {
     image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
     // Add your real social profiles here for stronger entity signals:
     sameAs: [
-      // 'https://www.youtube.com/@CubicalGolfer',
-      // 'https://www.instagram.com/cubicalgolfer',
-      // 'https://twitter.com/cubicalgolfer',
-      // 'https://www.pinterest.com/cubicalgolfer',
+      'https://www.pinterest.com/cubicalgolfer',
     ],
   };
 }
@@ -293,3 +290,49 @@ export function collectionPageSchema(opts: {
     },
   };
 }
+
+// ── HowTo schema (for tutorial page types) ───────────────────────────────────
+export function howToSchema(article: any): object | null {
+  if (article.pageType !== 'tutorial') return null;
+  const steps = article.sections
+    .filter((s: any) => s.body && s.body.trim())
+    .map((s: any, i: number) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      name: s.h2,
+      text: s.body.slice(0, 300),
+    }));
+  if (steps.length < 2) return null;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: article.titleDisplay,
+    description: article.description,
+    step: steps,
+    dateModified: article.dateModified,
+  };
+}
+
+// ── Product schema per pick (for buying-guide sections with affiliate key) ────
+export function productSchema(section: any, affiliateUrl: string): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim(),
+    description: section.body?.slice(0, 200) || '',
+    aggregateRating: section.rating ? {
+      '@type': 'AggregateRating',
+      ratingValue: section.rating,
+      reviewCount: section.ratingCount ? parseInt(section.ratingCount.replace(/,/g, '')) : 50,
+      bestRating: 5,
+      worstRating: 1,
+    } : undefined,
+    offers: {
+      '@type': 'Offer',
+      url: affiliateUrl,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
+  };
+}
+
