@@ -50,7 +50,7 @@ if (!url || !imgSrc) return;
     <div class="product-card__img-wrap">
       <img src={imgSrc} alt={imgAlt ?? name} width="280" height="200"
            loading="lazy" decoding="async" class="product-card__img"
-           onerror="this.src='/images/products/placeholder.svg'" />
+           onerror="this.src='/images/products/placeholder.webp'" />
       <div class="product-card__img-fallback" aria-hidden="true" style="display:none">
         <span style="font-size:56px">{emoji}</span>
       </div>
