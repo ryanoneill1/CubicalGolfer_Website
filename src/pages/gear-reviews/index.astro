@@ -9,7 +9,12 @@ const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat, articles.length);
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
-  collectionPageSchema('Golf Gear Reviews', 'gear-reviews', meta.description, articles.length),
+  collectionPageSchema({
+    title:       'Golf Gear Reviews',
+    description: meta.description,
+    url:         meta.canonical,
+    articles:    articles,
+  }),
 ];
 
 const TAG_CLASS: Record<string, string> = {
