@@ -1,303 +1,125 @@
 ---
 // src/pages/courses/[city].astro
-// Generates: /courses/chicago-il/, /courses/phoenix-az/, etc.
-// These target "best golf courses in [city]" searches (500–5,000/mo each).
-// At 8 cities now → scales to all 50+ major metros by adding rows to cities.ts
+// Programmatic local SEO page for each golf city.
 
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { CITIES } from '../../data/cities';
+import BaseLayout  from '../../layouts/BaseLayout.astro';
+import { CITIES }  from '../../data/cities';
 import { cityMeta } from '../../lib/seo';
 import { cityPageSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 import type { GolfCity } from '../../data/types';
-import { getAffiliateLink } from '../../data/affiliate-links';
-
-// Top gear picks for golf trips
-const rangefinder = getAffiliateLink('precision-pro-nx9-hd');
-const gpsWatch    = getAffiliateLink('garmin-approach-s42');
-const bestRanger  = getAffiliateLink('bushnell-tour-v6-shift');
 
 export async function getStaticPaths() {
   return CITIES.map(city => ({
     params: { city: city.slug },
-    props: { city },
+    props:  { city },
   }));
 }
 
 interface Props { city: GolfCity }
 const { city } = Astro.props;
 
-const meta = cityMeta(city);
-const schemas: object[] = [
-  cityPageSchema(city),
+const meta     = cityMeta(city);
+const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
-  faqSchema([
-    {
-      q: `What are the best public golf courses in ${city.city}?`,
-      a: `The best public golf courses in ${city.city} include: ${city.courses.filter(c => c.type === 'public').slice(0,3).map(c => c.name).join(', ')}. These offer the best combination of course quality, conditions, and value for weekend golfers.`,
-    },
-    {
-      q: `What is the best time of year to play golf in ${city.city}?`,
-      a: `The best golf season in ${city.city} is ${city.bestSeason}. ${city.bestSeason.includes('year') ? 'The mild climate allows year-round play.' : 'Outside of this window, weather can significantly impact your round.'}`,
-    },
-    {
-      q: `How much does it cost to play golf in ${city.city}?`,
-      a: `Public golf in ${city.city} ranges from $20–$200 depending on the course and time of day. Municipal courses typically run $20–$55. Semi-private and resort courses range from $60–$200. Twilight rates (after 3pm) can reduce costs by 30–50%.`,
-    },
-  ]),
+  cityPageSchema(city),
 ];
 
-const PUBLIC    = city.courses.filter(c => c.type === 'public');
-const SEMI_PRI  = city.courses.filter(c => c.type === 'semi-private');
-const RESORT    = city.courses.filter(c => c.type === 'resort');
+const TYPE_BADGE: Record<string, string> = {
+  'public':       '🟢 Public',
+  'semi-private': '🔵 Semi-Private',
+  'resort':       '🟡 Resort',
+};
 ---
 
-<BaseLayout {meta} {schemas} activeNav="courses">
+<BaseLayout {meta} {schemas} activeNav="home">
 
-  {/* Sticky bar — rangefinder recommendation */}
-  <div class="sticky-bar" id="sticky-bar" aria-label="Gear recommendation" role="complementary">
-    <div class="sticky-bar__inner">
-      <div class="sticky-bar__label">
-        <span class="sticky-bar__badge">TRIP ESSENTIAL</span>
-        <span class="sticky-bar__name">Precision Pro NX9 HD Rangefinder</span>
-      </div>
-      <div class="sticky-bar__right">
-        <span class="sticky-bar__price">{rangefinder.price}</span>
-        <a href={rangefinder.url} class="sticky-bar__btn" target="_blank" rel="nofollow noopener sponsored">
-          See Current Price →
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const csBar = document.getElementById('sticky-bar');
-    if (csBar) {
-      const onS = () => {
-        const y = window.scrollY, dh = document.body.scrollHeight, wh = window.innerHeight;
-        csBar.style.opacity = (y > 400 && y < dh - wh - 200) ? '1' : '0';
-        csBar.style.pointerEvents = (y > 400 && y < dh - wh - 200) ? 'auto' : 'none';
-      };
-      window.addEventListener('scroll', onS, { passive: true });
-    }
-  </script>
-
-  <header class="local-hero">
+  <header class="art-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="bc-sep" aria-hidden="true">›</span>
-      <a href="/courses/">Golf Courses</a>
+      <a href="/courses/">Golf Courses by City</a>
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">{city.city}, {city.state}</span>
     </nav>
-    <span class="art-tag-lg tag-life">LOCAL GUIDE</span>
-    <h1>Best Golf Courses in {city.city}, {city.state} (2026)</h1>
-  </header>
-
-  <div class="local-body">
-
-    <!-- ── Author Box — white content area ── -->
+    <span class="art-tag-lg tag-rev">COURSE GUIDE</span>
+    <h1>Best Golf Courses in {city.city}, {city.state} (2026 Guide)</h1>
     <div class="author-box">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
+      <a href="/about/" style="flex-shrink:0" aria-label="About Cubical Golfer">
+        <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
+      </a>
       <div style="flex:1">
-        <span class="author-name"><a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a></span>
+        <span class="author-name">
+          <a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · low-teens hdcp</span>
+        </span>
         <span class="author-meta">
-          ⛳ {city.courses.length} courses reviewed &nbsp;·&nbsp;
-          📅 Last updated: {city.dateModified} &nbsp;·&nbsp;
-          ✈️ Nearest airport: {city.nearbyAirport}
+          📅 Updated: {city.dateModified} &nbsp;·&nbsp;
+          ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
         </span>
       </div>
-      <span class="verified-badge">✅ Local Golf Guide</span>
+      <span class="verified-badge">✅ Independently Reviewed</span>
     </div>
+  </header>
 
-    <!-- ── Gear for your golf trip ── -->
-    <div style="overflow-x:auto;margin:0 0 32px">
-      <table class="cmp-table" style="width:100%;border-collapse:collapse;">
-        <caption style="text-align:left;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:8px">Essential Gear for Your {city.city} Golf Trip</caption>
-        <thead>
-          <tr>
-            <th style="text-align:left;padding:10px 12px;background:var(--green);color:#fff;border-radius:8px 0 0 0;font-size:13px">Product</th>
-            <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;font-size:13px">Price</th>
-            <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;font-size:13px">Why You Need It</th>
-            <th style="text-align:center;padding:10px 12px;background:var(--green);color:#fff;border-radius:0 8px 0 0;font-size:13px">Buy</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="background:#f9f6ef">
-            <td style="padding:10px 12px;font-weight:700;font-size:13px">Precision Pro NX9 HD Rangefinder</td>
-            <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{rangefinder.price}</td>
-            <td style="padding:10px 12px;text-align:center;font-size:12px">Exact yardages on unfamiliar courses</td>
-            <td style="padding:10px 12px;text-align:center">
-              <a href={rangefinder.url} class="product-card__cta" style="display:inline-block;padding:7px 13px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">Buy Now →</a>
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:10px 12px;font-weight:700;font-size:13px">Garmin Approach S42 GPS Watch</td>
-            <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{gpsWatch.price}</td>
-            <td style="padding:10px 12px;text-align:center;font-size:12px">Course maps + hazard distances</td>
-            <td style="padding:10px 12px;text-align:center">
-              <a href={gpsWatch.url} class="product-card__cta" style="display:inline-block;padding:7px 13px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">Buy Now →</a>
-            </td>
-          </tr>
-          <tr style="background:#f9f6ef">
-            <td style="padding:10px 12px;font-weight:700;font-size:13px">Bushnell Tour V6 Shift</td>
-            <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green)">{bestRanger.price}</td>
-            <td style="padding:10px 12px;text-align:center;font-size:12px">Best-in-class for bucket-list rounds</td>
-            <td style="padding:10px 12px;text-align:center">
-              <a href={bestRanger.url} class="product-card__cta" style="display:inline-block;padding:7px 13px;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;background:var(--gold);color:#1a1a1a" target="_blank" rel="nofollow noopener sponsored">Buy Now →</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <article class="art-content">
 
-    <div class="intro-box">
-      <p>{city.intro}</p>
-    </div>
+    <div class="intro-box"><p>{city.intro}</p></div>
 
-    <!-- Quick stats row -->
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:36px;">
-      <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;">
-        <strong style="font-size:28px;display:block;color:var(--green)">{city.courses.length}</strong>
-        <span style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em">Courses Reviewed</span>
-      </div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;">
-        <strong style="font-size:16px;display:block;color:var(--green)">{city.bestSeason}</strong>
-        <span style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em">Best Season</span>
-      </div>
-      <div style="background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center;">
-        <strong style="font-size:14px;display:block;color:var(--green)">{city.nearbyAirport}</strong>
-        <span style="font-size:12px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.08em">Nearest Airport</span>
-      </div>
-    </div>
-
-    <!-- Public courses -->
-    {PUBLIC.length > 0 && (
-      <section aria-labelledby="public-h">
-        <h2 id="public-h" style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--text);">
-          🟢 Public Golf Courses in {city.city}
-        </h2>
-        {PUBLIC.map(course => (
-          <div class="course-card">
-            <h3>{course.name}</h3>
-            <div class="course-meta">
-              <span class="course-type">🏌️ {course.type}</span>
-              <span>💰 {course.price}</span>
-              <span>⛳ {course.holes} holes</span>
-              {course.rating && <span>📊 Rating: {course.rating}</span>}
-            </div>
-            <p class="course-notes">{course.notes}</p>
-          </div>
-        ))}
-      </section>
-    )}
-
-    <!-- Semi-private courses -->
-    {SEMI_PRI.length > 0 && (
-      <section aria-labelledby="semi-h" style="margin-top:40px">
-        <h2 id="semi-h" style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--text);">
-          🔵 Semi-Private Courses Near {city.city}
-        </h2>
-        {SEMI_PRI.map(course => (
-          <div class="course-card">
-            <h3>{course.name}</h3>
-            <div class="course-meta">
-              <span class="course-type">🏌️ {course.type}</span>
-              <span>💰 {course.price}</span>
-              <span>⛳ {course.holes} holes</span>
-              {course.rating && <span>📊 Rating: {course.rating}</span>}
-            </div>
-            <p class="course-notes">{course.notes}</p>
-          </div>
-        ))}
-      </section>
-    )}
-
-    <!-- Resort courses -->
-    {RESORT.length > 0 && (
-      <section aria-labelledby="resort-h" style="margin-top:40px">
-        <h2 id="resort-h" style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--text);">
-          ⭐ Resort Golf Near {city.city}
-        </h2>
-        {RESORT.map(course => (
-          <div class="course-card">
-            <h3>{course.name}</h3>
-            <div class="course-meta">
-              <span class="course-type">🏌️ {course.type}</span>
-              <span>💰 {course.price}</span>
-              <span>⛳ {course.holes} holes</span>
-              {course.rating && <span>📊 Rating: {course.rating}</span>}
-            </div>
-            <p class="course-notes">{course.notes}</p>
-          </div>
-        ))}
-      </section>
-    )}
-
-    <!-- FAQ — HTML only, schema in JSON-LD <head> -->
-    <div class="art-faq" style="margin-top:48px">
-      <h3>Frequently Asked Questions</h3>
-      <details class="faq-item">
-        <summary>What are the best public golf courses in {city.city}?</summary>
-        <div class="faq-answer">
-          The best public golf courses in {city.city} include:
-          {PUBLIC.slice(0,3).map((c,i) => <span>{i > 0 ? ', ' : ''}{c.name}</span>)}.
-          All offer excellent conditions and value for weekend golfers.
+    <!-- Quick stats strip -->
+    <div class="verdict-quick" style="margin-bottom:32px">
+      <p class="verdict-quick-title">⚡ {city.city} Golf at a Glance</p>
+      <div class="verdict-quick-picks">
+        <div class="verdict-pick">
+          <span class="verdict-pick-label">Best Season</span>
+          <span class="verdict-pick-name">{city.bestSeason}</span>
         </div>
-      </details>
-      <details class="faq-item">
-        <summary>What is the best time of year to play golf in {city.city}?</summary>
-        <div class="faq-answer">
-          The best golf season in {city.city} is {city.bestSeason}.
-          Plan tee times in advance during peak months — popular courses book up
-          2–4 weeks ahead.
+        <div class="verdict-pick">
+          <span class="verdict-pick-label">Nearest Airport</span>
+          <span class="verdict-pick-name">{city.nearbyAirport}</span>
         </div>
-      </details>
-      <details class="faq-item">
-        <summary>How much does it cost to play golf in {city.city}?</summary>
-        <div class="faq-answer">
-          Public golf in {city.city} ranges from $20–$200 depending on the course and tee time.
-          Municipal courses run $20–$55. Semi-private courses $60–$150.
-          Twilight rates after 3pm can cut peak pricing by 30–50%.
+        <div class="verdict-pick verdict-pick--winner">
+          <span class="verdict-pick-label">Courses Listed</span>
+          <span class="verdict-pick-name">{city.courses.length} courses</span>
         </div>
-      </details>
-    </div>
-
-    <!-- Final Recommendation -->
-    <div class="verdict-box" style="margin:40px 0 32px">
-      <h2 style="font-size:20px;font-weight:800;color:var(--green);margin-bottom:12px">
-        🏁 Final Recommendation — Gear for Your {city.city} Golf Trip
-      </h2>
-      <p style="font-size:15px;line-height:1.65;margin-bottom:16px">
-        On an unfamiliar course, the right gear matters more than anywhere else.
-        A rangefinder gives you exact pin distances every shot — the <strong>Precision Pro NX9 HD (~$169)</strong> is the best value pick with a lifetime warranty.
-        For course maps and hazard distances on your wrist, the <strong>Garmin Approach S42 (~$249)</strong> covers 42,000+ courses worldwide.
-        Bring three fresh gloves for a two-day trip — <strong>FootJoy WeatherSof (~$18/pair)</strong> handles any weather.
-      </p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href={rangefinder.url} class="product-card__cta"
-           style="display:inline-flex;align-items:center;padding:11px 20px;background:var(--gold);color:#1a1a1a;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px"
-           target="_blank" rel="nofollow noopener sponsored">
-          Precision Pro NX9 HD — {rangefinder.price} →
-        </a>
-        <a href={gpsWatch.url} class="product-card__cta"
-           style="display:inline-flex;align-items:center;padding:11px 20px;background:var(--green);color:#fff;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px"
-           target="_blank" rel="nofollow noopener sponsored">
-          Garmin S42 — {gpsWatch.price} →
-        </a>
       </div>
     </div>
 
-    <!-- Internal links -->
-    <div class="rel-cluster" style="margin-top:36px">
-      <h4>Related Golf Guides</h4>
+    <!-- Course cards -->
+    {city.courses.map((course, idx) => (
+      <div class="art-section">
+        <h2>{course.name}</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center">
+          <span class="badge-pill">{TYPE_BADGE[course.type] ?? course.type}</span>
+          <span class="badge-pill">{course.holes} holes</span>
+          <span class="badge-pill" style="background:var(--gold);color:#1a1a1a">{course.price}</span>
+          {course.rating && <span class="badge-pill">Rating: {course.rating}</span>}
+        </div>
+        <p>{course.notes}</p>
+      </div>
+    ))}
+
+    <!-- Gear for your round -->
+    <div class="art-section" style="background:var(--cream-dark);border-radius:12px;padding:28px;margin-top:40px">
+      <h2 style="margin-top:0">Gear for Your {city.city} Round</h2>
+      <p>Whatever course you choose, the right gear makes a difference. These are our tested picks for weekend golfers:</p>
+      <div class="rel-links" style="margin-top:16px">
+        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026 →</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches 2026 →</a>
+        <a href="/best-golf-balls-2026/">Best Golf Balls 2026 →</a>
+        <a href="/best-golf-bags-2026/">Best Golf Bags 2026 →</a>
+      </div>
+    </div>
+
+    <div class="rel-cluster" style="margin-top:40px">
+      <h3>More City Guides</h3>
       <div class="rel-links">
-        <a href="/courses/">Golf Courses in Other US Cities →</a>
-        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders for Your Round</a>
-        <a href="/best-golf-gps-watches/">Best Golf GPS Watches 2026</a>
-        <a href="/how-to-break-90/">How to Break 90 This Season</a>
+        {CITIES.filter(c => c.slug !== city.slug).slice(0, 4).map(c => (
+          <a href={`/courses/${c.slug}/`}>{c.city}, {c.state} Golf Courses →</a>
+        ))}
+        <a href="/courses/">All City Golf Guides →</a>
       </div>
     </div>
 
-  </div>
+  </article>
 
 </BaseLayout>

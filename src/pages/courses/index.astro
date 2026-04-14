@@ -1,46 +1,40 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { CITIES } from '../../data/cities';
+// src/pages/courses/index.astro
+import BaseLayout  from '../../layouts/BaseLayout.astro';
+import { CITIES }  from '../../data/cities';
+import { coursesMeta } from '../../lib/seo';
 import { breadcrumbSchema } from '../../lib/schema';
 
-const meta = {
-  title: 'Best Golf Courses by City 2026 — Public Golf Near You',
-  description: 'Best public and semi-private golf courses in Chicago, Atlanta, Dallas, Phoenix, New York, LA, Houston & Miami. Prices, ratings and local tips for 2026.',
-  canonical: 'https://www.cubicalgolfer.com/courses/',
-  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
-  ogType: 'website' as const,
-  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
-  breadcrumbs: [
-    { label: 'Home', href: '/' },
-    { label: 'Golf Courses', href: '/courses/' },
-  ],
-};
-const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const meta     = coursesMeta();
+const schemas  = [breadcrumbSchema(meta.breadcrumbs)];
 ---
 
-<BaseLayout {meta} {schemas} activeNav="courses">
+<BaseLayout {meta} {schemas} activeNav="home">
 
-  <header class="local-hero">
+  <header class="cat-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">Golf Courses by City</span>
     </nav>
-    <h1>Best Golf Courses Near You</h1>
-    <p>The best public and semi-private golf courses in major US cities — reviewed by weekend golfers who actually play them.</p>
+    <h1>⛳ Golf Courses by City</h1>
+    <p class="cat-subhead">
+      The best public, semi-private, and resort golf courses in major US cities —
+      reviewed by weekend golfers for weekend golfers.
+    </p>
   </header>
 
   <div class="cat-page-body">
     <div class="articles-grid">
       {CITIES.map(city => (
-        <a href={`/courses/${city.slug}/`} class="article-card">
+        <a href={`/courses/${city.slug}/`} class="article-card" aria-label={`Golf courses in ${city.city}, ${city.state}`}>
           <div class="art-thumb teal">
-            <span class="art-badge tag-life">LOCAL GUIDE</span>
+            <span class="art-badge tag-rev">COURSE GUIDE</span>
             <span aria-hidden="true">⛳</span>
           </div>
           <div class="art-body">
             <h3>Best Golf Courses in {city.city}, {city.state}</h3>
-            <p>{city.courses.length} reviewed courses · Best season: {city.bestSeason}</p>
+            <p>{city.intro.substring(0, 110)}…</p>
             <div class="art-foot">
               <span class="art-words">{city.courses.length} courses · Updated 2026</span>
               <span class="art-read">See courses →</span>
@@ -48,6 +42,17 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
           </div>
         </a>
       ))}
+    </div>
+
+    <div style="margin-top:48px;background:var(--cream-dark);border-radius:12px;padding:28px">
+      <h2 style="margin-top:0">Gear Up Before Your Round</h2>
+      <p>Whatever city you're playing in, the right gear makes the difference. Our tested picks for weekend golfers:</p>
+      <div class="rel-links" style="margin-top:16px">
+        <a href="/best-golf-rangefinders-2026/">Best Rangefinders 2026 →</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches 2026 →</a>
+        <a href="/best-golf-bags-2026/">Best Golf Bags 2026 →</a>
+        <a href="/best-golf-balls-2026/">Best Golf Balls 2026 →</a>
+      </div>
     </div>
   </div>
 

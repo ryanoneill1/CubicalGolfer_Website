@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { breadcrumbSchema, websiteSchema } from '../lib/schema';
-import { ARTICLES } from '../data/articles';
+import { breadcrumbSchema } from '../lib/schema';
 
 const DOMAIN = 'https://www.cubicalgolfer.com';
 
@@ -50,7 +49,7 @@ const schemas = [
 const CATEGORIES = [
   {
     name: 'Rangefinders',
-    icon: '🔭',
+    icon: '??',
     rounds: 12,
     criteria: [
       { label: 'Pin acquisition speed', detail: 'How fast it locks to the flag — timed on 20+ approach shots per round across flat and hilly lies.' },
@@ -88,7 +87,7 @@ const CATEGORIES = [
   },
   {
     name: 'Drivers & Irons',
-    icon: '🏌️',
+    icon: '??️',
     rounds: 10,
     criteria: [
       { label: 'Forgiveness on heel/toe strikes', detail: 'Ball speed loss and directional error on off-centre hits measured across a full bucket at the range, then confirmed on-course.' },
@@ -99,7 +98,7 @@ const CATEGORIES = [
   },
   {
     name: 'Training Aids',
-    icon: '🎯',
+    icon: '??',
     rounds: 4,
     detail: 'Training aids are tested over a 4-week period across practice sessions and rounds, not just on the range.',
     criteria: [
@@ -111,7 +110,7 @@ const CATEGORIES = [
   },
   {
     name: 'Golf Bags & Accessories',
-    icon: '🎒',
+    icon: '??',
     rounds: 8,
     criteria: [
       { label: 'Carry comfort over 18 holes', detail: 'Tested on courses with significant elevation changes, not just flat layouts.' },
@@ -143,12 +142,12 @@ const CATEGORIES = [
   <div class="about-body">
 
     <!-- Principles strip -->
-    <div class="hwt-principles" class="hwt-principles" style="margin-bottom:48px">
+    <div class="hwt-principles" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px">
       {[
-        { icon: '💰', title: 'Self-Funded', body: 'Every product is purchased by us. No manufacturer loans, no review units, no freebies.' },
-        { icon: '🏌️', title: '10+ Rounds Minimum', body: 'No gear gets published after a demo day. We need enough data to know what happens when the round is going badly, not just well.' },
-        { icon: '📊', title: 'Consistent Criteria', body: 'The same evaluation checklist is used for every product in a category, every time. You can compare our reviews directly.' },
-        { icon: '🔄', title: 'Updated on Re-Test', body: 'If we test a newer version or a competitor displaces our pick, the recommendation changes. We do not lock in conclusions.' },
+        { icon: '??', title: 'Self-Funded', body: 'Every product is purchased by us. No manufacturer loans, no review units, no freebies.' },
+        { icon: '??️', title: '10+ Rounds Minimum', body: 'No gear gets published after a demo day. We need enough data to know what happens when the round is going badly, not just well.' },
+        { icon: '??', title: 'Consistent Criteria', body: 'The same evaluation checklist is used for every product in a category, every time. You can compare our reviews directly.' },
+        { icon: '??', title: 'Updated on Re-Test', body: 'If we test a newer version or a competitor displaces our pick, the recommendation changes. We do not lock in conclusions.' },
       ].map(p => (
         <div style="background:var(--cream-dark);border-radius:12px;padding:22px;border-top:3px solid var(--gold)">
           <span style="font-size:28px;display:block;margin-bottom:10px">{p.icon}</span>
@@ -221,7 +220,7 @@ const CATEGORIES = [
             </div>
             <div style="padding:20px 24px">
               {cat.detail && <p style="font-size:14px;color:var(--muted);margin:0 0 16px;font-style:italic">{cat.detail}</p>}
-              <div class="hwt-criteria-grid">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
                 {cat.criteria.map(c => (
                   <div style="background:var(--cream-dark);border-radius:8px;padding:14px">
                     <p style="font-size:13px;font-weight:700;color:var(--text);margin:0 0 4px">{c.label}</p>
@@ -238,7 +237,7 @@ const CATEGORIES = [
     <!-- What we do not do -->
     <section style="margin-bottom:48px">
       <h2>What We Do Not Do</h2>
-      <div class="hwt-donot-grid" style="margin-top:20px">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px">
         {[
           { title: 'Accept manufacturer samples', body: 'We do not accept free gear for review. Products go back to the retailer if they are returned at all. Gear we keep, we paid for.' },
           { title: 'Test on launch monitors only', body: 'Launch monitor data is useful but it is not golf. A rangefinder that reads perfectly indoors can be impossible to aim under on-course pressure. We test where the game is played.' },
@@ -275,12 +274,12 @@ const CATEGORIES = [
         passed on higher-commission products because a lower-commission option was
         genuinely the better recommendation.
       </p>
-      <div class="hwt-stats-grid" style="background:var(--green);border-radius:12px;padding:28px;margin-top:28px;color:#fff;text-align:center">
+      <div style="background:var(--green);border-radius:12px;padding:28px;margin-top:28px;color:#fff;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center">
         {[
           { num: '10+', label: 'rounds per product minimum' },
           { num: '100%', label: 'independently purchased gear' },
           { num: '$0', label: 'in sponsored content ever' },
-          { num: `${ARTICLES.length}+`, label: 'guides independently tested' },
+          { num: '44+', label: 'guides independently tested' },
         ].map(stat => (
           <div>
             <p style="font-size:28px;font-weight:800;margin:0 0 4px;color:var(--gold)">{stat.num}</p>
