@@ -68,18 +68,11 @@ export function organizationSchema(): object {
     foundingDate: '2024',
     slogan: 'Escape the cubicle. Find the fairway.',
     image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
-    // Add your real social profiles here for stronger entity signals:
-    sameAs: [
-      // 'https://www.youtube.com/@CubicalGolfer',
-      // 'https://www.instagram.com/cubicalgolfer',
-      // 'https://twitter.com/cubicalgolfer',
-      // 'https://www.pinterest.com/cubicalgolfer',
-    ],
+    sameAs: [],
   };
 }
 
 // ── Article schema ────────────────────────────────────────────────────────────
-// FIXED: Now includes image field — required by Google for Article rich results
 export function articleSchema(article: Article): object {
   return {
     '@context': 'https://schema.org',
@@ -99,7 +92,6 @@ export function articleSchema(article: Article): object {
       '@id': `${DOMAIN}${article.slug}`,
     },
     url: `${DOMAIN}${article.slug}`,
-    // Use article-specific image if available, otherwise OG image
     image: {
       '@type': 'ImageObject',
       url: article.ogImage || OG_IMAGE,
@@ -211,7 +203,8 @@ export function homeFaqSchema(): object {
     },
   ]);
 }
-// ── Individual product / affiliate review schema ──────────────────────────────
+
+// ── Individual product / affiliate review schema (UPDATED FOR WEBP) ──────────────
 export function productSchema(opts: {
   name:        string;
   description: string;
@@ -225,7 +218,7 @@ export function productSchema(opts: {
     '@type':       'Product',
     name:          opts.name,
     description:   opts.description,
-    image:         opts.image ?? `https://www.cubicalgolfer.com/images/products/placeholder.svg`,
+    image:         opts.image ?? `https://www.cubicalgolfer.com/images/products/placeholder.webp`,
     brand:         opts.brand ? { '@type': 'Brand', name: opts.brand } : undefined,
     offers: {
       '@type':      'Offer',
@@ -266,14 +259,14 @@ export function howWeTestSchema(): object {
   };
 }
 
-// ── Collection / category index page schema (UPDATED + BULLET-PROOF) ────────
+// ── Collection / category index page schema ────────────────────────────────────
 export function collectionPageSchema(opts: {
   title:       string;
   description: string;
   url:         string;
   articles:    Article[];
 }): object {
-  const articles = opts.articles ?? [];   // ← prevents crash if articles is missing
+  const articles = opts.articles ?? [];
 
   return {
     '@context':         'https://schema.org',
