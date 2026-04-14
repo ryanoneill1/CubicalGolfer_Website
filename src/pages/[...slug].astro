@@ -278,13 +278,15 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     {/* TESTING NOTES */}
     {article.testingNotes && (
       <div class="testing-note" role="note">
-        {article.testingNotes} <a href="/how-we-test/">See full testing methodology →</a>
+        {article.testingNotes}
+        <a href="/how-we-test/">See full testing methodology</a>
       </div>
     )}
     {isCommercial && !article.testingNotes && (
       <div class="testing-note" role="note">
         All products on this page were independently purchased and tested across real rounds on actual golf courses.
-        No manufacturer loans. No sponsored placements. <a href="/how-we-test/">See our full testing process →</a>
+        No manufacturer loans. No sponsored placements.
+        <a href="/how-we-test/">See our full testing process</a>
       </div>
     )}
 
