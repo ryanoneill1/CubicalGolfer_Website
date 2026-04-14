@@ -290,8 +290,10 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 
     {/* INDIVIDUAL PRODUCT SECTIONS */}
     {article.sections.map((section, idx) => {
-      const productId = BADGE_TO_PRODUCT[article.id]?.[section.badge || '']
-                     ?? (section as any).affiliateKey ?? '';
+      const sectionAffKey = (section as any).affiliateKey;
+      const productId = (sectionAffKey !== undefined)
+        ? sectionAffKey   // explicit affiliateKey on section takes priority ('' = no product)
+        : (BADGE_TO_PRODUCT[article.id]?.[section.badge || ''] ?? '');
       const aff = productId ? getAffiliateLink(productId) : null;
       return (
         <div class={`art-section${section.badge && isBuyingGuide ? ' has-image' : ''}`}>
@@ -310,8 +312,8 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
             </div>
           )}
 
-          {/* Product image */}
-          {section.badge && isBuyingGuide && (() => {
+          {/* Product image — only shown when a real product key exists */}
+          {section.badge && isBuyingGuide && productId && (() => {
             const sectionImgSrc = aff ? (aff as any).imgSrc : null;
             const sectionImgAlt = aff ? (aff as any).imgAlt ?? section.h2 : section.h2;
             return (
@@ -324,7 +326,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
                   <div class="product-img-fallback">
                     <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
                     <span style="font-size:13px;color:var(--muted);margin-top:8px">
-                      Add image: /public/images/products/{article.id}-{(section.badge ?? '').toLowerCase().replace(/\s+/g,'-')}.webp
+                      Img needed: /public/images/products/{productId}.webp
                     </span>
                   </div>
                 )}

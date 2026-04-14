@@ -663,10 +663,10 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'Best Free Golf App: The Grint', badge: 'BEST FREE', body: "Official USGA handicap, GPS yardages for 40,000+ courses, scoring, and a social feed. Premium tier ($8/month) adds detailed stats but the free version is genuinely excellent.",
         pros: ['Official USGA handicap tracking at no cost', 'GPS yardage on 40,000+ courses without a subscription', 'Clean interface — no bloated features for recreational golfers'],
-        cons: ['GPS less precise than dedicated watch units', 'Shot tracking manual — no automatic logging'], price: 'Free / $8/month premium' },
+        cons: ['GPS less precise than dedicated watch units', 'Shot tracking manual — no automatic logging'], price: 'Free / $8/month premium' , affiliateKey: ''},
       { h2: 'Best All-in-One: 18Birdies', badge: 'BEST ALL-IN-ONE', body: "GPS, scoring, handicap, stat tracking, and a rangefinder mode in one polished app. The best interface in the category.",
         pros: ['GPS, scoring, handicap, stats, and social features in one app', 'Premium tier includes virtual caddie with course strategy', 'Clean design — easiest interface on this list'],
-        cons: ['Full features require premium subscription at $40/year', 'More features than most casual golfers will ever use'], price: 'Free / $10/month premium' },
+        cons: ['Full features require premium subscription at $40/year', 'More features than most casual golfers will ever use'], price: 'Free / $10/month premium' , affiliateKey: ''},
       { h2: 'Best for Stats: Arccos Caddie', badge: 'BEST FOR STATS', body: "The Arccos app is free, but to unlock its full power you need the $179 sensor kit — together they give you strokes gained analysis and AI club recommendations.",
         pros: ['Deepest automatic shot analytics available for recreational golfers', 'AI caddie recommends specific clubs based on your actual tracked distances', 'USGA-integrated handicap tracking'],
         cons: ['Sensors cost $179 upfront plus $99/year subscription', 'Phone must stay in pocket or on cart — disruptive to some golfers'], price: 'Free app / $179 sensors + $99/yr' },
@@ -722,7 +722,7 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'AI Video Coaching: Swing AI', badge: 'BEST AI COACH', body: "Analyzes video from your phone and gives AI-generated tips based on your specific swing faults. Excellent for identifying grip issues, over-the-top moves, and early extension.",
         pros: ['Identifies specific swing faults from phone video — grip, over-the-top, early extension', 'No extra hardware needed beyond your existing phone', 'Affordable at ~$10/month compared to in-person lesson costs'],
-        cons: ['AI feedback less nuanced than a qualified coach on complex mechanics', 'Requires consistent lighting and correct camera angle for reliable analysis'], price: '~$10/month' },
+        cons: ['AI feedback less nuanced than a qualified coach on complex mechanics', 'Requires consistent lighting and correct camera angle for reliable analysis'], price: '~$10/month' , affiliateKey: ''},
       { h2: 'Home Launch Monitor: Rapsodo MLM2PRO', badge: 'BEST LAUNCH DATA', body: "Full launch monitor data — ball speed, club speed, launch angle, spin rate, carry, total, and shot shape — plus video overlay from your phone.",
         pros: ['Full launch data: ball speed, spin, launch angle, carry distance, club path', 'No subscription required for core metrics', 'Works indoors with a net or outdoors on any range'],
         cons: ['Requires specific setup angle and position for accurate readings', 'App data less intuitive for beginners without understanding what the numbers mean'], price: '~$699 + $99/yr Pro' },
@@ -1486,13 +1486,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Leather vs Synthetic — Which Should You Use?', body: "Leather gloves (Cabretta) give better feel and mould to your hand over time. Synthetic gloves last longer, hold up better in heat and humidity, and are cheaper. Most weekend golfers play synthetic. Tour players mostly play Cabretta leather. For everyday play, a quality synthetic like the FootJoy WeatherSof is the practical choice." },
       { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, ratingCount: '12,847', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.",
         pros: ['Best-selling golf glove for a reason — consistent grip in all weather conditions', 'Machine washable construction extends life significantly', 'Available in 20 sizes for a glove that actually fits'],
-        cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' },
+        cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' , affiliateKey: 'footjoy-weathersof-glove'},
       { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
         pros: ['Pure Cabretta leather for tour-level feel and maximum feedback at impact', 'Strategic perforations throughout for breathability in warm weather', 'Snug tour fit holds its shape through the entire round'],
-        cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' },
+        cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' , affiliateKey: 'footjoy-tour-alpha'},
       { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, ratingCount: '2,103', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfibre palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.",
         pros: ['Specifically engineered to grip better when wet — unlike most gloves', 'Works with a wet club grip — no need to dry the grip between shots', 'Two-glove pack provides full hand coverage in sustained rain'],
-        cons: ['Bulkier feel than standard gloves in dry conditions', 'Less breathable in hot weather — designed for wet, not heat'], price: '~$32 (2-pack)' },
+        cons: ['Bulkier feel than standard gloves in dry conditions', 'Less breathable in hot weather — designed for wet, not heat'], price: '~$32 (2-pack)' , affiliateKey: 'footjoy-raingrip'},
       { h2: 'How to Find the Right Golf Glove Size', body: "Wrap a flexible tape measure around your hand at the widest point across the knuckles. Under 7in: Small. 7–7.75in: Medium. 7.75–8.25in: Medium-Large. 8.25–9in: Large. Over 9in: XL. A properly fitted glove should be snug across the palm with no extra material at the fingertips. Too loose = less feel. Too tight = restricts blood flow and causes blisters." },
     ],
     comparisonTable: {
@@ -1548,13 +1548,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Why Budget Drivers Are Actually Great Now', body: "Tour-level technology from 2-3 years ago is available for under $200 today. The TaylorMade SIM Max was the best driver on the market in 2021 — it now sells for under $120. The performance gap between a $200 driver and a $600 driver is genuinely small for weekend golfers." },
       { h2: 'Best Under $150: TaylorMade SIM Max (Previous Gen)', badge: 'BEST OVERALL', rating: 4.7, ratingCount: '2,341', body: "Speed Injected Twist Face for faster ball speed. 460cc head with draw-biased weighting. The Inertia Generator at the back creates low-spin, high-launch for maximum carry. You're getting 2021 technology for 2026 budget pricing.",
         pros: ['Speed Injected Twist Face delivers consistent ball speed on mis-hits', 'Inertia Generator shifts weight low and back for forgiveness', 'Premium TaylorMade construction at a fraction of current retail'],
-        cons: ['Previous generation — technology 2-3 years behind current models', 'Limited adjustability compared to current loft-sleeve drivers'], price: '~$129-149' },
+        cons: ['Previous generation — technology 2-3 years behind current models', 'Limited adjustability compared to current loft-sleeve drivers'], price: '~$129-149' , affiliateKey: 'cobra-aerojet-max'},
       { h2: 'Best Under $200: Callaway Big Bertha B21', badge: 'BEST VALUE', rating: 4.6, ratingCount: '1,892', body: "Specifically designed to fight slices. The offset hosel and draw-biased weighting help high-handicappers hit more fairways. Flash Face SS21 cup face for ball speed. If your miss is a slice, this is your driver.",
         pros: ['Offset hosel reduces slice angle — specifically designed for high handicappers', 'AI-designed Flash Face for consistent ball speed across the face', 'Callaway quality and resale value at under $200'],
-        cons: ['Offset look at address takes visual adjustment — not preferred by better players', 'Lower distance ceiling than non-offset drivers for faster swing speeds'], price: '~$169-199' },
+        cons: ['Offset look at address takes visual adjustment — not preferred by better players', 'Lower distance ceiling than non-offset drivers for faster swing speeds'], price: '~$169-199' , affiliateKey: 'taylormade-qi35-max'},
       { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, ratingCount: '734', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.",
         pros: ['MainFrame variable face thickness for consistent distance on all contact points', 'One of the most forgiving modern drivers available under $400', 'Lightweight design helps generate clubhead speed more easily'],
-        cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' },
+        cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' , affiliateKey: 'callaway-paradym-ai-smoke-max'},
       { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you\'ve never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
     ],
     comparisonTable: {
@@ -1609,13 +1609,13 @@ export const ARTICLES: Article[] = [
       { h2: 'The 4 Training Aid Categories Worth Buying', body: "Path/alignment tools (alignment sticks), impact feedback (impact tape), putting aids (mirrors, cups), and tempo trainers (Orange Whip). Everything else is mostly a gimmick. These four categories produce measurable improvement for weekend golfers with 15-30 minutes of weekly practice." },
       { h2: 'Best Alignment: Alignment Sticks', badge: 'BEST VALUE', rating: 4.9, ratingCount: '15,203', body: "The most useful training aid in golf costs $12. Two fibreglass rods you can stick in the ground to check aim, ball position, swing path, hip rotation, and about 20 other things. Every range session should start with alignment sticks. Used by every tour player. Used by every instructor.",
         pros: ['Most versatile training aid available — gate drills, path training, and alignment checks', 'Under $20 for a pair — lowest cost impactful training tool', 'Used by every tour player in warm-up regardless of skill level'],
-        cons: ['No built-in feedback — requires self-monitoring and discipline', 'Ineffective without structured drills and consistent practice intent'], price: '~$12' },
+        cons: ['No built-in feedback — requires self-monitoring and discipline', 'Ineffective without structured drills and consistent practice intent'], price: '~$12' , affiliateKey: 'alignment-sticks'},
       { h2: 'Best Impact Feedback: Impact Tape', badge: 'BEST FEEDBACK', rating: 4.7, ratingCount: '8,421', body: "Stick a piece on your driver, iron, or putter face and you instantly see where you\'re striking the ball. Nothing teaches better than seeing your actual impact pattern — not where you think you\'re hitting it, where you actually are. One pack lasts months.",
         pros: ['Shows exactly where on the face contact occurs after every shot', 'Works on any club including driver, irons, and wedges', 'Immediate visual feedback without any technology or app required'],
-        cons: ['Single-use per strip — minor but ongoing material cost', 'Shows impact location only — not club path or face angle data'], price: '~$12' },
+        cons: ['Single-use per strip — minor but ongoing material cost', 'Shows impact location only — not club path or face angle data'], price: '~$12' , affiliateKey: 'eyeline-putting-cup'},
       { h2: 'Best Putting Aid: Putting Mirror', badge: 'BEST PUTTING', rating: 4.6, ratingCount: '3,847', body: "A putting mirror shows your eye position, face alignment, and stroke path simultaneously. 20 minutes a week on your carpet with a putting mirror eliminates more 3-putts than any amount of unfocused practice. The difference between a $12 putting mirror and a $300 putting lesson is essentially zero for alignment work.",
         pros: ['Shows exact eye position relative to ball at address — eliminates the most common setup error', 'Gate drill confirms square face alignment at impact', 'Lightweight — fits in any bag pocket for use before every round'],
-        cons: ['Effective only on flat practice surfaces — not useful for break or slope practice', 'Requires consistent lighting to see the reflection alignment clearly'], price: '~$25' },
+        cons: ['Effective only on flat practice surfaces — not useful for break or slope practice', 'Requires consistent lighting to see the reflection alignment clearly'], price: '~$25' , affiliateKey: 'putting-mirror'},
       { h2: 'Best Swing Tempo: Orange Whip', body: "At $109 it\'s the most expensive item on this list, but the Orange Whip is the only tempo trainer proven to translate to the course. The flexible shaft and weighted ball force correct sequencing. 10 minutes of swinging before a round is better than a bucket of balls. Skip if budget is tight — alignment sticks are more versatile.", price: '~$109' },
       { h2: 'Training Aids That Are Mostly Gimmicks', body: "Avoid: swing speed radar devices under $50 (inaccurate), weighted donuts on shafts (can hurt swing), overswing correctors (creates new problems), putting guides that force a straight stroke (most good putters have an arc), and any device promising to add 40+ yards." },
     ],
@@ -1833,6 +1833,7 @@ export const ARTICLES: Article[] = [
           'Less greenside spin than premium balls',
         ],
       
+        affiliateKey: 'srixon-soft-feel',
       },
       {
         h2: '🥈 Best Budget: Callaway Supersoft',
@@ -1841,6 +1842,7 @@ export const ARTICLES: Article[] = [
         pros: ['Ultra-low compression for maximum distance under 75 mph', 'Very straight flight — minimal side spin', 'Affordable at $20/dozen'],
         cons: ['Too soft for golfers above 85 mph swing speed', 'Very low spin makes it hard to stop near greens'],
         price: '~$20/doz',
+        affiliateKey: 'callaway-supersoft',
       },
       {
         h2: 'When to Upgrade to a Better Ball',
@@ -1914,6 +1916,7 @@ export const ARTICLES: Article[] = [
         pros: ['Lifetime warranty — no risk if you drop it', 'Slope included at base price', '±1 yard accuracy', 'One-button operation'],
         cons: ['Maximum 400-yard range (irrelevant for golf shots)', 'No JOLT vibration confirmation'],
         price: '~$169',
+        affiliateKey: 'bushnell-tour-v6-shift',
       },
       {
         h2: '🥈 Best Budget: Blue Tees Series 3 Max',
@@ -1932,6 +1935,7 @@ export const ARTICLES: Article[] = [
           'No magnetic cart mount',
         ],
       
+        affiliateKey: 'precision-pro-nx9-hd',
       },
       {
         h2: 'Do Beginners Need Slope?',
@@ -1998,6 +2002,7 @@ export const ARTICLES: Article[] = [
         pros: ['Fastest pin acquisition on the market', 'Lightest and most pocketable', 'Clearest optics tested', 'No GPS battery drain'],
         cons: ['No course maps or hazard distances', 'No GPS — only what you aim at'],
         price: '~$329',
+        affiliateKey: 'bushnell-tour-v6-shift',
       },
       {
         h2: 'Garmin Approach Z82 — What It Does Better',
@@ -2006,6 +2011,7 @@ export const ARTICLES: Article[] = [
         pros: ['Full hole maps with hazard distances', '40,000+ course database', 'Laser confirms GPS — best of both worlds', 'USB charging — no batteries to replace'],
         cons: ['Heavier and bulkier than pure lasers', 'Slower laser mode', 'Costs $170 more than Bushnell'],
         price: '~$499',
+        affiliateKey: 'garmin-approach-z82',
       },
       {
         h2: 'Which Should You Buy?',
@@ -2078,6 +2084,7 @@ export const ARTICLES: Article[] = [
           'Not ideal for swing speeds over 90 mph',
         ],
       
+        affiliateKey: 'callaway-supersoft',
       },
       {
         h2: '🥈 Best Budget: Callaway Supersoft',
@@ -2086,6 +2093,7 @@ export const ARTICLES: Article[] = [
         pros: ['Ultra-low compression — easiest to compress', 'Very affordable', 'Straightest flight of any ball tested'],
         cons: ['Too soft above 85 mph', 'Very low spin near greens'],
         price: '~$20/doz',
+        affiliateKey: 'srixon-soft-feel',
       },
       {
         h2: 'Should You Use a Pro V1 at Slow Swing Speed?',
@@ -2167,6 +2175,7 @@ export const ARTICLES: Article[] = [
           'Less widely available than Titleist or Callaway',
         ],
       
+        affiliateKey: 'taylormade-tp5',
       },
       {
         h2: '🥈 Best Value: Srixon Soft Feel',
@@ -2175,6 +2184,7 @@ export const ARTICLES: Article[] = [
         pros: ['Under $25/dozen', 'Consistent feel across all clubs', 'Plays longer than price suggests', 'Good for swing speeds 70-90 mph'],
         cons: ['Less greenside spin than urethane', 'Not ideal above 95 mph'],
         price: '~$22/doz',
+        affiliateKey: 'srixon-soft-feel',
       },
       {
         h2: '🥉 Best Premium: Titleist Pro V1',
@@ -2183,6 +2193,7 @@ export const ARTICLES: Article[] = [
         pros: ['Best spin control tested', 'Most consistent flight in wind', 'Best durability'],
         cons: ['$55/dozen', 'Full benefit requires 90+ mph swing'],
         price: '~$55/doz',
+        affiliateKey: 'titleist-pro-v1',
       },
     ],
     faq: [
@@ -2417,6 +2428,7 @@ export const ARTICLES: Article[] = [
         pros: ['Lifetime warranty — strongest guarantee in the category', 'Slope included at base price', '±1 yard accurate under 400 yards', 'Simple one-button operation'],
         cons: ['No JOLT vibration confirmation like Bushnell', 'Maximum 400 yards (sufficient for all golf shots)'],
         price: '~$169',
+        affiliateKey: 'bushnell-tour-v6-shift',
       },
       {
         h2: '🥈 Best Under $150: Blue Tees Series 3 Max',
@@ -2435,6 +2447,7 @@ export const ARTICLES: Article[] = [
           'No magnetic mount',
         ],
       
+        affiliateKey: 'precision-pro-nx9-hd',
       },
       {
         h2: 'What You Give Up Above $200',
@@ -2841,6 +2854,7 @@ export const ARTICLES: Article[] = [
           'Manual shot tagging only -- no auto-detection',
         ],
       
+        affiliateKey: '',
       },
       {
         h2: '🥈 Best Premium: 18Birdies',
@@ -2858,6 +2872,7 @@ export const ARTICLES: Article[] = [
           'Heavier on battery than simpler apps',
         ],
       
+        affiliateKey: '',
       },
       {
         h2: '🥉 Best for Data Geeks: Arccos Caddie',
@@ -2954,6 +2969,7 @@ export const ARTICLES: Article[] = [
           'Not useful for full swing practice',
         ],
       
+        affiliateKey: 'alignment-sticks',
       },
       {
         h2: '🥈 Best for Connection Feedback: Tour Striker Smart Ball',
@@ -2972,6 +2988,7 @@ export const ARTICLES: Article[] = [
           'More expensive at $29',
         ],
       
+        affiliateKey: 'alignment-sticks',
       },
       {
         h2: 'DIY Grip Training Drills (No Equipment)',
@@ -3152,6 +3169,7 @@ export const ARTICLES: Article[] = [
           'Requires setup time at start of each session',
         ],
       
+        affiliateKey: '',
       },
       {
         h2: '🥈 Best Mid-Range Compact: Rapsodo MLM2PRO',
@@ -3160,6 +3178,7 @@ export const ARTICLES: Article[] = [
         pros: ['Video + data overlay — partial visual feedback', 'Full launch data including spin axis', 'Works with hitting net in small spaces'],
         cons: ['$699 — more expensive than R10', 'Subscription for full features ($99/yr)'],
         price: '~$699',
+        affiliateKey: 'rapsodo-mlm2pro',
       },
     ],
     faq: [
@@ -3237,6 +3256,7 @@ export const ARTICLES: Article[] = [
           'Net requires periodic re-tensioning',
         ],
       
+        affiliateKey: '',
       },
       {
         h2: '🥈 Best Mat: Country Club Elite vs Fiberbuilt',
@@ -3245,6 +3265,7 @@ export const ARTICLES: Article[] = [
         pros: ['CCE: best feel closest to real turf at $350', 'Fiberbuilt: best durability for heavy use', 'Both protect clubs on off-center strikes'],
         cons: ['CCE: shows wear after 12-18 months of heavy use', 'Fiberbuilt: heavier and more expensive'],
         price: '~$350 (Country Club Elite)',
+        affiliateKey: '',
       },
       {
         h2: 'Adding a Launch Monitor',
