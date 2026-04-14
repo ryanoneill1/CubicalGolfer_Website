@@ -27,7 +27,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For most weekend golfers, the <strong>Bushnell Tour V6 Shift</strong> at $329 is the best rangefinder on the market. It is faster, simpler, and more reliable than anything at its price. See our full rangefinder comparison →',
     description: 'We tested 11 rangefinder models over 40+ real rounds — independently purchased, not gifted. Our top pick for 12–22 handicappers. See our #1 pick →',
     excerpt: 'From premium optics to budget picks — the top rangefinders for weekend golfers who want exact yardages and faster decisions.',
-    intro: "If you're still pacing off yardages or relying on sprinkler heads, you're leaving strokes on the course. A quality rangefinder is the single best $150–$300 investment a weekend golfer can make. We tested 11 models over 40+ rounds across four different courses to find the best for every budget.",
+    intro: "If you\'re still pacing off yardages or relying on sprinkler heads, you\'re leaving strokes on the course. A quality rangefinder is the single best $150–$300 investment a weekend golfer can make. We tested 11 models over 40+ rounds across four different courses to find the best for every budget.",
     toc: [
       'What to look for in a golf rangefinder',
       'Best overall: Bushnell Tour V6 Shift',
@@ -40,7 +40,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'What to Look For in a Golf Rangefinder',
-        body: "Before dropping cash on a rangefinder, understand what actually matters on the course. Magnification (6x is the sweet spot), slope compensation, scan mode, and battery life are the big four. Pin-seeking technology — which locks onto the flag rather than background trees — is a must-have. Jolt or vibration confirmation tells you you've actually hit the pin, not a tree 30 yards behind it.",
+        body: "Before dropping cash on a rangefinder, understand what actually matters on the course. Magnification (6x is the sweet spot), slope compensation, scan mode, and battery life are the big four. Pin-seeking technology — which locks onto the flag rather than background trees — is a must-have. Jolt or vibration confirmation tells you you\'ve actually hit the pin, not a tree 30 yards behind it.",
       },
       {
         h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
@@ -53,7 +53,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥈 Best Budget: Precision Pro NX9 HD',
         badge: 'BEST BUDGET', rating: 4.7, ratingCount: '1,203',
-        body: "For under $180, the NX9 HD is almost embarrassingly good. Clear optics, fast pin acquisition, adaptive slope technology, and a one-year battery life that means you'll forget it's in your bag. Backed by a lifetime warranty.",
+        body: "For under $180, the NX9 HD is almost embarrassingly good. Clear optics, fast pin acquisition, adaptive slope technology, and a one-year battery life that means you\'ll forget it\'s in your bag. Backed by a lifetime warranty.",
         pros: ['Slope-adjusted distances at under $180', 'Lifetime warranty — exceptional for this price tier', '1-year battery life on a single CR2'],
         cons: ['Brand less recognized than Bushnell', 'Pin acquisition slightly slower above 250 yards vs Bushnell'],
         price: '~$169 at Amazon',
@@ -280,7 +280,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Why You Actually Slice', body: "A slice is caused by an open clubface relative to your swing path at impact. The ball starts left (for right-handers) and curves right because the face is open to that path. The cure: close the face relative to the path." },
       { h2: 'Fix 1: Fix Your Grip', body: "The #1 root cause. Most slicers have a weak grip. Rotate both hands clockwise (right-handers) until you see 2.5 knuckles on your left hand and your right palm faces the target. This alone reduces your slice by 50%." },
       { h2: 'Fix 2: Close the Clubface at Address', body: "Most slicers set up with an open face without knowing it. For drivers, tee up slightly higher and close the face 1–2° at address. Look for a 'draw' or 'D' setting on modern drivers." },
-      { h2: 'Fix 3: Fix Your Swing Path', body: "The over-the-top move creates the leftward path. Feel like you're dropping the club into your back pocket at the start of the downswing, then swinging out to right field." },
+      { h2: 'Fix 3: Fix Your Swing Path', body: "The over-the-top move creates the leftward path. Feel like you\'re dropping the club into your back pocket at the start of the downswing, then swinging out to right field." },
       { h2: '5 Drills to Groove the Fix', body: '', items: [
         { name: 'Alignment stick drill', desc: 'Place a stick pointing at target, swing from inside it.' },
         { name: 'Towel drill', desc: 'Tuck towel under right armpit; keep it tucked through impact.' },
@@ -288,7 +288,7 @@ export const ARTICLES: Article[] = [
         { name: 'Gate drill', desc: 'Place two tees wider than clubhead; swing through without hitting them.' },
         { name: 'Step-drill', desc: 'Step lead foot back to almost together feet to prevent over-the-top.' },
       ]},
-      { h2: 'Gear Changes That Help', body: "A draw-biased driver can take a 30-yard slice down to a 10-yard fade. Softer shafts help if your swing speed is under 95mph — you can't load stiff shafts properly. Impact tape (~$12) on your driver face for 3 sessions will show you exactly which fixes work.", items: [
+      { h2: 'Gear Changes That Help', body: "A draw-biased driver can take a 30-yard slice down to a 10-yard fade. Softer shafts help if your swing speed is under 95mph — you can\'t load stiff shafts properly. Impact tape (~$12) on your driver face for 3 sessions will show you exactly which fixes work.", items: [
         { name: 'Impact tape (~$12)', desc: 'Stick to the driver face to see your miss pattern. Fastest feedback loop in golf.', affiliateKey: 'impact-tape' },
         { name: 'Alignment sticks 2-pack (~$12)', desc: 'Place in the ground to see your swing path vs target line during range sessions.', affiliateKey: 'alignment-sticks' },
       ]},
@@ -296,7 +296,7 @@ export const ARTICLES: Article[] = [
     faq: [
       { q: 'What actually causes a golf slice?', a: "An open clubface relative to the swing path at impact. The ball starts in the direction of the path and curves toward the face direction. Fix the face angle first, then the path." },
       { q: 'How long does it take to fix a golf slice?', a: "Most weekend golfers see 50% reduction within 2–3 range sessions with grip and path fixes. A complete fix typically takes 4–6 weeks of deliberate practice." },
-      { q: 'Should I get a draw-biased driver to fix my slice?', a: "Fix your grip and path first — those are free and permanent. A draw-biased driver is a useful band-aid but won't solve the root cause." },
+      { q: 'Should I get a draw-biased driver to fix my slice?', a: "Fix your grip and path first — those are free and permanent. A draw-biased driver is a useful band-aid but won\'t solve the root cause." },
     ],
     related: [
       { slug: '/how-to-break-90/', label: "How to Break 90: Weekend Golfer's Roadmap" },
@@ -332,13 +332,13 @@ export const ARTICLES: Article[] = [
       { h2: '5 Course Management Rules', body: '', items: [
         { name: 'Aim at the fat part of the green', desc: 'Pins in corners are traps. Play to the middle and 2-putt.' },
         { name: 'Club up in the wind', desc: 'Most amateurs under-club by 1–2 clubs. Short misses find trouble.' },
-        { name: 'Take water completely out of play', desc: "If you're debating whether to carry a hazard, lay up." },
+        { name: 'Take water completely out of play', desc: "If you\'re debating whether to carry a hazard, lay up." },
         { name: 'Chip with a 7 or 8 iron from the fringe', desc: 'More consistent than a lob wedge for run-up shots.' },
         { name: 'Lag putt from over 30 feet', desc: 'Focus on a 3-foot circle, not the hole.' },
       ]},
     ],
     faq: [
-      { q: 'What score do you need to break 90 in golf?', a: "Breaking 90 means shooting 89 or lower. On a par-72 course, that's 17 over par. You can make 3–4 double bogeys and still shoot 89 as long as you eliminate triples." },
+      { q: 'What score do you need to break 90 in golf?', a: "Breaking 90 means shooting 89 or lower. On a par-72 course, that\'s 17 over par. You can make 3–4 double bogeys and still shoot 89 as long as you eliminate triples." },
       { q: 'What handicap do you need to break 90?', a: "To consistently break 90, you typically need a handicap index of around 17–18 or lower." },
       { q: 'What is the fastest way to lower your golf score?', a: "Eliminate blow-up holes. Audit your last 5 scorecards and identify your disaster holes. On those holes, make bogey your target. Play safe. Chip out. Lay up." },
     ],
@@ -400,19 +400,19 @@ export const ARTICLES: Article[] = [
     title: "Best Beginner Golf Club Sets 2026 (Don't Overspend)",
     titleDisplay: 'Best Beginner Golf Club Sets for New Players',
     bottomLine: 'For most new golfers, the <strong>Wilson Profile SGI</strong> or <strong>Callaway Strata</strong> is the right starting point — complete, affordable, and forgiving enough to learn on without spending money on clubs you will outgrow. See our beginner guide →',
-    description: "Wilson Profile SGI, Callaway Strata & TaylorMade RBZ compared. The best beginner golf club sets in 2026 — without gear you'll quickly outgrow.",
-    excerpt: "Everything a new golfer needs to get started — without overspending on gear you'll outgrow.",
-    intro: "New golfers routinely overspend on equipment thinking better clubs will make them better. They won't. What beginners need is forgiveness, consistency, and affordability.",
+    description: "Wilson Profile SGI, Callaway Strata & TaylorMade RBZ compared. The best beginner golf club sets in 2026 — without gear you\'ll quickly outgrow.",
+    excerpt: "Everything a new golfer needs to get started — without overspending on gear you\'ll outgrow.",
+    intro: "New golfers routinely overspend on equipment thinking better clubs will make them better. They won\'t. What beginners need is forgiveness, consistency, and affordability.",
     toc: ['What beginners actually need', 'Best overall: Wilson Profile SGI', 'Best value: Callaway Strata', 'Best step-up: TaylorMade RBZ Speed Lite', 'What to skip', 'FAQ'],
     sections: [
       { h2: 'What Beginners Actually Need', body: "Cavity-back irons, a hybrid instead of 3 and 4 irons, a high-lofted fairway wood, a mallet putter, and a stand bag. You do NOT need 14 clubs, blades, or anything over $600." },
-      { h2: 'Best Overall: Wilson Profile SGI', badge: 'BEST OVERALL', body: "Wide soles and deep cavity backs for maximum forgiveness. The driver has a large 460cc head. Everything you need at a price that doesn't sting.",
+      { h2: 'Best Overall: Wilson Profile SGI', badge: 'BEST OVERALL', body: "Wide soles and deep cavity backs for maximum forgiveness. The driver has a large 460cc head. Everything you need at a price that doesn\'t sting.",
         pros: ['Complete set under $250 — lowest total cost of entry for a new golfer', 'Forgiving cavity-back irons with wide sole for clean turf interaction', 'Includes driver, fairway wood, hybrid, irons, putter, and bag'],
         cons: ['Less durable than mid-range sets after heavy use', 'Driver distance lower than premium options'], price: '~$299–$349 at Amazon' },
       { h2: 'Best Value: Callaway Strata', badge: 'BEST VALUE', body: "The Strata 12-piece set is the value leader. Callaway's engineering shows even at this price. The bag is a proper stand bag.",
         pros: ['Callaway brand quality at beginner price point', 'Stainless steel irons give noticeably better feel than Wilson at similar price', 'Hybrid is the most beginner-friendly long iron replacement available'],
         cons: ['Slightly heavier bag than Wilson set', 'Driver is not adjustable for trajectory preference'], price: '~$249 at Amazon' },
-      { h2: 'Best Step-Up: TaylorMade RBZ Speed Lite', badge: 'BEST STEP-UP', body: "For beginners who want something they won't outgrow for 3–4 years. The driver and fairway wood are proper TaylorMade equipment.",
+      { h2: 'Best Step-Up: TaylorMade RBZ Speed Lite', badge: 'BEST STEP-UP', body: "For beginners who want something they won\'t outgrow for 3–4 years. The driver and fairway wood are proper TaylorMade equipment.",
         pros: ['Lightweight design — best for walking rounds where bag weight matters', 'Higher-lofted driver helps beginners get the ball airborne consistently', 'Better quality build as handicap improves toward 20'],
         cons: ['$399 — more expensive than Wilson and Callaway options', 'Fewer clubs included than the other sets'], price: '~$499' },
       { h2: 'What to Skip Completely', body: "Avoid sets under $150 — shafts are too heavy and inconsistent. Skip blade irons until you break 90. Skip 1, 2, and 3 irons completely." },
@@ -452,7 +452,7 @@ export const ARTICLES: Article[] = [
         { name: 'Ball position moves with the club', desc: "Driver: opposite lead heel. Irons: move one ball-position back per iron. Pitching wedge: center of stance." },
         { name: 'Bend from the hips, not the waist', desc: "Bend forward from your hip joints until the club reaches the ground naturally." },
       ]},
-      { h2: "Course Etiquette — Don't Be That Person", body: "Don't stand in another player's line of sight. Repair divots and ball marks. Keep up with the group in front of you. Announce 'Fore!' if your ball could hit anyone." },
+      { h2: "Course Etiquette — Don't Be That Person", body: "Don't stand in another player\'s line of sight. Repair divots and ball marks. Keep up with the group in front of you. Announce 'Fore!' if your ball could hit anyone." },
     ],
     faq: [
       { q: 'How long does it take to get good at golf?', a: "Most beginners can play without embarrassing themselves (under 120) within 3–6 months. Breaking 100 takes 1–2 years. Breaking 90 typically takes 3–5 years for recreational players." },
@@ -483,7 +483,7 @@ export const ARTICLES: Article[] = [
     intro: "Understanding where you stand among golfers helps you set realistic goals. Here's the latest data on average golf handicaps in 2026, broken down by age, gender, and experience level.",
     toc: ['Average golf handicap — the numbers', 'Average handicap by age group', 'What does your handicap mean?', 'How to lower your handicap', 'FAQ'],
     sections: [
-      { h2: 'Average Golf Handicap in 2026', body: "According to the USGA, the average handicap for men in the US is 14.2. For women it's 27.5. Roughly 20% of golfers have a single-digit handicap. Only ~1% are scratch or better." },
+      { h2: 'Average Golf Handicap in 2026', body: "According to the USGA, the average handicap for men in the US is 14.2. For women it\'s 27.5. Roughly 20% of golfers have a single-digit handicap. Only ~1% are scratch or better." },
       { h2: 'Average Golf Handicap by Age Group', body: '', items: [
         { name: 'Under 30', desc: 'Average: 12.5 for men, 24.0 for women.' },
         { name: '30–49', desc: 'Average: 14.0 for men, 27.0 for women. Busiest life stage limits practice.' },
@@ -645,7 +645,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: '25 Golf Accessories Every Golfer Should Own',
     description: "The 25 highest-impact golf accessories tested by weekend golfers — under $200 total. Ranked by how much they actually improve your round.",
     excerpt: 'Useful upgrades for cleaner rounds, better prep, and fewer frustrating mistakes on the course.',
-    intro: "You don't need a $500 driver to play better golf. Half the strokes you're losing are to unforced errors. These 25 accessories fix all of that for under $200 total.",
+    intro: "You don\'t need a $500 driver to play better golf. Half the strokes you\'re losing are to unforced errors. These 25 accessories fix all of that for under $200 total.",
     toc: ['On-course essentials', 'Bag accessories', 'Practice gear', 'Tech & apps', 'Rain & weather gear'],
     sections: [
       { h2: 'On-Course Essentials (Under $15 Each)', body: '', items: [
@@ -661,7 +661,7 @@ export const ARTICLES: Article[] = [
         { name: 'Orange Whip swing trainer (~$109)', desc: 'Best swing tempo trainer on the market.', affiliateKey: 'alignment-sticks' },
         { name: 'Indoor putting cup (~$35)', desc: '10 minutes a day on your carpet fixes short misses.', affiliateKey: 'eyeline-putting-cup' },
       ]},
-      { h2: 'Rain & Weather Gear', body: "A FootJoy RainGrip glove is mandatory for any golfer who plays in weather. Wet grips lose 15 yards of carry. A proper golf rain jacket fits over a layer and doesn't restrict your swing." },
+      { h2: 'Rain & Weather Gear', body: "A FootJoy RainGrip glove is mandatory for any golfer who plays in weather. Wet grips lose 15 yards of carry. A proper golf rain jacket fits over a layer and doesn\'t restrict your swing." },
     ],
     faq: [
       { q: 'What golf accessories actually lower your score?', a: "Highest-impact accessories: (1) alignment sticks ($12), (2) a putting mirror ($25), (3) a groove cleaning brush ($10), and (4) impact tape ($12). Total: under $60 and more effective than most club upgrades." },
@@ -737,10 +737,10 @@ export const ARTICLES: Article[] = [
     intro: "You have a job, maybe a family, and a deep need to play more golf. The average office golfer plays 14 rounds a year. With a few scheduling strategies, that number can hit 25–30.",
     toc: ['The twilight round is your best friend', 'Play faster formats', 'Work from home = morning round', 'The golf buddy system'],
     sections: [
-      { h2: 'The Twilight Round Is Your Best Friend', body: "Twilight rates start at 3–4pm and can drop 40-60% off peak pricing. 2.5 hours instead of 4.5. Do that weekly from May through September and you've added 20 rounds to your year. A GPS watch on your wrist means zero time digging out a phone between shots — critical when you're racing the sunset.", items: [
+      { h2: 'The Twilight Round Is Your Best Friend', body: "Twilight rates start at 3–4pm and can drop 40-60% off peak pricing. 2.5 hours instead of 4.5. Do that weekly from May through September and you\'ve added 20 rounds to your year. A GPS watch on your wrist means zero time digging out a phone between shots — critical when you\'re racing the sunset.", items: [
         { name: 'Shot Scope V5 GPS Watch (~$249)', desc: 'Auto-tracks every shot, no phone needed. Front/middle/back yardages on your wrist. Saves 15-20 minutes per round — critical for twilight.', affiliateKey: 'shot-scope-v5' },
       ]},
-      { h2: 'Play Faster Formats', body: "Best ball scramble moves faster than stroke play. 'Ready golf' saves 20–30 minutes. 9 holes is a full golf experience — stop feeling like it doesn't count." },
+      { h2: 'Play Faster Formats', body: "Best ball scramble moves faster than stroke play. 'Ready golf' saves 20–30 minutes. 9 holes is a full golf experience — stop feeling like it doesn\'t count." },
       { h2: 'Work From Home = Morning Round', body: "The 6:30am tee time is the single best golf hack available. Done by 11, at your desk before most coworkers have finished their third coffee." },
       { h2: 'The Golf Buddy System', body: "Having 2–3 committed golf friends is more important than any gear upgrade. Build a standing tee time: same course, same day, every 2 weeks. Treat it like a board meeting." },
     ],
@@ -769,7 +769,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Golf Fitness Routines for the Office Golfer',
     description: "Desk job destroying your swing? These 15-minute golf fitness routines fix hip mobility, thoracic rotation & add 10+ yards — no gym required.",
     excerpt: '30-minute workouts designed for desk workers to build rotation, stability, and the flexibility to play pain-free.',
-    intro: "Sitting at a desk 8 hours a day tightens your hips, rounds your shoulders, and makes your thoracic spine completely immobile — exactly what you don't want for a golf swing.",
+    intro: "Sitting at a desk 8 hours a day tightens your hips, rounds your shoulders, and makes your thoracic spine completely immobile — exactly what you don\'t want for a golf swing.",
     toc: ['The 3 mobility killers for desk golfers', '5-minute morning routine', 'Best gym exercises for golf power', 'FAQ'],
     sections: [
       { h2: 'The 3 Mobility Killers for Desk Golfers', body: "Tight hip flexors limit hip turn through the ball. Rounded shoulders close off your backswing. A stiff thoracic spine restricts rotation. All three are reversible with 15–20 minutes of targeted daily work." },
@@ -807,7 +807,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Best Golf Courses Within a Weekend Drive',
     description: "The best golf courses within 2–4 hours of major US cities. Bucket-list golf you can play on a Saturday without booking a flight.",
     excerpt: 'Great courses that are worth the drive from major metros — no flight required.',
-    intro: "The best golf doesn't always require a plane ticket. These courses sit within a 2–4 hour drive of major population centers and rival much more expensive destinations.",
+    intro: "The best golf doesn\'t always require a plane ticket. These courses sit within a 2–4 hour drive of major population centers and rival much more expensive destinations.",
     toc: ['Midwest gems', 'Southeast standouts', 'How to plan a weekend golf trip'],
     sections: [
       { h2: 'Midwest Golf Gems', body: "Whistling Straits (Kohler, WI) hosted the 2021 Ryder Cup and offers public access. Sand Valley (Rome, WI) is a Coore & Crenshaw design within 2 hours of Chicago." },
@@ -876,7 +876,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Value: Srixon Soft Feel',
-        body: "At $25-$28 per dozen, the Srixon Soft Feel consistently outperforms its price point. Low compression benefits slower-swinging golfers with better energy transfer. Surprisingly soft off the putter for an ionomer-cover ball. The pick for golfers shooting over 95 who don't want to spend $50+ per dozen.",
+        body: "At $25-$28 per dozen, the Srixon Soft Feel consistently outperforms its price point. Low compression benefits slower-swinging golfers with better energy transfer. Surprisingly soft off the putter for an ionomer-cover ball. The pick for golfers shooting over 95 who don\'t want to spend $50+ per dozen.",
         price: '~$27 for 12',
       },
       {
@@ -886,7 +886,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'What High Handicappers Should Actually Play',
-        body: "Shooting over 100? A Titleist Pro V1 is actively hurting your game. Premium tour balls require high clubhead speed to compress and spin correctly. Under 85mph, use a low-compression two-piece ball: Callaway Supersoft or Srixon Soft Feel give you more distance and equally good feel for a fraction of the price. Upgrade when you're consistently breaking 90.",
+        body: "Shooting over 100? A Titleist Pro V1 is actively hurting your game. Premium tour balls require high clubhead speed to compress and spin correctly. Under 85mph, use a low-compression two-piece ball: Callaway Supersoft or Srixon Soft Feel give you more distance and equally good feel for a fraction of the price. Upgrade when you\'re consistently breaking 90.",
       },
     ],
     comparisonTable: {
@@ -925,12 +925,12 @@ export const ARTICLES: Article[] = [
     title: 'Best Golf Gloves for Hot Weather 2026 (Tested in 90°+ Heat)',
     titleDisplay: 'Best Golf Gloves for Hot Weather Rounds',
     bottomLine: 'For most golfers playing in normal conditions, the <strong>FootJoy WeatherSof</strong> is the right answer — consistent, washable, and available in the right size. See our full glove guide →',
-    description: "FootJoy WeatherSof, Titleist Players Flex & Callaway Dawn Patrol compared. Which hot-weather golf glove stays grippy longest when you're sweating.",
+    description: "FootJoy WeatherSof, Titleist Players Flex & Callaway Dawn Patrol compared. Which hot-weather golf glove stays grippy longest when you\'re sweating.",
     excerpt: 'Stay-dry, breathable gloves that keep your grip locked in when the temperature climbs.',
     intro: "A sweaty glove is a slipping glove. In hot weather, standard Cabretta leather saturates within 6 holes. These hot-weather picks stay breathable and grippy — tested across multiple summer rounds in 90°+ heat.",
     toc: ['What makes a great hot-weather glove', 'Best overall: FootJoy WeatherSof', 'Best ventilation: Titleist Players Flex', 'Best value: Callaway Dawn Patrol'],
     sections: [
-      { h2: 'What Makes a Great Hot-Weather Golf Glove', body: "Perforated or mesh panels on the back for air circulation, moisture-wicking materials on the palm, and a snug fit that doesn't bunch when wet." },
+      { h2: 'What Makes a Great Hot-Weather Golf Glove', body: "Perforated or mesh panels on the back for air circulation, moisture-wicking materials on the palm, and a snug fit that doesn\'t bunch when wet." },
       { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', body: "The #1 selling golf glove. Soft synthetic leather, Taction² palm for grip when sweaty, mesh back stays cool. Lasts 3–4x longer than premium leather.",
         pros: ['Hybrid microfiber and leather palm delivers consistent grip in all conditions', 'Machine washable — extends the life of each glove significantly', 'Available in 20 size variations for a precise, repeatable fit'],
         cons: ['Slightly less feel than pure leather in completely dry conditions', 'Microfiber area wears faster than leather-only palm gloves'], price: '~$18 each, ~$32 for 2-pack' },
@@ -1120,7 +1120,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Titleist Pro V1 vs Pro V1x — Full Comparison',
     description: 'Titleist Pro V1 vs Pro V1x compared for 2026. Compression, flight, spin & feel differences explained clearly. Which ball actually fits your swing speed and shot shape?',
     excerpt: 'The differences between Titleist Pro V1 and Pro V1x — and which one is right for your swing.',
-    intro: "The Pro V1 and Pro V1x are the two most popular premium golf balls in the world, yet most golfers who play them don't know the key differences. Here's exactly what separates them.",
+    intro: "The Pro V1 and Pro V1x are the two most popular premium golf balls in the world, yet most golfers who play them don\'t know the key differences. Here's exactly what separates them.",
     toc: ['Core differences', 'Pro V1: lower flight, more feel', 'Pro V1x: higher flight, more spin', 'Which should you play?', 'FAQ'],
     sections: [
       { h2: 'The Core Differences at a Glance', body: '', items: [
@@ -1276,7 +1276,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, ratingCount: '12,847', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.",
         pros: ['Best-selling golf glove for a reason — consistent grip in all weather conditions', 'Machine washable construction extends life significantly', 'Available in 20 sizes for a glove that actually fits'],
         cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' },
-      { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don't mind paying more, this is the pick.",
+      { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
         pros: ['Pure Cabretta leather for tour-level feel and maximum feedback at impact', 'Strategic perforations throughout for breathability in warm weather', 'Snug tour fit holds its shape through the entire round'],
         cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' },
       { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, ratingCount: '2,103', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfibre palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.",
@@ -1294,7 +1294,7 @@ export const ARTICLES: Article[] = [
       ],
     },
     faq: [
-      { q: 'Do I need to wear a golf glove?', a: "You don't have to, but almost all golfers do. A glove prevents blisters, improves grip by 15-20%, and keeps the club from slipping on hot or wet days. Most golfers wear one on their lead hand only (left for right-handed golfers)." },
+      { q: 'Do I need to wear a golf glove?', a: "You don\'t have to, but almost all golfers do. A glove prevents blisters, improves grip by 15-20%, and keeps the club from slipping on hot or wet days. Most golfers wear one on their lead hand only (left for right-handed golfers)." },
       { q: 'How often should I replace my golf glove?', a: "Replace when you notice reduced grip, visible holes at the fingertips or palm, or the material has stiffened. Most golfers replace gloves every 15-20 rounds. Buying 2-packs and alternating between rounds extends life significantly." },
     ],
     related: [
@@ -1320,7 +1320,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The best budget driver depends on your swing. Slicers: start with the <strong>Callaway Big Bertha B21</strong> — the offset will immediately straighten your ball flight. Everyone else: the Cleveland Launcher XL gives maximum forgiveness for the money. See our full driver guide →',
     description: "The best golf drivers under $200 in 2026 — TaylorMade RBZ, Callaway Big Bertha & Cleveland Launcher tested. Real performance at half the price of premium models.",
     excerpt: "Premium driver performance at budget prices — the best drivers under $200 tested over 20+ rounds.",
-    intro: "You don't need to spend $599 on a driver. The best drivers under $200 in 2026 are previous-season premium models that have dropped in price, not cheap no-name clubs. We tested 6 budget drivers to find the best.",
+    intro: "You don\'t need to spend $599 on a driver. The best drivers under $200 in 2026 are previous-season premium models that have dropped in price, not cheap no-name clubs. We tested 6 budget drivers to find the best.",
     toc: ['Why budget drivers are actually good now', 'Best under $150: TaylorMade SIM Max', 'Best under $200: Callaway Big Bertha', 'Best new budget: Cleveland Launcher XL', 'What to avoid', 'FAQ'],
     sections: [
       { h2: 'Why Budget Drivers Are Actually Great Now', body: "Tour-level technology from 2-3 years ago is available for under $200 today. The TaylorMade SIM Max was the best driver on the market in 2021 — it now sells for under $120. The performance gap between a $200 driver and a $600 driver is genuinely small for weekend golfers." },
@@ -1333,7 +1333,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, ratingCount: '734', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.",
         pros: ['MainFrame variable face thickness for consistent distance on all contact points', 'One of the most forgiving modern drivers available under $400', 'Lightweight design helps generate clubhead speed more easily'],
         cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' },
-      { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you've never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
+      { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you\'ve never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
     ],
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
@@ -1377,13 +1377,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Alignment: Alignment Sticks', badge: 'BEST VALUE', rating: 4.9, ratingCount: '15,203', body: "The most useful training aid in golf costs $12. Two fibreglass rods you can stick in the ground to check aim, ball position, swing path, hip rotation, and about 20 other things. Every range session should start with alignment sticks. Used by every tour player. Used by every instructor.",
         pros: ['Most versatile training aid available — gate drills, path training, and alignment checks', 'Under $20 for a pair — lowest cost impactful training tool', 'Used by every tour player in warm-up regardless of skill level'],
         cons: ['No built-in feedback — requires self-monitoring and discipline', 'Ineffective without structured drills and consistent practice intent'], price: '~$12' },
-      { h2: 'Best Impact Feedback: Impact Tape', badge: 'BEST FEEDBACK', rating: 4.7, ratingCount: '8,421', body: "Stick a piece on your driver, iron, or putter face and you instantly see where you're striking the ball. Nothing teaches better than seeing your actual impact pattern — not where you think you're hitting it, where you actually are. One pack lasts months.",
+      { h2: 'Best Impact Feedback: Impact Tape', badge: 'BEST FEEDBACK', rating: 4.7, ratingCount: '8,421', body: "Stick a piece on your driver, iron, or putter face and you instantly see where you\'re striking the ball. Nothing teaches better than seeing your actual impact pattern — not where you think you\'re hitting it, where you actually are. One pack lasts months.",
         pros: ['Shows exactly where on the face contact occurs after every shot', 'Works on any club including driver, irons, and wedges', 'Immediate visual feedback without any technology or app required'],
         cons: ['Single-use per strip — minor but ongoing material cost', 'Shows impact location only — not club path or face angle data'], price: '~$12' },
       { h2: 'Best Putting Aid: Putting Mirror', badge: 'BEST PUTTING', rating: 4.6, ratingCount: '3,847', body: "A putting mirror shows your eye position, face alignment, and stroke path simultaneously. 20 minutes a week on your carpet with a putting mirror eliminates more 3-putts than any amount of unfocused practice. The difference between a $12 putting mirror and a $300 putting lesson is essentially zero for alignment work.",
         pros: ['Shows exact eye position relative to ball at address — eliminates the most common setup error', 'Gate drill confirms square face alignment at impact', 'Lightweight — fits in any bag pocket for use before every round'],
         cons: ['Effective only on flat practice surfaces — not useful for break or slope practice', 'Requires consistent lighting to see the reflection alignment clearly'], price: '~$25' },
-      { h2: 'Best Swing Tempo: Orange Whip', body: "At $109 it's the most expensive item on this list, but the Orange Whip is the only tempo trainer proven to translate to the course. The flexible shaft and weighted ball force correct sequencing. 10 minutes of swinging before a round is better than a bucket of balls. Skip if budget is tight — alignment sticks are more versatile.", price: '~$109' },
+      { h2: 'Best Swing Tempo: Orange Whip', body: "At $109 it\'s the most expensive item on this list, but the Orange Whip is the only tempo trainer proven to translate to the course. The flexible shaft and weighted ball force correct sequencing. 10 minutes of swinging before a round is better than a bucket of balls. Skip if budget is tight — alignment sticks are more versatile.", price: '~$109' },
       { h2: 'Training Aids That Are Mostly Gimmicks', body: "Avoid: swing speed radar devices under $50 (inaccurate), weighted donuts on shafts (can hurt swing), overswing correctors (creates new problems), putting guides that force a straight stroke (most good putters have an arc), and any device promising to add 40+ yards." },
     ],
     comparisonTable: {
@@ -1396,7 +1396,7 @@ export const ARTICLES: Article[] = [
       ],
     },
     faq: [
-      { q: 'Do golf training aids actually work?', a: "The good ones do, but only with deliberate practice. Alignment sticks, impact tape, and putting mirrors work because they give you immediate, accurate feedback that is hard to fake. They force you to confront what you're actually doing rather than what you think you're doing." },
+      { q: 'Do golf training aids actually work?', a: "The good ones do, but only with deliberate practice. Alignment sticks, impact tape, and putting mirrors work because they give you immediate, accurate feedback that is hard to fake. They force you to confront what you\'re actually doing rather than what you think you\'re doing." },
       { q: 'What is the most effective golf training aid?', a: "Alignment sticks at $12 are the most effective training aid for the money — they improve aim, swing path, ball position, and hip rotation. A putting mirror is the most effective aid specifically for putting." },
     ],
     related: [
@@ -1594,7 +1594,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The Precision Pro NX9 HD is the best rangefinder for beginners — accurate, simple to use, includes slope, and costs under $175. You do not need a $329 Bushnell when you are learning the game.',
     description: 'Best golf rangefinder for beginners in 2026 — tested picks under $200 that are simple to operate and accurate enough for any skill level.',
     excerpt: "Don't overspend on a first rangefinder. Here's what actually matters for beginners and which models deliver it at the right price.",
-    intro: "Beginners are sold expensive, feature-heavy rangefinders they don't need. For a new golfer, three things matter: fast pin lock, clear display, and one-button operation. Everything else is noise. This guide covers what to buy and why you should not overspend.",
+    intro: "Beginners are sold expensive, feature-heavy rangefinders they don\'t need. For a new golfer, three things matter: fast pin lock, clear display, and one-button operation. Everything else is noise. This guide covers what to buy and why you should not overspend.",
     toc: [
       'What beginners actually need in a rangefinder',
       'Best Overall: Precision Pro NX9 HD',
@@ -1604,7 +1604,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'What Beginners Actually Need',
-        body: "A beginner rangefinder needs three things: fast pin acquisition (lock the flag within 1 second), a readable display in all light conditions, and single-hand operation. You should be able to range a target without breaking your pre-shot routine. Features like 1,300-yard range, tournament-legal slope toggle, and premium JOLT vibration are useful at higher skill levels but not necessary when you're learning which club you hit which distance.",
+        body: "A beginner rangefinder needs three things: fast pin acquisition (lock the flag within 1 second), a readable display in all light conditions, and single-hand operation. You should be able to range a target without breaking your pre-shot routine. Features like 1,300-yard range, tournament-legal slope toggle, and premium JOLT vibration are useful at higher skill levels but not necessary when you\'re learning which club you hit which distance.",
       },
       {
         h2: '🥇 Best Overall: Precision Pro NX9 HD',
@@ -1920,7 +1920,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Topped shots come from early extension — your hips thrust toward the ball and your spine rises before impact. The fix is a single drill: keep your trail knee flexed through the entire downswing. This keeps your spine angle consistent and eliminates the top.',
     description: 'How to stop topping the golf ball — the real cause of topped shots and the single drill that fixes it. No complicated swing changes needed.',
     excerpt: "Topped shots are caused by early extension, not lifting your head. Here is the actual fix that works in two practice sessions.",
-    intro: "Topped shots feel like you raised your head, but that's rarely the cause. The real culprit is early extension — your hips sliding toward the ball and your spine rising before impact. This pushes the bottom of your swing arc up, and you catch the top of the ball. One drill fixes this permanently.",
+    intro: "Topped shots feel like you raised your head, but that\'s rarely the cause. The real culprit is early extension — your hips sliding toward the ball and your spine rising before impact. This pushes the bottom of your swing arc up, and you catch the top of the ball. One drill fixes this permanently.",
     toc: [
       'What actually causes topped shots',
       'The trail knee drill',
@@ -2121,7 +2121,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Arccos Caddie — Where It Wins',
         badge: 'BEST ANALYTICS',
-        body: 'The AI Caddie is Arccos's biggest advantage. After 10+ rounds, it starts recommending clubs for specific distances based on YOUR actual performance numbers, not generic averages. It knows you hit your 7-iron 152 yards on average but only 140 yards on tight lies — and it suggests accordingly. The strokes-gained breakdown by category (driving, approach, short game, putting) is the most detailed analysis available outside of a TrackMan fitting.',
+        body: 'The AI Caddie is Arccos\'s biggest advantage. After 10+ rounds, it starts recommending clubs for specific distances based on YOUR actual performance numbers, not generic averages. It knows you hit your 7-iron 152 yards on average but only 140 yards on tight lies — and it suggests accordingly. The strokes-gained breakdown by category (driving, approach, short game, putting) is the most detailed analysis available outside of a TrackMan fitting.',
         pros: ['AI club recommendations based on your actual distances', 'Strokes gained analysis by shot category', 'Pairs with 40,000+ GPS-mapped courses', 'Apple Watch integration shows live hole data'],
         cons: ['Annual subscription ($99/yr after first year)', 'Requires phone on course for shot detection', 'Sensors cost $179 upfront'],
         price: '~$179 sensors + $99/yr',
@@ -2263,7 +2263,7 @@ export const ARTICLES: Article[] = [
         items: [
           'Ranging after addressing the ball: Range before you commit to your setup, not after. Changing clubs mid-routine disrupts your routine.',
           'Not confirming the reading: If the number looks wrong, range again. Locking onto a tree behind the green costs you a stroke.',
-          'Ignoring slope on hilly courses: Elevation change on a hilly course can mean 10-15 yards difference on steep shots. Never ignore slope data when it's available.',
+          'Ignoring slope on hilly courses: Elevation change on a hilly course can mean 10-15 yards difference on steep shots. Never ignore slope data when it\'s available.',
           'Forgetting wind adjustment: Rangefinders measure distance to the target, not adjusted distance for wind. With a strong headwind, add 1-2 clubs on top of whatever the rangefinder says.',
         ],
       },
@@ -2383,7 +2383,7 @@ export const ARTICLES: Article[] = [
         body: '',
         items: [
           'Launch monitor ($500-$3,000): The data engine. This is where quality matters most. SkyTrak+ (~$2,995) is the gold standard for home use. Garmin Approach R10 (~$599) is a budget entry point. Do not buy the cheapest option — inaccurate data destroys practice value.',
-          'Impact screen ($400-$1,200): Do not cheap out. A thin screen warps, breaks, and gives a poor image. Carl's Place or Shop Indoor Golf screens rated for driver impact are the standard. Budget $600+ for a quality 10x8 foot screen.',
+          'Impact screen ($400-$1,200): Do not cheap out. A thin screen warps, breaks, and gives a poor image. Carl\'s Place or Shop Indoor Golf screens rated for driver impact are the standard. Budget $600+ for a quality 10x8 foot screen.',
           'Projector ($300-$800): Must be a short-throw projector to work in a 15-foot-deep space. Optoma EH200ST or BenQ TH671ST are the standard picks. Key spec: throw ratio under 0.6.',
           'Hitting mat ($200-$500): A mat with a true fairway and rough sections matters for shot feedback. Fiberbuilt, TrueStrike, or Country Club Elite are the quality names. A carpet off-cut will damage your clubs.',
         ],
@@ -2430,7 +2430,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The Grint is the best free handicap tracking app — official USGA index, clean GPS, and no subscription required. 18Birdies is the best premium all-in-one. If you already use Arccos sensors, their app provides the most detailed performance data. Do not pay for any app without trying the free tier first.',
     description: 'Best golf apps for handicap tracking in 2026 — free and paid options for official USGA index, GPS yardages, and stat tracking reviewed.',
     excerpt: 'You need three things from a golf tracking app: official handicap, GPS yardages, and reliable score entry. Here are the apps that do all three without overcomplicating it.',
-    intro: 'Getting an official USGA handicap index requires submitting scores through an authorized source. These apps are all USGA-authorized — meaning your handicap carries from app to app and onto your club's handicap system. Here is what separates the good ones from the bloated ones.',
+    intro: 'Getting an official USGA handicap index requires submitting scores through an authorized source. These apps are all USGA-authorized — meaning your handicap carries from app to app and onto your club\'s handicap system. Here is what separates the good ones from the bloated ones.',
     toc: [
       'Best free: The Grint',
       'Best premium: 18Birdies',
@@ -2449,7 +2449,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥈 Best Premium: 18Birdies',
         badge: 'BEST ALL-IN-ONE',
-        body: '18Birdies combines official handicap tracking, GPS (40,000+ courses), digital scorecards, leaderboards for your group, and a built-in rangefinder mode. The design is the best in the category. If you play with a regular group and want to track everyone's rounds together, 18Birdies handles it better than anything else. Free tier includes handicap and GPS; premium ($10/month) adds detailed stats and group features.',
+        body: '18Birdies combines official handicap tracking, GPS (40,000+ courses), digital scorecards, leaderboards for your group, and a built-in rangefinder mode. The design is the best in the category. If you play with a regular group and want to track everyone\'s rounds together, 18Birdies handles it better than anything else. Free tier includes handicap and GPS; premium ($10/month) adds detailed stats and group features.',
         pros: ['Best interface in the category', 'Group scoring and leaderboards', 'Built-in rangefinder mode', 'Clean, detailed performance stats'],
         cons: ['Some features require premium subscription', 'Heavier battery usage than simpler apps'],
         price: 'Free / $10 per month premium',
@@ -2574,7 +2574,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥈 Best Budget: Garmin Approach S12',
         badge: 'BUDGET PICK',
-        body: 'The Garmin S12 at $169 adds a slightly cleaner interface and Garmin's reputation for GPS accuracy. It gives you 42,000 preloaded courses, front/middle/back, and a round timer. The slightly larger display makes it easier to read at a glance. If you prefer Garmin's ecosystem (you might have other Garmin devices), this is the entry point.',
+        body: 'The Garmin S12 at $169 adds a slightly cleaner interface and Garmin\'s reputation for GPS accuracy. It gives you 42,000 preloaded courses, front/middle/back, and a round timer. The slightly larger display makes it easier to read at a glance. If you prefer Garmin\'s ecosystem (you might have other Garmin devices), this is the entry point.',
         pros: ['Garmin GPS accuracy', '42,000 preloaded courses', 'Clean interface', 'Connects to Garmin Connect app'],
         cons: ['More expensive than Bushnell Ion Elite', 'No slope or wind data'],
         price: '~$169',
