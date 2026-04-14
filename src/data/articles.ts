@@ -3263,8 +3263,6 @@ export const ARTICLES: Article[] = [
     ],
   },
 
-,
-
   {
     id: 'rangefinder-under-150',
     slug: '/best-golf-rangefinder-under-150/',
