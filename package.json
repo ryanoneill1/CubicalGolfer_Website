@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node -e \"require('fs').writeFileSync('dist/_redirects', '')\" && node scripts/stamp-build.js",
+    "build": "astro build && node scripts/stamp-build.js",
     "preview": "astro preview",
     "check": "astro check",
     "generate": "node src/lib/generators.js",
-    "build:prod": "astro build && node --input-type=module < scripts/stamp-build.js && node -e \"require('fs').writeFileSync('dist/_redirects', '')\""
+    "build:prod": "astro build && node --input-type=module < scripts/stamp-build.js"
   },
   "dependencies": {
     "astro": "^4.8.0"
