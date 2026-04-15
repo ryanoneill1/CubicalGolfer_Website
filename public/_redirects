@@ -1,18 +1,21 @@
 # Redirects from old .html standalone pages to new clean Astro URLs
 # 301 = permanent redirect (preserves SEO equity)
+# Only includes pages where a matching Astro route exists
 
 /best-golf-rangefinder-beginners.html  /best-golf-rangefinder-beginners/  301
 /best-gps-golf-watch-high-handicappers.html  /best-gps-golf-watch-high-handicappers/  301
-/best-golf-swing-analyzer-iphone.html  /best-golf-swing-analyzers-iphone/  301
 /best-golf-apps-handicap-tracking.html  /best-golf-apps-handicap-tracking/  301
-/best-budget-launch-monitor.html  /best-budget-launch-monitor/  301
 /skytrak-vs-mevo-plus.html  /skytrak-vs-mevo-plus/  301
 /best-golf-simulator-small-spaces.html  /best-golf-simulator-small-spaces/  301
 /how-to-build-garage-golf-simulator.html  /how-to-build-garage-golf-simulator/  301
 /how-to-use-golf-rangefinder.html  /how-to-use-golf-rangefinder/  301
 /bushnell-vs-garmin-rangefinder.html  /bushnell-vs-garmin-rangefinder/  301
 /best-golf-grip-trainers.html  /best-golf-grip-trainers/  301
-/best-golf-training-aids-home-practice.html  /best-golf-training-aids-home-practice/  301
 /best-indoor-golf-net-setup.html  /best-indoor-golf-net-setup/  301
 /best-golf-balls-slow-swing-speed.html  /best-golf-balls-slow-swing-speed/  301
 /best-golf-balls-weekend-golfers.html  /best-golf-balls-weekend-golfers/  301
+
+# The following .html files have NO matching Astro route and serve as standalone pages:
+# - best-budget-launch-monitor.html
+# - best-golf-swing-analyzer-iphone.html
+# - best-golf-training-aids-home-practice.html
