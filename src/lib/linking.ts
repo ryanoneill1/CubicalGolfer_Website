@@ -16,6 +16,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
     { slug: '/best-golf-irons-2026/',              label: 'Best Golf Irons 2026' },
+    { slug: '/compare/',                           label: 'Compare Golf Products Head-to-Head' },
   ],
   'golf-tech': [
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
