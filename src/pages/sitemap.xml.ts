@@ -41,6 +41,11 @@ export async function GET() {
     { loc: '/compare/',                 freq: 'weekly',  pri: '0.8' },
     { loc: '/courses/',                 freq: 'monthly', pri: '0.8' },
 
+    // Standalone HTML pages (no Astro route — served from public/)
+    { loc: '/best-budget-launch-monitor.html',         freq: 'monthly', pri: '0.6' },
+    { loc: '/best-golf-swing-analyzer-iphone.html',    freq: 'monthly', pri: '0.6' },
+    { loc: '/best-golf-training-aids-home-practice.html', freq: 'monthly', pri: '0.6' },
+
     // Articles — priority and frequency by page type
     ...ARTICLES.map(a => ({
       loc:  a.slug,
