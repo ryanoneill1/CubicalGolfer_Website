@@ -401,17 +401,21 @@ nav.site-nav {
 .hero h1 em { font-style: italic; color: var(--gold); }
 .hero-sub { font-size: 17px; color: rgba(255,255,255,.82); line-height: 1.65; max-width: 480px; margin-bottom: 36px; }
 .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
-.hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 40px; }
-.hero-stat { font-size: 14px; color: rgba(255,255,255,.75); }
-.hero-stat strong { color: #fff; font-size: 19px; font-weight: 700; display: block; }
-.hero-card { background: var(--green-card); border-radius: var(--r3); padding: 28px 32px; }
-.hero-card h2 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 20px; }
-.hero-card ul { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-.hero-card li { display: flex; align-items: flex-start; gap: 10px; color: rgba(255,255,255,.88); font-size: 14.5px; line-height: 1.45; }
+.hero-stats { display: grid; grid-template-columns: repeat(4, auto); gap: 12px 32px; margin-top: 8px; }
+.hero-stat { font-size: 14px; color: rgba(255,255,255,.75); text-align: center; }
+.hero-stat strong { color: #fff; font-size: 24px; font-weight: 800; display: block; margin-bottom: 2px; }
+.hero-card { background: var(--green-card); border-radius: var(--r3); padding: 36px 36px 32px; border-left: 4px solid var(--gold); }
+.hero-card h2 { color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+.hero-card-sub { color: rgba(255,255,255,.7); font-size: 14px; line-height: 1.5; margin-bottom: 22px; }
+.hero-card ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+.hero-card li { display: flex; align-items: flex-start; gap: 12px; color: rgba(255,255,255,.92); font-size: 15px; line-height: 1.5; }
+.hero-card-cta { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.15); }
+.hero-card-link { color: var(--gold); font-size: 14px; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
+.hero-card-link:hover { text-decoration: underline; }
 .chk {
-  width: 20px; height: 20px; border-radius: 50%; background: var(--gold);
+  width: 24px; height: 24px; border-radius: 50%; background: var(--gold);
   flex-shrink: 0; display: flex; align-items: center; justify-content: center;
-  margin-top: 2px; font-size: 11px; color: var(--text); font-weight: 700;
+  margin-top: 1px; font-size: 12px; color: var(--text); font-weight: 800;
 }
 
 /* ── TRUST SECTION ── */
@@ -536,7 +540,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   .nav-links a { padding: 14px 24px; border-radius: 0; font-size: 15px; border-bottom: 1px solid var(--border); }
   .nav-toggle { display: flex; }
   .hero { grid-template-columns: 1fr; padding: 48px 1.5rem; }
-  .hero-card { display: none; }
+  .hero-card { margin-top: 8px; }
+  .hero-stats { grid-template-columns: repeat(4, auto); gap: 8px 20px; }
   .hero-btns { flex-direction: column; }
   .hero-btns .btn-gold, .hero-btns .btn-outline { width: 100%; text-align: center; padding: 15px; }
   .categories-grid { grid-template-columns: 1fr 1fr; }
@@ -550,6 +555,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 @media (max-width: 600px) {
   .categories-grid, .articles-grid, .art-list-grid, .related-grid { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 16px 24px; }
+  .hero-stat { text-align: left; }
   .cat-row2 { grid-column: span 1; grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -753,24 +760,32 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .hero-quick-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin: 16px 0 0;
+  margin: 20px 0 8px;
+}
+.hero-quick-label {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  color: var(--gold);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .hero-quick-link {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
-  color: rgba(255,255,255,.75);
-  background: rgba(255,255,255,.1);
-  border: 1px solid rgba(255,255,255,.2);
-  padding: 4px 12px;
+  color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 7px 16px;
   border-radius: 20px;
   text-decoration: none;
   transition: background .15s, color .15s;
   white-space: nowrap;
 }
 .hero-quick-link:hover {
-  background: rgba(255,255,255,.2);
+  background: rgba(255,255,255,.25);
   color: #fff;
 }
 
