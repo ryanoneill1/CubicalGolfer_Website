@@ -379,7 +379,7 @@ nav.site-nav {
   display: flex; align-items: center; justify-content: center;
 }
 .hero-illustration-img {
-  width: 380px; max-width: 100%; height: auto;
+  width: 760px; max-width: 100%; height: auto;
   border-radius: 14px; object-fit: cover;
 }
 .hero-badge {
