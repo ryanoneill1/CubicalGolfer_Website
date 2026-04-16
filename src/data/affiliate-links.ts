@@ -762,6 +762,65 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'FootJoy Tour Alpha Golf Shoes',
   },
 
+  // ── LAUNCH MONITORS ───────────────────────────────────────────────────────
+
+  'garmin-approach-r10': {
+    asin: 'B096B5JR5D',
+    url: 'https://www.amazon.com/dp/B096B5JR5D/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$499',
+    label: 'See Current Price',
+    imgSrc: '/images/products/garmin-approach-r10.webp',
+    imgAlt: 'Garmin Approach R10 Portable Golf Launch Monitor',
+    benefits: [
+      'Tracks 14+ data metrics including spin and launch angle',
+      'Works indoors and outdoors — waterproof and pocket-sized',
+      'Free E6 Connect sim play with Bandon Dunes included',
+    ],
+  },
+
+  'voice-caddie-sc4-pro': {
+    url: 'https://www.amazon.com/s?k=Voice+Caddie+SC4+Pro+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$499',
+    label: 'See Current Price',
+    imgSrc: '/images/products/voice-caddie-sc4-pro.webp',
+    imgAlt: 'Voice Caddie SC4 Pro Golf Launch Monitor',
+    benefits: [
+      'Built-in color screen — no phone needed on the range',
+      'E6 Connect compatible for home simulator play',
+      'No subscription — all features included at purchase',
+    ],
+  },
+
+  'bushnell-launch-pro': {
+    url: 'https://www.amazon.com/s?k=Bushnell+Launch+Pro+Circle+B+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$2,499',
+    label: 'See Current Price',
+    imgSrc: '/images/products/bushnell-launch-pro.webp',
+    imgAlt: 'Bushnell Launch Pro Circle B Launch Monitor',
+    benefits: [
+      'Same hardware as Foresight GC3 at 65% less cost',
+      'Three-camera photometric system for tour-level accuracy',
+      'Works with FSX Play, E6 Connect, and GSPro simulators',
+    ],
+  },
+
+  'flightscope-mevo-gen2': {
+    url: 'https://www.amazon.com/s?k=FlightScope+Mevo+Gen+2+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$2,199',
+    label: 'See Current Price',
+    imgSrc: '/images/products/flightscope-mevo-gen2.webp',
+    imgAlt: 'FlightScope Mevo Gen 2 Launch Monitor',
+    benefits: [
+      '3D Doppler radar for indoor and outdoor accuracy',
+      'Full club data: path, face angle, attack angle',
+      'Built-in camera for swing video with data overlay',
+    ],
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
