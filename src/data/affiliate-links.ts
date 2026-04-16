@@ -73,6 +73,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/blue-tees-series-3-max.webp',
     imgAlt: 'Blue Tees Series 3 Max Golf Rangefinder',
+  
+    benefits: [
+      'Lifetime warranty — replaced free if it ever fails',
+      'Slope toggle for tournament-legal play',
+      '±1 yard accuracy matches $300+ rangefinders',
+    ],
   },
 
   // Garmin Approach Z82 — ASIN B085T56B2X ✅ verified (official Garmin listing)
@@ -99,6 +105,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Bushnell',
     imgSrc: '/images/products/bushnell-pro-xe.webp',
     imgAlt: 'Bushnell Pro XE Golf Rangefinder',
+  
+    benefits: [
+      'Slope + Elements compensates for wind & altitude',
+      'BITE magnetic mount for cart bar convenience',
+      'Dual Display — red or black optics for any light',
+    ],
   },
 
   // ── GPS WATCHES ──────────────────────────────────────────────────────────
@@ -158,6 +170,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Bushnell',
     imgSrc: '/images/products/bushnell-ion-elite.webp',
     imgAlt: 'Bushnell Ion Elite GPS Golf Watch',
+  
+    benefits: [
+      'Largest GPS watch display — readable in direct sunlight',
+      'Slope-adjusted yardages built in at this price point',
+      'Auto hole advance with 36,000+ courses preloaded',
+    ],
   },
 
   // ── DRIVERS ──────────────────────────────────────────────────────────────
@@ -170,6 +188,11 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/callaway-paradym-ai-smoke-max.webp',
     imgAlt: 'Callaway Paradym AI Smoke Max Driver',
+    benefits: [
+      'AI-designed face optimized for consistent ball speed',
+      'Jailbreak + Batwing tech for stability on mishits',
+      'Adjustable hosel for draw/fade tuning',
+    ],
   },
 
   // TaylorMade Qi35 Max (2025) — search (shaft/loft variants)
@@ -180,6 +203,11 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/taylormade-qi35-max.webp',
     imgAlt: 'TaylorMade Qi35 Max Driver',
+    benefits: [
+      'Largest sweet spot in the TaylorMade lineup',
+      'Qi10 Infinity Carbon Crown for low spin',
+      'Speed Pocket flexes on low-face strikes for distance',
+    ],
   },
 
   // Cobra Aerojet Max — search (shaft/loft variants)
@@ -190,6 +218,11 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/cobra-aerojet-max.webp',
     imgAlt: 'Cobra Aerojet Max Golf Driver',
+    benefits: [
+      'PWR Bridge weighting for maximum forgiveness',
+      'AI-designed face for ball speed across the face',
+      'Best value premium driver at ~$100 less than rivals',
+    ],
   },
 
   // Ping G430 Max Driver — search (shaft/loft variants)
@@ -228,6 +261,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/callaway-chrome-tour-2026.webp',
     imgAlt: 'Callaway Chrome Tour 2026 Golf Balls',
+  
+    benefits: [
+      'Seamless Tour Aero design for stable ball flight',
+      'Graphene-infused Dual SoftFast core for speed',
+      'Tour-level spin with softer feel than Pro V1',
+    ],
   },
 
   // TaylorMade TP5 2024 — search (colour/generation variants)
@@ -248,6 +287,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/srixon-soft-feel.webp',
     imgAlt: 'Srixon Soft Feel Golf Balls',
+  
+    benefits: [
+      'Low compression (60) — ideal for swing speeds under 90mph',
+      'Soft Thin Cover for greenside control at half the price',
+      'Best value 2-piece ball for recreational golfers',
+    ],
   },
 
   // Vice Pro — sold direct-to-consumer; not on Amazon as brand-sold
@@ -285,6 +330,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/callaway-paradym-ai-smoke-max-irons.webp',
     imgAlt: 'Callaway Paradym AI Smoke Max Irons',
+  
+    benefits: [
+      'AI-designed Flash Face for distance on every club',
+      'Tungsten weighting for high launch and forgiveness',
+      'Urethane microspheres dampen vibration on mishits',
+    ],
   },
 
   // Titleist T300 Irons — search (shaft variants)
@@ -295,6 +346,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/titleist-t300.webp',
     imgAlt: 'Titleist T300 Golf Irons',
+  
+    benefits: [
+      'Max Impact 2.0 tech for distance without sacrificing feel',
+      'Denser tungsten weighting for a higher launch angle',
+      'Clean blade-like appearance with game-improvement tech',
+    ],
   },
 
   // Titleist T100 Irons — search (shaft variants)
@@ -338,6 +395,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/wilson-profile-sgi.webp',
     imgAlt: 'Wilson Profile SGI Complete Golf Set',
+  
+    benefits: [
+      'Complete 13-piece set with bag — everything you need',
+      'Oversized irons designed for maximum forgiveness',
+      'Best-selling beginner set for weekend golfers',
+    ],
   },
 
   // Callaway Strata Complete Set — search (varies by piece count / gender)
@@ -348,6 +411,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/callaway-strata.webp',
     imgAlt: 'Callaway Strata Complete Golf Set',
+  
+    benefits: [
+      '12-piece complete set with stand bag included',
+      'Forgiving driver and fairway wood for high launch',
+      'Trusted Callaway engineering at a starter price',
+    ],
   },
 
   // TaylorMade RBZ Speed Lite — search (current model name varies by year)
@@ -437,6 +506,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/rapsodo-mlm2pro.webp',
     imgAlt: 'Rapsodo MLM2PRO Golf Launch Monitor',
+  
+    benefits: [
+      'Doppler radar + camera for indoor/outdoor use',
+      'Shot tracer video replay on every swing',
+      'E6 Connect compatible for course simulation',
+    ],
   },
 
   // Blast Motion Golf Swing & Stroke Analyzer — ASIN B00UNFHKUK ✅ verified
@@ -471,6 +546,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Current Price',
     imgSrc: '/images/products/skytrak-plus.webp',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
+  
+    benefits: [
+      '4 high-speed cameras for photometric spin accuracy',
+      'Integrates with E6 Connect and TGC 2019 simulators',
+      'Professional-grade data: ball speed, spin axis, launch',
+    ],
   },
 
   // ── ACCESSORIES ──────────────────────────────────────────────────────────
@@ -565,6 +646,12 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$199', label: 'See Current Price',
     imgSrc: '/images/products/odyssey-white-hot-og.webp',
     imgAlt: 'Odyssey White Hot OG Putter',
+  
+    benefits: [
+      'White Hot insert — legendary soft feel at impact',
+      'Toe-hang balance suits slight arc putting strokes',
+      'Stroke Lab shaft for consistent tempo',
+    ],
   },
   'scotty-cameron-phantom': {
     url: 'https://www.amazon.com/s?k=Scotty+Cameron+Phantom+X+putter+2024&tag=cubicalgolfer-20',
@@ -577,6 +664,12 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$129', label: 'See Current Price',
     imgSrc: '/images/products/cleveland-hb-soft-milled.webp',
     imgAlt: 'Cleveland HB Soft Milled Putter',
+  
+    benefits: [
+      'Milled face for consistent roll from any lie',
+      'High-MOI mallet resists twisting on mishits',
+      'Best value premium putter under $150',
+    ],
   },
   'taylormade-spider-tour': {
     url: 'https://www.amazon.com/s?k=TaylorMade+Spider+Tour+putter+2024&tag=cubicalgolfer-20',
@@ -591,12 +684,24 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$249', label: 'See Current Price',
     imgSrc: '/images/products/sun-mountain-25-plus.webp',
     imgAlt: 'Sun Mountain 2.5+ Carry Golf Bag',
+  
+    benefits: [
+      '14-way top keeps every club organized and accessible',
+      'Under 5 lbs — lightest full-featured carry bag',
+      'Integrated stand with anti-slip legs',
+    ],
   },
   'titleist-players-4': {
     url: 'https://www.amazon.com/s?k=Titleist+Players+4+StaDry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$279', label: 'See Current Price',
     imgSrc: '/images/products/titleist-players-4.webp',
     imgAlt: 'Titleist Players 4 StaDry Golf Bag',
+  
+    benefits: [
+      '4-way top with full-length dividers for club protection',
+      'Lightweight at 3.5 lbs with comfortable dual straps',
+      'Premium materials built to last 5+ seasons',
+    ],
   },
   'callaway-fairway-14': {
     url: 'https://www.amazon.com/s?k=Callaway+Fairway+14+cart+bag&tag=cubicalgolfer-20',
@@ -617,6 +722,12 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$55/dozen', label: 'See Current Price',
     imgSrc: '/images/products/titleist-pro-v1x.webp',
     imgAlt: 'Titleist Pro V1x Golf Balls 2025',
+  
+    benefits: [
+      'Higher flight and more spin than the standard Pro V1',
+      'Firmer feel preferred by faster swing speed players',
+      'Optimized for swing speeds above 100mph',
+    ],
   },
 
   // ── GOLF SHOES ────────────────────────────────────────────────────────────
@@ -625,6 +736,12 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$120', label: 'See Current Price',
     imgSrc: '/images/products/footjoy-flex-xp.webp',
     imgAlt: 'FootJoy Flex XP Golf Shoes',
+  
+    benefits: [
+      'Waterproof protection with breathable mesh upper',
+      'Lightweight cushioning ideal for 18-hole walks',
+      'Versatile spikeless sole works on and off the course',
+    ],
   },
   'ecco-biom-c4': {
     url: 'https://www.amazon.com/s?k=ECCO+Biom+C4+golf+shoes&tag=cubicalgolfer-20',
