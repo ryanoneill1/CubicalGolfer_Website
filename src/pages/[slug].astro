@@ -1,0 +1,206 @@
+---
+// src/pages/compare/[slug].astro — Consistency System v2.0 — April 2026
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { COMPARISONS } from '../../data/comparisons';
+import { comparisonMeta } from '../../lib/seo';
+import { comparisonSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { getAffiliateLink } from '../../data/affiliate-links';
+import type { Comparison } from '../../data/types';
+
+export async function getStaticPaths() {
+  return COMPARISONS.map(c => ({
+    params: { slug: c.slug },
+    props: { comparison: c },
+  }));
+}
+
+interface Props { comparison: Comparison }
+const { comparison: c } = Astro.props;
+
+const meta = comparisonMeta(c);
+const schemas: object[] = [comparisonSchema(c), breadcrumbSchema(meta.breadcrumbs)];
+if (c.faq && c.faq.length > 0) schemas.push(faqSchema(c.faq));
+
+const PRODUCT_AFFILIATE_MAP: Record<string, string> = {
+  'bushnell-tour-v6':     'bushnell-tour-v6-shift',
+  'precision-pro-nx9':    'precision-pro-nx9-hd',
+  'garmin-s62':           'garmin-approach-s62',
+  'shot-scope-v5':        'shot-scope-v5',
+  'callaway-paradym-max': 'callaway-paradym-ai-smoke-max',
+  'taylormade-qi35-max':  'taylormade-qi35-max',
+  'arccos-caddie':        'arccos-caddie-sensors',
+  'garmin-s42':           'garmin-approach-s42',
+  'skytrak-plus':         'skytrak-plus',
+  'blue-tees-s3-max':     'blue-tees-series-3-max',
+};
+
+const PRODUCT_NAMES: Record<string, string> = {
+  'bushnell-tour-v6':     'Bushnell Tour V6 Shift',
+  'precision-pro-nx9':    'Precision Pro NX9 HD',
+  'garmin-s62':           'Garmin Approach S62',
+  'shot-scope-v5':        'Shot Scope V5',
+  'callaway-paradym-max': 'Callaway Paradym AI Smoke Max',
+  'taylormade-qi35-max':  'TaylorMade Qi35 Max',
+  'arccos-caddie':        'Arccos Caddie Smart Sensors',
+  'garmin-s42':           'Garmin Approach S42',
+  'skytrak-plus':         'SkyTrak+',
+  'blue-tees-s3-max':     'Blue Tees Series 3 Max',
+};
+
+const affA    = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
+const affB    = PRODUCT_AFFILIATE_MAP[c.productB] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB]) : null;
+const nameA   = PRODUCT_NAMES[c.productA] || c.productA.replace(/-/g, ' ');
+const nameB   = PRODUCT_NAMES[c.productB] || c.productB.replace(/-/g, ' ');
+const winnerName = PRODUCT_NAMES[c.winner] || c.winner.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]) : null;
+---
+
+<BaseLayout {meta} {schemas} activeNav="home">
+
+  {/* ── HERO ── */}
+  <header class="compare-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="bc-sep">›</span>
+      <a href="/compare/">Comparisons</a><span class="bc-sep">›</span>
+      <span aria-current="page">{c.title}</span>
+    </nav>
+    <span class="art-tag-lg tag-cmp">COMPARISON</span>
+    <h1>{c.title}</h1>
+    <div class="author-box">
+      <a href="/about/" style="flex-shrink:0">
+        <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
+      </a>
+      <div style="flex:1">
+        <span class="author-name">
+          <a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · low-teens hdcp</span>
+        </span>
+        <span class="author-meta">
+          📅 Updated: {c.dateModified} &nbsp;·&nbsp;
+          ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
+        </span>
+      </div>
+      <span class="verified-badge">✅ Independently Tested</span>
+    </div>
+  </header>
+
+  <div class="compare-body">
+
+    {/* ── WHO THIS IS FOR ── */}
+    <div class="bottom-line-box" role="note" aria-label="Who this comparison is for">
+      <p class="bottom-line-label">Who This Comparison Is For</p>
+      <p>{c.intro}</p>
+    </div>
+
+    {/* ── BUY BOTH — above fold ── */}
+    {(affA || affB) && (
+      <div class="compare-buy-row">
+        {affA && (
+          <div class="compare-buy-card">
+            <span class="compare-buy-label">{nameA}</span>
+            <span class="compare-buy-price">{affA.price}</span>
+            <a href={affA.url} class="btn-buy-affiliate" target="_blank"
+              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameA}`}>
+              <span class="btn-buy-cta">{affA.label} →</span>
+              <span class="btn-buy-badge">at {affA.retailer}</span>
+            </a>
+          </div>
+        )}
+        {affB && (
+          <div class="compare-buy-card">
+            <span class="compare-buy-label">{nameB}</span>
+            <span class="compare-buy-price">{affB.price}</span>
+            <a href={affB.url} class="btn-buy-affiliate" target="_blank"
+              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameB}`}>
+              <span class="btn-buy-cta">{affB.label} →</span>
+              <span class="btn-buy-badge">at {affB.retailer}</span>
+            </a>
+          </div>
+        )}
+      </div>
+    )}
+
+    {/* ── QUICK WINNER ── */}
+    <div class="verdict-box">
+      <h3>🏆 Winner: {winnerName}</h3>
+      <p>{c.winnerReason}</p>
+      {winnerAff && (
+        <a href={winnerAff.url} class="btn-buy-affiliate" style="margin-top:16px"
+          target="_blank" rel="nofollow noopener sponsored">
+          <span class="btn-buy-price">{winnerAff.price}</span>
+          <span class="btn-buy-cta">Buy the winner →</span>
+          <span class="btn-buy-badge">at {winnerAff.retailer}</span>
+        </a>
+      )}
+    </div>
+
+    {/* ── TESTING NOTES ── */}
+    <div class="testing-note" role="note">
+      Both products were independently purchased and tested across real rounds.
+      No manufacturer loans, no sponsored content.
+      <a href="/how-we-test/">See our full testing methodology</a>
+    </div>
+
+    {/* ── FULL COMPARISON ── */}
+    <h2>Full Comparison: {nameA} vs {nameB}</h2>
+    <p>{c.verdict}</p>
+
+    {/* ── BOTTOM BUY ROW ── */}
+    {(affA || affB) && (
+      <div class="compare-buy-row" style="margin-top:32px">
+        {affA && (
+          <a href={affA.url} class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
+            <span class="btn-buy-price">{affA.price}</span>
+            <span class="btn-buy-cta">{nameA} →</span>
+            <span class="btn-buy-badge">at {affA.retailer}</span>
+          </a>
+        )}
+        {affB && (
+          <a href={affB.url} class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
+            <span class="btn-buy-price">{affB.price}</span>
+            <span class="btn-buy-cta">{nameB} →</span>
+            <span class="btn-buy-badge">at {affB.retailer}</span>
+          </a>
+        )}
+      </div>
+    )}
+
+    {/* ── FAQ ── */}
+    {c.faq && c.faq.length > 0 && (
+      <div class="art-faq">
+        <h2>Frequently Asked Questions</h2>
+        {c.faq.map(({ q, a }) => (
+          <details class="faq-item">
+            <summary>{q}</summary>
+            <div class="faq-answer">{a}</div>
+          </details>
+        ))}
+      </div>
+    )}
+
+    {/* ── DISCLOSURE ── */}
+    <div class="disclosure-box" role="note">
+      Affiliate disclosure: some links on this page earn a small commission at no extra
+      cost to you. Products were independently purchased.
+      <a href="/about/" class="disclosure-link">Learn more about how we work</a>
+    </div>
+
+    {/* ── UPDATE STAMP ── */}
+    <div class="update-stamp">Last updated: {c.dateModified}</div>
+
+    {/* ── RELATED ── */}
+    <div class="rel-cluster" style="margin-top:40px">
+      <h3>Related Comparisons & Guides</h3>
+      <div class="rel-links">
+        <a href="/compare/">All Golf Product Comparisons →</a>
+        <a href="/gear-reviews/">All Gear Reviews →</a>
+        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
+        <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers 2026</a>
+      </div>
+    </div>
+
+  </div>
+
+</BaseLayout>
