@@ -4524,12 +4524,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Feature', 'Winner', 'Trackman 4', 'GCQuad', 'Verdict'],
       rows: [
-        { name: 'Price', bestFor: 'GCQuad', price: '$14,500', feature1: '$21,995 + $1,100/yr', feature2: 'GCQuad saves $7,500+', affiliateKey: 'foresight-gcquad' },
-        { name: 'Spin Consistency', bestFor: 'GCQuad', price: '82 RPM std dev', feature1: '176 RPM std dev', feature2: '2x more consistent', affiliateKey: 'foresight-gcquad' },
-        { name: 'Outdoor Tracking', bestFor: 'Trackman', price: 'Impact zone only', feature1: 'Full ball flight', feature2: 'Trackman tracks landing', affiliateKey: 'trackman-4' },
-        { name: 'Indoor Accuracy', bestFor: 'GCQuad', price: 'Excellent', feature1: 'Good (needs space)', feature2: 'GCQuad needs less room', affiliateKey: 'foresight-gcquad' },
-        { name: 'Sim Software', bestFor: 'GCQuad', price: 'FSX, E6, GSPro, TGC', feature1: 'Trackman only', feature2: 'GCQuad more flexible', affiliateKey: 'foresight-gcquad' },
-        { name: 'Annual Cost', bestFor: 'GCQuad', price: '$0', feature1: '$1,100/year', feature2: 'GCQuad has no subscription', affiliateKey: 'foresight-gcquad' },
+        { name: 'Trackman 4', bestFor: 'Outdoor Tracking', price: '~$21,995', feature1: 'Dual Doppler Radar + OERT', feature2: 'Full ball flight tracking', winner: false, affiliateKey: 'trackman-4' },
+        { name: 'Foresight GCQuad', bestFor: 'Indoor Accuracy', price: '~$14,500', feature1: 'Quadroscopic 4-Camera', feature2: '2x more consistent spin', winner: true, affiliateKey: 'foresight-gcquad' },
+        { name: 'Bushnell Launch Pro', bestFor: 'Best Value Premium', price: '~$2,499', feature1: 'Foresight GC3 Hardware', feature2: '83% less than GCQuad', affiliateKey: 'bushnell-launch-pro' },
       ],
     },
     sections: [
