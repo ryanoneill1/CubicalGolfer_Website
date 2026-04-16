@@ -20,6 +20,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
   ],
   'golf-tech': [
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
+    { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Launch Monitors 2026' },
     { slug: '/best-golf-apps-handicap-tracking/',  label: 'Best Golf Apps for Handicap Tracking' },
     { slug: '/golf-rangefinder-vs-gps-watch/',     label: 'Rangefinder vs GPS Watch' },
   ],
@@ -305,6 +306,13 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-swing-analyzers/',           label: 'Best Golf Swing Analyzers 2026' },
     { slug: '/best-golf-gps-watches/',               label: 'Best Golf GPS Watches 2026' },
     { slug: '/best-ai-golf-training-tools/',         label: 'Best AI Golf Training Tools' },
+  ],
+
+  // ── Launch monitor cluster ─────────────────────────────────────────────────
+  'launch-monitors': [
+    { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Golf Simulators for Small Spaces' },
+    { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
+    { slug: '/best-golf-swing-analyzers/',           label: 'Best Golf Swing Analyzers 2026' },
   ],
 };
 
