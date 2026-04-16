@@ -247,6 +247,72 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-irons-high-handicapper/',   label: 'Best Irons for High Handicappers' },
   ],
+
+  // ── Bags cluster ───────────────────────────────────────────────────────────
+  'golf-bags': [
+    { slug: '/best-golf-bags-2026/',                label: 'Best Golf Bags 2026' },
+    { slug: '/best-golf-accessories-under-50/',     label: 'Best Accessories Under $50' },
+    { slug: '/best-golf-shoes-for-walking/',        label: 'Best Shoes for Walking' },
+  ],
+
+  // ── Balls cluster ──────────────────────────────────────────────────────────
+  'golf-balls-2026': [
+    { slug: '/titleist-pro-v1-vs-pro-v1x/',         label: 'Pro V1 vs Pro V1x Comparison' },
+    { slug: '/golf-ball-compression-chart/',         label: 'Golf Ball Compression Chart' },
+    { slug: '/best-golf-balls-for-seniors/',         label: 'Best Golf Balls for Seniors' },
+  ],
+
+  // ── Drivers cluster ────────────────────────────────────────────────────────
+  'drivers-under-200': [
+    { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
+    { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
+    { slug: '/best-beginner-golf-club-sets/',        label: 'Best Beginner Club Sets' },
+  ],
+
+  // ── Shoes cluster ──────────────────────────────────────────────────────────
+  'golf-shoes-walking': [
+    { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
+    { slug: '/best-golf-bags-2026/',                 label: 'Best Golf Bags 2026' },
+    { slug: '/golf-fitness-office-golfer/',           label: 'Golf Fitness for Office Workers' },
+  ],
+
+  // ── Gloves cluster ─────────────────────────────────────────────────────────
+  'best-golf-gloves-men': [
+    { slug: '/best-golf-gloves-hot-weather/',        label: 'Best Golf Gloves for Hot Weather' },
+    { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
+    { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
+  ],
+
+  // ── Putters cluster ────────────────────────────────────────────────────────
+  'golf-putters': [
+    { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
+    { slug: '/best-putter-high-handicapper/',         label: 'Best Putter for High Handicappers' },
+  ],
+
+  // ── Simulator cluster ──────────────────────────────────────────────────────
+  'golf-simulator-small-spaces': [
+    { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
+    { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Garage Simulator' },
+    { slug: '/best-indoor-golf-net-setup/',           label: 'Best Indoor Golf Net Setup' },
+  ],
+  'skytrak-vs-mevo': [
+    { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Simulators for Small Spaces' },
+    { slug: '/best-ai-golf-training-tools/',         label: 'Best AI Golf Training Tools' },
+    { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Garage Simulator' },
+  ],
+
+  // ── Comparison cluster ─────────────────────────────────────────────────────
+  'pro-v1-vs-pro-v1x': [
+    { slug: '/best-golf-balls-2026/',                label: 'Best Golf Balls 2026' },
+    { slug: '/golf-ball-compression-chart/',         label: 'Golf Ball Compression Chart' },
+    { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
+  ],
+  'arccos-vs-shot-scope': [
+    { slug: '/best-golf-swing-analyzers/',           label: 'Best Golf Swing Analyzers 2026' },
+    { slug: '/best-golf-gps-watches/',               label: 'Best Golf GPS Watches 2026' },
+    { slug: '/best-ai-golf-training-tools/',         label: 'Best AI Golf Training Tools' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
