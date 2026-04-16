@@ -265,7 +265,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     {article.bottomLine && (
       <div class="bottom-line-box" role="note" aria-label="Our verdict">
         <p class="bottom-line-label">Our Verdict</p>
-        <p>{article.bottomLine}</p>
+        <p set:html={article.bottomLine} />
       </div>
     )}
 
