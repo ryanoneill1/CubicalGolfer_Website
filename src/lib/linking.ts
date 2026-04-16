@@ -276,13 +276,6 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-fitness-office-golfer/',           label: 'Golf Fitness for Office Workers' },
   ],
 
-  // ── Gloves cluster ─────────────────────────────────────────────────────────
-  'best-golf-gloves-men': [
-    { slug: '/best-golf-gloves-hot-weather/',        label: 'Best Golf Gloves for Hot Weather' },
-    { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
-    { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
-  ],
-
   // ── Putters cluster ────────────────────────────────────────────────────────
   'golf-putters': [
     { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
