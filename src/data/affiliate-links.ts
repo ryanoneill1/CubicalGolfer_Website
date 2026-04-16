@@ -821,6 +821,34 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
+  'trackman-4': {
+    url: 'https://www.amazon.com/s?k=Trackman+4+golf+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$21,995',
+    label: 'See Current Price',
+    imgSrc: '/images/products/trackman-4.webp',
+    imgAlt: 'Trackman 4 Golf Launch Monitor',
+    benefits: [
+      'Dual-radar OERT tracks full ball flight from impact to landing',
+      '40+ data parameters — the most comprehensive on the market',
+      'Used by 90%+ of PGA Tour coaches and club fitters',
+    ],
+  },
+
+  'foresight-gcquad': {
+    url: 'https://www.amazon.com/s?k=Foresight+GCQuad+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$14,500',
+    label: 'See Current Price',
+    imgSrc: '/images/products/foresight-gcquad.webp',
+    imgAlt: 'Foresight Sports GCQuad Launch Monitor',
+    benefits: [
+      'Four high-speed cameras measure impact directly — not estimated',
+      'More consistent spin data than radar units on mishits',
+      'Works with FSX Play, E6 Connect, GSPro and TGC 2019',
+    ],
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
