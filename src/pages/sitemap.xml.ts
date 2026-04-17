@@ -38,6 +38,7 @@ export async function GET() {
     { loc: '/golf-accessories/',        freq: 'weekly',  pri: '0.9' },
     { loc: '/golf-lifestyle/',          freq: 'weekly',  pri: '0.8' },
     { loc: '/improve-your-golf-game/',  freq: 'weekly',  pri: '0.9' },
+    { loc: '/office-hacks/',             freq: 'weekly',  pri: '0.9' },
     { loc: '/compare/',                 freq: 'weekly',  pri: '0.8' },
     { loc: '/courses/',                 freq: 'monthly', pri: '0.8' },
 
