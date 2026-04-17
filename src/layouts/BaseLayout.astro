@@ -20,14 +20,12 @@ interface Props {
 const { meta, schemas, activeNav = 'home' } = Astro.props;
 
 const NAV_ITEMS = [
-  { label: 'Home',             href: '/',                        key: 'home'          },
-  { label: 'Golf Gear Reviews', href: '/gear-reviews/',           key: 'gear-reviews'  },
+  { label: 'Home',              href: '/',                        key: 'home'          },
+  { label: 'Gear Reviews',      href: '/gear-reviews/',           key: 'gear-reviews'  },
   { label: 'Golf Tech',         href: '/golf-tech/',              key: 'golf-tech'     },
-  { label: 'Golf Accessories',  href: '/golf-accessories/',       key: 'golf-accessories' },
   { label: 'Improve Your Game', href: '/improve-your-golf-game/', key: 'improve-game'  },
-  { label: 'Golf Lifestyle',    href: '/golf-lifestyle/',         key: 'golf-lifestyle'},
-  { label: 'Golf Courses',       href: '/courses/',            key: 'courses'    },
-  { label: 'About',             href: '/about/',                  key: 'about'         },
+  { label: 'Office Hacks',      href: '/office-hacks/',           key: 'office-hacks'  },
+  { label: 'Free Buying Guide', href: '#free-guide',              key: 'free-guide', cta: true },
 ];
 ---
 
@@ -133,7 +131,10 @@ const NAV_ITEMS = [
       {NAV_ITEMS.map(item => (
         <a
           href={item.href}
-          class={activeNav === item.key ? 'active' : ''}
+          class:list={[
+            activeNav === item.key ? 'active' : '',
+            (item as any).cta ? 'nav-cta' : '',
+          ]}
           role="menuitem"
         >{item.label}</a>
       ))}
@@ -146,7 +147,7 @@ const NAV_ITEMS = [
   </main>
 
   <!-- ── EMAIL CAPTURE ── -->
-  <section class="email-strip" aria-label="Newsletter signup">
+  <section class="email-strip" id="free-guide" aria-label="Newsletter signup">
     <div class="email-strip__inner">
       <div class="email-strip__copy">
         <p class="email-strip__eyebrow">FREE DOWNLOAD</p>
@@ -217,6 +218,14 @@ const NAV_ITEMS = [
         <a href="/how-to-improve-putting/">Improve Your Putting</a>
         <a href="/golf-tips-for-beginners/">Tips for Beginners</a>
         <a href="/average-golf-handicap/">Average Handicap Guide</a>
+      </div>
+      <div class="footer-col">
+        <h4>Office Hacks</h4>
+        <a href="/office-hacks/">Office Hacks Hub</a>
+        <a href="/golf-practice-drills-at-home/">15-Min Home Drills</a>
+        <a href="/how-to-sneak-in-more-golf-rounds/">Sneak In More Rounds</a>
+        <a href="/golf-fitness-office-golfer/">Office Golf Fitness</a>
+        <a href="/best-golf-gear-under-100/">Best Gear Under $100</a>
       </div>
       <div class="footer-col">
         <h4>Accessories & Gifts</h4>
