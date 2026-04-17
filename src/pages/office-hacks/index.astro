@@ -1,0 +1,93 @@
+---
+// src/pages/office-hacks/index.astro — Curated hub for the 9-to-5 golfer
+import BaseLayout        from '../../layouts/BaseLayout.astro';
+import { ARTICLES }      from '../../data/articles';
+import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
+
+// Curate articles relevant to the office/weekend golfer lifestyle
+const OFFICE_HACK_IDS = [
+  'practice-drills-home',
+  'practice-golf-at-home',
+  'fitness',
+  'sneak-rounds',
+  'gear-under-100',
+  'break-90',
+  'improve-putting',
+  'how-to-stop-3-putting',
+  'beginner-set-under-500',
+  'beginner-sets',
+  'tips-beginners',
+  'handicap',
+  'handicap-weekend-golfer',
+];
+
+const articles = ARTICLES
+  .filter(a => OFFICE_HACK_IDS.includes(a.id))
+  .sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+
+const meta = {
+  title:       'Office Hacks — Golf Tips for the 9-to-5 Golfer',
+  description: 'Practice drills, fitness routines, and time hacks for golfers who work all week and play on weekends. Built by a cubicle golfer who gets it.',
+  canonical:   'https://www.cubicalgolfer.com/office-hacks/',
+  ogImage:     'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType:      'website' as const,
+  robots:      'index, follow',
+  breadcrumbs: [
+    { label: 'Home',         href: '/' },
+    { label: 'Office Hacks', href: '/office-hacks/' },
+  ],
+};
+
+const schemas = [
+  breadcrumbSchema(meta.breadcrumbs),
+  collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
+];
+---
+
+<BaseLayout {meta} {schemas} activeNav="office-hacks">
+
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Office Hacks</span>
+    </nav>
+    <h1>🏢 Office Hacks</h1>
+    <p class="cat-subhead">You work 9-to-5. Golf is your weekend reset. These guides are built for
+your schedule — quick practice drills, budget gear, fitness you can do at your desk, and ways
+to squeeze in more rounds without quitting your job.</p>
+  </header>
+
+  <div class="cat-page-body">
+    {articles.length === 0 ? (
+      <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
+    ) : (
+      <div class="articles-grid">
+        {articles.map(a => (
+          <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+            <div class={`art-thumb ${a.thumb}`}>
+              <span class={
+                a.tag === 'BUYING GUIDE' ? 'art-badge tag-buy' :
+                a.tag === 'COMPARISON'   ? 'art-badge tag-cmp' :
+                a.tag === 'TUTORIAL'     ? 'art-badge tag-tut' :
+                a.tag === 'LISTICLE'     ? 'art-badge tag-list' :
+                a.tag === 'LIFESTYLE'    ? 'art-badge tag-life' :
+                'art-badge tag-rev'
+              }>{a.tag}</span>
+              <span aria-hidden="true">{a.emoji}</span>
+            </div>
+            <div class="art-body">
+              <h3>{a.titleDisplay}</h3>
+              <p>{a.excerpt}</p>
+              <div class="art-foot">
+                <span class="art-words">{a.words} · Updated 2026</span>
+                <span class="art-read">Read guide →</span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+
+</BaseLayout>
