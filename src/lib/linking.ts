@@ -322,6 +322,23 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Golf Simulators for Small Spaces' },
     { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
   ],
+  'gear-under-100': [
+    { slug: '/best-golf-accessories-under-50/',      label: 'Best Golf Accessories Under $50' },
+    { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
+    { slug: '/best-beginner-golf-set-under-500/',    label: 'Best Beginner Set Under $500' },
+  ],
+  'practice-drills-home': [
+    { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
+    { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
+    { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
+  ],
+  'beginner-set-under-500': [
+    { slug: '/best-beginner-golf-club-sets/',         label: 'Best Beginner Golf Club Sets' },
+    { slug: '/golf-for-beginners/',                  label: 'Golf for Beginners Guide' },
+    { slug: '/best-golf-irons-high-handicapper/',    label: 'Best Irons for High Handicappers' },
+    { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
