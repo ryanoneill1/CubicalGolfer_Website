@@ -1269,3 +1269,117 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 @media (max-width: 860px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 540px) { .related-grid { grid-template-columns: 1fr; } }
 
+
+/* ── EMAIL CAPTURE STRIP ── */
+.email-strip {
+  background: var(--green);
+  padding: 56px clamp(1.5rem, 5vw, 4rem);
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+.email-strip__inner {
+  max-width: 920px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+.email-strip__eyebrow {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+.email-strip__heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin: 0 0 12px;
+}
+.email-strip__sub {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255,255,255,.7);
+  margin: 0;
+}
+.email-strip__field {
+  display: flex;
+  gap: 0;
+  border-radius: var(--r1);
+  overflow: hidden;
+}
+.email-strip__input {
+  flex: 1;
+  min-width: 0;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 2px solid transparent;
+  border-right: none;
+  border-radius: var(--r1) 0 0 var(--r1);
+  outline: none;
+  background: #fff;
+  color: var(--text);
+  transition: border-color .2s;
+}
+.email-strip__input:focus {
+  border-color: var(--gold);
+}
+.email-strip__btn {
+  padding: 14px 22px;
+  background: var(--gold);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 800;
+  font-family: inherit;
+  border: none;
+  border-radius: 0 var(--r1) var(--r1) 0;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s;
+}
+.email-strip__btn:hover { background: var(--gold-dark); }
+.email-strip__disclaimer {
+  margin: 10px 0 0;
+  font-size: 11px;
+  color: rgba(255,255,255,.4);
+  line-height: 1.5;
+}
+.email-strip__thanks {
+  padding: 16px 20px;
+  background: rgba(255,255,255,.12);
+  border-radius: var(--r1);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+@media (max-width: 720px) {
+  .email-strip__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .email-strip__field {
+    flex-direction: column;
+    border-radius: var(--r1);
+    overflow: visible;
+  }
+  .email-strip__input {
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: var(--r1);
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    width: 100%;
+  }
+  .email-strip__input::placeholder { color: rgba(255,255,255,.5); }
+  .email-strip__btn {
+    border-radius: var(--r1);
+    text-align: center;
+    width: 100%;
+    padding: 14px;
+  }
+}
