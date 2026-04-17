@@ -7,7 +7,7 @@ import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
-import { articleSchema, faqSchema, breadcrumbSchema, howToSchema } from '../lib/schema';
+import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema } from '../lib/schema';
 import { getMergedRelated } from '../lib/linking';
 import { getAffiliateLink } from '../data/affiliate-links';
 import type { Article } from '../data/types';
@@ -206,6 +206,21 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
     'BEST CONSISTENCY': 'foresight-gcquad',
   },
 };
+
+// Product schema for buying-guide sections with badges + affiliate links
+if (isBuyingGuide) {
+  for (const section of article.sections) {
+    if (!section.badge) continue;
+    const sectionAffKey = (section as any).affiliateKey;
+    const pid = (sectionAffKey !== undefined)
+      ? sectionAffKey
+      : (BADGE_TO_PRODUCT[article.id]?.[section.badge || ''] ?? '');
+    if (!pid) continue;
+    const aff = getAffiliateLink(pid);
+    if (!aff?.url) continue;
+    schemas.push(buyingGuideProductSchema(section, aff.url));
+  }
+}
 ---
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
