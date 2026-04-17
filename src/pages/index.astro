@@ -79,16 +79,27 @@ const TAG_CLASSES: Record<string, string> = {
   <!-- ── HERO ── -->
   <section class="hero" aria-label="Welcome to Cubical Golfer">
     <div>
-      <div class="hero-badge" aria-hidden="true">🏌️ FOR THE CUBICLE GOLFER</div>
-      <h1>Escape the Cubicle.<br /><em>Play Better Golf.</em></h1>
+      <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
+      <h1>You Work All Week.<br /><em>Golf Is Your Reset.</em></h1>
       <p class="hero-sub">
-        Independent gear reviews, buying guides, and swing tips for everyday golfers
-        who squeeze rounds in on weekends. Tested by real weekend golfers — 40+ rounds of hands-on testing.
+        Some weekends you shoot 84 and feel like a god. Others you card 97 and question everything.
+        You don't always make it to the range — sometimes you roll straight to the first tee, coffee in hand, zero warm-up swings.
+        We're the same. This site is gear reviews, buying guides, and no-BS tips built by weekend golfers who get it.
       </p>
       <div class="hero-btns">
         <a href="/best-golf-rangefinders-2026/" class="btn-gold">Best Rangefinders 2026 →</a>
         <a href="/best-golf-gifts-for-him/" class="btn-outline">Gift Guide 2026</a>
         <a href="/compare/" class="btn-outline">Compare Products</a>
+      </div>
+      <!-- Hero email capture -->
+      <div class="hero-email">
+        <p class="hero-email-label">Free guide: the one best pick in every gear category — no fluff, just answers.</p>
+        <form class="hero-email-form" id="hero-email-form" action="https://app.convertkit.com/forms/CONVERTKIT_FORM_ID/subscriptions" method="post" novalidate>
+          <input type="email" name="email_address" placeholder="your@email.com" required autocomplete="email" class="hero-email-input" />
+          <button type="submit" class="hero-email-btn">Send Me the Guide →</button>
+        </form>
+        <p class="hero-email-fine">No spam, ever. Unsubscribe in one click.</p>
+        <div class="hero-email-thanks" id="hero-email-thanks" hidden>✅ Check your inbox — the guide is on its way!</div>
       </div>
       <!-- Quick affiliate links above fold -->
       <div class="hero-quick-links">
@@ -104,14 +115,14 @@ const TAG_CLASSES: Record<string, string> = {
       <img src="/images/cubicalgolfer-hero.jpg" alt="Cubical Golfer — office golfer dreaming of the fairway" width="400" height="400" loading="eager" decoding="async" class="hero-illustration-img" />
     </div>
     <aside class="hero-card" aria-label="Why Cubical Golfer">
-      <h2>Built for Real Golfers</h2>
-      <p class="hero-card-sub">Every recommendation is backed by hands-on course testing — not spec sheets or paid placements.</p>
+      <h2>Built for Weekend Warriors</h2>
+      <p class="hero-card-sub">Not tour pros. Not scratch golfers. Just 9-to-5ers who play on weekends and refuse to stop getting better.</p>
       <ul>
-        <li><span class="chk" aria-hidden="true">✓</span>Gear recommendations that fit real budgets</li>
-        <li><span class="chk" aria-hidden="true">✓</span>No gear-head jargon — just what actually helps</li>
-        <li><span class="chk" aria-hidden="true">✓</span>Comparison tables for fast decision-making</li>
-        <li><span class="chk" aria-hidden="true">✓</span>Tested over 40+ real rounds on real courses</li>
-        <li><span class="chk" aria-hidden="true">✓</span>All products independently purchased</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Gear picks that fit a real-person budget</li>
+        <li><span class="chk" aria-hidden="true">✓</span>No science papers — just what actually helps your game</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Side-by-side tables so you decide in 60 seconds</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Tested over 40+ real rounds — not lab conditions</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Every product purchased with our own money</li>
       </ul>
       <div class="hero-card-cta">
         <a href="/how-we-test/" class="hero-card-link">See how we test →</a>
@@ -310,4 +321,115 @@ const TAG_CLASSES: Record<string, string> = {
     </div>
   </section>
 
+  <script>
+    (function () {
+      const form = document.getElementById('hero-email-form') as HTMLFormElement;
+      const thanks = document.getElementById('hero-email-thanks');
+      if (!form || !thanks) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value;
+        if (!email) return;
+        // Uncomment when ConvertKit/MailerLite is wired up:
+        // fetch(form.action, { method: 'POST', body: new FormData(form) });
+        form.querySelector('.hero-email-form')?.setAttribute('style', 'display:none');
+        form.querySelector('.hero-email-fine')?.setAttribute('style', 'display:none');
+        (form.parentElement?.querySelector('.hero-email-label') as HTMLElement)?.setAttribute('style', 'display:none');
+        form.style.display = 'none';
+        thanks.removeAttribute('hidden');
+      });
+    })();
+  </script>
+
 </BaseLayout>
+
+<style>
+  .hero-email {
+    margin-top: 28px;
+    padding: 20px 24px;
+    background: rgba(255,255,255,.08);
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,.12);
+    max-width: 480px;
+  }
+  .hero-email-label {
+    font-size: 14px;
+    color: rgba(255,255,255,.85);
+    margin: 0 0 12px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .hero-email-form {
+    display: flex;
+    gap: 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .hero-email-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    border: 2px solid transparent;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    background: #fff;
+    color: #1a1a1a;
+    transition: border-color .2s;
+  }
+  .hero-email-input:focus {
+    border-color: #C9A84C;
+  }
+  .hero-email-btn {
+    padding: 12px 20px;
+    background: #C9A84C;
+    color: #1a1a1a;
+    font-size: 14px;
+    font-weight: 800;
+    font-family: inherit;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background .2s;
+  }
+  .hero-email-btn:hover {
+    background: #a8892e;
+  }
+  .hero-email-fine {
+    margin: 8px 0 0;
+    font-size: 11px;
+    color: rgba(255,255,255,.4);
+  }
+  .hero-email-thanks {
+    padding: 14px 18px;
+    background: rgba(255,255,255,.12);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  @media (max-width: 600px) {
+    .hero-email { max-width: 100%; }
+    .hero-email-form {
+      flex-direction: column;
+      gap: 8px;
+      overflow: visible;
+    }
+    .hero-email-input {
+      border: 2px solid rgba(255,255,255,.2);
+      border-radius: 8px;
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      width: 100%;
+    }
+    .hero-email-input::placeholder { color: rgba(255,255,255,.5); }
+    .hero-email-btn {
+      border-radius: 8px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
