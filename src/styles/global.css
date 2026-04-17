@@ -2,7 +2,7 @@
 /* CubicalGolfer.com — Design System */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 16px; border: 0; }
 
 :root {
   --green:      #1E3A28;
@@ -34,22 +34,24 @@ body {
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  border: 0; outline: 0;
 }
 
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
 
 /* Skip link */
-.skip { position: absolute; top: -40px; left: 0; background: var(--green);
+.skip { position: absolute; top: -9999px; left: -9999px; background: var(--green);
   color: #fff; padding: 8px 16px; border-radius: 0 0 6px 0; font-size: 14px;
-  font-weight: 600; transition: top .2s; z-index: 9999; }
-.skip:focus { top: 0; }
+  font-weight: 600; z-index: 9999; }
+.skip:focus { top: 0; left: 0; }
 *:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
 
 /* ── NAV ── */
 nav.site-nav {
   position: sticky; top: 0; z-index: 100; background: var(--white);
-  border-top: none; border-bottom: 3px solid var(--green);
+  border: none; border-bottom: 3px solid var(--green);
+  box-shadow: none; outline: none;
   display: flex; align-items: center; justify-content: flex-start;
   padding: 0 clamp(1rem,4vw,2rem); height: var(--nav-h);
 }
