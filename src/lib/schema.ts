@@ -23,9 +23,14 @@ const AUTHOR = {
   '@type': 'Person',
   name: 'Cubical Golfer Staff',
   url: `${DOMAIN}/about/`,
-  description: 'Weekend golfer with 15+ years experience. Tests all gear over a minimum of 10 real rounds before recommending.',
+  description: 'Weekend golfer with 15+ years experience and a low-teens handicap. Tests all gear over a minimum of 10 real rounds on real courses before recommending. All products independently purchased.',
   image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
   '@id': `${DOMAIN}/about/#author`,
+  knowsAbout: [
+    'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
+    'Golf irons', 'Golf drivers', 'Golf balls', 'Golf putters',
+    'Golf swing improvement', 'Golf equipment testing', 'Golf simulator setup',
+  ],
 };
 
 export function schemaTag(obj: object): string {
@@ -105,6 +110,10 @@ export function articleSchema(article: Article): object {
     },
     inLanguage: 'en-US',
     isPartOf: { '@id': `${DOMAIN}/#website` },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.bottom-line-box', '.art-content h1', '.faq-answer'],
+    },
   };
 }
 
