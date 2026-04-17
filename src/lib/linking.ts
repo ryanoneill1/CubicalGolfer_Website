@@ -17,6 +17,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
     { slug: '/best-golf-irons-2026/',              label: 'Best Golf Irons 2026' },
     { slug: '/compare/',                           label: 'Compare Golf Products Head-to-Head' },
+    { slug: '/best-golf-gear-under-100/',          label: 'Best Golf Gear Under $100' },
   ],
   'golf-tech': [
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
@@ -28,11 +29,13 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
     { slug: '/best-golf-accessories-under-50/',              label: 'Best Golf Accessories Under $50' },
     { slug: '/best-golf-gifts-for-him/',                     label: 'Best Golf Gifts for Him' },
+    { slug: '/best-golf-gear-under-100/',                    label: 'Best Golf Gear Under $100' },
   ],
   'improve-game': [
     { slug: '/how-to-break-90/',         label: 'How to Break 90 This Season' },
     { slug: '/how-to-fix-your-slice/',   label: 'How to Fix Your Slice' },
     { slug: '/average-golf-handicap/',   label: 'Average Golf Handicap 2026' },
+    { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (15 Min)' },
   ],
   'golf-lifestyle': [
     { slug: '/golf-for-beginners/',      label: 'Golf for Beginners — Complete Guide' },
@@ -185,6 +188,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Start Here' },
     { slug: '/golf-tips-for-beginners/',            label: 'Golf Tips for Beginners' },
     { slug: '/golf-course-etiquette/',              label: 'Golf Course Etiquette Guide' },
+    { slug: '/best-beginner-golf-set-under-500/',   label: 'Best Beginner Set Under $500' },
+    { slug: '/best-golf-gear-under-100/',           label: 'Best Golf Gear Under $100' },
   ],
 
   // ── Improvement cluster ───────────────────────────────────────────────────────
@@ -197,16 +202,19 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
     { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+    { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
   ],
   'improve-putting': [
     { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
     { slug: '/best-putter-high-handicapper/',       label: 'Best Putter for High Handicappers' },
+    { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
   ],
   'how-to-stop-3-putting': [
     { slug: '/how-to-improve-putting/',             label: 'How to Improve Your Putting' },
     { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
+    { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
   ],
   'why-does-my-golf-ball-go-right': [
     { slug: '/how-to-fix-your-slice/',              label: 'Full Slice Fix Guide' },
