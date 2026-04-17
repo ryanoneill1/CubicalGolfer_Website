@@ -23,7 +23,7 @@ interface Props { article: Article }
 const { article } = Astro.props;
 
 const meta    = articleMeta(article);
-const related = getMergedRelated(article, 4);
+const related = getMergedRelated(article, 6);
 
 const schemas: object[] = [
   articleSchema(article),
