@@ -415,6 +415,17 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
           })()}
 
           {section.body && section.body.trim() && <p>{section.body}</p>}
+
+          {/* Inline section image — for editorial/lifestyle images in article body */}
+          {(section as any).sectionImage && (
+            <figure style="margin:24px 0;text-align:center;">
+              <img src={(section as any).sectionImage} alt={(section as any).sectionImageAlt ?? section.h2}
+                width="680" height="400" loading="lazy" decoding="async"
+                style="max-width:100%;height:auto;border-radius:12px;"
+                onerror="this.style.display='none'" />
+            </figure>
+          )}
+
           {section.price && <p class="price-note">💰 Price: {section.price}</p>}
 
           {/* PROS / CONS — new in v2 */}
