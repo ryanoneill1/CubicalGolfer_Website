@@ -20,8 +20,9 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
   ],
   'golf-tech': [
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
+    { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Launch Monitors 2026' },
     { slug: '/best-golf-apps-handicap-tracking/',  label: 'Best Golf Apps for Handicap Tracking' },
-    { slug: '/golf-rangefinder-vs-gps-watch/',     label: 'Rangefinder vs GPS Watch' },
+    { slug: '/compare/skytrak-vs-garmin-r10/',     label: 'SkyTrak+ vs Garmin R10' },
   ],
   'golf-accessories': [
     { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
@@ -49,6 +50,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
     { slug: '/do-i-need-slope-on-rangefinder/',  label: 'Do I Need Slope on a Rangefinder?' },
     { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinders for Seniors' },
+    { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9' },
   ],
   'rangefinder-worth-it': [
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
@@ -101,6 +103,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
     { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
     { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
+    { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5' },
   ],
   'gps-watch-high-handicapper': [
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best Golf GPS Watch Under $200' },
