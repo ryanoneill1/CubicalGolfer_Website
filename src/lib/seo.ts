@@ -25,7 +25,7 @@ function smartTitle(title: string): string {
 export function homeMeta(): PageMeta {
   return {
     title:       'Cubical Golfer — Gear Reviews & Tips for Weekend Golfers',
-    description: 'Honest golf gear reviews, buying guides, and improvement tips for weekend golfers. No fluff — just what actually works on the course.',
+    description: 'Gear reviews and tips for golfers who work all week and play on weekends. We fix our slice one day and find a new problem the next. Tested by a real 15-hdcp.',
     canonical:   `${DOMAIN}/`,
     ogImage:     OG_IMG,
     ogType:      'website',
@@ -135,11 +135,11 @@ export function coursesMeta(): PageMeta {
 
 // ── Category index pages ──────────────────────────────────────────────────────
 const CATEGORY_CONFIG: Record<string, { label: string; slug: string; description: string }> = {
-  'gear-reviews':     { label: 'Golf Gear Reviews', slug: 'gear-reviews',          description: 'Independent golf gear reviews and buying guides for weekend golfers — rangefinders, GPS watches, irons, drivers, and more. Tested over 40+ real rounds.' },
-  'golf-tech':        { label: 'Golf Tech',          slug: 'golf-tech',             description: 'Golf apps, swing analyzers, launch monitors, and AI training tools reviewed for weekend golfers in 2026.' },
-  'golf-accessories': { label: 'Golf Accessories',   slug: 'golf-accessories',      description: 'The best affordable golf accessories for weekend golfers — gloves, bags, training aids, and everything else under $50.' },
-  'improve-game':     { label: 'Improve Your Game',  slug: 'improve-your-golf-game',description: 'Practical tips and guides to help weekend golfers break 90, fix their slice, and lower their handicap faster.' },
-  'golf-lifestyle':   { label: 'Golf Lifestyle',     slug: 'golf-lifestyle',        description: 'Golf fitness, gift guides, course recommendations, and everything else for the office golfer who plays on weekends.' },
+  'gear-reviews':     { label: 'Golf Gear Reviews', slug: 'gear-reviews',          description: 'Rangefinders, drivers, irons, and GPS watches tested by a weekend golfer who shoots 84 one day and 97 the next. No lab coats — just real rounds.' },
+  'golf-tech':        { label: 'Golf Tech',          slug: 'golf-tech',             description: 'Launch monitors, swing analyzers, and golf apps reviewed by a 9-to-5 golfer. We are not scientists — we just want to know what actually helps.' },
+  'golf-accessories': { label: 'Golf Accessories',   slug: 'golf-accessories',      description: 'Gloves, bags, training aids, and gifts under $50 for the golfer who spends all week at a desk and all weekend chasing birdies.' },
+  'improve-game':     { label: 'Improve Your Game',  slug: 'improve-your-golf-game',description: 'Break 90, fix your slice, and stop 3-putting. Tips for weekend warriors who fix one thing on Saturday and find a new problem on Sunday.' },
+  'golf-lifestyle':   { label: 'Golf Lifestyle',     slug: 'golf-lifestyle',        description: 'Fitness, travel, and time hacks for golfers with day jobs who wish every weekend was a golf weekend. We get it — we are the same.' },
 };
 
 export function categoryMeta(category: string): PageMeta {
