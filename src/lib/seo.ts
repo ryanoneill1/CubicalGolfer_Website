@@ -14,6 +14,12 @@ const DOMAIN           = 'https://www.cubicalgolfer.com';
 export const VERIFICATION_TAG = '';   // ← paste your GSC code here if needed
 const OG_IMG  = `${DOMAIN}/images/og-image.jpg`;
 const SITE    = 'Cubical Golfer';
+const MAX_TITLE = 60;
+
+function smartTitle(title: string): string {
+  const withSite = `${title} | ${SITE}`;
+  return withSite.length <= MAX_TITLE ? withSite : title;
+}
 
 // ── Home ─────────────────────────────────────────────────────────────────────
 export function homeMeta(): PageMeta {
@@ -52,7 +58,7 @@ export function articleMeta(article: Article): PageMeta {
 export function comparisonMeta(c: Comparison): PageMeta {
   const canonical = `${DOMAIN}/compare/${c.slug}/`;
   return {
-    title:         `${c.title} | ${SITE}`,
+    title:         smartTitle(c.title),
     description:   c.description,
     canonical,
     ogImage:       OG_IMG,
@@ -76,7 +82,7 @@ export function staticMeta(opts: {
   breadcrumb?: string;
 }): PageMeta {
   return {
-    title:       `${opts.title} | ${SITE}`,
+    title:       smartTitle(opts.title),
     description: opts.description,
     canonical:   `${DOMAIN}${opts.slug}`,
     ogImage:     OG_IMG,
@@ -143,7 +149,7 @@ export function categoryMeta(category: string): PageMeta {
     description: `Golf guides and reviews in the ${category} category from Cubical Golfer.`,
   };
   return {
-    title:       `${cfg.label} — Weekend Golfer Picks 2026 | ${SITE}`,
+    title:       smartTitle(`${cfg.label} — Weekend Golfer Picks 2026`),
     description: cfg.description,
     canonical:   `${DOMAIN}/${cfg.slug}/`,
     ogImage:     OG_IMG,
@@ -182,7 +188,7 @@ function categorySlug(cat: string): string {
 // ── How We Test page ──────────────────────────────────────────────────────────
 export function howWeTestMeta(): PageMeta {
   return {
-    title:       `How We Test Golf Gear — Our Testing Standards | ${SITE}`,
+    title:       smartTitle('How We Test Golf Gear — Our Testing Standards'),
     description: 'Every product we recommend is independently purchased and tested over a minimum of 10 real rounds. Here is how we evaluate golf gear.',
     canonical:   `${DOMAIN}/how-we-test/`,
     ogImage:     OG_IMG,
@@ -198,7 +204,7 @@ export function howWeTestMeta(): PageMeta {
 // ── About page meta ────────────────────────────────────────────────────────────
 export function aboutMeta(): PageMeta {
   return {
-    title:       `About Cubical Golfer — Editorial Policy & Testing | ${SITE}`,
+    title:       smartTitle('About Cubical Golfer — Editorial Policy & Testing'),
     description: 'Who we are, how we test golf gear, and why we started Cubical Golfer. Independent reviews by real weekend golfers.',
     canonical:   `${DOMAIN}/about/`,
     ogImage:     OG_IMG,
