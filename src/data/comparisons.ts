@@ -10,7 +10,7 @@ import type { Comparison } from './types';
 export const COMPARISONS: Comparison[] = [
   {
     slug:        'bushnell-tour-v6-vs-precision-pro-nx9',
-    title:       'Bushnell Tour V6 Shift vs Precision Pro NX9 HD: Which Rangefinder Wins?',
+    title:       'Bushnell Tour V6 vs Precision Pro NX9 HD (2026)',
     description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — tested side-by-side over 12 rounds. Which rangefinder gives weekend golfers more for their money in 2026?',
     productA:    'bushnell-tour-v6',
     productB:    'precision-pro-nx9',
@@ -37,7 +37,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'garmin-approach-s62-vs-shot-scope-v5',
-    title:       'Garmin Approach S62 vs Shot Scope V5: Best GPS Golf Watch in 2026?',
+    title:       'Garmin S62 vs Shot Scope V5: Best GPS Watch 2026',
     description: 'Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in 2026?',
     productA:    'garmin-s62',
     productB:    'shot-scope-v5',
@@ -64,7 +64,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'arccos-vs-shot-scope',
-    title:       'Arccos Caddie vs Shot Scope V5: Which Auto-Tracking System Should You Buy?',
+    title:       'Arccos Caddie vs Shot Scope V5: Which to Buy?',
     description: 'Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscription cost, and data depth compared for weekend golfers in 2026. Honest verdict inside.',
     productA:    'arccos-caddie',
     productB:    'shot-scope-v5',
@@ -82,7 +82,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'callaway-paradym-vs-taylormade-qi35',
-    title:       'Callaway Paradym Ai Smoke Max vs TaylorMade Qi35 Max: Best Driver in 2026?',
+    title:       'Paradym Ai Smoke Max vs Qi35 Max: Best Driver 2026',
     description: 'Callaway Paradym Ai Smoke Max vs TaylorMade Qi35 Max compared in 2026 — distance, forgiveness, and value for weekend golfers. Which driver should you buy?',
     productA:    'callaway-paradym-max',
     productB:    'taylormade-qi35-max',
@@ -101,7 +101,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug: 'garmin-approach-s62-vs-s42',
-    title: 'Garmin Approach S62 vs S42: Which GPS Watch Should You Buy?',
+    title: 'Garmin S62 vs S42: Which GPS Watch to Buy?',
     description: 'Garmin S62 vs S42: both are excellent GPS golf watches, but the S62 costs $150 more. We break down the exact differences and who should pay for the upgrade.',
     productA: 'garmin-s62',
     productB: 'garmin-s42',
@@ -120,7 +120,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug: 'skytrak-vs-garmin-r10',
-    title: 'SkyTrak+ vs Garmin Approach R10: Which Home Simulator Wins?',
+    title: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?',
     description: 'SkyTrak+ ($2,995) vs Garmin R10 ($599) — both are home golf simulators, but they are built for different budgets and goals. We break down the exact differences.',
     productA: 'skytrak-plus',
     productB: 'garmin-s62',
