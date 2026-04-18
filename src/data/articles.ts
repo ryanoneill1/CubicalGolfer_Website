@@ -40,6 +40,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'What to Look For in a Golf Rangefinder',
+        callout: { text: 'Stuck at your desk wishing you were on the course? Practice your pre-shot routine at home instead.', link: '/golf-practice-drills-at-home/', label: 'See 7 drills you can do in 15 minutes' },
         body: "Before dropping cash on a rangefinder, understand what actually matters on the course. Magnification (6x is the sweet spot), slope compensation, scan mode, and battery life are the big four. Pin-seeking technology — which locks onto the flag rather than background trees — is a must-have. Jolt or vibration confirmation tells you you\'ve actually hit the pin, not a tree 30 yards behind it.",
         sectionImage: '/images/products/rangefinder-testing-course.webp',
         sectionImageAlt: 'Weekend golfer testing a laser rangefinder on a par-3 to get the exact pin distance',
@@ -172,6 +173,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'GPS Watch vs. Rangefinder — Which Do You Need?',
+        callout: { text: 'Between rounds, keep your game sharp without leaving the house.', link: '/golf-practice-drills-at-home/', label: '15-minute home practice drills' },
         body: "A rangefinder wins for exact pin distance. A GPS watch wins for hands-free pre-shot planning. Many serious weekend golfers use both. If you can only have one, get the rangefinder for accuracy.",
         sectionImage: '/images/products/gps-watch-wrist-course.webp',
         sectionImageAlt: 'GPS golf watch on a weekend golfer\'s wrist showing yardage to the green mid-round',
@@ -241,7 +243,8 @@ export const ARTICLES: Article[] = [
       { h2: '🥇 Best Overall: Callaway Paradym AI Smoke Max', badge: 'BEST OVERALL', body: "Callaway's AI face design customizes flex across the entire face for each individual head. The Max version is most forgiving with higher launch and draw bias option.", price: '~$599 at Golf Galaxy' },
       { h2: 'Best Distance: TaylorMade Qi35 Max', badge: 'BEST DISTANCE', body: "One of the longest drivers in the game on off-center strikes. Carbonwood design with draw-biased weighting. Exactly what matters for weekend golfers.", price: '~$599 at TaylorMade' },
       { h2: 'Best Value: Cobra Aerojet Max', badge: 'BEST VALUE', body: "At $399–$449, the Aerojet Max delivers premium-driver performance at a significantly lower price. The H.O.T. Face uses AI technology similar to Callaway.", price: '~$399–$449 at Amazon' },
-      { h2: 'Why a Fitting Matters More Than the Model', body: "A 1-hour driver fitting at PGA Superstore is $0–$50 and tells you the optimal shaft weight, flex, loft, and head design for YOUR swing. The right shaft makes more difference than the right head.", sectionImage: '/images/products/driver-address-setup.webp', sectionImageAlt: 'Driver at address showing proper setup — the right shaft and loft matter more than the brand', affiliateKey: 'cobra-aerojet-max' },
+      { h2: 'Why a Fitting Matters More Than the Model',
+        callout: { text: 'While you save up for that fitting, work on the part of your game that costs nothing to improve.', link: '/how-to-fix-your-slice/', label: 'Fix your slice this week' }, body: "A 1-hour driver fitting at PGA Superstore is $0–$50 and tells you the optimal shaft weight, flex, loft, and head design for YOUR swing. The right shaft makes more difference than the right head.", sectionImage: '/images/products/driver-address-setup.webp', sectionImageAlt: 'Driver at address showing proper setup — the right shaft and loft matter more than the brand', affiliateKey: 'cobra-aerojet-max' },
     ],
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'MOI', 'Bias'],
@@ -289,7 +292,8 @@ export const ARTICLES: Article[] = [
         pros: ['Tour aesthetic with game improvement forgiveness behind the face', 'Consistent carry distance even on off-centre contact', 'Better feedback than cavity backs — tells you about the quality of contact'],
         cons: ['Less forgiving than max game improvement irons on severe mis-hits', 'Higher price than cavity back alternatives'], price: '~$1,099 set' },
       { h2: 'Best for Low Handicappers (Under 10)', body: "The Titleist T100 are the gold standard: minimal offset, thin topline, and enough feel to know exactly where you struck the ball.", price: '~$1,299 set', sectionImage: '/images/products/iron-comparison-lineup.webp', sectionImageAlt: 'Three iron sets side by side showing the difference in offset and topline for different handicap levels', affiliateKey: 'titleist-t100' },
-      { h2: 'What Shaft Flex Do You Need?', body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head.", sectionImage: '/images/products/iron-turf-interaction.webp', sectionImageAlt: 'Iron hitting turf on a real course — shaft flex affects how the club releases through impact', affiliateKey: 'callaway-paradym-ai-smoke-max-irons' },
+      { h2: 'What Shaft Flex Do You Need?',
+        callout: { text: 'Hitting your irons fat? It might not be the clubs — the fix takes 5 minutes.', link: '/why-do-i-hit-irons-fat/', label: 'Why you hit irons fat (and the fix)' }, body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head.", sectionImage: '/images/products/iron-turf-interaction.webp', sectionImageAlt: 'Iron hitting turf on a real course — shaft flex affects how the club releases through impact', affiliateKey: 'callaway-paradym-ai-smoke-max-irons' },
     ],
     comparisonTable: {
       headers: ['Iron Model', 'Best For', 'Price (Set)', 'Forgiveness', 'Feel'],
@@ -1057,6 +1061,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'What High Handicappers Should Actually Play',
+        callout: { text: 'New to golf? Before you stress about ball choice, make sure you have the right clubs in your bag.', link: '/best-beginner-golf-set-under-500/', label: 'Best beginner sets under $500' },
         body: "Shooting over 100? A Titleist Pro V1 is actively hurting your game. Premium tour balls require high clubhead speed to compress and spin correctly. Under 85mph, use a low-compression two-piece ball: Callaway Supersoft or Srixon Soft Feel give you more distance and equally good feel for a fraction of the price. Upgrade when you\'re consistently breaking 90.",
         sectionImage: '/images/products/golf-ball-comparison-lineup.webp',
         sectionImageAlt: 'Budget vs premium golf balls side by side — weekend golfers shooting 95+ get more from a $25 ball than a $55 one',
@@ -4498,6 +4503,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'How to Choose a Golf Launch Monitor',
+        callout: { text: 'No budget for a launch monitor? These free drills give you real feedback without any tech.', link: '/golf-practice-drills-at-home/', label: '7 free practice drills at home' },
         body: "The single most important decision is indoor vs outdoor use. Doppler radar units (Garmin R10, Rapsodo, Voice Caddie) sit behind you and track the ball in flight — they work best outdoors with real ball flight. Photometric (camera-based) units (SkyTrak, Bushnell Launch Pro, Foresight GC3/GCQuad) sit beside the ball and capture impact data — they work equally well indoors. If you want a home simulator, photometric is the way to go. If you want a range companion, Doppler radar at $499-$749 delivers excellent value. Under $500 gets you carry distance, ball speed, and launch angle. $700-$1,200 adds spin data and video. $2,000+ gets you professional-grade accuracy with full club data.",
       },
       {
