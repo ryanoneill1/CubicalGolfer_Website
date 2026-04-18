@@ -63,15 +63,41 @@ const sameCategory = ARTICLES.filter(
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
-// Cross-category "Cubicle Golfer" tips — shown on gear-review and golf-tech pages
-const showCubicleGolferTips = article.category === 'gear-reviews' || article.category === 'golf-tech';
-const CUBICLE_GOLFER_TIPS = [
-  { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills You Can Do at Home in 15 Minutes' },
-  { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Sneak In More Golf Rounds With a Day Job' },
-  { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness Routines for the Office Golfer' },
-  { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home (No Range Needed)' },
-  { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
-].filter(tip => tip.slug !== article.slug);
+// Cross-category "Cubicle Golfer" tips — shown on ALL article pages with category-aware links
+const CUBICLE_TIPS_BY_CAT: Record<string, Array<{ slug: string; label: string }>> = {
+  'gear-reviews': [
+    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills You Can Do at Home in 15 Minutes' },
+    { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Sneak In More Golf Rounds With a Day Job' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
+  ],
+  'golf-tech': [
+    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (No Range Needed)' },
+    { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness Routines for the Office Golfer' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
+  ],
+  'improve-game': [
+    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness Routines for the Office Golfer' },
+    { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Sneak In More Golf Rounds With a Day Job' },
+    { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Set Under $500' },
+  ],
+  'golf-accessories': [
+    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills You Can Do at Home in 15 Minutes' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
+    { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },
+  ],
+  'golf-lifestyle': [
+    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (No Range Needed)' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
+  ],
+};
+const cubicleGolferLinks = (CUBICLE_TIPS_BY_CAT[article.category] ?? CUBICLE_TIPS_BY_CAT['gear-reviews'])
+  .filter(tip => tip.slug !== article.slug);
 
 const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
   'rangefinders': {
@@ -459,6 +485,19 @@ if (isBuyingGuide) {
             </figure>
           )}
 
+          {/* Inline cubicle golfer callout — contextual cross-link inside article body */}
+          {(section as any).callout && (
+            <div style="margin:20px 0;padding:16px 20px;background:#f0f7f2;border-left:4px solid var(--green);border-radius:0 8px 8px 0;">
+              <p style="margin:0;font-size:14px;line-height:1.6;color:var(--body);">
+                🏢 <strong>Cubicle Golfer Tip:</strong>{' '}
+                {(section as any).callout.text}{' '}
+                <a href={(section as any).callout.link} style="color:var(--green);font-weight:700;text-decoration:underline;">
+                  {(section as any).callout.label} →
+                </a>
+              </p>
+            </div>
+          )}
+
           {section.price && <p class="price-note">💰 Price: {section.price}</p>}
 
           {/* PROS / CONS — new in v2 */}
@@ -556,15 +595,15 @@ if (isBuyingGuide) {
       </div>
     )}
 
-    {/* CUBICLE GOLFER TIPS — cross-category links on gear/tech pages */}
-    {showCubicleGolferTips && CUBICLE_GOLFER_TIPS.length > 0 && (
+    {/* MORE FOR CUBICLE GOLFERS — cross-category links on ALL article pages */}
+    {cubicleGolferLinks.length > 0 && (
       <div class="rel-cluster" style="background:var(--green);border:none;">
-        <h3 style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 For the Cubicle Golfer</h3>
+        <h3 style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</h3>
         <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
           You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
         </p>
         <div class="rel-links">
-          {CUBICLE_GOLFER_TIPS.map(tip => (
+          {cubicleGolferLinks.map(tip => (
             <a href={tip.slug} style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">
               {tip.label}
             </a>
