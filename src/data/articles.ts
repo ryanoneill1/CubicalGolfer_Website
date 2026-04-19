@@ -119,13 +119,13 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Winner?'],
+      headers: ['Rangefinder', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Yes (toggle)', feature2: '6 months', winner: true },
-        { affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: 'Yes',          feature2: '12 months', winner: false },
-        { affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: 'Yes',    feature2: '12 months', winner: false },
-        { affiliateKey: 'garmin-approach-z82',    name: 'Garmin Approach Z82',   bestFor: 'Best Hybrid',   price: '~$499', feature1: 'Yes',         feature2: '14 hrs',  winner: false },
-        { affiliateKey: 'bushnell-pro-xe',        name: 'Bushnell Pro XE',       bestFor: 'Best Premium',  price: '~$499', feature1: 'Elements',    feature2: '6 months', winner: false },
+        { affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '', winner: true },
+        { affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: '4.6/5 ★', feature2: '', winner: false },
+        { affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: '4.4/5 ★', feature2: '', winner: false },
+        { affiliateKey: 'garmin-approach-z82',    name: 'Garmin Approach Z82',   bestFor: 'Best Hybrid',   price: '~$499', feature1: '4.5/5 ★', feature2: '', winner: false },
+        { affiliateKey: 'bushnell-pro-xe',        name: 'Bushnell Pro XE',       bestFor: 'Best Premium',  price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: false },
       ],
     },
     faq: [
@@ -202,10 +202,10 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['GPS Watch', 'Best For', 'Price', 'Shot Tracking', 'Battery'],
+      headers: ['GPS Watch', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Best Overall',      price: '~$499', feature1: 'Via phone', feature2: '20 hrs', winner: true },
-        { affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$249', feature1: 'Automatic', feature2: '10 hrs', winner: false },
+        { affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Best Overall',      price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: true },
+        { affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$249', feature1: '4.5/5 ★', feature2: '', winner: false },
         { affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget',        price: '~$149', feature1: 'No',        feature2: '16 hrs', winner: false },
         { affiliateKey: 'garmin-approach-s42',    name: 'Garmin Approach S42', bestFor: 'Best Mid-Range',     price: '~$249', feature1: 'Via phone', feature2: '15 hrs', winner: false },
       ],
@@ -252,11 +252,11 @@ export const ARTICLES: Article[] = [
         callout: { text: 'While you save up for that fitting, work on the part of your game that costs nothing to improve.', link: '/how-to-fix-your-slice/', label: 'Fix your slice this week' }, body: "A 1-hour driver fitting at PGA Superstore is $0–$50 and tells you the optimal shaft weight, flex, loft, and head design for YOUR swing. The right shaft makes more difference than the right head.", sectionImage: '/images/products/driver-address-setup.webp', sectionImageAlt: 'Driver at address showing proper setup — the right shaft and loft matter more than the brand', affiliateKey: 'cobra-aerojet-max' },
     ],
     comparisonTable: {
-      headers: ['Driver', 'Best For', 'Price', 'MOI', 'Bias'],
+      headers: ['Driver', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { affiliateKey: 'callaway-paradym-ai-smoke-max',  name: 'Callaway Paradym AI Smoke Max', bestFor: 'Best Overall', price: '~$499', feature1: 'Very High', feature2: 'Draw', winner: true },
-        { affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: 'Very High', feature2: 'Draw', winner: false },
-        { affiliateKey: 'cobra-aerojet-max',               name: 'Cobra Aerojet Max', bestFor: 'Best Value', price: '~$399', feature1: 'High', feature2: 'Draw', winner: false },
+        { affiliateKey: 'callaway-paradym-ai-smoke-max',  name: 'Callaway Paradym AI Smoke Max', bestFor: 'Best Overall', price: '~$499', feature1: '4.8/5 ★', feature2: '', winner: true },
+        { affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: '4.6/5 ★', feature2: '', winner: false },
+        { affiliateKey: 'cobra-aerojet-max',               name: 'Cobra Aerojet Max', bestFor: 'Best Value', price: '~$399', feature1: '4.5/5 ★', feature2: '', winner: false },
         { affiliateKey: 'ping-g430-max-driver',            name: 'Ping G430 Max', bestFor: 'Most Forgiving', price: '~$499', feature1: 'Highest', feature2: 'Neutral', winner: false },
       ],
     },
@@ -303,10 +303,10 @@ export const ARTICLES: Article[] = [
         callout: { text: 'Hitting your irons fat? It might not be the clubs — the fix takes 5 minutes.', link: '/why-do-i-hit-irons-fat/', label: 'Why you hit irons fat (and the fix)' }, body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head.", sectionImage: '/images/products/iron-turf-interaction.webp', sectionImageAlt: 'Iron hitting turf on a real course — shaft flex affects how the club releases through impact', affiliateKey: 'callaway-paradym-ai-smoke-max-irons' },
     ],
     comparisonTable: {
-      headers: ['Iron Model', 'Best For', 'Price (Set)', 'Forgiveness', 'Feel'],
+      headers: ['Iron Model', 'Best For', 'Price (Set)', 'Our Rating'],
       rows: [
-        { affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'High Handicappers', price: '~$1,199', feature1: 'Maximum', feature2: 'Good', winner: true },
-        { affiliateKey: 'titleist-t300',   name: 'Titleist T300', bestFor: 'Mid-Handicappers', price: '~$1,099', feature1: 'High', feature2: 'Very Good', winner: false },
+        { affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'High Handicappers', price: '~$1,199', feature1: '4.7/5 ★', feature2: '', winner: true },
+        { affiliateKey: 'titleist-t300',   name: 'Titleist T300', bestFor: 'Mid-Handicappers', price: '~$1,099', feature1: '4.6/5 ★', feature2: '', winner: false },
         { affiliateKey: 'ping-g430-irons', name: 'Ping G430', bestFor: 'All-Around', price: '~$999', feature1: 'High', feature2: 'Good', winner: false },
         { affiliateKey: 'titleist-t100',   name: 'Titleist T100', bestFor: 'Low Handicappers', price: '~$1,299', feature1: 'Medium', feature2: 'Excellent', winner: false },
         { affiliateKey: 'wilson-d9-irons', name: 'Wilson D9', bestFor: 'Best Value', price: '~$699', feature1: 'High', feature2: 'Good', winner: false },
@@ -1079,10 +1079,10 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Golf Ball', 'Best For', 'Price/Dozen', 'Compression', 'Cover'],
+      headers: ['Golf Ball', 'Best For', 'Price/Dozen', 'Our Rating'],
       rows: [
-        { affiliateKey: 'titleist-pro-v1',          name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: 'Urethane', winner: true },
-        { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour 2026', bestFor: 'Best New Release', price: '~$58', feature1: '75', feature2: 'Urethane', winner: false },
+        { affiliateKey: 'titleist-pro-v1',          name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '4.8/5 ★', feature2: '', winner: true },
+        { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour 2026', bestFor: 'Best New Release', price: '~$58', feature1: '4.6/5 ★', feature2: '', winner: false },
         { affiliateKey: 'taylormade-tp5',            name: 'TaylorMade TP5', bestFor: 'Best All-Round', price: '~$50', feature1: '85', feature2: 'Urethane', winner: false },
         { affiliateKey: 'srixon-soft-feel',          name: 'Srixon Soft Feel', bestFor: 'Best Value', price: '~$27', feature1: '60', feature2: 'Ionomer', winner: false },
         { affiliateKey: 'vice-pro',                  name: 'Vice Pro', bestFor: 'Best Budget DTC', price: '~$33', feature1: '85', feature2: 'Urethane', winner: false },
