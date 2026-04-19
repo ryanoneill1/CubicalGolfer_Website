@@ -83,6 +83,7 @@ export interface Article {
   whoFor?:       string[];    // "Who should buy" bullets (required for buying-guide)
   whoSkip?:      string[];    // "Who should skip" bullets (required for buying-guide)
   testingNotes?: string;      // Testing methodology summary
+  updateLog?:    Array<{ date: string; note: string }>;  // Visible changelog
   faq?:          FAQItem[];
   related:       RelatedLink[];
   // ── Auto-injected by linking.ts ─────────────────────────────────────────────

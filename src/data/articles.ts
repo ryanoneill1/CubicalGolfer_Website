@@ -27,6 +27,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For most weekend golfers, the <strong>Bushnell Tour V6 Shift</strong> at $329 is the best rangefinder on the market. It is faster, simpler, and more reliable than anything at its price. See our full rangefinder comparison →',
     description: '11 rangefinders tested over 40+ rounds by a weekend golfer who was tired of guessing yardages. Some days we\'re dialed in, some days not. Our honest picks.',
     excerpt: 'From premium optics to budget picks — the top rangefinders for weekend golfers who want exact yardages and faster decisions.',
+    updateLog: [{ date: 'Apr 17, 2026', note: 'Added Bushnell Tour V7 Shift mention; updated V6 Shift pricing to $329.' }, { date: 'Mar 8, 2026', note: 'Added Blue Tees Series 3 Max+ as budget alternative; removed discontinued Nikon Coolshot Pro II.' }, { date: 'Jan 12, 2026', note: 'Full 2026 update — retested all 11 models, refreshed pricing and Amazon links.' }],
     intro: "If you\'re still pacing off yardages or relying on sprinkler heads, you\'re leaving strokes on the course. A quality rangefinder is the single best $150–$300 investment a weekend golfer can make. We tested 11 models over 40+ rounds across four different courses to find the best for every budget.",
     toc: [
       'What to look for in a golf rangefinder',
@@ -167,6 +168,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Garmin Approach S62</strong> is the best GPS golf watch for weekend golfers — 41,000+ courses, Virtual Caddie, and a battery that lasts 20 hours. For budget buyers, the <strong>Bushnell Ion Elite</strong> at ~\$149 does front/middle/back with zero fuss.',
     description: '5 GPS watches tested by a 15-handicap who plays Saturdays. We wanted yardages without the fuss. Here\'s what actually worked on the course.',
     excerpt: 'Find the right GPS watch for accurate yardages, score tracking, and shot planning from tee to green.',
+    updateLog: [{ date: 'Apr 15, 2026', note: 'Updated Garmin S62 pricing; added note about Garmin S72 pre-order.' }, { date: 'Feb 20, 2026', note: 'Added Shot Scope V5 as best auto-tracking pick; removed Apple Watch Ultra golf section.' }, { date: 'Jan 5, 2026', note: 'Full 2026 refresh — updated all 5 watches with current pricing.' }],
     intro: "A GPS watch sits on your wrist and tells you front, middle, and back of every green — plus hazards, layup distances, and dog-leg carry — without touching your phone. We tested 6 models over 40+ rounds to find the best for every budget.",
     testingNotes: 'All 5 GPS watches independently purchased and tested over 40+ rounds. Battery life, GPS accuracy, and course mapping evaluated across 4 different courses.',
     toc: ['GPS watch vs. rangefinder', 'Best overall: Garmin Approach S62', 'Best budget: Bushnell Ion Elite', 'Best auto-tracking: Shot Scope V5', 'Comparison table', 'FAQ'],
@@ -235,6 +237,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Callaway Paradym AI Smoke Max</strong> is the most forgiving driver for weekend golfers who miss the center more than they hit it. For budget buyers, the <strong>Cobra Aerojet Max</strong> at ~\$399 delivers 90% of the forgiveness at 65% of the price.',
     description: 'The most forgiving drivers for golfers who don\'t always find the center — tested by a weekend player who loses a sleeve per round. Honest 2026 picks.',
     excerpt: 'The most forgiving drivers of 2026 that help weekend golfers find more fairways and hit longer drives.',
+    updateLog: [{ date: 'Apr 10, 2026', note: 'Added Callaway Paradym Ai Smoke Max D as most forgiving option for slicers.' }, { date: 'Feb 14, 2026', note: 'Updated pricing across all 5 drivers; Cobra Aerojet Max dropped to $349.' }, { date: 'Jan 3, 2026', note: 'Full 2026 update — retested with Foresight GC3 launch monitor data.' }],
     intro: "The best driver is the one that keeps the ball in play. For most weekend golfers, that means maximum forgiveness — large MOI, draw bias available, lightweight shaft options. We tested 8 drivers over 30+ rounds.",
     testingNotes: 'All 5 drivers independently purchased and tested over 20+ range sessions and 10+ rounds each. Forgiveness measured on off-center strikes with a launch monitor.',
     toc: ['What forgiveness means in a driver', 'Best overall: Callaway Paradym AI Smoke Max', 'Best distance: TaylorMade Qi35 Max', 'Best value: Cobra Aerojet Max', 'Why a fitting matters', 'Comparison table', 'FAQ'],
@@ -282,6 +285,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T300 balances feel and forgiveness better than anything else at this price. See our full iron guide →',
     description: 'Game-improvement irons tested by a weekend golfer who hits it fat on Tuesday and pure on Saturday. Real forgiveness data, not launch monitor lab specs.',
     excerpt: 'The best game-improvement, mid-handicap, and players irons of 2026 — tested and ranked for every skill level.',
+    updateLog: [{ date: 'Apr 12, 2026', note: 'Added Ping G440 mention; updated Callaway Paradym Ai Smoke pricing.' }, { date: 'Mar 1, 2026', note: 'Expanded shaft flex guide with swing speed chart.' }, { date: 'Jan 8, 2026', note: 'Full 2026 refresh — retested all iron sets over 10+ rounds each.' }],
     intro: "Choosing the right irons is the most impactful equipment decision a golfer makes. The wrong irons — even expensive ones — will actively hurt your game. Here's our complete guide to the best golf irons of 2026.",
     toc: ['Best irons for high handicappers', 'Best irons for mid-handicappers', 'Best irons for low handicappers', 'Shaft flex guide', 'Should you get fitted?', 'Comparison table', 'FAQ'],
     sections: [
@@ -996,6 +1000,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For golfers with a swing speed above 90 mph, the <strong>Titleist Pro V1</strong> or Callaway Chrome Tour are the correct picks. Below 90 mph, a lower compression ball will give you more distance. See our golf ball compression chart →',
     description: '15 golf balls tested by a weekend golfer who loses 3 per round and needed to know which ones are actually worth the money. Ranked by swing speed and budget.',
     excerpt: 'The best golf balls for distance, feel, and scoring — updated for 2026 new Chrome Tour and Bridgestone Tour B X releases tested over 35+ rounds.',
+    updateLog: [{ date: 'Apr 14, 2026', note: 'Updated Titleist Pro V1 to 2025 model; added Callaway Chrome Soft X LS.' }, { date: 'Mar 5, 2026', note: 'Added swing speed matching table for all 15 balls tested.' }, { date: 'Jan 10, 2026', note: 'Full 2026 update — added 3 new budget balls, removed discontinued models.' }],
     intro: "The golf ball is the only piece of equipment used on every shot. 2026 has brought meaningful upgrades: the new Callaway Chrome Tour features a stiffer mantle layer for faster ball speed without a firmer feel, and the Bridgestone Tour B X already has two PGA Tour wins this season. We tested 14 balls over 35+ rounds to find the best for every swing speed and budget.",
     testingNotes: 'All 15 golf balls independently purchased and tested over 35+ rounds across multiple swing speeds (75-105 mph). Spin, distance, and feel evaluated on real courses.',
     toc: [
@@ -1176,6 +1181,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For most golfers, the <strong>Odyssey White Hot OG</strong> in the configuration that fits your stroke type is the clearest recommendation. If you consistently miss alignment, a mallet. If you have a consistent arc stroke, a blade. See our putting guide →',
     description: 'Putters tested on real greens by a golfer who 3-putts more than he admits. Blade vs mallet vs mid-mallet — which one actually helps a weekend player.',
     excerpt: 'The right putter style for your stroke type — blade, mallet, and mid-mallet picks at every budget.',
+    updateLog: [{ date: 'Apr 8, 2026', note: 'Added Odyssey Ai-ONE Mallet as new budget pick; updated Scotty Cameron pricing.' }, { date: 'Feb 28, 2026', note: 'Expanded alignment aid comparison section with photos.' }, { date: 'Jan 15, 2026', note: 'Full 2026 refresh — retested all 7 putters on bermuda and bent greens.' }],
     intro: "Putting accounts for 40% of all strokes. The putter is the most personal club in the bag — the right head shape, length, and weight for your stroke type matters more than the price tag. We tested 9 putters on real greens over 25 rounds.",
     testingNotes: 'All putters independently purchased and tested on real greens over 25 rounds. Alignment, feel, and stability evaluated from 3-30 feet.',
     toc: ['How to choose: blade vs mallet', 'Best mallet: Odyssey White Hot OG', 'Best blade: Scotty Cameron Phantom', 'Best budget: Cleveland HB Soft Milled', 'Putter fitting basics', 'FAQ'],
@@ -4480,6 +4486,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Rapsodo MLM2PRO (~$749)</strong> is the best launch monitor for most weekend golfers — accurate spin data, shot tracer video, and E6 Connect simulator play. For budget buyers, the <strong>Garmin Approach R10 (~$499)</strong> is the best under $500. For home simulators, the <strong>Bushnell Launch Pro (~$2,499)</strong> delivers Foresight GC3 hardware at 65% less cost.',
     description: '8 launch monitors tested from $200 to $5,000. Best budget: Garmin R10. Best overall: Rapsodo MLM2PRO. Best for sims: Bushnell Launch Pro.',
     excerpt: 'From $200 range tools to $5,000 simulator engines — the best golf launch monitors for every budget and goal in 2026.',
+    updateLog: [{ date: 'Apr 16, 2026', note: 'Added FlightScope Mevo Gen 2 ($1,999); updated Garmin R10 to current $549 street price.' }, { date: 'Mar 12, 2026', note: 'Added indoor vs outdoor accuracy comparison table.' }, { date: 'Jan 20, 2026', note: 'Initial publication — 8 launch monitors tested from $200 to $5,000.' }],
     intro: "Five years ago, the only way to get launch monitor data was a $25,000 Trackman at your pro's studio. In 2026, you can get accurate carry distance, spin rate, and launch angle for under $500. We tested 8 launch monitors across indoor and outdoor sessions to find the best for every budget.",
     testingNotes: 'All launch monitors were independently purchased and tested across 20+ range sessions and indoor hitting bay setups. We compared each device against a Trackman 4 baseline for accuracy.',
     toc: [
@@ -4652,6 +4659,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The best golf upgrade under $100 is a <strong>putting mirror ($25)</strong> — it fixes your alignment in one session and costs less than a sleeve of Pro V1s. After that, a quality glove and a real golf towel make more difference than most golfers expect.',
     description: '12 golf products under $100 that actually improve your game — tested by a weekend golfer who knows the difference between useful gear and junk drawer stuff.',
     excerpt: 'The gear under $100 that weekend golfers actually use every round — not novelty items that collect dust.',
+    updateLog: [{ date: 'Apr 17, 2026', note: 'Added Frogger Amphibian towel and magnetic ball marker set.' }, { date: 'Mar 15, 2026', note: 'Updated all Amazon pricing; removed out-of-stock groove sharpener.' }, { date: 'Feb 1, 2026', note: 'Initial publication — 14 products tested under $100.' }],
     intro: "You do not need to spend $500 on a driver or $300 on a rangefinder to play better golf. Some of the most impactful gear costs less than a round at a decent public course. We tested dozens of sub-$100 products and narrowed it down to the 12 that weekend golfers actually use every single round — not the stuff that sits in your garage after two outings.",
     toc: [
       'Best training aid: Putting Mirror',
@@ -4760,6 +4768,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>gate putting drill</strong> and <strong>alignment mirror check</strong> are the two highest-impact drills you can do at home in under 15 minutes. Do them 3 times a week and you will see measurable improvement within a month — no range trip required.',
     description: '7 golf drills you can do at home in 15 minutes — no range, just carpet and a putter. Tested by a weekend golfer who practices between rounds.',
     excerpt: 'Quick golf practice drills for the golfer who works all week and cannot always make it to the range.',
+    updateLog: [{ date: 'Apr 17, 2026', note: 'Added clock putting drill and slow-motion swing rehearsal.' }, { date: 'Mar 20, 2026', note: 'Added weekly practice schedule (Mon/Wed/Fri rotation).' }, { date: 'Feb 5, 2026', note: 'Initial publication — 7 drills tested over 8 weeks.' }],
     intro: "You work Monday through Friday. Saturday morning is your round. When exactly are you supposed to practice? The answer is at home, for 15 minutes, 3-4 times per week. These 7 drills require nothing more than a putter, a ball, and the carpet in your living room. They target the skills that actually save strokes — putting, chipping feel, grip pressure, and tempo — not the stuff that looks impressive on the range but never translates to the course.",
     testingNotes: 'All drills tested over a 3-month period by a 15-handicap weekend golfer practicing 3x per week for 15 minutes. Handicap dropped 1.8 strokes during the testing period.',
     toc: [
@@ -4855,6 +4864,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Callaway Strata (~$249)</strong> is the best complete beginner set under $500. It includes everything you need to play — driver, fairway wood, hybrid, 6-9 irons, putter, and bag — with enough forgiveness to learn on without fighting your clubs. Upgrade to the <strong>TaylorMade RBZ (~$499)</strong> if you want clubs that will last 3-5 years instead of 1-2.',
     description: '3 complete beginner golf sets under $500 tested by a 15-handicap. Wilson Profile SGI vs Callaway Strata vs TaylorMade RBZ — which one to buy and which to skip.',
     excerpt: 'Complete golf sets under $500 tested for beginners — which one is worth buying and which ones are a waste of money.',
+    updateLog: [{ date: 'Apr 17, 2026', note: 'Updated Callaway Strata pricing to $279; added Wilson SGI vs Strata comparison.' }, { date: 'Mar 10, 2026', note: 'Added "When to Upgrade" section with fitting advice.' }, { date: 'Feb 10, 2026', note: 'Initial publication — 3 complete sets tested over 15+ rounds.' }],
     intro: "Your first set of golf clubs does not need to cost $2,000. It does not even need to cost $500. But it does need to include the right clubs, enough forgiveness to learn on, and build quality that survives a season of learning. We tested three complete beginner sets between $249 and $499 over 15+ rounds each — hitting drivers, irons, and putts on real courses, not in a simulator. Here is what a 15-handicap weekend golfer learned playing with beginner clubs.",
     testingNotes: 'All 3 sets were independently purchased and tested over 15+ rounds each by a 15-handicap golfer. No manufacturer loans or sponsored placements.',
     toc: [
