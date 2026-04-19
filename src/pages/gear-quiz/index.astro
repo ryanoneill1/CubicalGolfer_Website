@@ -1,0 +1,314 @@
+---
+// src/pages/index.astro — Homepage
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+import { homeMeta }         from '../lib/seo';
+import { websiteSchema, organizationSchema, homeFaqSchema, featuredArticlesSchema, breadcrumbSchema } from '../lib/schema';
+import { getFeaturedArticles, getCategoryArticles } from '../lib/linking';
+import { ARTICLES } from '../data/articles';
+import { getAffiliateLink } from '../data/affiliate-links';
+
+// Top picks for homepage product grid
+const TOP_PICKS = [
+  { key: 'bushnell-tour-v6-shift',   name: 'Bushnell Tour V6 Shift', badge: 'BEST RANGEFINDER', winner: true },
+  { key: 'garmin-approach-s62',       name: 'Garmin Approach S62',    badge: 'BEST GPS WATCH',    winner: false },
+  { key: 'titleist-pro-v1',           name: 'Titleist Pro V1',        badge: 'BEST GOLF BALL',    winner: false },
+  { key: 'arccos-caddie-sensors',     name: 'Arccos Caddie Sensors',  badge: 'BEST TECH UPGRADE', winner: false },
+].filter(p => {
+  const aff = getAffiliateLink(p.key);
+  return aff?.url && (aff as any)?.imgSrc;
+});
+
+const meta     = homeMeta();
+const featured = getFeaturedArticles(6);
+
+const schemas = [
+  websiteSchema(),
+  organizationSchema(),
+  homeFaqSchema(),
+  featuredArticlesSchema(featured),
+  breadcrumbSchema([{ label: 'Home', href: '/' }]),
+];
+
+const CATEGORIES = [
+  { id: 'gear-reviews',     label: 'Golf Gear Reviews',       icon: '🏌️', slug: 'gear-reviews',
+    desc: 'Tested and ranked gear for every part of your bag — drivers, irons, rangefinders, GPS watches, and more.',
+    links: [
+      { href: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026 (Tested & Ranked)' },
+      { href: '/best-golf-gps-watches/',        label: 'Best Golf GPS Watches 2026' },
+      { href: '/best-golf-putters-2026/',        label: 'Best Golf Putters 2026' },
+    ]},
+  { id: 'golf-tech', label: 'Golf Tech', icon: '🔭', slug: 'golf-tech',
+    desc: 'Apps, swing analyzers, simulators, and AI tools that help weekend golfers improve faster.',
+    links: [
+      { href: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
+      { href: '/best-golf-apps/', label: 'Best Golf Apps for Tracking Your Game' },
+      { href: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools 2026' },
+    ]},
+  { id: 'golf-accessories', label: 'Golf Accessories', icon: '🎒', slug: 'golf-accessories',
+    desc: 'Affordable accessories that improve every round — gloves, towels, training aids, and more.',
+    links: [
+      { href: '/best-golf-gifts-for-him/',       label: 'Best Golf Gifts for Him 2026' },
+      { href: '/best-golf-shoes-for-walking/',    label: 'Best Golf Shoes for Walking 2026' },
+      { href: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
+    ]},
+  { id: 'improve-game', label: 'Improve Your Golf Game', icon: '🎯', slug: 'improve-your-golf-game',
+    desc: 'Tutorials and guides for breaking scoring barriers, fixing swing faults, and building a practice plan.',
+    links: [
+      { href: '/how-to-break-90/', label: "How to Break 90: Weekend Golfer's Roadmap" },
+      { href: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice Permanently' },
+      { href: '/best-beginner-golf-club-sets/', label: 'Best Beginner Golf Club Sets 2026' },
+    ]},
+  { id: 'golf-lifestyle', label: 'Golf Lifestyle', icon: '🌿', slug: 'golf-lifestyle',
+    desc: 'Golf travel, fitness, time management, and everything that makes a golfer\'s life better.',
+    links: [
+      { href: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf With a Full-Time Job' },
+      { href: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
+      { href: '/best-golf-courses-weekend-drive/', label: 'Best Golf Courses Within a Weekend Drive' },
+    ]},
+];
+
+const TAG_CLASSES: Record<string, string> = {
+  'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
+  'LISTICLE': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
+};
+---
+
+<BaseLayout {meta} {schemas} activeNav="home">
+
+  <!-- ── HERO ── -->
+  <section class="hero" aria-label="Welcome to Cubical Golfer">
+    <div>
+      <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
+      <h1>You Work All Week.<br /><em>Golf Is Your Reset.</em></h1>
+      <p class="hero-sub">
+        Some weekends you shoot 84 and feel like a god. Others you card 97 and question everything.
+        You don't always make it to the range — sometimes you roll straight to the first tee, coffee in hand, zero warm-up swings.
+        We're the same. This site is gear reviews, buying guides, and no-BS tips built by weekend golfers who get it.
+      </p>
+      <div class="hero-btns">
+        <a href="/best-golf-rangefinders-2026/" class="btn-gold">Best Rangefinders 2026 →</a>
+        <a href="/gear-quiz/" class="btn-outline">🎯 Gear Quiz</a>
+        <a href="/compare/" class="btn-outline">Compare Products</a>
+      </div>
+      <!-- Quick affiliate links above fold -->
+      <div class="hero-quick-links">
+        <span class="hero-quick-label">Top Picks:</span>
+        <a href="/best-golf-rangefinders-2026/" class="hero-quick-link">Rangefinders</a>
+        <a href="/best-golf-gps-watches/" class="hero-quick-link">GPS Watches</a>
+        <a href="/best-golf-putters-2026/" class="hero-quick-link">Putters</a>
+        <a href="/best-golf-balls-2026/" class="hero-quick-link">Golf Balls</a>
+        <a href="/best-golf-bags-2026/" class="hero-quick-link">Bags</a>
+      </div>
+    </div>
+    <div class="hero-illustration">
+      <img src="/images/cubicalgolfer-hero.jpg" alt="Cubical Golfer — office golfer dreaming of the fairway" width="400" height="400" loading="eager" decoding="async" class="hero-illustration-img" />
+    </div>
+    <aside class="hero-card" aria-label="Why Cubical Golfer">
+      <h2>Built for Weekend Warriors</h2>
+      <p class="hero-card-sub">Not tour pros. Not scratch golfers. Just 9-to-5ers who play on weekends and refuse to stop getting better.</p>
+      <ul>
+        <li><span class="chk" aria-hidden="true">✓</span>Gear picks that fit a real-person budget</li>
+        <li><span class="chk" aria-hidden="true">✓</span>No science papers — just what actually helps your game</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Side-by-side tables so you decide in 60 seconds</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Tested over 40+ real rounds — not lab conditions</li>
+        <li><span class="chk" aria-hidden="true">✓</span>Every product purchased with our own money</li>
+      </ul>
+      <div class="hero-card-cta">
+        <a href="/how-we-test/" class="hero-card-link">See how we test →</a>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ── TOP PICKS PRODUCT GRID (monetised above fold) ── -->
+  {TOP_PICKS.length > 0 && (
+    <section class="home-picks" aria-labelledby="picks-h">
+      <div class="section-header">
+        <p class="section-eyebrow">EDITOR'S TOP PICKS</p>
+        <h2 id="picks-h">Best Golf Gear for Weekend Players</h2>
+        <p>Independently tested over 40+ real rounds. Every product has an affiliate link — we earn a small commission at no extra cost to you.</p>
+      </div>
+      <div class="home-picks__grid">
+        {TOP_PICKS.map(pick => {
+          const aff = getAffiliateLink(pick.key);
+          return (
+            <ProductCard
+              name={pick.name}
+              badge={pick.badge}
+              price={aff.price ?? ''}
+              retailer={aff.retailer}
+              url={aff.url}
+              label={aff.label}
+              winner={pick.winner}
+              imgSrc={(aff as any).imgSrc}
+              imgAlt={(aff as any).imgAlt ?? pick.name}
+              benefits={(aff as any).benefits}
+            />
+          );
+        })}
+      </div>
+      <div style="text-align:center;margin-top:24px">
+        <a href="/gear-reviews/" class="btn-outline" style="font-size:14px;padding:12px 28px">
+          See All Gear Reviews →
+        </a>
+      </div>
+    </section>
+  )}
+
+  <!-- ── CATEGORIES ── -->
+  <section style="padding: 64px clamp(1.5rem,5vw,4rem); background: var(--cream);" aria-labelledby="cats-h">
+    <div class="section-header">
+      <p class="section-eyebrow">EXPLORE THE SITE</p>
+      <h2 id="cats-h">Top Golf Categories</h2>
+      <p>Handpicked roundups and buyer guides for every part of your bag.</p>
+    </div>
+    <div class="categories-grid">
+      {CATEGORIES.slice(0, 3).map(cat => (
+        <div class="cat-card">
+          <div class="cat-head">
+            <span style="font-size:22px" aria-hidden="true">{cat.icon}</span>
+            <h3>{cat.label}</h3>
+          </div>
+          <div class="cat-body">
+            <p>{cat.desc}</p>
+            <nav class="cat-links" aria-label={`${cat.label} articles`}>
+              {cat.links.map(l => <a href={l.href} class="cat-link">{l.label}</a>)}
+            </nav>
+          </div>
+          <div class="cat-foot">
+            <a href={`/${cat.slug}/`}>View all {cat.label} →</a>
+          </div>
+        </div>
+      ))}
+      <div class="cat-row2">
+        {CATEGORIES.slice(3).map(cat => (
+          <div class="cat-card">
+            <div class="cat-head">
+              <span style="font-size:22px" aria-hidden="true">{cat.icon}</span>
+              <h3>{cat.label}</h3>
+            </div>
+            <div class="cat-body">
+              <p>{cat.desc}</p>
+              <nav class="cat-links" aria-label={`${cat.label} articles`}>
+                {cat.links.map(l => <a href={l.href} class="cat-link">{l.label}</a>)}
+              </nav>
+            </div>
+            <div class="cat-foot">
+              <a href={`/${cat.slug}/`}>View all {cat.label} →</a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURED ARTICLES ── -->
+  <section class="articles-section" style="padding: 64px clamp(1.5rem,5vw,4rem); background: var(--cream-dark);" aria-labelledby="arts-h">
+    <div class="section-header">
+      <p class="section-eyebrow">FRESH PICKS</p>
+      <h2 id="arts-h">Latest Buying Guides &amp; Tutorials</h2>
+      <p>The most useful gear and improvement content for your next round.</p>
+    </div>
+    <div class="articles-grid">
+      {featured.map(a => (
+        <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+          <div class={`art-thumb ${a.thumb}`} role="img" aria-label={`${a.titleDisplay} thumbnail`}>
+            <span class={`art-badge ${TAG_CLASSES[a.tag] || 'tag-buy'}`}>{a.tag}</span>
+            <span aria-hidden="true">{a.emoji}</span>
+          </div>
+          <div class="art-body">
+            <h3>{a.titleDisplay}</h3>
+            <p>{a.excerpt}</p>
+            <div class="art-foot">
+              <span class="art-words">{a.words} · Updated 2026</span>
+              <span class="art-read">Read guide →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── TRUST SECTION ── -->
+  <section class="trust-section" aria-labelledby="trust-h">
+    <div class="section-header">
+      <p class="section-eyebrow">WHY TRUST US</p>
+      <h2 id="trust-h">Real Weekend Golfers. Honest Picks.</h2>
+      <p>
+        Every recommendation comes from an office golfer's perspective — budget-conscious,
+        time-limited, and endlessly optimistic about Saturday's round.
+      </p>
+    </div>
+    <div class="trust-stats">
+      <div class="trust-stat"><div class="trust-num">{ARTICLES.length}+</div><div class="trust-lbl">Guides</div></div>
+      <div class="trust-stat"><div class="trust-num">40+</div><div class="trust-lbl">Rounds Tested</div></div>
+      <div class="trust-stat"><div class="trust-num">6</div><div class="trust-lbl">Partners</div></div>
+      <div class="trust-stat"><div class="trust-num">100%</div><div class="trust-lbl">Independent</div></div>
+    </div>
+    <p style="font-size:11px;font-weight:700;letter-spacing:.12em;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:14px">
+      AFFILIATE PARTNERS
+    </p>
+    <div class="partner-tags">
+      {['Amazon Associates','Bushnell (via Impact)','PGA Superstore','Global Golf','TaylorMade','Callaway'].map(p => (
+        <span class="partner-tag">{p}</span>
+      ))}
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ── -->
+  <section class="cta-banner">
+    <div>
+      <h2>Stop Guessing Yardages. Start Scoring Better.</h2>
+      <p>A rangefinder is the single best $169–$329 investment a weekend golfer can make. We tested 11 models over 40+ rounds.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
+      <a href="/best-golf-rangefinders-2026/" class="btn-gold" style="white-space:nowrap;font-size:15px;padding:15px 32px">
+        See Our Top Picks →
+      </a>
+      <span style="font-size:11px;color:rgba(255,255,255,.5)">Bushnell Tour V6 Shift ~$329 · NX9 HD ~$169</span>
+    </div>
+  </section>
+
+  <!-- ── VISIBLE FAQ (no microdata — schema is in JSON-LD above) ── -->
+  <section style="padding:64px clamp(1.5rem,5vw,4rem); background:var(--cream-dark);" aria-labelledby="faq-h">
+    <div style="max-width:780px;margin:0 auto">
+      <h2 id="faq-h" style="font-size:clamp(22px,2.5vw,30px);font-weight:700;margin-bottom:24px">
+        Frequently Asked Questions
+      </h2>
+      <div>
+        <details class="faq-item" open>
+          <summary>What is the best golf rangefinder for a weekend golfer in 2026?</summary>
+          <div class="faq-answer">
+            The <strong>Bushnell Tour V6 Shift (~$329)</strong> is the best overall golf rangefinder
+            for most weekend golfers in 2026. We tested 11 models over 40+ real rounds. It locks onto
+            pins instantly, has slope toggle for tournament play, and reads to 1,300 yards with ±1 yard accuracy.
+            For budget golfers, the <strong>Precision Pro NX9 HD (~$169)</strong> delivers excellent performance
+            at roughly half the price with a lifetime warranty.<br /><br />
+            <a href="/best-golf-rangefinders-2026/">Read our full rangefinder guide →</a>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I fix my golf slice permanently?</summary>
+          <div class="faq-answer">
+            A golf slice is caused by an open clubface relative to the swing path at impact.
+            The fastest fix: <strong>strengthen your grip</strong> by rotating both hands clockwise
+            until you see 2.5 knuckles on your lead hand. This alone reduces most slices by 50%.
+            Then check your clubface is square at address and work on swinging from inside to out.<br /><br />
+            <a href="/how-to-fix-your-slice/">Read the complete slice guide →</a>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How can a weekend golfer break 90?</summary>
+          <div class="faq-answer">
+            Breaking 90 means 17 over par — roughly bogey golf. The fastest path:
+            eliminate blow-up holes (triples and worse), improve your short game
+            (60% of all shots happen inside 100 yards), and always aim at the centre
+            of greens rather than tucked pins. You can make 3–4 double bogeys and still shoot 89.<br /><br />
+            <a href="/how-to-break-90/">Read the break-90 roadmap →</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
