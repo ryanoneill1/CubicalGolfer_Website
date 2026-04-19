@@ -36,6 +36,8 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Tour V6 Shift — ASIN B0C4PN57LJ ✅ verified
   'bushnell-tour-v6-shift': {
+    heroVerdictLine: 'Our #1 pick after 40+ rounds — nothing locks the pin faster at any price.',
+    heroWhoFor: 'Weekend golfers who want one rangefinder that does everything and lasts 5+ years.',
     url: 'https://bushnell.pxf.io/DWWLOa',
     retailer: 'Bushnell',
     price: '~$329',
@@ -117,6 +119,8 @@ export const AFFILIATE: Record<string, {
 
   // Garmin Approach S62 Black — ASIN B083BJSYZ9 ✅ verified (official retail unit)
   'garmin-approach-s62': {
+    heroVerdictLine: 'The smartest watch we tested — Virtual Caddie suggestions actually helped our scores.',
+    heroWhoFor: 'Golfers who want yardages, shot tracking, and smart club suggestions on their wrist.',
     asin: 'B083BJSYZ9',
     url: 'https://www.amazon.com/dp/B083BJSYZ9/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
@@ -239,6 +243,8 @@ export const AFFILIATE: Record<string, {
 
   // Titleist Pro V1 (2025 gen, 25th anniversary) — ASIN B0BR2YF8T6 ✅ verified
   'titleist-pro-v1': {
+    heroVerdictLine: 'Still the gold standard — the ball every other brand is trying to beat in 2026.',
+    heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
     asin: 'B0BR2YF8T6',
     url: 'https://www.amazon.com/dp/B0BR2YF8T6/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
@@ -482,6 +488,8 @@ export const AFFILIATE: Record<string, {
 
   // Arccos Caddie Smart Sensors (3rd Gen) — ASIN B0B5TW3HNG ✅ verified
   'arccos-caddie-sensors': {
+    heroVerdictLine: 'The only gear upgrade that gets smarter the more you play — AI caddie is legit.',
+    heroWhoFor: 'Data-driven golfers who want to know exactly where they lose strokes each round.',
     asin: 'B0B5TW3HNG',
     url: 'https://www.amazon.com/dp/B0B5TW3HNG/?tag=cubicalgolfer-20',
     retailer: 'Amazon',

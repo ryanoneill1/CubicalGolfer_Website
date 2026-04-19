@@ -139,11 +139,13 @@ const TAG_CLASSES: Record<string, string> = {
               price={aff.price ?? ''}
               retailer={aff.retailer}
               url={aff.url}
-              label={aff.label}
+              label="Check Today's Price"
               winner={pick.winner}
               imgSrc={(aff as any).imgSrc}
               imgAlt={(aff as any).imgAlt ?? pick.name}
               benefits={(aff as any).benefits}
+              verdict={(aff as any).heroVerdictLine}
+              whoFor={(aff as any).heroWhoFor}
             />
           );
         })}
