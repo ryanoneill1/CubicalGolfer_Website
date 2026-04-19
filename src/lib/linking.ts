@@ -32,10 +32,11 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-gear-under-100/',                    label: 'Best Golf Gear Under $100' },
   ],
   'improve-game': [
-    { slug: '/how-to-break-90/',         label: 'How to Break 90 This Season' },
-    { slug: '/how-to-fix-your-slice/',   label: 'How to Fix Your Slice' },
-    { slug: '/average-golf-handicap/',   label: 'Average Golf Handicap 2026' },
-    { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (15 Min)' },
+    { slug: '/how-to-break-90/',                     label: 'How to Break 90 This Season' },
+    { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
+    { slug: '/average-golf-handicap/',               label: 'Average Golf Handicap 2026' },
+    { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home (15 Min)' },
+    { slug: '/golf-practice-routine-before-work/',   label: '15-Min Morning Practice Routine' },
   ],
   'golf-lifestyle': [
     { slug: '/golf-for-beginners/',              label: 'Golf for Beginners — Complete Guide' },
@@ -215,6 +216,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
+    { slug: '/golf-practice-routine-before-work/',  label: '15-Min Morning Practice Routine' },
   ],
   'improve-putting': [
     { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
@@ -353,6 +355,14 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
     { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
+    { slug: '/golf-practice-routine-before-work/',   label: '15-Min Morning Practice Routine' },
+  ],
+  'morning-practice-routine': [
+    { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home (15 Min)' },
+    { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
+    { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
+    { slug: '/golf-fitness-office-golfer/',           label: 'Golf Fitness for Office Workers' },
+    { slug: '/how-to-break-90/',                     label: 'How to Break 90 This Season' },
   ],
   'beginner-set-under-500': [
     { slug: '/best-beginner-golf-club-sets/',         label: 'Best Beginner Golf Club Sets' },
