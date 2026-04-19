@@ -38,9 +38,10 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (15 Min)' },
   ],
   'golf-lifestyle': [
-    { slug: '/golf-for-beginners/',      label: 'Golf for Beginners — Complete Guide' },
-    { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him' },
-    { slug: '/golf-course-etiquette/',   label: 'Golf Course Etiquette Guide' },
+    { slug: '/golf-for-beginners/',              label: 'Golf for Beginners — Complete Guide' },
+    { slug: '/best-golf-gifts-for-him/',         label: 'Best Golf Gifts for Him' },
+    { slug: '/golf-course-etiquette/',           label: 'Golf Course Etiquette Guide' },
+    { slug: '/golf-desk-accessories-office/',    label: 'Best Golf Desk Accessories' },
   ],
 };
 
@@ -334,6 +335,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-accessories-under-50/',      label: 'Best Golf Accessories Under $50' },
     { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
     { slug: '/best-beginner-golf-set-under-500/',    label: 'Best Beginner Set Under $500' },
+    { slug: '/golf-desk-accessories-office/',        label: 'Best Golf Desk Accessories' },
   ],
   'practice-drills-home': [
     { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
@@ -345,6 +347,13 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-beginner-golf-club-sets/',         label: 'Best Beginner Golf Club Sets' },
     { slug: '/golf-for-beginners/',                  label: 'Golf for Beginners Guide' },
     { slug: '/best-golf-irons-high-handicapper/',    label: 'Best Irons for High Handicappers' },
+    { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
+  ],
+  'golf-desk-accessories': [
+    { slug: '/office-hacks/',                        label: 'Office Hacks Hub' },
+    { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
+    { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
+    { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
   ],
 };
