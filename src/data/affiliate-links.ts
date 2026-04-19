@@ -925,6 +925,73 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Golf Course Aerial Mouse Pad',
   },
 
+  // ── Golf Balls for 90 MPH Swing Speed ────────────────────────────────────────
+  'srixon-q-star-tour': {
+    url: 'https://www.amazon.com/dp/B09TQXQRMH/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$35/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/srixon-q-star-tour.webp',
+    imgAlt: 'Srixon Q-Star Tour Golf Balls',
+    benefits: [
+      '72 compression — perfectly matched to 85-95 mph swing speeds',
+      'Urethane cover delivers tour-level greenside spin',
+      'FastLayer core transitions from soft center to firm edge for distance',
+    ],
+  },
+  'callaway-chrome-soft': {
+    url: 'https://www.amazon.com/dp/B0BPMCSNQF/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$40/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/callaway-chrome-soft.webp',
+    imgAlt: 'Callaway Chrome Soft Golf Balls',
+    benefits: [
+      '75 compression — low-compression premium ball for moderate speeds',
+      'Hyper Elastic SoftFast core maximizes ball speed at 90 mph',
+      'Tour-quality urethane cover for short game spin and control',
+    ],
+  },
+  'titleist-tour-speed': {
+    url: 'https://www.amazon.com/dp/B0CM4DP9WL/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$36/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/titleist-tour-speed.webp',
+    imgAlt: 'Titleist Tour Speed Golf Balls',
+    benefits: [
+      '80 compression — bridges the gap between distance and tour performance',
+      'Reformulated core designed for 85-100 mph swing speeds',
+      'Ionomer cover is durable and affordable while still providing spin',
+    ],
+  },
+  'taylormade-tour-response': {
+    url: 'https://www.amazon.com/dp/B0BFMKM3MG/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$35/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/taylormade-tour-response.webp',
+    imgAlt: 'TaylorMade Tour Response Golf Balls',
+    benefits: [
+      '70 compression — softest premium ball in this class',
+      '100% cast urethane cover for Pro V1-level greenside control',
+      'Tour Flight dimple pattern optimized for mid-speed launch',
+    ],
+  },
+  'bridgestone-e12-contact': {
+    url: 'https://www.amazon.com/dp/B09HYNRQJQ/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$28/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/bridgestone-e12-contact.webp',
+    imgAlt: 'Bridgestone e12 Contact Golf Balls',
+    benefits: [
+      '78 compression — mid-range core tuned for moderate swing speeds',
+      'Contact Force dimple extends contact time for straighter flight',
+      'Best value premium ball under $30 per dozen',
+    ],
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
