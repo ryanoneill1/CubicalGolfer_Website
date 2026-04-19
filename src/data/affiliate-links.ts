@@ -849,6 +849,82 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
+  // ── Golf Desk Accessories ────────────────────────────────────────────────────
+  'desktop-putting-set': {
+    url: 'https://www.amazon.com/s?k=desktop+golf+putting+set+office&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$35',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/desktop-putting-set.webp',
+    imgAlt: 'Desktop Golf Putting Set for Office',
+    benefits: [
+      'Compact putting green fits on any desk or office floor',
+      'Includes mini putter, balls, and return cup',
+      'Perfect for 2-minute putting breaks between meetings',
+    ],
+  },
+  'golf-themed-mug': {
+    url: 'https://www.amazon.com/s?k=golf+themed+coffee+mug+funny&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$16',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/golf-themed-mug.webp',
+    imgAlt: 'Funny Golf-Themed Coffee Mug',
+  },
+  'office-putting-mat': {
+    url: 'https://www.amazon.com/s?k=office+putting+mat+indoor+golf&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$30',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/office-putting-mat.webp',
+    imgAlt: 'Indoor Office Putting Mat',
+    benefits: [
+      'Rolls up and fits under your desk when the boss walks by',
+      'True-roll surface simulates 10-foot stimp greens',
+      'Available in 8-foot and 10-foot lengths',
+    ],
+  },
+  'mini-chipping-net': {
+    url: 'https://www.amazon.com/s?k=mini+indoor+golf+chipping+net&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$25',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/mini-chipping-net.webp',
+    imgAlt: 'Mini Indoor Golf Chipping Net',
+  },
+  'golf-stress-ball': {
+    url: 'https://www.amazon.com/s?k=golf+ball+stress+ball+desk+toy&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$10',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/golf-stress-ball.webp',
+    imgAlt: 'Golf Ball Stress Ball Desk Toy',
+  },
+  'magnetic-ball-marker-desk': {
+    url: 'https://www.amazon.com/s?k=magnetic+golf+ball+marker+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$12',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/magnetic-ball-markers.webp',
+    imgAlt: 'Magnetic Golf Ball Marker Set',
+  },
+  'golf-book-harvey-penick': {
+    url: 'https://www.amazon.com/dp/0684867133/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$12',
+    label: 'See Price on Amazon',
+    imgSrc: '/images/products/golf-book-harvey-penick.webp',
+    imgAlt: 'Harvey Penick Little Red Book',
+  },
+  'golf-mouse-pad': {
+    url: 'https://www.amazon.com/s?k=golf+course+mouse+pad+desk&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$14',
+    label: 'See Options on Amazon',
+    imgSrc: '/images/products/golf-mouse-pad.webp',
+    imgAlt: 'Golf Course Aerial Mouse Pad',
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
