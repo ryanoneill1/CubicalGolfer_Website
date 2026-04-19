@@ -444,13 +444,13 @@ if (isBuyingGuide) {
                   <td>{row.bestFor}</td>
                   <td>{row.price}</td>
                   <td>{row.feature1}</td>
-                  <td>{row.feature2}</td>
+                  {row.feature2 && <td>{row.feature2}</td>}
                   <td class="cmp-td-buy">
                     {rowAff ? (
                       <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
                         rel="nofollow noopener sponsored"
                         aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}>
-                        {rowAff.price} →
+                        See Price →
                       </a>
                     ) : (
                       <span class="cmp-no-link">—</span>
