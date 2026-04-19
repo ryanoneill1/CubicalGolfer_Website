@@ -35,7 +35,7 @@ weekend on the course.</p>
       <div class="articles-grid">
         {articles.map(a => (
           <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
-            <div class={`art-thumb ${a.thumb}`}>
+            <div class={`art-thumb ${(a as any).thumbnail ? '' : a.thumb}`}>
               <span class={
                 a.tag === 'BUYING GUIDE' ? 'art-badge tag-buy' :
                 a.tag === 'COMPARISON'   ? 'art-badge tag-cmp' :
@@ -44,7 +44,12 @@ weekend on the course.</p>
                 a.tag === 'LIFESTYLE'    ? 'art-badge tag-life' :
                 'art-badge tag-rev'
               }>{a.tag}</span>
-              <span aria-hidden="true">{a.emoji}</span>
+              {(a as any).thumbnail ? (
+                <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async"
+                  style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;border-radius:12px 12px 0 0;" />
+              ) : (
+                <span aria-hidden="true">{a.emoji}</span>
+              )}
             </div>
             <div class="art-body">
               <h3>{a.titleDisplay}</h3>

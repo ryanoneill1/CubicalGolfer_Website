@@ -74,6 +74,7 @@ export interface Article {
   titleDisplay:  string;      // H1 (can be longer)
   description:   string;      // meta description (150–160 chars)
   excerpt:       string;      // card excerpt
+  thumbnail?:    string;      // card thumbnail image path (falls back to emoji)
   // ── Content fields ──────────────────────────────────────────────────────────
   bottomLine?:   string;      // 2–3 sentence verdict (required for buying-guide)
   intro:         string;      // opening paragraph
