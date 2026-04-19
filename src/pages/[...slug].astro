@@ -63,6 +63,39 @@ const sameCategory = ARTICLES.filter(
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
+// Cubicle Golfer personas — each category gets a rotating cast of desk-bound golf dreamers
+const PERSONAS: Record<string, Array<{ name: string; tagline: string }>> = {
+  'gear-reviews': [
+    { name: 'Fairway Finance Guy', tagline: '14-hdcp · reviews gear between budget meetings' },
+    { name: 'The Deskbound Driver', tagline: '16-hdcp · tests drivers on lunch-break range sessions' },
+    { name: 'Chief Bogey Officer', tagline: '18-hdcp · approves gear purchases nobody asked for' },
+  ],
+  'golf-tech': [
+    { name: 'Spreadsheet Swinger', tagline: '12-hdcp · tracks strokes gained like quarterly KPIs' },
+    { name: 'The KPI Caddie', tagline: '15-hdcp · measures everything, improves slowly' },
+    { name: 'PowerPoint Pro Golfer', tagline: '17-hdcp · once made a slide deck about swing plane' },
+  ],
+  'improve-game': [
+    { name: 'Mulligan Manager', tagline: '16-hdcp · manages mulligans better than projects' },
+    { name: 'The Back Nine Analyst', tagline: '14-hdcp · always shoots better on the back nine' },
+    { name: 'VP of Fairway Strategy', tagline: '15-hdcp · has a strategy for everything except putting' },
+  ],
+  'golf-accessories': [
+    { name: 'The Cubicle Caddie', tagline: '15-hdcp · keeps a putter under the desk' },
+    { name: 'Conference Call Golfer', tagline: '18-hdcp · practices grip during all-hands meetings' },
+    { name: 'The Commuter Caddie', tagline: '16-hdcp · listens to golf podcasts in traffic' },
+  ],
+  'golf-lifestyle': [
+    { name: 'The Lunch Break Golfer', tagline: '13-hdcp · has played 9 holes in 58 minutes' },
+    { name: '5PM Tee Time', tagline: '15-hdcp · leaves at 4:59, tees off at 5:15' },
+    { name: 'Out-of-Office Golfer', tagline: '17-hdcp · sets auto-reply, heads to the course' },
+  ],
+};
+// Pick a persona deterministically from the article ID so it's consistent across builds
+const catPersonas = PERSONAS[article.category] ?? PERSONAS['gear-reviews'];
+const personaIndex = article.id.split('').reduce((sum: number, c: string) => sum + c.charCodeAt(0), 0) % catPersonas.length;
+const persona = catPersonas[personaIndex];
+
 // Cross-category "Cubicle Golfer" tips — shown on ALL article pages with category-aware links
 const CUBICLE_TIPS_BY_CAT: Record<string, Array<{ slug: string; label: string }>> = {
   'gear-reviews': [
@@ -300,12 +333,12 @@ if (isBuyingGuide) {
 
     <div class="author-box">
       <a href="/about/" style="flex-shrink:0" aria-label="About Cubical Golfer">
-        <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="author-avatar-img" width="48" height="48" />
+        <img src="/images/cubicalgolfer-logo.jpg" alt="The Cubical Golfer Team" class="author-avatar-img" width="48" height="48" />
       </a>
       <div style="flex:1">
         <span class="author-name">
-          <a href="/about/" style="color:inherit;text-decoration:none">Cubical Golfer</a>
-          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">15+ yrs · low-teens hdcp</span>
+          <a href="/about/" style="color:inherit;text-decoration:none">{persona.name}</a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">{persona.tagline}</span>
         </span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
