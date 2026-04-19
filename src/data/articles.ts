@@ -145,6 +145,7 @@ export const ARTICLES: Article[] = [
       'Primarily use a GPS watch and rarely aim at the pin',
       'Play fewer than 8 rounds per year -- pacing off is fine at that frequency',
     ],
+    sources: [{ label: 'Bushnell Golf — Tour V6 Shift Specs', url: 'https://www.bushnellgolf.com/products/laser-rangefinders/tour-v6-shift/' }, { label: 'USGA — Rule 4.3a (Distance-Measuring Devices)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Precision Pro Golf — NX9 HD Specifications', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
     related: [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
@@ -214,6 +215,7 @@ export const ARTICLES: Article[] = [
       { q: 'Does the Garmin Approach S62 work without a phone?', a: "Yes — the S62 has 41,000+ preloaded courses and works completely standalone. The Garmin Connect app is only needed to sync data post-round." },
       { q: 'What is the best golf GPS watch under $200?', a: "The Bushnell Ion Elite (~$149) is the best GPS watch under $200. Front/middle/back for 40,000+ courses, auto-hole advance, and solid battery life." },
     ],
+    sources: [{ label: 'Garmin — Approach S62 Specifications', url: 'https://www.garmin.com/en-US/p/622467' }, { label: 'Shot Scope — V5 GPS Watch Features', url: 'https://www.shotscope.com/products/v5/' }],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps for Stat Tracking' },
@@ -262,6 +264,7 @@ export const ARTICLES: Article[] = [
       { q: 'What is the most forgiving golf driver in 2026?', a: "The Ping G430 Max has the highest MOI of any driver in 2026. However, the Callaway Paradym AI Smoke Max and TaylorMade Qi35 Max combine forgiveness with distance better for most golfers." },
       { q: 'Should a high handicapper use a draw-biased driver?', a: "If you slice the ball, yes. A draw-biased driver can turn a 30-yard slice into a 10-yard fade. Fix your grip and path first, then consider equipment." },
     ],
+    sources: [{ label: 'Callaway Golf — Paradym Ai Smoke Technology', url: 'https://www.callawaygolf.com/golf-clubs/drivers/' }, { label: 'TrackMan — Average Driver Distances by Handicap', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     related: [
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice Permanently' },
@@ -324,6 +327,7 @@ export const ARTICLES: Article[] = [
       'Have clubs less than 3 years old that still fit your swing',
       'On a tight budget -- good used irons outperform cheap new sets',
     ],
+    sources: [{ label: 'TrackMan — PGA Tour Averages by Club', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }, { label: 'Callaway Golf — Paradym Ai Smoke Irons Specs', url: 'https://www.callawaygolf.com/golf-clubs/irons/' }],
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Golf Club Sets' },
@@ -372,6 +376,7 @@ export const ARTICLES: Article[] = [
       { q: 'How long does it take to fix a golf slice?', a: "Most weekend golfers see 50% reduction within 2–3 range sessions with grip and path fixes. A complete fix typically takes 4–6 weeks of deliberate practice." },
       { q: 'Should I get a draw-biased driver to fix my slice?', a: "Fix your grip and path first — those are free and permanent. A draw-biased driver is a useful band-aid but won\'t solve the root cause." },
     ],
+    sources: [{ label: 'TrackMan — Club Path & Face Angle Definitions', url: 'https://blog.trackmangolf.com/ball-flight-laws/' }, { label: 'PGA of America — Grip Fundamentals', url: 'https://www.pga.com/story/instruction-how-to-properly-grip-a-golf-club' }],
     related: [
       { slug: '/how-to-break-90/', label: "How to Break 90: Weekend Golfer's Roadmap" },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
@@ -416,6 +421,7 @@ export const ARTICLES: Article[] = [
       { q: 'What handicap do you need to break 90?', a: "To consistently break 90, you typically need a handicap index of around 17–18 or lower." },
       { q: 'What is the fastest way to lower your golf score?', a: "Eliminate blow-up holes. Audit your last 5 scorecards and identify your disaster holes. On those holes, make bogey your target. Play safe. Chip out. Lay up." },
     ],
+    sources: [{ label: 'USGA — Scoring Statistics by Handicap', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }, { label: 'TrackMan — Short Game Performance Data', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     related: [
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice First' },
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
@@ -454,6 +460,7 @@ export const ARTICLES: Article[] = [
       { q: 'How can I stop 3-putting in golf?', a: "On putts over 30 feet, focus on leaving the ball within 3 feet. Practice the clock drill to dial in distance control. On short putts, pick a specific spot on the back of the cup to aim at." },
       { q: 'How do I aim my putter correctly?', a: "Stand behind the ball and pick an intermediate target 6 inches in front of your ball. Set your putter face perpendicular to that target, then set your feet parallel. Most golfers aim right of target without realizing it." },
     ],
+    sources: [{ label: 'TrackMan — PGA Tour Putting Statistics', url: 'https://blog.trackmangolf.com/putting-stats/' }, { label: 'USGA — Greens in Regulation & Putting Data', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }],
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Golf Putters 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 — Putting Is 40% of It' },
@@ -591,6 +598,7 @@ export const ARTICLES: Article[] = [
       { q: "What is a good golf handicap?", a: "A 'good' handicap depends on experience. Under 30 for a beginner (less than 2 years) is solid. Under 10 (single digits) puts you in the top 20% of all registered golfers. Scratch (0) is the top 1%." },
       { q: 'How do you get an official golf handicap?', a: "Submit 54 holes of scores to a USGA-authorized club or app like The Grint or GHIN. Most golfers can establish a handicap within 2–3 months of regular play." },
     ],
+    sources: [{ label: 'USGA — GHIN Handicap Index Statistics', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }, { label: 'National Golf Foundation — Golfer Demographics', url: 'https://www.ngf.org/' }],
     related: [
       { slug: '/how-to-break-90/', label: 'How to Break 90 and Lower Your Handicap' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
@@ -1099,6 +1107,7 @@ export const ARTICLES: Article[] = [
       'Lose 5+ balls per round -- spend money on lessons not premium balls',
       'Swing speed under 80 mph -- soft low-compression balls perform better',
     ],
+    sources: [{ label: 'Titleist — Pro V1 Construction & Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'MyGolfSpy — 2025 Golf Ball Test Methodology', url: 'https://mygolfspy.com/golf-ball-test/' }, { label: 'USGA — Conforming Golf Ball List', url: 'https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/equipment-rules/balls.html' }],
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
@@ -1221,6 +1230,7 @@ export const ARTICLES: Article[] = [
       'Have a putter you are comfortable with and stats do not show issues',
       'Have a putting lesson booked -- wait until you know your stroke type',
     ],
+    sources: [{ label: 'Odyssey Golf — White Hot OG Technology', url: 'https://www.odysseygolf.com/putters/' }, { label: 'TrackMan — PGA Tour Putting Statistics', url: 'https://blog.trackmangolf.com/putting-stats/' }],
     related: [
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
       { slug: '/best-golf-accessories-under-50/', label: 'Putting Mirror — Best $25 Training Aid' },
@@ -1335,6 +1345,7 @@ export const ARTICLES: Article[] = [
       { q: 'What golf ball compression should I use?', a: "Match your driver swing speed: under 85mph use 60-75 compression (Srixon Soft Feel, Callaway Supersoft). 85-100mph use 75-90 (Callaway Chrome Tour, TaylorMade TP5). Over 100mph use 87+ (Titleist Pro V1, Pro V1x)." },
       { q: 'Does compression affect distance?', a: "Yes significantly. Playing a ball too firm for your swing speed loses 5-15 yards. Playing too soft at high speeds causes excess spin and ballooning trajectory." },
     ],
+    sources: [{ label: 'Titleist — Golf Ball Compression & Fitting Guide', url: 'https://www.titleist.com/golf-ball-fitting' }, { label: 'Bridgestone Golf — Ball Fitting Technology', url: 'https://www.bridgestonegolf.com/en-us/ball-fitting' }, { label: 'MyGolfSpy — Golf Ball Compression Data', url: 'https://mygolfspy.com/golf-ball-test/' }],
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Titleist Pro V1 vs Pro V1x' },
@@ -1383,6 +1394,7 @@ export const ARTICLES: Article[] = [
       { q: 'Is the Pro V1 or Pro V1x better?', a: "Neither is objectively better — they suit different swings. Pro V1 for softer feel, mid-high flight, 90-105mph. Pro V1x for firmer feel, higher flight, 95mph+. Most amateurs below 100mph perform better with the Pro V1." },
       { q: 'Can a high handicapper use a Pro V1?', a: "Yes, if your swing speed is over 85mph. Below that, the Pro V1 will not compress properly and you will lose distance versus a low-compression ball like the Srixon Soft Feel." },
     ],
+    sources: [{ label: 'Titleist — Pro V1 vs Pro V1x Comparison', url: 'https://www.titleist.com/golf-balls/compare' }, { label: 'TrackMan — Ball Flight & Spin Data', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
@@ -2637,6 +2649,7 @@ export const ARTICLES: Article[] = [
       { q: 'What handicap should a weekend golfer expect after 2 years?', a: 'After 2 years of regular play (15-25 rounds/year), most golfers settle into a 20-28 handicap range without dedicated practice. With regular short-game practice and at least 2-3 lessons, reaching 15-18 within 2 years is realistic.' },
       { q: 'Is a 20 handicap good for a weekend golfer?', a: 'A 20 handicap is solidly average for a recreational golfer — better than roughly 40% of all registered golfers. It means you typically shoot around 92-95 on a par-72 course on a good day. It is not a number to be embarrassed about, and with focused practice it is very movable.' },
     ],
+    sources: [{ label: 'USGA — GHIN Handicap Index Data', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }, { label: 'National Golf Foundation — Participation Statistics', url: 'https://www.ngf.org/' }],
     related: [
       { slug: '/average-golf-handicap/', label: 'Average Golf Handicap by Age & Gender' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
@@ -3500,6 +3513,7 @@ export const ARTICLES: Article[] = [
       { q: 'Can I use a rangefinder with slope in a tournament?', a: 'Only if the committee has permitted distance-measuring devices AND has not prohibited slope mode. Most amateur stroke-play events permit rangefinders but prohibit slope. Check with your tournament organizer. When in doubt, disable slope and use the raw laser distance.' },
       { q: 'Is slope worth paying extra for?', a: 'Yes, for most golfers. The price difference between a rangefinder with and without slope is typically $20–$40. For that premium you get a tool that is useful in every practice round. Buy slope if you can afford it.' },
     ],
+    sources: [{ label: 'USGA — Rule 4.3a (Slope & DMDs in Competition)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Bushnell Golf — Slope Technology Explained', url: 'https://www.bushnellgolf.com/' }],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-rangefinder-under-150/', label: 'Best Rangefinder Under $150' },
@@ -3555,6 +3569,7 @@ export const ARTICLES: Article[] = [
       { q: 'Why do I hit my 7 iron farther than my 6 iron?', a: 'Common issue — usually caused by swinging too hard with longer irons, or a gapping problem in your set. If your 6 iron consistently goes shorter than your 7, get a fitting or check whether your 6 iron shaft is correct for your swing speed.' },
       { q: 'How far does a 20 handicap hit a 7 iron?', a: 'On average, 125–140 yards carry. Some 20 handicaps hit it 150+ on good strikes; some hit 110 yards. The key is knowing your average — not your best — and selecting clubs accordingly.' },
     ],
+    sources: [{ label: 'TrackMan — Average Distances by Club & Skill Level', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }, { label: 'USGA — Average Handicap Index Data', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }],
     related: [
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
@@ -3610,6 +3625,7 @@ export const ARTICLES: Article[] = [
       { q: 'Do I need a golf coach to lower my handicap?', a: 'Not necessarily. A single lesson with a good coach to identify your most damaging habit is valuable. But the biggest gains come from deliberate short game practice and smarter course management, neither of which requires ongoing coaching.' },
       { q: 'Does getting new clubs lower your handicap?', a: 'New clubs can help if your current equipment is genuinely wrong for your game (wrong shaft, wrong loft, old technology). But equipment changes produce much smaller improvements than practice and strategy changes for most recreational golfers.' },
     ],
+    sources: [{ label: 'USGA — Handicap Index Calculation', url: 'https://www.usga.org/content/usga/home-page/handicapping/world-handicap-system.html' }, { label: 'National Golf Foundation — Rounds Played Data', url: 'https://www.ngf.org/' }],
     related: [
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
@@ -3665,6 +3681,7 @@ export const ARTICLES: Article[] = [
       { q: 'Is a ball going right a slice or a push?', a: 'If the ball starts right AND curves further right, that is a slice (open face relative to path). If the ball starts right and flies straight right, that is a push (swing path is right of target with a square face). Different causes, different fixes. Most recreational golfers have a slice, not a push.' },
       { q: 'How quickly can I fix a ball going right?', a: 'Strengthening your grip can produce a noticeable change within a single range session. The feeling is uncomfortable at first — stick with it through two or three sessions before judging. Path issues take longer to fix (2–4 weeks of deliberate practice).' },
     ],
+    sources: [{ label: 'TrackMan — Ball Flight Laws (Path vs Face)', url: 'https://blog.trackmangolf.com/ball-flight-laws/' }, { label: 'PGA of America — Grip & Face Control', url: 'https://www.pga.com/story/instruction-how-to-properly-grip-a-golf-club' }],
     related: [
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
       { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids' },
@@ -3720,6 +3737,7 @@ export const ARTICLES: Article[] = [
       { q: 'Why do I hit fat shots when I am nervous?', a: 'Tension during a round causes tightening of the arms and hands, which reduces the lead-side pull-through and allows the club to bottom out behind the ball. Consciously relaxing your grip pressure to about 4/10 tightness before shots helps prevent tension-related fat shots.' },
       { q: 'Does a wider sole help with fat shots?', a: 'Yes — game-improvement irons with wider soles are more forgiving of fat shots because the sole glides through turf rather than digging. If you frequently hit fat shots, game-improvement irons are worth considering alongside technique work.' },
     ],
+    sources: [{ label: 'TrackMan — Attack Angle & Low Point Data', url: 'https://blog.trackmangolf.com/low-point/' }, { label: 'PGA of America — Weight Transfer in the Golf Swing', url: 'https://www.pga.com/' }],
     related: [
       { slug: '/how-to-stop-topping-the-ball/', label: 'How to Stop Topping the Ball' },
       { slug: '/why-does-my-golf-ball-go-right/', label: 'Why Does My Golf Ball Go Right?' },
@@ -4046,6 +4064,7 @@ export const ARTICLES: Article[] = [
       { q: 'Can you use a slope rangefinder in a golf tournament?', a: 'Yes, but only with slope mode turned OFF. Most modern slope rangefinders have a tournament mode or physical toggle. USGA Rule 4.3 allows distance-measuring devices but prohibits slope-adjusted readings during competition unless the Committee adds a Local Rule permitting them.' },
       { q: 'Which rangefinder has the best slope toggle?', a: 'The Bushnell Tour V6 Shift has a physical SLOPE SWITCH on the side of the unit — the easiest and most reliable slope toggle available. You can switch between slope and flat mode without opening any menus, which is critical when you forget to disable slope before a competitive round.' },
     ],
+    sources: [{ label: 'USGA — Rule 4.3a (Distance-Measuring Devices)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'R&A — Equipment Rules (DMDs)', url: 'https://www.randa.org/en/rules-of-golf' }],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
@@ -4189,6 +4208,7 @@ export const ARTICLES: Article[] = [
       { q: 'How do you eliminate 3-putts from inside 10 feet?', a: 'Three-putts from inside 10 feet are almost always an alignment or confidence problem, not a distance control problem. Use the Gate Drill (two tees one club-length in front of the ball, just wider than the putter head) for 20 putts before every round. Within 2 weeks the alignment issues that cause short misses disappear.' },
       { q: 'What is a good 3-putt rate for an amateur golfer?', a: 'Tour pros average around 1-2% 3-putt rate. Single-digit handicap amateurs average around 5-8%. Bogey golfers average 15-20% — meaning 3 to 4 holes per round. Getting that below 10% (under 2 three-putts per round) is realistic for any golfer who practices the Ladder Drill regularly.' },
     ],
+    sources: [{ label: 'TrackMan — Lag Putting Distance Control Data', url: 'https://blog.trackmangolf.com/putting-stats/' }, { label: 'PGA Tour — Strokes Gained: Putting Statistics', url: 'https://www.pgatour.com/stats/detail/02564' }],
     related: [
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
       { slug: '/best-golf-putters-2026/', label: 'Best Golf Putters 2026' },
@@ -4553,6 +4573,7 @@ export const ARTICLES: Article[] = [
       { q: 'Are cheap launch monitors accurate?', a: 'Yes — modern budget launch monitors ($200-$500) are accurate within 2-5% of professional-grade Trackman on ball speed and carry distance. Spin data is where cheaper units fall short — spend $700+ for reliable spin.' },
       { q: 'Is the Bushnell Launch Pro the same as the Foresight GC3?', a: 'Yes — identical three-camera photometric hardware. The difference is the software ecosystem: Launch Pro uses Bushnell FSX Play, the GC3 uses Foresight FSX Pro. For most home users, the Launch Pro at $2,499 is the better value.' },
     ],
+    sources: [{ label: 'Garmin — Approach R10 Specifications', url: 'https://www.garmin.com/en-US/p/695391' }, { label: 'Rapsodo — MLM2PRO Technology Overview', url: 'https://rapsodo.com/golf/mlm2pro/' }, { label: 'Foresight Sports — GCQuad Technical Specs', url: 'https://www.foresightsports.com/gcquad' }],
     related: [
       { slug: '/trackman-vs-foresight-gcquad/', label: 'Trackman 4 vs Foresight GCQuad' },
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
@@ -4837,6 +4858,7 @@ export const ARTICLES: Article[] = [
       { q: 'What golf training aid is best for home practice?', a: 'A putting mirror ($25) and an Eyeline putting cup ($35) are the two best home training aids. The mirror fixes alignment, and the cup creates a realistic target for distance control drills. Total cost: $60 for equipment that lasts years.' },
       { q: 'How often should a weekend golfer practice?', a: 'Three 15-minute sessions per week at home is the sweet spot for weekend golfers. This is enough to build and maintain skills without burnout. Focus on putting and short game — these are the skills that degrade fastest without practice and have the biggest impact on scoring.' },
     ],
+    sources: [{ label: 'TrackMan — Strokes Gained: Short Game Data', url: 'https://blog.trackmangolf.com/strokes-gained/' }, { label: 'PGA of America — Practice Drill Fundamentals', url: 'https://www.pga.com/story/best-putting-drills' }],
     related: [
       { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
@@ -5147,6 +5169,7 @@ export const ARTICLES: Article[] = [
       { q: 'Does golf ball compression really matter?', a: 'Yes — but less than the internet claims. The difference between a 70-compression and 90-compression ball at 90 mph swing speed is about 3-7 yards off the tee. Where it matters most is feel and spin: a properly matched compression gives you better energy transfer, more consistent launch, and a more predictable spin window on all shots.' },
       { q: 'What is the average golf swing speed for a male amateur?', a: 'The average male amateur driver swing speed is 93.4 mph according to TrackMan data. This produces an average driving distance of about 214 yards total. The average 7-iron speed for this player is about 75-80 mph, producing a carry distance of approximately 140-150 yards.' },
     ],
+    sources: [{ label: 'TrackMan — Average Swing Speed & Distance Data', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }, { label: 'Srixon — Q-Star Tour Construction & Specs', url: 'https://www.srixon.com/us/q-star-tour/' }, { label: 'Bridgestone Golf — e12 Contact Technology', url: 'https://www.bridgestonegolf.com/en-us/balls/e12-contact' }],
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 (All Swing Speeds)' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
@@ -5229,6 +5252,7 @@ export const ARTICLES: Article[] = [
       { q: 'How long before I see results from morning practice?', a: 'Most golfers notice improved feel and confidence within 2 weeks. Measurable scoring improvement typically shows after 4-6 weeks of consistent practice (3x/week). Our testers saw their biggest gains in putting (fewer 3-putts) and chipping (fewer skulled shots).' },
       { q: 'Is morning practice better than evening practice?', a: 'Both work. Morning has two advantages: you get a full night of sleep for memory consolidation before your next session, and morning routines are harder to cancel (no one schedules dinner over your 6:15 AM putting drill). Evening practice works if mornings are impossible — consistency matters more than timing.' },
     ],
+    sources: [{ label: 'Journal of Applied Sport Psychology — Visualization & Motor Learning', url: 'https://www.tandfonline.com/toc/uasp20/current' }, { label: 'TrackMan — Amateur vs Tour Putting Stats', url: 'https://blog.trackmangolf.com/putting-stats/' }],
     related: [
       { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (15 Minutes)' },
       { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },

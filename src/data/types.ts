@@ -84,6 +84,7 @@ export interface Article {
   whoSkip?:      string[];    // "Who should skip" bullets (required for buying-guide)
   testingNotes?: string;      // Testing methodology summary
   updateLog?:    Array<{ date: string; note: string }>;  // Visible changelog
+  sources?:      Array<{ label: string; url: string }>;  // External citation links
   faq?:          FAQItem[];
   related:       RelatedLink[];
   // ── Auto-injected by linking.ts ─────────────────────────────────────────────
