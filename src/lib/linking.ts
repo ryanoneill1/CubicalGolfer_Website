@@ -125,21 +125,32 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
+    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
   ],
   'golf-ball-compression': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors 2026' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
+    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
   ],
   'golf-balls-slow-swing': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
     { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
+    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
   ],
   'what-golf-ball-high-handicapper': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
+    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
+  ],
+  'golf-balls-90-mph': [
+    { slug: '/best-golf-balls-2026/',               label: 'Best Golf Balls 2026 (All Speeds)' },
+    { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
+    { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
+    { slug: '/titleist-pro-v1-vs-pro-v1x/',        label: 'Pro V1 vs Pro V1x Comparison' },
+    { slug: '/best-golf-balls-weekend-golfers/',    label: 'Best Balls for Weekend Golfers' },
   ],
 
   // ── Fix previously orphaned pages ─────────────────────────────────────────────
