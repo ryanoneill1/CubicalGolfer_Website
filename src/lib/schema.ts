@@ -21,15 +21,18 @@ const PUBLISHER = {
 };
 const AUTHOR = {
   '@type': 'Person',
-  name: 'Cubical Golfer Staff',
+  name: 'The Cubical Golfer Team',
   url: `${DOMAIN}/about/`,
-  description: 'Weekend golfer with 15+ years experience and a low-teens handicap. Tests all gear over a minimum of 10 real rounds on real courses before recommending. All products independently purchased.',
+  jobTitle: 'Gear Editors & Weekend Warriors',
+  description: 'A crew of 9-to-5 desk jockeys who live for Saturday morning tee times. 15-handicap average across the team. We test every product over 10+ real rounds with our own money — no freebies, no manufacturer loans. We write reviews between meetings and daydream about birdies during conference calls.',
   image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
   '@id': `${DOMAIN}/about/#author`,
   knowsAbout: [
     'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
     'Golf irons', 'Golf drivers', 'Golf balls', 'Golf putters',
     'Golf swing improvement', 'Golf equipment testing', 'Golf simulator setup',
+    'Weekend golf practice', 'Office golf fitness', 'Budget golf gear',
+    'Golf for beginners', 'Golf course management',
   ],
 };
 
