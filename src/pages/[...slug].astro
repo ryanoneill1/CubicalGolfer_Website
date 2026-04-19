@@ -392,6 +392,25 @@ if (isBuyingGuide) {
     {/* INTRO */}
     <div class="intro-box"><p>{article.intro}</p></div>
 
+    {/* UPDATE LOG — collapsible changelog */}
+    {(article as any).updateLog && (article as any).updateLog.length > 0 && (
+      <details class="update-log" style="margin:16px 0 24px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:13px;">
+        <summary style="padding:10px 16px;cursor:pointer;font-weight:600;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px;">
+          <span style="font-size:15px;">📋</span>
+          Update Log — last updated {(article as any).updateLog[0].date}
+          <span style="margin-left:auto;font-size:11px;color:var(--muted);opacity:.6;">▼</span>
+        </summary>
+        <div style="padding:4px 16px 14px;border-top:1px solid var(--border);">
+          {(article as any).updateLog.map((entry: {date: string; note: string}) => (
+            <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+              <span style="flex-shrink:0;font-weight:600;color:var(--green);min-width:90px;">{entry.date}</span>
+              <span style="color:var(--body);">{entry.note}</span>
+            </div>
+          ))}
+        </div>
+      </details>
+    )}
+
     {/* TABLE OF CONTENTS */}
     {article.toc && article.toc.length > 0 && (
       <nav class="toc" aria-label="Table of contents">
