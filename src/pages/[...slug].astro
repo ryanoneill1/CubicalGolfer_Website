@@ -677,6 +677,21 @@ if (isBuyingGuide) {
     {/* UPDATE STAMP */}
     <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified}</div>
 
+    {/* SOURCES & REFERENCES */}
+    {(article as any).sources && (article as any).sources.length > 0 && (
+      <div class="update-stamp" style="margin-top:12px;font-size:12px;line-height:1.8;">
+        <strong style="font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Sources & References</strong>
+        <div style="margin-top:6px;">
+          {(article as any).sources.map((src: {label: string; url: string}, i: number) => (
+            <span>
+              <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" style="color:var(--green);text-decoration:underline;">{src.label}</a>
+              {i < (article as any).sources.length - 1 && <span style="color:var(--muted);margin:0 8px;">·</span>}
+            </span>
+          ))}
+        </div>
+      </div>
+    )}
+
     {/* BOTTOM CTA */}
     <div class="art-cta">
       <h3>Get the Free Golf Gear Buying Guide</h3>
