@@ -438,6 +438,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'improve-putting',
     slug: '/how-to-improve-putting/',
+    thumbnail: '/images/thumbnails/improve-putting-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -477,6 +478,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'beginner-sets',
     slug: '/best-beginner-golf-club-sets/',
+    thumbnail: '/images/thumbnails/beginner-sets-thumb.webp',
     category: 'improve-game',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -537,6 +539,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'tips-beginners',
     slug: '/golf-tips-for-beginners/',
+    thumbnail: '/images/thumbnails/tips-beginners-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -575,6 +578,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'handicap',
     slug: '/average-golf-handicap/',
+    thumbnail: '/images/thumbnails/handicap-thumb.webp',
     category: 'improve-game',
     pageType: 'listicle',
     tag: 'GUIDE',
@@ -615,6 +619,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'swing-analyzers',
     slug: '/best-golf-swing-analyzers/',
+    thumbnail: '/images/thumbnails/swing-analyzers-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -675,6 +680,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-apps',
     slug: '/best-golf-apps/',
+    thumbnail: '/images/thumbnails/golf-apps-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -734,6 +740,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ai-tools',
     slug: '/best-ai-golf-training-tools/',
+    thumbnail: '/images/thumbnails/ai-tools-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -796,6 +803,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'accessories-25',
     slug: '/25-golf-accessories-every-golfer-should-own/',
+    thumbnail: '/images/thumbnails/accessories-25-thumb.webp',
     category: 'golf-accessories',
     pageType: 'listicle',
     tag: 'LISTICLE',
@@ -889,6 +897,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'sneak-rounds',
     slug: '/how-to-sneak-in-more-golf-rounds/',
+    thumbnail: '/images/thumbnails/sneak-rounds-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
     tag: 'LIFESTYLE',
@@ -925,6 +934,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'fitness',
     slug: '/golf-fitness-office-golfer/',
+    thumbnail: '/images/thumbnails/fitness-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
     tag: 'LIFESTYLE',
@@ -964,6 +974,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'courses',
     slug: '/best-golf-courses-weekend-drive/',
+    thumbnail: '/images/thumbnails/courses-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
     tag: 'LIFESTYLE',
@@ -1122,6 +1133,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'gloves',
     slug: '/best-golf-gloves-hot-weather/',
+    thumbnail: '/images/thumbnails/gloves-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -1311,6 +1323,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-ball-compression',
     slug: '/golf-ball-compression-chart/',
+    thumbnail: '/images/thumbnails/golf-ball-compression-thumb.webp',
     category: 'gear-reviews',
     pageType: 'listicle',
     tag: 'GUIDE',
@@ -1363,6 +1376,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pro-v1-vs-pro-v1x',
     slug: '/titleist-pro-v1-vs-pro-v1x/',
+    thumbnail: '/images/thumbnails/pro-v1-vs-pro-v1x-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -1412,6 +1426,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-gifts',
     slug: '/best-golf-gifts-for-him/',
+    thumbnail: '/images/thumbnails/golf-gifts-thumb.webp',
     category: 'golf-accessories',
     pageType: 'listicle',
     tag: 'BUYING GUIDE',
@@ -1461,6 +1476,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-shoes-walking',
     slug: '/best-golf-shoes-for-walking/',
+    thumbnail: '/images/thumbnails/golf-shoes-walking-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -1524,6 +1540,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-gloves-men',
     slug: '/best-golf-gloves-for-men/',
+    thumbnail: '/images/thumbnails/best-golf-gloves-men-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -1586,6 +1603,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-budget-drivers',
     slug: '/best-golf-drivers-under-200/',
+    thumbnail: '/images/thumbnails/best-budget-drivers-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -1647,6 +1665,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-training-aids',
     slug: '/best-golf-training-aids/',
+    thumbnail: '/images/thumbnails/best-golf-training-aids-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -1796,6 +1815,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-vs-gps',
     slug: '/golf-rangefinder-vs-gps-watch/',
+    thumbnail: '/images/thumbnails/rangefinder-vs-gps-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -1849,6 +1869,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'what-golf-ball-high-handicapper',
     slug: '/what-golf-ball-for-high-handicapper/',
+    thumbnail: '/images/thumbnails/what-golf-ball-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -1940,6 +1961,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-beginners',
     slug: '/best-golf-rangefinder-beginners/',
+    thumbnail: '/images/thumbnails/rangefinder-beginners-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -2028,6 +2050,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'bushnell-vs-garmin',
     slug: '/bushnell-vs-garmin-rangefinder/',
+    thumbnail: '/images/thumbnails/bushnell-vs-garmin-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -2095,6 +2118,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls-slow-swing',
     slug: '/best-golf-balls-slow-swing-speed/',
+    thumbnail: '/images/thumbnails/golf-balls-slow-swing-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -2186,6 +2210,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls-weekend',
     slug: '/best-golf-balls-weekend-golfers/',
+    thumbnail: '/images/thumbnails/golf-balls-weekend-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -2282,6 +2307,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-to-chip',
     slug: '/how-to-chip-in-golf/',
+    thumbnail: '/images/thumbnails/how-to-chip-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -2335,6 +2361,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'stop-topping',
     slug: '/how-to-stop-topping-the-ball/',
+    thumbnail: '/images/thumbnails/stop-topping-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -2388,6 +2415,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-etiquette',
     slug: '/golf-course-etiquette/',
+    thumbnail: '/images/thumbnails/golf-etiquette-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'listicle',
     tag: 'GUIDE',
@@ -2453,6 +2481,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-under-200',
     slug: '/best-golf-rangefinder-under-200/',
+    thumbnail: '/images/thumbnails/rangefinder-under-200-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -2541,6 +2570,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'arccos-vs-shot-scope',
     slug: '/arccos-vs-shot-scope/',
+    thumbnail: '/images/thumbnails/arccos-vs-shot-scope-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -2610,6 +2640,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'handicap-weekend-golfer',
     slug: '/average-golf-handicap-weekend-golfer/',
+    thumbnail: '/images/thumbnails/handicap-weekend-golfer-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'GUIDE',
@@ -2669,6 +2700,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-to-use-rangefinder',
     slug: '/how-to-use-golf-rangefinder/',
+    thumbnail: '/images/thumbnails/how-to-use-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -2733,6 +2765,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'skytrak-vs-mevo-plus',
     slug: '/skytrak-vs-mevo-plus/',
+    thumbnail: '/images/thumbnails/skytrak-vs-mevo-plus-thumb.webp',
     category: 'golf-tech',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -2802,6 +2835,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'garage-simulator',
     slug: '/how-to-build-garage-golf-simulator/',
+    thumbnail: '/images/thumbnails/garage-simulator-thumb.webp',
     category: 'golf-tech',
     pageType: 'tutorial',
     tag: 'GUIDE',
@@ -2867,6 +2901,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-apps-handicap',
     slug: '/best-golf-apps-handicap-tracking/',
+    thumbnail: '/images/thumbnails/golf-apps-handicap-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -2971,6 +3006,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-grip-trainers',
     slug: '/best-golf-grip-trainers/',
+    thumbnail: '/images/thumbnails/golf-grip-trainers-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3068,6 +3104,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'gps-watch-high-handicapper',
     slug: '/best-gps-golf-watch-high-handicappers/',
+    thumbnail: '/images/thumbnails/gps-watch-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3163,6 +3200,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-simulator-small-spaces',
     slug: '/best-golf-simulator-small-spaces/',
+    thumbnail: '/images/thumbnails/golf-simulator-small-spaces-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3248,6 +3286,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'indoor-golf-net',
     slug: '/best-indoor-golf-net-setup/',
+    thumbnail: '/images/thumbnails/indoor-golf-net-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3339,6 +3378,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-under-150',
     slug: '/best-golf-rangefinder-under-150/',
+    thumbnail: '/images/thumbnails/rangefinder-under-150-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3406,6 +3446,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-irons-high-handicapper',
     slug: '/best-golf-irons-high-handicapper/',
+    thumbnail: '/images/thumbnails/best-irons-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3479,6 +3520,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'slope-on-rangefinder',
     slug: '/what-is-slope-on-a-rangefinder/',
+    thumbnail: '/images/thumbnails/slope-on-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -3535,6 +3577,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-far-7-iron',
     slug: '/how-far-average-golfer-hit-7-iron/',
+    thumbnail: '/images/thumbnails/how-far-7-iron-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -3591,6 +3634,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'lower-handicap',
     slug: '/how-to-lower-golf-handicap/',
+    thumbnail: '/images/thumbnails/lower-handicap-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -3647,6 +3691,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-ball-go-right',
     slug: '/why-does-my-golf-ball-go-right/',
+    thumbnail: '/images/thumbnails/golf-ball-go-right-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -3703,6 +3748,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'hit-irons-fat',
     slug: '/why-do-i-hit-irons-fat/',
+    thumbnail: '/images/thumbnails/hit-irons-fat-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -3759,6 +3805,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'practice-golf-at-home',
     slug: '/how-to-practice-golf-at-home/',
+    thumbnail: '/images/thumbnails/practice-golf-at-home-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -3814,6 +3861,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'putter-high-handicapper',
     slug: '/best-putter-high-handicapper/',
+    thumbnail: '/images/thumbnails/putter-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3878,6 +3926,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'simulator-under-1000',
     slug: '/best-golf-simulator-under-1000/',
+    thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -3937,6 +3986,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-rangefinder-seniors',
     slug: '/best-golf-rangefinder-for-seniors/',
+    thumbnail: '/images/thumbnails/best-golf-rangefinder-seniors-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -4024,6 +4074,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'do-i-need-slope-rangefinder',
     slug: '/do-i-need-slope-on-rangefinder/',
+    thumbnail: '/images/thumbnails/do-i-need-slope-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'tutorial',
     tag: 'GUIDE',
@@ -4084,6 +4135,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-balls-seniors',
     slug: '/best-golf-balls-for-seniors/',
+    thumbnail: '/images/thumbnails/best-golf-balls-seniors-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -4162,6 +4214,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-to-stop-3-putting',
     slug: '/how-to-stop-3-putting/',
+    thumbnail: '/images/thumbnails/how-to-stop-3-putting-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -4228,6 +4281,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-gps-watch-under-200',
     slug: '/best-golf-gps-watch-under-200/',
+    thumbnail: '/images/thumbnails/best-golf-gps-watch-under-200-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -4305,6 +4359,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-for-beginners-hub',
     slug: '/golf-for-beginners/',
+    thumbnail: '/images/thumbnails/golf-for-beginners-hub-thumb.webp',
     category: 'improve-game',
     pageType: 'listicle',
     tag: 'GUIDE',
@@ -4368,6 +4423,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-irons-seniors',
     slug: '/best-golf-irons-for-seniors/',
+    thumbnail: '/images/thumbnails/best-golf-irons-seniors-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -4444,6 +4500,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'blue-tees-vs-bushnell-rangefinder',
     slug: '/blue-tees-vs-bushnell-rangefinder/',
+    thumbnail: '/images/thumbnails/blue-tees-vs-bushnell-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -4594,6 +4651,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'trackman-vs-foresight',
     slug: '/trackman-vs-foresight-gcquad/',
+    thumbnail: '/images/thumbnails/trackman-vs-foresight-thumb.webp',
     category: 'golf-tech',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -4985,6 +5043,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-desk-accessories',
     slug: '/golf-desk-accessories-office/',
+    thumbnail: '/images/thumbnails/golf-desk-accessories-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'listicle',
     tag: 'LISTICLE',
@@ -5083,6 +5142,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls-90-mph',
     slug: '/best-golf-balls-90-mph-swing-speed/',
+    thumbnail: '/images/thumbnails/golf-balls-90-mph-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -5198,6 +5258,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'morning-practice-routine',
     slug: '/golf-practice-routine-before-work/',
+    thumbnail: '/images/thumbnails/morning-practice-routine-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
