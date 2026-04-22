@@ -442,6 +442,23 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
     { slug: '/how-to-build-garage-golf-simulator/', label: 'Build a Simulator' },
   ],
+  'clubs-20-handicap': [
+    { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90' },
+  ],
+  'ball-15-handicap': [
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+    { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' },
+    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
+  ],
+  'driver-high-handicapper': [
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+    { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Paradym Review' },
+    { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
+    { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
