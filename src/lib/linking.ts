@@ -348,10 +348,36 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Launch monitor cluster ─────────────────────────────────────────────────
   'launch-monitors': [
+    { slug: '/rapsodo-mlm2pro-review/',              label: 'Rapsodo MLM2PRO Review — 6 Months' },
     { slug: '/trackman-vs-foresight-gcquad/',         label: 'Trackman 4 vs Foresight GCQuad' },
     { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Golf Simulators for Small Spaces' },
     { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
     { slug: '/best-golf-swing-analyzers/',           label: 'Best Golf Swing Analyzers 2026' },
+  ],
+  'rapsodo-mlm2pro-review': [
+    { slug: '/best-golf-launch-monitors-2026/',      label: 'Best Launch Monitors 2026' },
+    { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+' },
+    { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Golf Simulator' },
+  ],
+  'paradym-driver-review': [
+    { slug: '/best-golf-drivers-forgiveness/',        label: 'Best Forgiving Drivers 2026' },
+    { slug: '/how-to-fix-your-slice/',               label: 'Fix Your Slice' },
+    { slug: '/best-golf-irons-2026/',                label: 'Best Irons 2026' },
+  ],
+  'pro-v1-review': [
+    { slug: '/best-golf-balls-2026/',                label: 'Best Golf Balls 2026' },
+    { slug: '/titleist-pro-v1-vs-pro-v1x/',          label: 'Pro V1 vs Pro V1x' },
+    { slug: '/golf-ball-compression-chart/',          label: 'Compression Chart' },
+  ],
+  'arccos-caddie-review': [
+    { slug: '/best-golf-swing-analyzers/',           label: 'Best Swing Analyzers 2026' },
+    { slug: '/best-golf-apps/',                      label: 'Best Golf Apps 2026' },
+    { slug: '/garmin-approach-s62-review/',           label: 'Garmin S62 Review' },
+  ],
+  'precision-pro-nx9-review': [
+    { slug: '/best-golf-rangefinders-2026/',          label: 'Best Rangefinders 2026' },
+    { slug: '/bushnell-tour-v6-shift-review/',        label: 'Bushnell V6 Review' },
+    { slug: '/best-golf-rangefinder-under-200/',      label: 'Best Under $200' },
   ],
   'trackman-vs-foresight': [
     { slug: '/best-golf-launch-monitors-2026/',      label: 'Best Golf Launch Monitors 2026' },
