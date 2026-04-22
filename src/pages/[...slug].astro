@@ -353,6 +353,25 @@ if (isBuyingGuide) {
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
   <article class="art-content">
 
+    {/* QUICK ANSWER BOX — buying guides only */}
+    {(article as any).quickAnswerProduct && article.bottomLine && (() => {
+      const qaAff = getAffiliateLink((article as any).quickAnswerProduct);
+      const productCount = article.comparisonTable?.rows?.length ?? article.sections?.length ?? 0;
+      if (!qaAff?.url) return null;
+      return (
+        <div class="quick-answer-box">
+          <div class="quick-answer-header">⚡ Quick Answer</div>
+          <p class="quick-answer-text" set:html={article.bottomLine} />
+          <a href={qaAff.url} class="quick-answer-cta" target="_blank"
+            rel="nofollow noopener sponsored"
+            aria-label={`Check price for our #1 pick`}>
+            Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price →
+          </a>
+          <p class="quick-answer-more">Read the full guide below for all {productCount} products tested.</p>
+        </div>
+      );
+    })()}
+
     {/* BOTTOM LINE — required for buying guides */}
     {article.bottomLine && (
       <div class="bottom-line-box" role="note" aria-label="Our verdict">
