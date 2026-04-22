@@ -839,6 +839,37 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
    All pages must use these shared modules.
    ═══════════════════════════════════════════════════════════════════════════ */
 
+/* ── QUICK ANSWER BOX ── */
+.quick-answer-box {
+  background: var(--green);
+  border: 2px solid var(--gold);
+  border-radius: var(--r2);
+  padding: 28px 30px;
+  margin: 0 0 32px;
+  color: #fff;
+}
+.quick-answer-header {
+  font-size: 13px; font-weight: 800; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+}
+.quick-answer-text {
+  font-size: 15px; line-height: 1.7; color: #ffffffdd; margin: 0 0 18px;
+}
+.quick-answer-text strong { color: #fff; }
+.quick-answer-cta {
+  display: inline-block; background: var(--gold); color: var(--green);
+  padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 800;
+  text-decoration: none; transition: background .15s, transform .15s;
+}
+.quick-answer-cta:hover { background: var(--gold-dark); transform: scale(1.02); }
+.quick-answer-more {
+  font-size: 13px; color: #ffffff99; margin: 14px 0 0; font-style: italic;
+}
+@media (max-width: 640px) {
+  .quick-answer-box { padding: 22px 20px; }
+  .quick-answer-cta { display: block; text-align: center; padding: 14px 20px; font-size: 14px; }
+}
+
 /* ── BOTTOM LINE BOX (verdict callout — top of all buying guides) ── */
 .bottom-line-box {
   background: var(--cream-dark);
