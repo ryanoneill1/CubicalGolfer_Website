@@ -63,6 +63,19 @@ const sameCategory = ARTICLES.filter(
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison';
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
+// Sticky mobile CTA bar — first product for buying guides
+const stickyProduct = (() => {
+  if (!isBuyingGuide) return null;
+  const key = (article as any).quickAnswerProduct
+    || article.comparisonTable?.rows?.find((r: any) => r.affiliateKey)?.affiliateKey
+    || null;
+  if (!key) return null;
+  const aff = getAffiliateLink(key);
+  if (!aff?.url) return null;
+  const name = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === key)?.name ?? key;
+  return { name, price: aff.price, url: aff.url, retailer: aff.retailer };
+})();
+
 // Cubicle Golfer personas — each category gets a rotating cast of desk-bound golf dreamers
 const PERSONAS: Record<string, Array<{ name: string; tagline: string }>> = {
   'gear-reviews': [
@@ -768,6 +781,80 @@ if (isBuyingGuide) {
         ))}
       </div>
     </section>
+  )}
+  {/* STICKY MOBILE CTA BAR — buying guides only */}
+  {stickyProduct && (
+    <div id="sticky-cta" class="sticky-cta" aria-label="Quick buy">
+      <div class="sticky-cta__body">
+        <span class="sticky-cta__name">{stickyProduct.name}</span>
+        <span class="sticky-cta__price">{stickyProduct.price}</span>
+      </div>
+      <a href={stickyProduct.url} class="sticky-cta__btn" target="_blank"
+        rel="nofollow noopener sponsored">See Price →</a>
+      <button class="sticky-cta__close" aria-label="Dismiss" id="sticky-cta-close">×</button>
+    </div>
+  )}
+
+  {stickyProduct && (
+    <style>{`
+      .sticky-cta {
+        display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
+        background: var(--green); border-top: 2px solid var(--gold);
+        padding: 10px 14px; height: 56px;
+        align-items: center; gap: 10px;
+        box-shadow: 0 -4px 16px rgba(0,0,0,.18);
+        transform: translateY(100%); transition: transform .3s ease;
+      }
+      .sticky-cta.visible { transform: translateY(0); }
+      .sticky-cta__body { flex: 1; min-width: 0; }
+      .sticky-cta__name {
+        display: block; font-size: 13px; font-weight: 700; color: #fff;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      .sticky-cta__price { font-size: 11px; color: var(--gold); font-weight: 600; }
+      .sticky-cta__btn {
+        flex-shrink: 0; background: var(--gold); color: var(--green);
+        padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 800;
+        text-decoration: none; white-space: nowrap;
+      }
+      .sticky-cta__btn:hover { background: var(--gold-dark); }
+      .sticky-cta__close {
+        flex-shrink: 0; background: none; border: none; color: #fff9;
+        font-size: 20px; cursor: pointer; padding: 4px 2px; line-height: 1;
+      }
+      .sticky-cta__close:hover { color: #fff; }
+      @media (min-width: 769px) { .sticky-cta { display: none !important; } }
+      @media (max-width: 768px) { .sticky-cta { display: flex; } }
+    `}</style>
+  )}
+
+  {stickyProduct && (
+    <script is:inline>{`
+      (function(){
+        var bar = document.getElementById('sticky-cta');
+        var closeBtn = document.getElementById('sticky-cta-close');
+        if (!bar) return;
+        var dismissed = false;
+        var trigger = document.querySelector('.art-section');
+        if (!trigger) trigger = document.querySelector('.product-img-wrap');
+        if (!trigger) return;
+        function check() {
+          if (dismissed) return;
+          var rect = trigger.getBoundingClientRect();
+          if (rect.top < 0) {
+            bar.classList.add('visible');
+          } else {
+            bar.classList.remove('visible');
+          }
+        }
+        window.addEventListener('scroll', check, {passive: true});
+        closeBtn.addEventListener('click', function() {
+          dismissed = true;
+          bar.classList.remove('visible');
+          bar.style.display = 'none';
+        });
+      })();
+    `}</script>
   )}
 
 </BaseLayout>
