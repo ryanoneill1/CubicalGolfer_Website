@@ -877,9 +877,10 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
 }
 .quick-answer-text {
-  font-size: 15px; line-height: 1.7; color: #ffffffdd; margin: 0 0 18px;
+  font-size: 15px; line-height: 1.7; margin: 0 0 18px;
 }
-.quick-answer-text strong { color: #fff; }
+.art-content .quick-answer-box p { color: #ffffffdd; font-size: 15px; line-height: 1.7; }
+.art-content .quick-answer-box strong { color: #fff; }
 .quick-answer-cta {
   display: inline-block; background: var(--gold); color: var(--green);
   padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 800;
