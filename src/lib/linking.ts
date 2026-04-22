@@ -112,10 +112,17 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── GPS Watch cluster ─────────────────────────────────────────────────────────
   'gps-watches': [
+    { slug: '/garmin-approach-s62-review/',          label: 'Garmin S62 Review — 30 Rounds Later' },
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
     { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
     { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
     { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5' },
+  ],
+  'garmin-s62-review': [
+    { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
+    { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
+    { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
+    { slug: '/best-golf-apps/',                     label: 'Best Golf Apps 2026' },
   ],
   'gps-watch-high-handicapper': [
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best Golf GPS Watch Under $200' },
