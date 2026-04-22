@@ -52,10 +52,17 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Rangefinder cluster: every rangefinder page links to the others ──────────
   'rangefinders': [
+    { slug: '/bushnell-tour-v6-shift-review/',  label: 'Bushnell Tour V6 Shift Review (40 Rounds)' },
     { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
     { slug: '/do-i-need-slope-on-rangefinder/',  label: 'Do I Need Slope on a Rangefinder?' },
     { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinders for Seniors' },
     { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9' },
+  ],
+  'bushnell-v6-review': [
+    { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026 (All 11 Tested)' },
+    { slug: '/bushnell-vs-garmin-rangefinder/',    label: 'Bushnell vs Garmin Rangefinder' },
+    { slug: '/do-i-need-slope-on-rangefinder/',    label: 'Do I Need Slope on a Rangefinder?' },
+    { slug: '/best-golf-rangefinder-under-200/',   label: 'Best Rangefinders Under $200' },
   ],
   'rangefinder-worth-it': [
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
