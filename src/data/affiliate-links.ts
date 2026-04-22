@@ -239,6 +239,16 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Ping G430 Max Golf Driver',
   },
 
+  // Cleveland Launcher XL2 Driver — budget forgiving driver
+  'cleveland-launcher-xl2': {
+    url: 'https://www.amazon.com/s?k=Cleveland+Launcher+XL2+driver&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$349',
+    label: 'See Current Price',
+    imgSrc: '/images/products/cleveland-launcher-xl2.webp',
+    imgAlt: 'Cleveland Launcher XL2 Golf Driver',
+  },
+
   // ── GOLF BALLS ───────────────────────────────────────────────────────────
 
   // Titleist Pro V1 (2025 gen, 25th anniversary) — ASIN B0BR2YF8T6 ✅ verified
