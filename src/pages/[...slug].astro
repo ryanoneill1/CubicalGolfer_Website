@@ -457,7 +457,10 @@ if (isBuyingGuide) {
               return (
                 <tr class={row.winner ? 'cmp-winner' : ''}>
                   <td>
-                    {row.name}
+                    {rowAff ? (
+                      <a href={rowAff.url} target="_blank" rel="nofollow noopener sponsored"
+                        class="cmp-product-link">{row.name}</a>
+                    ) : row.name}
                     {row.winner && <span class="badge-best">BEST PICK</span>}
                   </td>
                   <td>{row.bestFor}</td>
@@ -526,20 +529,25 @@ if (isBuyingGuide) {
           {section.badge && isBuyingGuide && productId && (() => {
             const sectionImgSrc = aff ? (aff as any).imgSrc : null;
             const sectionImgAlt = aff ? (aff as any).imgAlt ?? section.h2 : section.h2;
+            const imgElement = sectionImgSrc ? (
+              <img src={sectionImgSrc} alt={sectionImgAlt} width="280" height="200"
+                loading="lazy" decoding="async" class="product-section-img"
+                onerror="this.src='/images/products/placeholder.webp'" />
+            ) : (
+              <div class="product-img-fallback">
+                <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
+              </div>
+            );
             return (
               <div class="product-img-wrap">
-                {sectionImgSrc ? (
-                  <img src={sectionImgSrc} alt={sectionImgAlt} width="280" height="200"
-                    loading="lazy" decoding="async" class="product-section-img"
-                    onerror="this.src='/images/products/placeholder.webp'" />
-                ) : (
-                  <div class="product-img-fallback">
-                    <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
-                    <span style="font-size:13px;color:var(--muted);margin-top:8px">
-                      Img needed: /public/images/products/{productId}.webp
-                    </span>
-                  </div>
-                )}
+                {aff?.url ? (
+                  <a href={aff.url} class="product-img-link" target="_blank"
+                    rel="nofollow noopener sponsored"
+                    aria-label={`View price for ${section.h2}`}>
+                    {imgElement}
+                    <span class="product-img-overlay">View Price →</span>
+                  </a>
+                ) : imgElement}
               </div>
             );
           })()}
@@ -547,14 +555,26 @@ if (isBuyingGuide) {
           {section.body && section.body.trim() && <p>{section.body}</p>}
 
           {/* Inline section image — for editorial/lifestyle images in article body */}
-          {(section as any).sectionImage && (
-            <figure style="margin:24px 0;text-align:center;">
+          {(section as any).sectionImage && (() => {
+            const secImg = (
               <img src={(section as any).sectionImage} alt={(section as any).sectionImageAlt ?? section.h2}
                 width="680" height="400" loading="lazy" decoding="async"
                 style="max-width:100%;height:auto;border-radius:12px;"
                 onerror="this.style.display='none'" />
-            </figure>
-          )}
+            );
+            return (
+              <figure style="margin:24px 0;text-align:center;position:relative;">
+                {aff?.url ? (
+                  <a href={aff.url} class="section-img-link" target="_blank"
+                    rel="nofollow noopener sponsored"
+                    aria-label={`View price for ${section.h2}`}>
+                    {secImg}
+                    <span class="product-img-overlay">View Price →</span>
+                  </a>
+                ) : secImg}
+              </figure>
+            );
+          })()}
 
           {/* Inline cubicle golfer callout — contextual cross-link inside article body */}
           {(section as any).callout && (
