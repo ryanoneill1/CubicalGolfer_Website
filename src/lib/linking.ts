@@ -417,6 +417,31 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
   ],
+  'garmin-s62-vs-apple-watch': [
+    { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },
+    { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' },
+    { slug: '/best-golf-apps/', label: 'Best Golf Apps' },
+  ],
+  'bushnell-v6-vs-nx9': [
+    { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' },
+    { slug: '/precision-pro-nx9-review/', label: 'NX9 HD Review' },
+    { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
+  ],
+  'arccos-vs-garmin-tracking': [
+    { slug: '/arccos-caddie-review/', label: 'Arccos Review' },
+    { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },
+    { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' },
+  ],
+  'pro-v1-vs-chrome-soft': [
+    { slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' },
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+    { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' },
+  ],
+  'rapsodo-vs-garmin-r10': [
+    { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' },
+    { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
+    { slug: '/how-to-build-garage-golf-simulator/', label: 'Build a Simulator' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
