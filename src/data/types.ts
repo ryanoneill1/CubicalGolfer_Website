@@ -64,6 +64,7 @@ export interface Article {
   slug:          string;      // URL path e.g. "/best-golf-rangefinders-2026/"
   category:      Category;
   pageType:      PageType;
+  quickAnswerProduct?: string;  // affiliateKey for #1 pick — renders Quick Answer box on buying guides
   tag:           string;      // "BUYING GUIDE" | "TUTORIAL" | "COMPARISON" etc.
   emoji:         string;
   thumb:         'green' | 'brown' | 'navy' | 'purple' | 'teal' | 'olive';
