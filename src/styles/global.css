@@ -234,7 +234,17 @@ nav.site-nav {
 .cmp-table th {
   background: var(--green); color: #fff; padding: 13px 16px;
   text-align: left; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  cursor: pointer; user-select: none; position: relative; white-space: nowrap;
 }
+.cmp-table th:hover { background: #152c1e; }
+.cmp-table th::after {
+  content: '⇅'; opacity: .35; margin-left: 4px; font-size: 10px;
+}
+.cmp-table th.sort-asc::after { content: '▲'; opacity: .9; }
+.cmp-table th.sort-desc::after { content: '▼'; opacity: .9; }
+.cmp-table th.cmp-th-buy { cursor: default; }
+.cmp-table th.cmp-th-buy::after { content: ''; }
+.cmp-table th.cmp-th-buy:hover { background: var(--green); }
 .cmp-table td {
   padding: 13px 16px; border-bottom: 1px solid var(--border);
   color: var(--body); line-height: 1.5; vertical-align: top;
