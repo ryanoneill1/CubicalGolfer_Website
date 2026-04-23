@@ -466,6 +466,21 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/pro-v1-vs-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
+  'budget-launch-monitors': [
+    { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' },
+    { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
+    { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
+  ],
+  'swing-analyzer-iphone': [
+    { slug: '/arccos-caddie-review/', label: 'Arccos Caddie Review' },
+    { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' },
+    { slug: '/best-golf-apps/', label: 'Best Golf Apps' },
+  ],
+  'training-aids-home': [
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+    { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
