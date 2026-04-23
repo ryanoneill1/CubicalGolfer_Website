@@ -485,7 +485,7 @@ if (isBuyingGuide) {
                       <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
                         rel="nofollow noopener sponsored"
                         aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}>
-                        See Price →
+                        {row.price} →
                       </a>
                     ) : (
                       <span class="cmp-no-link">—</span>
@@ -602,7 +602,7 @@ if (isBuyingGuide) {
             </div>
           )}
 
-          {section.price && <p class="price-note">💰 Price: {section.price}</p>}
+          {/* Price is now shown in the CTA button below */}
 
           {/* PROS / CONS — new in v2 */}
           {((section.pros && section.pros.length > 0) || (section.cons && section.cons.length > 0)) && (
@@ -647,6 +647,8 @@ if (isBuyingGuide) {
               retailer={aff.retailer} label={aff.label}
               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
               disclosure={true}
+              dateChecked={article.dateModified}
+              isWinner={section.badge?.includes('BEST OVERALL') || section.badge?.includes('EDITOR') || section.badge?.includes('BEST PICK') || false}
             />
           )}
         </div>
