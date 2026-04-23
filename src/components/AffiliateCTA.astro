@@ -2,17 +2,6 @@
 /**
  * AffiliateCTA.astro
  * Prominent "Buy Now" / "Check Price" CTA block.
- * Use above the fold, mid-content, and at the bottom of each product section.
- *
- * Props:
- *   url        — Affiliate URL (required)
- *   price      — Price string e.g. "~$329"
- *   name       — Product name for aria-label
- *   retailer   — e.g. "Amazon", "Bushnell"
- *   label      — Custom button text (default: "Check Price")
- *   size       — "sm" | "md" | "lg" (default: "md")
- *   variant    — "primary" | "secondary" | "urgent" (default: "primary")
- *   disclosure — Show affiliate disclosure inline (default: false)
  */
 
 interface Props {
@@ -24,6 +13,8 @@ interface Props {
   size?: 'sm' | 'md' | 'lg';
   variant?: 'primary' | 'secondary' | 'urgent';
   disclosure?: boolean;
+  dateChecked?: string;
+  isWinner?: boolean;
 }
 
 const {
@@ -31,30 +22,37 @@ const {
   price,
   name,
   retailer,
-  label = 'See Current Price',
+  label,
   size = 'md',
   variant = 'primary',
   disclosure = false,
+  dateChecked = '',
+  isWinner = false,
 } = Astro.props;
+
+const btnText = `${price} at ${retailer} — Check Today's Price →`;
+const dateLabel = dateChecked
+  ? `Free shipping · Price last checked ${new Date(dateChecked + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`
+  : `Free shipping · Prices may vary`;
 ---
 
 <div class:list={['aff-cta', `aff-cta--${size}`, `aff-cta--${variant}`]}>
-  <div class="aff-cta__inner">
-    <div class="aff-cta__price">{price}</div>
-    <a
-      href={url}
-      class="aff-cta__btn"
-      target="_blank"
-      rel="nofollow noopener sponsored"
-      aria-label={`${label} — ${name} at ${retailer}`}
-    >
-      <span class="aff-cta__btn-text">{label} →</span>
-      <span class="aff-cta__btn-sub">at {retailer} · Price may vary</span>
-    </a>
-  </div>
+  {isWinner && (
+    <span class="aff-cta__winner-badge">💰 Lowest price we've seen</span>
+  )}
+  <a
+    href={url}
+    class="aff-cta__btn"
+    target="_blank"
+    rel="nofollow noopener sponsored"
+    aria-label={`Check price for ${name} at ${retailer}`}
+  >
+    <span class="aff-cta__btn-text">{btnText}</span>
+  </a>
+  <p class="aff-cta__meta">{dateLabel}</p>
   {disclosure && (
     <p class="aff-cta__disclosure">
-      ⚖️ <em>Affiliate link — we earn a small commission at no extra cost to you. Prices change frequently — click to see the current price.</em>
+      ⚖️ <em>Affiliate link — we earn a small commission at no extra cost to you.</em>
     </p>
   )}
 </div>
@@ -63,38 +61,49 @@ const {
 .aff-cta {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   margin: 20px 0;
+  max-width: var(--prose-w, 720px);
 }
-.aff-cta__inner {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.aff-cta__price {
-  font-size: 28px;
-  font-weight: 900;
+.aff-cta__winner-badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: #f0f7f2;
   color: var(--green, #1E3A28);
-  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #b8dfc5;
+  margin-bottom: 2px;
 }
 
-/* Button base */
+/* Button */
 .aff-cta__btn {
   display: inline-flex;
-  flex-direction: column;
   align-items: center;
-  padding: 14px 28px;
+  justify-content: center;
+  padding: 16px 32px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 800;
-  transition: transform .15s, box-shadow .15s;
-  min-width: 200px;
+  min-width: 220px;
   text-align: center;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
-.aff-cta__btn:hover { transform: scale(1.03); box-shadow: 0 4px 16px rgba(0,0,0,.18); }
-.aff-cta__btn-text { font-size: 15px; font-weight: 800; line-height: 1.2; }
-.aff-cta__btn-sub  { font-size: 11px; font-weight: 500; opacity: .75; margin-top: 2px; }
+.aff-cta__btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,.15);
+}
+.aff-cta__btn-text { font-size: 15px; font-weight: 800; line-height: 1.3; }
+
+/* Meta line */
+.aff-cta__meta {
+  font-size: 12px;
+  color: var(--muted, #556B5C);
+  margin: 0;
+  font-weight: 500;
+}
 
 /* Variants */
 .aff-cta--primary .aff-cta__btn {
@@ -112,21 +121,15 @@ const {
 .aff-cta--urgent .aff-cta__btn {
   background: #d63b2f;
   color: #fff;
-  animation: pulse-cta 2.5s ease-in-out infinite;
 }
-.aff-cta--urgent .aff-cta__btn:hover { background: #b32d22; animation: none; }
-@keyframes pulse-cta {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(214,59,47,.4); }
-  50%       { box-shadow: 0 0 0 8px rgba(214,59,47,.0); }
-}
+.aff-cta--urgent .aff-cta__btn:hover { background: #b32d22; }
 
 /* Sizes */
-.aff-cta--sm .aff-cta__price    { font-size: 20px; }
-.aff-cta--sm .aff-cta__btn      { padding: 10px 20px; min-width: 160px; }
+.aff-cta--sm .aff-cta__btn      { padding: 12px 22px; min-width: 180px; }
 .aff-cta--sm .aff-cta__btn-text { font-size: 13px; }
 
-.aff-cta--lg .aff-cta__price    { font-size: 36px; }
-.aff-cta--lg .aff-cta__btn      { padding: 18px 36px; min-width: 240px; font-size: 17px; }
+.aff-cta--lg .aff-cta__btn      { padding: 20px 40px; min-width: 260px; }
+.aff-cta--lg .aff-cta__btn-text { font-size: 17px; }
 
 /* Disclosure */
 .aff-cta__disclosure {
@@ -136,7 +139,6 @@ const {
 }
 
 @media (max-width: 480px) {
-  .aff-cta__inner { flex-direction: column; align-items: flex-start; }
-  .aff-cta__btn   { width: 100%; }
+  .aff-cta__btn { width: 100%; padding: 16px 20px; }
 }
 </style>
