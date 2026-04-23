@@ -81,7 +81,7 @@ const NAV_ITEMS = [
   {meta.dateModified  && <meta property="article:modified_time"  content={meta.dateModified}  />}
 
   <!-- JSON-LD schemas — injected here ONLY (prevents duplicate field errors) -->
-  {schemas.map(schema => (
+  {schemas.filter(Boolean).map(schema => (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
 
