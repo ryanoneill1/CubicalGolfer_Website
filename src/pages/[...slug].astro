@@ -858,5 +858,39 @@ if (isBuyingGuide) {
       })();
     `}</script>
   )}
+  {/* ── Sortable comparison table ──────────────────────────────────────── */}
+  <script is:inline>
+    (function() {
+      var table = document.querySelector('.cmp-table');
+      if (!table) return;
+      var headers = table.querySelectorAll('thead th');
+      var tbody = table.querySelector('tbody');
+      if (!tbody) return;
+
+      var sortCol = -1;
+      var sortDir = 1;
+
+      headers.forEach(function(th, idx) {
+        if (th.classList.contains('cmp-th-buy')) return;
+        th.addEventListener('click', function() {
+          if (sortCol === idx) { sortDir *= -1; }
+          else { sortCol = idx; sortDir = 1; }
+          headers.forEach(function(h) { h.classList.remove('sort-asc', 'sort-desc'); });
+          th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+
+          var rows = Array.from(tbody.querySelectorAll('tr'));
+          rows.sort(function(a, b) {
+            var aText = (a.children[idx] ? a.children[idx].textContent : '').trim();
+            var bText = (b.children[idx] ? b.children[idx].textContent : '').trim();
+            var aNum = parseFloat(aText.replace(/[^0-9.\-]/g, ''));
+            var bNum = parseFloat(bText.replace(/[^0-9.\-]/g, ''));
+            if (!isNaN(aNum) && !isNaN(bNum)) return (aNum - bNum) * sortDir;
+            return aText.localeCompare(bText) * sortDir;
+          });
+          rows.forEach(function(r) { tbody.appendChild(r); });
+        });
+      });
+    })();
+  </script>
 
 </BaseLayout>
