@@ -65,6 +65,14 @@ const sameCategory = ARTICLES.filter(
   a => a.category === article.category && a.id !== article.id
 ).slice(0, 3);
 
+// ── Prev / Next navigation within same category ──────────────────────────
+const categoryArticles = ARTICLES
+  .filter(a => a.category === article.category)
+  .sort((a, b) => a.datePublished.localeCompare(b.datePublished));
+const currentIdx = categoryArticles.findIndex(a => a.id === article.id);
+const prevArticle = currentIdx > 0 ? categoryArticles[currentIdx - 1] : null;
+const nextArticle = currentIdx < categoryArticles.length - 1 ? categoryArticles[currentIdx + 1] : null;
+
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison' || article.pageType === 'review';
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
@@ -759,6 +767,24 @@ if (isBuyingGuide) {
     </div>
 
   </article>
+
+  {/* ── Prev / Next Navigation ───────────────────────────────────────── */}
+  {(prevArticle || nextArticle) && (
+    <nav class="prev-next-nav" aria-label="Previous and next articles">
+      {prevArticle ? (
+        <a href={prevArticle.slug} class="prev-next-link prev-next-link--prev">
+          <span class="prev-next-label">← Previous</span>
+          <span class="prev-next-title">{prevArticle.titleDisplay}</span>
+        </a>
+      ) : <span />}
+      {nextArticle ? (
+        <a href={nextArticle.slug} class="prev-next-link prev-next-link--next">
+          <span class="prev-next-label">Next →</span>
+          <span class="prev-next-title">{nextArticle.titleDisplay}</span>
+        </a>
+      ) : <span />}
+    </nav>
+  )}
 
   {/* SAME-CATEGORY CARD GRID */}
   {sameCategory.length > 0 && (
