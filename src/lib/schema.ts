@@ -325,6 +325,58 @@ export function howToSchema(article: any): object | null {
   };
 }
 
+// ── Review schema (for pageType 'review' — enables star rating rich snippets) ──
+export function reviewSchema(article: Article): object | null {
+  if (article.pageType !== 'review' || !article.rating) return null;
+
+  // Extract product name from title (strip Review, year, dashes)
+  const productName = article.title
+    .replace(/\s*Review\b.*$/i, '')
+    .replace(/\s*—\s*.*$/, '')
+    .replace(/\s*\(\d{4}\)\s*$/, '')
+    .replace(/\s*\d{4}\s*$/, '')
+    .trim();
+
+  // Extract brand (first word of product name)
+  const brand = productName.split(/\s+/)[0];
+
+  // Strip HTML from bottomLine for reviewBody
+  const reviewBody = (article.bottomLine || article.description || '')
+    .replace(/<[^>]+>/g, '');
+
+  // Use thumbnail or product image
+  const image = article.thumbnail
+    ? `${DOMAIN}${article.thumbnail}`
+    : `${DOMAIN}/images/og-image.png`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    '@id': `${DOMAIN}${article.slug}#review`,
+    itemReviewed: {
+      '@type': 'Product',
+      name: productName,
+      brand: { '@type': 'Brand', name: brand },
+      image: image,
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: article.rating,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    author: {
+      ...AUTHOR,
+      '@id': `${DOMAIN}/about/#author`,
+    },
+    publisher: PUBLISHER,
+    datePublished: article.datePublished,
+    dateModified: article.dateModified,
+    reviewBody: reviewBody,
+    url: `${DOMAIN}${article.slug}`,
+  };
+}
+
 // ── Product schema per pick (for buying-guide sections with affiliate key) ────
 export function buyingGuideProductSchema(section: any, affiliateUrl: string): object {
   return {
