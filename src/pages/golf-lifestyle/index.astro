@@ -46,7 +46,7 @@ weekend on the course.</p>
               }>{a.tag}</span>
               {(a as any).thumbnail ? (
                 <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async"
-                  style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;border-radius:12px 12px 0 0;" />
+                  class="art-thumb__img" />
               ) : (
                 <span aria-hidden="true">{a.emoji}</span>
               )}
