@@ -306,6 +306,7 @@ export function collectionPageSchema(opts: {
 // ── HowTo schema (for tutorial page types) ───────────────────────────────────
 export function howToSchema(article: any): object | null {
   if (article.pageType !== 'tutorial') return null;
+  if (!article.sections || !Array.isArray(article.sections)) return null; // FIX: guard missing sections
   const steps = article.sections
     .filter((s: any) => s.body && s.body.trim())
     .map((s: any, i: number) => ({
@@ -318,8 +319,9 @@ export function howToSchema(article: any): object | null {
   return {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: article.titleDisplay,
+    name: article.titleDisplay || article.title, // FIX: use correct field name
     description: article.description,
+    url: `${DOMAIN}${article.slug}`,
     step: steps,
     dateModified: article.dateModified,
   };
@@ -378,12 +380,29 @@ export function reviewSchema(article: Article): object | null {
 }
 
 // ── Product schema per pick (for buying-guide sections with affiliate key) ────
-export function buyingGuideProductSchema(section: any, affiliateUrl: string): object {
+// CRITICAL FIX: price, seller, and image are required by Google for Product snippets.
+// We are an affiliate site — seller must be the actual retailer (Amazon, Bushnell),
+// NOT cubicalgolfer.com. We do NOT emit shippingDetails, returnPolicy, or gtin
+// because we cannot legitimately claim those as an affiliate.
+export function buyingGuideProductSchema(
+  section: any,
+  affiliateUrl: string,
+  affiliatePrice: string,
+  affiliateRetailer: string,
+  productImage?: string,
+): object {
+  // Extract first numeric price from "~$329", "~$2,995", "~$179 + $99/yr", "~$55/dozen"
+  // Strips $ and ~ prefix, handles commas, takes first number only
+  const priceMatch = affiliatePrice?.replace(/,/g, '').match(/\d+(?:\.\d+)?/);
+  const numericPrice = priceMatch ? priceMatch[0] : '';
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim(),
     description: section.body?.slice(0, 200) || '',
+    image: productImage || `${DOMAIN}/images/products/placeholder.webp`,
+    // aggregateRating only emitted when we have real review data (section.rating)
     aggregateRating: section.rating ? {
       '@type': 'AggregateRating',
       ratingValue: section.rating,
@@ -395,7 +414,12 @@ export function buyingGuideProductSchema(section: any, affiliateUrl: string): ob
       '@type': 'Offer',
       url: affiliateUrl,
       priceCurrency: 'USD',
+      price: numericPrice,
       availability: 'https://schema.org/InStock',
+      seller: {
+        '@type': 'Organization',
+        name: affiliateRetailer || 'Amazon.com',
+      },
     },
   };
 }

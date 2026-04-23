@@ -33,12 +33,9 @@ if (article.faq && article.faq.length > 0) {
   schemas.push(faqSchema(article.faq));
 }
 if (article.pageType === 'tutorial' && article.toc && article.toc.length > 0) {
-  schemas.push(howToSchema({
-    name:        article.titleDisplay,
-    description: article.description,
-    url:         `https://www.cubicalgolfer.com${article.slug}`,
-    steps:       article.toc,
-  }));
+  // FIX: Pass actual article object — howToSchema needs article.sections and article.pageType
+  const howTo = howToSchema(article);
+  if (howTo) schemas.push(howTo); // FIX: null guard prevents <script>null</script>
 }
 // Review schema — enables star rating rich snippets in Google SERPs
 if (article.pageType === 'review' && article.rating) {
@@ -321,7 +318,11 @@ if (isBuyingGuide) {
     if (!pid) continue;
     const aff = getAffiliateLink(pid);
     if (!aff?.url) continue;
-    schemas.push(buyingGuideProductSchema(section, aff.url));
+    // FIX: Pass price, retailer, image — required by Google Product schema
+    schemas.push(buyingGuideProductSchema(
+      section, aff.url, aff.price, aff.retailer,
+      aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined
+    ));
   }
 }
 ---
