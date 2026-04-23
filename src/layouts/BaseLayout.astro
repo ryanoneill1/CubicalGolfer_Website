@@ -261,16 +261,16 @@ const NAV_ITEMS = [
 
   <script is:inline>
     (function () {
-      const toggle = document.getElementById('nav-toggle');
-      const links  = document.getElementById('nav-links');
+      var toggle = document.getElementById('nav-toggle');
+      var links  = document.getElementById('nav-links');
       if (!toggle || !links) return;
       toggle.addEventListener('click', function () {
-        const open = links.classList.toggle('open');
+        var open = links.classList.toggle('open');
         toggle.classList.toggle('open', open);
         toggle.setAttribute('aria-expanded', String(open));
       });
       document.addEventListener('click', function (e) {
-        if (!toggle.contains(e.target as Node) && !links.contains(e.target as Node)) {
+        if (!toggle.contains(e.target) && !links.contains(e.target)) {
           links.classList.remove('open');
           toggle.classList.remove('open');
           toggle.setAttribute('aria-expanded', 'false');
@@ -298,7 +298,7 @@ const NAV_ITEMS = [
         // Form submits normally to Kit.com via hidden iframe (target="kit-response")
         // Show success UX after a short delay to let the POST complete
         var btn = form.querySelector('.email-strip__btn');
-        if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
+        if (btn) { btn.textContent = 'Sending\u2026'; btn.disabled = true; }
         setTimeout(function () {
           if (field) field.setAttribute('hidden', '');
           if (disclaimer) disclaimer.setAttribute('hidden', '');
