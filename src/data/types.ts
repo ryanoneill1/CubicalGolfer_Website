@@ -15,6 +15,7 @@ export type PageType =
   | 'buying-guide'
   | 'comparison'
   | 'tutorial'
+  | 'review'
   | 'listicle'
   | 'lifestyle'
   | 'review'
@@ -88,6 +89,7 @@ export interface Article {
   updateLog?:    Array<{ date: string; note: string }>;  // Visible changelog
   sources?:      Array<{ label: string; url: string }>;  // External citation links
   faq?:          FAQItem[];
+  rating?:       number;        // 1–5 (one decimal) — Review schema rating for pageType 'review'
   related:       RelatedLink[];
   // ── Auto-injected by linking.ts ─────────────────────────────────────────────
   internalLinks?: RelatedLink[];
