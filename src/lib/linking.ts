@@ -450,7 +450,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'ball-15-handicap': [
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-    { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' },
+    { slug: '/golf-ball-compression-database/', label: 'Compression Database (35 Balls)' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
   'driver-high-handicapper': [
@@ -458,6 +458,13 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Paradym Review' },
     { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
     { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
+  ],
+  'compression-database': [
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+    { slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' },
+    { slug: '/best-golf-ball-15-handicap/', label: 'Best Ball for 15 Handicap' },
+    { slug: '/pro-v1-vs-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
 };
 
