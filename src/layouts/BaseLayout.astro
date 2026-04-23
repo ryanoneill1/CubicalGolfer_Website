@@ -158,36 +158,38 @@ const NAV_ITEMS = [
           ball, glove, putter — based on 40+ rounds of testing. No fluff. Just the answer.
         </p>
       </div>
-      <form
-        class="email-strip__form"
-        id="email-capture-form"
-        action="https://app.convertkit.com/forms/CONVERTKIT_FORM_ID/subscriptions"
-        method="post"
-        novalidate
-      >
-        <!-- Replace action URL above with your ConvertKit or Mailchimp endpoint -->
-        <div class="email-strip__field">
-          <label for="strip-email" class="sr-only">Your email address</label>
-          <input
-            type="email"
-            id="strip-email"
-            name="email_address"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-            class="email-strip__input"
-          />
-          <button type="submit" class="email-strip__btn">
-            Send Me the PDF →
-          </button>
-        </div>
-        <p class="email-strip__disclaimer">
-          No spam. Unsubscribe any time. We email ~twice a month with gear updates.
-        </p>
-        <div class="email-strip__thanks" id="strip-thanks" hidden>
-          ✅ &nbsp;Check your inbox — the cheat sheet is on its way!
-        </div>
-      </form>
+      <div>
+        <iframe name="kit-response" id="kit-iframe" style="display:none" aria-hidden="true"></iframe>
+        <form
+          id="email-capture-form"
+          action="https://cubical-golfer.kit.com/fd3a55c9dc"
+          method="post"
+          target="kit-response"
+          novalidate
+        >
+          <div class="email-strip__field" id="email-field">
+            <label for="strip-email" class="sr-only">Your email address</label>
+            <input
+              type="email"
+              id="strip-email"
+              name="email_address"
+              placeholder="your@email.com"
+              required
+              autocomplete="email"
+              class="email-strip__input"
+            />
+            <button type="submit" class="email-strip__btn">
+              Send Me the PDF →
+            </button>
+          </div>
+          <p class="email-strip__disclaimer" id="email-disclaimer">
+            No spam. Unsubscribe any time. We email ~twice a month with gear updates.
+          </p>
+          <div class="email-strip__thanks" id="strip-thanks" hidden>
+            ✅ &nbsp;Check your inbox — the cheat sheet is on its way!
+          </div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -257,7 +259,7 @@ const NAV_ITEMS = [
     </div>
   </footer>
 
-  <script>
+  <script is:inline>
     (function () {
       const toggle = document.getElementById('nav-toggle');
       const links  = document.getElementById('nav-links');
@@ -276,22 +278,32 @@ const NAV_ITEMS = [
       });
     })();
 
-    // Email capture form handler
+    // Email capture — form POSTs to Kit.com via hidden iframe, JS handles UX
     (function () {
-      const form = document.getElementById('email-capture-form') as HTMLFormElement;
-      const thanks = document.getElementById('strip-thanks');
-      if (!form || !thanks) return;
+      var form = document.getElementById('email-capture-form');
+      var field = document.getElementById('email-field');
+      var disclaimer = document.getElementById('email-disclaimer');
+      var thanks = document.getElementById('strip-thanks');
+      var input = document.getElementById('strip-email');
+      if (!form || !thanks || !input) return;
+
       form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const email = (form.querySelector('input[type="email"]') as HTMLInputElement)?.value;
-        if (!email) return;
-        // Submit to your email provider (ConvertKit/Mailchimp)
-        // For now, show the thank-you message
-        // When you have your endpoint, uncomment the fetch below:
-        // fetch(form.action, { method: 'POST', body: new FormData(form) });
-        form.querySelector('.email-strip__field')?.setAttribute('hidden', '');
-        form.querySelector('.email-strip__disclaimer')?.setAttribute('hidden', '');
-        thanks.removeAttribute('hidden');
+        var email = input.value.trim();
+        if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+          e.preventDefault();
+          input.style.borderColor = '#d63b2f';
+          input.focus();
+          return;
+        }
+        // Form submits normally to Kit.com via hidden iframe (target="kit-response")
+        // Show success UX after a short delay to let the POST complete
+        var btn = form.querySelector('.email-strip__btn');
+        if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
+        setTimeout(function () {
+          if (field) field.setAttribute('hidden', '');
+          if (disclaimer) disclaimer.setAttribute('hidden', '');
+          thanks.removeAttribute('hidden');
+        }, 800);
       });
     })();
   </script>
