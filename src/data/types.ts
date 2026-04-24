@@ -129,6 +129,7 @@ export interface Comparison {
   toc?:          string[];                        // FIX: Jump-to table of contents
   specs?:        Array<{ label: string; a: string; b: string; winner?: 'a' | 'b' | 'tie' }>;  // FIX: Side-by-side specs table
   weekendGolfer?: string;                         // FIX: "What Actually Matters for Weekend Golfers" section
+  related?:      Array<{ slug: string; label: string }>;  // Phase 5: Related guides for cross-linking
 }
 
 // ── Local page type ───────────────────────────────────────────────────────────

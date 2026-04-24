@@ -115,6 +115,13 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-01-28',
     dateModified:  '2026-03-28',
+    related: [
+      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 — Matched to Your Swing Speed' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart 2026' },
+      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026 (All Budgets)' },
+      { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Callaway Paradym Ai Smoke Max — Full Review' },
+      { slug: '/best-golf-irons-2026/', label: 'Best Game-Improvement Irons 2026' },
+    ],
   },
 
   {

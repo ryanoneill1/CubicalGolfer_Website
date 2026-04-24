@@ -276,15 +276,20 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
     {/* ── UPDATE STAMP ── */}
     <div class="update-stamp">Last updated: {c.dateModified}</div>
 
-    {/* ── RELATED ── */}
+    {/* ── RELATED GUIDES — dynamic per-comparison + fallback ── */}
     <div class="rel-cluster" style="margin-top:40px">
-      <h3>Related Comparisons & Guides</h3>
+      <h3>Related Guides</h3>
       <div class="rel-links">
-        <a href="/compare/">All Golf Product Comparisons →</a>
-        <a href="/gear-reviews/">All Gear Reviews →</a>
-        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
-        <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
-        <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers 2026</a>
+        {c.related && c.related.length > 0
+          ? c.related.map((link: any) => <a href={link.slug}>{link.label}</a>)
+          : <>
+              <a href="/compare/">All Golf Product Comparisons →</a>
+              <a href="/gear-reviews/">All Gear Reviews →</a>
+              <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
+              <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
+              <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers 2026</a>
+            </>
+        }
       </div>
     </div>
 
