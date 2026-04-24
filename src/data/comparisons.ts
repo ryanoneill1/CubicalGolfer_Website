@@ -34,6 +34,11 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-01-20',
     dateModified:  '2026-03-28',
+    related: [
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell Tour V6 Shift Review' },
+      { slug: '/precision-pro-nx9-review/', label: 'Precision Pro NX9 Review' },
+    ],
   },
   {
     slug:        'garmin-approach-s62-vs-shot-scope-v5',
@@ -61,6 +66,11 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-02-01',
     dateModified:  '2026-03-28',
+    related: [
+      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
+      { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },
+      { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' },
+    ],
   },
   {
     slug:        'arccos-vs-shot-scope',
@@ -141,6 +151,11 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-04-14',
     dateModified: '2026-04-14',
+    related: [
+      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
+      { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },
+      { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS Watch Under $200' },
+    ],
   },
 
   {
@@ -179,6 +194,11 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-04-14',
     dateModified:  '2026-04-14',
+    related: [
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell Tour V6 Shift Review' },
+      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+    ],
   },
 
   {
@@ -198,6 +218,11 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-04-14',
     dateModified:  '2026-04-14',
+    related: [
+      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
+      { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS Watch Under $200' },
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
+    ],
   },
 
 ];

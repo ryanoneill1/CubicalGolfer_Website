@@ -50,6 +50,8 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/golf-course-etiquette/',           label: 'Golf Course Etiquette Guide' },
     { slug: '/golf-desk-accessories-office/',    label: 'Best Golf Desk Accessories' },
     { slug: '/best-rain-gear-midwest-golfers/',  label: 'Best Rain Gear for Midwest Golfers' },
+    { slug: '/courses/chicago-il/',              label: 'Best Golf Courses in Chicago' },
+    { slug: '/gear-quiz/',                       label: 'Golf Gear Quiz — Find Your Fit' },
   ],
 };
 
@@ -64,6 +66,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/do-i-need-slope-on-rangefinder/',  label: 'Do I Need Slope on a Rangefinder?' },
     { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinders for Seniors' },
     { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9' },
+    { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees vs Bushnell Tour V6' },
   ],
   'bushnell-v6-review': [
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026 (All 11 Tested)' },
@@ -124,6 +127,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
     { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
     { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5' },
+    { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42 GPS Watch' },
+    { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Bushnell Ion Elite' },
   ],
   'garmin-s62-review': [
     { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
@@ -497,6 +502,57 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
     { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' },
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
+  ],
+  // ── Gift guides + youth golf clusters ─────────────────────────────────────
+  'golf-gifts-dad-under-100': [
+    { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
+    { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gift Guide' },
+    { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+  ],
+  'junior-golf-clubs-guide': [
+    { slug: '/how-to-get-your-kid-into-golf/', label: 'How to Get Your Kid Into Golf' },
+    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/golf-for-beginners/', label: 'Golf for Beginners Guide' },
+  ],
+  'golf-gifts-under-50': [
+    { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+    { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gift Guide' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+  ],
+  'christmas-golf-gifts': [
+    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
+    { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
+    { slug: '/best-golf-gifts-for-couples/', label: 'Golf Gifts for Couples' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+  ],
+  'mothers-day-golf-gifts': [
+    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
+    { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes 2026' },
+  ],
+  'get-kid-into-golf': [
+    { slug: '/best-junior-golf-clubs/', label: 'Best Junior Golf Clubs 2026' },
+    { slug: '/golf-for-beginners/', label: 'Golf for Beginners Guide' },
+    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+  ],
+  'couples-golf-gifts': [
+    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
+    { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' },
+  ],
+  // ── Travel & courses ──────────────────────────────────────────────────
+  'courses': [
+    { slug: '/courses/chicago-il/',       label: 'Best Golf Courses in Chicago' },
+    { slug: '/courses/new-york-ny/',      label: 'Best Golf Courses in NYC' },
+    { slug: '/courses/los-angeles-ca/',   label: 'Best Golf Courses in LA' },
+    { slug: '/courses/phoenix-az/',       label: 'Best Golf Courses in Phoenix' },
+    { slug: '/courses/miami-fl/',         label: 'Best Golf Courses in Miami' },
+    { slug: '/courses/dallas-tx/',        label: 'Best Golf Courses in Dallas' },
+    { slug: '/courses/atlanta-ga/',       label: 'Best Golf Courses in Atlanta' },
+    { slug: '/courses/houston-tx/',       label: 'Best Golf Courses in Houston' },
   ],
   // ── New article clusters ──────────────────────────────────────────────────
   'apartment-golf-simulator': [
