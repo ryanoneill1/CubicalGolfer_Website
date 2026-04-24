@@ -129,25 +129,28 @@ nav.site-nav {
 .author-box {
   display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
   margin: 12px 0 24px; padding: 12px 18px;
-  background: rgba(255,255,255,.12); border-radius: 8px;
-  font-size: 13px; color: rgba(255,255,255,.8);
+  background: #f0f7f2; border-radius: 8px;
+  border-bottom: 2px solid #B8DFC5;
+  font-size: 13px; color: #556B5C;
 }
 .author-avatar {
   width: 36px; height: 36px; border-radius: 50%;
-  background: var(--gold); color: var(--text); font-weight: 800; font-size: 14px;
+  background: #2A5038; color: #B8DFC5; font-weight: 800; font-size: 14px;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 .author-avatar-img {
   width: 40px; height: 40px; border-radius: 50%;
   object-fit: cover; flex-shrink: 0;
-  border: 2px solid rgba(255,255,255,.3);
+  border: 2px solid #B8DFC5;
 }
-.author-name  { font-weight: 700; color: #fff; display: block; }
-.author-meta  { font-size: 12px; color: rgba(255,255,255,.65); }
+.author-name  { font-weight: 700; color: #1E3A28; display: block; }
+.author-name a { color: #1E3A28; text-decoration: none; font-weight: 700; }
+.author-meta  { font-size: 12px; color: #556B5C; }
+.author-meta a { color: #1E3A28; text-decoration: none; font-weight: 500; }
 .verified-badge {
-  margin-left: auto; background: rgba(200,168,75,.2);
-  border: 1px solid rgba(200,168,75,.5); color: var(--gold);
-  font-size: 11px; font-weight: 700; padding: 3px 10px;
+  margin-left: auto; background: #1E3A28;
+  color: #E8F0EB;
+  font-size: 11px; font-weight: 600; padding: 4px 12px;
   border-radius: 20px; white-space: nowrap;
 }
 

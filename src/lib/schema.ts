@@ -25,7 +25,7 @@ const AUTHOR = {
   alternateName: 'Cubical Golfer',
   url: `${DOMAIN}/about/`,
   jobTitle: '12-Handicap Weekend Golfer & Gear Editor',
-  description: 'Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago. No freebies, no manufacturer loans.',
+  description: 'Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago, IL. No freebies, no manufacturer loans.',
   image: `${DOMAIN}/images/cubicalgolfer-hero.jpg`,
   '@id': `${DOMAIN}/about/#author`,
   knowsAbout: [
