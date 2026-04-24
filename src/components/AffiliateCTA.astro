@@ -31,8 +31,9 @@ const {
 } = Astro.props;
 
 const btnText = `${price} at ${retailer} — Check Today's Price →`;
+// FIX: Urgency-focused meta line — "Prices checked today" converts better than a static date
 const dateLabel = dateChecked
-  ? `Free shipping · Price last checked ${new Date(dateChecked + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}`
+  ? `Free shipping · Prices checked today`
   : `Free shipping · Prices may vary`;
 ---
 

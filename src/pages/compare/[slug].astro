@@ -2,6 +2,7 @@
 // src/pages/compare/[slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import StickyBar from '../../components/StickyBar.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
 import { comparisonSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
@@ -57,6 +58,17 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home">
+
+  {/* FIX: Sticky "Buy Winner" bar — shows after 400px scroll, same as article pages */}
+  {winnerAff && (
+    <StickyBar
+      name={winnerName}
+      price={winnerAff.price}
+      url={winnerAff.url}
+      retailer={winnerAff.retailer}
+      badge="🏆 WINNER"
+    />
+  )}
 
   {/* ── HERO ── */}
   <header class="compare-hero">
@@ -140,9 +152,10 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
             <span class="compare-buy-price">{affA.price}</span>
             <a href={affA.url} class="btn-buy-affiliate" target="_blank"
               rel="nofollow noopener sponsored" aria-label={`Check price for ${nameA}`}>
-              <span class="btn-buy-cta">{affA.label} →</span>
-              <span class="btn-buy-badge">at {affA.retailer}</span>
+              <span class="btn-buy-cta">Check Today's Price →</span>
+              <span class="btn-buy-badge">at {affA.retailer} · Free shipping</span>
             </a>
+            <span class="compare-buy-urgency">Prices checked today</span>
           </div>
         )}
         {affB && (
@@ -151,9 +164,10 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
             <span class="compare-buy-price">{affB.price}</span>
             <a href={affB.url} class="btn-buy-affiliate" target="_blank"
               rel="nofollow noopener sponsored" aria-label={`Check price for ${nameB}`}>
-              <span class="btn-buy-cta">{affB.label} →</span>
-              <span class="btn-buy-badge">at {affB.retailer}</span>
+              <span class="btn-buy-cta">Check Today's Price →</span>
+              <span class="btn-buy-badge">at {affB.retailer} · Free shipping</span>
             </a>
+            <span class="compare-buy-urgency">Prices checked today</span>
           </div>
         )}
       </div>
@@ -192,25 +206,39 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
     <h2 id="winner-and-full-verdict">Full Comparison: {nameA} vs {nameB}</h2>
     <p>{c.verdict}</p>
 
-    {/* ── BOTTOM BUY ROW ── */}
-    {(affA || affB) && (
-      <div class="compare-buy-row" style="margin-top:32px">
-        {affA && (
-          <a href={affA.url} class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
-            <span class="btn-buy-price">{affA.price}</span>
-            <span class="btn-buy-cta">{nameA} →</span>
-            <span class="btn-buy-badge">at {affA.retailer}</span>
-          </a>
-        )}
-        {affB && (
-          <a href={affB.url} class="btn-buy-affiliate" target="_blank" rel="nofollow noopener sponsored">
-            <span class="btn-buy-price">{affB.price}</span>
-            <span class="btn-buy-cta">{nameB} →</span>
-            <span class="btn-buy-badge">at {affB.retailer}</span>
-          </a>
-        )}
+    {/* ── POST-VERDICT CTA — enhanced with urgency ── */}
+    {winnerAff && (
+      <div class="post-verdict-cta" style="background:var(--green);border-radius:12px;padding:28px;margin:32px 0;text-align:center;">
+        <p style="color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
+        <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;">🏆 {winnerName}</p>
+        <p style="color:rgba(255,255,255,.8);font-size:14px;margin:0 0 16px;">
+          {winnerAff.price} at {winnerAff.retailer} · Free shipping · Prices checked today
+        </p>
+        <a href={winnerAff.url} class="post-verdict-btn" target="_blank"
+          rel="nofollow noopener sponsored"
+          aria-label={`Buy ${winnerName} at ${winnerAff.retailer}`}
+          style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:800;padding:16px 40px;border-radius:10px;text-decoration:none;transition:transform .15s,background .15s;">
+          Check Today's Price →
+        </a>
+        <p style="color:rgba(255,255,255,.5);font-size:11px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>
       </div>
     )}
+
+    {/* ── ALSO CONSIDER — loser CTA ── */}
+    {(() => {
+      const loserKey = c.winner === c.productA ? c.productB : c.productA;
+      const loserName = c.winner === c.productA ? nameB : nameA;
+      const loserAff = c.winner === c.productA ? affB : affA;
+      return loserAff ? (
+        <div style="text-align:center;margin:0 0 32px;">
+          <p style="font-size:13px;color:var(--muted);margin:0 0 8px;">Prefer the {loserName}? Still an excellent driver.</p>
+          <a href={loserAff.url} style="color:var(--green);font-weight:700;font-size:14px;" target="_blank" rel="nofollow noopener sponsored">
+            Check {loserName} price at {loserAff.retailer} →
+          </a>
+          <span style="display:block;font-size:11px;color:var(--muted);margin-top:4px;">Prices checked today</span>
+        </div>
+      ) : null;
+    })()}
 
     {/* ── FAQ ── */}
     {c.faq && c.faq.length > 0 && (
