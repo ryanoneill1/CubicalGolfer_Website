@@ -1016,7 +1016,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$189',
     label: 'See Current Price',
-    imgSrc: '/images/products/rukket-haack-net.webp',
+    imgSrc: '/images/products/spornia-spg-net.webp',
     imgAlt: 'Spornia SPG-7 Golf Practice Net',
     benefits: [
       'Auto-return system — no chasing balls in your apartment',
@@ -1055,7 +1055,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$299',
     label: 'See Current Price',
-    imgSrc: '/images/products/net-return-pro.webp',
+    imgSrc: '/images/products/diy-impact-screen-enclosure.webp',
     imgAlt: 'DIY Golf Simulator Impact Screen Enclosure',
     benefits: [
       'Impact screen rated for 250+ mph ball speeds',
@@ -1081,7 +1081,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$499',
     label: 'See Current Price',
-    imgSrc: '/images/products/voice-caddie-sc4-pro.webp',
+    imgSrc: '/images/products/square-golf-launch-monitor.webp',
     imgAlt: 'Square Golf Launch Monitor',
     benefits: [
       'Camera-based tracking optimized for indoor use',
@@ -1094,7 +1094,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$299',
     label: 'See Current Price',
-    imgSrc: '/images/products/footjoy-raingrip.webp',
+    imgSrc: '/images/products/zero-restriction-rain-suit.webp',
     imgAlt: 'Zero Restriction Golf Rain Suit',
     benefits: [
       'Tour-proven waterproof protection in driving rain',
@@ -1107,7 +1107,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$25',
     label: 'See Current Price',
-    imgSrc: '/images/products/orange-whip-trainer.webp',
+    imgSrc: '/images/products/resistance-bands-golf.webp',
     imgAlt: 'Golf Training Resistance Bands',
     benefits: [
       'Builds rotational power for faster swing speed',
@@ -1116,6 +1116,85 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
+  // ── New: gift guides + junior golf ────────────────────────────────────────
+  'callaway-xj-junior-set': {
+    url: 'https://www.amazon.com/s?k=Callaway+XJ+junior+golf+club+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$250',
+    label: 'See Current Price',
+    imgSrc: '/images/products/callaway-strata.webp',
+    imgAlt: 'Callaway XJ Junior Golf Club Set',
+    benefits: [
+      'Height-based sizing — 3 levels from ages 4-12',
+      'Lightweight graphite shafts for easy swings',
+      'Includes driver, irons, putter, and stand bag',
+    ],
+  },
+  'us-kids-tour-series': {
+    url: 'https://www.amazon.com/s?k=US+Kids+Golf+Tour+Series+junior+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$350',
+    label: 'See Current Price',
+    imgSrc: '/images/products/us-kids-tour-series.webp',
+    imgAlt: 'US Kids Tour Series Junior Golf Set',
+    benefits: [
+      'Frequency-matched and spined shafts for consistency',
+      'Available in 10+ height-based sizes',
+      'Steel and graphite options for serious juniors',
+    ],
+  },
+  'taylormade-team-tm-junior': {
+    url: 'https://www.amazon.com/s?k=TaylorMade+Team+TM+junior+golf+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$200',
+    label: 'See Current Price',
+    imgSrc: '/images/products/taylormade-team-tm-junior.webp',
+    imgAlt: 'TaylorMade Team TM Junior Golf Set',
+    benefits: [
+      'Tour-inspired design kids love',
+      'Forgiving clubs engineered for young swing speeds',
+      'Dual-strap stand bag included',
+    ],
+  },
+  'personalized-golf-balls': {
+    url: 'https://www.amazon.com/s?k=personalized+golf+balls+custom&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$30',
+    label: 'See Current Price',
+    imgSrc: '/images/products/personalized-golf-balls.webp',
+    imgAlt: 'Personalized Golf Balls',
+    benefits: [
+      'Custom text, initials, or graphics on each ball',
+      'Available in premium (Pro V1) and budget options',
+      'Ships in 3-5 business days',
+    ],
+  },
+  'golf-towel-personalized': {
+    url: 'https://www.amazon.com/s?k=personalized+golf+towel+embroidered&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$15',
+    label: 'See Current Price',
+    imgSrc: '/images/products/frogger-amphibian-towel.webp',
+    imgAlt: 'Personalized Golf Towel',
+    benefits: [
+      'Custom embroidered name or initials',
+      'Microfiber waffle-weave for club cleaning',
+      'Carabiner clip attaches to any bag',
+    ],
+  },
+  'women-golf-glove': {
+    url: 'https://www.amazon.com/s?k=womens+golf+glove+leather&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$18',
+    label: 'See Current Price',
+    imgSrc: '/images/products/women-golf-glove.webp',
+    imgAlt: 'Women Golf Glove',
+    benefits: [
+      'Cabretta leather for soft feel and grip',
+      'Women-specific sizing and fit',
+      'Breathable back panel for hot rounds',
+    ],
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
