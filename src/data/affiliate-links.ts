@@ -1010,6 +1010,112 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
+  // ── New: apartment simulator, launch monitors, rain gear, desk exercises ──
+  'spornia-spg-net': {
+    url: 'https://www.amazon.com/s?k=Spornia+SPG-7+golf+practice+net&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$189',
+    label: 'See Current Price',
+    imgSrc: '/images/products/spornia-spg-net.webp',
+    imgAlt: 'Spornia SPG-7 Golf Practice Net',
+    benefits: [
+      'Auto-return system — no chasing balls in your apartment',
+      'Sets up in 2 minutes, folds flat behind a couch',
+      'Steel frame handles full driver swings at 120+ mph',
+    ],
+  },
+  'fiberbuilt-studio-mat': {
+    url: 'https://www.amazon.com/s?k=Fiberbuilt+golf+hitting+mat+studio&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$449',
+    label: 'See Current Price',
+    imgSrc: '/images/products/fiberbuilt-studio-mat.webp',
+    imgAlt: 'Fiberbuilt Golf Studio Hitting Mat',
+    benefits: [
+      'Fiberglass grass mimics real fairway feel and lie',
+      'Joint-friendly — reduces wrist and elbow fatigue vs rubber mats',
+      'Compact 2×3 ft footprint fits any apartment corner',
+    ],
+  },
+  'benq-short-throw-projector': {
+    url: 'https://www.amazon.com/s?k=BenQ+short+throw+golf+simulator+projector&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$1,799',
+    label: 'See Current Price',
+    imgSrc: '/images/products/benq-tk850-projector.webp',
+    imgAlt: 'BenQ Short-Throw Golf Simulator Projector',
+    benefits: [
+      'Short throw — projects 100-inch image from 4 feet away',
+      'Full HD 1080p for crisp course graphics',
+      'Low input lag for real-time ball flight display',
+    ],
+  },
+  'diy-impact-screen-enclosure': {
+    url: 'https://www.amazon.com/s?k=golf+simulator+impact+screen+enclosure+DIY&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$299',
+    label: 'See Current Price',
+    imgSrc: '/images/products/net-return-pro.webp',
+    imgAlt: 'DIY Golf Simulator Impact Screen Enclosure',
+    benefits: [
+      'Impact screen rated for 250+ mph ball speeds',
+      'PVC frame assembles without tools in 30 minutes',
+      'Fits ceilings as low as 8 feet for apartment use',
+    ],
+  },
+  'garmin-approach-r50': {
+    url: 'https://www.amazon.com/s?k=Garmin+Approach+R50+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$599',
+    label: 'See Current Price',
+    imgSrc: '/images/products/garmin-approach-r10.webp',
+    imgAlt: 'Garmin Approach R50 Launch Monitor',
+    benefits: [
+      'Dual radar for improved indoor accuracy over R10',
+      'Free Garmin Golf app — no subscription required',
+      'E6 Connect and Home Tee Hero simulator compatible',
+    ],
+  },
+  'square-golf-launch-monitor': {
+    url: 'https://www.amazon.com/s?k=Square+Golf+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$499',
+    label: 'See Current Price',
+    imgSrc: '/images/products/voice-caddie-sc4-pro.webp',
+    imgAlt: 'Square Golf Launch Monitor',
+    benefits: [
+      'Camera-based tracking optimized for indoor use',
+      'No subscription — free app with full feature set',
+      'Compact enough for any apartment setup',
+    ],
+  },
+  'zero-restriction-rain-suit': {
+    url: 'https://www.amazon.com/s?k=Zero+Restriction+golf+rain+suit+jacket&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$299',
+    label: 'See Current Price',
+    imgSrc: '/images/products/footjoy-raingrip.webp',
+    imgAlt: 'Zero Restriction Golf Rain Suit',
+    benefits: [
+      'Tour-proven waterproof protection in driving rain',
+      'Stretch fabric allows full swing without restriction',
+      'Lightweight enough to keep in your bag year-round',
+    ],
+  },
+  'resistance-bands-golf': {
+    url: 'https://www.amazon.com/s?k=resistance+bands+golf+training+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$25',
+    label: 'See Current Price',
+    imgSrc: '/images/products/orange-whip-trainer.webp',
+    imgAlt: 'Golf Training Resistance Bands',
+    benefits: [
+      'Builds rotational power for faster swing speed',
+      'Portable — fits in a desk drawer for office use',
+      'Progressive resistance levels for all fitness levels',
+    ],
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────

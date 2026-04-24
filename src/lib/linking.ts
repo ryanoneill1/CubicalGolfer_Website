@@ -25,6 +25,9 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Launch Monitors 2026' },
     { slug: '/best-golf-apps-handicap-tracking/',  label: 'Best Golf Apps for Handicap Tracking' },
     { slug: '/compare/skytrak-vs-garmin-r10/',     label: 'SkyTrak+ vs Garmin R10' },
+    { slug: '/apartment-golf-simulator-setup/',    label: 'Apartment Simulator Setup Guide' },
+    { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
+    { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor Under $700' },
   ],
   'golf-accessories': [
     { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
@@ -38,12 +41,15 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/average-golf-handicap/',               label: 'Average Golf Handicap 2026' },
     { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home (15 Min)' },
     { slug: '/golf-practice-routine-before-work/',   label: '15-Min Morning Practice Routine' },
+    { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
+    { slug: '/desk-exercises-fix-golf-slice/',       label: 'Desk Exercises That Fix Your Slice' },
   ],
   'golf-lifestyle': [
     { slug: '/golf-for-beginners/',              label: 'Golf for Beginners — Complete Guide' },
     { slug: '/best-golf-gifts-for-him/',         label: 'Best Golf Gifts for Him' },
     { slug: '/golf-course-etiquette/',           label: 'Golf Course Etiquette Guide' },
     { slug: '/golf-desk-accessories-office/',    label: 'Best Golf Desk Accessories' },
+    { slug: '/best-rain-gear-midwest-golfers/',  label: 'Best Rain Gear for Midwest Golfers' },
   ],
 };
 
@@ -491,6 +497,42 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
     { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' },
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
+  ],
+  // ── New article clusters ──────────────────────────────────────────────────
+  'apartment-golf-simulator': [
+    { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
+    { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor Under $700' },
+    { slug: '/best-golf-simulator-under-1000/', label: 'Best Simulator Under $1,000' },
+    { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
+    { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
+  ],
+  'mlm2pro-vs-r50-vs-square': [
+    { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup Guide' },
+    { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor Under $700' },
+    { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' },
+  ],
+  'arccos-mlm2pro-strokes-dropped': [
+    { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup Guide' },
+    { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90' },
+    { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
+  ],
+  'budget-launch-monitor-apartment': [
+    { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup Guide' },
+    { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
+    { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' },
+  ],
+  'desk-exercises-golf-slice': [
+    { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
+    { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
+    { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup Guide' },
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills (15 Min)' },
+  ],
+  'rain-gear-midwest': [
+    { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes for Walking 2026' },
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
+    { slug: '/best-golf-gloves-for-men/', label: 'Best Golf Gloves 2026' },
   ],
 };
 
