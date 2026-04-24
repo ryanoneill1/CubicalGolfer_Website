@@ -241,7 +241,6 @@ export function productSchema(opts: {
       url:          opts.url,
       priceCurrency:'USD',
       price:         opts.price?.replace(/[^0-9.]/g, '') ?? '0',
-      availability: 'https://schema.org/InStock',
     },
   };
 }
@@ -415,7 +414,6 @@ export function buyingGuideProductSchema(
       url: affiliateUrl,
       priceCurrency: 'USD',
       price: numericPrice,
-      availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
         name: affiliateRetailer || 'Amazon.com',
