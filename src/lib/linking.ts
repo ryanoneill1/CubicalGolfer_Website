@@ -16,6 +16,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
     { slug: '/best-golf-irons-2026/',              label: 'Best Golf Irons 2026' },
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — 2026 Driver Comparison' },
     { slug: '/compare/',                           label: 'Compare Golf Products Head-to-Head' },
     { slug: '/best-golf-gear-under-100/',          label: 'Best Golf Gear Under $100' },
   ],
@@ -137,16 +138,20 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Ball cluster ──────────────────────────────────────────────────────────────
   'golf-balls': [
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — Best Driver 2026' },
+    { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
+    { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
-    { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
   ],
   'golf-ball-compression': [
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym — 2026 Driver Showdown' },
+    { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors 2026' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
-    { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
+    { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
   ],
   'golf-balls-slow-swing': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
@@ -361,6 +366,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'paradym-driver-review': [
     { slug: '/best-golf-drivers-forgiveness/',        label: 'Best Forgiving Drivers 2026' },
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym Comparison' },
+    { slug: '/best-golf-balls-2026/',                label: 'Best Golf Balls 2026 by Swing Speed' },
+    { slug: '/golf-ball-compression-chart/',          label: 'Golf Ball Compression Chart 2026' },
     { slug: '/how-to-fix-your-slice/',               label: 'Fix Your Slice' },
     { slug: '/best-golf-irons-2026/',                label: 'Best Irons 2026' },
   ],
@@ -456,6 +464,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'driver-high-handicapper': [
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Paradym Review' },
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — 2026 Driver Showdown' },
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 by Swing Speed' },
     { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
     { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
   ],
@@ -464,6 +474,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' },
     { slug: '/best-golf-ball-15-handicap/', label: 'Best Ball for 15 Handicap' },
     { slug: '/pro-v1-vs-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym Driver Comparison' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
   'budget-launch-monitors': [
