@@ -24,8 +24,8 @@ function smartTitle(title: string): string {
 // ── Home ─────────────────────────────────────────────────────────────────────
 export function homeMeta(): PageMeta {
   return {
-    title:       'Cubical Golfer — Gear Reviews & Tips for Weekend Golfers',
-    description: 'Gear reviews and tips for golfers who work all week and play on weekends. We fix our slice one day and find a new problem the next. Tested by a real 15-hdcp.',
+    title:       '95+ Golf Gear Reviews & Buying Guides for Weekend Golfers — Cubical Golfer (2026)',
+    description: 'Rangefinders, drivers, irons, GPS watches, and golf balls tested over 40+ real rounds by a 12-hdcp weekend golfer. No freebies — every product bought with our own money.',
     canonical:   `${DOMAIN}/`,
     ogImage:     OG_IMG,
     ogType:      'website',
