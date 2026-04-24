@@ -1016,7 +1016,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$189',
     label: 'See Current Price',
-    imgSrc: '/images/products/spornia-spg-net.webp',
+    imgSrc: '/images/products/rukket-haack-net.webp',
     imgAlt: 'Spornia SPG-7 Golf Practice Net',
     benefits: [
       'Auto-return system — no chasing balls in your apartment',

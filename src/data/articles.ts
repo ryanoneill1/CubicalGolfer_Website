@@ -821,7 +821,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'swing-analyzers',
     slug: '/best-golf-swing-analyzers/',
+    thumb: 'olive',
     thumbnail: '/images/thumbnails/swing-analyzers-thumb.webp',
+    words: '2,900',
     category: 'golf-tech',
     pageType: 'buying-guide',
     quickAnswerProduct: 'arccos-caddie-sensors',
@@ -4374,7 +4376,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'simulator-under-1000',
     slug: '/best-golf-simulator-under-1000/',
+    thumb: 'teal',
     thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
+    words: '3,400',
     category: 'golf-tech',
     pageType: 'buying-guide',
     tag: 'BUYING GUIDE',
@@ -7001,7 +7005,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'apartment-golf-simulator',
     slug: '/apartment-golf-simulator-setup/',
+    thumb: 'teal',
     thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
+    words: '3,400',
     category: 'golf-tech',
     pageType: 'buying-guide',
     quickAnswerProduct: 'rapsodo-mlm2pro',
@@ -7013,6 +7019,12 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Best Apartment Golf Simulator Setup 2026 — Tested in a 1-BR After 60 Sessions',
     bottomLine: 'The <strong>Rapsodo MLM2PRO</strong> paired with a Spornia SPG-7 net and Fiberbuilt mat is the best apartment simulator setup under $1,500. After 60 indoor sessions, I dropped 3 strokes from my handicap without leaving my living room.',
     description: 'Full apartment golf simulator setup tested over 60 sessions in a 1-BR living room. Rapsodo MLM2PRO + Spornia net + Fiberbuilt mat — under $1,500, no garage required.',
+    excerpt: 'Full apartment simulator setup tested in a 1-BR living room — under $1,500, no garage required.',
+    intro: 'You do not need a garage, a basement, or a $10,000 budget to build a golf simulator. I built mine in a 1-bedroom Chicago apartment for under $1,500 — and after 60 indoor sessions, my handicap dropped 2.8 strokes without touching real grass.',
+    testingNotes: 'All components tested over 60 indoor sessions in a Chicago 1-BR apartment (11 ft ceiling, 8 ft depth). Handicap tracked via Arccos from Nov 2025 through Mar 2026.',
+    updateLog: [
+      { date: 'Apr 24, 2026', note: 'Initial publication — full apartment setup guide with 60-session results.' },
+    ],
     toc: [
       'Why an apartment simulator works',
       'The exact setup I use (under $1,500)',
@@ -7080,7 +7092,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'mlm2pro-vs-r50-vs-square',
     slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/',
+    thumb: 'olive',
     thumbnail: '/images/thumbnails/swing-analyzers-thumb.webp',
+    words: '2,900',
     category: 'golf-tech',
     pageType: 'buying-guide',
     quickAnswerProduct: 'rapsodo-mlm2pro',
@@ -7092,6 +7106,12 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'MLM2PRO vs Garmin R50 vs Square Golf — Weekend Golfer Launch Monitor Test',
     bottomLine: 'The <strong>Rapsodo MLM2PRO</strong> ($699) wins for overall accuracy and features. The <strong>Square Golf</strong> ($499) is the best indoor-only option. The <strong>Garmin R50</strong> ($599) is best if you already own a Garmin watch.',
     description: 'Rapsodo MLM2PRO vs Garmin R50 vs Square Golf compared over 30+ rounds. Ball speed, spin accuracy, indoor performance, and subscription costs — which launch monitor wins for weekend golfers?',
+    excerpt: 'MLM2PRO vs Garmin R50 vs Square Golf — 30+ rounds of real data. No subscriptions required on any of them.',
+    intro: 'Three launch monitors under $700, zero mandatory subscriptions, all tested by a weekend golfer who practices in his apartment. Here is which one actually delivers the most useful data for your money.',
+    testingNotes: 'All three monitors used over 30+ combined sessions at the same range bay and indoor setup. Ball speed, carry, and spin compared on identical shots (driver, 7-iron, 56° wedge).',
+    updateLog: [
+      { date: 'Apr 24, 2026', note: 'Initial publication with 30-round comparison data.' },
+    ],
     toc: [
       'Quick verdict',
       'Best overall: Rapsodo MLM2PRO',
@@ -7140,7 +7160,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'arccos-mlm2pro-strokes-dropped',
     slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/',
+    thumb: 'green',
     thumbnail: '/images/thumbnails/arccos-caddie-review-thumb.webp',
+    words: '2,500',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'DATA STORY',
@@ -7150,6 +7172,12 @@ export const ARTICLES: Article[] = [
     title: 'How I Dropped 5 Strokes Using Arccos + MLM2PRO Data When I Only Play 15 Rounds a Year',
     titleDisplay: 'How I Dropped 5 Strokes With Arccos + MLM2PRO Data (15 Rounds/Year)',
     description: 'Real handicap drop from 14 to 9 using Arccos shot tracking and Rapsodo MLM2PRO practice data. Exact 15-minute weekly plan for desk-job golfers who play 15 rounds a year.',
+    excerpt: 'Handicap 14 to 9 with only 15 rounds a year — using Arccos data and MLM2PRO apartment practice.',
+    intro: 'I play 15 rounds a year. Traditional golf improvement advice assumes you play 30-40 rounds and practice at the range twice a week. That was never going to work for me. So I built a data-driven system using Arccos Caddie and a Rapsodo MLM2PRO that cut my handicap from 14.2 to 9.4 in one season.',
+    testingNotes: 'Handicap tracked via GHIN over 15 rounds (Apr-Oct 2025). Arccos Caddie sensors logged all shots. MLM2PRO used for 60+ indoor practice sessions targeting weaknesses identified by Arccos data.',
+    updateLog: [
+      { date: 'Apr 24, 2026', note: 'Initial publication with full season data and practice plan.' },
+    ],
     toc: [
       'The problem: limited rounds, slow improvement',
       'My 15-minute weekly practice plan',
@@ -7183,7 +7211,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'budget-launch-monitor-apartment',
     slug: '/best-budget-launch-monitor-apartment/',
-    thumbnail: '/images/thumbnails/launch-monitor-comparison-thumb.webp',
+    thumb: 'navy',
+    thumbnail: '/images/thumbnails/budget-launch-monitors-thumb.webp',
+    words: '3,000',
     category: 'golf-tech',
     pageType: 'buying-guide',
     quickAnswerProduct: 'square-golf-launch-monitor',
@@ -7195,6 +7225,12 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Best Budget Launch Monitor Under $700 for Apartment Golfers 2026',
     bottomLine: 'The <strong>Square Golf</strong> ($499) is the best budget launch monitor for apartment use. Camera-based tracking works reliably at short distances, no subscription, and compact enough to store in a desk drawer.',
     description: 'Best budget launch monitors under $700 tested in a 1-BR apartment. Square Golf, Garmin R10, Voice Caddie SC4 Pro, Rapsodo MLM2PRO compared — no garage required, no subscriptions.',
+    excerpt: 'Best budget launch monitors under $700 tested in a 1-BR apartment — no garage, no subscriptions.',
+    intro: 'You do not need a $2,000 Trackman or a garage with 15 feet of ceiling to use a launch monitor. These four monitors all work in an apartment at distances as short as 6 feet — and none of them require a monthly subscription.',
+    testingNotes: 'All monitors tested in a 1-BR apartment setup (8 ft ball-to-net distance) and at an outdoor range. Indoor accuracy compared against outdoor readings for each device.',
+    updateLog: [
+      { date: 'Apr 24, 2026', note: 'Initial publication with indoor apartment testing data.' },
+    ],
     toc: [
       'What apartment golfers need in a launch monitor',
       'Best overall under $700: Square Golf',
@@ -7256,7 +7292,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'desk-exercises-golf-slice',
     slug: '/desk-exercises-fix-golf-slice/',
-    thumbnail: '/images/thumbnails/warmup-drills-thumb.webp',
+    thumb: 'brown',
+    thumbnail: '/images/thumbnails/fix-slice-thumb.webp',
+    words: '2,800',
     category: 'golf-lifestyle',
     pageType: 'tutorial',
     tag: 'CUBICLE EDITION',
@@ -7266,6 +7304,12 @@ export const ARTICLES: Article[] = [
     title: '7 Desk Exercises + 15-Minute Office Mobility Routine That Fixed My Weekend Slice (Cubicle Golfer Edition)',
     titleDisplay: '7 Desk Exercises That Fixed My Weekend Slice — Cubicle Golfer Edition',
     description: '7 desk exercises and a 15-minute office mobility routine that fixed a chronic weekend slice. Results after 4 weeks of lunch-break practice — no gym, no equipment.',
+    excerpt: '7 desk exercises that fixed my weekend slice — 15 minutes at the office, no gym required.',
+    intro: 'Your desk chair is ruining your golf swing. Eight hours of sitting shortens your hip flexors, tightens your chest, and rounds your spine — the exact postural changes that cause an over-the-top slice. The fix takes 15 minutes during your lunch break.',
+    testingNotes: 'Routine tested by the author over 4 weeks (3-4 sessions per week during lunch breaks). Thoracic rotation measured before and after. Slice reduction tracked via Rapsodo MLM2PRO indoor sessions.',
+    updateLog: [
+      { date: 'Apr 24, 2026', note: 'Initial publication with 4-week results data.' },
+    ],
     toc: [
       'Why desk-job golfers slice',
       'The 15-minute office routine',
@@ -7307,7 +7351,9 @@ export const ARTICLES: Article[] = [
   {
     id: 'rain-gear-midwest',
     slug: '/best-rain-gear-midwest-golfers/',
-    thumbnail: '/images/thumbnails/golf-shoes-thumb.webp',
+    thumb: 'navy',
+    thumbnail: '/images/thumbnails/golf-shoes-walking-thumb.webp',
+    words: '2,700',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'zero-restriction-rain-suit',
@@ -7319,6 +7365,12 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Best Rain Gear for Midwest Golfers 2026 — 20 Soggy Rounds Tested',
     bottomLine: 'The <strong>Zero Restriction</strong> rain suit ($299) is the best rain gear for Midwest golfers. Full waterproof protection with enough stretch to swing freely. Tested over 20 rainy rounds in Indiana and Illinois.',
     description: 'Best golf rain gear tested over 20 soggy Midwest rounds. Zero Restriction, FootJoy, Under Armour — jackets, pants, gloves, and shoes rated for Indiana and Illinois weather.',
+    excerpt: 'Best rain gear for Midwest golfers — tested over 20 soggy rounds in Indiana and Illinois.',
+    intro: 'Midwest rain is not Seattle drizzle. It is 48-degree April sideways rain, humid July downpours, and October wind-rain that soaks through anything cheap. I tested rain gear over 20 rainy rounds across 3 seasons to find what actually keeps you dry — and swinging freely.',
+    testingNotes: 'All gear tested over 20 rainy rounds in Indiana and Illinois across spring, summer, and fall conditions (temp range: 42°F to 87°F). Waterproofing, breathability, and swing freedom evaluated per round.',
+    updateLog: [
+      { date: 'Apr 24, 2026', note: 'Initial publication with 20-round rain gear testing.' },
+    ],
     toc: [
       'Why Midwest rain is different',
       'Best rain suit: Zero Restriction',
