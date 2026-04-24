@@ -389,8 +389,8 @@ if (isBuyingGuide) {
       );
     })()}
 
-    {/* BOTTOM LINE — required for buying guides */}
-    {article.bottomLine && (
+    {/* BOTTOM LINE — shows as "Our Verdict" ONLY when Quick Answer box is NOT rendered */}
+    {article.bottomLine && !(article as any).quickAnswerProduct && (
       <div class="bottom-line-box" role="note" aria-label="Our verdict">
         <p class="bottom-line-label">Our Verdict</p>
         <p set:html={article.bottomLine} />
