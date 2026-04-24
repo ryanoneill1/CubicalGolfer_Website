@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const meta = {
+  title: 'Contact Cubical Golfer — Get in Touch',
+  description: 'Contact Cubical Golfer — questions about gear reviews, affiliate partnerships, or corrections. We respond to every email within 48 hours.',
+  canonical: 'https://www.cubicalgolfer.com/contact/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Contact', href: '/contact/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+---
+
+<BaseLayout {meta} {schemas}>
+  <div class="art-content" style="max-width:750px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Contact</span>
+    </nav>
+
+    <h1>Contact Cubical Golfer</h1>
+
+    <p>Have a question about a gear review? Spotted an error? Want to suggest a product for testing? I read and respond to every email.</p>
+
+    <div style="background:var(--cream-dark);border-radius:12px;padding:32px;margin:32px 0;">
+      <h2 style="margin-top:0;">Email</h2>
+      <p style="font-size:18px;margin-bottom:0;"><a href="mailto:hello@cubicalgolfer.com" style="color:var(--green);font-weight:600;">hello@cubicalgolfer.com</a></p>
+      <p style="font-size:14px;color:var(--muted);">Typical response time: within 48 hours</p>
+    </div>
+
+    <h2>What I Can Help With</h2>
+    <p><strong>Gear questions:</strong> Not sure which rangefinder, GPS watch, or golf ball is right for your game? I am happy to give honest recommendations based on my testing. Include your handicap and swing speed if you know them.</p>
+    <p><strong>Review corrections:</strong> If you spot an error in pricing, specs, or product information, let me know and I will fix it within 24 hours. Accuracy matters.</p>
+    <p><strong>Affiliate & partnership inquiries:</strong> I only partner with brands whose products I would personally use and recommend. If you represent a golf brand, reach out with details about your product and I will consider it for independent testing.</p>
+    <p><strong>General feedback:</strong> Ideas for new content, feedback on existing guides, or anything else — I want to hear it.</p>
+
+    <h2>What I Cannot Help With</h2>
+    <p>I am not a golf instructor and cannot provide swing advice. For lessons, I recommend finding a PGA professional near you at <a href="https://www.pga.com/coach" target="_blank" rel="noopener">pga.com/coach</a>.</p>
+
+    <div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(0,0,0,.1);">
+      <p style="font-size:14px;color:var(--muted);">
+        Cubical Golfer is run by Ryan O., a 12-handicap weekend golfer in Chicago, IL.
+        <a href="/about/">Learn more about me and how I test →</a>
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -92,7 +92,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'callaway-paradym-vs-taylormade-qi35',
-    title:       'TaylorMade Qi35 Max Beats Callaway Paradym Ai Smoke — 2026 Driver Showdown (Tested 20+ Rounds)',
+    title:       'Qi35 Max vs Paradym Ai Smoke — 2026 Driver Showdown',
     description: 'Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed, forgiveness, and mis-hit data compared. See which 2026 driver wins for weekend golfers.',
     productA:    'callaway-paradym-max',
     productB:    'taylormade-qi35-max',

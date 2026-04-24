@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const meta = {
+  title: 'Terms of Service — Cubical Golfer',
+  description: 'Cubical Golfer terms of service — usage guidelines, content ownership, affiliate link disclosure, and limitation of liability for our golf gear review site.',
+  canonical: 'https://www.cubicalgolfer.com/terms/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Terms of Service', href: '/terms/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const updated = '2026-04-24';
+---
+
+<BaseLayout {meta} {schemas}>
+  <div class="art-content" style="max-width:750px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Terms of Service</span>
+    </nav>
+
+    <h1>Terms of Service</h1>
+    <p style="font-size:14px;color:var(--muted);">Last updated: {updated}</p>
+
+    <p>By accessing and using Cubical Golfer (cubicalgolfer.com), you agree to these Terms of Service. If you do not agree, please do not use this site.</p>
+
+    <h2>Content & Opinions</h2>
+    <p>All content on Cubical Golfer represents the personal opinions and experiences of the author, Ryan O., based on independent testing of golf equipment. Reviews, ratings, and recommendations are subjective and based on real-world use. Your experience with the same products may differ based on swing speed, handicap, playing conditions, and personal preference.</p>
+
+    <h2>Product Information & Pricing</h2>
+    <p>Product prices, availability, and specifications are subject to change without notice. We make every effort to keep pricing accurate, but prices displayed on Cubical Golfer are approximate and may differ from the current price at the retailer. Always verify pricing at the retailer before purchasing.</p>
+
+    <h2>Affiliate Links & Compensation</h2>
+    <p>Cubical Golfer contains affiliate links. When you click these links and make a purchase, we may earn a commission at no additional cost to you. Affiliate relationships do not influence our reviews, ratings, or recommendations. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for full details.</p>
+
+    <h2>Intellectual Property</h2>
+    <p>All original content on Cubical Golfer — including text, images, graphics, and site design — is the property of Cubical Golfer and is protected by copyright law. You may not reproduce, distribute, or republish any content without written permission. You may link to our content and share it on social media with proper attribution.</p>
+
+    <h2>User Conduct</h2>
+    <p>By using this site, you agree not to: reproduce or scrape content for commercial use, attempt to disrupt site functionality, impersonate Cubical Golfer or its author, or use the site for any unlawful purpose.</p>
+
+    <h2>Disclaimer of Warranties</h2>
+    <p>Cubical Golfer is provided "as is" without warranties of any kind. We do not guarantee that product recommendations will suit your specific needs. Golf equipment performance varies based on individual factors. We are not responsible for purchasing decisions made based on our reviews.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>Cubical Golfer and its author shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of this site or reliance on its content. This includes, but is not limited to, damages from product purchases, equipment performance, or injury.</p>
+
+    <h2>External Links</h2>
+    <p>This site contains links to external websites (retailers, manufacturers, etc.). We are not responsible for the content, privacy practices, or availability of external sites. Following external links is at your own risk.</p>
+
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms of Service at any time. Changes will be posted on this page with an updated date. Continued use of the site after changes constitutes acceptance.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about these Terms? Contact us at <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a>.</p>
+  </div>
+</BaseLayout>

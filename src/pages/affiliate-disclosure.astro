@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const meta = {
+  title: 'Affiliate Disclosure — Cubical Golfer',
+  description: 'Cubical Golfer affiliate disclosure — how we earn revenue through Amazon Associates. Every product is independently purchased and tested.',
+  canonical: 'https://www.cubicalgolfer.com/affiliate-disclosure/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Affiliate Disclosure', href: '/affiliate-disclosure/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const updated = '2026-04-24';
+---
+
+<BaseLayout {meta} {schemas}>
+  <div class="art-content" style="max-width:750px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Affiliate Disclosure</span>
+    </nav>
+
+    <h1>Affiliate Disclosure</h1>
+    <p style="font-size:14px;color:var(--muted);">Last updated: {updated}</p>
+
+    <div style="background:#f0f7f2;border-left:3px solid var(--green);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;">
+      <p style="margin:0;font-weight:600;color:#1E3A28;">The short version:</p>
+      <p style="margin:8px 0 0;">Cubical Golfer earns money through affiliate links. When you click a link and buy something, we may earn a small commission at no extra cost to you. This never influences our reviews or recommendations. Every product is purchased with our own money and tested independently.</p>
+    </div>
+
+    <h2>How We Make Money</h2>
+    <p>Cubical Golfer is an independently run golf gear review site. We earn revenue through affiliate commissions — when you click a product link on our site and make a purchase at a retailer like Amazon, we receive a small percentage of the sale. This costs you nothing extra. The price you pay is the same whether you use our link or go directly to the retailer.</p>
+
+    <h2>Affiliate Programs We Participate In</h2>
+    <p><strong>Amazon Associates:</strong> Cubical Golfer is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.</p>
+    <p>We may also participate in other affiliate programs including LinkConnector, PlayBetter, and direct brand partnerships. All affiliate relationships are disclosed on this page.</p>
+
+    <h2>How We Review Products</h2>
+    <p>Affiliate revenue does not influence our editorial decisions. Our review process:</p>
+    <p><strong>We buy every product ourselves.</strong> No manufacturer freebies, no loaner units, no sponsored reviews. Every product on this site was purchased with our own money.</p>
+    <p><strong>We test over 10+ real rounds.</strong> Not in a simulator, not on a launch monitor in a lab. On actual golf courses in real playing conditions.</p>
+    <p><strong>We recommend what works.</strong> If a cheaper product outperforms an expensive one, we say so — even if the expensive one pays a higher commission. Our reputation depends on honest recommendations.</p>
+    <p>For full details on our testing methodology, see <a href="/how-we-test/">How We Test</a>.</p>
+
+    <h2>How to Identify Affiliate Links</h2>
+    <p>Affiliate links on Cubical Golfer are labeled with a disclosure statement: "Affiliate link — we earn a small commission at no extra cost to you." Links to Amazon include our affiliate tag (cubicalgolfer-20) in the URL. Non-affiliate links (to manufacturer sites, PGA.com, etc.) do not generate any revenue for us.</p>
+
+    <h2>FTC Compliance</h2>
+    <p>This disclosure is provided in accordance with the Federal Trade Commission's 16 CFR, Part 255: "Guides Concerning the Use of Endorsements and Testimonials in Advertising." We believe in full transparency about how we earn revenue and how it does (and does not) affect our content.</p>
+
+    <h2>Questions?</h2>
+    <p>If you have questions about our affiliate relationships, contact us at <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a>.</p>
+  </div>
+</BaseLayout>

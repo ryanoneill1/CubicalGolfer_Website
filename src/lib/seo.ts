@@ -25,8 +25,8 @@ function smartTitle(title: string): string {
 // ── Home ─────────────────────────────────────────────────────────────────────
 export function homeMeta(): PageMeta {
   return {
-    title:       `${ARTICLES.length}+ Golf Gear Reviews & Buying Guides for Weekend Golfers — Cubical Golfer (2026)`,
-    description: 'Rangefinders, drivers, irons, GPS watches, and golf balls tested over 40+ real rounds by a 12-hdcp weekend golfer. No freebies — every product bought with our own money.',
+    title:       `${ARTICLES.length}+ Golf Gear Reviews for Weekend Golfers — Cubical Golfer`,
+    description: 'Rangefinders, drivers, irons, GPS watches, and golf balls tested over 40+ real rounds by a 12-hdcp weekend golfer. No freebies — honest picks only.',
     canonical:   `${DOMAIN}/`,
     ogImage:     OG_IMG,
     ogType:      'website',

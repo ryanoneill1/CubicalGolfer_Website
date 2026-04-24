@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const meta = {
+  title: 'Privacy Policy — Cubical Golfer',
+  description: 'Cubical Golfer privacy policy — how we collect, use, and protect your data. We use Google Analytics and Kit.com for email. No data is sold to third parties.',
+  canonical: 'https://www.cubicalgolfer.com/privacy-policy/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Privacy Policy', href: '/privacy-policy/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const updated = '2026-04-24';
+---
+
+<BaseLayout {meta} {schemas}>
+  <div class="art-content" style="max-width:750px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Privacy Policy</span>
+    </nav>
+
+    <h1>Privacy Policy</h1>
+    <p style="font-size:14px;color:var(--muted);">Last updated: {updated}</p>
+
+    <p>Cubical Golfer ("we," "us," or "our") respects your privacy. This Privacy Policy explains what information we collect, how we use it, and your choices regarding that information.</p>
+
+    <h2>Information We Collect</h2>
+    <p><strong>Analytics data:</strong> We use Google Analytics 4 to understand how visitors use our site. This collects anonymized data including pages visited, time on site, device type, and approximate location. IP addresses are anonymized. No personally identifiable information is collected through analytics.</p>
+    <p><strong>Email addresses:</strong> If you voluntarily subscribe to our email list (powered by Kit.com, formerly ConvertKit), we collect your email address. We use this solely to send you golf gear recommendations and guides. You can unsubscribe at any time using the link in every email.</p>
+    <p><strong>Cookies:</strong> We use essential cookies for site functionality and analytics cookies via Google Analytics. See our <a href="/cookie-policy/">Cookie Policy</a> for details.</p>
+
+    <h2>How We Use Your Information</h2>
+    <p>We use collected information to: understand which content is most useful to our readers, improve site performance and user experience, and send email newsletters to subscribers who have opted in. We do not sell, trade, or rent your personal information to third parties.</p>
+
+    <h2>Affiliate Links</h2>
+    <p>Cubical Golfer participates in affiliate programs including Amazon Associates. When you click an affiliate link and make a purchase, we may earn a small commission at no extra cost to you. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for full details. Affiliate partners may place cookies on your device to track referrals — this is standard e-commerce tracking and does not give us access to your personal data.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>We use the following third-party services that may collect data:</p>
+    <p><strong>Google Analytics 4</strong> — website traffic analysis (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</p>
+    <p><strong>Kit.com (ConvertKit)</strong> — email newsletter delivery (<a href="https://kit.com/privacy" target="_blank" rel="noopener">Kit Privacy Policy</a>)</p>
+    <p><strong>Cloudflare</strong> — hosting and CDN (<a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare Privacy Policy</a>)</p>
+    <p><strong>Amazon Associates</strong> — affiliate tracking (<a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank" rel="noopener">Amazon Privacy Notice</a>)</p>
+
+    <h2>Your Rights</h2>
+    <p>You have the right to: request access to the personal data we hold about you, request deletion of your personal data, unsubscribe from our email list at any time, and opt out of analytics tracking by using browser privacy settings or the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+
+    <h2>Children's Privacy</h2>
+    <p>Cubical Golfer is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal data, please contact us and we will delete it.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, contact us at <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a>.</p>
+  </div>
+</BaseLayout>

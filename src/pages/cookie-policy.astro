@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const meta = {
+  title: 'Cookie Policy — Cubical Golfer',
+  description: 'Cubical Golfer cookie policy — what cookies we use, why, and how to manage them. We use Google Analytics and affiliate tracking cookies.',
+  canonical: 'https://www.cubicalgolfer.com/cookie-policy/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Cookie Policy', href: '/cookie-policy/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const updated = '2026-04-24';
+---
+
+<BaseLayout {meta} {schemas}>
+  <div class="art-content" style="max-width:750px;margin:0 auto;padding:48px 24px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Cookie Policy</span>
+    </nav>
+
+    <h1>Cookie Policy</h1>
+    <p style="font-size:14px;color:var(--muted);">Last updated: {updated}</p>
+
+    <p>Cubical Golfer uses cookies to improve your experience and understand how the site is used. This policy explains what cookies are, which ones we use, and how you can manage them.</p>
+
+    <h2>What Are Cookies?</h2>
+    <p>Cookies are small text files stored on your device when you visit a website. They help sites remember your preferences, understand usage patterns, and improve functionality. Cookies cannot access other data on your device.</p>
+
+    <h2>Cookies We Use</h2>
+
+    <h3>Essential Cookies</h3>
+    <p>These are required for the site to function. They include Cloudflare security cookies that protect against malicious traffic. These cannot be disabled without breaking site functionality.</p>
+
+    <h3>Analytics Cookies</h3>
+    <p>We use Google Analytics 4 to understand how visitors interact with our site. These cookies collect anonymized data including pages visited, time on site, referring source, device type, and approximate location. No personally identifiable information is collected. Analytics data helps us create better content and improve the site experience.</p>
+    <p>Cookies: _ga, _ga_[ID] — Duration: up to 2 years — Provider: Google</p>
+
+    <h3>Affiliate Tracking Cookies</h3>
+    <p>When you click an affiliate link (e.g., to Amazon), the retailer may place a cookie on your device to track the referral. This is how we earn a commission on qualifying purchases. These cookies are placed by the retailer, not by Cubical Golfer. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for more details.</p>
+
+    <h2>How to Manage Cookies</h2>
+    <p>You can control cookies through your browser settings. Most browsers allow you to: view which cookies are stored, delete all or specific cookies, block cookies from specific sites, and block all third-party cookies.</p>
+    <p>To opt out of Google Analytics specifically, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+    <p>Note: disabling cookies may affect site functionality and your experience on other websites.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Cookie Policy when we add or remove cookies. Changes will be posted on this page with an updated date.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about cookies? Contact us at <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a>.</p>
+  </div>
+</BaseLayout>

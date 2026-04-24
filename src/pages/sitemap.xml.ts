@@ -42,6 +42,11 @@ export async function GET() {
     { loc: '/gear-quiz/',                freq: 'monthly', pri: '0.8' },
     { loc: '/compare/',                 freq: 'weekly',  pri: '0.8' },
     { loc: '/courses/',                 freq: 'monthly', pri: '0.8' },
+    { loc: '/privacy-policy/',          freq: 'yearly',  pri: '0.3' },
+    { loc: '/terms/',                   freq: 'yearly',  pri: '0.3' },
+    { loc: '/contact/',                 freq: 'yearly',  pri: '0.5' },
+    { loc: '/affiliate-disclosure/',    freq: 'yearly',  pri: '0.4' },
+    { loc: '/cookie-policy/',           freq: 'yearly',  pri: '0.3' },
 
     // Articles — priority and frequency by page type
     ...ARTICLES.map(a => ({
