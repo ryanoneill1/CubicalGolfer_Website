@@ -354,6 +354,20 @@ if (isBuyingGuide) {
     </div>
   </header>
 
+  {/* ── WHY TRUST THIS GUIDE — E-E-A-T trust section (buying guides + reviews + listicles) ── */}
+  {(isBuyingGuide || article.pageType === 'listicle') && (
+    <div class="trust-card">
+      <h3 class="trust-card__heading">Why Trust This Guide</h3>
+      <ul class="trust-card__list">
+        <li><strong>Every product purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
+        <li><strong>10+ real rounds per product</strong> — tested on actual courses, not a simulator or fitting bay</li>
+        <li><strong>12-handicap perspective</strong> — written for weekend golfers, not scratch players or tour pros</li>
+        <li><strong>Updated {article.dateModified}</strong> — prices and picks reviewed regularly</li>
+      </ul>
+      <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
+    </div>
+  )}
+
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
   <article class="art-content">
 

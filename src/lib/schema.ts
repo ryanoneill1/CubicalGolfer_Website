@@ -21,11 +21,12 @@ const PUBLISHER = {
 };
 const AUTHOR = {
   '@type': 'Person',
-  name: 'The Cubical Golfer Team',
+  name: 'Ryan O.',
+  alternateName: 'Cubical Golfer',
   url: `${DOMAIN}/about/`,
-  jobTitle: 'Gear Editors & Weekend Warriors',
-  description: 'A crew of 9-to-5 desk jockeys who live for Saturday morning tee times. 15-handicap average across the team. We test every product over 10+ real rounds with our own money — no freebies, no manufacturer loans. We write reviews between meetings and daydream about birdies during conference calls.',
-  image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
+  jobTitle: '12-Handicap Weekend Golfer & Gear Editor',
+  description: 'Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago. No freebies, no manufacturer loans.',
+  image: `${DOMAIN}/images/cubicalgolfer-hero.jpg`,
   '@id': `${DOMAIN}/about/#author`,
   knowsAbout: [
     'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',

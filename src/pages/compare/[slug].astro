@@ -80,13 +80,14 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
     <span class="art-tag-lg tag-cmp">COMPARISON</span>
     <h1>{c.title}</h1>
     <div class="author-box">
-      <a href="/about/" style="flex-shrink:0">
-        <img src="/images/cubicalgolfer-logo.jpg" alt="The Cubical Golfer Team" class="author-avatar-img" width="48" height="48" />
+      <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
+        <img src="/images/cubicalgolfer-hero.jpg" alt="Cubical Golfer illustration" class="author-avatar-img" width="44" height="44"
+          style="border-radius:50%;object-fit:cover;" />
       </a>
       <div style="flex:1">
         <span class="author-name">
-          <a href="/about/" style="color:inherit;text-decoration:none">The Back Nine Analyst</a>
-          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">14-hdcp · always shoots better on the back nine</span>
+          <a href="/about/" style="color:inherit;text-decoration:none">Ryan O.</a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">12-handicap weekend golfer, Chicago</span>
         </span>
         <span class="author-meta">
           📅 Updated: {c.dateModified} &nbsp;·&nbsp;
@@ -96,6 +97,18 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
       <span class="verified-badge">✅ Independently Tested</span>
     </div>
   </header>
+
+  {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
+  <div class="trust-card">
+    <h3 class="trust-card__heading">Why Trust This Comparison</h3>
+    <ul class="trust-card__list">
+      <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
+      <li><strong>20+ real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
+      <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+      <li><strong>12-handicap perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
+    </ul>
+    <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
+  </div>
 
   <div class="compare-body">
 

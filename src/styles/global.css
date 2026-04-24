@@ -1533,3 +1533,45 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   transform: scale(1.03);
   background: var(--gold-dark, #a8892e) !important;
 }
+
+/* ── Trust card (E-E-A-T signal) ───────────────────────────────────────────── */
+.trust-card {
+  max-width: var(--content-w, 780px);
+  margin: 0 auto 24px;
+  padding: 20px 24px;
+  background: #f0f7f2;
+  border: 1px solid #b8dfc5;
+  border-radius: 12px;
+}
+.trust-card__heading {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--green, #1E3A28);
+  margin: 0 0 12px;
+}
+.trust-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.trust-card__list li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--body, #2D3F32);
+}
+.trust-card__list strong {
+  color: var(--green, #1E3A28);
+}
+.trust-card__link {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--green, #1E3A28);
+}
+@media (max-width: 600px) {
+  .trust-card__list { grid-template-columns: 1fr; }
+}
