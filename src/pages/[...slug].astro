@@ -5,6 +5,7 @@ import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
+import EmailCapture  from '../components/EmailCapture.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema } from '../lib/schema';
@@ -86,38 +87,13 @@ const stickyProduct = (() => {
   return { name, price: aff.price, url: aff.url, retailer: aff.retailer };
 })();
 
-// Cubicle Golfer personas — each category gets a rotating cast of desk-bound golf dreamers
-const PERSONAS: Record<string, Array<{ name: string; tagline: string }>> = {
-  'gear-reviews': [
-    { name: 'Fairway Finance Guy', tagline: '14-hdcp · reviews gear between budget meetings' },
-    { name: 'The Deskbound Driver', tagline: '16-hdcp · tests drivers on lunch-break range sessions' },
-    { name: 'Chief Bogey Officer', tagline: '18-hdcp · approves gear purchases nobody asked for' },
-  ],
-  'golf-tech': [
-    { name: 'Spreadsheet Swinger', tagline: '12-hdcp · tracks strokes gained like quarterly KPIs' },
-    { name: 'The KPI Caddie', tagline: '15-hdcp · measures everything, improves slowly' },
-    { name: 'PowerPoint Pro Golfer', tagline: '17-hdcp · once made a slide deck about swing plane' },
-  ],
-  'improve-game': [
-    { name: 'Mulligan Manager', tagline: '16-hdcp · manages mulligans better than projects' },
-    { name: 'The Back Nine Analyst', tagline: '14-hdcp · always shoots better on the back nine' },
-    { name: 'VP of Fairway Strategy', tagline: '15-hdcp · has a strategy for everything except putting' },
-  ],
-  'golf-accessories': [
-    { name: 'The Cubicle Caddie', tagline: '15-hdcp · keeps a putter under the desk' },
-    { name: 'Conference Call Golfer', tagline: '18-hdcp · practices grip during all-hands meetings' },
-    { name: 'The Commuter Caddie', tagline: '16-hdcp · listens to golf podcasts in traffic' },
-  ],
-  'golf-lifestyle': [
-    { name: 'The Lunch Break Golfer', tagline: '13-hdcp · has played 9 holes in 58 minutes' },
-    { name: '5PM Tee Time', tagline: '15-hdcp · leaves at 4:59, tees off at 5:15' },
-    { name: 'Out-of-Office Golfer', tagline: '17-hdcp · sets auto-reply, heads to the course' },
-  ],
+// FIX #1: Single named author replaces rotating fake personas (Chief Bogey Officer, etc.)
+const AUTHOR_BYLINE = {
+  name: 'Ryan O.',
+  tagline: '12-handicap weekend golfer, Chicago',
+  bio: 'Tests every piece of gear on his own dime across 25–40 rounds a year.',
+  avatar: '/images/cubicalgolfer-hero.jpg',
 };
-// Pick a persona deterministically from the article ID so it's consistent across builds
-const catPersonas = PERSONAS[article.category] ?? PERSONAS['gear-reviews'];
-const personaIndex = article.id.split('').reduce((sum: number, c: string) => sum + c.charCodeAt(0), 0) % catPersonas.length;
-const persona = catPersonas[personaIndex];
 
 // Cross-category "Cubicle Golfer" tips — shown on ALL article pages with category-aware links
 const CUBICLE_TIPS_BY_CAT: Record<string, Array<{ slug: string; label: string }>> = {
@@ -359,13 +335,14 @@ if (isBuyingGuide) {
     <h1>{article.titleDisplay}</h1>
 
     <div class="author-box">
-      <a href="/about/" style="flex-shrink:0" aria-label="About Cubical Golfer">
-        <img src="/images/cubicalgolfer-logo.jpg" alt="The Cubical Golfer Team" class="author-avatar-img" width="48" height="48" />
+      <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
+        <img src={AUTHOR_BYLINE.avatar} alt="Cubical Golfer illustration" class="author-avatar-img" width="44" height="44"
+          style="border-radius:50%;object-fit:cover;" />
       </a>
       <div style="flex:1">
         <span class="author-name">
-          <a href="/about/" style="color:inherit;text-decoration:none">{persona.name}</a>
-          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">{persona.tagline}</span>
+          <a href="/about/" style="color:inherit;text-decoration:none">{AUTHOR_BYLINE.name}</a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">{AUTHOR_BYLINE.tagline}</span>
         </span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
@@ -551,7 +528,10 @@ if (isBuyingGuide) {
         ? sectionAffKey   // explicit affiliateKey on section takes priority ('' = no product)
         : (BADGE_TO_PRODUCT[article.id]?.[section.badge || ''] ?? '');
       const aff = productId ? getAffiliateLink(productId) : null;
+      // FIX 2: Show mid-page email capture after section 3 on long pages
+      const showMidEmail = idx === 2 && isBuyingGuide && article.sections.length >= 5;
       return (
+        <>
         <div class="art-section">
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
@@ -583,14 +563,9 @@ if (isBuyingGuide) {
             );
             return (
               <div class="product-img-wrap">
-                {aff?.url ? (
-                  <a href={aff.url} class="product-img-link" target="_blank"
-                    rel="nofollow noopener sponsored"
-                    aria-label={`View price for ${section.h2}`}>
-                    {imgElement}
-                    <span class="product-img-overlay">View Price →</span>
-                  </a>
-                ) : imgElement}
+                {/* FIX: Product images no longer clickable — reduces CTA noise.
+                    Buy column and product name links remain as conversion points. */}
+                {imgElement}
               </div>
             );
           })()}
@@ -607,14 +582,8 @@ if (isBuyingGuide) {
             );
             return (
               <figure style="margin:24px 0;text-align:center;position:relative;">
-                {aff?.url ? (
-                  <a href={aff.url} class="section-img-link" target="_blank"
-                    rel="nofollow noopener sponsored"
-                    aria-label={`View price for ${section.h2}`}>
-                    {secImg}
-                    <span class="product-img-overlay">View Price →</span>
-                  </a>
-                ) : secImg}
+                {/* FIX: Section images no longer clickable — same rationale as product images */}
+                {secImg}
               </figure>
             );
           })()}
@@ -682,6 +651,14 @@ if (isBuyingGuide) {
             />
           )}
         </div>
+        {showMidEmail && (
+          <EmailCapture
+            heading="Before you decide — grab the cheat sheet"
+            variant="inline"
+            idSuffix="-inline"
+          />
+        )}
+        </>
       );
     })}
 

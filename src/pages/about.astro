@@ -4,8 +4,8 @@ import { breadcrumbSchema } from '../lib/schema';
 import { ARTICLES } from '../data/articles';
 
 const meta = {
-  title: 'Meet The Cubical Golfer Team — Desk Jockeys Who Live for Tee Time',
-  description: 'A crew of 9-to-5 workers who test golf gear between meetings and dream of birdies during conference calls. Meet the team behind every review.',
+  title: 'About Cubical Golfer — Real Gear Reviews by Ryan O.',
+  description: 'I\'m Ryan, a 12-handicap weekend golfer in Chicago. I started Cubical Golfer to test golf gear with my own money and share honest picks for golfers like me.',
   canonical: 'https://www.cubicalgolfer.com/about/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
   ogType: 'website' as const,
@@ -16,17 +16,6 @@ const meta = {
   ],
 };
 const schemas = [breadcrumbSchema(meta.breadcrumbs)];
-
-const TEAM = [
-  { name: 'Fairway Finance Guy', role: 'Gear Reviews Lead', hdcp: '14', bio: 'Reviews rangefinders and drivers between budget meetings. Has a spreadsheet ranking every rangefinder he\'s ever used. His coworkers think he\'s in finance — he\'s actually pricing golf gear.' },
-  { name: 'Spreadsheet Swinger', role: 'Golf Tech Editor', hdcp: '12', bio: 'Tracks strokes gained like quarterly KPIs. Built a launch monitor comparison matrix during a team standup. Believes every swing fault can be fixed with data.' },
-  { name: 'The Cubicle Caddie', role: 'Accessories Editor', hdcp: '15', bio: 'Keeps a putter under the desk and a groove brush in the laptop bag. Has strong opinions about gloves, towels, and anything under $50 that improves your round.' },
-  { name: 'Mulligan Manager', role: 'Improvement Guides', hdcp: '16', bio: 'Manages mulligans better than projects. Writes every practice drill and scoring guide on the site. Shot 79 once and will not let anyone forget it.' },
-  { name: 'The Lunch Break Golfer', role: 'Lifestyle & Courses', hdcp: '13', bio: 'Has played 9 holes in 58 minutes. Writes about sneaking in rounds, golf fitness, and every course within weekend-drive distance. Eats lunch at 11:30 to make the 12:15 tee time.' },
-  { name: '5PM Tee Time', role: 'Weekend Warrior', hdcp: '15', bio: 'Leaves at 4:59. Tees off at 5:15. Tests gear during twilight rounds and writes about it the next morning before anyone else is in the office.' },
-  { name: 'Chief Bogey Officer', role: 'Senior Editor', hdcp: '18', bio: 'Approves gear purchases nobody asked for. Makes the final call on every "Best Overall" pick. Has never broken 80 but has broken two drivers.' },
-  { name: 'The Back Nine Analyst', role: 'Comparisons Lead', hdcp: '14', bio: 'Always shoots better on the back nine. Runs every head-to-head comparison on the site. Believes the front nine is just a warm-up.' },
-];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="about">
@@ -38,77 +27,89 @@ const TEAM = [
       <span aria-current="page">About</span>
     </nav>
     <div style="display:flex;align-items:center;gap:20px;margin-bottom:20px;flex-wrap:wrap">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="The Cubical Golfer Team"
-           width="72" height="72" style="border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,.2)" />
+      <img src="/images/cubicalgolfer-hero.jpg" alt="Cubical Golfer illustration"
+           width="72" height="72" style="border-radius:50%;object-fit:cover;box-shadow:0 4px 16px rgba(0,0,0,.2)" />
       <div>
-        <h1 style="margin:0">We're Stuck in Cubicles. Golf Keeps Us Sane.</h1>
-        <p style="margin:4px 0 0;font-size:14px;opacity:.7">The Cubical Golfer Team · 15-handicap average · Gear Editors & Weekend Warriors</p>
+        <h1 style="margin:0">I'm Ryan. I Test Golf Gear So You Don't Have To.</h1>
+        <p style="margin:4px 0 0;font-size:14px;opacity:.7">Ryan O. · 12-handicap · Weekend Golfer in Chicago</p>
       </div>
     </div>
     <p>
-      We sit in meetings wishing we were on the back nine. We check tee times during lunch breaks.
-      We have swing thoughts during conference calls and alignment stick daydreams during all-hands.
-      Cubical Golfer is built by people exactly like you — 9-to-5 workers who live for Saturday morning
-      golf and refuse to stop getting better.
+      I'm a 12-handicap weekend golfer in Chicago. I started Cubical Golfer because every
+      gear review I read was either written by a scratch golfer or sponsored by a manufacturer.
+      Neither applied to me — a regular guy who plays 25–40 rounds a year, buys his own gear,
+      and wants to know what actually works without the marketing hype.
+    </p>
+    <p>
+      Every product on this site is purchased with my own money and tested over 10+ real rounds
+      on actual courses. No freebies. No manufacturer loans. Just honest picks for golfers like me.
     </p>
   </header>
 
   <div class="about-body">
     <div class="about-grid">
       <div>
-        <h2>Meet the Team</h2>
-        <p style="margin-bottom:24px;color:var(--muted);font-size:15px;">
-          Real desk jobs. Real handicaps. Real gear reviews written between meetings.
+        <h2>Why I Built This Site</h2>
+        <p style="margin-bottom:16px;">
+          I kept buying gear based on reviews from Tour-level players with 115 mph swing speeds
+          and single-digit handicaps. Their "best driver" wasn't my best driver. Their "must-have
+          golf ball" was designed for swing speeds I'll never reach.
+        </p>
+        <p style="margin-bottom:16px;">
+          Cubical Golfer reviews everything from the perspective of a weekend golfer with a real
+          job, a real budget, and a real 12-handicap. If a $169 rangefinder does 90% of what
+          a $329 one does, I'll tell you that. If the expensive one is genuinely worth it, I'll
+          tell you that too — with data from actual rounds, not press releases.
         </p>
 
-        <div style="display:flex;flex-direction:column;gap:16px;">
-          {TEAM.map(member => (
-            <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;">
-              <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
-                <h3 style="font-size:17px;font-weight:700;color:var(--green);margin:0;">{member.name}</h3>
-                <span style="font-size:12px;font-weight:600;color:var(--muted);background:var(--cream-dark);padding:3px 10px;border-radius:20px;">{member.hdcp}-hdcp · {member.role}</span>
-              </div>
-              <p style="font-size:14px;line-height:1.65;color:var(--body);margin:0;">{member.bio}</p>
-            </div>
-          ))}
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:24px;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
+            <h3 style="font-size:17px;font-weight:700;color:var(--green);margin:0;">Ryan O.</h3>
+            <span style="font-size:12px;font-weight:600;color:var(--muted);background:var(--cream-dark);padding:3px 10px;border-radius:20px;">12-hdcp · Founder & Gear Editor</span>
+          </div>
+          <p style="font-size:14px;line-height:1.65;color:var(--body);margin:0;">
+            Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago.
+            Started Cubical Golfer because every review online was either written by scratch golfers
+            or sponsored by manufacturers. Neither applied to him.
+          </p>
         </div>
 
         <h2 style="margin-top:40px" id="affiliate">Our Editorial Policy</h2>
         <p>
-          We earn affiliate commissions from some links on this site. If you click a link
-          and buy something, we may earn a small commission at no extra cost to you. This does NOT
-          affect our rankings or recommendations. We have declined to recommend products we were paid
+          I earn affiliate commissions from some links on this site. If you click a link
+          and buy something, I may earn a small commission at no extra cost to you. This does NOT
+          affect my rankings or recommendations. I have declined to recommend products I was paid
           to promote because they weren't genuinely the best option.
         </p>
         <p>
-          We never accept manufacturer loans for reviews. Every product we test is purchased by us.
-          No manufacturer has editorial control or advance review of our content. Our day jobs pay
-          the bills — this site exists because we genuinely love testing golf gear.
+          I never accept manufacturer loans for reviews. Every product I test is purchased by me.
+          No manufacturer has editorial control or advance review of my content. My day job pays
+          the bills — this site exists because I genuinely love testing golf gear.
         </p>
       </div>
 
       <div>
-        <h2>How We Test</h2>
+        <h2>How I Test</h2>
         <div class="about-vals">
           <div class="about-val">
             <span class="vi">🏌️</span>
             <h4>10+ Real Rounds Per Product</h4>
-            <p>Every piece of gear gets 10+ rounds before we write about it. We form opinions on the 14th hole, not from spec sheets.</p>
+            <p>Every piece of gear gets 10+ rounds before I write about it. I form opinions on the 14th hole, not from spec sheets.</p>
           </div>
           <div class="about-val">
             <span class="vi">💰</span>
-            <h4>Bought With Our Own Paychecks</h4>
-            <p>No freebies. No manufacturer loans. Every product was purchased by someone on this team using money they could have spent on greens fees.</p>
+            <h4>Bought With My Own Money</h4>
+            <p>No freebies. No manufacturer loans. Every product is purchased by me using money I could have spent on greens fees.</p>
           </div>
           <div class="about-val">
             <span class="vi">🏢</span>
-            <h4>Written From Our Cubicles</h4>
-            <p>We write for the golfer with a full-time job, limited practice time, and a real budget. If you've ever checked tee times during a meeting, this site is for you.</p>
+            <h4>Written From My Cubicle</h4>
+            <p>I write for the golfer with a full-time job, limited practice time, and a real budget. If you've ever checked tee times during a meeting, this site is for you.</p>
           </div>
           <div class="about-val">
             <span class="vi">🔄</span>
             <h4>Regularly Updated</h4>
-            <p>Every guide is reviewed annually. Gear that no longer represents best value gets removed — no matter how much the Chief Bogey Officer liked it.</p>
+            <p>Every guide is reviewed annually. Gear that no longer represents best value gets removed — no matter how much I liked it.</p>
           </div>
         </div>
 
@@ -117,10 +118,9 @@ const TEAM = [
           <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
             <li style="font-size:14px;color:var(--body)">✅ <strong>{ARTICLES.length}+ guides</strong> published</li>
             <li style="font-size:14px;color:var(--body)">✅ <strong>40+ rounds</strong> of hands-on testing</li>
-            <li style="font-size:14px;color:var(--body)">✅ <strong>~15 handicap</strong> average across the team</li>
+            <li style="font-size:14px;color:var(--body)">✅ <strong>12 handicap</strong></li>
             <li style="font-size:14px;color:var(--body)">✅ <strong>$0</strong> in sponsored content</li>
             <li style="font-size:14px;color:var(--body)">✅ <strong>100%</strong> independently purchased gear</li>
-            <li style="font-size:14px;color:var(--body)">✅ <strong>{TEAM.length} desk jockeys</strong> who'd rather be golfing</li>
             <li style="font-size:14px;color:var(--body)">✅ <strong>∞</strong> tee times checked during meetings</li>
           </ul>
         </div>

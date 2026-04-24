@@ -8,6 +8,7 @@
 //   - Removed render-blocking font request, replaced with display=swap preload
 
 import type { PageMeta } from '../data/types';
+import EmailCapture from '../components/EmailCapture.astro';
 import { VERIFICATION_TAG } from '../lib/seo';
 import '../styles/global.css';
 
@@ -149,38 +150,7 @@ const NAV_ITEMS = [
 
   <!-- ── EMAIL CAPTURE ── -->
   <section class="email-strip" id="free-guide" aria-label="Newsletter signup">
-    <div class="email-strip__inner">
-      <div class="email-strip__copy">
-        <p class="email-strip__eyebrow">FREE DOWNLOAD</p>
-        <h2 class="email-strip__heading">Get the Weekend Golfer's Gear Cheat Sheet</h2>
-        <p class="email-strip__sub">
-          One-page PDF: the single best pick in every category — rangefinder, GPS watch,
-          ball, glove, putter — based on 40+ rounds of testing. No fluff. Just the answer.
-        </p>
-      </div>
-      <div>
-        <div class="email-strip__field" id="email-field">
-          <label for="strip-email" class="sr-only">Your email address</label>
-          <input
-            type="email"
-            id="strip-email"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-            class="email-strip__input"
-          />
-          <button type="button" id="email-submit-btn" class="email-strip__btn">
-            Send Me the PDF →
-          </button>
-        </div>
-        <p class="email-strip__disclaimer" id="email-disclaimer">
-          No spam. Unsubscribe any time. We email ~twice a month with gear updates.
-        </p>
-        <div class="email-strip__thanks" id="strip-thanks" hidden>
-          ✅ &nbsp;Check your inbox — the cheat sheet is on its way!
-        </div>
-      </div>
-    </div>
+    <EmailCapture heading="Get the Weekend Golfer's Gear Cheat Sheet" variant="footer" />
   </section>
 
   <!-- ── FOOTER ── -->
@@ -269,55 +239,59 @@ const NAV_ITEMS = [
     })();
 
     // Email capture — Kit.com (ConvertKit) V3 API
+    // FIX: Supports multiple forms on the same page via ID suffixes
     (function () {
-      var btn = document.getElementById('email-submit-btn');
-      var input = document.getElementById('strip-email');
-      var field = document.getElementById('email-field');
-      var disclaimer = document.getElementById('email-disclaimer');
-      var thanks = document.getElementById('strip-thanks');
-      if (!btn || !input || !thanks) return;
+      var suffixes = ['', '-inline'];
+      suffixes.forEach(function (sfx) {
+        var btn = document.getElementById('email-submit-btn' + sfx);
+        var input = document.getElementById('strip-email' + sfx);
+        var field = document.getElementById('email-field' + sfx);
+        var disclaimer = document.getElementById('email-disclaimer' + sfx);
+        var thanks = document.getElementById('strip-thanks' + sfx);
+        if (!btn || !input || !thanks) return;
 
-      btn.addEventListener('click', function () {
-        var email = input.value.trim();
-        if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
-          input.style.borderColor = '#d63b2f';
-          input.focus();
-          return;
-        }
-        input.style.borderColor = '';
-        btn.textContent = 'Sending\u2026';
-        btn.disabled = true;
-
-        fetch('https://api.convertkit.com/v3/forms/9359554/subscribe', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json; charset=utf-8' },
-          body: JSON.stringify({
-            api_key: 'GODQuWrlCrC__lqMOglU1Q',
-            email: email
-          })
-        })
-        .then(function (res) {
-          if (!res.ok) throw new Error(res.status);
-          return res.json();
-        })
-        .then(function (data) {
-          if (data && data.subscription) {
-            if (field) field.setAttribute('hidden', '');
-            if (disclaimer) disclaimer.setAttribute('hidden', '');
-            thanks.removeAttribute('hidden');
-          } else {
-            throw new Error('no subscription');
+        btn.addEventListener('click', function () {
+          var email = input.value.trim();
+          if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
+            input.style.borderColor = '#d63b2f';
+            input.focus();
+            return;
           }
-        })
-        .catch(function () {
-          btn.textContent = 'Send Me the PDF \u2192';
-          btn.disabled = false;
-          input.style.borderColor = '#d63b2f';
-        });
-      });
+          input.style.borderColor = '';
+          btn.textContent = 'Sending\u2026';
+          btn.disabled = true;
 
-      input.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
+          fetch('https://api.convertkit.com/v3/forms/9359554/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+            body: JSON.stringify({
+              api_key: 'GODQuWrlCrC__lqMOglU1Q',
+              email: email
+            })
+          })
+          .then(function (res) {
+            if (!res.ok) throw new Error(res.status);
+            return res.json();
+          })
+          .then(function (data) {
+            if (data && data.subscription) {
+              if (field) field.setAttribute('hidden', '');
+              if (disclaimer) disclaimer.setAttribute('hidden', '');
+              thanks.removeAttribute('hidden');
+            } else {
+              throw new Error('no subscription');
+            }
+          })
+          .catch(function () {
+            btn.textContent = 'Send Me the PDF \u2192';
+            btn.disabled = false;
+            input.style.borderColor = '#d63b2f';
+          });
+        });
+
+        input.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
+        });
       });
     })();
   </script>
