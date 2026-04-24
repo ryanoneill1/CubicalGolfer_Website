@@ -1510,3 +1510,13 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   .prev-next-nav { grid-template-columns: 1fr; }
   .prev-next-link--next { text-align: left; }
 }
+
+/* ── Specs table winner cell ───────────────────────────────────────────────── */
+.cmp-winner-cell { background: rgba(42, 80, 56, 0.06); font-weight: 600; }
+
+/* ── TOC label for compare pages ───────────────────────────────────────────── */
+.toc-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 0 0 8px; }
+.toc-list { padding-left: 20px; margin: 0; }
+.toc-list li { font-size: 14.5px; line-height: 1.85; }
+.toc-list a { color: var(--green); text-decoration: none; }
+.toc-list a:hover { text-decoration: underline; }

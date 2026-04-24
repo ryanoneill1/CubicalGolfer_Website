@@ -456,7 +456,7 @@ export const ARTICLES: Article[] = [
     words: '4,600',
     datePublished: '2026-02-15',
     dateModified: '2026-03-25',
-    title: 'Best Game Improvement Irons 2026 — Tested for Forgiveness',
+    title: '7 Best Game-Improvement Irons 2026 — Tested by a 12-Handicap Weekend Golfer (Callaway, Ping, TaylorMade)',
     titleDisplay: 'Best Golf Irons 2026 — For Every Handicap',
     bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T300 balances feel and forgiveness better than anything else at this price. See our full iron guide →',
     description: 'Game-improvement irons tested by a weekend golfer who hits it fat on Tuesday and pure on Saturday. Real forgiveness data, not launch monitor lab specs.',
@@ -1234,7 +1234,7 @@ export const ARTICLES: Article[] = [
     words: '5,200',
     datePublished: '2026-02-18',
     dateModified: '2026-03-25',
-    title: '15 Golf Balls Tested in 2026 — Our Picks by Swing Speed',
+    title: '15 Best Golf Balls 2026 Tested by Swing Speed — Titleist Pro V1 Still Wins for 9-5 Golfers',
     titleDisplay: 'Best Golf Balls for Weekend Golfers 2026',
     bottomLine: 'For golfers with a swing speed above 90 mph, the <strong>Titleist Pro V1</strong> or Callaway Chrome Tour are the correct picks. Below 90 mph, a lower compression ball will give you more distance. See our golf ball compression chart →',
     description: '15 golf balls tested by a weekend golfer who loses 3 per round and needed to know which ones are actually worth the money. Ranked by swing speed and budget.',
@@ -1245,6 +1245,7 @@ export const ARTICLES: Article[] = [
     testingNotes: 'All 15 golf balls independently purchased and tested over 35+ rounds across multiple swing speeds (75-105 mph). Spin, distance, and feel evaluated on real courses.',
     toc: [
       'How to choose by swing speed',
+      'What actually matters for weekend golfers',
       'Best overall: Titleist Pro V1',
       'Best 2026 release: Callaway Chrome Tour',
       'Best all-round: TaylorMade TP5',
@@ -1265,6 +1266,10 @@ export const ARTICLES: Article[] = [
         sectionImage: '/images/products/golf-ball-compression-test.webp',
         sectionImageAlt: 'Golf ball compression testing — matching the right ball to your swing speed makes a real difference for weekend golfers',
         affiliateKey: 'titleist-pro-v1',
+      },
+      {
+        h2: 'What Actually Matters for Weekend Golfers',
+        body: "Stop overthinking golf balls. Here are the only three things that matter for a 9-to-5 golfer: (1) Compression matched to swing speed — playing a Pro V1 at 80 mph costs you 8-12 yards versus a Supersoft. That is a full club of distance you are leaving on the table. (2) Urethane cover vs ionomer — if you want greenside spin, you need urethane (Pro V1, Chrome Tour, Q-Star Tour, Vice Pro). Ionomer-covered balls (Supersoft, Soft Feel) go straighter but do not stop on greens. (3) Price per ball — if you lose 4+ balls per round, a $55 dozen costs you $15-$20 per round in lost balls alone. Play a $25 ball until you keep them in play. Everything else — dimple patterns, core gradients, alignment aids — is marketing.",
       },
       {
         h2: 'Best Overall: Titleist Pro V1',
@@ -1468,6 +1473,16 @@ export const ARTICLES: Article[] = [
       'Lose 5+ balls per round -- spend money on lessons not premium balls',
       'Swing speed under 80 mph -- soft low-compression balls perform better',
     ],
+    comparisonTable: {
+      headers: ['Golf Ball', 'Best For', 'Price/Dz', 'Compression', 'Our Rating'],
+      rows: [
+        { affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: '', winner: true, rating: 4.9, ratingCount: '4,120' },
+        { affiliateKey: 'callaway-chrome-tour', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '~$58', feature1: '~90', feature2: '', winner: false, rating: 4.7, ratingCount: '1,450' },
+        { affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best Under 95mph', price: '~$35', feature1: '72', feature2: '', winner: false, rating: 4.6, ratingCount: '1,870' },
+        { affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false, rating: 4.5, ratingCount: '2,340' },
+        { affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value Tour', price: '~$33', feature1: '80', feature2: '', winner: false, rating: 4.5, ratingCount: '1,120' },
+      ],
+    },
     sources: [{ label: 'Titleist — Pro V1 Construction & Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'MyGolfSpy — 2025 Golf Ball Test Methodology', url: 'https://mygolfspy.com/golf-ball-test/' }, { label: 'USGA — Conforming Golf Ball List', url: 'https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/equipment-rules/balls.html' }],
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
@@ -1709,15 +1724,16 @@ export const ARTICLES: Article[] = [
     words: '1,800',
     datePublished: '2026-03-25',
     dateModified: '2026-03-25',
-    title: 'Golf Ball Compression Chart 2026 — Matched to Swing Speed',
+    title: 'Golf Ball Compression Chart 2026: Exact Match for Your Swing Speed (Under 85 mph? Over 100 mph?)',
     titleDisplay: 'Golf Ball Compression Chart — Find Your Ball',
     bottomLine: 'Match your golf ball compression to your swing speed: under 85 mph use 50-70 compression (Callaway Supersoft), 85-100 mph use 70-90 compression (Srixon Q-Star), over 100 mph use 90+ compression (Titleist Pro V1).',
     description: 'Find the right golf ball compression for your swing speed — our chart covers 15 ball models from 50 to 100+ compression. Updated for 2026. See your match →',
     excerpt: 'Match your swing speed to the right golf ball compression — the fastest way to gain distance and improve feel.',
     intro: "Golf ball compression is a number from 30 to 120 indicating how much force is needed to compress the ball. Match your swing speed to the right compression and you unlock distance and feel.",
-    toc: ['What is golf ball compression?', 'Compression chart by swing speed', 'Best picks by compression', 'FAQ'],
+    toc: ['What is golf ball compression?', 'What actually matters for weekend golfers', 'Compression chart by swing speed', 'Best picks by compression', 'FAQ'],
     sections: [
       { h2: 'What Is Golf Ball Compression?', body: "Compression measures how much a ball deforms at impact. A low-compression ball (50-70) deforms easily — ideal for slower swing speeds. A high-compression ball (90+) needs higher speed to compress fully. Playing a ball too firm loses distance and spin control. Too soft at high speed causes excess spin and ballooning trajectory." },
+      { h2: 'What Actually Matters for Weekend Golfers', body: "You do not need to memorize compression numbers. Here is the only rule that matters: if your driver swing speed is under 85 mph (most weekend golfers), play a ball with compression under 70. If you are 85-100 mph, play 70-90. Over 100 mph, play 85+. The penalty for playing too firm is 3-5x larger than playing too soft — if you are between ranges, always go softer. One more thing: compression affects distance, but COVER TYPE affects spin. If you want the ball to stop on greens, you need urethane regardless of compression." },
       { h2: 'Compression Chart by Swing Speed', body: '', items: [
         { name: 'Under 70 mph → Compression 40-55', desc: 'Best balls: Callaway Supersoft (38), Wilson Duo Soft (29). Maximum softness helps slow swingers compress the ball properly.' },
         { name: '70-85 mph → Compression 55-70', desc: 'Best balls: Srixon Soft Feel (60), Bridgestone e6 (58). Low-compression two-piece balls give distance without tour swing speeds.' },

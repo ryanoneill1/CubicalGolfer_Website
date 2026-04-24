@@ -126,6 +126,9 @@ export interface Comparison {
   faq:           FAQItem[];
   datePublished: string;
   dateModified:  string;
+  toc?:          string[];                        // FIX: Jump-to table of contents
+  specs?:        Array<{ label: string; a: string; b: string; winner?: 'a' | 'b' | 'tie' }>;  // FIX: Side-by-side specs table
+  weekendGolfer?: string;                         // FIX: "What Actually Matters for Weekend Golfers" section
 }
 
 // ── Local page type ───────────────────────────────────────────────────────────

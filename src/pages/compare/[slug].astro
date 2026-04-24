@@ -87,11 +87,49 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
 
   <div class="compare-body">
 
+    {/* ── JUMP-TO TABLE OF CONTENTS ── */}
+    {c.toc && c.toc.length > 0 && (
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-label">Jump to:</p>
+        <ol class="toc-list">
+          {c.toc.map((item: string) => (
+            <li><a href={`#${item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>{item}</a></li>
+          ))}
+        </ol>
+      </nav>
+    )}
+
     {/* ── WHO THIS IS FOR ── */}
     <div class="bottom-line-box" role="note" aria-label="Who this comparison is for">
       <p class="bottom-line-label">Who This Comparison Is For</p>
       <p>{c.intro}</p>
     </div>
+
+    {/* ── SPECS COMPARISON TABLE ── */}
+    {c.specs && c.specs.length > 0 && (
+      <div id="quick-specs-comparison" class="cmp-wrap" style="margin-top:24px">
+        <h2>Quick Specs Comparison</h2>
+        <table class="cmp-table" role="table">
+          <caption class="sr-only">Side-by-side specs: {nameA} vs {nameB}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Spec</th>
+              <th scope="col">{nameA}</th>
+              <th scope="col">{nameB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.specs.map((spec: any) => (
+              <tr>
+                <td style="font-weight:600">{spec.label}</td>
+                <td class={spec.winner === 'a' ? 'cmp-winner-cell' : ''}>{spec.a} {spec.winner === 'a' ? '✅' : ''}</td>
+                <td class={spec.winner === 'b' ? 'cmp-winner-cell' : ''}>{spec.b} {spec.winner === 'b' ? '✅' : ''}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    )}
 
     {/* ── BUY BOTH — above fold ── */}
     {(affA || affB) && (
@@ -142,8 +180,16 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
       <a href="/how-we-test/">See our full testing methodology</a>
     </div>
 
+    {/* ── WHAT ACTUALLY MATTERS FOR WEEKEND GOLFERS ── */}
+    {c.weekendGolfer && (
+      <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;">
+        <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters for Weekend Golfers</h2>
+        <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
+      </div>
+    )}
+
     {/* ── FULL COMPARISON ── */}
-    <h2>Full Comparison: {nameA} vs {nameB}</h2>
+    <h2 id="winner-and-full-verdict">Full Comparison: {nameA} vs {nameB}</h2>
     <p>{c.verdict}</p>
 
     {/* ── BOTTOM BUY ROW ── */}
@@ -169,7 +215,7 @@ const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AF
     {/* ── FAQ ── */}
     {c.faq && c.faq.length > 0 && (
       <div class="art-faq">
-        <h2>Frequently Asked Questions</h2>
+        <h2 id="faq">Frequently Asked Questions</h2>
         {c.faq.map(({ q, a }) => (
           <details class="faq-item">
             <summary>{q}</summary>
