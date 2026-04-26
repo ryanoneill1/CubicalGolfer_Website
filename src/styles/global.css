@@ -922,15 +922,20 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── BOTTOM LINE BOX (verdict callout — top of all buying guides) ── */
 .bottom-line-box {
-  background: var(--cream-dark);
-  border-left: 4px solid var(--gold);
-  border-radius: 0 var(--r2) var(--r2) 0;
+  background: linear-gradient(135deg, #fdf8ee 0%, #faf0d8 100%);
+  border: 2px solid #e8d5a0;
+  border-radius: var(--r2);
   padding: 22px 26px;
   margin: 0 0 36px;
+  position: relative;
 }
 .bottom-line-label {
   font-size: 11px; font-weight: 700; letter-spacing: .12em;
-  text-transform: uppercase; color: var(--muted); margin-bottom: 8px;
+  text-transform: uppercase; color: #9a7b2e; margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.bottom-line-label::before {
+  content: '⚖️'; font-size: 14px;
 }
 .bottom-line-box p {
   font-size: 16px; line-height: 1.75; color: var(--body); margin: 0;
@@ -1241,9 +1246,9 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 /* ── BOTTOM LINE BOX: full width, prominent ── */
 .bottom-line-box {
   max-width: none;
-  border-left: 4px solid var(--gold);
-  background: var(--cream-dark);
-  border-radius: 0 var(--r2) var(--r2) 0;
+  border: 2px solid #e8d5a0;
+  background: linear-gradient(135deg, #fdf8ee 0%, #faf0d8 100%);
+  border-radius: var(--r2);
   padding: 24px 32px;
   margin: 0 0 40px;
 }

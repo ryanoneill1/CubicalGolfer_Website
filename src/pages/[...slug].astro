@@ -472,7 +472,7 @@ if (isBuyingGuide) {
           <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
             <tr>
-              {headers.map((h: string) => <th scope="col">{h}</th>)}
+              {headers.map((h: string) => <th scope="col" tabindex="0" role="button" aria-label={`Sort by ${h}`}>{h}</th>)}
               <th scope="col" class="cmp-th-buy">Buy</th>
             </tr>
           </thead>
@@ -910,7 +910,7 @@ if (isBuyingGuide) {
 
       headers.forEach(function(th, idx) {
         if (th.classList.contains('cmp-th-buy')) return;
-        th.addEventListener('click', function() {
+        function doSort() {
           if (sortCol === idx) { sortDir *= -1; }
           else { sortCol = idx; sortDir = 1; }
           headers.forEach(function(h) { h.classList.remove('sort-asc', 'sort-desc'); });
@@ -926,6 +926,10 @@ if (isBuyingGuide) {
             return aText.localeCompare(bText) * sortDir;
           });
           rows.forEach(function(r) { tbody.appendChild(r); });
+        }
+        th.addEventListener('click', doSort);
+        th.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doSort(); }
         });
       });
     })();
