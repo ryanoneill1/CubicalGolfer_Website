@@ -685,6 +685,70 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
   ],
+  // ── Drivers cluster ─────────────────────────────────────────────────────
+  // ── Putters cluster ────────────────────────────────────────────────────
+  'best-mallet-putters': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
+    { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+    { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right?' },
+    { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+  ],
+  'best-blade-putters': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
+    { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
+    { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right?' },
+    { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+  ],
+  'budget-putters-under-150': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
+    { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
+    { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+  ],
+  'putters-yips': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
+    { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Best Putters for Shaky Hands' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
+  ],
+  'putter-length-guide': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
+    { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+    { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade Putter' },
+  ],
+  'mallet-vs-blade': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
+    { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
+    { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+    { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
+  ],
+  'driver-under-300': [
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+    { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
+    { slug: '/best-golf-driver-seniors/', label: 'Best Drivers for Seniors' },
+    { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+  ],
+  'driver-slow-swing': [
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+    { slug: '/best-golf-driver-under-300/', label: 'Best Drivers Under $300' },
+    { slug: '/best-golf-driver-seniors/', label: 'Best Drivers for Seniors' },
+    { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+  ],
+  'driver-seniors': [
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+    { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
+    { slug: '/best-golf-clubs-slow-swing-speed/', label: 'Best Clubs for Slow Swing Speed' },
+    { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+  ],
+  'driver-vs-3-wood': [
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90' },
+    { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
+  ],
+  'fit-yourself-driver': [
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+    { slug: '/best-golf-driver-under-300/', label: 'Best Drivers Under $300' },
+    { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
+    { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+  ],
   'when-to-replace-grips': [
     { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
     { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Putters for Shaky Hands' },
