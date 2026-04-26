@@ -11,13 +11,13 @@
 import type { Article, Comparison, GolfCity, FAQItem } from '../data/types';
 
 const DOMAIN    = 'https://www.cubicalgolfer.com';
-const LOGO_URL  = `${DOMAIN}/images/logo.png`;
-const OG_IMAGE  = `${DOMAIN}/images/og-image.png`;
+const LOGO_URL  = `${DOMAIN}/images/cubicalgolfer-logo.jpg`;
+const OG_IMAGE  = `${DOMAIN}/images/og-image.jpg`;
 const PUBLISHER = {
   '@type': 'Organization',
   name: 'Cubical Golfer',
   url: DOMAIN,
-  logo: { '@type': 'ImageObject', url: LOGO_URL, width: 200, height: 60 },
+  logo: { '@type': 'ImageObject', url: LOGO_URL, width: 400, height: 400 },
 };
 const AUTHOR = {
   '@type': 'Person',
@@ -70,8 +70,8 @@ export function organizationSchema(): object {
     logo: {
       '@type': 'ImageObject',
       url: LOGO_URL,
-      width: 200,
-      height: 60,
+      width: 400,
+      height: 400,
     },
     description: 'Independent golf gear reviews and improvement guides for everyday weekend golfers.',
     foundingDate: '2024',

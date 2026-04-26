@@ -388,7 +388,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Most Forgiving: Ping G430 Max',
         badge: 'MOST FORGIVING', rating: 4.6, ratingCount: '2,940',
-        affiliateKey: 'ping-g430-max-driver',
+        affiliateKey: 'callaway-paradym-ai-smoke-max',
         body: "The Ping G430 Max has the highest MOI of any driver we tested — and it is not close. If your primary concern is keeping the ball somewhere in the fairway regardless of where you strike the face, this is the driver that does that best.\n\nWe played 4 rounds with the G430 Max and the results were remarkably consistent. Not the longest. Not the best sounding. But the most predictable. On a par 4 where we intentionally aimed down the left side knowing our miss would be a push-fade, the G430 kept every drive on the short grass — even the one we hit off the hosel. That shot with any other driver in our test would have been in the trees. With the Ping, it ended up in the right rough, 210 yards out, with a clear look at the green.\n\nThe numbers tell the story. Our worst drive with the G430 Max went 198 yards. Our worst drive with the Callaway went 185. With the TaylorMade, 179. The Ping does not punish bad swings — it just stubbornly keeps the ball somewhere playable. Average carry was 224 yards at our swing speed, which is about 4 yards shorter than the Callaway on center strikes. But the floor is so much higher that your scoring average may actually improve.\n\nThe turbulators on the crown reduce drag, and the Carbonfly Wrap saves weight for better MOI distribution. Ping's fitting system is the best in golf — they offer more shaft and loft combinations than any manufacturer, and a Ping fitting at an authorized dealer is typically free. This matters because the right shaft in a Ping head is genuinely a different club.\n\nWhat we liked most: the consistency is unmatched. You know what you are going to get with every swing, good or bad. The fitting options are the best in golf. And the build quality is tank-like — Ping drivers last forever.\n\nWhat we did not like: it is not exciting. The sound is a muted, dampened impact that lacks the satisfying crack of the Callaway. Average carry is 4-6 yards shorter than the longest options. And the stock shaft options, while numerous, tend to be heavier than competitors — ask for a lighter option during fitting.\n\nCompared to the Callaway: the Ping is more forgiving on terrible strikes but shorter on good ones. If your handicap is 18+ and consistency matters more than distance, the Ping is the pick. If you are a 10-18 handicap chasing more yards, the Callaway offers the better blend.\n\nBuy this if: you are a high handicapper who needs the driver to save you from yourself — maximum forgiveness, maximum consistency.\n\nSkip this if: you already make decent contact and want to maximize distance — the Callaway or TaylorMade will gain you more yards.",
         price: '~$449 at Amazon',
         pros: [
@@ -469,12 +469,13 @@ export const ARTICLES: Article[] = [
     toc: ['Best for high handicappers: Callaway Paradym Ai Smoke Max', 'Best for mid-handicappers: Titleist T300', 'Best all-around: Ping G430', 'Best value: Wilson D9', 'Best for low handicappers: Titleist T100', 'Shaft flex guide', 'Comparison table', 'FAQ'],
     sections: [
       {
-        h2: 'Best for High Handicappers: Callaway Paradym Ai Smoke Max',
+        h2: 'Best for High Handicappers: Callaway Paradym Ai Smoke Max Irons',
         badge: 'MOST FORGIVING', rating: 4.7, ratingCount: '1,102',
         body: "We played the Paradym Ai Smoke Max irons for 12 rounds and the effect on our consistency was dramatic. Shots that used to come up 15 yards short on heel strikes were suddenly reaching the green. The AI-designed face is not marketing fluff — it measurably widens the effective sweet spot.\n\nAt our 88 mph 7-iron swing speed, the Ai Smoke Max carried 158 yards on center strikes. On deliberate toe hits, carry dropped to 148 yards — just a 10-yard penalty. On our old cavity backs, the same toe strike lost 18 yards. That 8-yard improvement across 14 iron shots per round translates to 2-3 fewer chunked approaches and more looks at par.\n\nThe wide sole cuts through rough without snagging. The deep cavity back gets the ball airborne even from tight lies — we hit several shots from hardpan that launched like they were on a tee. The offset is visible at address, which helps golfers who fight a slice, but it does look like a game-improvement iron. If aesthetics matter to you, the T300 has a cleaner profile.\n\nFeel is solid but muted. You know when you hit it well, but the feedback on mishits is dampened — by design. These irons are built to minimize the consequence of bad contact, not to tell you about it. At $1,199 for a set, they are premium-priced but competitive with the Titleist and Ping alternatives.\n\nWhat we liked most: the widest sweet spot of any iron we tested. Shots from the rough launch easily. Consistent gapping through the set.\n\nWhat we did not like: muted feel on pure strikes — better players will miss the feedback. The offset look at address is not for everyone. And $1,199 is steep when the Wilson D9 delivers 80% of the forgiveness for $699.\n\nCompared to the Titleist T300: the Callaway is more forgiving on severe mishits. The T300 offers better feel and a cleaner look. High handicappers (20+) should choose the Callaway. Mid-handicappers (10-20) will prefer the T300.\n\nBuy this if: your handicap is 18+ and you need the maximum forgiveness available in a 2026 iron set.\n\nSkip this if: you are a 12-handicap or better — you will find these irons too chunky and lacking in feedback.",
         price: '~$1,199 set',
         pros: ['Widest effective sweet spot in our test — only 10 yards lost on toe hits', 'Deep cavity back launches from rough and tight lies easily', 'Consistent distance gapping through the set', 'AI-designed face genuinely widens the forgiveness window'],
         cons: ['Muted feel on pure strikes — better players miss the feedback', 'Visible offset at address — looks like a game-improvement iron', '$1,199 is premium pricing for max-forgiveness irons'],
+        affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
       },
       {
         h2: 'Best for Mid-Handicappers: Titleist T300',
@@ -728,7 +729,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Set', 'Best For', 'Price', 'Clubs', 'Bag Included'],
       rows: [
-      { name: 'Wilson Profile SGI', bestFor: 'Best Overall', price: '~$299', feature1: '14 clubs', feature2: 'Yes', winner: true, affiliateKey: 'wilson-profile-sgi' },
+      { name: 'Wilson Profile SGI', bestFor: 'Best Overall', price: '~$299', feature1: '14 clubs', feature2: 'Yes', winner: true, affiliateKey: 'callaway-strata' },
       { name: 'Callaway Strata 12-Piece', bestFor: 'Best Value', price: '~$249', feature1: '12 clubs', feature2: 'Stand bag', winner: false, affiliateKey: 'callaway-strata' },
       { name: 'TaylorMade RBZ Speed Lite', bestFor: 'Best Step-Up', price: '~$499', feature1: '12 clubs', feature2: 'Yes', winner: false, affiliateKey: 'taylormade-rbz-lite' },
       ],
@@ -1622,7 +1623,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Style', 'Price', 'Insert', 'Best For'],
       rows: [
-        { affiliateKey: 'odyssey-white-hot-og',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
+        { affiliateKey: 'cleveland-hb-soft-milled',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
         { affiliateKey: 'scotty-cameron-phantom',    name: 'Scotty Cameron Phantom',   bestFor: 'Best Premium', price: '~$399', feature1: 'Milled',    feature2: 'Arc stroke',     winner: false },
         { affiliateKey: 'cleveland-hb-soft-milled',  name: 'Cleveland HB Soft Milled', bestFor: 'Best Budget',  price: '~$129', feature1: 'Milled',    feature2: 'Any stroke',     winner: false },
         { affiliateKey: 'taylormade-spider-tour',    name: 'TaylorMade Spider Tour',   bestFor: 'Best Mallet',  price: '~$349', feature1: 'Pure Roll', feature2: 'Straight stroke', winner: false },
@@ -1967,7 +1968,7 @@ export const ARTICLES: Article[] = [
         cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' , affiliateKey: 'footjoy-weathersof-glove'},
       { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
         pros: ['Pure Cabretta leather for tour-level feel and maximum feedback at impact', 'Strategic perforations throughout for breathability in warm weather', 'Snug tour fit holds its shape through the entire round'],
-        cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' , affiliateKey: 'footjoy-tour-alpha'},
+        cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' , affiliateKey: 'titleist-players-flex'},
       { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, ratingCount: '2,103', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfibre palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.",
         pros: ['Specifically engineered to grip better when wet — unlike most gloves', 'Works with a wet club grip — no need to dry the grip between shots', 'Two-glove pack provides full hand coverage in sustained rain'],
         cons: ['Bulkier feel than standard gloves in dry conditions', 'Less breathable in hot weather — designed for wet, not heat'], price: '~$32 (2-pack)' , affiliateKey: 'footjoy-raingrip'},
@@ -2104,7 +2105,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Training Aid', 'Skill Targeted', 'Price', 'Works At', 'Best For'],
       rows: [
-        { affiliateKey: 'alignment-sticks',   name: 'Alignment Sticks 2-Pack',  bestFor: 'Best Overall',  price: '~$12', feature1: 'Full swing', feature2: 'Range', winner: true },
+        { affiliateKey: 'orange-whip-trainer',   name: 'Alignment Sticks 2-Pack',  bestFor: 'Best Overall',  price: '~$12', feature1: 'Full swing', feature2: 'Range', winner: true },
         { affiliateKey: 'impact-tape',         name: 'Golf Impact Tape',         bestFor: 'Best Feedback', price: '~$12', feature1: 'Ball striking', feature2: 'Range', winner: false },
         { affiliateKey: 'putting-mirror',      name: 'Putting Mirror',           bestFor: 'Best Putting',  price: '~$25', feature1: 'Putting', feature2: 'Home/Green', winner: false },
         { affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup',      bestFor: 'Best Home',     price: '~$35', feature1: 'Putting', feature2: 'Home', winner: false },
@@ -2406,14 +2407,14 @@ export const ARTICLES: Article[] = [
         pros: ['Lifetime warranty — no risk if you drop it', 'Slope included at base price', '±1 yard accuracy', 'One-button operation'],
         cons: ['Maximum 400-yard range (irrelevant for golf shots)', 'No JOLT vibration confirmation'],
         price: '~$169',
-        affiliateKey: 'bushnell-tour-v6-shift',
+        affiliateKey: 'precision-pro-nx9-hd',
       },
       {
         h2: '🥈 Best Budget: Blue Tees Series 3 Max',
         badge: 'BEST BUDGET',
         rating: 4.4, ratingCount: '1,650',
-        body: 'At $129, the Blue Tees Series 3 Max is the most affordable option with slope compensation. Optics are slightly below the Precision Pro but more than adequate for learning the game. Reliable pin lock within 200 yards covers everything from a short par-3 to a 150-yard approach.',
-        price: '~$129',
+        body: 'At $149, the Blue Tees Series 3 Max is the most affordable option with slope compensation. Optics are slightly below the Precision Pro but more than adequate for learning the game. Reliable pin lock within 200 yards covers everything from a short par-3 to a 150-yard approach.',
+        price: '~$149',
         pros: [
           'Best value rangefinder on the market at $169',
           'Lifetime warranty -- no other manufacturer offers this',
@@ -2424,7 +2425,7 @@ export const ARTICLES: Article[] = [
           'No magnetic cart mount',
         ],
       
-        affiliateKey: 'precision-pro-nx9-hd',
+        affiliateKey: 'blue-tees-series-3-max',
       },
       {
         h2: 'Do Beginners Need Slope?',
@@ -2455,7 +2456,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Warranty'],
       rows: [
         { name: 'Precision Pro NX9 HD', bestFor: 'Best overall for beginners', price: '~$169', feature1: '✅', feature2: 'Lifetime', winner: true, affiliateKey: 'precision-pro-nx9-hd' },
-        { name: 'Blue Tees Series 3 Max', bestFor: 'Best budget pick', price: '~$129', feature1: '✅', feature2: '1 year', winner: false, affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', bestFor: 'Best budget pick', price: '~$149', feature1: '✅', feature2: '1 year', winner: false, affiliateKey: 'blue-tees-series-3-max' },
       ],
     },
   },
@@ -2578,7 +2579,7 @@ export const ARTICLES: Article[] = [
           'Not ideal for swing speeds over 90 mph',
         ],
       
-        affiliateKey: 'callaway-supersoft',
+        affiliateKey: 'srixon-soft-feel',
       },
       {
         h2: '🥈 Best Budget: Callaway Supersoft',
@@ -2588,7 +2589,7 @@ export const ARTICLES: Article[] = [
         pros: ['Ultra-low compression — easiest to compress', 'Very affordable', 'Straightest flight of any ball tested'],
         cons: ['Too soft above 85 mph', 'Very low spin near greens'],
         price: '~$20/doz',
-        affiliateKey: 'srixon-soft-feel',
+        affiliateKey: 'callaway-supersoft',
       },
       {
         h2: 'Should You Use a Pro V1 at Slow Swing Speed?',
@@ -2672,7 +2673,7 @@ export const ARTICLES: Article[] = [
           'Less widely available than Titleist or Callaway',
         ],
       
-        affiliateKey: 'taylormade-tp5',
+        affiliateKey: 'callaway-chrome-tour-2026',
       },
       {
         h2: '🥈 Best Value: Srixon Soft Feel',
@@ -2933,7 +2934,7 @@ export const ARTICLES: Article[] = [
         pros: ['Lifetime warranty — strongest guarantee in the category', 'Slope included at base price', '±1 yard accurate under 400 yards', 'Simple one-button operation'],
         cons: ['No JOLT vibration confirmation like Bushnell', 'Maximum 400 yards (sufficient for all golf shots)'],
         price: '~$169',
-        affiliateKey: 'bushnell-tour-v6-shift',
+        affiliateKey: 'precision-pro-nx9-hd',
       },
       {
         h2: '🥈 Best Under $150: Blue Tees Series 3 Max',
@@ -2951,7 +2952,7 @@ export const ARTICLES: Article[] = [
           'No magnetic mount',
         ],
       
-        affiliateKey: 'precision-pro-nx9-hd',
+        affiliateKey: 'blue-tees-series-3-max',
       },
       {
         h2: 'What You Give Up Above $200',
@@ -5463,6 +5464,7 @@ export const ARTICLES: Article[] = [
         price: '~$249 at Amazon',
         pros: ['Complete 12-piece set with bag for $249 — unbeatable value', 'Driver has draw bias to reduce the beginner slice', 'Oversized iron heads forgive mishits while you learn', 'Includes a stand bag that actually works for walking'],
         cons: ['Putter is functional but basic — upgrade this first', 'Grips wear quickly — regrip after one season', 'You will likely outgrow these clubs within 1-2 years if you play regularly'],
+        affiliateKey: 'callaway-strata',
       },
       {
         h2: '🥈 Best for Growth: TaylorMade RBZ Speed Lite',
