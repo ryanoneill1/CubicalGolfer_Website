@@ -28,6 +28,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/apartment-golf-simulator-setup/',    label: 'Apartment Simulator Setup Guide' },
     { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
     { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor Under $700' },
+    { slug: '/best-golf-hitting-net-apartment-garage/', label: 'Best Golf Hitting Nets' },
   ],
   'golf-accessories': [
     { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
@@ -561,6 +562,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-simulator-under-1000/', label: 'Best Simulator Under $1,000' },
     { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
     { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
+    { slug: '/best-training-aids-fix-slice/', label: 'Training Aids to Fix Your Slice' },
+    { slug: '/best-swing-speed-trainer-over-40/', label: 'Swing Speed Trainers Over 40' },
   ],
   'mlm2pro-vs-r50-vs-square': [
     { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup Guide' },
@@ -572,6 +575,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
     { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
+    { slug: '/best-training-aids-fix-slice/', label: 'Training Aids to Fix Your Slice' },
+    { slug: '/best-swing-speed-trainer-over-40/', label: 'Swing Speed Trainers Over 40' },
   ],
   'budget-launch-monitor-apartment': [
     { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup Guide' },
@@ -589,6 +594,48 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     { slug: '/best-golf-gloves-for-men/', label: 'Best Golf Gloves 2026' },
+  ],
+  // ── 7 new buying guide clusters ───────────────────────────────────────
+  'indoor-putting-green': [
+    { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+    { slug: '/golf-desk-accessories-office/', label: 'Golf Desk Accessories' },
+  ],
+  'left-handed-golf-clubs': [
+    { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
+    { slug: '/best-junior-golf-clubs/', label: 'Best Junior Golf Clubs' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
+  ],
+  'training-aids-slice': [
+    { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90' },
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+    { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises for Slice' },
+  ],
+  'golf-hitting-net': [
+    { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
+    { slug: '/best-budget-launch-monitor-apartment/', label: 'Budget Launch Monitor' },
+    { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+  ],
+  'spikeless-golf-shoes': [
+    { slug: '/best-rain-gear-midwest-golfers/', label: 'Best Rain Gear Midwest' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+    { slug: '/best-golf-bags-2026/', label: 'Best Golf Bags 2026' },
+  ],
+  'clubs-slow-swing-speed': [
+    { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
+    { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Sets' },
+    { slug: '/best-swing-speed-trainer-over-40/', label: 'Swing Speed Trainers Over 40' },
+  ],
+  'swing-speed-trainer-over-40': [
+    { slug: '/best-golf-clubs-slow-swing-speed/', label: 'Best Clubs for Slow Swing' },
+    { slug: '/best-budget-launch-monitor-apartment/', label: 'Budget Launch Monitor' },
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+    { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises for Golf' },
   ],
 };
 
