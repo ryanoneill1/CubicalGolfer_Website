@@ -2,11 +2,12 @@
 // Generates /sitemap.xml dynamically at build time from data files.
 // Updated April 2026 — priority weights by page type.
 
+import type { APIRoute } from 'astro';
 import { ARTICLES }    from '../data/articles';
 import { COMPARISONS } from '../data/comparisons';
 import { CITIES }      from '../data/cities';
 
-export async function GET() {
+export const GET: APIRoute = async () => {
   const DOMAIN = 'https://www.cubicalgolfer.com';
 
   const priorityByType: Record<string, string> = {
@@ -83,6 +84,10 @@ export async function GET() {
     `</urlset>\n`;
 
   return new Response(xml, {
-    headers: { 'Content-Type': 'application/xml; charset=utf-8' },
+    status: 200,
+    headers: {
+      'Content-Type': 'application/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600',
+    },
   });
 }
