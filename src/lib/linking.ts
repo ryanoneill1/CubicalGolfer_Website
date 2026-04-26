@@ -658,6 +658,23 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gifts-for-couples/', label: 'Gifts for Couples' },
     { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Wedges' },
   ],
+  // ── Wedge topic cluster ───────────────────────────────────────────────
+  'approach-wedge-vs-gap-wedge': [
+    { slug: '/how-to-buy-wedges-4-degree-rule/', label: 'How to Buy Wedges — 4-Degree Rule' },
+    { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
+    { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+  ],
+  'how-to-buy-wedges': [
+    { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
+    { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
+    { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+  ],
+  'when-to-replace-wedges': [
+    { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
+    { slug: '/how-to-buy-wedges-4-degree-rule/', label: 'How to Buy Wedges — 4-Degree Rule' },
+    { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
+    { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────

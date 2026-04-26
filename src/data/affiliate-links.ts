@@ -1482,6 +1482,72 @@ export const AFFILIATE: Record<string, {
       '$25 + install — cheapest upgrade for shaky putting',
     ],
   },
+  // ── New: Wedge cluster products ───────────────────────────────────────
+  'vokey-sm10-52': {
+    url: 'https://www.amazon.com/s?k=Titleist+Vokey+SM10+52+degree+wedge&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$179',
+    label: 'See Current Price',
+    imgSrc: '/images/products/vokey-sm10.webp',
+    imgAlt: 'Titleist Vokey SM10 52-Degree Wedge',
+    benefits: [
+      'Tour-proven design — most played wedge on Tour',
+      'Spin Milled grooves for maximum spin on every shot',
+      'Multiple grind options for any turf condition',
+    ],
+  },
+  'cleveland-rtx6-52': {
+    url: 'https://www.amazon.com/s?k=Cleveland+RTX+6+Zipcore+52+degree+wedge&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$169',
+    label: 'See Current Price',
+    imgSrc: '/images/products/vokey-sm10.webp',
+    imgAlt: 'Cleveland RTX 6 ZipCore 52-Degree Wedge',
+    benefits: [
+      'ZipCore technology moves CG closer to face for better feel',
+      'UltiZip grooves for spin on full and partial shots',
+      '$169 — $10 cheaper than Vokey with comparable performance',
+    ],
+  },
+  'callaway-jaws-raw-52': {
+    url: 'https://www.amazon.com/s?k=Callaway+JAWS+RAW+52+degree+wedge&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$169',
+    label: 'See Current Price',
+    imgSrc: '/images/products/vokey-sm10.webp',
+    imgAlt: 'Callaway JAWS RAW 52-Degree Wedge',
+    benefits: [
+      'Raw face rusts over time — increases spin as it ages',
+      'Aggressive JAWS grooves for maximum short-game control',
+      'Multiple sole grinds for versatility around greens',
+    ],
+  },
+  'mizuno-t24-52': {
+    url: 'https://www.amazon.com/s?k=Mizuno+T24+52+degree+wedge&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$180',
+    label: 'See Current Price',
+    imgSrc: '/images/products/vokey-sm10.webp',
+    imgAlt: 'Mizuno T24 52-Degree Wedge',
+    benefits: [
+      'Grain Flow Forged — Mizuno\'s legendary feel',
+      'HydroFlow Micro Grooves for wet-condition spin',
+      'Clean, minimal aesthetic preferred by better players',
+    ],
+  },
+  'maxfli-milled-52': {
+    url: 'https://www.amazon.com/s?k=Maxfli+Milled+wedge+52+degree&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$80',
+    label: 'See Current Price',
+    imgSrc: '/images/products/vokey-sm10.webp',
+    imgAlt: 'Maxfli Milled Series 52-Degree Wedge',
+    benefits: [
+      '$80 — less than half the price of Vokey/Cleveland',
+      'CNC-milled face for consistent spin',
+      'Best value wedge for weekend golfers on a budget',
+    ],
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
