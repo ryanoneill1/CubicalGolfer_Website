@@ -8400,7 +8400,7 @@ export const ARTICLES: Article[] = [
     id: 'office-to-course-playbook',
     slug: '/office-to-golf-course-playbook/',
     thumb: 'green',
-    thumbnail: '/images/thumbnails/golf-practice-routine-thumb.webp',
+    thumbnail: '/images/thumbnails/morning-practice-routine-thumb.webp',
     words: '3,100',
     category: 'golf-lifestyle',
     pageType: 'tutorial',
