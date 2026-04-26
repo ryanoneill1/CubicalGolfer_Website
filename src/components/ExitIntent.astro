@@ -1,0 +1,174 @@
+---
+// Exit-intent email capture overlay.
+// Desktop: triggers when mouse leaves viewport upward.
+// Mobile: triggers after 60 seconds of idle.
+// Once dismissed or submitted, never shows again (localStorage).
+// Complies with Google mobile interstitial guidelines: no show within 30s.
+---
+<div id="exit-intent" class="exit-intent" hidden>
+  <div class="exit-intent__backdrop" id="exit-intent-backdrop"></div>
+  <div class="exit-intent__inner">
+    <button class="exit-intent__close" id="exit-intent-close" aria-label="Close">×</button>
+    <p class="exit-intent__eyebrow">BEFORE YOU GO</p>
+    <h3 class="exit-intent__heading">Get the Weekend Golfer's Cheat Sheet</h3>
+    <p class="exit-intent__sub">The single best pick in every category — rangefinder, GPS watch, ball, glove, putter — based on 40+ rounds of testing. Free, one page, no spam.</p>
+    <div class="exit-intent__field" id="exit-intent-field">
+      <input type="email" id="exit-email" class="exit-intent__input" placeholder="you@email.com" aria-label="Email address" />
+      <button id="exit-submit" class="exit-intent__btn">Send Me the PDF</button>
+    </div>
+    <p class="exit-intent__disclaimer">No spam. Unsubscribe any time.</p>
+    <p class="exit-intent__thanks" id="exit-intent-thanks" hidden>Check your inbox — the cheat sheet is on its way.</p>
+  </div>
+</div>
+
+<style>
+  .exit-intent { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; }
+  .exit-intent.visible { display: flex; }
+  .exit-intent__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
+  .exit-intent__inner {
+    position: relative; background: #fff; border-radius: 16px;
+    padding: 40px 36px; max-width: 440px; width: 90%; text-align: center;
+    box-shadow: 0 16px 48px rgba(0,0,0,.25); animation: exitSlideUp .3s ease;
+  }
+  @keyframes exitSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .exit-intent__close {
+    position: absolute; top: 12px; right: 16px;
+    background: none; border: none; font-size: 28px; color: var(--muted);
+    cursor: pointer; line-height: 1; padding: 4px;
+  }
+  .exit-intent__close:hover { color: var(--text); }
+  .exit-intent__eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: .14em;
+    color: var(--gold); text-transform: uppercase; margin: 0 0 8px;
+  }
+  .exit-intent__heading {
+    font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
+    color: var(--text); margin: 0 0 10px; line-height: 1.2;
+  }
+  .exit-intent__sub {
+    font-size: 14px; color: var(--muted); line-height: 1.6; margin: 0 0 20px;
+  }
+  .exit-intent__field { display: flex; gap: 0; border-radius: 8px; overflow: hidden; }
+  .exit-intent__input {
+    flex: 1; padding: 12px 14px; border: 2px solid var(--border); border-right: none;
+    border-radius: 8px 0 0 8px; font-size: 14px; font-family: inherit;
+  }
+  .exit-intent__input:focus { outline: none; border-color: var(--gold); }
+  .exit-intent__btn {
+    padding: 12px 20px; background: var(--green); color: #fff;
+    border: none; border-radius: 0 8px 8px 0; font-size: 14px;
+    font-weight: 700; font-family: inherit; cursor: pointer; white-space: nowrap;
+  }
+  .exit-intent__btn:hover { background: var(--green-mid); }
+  .exit-intent__disclaimer { font-size: 11px; color: var(--muted); margin: 10px 0 0; }
+  .exit-intent__thanks {
+    padding: 14px 18px; background: var(--green); border-radius: 8px;
+    color: #fff; font-size: 14px; font-weight: 600; margin: 8px 0 0;
+  }
+  @media (max-width: 480px) {
+    .exit-intent__inner { padding: 32px 24px; }
+    .exit-intent__field { flex-direction: column; border-radius: 8px; overflow: visible; }
+    .exit-intent__input { border-right: 2px solid var(--border); border-radius: 8px; }
+    .exit-intent__btn { border-radius: 8px; margin-top: 8px; }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var KEY = 'cg-exit-intent-dismissed';
+    if (localStorage.getItem(KEY)) return;
+
+    var overlay = document.getElementById('exit-intent');
+    var closeBtn = document.getElementById('exit-intent-close');
+    var backdrop = document.getElementById('exit-intent-backdrop');
+    var submitBtn = document.getElementById('exit-submit');
+    var emailInput = document.getElementById('exit-email');
+    var field = document.getElementById('exit-intent-field');
+    var thanks = document.getElementById('exit-intent-thanks');
+    var disclaimer = overlay ? overlay.querySelector('.exit-intent__disclaimer') : null;
+    if (!overlay) return;
+
+    var shown = false;
+    var pageLoadTime = Date.now();
+    var MIN_DELAY = 30000; // 30 seconds — Google mobile interstitial compliance
+
+    function show() {
+      if (shown) return;
+      if (Date.now() - pageLoadTime < MIN_DELAY) return;
+      shown = true;
+      overlay.removeAttribute('hidden');
+      // Force reflow before adding visible class for animation
+      overlay.offsetHeight;
+      overlay.classList.add('visible');
+    }
+
+    function dismiss() {
+      localStorage.setItem(KEY, '1');
+      overlay.classList.remove('visible');
+      setTimeout(function() { overlay.setAttribute('hidden', ''); }, 300);
+    }
+
+    // Desktop: mouse leaves viewport upward
+    document.addEventListener('mouseleave', function(e) {
+      if (e.clientY <= 0) show();
+    });
+
+    // Mobile/fallback: 60 seconds of idle
+    var idleTimer;
+    function resetIdle() {
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(show, 60000);
+    }
+    ['scroll', 'touchstart', 'click'].forEach(function(evt) {
+      document.addEventListener(evt, resetIdle, { passive: true });
+    });
+    resetIdle();
+
+    // Close handlers
+    closeBtn.addEventListener('click', dismiss);
+    backdrop.addEventListener('click', dismiss);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && shown) dismiss();
+    });
+
+    // Email submission — same ConvertKit form as footer
+    submitBtn.addEventListener('click', function() {
+      var email = emailInput.value.trim();
+      if (!email || email.indexOf('@') < 1) {
+        emailInput.style.borderColor = '#d63b2f';
+        emailInput.focus();
+        return;
+      }
+      emailInput.style.borderColor = '';
+      submitBtn.textContent = 'Sending\u2026';
+      submitBtn.disabled = true;
+
+      fetch('https://api.convertkit.com/v3/forms/9359554/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+        body: JSON.stringify({ api_key: 'GODQuWrlCrC__lqMOglU1Q', email: email })
+      })
+      .then(function(res) { if (!res.ok) throw new Error(res.status); return res.json(); })
+      .then(function(data) {
+        if (data && data.subscription) {
+          field.setAttribute('hidden', '');
+          if (disclaimer) disclaimer.setAttribute('hidden', '');
+          thanks.removeAttribute('hidden');
+          localStorage.setItem(KEY, '1');
+        } else { throw new Error('no subscription'); }
+      })
+      .catch(function() {
+        submitBtn.textContent = 'Send Me the PDF';
+        submitBtn.disabled = false;
+        emailInput.style.borderColor = '#d63b2f';
+      });
+    });
+
+    emailInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') { e.preventDefault(); submitBtn.click(); }
+    });
+  })();
+</script>

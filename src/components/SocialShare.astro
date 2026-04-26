@@ -1,0 +1,88 @@
+---
+// Social share buttons — minimal text links at the bottom of articles.
+interface Props {
+  url: string;
+  title: string;
+}
+const { url, title } = Astro.props;
+const enc = encodeURIComponent;
+---
+<div class="social-share">
+  <span class="social-share__label">Share this guide:</span>
+  <a href={`https://www.reddit.com/submit?url=${enc(url)}&title=${enc(title)}`}
+     target="_blank" rel="noopener" aria-label="Share on Reddit" class="social-share__link">Reddit</a>
+  <a href={`https://twitter.com/intent/tweet?url=${enc(url)}&text=${enc(title)}`}
+     target="_blank" rel="noopener" aria-label="Share on X" class="social-share__link">X</a>
+  <a href={`https://www.pinterest.com/pin/create/button/?url=${enc(url)}&description=${enc(title)}`}
+     target="_blank" rel="noopener" aria-label="Pin to Pinterest" class="social-share__link">Pinterest</a>
+  <a href={`https://www.facebook.com/sharer/sharer.php?u=${enc(url)}`}
+     target="_blank" rel="noopener" aria-label="Share on Facebook" class="social-share__link">Facebook</a>
+  <button class="social-share__copy" data-url={url} aria-label="Copy link">Copy link</button>
+</div>
+
+<style>
+  .social-share {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    margin: 32px 0 8px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .social-share__label {
+    font-weight: 600;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+  }
+  .social-share__link {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    transition: background .15s, border-color .15s;
+  }
+  .social-share__link:hover {
+    background: var(--cream);
+    border-color: var(--green);
+  }
+  .social-share__copy {
+    color: var(--green);
+    font-weight: 600;
+    font-size: 13px;
+    font-family: inherit;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: none;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .social-share__copy:hover {
+    background: var(--cream);
+    border-color: var(--green);
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var btns = document.querySelectorAll('.social-share__copy');
+    btns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var url = btn.getAttribute('data-url');
+        if (navigator.clipboard && url) {
+          navigator.clipboard.writeText(url).then(function() {
+            var orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            setTimeout(function() { btn.textContent = orig; }, 2000);
+          });
+        }
+      });
+    });
+  })();
+</script>

@@ -6,6 +6,8 @@ import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
 import BackToTop     from '../components/BackToTop.astro';
+import SocialShare   from '../components/SocialShare.astro';
+import ExitIntent    from '../components/ExitIntent.astro';
 import EmailCapture  from '../components/EmailCapture.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
@@ -714,6 +716,9 @@ if (isBuyingGuide) {
       </div>
     )}
 
+    {/* SOCIAL SHARE */}
+    <SocialShare url={`https://www.cubicalgolfer.com${article.slug}`} title={article.titleDisplay} />
+
     {/* RELATED GUIDES */}
     {related.length > 0 && (
       <div class="rel-cluster">
@@ -939,5 +944,6 @@ if (isBuyingGuide) {
   </script>
 
   {showBackToTop && <BackToTop />}
+  <ExitIntent />
 
 </BaseLayout>
