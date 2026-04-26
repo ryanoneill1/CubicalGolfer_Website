@@ -19,6 +19,10 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — 2026 Driver Comparison' },
     { slug: '/compare/',                           label: 'Compare Golf Products Head-to-Head' },
     { slug: '/best-golf-gear-under-100/',          label: 'Best Golf Gear Under $100' },
+    { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Putters for Shaky Hands' },
+    { slug: '/how-to-buy-wedges-4-degree-rule/',   label: 'How to Buy Wedges' },
+    { slug: '/when-to-replace-wedges-grooves/',    label: 'When to Replace Wedges' },
+    { slug: '/when-to-replace-golf-grips/',        label: 'When to Replace Grips' },
   ],
   'golf-tech': [
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
@@ -44,6 +48,10 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/golf-practice-routine-before-work/',   label: '15-Min Morning Practice Routine' },
     { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
     { slug: '/desk-exercises-fix-golf-slice/',       label: 'Desk Exercises That Fix Your Slice' },
+    { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
+    { slug: '/how-to-buy-wedges-4-degree-rule/',   label: 'How to Buy Wedges' },
+    { slug: '/when-to-replace-wedges-grooves/',    label: 'When to Replace Wedges' },
+    { slug: '/when-to-replace-golf-grips/',        label: 'When to Replace Grips' },
   ],
   'golf-lifestyle': [
     { slug: '/golf-for-beginners/',              label: 'Golf for Beginners — Complete Guide' },
@@ -53,6 +61,8 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-rain-gear-midwest-golfers/',  label: 'Best Rain Gear for Midwest Golfers' },
     { slug: '/courses/chicago-il/',              label: 'Best Golf Courses in Chicago' },
     { slug: '/gear-quiz/',                       label: 'Golf Gear Quiz — Find Your Fit' },
+    { slug: '/office-to-golf-course-playbook/',  label: 'Cubicle-to-Course Playbook' },
+    { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
   ],
 };
 
