@@ -1,0 +1,127 @@
+---
+// Client-side search — fetches a build-time JSON index on focus, filters as you type.
+---
+<div class="site-search">
+  <input type="search" id="site-search-input" placeholder="Search guides…" aria-label="Search guides" autocomplete="off" />
+  <div id="site-search-results" class="site-search__results" hidden></div>
+</div>
+
+<style>
+  .site-search {
+    position: relative;
+    margin-left: auto;
+  }
+  .site-search input {
+    padding: 7px 14px 7px 32px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: 13px;
+    font-family: inherit;
+    width: 160px;
+    transition: width .2s ease, border-color .2s;
+    background: var(--cream) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23556B5C' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cline x1='9.5' y1='9.5' x2='13' y2='13'/%3E%3C/svg%3E") no-repeat 10px center;
+  }
+  .site-search input:focus {
+    outline: 2px solid var(--gold);
+    border-color: var(--gold);
+    width: 220px;
+  }
+  .site-search__results {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 6px 24px rgba(0,0,0,.14);
+    width: 380px;
+    max-height: 420px;
+    overflow-y: auto;
+    z-index: 90;
+  }
+  .site-search__results a {
+    display: block;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.4;
+    transition: background .15s;
+  }
+  .site-search__results a:last-child { border-bottom: none; }
+  .site-search__results a:hover { background: var(--cream); }
+  .site-search__results a strong { display: block; margin-bottom: 2px; font-size: 14px; }
+  .search-result-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .site-search__empty {
+    padding: 16px;
+    font-size: 13px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .site-search { display: none; }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var input = document.getElementById('site-search-input');
+    var results = document.getElementById('site-search-results');
+    if (!input || !results) return;
+    var index = null;
+
+    input.addEventListener('focus', function() {
+      if (index) return;
+      fetch('/api/search-index.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) { index = data; })
+        .catch(function() {});
+    });
+
+    input.addEventListener('input', function() {
+      var q = input.value.toLowerCase().trim();
+      if (!q || q.length < 2 || !index) {
+        results.hidden = true;
+        return;
+      }
+      var hits = index.filter(function(a) {
+        return a.title.toLowerCase().indexOf(q) !== -1 ||
+               (a.excerpt || '').toLowerCase().indexOf(q) !== -1;
+      }).slice(0, 8);
+
+      if (hits.length === 0) {
+        results.innerHTML = '<div class="site-search__empty">No guides found</div>';
+        results.hidden = false;
+        return;
+      }
+
+      results.innerHTML = hits.map(function(h) {
+        var safe = function(s) { return (s || '').replace(/</g, '&lt;').replace(/>/g, '&gt;'); };
+        return '<a href="' + h.slug + '">' +
+          '<strong>' + safe(h.title) + '</strong>' +
+          '<span class="search-result-tag">' + safe(h.tag) + '</span></a>';
+      }).join('');
+      results.hidden = false;
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function(e) {
+      if (!input.contains(e.target) && !results.contains(e.target)) {
+        results.hidden = true;
+      }
+    });
+
+    // Close on Escape
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { results.hidden = true; input.blur(); }
+    });
+  })();
+</script>

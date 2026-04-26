@@ -10,6 +10,7 @@
 import type { PageMeta } from '../data/types';
 import EmailCapture from '../components/EmailCapture.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import SiteSearch from '../components/SiteSearch.astro';
 import { VERIFICATION_TAG } from '../lib/seo';
 import '../styles/global.css';
 
@@ -119,6 +120,7 @@ const NAV_ITEMS = [
         >{item.label}</a>
       ))}
     </div>
+    <SiteSearch />
   </nav>
 
   <!-- ── MAIN CONTENT ── -->
