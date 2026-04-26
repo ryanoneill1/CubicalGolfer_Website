@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "validate": "tsx scripts/validate-affiliate-keys.ts && tsx scripts/validate-thumbnails.ts",
+    "validate": "tsx scripts/validate-affiliate-keys.ts && tsx scripts/validate-thumbnails.ts && tsx scripts/validate-affiliate-urls.ts && tsx scripts/validate-promise-delivery.ts",
     "build": "npm run validate && astro build && node scripts/stamp-build.js",
     "preview": "astro preview",
     "check": "astro check",
