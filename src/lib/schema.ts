@@ -175,6 +175,47 @@ export function comparisonSchema(c: Comparison): object {
   };
 }
 
+// ── Product schema for comparison pages (×2 per page) ────────────────────────
+export interface ComparisonProduct {
+  name: string;
+  brand: string;
+  description: string;
+  image?: string;
+  url: string;
+  price: string;
+  retailer: string;
+  rating?: number;
+  ratingCount?: number;
+}
+
+export function comparisonProductsSchema(products: ComparisonProduct[]): object[] {
+  return products.map(p => ({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: p.name,
+    description: p.description,
+    image: p.image ? `${DOMAIN}${p.image}` : OG_IMAGE,
+    brand: { '@type': 'Brand', name: p.brand },
+    offers: {
+      '@type': 'Offer',
+      url: p.url,
+      priceCurrency: 'USD',
+      price: (p.price ?? '').replace(/[^0-9.]/g, ''),
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: p.retailer },
+    },
+    ...(p.rating ? {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: p.rating,
+        reviewCount: p.ratingCount ?? 50,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    } : {}),
+  }));
+}
+
 // ── Local page schema ─────────────────────────────────────────────────────────
 export function cityPageSchema(city: GolfCity): object {
   return {

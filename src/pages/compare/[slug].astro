@@ -5,7 +5,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import StickyBar from '../../components/StickyBar.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
-import { comparisonSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { comparisonSchema, faqSchema, breadcrumbSchema, comparisonProductsSchema } from '../../lib/schema';
+import type { ComparisonProduct } from '../../lib/schema';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import type { Comparison } from '../../data/types';
 
@@ -55,6 +56,33 @@ const nameA   = PRODUCT_NAMES[c.productA] || c.productA.replace(/-/g, ' ');
 const nameB   = PRODUCT_NAMES[c.productB] || c.productB.replace(/-/g, ' ');
 const winnerName = PRODUCT_NAMES[c.winner] || c.winner.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
 const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]) : null;
+
+// ── Product schema for SERP rich results ────────────────────────────────────
+const PRODUCT_BRANDS: Record<string, string> = {
+  'bushnell-tour-v6': 'Bushnell', 'precision-pro-nx9': 'Precision Pro',
+  'garmin-s62': 'Garmin', 'shot-scope-v5': 'Shot Scope',
+  'callaway-paradym-max': 'Callaway', 'taylormade-qi35-max': 'TaylorMade',
+  'arccos-caddie': 'Arccos', 'garmin-s42': 'Garmin',
+  'skytrak-plus': 'SkyTrak', 'blue-tees-s3-max': 'Blue Tees',
+};
+
+const compProducts: ComparisonProduct[] = [];
+for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, nameB]] as const) {
+  if (aff) {
+    compProducts.push({
+      name: name as string,
+      brand: PRODUCT_BRANDS[key as string] ?? (name as string).split(' ')[0],
+      description: c.description,
+      image: (aff as any).imgSrc,
+      url: (aff as any).url,
+      price: (aff as any).price ?? '',
+      retailer: (aff as any).retailer ?? 'Amazon',
+    });
+  }
+}
+if (compProducts.length > 0) {
+  schemas.push(...comparisonProductsSchema(compProducts));
+}
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home">
