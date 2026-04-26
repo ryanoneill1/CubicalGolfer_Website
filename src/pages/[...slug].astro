@@ -5,6 +5,7 @@ import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
+import BackToTop     from '../components/BackToTop.astro';
 import EmailCapture  from '../components/EmailCapture.astro';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
@@ -25,6 +26,8 @@ const { article } = Astro.props;
 
 const meta    = articleMeta(article);
 const related = getMergedRelated(article, 6);
+const wordCount = parseInt(((article as any).words ?? '0').replace(/,/g, ''), 10);
+const showBackToTop = wordCount >= 1500;
 
 const schemas: object[] = [
   articleSchema(article),
@@ -934,5 +937,7 @@ if (isBuyingGuide) {
       });
     })();
   </script>
+
+  {showBackToTop && <BackToTop />}
 
 </BaseLayout>

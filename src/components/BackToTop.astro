@@ -1,0 +1,46 @@
+---
+// Renders a floating "back to top" button on long pages.
+// Appears after 600px scroll, fades to top smoothly.
+---
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>
+  ↑
+</button>
+<style>
+  .back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 16px;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--green);
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    opacity: 0; pointer-events: none;
+    transition: opacity .3s ease;
+    z-index: 70;
+  }
+  .back-to-top.visible {
+    opacity: .9;
+    pointer-events: auto;
+  }
+  .back-to-top:hover { opacity: 1; }
+</style>
+<script is:inline>
+  (function() {
+    var btn = document.getElementById('back-to-top');
+    if (!btn) return;
+    btn.removeAttribute('hidden');
+    function check() {
+      if (window.scrollY > 600) btn.classList.add('visible');
+      else btn.classList.remove('visible');
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
