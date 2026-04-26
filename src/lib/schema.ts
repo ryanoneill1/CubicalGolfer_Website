@@ -26,7 +26,7 @@ const AUTHOR = {
   url: `${DOMAIN}/about/`,
   jobTitle: '12-Handicap Weekend Golfer & Gear Editor',
   description: 'Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago, IL. No freebies, no manufacturer loans.',
-  image: `${DOMAIN}/images/cubicalgolfer-hero.jpg`,
+  image: `${DOMAIN}/images/ryan-author-photo.jpg`,
   '@id': `${DOMAIN}/about/#author`,
   knowsAbout: [
     'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
@@ -35,6 +35,9 @@ const AUTHOR = {
     'Weekend golf practice', 'Office golf fitness', 'Budget golf gear',
     'Golf for beginners', 'Golf course management',
   ],
+  // sameAs: populate with real profile URLs as accounts are created (Part B).
+  // Empty entries cause schema validation warnings — only include URLs that exist.
+  // Example: sameAs: ['https://linkedin.com/in/...', 'https://x.com/...'],
 };
 
 export function schemaTag(obj: object): string {
@@ -77,9 +80,14 @@ export function organizationSchema(): object {
     foundingDate: '2024',
     slogan: 'Escape the cubicle. Find the fairway.',
     image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
-    // Add your real social profiles here for stronger entity signals:
+    // Social profiles — add URLs as accounts are created (Part B).
+    // Each real URL strengthens Google's entity understanding of Cubical Golfer.
     sameAs: [
       'https://www.pinterest.com/cubicalgolfer',
+      // 'https://www.linkedin.com/company/cubicalgolfer',  // TODO: create
+      // 'https://x.com/cubicalgolfer',                     // TODO: create
+      // 'https://www.youtube.com/@cubicalgolfer',           // TODO: create
+      // 'https://www.reddit.com/user/cubicalgolfer',        // TODO: create
     ],
   };
 }
