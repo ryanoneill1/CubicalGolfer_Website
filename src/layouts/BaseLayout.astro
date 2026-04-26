@@ -26,7 +26,7 @@ const NAV_ITEMS = [
   { label: 'Golf Tech',         href: '/golf-tech/',              key: 'golf-tech'     },
   { label: 'Improve Your Game', href: '/improve-your-golf-game/', key: 'improve-game'  },
   { label: 'Office Hacks',      href: '/office-hacks/',           key: 'office-hacks'  },
-  { label: 'Free Buying Guide', href: '#free-guide',              key: 'free-guide', cta: true },
+  { label: 'Compare',           href: '/compare/',                key: 'compare', cta: true },
 ];
 ---
 
@@ -312,6 +312,44 @@ const NAV_ITEMS = [
           if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
         });
       });
+    })();
+  </script>
+
+  <!-- Cloudflare Web Analytics — privacy-respecting, no cookies, GDPR-friendly -->
+  {import.meta.env.PUBLIC_ANALYTICS_TOKEN && (
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_ANALYTICS_TOKEN}"}`}></script>
+  )}
+
+  <!-- Affiliate click + email conversion tracking -->
+  <script is:inline>
+    (function() {
+      // Track affiliate link clicks (any sponsored link)
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[rel*="sponsored"]');
+        if (!link) return;
+        var product = link.getAttribute('aria-label') || link.textContent || 'unknown';
+        var url = link.href || '';
+        // Log to console in dev; Cloudflare WA tracks navigation automatically
+        if (typeof console !== 'undefined') {
+          console.log('[CG Analytics] Affiliate click:', product.substring(0, 60), url.substring(0, 80));
+        }
+        // If Plausible or GA4 is added later, fire event here:
+        // if (window.plausible) plausible('Affiliate Click', { props: { product: product } });
+      });
+
+      // Track email-capture conversion (thanks message becomes visible)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          if (m.target.classList && m.target.classList.contains('email-strip__thanks')) {
+            if (typeof console !== 'undefined') {
+              console.log('[CG Analytics] Email capture conversion');
+            }
+          }
+        });
+      });
+      var strip = document.querySelector('.email-strip');
+      if (strip) observer.observe(strip, { childList: true, subtree: true });
     })();
   </script>
 </body>
