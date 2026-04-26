@@ -304,6 +304,8 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'Garmin — Approach S62 Specifications', url: 'https://www.garmin.com/en-US/p/622467' }, { label: 'Shot Scope — V5 GPS Watch Features', url: 'https://www.shotscope.com/products/v5/' }],
     related: [
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps for Stat Tracking' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
@@ -534,6 +536,7 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'TrackMan — PGA Tour Averages by Club', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }, { label: 'Callaway Golf — Paradym Ai Smoke Irons Specs', url: 'https://www.callawaygolf.com/golf-clubs/irons/' }],
     related: [
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Golf Club Sets' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
@@ -747,6 +750,7 @@ export const ARTICLES: Article[] = [
       ],
     },
     related: [
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-bags-2026/', label: 'Best Golf Bags 2026 — What Beginners Need' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
       { slug: '/average-golf-handicap/', label: 'Average Golf Handicap for Beginners' },
@@ -789,6 +793,7 @@ export const ARTICLES: Article[] = [
       { q: 'What should a beginner golfer practice first?', a: "Practice in this order: (1) chipping and putting, (2) short irons — 9-iron and pitching wedge, (3) 7-iron, (4) driver last. 60% of strokes happen inside 100 yards." },
     ],
     related: [
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Golf Club Sets 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix the Beginner Slice' },
       { slug: '/average-golf-handicap/', label: "What's a Good Golf Handicap for a Beginner?" },
@@ -8486,6 +8491,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Weekend golfers who walk 18 holes regularly', 'Golfers who want one shoe for course and commute', 'Wide-foot golfers looking for comfortable options'],
     whoSkip: ['Cart riders who never walk more than tee-to-ball', 'Golfers who play in extreme wet conditions weekly (get spiked shoes)'],
     related: [
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-rain-gear-midwest-golfers/', label: 'Best Rain Gear for Midwest Golfers' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
       { slug: '/best-golf-bags-2026/', label: 'Best Golf Bags 2026' },

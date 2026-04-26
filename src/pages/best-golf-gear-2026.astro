@@ -1,0 +1,203 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { breadcrumbSchema, featuredArticlesSchema } from '../lib/schema';
+import { getAffiliateLink } from '../data/affiliate-links';
+
+const meta = {
+  title: 'Best Golf Gear 2026 — Weekend Golfer Definitive Guide',
+  description: 'The single best pick in every golf category — rangefinder, GPS watch, driver, irons, putter, balls, bag, gloves, shoes, and tech — tested over 40+ rounds.',
+  canonical: 'https://www.cubicalgolfer.com/best-golf-gear-2026/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index,follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Best Golf Gear 2026', href: '/best-golf-gear-2026/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+
+interface Winner {
+  category: string;
+  emoji: string;
+  name: string;
+  affiliateKey: string;
+  price: string;
+  benefit: string;
+  guideSlug: string;
+  guideLabel: string;
+}
+
+const winners: Winner[] = [
+  { category: 'Rangefinder', emoji: '🔭', name: 'Bushnell Tour V6 Shift', affiliateKey: 'bushnell-tour-v6-shift', price: '~$329', benefit: 'Fastest pin lock on the market — under 0.3 seconds with JOLT confirmation', guideSlug: '/best-golf-rangefinders-2026/', guideLabel: 'Best Rangefinders 2026' },
+  { category: 'GPS Watch', emoji: '⌚', name: 'Garmin Approach S62', affiliateKey: 'garmin-approach-s62', price: '~$399', benefit: 'Virtual Caddie AI + 42,000 courses preloaded', guideSlug: '/best-golf-gps-watches/', guideLabel: 'Best GPS Watches 2026' },
+  { category: 'Driver', emoji: '🏌️', name: 'Callaway Paradym AI Smoke Max', affiliateKey: 'callaway-paradym-ai-smoke-max', price: '~$499', benefit: 'AI-designed face widens the sweet spot for maximum forgiveness', guideSlug: '/best-golf-drivers-forgiveness/', guideLabel: 'Best Forgiving Drivers' },
+  { category: 'Irons', emoji: '⛳', name: 'Callaway Paradym AI Smoke Max Irons', affiliateKey: 'callaway-paradym-ai-smoke-max-irons', price: '~$899+', benefit: 'Widest effective sweet spot — only 10 yards lost on toe hits', guideSlug: '/best-golf-irons-2026/', guideLabel: 'Best Irons 2026' },
+  { category: 'Putter', emoji: '🏒', name: 'Odyssey White Hot OG', affiliateKey: 'odyssey-white-hot-og', price: '~$199', benefit: 'White Hot insert for the best feel and consistency on real greens', guideSlug: '/best-golf-putters-2026/', guideLabel: 'Best Putters 2026' },
+  { category: 'Golf Ball', emoji: '⚪', name: 'Titleist Pro V1', affiliateKey: 'titleist-pro-v1', price: '~$55/doz', benefit: 'Tour-level spin and consistency — the ball every other brand is chasing', guideSlug: '/best-golf-balls-2026/', guideLabel: 'Best Golf Balls 2026' },
+  { category: 'Golf Bag', emoji: '🎒', name: 'Sun Mountain 2.5+', affiliateKey: 'sun-mountain-25-plus', price: '~$249', benefit: 'Lightest full-size bag at 2.8 lbs with perfectly balanced dual straps', guideSlug: '/best-golf-bags-2026/', guideLabel: 'Best Golf Bags 2026' },
+  { category: 'Glove', emoji: '🧤', name: 'FootJoy WeatherSof', affiliateKey: 'footjoy-weathersof-glove', price: '~$18', benefit: 'Best value glove — lasts 20+ rounds and fits like a second skin', guideSlug: '/best-golf-gloves-hot-weather/', guideLabel: 'Best Golf Gloves' },
+  { category: 'Shoes', emoji: '👟', name: 'Skechers Go Golf Elite 5', affiliateKey: 'skechers-go-golf-elite-5', price: '~$110', benefit: 'Walk 18 in comfort — best cushioning of any spikeless shoe tested', guideSlug: '/best-spikeless-golf-shoes-walking-18/', guideLabel: 'Best Spikeless Shoes' },
+  { category: 'Wedge', emoji: '🔧', name: 'Titleist Vokey SM10', affiliateKey: 'vokey-sm10-52', price: '~$179', benefit: 'Most played wedge on Tour — Spin Milled grooves for maximum control', guideSlug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', guideLabel: 'Wedge Buying Guide' },
+  { category: 'Tech', emoji: '📱', name: 'Arccos Caddie Sensors', affiliateKey: 'arccos-caddie-sensors', price: '~$179 + $99/yr', benefit: 'AI caddie that gets smarter every round — automatic shot tracking', guideSlug: '/best-golf-swing-analyzers/', guideLabel: 'Best Swing Analyzers' },
+  { category: 'Training Aid', emoji: '🎯', name: 'SuperSpeed Golf Set', affiliateKey: 'superspeed-golf-set', price: '~$199', benefit: 'Add 5-8% swing speed in 6 weeks with 15 min 3x per week', guideSlug: '/best-swing-speed-trainer-over-40/', guideLabel: 'Best Speed Trainers' },
+];
+---
+
+<BaseLayout {meta} {schemas} activeNav="best-2026">
+
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Best Golf Gear 2026</span>
+    </nav>
+    <h1>Best Golf Gear of 2026 — The Weekend Golfer's Definitive Guide</h1>
+    <p>
+      We tested rangefinders, GPS watches, drivers, irons, putters, balls, bags, gloves, shoes,
+      wedges, and training tech over 40+ rounds across four courses. These are the single best picks
+      in every category — the gear we would buy again with our own money. No freebies, no manufacturer
+      loans, no sponsored placements. Just the winners.
+    </p>
+  </header>
+
+  <div class="art-content">
+
+    <div class="intro-box">
+      <p>
+        <strong>How to use this page:</strong> Each category below shows our #1 pick with its key
+        benefit and price. Click "Read full guide" for the complete comparison with runner-ups and
+        budget alternatives. Not sure what you need? Take our <a href="/gear-quiz/">Gear Quiz</a>
+        or <a href="/compare/">compare products head-to-head</a>.
+      </p>
+    </div>
+
+    <!-- Comparison table: all winners at a glance -->
+    <h2>Best in Every Category — At a Glance</h2>
+    <div class="cmp-wrap">
+      <table class="cmp-table" role="table">
+        <caption class="sr-only">Best golf gear of 2026 — one winner per category</caption>
+        <thead>
+          <tr>
+            <th scope="col">Category</th>
+            <th scope="col">Our Pick</th>
+            <th scope="col">Price</th>
+            <th scope="col" class="cmp-th-buy">Guide</th>
+          </tr>
+        </thead>
+        <tbody>
+          {winners.map(w => {
+            return (
+              <tr>
+                <td>{w.emoji} {w.category}</td>
+                <td><strong>{w.name}</strong></td>
+                <td>{w.price}</td>
+                <td class="cmp-td-buy">
+                  <a href={w.guideSlug} class="cmp-buy-btn">Read guide →</a>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Individual category winners -->
+    {winners.map(w => {
+      const aff = getAffiliateLink(w.affiliateKey) as any;
+      return (
+        <section class="art-section">
+          <h2>{w.emoji} Best {w.category}: {w.name}</h2>
+
+          {aff?.imgSrc && (
+            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" class="product-img-link">
+              <div class="product-img-wrap">
+                <img src={aff.imgSrc} alt={aff.imgAlt || w.name}
+                     width="520" height="340" loading="lazy" decoding="async"
+                     style="object-fit:contain;background:#fff;padding:16px;"
+                     onerror="this.style.display='none'" />
+                <div class="product-img-overlay">View on {aff.retailer || 'Amazon'} →</div>
+              </div>
+            </a>
+          )}
+
+          <p class="price-note">{w.price}</p>
+          <p>{w.benefit}.</p>
+
+          {aff && (
+            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" class="btn-buy-affiliate">
+              <span class="btn-buy-price">{aff.price}</span>
+              <span class="btn-buy-cta">Check Today's Price →</span>
+              <span class="btn-buy-badge">at {aff.retailer || 'Amazon'}</span>
+            </a>
+          )}
+
+          <p>
+            <a href={w.guideSlug} style="color:var(--green);font-weight:700;">
+              Read the full {w.guideLabel} →
+            </a>
+          </p>
+        </section>
+      );
+    })}
+
+    <!-- How We Test -->
+    <section class="art-section">
+      <h2>How We Chose These Winners</h2>
+      <p>
+        Every product on this page was purchased with our own money and tested over 10+ real rounds.
+        No manufacturer loans, no press samples, no sponsored placements. We evaluate based on
+        performance for weekend golfers with real swing speeds (85-100 mph), real budgets, and real
+        schedules. For our complete methodology, see <a href="/how-we-test/">how we test</a>.
+      </p>
+    </section>
+
+    <!-- Cross-links -->
+    <div class="rel-cluster">
+      <h3>Explore More</h3>
+      <div class="rel-links">
+        <a href="/gear-quiz/">Take the Gear Quiz — Find Your Perfect Setup</a>
+        <a href="/compare/">Compare Products Head-to-Head</a>
+        <a href="/how-we-test/">How We Test Every Product</a>
+        <a href="/best-golf-gear-under-100/">Best Golf Gear Under $100</a>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="art-faq">
+      <h3>Frequently Asked Questions</h3>
+      <details class="faq-item">
+        <summary>How do you choose the winners?</summary>
+        <div class="faq-answer">
+          Every product is independently purchased and tested over 10+ real rounds on actual courses.
+          We evaluate performance, value, durability, and ease of use from a weekend golfer's perspective.
+          The winner in each category is the product we would buy again with our own money.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Are these the best for ALL golfers?</summary>
+        <div class="faq-answer">
+          These picks are optimized for weekend golfers with 85-100 mph swing speeds and 10-20 handicaps.
+          Scratch golfers, seniors, and beginners may benefit from different picks — each full guide
+          includes alternatives for specific needs.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>How often is this page updated?</summary>
+        <div class="faq-answer">
+          We review every category winner quarterly and update this page whenever a new product
+          genuinely outperforms the current pick. Minor updates (pricing, availability) happen monthly.
+        </div>
+      </details>
+      <details class="faq-item">
+        <summary>Do you earn commissions from these links?</summary>
+        <div class="faq-answer">
+          Yes — affiliate links earn us a small commission at no extra cost to you. This never affects
+          our rankings. See our <a href="/affiliate-disclosure/">affiliate disclosure</a> for details.
+        </div>
+      </details>
+    </div>
+
+  </div>
+
+</BaseLayout>

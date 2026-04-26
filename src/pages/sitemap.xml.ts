@@ -32,6 +32,7 @@ export const GET: APIRoute = async () => {
   const entries = [
     // Static + category hub pages
     { loc: '/',                         freq: 'weekly',  pri: '1.0' },
+    { loc: '/best-golf-gear-2026/',     freq: 'weekly',  pri: '0.95' },
     { loc: '/about/',                   freq: 'monthly', pri: '0.7' },
     { loc: '/how-we-test/',             freq: 'monthly', pri: '0.7' },
     { loc: '/gear-reviews/',            freq: 'weekly',  pri: '0.9' },
