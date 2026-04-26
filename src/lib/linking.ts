@@ -651,6 +651,13 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
     { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
   ],
+  'gift-detective-guide': [
+    { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
+    { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gift Guide' },
+    { slug: '/best-golf-gifts-for-couples/', label: 'Gifts for Couples' },
+    { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Wedges' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
