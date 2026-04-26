@@ -1548,6 +1548,72 @@ export const AFFILIATE: Record<string, {
       'Best value wedge for weekend golfers on a budget',
     ],
   },
+  // ── New: Golf grips for Page 7 ────────────────────────────────────────
+  'golf-pride-mcc-plus4': {
+    url: 'https://www.amazon.com/s?k=Golf+Pride+MCC+Plus4+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$13/grip',
+    label: 'See Current Price',
+    imgSrc: '/images/products/golf-pride-mcc-plus4.webp',
+    imgAlt: 'Golf Pride MCC Plus4 Golf Grip',
+    benefits: [
+      'Cord upper for traction + rubber lower for comfort',
+      'Plus4 technology reduces grip pressure in lower hand',
+      'Most popular all-purpose grip on Tour',
+    ],
+  },
+  'golf-pride-tour-velvet-cord': {
+    url: 'https://www.amazon.com/s?k=Golf+Pride+Tour+Velvet+Cord+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$10/grip',
+    label: 'See Current Price',
+    imgSrc: '/images/products/golf-pride-mcc-plus4.webp',
+    imgAlt: 'Golf Pride Tour Velvet Cord Golf Grip',
+    benefits: [
+      'Full-cord construction for maximum wet-weather traction',
+      'Firmer feel preferred by better players',
+      '$10/grip — best value cord grip available',
+    ],
+  },
+  'lamkin-crossline-cord': {
+    url: 'https://www.amazon.com/s?k=Lamkin+Crossline+Cord+golf+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$8/grip',
+    label: 'See Current Price',
+    imgSrc: '/images/products/lamkin-crossline-cord.webp',
+    imgAlt: 'Lamkin Crossline Cord Golf Grip',
+    benefits: [
+      '$8/grip — cheapest quality cord grip available',
+      'Classic crossline surface pattern for secure hold',
+      'Best option for golfers with sweaty hands on a budget',
+    ],
+  },
+  'winn-dri-tac': {
+    url: 'https://www.amazon.com/s?k=Winn+Dri-Tac+golf+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$8/grip',
+    label: 'See Current Price',
+    imgSrc: '/images/products/golf-pride-mcc-plus4.webp',
+    imgAlt: 'Winn Dri-Tac Soft Golf Grip',
+    benefits: [
+      'Softest grip feel available — ideal for arthritis or joint pain',
+      'Polymer material absorbs vibration on mis-hits',
+      '$8/grip — affordable comfort upgrade',
+    ],
+  },
+  'superstroke-s-tech': {
+    url: 'https://www.amazon.com/s?k=SuperStroke+S-Tech+golf+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$13/grip',
+    label: 'See Current Price',
+    imgSrc: '/images/products/golf-pride-mcc-plus4.webp',
+    imgAlt: 'SuperStroke S-Tech Oversize Golf Grip',
+    benefits: [
+      'Oversized profile reduces hand tension and wrist action',
+      'Cross-traction surface for wet and dry grip',
+      'Best for golfers who want to quiet their hands through impact',
+    ],
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────

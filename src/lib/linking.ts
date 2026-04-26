@@ -675,6 +675,12 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
   ],
+  'when-to-replace-grips': [
+    { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
+    { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Putters for Shaky Hands' },
+    { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
+    { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
