@@ -9,6 +9,7 @@
 
 import type { PageMeta } from '../data/types';
 import EmailCapture from '../components/EmailCapture.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import { VERIFICATION_TAG } from '../lib/seo';
 import '../styles/global.css';
 
@@ -314,6 +315,8 @@ const NAV_ITEMS = [
       });
     })();
   </script>
+
+  <CookieBanner />
 
   <!-- Cloudflare Web Analytics — privacy-respecting, no cookies, GDPR-friendly -->
   {import.meta.env.PUBLIC_ANALYTICS_TOKEN && (

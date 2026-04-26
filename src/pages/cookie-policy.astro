@@ -4,7 +4,7 @@ import { breadcrumbSchema } from '../lib/schema';
 
 const meta = {
   title: 'Cookie Policy — Cubical Golfer',
-  description: 'Cubical Golfer cookie policy — what cookies we use, why, and how to manage them. We use Google Analytics and affiliate tracking cookies.',
+  description: 'Cubical Golfer cookie policy — what cookies and local storage we use, why, and how to manage them.',
   canonical: 'https://www.cubicalgolfer.com/cookie-policy/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
@@ -15,7 +15,7 @@ const meta = {
   ],
 };
 const schemas = [breadcrumbSchema(meta.breadcrumbs)];
-const updated = '2026-04-24';
+const updated = '2026-04-26';
 ---
 
 <BaseLayout {meta} {schemas}>
@@ -29,30 +29,40 @@ const updated = '2026-04-24';
     <h1>Cookie Policy</h1>
     <p style="font-size:14px;color:var(--muted);">Last updated: {updated}</p>
 
-    <p>Cubical Golfer uses cookies to improve your experience and understand how the site is used. This policy explains what cookies are, which ones we use, and how you can manage them.</p>
+    <p>Cubical Golfer uses cookies and local storage to improve your experience and understand how the site is used. This policy explains what we use, why, and how you can manage your preferences.</p>
 
     <h2>What Are Cookies?</h2>
     <p>Cookies are small text files stored on your device when you visit a website. They help sites remember your preferences, understand usage patterns, and improve functionality. Cookies cannot access other data on your device.</p>
 
-    <h2>Cookies We Use</h2>
+    <h2>First-Party Storage</h2>
 
-    <h3>Essential Cookies</h3>
-    <p>These are required for the site to function. They include Cloudflare security cookies that protect against malicious traffic. These cannot be disabled without breaking site functionality.</p>
+    <h3>Cookie Consent Preference</h3>
+    <p>We store your cookie consent choice in your browser's localStorage (not a cookie) so you are not asked again on every visit. This data never leaves your device.</p>
+    <p>Key: <code>cg-cookie-consent</code> — Value: "accepted" or "declined" — Duration: persists until you clear browser data — Provider: Cubical Golfer</p>
 
-    <h3>Analytics Cookies</h3>
-    <p>We use Google Analytics 4 to understand how visitors interact with our site. These cookies collect anonymized data including pages visited, time on site, referring source, device type, and approximate location. No personally identifiable information is collected. Analytics data helps us create better content and improve the site experience.</p>
-    <p>Cookies: _ga, _ga_[ID] — Duration: up to 2 years — Provider: Google</p>
+    <h2>Third-Party Cookies and Services</h2>
+
+    <h3>Cloudflare Web Analytics</h3>
+    <p>We use Cloudflare Web Analytics to understand how visitors interact with our site. Cloudflare Web Analytics does not use cookies, does not track individual visitors, and does not collect personally identifiable information. It measures aggregate page views and performance metrics only.</p>
+    <p>Provider: Cloudflare — Cookies: none — <a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Learn more</a></p>
 
     <h3>Affiliate Tracking Cookies</h3>
-    <p>When you click an affiliate link (e.g., to Amazon), the retailer may place a cookie on your device to track the referral. This is how we earn a commission on qualifying purchases. These cookies are placed by the retailer, not by Cubical Golfer. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for more details.</p>
+    <p>When you click an affiliate link, the retailer may place a cookie on your device to track the referral. This is how we earn a commission on qualifying purchases. These cookies are placed by the retailer, not by Cubical Golfer.</p>
+    <p><strong>Amazon Associates:</strong> Amazon places cookies when you click an affiliate link. Duration: 24 hours (or 89 days if you add an item to cart). Provider: Amazon. <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496" target="_blank" rel="noopener">Amazon Privacy Policy</a></p>
+    <p><strong>Bushnell (via Impact):</strong> Impact Radius may place a tracking cookie when you click a Bushnell affiliate link. Duration: 30 days. Provider: Impact.</p>
+    <p><strong>LAB Golf / Vice Golf:</strong> Direct affiliate links to these retailers may use their own tracking cookies. Duration varies by retailer.</p>
+    <p>See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a> for more details on how affiliate links work.</p>
+
+    <h3>ConvertKit (Kit.com)</h3>
+    <p>If you subscribe to our email newsletter, ConvertKit (Kit.com) processes your email address and may place cookies for form functionality. Provider: ConvertKit. <a href="https://kit.com/privacy" target="_blank" rel="noopener">ConvertKit Privacy Policy</a></p>
 
     <h2>How to Manage Cookies</h2>
-    <p>You can control cookies through your browser settings. Most browsers allow you to: view which cookies are stored, delete all or specific cookies, block cookies from specific sites, and block all third-party cookies.</p>
-    <p>To opt out of Google Analytics specifically, install the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
-    <p>Note: disabling cookies may affect site functionality and your experience on other websites.</p>
+    <p>You can control cookies through your browser settings. Most browsers allow you to view which cookies are stored, delete all or specific cookies, block cookies from specific sites, and block all third-party cookies.</p>
+    <p>You can also use the cookie banner that appears on your first visit to accept or decline non-essential cookies. To reset your preference, clear your browser's localStorage for this site.</p>
+    <p>Note: disabling cookies may affect your experience on retailer websites when clicking affiliate links.</p>
 
     <h2>Changes to This Policy</h2>
-    <p>We may update this Cookie Policy when we add or remove cookies. Changes will be posted on this page with an updated date.</p>
+    <p>We may update this Cookie Policy when we add or remove third-party services. Changes will be posted on this page with an updated date.</p>
 
     <h2>Contact</h2>
     <p>Questions about cookies? Contact us at <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a>.</p>
