@@ -644,6 +644,13 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
   ],
+  'putters-shaky-hands': [
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
+    { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+    { slug: '/best-golf-clubs-slow-swing-speed/', label: 'Best Clubs for Slow Swing Speed' },
+    { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
+    { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
