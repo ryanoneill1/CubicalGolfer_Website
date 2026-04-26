@@ -1322,6 +1322,33 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Nike Air Max 90 G Spikeless Golf Shoes',
     benefits: ['Air Max cushioning — legendary comfort', 'Integrated traction pattern for wet and dry', 'Course-to-street versatility'],
   },
+  // ── New: Cubicle-to-Course Playbook products ──────────────────────────
+  'grip-trainer-steering-wheel': {
+    url: 'https://www.amazon.com/s?k=golf+grip+trainer+pressure&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$15',
+    label: 'See Current Price',
+    imgSrc: '/images/products/golf-pride-grip-aid.webp',
+    imgAlt: 'Golf Grip Pressure Trainer',
+    benefits: [
+      'Builds proper grip pressure muscle memory',
+      'Small enough for a car cupholder or desk drawer',
+      'Use at red lights, on calls, between meetings',
+    ],
+  },
+  'theraband-flexbar': {
+    url: 'https://www.amazon.com/s?k=TheraBand+FlexBar+golf+forearm&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$18',
+    label: 'See Current Price',
+    imgSrc: '/images/products/resistance-bands-golf.webp',
+    imgAlt: 'TheraBand FlexBar Forearm and Wrist Stretcher',
+    benefits: [
+      'Prevents golfer elbow (medial epicondylitis)',
+      'Warms up wrists and forearms in 2 minutes',
+      'Fits in a golf bag side pocket or desk drawer',
+    ],
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────

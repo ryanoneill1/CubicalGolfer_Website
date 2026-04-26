@@ -637,6 +637,13 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
     { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises for Golf' },
   ],
+  'office-to-course-playbook': [
+    { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf With a Job' },
+    { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
+    { slug: '/golf-fitness-office-golfer/', label: 'Office Golfer Fitness Routine' },
+    { slug: '/how-to-break-90/', label: 'How to Break 90' },
+    { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
