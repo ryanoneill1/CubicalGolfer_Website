@@ -297,7 +297,7 @@ export const AFFILIATE: Record<string, {
 
   // Srixon Soft Feel — search (dozen size variants)
   'srixon-soft-feel': {
-    url: 'https://www.amazon.com/s?k=Srixon+Soft+Feel+golf+balls+dozen&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CYDVBYQY/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$27/dozen',
     label: 'See Current Price',
@@ -323,7 +323,7 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Supersoft (mentioned in FAQ of balls page)
   'callaway-supersoft': {
-    url: 'https://www.amazon.com/s?k=Callaway+Supersoft+golf+balls&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0F2FSR89S/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$25/dozen',
     label: 'See Current Price',
@@ -421,7 +421,7 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Strata Complete Set — search (varies by piece count / gender)
   'callaway-strata': {
-    url: 'https://www.amazon.com/s?k=Callaway+Strata+complete+golf+set&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B07Q3B6FXR/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$249',
     label: 'See Current Price',
@@ -437,7 +437,7 @@ export const AFFILIATE: Record<string, {
 
   // TaylorMade RBZ Speed Lite — search (current model name varies by year)
   'taylormade-rbz-lite': {
-    url: 'https://www.amazon.com/s?k=TaylorMade+RBZ+Speed+Lite+complete+golf+set&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0BN9Z6V3L/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$499',
     label: 'See Current Price',
@@ -486,7 +486,7 @@ export const AFFILIATE: Record<string, {
 
   // FootJoy RainGrip (mentioned in accessories-50 page)
   'footjoy-raingrip': {
-    url: 'https://www.amazon.com/s?k=FootJoy+RainGrip+golf+gloves&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0BBGQ4KLT/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$16/pair',
     label: 'See Current Price',
@@ -576,7 +576,7 @@ export const AFFILIATE: Record<string, {
 
   // Alignment sticks 2-pack
   'alignment-sticks': {
-    url: 'https://www.amazon.com/s?k=golf+alignment+sticks+2+pack+training+aid&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B003FXMHX0/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$12',
     label: 'See Options on Amazon',
@@ -606,7 +606,7 @@ export const AFFILIATE: Record<string, {
 
   // Frogger Amphibian Golf Towel
   'frogger-amphibian-towel': {
-    url: 'https://www.amazon.com/s?k=Frogger+Amphibian+golf+towel&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B002UY0E7E/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$18',
     label: 'See Current Price',
@@ -616,7 +616,7 @@ export const AFFILIATE: Record<string, {
 
   // Putting mirror
   'putting-mirror': {
-    url: 'https://www.amazon.com/s?k=golf+putting+mirror+training+aid&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B00N1MY7PE/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$25',
     label: 'See Options on Amazon',
@@ -626,7 +626,7 @@ export const AFFILIATE: Record<string, {
 
   // Impact tape / face stickers
   'impact-tape': {
-    url: 'https://www.amazon.com/s?k=golf+impact+face+tape+stickers&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0040CNVYY/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$12',
     label: 'See Options on Amazon',
@@ -646,7 +646,7 @@ export const AFFILIATE: Record<string, {
 
   // Gustbuster Pro Series umbrella
   'gustbuster-umbrella': {
-    url: 'https://www.amazon.com/s?k=Gustbuster+Pro+Series+golf+umbrella&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B007S6EELQ/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$45',
     label: 'See Current Price',
@@ -660,7 +660,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── PUTTERS ───────────────────────────────────────────────────────────────
   'odyssey-white-hot-og': {
-    url: 'https://www.amazon.com/s?k=Odyssey+White+Hot+OG+putter&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B09BTCRLZH/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$199', label: 'See Current Price',
     imgSrc: '/images/products/odyssey-white-hot-og.webp',
     imgAlt: 'Odyssey White Hot OG Putter',
@@ -672,13 +672,13 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'scotty-cameron-phantom': {
-    url: 'https://www.amazon.com/s?k=Scotty+Cameron+Phantom+X+putter+2024&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CX4QKFRD/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$399', label: 'See Current Price',
     imgSrc: '/images/products/scotty-cameron-phantom.webp',
     imgAlt: 'Scotty Cameron Phantom X Putter',
   },
   'cleveland-hb-soft-milled': {
-    url: 'https://www.amazon.com/s?k=Cleveland+HB+Soft+Milled+putter&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CRW9B66C/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129', label: 'See Current Price',
     imgSrc: '/images/products/cleveland-hb-soft-milled.webp',
     imgAlt: 'Cleveland HB Soft Milled Putter',
@@ -690,7 +690,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'taylormade-spider-tour': {
-    url: 'https://www.amazon.com/s?k=TaylorMade+Spider+Tour+putter+2024&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CX4N55PH/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$349', label: 'See Current Price',
     imgSrc: '/images/products/taylormade-spider-tour.webp',
     imgAlt: 'TaylorMade Spider Tour Putter',
@@ -698,7 +698,7 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BAGS ─────────────────────────────────────────────────────────────
   'sun-mountain-25-plus': {
-    url: 'https://www.amazon.com/s?k=Sun+Mountain+2.5+Plus+carry+bag&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CSP7QLGR/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$249', label: 'See Current Price',
     imgSrc: '/images/products/sun-mountain-25-plus.webp',
     imgAlt: 'Sun Mountain 2.5+ Carry Golf Bag',
@@ -736,7 +736,7 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BALLS (additional) ───────────────────────────────────────────────
   'titleist-pro-v1x': {
-    url: 'https://www.amazon.com/s?k=Titleist+Pro+V1x+golf+balls+2025&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0BR2YZBK8/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$55/dozen', label: 'See Current Price',
     imgSrc: '/images/products/titleist-pro-v1x.webp',
     imgAlt: 'Titleist Pro V1x Golf Balls 2025',
@@ -750,7 +750,7 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF SHOES ────────────────────────────────────────────────────────────
   'footjoy-flex-xp': {
-    url: 'https://www.amazon.com/s?k=FootJoy+Flex+XP+golf+shoes&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CMLKNHCG/?tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$120', label: 'See Current Price',
     imgSrc: '/images/products/footjoy-flex-xp.webp',
     imgAlt: 'FootJoy Flex XP Golf Shoes',
@@ -760,12 +760,6 @@ export const AFFILIATE: Record<string, {
       'Lightweight cushioning ideal for 18-hole walks',
       'Versatile spikeless sole works on and off the course',
     ],
-  },
-  'ecco-biom-c4': {
-    url: 'https://www.amazon.com/s?k=ECCO+Biom+C4+golf+shoes&tag=cubicalgolfer-20',
-    retailer: 'Amazon', price: '~$220', label: 'See Current Price',
-    imgSrc: '/images/products/ecco-biom-c4.webp',
-    imgAlt: 'ECCO Biom C4 Golf Shoes',
   },
   'skechers-go-golf': {
     url: 'https://www.amazon.com/s?k=Skechers+Go+Golf+Pro+5+golf+shoes&tag=cubicalgolfer-20',
@@ -1012,7 +1006,7 @@ export const AFFILIATE: Record<string, {
 
   // ── New: apartment simulator, launch monitors, rain gear, desk exercises ──
   'spornia-spg-net': {
-    url: 'https://www.amazon.com/s?k=Spornia+SPG-7+golf+practice+net&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B07Y7SS11K/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$189',
     label: 'See Current Price',
@@ -1103,7 +1097,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'resistance-bands-golf': {
-    url: 'https://www.amazon.com/s?k=resistance+bands+golf+training+set&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B01AVDVHTI/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$25',
     label: 'See Current Price',
@@ -1197,7 +1191,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── New: 7 buying guide articles (putting, LH, slice aids, nets, shoes, slow swing, speed trainers) ──
   'putt-a-bout-putting-green': {
-    url: 'https://www.amazon.com/s?k=Putt-A-Bout+putting+green+mat&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0002GOV9S/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$45',
     label: 'See Current Price',
@@ -1206,7 +1200,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['9-foot roll with ball return for repetitive practice', 'Non-skid rubber backing on any floor', 'Folds flat for storage under a desk'],
   },
   'sklz-accelerator-putting-mat': {
-    url: 'https://www.amazon.com/s?k=SKLZ+Accelerator+putting+mat&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B002AOLRHC/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$40',
     label: 'See Current Price',
@@ -1233,7 +1227,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['Tour-spec stimp speed surface', 'Printed training zones for distance control', 'Used by PGA Tour players'],
   },
   'lag-shot-7-iron': {
-    url: 'https://www.amazon.com/s?k=Lag+Shot+7+iron+swing+trainer&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B07Z7LXHRT/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$119',
     label: 'See Current Price',
@@ -1242,7 +1236,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['Whippy shaft forces proper swing sequence', 'Eliminates casting and over-the-top move', 'Hit real balls — not just an air drill'],
   },
   'eyeline-speed-trap': {
-    url: 'https://www.amazon.com/s?k=EyeLine+Speed+Trap+2.0+golf&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B079FMMWGL/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$40',
     label: 'See Current Price',
@@ -1251,7 +1245,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['Physical gate prevents over-the-top swing path', 'Instant feedback on every swing', 'Used by PGA instructors worldwide'],
   },
   'superspeed-golf-set': {
-    url: 'https://www.amazon.com/s?k=SuperSpeed+Golf+training+system&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B07PQSHFYN/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$199',
     label: 'See Current Price',
@@ -1550,7 +1544,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── New: Golf grips for Page 7 ────────────────────────────────────────
   'golf-pride-mcc-plus4': {
-    url: 'https://www.amazon.com/s?k=Golf+Pride+MCC+Plus4+grip&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B07BDPC5TN/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$13/grip',
     label: 'See Current Price',
@@ -1576,7 +1570,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lamkin-crossline-cord': {
-    url: 'https://www.amazon.com/s?k=Lamkin+Crossline+Cord+golf+grip&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B002M3XPKG/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$8/grip',
     label: 'See Current Price',
@@ -1589,7 +1583,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'winn-dri-tac': {
-    url: 'https://www.amazon.com/s?k=Winn+Dri-Tac+golf+grip&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B001D5LFYQ/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$8/grip',
     label: 'See Current Price',
