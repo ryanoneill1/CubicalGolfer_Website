@@ -96,7 +96,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-rangefinder-under-200/',  label: 'Best Rangefinders Under $200' },
   ],
   'rangefinder-under-200': [
-    { slug: '/best-golf-rangefinder-under-150/',  label: 'Best Rangefinders Under $150' },
+    { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinder Under $200' },
     { slug: '/blue-tees-vs-bushnell-rangefinder/', label: 'Blue Tees vs Bushnell' },
     { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinder for Seniors' },
   ],
@@ -119,11 +119,6 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/do-i-need-slope-on-rangefinder/',     label: 'Do You Actually Need Slope?' },
     { slug: '/best-golf-rangefinders-2026/',        label: 'Best Rangefinders with Slope 2026' },
     { slug: '/how-to-use-golf-rangefinder/',        label: 'How to Use a Rangefinder' },
-  ],
-  'best-golf-rangefinder-under-150': [
-    { slug: '/best-golf-rangefinder-under-200/',    label: 'Best Rangefinders Under $200' },
-    { slug: '/blue-tees-vs-bushnell-rangefinder/',  label: 'Blue Tees vs Bushnell' },
-    { slug: '/is-a-rangefinder-worth-it/',          label: 'Is a Rangefinder Worth It?' },
   ],
   'blue-tees-vs-bushnell-rangefinder': [
     { slug: '/best-golf-rangefinders-2026/',        label: 'Best Golf Rangefinders 2026' },
@@ -192,7 +187,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/titleist-pro-v1-vs-pro-v1x/',        label: 'Pro V1 vs Pro V1x Comparison' },
-    { slug: '/best-golf-balls-weekend-golfers/',    label: 'Best Balls for Weekend Golfers' },
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
   ],
 
   // ── Fix previously orphaned pages ─────────────────────────────────────────────
@@ -229,14 +224,14 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Beginner cluster ──────────────────────────────────────────────────────────
   'golf-for-beginners-hub': [
-    { slug: '/best-beginner-golf-club-sets/',       label: 'Best Beginner Golf Club Sets' },
+    { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
     { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
     { slug: '/golf-course-etiquette/',             label: 'Golf Course Etiquette Guide' },
   ],
   'tips-beginners': [
     { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Complete Guide' },
     { slug: '/golf-course-etiquette/',              label: 'Golf Course Etiquette' },
-    { slug: '/best-beginner-golf-club-sets/',       label: 'Best Beginner Golf Club Sets' },
+    { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
   ],
   'beginner-sets': [
     { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Start Here' },
@@ -266,7 +261,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
   ],
   'how-to-stop-3-putting': [
-    { slug: '/how-to-improve-putting/',             label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
@@ -287,7 +282,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
   ],
   'how-to-chip': [
-    { slug: '/how-to-improve-putting/',             label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
   ],
@@ -332,7 +327,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'drivers-under-200': [
     { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
-    { slug: '/best-beginner-golf-club-sets/',        label: 'Best Beginner Club Sets' },
+    { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
   ],
 
   // ── Shoes cluster ──────────────────────────────────────────────────────────
@@ -344,7 +339,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Putters cluster ────────────────────────────────────────────────────────
   'golf-putters': [
-    { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
     { slug: '/best-putter-high-handicapper/',         label: 'Best Putter for High Handicappers' },
   ],
@@ -421,7 +416,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-desk-accessories-office/',        label: 'Best Golf Desk Accessories' },
   ],
   'practice-drills-home': [
-    { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
     { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
@@ -430,12 +425,12 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'morning-practice-routine': [
     { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home (15 Min)' },
     { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
-    { slug: '/how-to-improve-putting/',              label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/golf-fitness-office-golfer/',           label: 'Golf Fitness for Office Workers' },
     { slug: '/how-to-break-90/',                     label: 'How to Break 90 This Season' },
   ],
   'beginner-set-under-500': [
-    { slug: '/best-beginner-golf-club-sets/',         label: 'Best Beginner Golf Club Sets' },
+    { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
     { slug: '/golf-for-beginners/',                  label: 'Golf for Beginners Guide' },
     { slug: '/best-golf-irons-high-handicapper/',    label: 'Best Irons for High Handicappers' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
@@ -480,7 +475,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'ball-15-handicap': [
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-    { slug: '/golf-ball-compression-database/', label: 'Compression Database (35 Balls)' },
+    { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
   'driver-high-handicapper': [
@@ -490,14 +485,6 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 by Swing Speed' },
     { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
     { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
-  ],
-  'compression-database': [
-    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-    { slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' },
-    { slug: '/best-golf-ball-15-handicap/', label: 'Best Ball for 15 Handicap' },
-    { slug: '/pro-v1-vs-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
-    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym Driver Comparison' },
-    { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
   'budget-launch-monitors': [
     { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' },
@@ -607,7 +594,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   // ── 7 new buying guide clusters ───────────────────────────────────────
   'indoor-putting-green': [
-    { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
     { slug: '/golf-desk-accessories-office/', label: 'Golf Desk Accessories' },
@@ -638,7 +625,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'clubs-slow-swing-speed': [
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
-    { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Sets' },
+    { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
     { slug: '/best-swing-speed-trainer-over-40/', label: 'Swing Speed Trainers Over 40' },
   ],
   'swing-speed-trainer-over-40': [
@@ -656,7 +643,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'putters-shaky-hands': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
-    { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-clubs-slow-swing-speed/', label: 'Best Clubs for Slow Swing Speed' },
     { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
     { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
@@ -711,7 +698,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'putter-length-guide': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
-    { slug: '/how-to-improve-putting/', label: 'How to Improve Your Putting' },
+    { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade Putter' },
   ],
   'mallet-vs-blade': [
