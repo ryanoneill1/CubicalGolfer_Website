@@ -284,7 +284,7 @@ export function productSchema(opts: {
     '@type':       'Product',
     name:          opts.name,
     description:   opts.description,
-    image:         opts.image ?? `https://www.cubicalgolfer.com/images/products/placeholder.svg`,
+    image:         opts.image ?? `https://www.cubicalgolfer.com/images/og-image.jpg`,
     brand:         opts.brand ? { '@type': 'Brand', name: opts.brand } : undefined,
     offers: {
       '@type':      'Offer',
@@ -450,7 +450,7 @@ export function buyingGuideProductSchema(
     '@type': 'Product',
     name: section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim(),
     description: section.body?.slice(0, 200) || '',
-    image: productImage || `${DOMAIN}/images/products/placeholder.webp`,
+    image: productImage || `${DOMAIN}/images/og-image.jpg`,
     // aggregateRating only emitted when we have real review data (section.rating)
     aggregateRating: section.rating ? {
       '@type': 'AggregateRating',
