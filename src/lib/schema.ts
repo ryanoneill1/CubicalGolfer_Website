@@ -483,6 +483,7 @@ export function buyingGuideProductSchema(
       url: affiliateUrl,
       priceCurrency: 'USD',
       price: numericPrice,
+      availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
         name: affiliateRetailer || 'Amazon.com',
