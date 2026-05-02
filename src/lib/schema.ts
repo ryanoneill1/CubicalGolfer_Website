@@ -9,6 +9,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Article, Comparison, GolfCity, FAQItem } from '../data/types';
+import { AFFILIATE } from '../data/affiliate-links';
 
 const DOMAIN    = 'https://www.cubicalgolfer.com';
 const LOGO_URL  = `${DOMAIN}/images/cubicalgolfer-logo.jpg`;
@@ -400,6 +401,14 @@ export function reviewSchema(article: Article): object | null {
     ? `${DOMAIN}${article.thumbnail}`
     : `${DOMAIN}/images/og-image.png`;
 
+  // Look up affiliate data for offers
+  const affKey = (article as any).quickAnswerProduct || '';
+  const aff = (AFFILIATE as any)[affKey];
+  const priceRaw = aff?.price || '';
+  // Extract first numeric price (handles "~$179 + $99/yr", "~$55/dozen", etc.)
+  const priceMatch = priceRaw.match(/\$?([\d,]+(?:\.\d{2})?)/);
+  const priceNum = priceMatch ? priceMatch[1].replace(/,/g, '') : '';
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Review',
@@ -409,6 +418,16 @@ export function reviewSchema(article: Article): object | null {
       name: productName,
       brand: { '@type': 'Brand', name: brand },
       image: image,
+      ...(aff ? {
+        offers: {
+          '@type': 'Offer',
+          url: aff.url,
+          priceCurrency: 'USD',
+          price: priceNum,
+          availability: 'https://schema.org/InStock',
+          seller: { '@type': 'Organization', name: aff.retailer || 'Amazon' },
+        },
+      } : {}),
     },
     reviewRating: {
       '@type': 'Rating',
