@@ -10,6 +10,7 @@ import type { Comparison } from './types';
 export const COMPARISONS: Comparison[] = [
   {
     slug:        'bushnell-tour-v6-vs-precision-pro-nx9',
+    thumbnail: '/images/thumbnails/compare-bushnell-tour-v6-vs-precision-pro-nx9.webp',
     title:       'Bushnell Tour V6 vs Precision Pro NX9 HD (2026)',
     description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — tested side-by-side over 12 rounds. Which rangefinder gives weekend golfers more for their money in 2026?',
     productA:    'bushnell-tour-v6',
@@ -42,6 +43,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'garmin-approach-s62-vs-shot-scope-v5',
+    thumbnail: '/images/thumbnails/compare-garmin-approach-s62-vs-shot-scope-v5.webp',
     title:       'Garmin S62 vs Shot Scope V5: Best GPS Watch 2026',
     description: 'Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in 2026?',
     productA:    'garmin-s62',
@@ -74,6 +76,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'arccos-vs-shot-scope',
+    thumbnail: '/images/thumbnails/compare-arccos-vs-shot-scope.webp',
     title:       'Arccos Caddie vs Shot Scope V5: Which to Buy?',
     description: 'Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscription cost, and data depth compared for weekend golfers in 2026. Honest verdict inside.',
     productA:    'arccos-caddie',
@@ -92,6 +95,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'callaway-paradym-vs-taylormade-qi35',
+    thumbnail: '/images/thumbnails/compare-callaway-paradym-vs-taylormade-qi35.webp',
     title:       'Qi35 Max vs Paradym Ai Smoke — 2026 Driver Showdown',
     description: 'Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed, forgiveness, and mis-hit data compared. See which 2026 driver wins for weekend golfers.',
     productA:    'callaway-paradym-max',
@@ -136,6 +140,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug: 'garmin-approach-s62-vs-s42',
+    thumbnail: '/images/thumbnails/compare-garmin-approach-s62-vs-s42.webp',
     title: 'Garmin S62 vs S42: Which GPS Watch to Buy?',
     description: 'Garmin S62 vs S42: both are excellent GPS golf watches, but the S62 costs $150 more. We break down the exact differences and who should pay for the upgrade.',
     productA: 'garmin-s62',
@@ -160,6 +165,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug: 'skytrak-vs-garmin-r10',
+    thumbnail: '/images/thumbnails/compare-skytrak-vs-garmin-r10.webp',
     title: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?',
     description: 'SkyTrak+ ($2,995) vs Garmin R10 ($599) — both are home golf simulators, but they are built for different budgets and goals. We break down the exact differences.',
     productA: 'skytrak-plus',
@@ -179,6 +185,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug:          'blue-tees-vs-bushnell-tour-v6',
+    thumbnail: '/images/thumbnails/compare-blue-tees-vs-bushnell-tour-v6.webp',
     title:         'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift',
     description:   'Blue Tees vs Bushnell rangefinder: we tested both over 30+ rounds. Accuracy is identical — the real differences are optics, vibration feedback, and warranty.',
     productA:      'blue-tees-s3-max',
@@ -203,6 +210,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug:          'garmin-s12-vs-bushnell-ion-elite',
+    thumbnail: '/images/thumbnails/compare-garmin-s12-vs-bushnell-ion-elite.webp',
     title:         'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch',
     description:   'Garmin Approach S12 vs Bushnell Ion Elite: the two best GPS golf watches under $200. We tested both on course — here is which to buy and why.',
     productA:      'garmin-s62',
@@ -230,6 +238,7 @@ export const COMPARISONS: Comparison[] = [
   // ── Driver cluster comparisons ────────────────────────────────────────────
   {
     slug:        'cobra-aerojet-max-vs-ping-g430-max',
+    thumbnail: '/images/thumbnails/compare-cobra-aerojet-max-vs-ping-g430-max.webp',
     title:       'Cobra Aerojet Max vs Ping G430 Max Driver (2026)',
     description: 'Cobra Aerojet Max vs Ping G430 Max — forgiveness, distance, and value compared. Which mid-range driver is best for weekend golfers?',
     productA:    'cobra-aerojet-max',
@@ -253,6 +262,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'cleveland-launcher-xl2-vs-cobra-aerojet-max',
+    thumbnail: '/images/thumbnails/compare-cleveland-launcher-xl2-vs-cobra-aerojet-max.webp',
     title:       'Cleveland Launcher XL2 vs Cobra Aerojet Max (2026)',
     description: 'Cleveland Launcher XL2 vs Cobra Aerojet Max — lightweight forgiveness vs mid-range power. Which driver is best for seniors and slow swing speeds?',
     productA:    'cleveland-xl2',
@@ -280,6 +290,7 @@ export const COMPARISONS: Comparison[] = [
   // ── Putter cluster comparisons ────────────────────────────────────────────
   {
     slug:        'odyssey-stroke-lab-vs-scotty-cameron-phantom',
+    thumbnail: '/images/thumbnails/compare-odyssey-stroke-lab-vs-scotty-cameron-phantom.webp',
     title:       'Odyssey Stroke Lab vs Scotty Cameron Phantom X (2026)',
     description: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X — feel, performance, and value compared. Which mid-range putter should you buy?',
     productA:    'odyssey-stroke-lab',
@@ -303,6 +314,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:        'lab-golf-df3-vs-odyssey-two-ball-eleven',
+    thumbnail: '/images/thumbnails/compare-lab-golf-df3-vs-odyssey-two-ball-eleven.webp',
     title:       'LAB Golf DF3 vs Odyssey Two Ball Eleven (2026)',
     description: 'LAB Golf DF3 vs Odyssey Two Ball Eleven — Lie Angle Balanced vs high MOI alignment mallet. Which putter is best for inconsistent putters?',
     productA:    'lab-df3',
