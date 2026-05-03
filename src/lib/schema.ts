@@ -416,6 +416,7 @@ export function reviewSchema(article: Article): object | null {
     itemReviewed: {
       '@type': 'Product',
       name: productName,
+      description: reviewBody.slice(0, 200),
       brand: { '@type': 'Brand', name: brand },
       image: image,
       ...(aff ? {
