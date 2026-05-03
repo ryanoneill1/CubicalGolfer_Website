@@ -190,31 +190,35 @@ export interface ComparisonProduct {
 }
 
 export function comparisonProductsSchema(products: ComparisonProduct[]): object[] {
-  return products.map(p => ({
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: p.name,
-    description: p.description,
-    image: p.image ? `${DOMAIN}${p.image}` : OG_IMAGE,
-    brand: { '@type': 'Brand', name: p.brand },
-    offers: {
-      '@type': 'Offer',
-      url: p.url,
-      priceCurrency: 'USD',
-      price: (p.price ?? '').replace(/[^0-9.]/g, ''),
-      availability: 'https://schema.org/InStock',
-      seller: { '@type': 'Organization', name: p.retailer },
-    },
-    ...(p.rating ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: p.rating,
-        reviewCount: p.ratingCount ?? 50,
-        bestRating: 5,
-        worstRating: 1,
+  return products.map(p => {
+    const priceMatch = (p.price ?? '').match(/\$?([\d,]+(?:\.\d{2})?)/);
+    const numericPrice = priceMatch ? priceMatch[1].replace(/,/g, '') : '';
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: p.name,
+      description: p.description,
+      image: p.image ? `${DOMAIN}${p.image}` : OG_IMAGE,
+      brand: { '@type': 'Brand', name: p.brand },
+      offers: {
+        '@type': 'Offer',
+        url: p.url,
+        priceCurrency: 'USD',
+        ...(numericPrice ? { price: numericPrice } : {}),
+        availability: 'https://schema.org/InStock',
+        seller: { '@type': 'Organization', name: p.retailer },
       },
-    } : {}),
-  }));
+      ...(p.rating ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: p.rating,
+          reviewCount: p.ratingCount ?? 50,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      } : {}),
+    };
+  });
 }
 
 // ── Local page schema ─────────────────────────────────────────────────────────
@@ -483,7 +487,7 @@ export function buyingGuideProductSchema(
       '@type': 'Offer',
       url: affiliateUrl,
       priceCurrency: 'USD',
-      price: numericPrice,
+      ...(numericPrice ? { price: numericPrice } : {}),
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',

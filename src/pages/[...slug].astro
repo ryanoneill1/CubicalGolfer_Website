@@ -301,7 +301,7 @@ if (isBuyingGuide) {
     if (!aff?.url) continue;
     // FIX: Pass price, retailer, image — required by Google Product schema
     schemas.push(buyingGuideProductSchema(
-      section, aff.url, aff.price, aff.retailer,
+      section, aff.url, section.price || aff.price, aff.retailer,
       aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined
     ));
   }
