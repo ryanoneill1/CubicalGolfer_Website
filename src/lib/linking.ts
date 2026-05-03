@@ -27,7 +27,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
   'golf-tech': [
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
     { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Launch Monitors 2026' },
-    { slug: '/best-golf-apps-handicap-tracking/',  label: 'Best Golf Apps for Handicap Tracking' },
+    { slug: '/best-golf-apps/',  label: 'Best Golf Apps' },
     { slug: '/compare/skytrak-vs-garmin-r10/',     label: 'SkyTrak+ vs Garmin R10' },
     { slug: '/apartment-golf-simulator-setup/',    label: 'Apartment Simulator Setup Guide' },
     { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
@@ -207,7 +207,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
   ],
   'handicap': [
-    { slug: '/average-golf-handicap-weekend-golfer/', label: 'Average Handicap for Weekend Golfers' },
+    { slug: '/average-golf-handicap/', label: 'Average Golf Handicap' },
     { slug: '/how-to-lower-golf-handicap/',         label: 'How to Lower Your Golf Handicap' },
     { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners Guide' },
   ],
@@ -361,11 +361,6 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/',                label: 'Best Golf Balls 2026' },
     { slug: '/golf-ball-compression-chart/',         label: 'Golf Ball Compression Chart' },
     { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
-  ],
-  'arccos-vs-shot-scope': [
-    { slug: '/best-golf-swing-analyzers/',           label: 'Best Golf Swing Analyzers 2026' },
-    { slug: '/best-golf-gps-watches/',               label: 'Best Golf GPS Watches 2026' },
-    { slug: '/best-ai-golf-training-tools/',         label: 'Best AI Golf Training Tools' },
   ],
 
   // ── Launch monitor cluster ─────────────────────────────────────────────────
