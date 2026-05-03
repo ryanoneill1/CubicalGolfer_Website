@@ -45,7 +45,7 @@ for weekend golfers who want data-driven improvement without a lesson budget.</p
                 'art-badge tag-rev'
               }>{a.tag}</span>
               {(a as any).thumbnail ? (
-                <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async"
+                <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async" width="400" height="260"
                   class="art-thumb__img" onerror="this.style.display='none'" />
               ) : (
                 <span aria-hidden="true">{a.emoji}</span>

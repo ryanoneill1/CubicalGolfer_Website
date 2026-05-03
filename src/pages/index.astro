@@ -221,7 +221,7 @@ const TAG_CLASSES: Record<string, string> = {
             <span class={`art-badge ${TAG_CLASSES[a.tag] || 'tag-buy'}`}>{a.tag}</span>
             {(a as any).thumbnail ? (
               <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async"
-                class="art-thumb__img" onerror="this.style.display='none'" />
+                width="400" height="260" class="art-thumb__img" onerror="this.style.display='none'" />
             ) : (
               <span aria-hidden="true">{a.emoji}</span>
             )}
