@@ -85,10 +85,9 @@ export function organizationSchema(): object {
     // Each real URL strengthens Google's entity understanding of Cubical Golfer.
     sameAs: [
       'https://www.pinterest.com/cubicalgolfer',
+      'https://x.com/CubicalGolfer',
       // 'https://www.linkedin.com/company/cubicalgolfer',  // TODO: create
-      // 'https://x.com/cubicalgolfer',                     // TODO: create
       // 'https://www.youtube.com/@cubicalgolfer',           // TODO: create
-      // 'https://www.reddit.com/user/cubicalgolfer',        // TODO: create
     ],
   };
 }

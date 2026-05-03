@@ -15,7 +15,30 @@ const meta = {
     { label: 'About', href: '/about/' },
   ],
 };
-const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  mainEntity: {
+    '@type': 'Person',
+    '@id': 'https://www.cubicalgolfer.com/about/#author',
+    name: 'Ryan O.',
+    alternateName: 'Cubical Golfer',
+    url: 'https://www.cubicalgolfer.com/about/',
+    jobTitle: 'Founder & Lead Tester, Cubical Golfer',
+    description: 'Weekend golfer who tests every product with his own money. 12-handicap, 14 years playing, 25-40 rounds per year in Chicago.',
+    image: 'https://www.cubicalgolfer.com/images/ryan-author-photo.jpg',
+    email: 'hello@cubicalgolfer.com',
+    sameAs: [
+      'https://x.com/CubicalGolfer',
+    ],
+    knowsAbout: [
+      'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
+      'Golf irons', 'Golf drivers', 'Golf balls', 'Golf putters',
+      'Golf swing improvement', 'Golf equipment testing',
+    ],
+  },
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs), personSchema];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="about">
@@ -98,17 +121,17 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
           </p>
         </div>
 
-        <!-- TODO: Populate "Where to Find Me" with real profile URLs (Part B assets required) -->
-        <!--
         <h2 style="margin-top:40px">Where to Find Me</h2>
         <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px;">
-          <a href="https://linkedin.com/in/...">LinkedIn</a>
-          <a href="https://x.com/cubicalgolfer">X / Twitter</a>
-          <a href="https://youtube.com/@cubicalgolfer">YouTube</a>
-          <a href="https://reddit.com/user/cubicalgolfer">Reddit</a>
-          <a href="https://pinterest.com/cubicalgolfer">Pinterest</a>
+          <a href="https://x.com/CubicalGolfer" rel="me noopener" target="_blank"
+             style="display:inline-flex;align-items:center;gap:6px;background:var(--green);color:#fff;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;">
+            𝕏 Follow on X
+          </a>
+          <a href="mailto:hello@cubicalgolfer.com"
+             style="display:inline-flex;align-items:center;gap:6px;background:var(--cream-dark);color:var(--green);padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;border:1px solid var(--green);">
+            ✉️ hello@cubicalgolfer.com
+          </a>
         </div>
-        -->
       </div>
 
       <div>
