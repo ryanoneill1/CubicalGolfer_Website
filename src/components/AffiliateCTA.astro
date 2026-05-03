@@ -15,6 +15,7 @@ interface Props {
   disclosure?: boolean;
   dateChecked?: string;
   isWinner?: boolean;
+  golfGalaxyUrl?: string;
 }
 
 const {
@@ -28,6 +29,7 @@ const {
   disclosure = false,
   dateChecked = '',
   isWinner = false,
+  golfGalaxyUrl = '',
 } = Astro.props;
 
 const btnText = `${price} at ${retailer} — Check Today's Price →`;
@@ -50,6 +52,17 @@ const dateLabel = dateChecked
   >
     <span class="aff-cta__btn-text">{btnText}</span>
   </a>
+  {golfGalaxyUrl && (
+    <a
+      href={golfGalaxyUrl}
+      class="aff-cta__btn aff-cta__btn--gg"
+      target="_blank"
+      rel="nofollow noopener sponsored"
+      aria-label={`Check price for ${name} at Golf Galaxy`}
+    >
+      <span class="aff-cta__btn-text">Also at Golf Galaxy →</span>
+    </a>
+  )}
   <p class="aff-cta__meta">{dateLabel}</p>
   {disclosure && (
     <p class="aff-cta__disclosure">
@@ -96,6 +109,16 @@ const dateLabel = dateChecked
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(0,0,0,.15);
 }
+.aff-cta__btn--gg {
+  background: #fff !important;
+  color: #1E3A28 !important;
+  border: 2px solid #1E3A28;
+  padding: 12px 28px;
+}
+.aff-cta__btn--gg:hover {
+  background: #f0f7f2 !important;
+}
+.aff-cta__btn--gg .aff-cta__btn-text { font-size: 13px; font-weight: 700; }
 .aff-cta__btn-text { font-size: 15px; font-weight: 800; line-height: 1.3; }
 
 /* Meta line */

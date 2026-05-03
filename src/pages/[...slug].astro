@@ -662,6 +662,7 @@ if (isBuyingGuide) {
             <AffiliateCTA
               url={aff.url} price={aff.price} name={section.h2}
               retailer={aff.retailer} label={aff.label}
+              golfGalaxyUrl={(aff as any).golfGalaxyUrl || ''}
               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
               disclosure={true}
               dateChecked={article.dateModified}
