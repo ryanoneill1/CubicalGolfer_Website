@@ -3786,7 +3786,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Why most golfers over-estimate their iron distance',
         body: 'Two reasons. First, golfers remember their best shot, not their average. You hit a 7 iron 160 yards once on a firm fairway with a tailwind — that becomes your "distance." Second, there is no automatic way to track where your ball lands unless you are using a GPS tracking system. The fix: use a launch monitor at the range or install Arccos sensors for automatic shot tracking.',
-        affiliateKey: 'arccos-caddie-sensors',
       },
       {
         h2: 'How to find your real 7 iron distance',
@@ -3795,7 +3794,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'How to add distance to your 7 iron',
         body: 'Three evidence-based methods: (1) Strike quality — consistently hitting the center of the face adds 10–15 yards vs toe or heel misses. Impact tape shows you where you are actually striking. (2) Shaft flex — a shaft that is too stiff for your swing speed costs distance. Get a fitting. (3) Attack angle — hitting down on the ball rather than scooping it adds compression and distance.',
-        affiliateKey: 'impact-tape',
       },
     ],
     faq: [
@@ -3848,12 +3846,10 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Short game improvement has the highest ROI',
         body: 'A 20 handicap golfer who eliminates 3-putts and gets up-and-down 25% of the time instead of 0% will drop 3–4 strokes per round without changing a single full swing. Invest 50% of your practice time in putting and chipping. Specifically: practice 6-foot putts until you make 9/10 consistently. Practice bump-and-run chips from 10 yards with a 9-iron.',
-        affiliateKey: 'putting-mirror',
       },
       {
         h2: 'Equipment changes that help vs hurt',
         body: 'New irons will help if you are currently gaming blades or an old set with the wrong shaft flex. A new driver will not help unless your current one is more than 7 years old. A new putter is worth considering if you 3-putt more than 3 times per round — the putter is used more than any other club and old putters do not wear out, but fit matters.',
-        affiliateKey: 'odyssey-white-hot-og',
       },
     ],
     faq: [
@@ -3902,7 +3898,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Cause 2: Over-the-top swing path',
         body: 'An over-the-top swing (club comes from outside the target line on the downswing) produces a slice when combined with an open face. Fix: place an alignment stick 6 inches outside your ball during range sessions. Practice swinging without hitting the stick — this forces an inside-out path. Do not try to fix this without first checking your grip.',
-        affiliateKey: 'alignment-sticks',
       },
       {
         h2: 'Cause 3: Early extension',
@@ -3963,7 +3958,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Cause 3: Ball too far forward in stance',
         body: 'For irons, ball position should be in the center to slightly forward of center. If the ball is too far forward (toward your lead foot), the swing arc bottoms out before reaching it. Fix: place an alignment stick across your feet at setup and check that your ball is in the center of your stance for a 7 iron.',
-        affiliateKey: 'alignment-sticks',
       },
       {
         h2: 'Drill: The tee in the ground drill',
@@ -7044,7 +7038,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Exercise 1: Seated Thoracic Rotation', body: "Sit in your desk chair with feet flat. Cross your arms over your chest. Rotate your upper body as far left as you can without moving your hips — hold 5 seconds. Return to center. Repeat right. Do 10 reps each side. This targets the exact range of motion you need for a full backswing. Most desk-job golfers have lost 20-30 degrees of thoracic rotation — this exercise restores it over 2-3 weeks." },
       { h2: 'Exercise 2: Desk Hip Opener', body: "Stand up. Place one foot on your desk chair seat (or a low table). Push your hips forward gently until you feel a stretch in the front of your standing leg. Hold 30 seconds. Switch sides. Do 3 reps each side. Tight hip flexors prevent proper hip rotation on the downswing — this is the number one physical cause of the over-the-top move that produces a slice." },
       { h2: 'Exercise 3: Doorframe Pec Stretch', body: "Stand in a doorframe. Place your forearm against the frame at shoulder height, elbow at 90 degrees. Step through the door until you feel a stretch across your chest. Hold 30 seconds. Switch arms. Do 3 reps each side. A tight chest pulls your shoulders forward and restricts your backswing length — this stretch opens up your shoulder turn." },
-      { h2: 'Exercise 4: Seated Core Twist With Band', badge: 'KEY EXERCISE', body: "Sit in your chair. Loop a resistance band around a desk leg or door handle at chest height. Hold the band with both hands, arms extended. Rotate away from the anchor point using only your core — do not pull with your arms. Do 15 reps each direction. This builds the rotational power that translates directly to club head speed. After 4 weeks I gained 3 mph of club head speed from this exercise alone.", affiliateKey: 'resistance-bands-golf' },
+      { h2: 'Exercise 4: Seated Core Twist With Band', badge: 'KEY EXERCISE', body: "Sit in your chair. Loop a resistance band around a desk leg or door handle at chest height. Hold the band with both hands, arms extended. Rotate away from the anchor point using only your core — do not pull with your arms. Do 15 reps each direction. This builds the rotational power that translates directly to club head speed. After 4 weeks I gained 3 mph of club head speed from this exercise alone." },
       { h2: 'Exercise 5: Standing Hip Hinge', body: "Stand with feet shoulder-width apart. Place your hands behind your head. Push your hips back while keeping your back flat — like you are closing a car door with your butt. Go until you feel a stretch in your hamstrings. Return to standing. Do 15 reps. This teaches the hip-hinge movement pattern that is the foundation of a proper golf downswing — getting into your lead hip rather than sliding or spinning." },
       { h2: 'Exercise 6: Wrist and Forearm Circles', body: "Extend both arms in front of you. Make slow circles with your wrists — 15 clockwise, 15 counter-clockwise. Then flex your wrists up and down, holding each position for 5 seconds. This prevents golfer elbow (medial epicondylitis) which is common in desk-job golfers who grip a mouse all day and then grip a club on weekends." },
       { h2: 'Exercise 7: Chair Glute Activation', body: "Sit in your chair. Squeeze your glutes as hard as you can for 10 seconds. Release. Repeat 10 times. This sounds absurd but sitting all day literally deactivates your glutes — they forget how to fire. Dead glutes mean no lower body power in your swing, which forces your upper body to compensate with an over-the-top move. Reactivating them is the simplest change with the biggest impact." },
