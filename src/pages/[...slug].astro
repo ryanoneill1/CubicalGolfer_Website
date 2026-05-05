@@ -431,7 +431,7 @@ if (isBuyingGuide) {
     })()}
 
     {/* INTRO */}
-    <div class="intro-box"><p>{article.intro}</p></div>
+    <div class="intro-box"><p set:html={article.intro} /></div>
 
     {/* UPDATE LOG — collapsible changelog */}
     {(article as any).updateLog && (article as any).updateLog.length > 0 && (
@@ -588,7 +588,7 @@ if (isBuyingGuide) {
             );
           })()}
 
-          {section.body && section.body.trim() && <p>{section.body}</p>}
+          {section.body && section.body.trim() && <div class="section-body" set:html={section.body} />}
 
           {/* Inline section image — for editorial/lifestyle images in article body */}
           {(section as any).sectionImage && (() => {
@@ -689,7 +689,7 @@ if (isBuyingGuide) {
           <div class="who-buy">
             <span class="who-label">Buy if you…</span>
             <ul>
-              {article.whoFor.map(item => <li>{item}</li>)}
+              {article.whoFor.map(item => <li set:html={item} />)}
             </ul>
           </div>
         )}
@@ -697,7 +697,7 @@ if (isBuyingGuide) {
           <div class="who-skip">
             <span class="who-label">Skip if you…</span>
             <ul>
-              {article.whoSkip.map(item => <li>{item}</li>)}
+              {article.whoSkip.map(item => <li set:html={item} />)}
             </ul>
           </div>
         )}
