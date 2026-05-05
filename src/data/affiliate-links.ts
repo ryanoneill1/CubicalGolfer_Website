@@ -1386,13 +1386,11 @@ export const AFFILIATE: Record<string, {
     ],
   },
   // ── New: Putters for shaky hands / older golfers ──────────────────────
-  // NOTE: LAB Golf sells direct only. Links go to labgolf.com with rel="noopener" (no sponsored).
-  // <!-- TODO: apply for LAB Golf affiliate program -->
   'lab-golf-df3': {
-    url: 'https://labgolf.com/products/df3',
-    retailer: 'LAB Golf (Direct)',
+    url: 'https://www.amazon.com/s?k=LAB+Golf+DF3+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$449',
-    label: 'See at LAB Golf',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/lab-golf-df3.webp',
     imgAlt: 'L.A.B. Golf DF3 Zero-Torque Putter',
     benefits: [
@@ -1402,10 +1400,10 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-df3i': {
-    url: 'https://labgolf.com/products/df3i',
-    retailer: 'LAB Golf (Direct)',
+    url: 'https://www.amazon.com/s?k=LAB+Golf+DF3i+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$469',
-    label: 'See at LAB Golf',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/lab-golf-df3i.webp',
     imgAlt: 'LAB Golf DF3i putter',
     benefits: [
@@ -1415,10 +1413,10 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-mezz1-max': {
-    url: 'https://labgolf.com/products/mezz-1-max',
-    retailer: 'LAB Golf (Direct)',
+    url: 'https://www.amazon.com/s?k=LAB+Golf+Mezz+1+Max+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$449',
-    label: 'See at LAB Golf',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/lab-golf-mezz1-max.webp',
     imgAlt: 'LAB Golf Mezz.1 Max putter',
     benefits: [
@@ -1428,10 +1426,10 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-oz1': {
-    url: 'https://labgolf.com/products/oz-1',
-    retailer: 'LAB Golf (Direct)',
+    url: 'https://www.amazon.com/s?k=LAB+Golf+OZ1+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$449',
-    label: 'See at LAB Golf',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/lab-golf-oz1.webp',
     imgAlt: 'LAB Golf OZ1 putter',
     benefits: [
