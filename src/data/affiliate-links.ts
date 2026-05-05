@@ -2016,6 +2016,32 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Pinnacle Rush golf balls',
   },
 
+  // ── Budget Putters ──────────────────────────────────────────────────────────
+  'odyssey-dfx': {
+    url: 'https://www.amazon.com/s?k=Odyssey+DFX+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$129',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/odyssey-dfx.webp',
+    imgAlt: 'Odyssey DFX mallet putter',
+  },
+  'pinemeadow-pgx': {
+    url: 'https://www.amazon.com/s?k=Pinemeadow+PGX+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$40',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/pinemeadow-pgx.webp',
+    imgAlt: 'Pinemeadow PGX mallet putter',
+  },
+  'wilson-staff-infinite': {
+    url: 'https://www.amazon.com/s?k=Wilson+Staff+Infinite+putter&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$99',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/wilson-staff-infinite.webp',
+    imgAlt: 'Wilson Staff Infinite blade putter',
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
