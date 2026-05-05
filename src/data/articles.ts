@@ -1001,7 +1001,7 @@ export const ARTICLES: Article[] = [
     intro: "You don\'t need a $500 driver to play better golf. Half the strokes you\'re losing are to unforced errors. These 25 accessories fix all of that for under $200 total.",
     toc: ['On-course essentials', 'Bag accessories', 'Practice gear', 'Tech & apps', 'Rain & weather gear'],
     sections: [
-      { h2: 'On-Course Essentials (Under $15 Each)', body: '', items: [
+      { h2: 'On-Course Essentials (Under $15 Each)', affiliateKey: 'magnetic-ball-markers', body: '', items: [
         { name: 'Ball markers — magnetic hat clip (~$8)', desc: 'Never scramble for a coin again.', affiliateKey: 'magnetic-ball-markers' },
         { name: 'Groove cleaner brush (~$10)', desc: 'Dirty grooves cost you spin and stopping power.', affiliateKey: 'groove-cleaning-brush' },
         { name: 'Golf towel — microfiber (~$18–$25)', desc: 'The Frogger Amphibian keeps clubs clean even in a downpour.', affiliateKey: 'frogger-amphibian-towel' },
@@ -1051,17 +1051,17 @@ export const ARTICLES: Article[] = [
     testingNotes: 'All products independently purchased and tested over a full season. Value assessed by frequency of use per round.',
     toc: ['Under $15', '$15–$30', '$30–$50'],
     sections: [
-      { h2: 'Best Golf Accessories Under $15', body: '', items: [
+      { h2: 'Best Golf Accessories Under $15', affiliateKey: 'alignment-sticks', body: '', items: [
         { name: 'Alignment sticks 2-pack (~$12)', desc: 'Best training aid in golf. Check aim, ball position, and swing path every session.', affiliateKey: 'alignment-sticks' },
         { name: 'Groove cleaning brush (~$8)', desc: 'Dirty grooves cost you spin on short irons. Cheap fix that pays off every round.', affiliateKey: 'groove-cleaning-brush' },
         { name: 'Magnetic hat clip ball markers (~$8)', desc: 'Get a 3-pack in different colors — never lose your spot on the green.', affiliateKey: 'magnetic-ball-markers' },
       ]},
-      { h2: 'Best Golf Accessories $15–$30', body: '', items: [
+      { h2: 'Best Golf Accessories $15–$30', affiliateKey: 'frogger-amphibian-towel', body: '', items: [
         { name: 'Frogger Amphibian Golf Towel (~$18)', desc: 'Wet side cleans clubs, dry side dries them — the best dual-sided design on the market.', affiliateKey: 'frogger-amphibian-towel' },
         { name: 'Putting mirror (~$25)', desc: '30 minutes of eye-line and alignment practice beats 2 hours of mindless putting.', affiliateKey: 'putting-mirror' },
         { name: 'Impact tape (~$12)', desc: 'See exactly where on the face you\'re striking — instant feedback with zero tech.', affiliateKey: 'impact-tape' },
       ]},
-      { h2: 'Best Golf Accessories $30–$50', body: '', items: [
+      { h2: 'Best Golf Accessories $30–$50', affiliateKey: 'eyeline-putting-cup', body: '', items: [
         { name: 'Eyeline Golf Edge Putting Cup (~$35)', desc: '10 minutes on your carpet fixes yips and short misses. Narrow gate builds accuracy fast.', affiliateKey: 'eyeline-putting-cup' },
         { name: 'FootJoy RainGrip Gloves 2-pack (~$32)', desc: 'Grips better when wet than most dry gloves. Essential for humid summer rounds.', affiliateKey: 'footjoy-raingrip' },
         { name: 'Golf umbrella — Gustbuster Pro Series (~$45)', desc: 'Vented canopy, wind-resistant. Survives 55mph gusts without flipping.', affiliateKey: 'gustbuster-umbrella' },
@@ -1900,19 +1900,19 @@ export const ARTICLES: Article[] = [
     intro: "Golf gifts are either immediately useful or immediately forgotten in a closet. This list skips the novelty items and focuses entirely on gear that weekend golfers actually use every single round.",
     toc: ['Under $25: stocking stuffers', '$25-$75: the sweet spot', '$75-$150: serious upgrades', '$150+: premium gifts', 'What to avoid', 'FAQ'],
     sections: [
-      { h2: 'Under $25 — The Best Golf Stocking Stuffers', body: '', items: [
+      { h2: 'Under $25 — The Best Golf Stocking Stuffers', affiliateKey: 'footjoy-weathersof-glove', body: '', items: [
         { name: 'FootJoy WeatherSof Gloves 2-pack (~$32)', desc: "The #1 selling golf glove worldwide. A great gift he will use every round.", affiliateKey: 'footjoy-weathersof-glove' },
         { name: 'Alignment sticks 2-pack (~$12)', desc: 'Every serious golfer wants a fresh set. The single most useful training aid in golf.', affiliateKey: 'alignment-sticks' },
         { name: 'Groove cleaning brush (~$8)', desc: 'Simple, useful, and always needs replacing. Great add-on gift.', affiliateKey: 'groove-cleaning-brush' },
         { name: 'Magnetic ball markers 3-pack (~$8)', desc: 'He will use these every single round. Get a multi-color set.', affiliateKey: 'magnetic-ball-markers' },
       ]},
-      { h2: '$25-$75 — The Golf Gift Sweet Spot', body: '', items: [
+      { h2: '$25-$75 — The Golf Gift Sweet Spot', affiliateKey: 'titleist-pro-v1', body: '', items: [
         { name: 'Titleist Pro V1 Dozen (~$55)', desc: 'The gift every golfer wants but often will not buy for himself. Always appreciated.', affiliateKey: 'titleist-pro-v1' },
         { name: 'Putting mirror (~$25)', desc: 'Serious golfers love this training aid. Shows alignment errors instantly.', affiliateKey: 'putting-mirror' },
         { name: 'Frogger Amphibian Towel (~$18)', desc: "The best golf towel he has never bought himself. Wet side cleans, dry side dries.", affiliateKey: 'frogger-amphibian-towel' },
         { name: 'Impact tape pack (~$12)', desc: 'Reveals exactly where on the face each club strikes. Surprisingly engaging to use.', affiliateKey: 'impact-tape' },
       ]},
-      { h2: '$150-$329 — Premium Golf Gifts', body: '', items: [
+      { h2: '$150-$329 — Premium Golf Gifts', affiliateKey: 'precision-pro-nx9-hd', body: '', items: [
         { name: 'Precision Pro NX9 HD Rangefinder (~$169)', desc: "The best-value rangefinder in 2026. If he does not have one, this is life-changing.", affiliateKey: 'precision-pro-nx9-hd' },
         { name: 'Arccos Caddie Smart Sensors (~$179 + sub)', desc: 'Automatically tracks every shot with AI course management. The data is incredible.', affiliateKey: 'arccos-caddie-sensors' },
         { name: 'Bushnell Tour V6 Shift (~$329)', desc: 'The premium rangefinder used by tour caddies. The ultimate upgrade gift.', affiliateKey: 'bushnell-tour-v6-shift' },
@@ -2337,6 +2337,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Which Should You Buy First?',
+        affiliateKey: 'bushnell-tour-v6-shift',
         body: 'If you are buying your first distance device: get a GPS watch under $250 (Garmin Approach S62 at $399 is excellent; Shot Scope V5 at $249 is the better value). The automatic distance display and course management data improves every round without requiring you to pull out a device and aim it. If you already have a GPS watch: add a $150-$200 laser rangefinder for pin-precise approach shots. The combination is genuinely the best setup for a weekend golfer.',
       },
     ],
@@ -4319,6 +4320,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Our Recommendation',
+        affiliateKey: 'bushnell-tour-v6-shift',
         body: 'If your budget is under $200, buy without slope. The Precision Pro NX9 HD gives accurate flat distances with a lifetime warranty. If your budget is $250+, buy with slope — the Bushnell Tour V6 Shift is the best choice because the SLOPE SWITCH is a physical toggle, not a menu setting. You can disable slope in 2 seconds before any competitive round.',
       },
     ],
