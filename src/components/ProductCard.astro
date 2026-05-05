@@ -24,6 +24,7 @@ interface Props {
   winner?: boolean;
   verdict?: string;
   whoFor?: string;
+  golfGalaxyUrl?: string;
 }
 
 const {
@@ -31,7 +32,7 @@ const {
   label = 'Check Today\'s Price',
   imgSrc, imgAlt, badge, benefits, description,
   emoji = '🏌️', winner = false,
-  verdict, whoFor,
+  verdict, whoFor, golfGalaxyUrl = '',
 } = Astro.props;
 
 // VALIDATION: skip render if required affiliate fields missing
@@ -101,6 +102,14 @@ if (!url || !imgSrc) return;
     <span class="product-card__cta-badge">at {retailer} · Free shipping</span>
   </a>
 
+  {golfGalaxyUrl && (
+    <a href={golfGalaxyUrl} class="product-card__cta product-card__cta--gg"
+       target="_blank" rel="nofollow noopener sponsored"
+       aria-label={`Check price for ${name} at Golf Galaxy`}>
+      <span class="product-card__cta-text">Also at Golf Galaxy →</span>
+    </a>
+  )}
+
 </div>
 
 <style>
@@ -156,4 +165,9 @@ if (!url || !imgSrc) return;
 .product-card__cta--winner:hover { background: #152c1e; }
 .product-card__cta-text { font-size: 14px; font-weight: 800; }
 .product-card__cta-badge { font-size: 11px; font-weight: 500; opacity: .75; }
+.product-card__cta--gg {
+  background: #fff; color: #1E3A28; border: 2px solid #1E3A28;
+  margin-top: 0; padding: 10px 20px; font-size: 13px;
+}
+.product-card__cta--gg:hover { background: #f0f7f2; }
 </style>
