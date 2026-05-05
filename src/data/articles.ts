@@ -48,7 +48,6 @@ export const ARTICLES: Article[] = [
         body: "Before dropping cash on a rangefinder, understand what actually matters on the course. Magnification (6x is the sweet spot), slope compensation, scan mode, and battery life are the big four. Pin-seeking technology — which locks onto the flag rather than background trees — is a must-have. Jolt or vibration confirmation tells you you\'ve actually hit the pin, not a tree 30 yards behind it.",
         sectionImage: '/images/products/rangefinder-testing-course.webp',
         sectionImageAlt: 'Weekend golfer testing a laser rangefinder on a par-3 to get the exact pin distance',
-        affiliateKey: 'bushnell-tour-v6-shift',
       },
       {
         h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
@@ -150,7 +149,6 @@ export const ARTICLES: Article[] = [
         body: "We tested each rangefinder over multiple rounds at four different courses. We measured lock-on speed, accuracy against a surveyed course, battery performance, and ease of use. All 5 products were purchased by us — no manufacturer loans.",
         sectionImage: '/images/products/rangefinder-comparison-lineup.webp',
         sectionImageAlt: 'All 5 rangefinders lined up for side-by-side comparison testing by a weekend golfer',
-        affiliateKey: 'precision-pro-nx9-hd',
       },
     ],
     comparisonTable: {
@@ -217,7 +215,6 @@ export const ARTICLES: Article[] = [
         body: "A rangefinder wins for exact pin distance. A GPS watch wins for hands-free pre-shot planning. Many serious weekend golfers use both. If you can only have one, get the rangefinder for accuracy.",
         sectionImage: '/images/products/gps-watch-wrist-course.webp',
         sectionImageAlt: 'GPS golf watch on a weekend golfer\'s wrist showing yardage to the green mid-round',
-        affiliateKey: 'garmin-approach-s62',
       },
       {
         h2: '🥇 Best Overall: Garmin Approach S62',
@@ -342,7 +339,7 @@ export const ARTICLES: Article[] = [
     testingNotes: 'All 5 drivers independently purchased and tested over 20+ range sessions and 10+ rounds each. Forgiveness measured on off-center strikes with a launch monitor.',
     toc: ['What forgiveness means in a driver', 'Best overall: Callaway Paradym AI Smoke Max', 'Best distance: TaylorMade Qi35 Max', 'Best value: Cobra Aerojet Max', 'Most forgiving: Ping G430 Max', 'Best budget: Cleveland Launcher XL2', 'Why a fitting matters', 'Comparison table', 'FAQ'],
     sections: [
-      { h2: 'What Does Forgiveness Actually Mean?', body: "A forgiving driver has high MOI (Moment of Inertia) — off-center hits lose less distance and direction. AI-designed faces also maximize ball speed across the entire face, not just the center.", sectionImage: '/images/products/driver-forgiveness-testing.webp', sectionImageAlt: 'Testing driver forgiveness on off-center strikes — the difference a weekend golfer actually feels', affiliateKey: 'callaway-paradym-ai-smoke-max' },
+      { h2: 'What Does Forgiveness Actually Mean?', body: "A forgiving driver has high MOI (Moment of Inertia) — off-center hits lose less distance and direction. AI-designed faces also maximize ball speed across the entire face, not just the center.", sectionImage: '/images/products/driver-forgiveness-testing.webp', sectionImageAlt: 'Testing driver forgiveness on off-center strikes — the difference a weekend golfer actually feels' },
       {
         h2: '🥇 Best Overall: Callaway Paradym AI Smoke Max',
         badge: 'BEST OVERALL', rating: 4.8, ratingCount: '3,240',
@@ -434,7 +431,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       { h2: 'Why a Fitting Matters More Than the Model',
-        callout: { text: 'While you save up for that fitting, work on the part of your game that costs nothing to improve.', link: '/how-to-fix-your-slice/', label: 'Fix your slice this week' }, body: "A 1-hour driver fitting at PGA Superstore is $0–$50 and tells you the optimal shaft weight, flex, loft, and head design for YOUR swing. The right shaft makes more difference than the right head. Every driver on this list can be the best driver for you — it depends entirely on your swing speed, attack angle, and miss pattern. A fitted Cobra Aerojet Max will outperform an off-the-rack Callaway Paradym every single time.", sectionImage: '/images/products/driver-address-setup.webp', sectionImageAlt: 'Driver at address showing proper setup — the right shaft and loft matter more than the brand', affiliateKey: 'cobra-aerojet-max' },
+        callout: { text: 'While you save up for that fitting, work on the part of your game that costs nothing to improve.', link: '/how-to-fix-your-slice/', label: 'Fix your slice this week' }, body: "A 1-hour driver fitting at PGA Superstore is $0–$50 and tells you the optimal shaft weight, flex, loft, and head design for YOUR swing. The right shaft makes more difference than the right head. Every driver on this list can be the best driver for you — it depends entirely on your swing speed, attack angle, and miss pattern. A fitted Cobra Aerojet Max will outperform an off-the-rack Callaway Paradym every single time.", sectionImage: '/images/products/driver-address-setup.webp', sectionImageAlt: 'Driver at address showing proper setup — the right shaft and loft matter more than the brand' },
     ],
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Our Rating'],
@@ -521,7 +518,7 @@ export const ARTICLES: Article[] = [
       },
       { h2: 'Best for Low Handicappers: Titleist T100', body: "The Titleist T100 are the gold standard for players irons: minimal offset, thin topline, and enough feel to know exactly where you struck the ball. These are not for most weekend golfers — they demand consistent contact and reward it with precision. For single-digit handicappers who shape shots intentionally.", price: '~$1,299 set', sectionImage: '/images/products/iron-comparison-lineup.webp', sectionImageAlt: 'Three iron sets side by side showing the difference in offset and topline for different handicap levels', affiliateKey: 'titleist-t100' },
       { h2: 'What Shaft Flex Do You Need?',
-        callout: { text: 'Hitting your irons fat? It might not be the clubs — the fix takes 5 minutes.', link: '/why-do-i-hit-irons-fat/', label: 'Why you hit irons fat (and the fix)' }, body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head. Every iron on this list can be the best iron for you — it depends entirely on your swing speed, attack angle, and how you deliver the club.", sectionImage: '/images/products/iron-turf-interaction.webp', sectionImageAlt: 'Iron hitting turf on a real course — shaft flex affects how the club releases through impact', affiliateKey: 'callaway-paradym-ai-smoke-max-irons' },
+        callout: { text: 'Hitting your irons fat? It might not be the clubs — the fix takes 5 minutes.', link: '/why-do-i-hit-irons-fat/', label: 'Why you hit irons fat (and the fix)' }, body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head. Every iron on this list can be the best iron for you — it depends entirely on your swing speed, attack angle, and how you deliver the club.", sectionImage: '/images/products/iron-turf-interaction.webp', sectionImageAlt: 'Iron hitting turf on a real course — shaft flex affects how the club releases through impact' },
     ],
     comparisonTable: {
       headers: ['Iron Model', 'Best For', 'Price (Set)', 'Our Rating'],
@@ -1245,7 +1242,6 @@ export const ARTICLES: Article[] = [
         body: "The most important factor in choosing a golf ball is your swing speed. Under 85mph: use a low-compression ball (Srixon Soft Feel, Callaway Supersoft). 85-100mph: mid-tier options work well (Vice Pro, Srixon Q-Star Tour). Over 100mph: premium tour balls deliver their intended performance (Titleist Pro V1, Callaway Chrome Tour). Playing a ball above your swing speed adds no distance — it reduces feel and short-game control.",
         sectionImage: '/images/products/golf-ball-compression-test.webp',
         sectionImageAlt: 'Golf ball compression testing — matching the right ball to your swing speed makes a real difference for weekend golfers',
-        affiliateKey: 'titleist-pro-v1',
       },
       {
         h2: 'What Actually Matters for Weekend Golfers',
@@ -1420,7 +1416,6 @@ export const ARTICLES: Article[] = [
         body: "Shooting over 100? A Titleist Pro V1 is actively hurting your game. Premium tour balls require high clubhead speed to compress and spin correctly. Under 85mph, use a low-compression two-piece ball: Callaway Supersoft or Srixon Soft Feel give you more distance and equally good feel for a fraction of the price. Upgrade when you\'re consistently breaking 90.",
         sectionImage: '/images/products/golf-ball-comparison-lineup.webp',
         sectionImageAlt: 'Budget vs premium golf balls side by side — weekend golfers shooting 95+ get more from a $25 ball than a $55 one',
-        affiliateKey: 'callaway-supersoft',
       },
     ],
     faq: [
@@ -1591,7 +1586,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Style', 'Price', 'Insert', 'Best For'],
       rows: [
-        { affiliateKey: 'cleveland-hb-soft-milled',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
+        { affiliateKey: 'odyssey-white-hot-og',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
         { affiliateKey: 'scotty-cameron-phantom',    name: 'Scotty Cameron Phantom',   bestFor: 'Best Premium', price: '~$399', feature1: 'Milled',    feature2: 'Arc stroke',     winner: false },
         { affiliateKey: 'cleveland-hb-soft-milled',  name: 'Cleveland HB Soft Milled', bestFor: 'Best Budget',  price: '~$129', feature1: 'Milled',    feature2: 'Any stroke',     winner: false },
         { affiliateKey: 'taylormade-spider-tour',    name: 'TaylorMade Spider Tour',   bestFor: 'Best Mallet',  price: '~$349', feature1: 'Pure Roll', feature2: 'Straight stroke', winner: false },
@@ -2098,21 +2093,21 @@ export const ARTICLES: Article[] = [
       { h2: 'Why Budget Drivers Are Actually Great Now', body: "Tour-level technology from 2-3 years ago is available for under $200 today. The TaylorMade SIM Max was the best driver on the market in 2021 — it now sells for under $120. The performance gap between a $200 driver and a $600 driver is genuinely small for weekend golfers." },
       { h2: 'Best Under $150: TaylorMade SIM Max (Previous Gen)', badge: 'BEST OVERALL', rating: 4.7, ratingCount: '2,341', body: "Speed Injected Twist Face for faster ball speed. 460cc head with draw-biased weighting. The Inertia Generator at the back creates low-spin, high-launch for maximum carry. You're getting 2021 technology for 2026 budget pricing.",
         pros: ['Speed Injected Twist Face delivers consistent ball speed on mis-hits', 'Inertia Generator shifts weight low and back for forgiveness', 'Premium TaylorMade construction at a fraction of current retail'],
-        cons: ['Previous generation — technology 2-3 years behind current models', 'Limited adjustability compared to current loft-sleeve drivers'], price: '~$129-149' , affiliateKey: 'cobra-aerojet-max'},
+        cons: ['Previous generation — technology 2-3 years behind current models', 'Limited adjustability compared to current loft-sleeve drivers'], price: '~$129-149'},
       { h2: 'Best Under $200: Callaway Big Bertha B21', badge: 'BEST VALUE', rating: 4.6, ratingCount: '1,892', body: "Specifically designed to fight slices. The offset hosel and draw-biased weighting help high-handicappers hit more fairways. Flash Face SS21 cup face for ball speed. If your miss is a slice, this is your driver.",
         pros: ['Offset hosel reduces slice angle — specifically designed for high handicappers', 'AI-designed Flash Face for consistent ball speed across the face', 'Callaway quality and resale value at under $200'],
-        cons: ['Offset look at address takes visual adjustment — not preferred by better players', 'Lower distance ceiling than non-offset drivers for faster swing speeds'], price: '~$169-199' , affiliateKey: 'taylormade-qi35-max'},
+        cons: ['Offset look at address takes visual adjustment — not preferred by better players', 'Lower distance ceiling than non-offset drivers for faster swing speeds'], price: '~$169-199' , affiliateKey: 'callaway-big-bertha'},
       { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, ratingCount: '734', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.",
         pros: ['MainFrame variable face thickness for consistent distance on all contact points', 'One of the most forgiving modern drivers available under $400', 'Lightweight design helps generate clubhead speed more easily'],
-        cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' , affiliateKey: 'callaway-paradym-ai-smoke-max'},
+        cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' , affiliateKey: 'cleveland-launcher-xl2'},
       { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you\'ve never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
     ],
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
       rows: [
-        { affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'TaylorMade SIM Max (prev gen)', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
-        { affiliateKey: 'taylormade-qi35-max',           name: 'Callaway Big Bertha B21',     bestFor: 'Anti-Slice',   price: '~$179', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
-        { affiliateKey: 'cobra-aerojet-max',             name: 'Cleveland Launcher XL',       bestFor: 'Budget New',   price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+        { name: 'TaylorMade SIM Max (prev gen)', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
+        { affiliateKey: 'callaway-big-bertha',           name: 'Callaway Big Bertha B21',     bestFor: 'Anti-Slice',   price: '~$179', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+        { affiliateKey: 'cleveland-launcher-xl2',         name: 'Cleveland Launcher XL',       bestFor: 'Budget New',   price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
       ],
     },
     faq: [
@@ -2165,7 +2160,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Alignment: Alignment Sticks', badge: 'BEST VALUE', rating: 4.9, ratingCount: '15,203', body: "The most useful training aid in golf costs $12. Two fibreglass rods you can stick in the ground to check aim, ball position, swing path, hip rotation, and about 20 other things. Every range session should start with alignment sticks. Used by every tour player. Used by every instructor.",
         pros: ['Most versatile training aid available — gate drills, path training, and alignment checks', 'Under $20 for a pair — lowest cost impactful training tool', 'Used by every tour player in warm-up regardless of skill level'],
         cons: ['No built-in feedback — requires self-monitoring and discipline', 'Ineffective without structured drills and consistent practice intent'], price: '~$12' , affiliateKey: 'alignment-sticks'},
-      { h2: 'Best Impact Feedback: Impact Tape', badge: 'BEST FEEDBACK', rating: 4.7, ratingCount: '8,421', body: "Stick a piece on your driver, iron, or putter face and you instantly see where you\'re striking the ball. Nothing teaches better than seeing your actual impact pattern — not where you think you\'re hitting it, where you actually are. One pack lasts months.",
+      { h2: 'Best Impact Feedback: Impact Tape', badge: 'BEST FEEDBACK', affiliateKey: 'impact-tape', rating: 4.7, ratingCount: '8,421', body: "Stick a piece on your driver, iron, or putter face and you instantly see where you\'re striking the ball. Nothing teaches better than seeing your actual impact pattern — not where you think you\'re hitting it, where you actually are. One pack lasts months.",
         pros: ['Shows exactly where on the face contact occurs after every shot', 'Works on any club including driver, irons, and wedges', 'Immediate visual feedback without any technology or app required'],
         cons: ['Single-use per strip — minor but ongoing material cost', 'Shows impact location only — not club path or face angle data'], price: '~$12' , affiliateKey: 'eyeline-putting-cup'},
       { h2: 'Best Putting Aid: Putting Mirror', badge: 'BEST PUTTING', rating: 4.6, ratingCount: '3,847', body: "A putting mirror shows your eye position, face alignment, and stroke path simultaneously. 20 minutes a week on your carpet with a putting mirror eliminates more 3-putts than any amount of unfocused practice. The difference between a $12 putting mirror and a $300 putting lesson is essentially zero for alignment work.",
@@ -2177,7 +2172,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Training Aid', 'Skill Targeted', 'Price', 'Works At', 'Best For'],
       rows: [
-        { affiliateKey: 'orange-whip-trainer',   name: 'Alignment Sticks 2-Pack',  bestFor: 'Best Overall',  price: '~$12', feature1: 'Full swing', feature2: 'Range', winner: true },
+        { affiliateKey: 'alignment-sticks',   name: 'Alignment Sticks 2-Pack',  bestFor: 'Best Overall',  price: '~$12', feature1: 'Full swing', feature2: 'Range', winner: true },
         { affiliateKey: 'impact-tape',         name: 'Golf Impact Tape',         bestFor: 'Best Feedback', price: '~$12', feature1: 'Ball striking', feature2: 'Range', winner: false },
         { affiliateKey: 'putting-mirror',      name: 'Putting Mirror',           bestFor: 'Best Putting',  price: '~$25', feature1: 'Putting', feature2: 'Home/Green', winner: false },
         { affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup',      bestFor: 'Best Home',     price: '~$35', feature1: 'Putting', feature2: 'Home', winner: false },
@@ -3150,7 +3145,7 @@ export const ARTICLES: Article[] = [
       headers: ['Simulator', 'Best For', 'Price', 'Technology', 'Outdoor Use'],
       rows: [
         { name: 'SkyTrak+', bestFor: 'Dedicated home setup', price: '~$2,995', feature1: 'Photometric', feature2: 'Indoor only', winner: true, affiliateKey: 'skytrak-plus' },
-        { name: 'Flightscope Mevo+', bestFor: 'Portable & outdoor', price: '~$2,499', feature1: 'Doppler Radar', feature2: 'Indoor + outdoor', winner: false, affiliateKey: 'rapsodo-mlm2pro' },
+        { name: 'Flightscope Mevo+', affiliateKey: 'flightscope-mevo-plus', bestFor: 'Portable & outdoor', price: '~$2,499', feature1: 'Doppler Radar', feature2: 'Indoor + outdoor', winner: false, affiliateKey: 'flightscope-mevo-plus' },
       ],
     },
   },
@@ -3315,7 +3310,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Training Aid', 'Best For', 'Price', 'What It Fixes', 'Where Used'],
       rows: [
-      { name: 'SKLZ Golf Grip Trainer', bestFor: 'Best Overall', price: '~$15', feature1: 'Grip position', feature2: 'Home or range', winner: true, affiliateKey: '' },
+      { name: 'SKLZ Golf Grip Trainer', bestFor: 'Best Overall', price: '~$15', feature1: 'Grip position', feature2: 'Home or range', winner: true },
       { name: 'Tour Striker Smart Ball', bestFor: 'Best Connection', price: '~$29', feature1: 'Connection + grip', feature2: 'Home or range', winner: false, affiliateKey: '' },
       ],
     },
@@ -4011,12 +4006,10 @@ export const ARTICLES: Article[] = [
       {
         h2: '2. Grip training at home',
         body: 'Hold a club with correct grip position for 10 minutes per day while watching TV. The correct grip feels deeply wrong for most golfers at first. A grip trainer removes the guesswork by physically molding your hands into the correct position. 10 minutes daily for 2–3 weeks builds the muscle memory needed to replicate it on the course.',
-        affiliateKey: 'alignment-sticks',
       },
       {
         h2: '3. Net and launch monitor setup',
         body: 'A hitting net in a garage or basement lets you hit full shots every day. The Garmin Approach R10 ($599) is the most affordable launch monitor that works indoors — it gives you ball speed, launch angle, carry distance, and spin. Paired with a basic hitting net ($199) and mat ($350), you have a complete home practice station under $1,200.',
-        affiliateKey: 'skytrak-plus',
       },
       {
         h2: '4. Swing path work with a mirror',
@@ -4928,7 +4921,6 @@ export const ARTICLES: Article[] = [
         badge: 'BEST CONSISTENCY',
         rating: 4.8, ratingCount: '340',
         body: "Gene Parente of Golf Laboratories — the most respected independent testing authority in golf — conducted robotic testing comparing both units. The results showed that on center strikes, both deliver excellent accuracy. But on mishits and off-center strikes, the GCQuad showed significantly better consistency. Spin rate standard deviation: GCQuad 82 RPM vs Trackman 176 RPM — the GCQuad was more than twice as consistent. Spin axis consistency: GCQuad showed a tighter range of variation (6.6 degrees vs 8.0 degrees). Clubhead speed variation: GCQuad 0.2 mph vs Trackman 0.8 mph. For coaches, fitters, and players who need reliable data on every swing — not just perfect strikes — the GCQuad has a measurable edge. Trackman maintains advantages in total distance and trajectory shape tracking because it measures the ball throughout its full flight.",
-        affiliateKey: 'foresight-gcquad',
       },
       {
         h2: 'Indoor vs Outdoor Performance',
@@ -5014,7 +5006,6 @@ export const ARTICLES: Article[] = [
         body: "Most weekend golfers think improvement requires expensive clubs or lessons. The truth is that the gear you use every single round — your glove, ball, towel, and a basic training aid — has more cumulative impact than a driver you hit 14 times. A $25 putting mirror fixes your alignment permanently. A $12 roll of impact tape tells you exactly where you strike the ball. These are not luxury purchases. They are the most efficient dollars you can spend on golf.",
         sectionImage: '/images/products/budget-gear-lineup.webp',
         sectionImageAlt: 'The best golf gear under $100 laid out — gloves, balls, training aids, and accessories that weekend golfers actually use',
-        affiliateKey: 'putting-mirror',
       },
       {
         h2: '🥇 Best Training Aid: Putting Mirror',
@@ -5057,7 +5048,6 @@ export const ARTICLES: Article[] = [
         body: "Three items that cost less than lunch and belong in every golf bag. A groove cleaning brush ($8) restores spin on wedges — dirty grooves cost you 500-1,000 RPM of spin on approach shots. Magnetic ball markers ($8 for a 4-pack) clip to your hat brim and are always accessible — no more digging through pockets on the green. A Frogger Amphibian towel ($18) has a wet interior pocket for cleaning clubs and a dry exterior for your hands — the best golf towel design on the market.",
         sectionImage: '/images/products/golf-accessories-under-20.webp',
         sectionImageAlt: 'Groove brush, magnetic ball markers, and Frogger towel — the $44 golf bag upgrade every weekend golfer needs',
-        affiliateKey: 'groove-cleaning-brush',
       },
       {
         h2: 'What to Skip',
@@ -5147,7 +5137,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Drill 6: Slow-Motion Swing Rehearsal (2 minutes)',
         body: "Take a 7-iron and make 5 full swings at 25% speed. Focus on three checkpoints: hands in front of the ball at impact, weight shifting to your lead foot, and club finishing over your lead shoulder. Slow-motion swings build muscle memory without the bad habits that creep in at full speed. This is how tour pros warm up — not by blasting driver on the range.",
-        affiliateKey: 'alignment-sticks',
       },
       {
         h2: 'Drill 7: Pre-Shot Routine Practice (1 minute)',
@@ -5222,7 +5211,6 @@ export const ARTICLES: Article[] = [
         body: "A beginner needs exactly these clubs: a forgiving driver (10.5-12 degrees of loft), a fairway wood or hybrid, 6-iron through pitching wedge, a sand wedge, and a mallet putter. That is 9-10 clubs plus a bag. You do not need a 3-iron, a 5-iron, or a 60-degree lob wedge. Those clubs are hard to hit for experienced golfers — they are nearly impossible for beginners. A good starter set includes the right clubs and leaves out the ones that would frustrate you.",
         sectionImage: '/images/products/beginner-bag-contents.webp',
         sectionImageAlt: 'What a complete beginner golf bag should look like — driver, hybrid, 6-PW irons, wedge, putter, and nothing else',
-        affiliateKey: 'callaway-strata',
       },
       {
         h2: '🥇 Best Value: Callaway Strata',
@@ -5260,7 +5248,6 @@ export const ARTICLES: Article[] = [
         body: "Upgrade when you can consistently break 100 and you know your swing well enough to get fitted. For most weekend golfers, this is 1-2 years into the game. When you upgrade, do it through a fitting — a $50-$100 fitting at PGA Superstore or Club Champion tells you exactly which shaft flex, club length, and head style matches your swing. Your first fitted set will feel like a completely different sport compared to starter clubs. Budget $800-$1,200 for a fitted iron set that will last 5-8 years.",
         sectionImage: '/images/products/beginner-set-comparison.webp',
         sectionImageAlt: 'Three beginner golf sets compared side by side — Callaway Strata, Wilson Profile SGI, and TaylorMade RBZ',
-        affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
       },
     ],
     whoFor: ['Brand new golfers buying their first set of clubs', 'Golfers who have been borrowing clubs and want their own', 'Budget-conscious players who do not want to overspend on gear they may outgrow'],
@@ -6283,8 +6270,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Tracking Accuracy — Arccos Wins', body: "Arccos correctly identified club and shot on 94% of full swings in our testing. Missed shots were primarily tap-in putts and half-swing chips. Occasional false positives from practice swings required 3-5 minutes of post-round editing.\n\nGarmin auto-detection was correct about 70% of the time after 15 rounds of learning. It confused 6-iron with 5-iron regularly, and struggled with partial wedge shots. Manual tagging (two taps per shot) was accurate but added 3 seconds per shot.\n\nFor serious data analysis, accuracy matters. A system that confuses clubs 30% of the time produces unreliable club averages. Arccos 94% accuracy produces data you can trust and act on.\n\nWinner: Arccos — 94% vs 70% automatic accuracy." },
       { h2: 'Data Quality and Strokes-Gained Analysis', body: "Arccos provides comprehensive strokes-gained analysis across five categories: driving, approach, short game, putting, and overall. Monthly reports show exactly where you gain and lose strokes relative to your handicap level. The data revealed that we were losing 3.4 strokes per round on approaches from 125-175 yards — a specific blind spot.\n\nGarmin provides club averages, scoring trends, and basic performance data through the Garmin Golf app. It shows how far you actually hit each club and where your shots land. But it does not calculate strokes gained against a benchmark.\n\nThe Arccos data is actionable — it tells you what to practice. The Garmin data is informational — it tells you what happened.\n\nWinner: Arccos — strokes-gained analysis is genuinely actionable." },
       { h2: 'Club Suggestions — Different Approaches', body: "Arccos AI Caddie suggests clubs based on your actual distances, wind, elevation, pin position, and historical performance. In our testing, AI Caddie was right 64% of the time vs 52% for our instincts.\n\nGarmin Virtual Caddie offers similar suggestions using your shot history, wind, and elevation. Right 68% of the time in our testing — slightly better than Arccos, likely because the S62 has better wind and elevation data from its built-in sensors.\n\nBoth systems improve club selection. Garmin is slightly more accurate on suggestions. Arccos is significantly more accurate on tracking. The ideal system would combine both — but you have to choose.\n\nWinner: Slight edge to Garmin Virtual Caddie (68% vs 64%)." },
-      { h2: 'Cost Over 3 Years', body: "Arccos: $179 (sensors) + $99 × 3 (subscription) = $476. Requires carrying phone during rounds.\n\nGarmin S62: $399 (one-time). No subscription. No phone needed. Also works as a daily smartwatch and GPS.\n\nThe Garmin is $77 cheaper over 3 years AND gives you a GPS watch, course maps, and smartwatch features. Arccos gives you better tracking data and strokes-gained analysis.\n\nWinner: Garmin S62 — cheaper total cost with more features.",
-        affiliateKey: 'garmin-approach-s62' },
+      { h2: 'Cost Over 3 Years', body: "Arccos: $179 (sensors) + $99 × 3 (subscription) = $476. Requires carrying phone during rounds.\n\nGarmin S62: $399 (one-time). No subscription. No phone needed. Also works as a daily smartwatch and GPS.\n\nThe Garmin is $77 cheaper over 3 years AND gives you a GPS watch, course maps, and smartwatch features. Arccos gives you better tracking data and strokes-gained analysis.\n\nWinner: Garmin S62 — cheaper total cost with more features." },
       { h2: 'Our Pick: Garmin for Most, Arccos for Data Obsessed', body: "Buy the Garmin S62 if: you want one device for GPS, tracking, club suggestions, and daily wear with no subscription. The tracking is good enough for most golfers and the total package is unmatched.\n\nBuy Arccos if: you are obsessed with understanding your game at a granular level and will actually use strokes-gained data to guide your practice. The tracking accuracy and analytics are the best available.\n\nThe budget option: Shot Scope V5 ($249, no subscription) offers automatic tracking via grip-end tags with strokes-gained analysis. It lacks the course maps of Garmin and the AI caddie of Arccos, but delivers solid tracking at the lowest total cost.",
         affiliateKey: 'arccos-caddie-sensors' },
     ],
@@ -9882,7 +9868,6 @@ export const ARTICLES: Article[] = [
         h2: 'Best Budget: Heavy Mallet with Oversized Grip',
         badge: 'BUDGET APPROACH',
         price: 'Check Amazon for current price',
-        affiliateKey: 'cleveland-huntington-beach',
         rating: 4.0,
         body: 'If the LAB Golf and premium options are outside your budget, the most effective anti-yips approach under $150 is combining a heavy mallet putter (the Cleveland Huntington Beach Soft mallet is our pick) with an oversized grip. The SuperStroke S-Tech or Winn Jumbo grip reduces wrist action by filling the hands, which dampens the small, fast movements that trigger yips. The combination of a high-MOI mallet head and an oversized grip costs under $150 total and provides 60-70% of the yips relief of the LAB Golf at a third of the price. The oversized grip alone costs $20-30 and can be installed on any existing putter — this is the lowest-cost yips intervention available. In our testing, adding a SuperStroke S-Tech to a standard mallet reduced visible wrist flinch by 40%. Combined with the Cleveland\'s forgiving face technology, this is a practical and affordable yips management strategy.',
         pros: [

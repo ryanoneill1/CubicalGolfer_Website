@@ -2042,6 +2042,33 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Wilson Staff Infinite blade putter',
   },
 
+  'flightscope-mevo-plus': {
+    url: 'https://www.amazon.com/s?k=Flightscope+Mevo+Plus&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$2,499',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/flightscope-mevo-plus.webp',
+    imgAlt: 'Flightscope Mevo+ launch monitor',
+  },
+
+  'garmin-approach-s12': {
+    url: 'https://www.amazon.com/s?k=Garmin+Approach+S12+golf+watch&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$149',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/garmin-approach-s12.webp',
+    imgAlt: 'Garmin Approach S12 GPS golf watch',
+  },
+
+  'sklz-accelerator-pro': {
+    url: 'https://www.amazon.com/s?k=SKLZ+Accelerator+Pro+putting+mat&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$40',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/sklz-accelerator-pro.webp',
+    imgAlt: 'SKLZ Accelerator Pro putting mat',
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
