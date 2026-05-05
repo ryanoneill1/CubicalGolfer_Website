@@ -212,6 +212,13 @@ if (compProducts.length > 0) {
               <span class="btn-buy-cta">Check Today's Price →</span>
               <span class="btn-buy-badge">at {affA.retailer} · Free shipping</span>
             </a>
+            {(affA as any).golfGalaxyUrl && (
+              <a href={(affA as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
+                rel="nofollow noopener sponsored" aria-label={`Check price for ${nameA} at Golf Galaxy`}
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                <span class="btn-buy-cta">Check Price at Golf Galaxy →</span>
+              </a>
+            )}
             <span class="compare-buy-urgency">Prices checked today</span>
           </div>
         )}
@@ -224,6 +231,13 @@ if (compProducts.length > 0) {
               <span class="btn-buy-cta">Check Today's Price →</span>
               <span class="btn-buy-badge">at {affB.retailer} · Free shipping</span>
             </a>
+            {(affB as any).golfGalaxyUrl && (
+              <a href={(affB as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
+                rel="nofollow noopener sponsored" aria-label={`Check price for ${nameB} at Golf Galaxy`}
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                <span class="btn-buy-cta">Check Price at Golf Galaxy →</span>
+              </a>
+            )}
             <span class="compare-buy-urgency">Prices checked today</span>
           </div>
         )}
@@ -240,6 +254,13 @@ if (compProducts.length > 0) {
           <span class="btn-buy-price">{winnerAff.price}</span>
           <span class="btn-buy-cta">Buy the winner →</span>
           <span class="btn-buy-badge">at {winnerAff.retailer}</span>
+        </a>
+      )}
+      {(winnerAff as any)?.golfGalaxyUrl && (
+        <a href={(winnerAff as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg"
+          target="_blank" rel="nofollow noopener sponsored"
+          style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+          <span class="btn-buy-cta">Check Price at Golf Galaxy →</span>
         </a>
       )}
     </div>
