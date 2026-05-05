@@ -131,12 +131,17 @@ const winners: Winner[] = [
               <span class="btn-buy-badge">at {aff.retailer || 'Amazon'}</span>
             </a>
           )}
-          {aff?.golfGalaxyUrl && (
+          {aff?.golfGalaxyUrl && (() => {
+            const secR = aff.golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
+              : aff.golfGalaxyUrl.includes('golfgalaxy') || aff.golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
+              : 'Retailer';
+            return (
             <a href={aff.golfGalaxyUrl} target="_blank" rel="nofollow noopener sponsored"
                class="btn-buy-affiliate btn-buy-gg" style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;">
-              <span class="btn-buy-cta">Check Price at Golf Galaxy →</span>
+              <span class="btn-buy-cta">Check Price at {secR} →</span>
             </a>
-          )}
+            );
+          })()}
 
           <p>
             <a href={w.guideSlug} style="color:var(--green);font-weight:700;">

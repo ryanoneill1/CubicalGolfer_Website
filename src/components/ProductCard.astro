@@ -102,13 +102,18 @@ if (!url || !imgSrc) return;
     <span class="product-card__cta-badge">at {retailer} · Free shipping</span>
   </a>
 
-  {golfGalaxyUrl && (
+  {golfGalaxyUrl && (() => {
+    const secRetailer = golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
+      : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
+      : 'Retailer';
+    return (
     <a href={golfGalaxyUrl} class="product-card__cta product-card__cta--gg"
        target="_blank" rel="nofollow noopener sponsored"
-       aria-label={`Check price for ${name} at Golf Galaxy`}>
-      <span class="product-card__cta-text">Check Price at Golf Galaxy →</span>
+       aria-label={`Check price for ${name} at ${secRetailer}`}>
+      <span class="product-card__cta-text">Check Price at {secRetailer} →</span>
     </a>
-  )}
+    );
+  })()}
 
 </div>
 

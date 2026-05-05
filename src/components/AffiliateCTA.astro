@@ -52,17 +52,22 @@ const dateLabel = dateChecked
   >
     <span class="aff-cta__btn-text">{btnText}</span>
   </a>
-  {golfGalaxyUrl && (
+  {golfGalaxyUrl && (() => {
+    const secondaryRetailer = golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
+      : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
+      : 'Retailer';
+    return (
     <a
       href={golfGalaxyUrl}
       class="aff-cta__btn aff-cta__btn--gg"
       target="_blank"
       rel="nofollow noopener sponsored"
-      aria-label={`Check price for ${name} at Golf Galaxy`}
+      aria-label={`Check price for ${name} at ${secondaryRetailer}`}
     >
-      <span class="aff-cta__btn-text">Check Price at Golf Galaxy →</span>
+      <span class="aff-cta__btn-text">Check Price at {secondaryRetailer} →</span>
     </a>
-  )}
+    );
+  })()}
   <p class="aff-cta__meta">{dateLabel}</p>
   {disclosure && (
     <p class="aff-cta__disclosure">

@@ -481,18 +481,18 @@ if (isBuyingGuide) {
           <tbody>
             {article.comparisonTable.rows.map((row: any) => {
               const rowAff = row.affiliateKey ? getAffiliateLink(row.affiliateKey) : null;
-              // Map each header to the correct data field
-              let featureIdx = 0;
-              const featurePool = [row.feature1 || '', row.feature2 || ''];
-              let bestForUsed = false;
+              const f1 = row.feature1 || '';
+              const f2 = row.feature2 || '';
+              const isF1Rating = /\/5.*★|\/5$/.test(f1);
+              const isF2Rating = /\/5.*★|\/5$/.test(f2);
+              const pool = isF1Rating ? [f2, row.bestFor || '', f1] : [f1, f2, row.bestFor || ''];
+              let pi = 0;
               const innerCells = innerHeaders.map((h: string) => {
                 const hl = h.toLowerCase();
                 if (/price|cost|\/dz|\/dozen/.test(hl)) return row.price || '';
-                if (/^best\s*(for|swing)|best\s*swing\s*speed/i.test(hl)) { bestForUsed = true; return row.bestFor || ''; }
-                // Everything else gets features in order, with bestFor as final fallback
-                if (featureIdx < featurePool.length && featurePool[featureIdx]) return featurePool[featureIdx++];
-                if (!bestForUsed) { bestForUsed = true; return row.bestFor || ''; }
-                return '';
+                if (/^best\s*(for|swing)/i.test(h)) return row.bestFor || '';
+                if (/rating|score/i.test(hl)) return isF1Rating ? f1 : isF2Rating ? f2 : pool[pi++] || '';
+                return pool[pi++] || '';
               });
               return (
                 <tr class={row.winner ? 'cmp-winner' : ''}>
