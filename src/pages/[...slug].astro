@@ -465,11 +465,8 @@ if (isBuyingGuide) {
     {/* COMPARISON TABLE */}
     {article.comparisonTable && (() => {
       const headers = article.comparisonTable.headers;
-      // FIX: Only render bestFor as a column when headers include a "Best For" column.
-      // Previously bestFor was hardcoded as column 2, causing data to shift right
-      // on any article whose headers don't include "Best For" (23 pages affected).
-      const hasBestForHeader = headers.some((h: string) => /best\s*for/i.test(h));
       const innerHeaderCount = headers.length - 1; // minus the product-name column
+      const innerHeaders = headers.slice(1); // headers after the name column
 
       return (
       <div class="cmp-wrap">
@@ -484,16 +481,19 @@ if (isBuyingGuide) {
           <tbody>
             {article.comparisonTable.rows.map((row: any) => {
               const rowAff = row.affiliateKey ? getAffiliateLink(row.affiliateKey) : null;
-              // Build inner cells to match header order
-              const innerCells: string[] = [];
-              if (hasBestForHeader && row.bestFor) innerCells.push(row.bestFor);
-              if (row.price) innerCells.push(row.price);
-              if (row.feature1) innerCells.push(row.feature1);
-              if (row.feature2) innerCells.push(row.feature2);
-              // Pad to match header count so Buy column stays aligned
-              while (innerCells.length < innerHeaderCount) innerCells.push('');
-              // Trim if more data fields than headers (e.g. head-to-head pages)
-              const trimmedCells = innerCells.slice(0, innerHeaderCount);
+              // Map each header to the correct data field
+              let featureIdx = 0;
+              const featurePool = [row.feature1 || '', row.feature2 || ''];
+              let bestForUsed = false;
+              const innerCells = innerHeaders.map((h: string) => {
+                const hl = h.toLowerCase();
+                if (/price|cost|\/dz|\/dozen/.test(hl)) return row.price || '';
+                if (/^best\s*(for|swing)|best\s*swing\s*speed/i.test(hl)) { bestForUsed = true; return row.bestFor || ''; }
+                // Everything else gets features in order, with bestFor as final fallback
+                if (featureIdx < featurePool.length && featurePool[featureIdx]) return featurePool[featureIdx++];
+                if (!bestForUsed) { bestForUsed = true; return row.bestFor || ''; }
+                return '';
+              });
               return (
                 <tr class={row.winner ? 'cmp-winner' : ''}>
                   <td>
@@ -503,7 +503,7 @@ if (isBuyingGuide) {
                     ) : row.name}
                     {row.winner && <span class="badge-best">BEST PICK</span>}
                   </td>
-                  {trimmedCells.map((cell: string) => <td>{cell}</td>)}
+                  {innerCells.map((cell: string) => <td>{cell}</td>)}
                   <td class="cmp-td-buy">
                     {rowAff ? (
                       <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
