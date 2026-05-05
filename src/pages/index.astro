@@ -94,23 +94,6 @@ const TAG_CLASSES: Record<string, string> = {
         <a href="/gear-quiz/" class="btn-outline">🎯 Gear Quiz</a>
         <a href="/compare/" class="btn-outline">Compare Products</a>
       </div>
-      <!-- Quick affiliate links above fold -->
-      <div class="hero-featured" style="margin:20px 0 12px;padding:16px 20px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;">
-        <span style="font-size:13px;font-weight:700;color:var(--green);">🏆 #1 Tested Pick:</span>
-        <span style="font-size:14px;font-weight:600;">Bushnell Tour V6 Shift — ~$329</span>
-        <a href={getAffiliateLink('bushnell-tour-v6-shift').url}
-           target="_blank" rel="nofollow noopener sponsored"
-           style="background:var(--gold);color:#1a1a1a;padding:8px 16px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;">
-          Check Bushnell Price →
-        </a>
-        {(getAffiliateLink('bushnell-tour-v6-shift') as any).golfGalaxyUrl && (
-          <a href={(getAffiliateLink('bushnell-tour-v6-shift') as any).golfGalaxyUrl}
-             target="_blank" rel="nofollow noopener sponsored"
-             style="background:#fff;color:var(--green);padding:8px 16px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;border:1px solid var(--green);">
-            Check Amazon Price →
-          </a>
-        )}
-      </div>
       <div class="hero-quick-links">
         <span class="hero-quick-label">Top Picks:</span>
         <a href="/best-golf-rangefinders-2026/" class="hero-quick-link">Rangefinders</a>
