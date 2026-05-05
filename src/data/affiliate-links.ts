@@ -1387,10 +1387,10 @@ export const AFFILIATE: Record<string, {
   },
   // ── New: Putters for shaky hands / older golfers ──────────────────────
   'lab-golf-df3': {
-    url: 'https://www.amazon.com/s?k=LAB+Golf+DF3+putter&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520DF3%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Golf Galaxy',
     price: '~$449',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/lab-golf-df3.webp',
     imgAlt: 'L.A.B. Golf DF3 Zero-Torque Putter',
     benefits: [
@@ -1400,10 +1400,10 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-df3i': {
-    url: 'https://www.amazon.com/s?k=LAB+Golf+DF3i+putter&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520DF3i%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Golf Galaxy',
     price: '~$469',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/lab-golf-df3i.webp',
     imgAlt: 'LAB Golf DF3i putter',
     benefits: [
@@ -1413,10 +1413,10 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-mezz1-max': {
-    url: 'https://www.amazon.com/s?k=LAB+Golf+Mezz+1+Max+putter&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520Mezz.1%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Golf Galaxy',
     price: '~$449',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/lab-golf-mezz1-max.webp',
     imgAlt: 'LAB Golf Mezz.1 Max putter',
     benefits: [
@@ -1426,10 +1426,10 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-oz1': {
-    url: 'https://www.amazon.com/s?k=LAB+Golf+OZ1+putter&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520OZ1%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Golf Galaxy',
     price: '~$449',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/lab-golf-oz1.webp',
     imgAlt: 'LAB Golf OZ1 putter',
     benefits: [
