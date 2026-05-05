@@ -53,6 +53,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
         badge: 'BEST OVERALL', rating: 4.8, ratingCount: '2,847',
+        affiliateKey: 'bushnell-tour-v6-shift',
         body: "We took the Tour V6 Shift out for 12 rounds across three different courses before writing a word about it. By round three, it had already replaced the rangefinder that had lived in our bag for two years. The difference was immediate and obvious — this thing just works faster and more reliably than anything else we tested.\n\nThe PinSeeker with JOLT technology is the headline feature, and it earns every bit of the hype. On a 187-yard par 3 with tall oaks behind the green, the V6 locked the flag in under 0.3 seconds and gave us a confident JOLT vibration confirming it hit the pin, not the trees. Our old rangefinder bounced between the flag and the treeline on shots like this — the V6 never did. Not once in 12 rounds.\n\nSlope Switch is the other feature that separates Bushnell from the pack. A physical toggle on the side switches slope compensation on and off. Slope on during practice rounds gives you the adjusted yardage accounting for elevation. Slope off during league play or tournaments makes it 100% USGA legal. No menu diving, no holding buttons — just flip the switch. We used it in a Saturday morning scramble with no issues from the rules committee.\n\nThe optics are sharp and bright. The 6x magnification felt natural — close enough to see pin positions clearly without the hand-shake amplification you get with 7x or 8x models. The display is crisp even in direct morning sunlight, which is when we play most of our rounds. Battery life is rated at 6 months of regular use, and after 12 rounds over 8 weeks, we were still on the original battery.\n\nWhat we liked most: the speed. Pull it out, press the button, get a number, put it back. The entire process takes under 4 seconds. The magnetic BITE mount sticks to the cart bar so it is always within reach. And the build quality feels like it will last 5+ years — the rubberized housing has survived being dropped on a cart path without a scratch.\n\nWhat we did not like: the price. At $329, it costs nearly double the Precision Pro NX9 HD, and honestly, the NX9 does 90% of what the V6 does. If you play 20+ rounds a year and want the absolute best, the V6 is worth every dollar. If you play 10-15 rounds, the NX9 is the smarter buy. The other minor gripe is that it is a pure rangefinder — no GPS mapping, no hazard distances, no course overview. If you want those features, look at the Garmin Z82 instead.\n\nBuy this if: you play 15+ rounds per year and want the fastest, most reliable rangefinder available with zero compromises.\n\nSkip this if: you are budget-conscious and would rather save $160 for the Precision Pro NX9 HD, which delivers 90% of the performance at 50% of the price.",
         price: '~$329 at Amazon',
         pros: [
@@ -71,6 +72,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥈 Best Budget: Precision Pro NX9 HD',
         badge: 'BEST BUDGET', rating: 4.7, ratingCount: '1,203',
+        affiliateKey: 'precision-pro-nx9-hd',
         body: "We almost did not test the NX9 HD because we assumed a $169 rangefinder would feel cheap. We were wrong. After 8 rounds with it, we had a genuine debate about whether to recommend it over the Bushnell as our top pick — it is that good for the money.\n\nThe first thing you notice is the optics. The HD display is crisp and clear, with a bright red readout that is easy to read in any lighting condition. We tested it at 6:30 AM with heavy dew and low sun angle, and the numbers were perfectly legible. Pin acquisition is fast — not quite Bushnell V6 fast, but we are talking maybe half a second slower. On a 156-yard par 3 with the pin tucked behind a bunker, the NX9 locked the flag on the first press and gave us the slope-adjusted number without hesitation.\n\nAdaptive slope technology is included at this price, which is remarkable. Two years ago, you had to spend $300+ to get slope. The NX9 also has pulse vibration confirmation — a quick buzz when it locks the target — which is not as satisfying as Bushnell's JOLT but gets the job done. Accuracy was within 1-2 yards of the Bushnell across all our testing, which is close enough that the difference will never change your club selection.\n\nThe lifetime warranty is the real differentiator. If anything goes wrong — ever — Precision Pro replaces it. No questions, no receipt needed, no expiration. We called their support line with a question about slope calibration and got a real human in under 2 minutes who actually knew what they were talking about. Try that with a $50 Amazon rangefinder.\n\nWhat we liked most: the value proposition is almost unfair. You get 90% of the Bushnell V6 performance for 50% of the price. The lifetime warranty removes all purchase anxiety. And the battery lasts about 12 months, which means you will forget this thing needs batteries at all.\n\nWhat we did not like: the exterior housing feels slightly plastic compared to the rubberized Bushnell. It is not fragile, but it does not feel as premium in your hand. In windy conditions above 15 mph, we noticed the NX9 occasionally took a second read to lock the pin — the Bushnell handled wind better. Neither issue is a dealbreaker at $169.\n\nCompared to the Bushnell V6: if you play 20+ rounds a year and want the absolute fastest, most premium feel, the Bushnell is worth the upgrade. If you play 10-20 rounds and want the best value in the entire rangefinder market, the NX9 HD is our pick without hesitation.\n\nBuy this if: you want a reliable, accurate rangefinder with slope and a lifetime warranty for under $175.\n\nSkip this if: you play competitively and want the fastest possible pin lock speed — spend the extra $160 on the Bushnell V6 Shift.",
         price: '~$169 at Amazon',
         pros: [
@@ -109,6 +111,7 @@ export const ARTICLES: Article[] = [
         h2: '🥉 Best GPS+Laser Hybrid: Garmin Approach Z82',
         badge: 'BEST HYBRID',
         rating: 4.5, ratingCount: '980',
+        affiliateKey: 'garmin-approach-z82',
         body: "The Garmin Z82 is the only rangefinder we tested that made us say out loud: I did not know a rangefinder could do that. It is not just a laser — it is a laser rangefinder with a full GPS system built in, and the combination is genuinely useful.\n\nHere is what happens when you look through the viewfinder: you see the laser distance to whatever you are pointing at, plus a full-color overlay showing the green shape, hazard distances, and layup yardages from Garmin's 42,000-course database. On a 380-yard par 4 with water running up the left side, the Z82 showed us the carry distance to clear the water (218 yards), the distance to the front of the green (165 yards from our layup), and the pin position — all without lowering the device. No other rangefinder does this.\n\nWe tested it over 6 rounds and the GPS+laser combination changed how we played at least 2-3 holes per round. On doglegs, we could laser the corner and see the remaining distance to the green simultaneously. On par 3s with tucked pins, the green overlay showed us which side had more room for a miss. The slope-adjusted distances factor in both elevation change and green undulation data, making club selection almost automatic.\n\nThe laser itself is solid — Garmin accuracy, fast lock, slope compensation. It is not quite as snappy as the Bushnell V6 on pure pin lock speed, but the difference is marginal. Where the Z82 loses points is size and price. It is noticeably bulkier than a standard rangefinder — about 30% heavier — and at $499, it is in a different budget category entirely.\n\nWhat we liked most: the green view overlay is a game-changer on unfamiliar courses. The 42,000-course database means it works everywhere. And the combination of laser precision with GPS context gives you more information per look than any other device.\n\nWhat we did not like: the bulk. It does not fit comfortably in a pocket, and the larger form factor makes one-handed operation less natural. The $499 price is also steep — for that money, you could buy the Bushnell V6 AND a Garmin S42 GPS watch and have both dedicated tools. Battery life is about 14 hours of GPS+laser use, which means charging every 3-4 rounds.\n\nCompared to the Bushnell V6: if you only need laser distances, the Bushnell is faster, smaller, and $170 cheaper. If you play unfamiliar courses regularly or want hazard and layup information without pulling out your phone, the Z82 offers genuinely unique capability.\n\nBuy this if: you frequently play new courses and want every piece of course information in one device.\n\nSkip this if: you mostly play your home course — you already know the hazards and a standard laser is all you need.",
         price: '~$499 at Amazon',
         pros: [
@@ -127,6 +130,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Premium: Bushnell Pro XE',
         badge: 'PREMIUM PICK', rating: 4.7, ratingCount: '1,891',
+        affiliateKey: 'bushnell-pro-xe',
         body: "The Pro XE is the rangefinder Bushnell makes for golfers who want every possible variable accounted for. While the Tour V6 Shift factors in slope, the Pro XE adds temperature and altitude to the equation — what Bushnell calls Elements. On a hot August afternoon at elevation, those factors can mean a 5-8 yard difference on a 175-yard approach.\n\nWe tested the Pro XE over 8 rounds, including a 95-degree day in July and a windy 52-degree morning in early April. On the hot day, the Pro XE read 168 yards to a pin that the V6 called 172. The actual carry with a 7-iron confirmed the Pro XE was closer — the ball landed pin high. In cool morning air, the Pro XE consistently showed 2-3 yards more than the V6 on the same targets, correctly accounting for reduced ball flight in denser air. Is a 3-yard difference worth $170? For most weekend golfers, honestly, no. For competitive players or golfers who play in extreme temperatures or at altitude, absolutely.\n\nThe PinSeeker with JOLT is the same excellent system from the V6 — instant pin lock, vibration confirmation, zero complaints. The magnetic cart mount is even stronger on the Pro XE, and the housing feels built like a tank. This is a rangefinder you buy once and hand down to your kids. The rubberized armor has survived multiple cart path drops in our testing without a mark.\n\nThe display is arguably the best in our entire test lineup. Bright, sharp, easy to read in every condition. The slope toggle works identically to the V6 — physical switch, tournament legal when off.\n\nWhat we liked most: the Elements technology genuinely produces more accurate numbers in extreme conditions. The build quality is the best of any rangefinder we have ever held. And the optics are the sharpest in the Bushnell lineup — the viewfinder clarity is noticeably better than the V6.\n\nWhat we did not like: the price. At $499, it costs $170 more than the V6 Shift and delivers maybe 5% more capability. The extra accuracy from Elements only matters when temperature is above 90 or below 50, or when you are playing at 3,000+ feet of elevation. For a Saturday round at your local course in moderate weather, the V6 gives you the same results. It is also a touch heavier than the V6, though the difference is minimal.\n\nCompared to the V6 Shift: the Pro XE is the better rangefinder on paper. But the V6 is the better value for 90% of golfers. Buy the Pro XE if you play in extreme conditions regularly, compete seriously, or just want the absolute best and price is not the priority.\n\nBuy this if: you play competitively, in extreme temperatures, or at altitude and want every yard accounted for.\n\nSkip this if: you play casual rounds in moderate weather — the V6 Shift gives you 95% of this performance for $170 less.",
         price: '~$499 at Amazon',
         pros: [
@@ -342,6 +346,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Best Overall: Callaway Paradym AI Smoke Max',
         badge: 'BEST OVERALL', rating: 4.8, ratingCount: '3,240',
+        affiliateKey: 'callaway-paradym-ai-smoke-max',
         body: "We hit roughly 200 balls with the Paradym Ai Smoke Max across four range sessions and six full rounds before forming an opinion. By the second round, it had permanently displaced the driver that had been in our bag for 18 months. The difference was not subtle — it was the kind of improvement that made us angry we had not switched sooner.\n\nThe headline is forgiveness on mishits. Callaway uses AI to design the face of every individual head, optimizing flex patterns so off-center strikes still produce competitive ball speed. We tested this deliberately: toe hits that would have lost 20 yards with our old driver lost about 8-10 yards with the Smoke Max. Heel strikes that used to balloon right held their line with only a gentle fade. On a 412-yard par 4 where we pulled our tee shot toward the left rough, the ball still carried 235 yards and rolled into the first cut instead of the trees. That is forgiveness you can feel.\n\nLaunch monitor data backed up what we saw on the course. Average carry was 228 yards at our 94 mph swing speed, with a dispersion pattern about 15% tighter than the TaylorMade Qi35 Max. Ball speed on center strikes averaged 148 mph, but the key number was ball speed on mishits — 141 mph, which is only a 5% drop. Most drivers lose 8-12% on off-center contact.\n\nThe sound is a deep, muted crack that feels powerful without being loud. The adjustable hosel lets you tweak loft and lie angle, and the draw-biased Max D version is available if you fight a slice. At 10.5 degrees with the stock Aldila Ascent shaft in regular flex, the launch conditions were ideal for our swing without any adjustments.\n\nWhat we liked most: the mishit forgiveness is genuinely a tier above everything else we tested. The AI face technology is not marketing fluff — the data proves it. The sound and feel are premium. And the adjustability means you can dial it in without a fitting, though we still recommend one.\n\nWhat we did not like: the price. At $499, this is a serious investment. The Cobra Aerojet Max delivers roughly 85% of this performance for $100 less. The stock shaft is serviceable but not exceptional — a $50 aftermarket shaft upgrade makes this driver even better, which feels like it should not be necessary at this price.\n\nCompared to the TaylorMade Qi35 Max: the Qi35 is slightly longer on pure center strikes, but the Callaway holds up significantly better on mishits. For a weekend golfer who misses the center on 40% of drives, the Callaway produces better average results across 18 holes.\n\nBuy this if: you want the most forgiving premium driver available and mishit recovery matters more to you than 3 extra yards on perfect strikes.\n\nSkip this if: you are on a budget — the Cobra Aerojet Max at $399 is the smarter play for most weekend golfers.",
         price: '~$499 at Amazon',
         pros: [
@@ -359,6 +364,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Distance: TaylorMade Qi35 Max',
         badge: 'BEST DISTANCE', rating: 4.6, ratingCount: '2,180',
+        affiliateKey: 'taylormade-qi35-max',
         body: "The TaylorMade Qi35 Max is the driver you buy when your number one priority is seeing bigger carry numbers. We tested it over 5 rounds and multiple range sessions, and it consistently produced our longest drives of the entire test — 3-5 yards beyond the Callaway on center strikes.\n\nThe Carbonwood construction is the engineering story here. TaylorMade replaced the traditional titanium crown with a carbon fiber composite, saving weight that gets redistributed low and back in the head. The result is a higher launch angle with lower spin — the exact combination that maximizes carry distance for amateur swing speeds. At our 94 mph driver speed, average carry was 232 yards with the Qi35 versus 228 with the Callaway. That 4-yard gap was consistent across sessions.\n\nOn a 395-yard par 4 playing slightly downwind, we hit a drive that carried 248 yards and rolled out to 271. Our playing partners noticed. The Qi35 produces a penetrating ball flight that holds its line in wind better than the higher-launching Callaway. In a crosswind test, the Qi35 drifted about 6 yards less on average than the Smoke Max.\n\nForgiveness is good but not quite Callaway-level. Toe strikes lost about 12-14 yards versus 8-10 with the Smoke Max. The dispersion pattern was slightly wider — about 20% more spread left-to-right on mishits. For a golfer who makes solid contact 70% of the time, the Qi35 produces better total results because the extra distance on good swings outweighs the penalty on bad ones. For a golfer who only finds the center 50% of the time, the Callaway is the safer choice.\n\nThe Qi35 has a slightly louder, higher-pitched impact sound compared to the Callaway. Some golfers love it — it sounds fast. Others find it a bit metallic. Personal preference. The Speed Pocket in the sole helps maintain ball speed on low-face strikes, which is where most amateurs miss.\n\nWhat we liked most: raw distance. This is the longest driver in our test, period. The wind performance is excellent. And the draw-biased weighting keeps the ball from drifting right without feeling like a hook machine.\n\nWhat we did not like: forgiveness on mishits is a step behind the Callaway and Ping. At $499, you are paying the same price for slightly less mishit protection. The stock shaft felt a touch heavy for our swing — a lighter aftermarket option helped.\n\nCompared to the Callaway: if you catch the center regularly and want maximum distance, the Qi35 wins. If you spray it and need the driver to bail you out, the Callaway is the better all-around choice.\n\nBuy this if: you make decent contact and want the longest driver available at any price.\n\nSkip this if: you mishit frequently and need a driver that minimizes the damage on bad swings.",
         price: '~$499 at Amazon',
         pros: [
@@ -376,6 +382,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Value: Cobra Aerojet Max',
         badge: 'BEST VALUE', rating: 4.5, ratingCount: '1,670',
+        affiliateKey: 'cobra-aerojet-max',
         body: "The Cobra Aerojet Max is the reason we tell every weekend golfer to stop assuming the most expensive driver is the best driver. At $399 — sometimes dropping to $349 on sale — it delivers performance that had us double-checking the price tag.\n\nWe tested the Aerojet Max over 4 rounds and 3 range sessions back-to-back with the Callaway Paradym Ai Smoke Max. The Cobra was shorter by about 5-7 yards on average. That is the entire performance gap. Everything else — forgiveness, dispersion, launch conditions — was within 10% of a driver that costs $100-$150 more.\n\nCobra uses their H.O.T. Face technology, which is essentially their version of AI-optimized face design. Each face is CNC milled and individually measured to ensure consistent thickness patterns that maximize ball speed across the hitting area. On toe strikes, we lost about 12 yards — worse than the Callaway's 8-10 but better than most drivers at any price. The dispersion pattern was surprisingly tight for a sub-$400 driver.\n\nThe look at address is confidence-inspiring. The Aerojet has a slightly larger footprint than the Callaway or TaylorMade, which makes it look more forgiving even before you swing. The matte black crown reduces glare, and the alignment aid is subtle but effective. Sound is a muted thud — not as refined as the Callaway but perfectly pleasant.\n\nOne thing Cobra does better than anyone: stock shaft options. The Aerojet Max comes with a lightweight Aldila Ascent shaft that is genuinely well-matched for the head. We did not feel the need to upgrade, which saves you another $50-$100 that other brands essentially require.\n\nWhat we liked most: the value is absurd. You are getting 85-90% of a $499 driver for $399 or less. The stock shaft is excellent — no upgrade needed. Cobra customer service is also underrated — they have a great reputation for warranty claims.\n\nWhat we did not like: 5-7 yards shorter than the Callaway and TaylorMade on average. The adjustability is more limited — fewer loft and weight settings. And the resale value is lower than Callaway or TaylorMade if you upgrade in two years.\n\nCompared to the Callaway Paradym Ai Smoke Max: 85% of the performance at 65-80% of the price. The Callaway is the better driver. The Cobra is the better purchase for most weekend golfers' budgets.\n\nBuy this if: you want a premium-performing driver without paying $500 and you are not chasing the last 5 yards of distance.\n\nSkip this if: you play 25+ rounds a year and want the absolute best mishit forgiveness available — the Callaway is worth the upgrade.",
         price: '~$399 at Amazon',
         pros: [
@@ -860,11 +867,13 @@ export const ARTICLES: Article[] = [
         rating: 4.5, ratingCount: '2,100',
         pros: ['GPS, scoring, handicap, stats, and social features in one app', 'Premium tier includes virtual caddie with course strategy', 'Clean design — easiest interface on this list'],
         cons: ['Full features require premium subscription at $40/year', 'More features than most casual golfers will ever use'], price: 'Free / $10/month premium' , affiliateKey: ''},
-      { h2: 'Best for Stats: Arccos Caddie', badge: 'BEST FOR STATS', body: "The Arccos app is free, but to unlock its full power you need the $179 sensor kit — together they give you strokes gained analysis and AI club recommendations.",
+      { h2: 'Best for Stats: Arccos Caddie', badge: 'BEST FOR STATS', affiliateKey: 'arccos-caddie-sensors',
+        body: "The Arccos app is free, but to unlock its full power you need the $179 sensor kit — together they give you strokes gained analysis and AI club recommendations.",
         rating: 4.6, ratingCount: '1,230',
         pros: ['Deepest automatic shot analytics available for recreational golfers', 'AI caddie recommends specific clubs based on your actual tracked distances', 'USGA-integrated handicap tracking'],
         cons: ['Sensors cost $179 upfront plus $99/year subscription', 'Phone must stay in pocket or on cart — disruptive to some golfers'], price: 'Free app / $179 sensors + $99/yr' },
-      { h2: 'Best Pure GPS: Golfshot', body: "Fastest, cleanest GPS interface. If you want front/middle/back with zero friction, Golfshot loads faster and displays more clearly than anything else.", price: 'Free / $30/year premium' },
+      { h2: 'Best Pure GPS: Golfshot', affiliateKey: 'golfshot',
+        body: "Fastest, cleanest GPS interface. If you want front/middle/back with zero friction, Golfshot loads faster and displays more clearly than anything else.", price: 'Free / $30/year premium' },
     ],
     faq: [
       { q: 'What is the best free golf GPS app?', a: "The Grint is the best completely free golf GPS app. It provides official USGA handicap tracking, GPS for 40,000+ courses, and digital scoring at zero cost." },
@@ -923,15 +932,18 @@ export const ARTICLES: Article[] = [
         rating: 4.4, ratingCount: '670',
         pros: ['Identifies specific swing faults from phone video — grip, over-the-top, early extension', 'No extra hardware needed beyond your existing phone', 'Affordable at ~$10/month compared to in-person lesson costs'],
         cons: ['AI feedback less nuanced than a qualified coach on complex mechanics', 'Requires consistent lighting and correct camera angle for reliable analysis'], price: '~$10/month' , affiliateKey: ''},
-      { h2: 'Home Launch Monitor: Rapsodo MLM2PRO', badge: 'BEST LAUNCH DATA', body: "Full launch monitor data — ball speed, club speed, launch angle, spin rate, carry, total, and shot shape — plus video overlay from your phone.",
+      { h2: 'Home Launch Monitor: Rapsodo MLM2PRO', badge: 'BEST LAUNCH DATA', affiliateKey: 'rapsodo-mlm2pro',
+        body: "Full launch monitor data — ball speed, club speed, launch angle, spin rate, carry, total, and shot shape — plus video overlay from your phone.",
         rating: 4.5, ratingCount: '890',
         pros: ['Full launch data: ball speed, spin, launch angle, carry distance, club path', 'No subscription required for core metrics', 'Works indoors with a net or outdoors on any range'],
         cons: ['Requires specific setup angle and position for accurate readings', 'App data less intuitive for beginners without understanding what the numbers mean'], price: '~$699 + $99/yr Pro' },
-      { h2: 'Best Smart Putting Sensor: Blast Motion', badge: 'BEST PUTTING', body: "Clips to any putter grip. Measures stroke tempo, face rotation, impact ratio, and backswing lengths. Compares your numbers to tour average.",
+      { h2: 'Best Smart Putting Sensor: Blast Motion', badge: 'BEST PUTTING', affiliateKey: 'blast-motion-sensor',
+        body: "Clips to any putter grip. Measures stroke tempo, face rotation, impact ratio, and backswing lengths. Compares your numbers to tour average.",
         rating: 4.4, ratingCount: '560',
         pros: ['Clips to any putter grip — measures tempo, rotation, and impact quality', 'Gives specific drill recommendations based on your diagnosed stroke fault', 'Compact and portable — fits in any bag'],
         cons: ['Putting and short game only — no full swing tracking', 'App subscription required to access advanced analytics and history'], price: '~$99' },
-      { h2: 'Best Home Simulator: SkyTrak+', badge: 'BEST SIMULATOR', body: "Captures ball speed, launch angle, spin rate, and spin axis for all 14 clubs. The unit alone costs $2,995 plus net, mat, and projector.",
+      { h2: 'Best Home Simulator: SkyTrak+', badge: 'BEST SIMULATOR', affiliateKey: 'skytrak-plus',
+        body: "Captures ball speed, launch angle, spin rate, and spin axis for all 14 clubs. The unit alone costs $2,995 plus net, mat, and projector.",
         rating: 4.7, ratingCount: '1,120',
         pros: ['Full simulator functionality — plays 100,000+ courses with real ball flight physics', 'Accurate launch data comparable to commercial simulators at a fraction of the cost', 'Compatible with most popular simulator software packages'],
         cons: ['$2,995 upfront — significant investment before adding screen, net, and enclosure costs', 'Requires dedicated space — minimum 8ft ceiling recommended for driver swings'], price: '~$2,995 + $199/yr software' },
@@ -1430,11 +1442,11 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Golf Ball', 'Best For', 'Price/Dz', 'Compression', 'Our Rating'],
       rows: [
-        { affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: '', winner: true, rating: 4.9, ratingCount: '4,120' },
-        { affiliateKey: 'callaway-chrome-tour', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '~$58', feature1: '~90', feature2: '', winner: false, rating: 4.7, ratingCount: '1,450' },
-        { affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best Under 95mph', price: '~$35', feature1: '72', feature2: '', winner: false, rating: 4.6, ratingCount: '1,870' },
-        { affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false, rating: 4.5, ratingCount: '2,340' },
-        { affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value Tour', price: '~$33', feature1: '80', feature2: '', winner: false, rating: 4.5, ratingCount: '1,120' },
+        { affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: '', winner: true, rating: 4.9, ratingCount: '4,120' , affiliateKey: 'titleist-pro-v1'},
+        { affiliateKey: 'callaway-chrome-tour', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '~$58', feature1: '~90', feature2: '', winner: false, rating: 4.7, ratingCount: '1,450' , affiliateKey: 'callaway-chrome-tour-2026'},
+        { affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best Under 95mph', price: '~$35', feature1: '72', feature2: '', winner: false, rating: 4.6, ratingCount: '1,870' , affiliateKey: 'srixon-q-star-tour'},
+        { affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false, rating: 4.5, ratingCount: '2,340' , affiliateKey: 'callaway-supersoft'},
+        { affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value Tour', price: '~$33', feature1: '80', feature2: '', winner: false, rating: 4.5, ratingCount: '1,120' , affiliateKey: 'vice-pro'},
       ],
     },
     sources: [{ label: 'Titleist — Pro V1 Construction & Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'MyGolfSpy — 2025 Golf Ball Test Methodology', url: 'https://mygolfspy.com/golf-ball-test/' }, { label: 'USGA — Conforming Golf Ball List', url: 'https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/equipment-rules/balls.html' }],
@@ -1756,40 +1768,40 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Golf Ball', 'Compression', 'Cover', 'Price/Dz', 'Best Swing Speed'],
       rows: [
-        { name: 'TaylorMade Noodle', bestFor: 'Beginners', price: '~$20', feature1: '34', feature2: 'Ionomer', winner: false },
+        { name: 'TaylorMade Noodle', bestFor: 'Beginners', price: '~$20', feature1: '34', feature2: 'Ionomer', winner: false , affiliateKey: 'taylormade-noodle'},
         { name: 'Callaway Supersoft', bestFor: 'Under 80 mph', price: '~$25', feature1: '38', feature2: 'Ionomer', winner: false, affiliateKey: 'callaway-supersoft' },
-        { name: 'Wilson DUO Soft+', bestFor: 'Seniors', price: '~$22', feature1: '40', feature2: 'Ionomer', winner: false },
-        { name: 'Titleist TruFeel', bestFor: 'Soft feel', price: '~$25', feature1: '45', feature2: 'Ionomer', winner: false },
-        { name: 'TaylorMade Soft Response', bestFor: 'Under 85 mph', price: '~$25', feature1: '50', feature2: 'Ionomer', winner: false },
+        { name: 'Wilson DUO Soft+', bestFor: 'Seniors', price: '~$22', feature1: '40', feature2: 'Ionomer', winner: false , affiliateKey: 'wilson-duo-soft-plus'},
+        { name: 'Titleist TruFeel', bestFor: 'Soft feel', price: '~$25', feature1: '45', feature2: 'Ionomer', winner: false , affiliateKey: 'titleist-trufeel'},
+        { name: 'TaylorMade Soft Response', bestFor: 'Under 85 mph', price: '~$25', feature1: '50', feature2: 'Ionomer', winner: false , affiliateKey: 'taylormade-soft-response'},
         { name: 'Bridgestone e12 Contact', bestFor: 'Budget distance', price: '~$28', feature1: '50', feature2: 'Ionomer', winner: false, affiliateKey: 'bridgestone-e12-contact' },
-        { name: 'Vice Drive', bestFor: 'Value', price: '~$17', feature1: '55', feature2: 'Ionomer', winner: false },
+        { name: 'Vice Drive', bestFor: 'Value', price: '~$17', feature1: '55', feature2: 'Ionomer', winner: false , affiliateKey: 'vice-drive'},
         { name: 'Srixon Soft Feel', bestFor: 'Best value', price: '~$27', feature1: '60', feature2: 'Ionomer', winner: true, affiliateKey: 'srixon-soft-feel' },
-        { name: 'Vice Pro Soft', bestFor: '80-90 mph', price: '~$28', feature1: '65', feature2: 'Urethane', winner: false },
-        { name: 'Titleist Tour Soft', bestFor: '80-90 mph', price: '~$35', feature1: '65', feature2: 'Ionomer', winner: false },
-        { name: 'Titleist Velocity', bestFor: 'Max distance', price: '~$30', feature1: '65', feature2: 'Ionomer', winner: false },
-        { name: 'Callaway Warbird', bestFor: 'Distance', price: '~$22', feature1: '68', feature2: 'Ionomer', winner: false },
-        { name: 'Bridgestone Tour B RX', bestFor: '85-95 mph', price: '~$45', feature1: '68', feature2: 'Urethane', winner: false },
-        { name: 'Wilson Chaos', bestFor: 'Mid speed', price: '~$28', feature1: '70', feature2: 'Ionomer', winner: false },
-        { name: 'Pinnacle Rush', bestFor: 'Distance', price: '~$22', feature1: '72', feature2: 'Ionomer', winner: false },
+        { name: 'Vice Pro Soft', bestFor: '80-90 mph', price: '~$28', feature1: '65', feature2: 'Urethane', winner: false , affiliateKey: 'vice-pro-soft'},
+        { name: 'Titleist Tour Soft', bestFor: '80-90 mph', price: '~$35', feature1: '65', feature2: 'Ionomer', winner: false , affiliateKey: 'titleist-tour-soft'},
+        { name: 'Titleist Velocity', bestFor: 'Max distance', price: '~$30', feature1: '65', feature2: 'Ionomer', winner: false , affiliateKey: 'titleist-velocity'},
+        { name: 'Callaway Warbird', bestFor: 'Distance', price: '~$22', feature1: '68', feature2: 'Ionomer', winner: false , affiliateKey: 'callaway-warbird'},
+        { name: 'Bridgestone Tour B RX', bestFor: '85-95 mph', price: '~$45', feature1: '68', feature2: 'Urethane', winner: false , affiliateKey: 'bridgestone-tour-b-rx'},
+        { name: 'Wilson Chaos', bestFor: 'Mid speed', price: '~$28', feature1: '70', feature2: 'Ionomer', winner: false , affiliateKey: 'wilson-chaos'},
+        { name: 'Pinnacle Rush', bestFor: 'Distance', price: '~$22', feature1: '72', feature2: 'Ionomer', winner: false , affiliateKey: 'pinnacle-rush'},
         { name: 'Srixon Q-Star Tour', bestFor: '85-95 mph', price: '~$35', feature1: '72', feature2: 'Urethane', winner: false, affiliateKey: 'srixon-q-star-tour' },
         { name: 'Callaway Chrome Soft', bestFor: '88-100 mph', price: '~$40', feature1: '75', feature2: 'Urethane', winner: false, affiliateKey: 'callaway-chrome-soft' },
-        { name: 'Kirkland Signature', bestFor: 'Value tour ball', price: '~$28', feature1: '75', feature2: 'Urethane', winner: false },
-        { name: 'Titleist AVX', bestFor: 'Low spin/launch', price: '~$50', feature1: '77', feature2: 'Urethane', winner: false },
+        { name: 'Kirkland Signature', bestFor: 'Value tour ball', price: '~$28', feature1: '75', feature2: 'Urethane', winner: false , affiliateKey: 'kirkland-signature'},
+        { name: 'Titleist AVX', bestFor: 'Low spin/launch', price: '~$50', feature1: '77', feature2: 'Urethane', winner: false , affiliateKey: 'titleist-avx'},
         { name: 'TaylorMade Tour Response', bestFor: '88-100 mph', price: '~$35', feature1: '77', feature2: 'Urethane', winner: false, affiliateKey: 'taylormade-tour-response' },
         { name: 'Titleist Tour Speed', bestFor: '90-100 mph', price: '~$36', feature1: '78', feature2: 'Urethane', winner: false, affiliateKey: 'titleist-tour-speed' },
         { name: 'Vice Pro', bestFor: '90-105 mph', price: '~$33', feature1: '80', feature2: 'Urethane', winner: false, affiliateKey: 'vice-pro' },
         { name: 'TaylorMade TP5', bestFor: '95-110 mph', price: '~$50', feature1: '85', feature2: 'Urethane', winner: false, affiliateKey: 'taylormade-tp5' },
         { name: 'Titleist Pro V1', bestFor: '90-110 mph', price: '~$55', feature1: '87', feature2: 'Urethane', winner: false, affiliateKey: 'titleist-pro-v1' },
-        { name: 'Wilson Staff Model', bestFor: '95-110 mph', price: '~$35', feature1: '87', feature2: 'Urethane', winner: false },
-        { name: 'Srixon Z-Star', bestFor: '90-110 mph', price: '~$40', feature1: '88', feature2: 'Urethane', winner: false },
+        { name: 'Wilson Staff Model', bestFor: '95-110 mph', price: '~$35', feature1: '87', feature2: 'Urethane', winner: false , affiliateKey: 'wilson-staff-model'},
+        { name: 'Srixon Z-Star', bestFor: '90-110 mph', price: '~$40', feature1: '88', feature2: 'Urethane', winner: false , affiliateKey: 'srixon-z-star'},
         { name: 'Callaway Chrome Tour', bestFor: '95-115 mph', price: '~$58', feature1: '90', feature2: 'Urethane', winner: false, affiliateKey: 'callaway-chrome-tour-2026' },
-        { name: 'Bridgestone Tour B XS', bestFor: '95-110 mph', price: '~$48', feature1: '90', feature2: 'Urethane', winner: false },
-        { name: 'Vice Pro Plus', bestFor: '100+ mph', price: '~$35', feature1: '90', feature2: 'Urethane', winner: false },
+        { name: 'Bridgestone Tour B XS', bestFor: '95-110 mph', price: '~$48', feature1: '90', feature2: 'Urethane', winner: false , affiliateKey: 'bridgestone-tour-b-xs'},
+        { name: 'Vice Pro Plus', bestFor: '100+ mph', price: '~$35', feature1: '90', feature2: 'Urethane', winner: false , affiliateKey: 'vice-pro-plus'},
         { name: 'Titleist Pro V1x', bestFor: '100+ mph', price: '~$55', feature1: '97', feature2: 'Urethane', winner: false, affiliateKey: 'titleist-pro-v1x' },
-        { name: 'TaylorMade TP5x', bestFor: '100+ mph', price: '~$50', feature1: '97', feature2: 'Urethane', winner: false },
-        { name: 'Bridgestone Tour B X', bestFor: '100+ mph', price: '~$48', feature1: '100', feature2: 'Urethane', winner: false },
-        { name: 'Srixon Z-Star XV', bestFor: '105+ mph', price: '~$40', feature1: '102', feature2: 'Urethane', winner: false },
-        { name: 'Maxfli Tour X', bestFor: '105+ mph', price: '~$35', feature1: '100', feature2: 'Urethane', winner: false },
+        { name: 'TaylorMade TP5x', bestFor: '100+ mph', price: '~$50', feature1: '97', feature2: 'Urethane', winner: false , affiliateKey: 'taylormade-tp5x'},
+        { name: 'Bridgestone Tour B X', bestFor: '100+ mph', price: '~$48', feature1: '100', feature2: 'Urethane', winner: false , affiliateKey: 'bridgestone-tour-b-x'},
+        { name: 'Srixon Z-Star XV', bestFor: '105+ mph', price: '~$40', feature1: '102', feature2: 'Urethane', winner: false , affiliateKey: 'srixon-z-star-xv'},
+        { name: 'Maxfli Tour X', bestFor: '105+ mph', price: '~$35', feature1: '100', feature2: 'Urethane', winner: false , affiliateKey: 'maxfli-tour-x'},
       ],
     },
     faq: [
@@ -3103,6 +3115,7 @@ export const ARTICLES: Article[] = [
         h2: '🥇 SkyTrak+ — Where It Wins',
         badge: 'BEST FOR HOME SETUPS',
         rating: 4.7, ratingCount: '1,120',
+        affiliateKey: 'skytrak-plus',
         body: 'SkyTrak+ at $2,995 offers the best simulation experience at this price point. The photometric system is extremely accurate indoors (where it works best), and the software ecosystem — including WGT Golf, E6 Connect, and The Golf Club — is the deepest in the category. It connects via WiFi or direct USB and works reliably in a dedicated net setup. The subscription tiers ($99/yr for basic, $199/yr for full simulation) are reasonable for the content included.',
         pros: ['Most accurate at indoor distances', 'Best software ecosystem (WGT, E6, TGC)', 'Consistent readings shot-to-shot', 'Compact and easy to position'],
         cons: ['Works best indoors — limited outdoor use', 'Annual software subscription required', 'No built-in radar for full carry measurement'],
@@ -3350,6 +3363,7 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Overall: Bushnell Ion Elite',
         badge: 'BEST OVERALL',
         rating: 4.7, ratingCount: '2,340',
+        affiliateKey: 'bushnell-ion-elite',
         body: 'The Ion Elite at $149 is clean, simple, and accurate. Front/middle/back of green for 40,000+ courses. Hazard and layup distances. Auto-hole advance. Long battery life (16+ hours — a full round without worrying about charging). The display is easy to read in full sun. No subscription required. For a high handicapper who wants yardage data without thinking about the watch, this is the right buy.',
         price: '~$149',
         pros: [
@@ -3368,6 +3382,7 @@ export const ARTICLES: Article[] = [
         h2: '🥈 Best Budget: Garmin Approach S12',
         badge: 'BUDGET PICK',
         rating: 4.3, ratingCount: '1,340',
+        affiliateKey: 'garmin-approach-s12',
         body: 'The Garmin S12 at $169 adds a slightly cleaner interface and Garmin\'s reputation for GPS accuracy. It gives you 42,000 preloaded courses, front/middle/back, and a round timer. The slightly larger display makes it easier to read at a glance. If you prefer Garmin\'s ecosystem (you might have other Garmin devices), this is the entry point.',
         price: '~$169',
         pros: [
@@ -3465,7 +3480,6 @@ export const ARTICLES: Article[] = [
           'Requires setup time at start of each session',
         ],
       
-        affiliateKey: '',
       },
       {
         h2: '🥈 Best Mid-Range Compact: Rapsodo MLM2PRO',
@@ -3543,6 +3557,7 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Net: Rukket 10x7 Haack Golf Net',
         badge: 'BEST OVERALL NET',
         rating: 4.7, ratingCount: '2,340',
+        affiliateKey: 'rukket-haack-net',
         body: 'The Rukket Haack Golf Net ($199) is the standard for home golf nets. At 10x7 feet, it is wide and tall enough for full driver shots without edge misses. The 7-layer impact barrier handles repeated full-speed shots without breaking down. Setup takes 5 minutes — no tools required. It has a target circle in the center for aim practice. Has survived 2+ years of regular use in testing.',
         price: '~$199',
         pros: [
@@ -3556,17 +3571,16 @@ export const ARTICLES: Article[] = [
           'Net requires periodic re-tensioning',
         ],
       
-        affiliateKey: '',
       },
       {
         h2: '🥈 Best Mat: Country Club Elite vs Fiberbuilt',
         badge: 'MAT COMPARISON',
         rating: 4.4, ratingCount: '1,230',
+        affiliateKey: 'fiberbuilt-studio-mat',
         body: 'Country Club Elite Real Feel Mat (~$350 for 3x5 feet) is the gold standard — the turf material gives realistic impact feel and will not damage club faces. Fiberbuilt mats ($400-$600) are more durable for daily use and have a realistic divot response. Avoid thin foam mats under $100 — they damage clubs on fat shots and give false feedback on strike quality. Minimum spend on a mat: $200 for decent feel.',
         pros: ['CCE: best feel closest to real turf at $350', 'Fiberbuilt: best durability for heavy use', 'Both protect clubs on off-center strikes'],
         cons: ['CCE: shows wear after 12-18 months of heavy use', 'Fiberbuilt: heavier and more expensive'],
         price: '~$350 (Country Club Elite)',
-        affiliateKey: '',
       },
       {
         h2: 'Adding a Launch Monitor',
@@ -3710,17 +3724,14 @@ export const ARTICLES: Article[] = [
       {
         h2: 'What slope mode actually does',
         body: 'A laser rangefinder measures the straight-line distance from you to the flag. Slope mode then takes the elevation difference into account and outputs the "plays like" distance. If you are 150 yards from a flag that is 20 feet above you, slope mode might read 158 yards — the distance you should treat it as when selecting your club.',
-        affiliateKey: '',
       },
       {
         h2: 'How slope yardage is calculated',
         body: 'Rangefinders use a trigonometric formula based on the angle of incline. Most devices calculate slope using the angle between the device and the flag combined with the raw laser distance. The result is the "adjusted plays-like distance" displayed on screen. Bushnell calls this "Slope Switch." Precision Pro calls it "Adaptive Slope." All manufacturers use the same underlying calculation.',
-        affiliateKey: '',
       },
       {
         h2: 'When slope is illegal in golf',
         body: 'Slope mode is illegal during stroke play competitions governed by the Rules of Golf unless the committee has issued a Local Rule permitting distance-measuring devices. In casual rounds and practice rounds, slope is completely legal and useful. Most modern rangefinders include a physical toggle to disable slope for competition use — look for "tournament mode" or a legal indicator in the viewfinder.',
-        affiliateKey: '',
       },
       {
         h2: 'Recommended rangefinders with slope',
@@ -3770,7 +3781,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Average 7 iron distance by handicap',
         body: 'Based on Arccos Golf data from millions of tracked shots: scratch golfer: 175 yards. 5 handicap: 165 yards. 10 handicap: 155 yards. 15 handicap: 145 yards. 20 handicap: 135 yards. 25 handicap: 120 yards. Female golfers average 15–25 yards shorter across all handicap levels. These are carry distances — not total with roll.',
-        affiliateKey: '',
       },
       {
         h2: 'Why most golfers over-estimate their iron distance',
@@ -3780,7 +3790,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'How to find your real 7 iron distance',
         body: 'Three ways: (1) Hit 20 balls to a range flag, walk off the middle of the cluster — not the longest. (2) Use a launch monitor at the range — most good ranges have them available. (3) Use Arccos or Shot Scope sensors for 10+ rounds to build an accurate automatic average. GPS-tracked round averages are the most accurate because they measure real course conditions.',
-        affiliateKey: '',
       },
       {
         h2: 'How to add distance to your 7 iron',
@@ -3830,12 +3839,10 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Why most improvement approaches are wrong',
         body: 'Recreational golfers typically try to improve by: hitting more range balls, buying new equipment, or working on their full swing. None of these are the fastest path to a lower handicap. Strokes-gained data from Arccos across 500,000+ tracked rounds consistently shows the same thing: the biggest waste of shots for golfers shooting 85–100 is not poor driving — it is the 3-putt, the chip that stays in the rough, and the snowman on hole 7.',
-        affiliateKey: '',
       },
       {
         h2: 'The biggest source of wasted strokes: disaster holes',
         body: 'For a 20 handicap, one 8 or 9 on a par-4 costs more strokes against your target score than three bogeys. Strategy: on any hole where you are already making a triple bogey or worse, pick up and take the maximum (as allowed by your playing format). In competitive rounds, play conservatively from tee on tight holes — a driver OB costs two shots immediately.',
-        affiliateKey: '',
       },
       {
         h2: 'Short game improvement has the highest ROI',
@@ -3890,7 +3897,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Cause 1: Weak grip (most common)',
         body: 'A weak grip — where both hands are rotated toward the target, showing fewer than 2 knuckles on the lead hand — makes it mechanically very hard to square the face at impact. It is the single most common cause of a ball going right. Fix: strengthen your grip by rotating both hands away from the target until you can see 2.5 knuckles on your lead hand. The ball will feel like it is going left initially — that is the face squaring for the first time.',
-        affiliateKey: '',
       },
       {
         h2: 'Cause 2: Over-the-top swing path',
@@ -3900,12 +3906,10 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Cause 3: Early extension',
         body: 'Early extension happens when your hips thrust toward the ball on the downswing. This pushes the club face open through impact. A putting mirror or impact recording on your phone will reveal whether this is happening. Fix: during practice swings, focus on keeping your hip depth constant through impact — feel like your hips rotate around, not toward the ball.',
-        affiliateKey: '',
       },
       {
         h2: 'Equipment: is your shaft too stiff?',
         body: 'A shaft that is too stiff for your swing speed does not flex enough to square the face at impact, producing a shot to the right. If you hit the ball reasonably on center but it consistently goes right even with a strong grip, visit a fitting center and get your swing speed measured. Most recreational male golfers swing between 75–95 mph — regular flex is correct for most, not stiff.',
-        affiliateKey: '',
       },
     ],
     faq: [
@@ -3950,12 +3954,10 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Cause 1: Weight staying on the back foot (most common)',
         body: 'If your weight stays on your back foot through impact, the club bottoms out too early — behind the ball. Fix: focus on shifting weight to your lead foot through impact. A useful thought: imagine pressing your lead foot into the ground as you swing through. At the finish, 90% of your weight should be on your lead foot.',
-        affiliateKey: '',
       },
       {
         h2: 'Cause 2: Early release (casting)',
         body: 'Casting happens when you release the wrist hinge early on the downswing — the club head overtakes the hands before impact. This moves the bottom of the swing arc behind the ball. Fix: feel like your hands are leading the clubhead into impact. A punch shot drill (short, controlled finish) trains this effectively.',
-        affiliateKey: '',
       },
       {
         h2: 'Cause 3: Ball too far forward in stance',
@@ -3965,7 +3967,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Drill: The tee in the ground drill',
         body: 'Push a tee into the ground 3 inches behind your ball. Hit shots without touching the tee. If you hit the tee, you are bottoming out too early. This drill gives instant feedback and trains the correct low point in one or two practice sessions.',
-        affiliateKey: '',
       },
     ],
     faq: [
@@ -4025,7 +4026,6 @@ export const ARTICLES: Article[] = [
       {
         h2: '4. Swing path work with a mirror',
         body: 'A large mirror (or phone propped up in landscape) shows you swing path from down-the-line and face-on. Check at setup: spine angle, ball position, and grip. Check at the top: club parallel to target line. Check at impact: head behind ball, weight moving forward. Video review is the most efficient form of swing work you can do without a coach.',
-        affiliateKey: '',
       },
     ],
     faq: [
@@ -4151,16 +4151,15 @@ export const ARTICLES: Article[] = [
         h2: 'The anchor: Garmin Approach R10',
         badge: 'BEST OVERALL',
         rating: 4.7, ratingCount: '2,340',
+        affiliateKey: 'garmin-approach-r10',
         body: 'The Garmin R10 uses Doppler radar to measure ball speed, club speed, launch angle, backspin, sidespin, and carry distance. It works behind the ball at 6–8 feet, making it suitable for most garage or basement setups. The companion app shows shot data in real time. It also integrates with E6 Connect for full course simulation (requires additional subscription).',
         price: '~$599',
         pros: ['Most affordable accurate launch monitor available', 'Works indoors — does not require outdoor space', 'Companion app free with basic data', 'Upgradeable to full simulation via E6 Connect app'],
         cons: ['Course simulation requires $99–$150/year app subscription', 'Accuracy slightly below SkyTrak+ on spin data', 'Requires consistent setup position each session'],
-        affiliateKey: '',
       },
       {
         h2: 'What you will NOT get under $1,000',
         body: 'A visual course on screen is not part of this budget. That requires a projector ($400–$800), an impact screen ($300–$800), and enclosure framing ($200–$500) — on top of the launch monitor and software. The sub-$1,000 setup is a data-only practice station, not a visual simulation.',
-        affiliateKey: '',
       },
     ],
     faq: [
@@ -5024,6 +5023,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Best Training Aid: Putting Mirror',
         badge: 'BEST TRAINING AID', rating: 4.8, ratingCount: '3,200',
+        affiliateKey: 'putting-mirror',
         body: "At $25, a putting mirror is the single highest-ROI golf purchase you can make. Place it on any flat surface, set up over it, and instantly see if your eyes are over the ball, your shoulders are square, and your putter face is aimed where you think it is. Most golfers discover their alignment is off by 2-4 degrees — which means every putt outside 6 feet is starting on the wrong line. One session with this mirror fixes it.",
         price: '~$25 at Amazon',
         pros: ['Fixes alignment in one session — $25 well spent', 'Works on any flat surface including carpet at home', 'Shows eye position, shoulder line, and face angle simultaneously'],
@@ -5032,6 +5032,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥈 Best Glove: FootJoy WeatherSof',
         badge: 'BEST GLOVE', rating: 4.7, ratingCount: '12,400',
+        affiliateKey: 'footjoy-weathersof-glove',
         body: "The WeatherSof has been the best-selling golf glove for over a decade for a reason: it fits well, grips well, and costs $18. Premium gloves at $25-$30 offer marginal improvements in feel that most weekend golfers cannot detect. The WeatherSof lasts 15-20 rounds in moderate conditions, which means your per-round cost is about $1. Buy a two-pack and rotate them.",
         price: '~$18 at Amazon',
         pros: ['Best value-to-performance ratio in golf gloves', 'Consistent sizing — your size does not change between batches', 'Lasts 15-20 rounds with proper rotation'],
@@ -5040,6 +5041,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Budget Ball: Srixon Soft Feel',
         badge: 'BEST BUDGET BALL', rating: 4.6, ratingCount: '5,100',
+        affiliateKey: 'srixon-soft-feel',
         body: "At $27 per dozen, the Srixon Soft Feel outperforms its price by a wide margin. Low compression benefits golfers with swing speeds under 95 mph — which is most weekend players. The feel off the putter is surprisingly soft for an ionomer-cover ball. If you are shooting over 90 and losing 2-3 balls per round, there is no reason to play a $55/dozen Pro V1. The Srixon gives you 90% of the performance at half the price.",
         price: '~$27/dozen at Amazon',
         pros: ['Excellent performance-to-price ratio', 'Low compression suits most weekend swing speeds', 'Soft feel off the putter face'],
@@ -5048,6 +5050,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Range Tool: Alignment Sticks',
         badge: 'BEST RANGE TOOL', rating: 4.9, ratingCount: '8,900',
+        affiliateKey: 'alignment-sticks',
         body: "At $12, alignment sticks are the most underrated training aid in golf. Place one on the ground parallel to your target line and you instantly know if your feet, hips, and shoulders are aimed correctly. Place a second one along your ball-to-target line and you have a visual guide for every shot. Tour pros use these at every practice session. The reason most weekend golfers do not use them is simply that nobody told them to.",
         price: '~$12 at Amazon',
         pros: ['Used by every tour pro on every range session', 'Fix alignment, ball position, and swing path simultaneously', '$12 — less than a single sleeve of premium balls'],
@@ -5237,6 +5240,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥈 Best for Growth: TaylorMade RBZ Speed Lite',
         badge: 'BEST FOR GROWTH', rating: 4.7, ratingCount: '3,800',
+        affiliateKey: 'taylormade-rbz-lite',
         body: "At $499, the RBZ Speed Lite is double the price of the Strata — but it is a meaningfully better set. The Speed Pocket technology in the irons adds distance and forgiveness beyond what budget sets offer. The driver feels and sounds premium. The bag has more pockets and better build quality. Most importantly, these are clubs you will not outgrow in one season. If you plan to play 15+ rounds per year and want clubs that last 3-5 years, the RBZ pays for itself versus buying a cheap set and replacing it in 12 months.",
         price: '~$499 at Amazon',
         pros: ['Speed Pocket irons genuinely add distance over budget alternatives', 'Build quality that lasts 3-5 years of regular play', 'Driver feels premium — not like a starter club', 'Best resale value of any beginner set if you upgrade later'],
@@ -5245,6 +5249,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Ultra-Budget: Wilson Profile SGI',
         badge: 'BEST ULTRA-BUDGET', rating: 4.4, ratingCount: '6,100',
+        affiliateKey: 'wilson-profile-sgi',
         body: "The Wilson Profile SGI at $299 splits the difference between the Strata and the RBZ. Wilson has been making beginner clubs for decades, and the SGI (Super Game Improvement) line is designed specifically for high handicappers. The irons have the widest soles of any set we tested — they literally bounce off the turf on fat shots instead of digging. The driver is adequate but unremarkable. The bag is functional. This is a solid set for golfers who want something slightly better than the Strata without jumping to $499.",
         price: '~$299 at Amazon',
         pros: ['Widest iron soles of any set — extremely forgiving on fat shots', 'Wilson quality and warranty behind the product', 'Good middle ground between ultra-budget and mid-range'],
