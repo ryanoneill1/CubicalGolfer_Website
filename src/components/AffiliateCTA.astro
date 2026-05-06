@@ -54,6 +54,7 @@ const dateLabel = dateChecked
   </a>
   {golfGalaxyUrl && (() => {
     const secondaryRetailer = golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
+      : golfGalaxyUrl.includes('playbetter.com') ? 'PlayBetter'
       : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
       : 'Retailer';
     return (

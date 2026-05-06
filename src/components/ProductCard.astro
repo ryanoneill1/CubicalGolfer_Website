@@ -104,6 +104,7 @@ if (!url || !imgSrc) return;
 
   {golfGalaxyUrl && (() => {
     const secRetailer = golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
+      : golfGalaxyUrl.includes('playbetter.com') ? 'PlayBetter'
       : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
       : 'Retailer';
     return (

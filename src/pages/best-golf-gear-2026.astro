@@ -133,6 +133,7 @@ const winners: Winner[] = [
           )}
           {aff?.golfGalaxyUrl && (() => {
             const secR = aff.golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
+              : aff.golfGalaxyUrl.includes('playbetter.com') ? 'PlayBetter'
               : aff.golfGalaxyUrl.includes('golfgalaxy') || aff.golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
               : 'Retailer';
             return (

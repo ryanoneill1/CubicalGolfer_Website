@@ -216,7 +216,7 @@ if (compProducts.length > 0) {
               <a href={(affA as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
                 rel="nofollow noopener sponsored"
                 style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
-                <span class="btn-buy-cta">Check Price at {(affA as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : 'Golf Galaxy'} →</span>
+                <span class="btn-buy-cta">Check Price at {(affA as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (affA as any).golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
               </a>
             )}
             <span class="compare-buy-urgency">Prices checked today</span>
@@ -235,7 +235,7 @@ if (compProducts.length > 0) {
               <a href={(affB as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
                 rel="nofollow noopener sponsored"
                 style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
-                <span class="btn-buy-cta">Check Price at {(affB as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : 'Golf Galaxy'} →</span>
+                <span class="btn-buy-cta">Check Price at {(affB as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (affB as any).golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
               </a>
             )}
             <span class="compare-buy-urgency">Prices checked today</span>
@@ -260,7 +260,7 @@ if (compProducts.length > 0) {
         <a href={(winnerAff as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg"
           target="_blank" rel="nofollow noopener sponsored"
           style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
-          <span class="btn-buy-cta">Check Price at {(winnerAff as any)?.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : 'Golf Galaxy'} →</span>
+          <span class="btn-buy-cta">Check Price at {(winnerAff as any)?.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (winnerAff as any)?.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
         </a>
       )}
     </div>

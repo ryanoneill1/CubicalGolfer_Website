@@ -56,6 +56,7 @@ export const AFFILIATE: Record<string, {
   'precision-pro-nx9-hd': {
     asin: 'B0DP3GL8RN',
     url: 'https://www.amazon.com/dp/B0DP3GL8RN/?tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Precision*+Pro*+NX9*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$169',
     label: 'See Current Price',
@@ -156,6 +157,7 @@ export const AFFILIATE: Record<string, {
   'shot-scope-v5': {
     asin: 'B0CYT7RJ54',
     url: 'https://www.amazon.com/dp/B0CYT7RJ54/?tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Shot*+Scope*+V5*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$249',
     label: 'See Current Price',
@@ -171,7 +173,7 @@ export const AFFILIATE: Record<string, {
   // Bushnell Ion Elite — search (colourway/strap variants)
   'bushnell-ion-elite': {
     url: 'https://bushnell.pxf.io/DWWLOa',
-    golfGalaxyUrl: 'https://www.amazon.com/s?k=Bushnell+Ion+Elite+GPS+watch&tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Ion*+Elite*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
     price: '~$149',
     label: 'Check Price at Bushnell →',
@@ -540,6 +542,7 @@ export const AFFILIATE: Record<string, {
   'rapsodo-mlm2pro': {
     asin: 'B0BTPZMCSF',
     url: 'https://www.amazon.com/dp/B0BTPZMCSF/?tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Rapsodo*+MLM2PRO*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$699',
     label: 'See Current Price',
@@ -570,6 +573,7 @@ export const AFFILIATE: Record<string, {
   'swing-caddie-sc4-pro': {
     asin: 'B0DK24YKBD',
     url: 'https://www.amazon.com/dp/B0DK24YKBD/?tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Voice*+Caddie*+SC4*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$499',
     label: 'See Current Price',
@@ -580,6 +584,7 @@ export const AFFILIATE: Record<string, {
   // SkyTrak+ Launch Monitor — search (primarily sold direct / specialty retail)
   'skytrak-plus': {
     url: 'https://www.amazon.com/s?k=SkyTrak+plus+golf+launch+monitor+simulator&tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=SkyTrak%2B*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$2,995',
     label: 'See Current Price',
@@ -825,6 +830,7 @@ export const AFFILIATE: Record<string, {
 
   'voice-caddie-sc4-pro': {
     url: 'https://www.amazon.com/s?k=Voice+Caddie+SC4+Pro+launch+monitor&tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Voice*+Caddie*+SC4*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$499',
     label: 'See Current Price',
@@ -1732,6 +1738,7 @@ export const AFFILIATE: Record<string, {
   },
   'orange-whip-trainer': {
     url: 'https://www.amazon.com/dp/B009G1BWCE/?tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Orange*+Whip*+Trainer*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$109',
     label: 'Check Price at Amazon →',
@@ -2047,6 +2054,7 @@ export const AFFILIATE: Record<string, {
 
   'flightscope-mevo-plus': {
     url: 'https://www.amazon.com/s?k=Flightscope+Mevo+Plus&tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Flightscope*+Mevo%2B*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$2,499',
     label: 'Check Price at Amazon →',
