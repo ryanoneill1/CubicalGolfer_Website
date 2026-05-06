@@ -39,7 +39,7 @@ export const AFFILIATE: Record<string, {
     heroVerdictLine: 'Our #1 pick after 40+ rounds — nothing locks the pin faster at any price.',
     heroWhoFor: 'Weekend golfers who want one rangefinder that does everything and lasts 5+ years.',
     url: 'https://bushnell.pxf.io/DWWLOa',
-    golfGalaxyUrl: 'https://www.amazon.com/s?k=Bushnell+Tour+V6+Shift+rangefinder&tag=cubicalgolfer-20',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Tour*+V6*+Shift*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
     price: '~$329',
     label: 'Check Price at Bushnell →',
