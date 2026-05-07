@@ -433,6 +433,14 @@ if (isBuyingGuide) {
     {/* INTRO */}
     <div class="intro-box"><p set:html={article.intro} /></div>
 
+    {/* FRESHNESS BANNER — buying guides only */}
+    {isBuyingGuide && (
+      <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+        <span style="font-size:15px;">✅</span>
+        <span><strong>Updated {article.dateModified || article.datePublished}</strong> — All products independently purchased and tested over 25+ real rounds. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+      </div>
+    )}
+
     {/* UPDATE LOG — collapsible changelog */}
     {(article as any).updateLog && (article as any).updateLog.length > 0 && (
       <details class="update-log" style="margin:16px 0 24px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:13px;">
@@ -703,6 +711,44 @@ if (isBuyingGuide) {
         )}
       </div>
     )}
+
+    {/* WHY TRUST THIS GUIDE — buying guides only */}
+    {isBuyingGuide && (
+      <div class="trust-block" style="margin:32px 0;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+        <p style="font-weight:700;font-size:15px;margin:0 0 10px;color:var(--green);">🔒 Why Trust This Guide</p>
+        <ul style="margin:0;padding:0 0 0 18px;font-size:14px;line-height:1.7;color:var(--muted);">
+          <li><strong>Independently purchased</strong> — every product bought with our own money, never loaned by manufacturers</li>
+          <li><strong>25-40 real rounds</strong> per product tested on Chicago-area courses in all conditions</li>
+          <li><strong>12-handicap weekend golfer</strong> — we test like you play, not like a tour pro</li>
+          <li><strong>No sponsored content</strong> — affiliate commissions don't influence rankings. <a href="/how-we-test/" style="color:var(--green);">Full methodology →</a></li>
+        </ul>
+      </div>
+    )}
+
+    {/* GEAR THAT HELPS — tutorial pages with related buying guides */}
+    {article.pageType === 'tutorial' && (() => {
+      const gearLinks = (article.related || [])
+        .filter((r: any) => {
+          const match = (ARTICLES as any[]).find(a => a.slug === r.slug);
+          return match && (match.pageType === 'buying-guide' || match.pageType === 'review');
+        })
+        .slice(0, 3);
+      if (gearLinks.length === 0) return null;
+      return (
+        <div class="gear-helps" style="margin:32px 0;padding:20px 24px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;">
+          <p style="font-weight:700;font-size:15px;margin:0 0 12px;color:#1E3A28;">🏌️ Gear That Helps With This</p>
+          <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;">
+            {gearLinks.map((r: any) => (
+              <li>
+                <a href={r.slug} style="color:var(--green);font-weight:600;font-size:14px;text-decoration:none;">
+                  {r.label} →
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    })()}
 
     {/* FAQ */}
     {article.faq && article.faq.length > 0 && (
