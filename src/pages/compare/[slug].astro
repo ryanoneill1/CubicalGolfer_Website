@@ -205,6 +205,9 @@ if (compProducts.length > 0) {
       <div class="compare-buy-row">
         {affA && (
           <div class="compare-buy-card">
+            {affA.imgSrc && (
+              <img src={affA.imgSrc} alt={affA.imgAlt || nameA} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius:8px;object-fit:contain;" loading="lazy" />
+            )}
             <span class="compare-buy-label">{nameA}</span>
             <span class="compare-buy-price">{affA.price}</span>
             <a href={affA.url} class="btn-buy-affiliate" target="_blank"
@@ -224,6 +227,9 @@ if (compProducts.length > 0) {
         )}
         {affB && (
           <div class="compare-buy-card">
+            {affB.imgSrc && (
+              <img src={affB.imgSrc} alt={affB.imgAlt || nameB} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius:8px;object-fit:contain;" loading="lazy" />
+            )}
             <span class="compare-buy-label">{nameB}</span>
             <span class="compare-buy-price">{affB.price}</span>
             <a href={affB.url} class="btn-buy-affiliate" target="_blank"
