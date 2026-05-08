@@ -1,5 +1,6 @@
 ---
 // src/pages/golf-accessories/index.astro
+import { getAffiliateLink } from '../../data/affiliate-links';
 import BaseLayout        from '../../layouts/BaseLayout.astro';
 import { ARTICLES }      from '../../data/articles';
 import { categoryMeta }  from '../../lib/seo';
@@ -27,6 +28,34 @@ const schemas  = [
     <p class="cat-subhead">Gloves, bags, training aids, towels, and the small purchases that make
 every round a little smoother — ranked by real value per round.</p>
   </header>
+
+  <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+    <div style="flex:1;min-width:200px;">
+      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">FootJoy WeatherSof Glove — ~$18</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">Best-selling golf glove — tested over 40+ rounds</p>
+    </div>
+    {(() => {
+      const aff = getAffiliateLink('footjoy-weathersof-glove');
+      const secUrl = (aff as any).golfGalaxyUrl || '';
+      const secR = secUrl.includes('amazon') ? 'Amazon' : secUrl.includes('playbetter') ? 'PlayBetter' : secUrl.includes('golfgalaxy') || secUrl.includes('click-101736949') ? 'Golf Galaxy' : '';
+      return (
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <a href={aff.url} target="_blank" rel="nofollow noopener sponsored"
+             style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+            Check Price at {aff.retailer} →
+          </a>
+          {secUrl && secR && (
+            <a href={secUrl} target="_blank" rel="nofollow noopener sponsored"
+               style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
+              Check Price at {secR} →
+            </a>
+          )}
+        </div>
+      );
+    })()}
+  </div>
+
 
   <div class="cat-page-body">
     {articles.length === 0 ? (
