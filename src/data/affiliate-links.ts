@@ -2180,6 +2180,128 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'PuttOut pressure putt trainer',
   },
 
+  // ── Month 2-5 New Products ────────────────────────────────────────────
+  'spornia-spg-hitting-mat': {
+    url: 'https://www.amazon.com/s?k=Spornia+SPG+golf+hitting+mat&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$159', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/spornia-spg-hitting-mat.webp', imgAlt: 'Spornia SPG golf hitting mat',
+  },
+  'fiberbuilt-flight-deck': {
+    url: 'https://www.amazon.com/s?k=Fiberbuilt+Flight+Deck+golf+mat&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$449', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/fiberbuilt-flight-deck.webp', imgAlt: 'Fiberbuilt Flight Deck golf hitting mat',
+  },
+  'country-club-elite-mat': {
+    url: 'https://www.amazon.com/s?k=Country+Club+Elite+golf+mat&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$379', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/country-club-elite-mat.webp', imgAlt: 'Country Club Elite real feel golf mat',
+  },
+  'carls-place-impact-screen': {
+    url: 'https://www.amazon.com/s?k=Carls+Place+golf+impact+screen&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$199', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/carls-place-impact-screen.webp', imgAlt: 'Carls Place golf simulator impact screen',
+  },
+  'homecourse-retractable-screen': {
+    url: 'https://www.amazon.com/s?k=HomeCourse+retractable+golf+screen&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$599', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/homecourse-retractable-screen.webp', imgAlt: 'HomeCourse retractable golf screen',
+  },
+  'benq-th671st-projector': {
+    url: 'https://www.amazon.com/s?k=BenQ+TH671ST+short+throw+projector&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$799', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/benq-th671st-projector.webp', imgAlt: 'BenQ TH671ST short throw projector for golf simulator',
+  },
+  'optoma-gt1090hdr': {
+    url: 'https://www.amazon.com/s?k=Optoma+GT1090HDR+short+throw+projector&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$1,099', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/optoma-gt1090hdr.webp', imgAlt: 'Optoma GT1090HDR short throw projector',
+  },
+  'bag-boy-volt-electric': {
+    url: 'https://www.amazon.com/s?k=Bag+Boy+Volt+electric+push+cart&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$899', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/bag-boy-volt-electric.webp', imgAlt: 'Bag Boy Volt electric golf push cart',
+  },
+  'mgi-zip-navigator': {
+    url: 'https://www.amazon.com/s?k=MGI+Zip+Navigator+electric+golf+cart&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$1,699', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/mgi-zip-navigator.webp', imgAlt: 'MGI Zip Navigator electric golf caddy',
+  },
+  'sun-mountain-25-bag': {
+    url: 'https://www.amazon.com/s?k=Sun+Mountain+2.5+stand+bag&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$230', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/sun-mountain-25-bag.webp', imgAlt: 'Sun Mountain 2.5 stand bag',
+  },
+  'ping-hoofer-lite': {
+    url: 'https://www.amazon.com/s?k=Ping+Hoofer+Lite+stand+bag&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$265', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/ping-hoofer-lite.webp', imgAlt: 'Ping Hoofer Lite stand bag',
+  },
+  'titleist-players-4-bag': {
+    url: 'https://www.amazon.com/s?k=Titleist+Players+4+stand+bag&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$250', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/titleist-players-4-bag.webp', imgAlt: 'Titleist Players 4 stand bag',
+  },
+  'footjoy-superlites-xp': {
+    url: 'https://www.amazon.com/s?k=FootJoy+Superlites+XP+golf+shoes&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$90', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/footjoy-superlites-xp.webp', imgAlt: 'FootJoy Superlites XP spikeless golf shoes',
+  },
+  'skechers-go-golf-arch-fit': {
+    url: 'https://www.amazon.com/s?k=Skechers+GO+GOLF+Arch+Fit&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$110', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/skechers-go-golf-arch-fit.webp', imgAlt: 'Skechers GO GOLF Arch Fit golf shoes',
+  },
+  'new-balance-breeze-v2': {
+    url: 'https://www.amazon.com/s?k=New+Balance+Breeze+V2+golf+shoes&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$85', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/new-balance-breeze-v2.webp', imgAlt: 'New Balance Breeze V2 golf shoes',
+  },
+  'galvin-green-rain-jacket': {
+    url: 'https://www.amazon.com/s?k=Galvin+Green+golf+rain+jacket&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$300', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/galvin-green-rain-jacket.webp', imgAlt: 'Galvin Green Gore-Tex golf rain jacket',
+  },
+  'zero-restriction-rain-suit': {
+    url: 'https://www.amazon.com/s?k=Zero+Restriction+golf+rain+jacket&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$250', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/zero-restriction-rain-suit.webp', imgAlt: 'Zero Restriction golf rain jacket',
+  },
+  'under-armour-storm-rain': {
+    url: 'https://www.amazon.com/s?k=Under+Armour+Storm+golf+rain+jacket&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$100', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/under-armour-storm-rain.webp', imgAlt: 'Under Armour Storm golf rain jacket',
+  },
+  'oakley-prizm-golf': {
+    url: 'https://www.amazon.com/s?k=Oakley+Prizm+Golf+sunglasses&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$190', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/oakley-prizm-golf.webp', imgAlt: 'Oakley Prizm Golf sunglasses',
+  },
+  'tifosi-seek-fc': {
+    url: 'https://www.amazon.com/s?k=Tifosi+Seek+FC+golf+sunglasses&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$35', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/tifosi-seek-fc.webp', imgAlt: 'Tifosi Seek FC sport sunglasses',
+  },
+  'callaway-strata-senior': {
+    url: 'https://www.amazon.com/s?k=Callaway+Strata+senior+golf+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$450', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/callaway-strata-senior.webp', imgAlt: 'Callaway Strata senior golf club set',
+  },
+  'cleveland-launcher-xl-senior': {
+    url: 'https://www.amazon.com/s?k=Cleveland+Launcher+XL+senior+set&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$799', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/cleveland-launcher-xl-senior.webp', imgAlt: 'Cleveland Launcher XL senior golf set',
+  },
+  'golf-pride-cp2-wrap-jumbo': {
+    url: 'https://www.amazon.com/s?k=Golf+Pride+CP2+Wrap+Jumbo+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$8', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/golf-pride-cp2-wrap-jumbo.webp', imgAlt: 'Golf Pride CP2 Wrap Jumbo grip for arthritis',
+  },
+  'winn-dri-tac-oversize': {
+    url: 'https://www.amazon.com/s?k=Winn+Dri-Tac+oversize+golf+grip&tag=cubicalgolfer-20',
+    retailer: 'Amazon', price: '~$7', label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/winn-dri-tac-oversize.webp', imgAlt: 'Winn Dri-Tac oversize golf grip',
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
