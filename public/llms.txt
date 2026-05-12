@@ -1,13 +1,11 @@
 # CubicalGolfer.com
-> Independent golf gear reviews, head-to-head comparisons, and buying guides for weekend golfers.
-> Built by a 12-handicap Chicago golfer who tests everything over 25+ real rounds.
+> Independent golf gear reviews and buying guides for weekend golfers.
 
 ## Pages
 
 - Homepage: https://www.cubicalgolfer.com/
 - About: https://www.cubicalgolfer.com/about/
 - How We Test: https://www.cubicalgolfer.com/how-we-test/
-- Best Golf Gear 2026: https://www.cubicalgolfer.com/best-golf-gear-2026/
 
 ## Gear Reviews
 
@@ -123,7 +121,11 @@
 - Best Budget Launch Monitor Under $700 for Apartment Golfers 2026: https://www.cubicalgolfer.com/best-budget-launch-monitor-apartment/
 - Best Golf Hitting Nets — Apartment, Garage & Backyard: https://www.cubicalgolfer.com/best-golf-hitting-net-apartment-garage/
 - Best Launch Monitors Without Subscription Fees (2026): https://www.cubicalgolfer.com/best-launch-monitors-no-subscription/
-- Shot Scope LM1 vs Garmin R10 — Which Budget Launch Monitor Wins?: https://www.cubicalgolfer.com/shot-scope-lm1-vs-garmin-r10/
+- Shot Scope LM1 vs Garmin R10 — Which Budget Monitor Wins?: https://www.cubicalgolfer.com/shot-scope-lm1-vs-garmin-r10/
+- Best Golf Hitting Mats for Home (2026): https://www.cubicalgolfer.com/best-golf-hitting-mats-home/
+- Best Impact Screens for Golf Simulator (2026): https://www.cubicalgolfer.com/best-impact-screens-golf-simulator/
+- Best Projectors for Golf Simulator (2026): https://www.cubicalgolfer.com/best-golf-simulator-projectors/
+- How Much Does a Golf Simulator Cost? (2026): https://www.cubicalgolfer.com/how-much-does-golf-simulator-cost/
 
 ## Golf Accessories
 
@@ -140,6 +142,10 @@
 - Best Father's Day Golf Gifts 2026: https://www.cubicalgolfer.com/fathers-day-golf-gifts-2026/
 - Best Golf Push Carts 2026 (Tested on Course): https://www.cubicalgolfer.com/best-golf-push-carts-2026/
 - Best Golf Grips for Sweaty Hands (2026): https://www.cubicalgolfer.com/best-golf-grips-sweaty-hands/
+- Best Electric Golf Push Carts 2026: https://www.cubicalgolfer.com/best-electric-golf-push-cart/
+- Best Golf Bags for Walking 2026: https://www.cubicalgolfer.com/best-golf-bags-walking-2026/
+- Best Golf Rain Gear 2026 (Tested in Rain): https://www.cubicalgolfer.com/best-golf-rain-gear-2026/
+- Best Golf Shoes for Bad Knees (2026): https://www.cubicalgolfer.com/best-golf-shoes-bad-knees/
 
 ## Golf Lifestyle
 
@@ -158,7 +164,7 @@
 
 - Best Indoor Putting Greens for Office & Home (2026): https://www.cubicalgolfer.com/best-indoor-putting-green-office/
 
-## Head-to-Head Comparisons
+## Comparisons
 
 - undefined: https://www.cubicalgolfer.com/compare/bushnell-tour-v6-vs-precision-pro-nx9/
 - undefined: https://www.cubicalgolfer.com/compare/garmin-approach-s62-vs-shot-scope-v5/
