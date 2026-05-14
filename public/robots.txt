@@ -66,3 +66,6 @@ User-agent: Twitterbot
 Allow: /
 
 Sitemap: https://www.cubicalgolfer.com/sitemap.xml
+
+# Content signals (informational — not a robots.txt directive)
+# search=yes, ai-train=no
