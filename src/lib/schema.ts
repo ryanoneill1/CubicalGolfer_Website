@@ -12,7 +12,7 @@ import type { Article, Comparison, GolfCity, FAQItem } from '../data/types';
 import { AFFILIATE } from '../data/affiliate-links';
 
 const DOMAIN    = 'https://www.cubicalgolfer.com';
-const LOGO_URL  = `${DOMAIN}/images/cubicalgolfer-logo.jpg`;
+const LOGO_URL  = `${DOMAIN}/images/cubicalgolfer-logo.webp`;
 const OG_IMAGE  = `${DOMAIN}/images/og-image.jpg`;
 const PUBLISHER = {
   '@type': 'Organization',
@@ -27,7 +27,7 @@ const AUTHOR = {
   url: `${DOMAIN}/about/`,
   jobTitle: '12-Handicap Weekend Golfer & Gear Editor',
   description: 'Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago, IL. No freebies, no manufacturer loans.',
-  image: `${DOMAIN}/images/ryan-author-photo.jpg`,
+  image: `${DOMAIN}/images/ryan-author-photo.webp`,
   '@id': `${DOMAIN}/about/#author`,
   knowsAbout: [
     'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
@@ -80,7 +80,7 @@ export function organizationSchema(): object {
     description: 'Independent golf gear reviews and improvement guides for everyday weekend golfers.',
     foundingDate: '2024',
     slogan: 'Escape the cubicle. Find the fairway.',
-    image: `${DOMAIN}/images/cubicalgolfer-logo.jpg`,
+    image: `${DOMAIN}/images/cubicalgolfer-logo.webp`,
     // Social profiles — add URLs as accounts are created (Part B).
     // Each real URL strengthens Google's entity understanding of Cubical Golfer.
     sameAs: [
