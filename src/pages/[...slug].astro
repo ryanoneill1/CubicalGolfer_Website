@@ -17,7 +17,9 @@ import { getAffiliateLink } from '../data/affiliate-links';
 import type { Article } from '../data/types';
 
 export async function getStaticPaths() {
-  return ARTICLES.map(article => ({
+  return ARTICLES
+    .filter(article => article.slug !== '/golf-ball-compression-chart/') // standalone page
+    .map(article => ({
     params: { slug: article.slug.replace(/^\/|\/$/g, '') },
     props: { article },
   }));

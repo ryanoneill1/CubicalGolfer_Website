@@ -1,0 +1,373 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAffiliateLink } from '../../data/affiliate-links';
+import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { ARTICLES } from '../../data/articles';
+
+const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
+
+const meta = {
+  title: 'Golf Ball Compression Chart 2026 — Interactive Filter by Swing Speed',
+  description: 'Interactive 2026 golf ball compression chart — 34+ balls filtered by your swing speed. Compression, cover, price, and recommended buy. Match your ball in 10 seconds.',
+  canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'article' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Improve Your Game', href: '/improve-your-golf-game/' },
+    { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },
+  ],
+};
+
+const TAG = 'cubicalgolfer-20';
+
+const balls = [
+  { name: 'TaylorMade Noodle', compression: 34, cover: 'Ionomer', price: 20, minMph: 0, maxMph: 75, search: 'TaylorMade+Noodle+golf+balls', brand: 'TaylorMade' },
+  { name: 'Callaway Supersoft', compression: 38, cover: 'Ionomer', price: 25, minMph: 0, maxMph: 80, asin: 'B0F2FSR89S', brand: 'Callaway' },
+  { name: 'Wilson DUO Soft+', compression: 40, cover: 'Ionomer', price: 22, minMph: 0, maxMph: 80, search: 'Wilson+DUO+Soft%2B+golf+balls', brand: 'Wilson' },
+  { name: 'Titleist TruFeel', compression: 45, cover: 'Ionomer', price: 25, minMph: 65, maxMph: 85, search: 'Titleist+TruFeel+golf+balls', brand: 'Titleist' },
+  { name: 'TaylorMade Soft Response', compression: 50, cover: 'Ionomer', price: 25, minMph: 70, maxMph: 85, search: 'TaylorMade+Soft+Response+golf+balls', brand: 'TaylorMade' },
+  { name: 'Bridgestone e12 Contact', compression: 50, cover: 'Ionomer', price: 28, minMph: 70, maxMph: 90, asin: 'B09HYNRQJQ', brand: 'Bridgestone' },
+  { name: 'Vice Drive', compression: 55, cover: 'Ionomer', price: 17, minMph: 70, maxMph: 90, search: 'Vice+Drive+golf+balls', brand: 'Vice', badge: 'BUDGET PICK' },
+  { name: 'Srixon Soft Feel', compression: 60, cover: 'Ionomer', price: 27, minMph: 75, maxMph: 95, asin: 'B0CYDVBYQY', brand: 'Srixon', badge: 'BEST VALUE' },
+  { name: 'Vice Pro Soft', compression: 65, cover: 'Urethane', price: 28, minMph: 80, maxMph: 95, search: 'Vice+Pro+Soft+golf+balls', brand: 'Vice' },
+  { name: 'Titleist Tour Soft', compression: 65, cover: 'Ionomer', price: 35, minMph: 80, maxMph: 95, search: 'Titleist+Tour+Soft+golf+balls', brand: 'Titleist' },
+  { name: 'Titleist Velocity', compression: 65, cover: 'Ionomer', price: 30, minMph: 85, maxMph: 110, search: 'Titleist+Velocity+golf+balls', brand: 'Titleist' },
+  { name: 'Callaway Warbird', compression: 68, cover: 'Ionomer', price: 22, minMph: 80, maxMph: 100, search: 'Callaway+Warbird+golf+balls', brand: 'Callaway' },
+  { name: 'Bridgestone Tour B RX', compression: 68, cover: 'Urethane', price: 45, minMph: 85, maxMph: 100, search: 'Bridgestone+Tour+B+RX+golf+balls', brand: 'Bridgestone' },
+  { name: 'Wilson Chaos', compression: 70, cover: 'Ionomer', price: 28, minMph: 85, maxMph: 100, search: 'Wilson+Chaos+golf+balls', brand: 'Wilson' },
+  { name: 'Pinnacle Rush', compression: 72, cover: 'Ionomer', price: 22, minMph: 85, maxMph: 105, search: 'Pinnacle+Rush+golf+balls', brand: 'Pinnacle' },
+  { name: 'Srixon Q-Star Tour', compression: 72, cover: 'Urethane', price: 35, minMph: 85, maxMph: 100, asin: 'B09TQXQRMH', brand: 'Srixon' },
+  { name: 'Callaway Chrome Soft', compression: 75, cover: 'Urethane', price: 40, minMph: 88, maxMph: 105, asin: 'B0BPMCSNQF', brand: 'Callaway' },
+  { name: 'Kirkland Signature', compression: 75, cover: 'Urethane', price: 28, minMph: 85, maxMph: 100, search: 'Kirkland+Signature+golf+balls', brand: 'Kirkland', badge: 'VALUE KING' },
+  { name: 'Titleist AVX', compression: 77, cover: 'Urethane', price: 50, minMph: 90, maxMph: 110, search: 'Titleist+AVX+golf+balls', brand: 'Titleist' },
+  { name: 'TaylorMade Tour Response', compression: 77, cover: 'Urethane', price: 35, minMph: 88, maxMph: 105, asin: 'B0BFMKM3MG', brand: 'TaylorMade' },
+  { name: 'Titleist Tour Speed', compression: 78, cover: 'Urethane', price: 36, minMph: 90, maxMph: 105, asin: 'B0CM4DP9WL', brand: 'Titleist' },
+  { name: 'Vice Pro', compression: 80, cover: 'Urethane', price: 33, minMph: 90, maxMph: 110, search: 'Vice+Pro+golf+balls', brand: 'Vice' },
+  { name: 'TaylorMade TP5', compression: 85, cover: 'Urethane', price: 50, minMph: 95, maxMph: 115, search: 'TaylorMade+TP5+golf+balls', brand: 'TaylorMade' },
+  { name: 'Titleist Pro V1', compression: 87, cover: 'Urethane', price: 55, minMph: 90, maxMph: 115, asin: 'B0BR2YF8T6', brand: 'Titleist', badge: 'MOST POPULAR' },
+  { name: 'Wilson Staff Model', compression: 87, cover: 'Urethane', price: 35, minMph: 95, maxMph: 115, search: 'Wilson+Staff+Model+golf+balls', brand: 'Wilson' },
+  { name: 'Srixon Z-Star', compression: 88, cover: 'Urethane', price: 40, minMph: 90, maxMph: 115, search: 'Srixon+Z-Star+golf+balls', brand: 'Srixon' },
+  { name: 'Callaway Chrome Tour', compression: 90, cover: 'Urethane', price: 58, minMph: 95, maxMph: 120, search: 'Callaway+Chrome+Tour+golf+balls', brand: 'Callaway' },
+  { name: 'Bridgestone Tour B XS', compression: 90, cover: 'Urethane', price: 48, minMph: 95, maxMph: 115, search: 'Bridgestone+Tour+B+XS+golf+balls', brand: 'Bridgestone' },
+  { name: 'Vice Pro Plus', compression: 90, cover: 'Urethane', price: 35, minMph: 100, maxMph: 120, search: 'Vice+Pro+Plus+golf+balls', brand: 'Vice' },
+  { name: 'Titleist Pro V1x', compression: 97, cover: 'Urethane', price: 55, minMph: 100, maxMph: 130, asin: 'B0BR2YZBK8', brand: 'Titleist' },
+  { name: 'TaylorMade TP5x', compression: 97, cover: 'Urethane', price: 50, minMph: 100, maxMph: 130, search: 'TaylorMade+TP5x+golf+balls', brand: 'TaylorMade' },
+  { name: 'Bridgestone Tour B X', compression: 100, cover: 'Urethane', price: 48, minMph: 100, maxMph: 130, search: 'Bridgestone+Tour+B+X+golf+balls', brand: 'Bridgestone' },
+  { name: 'Maxfli Tour X', compression: 100, cover: 'Urethane', price: 35, minMph: 105, maxMph: 130, search: 'Maxfli+Tour+X+golf+balls', brand: 'Maxfli' },
+  { name: 'Srixon Z-Star XV', compression: 102, cover: 'Urethane', price: 40, minMph: 105, maxMph: 130, search: 'Srixon+Z-Star+XV+golf+balls', brand: 'Srixon' },
+];
+
+function ballUrl(ball: typeof balls[0]) {
+  return ball.asin
+    ? `https://www.amazon.com/dp/${ball.asin}/?tag=${TAG}`
+    : `https://www.amazon.com/s?k=${ball.search}&tag=${TAG}`;
+}
+
+const brands = ['Titleist', 'Callaway', 'TaylorMade', 'Srixon', 'Bridgestone', 'Vice', 'Kirkland'];
+
+const faqs = [
+  { q: 'What golf ball compression should I use?', a: 'Match compression to your driver swing speed. Under 85 mph: play compression 35-65. Between 85-100 mph: play compression 65-90. Over 100 mph: play compression 90-102. The interactive calculator above gives you a personalized recommendation.' },
+  { q: 'Does golf ball compression affect distance?', a: 'Yes. If the compression is too high for your swing speed, you cannot fully compress the ball at impact, losing energy transfer and distance. A 75 mph swinger playing a Pro V1 (87 compression) will hit it shorter than a Callaway Supersoft (38 compression). The right compression maximizes energy transfer for YOUR speed.' },
+  { q: 'What is the compression of a Titleist Pro V1?', a: 'The Titleist Pro V1 has a compression of 87. It is designed for swing speeds of 90-115 mph. If your driver swing speed is below 90 mph, the Tour Soft (65 compression) or AVX (77 compression) will give you better distance and feel.' },
+  { q: 'What compression is a Callaway Supersoft?', a: 'The Callaway Supersoft has a compression of 38 — one of the lowest on the market. It is ideal for swing speeds under 80 mph, seniors, and beginners. The soft feel and low compression help slower swingers maximize distance.' },
+  { q: 'What is a good compression for a senior golfer?', a: 'Most senior golfers benefit from compression between 35-65. The Callaway Supersoft (38), Wilson DUO Soft+ (40), and Srixon Soft Feel (60) are the best options. These compress fully at slower swing speeds, maximizing distance without sacrificing feel.' },
+  { q: 'Is higher or lower compression better?', a: 'Neither — it depends on your swing speed. Lower compression (35-65) is better for slower swingers because the ball compresses more easily. Higher compression (85-102) is better for faster swingers because it resists deformation and transfers more energy. Playing the wrong compression in either direction costs distance.' },
+  { q: 'What compression are Kirkland golf balls?', a: 'Kirkland Signature golf balls have a compression of approximately 75 with a urethane cover. At $28 per dozen ($2.33 per ball), they offer tour-level construction at a fraction of the Pro V1 price. Best for swing speeds of 85-100 mph.' },
+  { q: 'How do I know what compression golf ball to use based on swing speed?', a: 'Use the interactive calculator at the top of this page — enter your driver swing speed and it recommends three balls (budget, balanced, premium). If you do not know your swing speed, use the 7-iron carry distance estimator: 110 yards ≈ 72 mph, 130 yards ≈ 82 mph, 150 yards ≈ 92 mph, 170 yards ≈ 102 mph.' },
+  { q: 'Does temperature affect golf ball compression?', a: 'Yes. Cold temperatures make golf balls harder (effectively increasing compression by 5-10 points). In winter or early morning rounds below 50°F, drop down one compression bracket. If you normally play a 75-compression ball, switch to a 60-65 in cold weather for the same feel and distance.' },
+];
+
+const schemas = [
+  articleSchema(article),
+  breadcrumbSchema(meta.breadcrumbs),
+  faqSchema(faqs),
+];
+---
+<BaseLayout meta={meta} schemas={schemas}>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      {meta.breadcrumbs.map((bc, i) => (
+        <li>{i < meta.breadcrumbs.length - 1 ? <a href={bc.href}>{bc.label}</a> : <span aria-current="page">{bc.label}</span>}</li>
+      ))}
+    </ol>
+  </nav>
+
+  <article class="article-single">
+
+    <header class="art-header">
+      <span class="art-badge tag-guide">INTERACTIVE CHART</span>
+      <h1>Golf Ball Compression Chart 2026 — Match Your Swing Speed</h1>
+      <p class="art-author">
+        <img src="/images/ryan-author-photo.webp" alt="Ryan O." width="44" height="44" class="author-avatar-img" />
+        <span>By <strong>Ryan O.</strong> — 12-handicap weekend golfer, Chicago, IL</span>
+      </p>
+    </header>
+
+    <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);">
+      ✅ <strong>Updated May 2026</strong> — 34 balls independently tested. All prices verified. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a>
+    </div>
+
+    <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps every major golf ball's compression rating to your swing speed — so you can find the right ball in 10 seconds instead of wasting money on balls designed for someone else's swing.</p>
+
+    <!-- ═══ INTERACTIVE BALL FINDER ═══ -->
+    <section class="ball-finder" id="ball-finder">
+      <h2 style="margin-top:0;color:var(--green);">🎯 Find Your Ball in 10 Seconds</h2>
+      <div class="finder-controls">
+        <label for="speed-slider" style="font-weight:600;">Your driver swing speed (mph):</label>
+        <div class="speed-input-group">
+          <input type="range" id="speed-slider" min="60" max="130" value="90" step="1" />
+          <input type="number" id="speed-number" min="60" max="130" value="90" style="width:80px;padding:8px;font-size:18px;border:2px solid var(--green);border-radius:6px;text-align:center;" />
+          <button type="button" id="dont-know-btn" style="background:var(--gold);color:#1a1a1a;border:none;padding:10px 16px;border-radius:6px;font-weight:700;cursor:pointer;font-size:13px;">I don't know my speed</button>
+        </div>
+        <div id="iron-helper" hidden style="margin-top:12px;padding:16px;background:#fff;border:1px solid var(--border);border-radius:8px;">
+          <p style="font-weight:600;margin:0 0 10px;">How far does your 7-iron carry?</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <button class="iron-btn" data-mph="72">~110 yd (≈72 mph)</button>
+            <button class="iron-btn" data-mph="82">~130 yd (≈82 mph)</button>
+            <button class="iron-btn" data-mph="92">~150 yd (≈92 mph)</button>
+            <button class="iron-btn" data-mph="102">~170 yd (≈102 mph)</button>
+            <button class="iron-btn" data-mph="110">~190 yd (≈110+ mph)</button>
+          </div>
+        </div>
+      </div>
+      <div class="finder-result" id="finder-result" aria-live="polite"></div>
+    </section>
+
+    <!-- ═══ SORTABLE TABLE ═══ -->
+    <section>
+      <h2>Complete Golf Ball Compression Chart 2026</h2>
+      <p>Click any column header to sort. Use the filters to narrow by cover type or budget.</p>
+      <div class="chart-filters">
+        <label>Cover: <select id="cover-filter" style="padding:6px 10px;border-radius:6px;border:1px solid var(--border);">
+          <option value="">All</option>
+          <option value="Urethane">Urethane (tour spin)</option>
+          <option value="Ionomer">Ionomer (value)</option>
+        </select></label>
+        <label>Max price: <input type="range" id="price-filter" min="15" max="60" value="60" style="vertical-align:middle;" /> <span id="price-display">$60</span></label>
+      </div>
+      <div style="overflow-x:auto;">
+        <table id="compression-table" class="cmp-table" style="width:100%;">
+          <thead>
+            <tr>
+              <th data-sort="name" style="cursor:pointer;">Golf Ball ↕</th>
+              <th data-sort="compression" style="cursor:pointer;">Compression ↕</th>
+              <th data-sort="cover" style="cursor:pointer;">Cover ↕</th>
+              <th data-sort="price" style="cursor:pointer;">Price/dz ↕</th>
+              <th>Best Speed</th>
+              <th>Buy</th>
+            </tr>
+          </thead>
+          <tbody>
+            {balls.map(ball => (
+              <tr data-compression={ball.compression} data-cover={ball.cover} data-price={ball.price} data-min-mph={ball.minMph} data-max-mph={ball.maxMph} data-name={ball.name}>
+                <td>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:10px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</td>
+                <td>{ball.compression}</td>
+                <td>{ball.cover}</td>
+                <td>~${ball.price}</td>
+                <td>{ball.minMph}–{ball.maxMph} mph</td>
+                <td><a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT IS COMPRESSION ═══ -->
+    <section>
+      <h2>What Is Golf Ball Compression and Why It Matters</h2>
+      <p>Compression is a number (typically 30-110) that measures how much a golf ball deforms when struck. Lower numbers mean the ball squishes more easily; higher numbers mean it resists deformation.</p>
+      <p>Why this matters for YOUR game: if your swing speed is too slow for a high-compression ball, you physically cannot compress it enough at impact. Energy that should transfer into ball speed gets lost. The result is shorter distance, less control, and a harder feel you probably don't enjoy.</p>
+      <h3>How Compression Is Measured</h3>
+      <p>Manufacturers measure compression by applying a standard load to the ball and measuring deformation. A ball rated 40 compresses significantly under the same force that barely dents a 100-compression ball. There is no universal standard between manufacturers, so treat compression as a relative guide, not an absolute number.</p>
+      <h3>Compression vs Cover Material</h3>
+      <p>Compression and cover are different things. Compression affects distance and feel. Cover material (urethane vs ionomer) affects spin and control around the greens. A low-compression ball with a urethane cover (like the Vice Pro Soft at 65) gives you both easy compression AND greenside spin — the best of both worlds for mid-speed swingers.</p>
+    </section>
+
+    <!-- ═══ HOW TO FIND YOUR SWING SPEED ═══ -->
+    <section>
+      <h2>How to Find Your Swing Speed</h2>
+      <h3>Measure With a Launch Monitor</h3>
+      <p>The most accurate method. Budget options like the <a href="/best-launch-monitors-no-subscription/">Shot Scope LM1 ($199, no subscription)</a> display your club speed on a built-in screen. Most golf stores also offer free swing speed checks — ask at your local Golf Galaxy or PGA Tour Superstore.</p>
+      <h3>Estimate from Your 7-Iron Carry Distance</h3>
+      <p>If you don't have a launch monitor, your 7-iron carry distance is a reliable proxy. Use the "I don't know my speed" button in the calculator above, or reference this table:</p>
+      <div style="overflow-x:auto;">
+        <table class="cmp-table" style="max-width:500px;">
+          <thead><tr><th>7-Iron Carry</th><th>≈ Driver Speed</th><th>Compression Range</th></tr></thead>
+          <tbody>
+            <tr><td>~110 yards</td><td>~72 mph</td><td>35–55</td></tr>
+            <tr><td>~130 yards</td><td>~82 mph</td><td>50–70</td></tr>
+            <tr><td>~150 yards</td><td>~92 mph</td><td>65–85</td></tr>
+            <tr><td>~170 yards</td><td>~102 mph</td><td>80–95</td></tr>
+            <tr><td>~190 yards</td><td>~110+ mph</td><td>90–102</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ═══ BEST BALLS BY SPEED ═══ -->
+    <section>
+      <h2>Best Golf Balls for Swing Speed Under 85 mph</h2>
+      <p>If your driver speed is under 85 mph, you need compression between 35-65. Higher-compression balls will feel like hitting a rock and fly shorter. These are the balls that actually compress at your speed:</p>
+      <h3>Best for Seniors (Under 75 mph)</h3>
+      <p>The <strong>Callaway Supersoft</strong> (38 compression, $25/dz) is the best ball for swing speeds under 75 mph. It compresses fully even at very slow speeds, maximizing distance. The <strong>Wilson DUO Soft+</strong> (40, $22/dz) is the budget alternative. See our full <a href="/best-golf-balls-for-seniors/">best balls for seniors guide</a>.</p>
+      <h3>Best Budget Options Under $25/dozen</h3>
+      <p>The <strong>Vice Drive</strong> at $17/dozen is the cheapest quality ball for slow swingers. The <strong>TaylorMade Noodle</strong> ($20/dz) and <strong>Wilson DUO Soft+</strong> ($22/dz) round out the under-$25 options. All three have ionomer covers — durable and consistent.</p>
+    </section>
+
+    <section>
+      <h2>Best Golf Balls for Swing Speed 85–100 mph</h2>
+      <p>This is where most weekend golfers land — and where the most options exist. Compression 65-90 is your range. The key decision: ionomer cover (cheaper, less spin) or urethane cover (more spin around greens, premium price).</p>
+      <p>Our top picks: <strong>Kirkland Signature</strong> ($28/dz, urethane, 75 compression) for value, <strong>Srixon Q-Star Tour</strong> ($35/dz, urethane, 72) for the best balance, and <strong>Callaway Chrome Soft</strong> ($40/dz, urethane, 75) for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
+    </section>
+
+    <section>
+      <h2>Best Golf Balls for Swing Speed Over 100 mph</h2>
+      <p>Above 100 mph, you can compress any ball on the market. The choice becomes about spin, feel, and control rather than distance. Compression 85-102 is your range.</p>
+      <p>The <strong>Titleist Pro V1</strong> ($55/dz, 87 compression) remains the gold standard — consistent flight, excellent greenside spin, and the ball every tour player trusts. The <strong>TaylorMade TP5</strong> ($50/dz, 85) and <strong>Srixon Z-Star</strong> ($40/dz, 88) are the best alternatives. Budget pick: <strong>Vice Pro</strong> ($33/dz, 80 compression, urethane cover).</p>
+    </section>
+
+    <!-- ═══ BRAND SUB-TABLES ═══ -->
+    <section>
+      <h2>Golf Ball Compression by Brand</h2>
+      {brands.map(brand => {
+        const brandBalls = balls.filter(b => b.brand === brand);
+        return (
+          <div style="margin-bottom:28px;">
+            <h3>{brand} Golf Ball Compression</h3>
+            <div style="overflow-x:auto;">
+              <table class="cmp-table" style="width:100%;">
+                <thead><tr><th>Ball</th><th>Compression</th><th>Cover</th><th>Price/dz</th><th>Speed Range</th><th>Buy</th></tr></thead>
+                <tbody>
+                  {brandBalls.map(b => (
+                    <tr>
+                      <td>{b.name}</td><td>{b.compression}</td><td>{b.cover}</td><td>~${b.price}</td><td>{b.minMph}–{b.maxMph} mph</td>
+                      <td><a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" style="color:var(--green);font-weight:600;">Check price →</a></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        );
+      })}
+    </section>
+
+    <!-- ═══ FAQ ═══ -->
+    <section>
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map(({ q, a }) => (
+        <details class="faq-item">
+          <summary>{q}</summary>
+          <div class="faq-answer">{a}</div>
+        </details>
+      ))}
+    </section>
+
+    <!-- ═══ RELATED GUIDES ═══ -->
+    <section style="margin-top:32px;padding:20px;background:rgba(30,58,40,.04);border-radius:10px;">
+      <h2 style="font-size:16px;margin-top:0;">Related Guides</h2>
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:6px;">
+        <li><a href="/best-golf-balls-2026/" style="color:var(--green);font-weight:600;">Best Golf Balls 2026 →</a></li>
+        <li><a href="/best-golf-balls-slow-swing-speed/" style="color:var(--green);font-weight:600;">Best Balls for Slow Swing Speeds →</a></li>
+        <li><a href="/best-golf-balls-90-mph-swing-speed/" style="color:var(--green);font-weight:600;">Best Balls for 85-100 mph →</a></li>
+        <li><a href="/best-golf-balls-for-seniors/" style="color:var(--green);font-weight:600;">Best Balls for Seniors →</a></li>
+        <li><a href="/what-golf-ball-for-high-handicapper/" style="color:var(--green);font-weight:600;">Best Ball for High Handicappers →</a></li>
+        <li><a href="/titleist-pro-v1-vs-pro-v1x/" style="color:var(--green);font-weight:600;">Pro V1 vs Pro V1x →</a></li>
+      </ul>
+    </section>
+
+  </article>
+
+</BaseLayout>
+
+<script>
+  const ss = document.getElementById('speed-slider') as HTMLInputElement;
+  const sn = document.getElementById('speed-number') as HTMLInputElement;
+  const dkb = document.getElementById('dont-know-btn')!;
+  const ih = document.getElementById('iron-helper')!;
+  const rb = document.getElementById('finder-result')!;
+  const cf = document.getElementById('cover-filter') as HTMLSelectElement;
+  const pf = document.getElementById('price-filter') as HTMLInputElement;
+  const pd = document.getElementById('price-display')!;
+  const tb = document.querySelector('#compression-table tbody')!;
+
+  function update() {
+    const speed = parseInt(ss.value, 10);
+    const rows = Array.from(tb.rows);
+    const matches = rows.filter(r => speed >= parseInt(r.dataset.minMph!) && speed <= parseInt(r.dataset.maxMph!))
+      .map(r => ({ name: r.dataset.name!, compression: parseInt(r.dataset.compression!), price: parseFloat(r.dataset.price!), cover: r.dataset.cover!, href: (r.querySelector('a') as HTMLAnchorElement).href }));
+
+    if (!matches.length) { rb.innerHTML = '<p>No exact matches — adjust ±5 mph.</p>'; return; }
+
+    const sorted = [...matches].sort((a, b) => a.price - b.price);
+    const budget = sorted[0];
+    const premium = matches.filter(m => m.cover === 'Urethane').sort((a, b) => b.price - a.price)[0] || sorted[sorted.length - 1];
+    const balanced = sorted[Math.floor(sorted.length / 2)];
+    const avg = Math.round(matches.reduce((s, m) => s + m.compression, 0) / matches.length / 5) * 5;
+    const picks = [budget, balanced, premium].filter(Boolean).filter((v, i, a) => a.findIndex(t => t.name === v.name) === i);
+
+    rb.innerHTML = `<h3 style="margin-top:0;">For ${speed} mph — play compression ${avg}±10</h3>
+      <div class="finder-picks">${picks.map((p, i) => `
+        <div class="pick-card ${i === 0 ? 'budget' : i === picks.length - 1 ? 'premium' : 'balanced'}">
+          <span class="pick-label">${i === 0 ? '💰 Budget' : i === picks.length - 1 ? '⭐ Premium' : '🎯 Best Balance'}</span>
+          <strong>${p.name}</strong>
+          <span>Compression ${p.compression} · ${p.cover} · ~$${p.price}/dz</span>
+          <a href="${p.href}" rel="sponsored nofollow noopener" target="_blank">Check today's price →</a>
+        </div>`).join('')}</div>`;
+  }
+
+  ss.addEventListener('input', () => { sn.value = ss.value; update(); });
+  sn.addEventListener('input', () => { ss.value = sn.value; update(); });
+  dkb.addEventListener('click', () => { ih.hidden = !ih.hidden; });
+  ih.querySelectorAll('.iron-btn').forEach(btn => {
+    btn.addEventListener('click', () => { ss.value = btn.dataset.mph!; sn.value = btn.dataset.mph!; ih.hidden = true; update(); });
+  });
+
+  function applyFilters() {
+    const cover = cf.value;
+    const max = parseFloat(pf.value);
+    pd.textContent = `$${max}`;
+    Array.from(tb.rows).forEach(r => {
+      r.style.display = (!cover || r.dataset.cover === cover) && parseFloat(r.dataset.price!) <= max ? '' : 'none';
+    });
+  }
+  cf.addEventListener('change', applyFilters);
+  pf.addEventListener('input', applyFilters);
+
+  document.querySelectorAll('th[data-sort]').forEach(th => {
+    let asc = true;
+    th.addEventListener('click', () => {
+      const key = th.dataset.sort!;
+      const rows = Array.from(tb.rows);
+      rows.sort((a, b) => {
+        const av = key === 'name' || key === 'cover' ? a.dataset[key]! : parseFloat(a.dataset[key]!);
+        const bv = key === 'name' || key === 'cover' ? b.dataset[key]! : parseFloat(b.dataset[key]!);
+        return asc ? (av > bv ? 1 : -1) : (av < bv ? 1 : -1);
+      });
+      rows.forEach(r => tb.appendChild(r));
+      asc = !asc;
+    });
+  });
+  update();
+</script>
+
+<style>
+  .ball-finder { background: rgba(30,58,40,.04); padding: 24px; border-radius: 12px; margin: 24px 0; border: 2px solid var(--green); }
+  .speed-input-group { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 8px; }
+  #speed-slider { flex: 1; min-width: 180px; accent-color: var(--green); }
+  .iron-btn { background: var(--green); color: #fff; border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 600; }
+  .iron-btn:hover { opacity: 0.9; }
+  .finder-picks { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px; }
+  .pick-card { background: #fff; padding: 14px; border-radius: 8px; display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--border); }
+  .pick-card.premium { border-top: 4px solid var(--gold); }
+  .pick-card.budget { border-top: 4px solid var(--green); }
+  .pick-card.balanced { border-top: 4px solid #1E3A28; }
+  .pick-label { font-size: 12px; font-weight: 700; letter-spacing: 0.03em; }
+  .pick-card a { background: var(--green); color: #fff; padding: 8px 14px; text-decoration: none; border-radius: 6px; text-align: center; margin-top: 6px; font-size: 13px; font-weight: 600; }
+  .chart-filters { display: flex; gap: 24px; margin: 12px 0; flex-wrap: wrap; align-items: center; }
+  @media (max-width: 600px) { .speed-input-group { flex-direction: column; align-items: stretch; } .finder-picks { grid-template-columns: 1fr; } }
+</style>
