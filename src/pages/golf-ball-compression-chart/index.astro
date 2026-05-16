@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 import { ARTICLES } from '../../data/articles';
@@ -88,56 +89,57 @@ const schemas = [
 <BaseLayout meta={meta} schemas={schemas}>
 
   <!-- STICKY BAR -->
-  <div class="sp-bar">
-    <div class="sp-bar-inner">
-      <span class="sp-bar-badge">BEST VALUE</span>
-      <span class="sp-bar-name">Callaway Supersoft</span>
-      <span class="sp-bar-price">~$25/dozen</span>
-      <a href="https://www.amazon.com/dp/B0F2FSR89S/?tag=cubicalgolfer-20" target="_blank" rel="nofollow noopener sponsored" class="sp-bar-btn">Check Price at Amazon →</a>
+  <StickyBar
+    name="Callaway Supersoft"
+    price="~$25/dz"
+    url="https://www.amazon.com/dp/B0F2FSR89S/?tag=cubicalgolfer-20"
+    retailer="Amazon"
+    badge="BEST VALUE"
+  />
+
+  <header class="art-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/improve-your-golf-game/">Improve Your Game</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Golf Ball Compression Chart 2026</span>
+    </nav>
+
+    <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
+    <h1>Golf Ball Compression Chart 2026 — Match Your Swing Speed</h1>
+
+    <div class="author-box">
+      <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
+        <img src="/images/ryan-author-photo.webp" alt="Ryan O., Cubical Golfer founder and gear editor" class="author-avatar-img" width="44" height="44" />
+      </a>
+      <div style="flex:1">
+        <span class="author-name">
+          <a href="/about/">Ryan O.</a>
+          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">12-handicap weekend golfer, Chicago, IL</span>
+        </span>
+        <span class="author-meta">
+          📖 3,400 words &nbsp;·&nbsp;
+          📅 Updated: 2026-05-16 &nbsp;·&nbsp;
+          ⛳ <a href="/how-we-test/">How we test →</a>
+        </span>
+      </div>
     </div>
+  </header>
+
+  <!-- TRUST CARD — same as other buying guides -->
+  <div class="trust-card">
+    <h3 class="trust-card__heading">Why Trust This Guide</h3>
+    <ul class="trust-card__list">
+      <li><strong>Every ball purchased</strong> — bought with our own money, no manufacturer samples</li>
+      <li><strong>Compression data verified</strong> — cross-referenced with manufacturer specs and independent testing</li>
+      <li><strong>12-handicap perspective</strong> — recommendations for weekend golfers, not tour pros</li>
+      <li><strong>Updated 2026-05-16</strong> — prices and availability checked monthly</li>
+    </ul>
+    <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
   </div>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a>
-    <span class="bc-sep" aria-hidden="true">›</span>
-    <a href="/improve-your-golf-game/">Improve Your Game</a>
-    <span class="bc-sep" aria-hidden="true">›</span>
-    <span aria-current="page">Compression Chart</span>
-  </nav>
-
   <article class="art-content">
-
-    <header class="art-hero">
-      <span class="art-badge tag-guide">INTERACTIVE CHART</span>
-      <h1>Golf Ball Compression Chart 2026 — Match Your Swing Speed</h1>
-      <p class="art-meta">
-        <a href="/about/" class="art-author-link">
-          <img src="/images/ryan-author-photo.webp" alt="Ryan O." width="44" height="44" class="author-avatar-img" />
-        </a>
-        <span class="art-meta-text">
-          <a href="/about/">Ryan O.</a> 12-handicap weekend golfer, Chicago, IL<br/>
-          📖 3,400 words · 📅 Updated: 2026-05-16 · ⛳ <a href="/how-we-test/">How we test →</a>
-        </span>
-      </p>
-    </header>
-
-    <!-- FRESHNESS BANNER -->
-    <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
-      <span style="font-size:15px;">✅</span>
-      <span><strong>Updated 2026-05-16</strong> — All 34 balls independently tested. Prices verified monthly. No manufacturer sponsorships. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
-    </div>
-
-    <!-- TRUST BLOCK -->
-    <div class="trust-card">
-      <h3 class="trust-card__heading">Why Trust This Guide</h3>
-      <ul class="trust-card__list">
-        <li><strong>Every ball purchased</strong> — bought with our own money, no manufacturer samples</li>
-        <li><strong>Compression data verified</strong> — cross-referenced with manufacturer specs and independent testing</li>
-        <li><strong>12-handicap perspective</strong> — recommendations for weekend golfers, not tour pros</li>
-        <li><strong>Updated May 2026</strong> — prices and availability checked monthly</li>
-      </ul>
-      <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
-    </div>
 
     <!-- QUICK ANSWER -->
     <div class="quick-answer-box">
@@ -145,6 +147,12 @@ const schemas = [
       <p class="quick-answer-text">Under 85 mph swing speed: play compression 35-65. Between 85-100 mph: play 65-90. Over 100 mph: play 90+. Use the interactive calculator below to get a personalized recommendation in 10 seconds.</p>
       <a href="https://www.amazon.com/dp/B0F2FSR89S/?tag=cubicalgolfer-20" class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored">Our #1 Pick: Callaway Supersoft ~$25/dz — Check Price →</a>
       <p class="quick-answer-more">Read the full guide below for all 34 balls tested.</p>
+    </div>
+
+    <!-- FRESHNESS BANNER -->
+    <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:15px;">✅</span>
+      <span><strong>Updated 2026-05-16</strong> — All 34 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
 
     <!-- TOC -->
