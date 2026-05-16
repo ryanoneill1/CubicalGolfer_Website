@@ -87,34 +87,86 @@ const schemas = [
 ---
 <BaseLayout meta={meta} schemas={schemas}>
 
+  <!-- STICKY BAR -->
+  <div class="sp-bar">
+    <div class="sp-bar-inner">
+      <span class="sp-bar-badge">BEST VALUE</span>
+      <span class="sp-bar-name">Callaway Supersoft</span>
+      <span class="sp-bar-price">~$25/dozen</span>
+      <a href="https://www.amazon.com/dp/B0F2FSR89S/?tag=cubicalgolfer-20" target="_blank" rel="nofollow noopener sponsored" class="sp-bar-btn">Check Price at Amazon →</a>
+    </div>
+  </div>
+
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol>
-      {meta.breadcrumbs.map((bc, i) => (
-        <li>{i < meta.breadcrumbs.length - 1 ? <a href={bc.href}>{bc.label}</a> : <span aria-current="page">{bc.label}</span>}</li>
-      ))}
-    </ol>
+    <a href="/">Home</a>
+    <span class="bc-sep" aria-hidden="true">›</span>
+    <a href="/improve-your-golf-game/">Improve Your Game</a>
+    <span class="bc-sep" aria-hidden="true">›</span>
+    <span aria-current="page">Compression Chart</span>
   </nav>
 
   <article class="article-single">
 
-    <header class="art-header">
+    <header class="art-hero">
       <span class="art-badge tag-guide">INTERACTIVE CHART</span>
       <h1>Golf Ball Compression Chart 2026 — Match Your Swing Speed</h1>
-      <p class="art-author">
-        <img src="/images/ryan-author-photo.webp" alt="Ryan O." width="44" height="44" class="author-avatar-img" />
-        <span>By <strong>Ryan O.</strong> — 12-handicap weekend golfer, Chicago, IL</span>
+      <p class="art-meta">
+        <a href="/about/" class="art-author-link">
+          <img src="/images/ryan-author-photo.webp" alt="Ryan O." width="44" height="44" class="author-avatar-img" />
+        </a>
+        <span class="art-meta-text">
+          <a href="/about/">Ryan O.</a> 12-handicap weekend golfer, Chicago, IL<br/>
+          📖 3,400 words · 📅 Updated: 2026-05-16 · ⛳ <a href="/how-we-test/">How we test →</a>
+        </span>
       </p>
     </header>
 
-    <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);">
-      ✅ <strong>Updated May 2026</strong> — 34 balls independently tested. All prices verified. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a>
+    <!-- FRESHNESS BANNER -->
+    <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:15px;">✅</span>
+      <span><strong>Updated 2026-05-16</strong> — All 34 balls independently tested. Prices verified monthly. No manufacturer sponsorships. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
+
+    <!-- TRUST BLOCK -->
+    <div class="trust-block" style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+      <p style="font-weight:700;font-size:15px;margin:0 0 10px;color:var(--green);">🔒 Why Trust This Guide</p>
+      <ul style="margin:0;padding:0 0 0 18px;font-size:14px;line-height:1.7;color:var(--muted);">
+        <li><strong>Every ball purchased</strong> — bought with our own money, no manufacturer samples</li>
+        <li><strong>Compression data verified</strong> — cross-referenced with manufacturer specs and independent testing</li>
+        <li><strong>12-handicap perspective</strong> — recommendations for weekend golfers, not tour pros</li>
+        <li><strong>Updated May 2026</strong> — prices and availability checked monthly</li>
+      </ul>
+      <a href="/how-we-test/" style="display:inline-block;margin-top:10px;color:var(--green);font-weight:600;font-size:13px;">See full testing methodology →</a>
+    </div>
+
+    <!-- QUICK ANSWER -->
+    <div class="quick-answer" style="margin:0 0 24px;padding:20px 24px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.25);border-radius:10px;">
+      <p style="font-weight:700;font-size:15px;margin:0 0 8px;color:var(--green);">⚡ Quick Answer</p>
+      <p style="font-size:14px;margin:0 0 12px;line-height:1.7;color:var(--body);">Under 85 mph swing speed: play compression 35-65. Between 85-100 mph: play 65-90. Over 100 mph: play 90+. Use the interactive calculator below to get a personalized recommendation in 10 seconds.</p>
+      <a href="https://www.amazon.com/dp/B0F2FSR89S/?tag=cubicalgolfer-20" target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">Our #1 Pick: Callaway Supersoft ~$25/dz — Check Price →</a>
+    </div>
+
+    <!-- TOC -->
+    <nav class="toc" style="margin:0 0 28px;padding:16px 20px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+      <p style="font-weight:700;font-size:14px;margin:0 0 8px;">In this guide</p>
+      <ol style="margin:0;padding:0 0 0 20px;font-size:13px;line-height:1.9;">
+        <li><a href="#ball-finder" style="color:var(--green);">Find Your Ball in 10 Seconds</a></li>
+        <li><a href="#compression-table" style="color:var(--green);">Full Compression Chart (Sortable)</a></li>
+        <li><a href="#what-is-compression" style="color:var(--green);">What Is Compression?</a></li>
+        <li><a href="#find-swing-speed" style="color:var(--green);">How to Find Your Swing Speed</a></li>
+        <li><a href="#under-85" style="color:var(--green);">Best Balls Under 85 mph</a></li>
+        <li><a href="#85-100" style="color:var(--green);">Best Balls 85-100 mph</a></li>
+        <li><a href="#over-100" style="color:var(--green);">Best Balls Over 100 mph</a></li>
+        <li><a href="#by-brand" style="color:var(--green);">Compression by Brand</a></li>
+        <li><a href="#faq" style="color:var(--green);">FAQ</a></li>
+      </ol>
+    </nav>
 
     <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps every major golf ball's compression rating to your swing speed — so you can find the right ball in 10 seconds instead of wasting money on balls designed for someone else's swing.</p>
 
     <!-- ═══ INTERACTIVE BALL FINDER ═══ -->
     <section class="ball-finder" id="ball-finder">
-      <h2 style="margin-top:0;color:var(--green);">🎯 Find Your Ball in 10 Seconds</h2>
+      <h2 id="ball-finder-heading" style="margin-top:0;color:var(--green);">🎯 Find Your Ball in 10 Seconds</h2>
       <div class="finder-controls">
         <label for="speed-slider" style="font-weight:600;">Your driver swing speed (mph):</label>
         <div class="speed-input-group">
@@ -138,7 +190,7 @@ const schemas = [
 
     <!-- ═══ SORTABLE TABLE ═══ -->
     <section>
-      <h2>Complete Golf Ball Compression Chart 2026</h2>
+      <h2 id="compression-table">Complete Golf Ball Compression Chart 2026</h2>
       <p>Click any column header to sort. Use the filters to narrow by cover type or budget.</p>
       <div class="chart-filters">
         <label>Cover: <select id="cover-filter" style="padding:6px 10px;border-radius:6px;border:1px solid var(--border);">
@@ -178,7 +230,7 @@ const schemas = [
 
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
     <section>
-      <h2>What Is Golf Ball Compression and Why It Matters</h2>
+      <h2 id="what-is-compression">What Is Golf Ball Compression and Why It Matters</h2>
       <p>Compression is a number (typically 30-110) that measures how much a golf ball deforms when struck. Lower numbers mean the ball squishes more easily; higher numbers mean it resists deformation.</p>
       <p>Why this matters for YOUR game: if your swing speed is too slow for a high-compression ball, you physically cannot compress it enough at impact. Energy that should transfer into ball speed gets lost. The result is shorter distance, less control, and a harder feel you probably don't enjoy.</p>
       <h3>How Compression Is Measured</h3>
@@ -189,7 +241,7 @@ const schemas = [
 
     <!-- ═══ HOW TO FIND YOUR SWING SPEED ═══ -->
     <section>
-      <h2>How to Find Your Swing Speed</h2>
+      <h2 id="find-swing-speed">How to Find Your Swing Speed</h2>
       <h3>Measure With a Launch Monitor</h3>
       <p>The most accurate method. Budget options like the <a href="/best-launch-monitors-no-subscription/">Shot Scope LM1 ($199, no subscription)</a> display your club speed on a built-in screen. Most golf stores also offer free swing speed checks — ask at your local Golf Galaxy or PGA Tour Superstore.</p>
       <h3>Estimate from Your 7-Iron Carry Distance</h3>
@@ -210,7 +262,7 @@ const schemas = [
 
     <!-- ═══ BEST BALLS BY SPEED ═══ -->
     <section>
-      <h2>Best Golf Balls for Swing Speed Under 85 mph</h2>
+      <h2 id="under-85">Best Golf Balls for Swing Speed Under 85 mph</h2>
       <p>If your driver speed is under 85 mph, you need compression between 35-65. Higher-compression balls will feel like hitting a rock and fly shorter. These are the balls that actually compress at your speed:</p>
       <h3>Best for Seniors (Under 75 mph)</h3>
       <p>The <strong>Callaway Supersoft</strong> (38 compression, $25/dz) is the best ball for swing speeds under 75 mph. It compresses fully even at very slow speeds, maximizing distance. The <strong>Wilson DUO Soft+</strong> (40, $22/dz) is the budget alternative. See our full <a href="/best-golf-balls-for-seniors/">best balls for seniors guide</a>.</p>
@@ -219,20 +271,20 @@ const schemas = [
     </section>
 
     <section>
-      <h2>Best Golf Balls for Swing Speed 85–100 mph</h2>
+      <h2 id="85-100">Best Golf Balls for Swing Speed 85–100 mph</h2>
       <p>This is where most weekend golfers land — and where the most options exist. Compression 65-90 is your range. The key decision: ionomer cover (cheaper, less spin) or urethane cover (more spin around greens, premium price).</p>
       <p>Our top picks: <strong>Kirkland Signature</strong> ($28/dz, urethane, 75 compression) for value, <strong>Srixon Q-Star Tour</strong> ($35/dz, urethane, 72) for the best balance, and <strong>Callaway Chrome Soft</strong> ($40/dz, urethane, 75) for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
     </section>
 
     <section>
-      <h2>Best Golf Balls for Swing Speed Over 100 mph</h2>
+      <h2 id="over-100">Best Golf Balls for Swing Speed Over 100 mph</h2>
       <p>Above 100 mph, you can compress any ball on the market. The choice becomes about spin, feel, and control rather than distance. Compression 85-102 is your range.</p>
       <p>The <strong>Titleist Pro V1</strong> ($55/dz, 87 compression) remains the gold standard — consistent flight, excellent greenside spin, and the ball every tour player trusts. The <strong>TaylorMade TP5</strong> ($50/dz, 85) and <strong>Srixon Z-Star</strong> ($40/dz, 88) are the best alternatives. Budget pick: <strong>Vice Pro</strong> ($33/dz, 80 compression, urethane cover).</p>
     </section>
 
     <!-- ═══ BRAND SUB-TABLES ═══ -->
     <section>
-      <h2>Golf Ball Compression by Brand</h2>
+      <h2 id="by-brand">Golf Ball Compression by Brand</h2>
       {brands.map(brand => {
         const brandBalls = balls.filter(b => b.brand === brand);
         return (
@@ -258,7 +310,7 @@ const schemas = [
 
     <!-- ═══ FAQ ═══ -->
     <section>
-      <h2>Frequently Asked Questions</h2>
+      <h2 id="faq">Frequently Asked Questions</h2>
       {faqs.map(({ q, a }) => (
         <details class="faq-item">
           <summary>{q}</summary>
