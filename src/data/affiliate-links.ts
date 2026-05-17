@@ -2313,5 +2313,36 @@ export function getAffiliateLink(productId: string) {
     retailer: 'Amazon',
     price: 'Check price',
     label: 'See Current Price',
-  };
+  
+  'flightscope-x3': {
+    url: 'https://www.amazon.com/s?k=FlightScope+X3+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$15,995',
+    imgSrc: '/images/products/flightscope-x3.webp',
+  },
+  'square-golf': {
+    url: 'https://www.amazon.com/s?k=Square+Golf+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$699',
+    imgSrc: '/images/products/square-golf.webp',
+  },
+  'garmin-r50': {
+    url: 'https://www.amazon.com/s?k=Garmin+Approach+R50+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$899',
+    imgSrc: '/images/products/garmin-r50.webp',
+  },
+  'ernest-sports-es16': {
+    url: 'https://www.amazon.com/s?k=Ernest+Sports+ES16+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$499',
+    imgSrc: '/images/products/ernest-sports-es16.webp',
+  },
+  'swing-caddie-sc4': {
+    url: 'https://www.amazon.com/s?k=Swing+Caddie+SC4+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$599',
+    imgSrc: '/images/products/swing-caddie-sc4.webp',
+  },
+};
 }
