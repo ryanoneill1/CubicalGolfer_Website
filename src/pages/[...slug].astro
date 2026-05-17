@@ -363,7 +363,7 @@ if (isBuyingGuide) {
   {/* ── WHY TRUST THIS GUIDE — E-E-A-T trust section (buying guides + reviews + listicles) ── */}
   {(isBuyingGuide || article.pageType === 'listicle') && (
     <div class="trust-card">
-      <h3 class="trust-card__heading">Why Trust This Guide</h3>
+      <p class="trust-card__heading">Why Trust This Guide</p>
       <ul class="trust-card__list">
         <li><strong>Every product purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
         <li><strong>10+ real rounds per product</strong> — tested on actual courses, not a simulator or fitting bay</li>
@@ -801,7 +801,7 @@ if (isBuyingGuide) {
     {/* RELATED GUIDES */}
     {related.length > 0 && (
       <div class="rel-cluster">
-        <h3>Related Guides</h3>
+        <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
         <div class="rel-links">
           {related.map(link => <a href={link.slug}>{link.label}</a>)}
         </div>
@@ -811,7 +811,7 @@ if (isBuyingGuide) {
     {/* MORE FOR CUBICLE GOLFERS — cross-category links on ALL article pages */}
     {cubicleGolferLinks.length > 0 && (
       <div class="rel-cluster" style="background:var(--green);border:none;">
-        <h3 style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</h3>
+        <p style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
         <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
           You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
         </p>
@@ -855,7 +855,7 @@ if (isBuyingGuide) {
 
     {/* BOTTOM CTA */}
     <div class="art-cta">
-      <h3>Get the Free Golf Gear Buying Guide</h3>
+      <p style="font-weight:700;font-size:16px;margin:0 0 10px;">Get the Free Golf Gear Buying Guide</p>
       <p>The cheat sheet every weekend golfer needs before buying anything new. No spam, ever.</p>
       <a href="/" class="btn-gold" style="display:inline-block;margin-top:8px;">Browse All Guides →</a>
     </div>
@@ -897,7 +897,7 @@ if (isBuyingGuide) {
               )}
             </div>
             <div class="art-body">
-              <h3>{a.titleDisplay}</h3>
+              <p style="font-weight:700;font-size:15px;margin:4px 0;">{a.titleDisplay}</p>
               <p>{a.excerpt}</p>
               <div class="art-foot">
                 <span class="art-words">{a.words} · Updated 2026</span>
