@@ -9,15 +9,15 @@
   <div class="exit-intent__backdrop" id="exit-intent-backdrop"></div>
   <div class="exit-intent__inner">
     <button class="exit-intent__close" id="exit-intent-close" aria-label="Close">×</button>
-    <p class="exit-intent__eyebrow">BEFORE YOU GO</p>
-    <h3 class="exit-intent__heading">Get the Weekend Golfer's Cheat Sheet</h3>
-    <p class="exit-intent__sub">The single best pick in every category — rangefinder, GPS watch, ball, glove, putter — based on 40+ rounds of testing. Free, one page, no spam.</p>
+    <p class="exit-intent__eyebrow">BEFORE YOU GO — FREE PDF</p>
+    <h3 class="exit-intent__heading">Grab the Free Compression Cheat Sheet</h3>
+    <p class="exit-intent__sub">Match your swing speed to the perfect golf ball in 10 seconds. 34 balls color-coded by compression, cover, and price. One printable page, free.</p>
     <div class="exit-intent__field" id="exit-intent-field">
       <input type="email" id="exit-email" class="exit-intent__input" placeholder="you@email.com" aria-label="Email address" />
-      <button id="exit-submit" class="exit-intent__btn">Send Me the PDF</button>
+      <button id="exit-submit" class="exit-intent__btn">Send Me the Cheat Sheet</button>
     </div>
     <p class="exit-intent__disclaimer">No spam. Unsubscribe any time.</p>
-    <p class="exit-intent__thanks" id="exit-intent-thanks" hidden>Check your inbox — the cheat sheet is on its way.</p>
+    <p class="exit-intent__thanks" id="exit-intent-thanks" hidden>Check your inbox — the compression cheat sheet is on its way!</p>
   </div>
 </div>
 
@@ -161,7 +161,7 @@
         } else { throw new Error('no subscription'); }
       })
       .catch(function() {
-        submitBtn.textContent = 'Send Me the PDF';
+        submitBtn.textContent = 'Send Me the Cheat Sheet';
         submitBtn.disabled = false;
         emailInput.style.borderColor = '#d63b2f';
       });
