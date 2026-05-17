@@ -2369,5 +2369,72 @@ export function getAffiliateLink(productId: string) {
     price: '~$599',
     imgSrc: '/images/products/homecourse-retractable-screen.webp',
   },
+
+  'taylormade-qi-irons': {
+    url: 'https://www.amazon.com/dp/B0DM9F2XBJ/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$899',
+    imgSrc: '/images/products/taylormade-qi-irons.webp',
+  },
+  'cleveland-launcher-xl2-irons': {
+    url: 'https://www.amazon.com/dp/B0BTFM23KH/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$699',
+    imgSrc: '/images/products/cleveland-launcher-xl2-irons.webp',
+  },
+  'cobra-aerojet-irons': {
+    url: 'https://www.amazon.com/dp/B0BTRK28F5/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$799',
+    imgSrc: '/images/products/cobra-aerojet-irons.webp',
+  },
+  'cleveland-cbx4-wedge': {
+    url: 'https://www.amazon.com/dp/B0D6GN4KCX/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$150',
+    imgSrc: '/images/products/cleveland-cbx4-wedge.webp',
+  },
+  'callaway-jaws-full-toe': {
+    url: 'https://www.amazon.com/dp/B0CPFL85LP/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$180',
+    imgSrc: '/images/products/callaway-jaws-full-toe.webp',
+  },
+  'taylormade-hi-toe-3': {
+    url: 'https://www.amazon.com/dp/B0CKBBQ5CS/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$170',
+    imgSrc: '/images/products/taylormade-hi-toe-3.webp',
+  },
+  'callaway-paradym-hybrid': {
+    url: 'https://www.amazon.com/dp/B0CWJ4VMHK/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$250',
+    imgSrc: '/images/products/callaway-paradym-hybrid.webp',
+  },
+  'ping-g430-hybrid': {
+    url: 'https://www.amazon.com/dp/B0BMS75HQ3/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$260',
+    imgSrc: '/images/products/ping-g430-hybrid.webp',
+  },
+  'taylormade-stealth-hybrid': {
+    url: 'https://www.amazon.com/dp/B09LGQWBZ4/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$180',
+    imgSrc: '/images/products/taylormade-stealth-hybrid.webp',
+  },
+  'cobra-aerojet-hybrid': {
+    url: 'https://www.amazon.com/dp/B0BTRKL2W9/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$200',
+    imgSrc: '/images/products/cobra-aerojet-hybrid.webp',
+  },
+  'lamkin-crossline': {
+    url: 'https://www.amazon.com/dp/B001B6ECDS/?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$5',
+    imgSrc: '/images/products/lamkin-crossline.webp',
+  },
 };
 }
