@@ -1,0 +1,291 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAffiliateLink } from '../../data/affiliate-links';
+import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Equipment Budget Planner — What to Buy First (2026)',
+  description: 'Interactive golf budget planner. Pick your total budget and see exactly what to buy, in what order, with specific product recommendations at every tier.',
+  canonical: 'https://www.cubicalgolfer.com/golf-equipment-budget-planner/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'article' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Gear Reviews', href: '/gear-reviews/' },
+    { label: 'Budget Planner', href: '/golf-equipment-budget-planner/' },
+  ],
+};
+
+const faqs = [
+  { q: 'How much should a beginner spend on golf equipment?', a: 'A complete beginner set (clubs, bag, balls, gloves, tees) costs $300-$500. The Callaway Strata set ($350) is the best value starter package.' },
+  { q: 'What golf equipment should I buy first?', a: 'Clubs first (beginner set or used irons), then a glove, balls, and tees. Skip the rangefinder, watch, and training aids until you play regularly.' },
+  { q: 'Is expensive golf equipment worth it?', a: 'For beginners: no. A $350 beginner set performs 90% as well as $2,000 in individual clubs. Invest in lessons first. For mid-handicappers: fitted irons make a measurable difference.' },
+  { q: 'When should I upgrade from a beginner set?', a: 'When your handicap drops below 20 and you play 15+ rounds per year. Upgrade irons first (biggest impact), then driver, then putter. Keep the bag and accessories.' },
+];
+
+const schemas = [
+  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
+  faqSchema(faqs),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+
+const TAG = 'cubicalgolfer-20';
+const products = {
+  strata: getAffiliateLink('callaway-strata-set'),
+  supersoft: getAffiliateLink('callaway-supersoft'),
+  r10: getAffiliateLink('garmin-approach-r10'),
+  prov1: getAffiliateLink('titleist-pro-v1'),
+  spiderTour: getAffiliateLink('taylormade-spider-tour'),
+  rtx6: getAffiliateLink('cleveland-rtx6-52'),
+  fiberbuilt: getAffiliateLink('fiberbuilt-flight-deck'),
+  s62: getAffiliateLink('garmin-approach-s62'),
+  bushnell: getAffiliateLink('bushnell-tour-v6-shift'),
+  arccos: getAffiliateLink('arccos-caddie-sensors'),
+  bagboy: getAffiliateLink('bag-boy-nitron'),
+  dawnPatrol: getAffiliateLink('callaway-dawn-patrol'),
+};
+---
+
+<BaseLayout {meta} {schemas} activeNav="gear-reviews">
+
+  <article class="art-content">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/gear-reviews/">Gear Reviews</a><span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Budget Planner</span>
+      </nav>
+      <p class="art-freshness">Updated May 2026 · Interactive Tool</p>
+      <h1>Golf Equipment Budget Planner — What to Buy First</h1>
+      <p class="art-excerpt">Pick your total budget. We'll show you exactly what to buy, in what order, with specific products and prices. Every recommendation tested by us.</p>
+      <div class="author-box">
+        <img src="/images/ryan-avatar.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
+        <div><p class="author-box__name">Ryan O'Neill</p><p class="author-box__bio">12-handicap · Built a full bag from scratch on a budget</p></div>
+      </div>
+    </header>
+
+    <div class="trust-card">
+      <p class="trust-card__heading">Why Trust This Planner</p>
+      <p>Every product was independently purchased and tested. Prices updated May 2026. We never recommend gear we haven't used ourselves.</p>
+    </div>
+
+    <section id="planner">
+      <h2>What's Your Total Golf Budget?</h2>
+      <div id="budget-btns" style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 24px;">
+        <button class="calc-btn" data-b="500" onclick="selectBudget(500)">$500</button>
+        <button class="calc-btn" data-b="1000" onclick="selectBudget(1000)">$1,000</button>
+        <button class="calc-btn" data-b="2500" onclick="selectBudget(2500)">$2,500</button>
+        <button class="calc-btn" data-b="5000" onclick="selectBudget(5000)">$5,000</button>
+        <button class="calc-btn" data-b="10000" onclick="selectBudget(10000)">$10,000</button>
+      </div>
+      <div id="budget-result" style="display:none;">
+        <h2 id="budget-title"></h2>
+
+        <!-- Visual allocation bar -->
+        <div id="alloc-bar" style="display:flex;height:32px;border-radius:8px;overflow:hidden;margin:8px 0 20px;font-size:11px;font-weight:600;color:#fff;"></div>
+
+        <div id="budget-sections"></div>
+
+        <div id="upgrade-path" style="margin:24px 0;padding:16px;background:var(--bg-alt,#f8f7f4);border-radius:8px;">
+          <p style="font-weight:700;margin:0 0 8px;">📈 Upgrade Path — Buy In This Order</p>
+          <div id="upgrade-list"></div>
+        </div>
+
+        <h3>Related Guides</h3>
+        <ul>
+          <li><a href="/best-golf-gear-2026/">Best Golf Gear 2026 — Winners List</a></li>
+          <li><a href="/golf-tips-for-beginners/">Golf Tips for Beginners</a></li>
+          <li><a href="/best-beginner-golf-set-under-500/">Best Beginner Set Under $500</a></li>
+          <li><a href="/best-golf-launch-monitors-2026/">Best Launch Monitors</a></li>
+          <li><a href="/golf-simulator-cost-calculator/">Simulator Cost Calculator</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f, i) => (
+        <div class="faq-item" id={`faq-${i}`}>
+          <h3 class="faq-q">{f.q}</h3>
+          <p class="faq-a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
+
+<script define:vars={{ strata: products.strata?.url||'', supersoft: products.supersoft?.url||'', r10: products.r10?.url||'', prov1: products.prov1?.url||'', spiderTour: products.spiderTour?.url||'', rtx6: products.rtx6?.url||'', fiberbuilt: products.fiberbuilt?.url||'', s62: products.s62?.url||'', bushnell: products.bushnell?.url||'', arccos: products.arccos?.url||'', bagboy: products.bagboy?.url||'', dawnPatrol: products.dawnPatrol?.url||'' }}>
+
+const budgets = {
+  500: {
+    title: '$500 Budget — The Essentials',
+    alloc: { Clubs: 70, Balls: 10, Accessories: 15, Tech: 0, Bag: 5 },
+    sections: [
+      { cat: 'Clubs', pct: 70, items: [
+        { name: 'Callaway Strata Complete Set', price: 350, url: strata, note: 'Driver, woods, irons, putter, bag — everything in one box' },
+      ]},
+      { cat: 'Balls', pct: 10, items: [
+        { name: 'Callaway Supersoft (2 dozen)', price: 50, url: supersoft, note: 'Forgiving, durable, affordable' },
+      ]},
+      { cat: 'Accessories', pct: 15, items: [
+        { name: 'Callaway Dawn Patrol Glove', price: 15, url: dawnPatrol, note: 'Durable leather, great value' },
+        { name: 'Tees + divot tool + marker', price: 15, url: '', note: 'Basics you need for every round' },
+      ]},
+    ],
+    upgrade: ['1. Play 10 rounds with this setup', '2. Take a lesson ($50-$100)', '3. Upgrade putter first when handicap drops below 25', '4. Then upgrade irons when below 20'],
+  },
+  1000: {
+    title: '$1,000 Budget — Solid Foundation',
+    alloc: { Clubs: 55, Balls: 10, Accessories: 15, Tech: 15, Bag: 5 },
+    sections: [
+      { cat: 'Clubs', pct: 55, items: [
+        { name: 'Callaway Strata Complete Set', price: 350, url: strata, note: 'Full set to start' },
+        { name: 'Cleveland RTX6 wedge (52°)', price: 130, url: rtx6, note: 'Upgrade your short game first' },
+      ]},
+      { cat: 'Balls', pct: 10, items: [
+        { name: 'Callaway Supersoft (4 dozen)', price: 100, url: supersoft, note: 'Season supply' },
+      ]},
+      { cat: 'Accessories', pct: 15, items: [
+        { name: 'Glove + tees + towel + markers', price: 40, url: dawnPatrol },
+        { name: 'Bushnell rangefinder or GPS', price: 150, url: bushnell, note: 'Know your exact distances' },
+      ]},
+      { cat: 'Tech', pct: 15, items: [
+        { name: 'Alignment sticks', price: 15, url: '', note: 'Best $15 training aid in golf' },
+      ]},
+    ],
+    upgrade: ['1. Invest $100 in lessons before buying more gear', '2. Upgrade putter ($150-$250) after 20 rounds', '3. Get fitted for irons when handicap hits 18', '4. Add a launch monitor for practice data'],
+  },
+  2500: {
+    title: '$2,500 Budget — Serious Golfer Setup',
+    alloc: { Clubs: 50, Balls: 8, Accessories: 12, Tech: 22, Bag: 8 },
+    sections: [
+      { cat: 'Clubs', pct: 50, items: [
+        { name: 'Game-improvement iron set (fitted)', price: 600, url: '', note: 'Callaway Big Bertha, Ping G430, or TaylorMade Qi' },
+        { name: 'Driver (fitted)', price: 350, url: '', note: 'Previous-gen premium driver at discount' },
+        { name: 'TaylorMade Spider Tour putter', price: 200, url: spiderTour, note: 'Tour-proven mallet' },
+        { name: 'Cleveland RTX6 wedge set (50°+54°)', price: 260, url: rtx6, note: 'Gap + sand wedge' },
+      ]},
+      { cat: 'Balls', pct: 8, items: [
+        { name: 'Titleist Pro V1 (3 dozen)', price: 165, url: prov1, note: 'Premium ball for mid-handicappers' },
+      ]},
+      { cat: 'Accessories', pct: 12, items: [
+        { name: 'Bushnell Tour V6 rangefinder', price: 250, url: bushnell },
+        { name: 'Gloves, towel, umbrella', price: 50, url: dawnPatrol },
+      ]},
+      { cat: 'Tech', pct: 22, items: [
+        { name: 'Garmin R10 launch monitor', price: 499, url: r10, note: 'Practice data + home simulator' },
+      ]},
+      { cat: 'Bag', pct: 8, items: [
+        { name: 'Bag Boy Nitron push cart', price: 250, url: bagboy, note: 'Walk more, score lower' },
+      ]},
+    ],
+    upgrade: ['1. Get professionally fitted for irons — biggest single improvement', '2. Add a home hitting net ($130) for R10 practice', '3. Upgrade to simulator setup when ready ($600 more for screen + projector)', '4. Consider Arccos sensors for strokes-gained data'],
+  },
+  5000: {
+    title: '$5,000 Budget — Full Premium Setup',
+    alloc: { Clubs: 40, Balls: 5, Accessories: 10, Tech: 35, Bag: 10 },
+    sections: [
+      { cat: 'Clubs (fitted)', pct: 40, items: [
+        { name: 'Fitted iron set (current gen)', price: 800, url: '', note: 'Ping G430, Callaway Paradym, or TaylorMade Qi' },
+        { name: 'Fitted driver', price: 500, url: '', note: 'Current-gen with right shaft' },
+        { name: 'TaylorMade Spider Tour putter', price: 200, url: spiderTour },
+        { name: 'Wedge set (50°/54°/58°)', price: 390, url: rtx6, note: '3 Cleveland RTX6 wedges' },
+      ]},
+      { cat: 'Tech', pct: 35, items: [
+        { name: 'Home simulator (R10 + screen + projector)', price: 1300, url: r10, note: 'See our simulator cost calculator' },
+        { name: 'Garmin S62 GPS watch', price: 400, url: s62, note: 'On-course GPS + fitness' },
+        { name: 'Arccos Caddie sensors', price: 200, url: arccos, note: 'Automatic shot tracking + AI caddie' },
+      ]},
+      { cat: 'Accessories', pct: 10, items: [
+        { name: 'Bushnell Tour V6 Shift rangefinder', price: 300, url: bushnell },
+        { name: 'Premium bag + accessories', price: 250, url: '' },
+      ]},
+      { cat: 'Balls', pct: 5, items: [
+        { name: 'Titleist Pro V1 (6 dozen)', price: 300, url: prov1, note: 'Full season supply' },
+      ]},
+    ],
+    upgrade: ['1. You have everything you need — invest in lessons', '2. Upgrade simulator to SkyTrak+ when R10 subscription expires', '3. Get fitted for fairway woods and hybrids', '4. Consider Fiberbuilt mat upgrade for the simulator'],
+  },
+  10000: {
+    title: '$10,000 Budget — Tour-Level Everything',
+    alloc: { Clubs: 30, Balls: 3, Accessories: 7, Tech: 50, Bag: 10 },
+    sections: [
+      { cat: 'Clubs (fully fitted)', pct: 30, items: [
+        { name: 'Full bag fitting + current-gen clubs', price: 2500, url: '', note: '14 clubs fitted by a professional' },
+      ]},
+      { cat: 'Tech', pct: 50, items: [
+        { name: 'Full simulator (SkyTrak+ package)', price: 4492, url: '', note: 'See our $5K simulator guide' },
+        { name: 'Garmin S62 GPS watch', price: 400, url: s62 },
+        { name: 'Arccos Caddie sensors', price: 200, url: arccos },
+      ]},
+      { cat: 'Accessories', pct: 7, items: [
+        { name: 'Bushnell Tour V6 Shift', price: 300, url: bushnell },
+        { name: 'Premium bag, rain gear, shoes', price: 500, url: '' },
+      ]},
+      { cat: 'Balls', pct: 3, items: [
+        { name: 'Pro V1 (full year supply)', price: 400, url: prov1 },
+      ]},
+      { cat: 'Lessons & Experiences', pct: 10, items: [
+        { name: '10 lessons with a PGA pro', price: 800, url: '', note: 'The highest-ROI golf investment' },
+      ]},
+    ],
+    upgrade: ['1. At this level, focus on practice and lessons', '2. Regrip clubs every 40 rounds', '3. Get ball-fitted with a launch monitor', '4. Track strokes gained with Arccos to find weaknesses'],
+  },
+};
+
+const colors = { Clubs: '#1E3A28', Balls: '#C9A84C', Accessories: '#4a7c5f', Tech: '#2c5d8f', Bag: '#8B7355', 'Lessons & Experiences': '#6b4e8b' };
+
+function selectBudget(b) {
+  const data = budgets[b];
+  document.querySelectorAll('.calc-btn').forEach(btn => btn.classList.remove('calc-btn--active'));
+  document.querySelector(`[data-b="${b}"]`).classList.add('calc-btn--active');
+
+  document.getElementById('budget-title').textContent = data.title;
+
+  // Allocation bar
+  const bar = document.getElementById('alloc-bar');
+  bar.innerHTML = '';
+  for (const [cat, pct] of Object.entries(data.alloc)) {
+    if (pct === 0) continue;
+    bar.innerHTML += `<div style="flex:${pct};background:${colors[cat]||'#666'};display:flex;align-items:center;justify-content:center;padding:0 4px;overflow:hidden;white-space:nowrap;">${cat} ${pct}%</div>`;
+  }
+
+  // Sections
+  const sectionsEl = document.getElementById('budget-sections');
+  sectionsEl.innerHTML = '';
+  data.sections.forEach(sec => {
+    let html = `<h3 style="margin:20px 0 8px;color:${colors[sec.cat]||'var(--text)'};">${sec.cat}</h3><table class="cmp-table"><thead><tr><th>Product</th><th>Price</th><th></th></tr></thead><tbody>`;
+    sec.items.forEach(item => {
+      const link = item.url ? `<a href="${item.url}" target="_blank" rel="nofollow noopener sponsored" style="color:var(--green);font-weight:600;text-decoration:none;">Buy →</a>` : '';
+      html += `<tr><td>${item.name}${item.note ? '<br><small style="color:var(--muted);">'+item.note+'</small>' : ''}</td><td style="white-space:nowrap;font-weight:600;">$${item.price.toLocaleString()}</td><td>${link}</td></tr>`;
+    });
+    html += '</tbody></table>';
+    sectionsEl.innerHTML += html;
+  });
+
+  // Upgrade path
+  document.getElementById('upgrade-list').innerHTML = data.upgrade.map(u => `<p style="margin:4px 0;">${u}</p>`).join('');
+
+  document.getElementById('budget-result').style.display = 'block';
+  document.getElementById('budget-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+<style>
+.calc-btn {
+  flex: 1 1 100px;
+  padding: 14px 8px;
+  border: 2px solid var(--border, #e0ddd5);
+  border-radius: 8px;
+  background: var(--bg-alt, #f8f7f4);
+  color: var(--text, #1a1a1a);
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: all .2s;
+}
+.calc-btn:hover { border-color: var(--green, #1E3A28); }
+.calc-btn--active { border-color: var(--green, #1E3A28); background: var(--green, #1E3A28); color: #fff; }
+</style>

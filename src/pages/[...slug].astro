@@ -18,7 +18,7 @@ import type { Article } from '../data/types';
 
 export async function getStaticPaths() {
   return ARTICLES
-    .filter(article => article.slug !== '/golf-ball-compression-chart/' && article.slug !== '/golf-simulator-complete-guide/' && article.slug !== '/launch-monitor-buying-guide/' && article.slug !== '/golf-ball-complete-guide/') // standalone page
+    .filter(article => article.slug !== '/golf-ball-compression-chart/' && article.slug !== '/golf-simulator-complete-guide/' && article.slug !== '/launch-monitor-buying-guide/' && article.slug !== '/golf-ball-complete-guide/' && article.slug !== '/golf-simulator-cost-calculator/' && article.slug !== '/golf-club-distance-chart/' && article.slug !== '/golf-equipment-budget-planner/') // standalone page
     .map(article => ({
     params: { slug: article.slug.replace(/^\/|\/$/g, '') },
     props: { article },

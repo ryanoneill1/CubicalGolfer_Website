@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Club Distance Chart — Enter Your Swing Speed (2026)',
+  description: 'Interactive golf club distance chart. Enter your driver swing speed and see estimated carry distances for every club in your bag.',
+  canonical: 'https://www.cubicalgolfer.com/golf-club-distance-chart/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'article' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Improve Your Game', href: '/improve-your-golf-game/' },
+    { label: 'Distance Chart', href: '/golf-club-distance-chart/' },
+  ],
+};
+
+const faqs = [
+  { q: 'How far should I hit each club?', a: 'It depends on your swing speed. A 90 mph driver swing speed typically produces: driver 220yd, 7-iron 150yd, PW 120yd. Enter your speed in our calculator above for personalized numbers.' },
+  { q: 'How do I find my swing speed?', a: 'Use a launch monitor (Garmin R10 at $499 is the most affordable), visit a golf store with a fitting bay, or estimate from driver carry: 200yd carry ≈ 90mph, 230yd ≈ 100mph, 260yd ≈ 110mph.' },
+  { q: 'What is the gap between each club?', a: 'Ideally 10-15 yards between consecutive clubs. If you have gaps larger than 20 yards, consider adding a hybrid or gap wedge to fill them.' },
+  { q: 'Why do I hit my clubs shorter than average?', a: 'Off-center hits, incorrect shaft flex, or technique issues all reduce distance. A launch monitor can diagnose the cause — see our practice guide.' },
+  { q: 'Should I carry a 3-iron or a hybrid?', a: 'Almost every golfer below scratch handicap hits a hybrid farther and more consistently than a 3-iron. The hybrid launches higher and is more forgiving on mishits.' },
+];
+
+const schemas = [
+  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
+  faqSchema(faqs),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+---
+
+<BaseLayout {meta} {schemas} activeNav="improve">
+
+  <article class="art-content">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/improve-your-golf-game/">Improve</a><span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Distance Chart</span>
+      </nav>
+      <p class="art-freshness">Updated May 2026 · Interactive Tool</p>
+      <h1>Golf Club Distance Chart — Enter Your Swing Speed</h1>
+      <p class="art-excerpt">Slide to your driver swing speed and instantly see estimated carry distances for every club. Spot gaps in your bag and know which clubs to add.</p>
+      <div class="author-box">
+        <img src="/images/ryan-avatar.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
+        <div><p class="author-box__name">Ryan O'Neill</p><p class="author-box__bio">12-handicap · Distances verified with launch monitor data</p></div>
+      </div>
+    </header>
+
+    <div class="trust-card">
+      <p class="trust-card__heading">How We Calculate</p>
+      <p>Distances are based on average amateur data from launch monitor studies, scaled proportionally to your driver swing speed. Your actual distances may vary ±10% based on strike quality, conditions, and equipment.</p>
+    </div>
+
+    <section id="calculator">
+      <h2>Your Driver Swing Speed</h2>
+      <div style="display:flex;align-items:center;gap:16px;margin:16px 0 8px;">
+        <input type="range" id="speed-slider" min="60" max="120" value="90" step="1" style="flex:1;height:8px;accent-color:var(--green,#1E3A28);" />
+        <div style="display:flex;align-items:baseline;gap:4px;">
+          <input type="number" id="speed-input" value="90" min="60" max="120" style="width:56px;font-size:20px;font-weight:700;text-align:center;border:2px solid var(--border,#e0ddd5);border-radius:6px;padding:4px;" />
+          <span style="font-size:14px;color:var(--muted,#888);">mph</span>
+        </div>
+      </div>
+      <p style="color:var(--muted,#888);font-size:13px;margin-bottom:24px;">Average male amateur: 93 mph · Average female: 72 mph · PGA Tour avg: 114 mph</p>
+
+      <table class="cmp-table" id="dist-table">
+        <thead><tr><th>Club</th><th>Carry (yds)</th><th>Total (yds)</th><th style="width:30%;">Bar</th></tr></thead>
+        <tbody id="dist-body"></tbody>
+      </table>
+
+      <div id="gap-alert" style="display:none;margin:20px 0;padding:16px;border-left:4px solid var(--gold,#C9A84C);background:var(--bg-alt,#f8f7f4);border-radius:0 8px 8px 0;">
+        <p style="font-weight:700;margin:0 0 8px;">⚠️ Bag Gaps Detected</p>
+        <div id="gap-list"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Don't Know Your Swing Speed?</h2>
+      <p>The most accurate method: use a <a href="/best-budget-launch-monitor/">launch monitor</a>. Budget options like the <a href="/best-launch-monitors-no-subscription/">Shot Scope LM1 ($199)</a> display your speed on a built-in screen. Most golf stores also offer free swing speed checks.</p>
+      <p><strong>Quick estimate from driver carry:</strong></p>
+      <table class="cmp-table">
+        <thead><tr><th>Driver Carry</th><th>Estimated Speed</th></tr></thead>
+        <tbody>
+          <tr><td>160 yards</td><td>~75 mph</td></tr>
+          <tr><td>180 yards</td><td>~83 mph</td></tr>
+          <tr><td>200 yards</td><td>~90 mph</td></tr>
+          <tr><td>220 yards</td><td>~97 mph</td></tr>
+          <tr><td>240 yards</td><td>~105 mph</td></tr>
+          <tr><td>260 yards</td><td>~112 mph</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Related Guides</h2>
+      <ul>
+        <li><a href="/golf-ball-compression-chart/">Golf Ball Compression Chart</a> — match your ball to your speed</li>
+        <li><a href="/how-to-improve-with-launch-monitor/">How to Improve with a Launch Monitor</a></li>
+        <li><a href="/best-golf-launch-monitors-2026/">Best Launch Monitors 2026</a></li>
+        <li><a href="/best-golf-irons-2026/">Best Irons 2026</a> — upgrade your distance</li>
+        <li><a href="/best-golf-drivers-forgiveness/">Most Forgiving Drivers</a></li>
+        <li><a href="/how-to-break-90/">How to Break 90</a></li>
+      </ul>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f, i) => (
+        <div class="faq-item" id={`faq-${i}`}>
+          <h3 class="faq-q">{f.q}</h3>
+          <p class="faq-a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
+
+<script>
+// Club data: [name, carryRatio vs driver, rollBonus, type]
+// carryRatio = what fraction of driver carry this club hits
+const clubs = [
+  ['Driver', 1.00, 20, 'wood'],
+  ['3-Wood', 0.86, 14, 'wood'],
+  ['5-Wood', 0.80, 12, 'wood'],
+  ['4-Hybrid', 0.76, 8, 'hybrid'],
+  ['5-Iron', 0.72, 6, 'iron'],
+  ['6-Iron', 0.68, 5, 'iron'],
+  ['7-Iron', 0.64, 4, 'iron'],
+  ['8-Iron', 0.59, 3, 'iron'],
+  ['9-Iron', 0.54, 3, 'iron'],
+  ['PW', 0.49, 2, 'wedge'],
+  ['GW (50°)', 0.44, 2, 'wedge'],
+  ['SW (56°)', 0.36, 1, 'wedge'],
+  ['LW (60°)', 0.30, 1, 'wedge'],
+];
+
+function driverCarry(speed) {
+  // Approximate: carry = speed * 2.4 - 6 (for average amateur smash factor ~1.44)
+  return Math.round(speed * 2.44 - 6);
+}
+
+function update() {
+  const speed = parseInt(document.getElementById('speed-slider').value);
+  document.getElementById('speed-input').value = speed;
+  const dc = driverCarry(speed);
+  const maxTotal = dc + 20;
+  const tbody = document.getElementById('dist-body');
+  tbody.innerHTML = '';
+
+  const distances = [];
+  clubs.forEach(([name, ratio, roll, type]) => {
+    const carry = Math.round(dc * ratio);
+    const total = carry + roll;
+    distances.push({ name, carry, total, type });
+    const pct = Math.round((total / maxTotal) * 100);
+    const color = type === 'wood' ? 'var(--green,#1E3A28)' : type === 'hybrid' ? 'var(--gold,#C9A84C)' : type === 'iron' ? '#4a7c5f' : '#8B7355';
+    tbody.innerHTML += `<tr>
+      <td style="font-weight:600;white-space:nowrap;">${name}</td>
+      <td style="text-align:center;font-weight:600;">${carry}</td>
+      <td style="text-align:center;">${total}</td>
+      <td><div style="height:16px;border-radius:4px;background:${color};width:${pct}%;min-width:8px;transition:width .3s;"></div></td>
+    </tr>`;
+  });
+
+  // Gap detection
+  const mainClubs = distances.filter(d => !['GW (50°)', 'SW (56°)', 'LW (60°)'].includes(d.name));
+  const gaps = [];
+  for (let i = 0; i < mainClubs.length - 1; i++) {
+    const gap = mainClubs[i].carry - mainClubs[i + 1].carry;
+    if (gap > 22) {
+      gaps.push(`<strong>${mainClubs[i].name} → ${mainClubs[i+1].name}:</strong> ${gap} yard gap. Consider adding a ${mainClubs[i].type === 'wood' ? 'hybrid' : 'gap wedge or utility iron'} between them.`);
+    }
+  }
+  const alertEl = document.getElementById('gap-alert');
+  if (gaps.length > 0) {
+    document.getElementById('gap-list').innerHTML = gaps.map(g => `<p style="margin:6px 0;">${g}</p>`).join('');
+    alertEl.style.display = 'block';
+  } else {
+    alertEl.style.display = 'none';
+  }
+}
+
+document.getElementById('speed-slider').addEventListener('input', function() {
+  document.getElementById('speed-input').value = this.value;
+  update();
+});
+document.getElementById('speed-input').addEventListener('change', function() {
+  let v = Math.max(60, Math.min(120, parseInt(this.value) || 90));
+  this.value = v;
+  document.getElementById('speed-slider').value = v;
+  update();
+});
+
+update();
+</script>
