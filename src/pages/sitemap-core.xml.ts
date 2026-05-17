@@ -20,6 +20,9 @@ export const GET: APIRoute = async () => {
     { loc: '/office-hacks/',            changefreq: 'weekly',  priority: '0.9', lastmod: FALLBACK },
     { loc: '/gear-quiz/',               changefreq: 'monthly', priority: '0.8', lastmod: FALLBACK },
     { loc: '/compare/',                 changefreq: 'weekly',  priority: '0.8', lastmod: FALLBACK },
+    { loc: '/golf-simulator-complete-guide/', changefreq: 'weekly',  priority: '0.95', lastmod: '2026-05-17' },
+    { loc: '/launch-monitor-buying-guide/',    changefreq: 'weekly',  priority: '0.95', lastmod: '2026-05-17' },
+    { loc: '/golf-ball-complete-guide/',        changefreq: 'weekly',  priority: '0.95', lastmod: '2026-05-17' },
   ];
 
   return new Response(buildSitemapXml(entries), {

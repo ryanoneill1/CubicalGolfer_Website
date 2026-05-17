@@ -18,7 +18,7 @@ import type { Article } from '../data/types';
 
 export async function getStaticPaths() {
   return ARTICLES
-    .filter(article => article.slug !== '/golf-ball-compression-chart/') // standalone page
+    .filter(article => article.slug !== '/golf-ball-compression-chart/' && article.slug !== '/golf-simulator-complete-guide/' && article.slug !== '/launch-monitor-buying-guide/' && article.slug !== '/golf-ball-complete-guide/') // standalone page
     .map(article => ({
     params: { slug: article.slug.replace(/^\/|\/$/g, '') },
     props: { article },

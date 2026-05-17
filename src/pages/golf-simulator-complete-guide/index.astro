@@ -1,0 +1,247 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StickyBar from '../../components/StickyBar.astro';
+import { getAffiliateLink } from '../../data/affiliate-links';
+import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Complete Golf Simulator Guide 2026 — From $700 to $10,000',
+  description: 'Build your perfect home golf simulator at any budget. Room setup, monitors, projectors, screens, mats, and software compared with total costs.',
+  canonical: 'https://www.cubicalgolfer.com/golf-simulator-complete-guide/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'article' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Golf Tech', href: '/golf-tech/' },
+    { label: 'Golf Simulator Guide', href: '/golf-simulator-complete-guide/' },
+  ],
+};
+
+const faqs = [
+  { q: 'How much does a home golf simulator cost?', a: 'A basic net-and-monitor setup costs $650-$900. A mid-range projector simulator costs $1,500-$3,000. A full premium setup costs $4,000-$10,000. The biggest cost is the launch monitor.' },
+  { q: 'What is the minimum room size for a golf simulator?', a: 'Minimum 10 feet deep × 8 feet wide × 8 feet tall for irons with a radar monitor. Full driver simulator: 12×10×9 feet. Full projector setup: 15×10×9 feet.' },
+  { q: 'Do I need a projector for a golf simulator?', a: 'No. You can practice with just a launch monitor, net, and mat — data shows on your phone or tablet. A projector adds virtual golf courses but is optional.' },
+  { q: 'Which launch monitor is best for a home simulator?', a: 'The Garmin R10 ($499) is the best starter. The SkyTrak+ ($2,995) is the best premium option. See our full launch monitor buying guide for every option.' },
+  { q: 'Can I build a golf simulator in my apartment?', a: 'Yes — with a radar monitor (works in low ceilings), a quiet impact screen or net, and basic sound dampening. See our apartment simulator guide.' },
+  { q: 'Is a golf simulator worth the money?', a: 'If you practice 2+ times per month and a range session costs $15-25, a $700 setup pays for itself in 6-15 months. See our simulator vs driving range comparison.' },
+];
+
+const schemas = [
+  articleSchema({
+    headline: meta.title,
+    description: meta.description,
+    datePublished: '2026-05-17',
+    dateModified: '2026-05-17',
+    url: meta.canonical,
+  }),
+  faqSchema(faqs),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+
+const quickProduct = getAffiliateLink('garmin-approach-r10');
+---
+
+<BaseLayout {meta} {schemas} activeNav="golf-tech">
+
+  <StickyBar
+    productName="Garmin R10 — Best Starter Monitor"
+    productUrl={quickProduct?.url || '#'}
+    price={quickProduct?.price || '~$499'}
+  />
+
+  <article class="art-content">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/golf-tech/">Golf Tech</a><span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Golf Simulator Guide</span>
+      </nav>
+      <p class="art-freshness">Updated May 2026 · Comprehensive Guide</p>
+      <h1>Complete Golf Simulator Guide 2026 — From $700 to $10,000</h1>
+      <p class="art-excerpt">Everything you need to build a home golf simulator at any budget. Room requirements, monitors, projectors, screens, mats, software, and total costs — all in one guide.</p>
+      <div class="author-box">
+        <img src="/images/ryan-avatar.webp" alt="Ryan — Cubicle Golfer" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
+        <div>
+          <p class="author-box__name">Ryan O'Neill</p>
+          <p class="author-box__bio">12-handicap weekend golfer · Built 3 simulator setups · Tested 8+ launch monitors</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="quick-answer-box">
+      <p class="quick-answer-box__label">⚡ Quick Answer</p>
+      <p><strong>Best starter setup:</strong> Garmin R10 + hitting net + mat = <strong>under $700.</strong> Best full simulator: SkyTrak+ + impact screen + projector + premium mat = <strong>under $5,000.</strong> Start basic, upgrade when you know what matters to you.</p>
+      {quickProduct && (
+        <a href={quickProduct.url} target="_blank" rel="nofollow noopener sponsored" class="quick-answer-box__cta">
+          Check Garmin R10 Price at {quickProduct.retailer} →
+        </a>
+      )}
+    </div>
+
+    <div class="trust-card">
+      <p class="trust-card__heading">Why Trust This Guide</p>
+      <p>We built 3 simulator setups (apartment, garage, dedicated room) and tested 8+ launch monitors over 12 months. Every recommendation comes from real use — not spec sheets.</p>
+    </div>
+
+    <nav class="toc" aria-label="Table of Contents">
+      <p class="toc__title">In This Guide</p>
+      <ol>
+        <li><a href="#tiers">3 Setup Tiers at a Glance</a></li>
+        <li><a href="#room">Room Requirements</a></li>
+        <li><a href="#monitors">Choosing a Launch Monitor</a></li>
+        <li><a href="#screens">Screens, Nets & Projectors</a></li>
+        <li><a href="#software">Simulator Software</a></li>
+        <li><a href="#guides">All Our Simulator Guides</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </nav>
+
+    <section id="tiers">
+      <h2>3 Simulator Setups at Every Budget</h2>
+      <table class="cmp-table">
+        <thead><tr><th>Setup</th><th>What You Get</th><th>Total Cost</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Basic — Data Only</strong></td><td>Launch monitor + net + mat</td><td><strong>$650–$900</strong></td><td>Practice with data, no screen needed</td></tr>
+          <tr><td><strong>Mid — Virtual Golf</strong></td><td>Monitor + projector + impact screen + mat + software</td><td><strong>$1,500–$3,000</strong></td><td>Play virtual courses at home</td></tr>
+          <tr><td><strong>Full — Premium Sim</strong></td><td>Premium monitor + HD projector + screen + enclosure + premium mat</td><td><strong>$4,000–$10,000</strong></td><td>Golf-lounge experience at home</td></tr>
+        </tbody>
+      </table>
+      <p>Not sure which tier? Start with Basic. You can upgrade to Mid by adding a projector and screen later without replacing any equipment. See our <a href="/best-golf-simulator-for-beginners/">beginner simulator guide</a> for step-by-step.</p>
+    </section>
+
+    <section id="room">
+      <h2>Room Requirements — Measure First, Buy Second</h2>
+      <table class="cmp-table">
+        <thead><tr><th>Measurement</th><th>Irons Only</th><th>All Clubs</th><th>Full Projector Sim</th></tr></thead>
+        <tbody>
+          <tr><td>Ceiling Height</td><td>8 ft</td><td>9 ft</td><td>9–10 ft</td></tr>
+          <tr><td>Room Width</td><td>8 ft</td><td>9 ft</td><td>10+ ft</td></tr>
+          <tr><td>Room Depth</td><td>10 ft</td><td>12 ft</td><td>15+ ft</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Critical:</strong> measure your LOWEST ceiling point — beams, ductwork, and garage door tracks all reduce effective height.</p>
+      <p><strong>Deep dives:</strong></p>
+      <ul>
+        <li><a href="/golf-simulator-room-dimensions-guide/">Complete Room Dimensions Guide</a> — every measurement for every setup</li>
+        <li><a href="/how-to-build-garage-golf-simulator/">Garage Simulator Build Guide</a> — step-by-step for the most popular room</li>
+        <li><a href="/apartment-golf-simulator-setup/">Apartment Simulator Setup</a> — making it work in 400 sq ft</li>
+        <li><a href="/best-golf-simulator-small-spaces/">Small Space Simulator Guide</a> — when every inch matters</li>
+      </ul>
+    </section>
+
+    <section id="monitors">
+      <h2>Choosing a Launch Monitor — The Brain of Your Simulator</h2>
+      <p>The launch monitor is the most important (and expensive) component. It captures your ball data and sends it to your screen or phone. Here's every option by price:</p>
+      <table class="cmp-table">
+        <thead><tr><th>Monitor</th><th>Price</th><th>Subscription</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td><a href="/shot-scope-lm1-vs-garmin-r10/">Shot Scope LM1</a></td><td>$199</td><td>None</td><td>Cheapest option, no sim support</td></tr>
+          <tr><td><a href="/best-budget-launch-monitor/">Garmin R10</a></td><td>$499</td><td>$99/yr opt</td><td>Best starter for simulators</td></tr>
+          <tr><td><a href="/garmin-r10-vs-square-golf/">Square Golf</a></td><td>$699</td><td>None</td><td>Zero fees, photometric</td></tr>
+          <tr><td><a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a></td><td>$699</td><td>$199/yr</td><td>Video replay + data</td></tr>
+          <tr><td><a href="/skytrak-vs-mevo-plus/">Mevo Gen2</a></td><td>$2,199</td><td>None</td><td>Radar fusion, no sub</td></tr>
+          <tr><td><a href="/bushnell-launch-pro-vs-skytrak-plus/">Bushnell Launch Pro</a></td><td>$2,499</td><td>None</td><td>Best accuracy, Foresight tech</td></tr>
+          <tr><td><a href="/mlm2pro-vs-skytrak-plus/">SkyTrak+</a></td><td>$2,995</td><td>$199/yr opt</td><td>Best sim experience</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Deep dives:</strong></p>
+      <ul>
+        <li><a href="/launch-monitor-buying-guide/">Complete Launch Monitor Buying Guide</a> — every monitor compared</li>
+        <li><a href="/launch-monitor-subscription-cost-comparison/">Subscription Cost Comparison</a> — real 3-year ownership costs</li>
+        <li><a href="/best-launch-monitor-low-ceiling/">Best Monitors for Low Ceilings</a> — 8-9 ft tested</li>
+        <li><a href="/trackman-alternatives-2026/">Trackman Alternatives Under $3,000</a></li>
+        <li><a href="/golf-launch-monitor-accuracy-test/">Accuracy Test: 8 Monitors Compared</a></li>
+      </ul>
+    </section>
+
+    <section id="screens">
+      <h2>Screens, Nets, Projectors & Mats</h2>
+      <p>After your monitor, these components complete the setup:</p>
+      <h3>Impact Screens vs Nets</h3>
+      <p>Use an <a href="/best-impact-screens-golf-simulator/">impact screen</a> if you want projector play (doubles as projector surface). Use a <a href="/best-golf-net-for-garage/">hitting net</a> if you only want data practice (cheaper, faster setup).</p>
+      <h3>Projectors</h3>
+      <p>Most garages need a <a href="/best-golf-simulator-projectors/">short-throw projector</a> (0.5-0.8 throw ratio) because standard projectors need 10+ feet of distance. Use our <a href="/golf-simulator-projector-distance-calculator/">projector distance calculator</a> to find the right throw ratio.</p>
+      <h3>Hitting Mats</h3>
+      <p>Never skip the mat — hitting off concrete damages clubs and wrists. The <a href="/best-golf-hitting-mats-home/">Fiberbuilt Flight Deck</a> ($449) is the gold standard. Budget option: any 3×5 commercial mat with a rubber underlayer.</p>
+      <p><strong>More guides:</strong></p>
+      <ul>
+        <li><a href="/best-golf-hitting-net-apartment-garage/">Best Indoor Golf Nets</a></li>
+        <li><a href="/best-indoor-golf-net-setup/">Indoor Net Setup Guide</a></li>
+        <li><a href="/portable-golf-simulator-setup/">Portable Simulator Setup</a> — pack away in 5 minutes</li>
+        <li><a href="/quiet-golf-simulator-setup/">Quiet Simulator Setup</a> — apartment friendly</li>
+      </ul>
+    </section>
+
+    <section id="software">
+      <h2>Simulator Software</h2>
+      <p>Your monitor captures data; software turns it into virtual golf. The four main options:</p>
+      <table class="cmp-table">
+        <thead><tr><th>Software</th><th>Price</th><th>Courses</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td>GSPro</td><td>$250/yr</td><td>200,000+</td><td>Best value, most courses</td></tr>
+          <tr><td>E6 Connect</td><td>$150–300/yr</td><td>100+ licensed</td><td>Most polished interface</td></tr>
+          <tr><td>TGC 2019</td><td>$900 once</td><td>150,000+</td><td>Best graphics, one-time buy</td></tr>
+          <tr><td>Awesome Golf</td><td>Free–$200</td><td>50+</td><td>Free tier to start</td></tr>
+        </tbody>
+      </table>
+      <p>See our <a href="/best-golf-simulator-software-2026/">full software comparison</a> with compatibility matrix for every monitor.</p>
+    </section>
+
+    <section id="guides">
+      <h2>All Our Simulator & Indoor Golf Guides</h2>
+      <h3>Setup Guides</h3>
+      <ul>
+        <li><a href="/how-to-build-garage-golf-simulator/">How to Build a Garage Golf Simulator</a></li>
+        <li><a href="/apartment-golf-simulator-setup/">Apartment Simulator Setup</a></li>
+        <li><a href="/portable-golf-simulator-setup/">Portable Simulator Setup — Pack in 5 Min</a></li>
+        <li><a href="/quiet-golf-simulator-setup/">Quiet Simulator Setup — Apartment Friendly</a></li>
+        <li><a href="/best-golf-simulator-for-beginners/">Simulator Guide for Beginners</a></li>
+        <li><a href="/golf-simulator-room-dimensions-guide/">Room Dimensions Guide</a></li>
+      </ul>
+      <h3>Budget Guides</h3>
+      <ul>
+        <li><a href="/how-much-does-golf-simulator-cost/">How Much Does a Golf Simulator Cost?</a></li>
+        <li><a href="/best-golf-simulator-under-1000/">Best Simulator Under $1,000</a></li>
+        <li><a href="/best-golf-simulator-under-5000/">Best Simulator Under $5,000</a></li>
+        <li><a href="/golf-simulator-vs-driving-range/">Simulator vs Driving Range — Cost Comparison</a></li>
+      </ul>
+      <h3>Equipment Guides</h3>
+      <ul>
+        <li><a href="/best-golf-launch-monitors-2026/">Best Launch Monitors 2026</a></li>
+        <li><a href="/best-golf-simulator-projectors/">Best Simulator Projectors</a></li>
+        <li><a href="/best-impact-screens-golf-simulator/">Best Impact Screens</a></li>
+        <li><a href="/best-golf-hitting-mats-home/">Best Hitting Mats</a></li>
+        <li><a href="/best-golf-hitting-net-apartment-garage/">Best Indoor Golf Nets</a></li>
+        <li><a href="/best-golf-net-for-garage/">Best Garage Golf Nets</a></li>
+        <li><a href="/best-golf-simulator-software-2026/">Best Simulator Software 2026</a></li>
+        <li><a href="/golf-simulator-projector-distance-calculator/">Projector Distance Calculator</a></li>
+      </ul>
+      <h3>Monitor Comparisons</h3>
+      <ul>
+        <li><a href="/launch-monitor-subscription-cost-comparison/">Subscription Cost Comparison</a></li>
+        <li><a href="/best-launch-monitor-low-ceiling/">Best for Low Ceilings</a></li>
+        <li><a href="/trackman-alternatives-2026/">Trackman Alternatives</a></li>
+        <li><a href="/golf-launch-monitor-accuracy-test/">Accuracy Test Data</a></li>
+        <li><a href="/mlm2pro-vs-skytrak-plus/">MLM2PRO vs SkyTrak+</a></li>
+        <li><a href="/bushnell-launch-pro-vs-skytrak-plus/">Launch Pro vs SkyTrak+</a></li>
+        <li><a href="/garmin-r10-vs-square-golf/">Garmin R10 vs Square Golf</a></li>
+        <li><a href="/skytrak-vs-mevo-plus/">SkyTrak vs Mevo+</a></li>
+        <li><a href="/rapsodo-vs-garmin-r10/">Rapsodo vs Garmin R10</a></li>
+        <li><a href="/shot-scope-lm1-vs-garmin-r10/">Shot Scope LM1 vs R10</a></li>
+        <li><a href="/how-to-improve-with-launch-monitor/">How to Improve with a Launch Monitor</a></li>
+      </ul>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f, i) => (
+        <div class="faq-item" id={`faq-${i}`}>
+          <h3 class="faq-q">{f.q}</h3>
+          <p class="faq-a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+
+  </article>
+</BaseLayout>
