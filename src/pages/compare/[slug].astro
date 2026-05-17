@@ -150,7 +150,7 @@ if (compProducts.length > 0) {
 
   {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
   <div class="trust-card">
-    <h3 class="trust-card__heading">Why Trust This Comparison</h3>
+    <p class="trust-card__heading">Why Trust This Comparison</p>
     <ul class="trust-card__list">
       <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
       <li><strong>20+ real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
@@ -268,7 +268,7 @@ if (compProducts.length > 0) {
 
     {/* ── QUICK WINNER ── */}
     <div class="verdict-box">
-      <h3>🏆 Winner: {winnerName}</h3>
+      <p style="font-weight:700;font-size:18px;margin:0 0 12px;">🏆 Winner: {winnerName}</p>
       <p>{c.winnerReason}</p>
       {winnerAff && (
         <a href={winnerAff.url} class="btn-buy-affiliate" style="margin-top:16px"
@@ -365,7 +365,7 @@ if (compProducts.length > 0) {
 
     {/* ── RELATED GUIDES — dynamic per-comparison + fallback ── */}
     <div class="rel-cluster" style="margin-top:40px">
-      <h3>Related Guides</h3>
+      <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
       <div class="rel-links">
         {c.related && c.related.length > 0
           ? c.related.map((link: any) => <a href={link.slug}>{link.label}</a>)
@@ -381,7 +381,7 @@ if (compProducts.length > 0) {
     </div>
 
     <div class="rel-cluster" style="background:var(--green);border:none;margin-top:24px;">
-      <h3 style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</h3>
+      <p style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
       <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
         You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
       </p>

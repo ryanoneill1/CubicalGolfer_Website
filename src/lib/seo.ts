@@ -125,7 +125,7 @@ export function coursesMeta(): PageMeta {
     canonical:   `${DOMAIN}/courses/`,
     ogImage:     OG_IMG,
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      'noindex, follow',
     breadcrumbs: [
       { label: 'Home',                href: '/' },
       { label: 'Golf Courses by City', href: '/courses/' },

@@ -183,6 +183,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
+          { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees vs Bushnell Tour V6' },
+          { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'V6 vs Precision Pro NX9' },
     ],
 
   },
@@ -314,6 +316,9 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps for Stat Tracking' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
+          { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42' },
+          { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
+          { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Ion Elite' },
     ],
     
   },
@@ -458,6 +463,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice Permanently' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+          { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland XL2 vs Cobra' },
+          { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet vs Ping G430' },
     ],
   },
 
@@ -901,6 +908,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
+          { slug: '/best-golf-apps-for-apple-watch/', label: 'Best Golf Apps for Apple Watch' },
     ],
   },
 
@@ -1616,6 +1624,8 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/best-golf-accessories-under-50/', label: 'Putting Mirror — Best $25 Training Aid' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
+          { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB DF3 vs Odyssey 2-Ball' },
+          { slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Stroke Lab vs Phantom' },
     ],
   },
 
@@ -2205,6 +2215,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
+          { slug: '/best-golf-training-aids-home-practice/', label: 'Best Home Practice Training Aids' },
     ],
   },
 
@@ -3002,6 +3013,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinders for Beginners' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth It?' },
       { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Compared' },
+    
+      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees vs Bushnell V6' },
     ],
     comparisonTable: {
       headers: ['Rangefinder', 'Price', 'Slope', 'Accuracy', 'Warranty'],
@@ -3429,6 +3442,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
+    
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Bushnell Ion Elite' },
     ],
     comparisonTable: {
       headers: ['GPS Watch', 'Best For', 'Price', 'Subscription', 'Battery'],
@@ -4581,6 +4596,10 @@ export const ARTICLES: Article[] = [
       { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
       { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+    
+      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42 Compared' },
+    
+      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
     ],
   },
 
@@ -5884,6 +5903,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS Watch Under $200' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
+    
+      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'S62 vs S42 Comparison' },
     ],
 
   },
@@ -6110,7 +6131,8 @@ export const ARTICLES: Article[] = [
     whoFor: ['15+ rounds/year wanting data-driven improvement', 'Want to know where you gain/lose strokes', 'Want AI club suggestions from real data', 'Willing to carry phone during rounds'],
     whoSkip: ['Fewer than 10 rounds/year', 'Refuse to carry phone on course', 'Budget-conscious — Shot Scope V5 at $249', 'Already know exact distances'],
     sources: [{ label: 'Arccos — Caddie AI Technology', url: 'https://www.arccosgolf.com/pages/caddie' }],
-    related: [{ slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' }, { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' }, { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' }],
+    related: [{ slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' }, { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' }, { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },      { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope' },
+    ],
   },
 
   // ── REVIEW: Precision Pro NX9 HD ────────────────────────────────────────
@@ -6216,7 +6238,9 @@ export const ARTICLES: Article[] = [
       { q: 'Which has better battery for golf?', a: 'Garmin S62: 20 hours GPS golf (4 rounds). Apple Watch: 6-8 hours with Golfshot (1 round with battery anxiety). Not close.' },
     ],
     sources: [{ label: 'Garmin — Approach S62 Specs', url: 'https://www.garmin.com/en-US/p/622467' }, { label: 'Golfshot — Apple Watch Features', url: 'https://golfshot.com' }],
-    related: [{ slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' }, { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' }, { slug: '/best-golf-apps/', label: 'Best Golf Apps' }],
+    related: [{ slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' }, { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' }, { slug: '/best-golf-apps/', label: 'Best Golf Apps' },
+      { slug: '/best-golf-apps-for-apple-watch/', label: 'Best Golf Apps for Apple Watch' },
+    ],
   },
 
   // ── COMPARISON: Bushnell V6 vs Precision Pro NX9 ────────────────────────
@@ -6540,7 +6564,7 @@ export const ARTICLES: Article[] = [
     title: 'Best Driver for High Handicappers 2026 — Most Forgiving',
     titleDisplay: 'Best Driver for High Handicappers (2026)',
     bottomLine: 'High handicappers should buy the most forgiving driver they can afford — MOI matters more than ball speed. Our top pick: <strong>Callaway Paradym Ai Smoke Max</strong> ($499) for the best mishit protection available. Budget pick: <strong>Cleveland Launcher XL2</strong> ($349) for the best performance under $350.',
-    description: 'The most forgiving drivers for high handicappers in 2026 — why MOI matters more than distance, what shaft flex at what speed, and 5 drivers ranked by forgiveness.',
+    description: 'Most forgiving drivers for high handicappers in 2026. Why MOI matters, what shaft flex at what speed, and 5 drivers ranked.',
     excerpt: 'High handicappers need forgiveness, not distance. Here are the 5 most forgiving drivers in 2026, tested by golfers who miss the center more than they hit it.',
     thumbnail: '/images/thumbnails/driver-high-handicapper-thumb.webp',
     intro: "If you shoot 95+, your driver is not why you shoot 95+. But the wrong driver makes a bad situation worse. A driver that punishes mishits with a 40-yard slice turns a bogey into a triple. A forgiving driver that keeps mishits in play turns that triple back into a bogey. Here are the 5 most forgiving drivers for high handicappers, ranked by the only metric that matters: how much do you lose when you miss the center?",
@@ -6571,7 +6595,11 @@ export const ARTICLES: Article[] = [
     whoFor: ['Shoot 95+ and want the most forgiving driver available', 'Miss the sweet spot on 40%+ of drives', 'Currently gaming a driver more than 5 years old', 'Want to keep more drives in play, even imperfect ones'],
     whoSkip: ['Already shoot under 85 — look at drivers optimized for distance and workability', 'Bought a driver in the last 2-3 years — lessons will help more than new equipment', 'Budget under $300 — buy a quality used previous-gen driver instead'],
     sources: [{ label: 'TrackMan — Driver Data by Handicap', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }, { label: 'USGA — Equipment Standards & MOI Limits', url: 'https://www.usga.org/equipment-standards.html' }],
-    related: [{ slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' }, { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Paradym Ai Smoke Max Review' }, { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' }, { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' }],
+    related: [{ slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' }, { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Paradym Ai Smoke Max Review' }, { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' }, { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet vs Ping G430' },
+    
+      { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland XL2 vs Cobra' },
+    ],
   },
 
   // ── RESOURCE: Golf Ball Compression Database ────────────────────────────// ── MIGRATED FROM public/ .html orphans ─────────────────────────────────
@@ -6742,7 +6770,7 @@ export const ARTICLES: Article[] = [
     title: 'Best Apartment Golf Simulator Setup 2026 — Tested in a 1-BR',
     titleDisplay: 'Best Apartment Golf Simulator Setup 2026 — Tested in a 1-BR After 60 Sessions',
     bottomLine: 'The <strong>Rapsodo MLM2PRO</strong> paired with a Spornia SPG-7 net and Fiberbuilt mat is the best apartment simulator setup under $1,500. After 60 indoor sessions, I dropped 3 strokes from my handicap without leaving my living room.',
-    description: 'Full apartment golf simulator setup tested over 60 sessions in a 1-BR living room. Rapsodo MLM2PRO + Spornia net + Fiberbuilt mat — under $1,500, no garage required.',
+    description: 'Apartment golf simulator setup tested over 60 sessions. MLM2PRO + Spornia net + Fiberbuilt mat — under $1,500, no garage.',
     excerpt: 'Full apartment simulator setup tested in a 1-BR living room — under $1,500, no garage required.',
     intro: 'You do not need a garage, a basement, or a $10,000 budget to build a golf simulator. I built mine in a 1-bedroom Chicago apartment for under $1,500 — and after 60 indoor sessions, my handicap dropped 2.8 strokes without touching real grass.',
     testingNotes: 'All components tested over 60 indoor sessions in a Chicago 1-BR apartment (11 ft ceiling, 8 ft depth). Handicap tracked via Arccos from Nov 2025 through Mar 2026.',
@@ -7029,7 +7057,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-04-24',
     title: '7 Desk Exercises That Fixed My Weekend Slice — Office Edition',
     titleDisplay: '7 Desk Exercises That Fixed My Weekend Slice — Cubicle Golfer Edition',
-    description: '7 desk exercises and a 15-minute office mobility routine that fixed a chronic weekend slice. Results after 4 weeks of lunch-break practice — no gym, no equipment.',
+    description: '7 desk exercises that fixed a chronic slice. 15-minute office routine, results after 4 weeks — no gym, no equipment.',
     excerpt: '7 desk exercises that fixed my weekend slice — 15 minutes at the office, no gym required.',
     intro: 'Your desk chair is ruining your golf swing. Eight hours of sitting shortens your hip flexors, tightens your chest, and rounds your spine — the exact postural changes that cause an over-the-top slice. The fix takes 15 minutes during your lunch break.',
     testingNotes: 'Routine tested by the author over 4 weeks (3-4 sessions per week during lunch breaks). Thoracic rotation measured before and after. Slice reduction tracked via Rapsodo MLM2PRO indoor sessions.',
@@ -7451,7 +7479,7 @@ export const ARTICLES: Article[] = [
     title: 'Best Golf Gifts for Mom 2026 — Gear She Actually Wants',
     titleDisplay: 'Best Golf Gifts for Mom 2026 — Gear She Actually Wants',
     bottomLine: 'The best gift for a golf-loving mom is gear she would not buy for herself. New <strong>FootJoy Flex XP shoes</strong> ($120) replace the worn-out pair she has been wearing for 3 seasons, or a <strong>dozen premium golf balls</strong> in a colorful sleeve ($45-$55) shows you know her game.',
-    description: 'Best golf gifts for mom — Mother\'s Day 2026 picks she will actually use on the course. Shoes, gloves, balls, and accessories chosen by golfers, not marketing teams.',
+    description: 'Best golf gifts for mom — 2026 picks she will actually use. Shoes, gloves, balls, and accessories chosen by golfers.',
     excerpt: 'Best golf gifts for mom — gear she actually wants, not golf-themed candles.',
     intro: 'Women\'s golf equipment has come a long way, and golf-loving moms deserve gifts that match their game — not pink novelty items from the clearance bin. Here are gifts chosen by actual golfers for the mom who takes her tee time seriously.',
     testingNotes: 'Product selections informed by feedback from women golfers in our community and hands-on testing of unisex items.',
@@ -7659,6 +7687,7 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
       { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+          { slug: '/best-indoor-putting-green-office/', label: 'Indoor Putting Green for Office' },
     ],
   },
 
@@ -7877,6 +7906,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor' },
       { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
       { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
+          { slug: '/best-golf-net-for-garage/', label: 'Best Golf Nets for Garage' },
     ],
   },
 
@@ -9513,6 +9543,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
       { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
       { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right for You?' },
+    
+      { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB DF3 vs Odyssey Two-Ball' },
     ],
   },
 
@@ -10081,7 +10113,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-05-15',
     title: "Best Father's Day Golf Gifts 2026 (That He'll Actually Use)",
     titleDisplay: "Best Father's Day Golf Gifts 2026",
-    description: "Father's Day golf gift guide for 2026. Tested picks by price: under $25, under $50, under $100, under $250, and splurge picks. Every product independently purchased.",
+    description: "Father's Day golf gifts 2026. Tested picks by price: under $25, $50, $100, $250, and splurge. All independently purchased.",
     excerpt: 'Best Father\'s Day golf gifts ranked by price — under $25, $50, $100, $250, and splurge picks. All independently tested.',
     bottomLine: 'The <strong>Bushnell Tour V6 Shift</strong> ($329) is the gift every golfer wants but won\'t buy themselves. For tighter budgets, the <strong>Precision Pro NX9</strong> ($169) delivers 90% of the performance at half the price.',
     testingNotes: 'Every product in this guide is something I personally own, have gifted, or have received as a gift. Recommendations based on 2+ years of actual use.',
@@ -10351,7 +10383,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-05-28',
     dateModified: '2026-05-28',
     title: 'Best Golf Grips for Sweaty Hands (2026)',
-    description: "Best golf grips for sweaty hands and humid conditions. Cord, half-cord, and tackified options tested in heat and rain. Golf Pride, Lamkin, Super Stroke compared.",
+    description: "Best golf grips for sweaty hands. Cord, half-cord, and tackified grips tested in heat and rain. Golf Pride, Lamkin compared.",
     titleDisplay: 'Best Golf Grips for Sweaty Hands (2026)',
     excerpt: 'Best golf grips for sweaty hands and humid conditions. Cord, half-cord, and tackified options tested through a Chicago summer.',
     bottomLine: 'The <strong>Golf Pride Z-Grip Cord</strong> ($6/grip) is the best for heavy sweating — gets tackier when wet. The <strong>MCC Plus4</strong> ($8/grip) is the best all-around if you want cord security with rubber comfort.',
@@ -10557,6 +10589,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
       { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors Without Subscriptions' },
+          { slug: '/golf-simulator-vs-driving-range/', label: 'Simulator vs Driving Range' },
+          { slug: '/best-golf-simulator-under-5000/', label: 'Simulator Under $5,000' },
     ],
   },
 
@@ -11225,6 +11259,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-simulator-projectors/', label: 'Best Simulator Projectors' },
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Cost Comparison' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
+          { slug: '/best-golf-simulator-under-5000/', label: 'Simulator Under $5,000' },
     ],
   },
 
@@ -11340,6 +11375,7 @@ export const ARTICLES: Article[] = [
       { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
       { slug: '/portable-golf-simulator-setup/', label: 'Portable Setup Guide' },
+          { slug: '/golf-simulator-vs-driving-range/', label: 'Simulator vs Driving Range' },
     ],
   },
 
