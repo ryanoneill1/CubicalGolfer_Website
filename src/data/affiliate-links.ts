@@ -2344,5 +2344,30 @@ export function getAffiliateLink(productId: string) {
     price: '~$599',
     imgSrc: '/images/products/swing-caddie-sc4.webp',
   },
+
+  'foam-practice-balls': {
+    url: 'https://www.amazon.com/s?k=foam+golf+practice+balls+indoor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$15',
+    imgSrc: '/images/products/foam-practice-balls.webp',
+  },
+  'acoustic-foam-panels': {
+    url: 'https://www.amazon.com/s?k=acoustic+foam+panels+golf+simulator&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$25',
+    imgSrc: '/images/products/acoustic-foam-panels.webp',
+  },
+  'spornia-spg-7': {
+    url: 'https://www.amazon.com/s?k=Spornia+SPG-7+golf+net&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$219',
+    imgSrc: '/images/products/spornia-spg-7.webp',
+  },
+  'homecourse-retractable-screen': {
+    url: 'https://www.amazon.com/s?k=HomeCourse+retractable+golf+screen&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$599',
+    imgSrc: '/images/products/homecourse-retractable-screen.webp',
+  },
 };
 }
