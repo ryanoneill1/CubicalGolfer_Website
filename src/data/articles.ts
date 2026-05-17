@@ -620,6 +620,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'break-90',
     slug: '/how-to-break-90/',
+    quickAnswerProduct: 'garmin-approach-r10',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -668,6 +669,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'tips-beginners',
     slug: '/golf-tips-for-beginners/',
+    quickAnswerProduct: 'callaway-strata-set',
     thumbnail: '/images/thumbnails/tips-beginners-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -729,6 +731,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'handicap',
     slug: '/average-golf-handicap/',
+    quickAnswerProduct: 'arccos-caddie-sensors',
     thumbnail: '/images/thumbnails/handicap-thumb.webp',
     category: 'improve-game',
     pageType: 'listicle',
@@ -1091,6 +1094,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'sneak-rounds',
     slug: '/how-to-sneak-in-more-golf-rounds/',
+    quickAnswerProduct: 'bag-boy-nitron',
     thumbnail: '/images/thumbnails/sneak-rounds-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
@@ -1131,6 +1135,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'fitness',
     slug: '/golf-fitness-office-golfer/',
+    quickAnswerProduct: 'alignment-sticks',
     thumbnail: '/images/thumbnails/fitness-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
@@ -1174,6 +1179,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'courses',
     slug: '/best-golf-courses-weekend-drive/',
+    quickAnswerProduct: 'bag-boy-nitron',
     thumbnail: '/images/thumbnails/courses-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
@@ -2738,6 +2744,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'how-to-chip',
     slug: '/how-to-chip-in-golf/',
+    quickAnswerProduct: 'cleveland-rtx6-52',
     thumbnail: '/images/thumbnails/how-to-chip-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -2795,6 +2802,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'stop-topping',
     slug: '/how-to-stop-topping-the-ball/',
+    quickAnswerProduct: 'alignment-sticks',
     thumbnail: '/images/thumbnails/stop-topping-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -2852,6 +2860,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-etiquette',
     slug: '/golf-course-etiquette/',
+    quickAnswerProduct: 'blue-tees-series-3-max',
     thumbnail: '/images/thumbnails/golf-etiquette-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'listicle',
@@ -3898,6 +3907,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-ball-go-right',
     slug: '/why-does-my-golf-ball-go-right/',
+    quickAnswerProduct: 'alignment-sticks',
     thumbnail: '/images/thumbnails/golf-ball-go-right-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -3954,6 +3964,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'hit-irons-fat',
     slug: '/why-do-i-hit-irons-fat/',
+    quickAnswerProduct: 'fiberbuilt-flight-deck',
     thumbnail: '/images/thumbnails/hit-irons-fat-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -4448,6 +4459,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-to-stop-3-putting',
     slug: '/how-to-stop-3-putting/',
+    quickAnswerProduct: 'birdieball-putting-green',
     thumbnail: '/images/thumbnails/how-to-stop-3-putting-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -4606,6 +4618,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-for-beginners-hub',
     slug: '/golf-for-beginners/',
+    quickAnswerProduct: 'callaway-strata-set',
     thumbnail: '/images/thumbnails/golf-for-beginners-hub-thumb.webp',
     category: 'improve-game',
     pageType: 'listicle',
@@ -5534,6 +5547,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'morning-practice-routine',
     slug: '/golf-practice-routine-before-work/',
+    quickAnswerProduct: 'rukket-haack-net',
     thumbnail: '/images/thumbnails/morning-practice-routine-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -7046,6 +7060,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'desk-exercises-golf-slice',
     slug: '/desk-exercises-fix-golf-slice/',
+    quickAnswerProduct: 'alignment-sticks',
     thumb: 'brown',
     thumbnail: '/images/thumbnails/desk-exercises-golf-thumb.webp',
     words: '2,800',
@@ -9979,6 +9994,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'putter-length-guide',
     slug: '/how-to-choose-putter-length/',
+    quickAnswerProduct: 'odyssey-white-hot-og',
     thumb: 'teal',
     thumbnail: '/images/thumbnails/putter-length-thumb.webp',
     words: '2,100',
@@ -10035,6 +10051,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'mallet-vs-blade',
     slug: '/mallet-vs-blade-putter/',
+    quickAnswerProduct: 'taylormade-spider-tour',
     thumb: 'brown',
     thumbnail: '/images/thumbnails/mallet-vs-blade-thumb.webp',
     words: '2,300',
