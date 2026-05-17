@@ -23,13 +23,13 @@ interface Props {
 const { meta, schemas, activeNav = 'home' } = Astro.props;
 
 const NAV_ITEMS = [
-  { label: 'Home',              href: '/',                        key: 'home'          },
-  { label: 'Gear Reviews',      href: '/gear-reviews/',           key: 'gear-reviews'  },
-  { label: 'Golf Tech',         href: '/golf-tech/',              key: 'golf-tech'     },
-  { label: 'Improve Your Game', href: '/improve-your-golf-game/', key: 'improve-game'  },
-  { label: 'Office Hacks',      href: '/office-hacks/',           key: 'office-hacks'  },
-  { label: 'Best of 2026',     href: '/best-golf-gear-2026/',    key: 'best-2026', cta: true },
-  { label: 'Compare',           href: '/compare/',                key: 'compare'       },
+  { label: 'Home',              href: '/',                            key: 'home'          },
+  { label: 'Gear Reviews',      href: '/gear-reviews/',               key: 'gear-reviews'  },
+  { label: 'Golf Tech',         href: '/golf-tech/',                  key: 'golf-tech'     },
+  { label: 'Improve',           href: '/improve-your-golf-game/',     key: 'improve-game'  },
+  { label: 'Compare',           href: '/compare/',                    key: 'compare'       },
+  { label: 'Tools',             href: '/golf-ball-compression-chart/', key: 'tools'        },
+  { label: 'Gear Quiz',         href: '/gear-quiz/',                  key: 'quiz', cta: true },
 ];
 ---
 
@@ -157,46 +157,49 @@ const NAV_ITEMS = [
         <a href="/sitemap.xml">Sitemap</a>
       </div>
       <div class="footer-col">
-        <p style="font-weight:700;font-size:14px;color:var(--gold)">Gear Reviews</p>
-        <a href="/gear-reviews/">Golf Gear Reviews</a>
+        <p style="font-weight:700;font-size:14px;color:var(--gold)">Equipment Reviews</p>
+        <a href="/gear-reviews/">All Gear Reviews</a>
+        <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers</a>
+        <a href="/best-game-improvement-irons-2026/">Best Game Improvement Irons</a>
+        <a href="/best-golf-putters-2026/">Best Putters 2026</a>
         <a href="/best-golf-rangefinders-2026/">Best Rangefinders 2026</a>
         <a href="/best-golf-gps-watches/">Best GPS Watches</a>
-        <a href="/best-golf-putters-2026/">Best Golf Putters 2026</a>
-        <a href="/best-golf-bags-2026/">Best Golf Bags 2026</a>
-        <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers</a>
-        <a href="/best-golf-irons-2026/">Best Golf Irons 2026</a>
         <a href="/best-golf-balls-2026/">Best Golf Balls 2026</a>
         <a href="/golf-ball-compression-chart/">Ball Compression Chart</a>
-        <a href="/titleist-pro-v1-vs-pro-v1x/">Pro V1 vs Pro V1x</a>
-        <a href="/best-left-handed-golf-clubs-2026/">Left-Handed Clubs</a>
-        <a href="/best-spikeless-golf-shoes-walking-18/">Spikeless Shoes</a>
-        <a href="/best-putters-shaky-hands-older-golfers/">Putters for Shaky Hands</a>
-        <a href="/how-to-buy-wedges-4-degree-rule/">How to Buy Wedges</a>
-        <a href="/when-to-replace-wedges-grooves/">Replace Your Wedges</a>
-        <a href="/when-to-replace-golf-grips/">Replace Your Grips</a>
+        <a href="/best-golf-bags-2026/">Best Golf Bags 2026</a>
+        <a href="/best-hybrid-clubs-2026/">Best Hybrids 2026</a>
+        <a href="/best-golf-grips-2026/">Best Grips 2026</a>
+        <a href="/best-wedges-for-beginners/">Best Wedges for Beginners</a>
       </div>
       <div class="footer-col">
-        <p style="font-weight:700;font-size:14px;color:var(--gold)">Improve</p>
+        <p style="font-weight:700;font-size:14px;color:var(--gold)">Golf Tech & Simulators</p>
+        <a href="/golf-tech/">Golf Tech Hub</a>
+        <a href="/best-golf-launch-monitors-2026/">Best Launch Monitors 2026</a>
+        <a href="/launch-monitor-subscription-cost-comparison/">Subscription Cost Comparison</a>
+        <a href="/best-launch-monitor-low-ceiling/">Best for Low Ceilings</a>
+        <a href="/trackman-alternatives-2026/">Trackman Alternatives</a>
+        <a href="/golf-launch-monitor-accuracy-test/">Monitor Accuracy Test</a>
+        <a href="/best-golf-simulator-for-beginners/">Simulator for Beginners</a>
+        <a href="/how-much-does-golf-simulator-cost/">Simulator Cost Breakdown</a>
+        <a href="/best-golf-simulator-under-5000/">Simulator Under $5,000</a>
+        <a href="/best-golf-simulator-software-2026/">Simulator Software Compared</a>
+        <a href="/golf-simulator-room-dimensions-guide/">Room Dimensions Guide</a>
+        <a href="/portable-golf-simulator-setup/">Portable Simulator Setup</a>
+      </div>
+      <div class="footer-col">
+        <p style="font-weight:700;font-size:14px;color:var(--gold)">Improve Your Game</p>
         <a href="/improve-your-golf-game/">Improvement Hub</a>
         <a href="/how-to-fix-your-slice/">Fix Your Slice</a>
         <a href="/how-to-break-90/">Break 90 Roadmap</a>
         <a href="/how-to-stop-3-putting/">Improve Your Putting</a>
         <a href="/golf-tips-for-beginners/">Tips for Beginners</a>
-        <a href="/average-golf-handicap/">Average Handicap Guide</a>
-        <a href="/best-training-aids-fix-slice/">Slice Training Aids</a>
-        <a href="/best-swing-speed-trainer-over-40/">Speed Trainers Over 40</a>
-        <a href="/approach-wedge-vs-gap-wedge-do-you-need-it/">AW vs Gap Wedge</a>
-      </div>
-      <div class="footer-col">
-        <p style="font-weight:700;font-size:14px;color:var(--gold)">Office Hacks</p>
-        <a href="/office-hacks/">Office Hacks Hub</a>
+        <a href="/how-to-improve-with-launch-monitor/">Improve with a Monitor</a>
+        <a href="/shaft-flex-guide/">Shaft Flex Guide</a>
+        <a href="/driver-loft-guide/">Driver Loft Guide</a>
+        <a href="/iron-fitting-guide-beginners/">Iron Fitting Guide</a>
+        <a href="/wedge-bounce-guide/">Wedge Bounce Explained</a>
         <a href="/golf-practice-drills-at-home/">15-Min Home Drills</a>
-        <a href="/how-to-sneak-in-more-golf-rounds/">Sneak In More Rounds</a>
-        <a href="/golf-fitness-office-golfer/">Office Golf Fitness</a>
-        <a href="/best-golf-gear-under-100/">Best Gear Under $100</a>
-        <a href="/best-indoor-putting-green-office-home/">Office Putting Greens</a>
-        <a href="/best-golf-hitting-net-apartment-garage/">Golf Hitting Nets</a>
-        <a href="/office-to-golf-course-playbook/">Cubicle-to-Course Playbook</a>
+        <a href="/desk-exercises-fix-golf-slice/">Desk Exercises for Golf</a>
       </div>
       <div class="footer-col">
         <p style="font-weight:700;font-size:14px;color:var(--gold)">Gift Guides</p>
@@ -205,12 +208,23 @@ const NAV_ITEMS = [
         <a href="/best-golf-gifts-under-50/">Best Gifts Under $50</a>
         <a href="/best-christmas-golf-gifts/">Christmas Golf Gifts</a>
         <a href="/best-golf-gifts-for-couples/">Gifts for Couples</a>
-        <a href="/gifts-for-golfer-who-never-keeps-anything/">Gift Detective Guide</a>
+        <p style="font-weight:700;font-size:14px;color:var(--gold);margin-top:16px;">Tools & Compare</p>
+        <a href="/golf-simulator-cost-calculator/">Simulator Cost Calculator</a>
+        <a href="/golf-club-distance-chart/">Club Distance Chart</a>
+        <a href="/golf-equipment-budget-planner/">Equipment Budget Planner</a>
+        <a href="/compare/">Compare Products</a>
+        <a href="/gear-quiz/">Gear Quiz</a>
       </div>
       <div class="footer-col">
-        <p style="font-weight:700;font-size:14px;color:var(--gold)">Youth Golf</p>
-        <a href="/best-junior-golf-clubs/">Best Junior Golf Clubs</a>
+        <p style="font-weight:700;font-size:14px;color:var(--gold)">More</p>
+        <a href="/office-hacks/">Office Hacks</a>
+        <a href="/best-junior-golf-clubs/">Junior Golf Clubs</a>
         <a href="/how-to-get-your-kid-into-golf/">Get Your Kid Into Golf</a>
+        <a href="/best-golf-gear-under-100/">Best Gear Under $100</a>
+        <a href="/best-golf-hitting-net-apartment-garage/">Golf Hitting Nets</a>
+        <a href="/best-golf-apps-for-apple-watch/">Apple Watch Golf Apps</a>
+        <a href="/golf-simulator-vs-driving-range/">Simulator vs Range</a>
+        <a href="/best-irons-under-500/">Best Irons Under $500</a>
       </div>
     </div>
     <div class="footer-bottom">
