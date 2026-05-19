@@ -2588,7 +2588,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth Buying?' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
     comparisonTable: {
@@ -2968,7 +2968,7 @@ export const ARTICLES: Article[] = [
 
   {
     id: 'rangefinder-under-200',
-    slug: '/best-golf-rangefinder-under-200/',
+    slug: '/best-golf-rangefinders-under-200/',
     thumbnail: '/images/thumbnails/rangefinder-under-200-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -3727,8 +3727,8 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'USGA — Rule 4.3a (Slope & DMDs in Competition)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Bushnell Golf — Slope Technology Explained', url: 'https://www.bushnellgolf.com/' }],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinder Under $200' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinder Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinder Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinder Under $200' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Golf Rangefinder Worth It?' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
       { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder' },
@@ -4249,7 +4249,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth It?' },
     ],
@@ -4316,7 +4316,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder' },
     
       { slug: '/best-golf-rangefinder-beginners/', label: 'Rangefinders for Beginners' },
@@ -4559,7 +4559,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
     
       { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42 Compared' },
     
@@ -4774,7 +4774,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Rangefinder' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth It?' },
     
@@ -6164,7 +6164,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Budget-conscious golfers wanting accuracy without $300+', '10-20 rounds/year', 'Want lifetime warranty guarantee', 'First rangefinder purchase'],
     whoSkip: ['25+ rounds/year in tournaments — Bushnell V6 speed matters', 'Want magnetic cart mount', 'Need fastest possible pin lock'],
     sources: [{ label: 'Precision Pro — NX9 HD Specifications', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
-    related: [{ slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' }, { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' }, { slug: '/best-golf-rangefinder-under-200/', label: 'Best Under $200' },
+    related: [{ slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' }, { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' }, { slug: '/best-golf-rangefinders-under-200/', label: 'Best Under $200' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
   },
