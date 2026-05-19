@@ -35,7 +35,7 @@ export const GET: APIRoute = async () => {
     { loc: '/golf-accessories/',        changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('golf-accessories') },
     { loc: '/golf-lifestyle/',          changefreq: 'weekly',  priority: '0.8',  lastmod: freshestInCategory('golf-lifestyle') },
     { loc: '/improve-your-golf-game/',  changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('improve-game') },
-    { loc: '/office-hacks/',            changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('improve-game') },
+    // /office-hacks/ removed from sitemap — noindexed (off-topic for golf gear authority)
     { loc: '/gear-quiz/',               changefreq: 'monthly', priority: '0.8',  lastmod: '2026-04-14' },
     { loc: '/compare/',                 changefreq: 'weekly',  priority: '0.8',  lastmod: freshestOverall() },
     { loc: '/golf-simulator-complete-guide/', changefreq: 'weekly',  priority: '0.95', lastmod: freshestInCategory('golf-tech') },
