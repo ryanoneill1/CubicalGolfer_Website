@@ -6,7 +6,6 @@ Allow: /
 
 Disallow: /drafts/
 Disallow: /admin/
-Disallow: /_astro/
 Disallow: /api/
 
 # Search Engines
