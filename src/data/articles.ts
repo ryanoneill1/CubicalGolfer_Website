@@ -179,6 +179,11 @@ export const ARTICLES: Article[] = [
       'Play fewer than 8 rounds per year -- pacing off is fine at that frequency',
     ],
     sources: [{ label: 'Bushnell Golf — Tour V6 Shift Specs', url: 'https://www.bushnellgolf.com/products/laser-rangefinders/tour-v6-shift/' }, { label: 'USGA — Rule 4.3a (Distance-Measuring Devices)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Precision Pro Golf — NX9 HD Specifications', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
+    relatedComparisons: [
+      { label: 'Bushnell Tour V6 vs Precision Pro NX9', url: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', description: 'Our #1 vs the best value — tested over 12 rounds' },
+      { label: 'Blue Tees Series 3 vs Bushnell Tour V6', url: '/compare/blue-tees-vs-bushnell-tour-v6/', description: 'Budget vs premium — is $180 more worth it?' },
+      { label: 'Garmin S12 vs Bushnell Ion Elite', url: '/compare/garmin-s12-vs-bushnell-ion-elite/', description: 'GPS watch vs wrist rangefinder compared' },
+    ],
     related: [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
@@ -310,6 +315,11 @@ export const ARTICLES: Article[] = [
       { q: 'What driver has the highest MOI?', a: "The Ping G430 Max has one of the highest MOIs (moment of inertia) among 2026 drivers, meaning it resists twisting on off-center hits more than almost any other driver. High MOI equals high forgiveness. The TaylorMade Qi35 Max and Callaway Paradym AI Smoke Max are also among the highest." },
     ],
     sources: [{ label: 'Garmin — Approach S62 Specifications', url: 'https://www.garmin.com/en-US/p/622467' }, { label: 'Shot Scope — V5 GPS Watch Features', url: 'https://www.shotscope.com/products/v5/' }],
+    relatedComparisons: [
+      { label: 'Callaway Paradym vs TaylorMade Qi35', url: '/compare/callaway-paradym-vs-taylormade-qi35/', description: 'The two most popular forgiving drivers head-to-head' },
+      { label: 'Cobra Aerojet Max vs Ping G430 Max', url: '/compare/cobra-aerojet-max-vs-ping-g430-max/', description: 'Previous-gen bargains — which discount driver wins?' },
+      { label: 'Cleveland XL2 vs Cobra Aerojet Max', url: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', description: 'Senior-friendly vs all-around forgiving' },
+    ],
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
@@ -459,6 +469,11 @@ export const ARTICLES: Article[] = [
       { q: 'What driver has the highest MOI?', a: "The Ping G430 Max has one of the highest MOIs among 2026 drivers. The TaylorMade Qi35 Max and Callaway Paradym AI Smoke Max are also top contenders." },
     ],
     sources: [{ label: 'Callaway Golf — Paradym Ai Smoke Technology', url: 'https://www.callawaygolf.com/golf-clubs/drivers/' }, { label: 'TrackMan — Average Driver Distances by Handicap', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
+    relatedComparisons: [
+      { label: 'Callaway Paradym vs TaylorMade Qi35', url: '/compare/callaway-paradym-vs-taylormade-qi35/', description: 'The two most popular forgiving drivers head-to-head' },
+      { label: 'Cobra Aerojet Max vs Ping G430 Max', url: '/compare/cobra-aerojet-max-vs-ping-g430-max/', description: 'Previous-gen bargains — which discount driver wins?' },
+      { label: 'Cleveland XL2 vs Cobra Aerojet Max', url: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', description: 'Senior-friendly vs all-around forgiving' },
+    ],
     related: [
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice Permanently' },
@@ -555,6 +570,10 @@ export const ARTICLES: Article[] = [
       'On a tight budget -- good used irons outperform cheap new sets',
     ],
     sources: [{ label: 'TrackMan — PGA Tour Averages by Club', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }, { label: 'Callaway Golf — Paradym Ai Smoke Irons Specs', url: 'https://www.callawaygolf.com/golf-clubs/irons/' }],
+    relatedComparisons: [
+      { label: 'Cleveland XL2 vs Cobra Aerojet Max', url: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', description: 'Two forgiving game-improvement options compared' },
+      { label: 'Cobra Aerojet Max vs Ping G430 Max', url: '/compare/cobra-aerojet-max-vs-ping-g430-max/', description: 'The top game-improvement drivers tested side by side' },
+    ],
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
@@ -1632,6 +1651,10 @@ export const ARTICLES: Article[] = [
       'Have a putting lesson booked -- wait until you know your stroke type',
     ],
     sources: [{ label: 'Odyssey Golf — White Hot OG Technology', url: 'https://www.odysseygolf.com/putters/' }, { label: 'TrackMan — PGA Tour Putting Statistics', url: 'https://blog.trackmangolf.com/putting-stats/' }],
+    relatedComparisons: [
+      { label: 'Odyssey Stroke Lab vs Scotty Cameron Phantom', url: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', description: 'Mid-range vs premium mallet — is the Scotty worth 2x?' },
+      { label: 'LAB Golf DF3 vs Odyssey Two Ball Eleven', url: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', description: 'Lie-angle balanced vs traditional alignment' },
+    ],
     related: [
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/best-golf-accessories-under-50/', label: 'Putting Mirror — Best $25 Training Aid' },

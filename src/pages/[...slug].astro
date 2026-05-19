@@ -6,6 +6,7 @@ import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
 import ProductCTA    from '../components/ProductCTA.astro';
+import RelatedLinks  from '../components/RelatedLinks.astro';
 import BackToTop     from '../components/BackToTop.astro';
 import SocialShare   from '../components/SocialShare.astro';
 import ExitIntent    from '../components/ExitIntent.astro';
@@ -843,6 +844,14 @@ if (isBuyingGuide) {
         </div>
       );
     })()}
+
+    {/* RELATED COMPARISONS — links to /compare/ pages for better internal linking */}
+    {(article as any).relatedComparisons && (article as any).relatedComparisons.length > 0 && (
+      <RelatedLinks
+        heading="Related Comparisons"
+        links={(article as any).relatedComparisons}
+      />
+    )}
 
     {/* RELATED GUIDES */}
     {related.length > 0 && (

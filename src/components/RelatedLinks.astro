@@ -1,0 +1,107 @@
+---
+/**
+ * RelatedLinks.astro
+ * Reusable "Related Comparisons" / "You Might Also Like" section.
+ * Uses the existing .rel-cluster / .rel-links classes for visual consistency.
+ *
+ * Props:
+ *   heading — Section title e.g. "Related Comparisons"
+ *   links   — Array of { label, url, description? }
+ */
+
+interface LinkItem {
+  label: string;
+  url: string;
+  description?: string;
+}
+
+interface Props {
+  heading: string;
+  links: LinkItem[];
+}
+
+const { heading, links } = Astro.props;
+
+if (!links || links.length === 0) return;
+---
+
+<div class="related-links-section">
+  <p class="related-links-section__heading">{heading}</p>
+  <div class="related-links-section__grid">
+    {links.map(link => (
+      <a href={link.url} class="related-links-section__card">
+        <span class="related-links-section__label">{link.label}</span>
+        {link.description && (
+          <span class="related-links-section__desc">{link.description}</span>
+        )}
+        <span class="related-links-section__arrow">Read comparison →</span>
+      </a>
+    ))}
+  </div>
+</div>
+
+<style>
+.related-links-section {
+  margin: 32px 0;
+  padding: 24px;
+  background: rgba(30, 58, 40, 0.04);
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: var(--r2, 12px);
+}
+
+.related-links-section__heading {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--green, #1E3A28);
+  margin: 0 0 16px;
+}
+
+.related-links-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+
+.related-links-section__card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: var(--white, #fff);
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: var(--r1, 6px);
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.related-links-section__card:hover {
+  border-color: var(--green, #1E3A28);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.related-links-section__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green, #1E3A28);
+  line-height: 1.3;
+}
+
+.related-links-section__desc {
+  font-size: 13px;
+  color: var(--muted, #556B5C);
+  line-height: 1.5;
+}
+
+.related-links-section__arrow {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gold, #C8A84B);
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  .related-links-section__grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
