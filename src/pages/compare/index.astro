@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { COMPARISONS } from '../../data/comparisons';
+import { ARTICLES } from '../../data/articles';
+
+// Get all VS comparison articles (not in /compare/ route)
+const vsArticles = (ARTICLES as any[]).filter(a => 
+  (a.slug.includes('-vs-') || a.pageType === 'comparison') && 
+  !a.slug.startsWith('/compare/')
+).sort((a: any, b: any) => a.title.localeCompare(b.title));
 import { breadcrumbSchema } from '../../lib/schema';
 
 const meta = {
@@ -53,36 +60,29 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
       ))}
     </div>
 
-    <!-- Additional comparisons from buying guides -->
+    <!-- VS Comparisons from articles -->
     <div style="margin-top:32px">
-      <h2 style="font-size:20px;margin-bottom:16px">More Comparisons</h2>
+      <h2 style="font-size:20px;margin-bottom:16px">More Head-to-Head Comparisons</h2>
       <div class="articles-grid">
-        <a href="/titleist-pro-v1-vs-pro-v1x/" class="article-card">
-          <div class="art-thumb olive">
-            <span class="art-badge tag-cmp">COMPARISON</span>
-            <span aria-hidden="true">⛳</span>
-          </div>
-          <div class="art-body">
-            <p class="hub-card-title">Titleist Pro V1 vs Pro V1x (2026)</p>
-            <p>Compression, flight, spin and feel differences — which ball fits your swing?</p>
-            <div class="art-foot">
-              <span class="art-read">Read comparison →</span>
+        {vsArticles.map(a => (
+          <a href={a.slug} class="article-card">
+            <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
+              <span class="art-badge tag-cmp">{a.tag || 'COMPARISON'}</span>
+              {a.thumbnail
+                ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
+                : <span aria-hidden="true">{a.emoji || '⚖️'}</span>
+              }
             </div>
-          </div>
-        </a>
-        <a href="/golf-ball-compression-chart/" class="article-card">
-          <div class="art-thumb olive">
-            <span class="art-badge tag-cmp">GUIDE</span>
-            <span aria-hidden="true">⛳</span>
-          </div>
-          <div class="art-body">
-            <p class="hub-card-title">Golf Ball Compression Chart by Swing Speed</p>
-            <p>Match your MPH to the right ball. Every major ball ranked by compression.</p>
-            <div class="art-foot">
-              <span class="art-read">Read guide →</span>
+            <div class="art-body">
+              <p class="hub-card-title">{a.titleDisplay || a.title}</p>
+              <p>{a.excerpt?.substring(0, 120)}…</p>
+              <div class="art-foot">
+                <span class="art-words">{a.words} · Updated 2026</span>
+                <span class="art-read">Read comparison →</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
+        ))}
       </div>
     </div>
   </div>
