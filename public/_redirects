@@ -2,6 +2,9 @@
 # These .html files previously existed in public/ and may be indexed by Google.
 # Removing them without redirects would create 404s and waste SEO equity.
 
+# Off-topic section redirect — /office-hacks/ consolidates into main improvement hub
+/office-hacks/  /improve-your-golf-game/  301
+
 /best-golf-rangefinder-beginners.html  /best-golf-rangefinder-beginners/  301
 /best-gps-golf-watch-high-handicappers.html  /best-gps-golf-watch-high-handicappers/  301
 /best-golf-apps-handicap-tracking.html  /best-golf-apps-handicap-tracking/  301
