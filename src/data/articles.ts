@@ -725,6 +725,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix the Beginner Slice' },
       { slug: '/average-golf-handicap/', label: "What's a Good Golf Handicap for a Beginner?" },
+    
+      { slug: '/best-indoor-putting-green-office-home/', label: 'Best Indoor Putting Greens' },
     ],
   },
 
@@ -985,6 +987,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
       { slug: '/how-to-break-90/', label: "How to Break 90" },
+    
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
   },
 
@@ -1894,6 +1898,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
+    
+      { slug: '/golf-ball-complete-guide/', label: 'Golf Ball Complete Guide' },
     ],
   },
 
@@ -3255,6 +3261,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
+    
+      { slug: '/golf-simulator-complete-guide/', label: 'Complete Simulator Guide' },
     ],
   },
 {
@@ -3752,6 +3760,9 @@ export const ARTICLES: Article[] = [
       { slug: '/average-golf-handicap/', label: 'Average Golf Handicap by Age' },
       { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Golf Ball for High Handicappers' },
       { slug: '/how-to-lower-golf-handicap/', label: 'How to Lower Your Golf Handicap' },
+    
+      { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
+      { slug: '/best-game-improvement-irons-2026/', label: 'Game Improvement Irons' },
     ],
   },
 
@@ -4115,6 +4126,8 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo Plus' },
+    
+      { slug: '/golf-simulator-complete-guide/', label: 'Complete Simulator Guide' },
     ],
   },
 
@@ -4276,6 +4289,8 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
       { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/how-to-use-golf-rangefinder/', label: 'How to Use a Golf Rangefinder' },
+    
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Rangefinders for Beginners' },
     ],
   },
 
@@ -4733,6 +4748,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Rangefinder' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth It?' },
+    
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
   },
 
@@ -4831,6 +4848,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Comparison' },
+    
+      { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
     ],
   },
 
@@ -5884,7 +5903,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['Practice at the range twice per month or more', 'Want actual carry distances for every club', 'Interested in simulator play during off-season', 'Willing to invest in data-driven improvement'],
     whoSkip: ['Practice once a month or less', 'Want a dedicated simulator — SkyTrak+ is better indoors', 'Just want basic distances — Garmin R10 is simpler at $499'],
     sources: [{ label: 'Rapsodo — MLM2PRO Specifications', url: 'https://rapsodo.com/golf/mlm2pro/' }],
-    related: [{ slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' }, { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak vs Mevo+' }, { slug: '/how-to-build-garage-golf-simulator/', label: 'Build a Golf Simulator' }],
+    related: [{ slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' }, { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak vs Mevo+' }, { slug: '/how-to-build-garage-golf-simulator/', label: 'Build a Golf Simulator' },
+      { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
+    ],
   },
 
   // ── REVIEW: Callaway Paradym Ai Smoke Max Driver ────────────────────────
@@ -5996,7 +6017,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['90+ mph swing speed, shoot under 90', 'Value greenside spin above all', 'Lose fewer than 3 per round', 'Play well-maintained greens'],
     whoSkip: ['Lose 4+ per round — play $27 balls', 'Under 85 mph swing — lower compression performs better', 'Shoot over 95 — fundamentals matter more', 'Tight budget — Vice Pro at $33'],
     sources: [{ label: 'Titleist — Pro V1 Technology', url: 'https://www.titleist.com/golf-balls/pro-v1' }],
-    related: [{ slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' }, { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x' }, { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' }],
+    related: [{ slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' }, { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x' }, { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' },
+      { slug: '/what-golf-ball-for-high-handicapper/', label: 'Balls for High Handicappers' },
+    ],
   },
 
   // ── REVIEW: Arccos Caddie ───────────────────────────────────────────────
@@ -6110,7 +6133,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['Budget-conscious golfers wanting accuracy without $300+', '10-20 rounds/year', 'Want lifetime warranty guarantee', 'First rangefinder purchase'],
     whoSkip: ['25+ rounds/year in tournaments — Bushnell V6 speed matters', 'Want magnetic cart mount', 'Need fastest possible pin lock'],
     sources: [{ label: 'Precision Pro — NX9 HD Specifications', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
-    related: [{ slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' }, { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' }, { slug: '/best-golf-rangefinder-under-200/', label: 'Best Under $200' }],
+    related: [{ slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' }, { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' }, { slug: '/best-golf-rangefinder-under-200/', label: 'Best Under $200' },
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
+    ],
   },
 
 
@@ -6162,6 +6187,8 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'Garmin — Approach S62 Specs', url: 'https://www.garmin.com/en-US/p/622467' }, { label: 'Golfshot — Apple Watch Features', url: 'https://golfshot.com' }],
     related: [{ slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' }, { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' }, { slug: '/best-golf-apps/', label: 'Best Golf Apps' },
       { slug: '/best-golf-apps-for-apple-watch/', label: 'Best Golf Apps for Apple Watch' },
+    
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
   },
 
@@ -6212,7 +6239,9 @@ export const ARTICLES: Article[] = [
       { q: 'Which has better slope?', a: 'Both slope readings are within 1-2 yards of each other. The V6 has a physical slope switch (faster, visible to officials). The NX9 uses a button toggle (functional but not externally visible).' },
     ],
     sources: [{ label: 'Bushnell — Tour V6 Shift Specs', url: 'https://www.bushnellgolf.com/products/laser-rangefinders/tour-v6-shift/' }, { label: 'Precision Pro — NX9 HD Specs', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
-    related: [{ slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' }, { slug: '/precision-pro-nx9-review/', label: 'NX9 HD Review' }, { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' }],
+    related: [{ slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' }, { slug: '/precision-pro-nx9-review/', label: 'NX9 HD Review' }, { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
+    ],
   },
 
   // ── COMPARISON: Arccos vs Garmin Shot Tracking ──────────────────────────
@@ -6260,7 +6289,9 @@ export const ARTICLES: Article[] = [
       { q: 'Which saves more strokes?', a: 'In our testing, Arccos data led to a 2.1 handicap drop over 4 months via targeted practice. Garmin Virtual Caddie saved 1-2 strokes per round via better club selection. Different mechanisms, similar results.' },
     ],
     sources: [{ label: 'Arccos — Caddie AI', url: 'https://www.arccosgolf.com/pages/caddie' }, { label: 'Garmin — S62 Specs', url: 'https://www.garmin.com/en-US/p/622467' }],
-    related: [{ slug: '/arccos-caddie-review/', label: 'Arccos Review' }, { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' }, { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' }],
+    related: [{ slug: '/arccos-caddie-review/', label: 'Arccos Review' }, { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' }, { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' },
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
+    ],
   },
 
   // ── COMPARISON: Pro V1 vs Chrome Soft ────────────────────────────────────
@@ -6309,7 +6340,10 @@ export const ARTICLES: Article[] = [
       { q: 'Can I mix Pro V1 and Chrome Soft during a round?', a: 'Technically yes, but not recommended. Each ball has different spin and distance characteristics. Switching mid-round makes club selection inconsistent. Pick one and commit for the round.' },
     ],
     sources: [{ label: 'Titleist — Pro V1 Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'Callaway — Chrome Soft Technology', url: 'https://www.callawaygolf.com/golf-balls/' }],
-    related: [{ slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' }, { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' }, { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' }],
+    related: [{ slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' }, { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' }, { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' },
+      { slug: '/what-golf-ball-for-high-handicapper/', label: 'Balls for High Handicappers' },
+      { slug: '/best-golf-balls-for-seniors/', label: 'Balls for Seniors' },
+    ],
   },
 
   // ── COMPARISON: Rapsodo MLM2PRO vs Garmin R10 ───────────────────────────
@@ -6464,7 +6498,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['15-handicap with 88-95 mph driver speed', 'Shoot 83-88 and want to optimize ball choice', 'Ready to match compression to swing speed'],
     whoSkip: ['Shoot over 100 — ball choice barely matters at this level', 'Lose 5+ balls per round — play the cheapest ball you can find', 'Swing over 100 mph — you need a higher compression ball like the Pro V1'],
     sources: [{ label: 'Titleist — Golf Ball Fitting by Swing Speed', url: 'https://www.titleist.com/golf-ball-fitting' }, { label: 'MyGolfSpy — Ball Compression Testing', url: 'https://mygolfspy.com/golf-ball-test/' }],
-    related: [{ slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' }, { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' }, { slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' }, { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' }],
+    related: [{ slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' }, { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' }, { slug: '/titleist-pro-v1-review/', label: 'Pro V1 Review' }, { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
+      { slug: '/what-golf-ball-for-high-handicapper/', label: 'Balls for High Handicappers' },
+    ],
   },
 
   // ── HANDICAP-SPECIFIC: Best Driver for High Handicapper ─────────────────
@@ -6569,7 +6605,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['Want data-driven practice sessions on a budget', 'Curious about your actual carry distances', 'Want simulator play during the off-season'],
     whoSkip: ['Already own a launch monitor from the last 2 years', 'Want premium indoor accuracy — SkyTrak+ at $2,995 is the right choice'],
     sources: [{ label: 'Garmin — Approach R10 Specifications', url: 'https://www.garmin.com/en-US/p/695391' }],
-    related: [{ slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' }, { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' }, { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' }],
+    related: [{ slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' }, { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' }, { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
+      { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
+    ],
   },
 
   {
@@ -6760,6 +6798,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-simulator-under-1000/', label: 'Best Simulator Under $1,000' },
+    
+      { slug: '/golf-simulator-complete-guide/', label: 'Complete Simulator Guide' },
     ],
   },
 
@@ -8883,6 +8923,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers (All Prices)' },
       { slug: '/best-golf-drivers-under-200/', label: 'Best Drivers Under $200' },
       { slug: '/best-driver-for-high-handicapper/', label: 'Best Drivers for High Handicappers' },
+    
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Paradym vs Qi35 Comparison' },
     ],
   },
 
@@ -9616,6 +9658,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
       { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
       { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right for You?' },
+    
+      { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
     ],
   },
 
@@ -9895,6 +9939,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
       { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Best Putters for Shaky Hands' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
+    
+      { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
     ],
   },
 
@@ -10135,6 +10181,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
       { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak vs Mevo+' },
+    
+      { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
     ],
   },
 
@@ -10176,6 +10224,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors Without Subscriptions' },
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
       { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
+    
+      { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Costs' },
     ],
   },
 
@@ -10425,6 +10475,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
       { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
+    
+      { slug: '/golf-simulator-complete-guide/', label: 'Complete Simulator Guide' },
     ],
   },
 
@@ -10503,6 +10555,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Carts 2026' },
       { slug: '/best-golf-bags-walking-2026/', label: 'Best Walking Golf Bags' },
       { slug: '/push-cart-vs-riding-cart-golf/', label: 'Push Cart vs Riding Cart' },
+    
+      { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
     ],
   },
 
@@ -10806,6 +10860,10 @@ export const ARTICLES: Article[] = [
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Cost Comparison' },
       { slug: '/best-launch-monitor-low-ceiling/', label: 'Best Monitors for Low Ceilings' },
       { slug: '/trackman-vs-foresight-gcquad/', label: 'Trackman vs Foresight GCQuad' },
+    
+      { slug: '/best-launch-monitors-no-subscription/', label: 'No-Subscription Monitors' },
+    
+      { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
     ],
   },
 
@@ -10864,6 +10922,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
       { slug: '/trackman-alternatives-2026/', label: 'Trackman Alternatives' },
       { slug: '/best-launch-monitor-low-ceiling/', label: 'Best Monitors for Low Ceilings' },
+    
+      { slug: '/best-launch-monitors-no-subscription/', label: 'No-Subscription Monitors' },
     ],
   },
 
@@ -10915,6 +10975,8 @@ export const ARTICLES: Article[] = [
       { slug: '/mlm2pro-vs-skytrak-plus/', label: 'MLM2PRO vs SkyTrak+' },
       { slug: '/trackman-alternatives-2026/', label: 'Trackman Alternatives' },
       { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
+    
+      { slug: '/best-launch-monitors-no-subscription/', label: 'No-Subscription Monitors' },
     ],
   },
 
@@ -10966,6 +11028,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Cost Comparison' },
       { slug: '/best-launch-monitor-low-ceiling/', label: 'Best Monitors for Low Ceilings' },
+    
+      { slug: '/best-launch-monitors-no-subscription/', label: 'No-Subscription Monitors' },
     ],
   },
 
@@ -11021,6 +11085,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-hitting-net-apartment-garage/', label: 'Best Indoor Golf Nets' },
       { slug: '/quiet-golf-simulator-setup/', label: 'Quiet Simulator Setup' },
       { slug: '/best-launch-monitor-low-ceiling/', label: 'Best Monitors for Low Ceilings' },
+    
+      { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
     ],
   },
 
@@ -11134,6 +11200,8 @@ export const ARTICLES: Article[] = [
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Cost Comparison' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
           { slug: '/best-golf-simulator-under-5000/', label: 'Simulator Under $5,000' },
+    
+      { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
     ],
   },
 
@@ -11194,6 +11262,8 @@ export const ARTICLES: Article[] = [
       { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
       { slug: '/portable-golf-simulator-setup/', label: 'Portable Simulator Setup' },
+    
+      { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
     ],
   },
 
@@ -11250,6 +11320,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
       { slug: '/portable-golf-simulator-setup/', label: 'Portable Setup Guide' },
           { slug: '/golf-simulator-vs-driving-range/', label: 'Simulator vs Driving Range' },
+    
+      { slug: '/golf-simulator-complete-guide/', label: 'Complete Simulator Guide' },
     ],
   },
 
@@ -11308,6 +11380,8 @@ export const ARTICLES: Article[] = [
       { slug: '/trackman-alternatives-2026/', label: 'Trackman Alternatives' },
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Costs' },
       { slug: '/best-launch-monitor-low-ceiling/', label: 'Best for Low Ceilings' },
+    
+      { slug: '/best-launch-monitors-no-subscription/', label: 'No-Subscription Monitors' },
     ],
   },
 
@@ -11992,6 +12066,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-hybrid-clubs-2026/', label: 'Best Hybrids 2026' },
       { slug: '/golf-club-distance-chart/', label: 'Club Distance Chart' },
       { slug: '/best-game-improvement-irons-2026/', label: 'Best Game Improvement Irons' },
+    
+      { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
     ],
   },
 
@@ -12098,6 +12174,9 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-grips-sweaty-hands/', label: 'Best Grips for Sweaty Hands' },
       { slug: '/iron-fitting-guide-beginners/', label: 'Iron Fitting Guide' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+    
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Paradym vs Qi35' },
+      { slug: '/best-golf-drivers-forgiveness/', label: 'Most Forgiving Drivers' },
     ],
   },
 
