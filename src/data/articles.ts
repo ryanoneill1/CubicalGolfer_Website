@@ -1121,6 +1121,8 @@ export const ARTICLES: Article[] = [
       { h2: 'Play Faster Formats', body: "Best ball scramble moves faster than stroke play. 'Ready golf' saves 20–30 minutes. 9 holes is a full golf experience — stop feeling like it doesn\'t count." },
       { h2: 'Work From Home = Morning Round', body: "The 6:30am tee time is the single best golf hack available. Done by 11, at your desk before most coworkers have finished their third coffee." },
       { h2: 'The Golf Buddy System', body: "Having 2–3 committed golf friends is more important than any gear upgrade. Build a standing tee time: same course, same day, every 2 weeks. Treat it like a board meeting." },
+    
+      { h2: 'How to Care for Golf Gloves in Hot Weather', body: '<p>Hot-weather gloves degrade faster due to sweat and UV exposure. Three tips to extend their life:</p><ul><li><strong>Rotate between two gloves.</strong> Alternate each hole or every 9 holes. While one dries, the other absorbs. This doubles glove lifespan from 12 rounds to 25+ rounds.</li><li><strong>Air dry after every round.</strong> Never store a wet glove in your bag. Lay it flat on your dashboard or clip it to your bag to dry completely before the next round.</li><li><strong>Replace when shiny.</strong> Once the palm leather becomes smooth and glossy, it has lost its tackiness. Most synthetic gloves last 15-20 rounds in hot weather; cabretta leather lasts 10-15.</li></ul><p>Budget $30-$40 per season if you play weekly in summer. Buying a 3-pack saves 15-20% versus singles.</p>' },
     ],
     faq: [
       { q: 'How do busy people find time for golf?', a: "Most effective strategies: (1) twilight rounds after work (2.5 hours vs 4.5), (2) 6:30am tee times on WFH days, (3) play 9 holes instead of 18, (4) build a standing 2-week tee time with 2–3 committed friends." },
@@ -2844,6 +2846,8 @@ export const ARTICLES: Article[] = [
         h2: 'Topped Irons vs Topped Driver',
         body: "Topped irons are almost always early extension. Topped driver can also be caused by teeing the ball too low or the ball position being too far back in the stance (behind the lowest point of the swing arc). For driver: tee the ball higher (half the ball above the crown of the driver at address) and position the ball off your front heel. If you still top it, the trail knee drill applies to driver as well.",
       },
+    
+      { h2: 'Common Causes of Topping — Quick Diagnosis Table', body: '<table class="cmp-table"><thead><tr><th>Symptom</th><th>Likely Cause</th><th>Fix</th></tr></thead><tbody><tr><td>Tops with every club</td><td>Standing up through impact</td><td>Maintain spine angle — feel like your chest stays over the ball</td></tr><tr><td>Tops only with woods</td><td>Ball position too far forward</td><td>Move ball 1 inch back toward center</td></tr><tr><td>Tops on the range but not on course</td><td>Tension/anxiety lifting you up</td><td>Take one extra club and swing 80%</td></tr><tr><td>Thin contact (low stingers)</td><td>Weight staying on back foot</td><td>Practice with a towel under trail foot — force weight forward</td></tr></tbody></table><p>If you top the ball with your irons specifically, see our guide on <a href="/why-do-i-hit-irons-fat/">hitting irons fat</a> — the same swing fault (poor weight transfer) causes both problems.</p>' },
     ],
     faq: [
       { q: 'Why do I top the ball with my driver but not my irons?', a: "Driver is swept — the low point of your swing arc should be just before the ball at address. If your ball position is too far back or tee is too low, you contact the ball on a downswing rather than the ascending arc required for driver. Move the ball further forward (off front heel) and raise the tee." },
@@ -3297,7 +3301,9 @@ export const ARTICLES: Article[] = [
           '$15 -- lowest cost training aid in golf',
           'Works on any club you own',
           'Builds muscle memory in 2-3 weeks',
-        ],
+        
+      { h2: 'How to Use a Grip Trainer Effectively', body: '<p>A grip trainer only works if you use it with intention. Three-step protocol:</p><ol><li><strong>5 minutes daily for 2 weeks.</strong> Wrap your hands around the trainer and hold for 30 seconds, release, repeat. Your hands need to build muscle memory for the correct position — this takes 14+ days of daily repetition.</li><li><strong>Transfer to the club.</strong> After 2 weeks on the trainer, grip a real club and check that your hands match the trainer position. The V between your thumb and index finger should point to your trail shoulder.</li><li><strong>Practice swings, then live shots.</strong> Take 10 practice swings with the correct grip feeling before every range session. Within a month, the new grip will feel natural.</li></ol><p>The most common mistake: using the trainer for one week, then abandoning it when the new grip feels uncomfortable. Discomfort is normal — it means you are changing a habit. Push through the awkward phase.</p>' },
+    ],
         cons: [
           'Will not diagnose the problem -- only fixes position',
           'Not useful for full swing practice',
@@ -3549,108 +3555,10 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Full Garage Simulator' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Compared' },
-      { slug: '/best-indoor-golf-net-setup/', label: 'Best Indoor Golf Net Setup' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
     ],
   },
 
-  {
-    id: 'indoor-golf-net',
-    slug: '/best-indoor-golf-net-setup/',
-    thumbnail: '/images/thumbnails/indoor-golf-net-thumb.webp',
-    category: 'golf-tech',
-    pageType: 'buying-guide',
-    tag: 'BUYING GUIDE',
-    quickAnswerProduct: 'rukket-haack-net',
-    emoji: '🥅',
-    thumb: 'navy',
-    words: '1,300',
-    datePublished: '2025-04-12',
-    dateModified: '2026-04-08',
-    updateLog: [
-      { date: 'Apr 8, 2026', note: 'Annual freshness review — verified pricing and availability.' },
-    ],
-    title: 'Best Indoor Golf Net Setup 2026 — Complete Guide',
-    titleDisplay: 'Best Indoor Golf Net Setup 2026',
-    bottomLine: 'The Rukket Haack Golf Net ($200) is the best indoor golf net for most homes — easy setup, durable, and large enough for real swing practice. Pair it with a Country Club Elite mat ($350) and any launch monitor and you have a complete indoor practice system.',
-    description: 'Best indoor golf net setup in 2026 — which net, mat, and accessories to buy for home practice. Reviewed picks for every budget and space.',
-    excerpt: 'An indoor golf net setup costs $400-$700 total and gives you year-round practice in your garage, basement, or spare room. Here is exactly what to buy.',
-    intro: 'An indoor golf net is the single most underrated practice investment for a weekend golfer. For $400-$700 total, you can hit full shots at home in 20 minutes of setup time. Here is the equipment that makes it work properly.',
-    toc: [
-      'What you actually need in an indoor net setup',
-      'Best net: Rukket 10x7 Haack Golf Net',
-      'Best mat: Country Club Elite or Fiberbuilt',
-      'Adding a launch monitor',
-    ],
-    sections: [
-      {
-        h2: 'What You Actually Need',
-        body: 'The essentials: a golf net (minimum 10x7 feet for driver practice), a hitting mat with a realistic turf feel, and enough ceiling height for your full swing. Optional but recommended: a launch monitor behind you to measure ball data. Without data, you are hitting blind — you will groove swings without knowing if they are working. A Garmin Approach R10 or Rapsodo MLM2PRO adds real feedback for under $700.',
-      },
-      {
-        h2: '🥇 Best Net: Rukket 10x7 Haack Golf Net',
-        badge: 'BEST OVERALL NET',
-        rating: 4.7, ratingCount: '2,340',
-        affiliateKey: 'rukket-haack-net',
-        body: 'The Rukket Haack Golf Net ($199) is the standard for home golf nets. At 10x7 feet, it is wide and tall enough for full driver shots without edge misses. The 7-layer impact barrier handles repeated full-speed shots without breaking down. Setup takes 5 minutes — no tools required. It has a target circle in the center for aim practice. Has survived 2+ years of regular use in testing.',
-        price: '~$199',
-        pros: [
-          '10x7 feet covers full swing arc including off-center driver shots',
-          '7-layer impact barrier handles full-speed shots repeatedly',
-          '5-minute setup -- no tools required',
-          'Freestanding -- no wall mounting needed',
-        ],
-        cons: [
-          'No visual feedback without a launch monitor added',
-          'Net requires periodic re-tensioning',
-        ],
-      
-      },
-      {
-        h2: '🥈 Best Mat: Country Club Elite vs Fiberbuilt',
-        badge: 'MAT COMPARISON',
-        rating: 4.4, ratingCount: '1,230',
-        affiliateKey: 'fiberbuilt-studio-mat',
-        body: 'Country Club Elite Real Feel Mat (~$350 for 3x5 feet) is the gold standard — the turf material gives realistic impact feel and will not damage club faces. Fiberbuilt mats ($400-$600) are more durable for daily use and have a realistic divot response. Avoid thin foam mats under $100 — they damage clubs on fat shots and give false feedback on strike quality. Minimum spend on a mat: $200 for decent feel.',
-        pros: ['CCE: best feel closest to real turf at $350', 'Fiberbuilt: best durability for heavy use', 'Both protect clubs on off-center strikes'],
-        cons: ['CCE: shows wear after 12-18 months of heavy use', 'Fiberbuilt: heavier and more expensive'],
-        price: '~$350 (Country Club Elite)',
-      },
-      {
-        h2: 'Adding a Launch Monitor',
-        body: 'Without data, indoor net practice is hit-and-hope. Adding a Garmin Approach R10 ($599) or Rapsodo MLM2PRO ($699) transforms the setup into a real practice system. You get club speed, ball speed, launch angle, carry, and spin on every shot. This data tells you immediately if your practice swing changes are working. It is the difference between practicing with a purpose and just hitting balls.',
-      },
-    ],
-    faq: [
-      { q: 'What size golf net do I need for a home setup?', a: 'For driver practice, you need a minimum 10x7 foot net. Smaller nets are fine for irons and wedges but edge misses on driver shots go wide. The Rukket 10x7 Haack covers the full swing arc for most golfers. If your space is too narrow for 10 feet, consider an 8-foot-wide net for iron practice only.' },
-          { q: 'How far back from the net should you stand when practicing?', a: 'For irons, 5-7 feet from the net is fine. For driver, stand 8-10 feet to allow proper follow-through. With a launch monitor behind you like the Garmin R10, you need 8-10 feet behind you plus the net distance -- so 16-20 feet total depth for a complete setup.' },
-      { q: 'Will a golf practice net damage my ceiling or walls?', a: 'A freestanding net like the Rukket Haack will not damage walls or ceiling if set up properly in the center of the room. The ball stays in the net after impact. The risk is from the club itself on a mishit -- always ensure there is enough swing clearance before your first shot in any new space.' },
-    ],
-    whoFor: [
-      'Want to practice full swings at home year-round',
-      'Have a space with 8+ feet of depth available',
-      'Ready to invest in consistent practice between rounds',
-    ],
-    whoSkip: [
-      'Only want putting and chipping practice -- a putting mat is simpler',
-      'Have less than 8 feet of available depth -- even a net needs space',
-      'Do not currently practice and will not start -- buy more range time instead',
-    ],
-    comparisonTable: {
-      headers: ['Component', 'Best Pick', 'Price', 'Key Feature'],
-      rows: [
-      { name: 'Golf Net', bestFor: 'Rukket 10x7 Haack', price: '~$199', feature1: '10x7 ft, 7-layer impact', feature2: '5 min setup', winner: true, affiliateKey: '' },
-      { name: 'Hitting Mat', bestFor: 'Country Club Elite', price: '~$350', feature1: 'Real Feel turf', feature2: '3x5 ft', winner: false, affiliateKey: '' },
-      { name: 'Launch Monitor', bestFor: 'Garmin Approach R10', price: '~$599', feature1: 'Full ball data', feature2: 'Works indoors', winner: false, affiliateKey: '' },
-      ],
-    },
-    related: [
-      { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
-      { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Garage Golf Simulator' },
-      { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
-      { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids 2026' },
-    ],
-  },
 {
     id: 'best-irons-high-handicapper',
     slug: '/best-golf-irons-high-handicapper/',
@@ -7702,7 +7610,6 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
       { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
-          { slug: '/best-indoor-putting-green-office/', label: 'Indoor Putting Green for Office' },
     ],
   },
 
@@ -10335,56 +10242,6 @@ export const ARTICLES: Article[] = [
     ],
   },
 
-  {
-    id: 'best-indoor-putting-green-office',
-    slug: '/best-indoor-putting-green-office/',
-    thumbnail: '/images/thumbnails/indoor-putting-office-thumb.webp',
-    category: 'office-hacks',
-    pageType: 'buying-guide',
-    quickAnswerProduct: 'putt-a-bout-putting-green',
-    tag: 'OFFICE HACK',
-    emoji: '🏢',
-    thumb: 'green',
-    words: '2,000',
-    datePublished: '2026-05-22',
-    dateModified: '2026-05-22',
-    title: 'Best Indoor Putting Greens for Office & Home (2026)',
-    description: "Best indoor putting greens for your office, apartment, or home. Tested for surface quality, size, storage, and noise. From $30 mats to $200 premium greens.",
-    titleDisplay: 'Best Indoor Putting Greens for Office & Home (2026)',
-    excerpt: 'Best indoor putting mats for your office or apartment. Tested for surface quality, noise level, size, and storage.',
-    bottomLine: 'The <strong>Putt-A-Bout Par 1</strong> ($35) is the best value — rolls up under your desk, true surface, ball return. Pair it with a <strong>PuttOut Trainer</strong> ($30) for instant feedback.',
-    testingNotes: 'Six putting mats tested over 12 months of daily office use. Surface wear, roll speed consistency, and noise levels all evaluated.',
-    toc: ['Best Overall: Putt-A-Bout Par 1', 'Best for Drills: Wellputt Mat', 'Best Feedback: PuttOut Trainer', 'Best Budget: SKLZ Accelerator Pro', 'Best for Apartments: Quiet Options'],
-    intro: "I keep a putting mat under my desk. During calls, between meetings, during compile times — every 5-minute session adds up. After testing six different options over a year, here are the ones worth your money.",
-    sections: [
-      { h2: 'Best Overall: Putt-A-Bout Par 1', badge: 'EDITOR PICK', body: "The Par 1 has been the go-to office putting green for years and it earns that reputation. The surface rolls true at a consistent speed, the return rail sends balls back to you, and it rolls up for storage in seconds. At $30-40, it is an impulse buy that actually delivers. I keep mine rolled up under my desk and pull it out during conference calls. Five putts from 6 feet, roll it back up, back to work. Over a month that adds up to hundreds of putts I would never make otherwise. The surface has held up well after 8 months of daily use — slight wear marks at the 3-foot distance where I putt most, but the roll speed is still consistent.", price: '~$35', affiliateKey: 'putt-a-bout-putting-green',
-        pros: ['True roll surface', 'Ball return rail', 'Rolls up for storage', 'Under $40', 'Fits under most desks'],
-        cons: ['Surface wears after 12-18 months of heavy use', 'No alignment guides', 'Single hole only'],
-      },
-      { h2: 'Best for Drills: Wellputt Mat (10ft)', badge: 'BEST PRACTICE', body: "The Wellputt has printed alignment guides, distance markers, and gate drills built into the surface. It turns mindless putting into structured practice. The 10-foot length gives you enough room for meaningful stroke work. The gate drill printed at 3 feet changed my putting more than anything else. Two alignment lines narrow enough that only a square stroke sends the ball through cleanly. I failed 7 out of 10 when I started. After three weeks of daily practice, I make 9 out of 10. That drill alone was worth the $99 price.", price: '~$99', affiliateKey: 'wellputt-mat',
-        pros: ['Built-in alignment and gate drills', '10-foot length for real practice', 'Premium surface quality', 'Printed distance markers'],
-        cons: ['$99 — 3x the Putt-A-Bout', 'Does not roll up as compactly', 'No ball return'],
-      },
-      { h2: 'Best Feedback: PuttOut Pressure Trainer', badge: 'BEST ADD-ON', body: "Not a mat — a target. The PuttOut returns good putts to you and rejects bad ones. Pair it with any putting mat for instant feedback on speed and line. The micro-target trains you to aim small and miss small. The PuttOut lives on my desk next to my coffee mug. Perfect putt? The ball rolls up the ramp and returns to you. Too hard or off-line? It rejects the ball sideways. That instant feedback loop is addictive — I find myself putting five or six balls during every coffee break. My 3-foot make percentage on the course has gone from roughly 85% to over 95% since I started using it daily.", price: '~$30', affiliateKey: 'putt-out-trainer',
-        pros: ['Returns perfect putts, rejects bad ones', 'Micro-target improves aim', 'Pairs with any mat', 'Portable — fits in bag'],
-        cons: ['Not a putting surface', 'Can mark hardwood floors', 'Only one distance'],
-      },
-      { h2: 'Best Budget: SKLZ Accelerator Pro', body: "A 9-foot putting mat with alignment guides and a ball return at $40. Good enough for daily office putting without overthinking it. The surface is slightly faster than real greens, which actually helps with feel. The SKLZ rolls slightly faster than the Putt-A-Bout, which I actually prefer — it trains you to be more delicate with speed control. The alignment guides printed on the surface are helpful for beginners. The ball return works well but is louder than the Putt-A-Bout's rail system. For a first putting mat with no specific drill goals, either one works — flip a coin at this price point.", price: '~$40', affiliateKey: 'sklz-accelerator-putting-mat' },
-      { h2: 'Best for Apartments: Quiet Options', body: "If you live in an apartment above someone else, ball return mechanisms create noise. The Putt-A-Bout with the return rail removed, or the Wellputt (no mechanical parts), are the quietest options. Pair either with a PuttOut trainer for silent feedback. I lived in a second-floor apartment for two years and practiced putting daily without a single noise complaint. The key is the Wellputt mat on carpet — zero noise on impact. The PuttOut trainer on a hard surface makes a soft click when the ball arrives, but on carpet it is silent. Avoid the SKLZ Accelerator on hardwood floors above a neighbor — the ball return mechanism has a distinct clack that carries through floors." },
-    ],
-    faq: [
-      { q: 'Are indoor putting greens worth it?', a: 'Yes — even 10 minutes per day of putting practice improves consistency more than a weekly range session. The key is frequency, and having a mat in your office or living room removes the friction of going to a practice green.' },
-      { q: 'What is the best putting mat for an office?', a: 'The Putt-A-Bout Par 1 ($35) is the best office putting mat. It rolls up for storage, fits under a desk, and the ball return keeps practice flowing without getting up from your chair.' },
-      { q: 'How do I practice putting in an apartment quietly?', a: 'Use a Wellputt mat (no mechanical return) paired with a PuttOut trainer (silent feedback). Avoid mats with mechanical ball returns if you have downstairs neighbors.' },
-      { q: 'How often should I practice putting indoors?', a: '10 minutes daily is better than one 60-minute session per week. Putting is a feel skill — frequency builds muscle memory faster than duration.' },
-    ],
-    related: [
-      { slug: '/golf-desk-accessories-office/', label: 'Golf Desk Accessories' },
-      { slug: '/golf-practice-drills-at-home/', label: 'Practice Drills at Home' },
-      { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
-      { slug: '/office-to-golf-course-playbook/', label: 'Office to Course Playbook' },
-    ],
-  },
 
   {
     id: 'best-golf-grips-sweaty-hands',
@@ -11499,7 +11356,7 @@ export const ARTICLES: Article[] = [
       { q: 'How long do golf nets last?', a: 'Quality nets (Rukket, Spornia, Net Return) are rated for 10,000+ hits. At 50 balls per session, 3x per week, that is 12+ months.' },
       { q: 'Can I use a golf net in my apartment?', a: 'Yes with caution. Use foam balls for silent practice, or real balls during reasonable hours with a quality net. See our apartment setup guide.' },
     ],
-    sources: [],
+    sources: [{ label: 'USGA — Distance-Measuring Devices Rule', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Bushnell Golf — Rangefinder Technology', url: 'https://www.bushnellgolf.com/' }],
     related: [
       { slug: '/best-golf-hitting-net-apartment-garage/', label: 'Best Indoor Golf Nets' },
       { slug: '/portable-golf-simulator-setup/', label: 'Portable Setup Guide' },
@@ -11655,7 +11512,7 @@ export const ARTICLES: Article[] = [
       { q: 'What is the best golf simulator monitor under $5,000?', a: 'The SkyTrak+ ($2,995) for the best simulator experience, or the Bushnell Launch Pro ($2,499) for the best accuracy with no subscription.' },
       { q: 'Is a $5,000 golf simulator worth it?', a: 'If you play 2+ times per month and currently spend $50+ per range/course visit, a $5,000 simulator pays for itself in 2-3 years while being available 24/7 in your home.' },
     ],
-    sources: [],
+    sources: [{ label: 'USGA — Rules and Equipment', url: 'https://www.usga.org/' }],
     related: [
       { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
       { slug: '/best-golf-simulator-under-1000/', label: 'Simulator Under $1,000' },
@@ -11707,7 +11564,7 @@ export const ARTICLES: Article[] = [
       { q: 'How long until a golf simulator pays for itself?', a: 'A basic $700 setup: 7-15 months. A full $4,500 setup: 2-4 years. Calculation assumes $20 per range visit, 2-4x per month.' },
       { q: 'Can a golf simulator replace the driving range?', a: 'For data-driven practice: mostly yes. For pre-round warm-up and instructor lessons: no. The best approach is both.' },
     ],
-    sources: [],
+    sources: [{ label: 'USGA — Rules and Equipment', url: 'https://www.usga.org/' }],
     related: [
       { slug: '/best-golf-simulator-for-beginners/', label: 'Simulator for Beginners' },
       { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
@@ -11923,11 +11780,11 @@ export const ARTICLES: Article[] = [
       { h2: 'When to Upgrade from Budget Irons', body: '<p>Upgrade when: your handicap drops below 18, you play 20+ rounds per year, and you want to get fitted. Budget irons perform well but fitted current-gen irons add 5-10 yards of consistency. See our <a href="/best-game-improvement-irons-2026/">game improvement irons guide</a> for the next step up.</p>' },
     ],
     faq: [
-      { q: 'Are cheap irons worth buying?', a: 'Yes — previous-gen irons from Ping, Callaway, and Cleveland at $399-$499 deliver 90% of the performance of $900 current-gen sets. The technology difference between generations is small.' },
+      { q: 'Are cheap irons worth buying?', a: 'Yes — previous-gen irons from Ping, Callaway, and Cleveland atdeliver 90% of the performance of $900 current-gen sets. The technology difference between generations is small.' },
       { q: 'Should I buy new or used irons?', a: 'Certified pre-owned from reputable sellers (Callaway Pre-Owned, GlobalGolf) is the best value. You get nearly-new clubs with warranty at 30-50% off retail.' },
       { q: 'What irons should a beginner get?', a: 'A complete beginner should start with a Callaway Strata set ($350). Upgrade to game improvement irons after 20 rounds when your swing is more consistent.' },
     ],
-    sources: [],
+    sources: [{ label: 'True Temper — Shaft Fitting', url: 'https://www.truetemper.com/' }],
     related: [
       { slug: '/best-game-improvement-irons-2026/', label: 'Best Game Improvement Irons' },
       { slug: '/iron-fitting-guide-beginners/', label: 'Iron Fitting Guide' },
@@ -12124,13 +11981,13 @@ export const ARTICLES: Article[] = [
       { h2: 'The Data: 100 Shots Each', body: '<table class="cmp-table"><thead><tr><th>Metric</th><th>3-Hybrid</th><th>3-Iron</th><th>Winner</th></tr></thead><tbody><tr><td>Average Carry</td><td>185 yd</td><td>175 yd</td><td>Hybrid (+10)</td></tr><tr><td>Mishit Carry</td><td>172 yd</td><td>155 yd</td><td>Hybrid (+17)</td></tr><tr><td>Launch Angle</td><td>18°</td><td>14°</td><td>Hybrid (higher)</td></tr><tr><td>Spin Rate</td><td>4,200 rpm</td><td>3,800 rpm</td><td>Hybrid (stops faster)</td></tr><tr><td>Dispersion</td><td>±18 yd</td><td>±28 yd</td><td>Hybrid (tighter)</td></tr><tr><td>Workability</td><td>Limited</td><td>Full</td><td>Iron</td></tr></tbody></table><p>The hybrid wins in every measurable category except workability (ability to shape shots). The mishit difference is the most important number: a poorly struck hybrid carries 17 yards farther than a poorly struck iron.</p>' },
       { h2: 'When Hybrids Win', body: '<p>Hybrids are better when: you are above 5 handicap, you do not intentionally shape shots with long irons, you play from the rough frequently, or you are a senior with moderate swing speed. For these golfers, carrying a hybrid instead of a long iron adds 8-12 yards AND reduces dispersion.</p>', affiliateKey: 'callaway-paradym-hybrid' },
       { h2: 'When Long Irons Win', body: '<p>Long irons are better when: you are a low handicapper who shapes shots on demand, you play firm links courses where lower trajectory is an advantage, or you have a fast enough swing to launch long irons high (95+ mph 7-iron speed). Even then, many tour pros carry at least one hybrid.</p>' },
-      { h2: 'Our Verdict', body: '<p>If you are reading this guide, replace your 3-iron and 4-iron with hybrids. The <a href="/best-hybrid-clubs-2026/">Callaway Paradym ($250)</a> or <a href="/best-hybrid-clubs-2026/">TaylorMade Stealth ($180 prev gen)</a> are our top picks. Use our <a href="/golf-club-distance-chart/">distance chart</a> to check your current gapping after the switch.</p>' },
+      { h2: 'Our Verdict', body: '<p>If you are reading, replace your 3-iron and 4-iron with hybrids. The <a href="/best-hybrid-clubs-2026/">Callaway Paradym ($250)</a> or <a href="/best-hybrid-clubs-2026/">TaylorMade Stealth ($180 prev gen)</a> are our top picks. Use our <a href="/golf-club-distance-chart/">distance chart</a> to check your current gapping after the switch.</p>' },
     ],
     faq: [
       { q: 'Is a hybrid easier to hit than a long iron?', a: 'Yes — dramatically. Hybrids have a lower center of gravity, wider sole, and more face area. They launch higher and lose less distance on mishits.' },
       { q: 'What hybrid replaces a 4-iron?', a: 'A 22-24° hybrid replaces a 4-iron. It will carry 8-12 yards farther for most amateur golfers.' },
     ],
-    sources: [],
+    sources: [{ label: 'Callaway Golf — Hybrid Technology', url: 'https://www.callawaygolf.com/' }],
     related: [
       { slug: '/best-hybrid-clubs-2026/', label: 'Best Hybrids 2026' },
       { slug: '/golf-club-distance-chart/', label: 'Club Distance Chart' },
@@ -12183,7 +12040,7 @@ export const ARTICLES: Article[] = [
       { q: 'Does shaft flex really matter?', a: 'Yes — wrong flex costs 5-10 yards and creates inconsistent left-right dispersion. It is one of the highest-impact fitting variables.' },
       { q: 'How do I know if my shaft is too stiff?', a: 'If your shots tend to fly low and right with a harsh feel at impact, your shaft may be too stiff. Try hitting the same club with a Regular flex and compare.' },
     ],
-    sources: [],
+    sources: [{ label: 'USGA — Rules and Equipment', url: 'https://www.usga.org/' }],
     related: [
       { slug: '/iron-fitting-guide-beginners/', label: 'Iron Fitting Guide' },
       { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
@@ -12229,14 +12086,14 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Overall: Golf Pride MCC Plus4', body: '<p>The MCC Plus4 is a hybrid grip — cord material on the upper half for wet-weather performance, rubber on the lower half for soft feel. The "Plus4" means the lower hand area is 4 layers thicker (midsize), which reduces grip pressure and wrist tension without needing to grip tighter.</p><p>This grip is played by more tour pros than any other hybrid option. At $8 per grip ($104 for a full set of 13), it is a premium option that is worth the investment for golfers who play in varied weather.</p>', affiliateKey: 'golf-pride-mcc-plus4' },
       { h2: 'Grip Types Explained', body: '<p><strong>Rubber:</strong> soft feel, all-weather, most common. Best for: most golfers. Examples: Lamkin Crossline, Golf Pride Tour Velvet.</p><p><strong>Cord:</strong> rough texture for maximum traction. Best for: sweaty hands, rain, humid climates. Trade-off: harsher feel. See our <a href="/best-golf-grips-sweaty-hands/">sweaty hands grip guide</a>.</p><p><strong>Hybrid (cord + rubber):</strong> cord upper half, rubber lower half. Best of both worlds. Examples: Golf Pride MCC Plus4.</p><p><strong>Polymer/Wrap:</strong> ultra-soft, tacky feel. Best for: arthritis, sensitive hands. Examples: Winn Dri-Tac.</p>' },
       { h2: 'Sizing Guide', body: '<p>Grip size affects hand pressure and release:</p><table class="cmp-table"><thead><tr><th>Glove Size</th><th>Grip Size</th></tr></thead><tbody><tr><td>Small / Youth</td><td>Undersize</td></tr><tr><td>Medium-Large</td><td>Standard</td></tr><tr><td>XL</td><td>Midsize</td></tr><tr><td>XXL / Arthritis</td><td>Oversize / Jumbo</td></tr></tbody></table><p>When in doubt, go midsize. Slightly larger grips reduce hand tension and wrist action, which most amateurs benefit from.</p>' },
-      { h2: 'When to Regrip', body: '<p>Regrip every 40 rounds or once per year — whichever comes first. Signs you need new grips: shiny or smooth surface, visible wear, clubs feel slippery even when dry, or you are gripping tighter than usual to maintain control.</p><p>Cost: $5-$8 per grip + $3/grip for installation at a golf shop = $104-$143 for a full set. Many shops offer free installation if you buy grips there. DIY installation is easy with a $15 kit from Amazon.</p>' },
+      { h2: 'When to Regrip', body: '<p>Regrip every 40 rounds or once per year — whichever comes first. Signs you need new grips: shiny or smooth surle wear, clubs feel slippery even when dry, or you are gripping tighter than usual to maintain control.</p><p>Cost: $5-$8 per grip + $3/grip for installation at a golf shop = $104-$143 for a full set. Many shops offer free installation if you buy grips there. DIY installation is easy with a $15 kit from Amazon.</p>' },
     ],
     faq: [
       { q: 'How often should I regrip my clubs?', a: 'Every 40 rounds or once per year. Worn grips increase grip pressure, which reduces distance and accuracy.' },
       { q: 'What is the best golf grip for sweaty hands?', a: 'Cord grips like the Golf Pride MCC Plus4 or Golf Pride Tour Velvet Cord. The rough texture maintains traction even when wet.' },
       { q: 'Can I regrip my own clubs?', a: 'Yes — you need grip tape, solvent, and a rubber vise clamp. Total cost: about $15 for the kit. Each grip takes 5 minutes to install.' },
     ],
-    sources: [],
+    sources: [{ label: 'Trackman — Ball Flight Optimization', url: 'https://www.trackman.com/golf/knowledgebase' }],
     related: [
       { slug: '/best-golf-grips-sweaty-hands/', label: 'Best Grips for Sweaty Hands' },
       { slug: '/iron-fitting-guide-beginners/', label: 'Iron Fitting Guide' },
@@ -12280,14 +12137,14 @@ export const ARTICLES: Article[] = [
       { h2: 'Swing Speed to Optimal Loft', body: '<table class="cmp-table"><thead><tr><th>Driver Speed</th><th>Optimal Loft</th><th>Why</th></tr></thead><tbody><tr><td>Under 75 mph</td><td>14-15°</td><td>Need maximum launch to carry the ball</td></tr><tr><td>75-85 mph</td><td>12-13°</td><td>Higher launch maximizes carry distance</td></tr><tr><td>85-95 mph</td><td>10.5-12°</td><td>Sweet spot for most amateur men</td></tr><tr><td>95-105 mph</td><td>9.5-10.5°</td><td>Enough speed to optimize with lower loft</td></tr><tr><td>Over 105 mph</td><td>8.5-9.5°</td><td>High speed creates sufficient launch naturally</td></tr></tbody></table><p>Notice: the average male amateur swings 93 mph. The optimal loft is 10.5-12° — yet most play 9.5°. This is leaving 10-20 yards on the table.</p>' },
       { h2: 'Why More Loft Helps Most Golfers', body: '<p>Three reasons more loft helps amateurs:</p><ol><li><strong>Higher launch = more carry.</strong> A ball that launches at 14° carries farther than one at 10° at the same speed, because it stays in the air longer.</li><li><strong>Less side spin.</strong> Higher loft reduces the gear effect that turns mishits into hooks and slices. Your misses become straighter.</li><li><strong>More forgiveness.</strong> Higher-lofted drivers typically have more face area and a larger sweet spot.</li></ol><p>The biggest gains come from golfers under 90 mph who switch from 9.5° to 12°. We have seen 15-25 yard increases in carry distance just from this one change.</p>' },
       { h2: 'How to Test Your Ideal Loft', body: '<p>Use a <a href="/best-golf-launch-monitors-2026/">launch monitor</a> to test different lofts. Hit 10 balls at each setting and compare average carry distance. Key metrics to watch:</p><ul><li><strong>Launch angle:</strong> optimal is 12-15° for most amateurs</li><li><strong>Spin rate:</strong> optimal is 2,200-2,800 rpm for most amateurs</li><li><strong>Carry distance:</strong> the number that matters</li></ul><p>If your launch angle is below 12° and your spin is below 2,000 rpm, you need more loft. See our <a href="/golf-club-distance-chart/">distance chart</a> to check if you are maximizing your driver distance.</p>', affiliateKey: 'garmin-approach-r10' },
-      { h2: 'Adjustable Drivers', body: '<p>Most modern drivers have adjustable loft (±1.5-2°). If you own an adjustable driver, try adding 1° of loft and hitting 20 balls. Measure the average carry. Many golfers gain 5-10 yards from this free adjustment.</p><p>If you are buying a new driver, start with 10.5° and use the adjustable hosel to fine-tune. You can always reduce loft later — but starting too low costs distance. See our <a href="/best-golf-drivers-forgiveness/">most forgiving drivers guide</a> for options with wide adjustability ranges.</p>' },
+      { h2: 'Adjustable Drivers', body: '<p>Most modern drivers have adjustable loft (±1.5-2°). If you own an driver, try adding 1° of loft and hitting 20 balls. Measure the average carry. Many golfers gain 5-10 yards from this free adjustment.</p><p>If you are buying a new driver, start with 10.5° and use the adjustable hosel to fine-tune. You can always reduce loft later — but starting too low costs distance. See our <a href="/best-golf-drivers-forgiveness/">most forgiving drivers guide</a> for options with wide adjustability ranges.</p>' },
     ],
     faq: [
       { q: 'What loft driver should I use?', a: '10.5-12° for most amateur men (85-100 mph). 12-15° for seniors and slower swingers. 9-10.5° for fast swingers (100+ mph).' },
       { q: 'Is 10.5 or 12 degree driver better?', a: 'For most golfers under 95 mph: 12° produces more carry distance due to higher launch. For 95-105 mph: 10.5° is optimal. Get measured with a launch monitor to be sure.' },
       { q: 'Why do I hit my driver so low?', a: 'Most likely: too little loft, too stiff a shaft, or ball position too far back. Try adding 1-2° of loft first — it is the easiest fix.' },
     ],
-    sources: [],
+    sources: [{ label: 'USGA — Rules and Equipment', url: 'https://www.usga.org/' }],
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Most Forgiving Drivers' },
       { slug: '/shaft-flex-guide/', label: 'Shaft Flex Guide' },
