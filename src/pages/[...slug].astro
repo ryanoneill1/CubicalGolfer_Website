@@ -5,6 +5,7 @@ import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
+import ProductCTA    from '../components/ProductCTA.astro';
 import BackToTop     from '../components/BackToTop.astro';
 import SocialShare   from '../components/SocialShare.astro';
 import ExitIntent    from '../components/ExitIntent.astro';
@@ -397,6 +398,32 @@ if (isBuyingGuide) {
     })()}
 
     {/* BOTTOM LINE — shows as "Our Verdict" ONLY when Quick Answer box is NOT rendered */}
+
+    {/* ── ABOVE-THE-FOLD PRODUCT CTA — buying guides only ── */}
+    {isBuyingGuide && (() => {
+      const ctaKey = (article as any).quickAnswerProduct;
+      if (!ctaKey) return null;
+      const ctaAff = getAffiliateLink(ctaKey);
+      if (!ctaAff?.url) return null;
+      const ctaName = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === ctaKey)?.name
+        ?? ctaKey.replace(/-/g, ' ');
+      const ctaBadge = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === ctaKey)?.badge
+        ?? 'Our Top Pick';
+      return (
+        <ProductCTA
+          productName={ctaName}
+          amazonUrl={ctaAff.url}
+          amazonPrice={ctaAff.price}
+          altUrl={(ctaAff as any).golfGalaxyUrl || undefined}
+          altLabel={(ctaAff as any).golfGalaxyUrl
+            ? ((ctaAff as any).golfGalaxyUrl.includes('amazon') ? 'Amazon' :
+               (ctaAff as any).golfGalaxyUrl.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy')
+            : undefined}
+          badge={ctaBadge}
+        />
+      );
+    })()}
+
     {article.bottomLine && !(article as any).quickAnswerProduct && (
       <div class="bottom-line-box" role="note" aria-label="Our verdict">
         <p class="bottom-line-label">Our Verdict</p>
