@@ -5,14 +5,21 @@ import BaseLayout        from '../../layouts/BaseLayout.astro';
 import { ARTICLES }      from '../../data/articles';
 import { categoryMeta }  from '../../lib/seo';
 import { getCategoryArticles } from '../../lib/linking';
-import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
+import { breadcrumbSchema, collectionPageSchema, faqSchema } from '../../lib/schema';
 
 const cat      = 'golf-accessories';
 const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat);
+const hubFaq = [
+  { q: 'What golf accessories are actually worth buying?', a: 'A quality glove ($15-25), a rangefinder or GPS watch ($150-350), and a good towel ($12) are the three accessories that improve every round. After that: rain gear if you play in weather, a push cart if you walk, and alignment sticks ($12) for practice. Skip the novelty items until the basics are covered.' },
+  { q: 'How often should I replace my golf glove?', a: 'Every 15-20 rounds for synthetic gloves, every 10-15 rounds for cabretta leather. Signs it is time: the palm is shiny or slick, the grip feels loose even when you squeeze, or there are visible tears. Budget $30-50 per season if you play weekly.' },
+  { q: 'What is the best golf bag for walking 18 holes?', a: 'A lightweight stand bag under 4.5 pounds with padded straps and 4+ dividers. The Ping Hoofer Lite and Sun Mountain 2.5+ are our top picks. If you use a push cart, a cart bag with a flat bottom and pass-through pockets works better. See our golf bags guide for detailed picks.' },
+];
+
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
   collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
+  faqSchema(hubFaq),
 ];
 ---
 
@@ -57,6 +64,18 @@ every round a little smoother — ranked by real value per round.</p>
   </div>
 
 
+
+  <section class="hub-intro" style="margin:0 0 32px;max-width:740px;">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 12px;">Golf Accessories That Earn Their Spot in Your Bag</h2>
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">The golf accessories market is full of products that sound great in the Amazon listing and collect dust in your garage. We focus on gear that actually gets used round after round — <a href="/best-golf-gloves-for-men/">gloves</a> that last in summer heat, <a href="/best-rain-gear-midwest-golfers/">rain gear</a> that keeps you dry without overheating, <a href="/best-golf-bags-2026/">bags</a> that organize 14 clubs without weighing 8 pounds, and <a href="/best-golf-push-carts-2026/">push carts</a> that fold without a wrestling match.</p>
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">We also cover the accessories nobody talks about but everyone needs: <a href="/when-to-replace-golf-grips/">when to regrip your clubs</a>, <a href="/best-golf-grips-sweaty-hands/">grips that work in humid weather</a>, and the $12 alignment sticks that are genuinely the best training aid in golf.</p>
+
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">The accessories that make the biggest difference for weekend golfers are usually the cheapest: a quality <a href="/best-golf-gloves-for-men/">golf glove</a> ($15) that does not fall apart after 5 rounds, <a href="/best-golf-training-aids/">alignment sticks</a> ($12) for your pre-round warm-up, and a <a href="/best-golf-grips-2026/">fresh set of grips</a> ($60-$100 installed) that restores the traction your clubs lost 40 rounds ago. These small upgrades collectively improve your game more than a $500 driver upgrade for most handicaps above 15.</p>
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">We also cover weather gear in detail because nothing ruins a round faster than being unprepared. Our <a href="/best-golf-rain-gear-2026/">rain gear guide</a> tests waterproof jackets in actual downpours, not spray bottles. Our <a href="/best-golf-gloves-hot-weather/">hot weather glove guide</a> ranks durability by rounds played in 85+ degree heat. And our <a href="/best-golf-shoes-bad-knees/">shoe guides</a> are tested by walking full 18-hole rounds, not riding in a cart.</p>
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">Looking for gifts? Many of our accessories double as perfect presents — a <a href="/best-golf-gifts-under-50/">$35 personalized golf towel</a> or a set of <a href="/best-golf-accessories-under-50/">magnetic ball markers</a> are the kind of thoughtful picks that golfers actually use instead of shelving.</p>
+    <p style="font-size:14px;line-height:1.7;color:var(--muted);margin:0;">Budget picks included in every guide — you do not need to spend $300 on accessories to play better golf.</p>
+  </section>
+
   <div class="cat-page-body">
     {articles.length === 0 ? (
       <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
@@ -93,5 +112,22 @@ every round a little smoother — ranked by real value per round.</p>
       </div>
     )}
   </div>
+
+
+  <section class="hub-faq" style="max-width:740px;margin:40px 0 0;">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Frequently Asked Questions</h2>
+    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
+      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">What golf accessories are actually worth buying?</summary>
+      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">A quality glove ($15-25), a rangefinder or GPS watch ($150-350), and a good towel ($12) are the three accessories that improve every round. After that: rain gear if you play in weather, a push cart if you walk, and alignment sticks ($12) for practice. Skip the novelty items until the basics are covered.</p>
+    </details>
+    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
+      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">How often should I replace my golf glove?</summary>
+      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Every 15-20 rounds for synthetic gloves, every 10-15 rounds for cabretta leather. Signs it is time: the palm is shiny or slick, the grip feels loose even when you squeeze, or there are visible tears. Budget $30-50 per season if you play weekly.</p>
+    </details>
+    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
+      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">What is the best golf bag for walking 18 holes?</summary>
+      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">A lightweight stand bag under 4.5 pounds with padded straps and 4+ dividers. The Ping Hoofer Lite and Sun Mountain 2.5+ are our top picks. If you use a push cart, a cart bag with a flat bottom and pass-through pockets works better. See our golf bags guide for detailed picks.</p>
+    </details>
+  </section>
 
 </BaseLayout>
