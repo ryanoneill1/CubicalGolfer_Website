@@ -2439,13 +2439,13 @@ export function getAffiliateLink(productId: string) {
 
   'callaway-300-pro': {
     name: 'Callaway 300 Pro Laser Rangefinder',
-    url: 'https://www.amazon.com/s?k=callaway+300+pro+rangefinder&linkCode=ll2&tag=cubicalgolfer-20&linkId=placeholder300pro&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=callaway+300+pro&linkCode=ll2&tag=cubicalgolfer-20&linkId=96a921ff0acbd88ccdeb2a5e29e4cfe4&language=en_US&ref_=as_li_ss_tl',
     price: '~$149',
     retailer: 'Amazon',
   },
   'bushnell-phantom-2': {
     name: 'Bushnell Phantom 2 GPS',
-    url: 'https://www.amazon.com/s?k=bushnell+phantom+2+golf&linkCode=ll2&tag=cubicalgolfer-20&linkId=placeholderphantom2&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=bushnell+phantom+2&linkCode=ll2&tag=cubicalgolfer-20&linkId=014e3b7eabc6c8a8364b16210b2387fb&language=en_US&ref_=as_li_ss_tl',
     price: '~$129',
     retailer: 'Amazon',
   },
