@@ -2436,5 +2436,18 @@ export function getAffiliateLink(productId: string) {
     price: '~$5',
     imgSrc: '/images/products/lamkin-crossline.webp',
   },
+
+  'callaway-300-pro': {
+    name: 'Callaway 300 Pro Laser Rangefinder',
+    url: 'https://www.amazon.com/s?k=callaway+300+pro+rangefinder&linkCode=ll2&tag=cubicalgolfer-20&linkId=placeholder300pro&language=en_US&ref_=as_li_ss_tl',
+    price: '~$149',
+    retailer: 'Amazon',
+  },
+  'bushnell-phantom-2': {
+    name: 'Bushnell Phantom 2 GPS',
+    url: 'https://www.amazon.com/s?k=bushnell+phantom+2+golf&linkCode=ll2&tag=cubicalgolfer-20&linkId=placeholderphantom2&language=en_US&ref_=as_li_ss_tl',
+    price: '~$129',
+    retailer: 'Amazon',
+  },
 };
 }

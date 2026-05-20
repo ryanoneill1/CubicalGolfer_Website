@@ -2976,7 +2976,7 @@ export const ARTICLES: Article[] = [
     tag: 'BUYING GUIDE',
     emoji: '🎯',
     thumb: 'teal',
-    words: '2,100',
+    words: '2,800',
     datePublished: '2025-08-20',
     dateModified: '2026-05-10',
     updateLog: [
@@ -3046,6 +3046,8 @@ export const ARTICLES: Article[] = [
       { q: 'Is a $150 rangefinder accurate enough for golf?', a: 'Yes — both picks above are accurate to ±1 yard within 400 yards, which covers every approach shot you will take on a golf course. The accuracy difference between a $150 and $329 rangefinder is zero within meaningful golf distances.' },
           { q: 'What is the best cheap golf rangefinder?', a: 'The Precision Pro NX9 HD (~$169) is the best inexpensive golf rangefinder -- slope mode, fast enough pin acquisition for weekend play, and the best warranty in the category (lifetime). The Blue Tees Series 3 Max (~$149) is the next best option.' },
       { q: 'Are cheap golf rangefinders accurate?', a: 'Yes -- budget rangefinders from Precision Pro and Blue Tees are accurate to +/-1-2 yards, which is more than sufficient for club selection. The main differences vs premium models are pin-acquisition speed, ergonomics, and optics quality.' },
+      { q: 'Is $200 enough for a good golf rangefinder?', a: 'Absolutely. The Precision Pro NX9 HD at $169 includes slope, pin lock, and plus-or-minus 1 yard accuracy. You give up pin acquisition speed and brand prestige versus $300+ models, but the actual distance readings are just as reliable for scoring.' },
+      { q: 'Do I need slope mode on a rangefinder?', a: 'On flat courses, slope adds minimal value. On hilly courses with significant elevation changes, slope regularly changes your club selection by 1-2 clubs per round. The NX9 HD and Blue Tees include slope. The Callaway 300 Pro skips it to invest in optics quality instead.' },
     ],
     whoFor: [
       'Want a quality laser rangefinder for under $200',
@@ -3069,6 +3071,8 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Precision Pro NX9 HD', price: '~$169', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $200', winner: true, affiliateKey: 'precision-pro-nx9-hd' },
         { name: 'Blue Tees Series 3 Max', price: '~$129', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $150', winner: false, affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Callaway 300 Pro', price: '~$149', feature1: '❌', feature2: '±1 yard', bestFor: 'Best optics (no slope)', affiliateKey: 'callaway-300-pro' },
+        { name: 'Bushnell Phantom 2 GPS', price: '~$129', feature1: 'N/A (GPS)', feature2: '±3 yards', bestFor: 'Simplest option (GPS, not laser)', affiliateKey: 'bushnell-phantom-2' },
       ],
     },
   },
