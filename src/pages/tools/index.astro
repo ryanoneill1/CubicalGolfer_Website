@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+
+const meta = {
+  title:       'Free Golf Tools & Calculators — Cubical Golfer',
+  description: 'Interactive golf tools: ball compression chart, simulator cost calculator, club distance chart, and budget planner. All free, no sign-up.',
+  canonical:   'https://www.cubicalgolfer.com/tools/',
+  ogImage:     'https://www.cubicalgolfer.com/images/og-image.png',
+  ogType:      'website' as const,
+  robots:      'index,follow,max-snippet:-1,max-image-preview:large',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Tools', href: '/tools/' },
+  ],
+};
+
+const tools = [
+  {
+    title: 'Golf Ball Compression Chart',
+    href:  '/golf-ball-compression-chart/',
+    emoji: '🏌️',
+    desc:  'Filter 34+ golf balls by compression rating and swing speed. Find the right ball for your game with prices and buy links.',
+    tag:   'INTERACTIVE CHART',
+  },
+  {
+    title: 'Golf Simulator Cost Calculator',
+    href:  '/golf-simulator-cost-calculator/',
+    emoji: '🖥️',
+    desc:  'Pick your budget, room size, and launch monitor — get a complete parts list with real prices. Build your sim setup from $1,100 to $15,000+.',
+    tag:   'CALCULATOR',
+  },
+  {
+    title: 'Golf Club Distance Chart',
+    href:  '/golf-club-distance-chart/',
+    emoji: '📏',
+    desc:  'Enter your driver swing speed and see estimated carry distances for every club in your bag. Based on real Trackman data, not marketing numbers.',
+    tag:   'INTERACTIVE CHART',
+  },
+  {
+    title: 'Golf Equipment Budget Planner',
+    href:  '/golf-equipment-budget-planner/',
+    emoji: '💰',
+    desc:  'Set your total budget and see exactly what to buy, in what order, with specific product recommendations at every price tier.',
+    tag:   'PLANNER',
+  },
+];
+
+const toolsFaq = [
+  { q: 'Are these golf tools free to use?', a: 'Yes — all four tools are completely free with no sign-up, no email gate, and no usage limits. We earn revenue through affiliate links on recommended products, not by charging for tools.' },
+  { q: 'Where does the data in these tools come from?', a: 'The golf ball compression chart uses manufacturer-published compression ratings cross-referenced with independent testing data. The distance chart uses Trackman averages adjusted by swing speed. The simulator calculator uses real retail prices updated monthly. All data sources are cited on each tool page.' },
+  { q: 'Can I use these tools on my phone?', a: 'Yes — all four tools are fully responsive and work on mobile screens. The compression chart and distance chart are particularly useful on the range or course when you want a quick reference for club selection or ball choice.' },
+];
+
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="tools">
+
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Tools</span>
+    </nav>
+    <h1>Golf Tools & Calculators</h1>
+    <p class="cat-subhead">Free interactive tools to help you pick the right gear, plan your setup, and know your distances.</p>
+  </header>
+
+  <section class="hub-intro" style="margin:0 auto 32px;max-width:740px;text-align:center;">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 12px;">Built for Weekend Golfers Who Want Answers, Not Sales Pitches</h2>
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">Every tool on this page was built to answer a specific question we kept hearing from golfers: what ball should I play for my swing speed? How much does a simulator actually cost? How far should my 7-iron go? What should I buy first on a $500 budget?</p>
+    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">These are not generic calculators — they use real data from our testing, Trackman averages, and current retail prices. The <a href="/golf-ball-compression-chart/">compression chart</a> filters 34+ balls by swing speed so you stop guessing which ball suits your game. The <a href="/golf-simulator-cost-calculator/">simulator calculator</a> builds a complete parts list at your budget so you know exactly what a home setup costs before you start buying. The <a href="/golf-club-distance-chart/">distance chart</a> gives you realistic carry numbers, not the optimistic figures on manufacturer websites.</p>
+    <p style="font-size:14px;line-height:1.7;color:var(--muted);margin:0;text-align:left;">All tools free, no sign-up required. Data updated when prices change or new products launch.</p>
+  </section>
+
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {tools.map(tool => (
+        <a href={tool.href} class="article-card">
+          <div class={`art-thumb olive`}>
+            <span class="art-badge tag-tool">{tool.tag}</span>
+            <span aria-hidden="true" style="font-size:3rem;">{tool.emoji}</span>
+          </div>
+          <div class="art-body">
+            <p class="hub-card-title">{tool.title}</p>
+            <p>{tool.desc}</p>
+            <div class="art-foot">
+              <span class="art-words">Free · Interactive</span>
+              <span class="art-read">Open tool →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <section class="hub-faq" style="max-width:740px;margin:40px auto 0;">
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;text-align:center;">Frequently Asked Questions</h2>
+      {toolsFaq.map(f => (
+        <details class="faq-item" style="margin:0 0 12px;border:1px solid var(--border);border-radius:var(--r1);overflow:hidden;">
+          <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{f.q}</summary>
+          <p style="padding:0 18px 14px;margin:0;font-size:14px;line-height:1.7;color:var(--body);">{f.a}</p>
+        </details>
+      ))}
+    </section>
+  </div>
+
+</BaseLayout>

@@ -41,6 +41,7 @@ export const GET: APIRoute = async () => {
     { loc: '/golf-simulator-complete-guide/', changefreq: 'weekly',  priority: '0.95', lastmod: freshestInCategory('golf-tech') },
     { loc: '/launch-monitor-buying-guide/',   changefreq: 'weekly',  priority: '0.95', lastmod: freshestInCategory('golf-tech') },
     { loc: '/golf-ball-complete-guide/',       changefreq: 'weekly',  priority: '0.95', lastmod: freshestInCategory('gear-reviews') },
+    { loc: '/tools/',                          changefreq: 'monthly', priority: '0.8',  lastmod: '2026-05-17' },
     { loc: '/golf-simulator-cost-calculator/', changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
     { loc: '/golf-club-distance-chart/',       changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
     { loc: '/golf-equipment-budget-planner/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
