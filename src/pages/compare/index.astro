@@ -34,14 +34,28 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
 
 <BaseLayout {meta} {schemas} activeNav="home">
 
-  <header class="compare-hero">
+  <header class="cat-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">Comparisons</span>
     </nav>
+    <span class="hero-badge">12 HEAD-TO-HEAD TESTS</span>
     <h1>Golf Product Comparisons</h1>
-    <p>Head-to-head tested comparisons for weekend golfers who want to know: which one is actually worth buying?</p>
+    <p class="cat-subhead">Side-by-side tested comparisons for weekend golfers who want to know: which one is actually worth buying?</p>
+    <div class="hero-divider"></div>
+    <div class="hero-stats">
+      <div><div class="hero-stat-num">12</div><div class="hero-stat-label">Comparisons</div></div>
+      <div><div class="hero-stat-num">100+</div><div class="hero-stat-label">Shots per product</div></div>
+      <div><div class="hero-stat-num">5</div><div class="hero-stat-label">Categories</div></div>
+    </div>
+    <div class="hero-pills">
+      <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" class="hero-pill"><span class="hero-pill-dot"></span>Rangefinders (3)</a>
+      <a href="/compare/callaway-paradym-vs-taylormade-qi35/" class="hero-pill"><span class="hero-pill-dot"></span>Drivers (3)</a>
+      <a href="/compare/garmin-approach-s62-vs-shot-scope-v5/" class="hero-pill"><span class="hero-pill-dot"></span>GPS & tracking (2)</a>
+      <a href="/compare/skytrak-vs-garmin-r10/" class="hero-pill"><span class="hero-pill-dot"></span>Launch monitors (2)</a>
+      <a href="/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/" class="hero-pill"><span class="hero-pill-dot"></span>Putters (2)</a>
+    </div>
   </header>
 
 
