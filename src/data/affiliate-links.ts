@@ -2302,6 +2302,24 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/winn-dri-tac-oversize.webp', imgAlt: 'Winn Dri-Tac oversize golf grip',
   },
 
+
+  // ── NEW PRODUCTS (May 2026) ────────────────────────────────────────────
+  'callaway-300-pro': {
+    url: 'https://www.amazon.com/s?k=callaway+300+pro&linkCode=ll2&tag=cubicalgolfer-20&linkId=96a921ff0acbd88ccdeb2a5e29e4cfe4&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Amazon',
+    price: '~$149',
+    label: 'Check Price on Amazon',
+    imgSrc: '/images/products/callaway-300-pro.webp',
+    imgAlt: 'Callaway 300 Pro Laser Rangefinder',
+  },
+  'bushnell-phantom-2': {
+    url: 'https://www.amazon.com/s?k=bushnell+phantom+2&linkCode=ll2&tag=cubicalgolfer-20&linkId=014e3b7eabc6c8a8364b16210b2387fb&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Amazon',
+    price: '~$129',
+    label: 'Check Price on Amazon',
+    imgSrc: '/images/products/bushnell-phantom-2.webp',
+    imgAlt: 'Bushnell Phantom 2 Golf GPS',
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
@@ -2437,17 +2455,5 @@ export function getAffiliateLink(productId: string) {
     imgSrc: '/images/products/lamkin-crossline.webp',
   },
 
-  'callaway-300-pro': {
-    name: 'Callaway 300 Pro Laser Rangefinder',
-    url: 'https://www.amazon.com/s?k=callaway+300+pro&linkCode=ll2&tag=cubicalgolfer-20&linkId=96a921ff0acbd88ccdeb2a5e29e4cfe4&language=en_US&ref_=as_li_ss_tl',
-    price: '~$149',
-    retailer: 'Amazon',
-  },
-  'bushnell-phantom-2': {
-    name: 'Bushnell Phantom 2 GPS',
-    url: 'https://www.amazon.com/s?k=bushnell+phantom+2&linkCode=ll2&tag=cubicalgolfer-20&linkId=014e3b7eabc6c8a8364b16210b2387fb&language=en_US&ref_=as_li_ss_tl',
-    price: '~$129',
-    retailer: 'Amazon',
-  },
 };
 }
