@@ -1,0 +1,44 @@
+---
+/**
+ * AffiliateDisclosure.astro — Compact disclosure box for top of review pages.
+ * Appears below AuthorByline, above QuickPick.
+ * Static content, no props.
+ */
+---
+
+<div class="afd" role="note" aria-label="Affiliate disclosure">
+  <p class="afd__text">
+    ℹ️ <strong>Disclosure:</strong> We earn a small commission (typically 3-4%)
+    if you buy through our links. This never influences our rankings — every
+    product was <a href="/how-we-test/">independently purchased and tested</a>.
+  </p>
+</div>
+
+<style>
+.afd {
+  margin: 0 0 20px;
+  padding: 10px 16px;
+  background: #FFFBEB;
+  border-left: 3px solid #F59E0B;
+  border-radius: 0 var(--r1, 6px) var(--r1, 6px) 0;
+}
+
+.afd__text {
+  font-size: 13px;
+  color: #7C6E3B;
+  line-height: 1.5;
+  margin: 0;
+}
+.afd__text strong {
+  color: #5C4F24;
+}
+.afd__text a {
+  color: #5C4F24;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.afd__text a:hover {
+  color: var(--green, #1E3A28);
+}
+</style>

@@ -2,6 +2,7 @@
 // src/pages/index.astro — Homepage
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
+import TrustBar from '../components/TrustBar.astro';
 import { homeMeta }         from '../lib/seo';
 import { websiteSchema, organizationSchema, homeFaqSchema, featuredArticlesSchema, breadcrumbSchema } from '../lib/schema';
 import { getFeaturedArticles, getCategoryArticles } from '../lib/linking';
@@ -121,6 +122,8 @@ const TAG_CLASSES: Record<string, string> = {
       </div>
     </aside>
   </section>
+
+  <TrustBar />
 
   <!-- ── TOP PICKS PRODUCT GRID (monetised above fold) ── -->
   {TOP_PICKS.length > 0 && (

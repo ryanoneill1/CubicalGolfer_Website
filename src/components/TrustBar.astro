@@ -1,0 +1,55 @@
+---
+/**
+ * TrustBar.astro — Horizontal trust indicator pills.
+ * Static content, no props. For homepage hero and hub pages.
+ */
+---
+
+<div class="tb" role="complementary" aria-label="Trust indicators">
+  <div class="tb__pills">
+    <span class="tb__pill">🏆 40+ rounds tested per product</span>
+    <span class="tb__pill">💳 All gear independently purchased</span>
+    <span class="tb__pill">🚫 Zero sponsored content</span>
+    <span class="tb__pill">⭐ Real on-course results</span>
+  </div>
+</div>
+
+<style>
+.tb {
+  padding: 16px 0;
+}
+
+.tb__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tb__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  background: rgba(30, 58, 40, 0.06);
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--body, #2D3F32);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .tb__pills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+  .tb__pill {
+    justify-content: center;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+</style>
