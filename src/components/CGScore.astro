@@ -1,0 +1,215 @@
+---
+/**
+ * CGScore.astro — Cubical Golfer Test Score visualization.
+ * Visual scoring breakdown that builds trust and authority (RTINGS-style).
+ * Renders category bars with color coding and an overall verdict.
+ */
+
+interface ScoreCategory {
+  name: string;
+  score: number;
+  note?: string;
+}
+
+interface Props {
+  overallScore: number;
+  categories: ScoreCategory[];
+  verdict: 'recommended' | 'best-value' | 'premium' | 'skip';
+  rounds?: number;
+}
+
+const { overallScore, categories, verdict, rounds = 12 } = Astro.props;
+
+const verdictConfig = {
+  'recommended': { label: '✓ RECOMMENDED',  cls: 'vd--rec' },
+  'best-value':  { label: '✓ BEST VALUE',   cls: 'vd--val' },
+  'premium':     { label: '✓ PREMIUM PICK', cls: 'vd--prm' },
+  'skip':        { label: '✗ SKIP',         cls: 'vd--skip' },
+};
+
+const v = verdictConfig[verdict];
+
+function barColor(score: number): string {
+  if (score >= 8) return 'bar--high';
+  if (score >= 6) return 'bar--mid';
+  return 'bar--low';
+}
+---
+
+<div class="cgs" role="figure" aria-label={`CG Test Score: ${overallScore} out of 10`}>
+  <div class="cgs__header">
+    <div class="cgs__label">CG TEST SCORE</div>
+    <div class="cgs__overall">
+      <span class="cgs__num">{overallScore.toFixed(1)}</span>
+      <span class="cgs__of">/10</span>
+    </div>
+    <span class={`cgs__verdict ${v.cls}`}>{v.label}</span>
+  </div>
+
+  <div class="cgs__bars">
+    {categories.map(cat => (
+      <div class="cgs__row">
+        <span class="cgs__cat-name">{cat.name}</span>
+        <div class="cgs__bar-track">
+          <div class={`cgs__bar-fill ${barColor(cat.score)}`} style={`width:${cat.score * 10}%`}></div>
+        </div>
+        <span class="cgs__cat-score">{cat.score.toFixed(1)}</span>
+        {cat.note && <span class="cgs__cat-note">{cat.note}</span>}
+      </div>
+    ))}
+  </div>
+
+  <p class="cgs__footer">Based on {rounds} rounds of on-course testing · <a href="/how-we-test/">Full methodology</a></p>
+</div>
+
+<style>
+.cgs {
+  margin: 20px 0 28px;
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: var(--r2, 12px);
+  background: var(--white, #fff);
+  box-shadow: var(--s1, 0 2px 8px rgba(0,0,0,.06));
+  overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.cgs__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--border, #D8D3C8);
+  background: var(--cream, #F4F1EA);
+}
+
+.cgs__label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--green, #1E3A28);
+  text-transform: uppercase;
+}
+
+.cgs__overall {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.cgs__num {
+  font-family: var(--font-display, 'Playfair Display', serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--green, #1E3A28);
+  line-height: 1;
+}
+
+.cgs__of {
+  font-size: 14px;
+  color: var(--muted, #556B5C);
+  font-weight: 500;
+}
+
+.cgs__verdict {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.vd--rec  { background: rgba(30,58,40,0.1); color: var(--green, #1E3A28); }
+.vd--val  { background: rgba(200,168,75,0.15); color: #8B6E14; }
+.vd--prm  { background: var(--green, #1E3A28); color: var(--gold, #C8A84B); }
+.vd--skip { background: rgba(200,50,50,0.1); color: #C83232; }
+
+/* ── Category rows ──────────────────────────────────────── */
+.cgs__bars {
+  padding: 16px 22px 12px;
+}
+
+.cgs__row {
+  display: grid;
+  grid-template-columns: 130px 1fr 40px;
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 0 12px;
+  margin-bottom: 12px;
+}
+.cgs__row:last-child { margin-bottom: 0; }
+
+.cgs__cat-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--body, #2D3F32);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.cgs__bar-track {
+  grid-column: 2;
+  grid-row: 1;
+  height: 8px;
+  background: var(--cream-dark, #EAE6DD);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cgs__bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+.bar--high { background: var(--green, #1E3A28); }
+.bar--mid  { background: var(--gold, #C8A84B); }
+.bar--low  { background: #C83232; }
+
+.cgs__cat-score {
+  grid-column: 3;
+  grid-row: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green, #1E3A28);
+  text-align: right;
+}
+
+.cgs__cat-note {
+  grid-column: 2 / 4;
+  grid-row: 2;
+  font-size: 11px;
+  color: var(--muted, #556B5C);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+.cgs__footer {
+  font-size: 11px;
+  color: var(--muted, #556B5C);
+  margin: 0;
+  padding: 10px 22px 14px;
+  border-top: 1px solid var(--border, #D8D3C8);
+}
+.cgs__footer a {
+  color: var(--green, #1E3A28);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .cgs__header {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px 16px;
+  }
+  .cgs__num { font-size: 28px; }
+  .cgs__bars { padding: 14px 16px 10px; }
+  .cgs__row {
+    grid-template-columns: 100px 1fr 36px;
+    gap: 0 8px;
+  }
+  .cgs__cat-name { font-size: 12px; }
+}
+</style>
