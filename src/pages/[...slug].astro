@@ -406,10 +406,9 @@ if (isBuyingGuide) {
       if (!ctaKey) return null;
       const ctaAff = getAffiliateLink(ctaKey);
       if (!ctaAff?.url) return null;
-      const ctaName = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === ctaKey)?.name
-        ?? ctaKey.replace(/-/g, ' ');
-      const ctaBadge = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === ctaKey)?.badge
-        ?? 'Our Top Pick';
+      const ctaRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === ctaKey);
+      const ctaName = ctaRow?.name ?? ctaKey.replace(/-/g, ' ');
+      const ctaBadge = ctaRow?.badge ?? 'Our Top Pick';
       return (
         <ProductCTA
           productName={ctaName}
@@ -421,6 +420,10 @@ if (isBuyingGuide) {
                (ctaAff as any).golfGalaxyUrl.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy')
             : undefined}
           badge={ctaBadge}
+          rating={(article as any).quickPickRating || undefined}
+          imageUrl={(ctaAff as any).imgSrc || undefined}
+          why={(article as any).quickPickWhy || undefined}
+          bestFor={(article as any).quickPickBestFor || ctaRow?.bestFor || undefined}
         />
       );
     })()}
