@@ -1,16 +1,8 @@
 ---
 /**
- * StickyBar.astro
- * Sticky "Check Price" bar that appears after scrolling 400px.
- * Highest-converting CTA placement on affiliate pages.
- * Only renders on buying guides with a top product.
- *
- * Props:
- *   name      — Top product name
- *   price     — Price string
- *   url       — Affiliate URL
- *   retailer  — Retailer name
- *   badge     — Short badge text e.g. "BEST OVERALL"
+ * StickyBar.astro — Sticky bottom CTA bar.
+ * Appears after 40% scroll, hides near footer, dismissable.
+ * Already wired to all buying guides via [...slug].astro template.
  */
 
 interface Props {
@@ -26,48 +18,68 @@ const { name, price, url, retailer, badge = 'BEST PICK' } = Astro.props;
 if (!url) return;
 ---
 
-<div class="sticky-bar" id="sticky-bar" aria-label="Top product quick access" role="complementary">
-  <div class="sticky-bar__inner">
-    <div class="sticky-bar__label">
-      <span class="sticky-bar__badge">{badge}</span>
-      <span class="sticky-bar__name">{name}</span>
+<div class="sb" id="sticky-bar" aria-label="Top product quick access" role="complementary">
+  <div class="sb__inner">
+    <div class="sb__left">
+      <span class="sb__badge">{badge}</span>
+      <span class="sb__name">{name}</span>
     </div>
-    <div class="sticky-bar__right">
-      <span class="sticky-bar__price">{price}</span>
+    <div class="sb__right">
+      <span class="sb__price">{price}</span>
       <a
         href={url}
-        class="sticky-bar__btn"
+        class="sb__btn"
         target="_blank"
         rel="nofollow noopener sponsored"
         aria-label={`Check price for ${name} at ${retailer}`}
       >
         Check Price →
       </a>
+      <button class="sb__close" id="sticky-bar-close" aria-label="Dismiss" type="button">✕</button>
     </div>
   </div>
 </div>
 
 <script>
   const bar = document.getElementById('sticky-bar');
+  const closeBtn = document.getElementById('sticky-bar-close');
+
   if (bar) {
-    // Show after scrolling 400px, hide near footer
-    const onScroll = () => {
-      const scrollY = window.scrollY;
-      const docH = document.body.scrollHeight;
-      const winH = window.innerHeight;
-      const nearFooter = scrollY + winH > docH - 300;
-      if (scrollY > 400 && !nearFooter) {
-        bar.classList.add('sticky-bar--visible');
-      } else {
-        bar.classList.remove('sticky-bar--visible');
+    const KEY = 'sb_dismissed';
+    const wasDismissed = sessionStorage.getItem(KEY) === '1';
+
+    if (wasDismissed) {
+      bar.remove();
+    } else {
+      const onScroll = () => {
+        const scrollY = window.scrollY;
+        const docH = document.body.scrollHeight;
+        const winH = window.innerHeight;
+        const threshold = docH * 0.4;
+        const nearFooter = scrollY + winH > docH - 300;
+
+        if (scrollY > threshold && !nearFooter) {
+          bar.classList.add('sb--visible');
+        } else {
+          bar.classList.remove('sb--visible');
+        }
+      };
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          bar.classList.remove('sb--visible');
+          bar.style.display = 'none';
+          sessionStorage.setItem(KEY, '1');
+        });
       }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
+    }
   }
 </script>
 
 <style>
-.sticky-bar {
+.sb {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -79,26 +91,26 @@ if (!url) return;
   transition: transform .3s ease;
   box-shadow: 0 -4px 20px rgba(0,0,0,.25);
 }
-.sticky-bar--visible {
-  transform: translateY(0);
-}
-.sticky-bar__inner {
-  max-width: 900px;
+.sb--visible { transform: translateY(0); }
+
+.sb__inner {
+  max-width: 1100px;
   margin: 0 auto;
   padding: 12px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  flex-wrap: wrap;
 }
-.sticky-bar__label {
+
+.sb__left {
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap;
+  min-width: 0;
 }
-.sticky-bar__badge {
+
+.sb__badge {
   background: var(--gold, #C9A84C);
   color: #1a1a1a;
   font-size: 10px;
@@ -108,28 +120,33 @@ if (!url) return;
   padding: 3px 10px;
   border-radius: 20px;
   white-space: nowrap;
+  flex-shrink: 0;
 }
-.sticky-bar__name {
+
+.sb__name {
   font-size: 14px;
   font-weight: 600;
   color: rgba(255,255,255,.9);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 220px;
 }
-.sticky-bar__right {
+
+.sb__right {
   display: flex;
   align-items: center;
   gap: 14px;
+  flex-shrink: 0;
 }
-.sticky-bar__price {
+
+.sb__price {
   font-size: 18px;
   font-weight: 800;
   color: var(--gold, #C9A84C);
   white-space: nowrap;
 }
-.sticky-bar__btn {
+
+.sb__btn {
   background: var(--gold, #C9A84C);
   color: #1a1a1a;
   font-size: 13px;
@@ -138,15 +155,47 @@ if (!url) return;
   border-radius: 8px;
   text-decoration: none;
   white-space: nowrap;
-  transition: background .15s, transform .15s;
+  transition: background .15s, transform .1s;
 }
-.sticky-bar__btn:hover {
+.sb__btn:hover {
   background: var(--gold-dark, #a8892e);
-  transform: scale(1.03);
+  transform: translateY(-1px);
 }
-@media (max-width: 480px) {
-  .sticky-bar__name { max-width: 140px; font-size: 12px; }
-  .sticky-bar__price { font-size: 15px; }
-  .sticky-bar__btn { padding: 8px 14px; font-size: 12px; }
+
+.sb__close {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.5);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+  line-height: 1;
+  border-radius: 50%;
+  transition: color .15s, background .15s;
+}
+.sb__close:hover {
+  color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+/* ── Mobile: larger touch targets ── */
+@media (max-width: 640px) {
+  .sb__inner {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+  .sb__name {
+    font-size: 12px;
+    max-width: 120px;
+  }
+  .sb__price { font-size: 15px; }
+  .sb__btn {
+    padding: 14px 18px;
+    font-size: 13px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+  }
+  .sb__badge { font-size: 9px; padding: 2px 8px; }
 }
 </style>
