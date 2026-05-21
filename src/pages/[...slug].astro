@@ -9,6 +9,7 @@ import ProductCTA    from '../components/ProductCTA.astro';
 import CGScore       from '../components/CGScore.astro';
 import AuthorByline  from '../components/AuthorByline.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import TableOfContents from '../components/TableOfContents.astro';
 import RelatedLinks  from '../components/RelatedLinks.astro';
 import BackToTop     from '../components/BackToTop.astro';
 import SocialShare   from '../components/SocialShare.astro';
@@ -85,6 +86,24 @@ const nextArticle = currentIdx < categoryArticles.length - 1 ? categoryArticles[
 
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison' || article.pageType === 'review';
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
+
+// Generate ToC items from article sections (for articles with 4+ sections)
+const tocItems = (() => {
+  const sections = (article as any).sections || [];
+  if (sections.length < 5) return [];
+  const items = sections
+    .filter((s: any) => s.h2)
+    .map((s: any) => ({
+      label: s.h2.replace(/🥇|🥈|🥉|⭐|🏆/g, '').trim(),
+      anchor: s.h2.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+      indent: false,
+    }));
+  // Add FAQ if article has faq
+  if ((article as any).faq?.length > 0) {
+    items.push({ label: 'FAQ', anchor: 'faq', indent: false });
+  }
+  return items;
+})();
 
 // Sticky mobile CTA bar — first product for buying guides
 const stickyProduct = (() => {
@@ -394,7 +413,13 @@ if (isBuyingGuide) {
   )}
 
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
+  <div class={`art-layout ${tocItems.length > 0 ? 'art-layout--has-toc' : ''}`}>
   <article class="art-content">
+
+    {/* TABLE OF CONTENTS — mobile accordion (inline in flow) */}
+    {tocItems.length > 0 && (
+      <TableOfContents items={tocItems} heading={isBuyingGuide ? 'In this review' : 'In this guide'} />
+    )}
 
     {/* QUICK ANSWER BOX — buying guides only */}
     {(article as any).quickAnswerProduct && article.bottomLine && (() => {
@@ -946,6 +971,12 @@ if (isBuyingGuide) {
     </div>
 
   </article>
+
+  {/* Desktop ToC sidebar (second column of grid) */}
+  {tocItems.length > 0 && (
+    <TableOfContents items={tocItems} heading={isBuyingGuide ? 'In this review' : 'In this guide'} />
+  )}
+  </div> <!-- /art-layout -->
 
   {/* ── Prev / Next Navigation ───────────────────────────────────────── */}
   {(prevArticle || nextArticle) && (

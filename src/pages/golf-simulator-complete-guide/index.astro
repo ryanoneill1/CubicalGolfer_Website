@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StickyBar from '../../components/StickyBar.astro';
+import TableOfContents from '../../components/TableOfContents.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 
@@ -85,16 +86,18 @@ const quickProduct = getAffiliateLink('garmin-approach-r10');
     </div>
 
     <nav class="toc" aria-label="Table of Contents">
-      <p class="toc__title">In This Guide</p>
-      <ol>
-        <li><a href="#tiers">3 Setup Tiers at a Glance</a></li>
-        <li><a href="#room">Room Requirements</a></li>
-        <li><a href="#monitors">Choosing a Launch Monitor</a></li>
-        <li><a href="#screens">Screens, Nets & Projectors</a></li>
-        <li><a href="#software">Simulator Software</a></li>
-        <li><a href="#guides">All Our Simulator Guides</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ol>
+      <TableOfContents items={[
+        { label: '3 Setup Tiers at a Glance', anchor: 'tiers' },
+        { label: 'Room Requirements', anchor: 'room' },
+        { label: 'Choosing a Launch Monitor', anchor: 'monitors' },
+        { label: 'Screens, Nets & Projectors', anchor: 'screens' },
+        { label: 'Impact Screens vs Nets', anchor: 'impact-screens-vs-nets', indent: true },
+        { label: 'Projectors', anchor: 'projectors', indent: true },
+        { label: 'Hitting Mats', anchor: 'hitting-mats', indent: true },
+        { label: 'Simulator Software', anchor: 'software' },
+        { label: 'All Simulator Guides', anchor: 'guides' },
+        { label: 'FAQ', anchor: 'faq' },
+      ]} heading="In this guide" />
     </nav>
 
     <section id="tiers">
@@ -158,11 +161,11 @@ const quickProduct = getAffiliateLink('garmin-approach-r10');
     <section id="screens">
       <h2>Screens, Nets, Projectors & Mats</h2>
       <p>After your monitor, these components complete the setup:</p>
-      <h3>Impact Screens vs Nets</h3>
+      <h3 id="impact-screens-vs-nets">Impact Screens vs Nets</h3>
       <p>Use an <a href="/best-impact-screens-golf-simulator/">impact screen</a> if you want projector play (doubles as projector surface). Use a <a href="/best-golf-net-for-garage/">hitting net</a> if you only want data practice (cheaper, faster setup).</p>
-      <h3>Projectors</h3>
+      <h3 id="projectors">Projectors</h3>
       <p>Most garages need a <a href="/best-golf-simulator-projectors/">short-throw projector</a> (0.5-0.8 throw ratio) because standard projectors need 10+ feet of distance. Use our <a href="/golf-simulator-projector-distance-calculator/">projector distance calculator</a> to find the right throw ratio.</p>
-      <h3>Hitting Mats</h3>
+      <h3 id="hitting-mats">Hitting Mats</h3>
       <p>Never skip the mat — hitting off concrete damages clubs and wrists. The <a href="/best-golf-hitting-mats-home/">Fiberbuilt Flight Deck</a> ($449) is the gold standard. Budget option: any 3×5 commercial mat with a rubber underlayer.</p>
       <p><strong>More guides:</strong></p>
       <ul>

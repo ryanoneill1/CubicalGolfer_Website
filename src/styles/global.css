@@ -1740,3 +1740,21 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   .hero-stats { gap: 20px; }
   .hero-stat-num { font-size: 17px; }
 }
+
+/* ── ARTICLE TWO-COLUMN LAYOUT (article + ToC sidebar) ──────────────── */
+.art-layout {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 var(--page-px);
+}
+@media (min-width: 1024px) {
+  .art-layout--has-toc {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 32px;
+    align-items: start;
+  }
+  .art-layout--has-toc .art-content {
+    max-width: none; /* grid handles width */
+  }
+}
