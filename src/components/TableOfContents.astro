@@ -1,7 +1,7 @@
 ---
 /**
  * TableOfContents.astro — Jump navigation for long articles.
- * Desktop: sticky sidebar card. Mobile: collapsible accordion.
+ * Desktop: solid card below hero. Mobile: collapsible accordion.
  */
 
 interface TocItem {
@@ -20,148 +20,139 @@ const { items, heading = 'In this guide' } = Astro.props;
 if (!items || items.length < 3) return;
 ---
 
-<!-- Mobile: collapsible accordion -->
-<details class="toc-mobile" id="toc-mobile">
-  <summary class="toc-mobile__toggle">Jump to section ▼</summary>
-  <nav class="toc-mobile__nav" aria-label="Table of contents">
-    <ul class="toc__list">
-      {items.map(item => (
-        <li class={item.indent ? 'toc__item toc__item--sub' : 'toc__item'}>
-          <a href={`#${item.anchor}`} class="toc__link" data-toc-anchor={item.anchor}>{item.label}</a>
-        </li>
-      ))}
-    </ul>
-  </nav>
-</details>
-
-<!-- Desktop: sticky sidebar -->
-<aside class="toc-desktop" id="toc-desktop" aria-label="Table of contents">
-  <p class="toc-desktop__heading">{heading}</p>
-  <nav>
-    <ul class="toc__list">
-      {items.map(item => (
-        <li class={item.indent ? 'toc__item toc__item--sub' : 'toc__item'}>
-          <a href={`#${item.anchor}`} class="toc__link" data-toc-anchor={item.anchor}>{item.label}</a>
-        </li>
-      ))}
-    </ul>
-  </nav>
-</aside>
+<div class="toc-card" id="toc-mobile">
+  <details class="toc-details">
+    <summary class="toc-header">
+      <span class="toc-title">{heading}</span>
+      <span class="toc-count">{items.length} sections</span>
+    </summary>
+    <nav class="toc-nav" aria-label="Table of contents">
+      <ol class="toc-list">
+        {items.map((item, i) => (
+          <li class={item.indent ? 'toc-item toc-item--sub' : 'toc-item'}>
+            <a href={`#${item.anchor}`} class="toc-link" data-toc-anchor={item.anchor}>
+              <span class="toc-num">{i + 1}</span>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  </details>
+</div>
 
 <script>
-  // Mobile: collapse after tapping a link
-  const mobile = document.getElementById('toc-mobile');
-  if (mobile) {
-    mobile.querySelectorAll('.toc__link').forEach(link => {
+  const card = document.getElementById('toc-mobile');
+  if (card) {
+    const details = card.querySelector('details');
+    card.querySelectorAll('.toc-link').forEach(link => {
       link.addEventListener('click', () => {
-        setTimeout(() => { (mobile as HTMLDetailsElement).open = false; }, 100);
-      });
-    });
-  }
-
-  // Desktop: highlight active section on scroll
-  const desktop = document.getElementById('toc-desktop');
-  if (desktop) {
-    const links = desktop.querySelectorAll('.toc__link');
-    const anchors: string[] = [];
-    links.forEach(l => anchors.push((l as HTMLElement).dataset.tocAnchor || ''));
-
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          const id = entry.target.id;
-          links.forEach(l => {
-            const a = (l as HTMLElement).dataset.tocAnchor;
-            l.classList.toggle('toc__link--active', a === id);
-          });
+        if (details && window.innerWidth < 1024) {
+          setTimeout(() => { (details as HTMLDetailsElement).open = false; }, 100);
         }
-      }
-    }, { rootMargin: '-80px 0px -70% 0px' });
-
-    anchors.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
+      });
     });
   }
 </script>
 
 <style>
-/* ── Shared list styles ─────────────────────────────── */
-.toc__list {
+.toc-card {
+  background: var(--white, #fff);
+  border: 1.5px solid var(--border, #D8D3C8);
+  border-radius: var(--r2, 12px);
+  margin: 20px 0 28px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.toc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--green, #1E3A28);
+  cursor: pointer;
+  list-style: none;
+}
+.toc-header::-webkit-details-marker { display: none; }
+
+.toc-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold, #C8A84B);
+}
+
+.toc-count {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+}
+
+.toc-nav {
+  padding: 8px 12px 12px;
+}
+
+.toc-list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.toc__item { margin-bottom: 2px; }
-.toc__item--sub { padding-left: 16px; }
-
-.toc__link {
-  display: block;
-  padding: 5px 12px;
-  font-size: 13px;
-  color: var(--muted, #556B5C);
-  text-decoration: none;
-  border-left: 2px solid transparent;
-  border-radius: 0 4px 4px 0;
-  transition: color 0.15s, border-color 0.15s, background 0.15s;
-  line-height: 1.4;
-}
-.toc__link:hover {
-  color: var(--green, #1E3A28);
-  background: rgba(30, 58, 40, 0.04);
-}
-.toc__link--active {
-  color: var(--green, #1E3A28);
-  font-weight: 600;
-  border-left-color: var(--gold, #C8A84B);
-  background: rgba(30, 58, 40, 0.04);
+  counter-reset: none;
 }
 
-/* ── Mobile accordion ───────────────────────────────── */
-.toc-mobile {
-  display: none;
-  margin: 16px 0 24px;
-  border: 1px solid var(--border, #D8D3C8);
-  border-radius: var(--r1, 6px);
-  background: var(--white, #fff);
-  overflow: hidden;
+.toc-item {
+  margin: 0;
 }
-.toc-mobile__toggle {
-  display: block;
-  padding: 12px 16px;
+.toc-item--sub { padding-left: 20px; }
+
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
+  color: var(--body, #2D3F32);
+  text-decoration: none;
+  border-radius: var(--r1, 6px);
+  transition: background 0.15s, color 0.15s;
+  line-height: 1.35;
+}
+.toc-link:hover {
+  background: var(--cream, #F4F1EA);
   color: var(--green, #1E3A28);
-  cursor: pointer;
 }
-.toc-mobile__nav { padding: 0 8px 12px; }
 
-/* ── Desktop sticky sidebar ─────────────────────────── */
-.toc-desktop {
-  display: none;
-  position: sticky;
-  top: 80px;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
-  padding: 16px 0 16px 8px;
-  border-left: 1px solid var(--border, #D8D3C8);
-}
-.toc-desktop__heading {
+.toc-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--cream, #F4F1EA);
+  color: var(--green, #1E3A28);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted, #556B5C);
-  margin: 0 0 10px 12px;
+  flex-shrink: 0;
 }
 
-/* ── Responsive ─────────────────────────────────────── */
-@media (max-width: 1023px) {
-  .toc-mobile { display: block; }
-  .toc-desktop { display: none !important; }
+/* Desktop: open by default */
+@media (min-width: 768px) {
+  .toc-details { }
+  .toc-details[open] .toc-header { border-bottom: 1px solid var(--border, #D8D3C8); }
+  .toc-nav { padding: 10px 16px 16px; }
+  .toc-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+  }
 }
-@media (min-width: 1024px) {
-  .toc-mobile { display: none !important; }
-  .toc-desktop { display: block; }
+
+/* Mobile: collapsed by default */
+@media (max-width: 767px) {
+  .toc-card { margin: 16px 0 20px; }
+  .toc-link { font-size: 13px; padding: 7px 8px; }
+  .toc-num { width: 20px; height: 20px; font-size: 10px; }
 }
 </style>
