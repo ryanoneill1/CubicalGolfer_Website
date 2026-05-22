@@ -66,12 +66,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
     <span class="hero-badge">FREE · NO SIGN-UP</span>
     <h1>Golf Tools & Calculators</h1>
     <p class="cat-subhead">Interactive tools built from real testing data — find the right ball, plan your simulator build, know your distances, and set your budget.</p>
-    <div class="hero-divider"></div>
-    <div class="hero-stats">
-      <div><div class="hero-stat-num">4</div><div class="hero-stat-label">Interactive tools</div></div>
-      <div><div class="hero-stat-num">34+</div><div class="hero-stat-label">Golf balls charted</div></div>
-      <div><div class="hero-stat-num">$0</div><div class="hero-stat-label">Always free</div></div>
-    </div>
+
     <div class="hero-pills">
       <a href="/golf-ball-compression-chart/" class="hero-pill"><span class="hero-pill-dot"></span>Compression chart</a>
       <a href="/golf-simulator-cost-calculator/" class="hero-pill"><span class="hero-pill-dot"></span>Simulator calculator</a>
@@ -80,11 +75,44 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
     </div>
   </header>
 
-  <section class="hub-intro" style="margin:0 auto 32px;max-width:740px;text-align:center;">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 12px;">Built for Weekend Golfers Who Want Answers, Not Sales Pitches</h2>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">Every tool on this page was built to answer a specific question we kept hearing from golfers: what ball should I play for my swing speed? How much does a simulator actually cost? How far should my 7-iron go? What should I buy first on a $500 budget?</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">These are not generic calculators — they use real data from our testing, Trackman averages, and current retail prices. The <a href="/golf-ball-compression-chart/">compression chart</a> filters 34+ balls by swing speed so you stop guessing which ball suits your game. The <a href="/golf-simulator-cost-calculator/">simulator calculator</a> builds a complete parts list at your budget so you know exactly what a home setup costs before you start buying. The <a href="/golf-club-distance-chart/">distance chart</a> gives you realistic carry numbers, not the optimistic figures on manufacturer websites.</p>
-    <p style="font-size:14px;line-height:1.7;color:var(--muted);margin:0;text-align:left;">All tools free, no sign-up required. Data updated when prices change or new products launch.</p>
+  <section style="max-width:100%;margin:0 auto 40px;padding:24px var(--page-px) 0;">
+
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;">
+
+      <!-- LEFT: Image + stats -->
+      <div>
+        <img src="/images/tools-hero.webp"
+          alt="Cubical Golfer interactive tools: compression chart, simulator calculator, distance chart, budget planner"
+          width="600" height="500" loading="eager" decoding="async"
+          style="width:100%;height:auto;border-radius:var(--r2);" />
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;">
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--r2);padding:20px 16px;text-align:center;">
+            <div style="font-size:36px;font-weight:700;color:var(--green);line-height:1;">4</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:6px;">Tools</div>
+          </div>
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--r2);padding:20px 16px;text-align:center;">
+            <div style="font-size:36px;font-weight:700;color:var(--green);line-height:1;">34+</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:6px;">Balls charted</div>
+          </div>
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--r2);padding:20px 16px;text-align:center;">
+            <div style="font-size:36px;font-weight:700;color:var(--green);line-height:1;">$0</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:6px;">Always free</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: All text as one flowing block -->
+      <div style="font-size:16px;line-height:1.75;color:var(--body);">
+        <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;line-height:1.3;">Built for Weekend Golfers Who Want Answers, Not Sales Pitches</h2>
+        <p style="margin:0 0 14px;">Every tool on this page was built to answer a specific question we kept hearing from golfers: what ball should I play for my swing speed? How much does a simulator actually cost? How far should my 7-iron go? What should I buy first on a $500 budget?</p>
+        <p style="margin:0 0 14px;">These are not generic calculators — they use real data from our testing, Trackman averages, and current retail prices. The <a href="/golf-ball-compression-chart/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">compression chart</a> filters 34+ balls by swing speed so you stop guessing which ball suits your game. The <a href="/golf-simulator-cost-calculator/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">simulator calculator</a> builds a complete parts list at your budget so you know exactly what a home setup costs before you start buying.</p>
+        <p style="margin:0 0 14px;">The <a href="/golf-club-distance-chart/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">distance chart</a> gives you realistic carry numbers based on Trackman data, not the optimistic figures on manufacturer websites. Enter your driver swing speed and see estimated carry for every club in your bag. The <a href="/golf-equipment-budget-planner/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">budget planner</a> tells you exactly what to buy first at every price tier — from $200 to $2,000 — so you invest in the gear that actually lowers your scores before splurging on nice-to-haves.</p>
+        <p style="margin:0 0 14px;">All four tools work on mobile, require no sign-up, and have no usage limits. We earn revenue through affiliate links on recommended products within the tools, not by charging for access or gating results behind an email wall.</p>
+        <p style="font-size:14px;color:var(--muted);margin:0;">Data updated monthly when prices change or new products launch.</p>
+      </div>
+
+    </div>
+
   </section>
 
   <div class="cat-page-body">
