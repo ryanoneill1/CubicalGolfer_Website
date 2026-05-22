@@ -1758,3 +1758,71 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
     max-width: none; /* grid handles width */
   }
 }
+
+/* ── MOBILE TABLE SCROLL FIX ───────────────────────────────────────────── */
+.comparison-table-wrapper {
+  border-radius: var(--r2);
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+  }
+  .comparison-table-wrapper::after {
+    content: '← Scroll to see more →';
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    color: var(--muted);
+    padding: 6px;
+    background: var(--cream);
+  }
+  .comparison-table-wrapper .cmp-table {
+    min-width: 520px;
+  }
+  .cmp-table th:first-child,
+  .cmp-table td:first-child {
+    position: sticky;
+    left: 0;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.06);
+  }
+  .cmp-table th:first-child { background: var(--green); }
+}
+
+/* ── SCORE BAR UTILITIES (global, supplements CGScore scoped styles) ──── */
+.score-bar-track {
+  width: 100%; height: 8px;
+  background: var(--cream-dark, #EAE6DD);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.score-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+.score-bar-fill[data-score-level="high"] { background: var(--green); }
+.score-bar-fill[data-score-level="mid"]  { background: var(--gold); }
+.score-bar-fill[data-score-level="low"]  { background: #C83232; }
+
+/* ── WCAG 2.1 AA: 44px minimum touch targets on mobile ─────────────────── */
+@media (max-width: 640px) {
+  .qp__cta,
+  .sb__btn,
+  .aff-cta__btn,
+  .product-card__cta,
+  .btn-gold,
+  .btn-outline,
+  [class*="cta__btn"],
+  [class*="btn--primary"] {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
