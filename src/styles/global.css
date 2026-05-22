@@ -1759,36 +1759,45 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   }
 }
 
-/* ── RESPONSIVE TABLE FIX ──────────────────────────────────────────────── */
+/* ── FULL-WIDTH RESPONSIVE TABLES ──────────────────────────────────────── */
 .comparison-table-wrapper {
-  border-radius: var(--r2);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  max-width: 100%;
+  /* Break out of content container to span full viewport */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0 var(--page-px);
+  overflow: visible;
 }
 .comparison-table-wrapper .cmp-table {
-  min-width: 600px;
+  width: 100%;
+  table-layout: auto;
 }
-/* Sticky first column so product name is always visible when scrolling */
-.comparison-table-wrapper .cmp-table th:first-child,
-.comparison-table-wrapper .cmp-table td:first-child {
-  position: sticky;
-  left: 0;
-  z-index: 1;
-  background: #fff;
-  box-shadow: 2px 0 4px rgba(0,0,0,0.04);
-}
-.comparison-table-wrapper .cmp-table th:first-child {
-  background: var(--green);
-}
-.comparison-table-wrapper .cmp-table tr:nth-child(even) td:first-child {
-  background: #fafaf8;
-}
-/* Scroll hint on smaller screens */
-@media (max-width: 900px) {
+@media (max-width: 640px) {
   .comparison-table-wrapper {
-    border: 1px solid var(--border);
-    border-radius: var(--r2);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 0;
+  }
+  .comparison-table-wrapper .cmp-table {
+    min-width: 580px;
+    font-size: 13px;
+  }
+  .comparison-table-wrapper .cmp-table th,
+  .comparison-table-wrapper .cmp-table td {
+    padding: 10px 12px;
+  }
+  .comparison-table-wrapper .cmp-table th:first-child,
+  .comparison-table-wrapper .cmp-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.04);
+  }
+  .comparison-table-wrapper .cmp-table th:first-child {
+    background: var(--green);
+  }
+  .comparison-table-wrapper .cmp-table tr:nth-child(even) td:first-child {
+    background: #fafaf8;
   }
   .comparison-table-wrapper::after {
     content: '← Scroll to see all columns →';
@@ -1799,15 +1808,6 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
     padding: 6px;
     background: var(--cream);
     border-top: 1px solid var(--border);
-  }
-}
-@media (max-width: 640px) {
-  .comparison-table-wrapper .cmp-table {
-    font-size: 13px;
-  }
-  .comparison-table-wrapper .cmp-table th,
-  .comparison-table-wrapper .cmp-table td {
-    padding: 10px 12px;
   }
 }
 
