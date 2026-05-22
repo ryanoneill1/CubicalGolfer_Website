@@ -5,21 +5,14 @@ import BaseLayout        from '../../layouts/BaseLayout.astro';
 import { ARTICLES }      from '../../data/articles';
 import { categoryMeta }  from '../../lib/seo';
 import { getCategoryArticles } from '../../lib/linking';
-import { breadcrumbSchema, collectionPageSchema, faqSchema } from '../../lib/schema';
+import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 
 const cat      = 'improve-game';
 const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat);
-const hubFaq = [
-  { q: 'What is the fastest way to lower my golf handicap?', a: 'Eliminate three-putts. The average 20-handicap three-putts 4-5 times per round — that is 4-5 free strokes. A putting mirror ($25) and 10 minutes of gate putting before work, three times per week, can drop your handicap by 2-3 strokes in 8 weeks without changing your full swing.' },
-  { q: 'How do I stop slicing the golf ball?', a: 'Strengthen your grip first — rotate both hands clockwise on the grip by about 15 degrees. This single change corrects the open clubface that causes 70% of slices. If the slice persists, your swing path is out-to-in — see our slice fix guide for the alignment drill that corrects it in one range session.' },
-  { q: 'Should I take golf lessons or buy new clubs first?', a: 'Lessons first, always. A $100 lesson fixes grip, alignment, and ball position problems that no club can compensate for. New clubs on a bad swing just make bad shots go farther. Once your fundamentals are solid (typically after 2-3 lessons), then get fitted for irons — that is when equipment starts making a measurable difference.' },
-];
-
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
   collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
-  faqSchema(hubFaq),
 ];
 ---
 
@@ -31,24 +24,12 @@ const schemas  = [
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">Improve Your Game</span>
     </nav>
-    <span class="hero-badge">28 GUIDES · NO FLUFF</span>
-    <h1>Improve Your Golf Game</h1>
-    <p class="cat-subhead">Fix your slice, break 90, lower your handicap — practical guides for weekend golfers who want real results, not range tips that fall apart on the course.</p>
-    <div class="hero-divider"></div>
-    <div class="hero-stats">
-      <div><div class="hero-stat-num">28</div><div class="hero-stat-label">Guides</div></div>
-      <div><div class="hero-stat-num">15 min</div><div class="hero-stat-label">Avg practice time</div></div>
-      <div><div class="hero-stat-num">3–5</div><div class="hero-stat-label">Strokes saved</div></div>
-    </div>
-    <div class="hero-pills">
-      <a href="/golf-practice-drills-at-home/" class="hero-pill"><span class="hero-pill-dot"></span>Practice drills (6)</a>
-      <a href="/how-to-break-90/" class="hero-pill"><span class="hero-pill-dot"></span>Scoring guides (3)</a>
-      <a href="/golf-tips-for-beginners/" class="hero-pill"><span class="hero-pill-dot"></span>Beginner tips (3)</a>
-      <a href="/how-to-stop-3-putting/" class="hero-pill"><span class="hero-pill-dot"></span>Short game (2)</a>
-    </div>
+    <h1>🎯 Improve Your Golf Game</h1>
+    <p class="cat-subhead">Fix your slice, break 90, lower your handicap — practical guides for
+weekend golfers who are serious about getting better.</p>
   </header>
 
-  <div class="hub-featured" style="margin:0 auto 28px;max-width:960px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+  <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
       <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
       <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Arccos Caddie Sensors — ~$179</p>
@@ -75,17 +56,6 @@ const schemas  = [
     })()}
   </div>
 
-
-
-  <section class="hub-intro" style="margin:0 auto 32px;max-width:960px;text-align:center;">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 12px;">Get Better at Golf Without Quitting Your Day Job</h2>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">You play golf on weekends. Maybe you squeeze in a 9-hole round after work once a month. You do not have time for a 2-hour range session three times a week — but you still want to <a href="/how-to-break-90/">break 90</a>, stop embarrassing yourself with the <a href="/how-to-fix-your-slice/">slice</a>, and feel like the money you spend on greens fees is actually worth it.</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">Every guide below is built for that reality. The <a href="/golf-practice-drills-at-home/">15-minute home drills</a> work on carpet. The <a href="/how-to-stop-3-putting/">putting improvement plan</a> takes 10 minutes before work. The <a href="/best-golf-training-aids/">training aid recommendations</a> cost under $50 and fit in a desk drawer. We test every method ourselves — a 12-handicap playing 20 rounds a year, not a teaching pro who hits balls for a living.</p>
-
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">Our improvement guides cover four key areas. <strong>Scoring and strategy:</strong> <a href="/how-to-break-90/">how to break 90</a> with course management rather than swing overhauls, and <a href="/how-to-lower-golf-handicap/">how to lower your handicap</a> by identifying where you actually lose strokes. <strong>Short game:</strong> <a href="/how-to-chip-in-golf/">chipping</a>, <a href="/how-to-stop-3-putting/">putting</a>, and the wedge play that accounts for 65% of your shots. <strong>Swing fixes:</strong> practical solutions for the <a href="/how-to-fix-your-slice/">slice</a>, <a href="/why-do-i-hit-irons-fat/">fat iron shots</a>, and <a href="/how-to-stop-topping-the-ball/">topped balls</a> that plague recreational players. <strong>Practice routines:</strong> <a href="/golf-practice-drills-at-home/">at-home drills</a> and <a href="/golf-practice-routine-before-work/">before-work routines</a> designed for people who have 15 minutes, not 2 hours.</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;text-align:left;">Every guide includes a specific practice plan with time estimates. If we say you can improve your putting in 10 minutes a day, we tell you exactly which drill to do and for how long. No vague advice, just executable routines that fit a working golfer's schedule. The fastest path to lower scores? <a href="/how-to-stop-3-putting/">Fix your putting first</a> — it drops more strokes than any swing change.</p>
-    <p style="font-size:14px;line-height:1.7;color:var(--muted);margin:0;text-align:left;">All improvement guides include specific practice routines with timeframes — not vague "hit more balls" advice.</p>
-  </section>
 
   <div class="cat-page-body">
     {articles.length === 0 ? (
@@ -123,22 +93,5 @@ const schemas  = [
       </div>
     )}
   </div>
-
-
-  <section class="hub-faq" style="max-width:960px;margin:40px auto 0;">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Frequently Asked Questions</h2>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">What is the fastest way to lower my golf handicap?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Eliminate three-putts. The average 20-handicap three-putts 4-5 times per round — that is 4-5 free strokes. A putting mirror ($25) and 10 minutes of gate putting before work, three times per week, can drop your handicap by 2-3 strokes in 8 weeks without changing your full swing.</p>
-    </details>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">How do I stop slicing the golf ball?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Strengthen your grip first — rotate both hands clockwise on the grip by about 15 degrees. This single change corrects the open clubface that causes 70% of slices. If the slice persists, your swing path is out-to-in — see our slice fix guide for the alignment drill that corrects it in one range session.</p>
-    </details>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">Should I take golf lessons or buy new clubs first?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Lessons first, always. A $100 lesson fixes grip, alignment, and ball position problems that no club can compensate for. New clubs on a bad swing just make bad shots go farther. Once your fundamentals are solid (typically after 2-3 lessons), then get fitted for irons — that is when equipment starts making a measurable difference.</p>
-    </details>
-  </section>
 
 </BaseLayout>

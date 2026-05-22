@@ -10729,7 +10729,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Carts 2026' },
       { slug: '/best-golf-bags-walking-2026/', label: 'Best Walking Golf Bags' },
-      { slug: '/push-cart-vs-riding-cart-golf/', label: 'Push Cart vs Riding Cart' },
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Carts 2026' },
     
       { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
     ],
@@ -11712,9 +11712,9 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'Best Free Golf App: Golfshot', body: '<p>Golfshot gives you GPS yardage to front/center/back of every green on 45,000+ courses — free. The Apple Watch app shows distances at a glance without pulling out your phone. The free tier is genuinely useful; the $40/year premium adds hole flyovers and club recommendations.</p><p>If you just want yardage on your wrist and do not want to pay anything, Golfshot is the answer.</p>' },
       { h2: 'Best Premium App: 18Birdies', body: '<p>18Birdies combines GPS, scoring, social features, and AI-powered club recommendations. The Apple Watch app shows yardage, tracks your score, and logs club distances automatically. At $99/year for premium, it is the best all-around golf app for Apple Watch users who want everything in one place.</p>' },
-      { h2: 'Best for Shot Tracking: Arccos Caddie', body: '<p><a href="/arccos-caddie-review-2026/">Arccos Caddie</a> with the sensor system ($199 for sensors + subscription) turns your Apple Watch into an AI caddie. It tracks every shot automatically, builds a strokes gained profile, and tells you which club to hit based on YOUR data — not generic averages.</p><p>This is the most powerful golf app available, but it requires Arccos sensors on your clubs. See our <a href="/arccos-caddie-review-2026/">full Arccos review</a>.</p>', affiliateKey: 'arccos-caddie-sensors' },
+      { h2: 'Best for Shot Tracking: Arccos Caddie', body: '<p><a href="/arccos-caddie-review/">Arccos Caddie</a> with the sensor system ($199 for sensors + subscription) turns your Apple Watch into an AI caddie. It tracks every shot automatically, builds a strokes gained profile, and tells you which club to hit based on YOUR data — not generic averages.</p><p>This is the most powerful golf app available, but it requires Arccos sensors on your clubs. See our <a href="/arccos-caddie-review/">full Arccos review</a>.</p>', affiliateKey: 'arccos-caddie-sensors' },
       { h2: 'All 7 Apps Compared', body: '<table class="cmp-table"><thead><tr><th>App</th><th>Free Tier</th><th>Premium Price</th><th>GPS</th><th>Scoring</th><th>Shot Tracking</th></tr></thead><tbody><tr><td>Golfshot</td><td>✅ GPS + scoring</td><td>$40/yr</td><td>✅</td><td>✅</td><td>❌</td></tr><tr><td>18Birdies</td><td>✅ Basic GPS</td><td>$99/yr</td><td>✅</td><td>✅</td><td>Manual</td></tr><tr><td>Arccos Caddie</td><td>❌</td><td>$199/yr + sensors</td><td>✅</td><td>✅</td><td>✅ Auto</td></tr><tr><td>Hole19</td><td>✅ GPS</td><td>$70/yr</td><td>✅</td><td>✅</td><td>❌</td></tr><tr><td>SwingU</td><td>✅ GPS</td><td>$100/yr</td><td>✅</td><td>✅</td><td>Manual</td></tr><tr><td>TheGrint</td><td>✅ Handicap</td><td>$80/yr</td><td>✅</td><td>✅</td><td>❌</td></tr><tr><td>V1 Golf</td><td>❌</td><td>$120/yr</td><td>❌</td><td>❌</td><td>Video swing</td></tr></tbody></table>' },
-      { h2: 'Apple Watch vs Dedicated Garmin GPS Watch', body: '<p>The Apple Watch with a golf app gives you 80% of what a <a href="/garmin-s62-vs-apple-watch-golf/">Garmin Approach S62</a> offers — GPS yardage, scoring, and basic shot tracking. The Garmin advantages: longer battery (20+ hours vs 5-6 hours on Apple Watch during GPS use), physical buttons for gloved hands, and built-in golf features without app subscriptions.</p><p>If you already own an Apple Watch, try Golfshot free before buying a Garmin. If GPS golf is a primary use case, the <a href="/best-golf-gps-watches-2026/">dedicated Garmin</a> is the better tool.</p>', affiliateKey: 'garmin-approach-s62' },
+      { h2: 'Apple Watch vs Dedicated Garmin GPS Watch', body: '<p>The Apple Watch with a golf app gives you 80% of what a <a href="/garmin-s62-vs-apple-watch-golf/">Garmin Approach S62</a> offers — GPS yardage, scoring, and basic shot tracking. The Garmin advantages: longer battery (20+ hours vs 5-6 hours on Apple Watch during GPS use), physical buttons for gloved hands, and built-in golf features without app subscriptions.</p><p>If you already own an Apple Watch, try Golfshot free before buying a Garmin. If GPS golf is a primary use case, the <a href="/best-golf-gps-watches/">dedicated Garmin</a> is the better tool.</p>', affiliateKey: 'garmin-approach-s62' },
     ],
     faq: [
       { q: 'What is the best free golf app for Apple Watch?', a: 'Golfshot — free GPS yardage to front/center/back on 45,000+ courses. No payment required for basic features.' },
@@ -11724,9 +11724,9 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'Apple — watchOS Health & Fitness', url: 'https://www.apple.com/watchos/' }],
     related: [
       { slug: '/garmin-s62-vs-apple-watch-golf/', label: 'Garmin vs Apple Watch for Golf' },
-      { slug: '/best-golf-gps-watches-2026/', label: 'Best GPS Watches 2026' },
-      { slug: '/best-golf-apps-2026/', label: 'Best Golf Apps 2026' },
-      { slug: '/arccos-caddie-review-2026/', label: 'Arccos Caddie Review' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' },
+      { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
+      { slug: '/arccos-caddie-review/', label: 'Arccos Caddie Review' },
     ],
   },
 
@@ -11870,7 +11870,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Structured Practice Drills', body: '<p><strong>Drill 1: The 10-Shot Test.</strong> Hit 10 balls with the same club at the same target. Record carry distance for each. Calculate your range (max minus min). This is your consistency number. Track it weekly.</p><p><strong>Drill 2: Smash Factor Focus.</strong> Hit 10 balls focusing ONLY on center contact. Slow your swing 10% and watch smash factor. A slower swing with 1.48 smash factor goes farther than a fast swing with 1.35.</p><p><strong>Drill 3: Distance Gapping.</strong> Hit 5 balls with each club in your bag. Record average carry. Create a distance chart. Knowing your ACTUAL distances (not what you think) saves 3-5 strokes per round.</p><p><strong>Drill 4: Scoring Zone.</strong> Hit 20 wedge shots at specific distances: 50, 75, 100 yards. Track how close each carry is to the target. This is where strokes are actually saved.</p>' },
       { h2: '30-Day Improvement Plan', body: '<p><strong>Week 1:</strong> Baseline. Hit 10 shots with driver, 7-iron, and PW. Record averages. This is your starting point.</p><p><strong>Week 2:</strong> Center contact. Every session, focus on smash factor. Slow down to find center. Track improvement.</p><p><strong>Week 3:</strong> Distance control. Run the gapping drill. Create your distance chart. Practice hitting specific numbers with wedges.</p><p><strong>Week 4:</strong> Consistency. Repeat the 10-shot test with every club. Compare to Week 1. Your dispersion should be tighter.</p><p><strong>Expected result:</strong> 2-4 strokes improvement in 30 days if you practice 3x per week for 20 minutes. Not from a magic swing change — from knowing your real numbers and practicing with intention.</p>' },
       { h2: 'Common Practice Mistakes', body: '<ul><li><strong>Hitting driver for 30 minutes straight</strong> — fun but useless. Your short game improves your score faster.</li><li><strong>Watching ball speed instead of smash factor</strong> — ball speed varies with effort. Smash factor shows quality of strike regardless of effort.</li><li><strong>No target</strong> — hitting balls without a distance target is exercise, not practice. Always pick a number.</li><li><strong>Changing your swing based on one shot</strong> — track trends over 10+ shots, not individual results. One bad read means nothing.</li></ul>' },
-      { h2: 'When to Upgrade Your Monitor', body: '<p>Your current monitor is holding you back when:</p><ul><li>You need spin data to optimize wedge distances (upgrade from LM1/basic R10 to MLM2PRO)</li><li>You want video replay to diagnose swing issues (MLM2PRO)</li><li>You want on-course tracking to identify weaknesses (<a href="/arccos-caddie-review-2026/">Arccos Caddie</a>)</li><li>You want professional-level accuracy for club fitting (<a href="/trackman-alternatives-2026/">Bushnell Launch Pro</a>)</li></ul><p>If your smash factor is already 1.45+ and your 10-shot dispersion is under 10 yards — you do not need a better monitor. You need more rounds.</p>' },
+      { h2: 'When to Upgrade Your Monitor', body: '<p>Your current monitor is holding you back when:</p><ul><li>You need spin data to optimize wedge distances (upgrade from LM1/basic R10 to MLM2PRO)</li><li>You want video replay to diagnose swing issues (MLM2PRO)</li><li>You want on-course tracking to identify weaknesses (<a href="/arccos-caddie-review/">Arccos Caddie</a>)</li><li>You want professional-level accuracy for club fitting (<a href="/trackman-alternatives-2026/">Bushnell Launch Pro</a>)</li></ul><p>If your smash factor is already 1.45+ and your 10-shot dispersion is under 10 yards — you do not need a better monitor. You need more rounds.</p>' },
     ],
     faq: [
       { q: 'How do I practice with a launch monitor?', a: 'Focus on three metrics: carry consistency, smash factor, and dispersion. Use structured drills (10-shot test, gapping, scoring zone) instead of mindlessly hitting balls.' },
@@ -12101,7 +12101,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-wedges-for-beginners/', label: 'Best Wedges for Beginners' },
       { slug: '/how-to-chip-in-golf/', label: 'How to Chip in Golf' },
-      { slug: '/best-golf-wedges-2026/', label: 'Best Wedges 2026' },
+      { slug: '/best-wedges-for-beginners/', label: 'Best Wedges for Beginners' },
     ],
   },
 
@@ -12151,7 +12151,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/wedge-bounce-guide/', label: 'Wedge Bounce Explained' },
       { slug: '/how-to-chip-in-golf/', label: 'How to Chip' },
-      { slug: '/best-golf-wedges-2026/', label: 'Best Wedges 2026' },
+      { slug: '/best-wedges-for-beginners/', label: 'Best Wedges for Beginners' },
     ],
   },
 

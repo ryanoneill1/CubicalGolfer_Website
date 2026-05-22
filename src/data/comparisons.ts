@@ -267,7 +267,7 @@ export const COMPARISONS: Comparison[] = [
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell Tour V6 Shift Review' },
-      { slug: '/best-golf-rangefinder-under-200/', label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
     ],
   },
 

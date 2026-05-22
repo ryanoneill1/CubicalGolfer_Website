@@ -5,21 +5,14 @@ import BaseLayout        from '../../layouts/BaseLayout.astro';
 import { ARTICLES }      from '../../data/articles';
 import { categoryMeta }  from '../../lib/seo';
 import { getCategoryArticles } from '../../lib/linking';
-import { breadcrumbSchema, collectionPageSchema, faqSchema } from '../../lib/schema';
+import { breadcrumbSchema, collectionPageSchema } from '../../lib/schema';
 
 const cat      = 'golf-lifestyle';
 const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat);
-const hubFaq = [
-  { q: 'How can I play more golf with a full-time job?', a: 'Three proven tactics: play 9 holes instead of 18 (saves 2 hours per round), use a push cart to speed up walking rounds, and join a twilight league that starts at 5 PM on weekdays. Most courses offer discounted twilight rates after 3-4 PM. See our guide on sneaking in more rounds.' },
-  { q: 'Is golf fitness actually important for weekend golfers?', a: 'Yes — but not for the reason you think. Weekend golfers do not need to gain 10 mph of swing speed. They need to avoid injury and maintain posture through 18 holes. Hip mobility, core rotation, and forearm strength are the three areas that matter most. Our desk exercises take 5 minutes and prevent the back pain that ruins the back nine.' },
-  { q: 'What are the best golf gifts for someone who already has everything?', a: 'Consumables and experiences: premium golf balls they would not buy themselves ($50/dz Pro V1s), a round at a bucket-list course, or a custom ball marker. Avoid clubs (they need to be fitted) and avoid novelty items (they end up in a drawer). See our gift detective guide for creative options.' },
-];
-
 const schemas  = [
   breadcrumbSchema(meta.breadcrumbs),
   collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
-  faqSchema(hubFaq),
 ];
 ---
 
@@ -64,18 +57,6 @@ weekend on the course.</p>
   </div>
 
 
-
-  <section class="hub-intro" style="margin:0 0 32px;max-width:960px;">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 12px;">Golf Life Beyond the Course</h2>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">Golf is not just what happens between the first tee and the 18th green. It is the <a href="/golf-practice-routine-before-work/">morning putting routine</a> before you commute, the <a href="/desk-exercises-fix-golf-slice/">desk stretches</a> that keep your hips rotating, the <a href="/golf-desk-accessories-office/">desk accessories</a> that remind you the weekend is coming, and the <a href="/how-to-sneak-in-more-golf-rounds/">creative scheduling</a> that turns a busy week into a golf week.</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">This section covers everything that surrounds the game — <a href="/golf-fitness-office-golfer/">fitness routines</a> designed for desk workers, <a href="/best-golf-gifts-for-dad/">gift guides</a> for the golfer who says they do not need anything, and the lifestyle hacks that keep golf fun when your schedule is packed.</p>
-
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">For the golfer who works a desk job, the biggest challenge is not your swing — it is finding time and staying physically ready to play well when you do get out. Our <a href="/golf-fitness-office-golfer/">office fitness guide</a> covers the hip mobility, thoracic rotation, and grip strength exercises you can do between meetings. The <a href="/desk-exercises-fix-golf-slice/">desk exercises for your slice</a> target the exact muscle patterns that cause an open clubface. And the <a href="/golf-practice-routine-before-work/">morning practice routine</a> turns 15 minutes before your commute into genuine skill building.</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">We also maintain the most thorough <a href="/best-golf-gifts-for-dad/">golf gift guides</a> on the internet — not generic lists but gifts organized by what the golfer actually needs, whether that is <a href="/best-golf-gifts-under-50/">something under $50</a>, a <a href="/best-christmas-golf-gifts/">Christmas surprise</a>, or a <a href="/gifts-for-golfer-who-never-keeps-anything/">gift for someone who claims they do not want anything</a>. Every recommendation is something we have personally used or gifted</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">We update this section seasonally — <a href="/best-christmas-golf-gifts/">Christmas gift guides</a> go live in October, <a href="/fathers-day-golf-gifts-2026/">Father's Day picks</a> in April, and weather-specific content like <a href="/best-rain-gear-midwest-golfers/">Midwest rain gear</a> ahead of spring golf season. Bookmark this page and check back when the season changes.</p>
-    <p style="font-size:14px;line-height:1.7;color:var(--muted);margin:0;">All lifestyle content focused on practical tips you can implement this week, not aspirational advice.</p>
-  </section>
-
   <div class="cat-page-body">
     {articles.length === 0 ? (
       <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
@@ -112,22 +93,5 @@ weekend on the course.</p>
       </div>
     )}
   </div>
-
-
-  <section class="hub-faq" style="max-width:960px;margin:40px 0 0;">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Frequently Asked Questions</h2>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">How can I play more golf with a full-time job?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Three proven tactics: play 9 holes instead of 18 (saves 2 hours per round), use a push cart to speed up walking rounds, and join a twilight league that starts at 5 PM on weekdays. Most courses offer discounted twilight rates after 3-4 PM. See our guide on sneaking in more rounds.</p>
-    </details>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">Is golf fitness actually important for weekend golfers?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Yes — but not for the reason you think. Weekend golfers do not need to gain 10 mph of swing speed. They need to avoid injury and maintain posture through 18 holes. Hip mobility, core rotation, and forearm strength are the three areas that matter most. Our desk exercises take 5 minutes and prevent the back pain that ruins the back nine.</p>
-    </details>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">What are the best golf gifts for someone who already has everything?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Consumables and experiences: premium golf balls they would not buy themselves ($50/dz Pro V1s), a round at a bucket-list course, or a custom ball marker. Avoid clubs (they need to be fitted) and avoid novelty items (they end up in a drawer). See our gift detective guide for creative options.</p>
-    </details>
-  </section>
 
 </BaseLayout>
