@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { getAffiliateLink } from '../../data/affiliate-links';
 
 const meta = {
   title:       'Free Golf Tools & Calculators — Cubical Golfer',
@@ -79,11 +80,16 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
 
     <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
-      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Tool</span>
-      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Golf Ball Compression Chart</p>
-      <p style="font-size:13px;margin:0;color:var(--muted);">Filter 34+ balls by swing speed — find your perfect match in 30 seconds</p>
+      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Garmin Approach R10 — ~$599</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">Best launch monitor for weekend golfers — pairs with our simulator calculator</p>
     </div>
-    <a href="/golf-ball-compression-chart/" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;">Try It Free →</a>
+    {(() => {
+      const aff = getAffiliateLink('garmin-approach-r10');
+      return aff?.url ? (
+        <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
+      ) : null;
+    })()}
   </div>
 
   <section style="max-width:100%;margin:0 auto 40px;padding:24px var(--page-px) 0;">
