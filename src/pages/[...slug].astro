@@ -889,25 +889,6 @@ if (isBuyingGuide) {
     {/* SOCIAL SHARE */}
     <SocialShare url={`https://www.cubicalgolfer.com${article.slug}`} title={article.titleDisplay} />
 
-    {/* ─── END-OF-ARTICLE CTA ─── */}
-    {isBuyingGuide && (() => {
-      const endAff = getAffiliateLink((article as any).quickAnswerProduct);
-      if (!endAff?.url) return null;
-      const endName = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === (article as any).quickAnswerProduct)?.name
-        ?? (article as any).quickAnswerProduct?.replace(/-/g, ' ');
-      return (
-        <div style="margin:32px 0;padding:24px;background:var(--green);border-radius:12px;color:#fff;text-align:center;">
-          <p style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin:0 0 8px;">OUR TOP PICK</p>
-          <p style="font-size:20px;font-weight:800;margin:0 0 4px;text-transform:capitalize;">{endName}</p>
-          <p style="font-size:16px;color:var(--gold);font-weight:700;margin:0 0 16px;">{endAff.price} at {endAff.retailer}</p>
-          <a href={endAff.url} target="_blank" rel="nofollow noopener sponsored"
-             style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:15px;font-weight:800;padding:14px 32px;border-radius:8px;text-decoration:none;">
-            Check Today's Price →
-          </a>
-        </div>
-      );
-    })()}
-
     {/* RELATED COMPARISONS — links to /compare/ pages for better internal linking */}
     {(article as any).relatedComparisons && (article as any).relatedComparisons.length > 0 && (
       <RelatedLinks
