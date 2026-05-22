@@ -17,6 +17,7 @@
       <button id="exit-submit" class="exit-intent__btn">Send Me the Cheat Sheet</button>
     </div>
     <p class="exit-intent__disclaimer">No spam. Unsubscribe any time.</p>
+    <button class="exit-intent__skip" id="exit-intent-skip">No thanks, I'll figure it out myself</button>
     <p class="exit-intent__thanks" id="exit-intent-thanks" hidden>Check your inbox — the compression cheat sheet is on its way!</p>
   </div>
 </div>
@@ -68,6 +69,12 @@
     padding: 14px 18px; background: var(--green); border-radius: 8px;
     color: #fff; font-size: 14px; font-weight: 600; margin: 8px 0 0;
   }
+  .exit-intent__skip {
+    background: none; border: none; color: var(--muted); font-size: 12px;
+    cursor: pointer; margin-top: 10px; text-decoration: underline;
+    text-underline-offset: 2px; font-family: inherit;
+  }
+  .exit-intent__skip:hover { color: var(--text); }
   @media (max-width: 480px) {
     .exit-intent__inner { padding: 32px 24px; }
     .exit-intent__field { flex-direction: column; border-radius: 8px; overflow: visible; }
@@ -127,9 +134,19 @@
     });
     resetIdle();
 
+    // Mobile: scroll back UP more than 300px (user is done reading)
+    var maxScroll = 0;
+    document.addEventListener('scroll', function() {
+      var y = window.scrollY;
+      if (y > maxScroll) maxScroll = y;
+      if (maxScroll - y > 300 && maxScroll > 500) show();
+    }, { passive: true });
+
     // Close handlers
     closeBtn.addEventListener('click', dismiss);
     backdrop.addEventListener('click', dismiss);
+    var skipBtn = document.getElementById('exit-intent-skip');
+    if (skipBtn) skipBtn.addEventListener('click', dismiss);
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && shown) dismiss();
     });
