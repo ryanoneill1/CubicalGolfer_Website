@@ -54,47 +54,44 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
   </header>
 
 
-  <section class="compare-split" style="max-width:740px;margin:0 auto 36px;padding:0 var(--page-px);">
+  <section style="max-width:860px;margin:0 auto 36px;padding:0 var(--page-px);">
 
-    <!-- Split layout: image+stats LEFT, text RIGHT -->
-    <div style="display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:start;margin-bottom:28px;">
+    <div style="display:grid;grid-template-columns:340px 1fr;gap:32px;align-items:start;">
 
-      <!-- LEFT: Hero image + stats -->
+      <!-- LEFT: Image + stats -->
       <div>
         <img src="/images/compare-hero.webp"
-          alt="Side-by-side golf product comparisons: rangefinders, drivers, and putters"
-          width="1200" height="380" loading="eager" decoding="async"
-          style="width:100%;height:auto;border-radius:var(--r2);margin-bottom:12px;" />
-        <div style="display:flex;gap:8px;">
-          <div style="flex:1;background:var(--cream);border:1px solid var(--border);border-radius:var(--r1);padding:10px 8px;text-align:center;">
+          alt="Cubical Golfer product comparisons: rangefinders, drivers, and putters tested side by side"
+          width="600" height="500" loading="eager" decoding="async"
+          style="width:100%;height:auto;border-radius:var(--r2);" />
+        <div style="display:flex;gap:8px;margin-top:12px;">
+          <div style="flex:1;background:var(--cream);border:1px solid var(--border);border-radius:var(--r1);padding:10px 6px;text-align:center;">
             <div style="font-size:20px;font-weight:700;color:var(--green);">12</div>
             <div style="font-size:10px;color:var(--muted);">Comparisons</div>
           </div>
-          <div style="flex:1;background:var(--cream);border:1px solid var(--border);border-radius:var(--r1);padding:10px 8px;text-align:center;">
+          <div style="flex:1;background:var(--cream);border:1px solid var(--border);border-radius:var(--r1);padding:10px 6px;text-align:center;">
             <div style="font-size:20px;font-weight:700;color:var(--green);">100+</div>
             <div style="font-size:10px;color:var(--muted);">Shots each</div>
           </div>
-          <div style="flex:1;background:var(--cream);border:1px solid var(--border);border-radius:var(--r1);padding:10px 8px;text-align:center;">
+          <div style="flex:1;background:var(--cream);border:1px solid var(--border);border-radius:var(--r1);padding:10px 6px;text-align:center;">
             <div style="font-size:20px;font-weight:700;color:var(--green);">5</div>
             <div style="font-size:10px;color:var(--muted);">Categories</div>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT: Editorial text -->
-      <div>
-        <h2 style="font-size:17px;color:var(--green);margin:0 0 10px;line-height:1.3;">Side-by-Side Product Tests — Not Just Spec Sheet Comparisons</h2>
-        <p style="font-size:14px;line-height:1.65;color:var(--body);margin:0 0 10px;">Every comparison on this page was tested by the same golfer, on the same day, on the same course. We do not copy specs from two product pages and call it a comparison. We actually buy both products, hit 100+ shots with each on a launch monitor, play real rounds, and then tell you which one is worth your money.</p>
-        <p style="font-size:14px;line-height:1.65;color:var(--body);margin:0 0 10px;">Our <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">rangefinder comparisons</a> measure pin-lock speed and accuracy over 12+ rounds. Our <a href="/best-golf-launch-monitors-2026/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">launch monitor comparisons</a> check accuracy against a Trackman 4 baseline over 200+ shots. Our <a href="/best-golf-drivers-forgiveness/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">driver comparisons</a> test forgiveness on off-center hits, not just dead-center ball speed.</p>
-        <p style="font-size:14px;line-height:1.65;color:var(--body);margin:0;">Every comparison ends with a clear winner and a specific recommendation by golfer type — because the best product for a 5-handicap is often the wrong product for a 20-handicap. If both products are close, we say so and explain exactly what the extra money buys.</p>
+      <!-- RIGHT: All text as one flowing block -->
+      <div style="font-size:14px;line-height:1.7;color:var(--body);">
+        <h2 style="font-size:18px;color:var(--green);margin:0 0 12px;line-height:1.3;">Side-by-Side Product Tests — Not Just Spec Sheet Comparisons</h2>
+        <p style="margin:0 0 12px;">Every comparison on this page was tested by the same golfer, on the same day, on the same course. We do not copy specs from two product pages and call it a comparison. We actually buy both products, hit 100+ shots with each on a launch monitor, play real rounds, and then tell you which one is worth your money.</p>
+        <p style="margin:0 0 12px;">Our <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">rangefinder comparisons</a> measure pin-lock speed and accuracy over 12+ rounds. Our <a href="/best-golf-launch-monitors-2026/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">launch monitor comparisons</a> check accuracy against a Trackman 4 baseline over 200+ shots. Our <a href="/best-golf-drivers-forgiveness/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">driver comparisons</a> test forgiveness on off-center hits, not just dead-center ball speed.</p>
+        <p style="margin:0 0 12px;">Every comparison ends with a clear winner and a specific recommendation by golfer type — because the best product for a 5-handicap is often the wrong product for a 20-handicap. If both products are close, we say so and explain exactly what the extra money buys.</p>
+        <p style="margin:0 0 12px;">We currently cover the matchups that weekend golfers ask about most: <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Bushnell vs Precision Pro</a> in rangefinders, <a href="/compare/skytrak-vs-garmin-r10/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">SkyTrak vs Garmin R10</a> in launch monitors, <a href="/compare/callaway-paradym-vs-taylormade-qi35/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Callaway Paradym vs TaylorMade Qi35</a> in drivers, and several GPS watch and putter matchups. Each comparison includes a side-by-side specs table, real-world performance data, a clear winner, and FAQ answers for the questions you are probably Googling right now.</p>
+        <p style="margin:0 0 12px;">If you cannot decide between two products, start with the comparison that matches your category — then check the full buying guide for that category to see the complete ranked list. Most comparisons also include a <a href="/gear-quiz/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">gear quiz</a> recommendation if you want a faster answer based on your handicap and budget.</p>
+        <p style="font-size:13px;color:var(--muted);margin:0;">All comparisons updated when new models release or prices change significantly.</p>
       </div>
 
     </div>
-
-    <!-- BELOW BOTH: Remaining text (full width) -->
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">We currently cover the matchups that weekend golfers ask about most: <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Bushnell vs Precision Pro</a> in rangefinders, <a href="/compare/skytrak-vs-garmin-r10/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">SkyTrak vs Garmin R10</a> in launch monitors, <a href="/compare/callaway-paradym-vs-taylormade-qi35/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Callaway Paradym vs TaylorMade Qi35</a> in drivers, and several GPS watch and putter matchups. Each comparison includes a side-by-side specs table, real-world performance data, a clear winner, and FAQ answers for the questions you are probably Googling right now.</p>
-    <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0 0 12px;">If you cannot decide between two products, start with the comparison that matches your category — then check the full buying guide for that category to see the complete ranked list. Most comparisons also include a <a href="/gear-quiz/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">gear quiz</a> recommendation if you want a faster answer based on your handicap and budget.</p>
-    <p style="font-size:13px;line-height:1.7;color:var(--muted);margin:0;">All comparisons updated when new models release or prices change significantly.</p>
 
   </section>
 
