@@ -45,6 +45,8 @@ export const GET: APIRoute = async () => {
     { loc: '/golf-simulator-cost-calculator/', changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
     { loc: '/golf-club-distance-chart/',       changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
     { loc: '/golf-equipment-budget-planner/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
+    { loc: '/golf-handicap-calculator/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
+    { loc: '/golf-swing-speed-chart/',       changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
   ];
 
   return new Response(buildSitemapXml(entries), {
