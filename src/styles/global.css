@@ -120,7 +120,7 @@ html { scroll-behavior: smooth; font-size: 16px; border: 0; }
   /* ── Layout ──────────────────────────────────────────────────────────── */
   --nav-h:      64px;
   --prose-w:    720px;
-  --content-w:  1140px;
+  --content-w:  1400px;
   --page-px:    clamp(1.5rem, 5vw, 4rem);
 
   /* Aliases for new token names (backwards compatible) */
@@ -1759,24 +1759,16 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   }
 }
 
-/* ── FULL-WIDTH RESPONSIVE TABLES ──────────────────────────────────────── */
+/* ── RESPONSIVE TABLES ─────────────────────────────────────────────────── */
 .comparison-table-wrapper {
-  /* Break out of content container to span full viewport */
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 0 var(--page-px);
-  overflow: visible;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .comparison-table-wrapper .cmp-table {
   width: 100%;
-  table-layout: auto;
 }
 @media (max-width: 640px) {
-  .comparison-table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 0;
-  }
   .comparison-table-wrapper .cmp-table {
     min-width: 580px;
     font-size: 13px;
@@ -1784,30 +1776,6 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   .comparison-table-wrapper .cmp-table th,
   .comparison-table-wrapper .cmp-table td {
     padding: 10px 12px;
-  }
-  .comparison-table-wrapper .cmp-table th:first-child,
-  .comparison-table-wrapper .cmp-table td:first-child {
-    position: sticky;
-    left: 0;
-    z-index: 1;
-    background: #fff;
-    box-shadow: 2px 0 4px rgba(0,0,0,0.04);
-  }
-  .comparison-table-wrapper .cmp-table th:first-child {
-    background: var(--green);
-  }
-  .comparison-table-wrapper .cmp-table tr:nth-child(even) td:first-child {
-    background: #fafaf8;
-  }
-  .comparison-table-wrapper::after {
-    content: '← Scroll to see all columns →';
-    display: block;
-    text-align: center;
-    font-size: 11px;
-    color: var(--muted);
-    padding: 6px;
-    background: var(--cream);
-    border-top: 1px solid var(--border);
   }
 }
 
