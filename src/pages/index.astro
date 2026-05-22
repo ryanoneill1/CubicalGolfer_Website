@@ -118,6 +118,25 @@ const TAG_CLASSES: Record<string, string> = {
 
   <TrustBar />
 
+  {/* ── FEATURED PICK ── */}
+  {(() => {
+    const aff = getAffiliateLink('callaway-paradym-ai-smoke-max');
+    return (
+      <div style="max-width:var(--content-w);margin:0 auto;padding:0 var(--page-px);">
+        <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+          <div style="flex:1;min-width:200px;">
+            <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
+            <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Callaway Paradym Ai Smoke Max Driver — ~$599</p>
+            <p style="font-size:13px;margin:0;color:var(--muted);">Most forgiving driver we tested in 2026 — only 8 yards loss on 15mm toe mishits</p>
+          </div>
+          {aff?.url && (
+            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
+          )}
+        </div>
+      </div>
+    );
+  })()}
+
   <!-- ── TOP PICKS PRODUCT GRID (monetised above fold) ── -->
   {TOP_PICKS.length > 0 && (
     <section class="home-picks" aria-labelledby="picks-h">
