@@ -95,6 +95,20 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
 
   </section>
 
+  <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+    <div style="flex:1;min-width:200px;">
+      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Bushnell Tour V6 vs Precision Pro NX9</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">Our most popular comparison — $329 vs $169, tested over 12 rounds</p>
+    </div>
+    {(() => {
+      return (
+        <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;">Read Comparison →</a>
+      );
+    })()}
+  </div>
+
+
   <div class="cat-page-body">
     <div class="articles-grid">
       {COMPARISONS.map(c => (
