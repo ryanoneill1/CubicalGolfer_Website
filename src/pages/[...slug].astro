@@ -91,7 +91,8 @@ const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 const tocItems = (() => {
   const sections = (article as any).sections || [];
   if (sections.length < 5) return [];
-  const items = sections
+  // For buying guides with many products, only show guide-level sections (not individual products)
+  let items = sections
     .filter((s: any) => s.h2)
     .map((s: any) => ({
       label: s.h2.replace(/🥇|🥈|🥉|⭐|🏆/g, '').trim(),
@@ -100,6 +101,11 @@ const tocItems = (() => {
     }));
   // Add FAQ if article has faq
   if ((article as any).faq?.length > 0) {
+    items.push({ label: 'FAQ', anchor: 'faq', indent: false });
+  }
+  // Cap at 10 items to prevent sidebar overflow
+  if (items.length > 10) {
+    items = items.slice(0, 9);
     items.push({ label: 'FAQ', anchor: 'faq', indent: false });
   }
   return items;
@@ -413,7 +419,7 @@ if (isBuyingGuide) {
   )}
 
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
-  <div class={`art-layout ${tocItems.length > 0 ? 'art-layout--has-toc' : ''}`}>
+  <div class="art-layout">
   <article class="art-content">
 
     {/* TABLE OF CONTENTS — mobile accordion (inline in flow) */}
@@ -974,10 +980,7 @@ if (isBuyingGuide) {
 
   </article>
 
-  {/* Desktop ToC sidebar (second column of grid) */}
-  {tocItems.length > 0 && (
-    <TableOfContents items={tocItems} heading={isBuyingGuide ? 'In this review' : 'In this guide'} />
-  )}
+
   </div> <!-- /art-layout -->
 
   {/* ── Prev / Next Navigation ───────────────────────────────────────── */}
