@@ -6,6 +6,13 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   integrations: [],
+
+  // Built-in prefetch — preloads internal links on hover (Astro 4.x native)
+  prefetch: {
+    prefetchAll: false,
+    defaultStrategy: 'hover',
+  },
+
   build: {
     format: 'directory',
     assets: '_astro',

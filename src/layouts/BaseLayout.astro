@@ -8,6 +8,7 @@
 //   - Removed render-blocking font request, replaced with display=swap preload
 
 import type { PageMeta } from '../data/types';
+import { ViewTransitions } from 'astro:transitions';
 import EmailCapture from '../components/EmailCapture.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import SiteSearch from '../components/SiteSearch.astro';
@@ -94,6 +95,12 @@ const NAV_ITEMS = [
   <link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Preconnect to external domains for faster affiliate/image loads -->
+
+  <!-- View Transitions — smooth page-to-page animations -->
+  <ViewTransitions />
+
+  <!-- Plausible Analytics — privacy-friendly, no cookies, GDPR compliant -->
+  <script defer data-domain="cubicalgolfer.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
