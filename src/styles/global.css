@@ -1760,23 +1760,27 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 
 /* ── RESPONSIVE TABLES ─────────────────────────────────────────────────── */
+/* Wrapper provides scroll container when present */
 .comparison-table-wrapper {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
-.comparison-table-wrapper .cmp-table {
+/* All comparison tables fill their container — with or without wrapper */
+.cmp-table {
   width: 100%;
 }
 @media (max-width: 640px) {
-  .comparison-table-wrapper .cmp-table {
-    min-width: 580px;
+  .cmp-table {
+    min-width: 520px;
     font-size: 13px;
   }
-  .comparison-table-wrapper .cmp-table th,
-  .comparison-table-wrapper .cmp-table td {
+  .cmp-table th,
+  .cmp-table td {
     padding: 10px 12px;
   }
+  /* Tables without wrapper still scroll via parent overflow */
+  .art-content { overflow-x: auto; }
 }
 
 /* ── SCORE BAR UTILITIES (global, supplements CGScore scoped styles) ──── */
