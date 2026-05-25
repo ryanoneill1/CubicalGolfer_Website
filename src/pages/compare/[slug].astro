@@ -42,6 +42,19 @@ const PRODUCT_AFFILIATE_MAP: Record<string, string> = {
   'scotty-cameron-phantom':'scotty-cameron-phantom-x',
   'lab-df3':               'lab-golf-df3',
   'odyssey-two-ball':      'odyssey-two-ball-eleven',
+  'garmin-r10':            'garmin-approach-r10',
+  'shot-scope-lm1':        'shot-scope-lm1',
+  'callaway-ai-smoke-max': 'callaway-paradym-ai-smoke-max',
+  'pro-v1':                'titleist-pro-v1',
+  'chrome-soft':           'callaway-chrome-soft',
+  'kirkland':              'kirkland-signature',
+  'mevo-plus':             'flightscope-mevo-plus',
+  'garmin-s70':            'garmin-approach-s70',
+  'bushnell-v6':           'bushnell-tour-v6-shift',
+  'callaway-300-pro':      'callaway-300-pro',
+  'flightscope-mevo-gen2': 'flightscope-mevo-gen2',
+  'garmin-s12':            'garmin-approach-s12',
+  'bushnell-ion-elite':    'bushnell-phantom-2',
 };
 
 const PRODUCT_NAMES: Record<string, string> = {
@@ -62,6 +75,19 @@ const PRODUCT_NAMES: Record<string, string> = {
   'scotty-cameron-phantom':'Scotty Cameron Phantom X',
   'lab-df3':               'LAB Golf DF3',
   'odyssey-two-ball':      'Odyssey Two Ball Eleven',
+  'garmin-r10':            'Garmin Approach R10',
+  'shot-scope-lm1':        'Shot Scope LM1',
+  'callaway-ai-smoke-max': 'Callaway Paradym Ai Smoke Max',
+  'pro-v1':                'Titleist Pro V1',
+  'chrome-soft':           'Callaway Chrome Soft',
+  'kirkland':              'Kirkland Signature',
+  'mevo-plus':             'Flightscope Mevo+',
+  'garmin-s70':            'Garmin Approach S70',
+  'bushnell-v6':           'Bushnell Tour V6 Shift',
+  'callaway-300-pro':      'Callaway 300 Pro',
+  'flightscope-mevo-gen2': 'Flightscope Mevo Gen2',
+  'garmin-s12':            'Garmin Approach S12',
+  'bushnell-ion-elite':    'Bushnell ION Elite',
 };
 
 const affA    = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
@@ -178,7 +204,10 @@ if (compProducts.length > 0) {
         <ol class="toc-list">
           {c.specs && c.specs.length > 0 && <li><a href="#quick-specs-comparison">Quick Specs</a></li>}
           <li><a href="#who-this-comparison-is-for">Who This Is For</a></li>
-          <li><a href="#verdict">{nameA} vs {nameB} — Verdict</a></li>
+          {c.sections && c.sections.map((s: any) => (
+            <li><a href={`#${s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>{s.h2}</a></li>
+          ))}
+          <li><a href="#winner-and-full-verdict">{nameA} vs {nameB} — Verdict</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ol>
       </nav>
@@ -194,6 +223,7 @@ if (compProducts.length > 0) {
     {c.specs && c.specs.length > 0 && (
       <div id="quick-specs-comparison" class="cmp-wrap" style="margin-top:24px">
         <h2>Quick Specs Comparison</h2>
+        <div class="comparison-table-wrapper">
         <table class="cmp-table" role="table">
           <caption class="sr-only">Side-by-side specs: {nameA} vs {nameB}</caption>
           <thead>
@@ -213,6 +243,7 @@ if (compProducts.length > 0) {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
     )}
 
@@ -299,6 +330,18 @@ if (compProducts.length > 0) {
       <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;">
         <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters for Weekend Golfers</h2>
         <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
+      </div>
+    )}
+
+    {/* ── EDITORIAL SECTIONS — deep analysis, who-should-buy, price-value ── */}
+    {c.sections && c.sections.length > 0 && (
+      <div class="compare-editorial">
+        {c.sections.map((s: any) => (
+          <section style="margin:28px 0;">
+            <h2 id={s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')} style="font-size:20px;color:var(--green);margin:0 0 12px;">{s.h2}</h2>
+            <div style="font-size:15px;line-height:1.7;color:var(--body);" set:html={s.body} />
+          </section>
+        ))}
       </div>
     )}
 
