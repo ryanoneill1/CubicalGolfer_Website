@@ -1,11 +1,6 @@
-# 301 redirects: legacy .html URLs → clean directory URLs
-# These .html files previously existed in public/ and may be indexed by Google.
-# Removing them without redirects would create 404s and waste SEO equity.
-
-# Off-topic section redirect — /office-hacks/ consolidates into main improvement hub
+# 301 redirects
 /office-hacks/  /improve-your-golf-game/  301
 /best-golf-rangefinder-under-200/  /best-golf-rangefinders-under-200/  301
-
 /best-golf-rangefinder-beginners.html  /best-golf-rangefinder-beginners/  301
 /best-gps-golf-watch-high-handicappers.html  /best-gps-golf-watch-high-handicappers/  301
 /best-golf-apps-handicap-tracking.html  /best-golf-apps-handicap-tracking/  301
@@ -21,35 +16,25 @@
 /best-budget-launch-monitor.html  /best-budget-launch-monitor/  301
 /best-golf-swing-analyzer-iphone.html  /best-golf-swing-analyzer-iphone/  301
 /best-golf-training-aids-home-practice.html  /best-golf-training-aids-home-practice/  301
-
-# ── ORPHAN PAGE REDIRECTS ───────────────────────────────────────────────
-# These pages exist as client-side redirect HTML files. Adding them here
-# makes Cloudflare 301 redirect at the CDN level (faster, SEO-correct).
-/golf-ball-compression-database/          /golf-ball-compression-chart/          301
-/best-golf-apps-handicap-tracking/        /best-golf-apps/                      301
-/best-golf-balls-weekend-golfers/         /best-golf-balls-2026/                301
-/best-golf-rangefinder-under-150/         /best-golf-rangefinders-under-200/    301
-/best-indoor-golf-net-setup/              /best-golf-hitting-net-apartment-garage/ 301
-/best-indoor-putting-green-office/        /best-indoor-putting-green-office-home/ 301
-/average-golf-handicap-weekend-golfer/    /average-golf-handicap/               301
-/best-beginner-golf-club-sets/            /best-beginner-golf-set-under-500/    301
-/how-to-improve-putting/                  /how-to-stop-3-putting/              301
-/arccos-vs-shot-scope/                    /compare/arccos-vs-shot-scope/        301
-
-# ── 404 FIX ─────────────────────────────────────────────────────────────
-/indoor-golf/                             /best-indoor-putting-green-office-home/ 301
-
-# ── CLUSTER CONSOLIDATION REDIRECTS ──────────────────────────────────
-/best-blade-putters-2026/                          /best-golf-putters-2026/                           301
-/best-mallet-putters-2026/                         /best-golf-putters-2026/                           301
-/best-putter-high-handicapper/                     /best-golf-putters-2026/                           301
-/best-putters-shaky-hands-older-golfers/           /best-golf-putters-2026/                           301
-/best-putters-yips/                                /best-golf-putters-2026/                           301
-/best-golf-net-for-garage/                         /best-golf-hitting-net-apartment-garage/           301
-/best-golf-driver-seniors/                         /best-golf-driver-slow-swing-speed/                301
-/golf-practice-routine-before-work/                /golf-practice-drills-at-home/                     301
-/how-to-practice-golf-at-home/                     /golf-practice-drills-at-home/                     301
-/golf-desk-accessories-office/                     /office-to-golf-course-playbook/                   301
-/golf-fitness-office-golfer/                       /office-to-golf-course-playbook/                   301
-
-# ── CLUSTER CONSOLIDATION REDIRECTS ──────────────────────────────────
+/golf-ball-compression-database/  /golf-ball-compression-chart/  301
+/best-golf-apps-handicap-tracking/  /best-golf-apps/  301
+/best-golf-balls-weekend-golfers/  /best-golf-balls-2026/  301
+/best-golf-rangefinder-under-150/  /best-golf-rangefinders-under-200/  301
+/best-indoor-golf-net-setup/  /best-golf-hitting-net-apartment-garage/  301
+/best-indoor-putting-green-office/  /best-indoor-putting-green-office-home/  301
+/average-golf-handicap-weekend-golfer/  /average-golf-handicap/  301
+/best-beginner-golf-club-sets/  /best-beginner-golf-set-under-500/  301
+/how-to-improve-putting/  /how-to-stop-3-putting/  301
+/arccos-vs-shot-scope/  /compare/arccos-vs-shot-scope/  301
+/indoor-golf/  /best-indoor-putting-green-office-home/  301
+/best-blade-putters-2026/  /best-golf-putters-2026/  301
+/best-mallet-putters-2026/  /best-golf-putters-2026/  301
+/best-putter-high-handicapper/  /best-golf-putters-2026/  301
+/best-putters-shaky-hands-older-golfers/  /best-golf-putters-2026/  301
+/best-putters-yips/  /best-golf-putters-2026/  301
+/best-golf-net-for-garage/  /best-golf-hitting-net-apartment-garage/  301
+/best-golf-driver-seniors/  /best-golf-driver-slow-swing-speed/  301
+/golf-practice-routine-before-work/  /golf-practice-drills-at-home/  301
+/how-to-practice-golf-at-home/  /golf-practice-drills-at-home/  301
+/golf-desk-accessories-office/  /office-to-golf-course-playbook/  301
+/golf-fitness-office-golfer/  /office-to-golf-course-playbook/  301
