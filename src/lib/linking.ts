@@ -431,7 +431,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
   ],
   'golf-desk-accessories': [
-    { slug: '/office-hacks/',                        label: 'Office Hacks Hub' },
+    { slug: '/office-to-golf-course-playbook/',      label: 'Office-to-Course Playbook' },
     { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
     { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
     { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home' },

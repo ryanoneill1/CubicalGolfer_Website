@@ -5,6 +5,12 @@ import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import StickyBar     from '../components/StickyBar.astro';
+import ProductCTA    from '../components/ProductCTA.astro';
+import CGScore       from '../components/CGScore.astro';
+import AuthorByline  from '../components/AuthorByline.astro';
+import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import TableOfContents from '../components/TableOfContents.astro';
+import RelatedLinks  from '../components/RelatedLinks.astro';
 import BackToTop     from '../components/BackToTop.astro';
 import SocialShare   from '../components/SocialShare.astro';
 import ExitIntent    from '../components/ExitIntent.astro';
@@ -18,7 +24,7 @@ import type { Article } from '../data/types';
 
 export async function getStaticPaths() {
   return ARTICLES
-    .filter(article => article.slug !== '/golf-ball-compression-chart/') // standalone page
+    .filter(article => article.slug !== '/golf-ball-compression-chart/' && article.slug !== '/golf-simulator-complete-guide/' && article.slug !== '/launch-monitor-buying-guide/' && article.slug !== '/golf-ball-complete-guide/' && article.slug !== '/golf-simulator-cost-calculator/' && article.slug !== '/golf-club-distance-chart/' && article.slug !== '/golf-equipment-budget-planner/') // standalone page
     .map(article => ({
     params: { slug: article.slug.replace(/^\/|\/$/g, '') },
     props: { article },
@@ -81,6 +87,30 @@ const nextArticle = currentIdx < categoryArticles.length - 1 ? categoryArticles[
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison' || article.pageType === 'review';
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
+// Generate ToC items from article sections (for articles with 4+ sections)
+const tocItems = (() => {
+  const sections = (article as any).sections || [];
+  if (sections.length < 5) return [];
+  // For buying guides with many products, only show guide-level sections (not individual products)
+  let items = sections
+    .filter((s: any) => s.h2)
+    .map((s: any) => ({
+      label: s.h2.replace(/🥇|🥈|🥉|⭐|🏆/g, '').trim(),
+      anchor: s.h2.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+      indent: false,
+    }));
+  // Add FAQ if article has faq
+  if ((article as any).faq?.length > 0) {
+    items.push({ label: 'FAQ', anchor: 'faq', indent: false });
+  }
+  // Cap at 10 items to prevent sidebar overflow
+  if (items.length > 10) {
+    items = items.slice(0, 9);
+    items.push({ label: 'FAQ', anchor: 'faq', indent: false });
+  }
+  return items;
+})();
+
 // Sticky mobile CTA bar — first product for buying guides
 const stickyProduct = (() => {
   if (!isBuyingGuide) return null;
@@ -105,31 +135,31 @@ const AUTHOR_BYLINE = {
 // Cross-category "Cubicle Golfer" tips — shown on ALL article pages with category-aware links
 const CUBICLE_TIPS_BY_CAT: Record<string, Array<{ slug: string; label: string }>> = {
   'gear-reviews': [
-    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Office-to-Course Playbook' },
     { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills You Can Do at Home in 15 Minutes' },
     { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Sneak In More Golf Rounds With a Day Job' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
   ],
   'golf-tech': [
-    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Office-to-Course Playbook' },
     { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (No Range Needed)' },
     { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness Routines for the Office Golfer' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
   ],
   'improve-game': [
-    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Office-to-Course Playbook' },
     { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness Routines for the Office Golfer' },
     { slug: '/golf-practice-routine-before-work/', label: '15-Min Morning Practice Routine' },
     { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Sneak In More Golf Rounds With a Day Job' },
   ],
   'golf-accessories': [
-    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Office-to-Course Playbook' },
     { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills You Can Do at Home in 15 Minutes' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
     { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },
   ],
   'golf-lifestyle': [
-    { slug: '/office-hacks/', label: 'Office Hacks Hub — All Tips for 9-to-5 Golfers' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Office-to-Course Playbook' },
     { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home (No Range Needed)' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100 for Weekend Golfers' },
     { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
@@ -323,7 +353,7 @@ if (isBuyingGuide) {
         price={topAff.price ?? ''}
         url={topAff.url}
         retailer={topAff.retailer}
-        badge={topRow.winner ? 'BEST PICK' : topRow.bestFor}
+        badge={(article as any).stickyLabel || (topRow.winner ? 'BEST PICK' : topRow.bestFor)}
       />
     );
   })()}
@@ -374,8 +404,28 @@ if (isBuyingGuide) {
     </div>
   )}
 
+  {/* ── ENHANCED AUTHOR BYLINE — per-article testing data (EEAT) ── */}
+  {(article as any).authorByline && (
+    <AuthorByline
+      roundsTested={(article as any).authorByline.roundsTested}
+      lastTested={(article as any).authorByline.lastTested}
+      courseTested={(article as any).authorByline.courseTested}
+    />
+  )}
+
+  {/* ── AFFILIATE DISCLOSURE — top-of-article trust signal ── */}
+  {isCommercial && (
+    <AffiliateDisclosure />
+  )}
+
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
+  <div class="art-layout">
   <article class="art-content">
+
+    {/* TABLE OF CONTENTS — mobile accordion (inline in flow) */}
+    {tocItems.length > 0 && (
+      <TableOfContents items={tocItems} heading={isBuyingGuide ? 'In this review' : 'In this guide'} />
+    )}
 
     {/* QUICK ANSWER BOX — buying guides only */}
     {(article as any).quickAnswerProduct && article.bottomLine && (() => {
@@ -397,6 +447,45 @@ if (isBuyingGuide) {
     })()}
 
     {/* BOTTOM LINE — shows as "Our Verdict" ONLY when Quick Answer box is NOT rendered */}
+
+    {/* ── ABOVE-THE-FOLD PRODUCT CTA — buying guides only ── */}
+    {isBuyingGuide && (() => {
+      const ctaKey = (article as any).quickAnswerProduct;
+      if (!ctaKey) return null;
+      const ctaAff = getAffiliateLink(ctaKey);
+      if (!ctaAff?.url) return null;
+      const ctaRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === ctaKey);
+      const ctaName = ctaRow?.name ?? ctaKey.replace(/-/g, ' ');
+      const ctaBadge = ctaRow?.badge ?? 'Our Top Pick';
+      return (
+        <ProductCTA
+          productName={ctaName}
+          amazonUrl={ctaAff.url}
+          amazonPrice={ctaAff.price}
+          altUrl={(ctaAff as any).golfGalaxyUrl || undefined}
+          altLabel={(ctaAff as any).golfGalaxyUrl
+            ? ((ctaAff as any).golfGalaxyUrl.includes('amazon') ? 'Amazon' :
+               (ctaAff as any).golfGalaxyUrl.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy')
+            : undefined}
+          badge={ctaBadge}
+          rating={(article as any).quickPickRating || undefined}
+          imageUrl={(ctaAff as any).imgSrc || undefined}
+          why={(article as any).quickPickWhy || undefined}
+          bestFor={(article as any).quickPickBestFor || ctaRow?.bestFor || undefined}
+        />
+      );
+    })()}
+
+    {/* ── CG TEST SCORE — visual scoring breakdown ── */}
+    {(article as any).cgScore && (
+      <CGScore
+        overallScore={(article as any).cgScore.overall}
+        categories={(article as any).cgScore.categories}
+        verdict={(article as any).cgScore.verdict}
+        rounds={(article as any).cgScore.rounds || 12}
+      />
+    )}
+
     {article.bottomLine && !(article as any).quickAnswerProduct && (
       <div class="bottom-line-box" role="note" aria-label="Our verdict">
         <p class="bottom-line-label">Our Verdict</p>
@@ -480,6 +569,7 @@ if (isBuyingGuide) {
 
       return (
       <div class="cmp-wrap">
+        <div class="comparison-table-wrapper">
         <table class="cmp-table" role="table">
           <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
@@ -530,6 +620,7 @@ if (isBuyingGuide) {
             })}
           </tbody>
         </table>
+        </div>
       </div>
       );
     })()}
@@ -798,6 +889,14 @@ if (isBuyingGuide) {
     {/* SOCIAL SHARE */}
     <SocialShare url={`https://www.cubicalgolfer.com${article.slug}`} title={article.titleDisplay} />
 
+    {/* RELATED COMPARISONS — links to /compare/ pages for better internal linking */}
+    {(article as any).relatedComparisons && (article as any).relatedComparisons.length > 0 && (
+      <RelatedLinks
+        heading="Related Comparisons"
+        links={(article as any).relatedComparisons}
+      />
+    )}
+
     {/* RELATED GUIDES */}
     {related.length > 0 && (
       <div class="rel-cluster">
@@ -853,14 +952,18 @@ if (isBuyingGuide) {
       </div>
     )}
 
-    {/* BOTTOM CTA */}
+    {/* END-OF-ARTICLE CTA */}
     <div class="art-cta">
-      <p style="font-weight:700;font-size:16px;margin:0 0 10px;">Get the Free Golf Gear Buying Guide</p>
-      <p>The cheat sheet every weekend golfer needs before buying anything new. No spam, ever.</p>
-      <a href="/" class="btn-gold" style="display:inline-block;margin-top:8px;">Browse All Guides →</a>
+      <p style="font-weight:700;font-size:16px;margin:0 0 10px;">Ready to find the right gear?</p>
+      <p>Take our 60-second gear quiz for a personalized recommendation based on your handicap, budget, and playing style.</p>
+      <a href="/gear-quiz/" class="btn-gold" style="display:inline-block;margin-top:8px;">Take the Gear Quiz →</a>
+      <a href="/gear-reviews/" style="display:inline-block;margin-top:8px;margin-left:12px;font-size:14px;color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Browse All Reviews</a>
     </div>
 
   </article>
+
+
+  </div> <!-- /art-layout -->
 
   {/* ── Prev / Next Navigation ───────────────────────────────────────── */}
   {(prevArticle || nextArticle) && (
@@ -909,80 +1012,8 @@ if (isBuyingGuide) {
       </div>
     </section>
   )}
-  {/* STICKY MOBILE CTA BAR — buying guides only */}
-  {stickyProduct && (
-    <div id="sticky-cta" class="sticky-cta" aria-label="Quick buy">
-      <div class="sticky-cta__body">
-        <span class="sticky-cta__name">{stickyProduct.name}</span>
-        <span class="sticky-cta__price">{stickyProduct.price}</span>
-      </div>
-      <a href={stickyProduct.url} class="sticky-cta__btn" target="_blank"
-        rel="nofollow noopener sponsored">See Price →</a>
-      <button class="sticky-cta__close" aria-label="Dismiss" id="sticky-cta-close">×</button>
-    </div>
-  )}
+  {/* STICKY CTA — handled by StickyBar component at top of template */}
 
-  {stickyProduct && (
-    <style>{`
-      .sticky-cta {
-        display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 90;
-        background: var(--green); border-top: 2px solid var(--gold);
-        padding: 10px 14px; height: 56px;
-        align-items: center; gap: 10px;
-        box-shadow: 0 -4px 16px rgba(0,0,0,.18);
-        transform: translateY(100%); transition: transform .3s ease;
-      }
-      .sticky-cta.visible { transform: translateY(0); }
-      .sticky-cta__body { flex: 1; min-width: 0; }
-      .sticky-cta__name {
-        display: block; font-size: 13px; font-weight: 700; color: #fff;
-        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      }
-      .sticky-cta__price { font-size: 11px; color: var(--gold); font-weight: 600; }
-      .sticky-cta__btn {
-        flex-shrink: 0; background: var(--gold); color: var(--green);
-        padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 800;
-        text-decoration: none; white-space: nowrap;
-      }
-      .sticky-cta__btn:hover { background: var(--gold-dark); }
-      .sticky-cta__close {
-        flex-shrink: 0; background: none; border: none; color: #fff9;
-        font-size: 20px; cursor: pointer; padding: 4px 2px; line-height: 1;
-      }
-      .sticky-cta__close:hover { color: #fff; }
-      @media (min-width: 769px) { .sticky-cta { display: none !important; } }
-      @media (max-width: 768px) { .sticky-cta { display: flex; } }
-    `}</style>
-  )}
-
-  {stickyProduct && (
-    <script is:inline>{`
-      (function(){
-        var bar = document.getElementById('sticky-cta');
-        var closeBtn = document.getElementById('sticky-cta-close');
-        if (!bar) return;
-        var dismissed = false;
-        var trigger = document.querySelector('.art-section');
-        if (!trigger) trigger = document.querySelector('.product-img-wrap');
-        if (!trigger) return;
-        function check() {
-          if (dismissed) return;
-          var rect = trigger.getBoundingClientRect();
-          if (rect.top < 0) {
-            bar.classList.add('visible');
-          } else {
-            bar.classList.remove('visible');
-          }
-        }
-        window.addEventListener('scroll', check, {passive: true});
-        closeBtn.addEventListener('click', function() {
-          dismissed = true;
-          bar.classList.remove('visible');
-          bar.style.display = 'none';
-        });
-      })();
-    `}</script>
-  )}
   {/* ── Sortable comparison table ──────────────────────────────────────── */}
   <script is:inline>
     (function() {
