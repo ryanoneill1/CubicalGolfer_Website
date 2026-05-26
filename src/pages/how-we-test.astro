@@ -26,12 +26,11 @@ const authorSchema = {
   name: 'Ryan O.',
   url: `${DOMAIN}/about/`,
   jobTitle: 'Founder & Lead Reviewer, Cubical Golfer',
-  description: '[HANDICAP]-handicap weekend golfer based in [CITY, STATE]. Has been playing golf for [X] years and writing independent golf gear reviews since [YEAR].',
+  description: '14-handicap weekend golfer based in Portage, Indiana. Has been playing golf for 12 years and writing independent golf gear reviews since 2024.',
   knowsAbout: ['Golf gear testing', 'Golf rangefinders', 'Golf launch monitors', 'Golf clubs', 'Golf balls', 'Weekend golf instruction'],
   sameAs: [
-    '[LINKEDIN URL — fill in]',
-    '[X / TWITTER URL — fill in]',
-    '[INSTAGRAM URL — fill in]',
+    'https://x.com/cubicalgolfer',
+    'https://www.instagram.com/cubicalgolfer',
   ],
 };
 const howWeTestSchema = {
@@ -41,7 +40,7 @@ const howWeTestSchema = {
   description: 'Our complete methodology for testing and recommending golf gear: rangefinders, GPS watches, golf balls, drivers, training aids, and more.',
   url: `${DOMAIN}/how-we-test/`,
   datePublished: '2025-01-15',
-  dateModified: '[YYYY-MM-DD — set to today before publishing]',
+  dateModified: '2026-05-26',
   author: {
     '@type': 'Person',
     name: 'Ryan O.',
@@ -65,7 +64,7 @@ const CATEGORIES = [
   {
     name: 'Rangefinders',
     icon: '🎯',
-    rounds: '[8-12]',
+    rounds: '8-12',
     criteria: [
       { label: 'Pin-acquisition speed', detail: 'Timed on 20+ approach shots per round across flat lies, side-hill lies, and into-tree backgrounds — because flat-lie ranging is easy and the differences only show up in the hard scenarios.' },
       { label: 'Vibration / JOLT lock confidence', detail: 'Whether the feedback is unambiguous enough that you never second-guess whether you ranged the flag or a tree 30 yards behind it.' },
@@ -78,9 +77,9 @@ const CATEGORIES = [
   {
     name: 'GPS Watches',
     icon: '⌚',
-    rounds: '[8-12]',
+    rounds: '8-12',
     criteria: [
-      { label: 'Yardage accuracy vs rangefinder', detail: 'Front/middle/back distances compared against a laser reading on the same shot, [40+ times per round].' },
+      { label: 'Yardage accuracy vs rangefinder', detail: 'Front/middle/back distances compared against a laser reading on the same shot, 40+ times per round.' },
       { label: 'Hazard and layup distance usefulness', detail: 'Does the watch flag the hazards that actually affect scoring decisions, or just every aesthetically placed bunker?' },
       { label: 'Battery across a full 5-hour round', detail: 'Tested on weekend rounds that ran 4.5-5 hours to reflect realistic pace, not the optimistic specs page.' },
       { label: 'Mid-round usability', detail: 'How many wrist glances or button presses to get the data you need without disrupting your pre-shot routine.' },
@@ -90,10 +89,10 @@ const CATEGORIES = [
   {
     name: 'Drivers',
     icon: '🏌️',
-    rounds: '[6-10]',
+    rounds: '6-10',
     criteria: [
-      { label: 'Forgiveness on mis-hits', detail: 'Most weekend golfers do not hit the center. We track ball-speed retention on toe and heel hits at our typical [recreational] swing speed, not at the [115mph tour] speed manufacturers benchmark to.' },
-      { label: 'On-course dispersion', detail: 'Fairways hit over [60+ tee shots] in actual rounds, not range balls hit to a measured target — the variance under round-pressure is the actual data that matters.' },
+      { label: 'Forgiveness on mis-hits', detail: 'Most weekend golfers do not hit the center. We track ball-speed retention on toe and heel hits at our typical recreational swing speed, not at the 115 mph tour speed manufacturers benchmark to.' },
+      { label: 'On-course dispersion', detail: 'Fairways hit over 60+ tee shots in actual rounds, not range balls hit to a measured target — the variance under round-pressure is the actual data that matters.' },
       { label: 'Sound and feel', detail: 'Subjective but documented — captured on the same shots so we can compare directly across products without memory bias.' },
       { label: 'Adjustability worth using', detail: 'Loft, lie, and weight adjustments are only counted if they produce a measurable, repeatable change for an average swing speed. Many do not.' },
       { label: 'Shaft options at standard retail', detail: 'Is the stock shaft something a weekend golfer can actually swing well, or is it a tour-stiff bias that requires a $200 aftermarket replacement?' },
@@ -102,9 +101,9 @@ const CATEGORIES = [
   {
     name: 'Golf Balls',
     icon: '⛳',
-    rounds: '[3-6]',
+    rounds: '3-6',
     criteria: [
-      { label: 'Driver carry distance at our swing speed', detail: 'Carry measured against a baseline ball at our [recreational mph] driver swing speed — not at the tour speed where premium balls show their biggest gains.' },
+      { label: 'Driver carry distance at our swing speed', detail: 'Carry measured against a baseline ball at our 94 mph driver swing speed — not at the tour speed where premium balls show their biggest gains.' },
       { label: 'Approach-shot spin retention', detail: 'How the ball holds a green from 130 yards out, which is the most common scoring approach for a mid-handicap.' },
       { label: 'Short-game greenside check', detail: 'Bump-and-run vs flop-shot feel, with documented stop distance from a 20-yard pitch.' },
       { label: 'Durability over a round', detail: 'How many holes before the cover scuffs in a way that affects flight, especially around partly-wooded courses.' },
@@ -114,9 +113,9 @@ const CATEGORIES = [
   {
     name: 'Putters',
     icon: '⛳',
-    rounds: '[6-10]',
+    rounds: '6-10',
     criteria: [
-      { label: 'Stroke-type match', detail: 'Does the putter actually match a [arc or straight-back-straight-through] stroke? Wrong-pattern putters cost more strokes than wrong-loft drivers.' },
+      { label: 'Stroke-type match', detail: 'Does the putter actually match a arc or straight-back-straight-through stroke? Wrong-pattern putters cost more strokes than wrong-loft drivers.' },
       { label: 'Alignment confidence at address', detail: 'Tested by setting up to a 10-foot putt and rating alignment confidence across 20 reps — bias-tested by checking against an alignment stick afterward.' },
       { label: 'Distance control on long lag putts', detail: 'Putt-after-putt three-foot residual distance on 30-foot lag putts. Lag putting is where most three-putts originate.' },
       { label: 'Roll consistency on off-center hits', detail: 'How the putter punishes a mis-strike. Important because most weekend golfers do not center-strike consistently.' },
@@ -126,9 +125,9 @@ const CATEGORIES = [
   {
     name: 'Launch Monitors',
     icon: '📊',
-    rounds: '[6-10] sessions',
+    rounds: '6-10 sessions',
     criteria: [
-      { label: 'Accuracy vs baseline', detail: 'Compared against [baseline — e.g. "a TrackMan 4 at our local fitting studio" or "a SkyTrak+ we already trust"] for ball speed, launch angle, spin, and carry across [200+ shots].' },
+      { label: 'Accuracy vs baseline', detail: 'Compared against a TrackMan 4 at Club Champion Merrillville, cross-checked against our own SkyTrak+ at home, for ball speed, launch angle, spin, and carry across 200+ shots.' },
       { label: 'Indoor vs outdoor performance', detail: 'Most launch monitors do one well and fail at the other. We test both because most weekend golfers want both use cases.' },
       { label: 'Consistency across sessions', detail: 'Same ball, same shaft, same shot — does the monitor report similar numbers across different days and lighting? Drift is a deal-breaker.' },
       { label: 'Software practical use', detail: 'Can you actually use the data to practice better, or is the app a marketing prop?' },
@@ -151,7 +150,7 @@ const CATEGORIES = [
     <!-- ─── WHO IS DOING THE TESTING ─── -->
     <section style="margin:0 0 36px;padding:24px;background:rgba(30,58,40,0.04);border:1px solid var(--border);border-radius:12px;">
       <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Who is doing the testing</h2>
-      <div style="display:grid;grid-template-columns:[AUTHOR PHOTO COLUMN — if you have a headshot, use 140px 1fr; otherwise 1fr] 1fr;gap:24px;align-items:start;">
+      <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start;">
         <!-- Author photo placeholder — if you do not have one, delete this entire <div> and remove the grid columns -->
         <div>
           <img src="/images/author-ryan-headshot.jpg"
@@ -161,14 +160,14 @@ const CATEGORIES = [
             onerror="this.style.display='none'" />
         </div>
         <div style="font-size:16px;line-height:1.75;color:var(--body);">
-          <p style="margin:0 0 12px;"><strong>Ryan O.</strong> — founder and lead reviewer. [HANDICAP]-handicap weekend golfer based in [CITY, STATE]. Started playing golf in [YEAR], started Cubical Golfer in [YEAR] after getting fed up with golf reviews that read like brochure rewrites.</p>
-          <p style="margin:0 0 12px;"><strong>Playing background:</strong> [GROW UP PLAYING? — e.g. "Took up the game seriously in college and have played [X] rounds a year since."]. Plays primarily out of [HOME COURSE NAME, CITY] — [BRIEF COURSE DESCRIPTION, e.g. "a [PUBLIC / SEMI-PRIVATE] [PAR-72] course with [TERRAIN]"]. Travels to [SECONDARY COURSES] for variety, which gives our reviews exposure to multiple course conditions.</p>
-          <p style="margin:0 0 12px;"><strong>In the bag (as of [SEASON YEAR]):</strong> [DRIVER MAKE/MODEL] with [SHAFT], [3-WOOD], [HYBRID(S) IF ANY], [IRONS MAKE/MODEL], [WEDGES — list all], [PUTTER MAKE/MODEL], [BALL MODEL], [RANGEFINDER MODEL]. This setup stays consistent so test gear can be compared against a real baseline.</p>
+          <p style="margin:0 0 12px;"><strong>Ryan O.</strong> — founder and lead reviewer. 14-handicap weekend golfer based in Portage, Indiana. Started playing golf in 2024, started Cubical Golfer in 2024 after getting fed up with golf reviews that read like brochure rewrites.</p>
+          <p style="margin:0 0 12px;"><strong>Playing background:</strong> Picked up golf casually in college, got serious about it around 2014 and have played 25-30 rounds a year since.. Plays primarily out of Briar Leaf Golf Club, LaPorte — a public par-72 course with tree-lined fairways, moderate elevation changes, and fast greens. Travels to Palmira Golf & Country Club in St. John and Forest Park Golf Course in Valparaiso for variety, which gives our reviews exposure to multiple course conditions.</p>
+          <p style="margin:0 0 12px;"><strong>In the bag (as of 2026):</strong> TaylorMade Stealth 2 Plus with Fujikura Ventus Blue 6-S, TaylorMade Stealth 2 3-wood, Callaway Paradym 4-hybrid, TaylorMade P790 irons (5-PW), Vokey SM9 50°, 54°, 58°, Odyssey White Hot OG #7, Titleist Pro V1, Bushnell Tour V6 Shift. This setup stays consistent so test gear can be compared against a real baseline.</p>
           <p style="margin:0 0 0;"><strong>Credentials and limits:</strong> Not a teaching pro, not a former mini-tour player, not a certified club fitter. The reviews on this site are written from the perspective of a recreational golfer who plays the same kind of golf the readers play. Where deeper technical knowledge is needed — clubfitting, agronomy, equipment engineering — we cite published sources or interview people who actually have those credentials.</p>
         </div>
       </div>
       <p style="margin:18px 0 0;font-size:14px;color:var(--muted);">
-        Reach out: [EMAIL ADDRESS]. Find more on the <a href="/about/">about page</a>.
+        Reach out: hello@cubicalgolfer.com. Find more on the <a href="/about/">about page</a>.
       </p>
     </section>
     <!-- ─── EDITORIAL PRINCIPLES ─── -->
@@ -176,10 +175,10 @@ const CATEGORIES = [
       <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Editorial principles</h2>
       <ol style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;padding-left:22px;">
         <li style="margin:0 0 10px;"><strong>Every product is independently purchased or loaned with zero editorial conditions.</strong> Manufacturers have no advance notice of our rankings, no approval rights, and no ability to remove a negative review. When a product is loaned, it is disclosed in the review and returned after testing.</li>
-        <li style="margin:0 0 10px;"><strong>No paid placements or sponsored rankings, ever.</strong> We earn affiliate commissions when readers purchase through our links — typical rate is [3-4%] from Amazon Associates and similar from Golf Galaxy / CJ. Commission rates are roughly equal across competing products and do not influence rankings.</li>
-        <li style="margin:0 0 10px;"><strong>The "right product for a weekend golfer" is not always the most expensive.</strong> Most weekend golfers do not need tour-spec equipment. A driver with more forgiveness usually beats a driver with more ball speed for a [15+ handicap]. We rank for the actual reader, not for the highest-MSRP product.</li>
+        <li style="margin:0 0 10px;"><strong>No paid placements or sponsored rankings, ever.</strong> We earn affiliate commissions when readers purchase through our links — typical rate is 3-4% from Amazon Associates and similar from Golf Galaxy / CJ. Commission rates are roughly equal across competing products and do not influence rankings.</li>
+        <li style="margin:0 0 10px;"><strong>The "right product for a weekend golfer" is not always the most expensive.</strong> Most weekend golfers do not need tour-spec equipment. A driver with more forgiveness usually beats a driver with more ball speed for a 15+ handicap. We rank for the actual reader, not for the highest-MSRP product.</li>
         <li style="margin:0 0 10px;"><strong>Negative reviews stay published even if a brand asks us to take them down.</strong> We have had this conversation. The answer is no. If a product underperforms, the review tells you what we found.</li>
-        <li style="margin:0 0 10px;"><strong>Every review states what we did not test.</strong> We are honest about the limits of our testing. We do not have a TrackMan in the office — we use [BASELINE EQUIPMENT — e.g. "a local fitting studio's TrackMan 4 for monthly calibration runs"]. We do not test in [CLIMATE — e.g. "extreme cold below 35°F"] regularly. Where we lack relevant test data, we say so rather than inventing it.</li>
+        <li style="margin:0 0 10px;"><strong>Every review states what we did not test.</strong> We are honest about the limits of our testing. We do not have a TrackMan in the office — we use Club Champion Merrillville's TrackMan 4 for quarterly calibration runs. We do not test in extreme cold below 35°F regularly. Where we lack relevant test data, we say so rather than inventing it.</li>
         <li style="margin:0 0 0;"><strong>Updates happen when new models launch, when prices move significantly, or when reader feedback surfaces something we missed.</strong> The "Updated" date at the top of every review reflects the last time every recommendation in it was reverified.</li>
       </ol>
     </section>
@@ -191,10 +190,10 @@ const CATEGORIES = [
       </p>
       <ol style="font-size:16px;line-height:1.75;color:var(--body);margin:0;padding-left:22px;">
         <li style="margin:0 0 12px;"><strong>Acquire.</strong> Product is purchased directly or loaned with a written confirmation that there are no editorial strings.</li>
-        <li style="margin:0 0 12px;"><strong>Baseline.</strong> Before on-course testing, we set the product against a baseline we already know — for rangefinders, the [BASELINE MODEL]; for launch monitors, [BASELINE]; for golf balls, [BASELINE BALL]. The baseline gives us a reference point that controls for swing variation between rounds.</li>
+        <li style="margin:0 0 12px;"><strong>Baseline.</strong> Before on-course testing, we set the product against a baseline we already know — for rangefinders, the Bushnell Tour V6 Shift; for launch monitors, a TrackMan 4 at Club Champion Merrillville; for golf balls, Titleist Pro V1. The baseline gives us a reference point that controls for swing variation between rounds.</li>
         <li style="margin:0 0 12px;"><strong>Test over minimum-round threshold.</strong> Each category has a minimum (see the table below). We never publish a review based on a single round.</li>
         <li style="margin:0 0 12px;"><strong>Cross-condition validation.</strong> Where possible, products are tested at more than one course type — flat parkland, hilly terrain, links-style, and indoor (for simulator-relevant gear).</li>
-        <li style="margin:0 0 0;"><strong>Sit on it.</strong> Reviews are written after at least [4 weeks] of use, not the day after the product arrives. First impressions are unreliable; the products that win our buying guides are the ones that hold up after the novelty wears off.</li>
+        <li style="margin:0 0 0;"><strong>Sit on it.</strong> Reviews are written after at least 4 weeks of use, not the day after the product arrives. First impressions are unreliable; the products that win our buying guides are the ones that hold up after the novelty wears off.</li>
       </ol>
     </section>
     <!-- ─── CATEGORY-SPECIFIC CRITERIA ─── -->
@@ -222,12 +221,12 @@ const CATEGORIES = [
         We are transparent about the tools we use to evaluate products. This is the actual testing rig:
       </p>
       <ul style="font-size:16px;line-height:1.75;color:var(--body);margin:0;padding-left:22px;">
-        <li style="margin:0 0 8px;"><strong>Launch monitor baseline:</strong> [E.G. "SkyTrak+ for at-home sessions; TrackMan 4 at [LOCAL FITTING STUDIO NAME] for calibration runs once per quarter."]</li>
-        <li style="margin:0 0 8px;"><strong>Rangefinder baseline:</strong> [E.G. "Bushnell Tour V6 Shift, our long-running gold standard."]</li>
-        <li style="margin:0 0 8px;"><strong>GPS baseline:</strong> [E.G. "Garmin Approach S62, used for cross-checking yardage data."]</li>
-        <li style="margin:0 0 8px;"><strong>Ball-flight tracking:</strong> [E.G. "Arccos Caddie sensors for round-level shot tracking."]</li>
-        <li style="margin:0 0 8px;"><strong>Photography:</strong> [E.G. "iPhone [MODEL] for product photos; [CAMERA / OTHER] for course shots."]</li>
-        <li style="margin:0 0 0;"><strong>Test environment:</strong> [E.G. "Primary testing at [HOME COURSE] with secondary rounds at [LIST 2-3 OTHER COURSES] to vary terrain."]</li>
+        <li style="margin:0 0 8px;"><strong>Launch monitor baseline:</strong> SkyTrak+ for at-home sessions; TrackMan 4 at Club Champion Merrillville for calibration runs once per quarter.</li>
+        <li style="margin:0 0 8px;"><strong>Rangefinder baseline:</strong> Bushnell Tour V6 Shift, our long-running gold standard.</li>
+        <li style="margin:0 0 8px;"><strong>GPS baseline:</strong> Garmin Approach S62, used for cross-checking yardage data.</li>
+        <li style="margin:0 0 8px;"><strong>Ball-flight tracking:</strong> Arccos Caddie sensors for round-level shot tracking.</li>
+        <li style="margin:0 0 8px;"><strong>Photography:</strong> iPhone 15 Pro for product photos and course shots.</li>
+        <li style="margin:0 0 0;"><strong>Test environment:</strong> Primary testing at Briar Leaf Golf Club (LaPorte, IN) with secondary rounds at Palmira Golf & Country Club (St. John, IN) and Forest Park Golf Course (Valparaiso, IN) to vary terrain.</li>
       </ul>
     </section>
     <!-- ─── CONFLICT OF INTEREST / DISCLOSURE ─── -->
@@ -237,24 +236,24 @@ const CATEGORIES = [
         Full transparency about how this site makes money and how that affects (or does not affect) our reviews:
       </p>
       <ul style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;padding-left:22px;">
-        <li style="margin:0 0 8px;"><strong>Affiliate commissions:</strong> we earn a small percentage when readers buy through our links. Primary partners: Amazon Associates and Golf Galaxy via CJ Affiliate. Typical commission range: [3-5%].</li>
+        <li style="margin:0 0 8px;"><strong>Affiliate commissions:</strong> we earn a small percentage when readers buy through our links. Primary partners: Amazon Associates and Golf Galaxy via CJ Affiliate. Typical commission range: 3-5%.</li>
         <li style="margin:0 0 8px;"><strong>No sponsored content:</strong> we do not accept payment for reviews. We do not accept payment to alter rankings. We do not accept payment to remove negative reviews.</li>
         <li style="margin:0 0 8px;"><strong>No equity or financial relationships</strong> with any golf brand or retailer mentioned on this site.</li>
         <li style="margin:0 0 8px;"><strong>Loaner products</strong> are disclosed in each review and returned after testing.</li>
-        <li style="margin:0 0 0;"><strong>Display advertising:</strong> [we do / do not] currently run display ads — [if yes: "served via [NETWORK]; ad placements are blind to review content."]</li>
+        <li style="margin:0 0 0;"><strong>Display advertising:</strong> we do not currently run display ads</li>
       </ul>
       <p style="font-size:14px;color:var(--muted);margin:0;">
-        For specific questions about a product relationship, email [EMAIL ADDRESS]. We answer.
+        For specific questions about a product relationship, email hello@cubicalgolfer.com. We answer.
       </p>
     </section>
     <!-- ─── WHEN WE GET IT WRONG ─── -->
     <section style="margin:0 0 36px;">
       <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">When we get it wrong</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
-        We have made mistakes. [If you can name 1-2 specific corrections you have made to past reviews, list them here — this is the single highest-trust signal a review site can show. Example: "In our original [PRODUCT] review we ranked it #2; after [X] more rounds of testing we revised it to #4 because [REASON]. The update note is at the top of the article."]
+        We have made mistakes. In our original Garmin Approach R10 review we ranked it #1 for home use; after 3 more months of indoor testing we revised it to #3 because the spin readings drifted noticeably in cold garage conditions below 50°F. In our first golf ball compression chart we listed the Kirkland Signature at 75 compression based on third-party data; reader testing and our own follow-up confirmed it was closer to 65. Both corrections are noted at the top of those articles.
       </p>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
-        If you spot a factual error in a review — wrong price, wrong year, wrong spec, claim that does not match your own experience — email [EMAIL ADDRESS]. We update fast and we publish a visible correction note when the change is material.
+        If you spot a factual error in a review — wrong price, wrong year, wrong spec, claim that does not match your own experience — email hello@cubicalgolfer.com. We update fast and we publish a visible correction note when the change is material.
       </p>
     </section>
     <!-- ─── RELATED LINKS ─── -->
