@@ -1,0 +1,137 @@
+---
+// src/pages/courses/[city].astro
+// Programmatic local SEO page for each golf city.
+
+import BaseLayout  from '../../layouts/BaseLayout.astro';
+import { CITIES }  from '../../data/cities';
+import { cityMeta } from '../../lib/seo';
+import { cityPageSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import type { GolfCity } from '../../data/types';
+
+export async function getStaticPaths() {
+  return CITIES.map(city => ({
+    params: { city: city.slug },
+    props:  { city },
+  }));
+}
+
+interface Props { city: GolfCity }
+const { city } = Astro.props;
+
+const meta     = cityMeta(city);
+const schemas  = [
+  breadcrumbSchema(meta.breadcrumbs),
+  cityPageSchema(city),
+];
+
+const TYPE_BADGE: Record<string, string> = {
+  'public':       '🟢 Public',
+  'semi-private': '🔵 Semi-Private',
+  'resort':       '🟡 Resort',
+};
+---
+
+<BaseLayout {meta} {schemas} activeNav="home">
+
+  <header class="art-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/courses/">Golf Courses by City</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{city.city}, {city.state}</span>
+    </nav>
+    <span class="art-tag-lg tag-rev">COURSE GUIDE</span>
+    <h1>Best Golf Courses in {city.city}, {city.state} (2026 Guide)</h1>
+    <div class="author-box">
+      <a href="/about/" style="flex-shrink:0" aria-label="About Cubical Golfer">
+        <img src="/images/cubicalgolfer-logo.webp" alt="The Cubical Golfer Team" class="author-avatar-img" width="48" height="48" />
+      </a>
+      <div style="flex:1">
+        <span class="author-name">
+          <a href="/about/" style="color:inherit;text-decoration:none">Out-of-Office Golfer</a>
+          <span style="font-size:11px;font-weight:500;color:var(--muted);margin-left:6px">17-hdcp · sets auto-reply, heads to the course</span>
+        </span>
+        <span class="author-meta">
+          📅 Updated: {city.dateModified} &nbsp;·&nbsp;
+          ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
+        </span>
+      </div>
+      <span class="verified-badge">✅ Independently Reviewed</span>
+    </div>
+  </header>
+
+  <article class="art-content">
+
+    <div class="intro-box"><p>{city.intro}</p></div>
+
+    <!-- Quick stats strip -->
+    <div class="verdict-quick" style="margin-bottom:32px">
+      <p class="verdict-quick-title">⚡ {city.city} Golf at a Glance</p>
+      <div class="verdict-quick-picks">
+        <div class="verdict-pick">
+          <span class="verdict-pick-label">Best Season</span>
+          <span class="verdict-pick-name">{city.bestSeason}</span>
+        </div>
+        <div class="verdict-pick">
+          <span class="verdict-pick-label">Nearest Airport</span>
+          <span class="verdict-pick-name">{city.nearbyAirport}</span>
+        </div>
+        <div class="verdict-pick verdict-pick--winner">
+          <span class="verdict-pick-label">Courses Listed</span>
+          <span class="verdict-pick-name">{city.courses.length} courses</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Course cards -->
+    {city.courses.map((course, idx) => (
+      <div class="art-section">
+        <h2>{course.name}</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center">
+          <span class="badge-pill">{TYPE_BADGE[course.type] ?? course.type}</span>
+          <span class="badge-pill">{course.holes} holes</span>
+          <span class="badge-pill" style="background:var(--gold);color:#1a1a1a">{course.price}</span>
+          {course.rating && <span class="badge-pill">Rating: {course.rating}</span>}
+        </div>
+        <p>{course.notes}</p>
+      </div>
+    ))}
+
+    <!-- Gear for your round -->
+    <div class="art-section" style="background:var(--cream-dark);border-radius:12px;padding:28px;margin-top:40px">
+      <h2 style="margin-top:0">Gear for Your {city.city} Round</h2>
+      <p>Whatever course you choose, the right gear makes a difference. These are our tested picks for weekend golfers:</p>
+      <div class="rel-links" style="margin-top:16px">
+        <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026 →</a>
+        <a href="/best-golf-gps-watches/">Best GPS Watches 2026 →</a>
+        <a href="/best-golf-balls-2026/">Best Golf Balls 2026 →</a>
+        <a href="/best-golf-bags-2026/">Best Golf Bags 2026 →</a>
+      </div>
+    </div>
+
+    <div class="rel-cluster" style="margin-top:40px">
+      <h3>More City Guides</h3>
+      <div class="rel-links">
+        {CITIES.filter(c => c.slug !== city.slug).slice(0, 4).map(c => (
+          <a href={`/courses/${c.slug}/`}>{c.city}, {c.state} Golf Courses →</a>
+        ))}
+        <a href="/courses/">All City Golf Guides →</a>
+      </div>
+    </div>
+
+    <div class="rel-cluster" style="background:var(--green);border:none;margin-top:24px;">
+      <h3 style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</h3>
+      <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
+        You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
+      </p>
+      <div class="rel-links">
+        <a href="/office-to-golf-course-playbook/" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">Office-to-Course Playbook</a>
+        <a href="/how-to-sneak-in-more-golf-rounds/" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">How to Sneak In More Golf Rounds With a Day Job</a>
+        <a href="/golf-practice-drills-at-home/" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">7 Practice Drills You Can Do at Home in 15 Minutes</a>
+      </div>
+    </div>
+
+  </article>
+
+</BaseLayout>
