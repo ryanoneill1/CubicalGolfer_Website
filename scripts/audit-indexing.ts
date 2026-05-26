@@ -185,15 +185,19 @@ for (const [slug, page] of allPages) {
     const art = A.find(a => a.slug === slug);
     if (art) {
       const allBody = (art.sections || []).map((s: any) => s.body || '').join(' ');
-      const hrefMatches = allBody.match(/href="\/[^"]+"/g) || [];
-      page.outboundLinks = hrefMatches.length;
+      const escapedMatches = allBody.match(/href=\\\"\/[^"\\]+\\\"/g) || [];
+      const unescapedMatches = allBody.match(/href="\/[^"]+"/g) || [];
+      const singleQuoteMatches = allBody.match(/href='\/[^']+'/g) || [];
+      page.outboundLinks = escapedMatches.length + unescapedMatches.length + singleQuoteMatches.length;
     }
   } else if (page.source === 'comparisons') {
     const comp = C.find(c => `/compare/${c.slug}/` === slug);
     if (comp) {
       const allBody = (comp.sections || []).map((s: any) => s.body || '').join(' ') + (comp.intro || '') + (comp.weekendGolfer || '');
-      const hrefMatches = allBody.match(/href="\/[^"]+"/g) || [];
-      page.outboundLinks = hrefMatches.length;
+      const escapedMatches = allBody.match(/href=\\\"\/[^"\\]+\\\"/g) || [];
+      const unescapedMatches = allBody.match(/href="\/[^"]+"/g) || [];
+      const singleQuoteMatches = allBody.match(/href='\/[^']+'/g) || [];
+      page.outboundLinks = escapedMatches.length + unescapedMatches.length + singleQuoteMatches.length;
     }
   }
 }
