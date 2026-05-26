@@ -1,7 +1,7 @@
 {
   "name": "cubicalgolfer",
   "version": "2.0.0",
-  "description": "CubicalGolfer.com — Programmatic SEO Golf Media Engine",
+  "description": "CubicalGolfer.com \u2014 Programmatic SEO Golf Media Engine",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "generate": "node src/lib/generators.js",
-    "build:prod": "astro build && node --input-type=module < scripts/stamp-build.js"
+    "build:prod": "astro build && node --input-type=module < scripts/stamp-build.js",
+    "audit:indexing": "tsx scripts/audit-indexing.ts"
   },
   "dependencies": {
     "astro": "^4.8.0"
