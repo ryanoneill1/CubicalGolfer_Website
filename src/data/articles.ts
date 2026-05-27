@@ -4051,7 +4051,6 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulator for Small Spaces' },
-      { slug: '/best-indoor-golf-net-setup/', label: 'Best Indoor Golf Net Setup' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
       { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
