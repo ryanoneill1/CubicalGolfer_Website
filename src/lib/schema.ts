@@ -25,8 +25,8 @@ const AUTHOR = {
   name: 'Ryan O.',
   alternateName: 'Cubical Golfer',
   url: `${DOMAIN}/about/`,
-  jobTitle: '12-Handicap Weekend Golfer & Gear Editor',
-  description: 'Tests every piece of gear on his own dime across 25–40 rounds a year in Chicago, IL. No freebies, no manufacturer loans.',
+  jobTitle: '10-Index Weekend Golfer & Gear Editor',
+  description: 'Got serious about golf in 2012, broke a chronic driver issue in 2020 that dropped him to a 10 index. Tests every piece of gear on his own dime, playing twice a week year-round out of Harborside  in Chicago, IL. No freebies, no manufacturer loans.',
   image: `${DOMAIN}/images/ryan-author-photo.webp`,
   '@id': `${DOMAIN}/about/#author`,
   knowsAbout: [
@@ -78,7 +78,7 @@ export function organizationSchema(): object {
       height: 400,
     },
     description: 'Independent golf gear reviews and improvement guides for everyday weekend golfers.',
-    foundingDate: '2024',
+    foundingDate: '2026',
     slogan: 'Escape the cubicle. Find the fairway.',
     image: `${DOMAIN}/images/cubicalgolfer-logo.webp`,
     // Social profiles — add URLs as accounts are created (Part B).

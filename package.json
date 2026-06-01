@@ -11,7 +11,8 @@
     "check": "astro check",
     "generate": "node src/lib/generators.js",
     "build:prod": "astro build && node --input-type=module < scripts/stamp-build.js",
-    "audit:indexing": "tsx scripts/audit-indexing.ts"
+    "audit:indexing": "tsx scripts/audit-indexing.ts",
+    "notify:indexnow": "tsx scripts/notify-indexnow.ts"
   },
   "dependencies": {
     "astro": "^4.8.0"
