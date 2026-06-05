@@ -8,8 +8,8 @@ import { ARTICLES } from '../../data/articles';
 const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
 const meta = {
-  title: 'Golf Ball Compression Chart 2026 — 34 Balls Ranked by Compression',
-  description: 'The complete 2026 golf ball compression chart. 34 balls from Titleist, Callaway, TaylorMade, Srixon and more — ranked low to high, with swing speed guide.',
+  title: 'Golf Ball Compression Chart — 34 Balls Ranked Low to High (2026 Update)',
+  description: 'The complete golf ball compression chart with 34 balls ranked from low to high compression. Sortable by brand, cover type, price, and swing speed — find the right ball in 10 seconds.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'article' as const,
@@ -113,11 +113,11 @@ const schemas = [
       <span class="bc-sep" aria-hidden="true">›</span>
       <a href="/improve-your-golf-game/">Improve Your Game</a>
       <span class="bc-sep" aria-hidden="true">›</span>
-      <span aria-current="page">Golf Ball Compression Chart 2026</span>
+      <span aria-current="page">Golf Ball Compression Chart</span>
     </nav>
 
     <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
-    <h1>Golf Ball Compression Chart 2026 — Match Your Swing Speed</h1>
+    <h1>Golf Ball Compression Chart — Find the Right Ball for Your Swing Speed</h1>
 
     <div class="author-box">
       <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
@@ -165,6 +165,15 @@ const schemas = [
       <span><strong>Updated 2026-05-25</strong> — All 34 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
 
+    <!-- PDF DOWNLOAD -->
+    <div style="margin:0 0 20px;padding:16px 20px;background:var(--gold);border-radius:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <div>
+        <p style="margin:0;font-weight:700;font-size:15px;color:#1a1a1a;">Download the Golf Ball Compression Chart (PDF)</p>
+        <p style="margin:4px 0 0;font-size:12px;color:#333;">Printable version — same data, take it to the range or pro shop.</p>
+      </div>
+      <a href="/downloads/golf-ball-compression-chart-2026.pdf" download style="background:#1a1a1a;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;">Download PDF →</a>
+    </div>
+
     <!-- TOC -->
     <nav class="toc" aria-label="Table of contents">
       <p class="toc-heading">In this guide</p>
@@ -209,9 +218,21 @@ const schemas = [
 
     <!-- ═══ SORTABLE TABLE ═══ -->
     <section>
-      <h2 id="compression-table">Complete Golf Ball Compression Chart 2026</h2>
+      <h2 id="compression-table">Complete Golf Ball Compression Chart (2026 Data)</h2>
       <p>Click any column header to sort. Use the filters to narrow by cover type or budget.</p>
       <div class="chart-filters">
+        <label>Brand: <select id="brand-filter" style="padding:6px 10px;border-radius:6px;border:1px solid var(--border);">
+          <option value="">All Brands</option>
+          <option value="Titleist">Titleist</option>
+          <option value="Callaway">Callaway</option>
+          <option value="TaylorMade">TaylorMade</option>
+          <option value="Srixon">Srixon</option>
+          <option value="Bridgestone">Bridgestone</option>
+          <option value="Vice">Vice</option>
+          <option value="Kirkland">Kirkland</option>
+          <option value="Wilson">Wilson</option>
+          <option value="Mizuno">Mizuno</option>
+        </select></label>
         <label>Cover: <select id="cover-filter" style="padding:6px 10px;border-radius:6px;border:1px solid var(--border);">
           <option value="">All</option>
           <option value="Urethane">Urethane (tour spin)</option>
@@ -428,7 +449,23 @@ const schemas = [
     });
   });
   update();
-</script>
+
+    // Brand filter
+    var brandFilter = document.getElementById('brand-filter');
+    if (brandFilter) {
+      brandFilter.addEventListener('change', function() {
+        var brand = this.value.toLowerCase();
+        document.querySelectorAll('#compression-table tbody tr').forEach(function(row) {
+          var name = (row.getAttribute('data-name') || '').toLowerCase();
+          if (!brand || name.includes(brand.toLowerCase())) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+  </script>
 
 <style>
   .ball-finder { background: rgba(30,58,40,.04); padding: 24px; border-radius: 12px; margin: 24px 0; border: 2px solid var(--green); }

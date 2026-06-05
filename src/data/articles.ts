@@ -1560,6 +1560,7 @@ export const ARTICLES: Article[] = [
     },
     sources: [{ label: 'Titleist — Pro V1 Construction & Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'MyGolfSpy — 2025 Golf Ball Test Methodology', url: 'https://mygolfspy.com/golf-ball-test/' }, { label: 'USGA — Conforming Golf Ball List', url: 'https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/equipment-rules/balls.html' }],
     related: [
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
