@@ -158,6 +158,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'golf-balls': [
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — Best Driver 2026' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
@@ -165,6 +166,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'golf-ball-compression': [
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym — 2026 Driver Showdown' },
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors 2026' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
@@ -271,6 +273,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'why-does-my-golf-ball-go-right': [
     { slug: '/how-to-fix-your-slice/',              label: 'Full Slice Fix Guide' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/',      label: 'Best Forgiving Drivers 2026' },
   ],
   'why-do-i-hit-irons-fat': [
@@ -328,6 +331,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Drivers cluster ────────────────────────────────────────────────────────
   'drivers-under-200': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
@@ -380,6 +384,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Golf Simulator' },
   ],
   'paradym-driver-review': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/',        label: 'Best Forgiving Drivers 2026' },
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym Comparison' },
     { slug: '/best-golf-balls-2026/',                label: 'Best Golf Balls 2026 by Swing Speed' },
@@ -469,6 +474,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'clubs-20-handicap': [
     { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
     { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
@@ -479,6 +485,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
   ],
   'driver-high-handicapper': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Paradym Review' },
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — 2026 Driver Showdown' },
@@ -602,6 +609,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'left-handed-golf-clubs': [
     { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
     { slug: '/best-junior-golf-clubs/', label: 'Best Junior Golf Clubs' },
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
@@ -626,6 +634,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'clubs-slow-swing-speed': [
     { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
     { slug: '/best-swing-speed-trainer-over-40/', label: 'Swing Speed Trainers Over 40' },
@@ -713,29 +722,34 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
   ],
   'driver-under-300': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'driver-slow-swing': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-driver-under-300/', label: 'Best Drivers Under $300' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'driver-seniors': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
     { slug: '/best-golf-clubs-slow-swing-speed/', label: 'Best Clubs for Slow Swing Speed' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'driver-vs-3-wood': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
     { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
   ],
   'fit-yourself-driver': [
+    { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-driver-under-300/', label: 'Best Drivers Under $300' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
