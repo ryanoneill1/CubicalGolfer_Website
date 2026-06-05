@@ -28,6 +28,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For most weekend golfers, the <strong>Bushnell Tour V6 Shift</strong> at $329 is the best rangefinder on the market. It is faster, simpler, and more reliable than anything at its price. See our full rangefinder comparison →',
     description: '5 rangefinders tested over 40+ rounds by a weekend golfer who was tired of guessing yardages. Honest picks for every budget.',
     excerpt: 'From premium optics to budget picks — the top rangefinders for weekend golfers who want exact yardages and faster decisions.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rangefinders-thumb.webp',
     thumbnail: '/images/thumbnails/rangefinders-thumb.webp',
     updateLog: [{ date: 'Apr 17, 2026', note: 'Added Bushnell Tour V7 Shift mention; updated V6 Shift pricing to $329.' }, { date: 'Mar 8, 2026', note: 'Added Blue Tees Series 3 Max+ as budget alternative; removed discontinued Nikon Coolshot Pro II.' }, { date: 'Jan 12, 2026', note: 'Full 2026 update — retested all 5 models, refreshed pricing and Amazon links.' }],
     intro: "If you\'re still pacing off yardages or relying on sprinkler heads, you\'re leaving strokes on the course. A quality rangefinder is the single best $150–$300 investment a weekend golfer can make. We tested 5 of the top-rated rangefinders over 40+ rounds across four different courses to find the best for every budget.",
@@ -150,6 +151,8 @@ export const ARTICLES: Article[] = [
         sectionImage: '/images/products/rangefinder-comparison-lineup.webp',
         sectionImageAlt: 'All 5 rangefinders lined up for side-by-side comparison testing by a weekend golfer',
       },
+    
+      { h2: 'Keep reading', body: 'If distance precision matters to you, pair your rangefinder with a <a href=\'/best-golf-gps-watches/\'>GPS watch</a> for hole-overview data between shots. Golfers working on their approach game should also see our <a href=\'/best-golf-irons-2026/\'>best irons guide</a> — the right iron set turns accurate yardage into actual scoring improvement. And if you are still debating whether a rangefinder is worth the investment at all, our <a href=\'/is-a-rangefinder-worth-it/\'>honest breakdown</a> covers the math.' },
     ],
     comparisonTable: {
       headers: ['Rangefinder', 'Best For', 'Price', 'Our Rating'],
@@ -166,6 +169,9 @@ export const ARTICLES: Article[] = [
       { q: 'What is the difference between a laser rangefinder and a GPS watch?', a: "A laser rangefinder measures exact distance to whatever you point at. A GPS watch gives pre-loaded front/middle/back yardages. Many golfers use both." },
       { q: 'How accurate are golf rangefinders?', a: "Quality rangefinders like the Bushnell Tour V6 Shift are accurate to ±1 yard. Budget models like the Precision Pro NX9 HD are ±1–2 yards." },
       { q: 'What rangefinder do PGA Tour caddies use?', a: "Most PGA Tour caddies use Bushnell rangefinders, particularly the Pro XE. The Tour V6 Shift is essentially the same technology at a lower price." },
+    
+      { q: 'How accurate are golf rangefinders compared to GPS watches?', a: 'Laser rangefinders are accurate to within 1 yard on most models, while GPS watches are typically accurate to within 3-5 yards. The difference matters most on approach shots where a 4-yard error can mean the wrong club. Rangefinders also give you exact pin distance rather than front-middle-back estimates. For scoring improvement, the rangefinder wins on precision every time.' },
+      { q: 'Is slope mode legal in tournament play?', a: 'Slope mode is illegal in USGA-sanctioned tournament play but legal in casual rounds and most recreational leagues. Most modern rangefinders have a tournament mode that disables slope with a visible indicator so your playing partners can verify. If you play any competitions, make sure the model you buy has a tournament-legal toggle — not all do.' },
     ],
     whoFor: [
       'Play 10+ rounds per year and want accurate pin distances',
@@ -211,6 +217,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Garmin Approach S62</strong> is the best GPS golf watch for weekend golfers — 41,000+ courses, Virtual Caddie, and a battery that lasts 20 hours. For budget buyers, the <strong>Bushnell Ion Elite</strong> at ~\$149 does front/middle/back with zero fuss.',
     description: '5 GPS watches tested by a 15-handicap who plays Saturdays. We wanted yardages without the fuss. Here\'s what actually worked on the course.',
     excerpt: 'Find the right GPS watch for accurate yardages, score tracking, and shot planning from tee to green.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gps-watches-thumb.webp',
     thumbnail: '/images/thumbnails/gps-watches-thumb.webp',
     updateLog: [{ date: 'Apr 15, 2026', note: 'Updated Garmin S62 pricing; added note about Garmin S72 pre-order.' }, { date: 'Feb 20, 2026', note: 'Added Shot Scope V5 as best auto-tracking pick; removed Apple Watch Ultra golf section.' }, { date: 'Jan 5, 2026', note: 'Full 2026 refresh — updated all 5 watches with current pricing.' }],
     intro: "A GPS watch sits on your wrist and tells you front, middle, and back of every green — plus hazards, layup distances, and dog-leg carry — without touching your phone. We tested 6 models over 40+ rounds to find the best for every budget.",
@@ -298,6 +305,10 @@ export const ARTICLES: Article[] = [
       },
     
       { h2: 'Getting the Most From a Forgiving Driver', body: '<p>Even the most forgiving driver underperforms with wrong specs. Our <a href="/how-to-fit-yourself-for-driver/">self-fitting guide</a> walks through loft, shaft, and lie adjustments you can make at home. The <a href="/driver-loft-guide/">driver loft guide</a> is especially useful — most weekend golfers play too little loft for their swing speed. On a budget? Our <a href="/best-golf-drivers-under-200/">best under $200</a> list still delivers solid forgiveness. For seniors or slower swingers, see the <a href="/best-golf-driver-slow-swing-speed/">slow swing speed picks</a>.</p>' },
+    
+      { h2: 'Keep reading', body: 'For pin-precise yardage on approach shots, a <a href=\'/best-golf-rangefinders-2026/\'>laser rangefinder</a> complements a GPS watch well — the watch gives you the big picture, the rangefinder gives you the exact number. If you are using your watch data to practice smarter, our <a href=\'/best-golf-training-aids/\'>training aids guide</a> covers the tools that turn data into lower scores. Weekend golfers working toward a specific milestone should also check out <a href=\'/how-to-break-90/\'>how to break 90</a>.' },
+    
+      { h2: 'Keep reading', body: 'Once you have picked a forgiving driver, make sure the rest of your bag matches. Our <a href=\'/best-golf-irons-2026/\'>best irons guide</a> covers game-improvement irons that complement forgiving drivers. If your miss is a consistent slice, read <a href=\'/how-to-fix-your-slice/\'>how to fix your slice</a> — the right driver helps but a swing fix is permanent. Golfers on a tighter budget should also see our <a href=\'/best-golf-drivers-under-200/\'>drivers under $200</a> roundup.' },
     ],
     comparisonTable: {
       headers: ['GPS Watch', 'Best For', 'Price', 'Our Rating'],
@@ -315,6 +326,9 @@ export const ARTICLES: Article[] = [
       { q: 'What is the most forgiving driver for seniors?', a: "The Cleveland Launcher XL2 or the Cobra Air-X. Both are lightweight (under 290g), launch high, and are designed for swing speeds under 90 mph. The lighter weight adds 1-2 mph of swing speed. See our full guide at best drivers for seniors." },
       { q: 'Does a more forgiving driver really help?', a: "Yes — measurably. In our testing, the most forgiving driver (Callaway Paradym AI Smoke Max) lost 8 yards on toe hits versus 18 yards for a players driver. Over 14 drives per round, that forgiveness translates to 3-5 more fairways hit and 1-2 fewer penalty strokes." },
       { q: 'What driver has the highest MOI?', a: "The Ping G430 Max has one of the highest MOIs (moment of inertia) among 2026 drivers, meaning it resists twisting on off-center hits more than almost any other driver. High MOI equals high forgiveness. The TaylorMade Qi35 Max and Callaway Paradym AI Smoke Max are also among the highest." },
+    
+      { q: 'What makes a driver forgiving versus a tour driver?', a: 'Forgiveness in a driver comes from three things: high moment of inertia which resists twisting on off-center hits, a larger 460cc clubhead, and a low-and-back center of gravity that launches the ball higher with more spin stability. Tour drivers sacrifice some of these properties for workability — the ability to shape shots left or right intentionally. If you do not intentionally shape shots, you want forgiveness.' },
+      { q: 'Can a forgiving driver fix my slice?', a: 'A forgiving driver with draw bias can reduce a slice by 10-20 yards but it will not eliminate one caused by a fundamental swing path issue. Draw-bias drivers shift weight to the heel and close the face slightly at impact, which counteracts the open face that causes most slices. If your slice is more than 30 yards offline, the driver alone will not fix it — you need a swing adjustment paired with the right equipment.' },
     ],
     sources: [{ label: 'Garmin — Approach S62 Specifications', url: 'https://www.garmin.com/en-US/p/622467' }, { label: 'Shot Scope — V5 GPS Watch Features', url: 'https://www.shotscope.com/products/v5/' }],
     relatedComparisons: [
@@ -352,6 +366,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Callaway Paradym AI Smoke Max</strong> is the most forgiving driver for weekend golfers who miss the center more than they hit it. For budget buyers, the <strong>Cobra Aerojet Max</strong> at ~\$399 delivers 90% of the forgiveness at 65% of the price.',
     description: 'The most forgiving drivers for golfers who don\'t always find the center — tested by a weekend player who loses a sleeve per round. Honest 2026 picks.',
     excerpt: 'The most forgiving drivers of 2026 that help weekend golfers find more fairways and hit longer drives.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/drivers-thumb.webp',
     thumbnail: '/images/thumbnails/drivers-thumb.webp',
     updateLog: [{ date: 'Apr 10, 2026', note: 'Added Callaway Paradym Ai Smoke Max D as most forgiving option for slicers.' }, { date: 'Feb 14, 2026', note: 'Updated pricing across all 5 drivers; Cobra Aerojet Max dropped to $349.' }, { date: 'Jan 3, 2026', note: 'Full 2026 update — retested with Foresight GC3 launch monitor data.' }],
     intro: "The best driver is the one that keeps the ball in play. For most weekend golfers, that means maximum forgiveness — large MOI, draw bias available, lightweight shaft options. We tested 8 drivers over 30+ rounds.",
@@ -468,6 +483,10 @@ export const ARTICLES: Article[] = [
     
     
       { h2: 'What changes for left-handers, taller players, and slower swing speeds', body: "Swing analyzer accuracy is not uniform across all body types and swing patterns. Most published accuracy data comes from average-build right-handed golfers with mid-range swing speeds. If you fall outside that pattern, the data shifts. For left-handed golfers, most clip-on units work but require a different mounting orientation that can affect the unit's stability over a round — check the manufacturer's mount-direction instructions, do not assume symmetry. For taller players (over 6'2\"), the camera-based systems struggle with frame-fit when set up indoors with standard ceiling heights — the camera cannot see the full swing arc, which corrupts the swing-plane data. The clip-on and grip-mounted sensors are more reliable here. For slower swing speeds (under 85 mph driver), the radar-based analyzers can underread ball speed because the Doppler frequency shift is smaller — this matters most for the Rapsodo and similar Doppler units, less for the camera-based and accelerometer-based options. Match your equipment to your actual swing, not the average swing in the marketing materials." },
+    
+      { h2: 'Keep reading', body: 'If your phone app leaves you wanting more precision, a <a href=\'/best-golf-gps-watches/\'>GPS watch</a> puts the data on your wrist without draining your phone. Golfers who want shot-by-shot data should also look at <a href=\'/best-golf-swing-analyzers/\'>swing analyzers</a> that pair with apps to track every club in the bag. And for the data-driven golfer working on their game, our <a href=\'/how-to-break-90/\'>break 90 guide</a> turns those numbers into a scoring plan.' },
+    
+      { h2: 'Keep reading', body: 'Swing data is most valuable when paired with a plan. If you are working toward <a href=\'/how-to-break-90/\'>breaking 90</a>, our roadmap tells you exactly which data points matter at your level. For more advanced ball-flight data, a <a href=\'/best-golf-launch-monitors-2026/\'>launch monitor</a> gives you spin, carry, and launch angle that clip-on sensors cannot measure.' },
     ],
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Our Rating'],
@@ -485,6 +504,9 @@ export const ARTICLES: Article[] = [
       { q: 'What swing analyzer do most serious amateurs use?', a: 'Among competitive amateurs with 0-5 handicaps, the most common setup is Arccos for on-course tracking plus a Rapsodo or Garmin R10 for range practice. This gives them shot-level course data AND ball-flight practice data — two different use cases covered by two devices. For mid-handicappers in the 10-18 range, Arccos alone is usually sufficient because the strokes gained insights have the highest impact-per-dollar at that level. The data tells you what to practice, which is more valuable than precise swing mechanics data.' },
       { q: 'Are the manufacturer accuracy specs trustworthy?', a: 'Usually within tolerance on center-strike, well-calibrated swings — which is how manufacturers test. Real-world accuracy is 20-30% worse on edge cases: thin shots, mishits, extreme temperatures, low battery. The Rapsodo and SkyTrak+ hold accuracy best across varied conditions. Budget clip-on sensors drift the most because the mounting loosens over time. Treat manufacturer specs as best-case ceiling, not average-case expectation. The numbers you see on the range with fresh batteries and a clean setup are the most accurate readings you will ever get.' },
       { q: 'How often do I need to recalibrate a swing analyzer?', a: 'Depends on the type. Clip-on shaft sensors need recalibration every 4-6 weeks if used heavily — the vibration from impacts gradually shifts the accelerometer baseline. Grip-mounted sensors (Arccos, Shot Scope) essentially never need recalibration because they are permanently fixed and only track shot detection, not swing mechanics. Camera-based systems need repositioning every session if the camera moves at all — even a 2-inch shift changes the reference frame for swing-plane measurements. For the most consistent data, pick a setup that minimizes recalibration friction.' },
+    
+      { q: 'Do golf GPS apps drain your phone battery?', a: 'GPS-active golf apps typically use 15-25 percent of battery over a 4.5-hour round depending on your phone model and screen brightness. Newer iPhones handle it better than older models. The practical solution is to start your round with at least 60 percent battery or carry a small power bank in your bag. Turning off background app refresh and lowering screen brightness helps significantly.' },
+      { q: 'Are paid golf app subscriptions worth it?', a: 'It depends on how often you play. If you play fewer than 15 rounds per year, free GPS apps cover your needs. If you play 20 or more rounds and want to understand why your handicap is stuck, paid shot-tracking apps like Arccos or Shot Scope provide the analytics that free apps cannot. The breakeven point is roughly one stroke saved per round.' },
     ],
     sources: [{ label: 'Callaway Golf — Paradym Ai Smoke Technology', url: 'https://www.callawaygolf.com/golf-clubs/drivers/' }, { label: 'TrackMan — Average Driver Distances by Handicap', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     relatedComparisons: [
@@ -518,6 +540,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T300 balances feel and forgiveness better than anything else at this price. See our full iron guide →',
     description: '5 game-improvement irons tested over 30+ rounds by a 12-hdcp. Ping G430 vs Callaway Paradym vs TaylorMade Qi — which set adds the most forgiveness per dollar?',
     excerpt: 'The best game-improvement, mid-handicap, and players irons of 2026 — tested and ranked for every skill level.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/irons-thumb.webp',
     thumbnail: '/images/thumbnails/irons-thumb.webp',
     updateLog: [{ date: 'Apr 12, 2026', note: 'Added Ping G440 mention; updated Callaway Paradym Ai Smoke pricing.' }, { date: 'Mar 1, 2026', note: 'Expanded shaft flex guide with swing speed chart.' }, { date: 'Jan 8, 2026', note: 'Full 2026 refresh — retested all iron sets over 10+ rounds each.' }],
     intro: "Choosing the right irons is the most impactful equipment decision a golfer makes. The wrong irons — even expensive ones — will actively hurt your game. Here's our complete guide to the best golf irons of 2026.",
@@ -561,6 +584,10 @@ export const ARTICLES: Article[] = [
       { h2: 'Best for Low Handicappers: Titleist T100', body: "The Titleist T100 are the gold standard for players irons: minimal offset, thin topline, and enough feel to know exactly where you struck the ball. I tested these over 8 rounds and they humbled me immediately. On pure strikes, the feedback is extraordinary — you feel the ball compress against the face in a way that game-improvement irons cannot replicate. My 7-iron carried 162 yards on average with a penetrating mid-flight trajectory that held its line in crosswinds.\\n\\nThe catch: mishits punish you. A half-inch off center and I lost 12-15 yards of carry with a noticeable sting through the shaft. If your handicap is above 10, these will cost you strokes. Below 8, they reward precision with workability no cavity-back can match — I shaped a consistent 5-yard draw on demand.\\n\\nThe forged 1025 carbon steel gives that buttery soft feel that better players chase. At $1,299 for a set they are expensive, but these are the irons you graduate to when your ball striking earns them. For most of us weekend golfers, the Paradym or G430 are smarter picks.", price: '~$1,299 set', sectionImage: '/images/products/iron-comparison-lineup.webp', sectionImageAlt: 'Three iron sets side by side showing the difference in offset and topline for different handicap levels', affiliateKey: 'titleist-t100' },
       { h2: 'What Shaft Flex Do You Need?',
         callout: { text: 'Hitting your irons fat? It might not be the clubs — the fix takes 5 minutes.', link: '/why-do-i-hit-irons-fat/', label: 'Why you hit irons fat (and the fix)' }, body: "Under 80mph → ladies/senior, 80–95mph → regular, 95–110mph → stiff, over 110mph → extra stiff. Getting fitted is more important than picking the right head. Every iron on this list can be the best iron for you — it depends entirely on your swing speed, attack angle, and how you deliver the club. Senior golfers should also see our <a href=\"/best-golf-irons-for-seniors/\">irons for seniors</a> guide. And if your long irons sit unused, our <a href=\"/hybrid-vs-long-iron/\">hybrid vs long iron breakdown</a> explains why most amateurs hit hybrids better.", sectionImage: '/images/products/iron-turf-interaction.webp', sectionImageAlt: 'Iron hitting turf on a real course — shaft flex affects how the club releases through impact' },
+    
+      { h2: 'Keep reading', body: 'The right irons paired with the right driver make a bigger difference than either alone. See our <a href=\'/best-golf-drivers-forgiveness/\'>most forgiving drivers</a> guide to match your iron set with a driver that has similar forgiveness. For the short game end of the bag, our <a href=\'/best-golf-putters-2026/\'>best putters guide</a> covers the other half of scoring. And if you want data on how your new irons actually perform, a <a href=\'/best-golf-launch-monitors-2026/\'>launch monitor</a> gives you real carry distances per club.' },
+    
+      { h2: 'Keep reading', body: 'Equipment can help too — a <a href=\'/best-golf-drivers-forgiveness/\'>forgiving driver with draw bias</a> reduces a slice by 10-20 yards even before the swing fix takes hold. If the slice was costing you scores in the high 90s, pair the fix with our <a href=\'/how-to-break-90/\'>break 90 roadmap</a> to build a plan around your improved ball flight. A <a href=\'/best-golf-swing-analyzers/\'>swing analyzer</a> can also help you track whether your face angle and path numbers are actually improving between range sessions.' },
     ],
     comparisonTable: {
       headers: ['Iron Model', 'Best For', 'Price (Set)', 'Our Rating'],
@@ -576,6 +603,12 @@ export const ARTICLES: Article[] = [
       { q: 'What are the most forgiving golf irons in 2026?', a: "The Callaway Paradym Ai Smoke Max and TaylorMade Qi35 Max irons. Both use AI-designed faces that maximize ball speed on off-center strikes. Budget pick: Wilson D9 (~$699)." },
       { q: 'Should beginner golfers buy expensive irons?', a: "No. The Wilson Profile SGI or Callaway Strata complete set ($249–$349) gives beginners everything they need. Expensive irons are a waste of money until your ball striking is consistent." },
       { q: 'What is the difference between cavity back and blade irons?', a: "Cavity-back irons have a hollowed-out back that moves weight to the perimeter for forgiveness. Blade irons have maximum feel but a small sweet spot — only for low-handicap players." },
+    
+      { q: 'How often should you replace your golf irons?', a: 'Most recreational golfers can play the same irons for 5-8 years before wear meaningfully affects performance. The grooves on forged irons wear faster than cast irons, especially on sand shots. If your ball is not checking on the green the way it used to from short approach distances, the grooves may be worn. Technology gains between iron generations are typically 2-4 yards per club — noticeable but not transformative.' },
+      { q: 'Should a beginner buy game-improvement or players irons?', a: 'Game-improvement irons for the first 2-3 years, without exception. Players irons reward center-face contact with better feel and shot shaping, but they punish mis-hits with dramatic distance loss and offline shots. A beginner hits the center of the face less than 30 percent of the time — game-improvement irons with a larger sweet spot and lower center of gravity make the other 70 percent of swings playable.' },
+    
+      { q: 'What is the number one cause of a slice?', a: 'An open clubface at impact relative to the swing path. Most golfers assume slices come from an outside-in swing path, and that is a contributing factor, but the face angle accounts for roughly 75 percent of the ball starting direction. You can swing outside-in and still hit straight shots if the face is square to the path. Fix the face first through grip and forearm rotation, then address the path.' },
+      { q: 'Can a strong grip fix a slice permanently?', a: 'A stronger grip is the fastest slice fix and works permanently for many golfers. Rotating both hands clockwise on the grip for right-handers pre-sets the clubface in a more closed position, which counteracts the open face that causes the slice. The adjustment feels uncomfortable for the first 2-3 range sessions but most golfers adapt within a week.' },
     ],
     whoFor: [
       'Shoot between 85-105 and want more consistent distance on mishits',
@@ -620,6 +653,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: "How to Fix Your Slice: The Weekend Golfer's Complete Guide",
     description: 'You fixed your slice last week and it\'s back. We know the feeling. Grip, path, and face fixes that actually stick — from one weekend warrior to another.',
     excerpt: 'Step-by-step drills and gear adjustments that actually stick — no range bucket required.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/fix-slice-thumb.webp',
     thumbnail: '/images/thumbnails/fix-slice-thumb.webp',
     intro: 'The slice is the most common miss in amateur golf — and the most misunderstood. The fix is in understanding what actually causes the ball to curve right, then changing one or two variables that matter. And if you are heading to the course straight from work, our <a href="/office-to-golf-course-playbook/">cubicle-to-course playbook</a> has a warm-up routine that prevents the first-tee slice.',
     testingNotes: 'All iron sets independently purchased and tested over 10+ rounds each. Forgiveness and distance measured on real courses across multiple swing speeds.',
@@ -646,7 +680,9 @@ export const ARTICLES: Article[] = [
         { name: 'Alignment sticks 2-pack (~$12)', desc: 'Place in the ground to see your swing path vs target line during range sessions.', affiliateKey: 'alignment-sticks' },
       ]},
     
-      ],
+      
+      { h2: 'Keep reading', body: 'Club selection is half the battle. Make sure your bag is working for you — our <a href=\'/best-golf-drivers-forgiveness/\'>forgiving drivers guide</a> and <a href=\'/best-golf-putters-2026/\'>putting guide</a> cover the two clubs that affect scoring most. If three-putting is your main leak, a <a href=\'/best-golf-training-aids/\'>putting training aid</a> can cut 2-3 strokes per round within a month of consistent practice.' },
+    ],
     faq: [
       { q: 'What actually causes a golf slice?', a: "An open clubface relative to the swing path at impact. The ball starts in the direction of the path and curves toward the face direction. Fix the face angle first, then the path." },
       { q: 'How long does it take to fix a golf slice?', a: "Most weekend golfers see 50% reduction within 2–3 range sessions with grip and path fixes. A complete fix typically takes 4–6 weeks of deliberate practice." },
@@ -655,6 +691,9 @@ export const ARTICLES: Article[] = [
       { q: 'How many putts per round to break 90?', a: 'Aim for 34 or fewer putts per round. The average 95-shooter takes 36-38 putts. Reducing three-putts from 4-5 per round to 1-2 saves 3-4 strokes immediately. The fix is lag putting practice — hit your first putt to a 3-foot circle around the hole instead of at the hole. Distance control on long putts is more important than make rate on short putts.' },
       { q: 'Should I take golf lessons to break 90?', a: 'Not necessarily. If your main scoring issue is blow-up holes and three-putts, course management and putting practice fix the problem without lessons. If you have a consistent miss (slice, fat shots, shanks) that causes the blow-ups, one or two targeted lessons addressing that specific miss are worthwhile. Avoid lesson packages that overhaul your entire swing — you need to fix one thing, not rebuild everything.' },
       { q: 'What percentage of golfers break 90?', a: 'Roughly 25-30% of golfers who keep a handicap break 90 regularly. Among all recreational golfers (including those who do not track scores), the percentage is lower. Breaking 90 puts you ahead of the majority of weekend golfers. It does not require exceptional talent — it requires consistent course management and basic short game competence.' },
+    
+      { q: 'What handicap do you need to break 90?', a: 'Breaking 90 consistently correlates to roughly a 15-18 handicap index. A golfer who shoots 89 once has not broken 90 — the milestone means shooting under 90 more often than not. Most golfers reach this level after 2-4 years of regular play combined with some structured practice. The key is not swing perfection but course management.' },
+      { q: 'What is the fastest way to go from 100 to 90?', a: 'Eliminate penalty strokes and three-putts. The average golfer shooting 100 loses 6-8 strokes per round to penalties and 4-6 strokes to three-putts. Fixing those two categories alone drops the score to 86-90 without changing your swing at all. Play one less club off the tee when trouble is in range, and spend 80 percent of your practice time on putts inside 6 feet.' },
     ],
     sources: [{ label: 'TrackMan — Club Path & Face Angle Definitions', url: 'https://blog.trackmangolf.com/ball-flight-laws/' }, { label: 'PGA of America — Grip Fundamentals', url: 'https://www.pga.com/story/instruction-how-to-properly-grip-a-golf-club' }],
     related: [
@@ -683,6 +722,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: "How to Break 90: A Weekend Golfer's Roadmap",
     description: "Breaking 90 means 17 over. You've shot 91 twice and it stings. Here's the scoring math and course management a weekend warrior actually needs to get there.",
     excerpt: 'The exact skills, stats, and mindset shifts that move you from 95 to 89.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/break-90-thumb.webp',
     thumbnail: '/images/thumbnails/break-90-thumb.webp',
     intro: "Breaking 90 requires averaging bogey golf — one over par on every hole. It's achievable for any golfer averaging 95–105 who's willing to play smarter, not necessarily better.",
     toc: ['The math of breaking 90', 'Your #1 enemy: the blow-up hole', 'Stop trying to hit it far', 'Short game is 60% of your score', '5 course management rules', 'FAQ'],
@@ -707,6 +747,8 @@ export const ARTICLES: Article[] = [
     
       { h2: 'Common Mistakes When Trying to Break 90', body: "Five habits that keep weekend golfers stuck between 92-98.\n\n<strong>Going to the range instead of the putting green.</strong> Most practice time should go to putting and chipping — those are 60% of your strokes. Hitting a bucket of drivers feels productive but does not address the strokes you are actually losing.\n\n<strong>Changing your swing mid-round.</strong> The first tee is not the time for swing thoughts from a YouTube video you watched last night. Play with the swing you brought to the course today. Save changes for the range.\n\n<strong>Playing the tips.</strong> Most weekend golfers should play the forward tees (5,800-6,200 yards). The course plays shorter, approaches are more manageable, and you reach more par-5s in regulation. There is no handicap penalty for playing shorter tees.\n\n<strong>Skipping the pre-round routine.</strong> Three holes of warming up on the course costs 3-4 strokes. Thirty minutes on the practice green saves them.\n\n<strong>Keeping score on every hole.</strong> Some golfers play worse when they track their score because pressure builds on the back nine. If score anxiety is a problem, stop adding up until the round is over. Play each hole independently." },
       { h2: 'When You Break 90 — What Changes Next', body: "The path from 95 to 89 is mostly course management and three-putt elimination. The path from 89 to 85 is different — it requires actual skill improvement. Once you break 90, the next targets are: increasing your greens in regulation from 3-4 to 6-7 per round (which requires better iron contact), reducing your average putts from 34 to 31 (which requires distance control on 20-30 footers), and developing a reliable 50-yard pitch shot. These are swing and touch skills that take deliberate practice, not just smarter decisions. A series of 3-5 lessons focused on iron contact is the fastest investment at this stage." },
+    
+      { h2: 'Keep reading', body: 'Once the basics click, your next milestone is <a href=\'/how-to-break-90/\'>breaking 90</a> — our guide maps out the exact steps. Beginners building their first bag should see our <a href=\'/best-golf-drivers-forgiveness/\'>forgiving drivers</a> and <a href=\'/best-golf-irons-2026/\'>irons guide</a> to avoid overspending on equipment they will outgrow.' },
     ],
     faq: [
       { q: 'What score do you need to break 90 in golf?', a: "Breaking 90 means shooting 89 or lower. On a par-72 course, that\'s 17 over par. You can make 3–4 double bogeys and still shoot 89 as long as you eliminate triples." },
@@ -724,6 +766,7 @@ export const ARTICLES: Article[] = [
     id: 'tips-beginners',
     slug: '/golf-tips-for-beginners/',
     quickAnswerProduct: 'callaway-strata-set',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/tips-beginners-thumb.webp',
     thumbnail: '/images/thumbnails/tips-beginners-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -788,6 +831,7 @@ export const ARTICLES: Article[] = [
     id: 'handicap',
     slug: '/average-golf-handicap/',
     quickAnswerProduct: 'arccos-caddie-sensors',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/handicap-thumb.webp',
     thumbnail: '/images/thumbnails/handicap-thumb.webp',
     category: 'improve-game',
     pageType: 'listicle',
@@ -835,6 +879,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'swing-analyzers',
     slug: '/best-golf-swing-analyzers/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/swing-analyzers-thumb.webp',
     thumbnail: '/images/thumbnails/swing-analyzers-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -909,6 +954,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-apps',
     slug: '/best-golf-apps/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-apps-thumb.webp',
     thumbnail: '/images/thumbnails/golf-apps-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -979,6 +1025,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'ai-tools',
     slug: '/best-ai-golf-training-tools/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/ai-tools-thumb.webp',
     thumbnail: '/images/thumbnails/ai-tools-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -1055,6 +1102,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'accessories-25',
     slug: '/25-golf-accessories-every-golfer-should-own/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/accessories-25-thumb.webp',
     thumbnail: '/images/thumbnails/accessories-25-thumb.webp',
     category: 'golf-accessories',
     pageType: 'listicle',
@@ -1118,6 +1166,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The best golf accessories under \$50 are a putting mirror (\$25), a FootJoy WeatherSof glove (\$18), and a pack of Srixon Soft Feel balls (\$27/dozen). These three items deliver more improvement per dollar than any club upgrade.',
     description: "12 golf accessories under $50 that improve your round more than a new driver. Tested by weekend golfers.",
     excerpt: 'High-impact, low-cost upgrades every golfer should own before spending big on gear.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/accessories-thumb.webp',
     thumbnail: '/images/thumbnails/accessories-thumb.webp',
     intro: "Before you drop $400 on a new driver, spend $150 on these accessories. Each one will improve your round more reliably than a club upgrade.",
     testingNotes: 'All products independently purchased and tested over a full season. Value assessed by frequency of use per round.',
@@ -1146,6 +1195,10 @@ export const ARTICLES: Article[] = [
     
       
       { h2: 'Gift-giving by who they actually are', body: "Price-tier shopping (the section above) works if you do not know the recipient well. But if you do know them, recipient-type shopping is faster and produces gifts that feel personal. The five common recipient types below cover roughly 90% of the golfers you are shopping for. The key is matching the gift to where they are in the game, not where you wish they were.\n\n<strong>The beginner who just started playing.</strong> This is the easiest category and the one most people overcomplicate. New golfers do not need fancy gear — they need the basics that make their first 10 rounds less embarrassing. A glove that fits, a sleeve of forgiving balls (not Pro V1 — they will lose them too fast), a divot tool, and a towel. Total spend under $50. Avoid: clubs (every new golfer is wrong about what clubs they need), shoes (sizing risk), or anything labeled \"for beginners\" — new golfers do not want to feel like beginners. The single best gift in this tier is a starter set if you actually know their measurements. If you do not, stick to consumables and a gift card to their local municipal course for greens fees.\n\n<strong>The casual weekend golfer who plays 10-30 rounds a year.</strong> The trick here is buying the thing they want but will not justify. They have a 5-year-old glove because the current one \"still works.\" They use the same towel every round, which is now a dishrag. They lose 6 balls a round and refuse to buy anything above $20 a dozen. A gift in this category should be something they would notice using. A premium 2-pack of cabretta gloves ($35). A quality microfiber towel set ($25-30). A dozen of a ball above their usual ($45-55). Each one is a small upgrade they would never buy for themselves and will use every single round.\n\n<strong>The obsessed mid-handicapper.</strong> This is the hardest category because the recipient already owns most of the obvious stuff. The right gift is something specific to a problem they are working on. If they are trying to break 90, a putting mirror ($25) or a real lesson with a teaching pro ($75-150) hits harder than another rangefinder. If they are tinkering with their bag, a launch monitor session at a local fitting studio ($100-200) gives them data they have never had. If they are a data nerd, the Arccos sensor set ($179 plus a subscription) genuinely changes how they see their game. Avoid: another piece of swing-trainer equipment unless they have explicitly asked for one. They have six of them in the garage already.\n\n<strong>The senior golfer or recreational walker.</strong> The gift here is about comfort and reducing fatigue, not about adding distance. A quality push cart ($150-250) is the single best gift for a walker who currently carries. A pair of waterproof walking shoes ($120-180) protects on dew-heavy morning rounds. A wider grip set for stiffer hands ($80-120 installed) makes every club easier to control. For the social-round senior who plays nine holes with friends, an insulated tumbler with their initials, a quality umbrella, or a small bag-mounted speaker (low-volume, low-key) hits the right note. Avoid: anything that signals you think they need help. Senior-specific marketing is patronizing — buy a good product that happens to suit how they play, not a product labeled for older golfers.\n\n<strong>The gear-head who already owns everything.</strong> This is the experience-gift tier. A round at a course they have never played ($75-200). A fitting session at a local pro shop ($100-200). A pair of premium gloves they would consider extravagant ($55-65 for two). A one-year subscription to a single quality publication or premium app. The gear-head's drawer is already full of clip-ons and gadgets — what they are missing is time, access, and experiences. A handwritten card listing three courses you will play with them over the next year hits harder than any product on this page.\n\nThe same physical gift can land differently depending on the recipient. A $179 Arccos sensor set is a perfect gift for the obsessed mid-handicapper and a waste for the beginner who has not broken 110 yet. The price tiers above are useful for narrowing the budget. Knowing who you are buying for is what makes the gift actually land." },
+    
+      { h2: 'Keep reading', body: 'Good shoes are the start of a comfortable walking setup. Our <a href=\'/best-golf-bags-2026/\'>golf bags guide</a> covers lightweight options built for walkers, and <a href=\'/best-golf-accessories-under-50/\'>accessories under $50</a> includes the gloves, towels, and small gear that round out every walking kit. If you are a walking golfer looking to improve your scores, <a href=\'/how-to-break-90/\'>our break 90 guide</a> was written specifically for the weekend golfer who plays on foot.' },
+    
+      { h2: 'Keep reading', body: 'Not sure what kind of golfer you are buying for? Our <a href=\'/best-golf-accessories-under-50/\'>accessories under $50</a> guide covers the universally useful gifts that work for any skill level. For the golfer who is serious about improving, a <a href=\'/best-golf-training-aids/\'>training aid</a> or a <a href=\'/best-golf-apps/\'>golf app subscription</a> makes a more impactful gift than another sleeve of balls.' },
     ],
     faq: [
       { q: 'What is the best golf gift for a beginner?', a: 'A glove 2-pack (~$32), a pack of alignment sticks (~$12), and a dozen Srixon Soft Feel balls (~$22). Total cost under $70 and it covers the three things beginners run out of fastest: gloves that wear through, practice aids they do not own, and balls they lose. Avoid buying a beginner clubs or a full bag — those are deeply personal equipment decisions that depend on height, swing speed, and budget the recipient should choose themselves.' },
@@ -1157,6 +1210,9 @@ export const ARTICLES: Article[] = [
       { q: "How do I shop for a golfer if I don't golf myself?", a: "Stay in the consumables tier (under $50) and you cannot go wrong. Gloves, balls, tees, towels, divot tools — these are things every golfer needs and replaces regularly, so the recipient will use it without judgment about whether you picked the \"right\" model. Avoid anything that requires fitting (clubs, shoes), anything with an opinion attached (specific ball brand, specific glove material), or anything technical (rangefinders, GPS units) unless they have explicitly told you they want it. The safest premium gift if you absolutely must spend more: a gift card to a golf retailer the recipient already uses." },
       { q: "What's the best gift for a golfer who already owns everything?", a: "Consumables they have not bothered to upgrade. Even golfers with a $3,000 bag often play with worn-out gloves and yellow towels because those feel like an unnecessary upgrade to buy themselves. A premium glove bundle, a quality microfiber towel set, or a sleeve of the ball they always wished they could justify (Pro V1, Chrome Soft X) are gifts that get used immediately. Another reliable choice: an experience over a thing. A lesson with a teaching pro, a round at a course they have always wanted to play, or a fitting session at a local pro shop." },
       { q: "Are golf-branded subscription boxes worth it?", a: "Not really. The boxes typically include a couple of golf balls, a glove, some tees, and a few branded accessories — which sounds like a good value until you realize you are paying $30-50 per month for items that cost $20 at retail and that the recipient may not actually use. The accessories are usually generic-branded items the recipient would not pick on their own. If the recipient explicitly likes surprise boxes, fine. Otherwise the same $30-50 spent on one quality item they will actually use is a better gift." },
+    
+      { q: 'Are spikeless golf shoes good enough for wet conditions?', a: 'Modern spikeless shoes with aggressive tread patterns handle light wet conditions well, but traditional spiked shoes still outperform in heavy rain, dewy mornings, and hilly terrain where traction matters most. If you play early morning rounds regularly or live in a rainy climate, spikes are the safer choice. For fair-weather walking rounds on flat courses, spikeless shoes are lighter and more comfortable over 18 holes.' },
+      { q: 'How many rounds do walking golf shoes typically last?', a: 'Walking-specific golf shoes last 80-120 rounds for most golfers before the cushioning compresses noticeably and the outsole tread wears smooth. That translates to roughly 2-3 seasons for a golfer playing 40 rounds per year. The midsole cushioning degrades before the upper shows visible wear, so if your feet feel more tired after a round than they used to, the shoes have likely lost their support.' },
     ],
     related: [
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Should Own' },
@@ -1170,6 +1226,7 @@ export const ARTICLES: Article[] = [
     id: 'sneak-rounds',
     slug: '/how-to-sneak-in-more-golf-rounds/',
     quickAnswerProduct: 'bag-boy-nitron',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sneak-rounds-thumb.webp',
     thumbnail: '/images/thumbnails/sneak-rounds-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
@@ -1203,7 +1260,7 @@ export const ARTICLES: Article[] = [
       { q: 'How do busy people find time for golf?', a: "Most effective strategies: (1) twilight rounds after work (2.5 hours vs 4.5), (2) 6:30am tee times on WFH days, (3) play 9 holes instead of 18, (4) build a standing 2-week tee time with 2–3 committed friends." },
     ],
     related: [
-      { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
+      { slug: '/office-to-golf-course-playbook/', label: 'Golf Fitness for Office Workers' },
       { slug: '/best-golf-courses-weekend-drive/', label: 'Best Golf Courses Within a Weekend Drive' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
     ],
@@ -1212,6 +1269,7 @@ export const ARTICLES: Article[] = [
     id: 'courses',
     slug: '/best-golf-courses-weekend-drive/',
     quickAnswerProduct: 'bag-boy-nitron',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/courses-thumb.webp',
     thumbnail: '/images/thumbnails/courses-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
@@ -1244,7 +1302,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/courses/phoenix-az/', label: 'Best Golf Courses in Phoenix' },
 
-      { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
+      { slug: '/office-to-golf-course-playbook/', label: 'Golf Fitness for Office Workers' },
       { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders for Your Trip' },
     ],
@@ -1267,6 +1325,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For golfers with a swing speed above 90 mph, the <strong>Titleist Pro V1</strong> or Callaway Chrome Tour are the correct picks. Below 90 mph, a lower compression ball will give you more distance. See our golf ball compression chart →',
     description: '9 golf balls tested over 40+ rounds. Matched to your swing speed — Pro V1, Chrome Tour, Q-Star Tour, Supersoft. Find your best ball.',
     excerpt: 'The best golf balls for distance, feel, and scoring — updated for 2026 new Chrome Tour and Bridgestone Tour B X releases tested over 35+ rounds.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-balls-thumb.webp',
     thumbnail: '/images/thumbnails/golf-balls-thumb.webp',
     updateLog: [{ date: 'Apr 14, 2026', note: 'Updated Titleist Pro V1 to 2025 model; added Callaway Chrome Soft X LS.' }, { date: 'Mar 5, 2026', note: 'Added swing speed matching table for all 9 balls tested.' }, { date: 'Jan 10, 2026', note: 'Full 2026 update — added 3 new budget balls, removed discontinued models.' }],
     intro: "The golf ball is the only piece of equipment used on every shot. 2026 has brought meaningful upgrades: the new Callaway Chrome Tour features a stiffer mantle layer for faster ball speed, and the Bridgestone Tour B X already has two PGA Tour wins this season. We tested 9 balls over 35+ rounds to find the best for every swing speed and budget.",
@@ -1468,6 +1527,8 @@ export const ARTICLES: Article[] = [
         sectionImage: '/images/products/golf-ball-comparison-lineup.webp',
         sectionImageAlt: 'Budget vs premium golf balls side by side — weekend golfers shooting 95+ get more from a $25 ball than a $55 one',
       },
+    
+      { h2: 'Keep reading', body: 'Ball selection matters more when the rest of your equipment is dialed in. If you are still choosing a driver, see our <a href=\'/best-golf-drivers-forgiveness/\'>forgiving drivers guide</a> — the right driver-ball pairing affects launch conditions. Curious how different balls compare on compression? Our <a href=\'/golf-ball-compression-chart/\'>compression chart</a> ranks every major ball side by side. Golfers on a budget should also check <a href=\'/best-golf-accessories-under-50/\'>accessories under $50</a> for balls that punch above their price.' },
     ],
     faq: [
       { q: 'What golf ball should a high handicapper use?', a: "Golfers shooting over 100 should use a low-compression two-piece ball: Callaway Supersoft (~$25/dozen) or Srixon Soft Feel (~$27/dozen). Premium tour balls require swing speeds over 85mph to compress properly. Playing one below your speed actually costs you distance." },
@@ -1505,6 +1566,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'gloves',
     slug: '/best-golf-gloves-hot-weather/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gloves-thumb.webp',
     thumbnail: '/images/thumbnails/gloves-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -1565,7 +1627,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Should Own' },
-      { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
+      { slug: '/office-to-golf-course-playbook/', label: 'Golf Fitness for Office Workers' },
     ],
   },
 
@@ -1589,9 +1651,10 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For most golfers, the <strong>Odyssey White Hot OG</strong> in the configuration that fits your stroke type is the clearest recommendation. If you consistently miss alignment, a mallet. If you have a consistent arc stroke, a blade. See our putting guide →',
     description: 'Putters tested on real greens by a golfer who 3-putts more than he admits. Blade vs mallet vs mid-mallet — which one actually helps a weekend player.',
     excerpt: 'The right putter style for your stroke type — blade, mallet, and mid-mallet picks at every budget.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/putters-thumb.webp',
     thumbnail: '/images/thumbnails/putters-thumb.webp',
     updateLog: [{ date: 'Apr 8, 2026', note: 'Added Odyssey Ai-ONE Mallet as new budget pick; updated Scotty Cameron pricing.' }, { date: 'Feb 28, 2026', note: 'Expanded alignment aid comparison section with photos.' }, { date: 'Jan 15, 2026', note: 'Full 2026 refresh — retested all 7 putters on bermuda and bent greens.' }],
-    intro: "Putting accounts for 40% of all strokes. The putter is the most personal club in the bag — the right head shape, length, and weight for your stroke type matters more than the price tag. We tested 9 putters on real greens over 25 rounds. For older golfers or anyone with hand tremor, see our <a href=\"/best-putters-shaky-hands-older-golfers/\">putters for shaky hands guide</a> — it covers zero-torque and arm-lock options.",
+    intro: "Putting accounts for 40% of all strokes. The putter is the most personal club in the bag — the right head shape, length, and weight for your stroke type matters more than the price tag. We tested 9 putters on real greens over 25 rounds. For older golfers or anyone with hand tremor, see our <a href=\"/best-golf-putters-2026/\">putters for shaky hands guide</a> — it covers zero-torque and arm-lock options.",
     testingNotes: 'All putters independently purchased and tested on real greens over 25 rounds. Alignment, feel, and stability evaluated from 3-30 feet.',
     toc: ['How to choose: blade vs mallet', 'Best overall: Odyssey White Hot OG', 'Best premium: Scotty Cameron Phantom', 'Best stability: TaylorMade Spider Tour', 'Best budget: Cleveland HB Soft Milled', 'Putter length fitting', 'FAQ'],
     sections: [
@@ -1639,6 +1702,8 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Putters for High Handicappers', body: '<p>High handicappers (20+ handicap) should prioritize alignment aids and forgiveness. The Odyssey Triple Track reduces misaim by 2-4 degrees and the face insert maintains speed on mishits. Avoid blade putters if you are above a 20 handicap — the forgiveness penalty costs you 1-2 three-putts per round. For more affordable options, see our <a href="/best-budget-putters-under-150/">putters under $150</a> roundup.</p> Pair the right putter with our <a href=\"/how-to-stop-3-putting/\">guide to eliminating three-putts</a>.' },
       { h2: 'Best Putters for Older Golfers', body: '<p>Heavier putters (370-380g) dampen hand shake better than standard weight (340-350g). The <strong>Odyssey Tri-Hot 5K</strong> uses heavy stainless steel construction that absorbs micro-movements. Counter-balanced putters (extra weight in the grip end) create a pendulum effect that makes the stroke smoother and less hand-dependent. Not sure what length you need? Our <a href="/how-to-choose-putter-length/">putter length guide</a> walks through the measurement.</p>' },
       { h2: 'Best Putters for the Yips', body: '<p>The <strong>L.A.B. Golf Directed Force</strong> is the most yips-friendly putter we tested — its lie-angle-balanced design means the face stays square without any manipulation, reducing demands on your hands and wrists. Arm-lock putters also physically limit wrist movement where yips manifest most. It is expensive ($400+) but golfers who have tried everything else often find it transformative.</p>' },
+    
+      { h2: 'Keep reading', body: 'The putter only works as well as your green-reading and speed control. If three-putting is the issue, our <a href=\'/how-to-break-90/\'>break 90 guide</a> has a putting-specific section that covers lag-putt practice. For golfers building a complete bag, pair your putter with <a href=\'/best-golf-irons-2026/\'>the right irons</a> and a <a href=\'/best-golf-drivers-forgiveness/\'>forgiving driver</a> for a setup that works together.' },
     ],
     comparisonTable: {
       headers: ['Putter', 'Style', 'Price', 'Insert', 'Best For'],
@@ -1653,6 +1718,9 @@ export const ARTICLES: Article[] = [
       { q: 'What is the best putter for a high handicapper?', a: "High handicappers benefit most from a mallet putter with a large alignment aid — the Odyssey White Hot OG is the best pick. The larger head is more forgiving, and the 2-ball system is easiest to aim consistently." },
       { q: 'What length putter should I use?', a: "Most golfers use a putter that is too long. Correct length puts your eyes directly over or slightly inside the ball. For most golfers between 5ft 8in and 6ft 1in, a 33 or 34 inch putter is correct." },
           { q: 'How do I know if I need a mallet or blade putter?', a: 'If your stroke is straight-back-straight-through, a face-balanced mallet works best. If your stroke has a natural arc, a toe-weighted mallet or blade works better. Balance your putter grip-end on your finger -- if the face points up it is face-balanced (mallet). If it hangs at an angle it is toe-weighted (blade).' },
+    
+      { q: 'How do I know if I need a blade or mallet putter?', a: 'Your stroke type determines which head shape works best. If you have an arcing stroke where the putter face opens on the backstroke and closes through impact, a blade or small mallet with toe hang matches naturally. If you have a straight-back-straight-through stroke, a face-balanced mallet keeps the face square without fighting your path. The wrong match costs more strokes than the wrong brand.' },
+      { q: 'Does putter length actually matter?', a: 'Yes — putter length affects your posture, eye position over the ball, and stroke mechanics. Most stock putters are 34 or 35 inches, but the correct length depends on your height and arm length. A putter that is too long forces you to stand too upright with your eyes inside the ball line, which causes misalignment. A basic fitting takes 10 minutes and is often free at golf retailers.' },
     ],
     whoFor: [
       '3-putt more than 3 times per round -- equipment can genuinely help',
@@ -1697,6 +1765,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Your bag choice should match how you play. Walking? The <strong>Sun Mountain 2.5+</strong> is the lightest full-size carry bag available. Riding? The <strong>Callaway Fairway 14</strong> maximizes storage without compromise. See our full bag guide →',
     description: 'Sun Mountain 2.5+, Titleist Players 4 & Callaway Fairway 14 tested side-by-side. Best golf bags for carry, cart & riding in 2026 at every budget.',
     excerpt: 'The best carry, stand, and cart bags of 2026 — tested over 30+ rounds.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-bags-thumb.webp',
     thumbnail: '/images/thumbnails/golf-bags-thumb.webp',
     intro: "The right golf bag depends on how you play: walking, riding, or both. A carry bag on a riding cart wears faster. A cart bag on your back gets heavy fast. Here are the best options for each use case in 2026.",
     testingNotes: 'All golf bags independently purchased and tested over a full season of play — walking, riding, and push cart use.',
@@ -1764,6 +1833,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-ball-compression',
     slug: '/golf-ball-compression-chart/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-ball-compression-thumb.webp',
     thumbnail: '/images/thumbnails/golf-ball-compression-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -1895,6 +1965,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'pro-v1-vs-pro-v1x',
     slug: '/titleist-pro-v1-vs-pro-v1x/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/pro-v1-vs-pro-v1x-thumb.webp',
     thumbnail: '/images/thumbnails/pro-v1-vs-pro-v1x-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
@@ -1951,6 +2022,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-gifts',
     slug: '/best-golf-gifts-for-him/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-gifts-thumb.webp',
     thumbnail: '/images/thumbnails/golf-gifts-thumb.webp',
     category: 'golf-accessories',
     pageType: 'listicle',
@@ -2005,6 +2077,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-shoes-walking',
     slug: '/best-golf-shoes-for-walking/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-shoes-walking-thumb.webp',
     thumbnail: '/images/thumbnails/golf-shoes-walking-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -2067,7 +2140,7 @@ export const ARTICLES: Article[] = [
       'Already have comfortable golf shoes less than 2 seasons old',
     ],
     related: [
-      { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for Office Workers' },
+      { slug: '/office-to-golf-course-playbook/', label: 'Golf Fitness for Office Workers' },
       { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
     ],
@@ -2079,6 +2152,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-gloves-men',
     slug: '/best-golf-gloves-for-men/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-gloves-men-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-gloves-men-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -2146,6 +2220,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-budget-drivers',
     slug: '/best-golf-drivers-under-200/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-budget-drivers-thumb.webp',
     thumbnail: '/images/thumbnails/best-budget-drivers-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -2179,7 +2254,7 @@ export const ARTICLES: Article[] = [
         cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' , affiliateKey: 'cleveland-launcher-xl2'},
       { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you\'ve never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
     
-      { h2: 'Expanding Your Options', body: '<p>If you need a full set (not just a driver), see our <a href="/best-beginner-golf-club-sets/">best beginner club sets</a>. For the overall forgiveness ranking regardless of price, our <a href="/best-golf-drivers-forgiveness/">most forgiving drivers</a> list is the reference. And if budget allows another $100, our <a href="/best-golf-driver-under-300/">under $300 picks</a> are a meaningful step up in feel and adjustability.</p>' },
+      { h2: 'Expanding Your Options', body: '<p>If you need a full set (not just a driver), see our <a href="/best-beginner-golf-set-under-500/">best beginner club sets</a>. For the overall forgiveness ranking regardless of price, our <a href="/best-golf-drivers-forgiveness/">most forgiving drivers</a> list is the reference. And if budget allows another $100, our <a href="/best-golf-driver-under-300/">under $300 picks</a> are a meaningful step up in feel and adjustability.</p>' },
     ],
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
@@ -2214,6 +2289,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-training-aids',
     slug: '/best-golf-training-aids/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-training-aids-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-training-aids-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -2249,6 +2325,8 @@ export const ARTICLES: Article[] = [
       { h2: 'Training Aids That Are Mostly Gimmicks', body: "Avoid: swing speed radar devices under $50 (inaccurate), weighted donuts on shafts (can hurt swing), overswing correctors (creates new problems), putting guides that force a straight stroke (most good putters have an arc), and any device promising to add 40+ yards." },
     
       { h2: 'Aids by Problem Area', body: '<p>Targeting a specific weakness? Our <a href="/best-training-aids-fix-slice/">slice-fixing training aids</a> focus on the most common miss. For hand and wrist issues, the <a href="/best-golf-grip-trainers/">best grip trainers</a> build the right pressure patterns. Pair any aid with our <a href="/golf-practice-drills-at-home/">15-minute home drill routine</a> for a complete practice plan. And if speed is the goal, try a <a href="/best-swing-speed-trainer-over-40/">speed trainer designed for over-40 golfers</a>.</p>' },
+    
+      { h2: 'Keep reading', body: 'Training aids work best when paired with a clear goal. If your target is <a href=\'/how-to-break-90/\'>breaking 90</a>, our roadmap tells you exactly where to focus your practice. A <a href=\'/best-golf-swing-analyzers/\'>swing analyzer</a> gives you objective data on whether the training aid is actually changing your numbers. And for golfers who want to practice smarter without buying more equipment, our <a href=\'/golf-practice-drills-at-home/\'>at-home drills guide</a> covers what you can do in 15 minutes.' },
     ],
     comparisonTable: {
       headers: ['Training Aid', 'Skill Targeted', 'Price', 'Works At', 'Best For'],
@@ -2263,6 +2341,9 @@ export const ARTICLES: Article[] = [
       { q: 'Do golf training aids actually work?', a: "The good ones do, but only with deliberate practice. Alignment sticks, impact tape, and putting mirrors work because they give you immediate, accurate feedback that is hard to fake. They force you to confront what you\'re actually doing rather than what you think you\'re doing." },
       { q: 'What is the most effective golf training aid?', a: "Alignment sticks at $12 are the most effective training aid for the money — they improve aim, swing path, ball position, and hip rotation. A putting mirror is the most effective aid specifically for putting." },
           { q: 'Do golf training aids actually help?', a: 'Yes -- but only if used consistently for a specific identified fault. A training aid that addresses your actual problem will produce measurable improvement within 3-4 range sessions. Buying a training aid without knowing what problem you are solving wastes money. Get a lesson first, identify the fault, then buy the appropriate aid.' },
+    
+      { q: 'Do golf training aids actually work?', a: 'Some do, most do not — and the ones that work only help if you use them consistently. Alignment sticks, putting mirrors, and impact bags have the strongest evidence of transferring practice gains to on-course performance. Swing trainers with exaggerated weighting build muscle memory but the effect fades if you stop using them. The best training aid is the one you will actually use 3 times per week for 15 minutes.' },
+      { q: 'How long does it take to see results from a training aid?', a: 'Most golfers see measurable improvement within 3-4 weeks of consistent practice at 3-4 sessions per week, 15-20 minutes each. The initial gains come from awareness — you start noticing the fault the training aid addresses during actual rounds. Permanent muscle memory changes take 6-8 weeks.' },
     ],
     whoFor: [
       'Want to practice with purpose at the range -- not just hit balls',
@@ -2305,6 +2386,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Yes — for golfers who play 15+ rounds a year, a $150-$200 rangefinder saves 2-4 shots per round by eliminating bad yardage guesses. The ROI is immediate.',
     description: 'Is a golf rangefinder worth it for weekend golfers? Honest answer covering how many strokes it saves, who benefits most, and when to skip it.',
     excerpt: 'Exact yardages eliminate one of the most common errors in recreational golf. Here is an honest look at whether a rangefinder is worth buying.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rangefinder-worth-it-thumb.webp',
     thumbnail: '/images/thumbnails/rangefinder-worth-it-thumb.webp',
     intro: 'The honest answer is yes — for most golfers who play regularly, a rangefinder is worth the money. Not because it is a gimmick, but because bad yardage estimates cause real scorecard damage. The question is not whether to buy one; it is which one to buy and at what price point.',
     toc: [
@@ -2377,6 +2459,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-vs-gps',
     slug: '/golf-rangefinder-vs-gps-watch/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rangefinder-vs-gps-thumb.webp',
     thumbnail: '/images/thumbnails/rangefinder-vs-gps-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
@@ -2436,6 +2519,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'what-golf-ball-high-handicapper',
     slug: '/what-golf-ball-for-high-handicapper/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/what-golf-ball-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/what-golf-ball-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -2534,6 +2618,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-beginners',
     slug: '/best-golf-rangefinder-beginners/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rangefinder-beginners-thumb.webp',
     thumbnail: '/images/thumbnails/rangefinder-beginners-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -2629,6 +2714,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'bushnell-vs-garmin',
     slug: '/bushnell-vs-garmin-rangefinder/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/bushnell-vs-garmin-thumb.webp',
     thumbnail: '/images/thumbnails/bushnell-vs-garmin-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
@@ -2710,6 +2796,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls-slow-swing',
     slug: '/best-golf-balls-slow-swing-speed/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-balls-slow-swing-thumb.webp',
     thumbnail: '/images/thumbnails/golf-balls-slow-swing-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -2808,6 +2895,7 @@ export const ARTICLES: Article[] = [
     id: 'how-to-chip',
     slug: '/how-to-chip-in-golf/',
     quickAnswerProduct: 'cleveland-rtx6-52',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-to-chip-thumb.webp',
     thumbnail: '/images/thumbnails/how-to-chip-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -2866,6 +2954,7 @@ export const ARTICLES: Article[] = [
     id: 'stop-topping',
     slug: '/how-to-stop-topping-the-ball/',
     quickAnswerProduct: 'alignment-sticks',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/stop-topping-thumb.webp',
     thumbnail: '/images/thumbnails/stop-topping-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -2926,6 +3015,7 @@ export const ARTICLES: Article[] = [
     id: 'golf-etiquette',
     slug: '/golf-course-etiquette/',
     quickAnswerProduct: 'blue-tees-series-3-max',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-etiquette-thumb.webp',
     thumbnail: '/images/thumbnails/golf-etiquette-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'listicle',
@@ -2995,6 +3085,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-under-200',
     slug: '/best-golf-rangefinders-under-200/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rangefinder-under-200-thumb.webp',
     thumbnail: '/images/thumbnails/rangefinder-under-200-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -3110,6 +3201,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'how-to-use-rangefinder',
     slug: '/how-to-use-golf-rangefinder/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-to-use-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/how-to-use-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'tutorial',
@@ -3179,6 +3271,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'skytrak-vs-mevo-plus',
     slug: '/skytrak-vs-mevo-plus/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/skytrak-vs-mevo-plus-thumb.webp',
     thumbnail: '/images/thumbnails/skytrak-vs-mevo-plus-thumb.webp',
     category: 'golf-tech',
     pageType: 'comparison',
@@ -3256,6 +3349,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'garage-simulator',
     slug: '/how-to-build-garage-golf-simulator/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/garage-simulator-thumb.webp',
     thumbnail: '/images/thumbnails/garage-simulator-thumb.webp',
     category: 'golf-tech',
     pageType: 'tutorial',
@@ -3327,6 +3421,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'golf-grip-trainers',
     slug: '/best-golf-grip-trainers/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-grip-trainers-thumb.webp',
     thumbnail: '/images/thumbnails/golf-grip-trainers-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -3433,6 +3528,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'gps-watch-high-handicapper',
     slug: '/best-gps-golf-watch-high-handicappers/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gps-watch-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/gps-watch-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -3539,6 +3635,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-simulator-small-spaces',
     slug: '/best-golf-simulator-small-spaces/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-simulator-small-spaces-thumb.webp',
     thumbnail: '/images/thumbnails/golf-simulator-small-spaces-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -3629,6 +3726,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-irons-high-handicapper',
     slug: '/best-golf-irons-high-handicapper/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-irons-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/best-irons-high-handicapper-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -3710,6 +3808,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'slope-on-rangefinder',
     slug: '/what-is-slope-on-a-rangefinder/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/slope-on-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/slope-on-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'tutorial',
@@ -3768,6 +3867,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-far-7-iron',
     slug: '/how-far-average-golfer-hit-7-iron/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-far-7-iron-thumb.webp',
     thumbnail: '/images/thumbnails/how-far-7-iron-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -3828,6 +3928,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'lower-handicap',
     slug: '/how-to-lower-golf-handicap/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/lower-handicap-thumb.webp',
     thumbnail: '/images/thumbnails/lower-handicap-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -3886,6 +3987,7 @@ export const ARTICLES: Article[] = [
     id: 'golf-ball-go-right',
     slug: '/why-does-my-golf-ball-go-right/',
     quickAnswerProduct: 'alignment-sticks',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-ball-go-right-thumb.webp',
     thumbnail: '/images/thumbnails/golf-ball-go-right-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -3943,6 +4045,7 @@ export const ARTICLES: Article[] = [
     id: 'hit-irons-fat',
     slug: '/why-do-i-hit-irons-fat/',
     quickAnswerProduct: 'fiberbuilt-flight-deck',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/hit-irons-fat-thumb.webp',
     thumbnail: '/images/thumbnails/hit-irons-fat-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -3998,6 +4101,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'simulator-under-1000',
     slug: '/best-golf-simulator-under-1000/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-under-1000-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -4052,7 +4156,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulator for Small Spaces' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
-      { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },
+      { slug: '/golf-practice-drills-at-home/', label: 'How to Practice Golf at Home' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo Plus' },
     
@@ -4063,6 +4167,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-rangefinder-seniors',
     slug: '/best-golf-rangefinder-for-seniors/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-rangefinder-seniors-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-rangefinder-seniors-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -4158,6 +4263,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'do-i-need-slope-rangefinder',
     slug: '/do-i-need-slope-on-rangefinder/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/do-i-need-slope-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/do-i-need-slope-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'tutorial',
@@ -4226,6 +4332,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-balls-seniors',
     slug: '/best-golf-balls-for-seniors/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-balls-seniors-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-balls-seniors-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -4312,6 +4419,7 @@ export const ARTICLES: Article[] = [
     id: 'how-to-stop-3-putting',
     slug: '/how-to-stop-3-putting/',
     quickAnswerProduct: 'birdieball-putting-green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-to-stop-3-putting-thumb.webp',
     thumbnail: '/images/thumbnails/how-to-stop-3-putting-thumb.webp',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -4382,6 +4490,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-gps-watch-under-200',
     slug: '/best-golf-gps-watch-under-200/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-gps-watch-under-200-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-gps-watch-under-200-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -4471,6 +4580,7 @@ export const ARTICLES: Article[] = [
     id: 'golf-for-beginners-hub',
     slug: '/golf-for-beginners/',
     quickAnswerProduct: 'callaway-strata-set',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-for-beginners-hub-thumb.webp',
     thumbnail: '/images/thumbnails/golf-for-beginners-hub-thumb.webp',
     category: 'improve-game',
     pageType: 'listicle',
@@ -4538,6 +4648,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-irons-seniors',
     slug: '/best-golf-irons-for-seniors/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-irons-seniors-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-irons-seniors-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -4621,6 +4732,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'blue-tees-vs-bushnell-rangefinder',
     slug: '/blue-tees-vs-bushnell-rangefinder/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/blue-tees-vs-bushnell-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/blue-tees-vs-bushnell-rangefinder-thumb.webp',
     category: 'gear-reviews',
     pageType: 'comparison',
@@ -4699,6 +4811,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Rapsodo MLM2PRO (~$749)</strong> is the best launch monitor for most weekend golfers — accurate spin data, shot tracer video, and E6 Connect simulator play. For budget buyers, the <strong>Garmin Approach R10 (~$499)</strong> is the best under $500. For home simulators, the <strong>Bushnell Launch Pro (~$2,499)</strong> delivers Foresight GC3 hardware at 65% less cost.',
     description: '8 launch monitors tested from $200 to $5,000. Best budget: Garmin R10. Best overall: Rapsodo MLM2PRO. Best for sims: Bushnell Launch Pro.',
     excerpt: 'From $200 range tools to $5,000 simulator engines — the best golf launch monitors for every budget and goal in 2026.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/launch-monitors-thumb.webp',
     thumbnail: '/images/thumbnails/launch-monitors-thumb.webp',
     updateLog: [{ date: 'Apr 16, 2026', note: 'Added FlightScope Mevo Gen 2 ($1,999); updated Garmin R10 to current $549 street price.' }, { date: 'Mar 12, 2026', note: 'Added indoor vs outdoor accuracy comparison table.' }, { date: 'Jan 20, 2026', note: 'Initial publication — 8 launch monitors tested from $200 to $5,000.' }],
     intro: "Five years ago, the only way to get launch monitor data was a $25,000 Trackman at your pro's studio. In 2026, you can get accurate carry distance, spin rate, and launch angle for under $500. We tested 8 launch monitors across indoor and outdoor sessions to find the best for every budget.",
@@ -4763,6 +4876,8 @@ export const ARTICLES: Article[] = [
         pros: ['Full club data: path, face angle, attack angle', 'Built-in camera for swing video', 'Accurate indoors and outdoors'],
         cons: ['$2,199 is 3x the cost of the Rapsodo', 'Subscription required for some features'],
       },
+    
+      { h2: 'Keep reading', body: 'A launch monitor is most useful when you know what numbers to target. Our <a href=\'/best-golf-balls-2026/\'>ball guide</a> helps you pick the ball that matches your measured swing speed. If you want on-course tracking instead of range data, <a href=\'/best-golf-swing-analyzers/\'>swing analyzers</a> and <a href=\'/best-golf-apps/\'>shot-tracking apps</a> fill that gap.' },
     ],
     whoFor: ['Want data-driven practice instead of mindless range sessions', 'Are building or considering a home golf simulator', 'Want to know your actual carry distances for better club selection'],
     whoSkip: ['Only play 5-10 rounds per year and rarely practice', 'Already have a recent launch monitor', 'Prefer feel-based practice without data'],
@@ -4785,6 +4900,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'trackman-vs-foresight',
     slug: '/trackman-vs-foresight-gcquad/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/trackman-vs-foresight-thumb.webp',
     thumbnail: '/images/thumbnails/trackman-vs-foresight-thumb.webp',
     category: 'golf-tech',
     pageType: 'comparison',
@@ -4886,6 +5002,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The best golf upgrade under $100 is a <strong>putting mirror ($25)</strong> — it fixes your alignment in one session and costs less than a sleeve of Pro V1s. After that, a quality glove and a real golf towel make more difference than most golfers expect.',
     description: '12 golf products under $100 that actually improve your game — tested by a weekend golfer who knows the difference between useful gear and junk drawer stuff.',
     excerpt: 'The gear under $100 that weekend golfers actually use every round — not novelty items that collect dust.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gear-under-100-thumb.webp',
     thumbnail: '/images/thumbnails/gear-under-100-thumb.webp',
     updateLog: [{ date: 'Apr 17, 2026', note: 'Added Frogger Amphibian towel and magnetic ball marker set.' }, { date: 'Mar 15, 2026', note: 'Updated all Amazon pricing; removed out-of-stock groove sharpener.' }, { date: 'Feb 1, 2026', note: 'Initial publication — 14 products tested under $100.' }],
     intro: "You do not need to spend $500 on a driver or $300 on a rangefinder to play better golf. Some of the most impactful gear costs less than a round at a decent public course. We tested dozens of sub-$100 products and narrowed it down to the 12 that weekend golfers actually use every single round — not the stuff that sits in your garage after two outings.",
@@ -4999,6 +5116,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>gate putting drill</strong> and <strong>alignment mirror check</strong> are the two highest-impact drills you can do at home in under 15 minutes. Do them 3 times a week and you will see measurable improvement within a month — no range trip required.',
     description: '7 golf drills you can do at home in 15 minutes — no range, just carpet and a putter. Tested by a weekend golfer who practices between rounds.',
     excerpt: 'Quick golf practice drills for the golfer who works all week and cannot always make it to the range.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/practice-drills-thumb.webp',
     thumbnail: '/images/thumbnails/practice-drills-thumb.webp',
     updateLog: [{ date: 'Apr 17, 2026', note: 'Added clock putting drill and slow-motion swing rehearsal.' }, { date: 'Mar 20, 2026', note: 'Added weekly practice schedule (Mon/Wed/Fri rotation).' }, { date: 'Feb 5, 2026', note: 'Initial publication — 7 drills tested over 8 weeks.' }],
     intro: "You work Monday through Friday. Saturday morning is your round. When exactly are you supposed to practice? The answer is at home, for 15 minutes, 3-4 times per week. These 7 drills require nothing more than a putter, a ball, and the carpet in your living room. They target the skills that actually save strokes — putting, chipping feel, grip pressure, and tempo — not the stuff that looks impressive on the range but never translates to the course.",
@@ -5077,7 +5195,7 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/how-to-chip-in-golf/', label: 'How to Chip in Golf' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
-      { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice Golf at Home' },
+      { slug: '/golf-practice-drills-at-home/', label: 'How to Practice Golf at Home' },
       { slug: '/best-golf-training-aids/', label: 'Best Golf Training Aids' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     ],
@@ -5100,6 +5218,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Callaway Strata (~$249)</strong> is the best complete beginner set under $500. It includes everything you need to play — driver, fairway wood, hybrid, 6-9 irons, putter, and bag — with enough forgiveness to learn on without fighting your clubs. Upgrade to the <strong>TaylorMade RBZ (~$499)</strong> if you want clubs that will last 3-5 years instead of 1-2.',
     description: '3 complete beginner golf sets under $500 tested by a 15-handicap. Wilson Profile SGI vs Callaway Strata vs TaylorMade RBZ — which one to buy and which to skip.',
     excerpt: 'Complete golf sets under $500 tested for beginners — which one is worth buying and which ones are a waste of money.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/beginner-sets-thumb.webp',
     thumbnail: '/images/thumbnails/beginner-sets-thumb.webp',
     updateLog: [{ date: 'Apr 17, 2026', note: 'Updated Callaway Strata pricing to $279; added Wilson SGI vs Strata comparison.' }, { date: 'Mar 10, 2026', note: 'Added "When to Upgrade" section with fitting advice.' }, { date: 'Feb 10, 2026', note: 'Initial publication — 3 complete sets tested over 15+ rounds.' }],
     intro: "Your first set of golf clubs does not need to cost $2,000. It does not even need to cost $500. But it does need to include the right clubs, enough forgiveness to learn on, and build quality that survives a season of learning. We tested three complete beginner sets between $249 and $499 over 15+ rounds each — hitting drivers, irons, and putts on real courses, not in a simulator. Here is what a 15-handicap weekend golfer learned playing with beginner clubs.",
@@ -5192,6 +5311,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls-90-mph',
     slug: '/best-golf-balls-90-mph-swing-speed/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-balls-90-mph-thumb.webp',
     thumbnail: '/images/thumbnails/golf-balls-90-mph-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -5328,6 +5448,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'After 40 rounds, the <strong>Bushnell Tour V6 Shift</strong> is the best rangefinder we have ever used. PinSeeker JOLT locks pins in under 0.3 seconds, the Slope Switch is the most elegant tournament toggle on the market, and the build quality suggests this thing will outlast your golf game. At $329, it is not cheap — but it is the last rangefinder you will need to buy.',
     description: 'Bushnell Tour V6 Shift review after 40 real rounds — PinSeeker JOLT, Slope Switch, battery life, and honest negatives. Is it worth $329 for a weekend golfer?',
     excerpt: 'A deep review of the Bushnell Tour V6 Shift after 40 rounds — testing PinSeeker JOLT, slope accuracy, battery life, and build quality on real courses.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/bushnell-v6-review-thumb.webp',
     thumbnail: '/images/thumbnails/bushnell-v6-review-thumb.webp',
     intro: "Most rangefinder reviews are written after a range session and a single round. We used the Bushnell Tour V6 Shift as our primary rangefinder for 40 rounds across 6 different courses over 4 months. This is what we learned — the good, the bad, and whether $329 is actually worth it for a weekend golfer who plays 15-25 rounds per year.",
     testingNotes: 'Bushnell Tour V6 Shift purchased at retail ($329) and used as our primary rangefinder for 40 rounds over 4 months. Tested on 6 different courses in varying weather conditions including rain, fog, wind, and direct sunlight.',
@@ -5471,6 +5592,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'After 30 rounds, the <strong>Garmin Approach S62</strong> earned a permanent spot on our wrist. Virtual Caddie genuinely improves club selection after 10+ rounds of learning your game. The full-color course maps are the clearest of any golf watch. At $399, it is expensive — but it replaces your GPS app, your shot tracker, and your fitness watch in one device.',
     description: 'Garmin Approach S62 review after 30 rounds — Virtual Caddie accuracy, GPS testing, battery life, and whether $399 is justified for a weekend golfer in 2026.',
     excerpt: 'An honest review of the Garmin Approach S62 after 30 rounds — is the Virtual Caddie worth $400 for a weekend golfer who plays 15-20 rounds per year?',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/garmin-s62-review-thumb.webp',
     thumbnail: '/images/thumbnails/garmin-s62-review-thumb.webp',
     intro: "The Garmin Approach S62 costs $399 — more than most weekend golfers spend on a full season of range balls. We wore it for 30 rounds over 3 months to answer one question: does a $400 GPS watch actually help you score better, or is it an expensive gadget that tells you what you already know?",
     testingNotes: 'Garmin Approach S62 purchased at retail ($399) and worn as primary watch for 3 months — 30 golf rounds plus daily smartwatch use. Tested on 5 courses. GPS accuracy compared to laser rangefinder readings on every approach shot for 10 full rounds.',
@@ -5625,6 +5747,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Rapsodo MLM2PRO</strong> is the best personal launch monitor under $1,000. Camera-based tracking captures ball flight and club data within 3-5 yards of a $5,000 Foresight GC3. At $699, it turns aimless range sessions into structured improvement. If you practice twice per month, the cost is $29 per session over one year — less than the range balls.',
     description: 'Rapsodo MLM2PRO review after 6 months — accuracy testing vs Foresight, simulator compatibility, indoor vs outdoor use, and whether $699 is justified.',
     excerpt: 'An honest 6-month review of the Rapsodo MLM2PRO — is the best budget launch monitor actually accurate enough to improve your game?',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rapsodo-mlm2pro-review-thumb.webp',
     thumbnail: '/images/thumbnails/rapsodo-mlm2pro-review-thumb.webp',
     intro: "We bought the Rapsodo MLM2PRO six months ago with one question: can a $699 launch monitor give a weekend golfer data accurate enough to actually improve? After 50+ range sessions and 3 months of indoor net use, we have a definitive answer.",
     testingNotes: 'Rapsodo MLM2PRO purchased at retail ($699). Tested over 6 months: 50+ outdoor range sessions, 3 months indoor use. Accuracy benchmarked against a Foresight GC3 on 200+ shots.',
@@ -5683,6 +5806,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Callaway Paradym Ai Smoke Max</strong> is the most forgiving driver we have tested. The AI-designed face loses only 5% ball speed on toe strikes vs 10-12% for competitors. At $499, it is not cheap — but if your miss is off-center contact, no other 2026 driver protects your distance as well.',
     description: 'Callaway Paradym Ai Smoke Max driver review after 20 rounds — launch monitor data, forgiveness testing, mishit comparison, and whether $499 is worth it.',
     excerpt: 'A deep review of the Callaway Paradym Ai Smoke Max — the most forgiving driver of 2026, tested over 20 real rounds with launch monitor data.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/paradym-driver-review-thumb.webp',
     thumbnail: '/images/thumbnails/paradym-driver-review-thumb.webp',
     intro: "Callaway claims the Paradym Ai Smoke Max is the most forgiving driver they have ever made. After 20 rounds and 300+ launch monitor shots, we can tell you whether the AI face hype is real — and whether $499 makes sense for a weekend golfer who misses the center more often than not.",
     testingNotes: 'Purchased at retail ($499) in 10.5° with stock Aldila Ascent Regular. Tested over 20 rounds and 300+ launch monitor shots. Mishit testing against TaylorMade Qi35 Max.',
@@ -5739,6 +5863,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'After 20 rounds, the <strong>Titleist Pro V1</strong> is still the best golf ball for golfers with 90+ mph swing speed. Greenside spin and feel remain unmatched. Shot-to-shot consistency is tighter than any competitor. At $55/dozen it is expensive — but for golfers who shoot under 90 and lose fewer than 3 balls per round, the performance justifies the price.',
     description: 'Titleist Pro V1 review 2026 — greenside spin, distance at 94 mph, durability, and whether $55/dozen is justified vs Chrome Tour and Vice Pro.',
     excerpt: 'An honest Pro V1 review — greenside spin testing, distance data, durability, and value analysis against Chrome Tour and Vice Pro.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/pro-v1-review-thumb.webp',
     thumbnail: '/images/thumbnails/pro-v1-review-thumb.webp',
     intro: "The Pro V1 has been number one in golf for over two decades. In 2026, the Chrome Tour nips at its heels on distance and the Vice Pro undercuts it by 40% on price. Is the Pro V1 still worth $55? We played 20 rounds with the 25th anniversary edition to find out.",
     testingNotes: 'Titleist Pro V1 (2025 model) purchased at retail. Tested over 20 rounds. Spin, distance, and feel compared to Chrome Tour and Vice Pro.',
@@ -5797,6 +5922,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'After 25 rounds, <strong>Arccos Caddie</strong> dropped our handicap by 2.1 strokes. The AI caddie was right 64% of the time vs 52% for gut instinct. The strokes-gained data revealed approach-shot weaknesses we never would have found ourselves. The $99/year subscription stings — but at $6.60/round for 15 rounds, it is the cheapest way to genuinely lower your scores.',
     description: 'We wore Arccos sensors for 25 rounds and tracked every stat. Here is what the AI caddie gets right, what it misses, and whether $99/year is worth it.',
     excerpt: 'Does Arccos Caddie actually lower your scores? After 25 rounds we have the data — AI caddie accuracy, strokes-gained insights, and subscription math.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/arccos-caddie-review-thumb.webp',
     thumbnail: '/images/thumbnails/arccos-caddie-review-thumb.webp',
     intro: "Arccos promises to be the smartest caddie you have ever had — AI that learns your game and tells you which club to hit on every shot. After 25 rounds with sensors in every club, we can tell you whether it works and whether $99/year is justified.",
     testingNotes: 'Arccos Smart Sensors (3rd Gen) purchased at retail ($179). Used for 25 rounds over 4 months. AI suggestions tracked vs our own selection. Strokes-gained analyzed monthly.',
@@ -5855,6 +5981,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Precision Pro NX9 HD</strong> is the best rangefinder under $200 — accurate within 1-2 yards of the Bushnell V6 Shift at half the price, backed by a lifetime warranty no competitor matches. For the 80% of weekend golfers who do not need the absolute fastest pin lock, the NX9 HD delivers everything that matters at $169.',
     description: 'Precision Pro NX9 HD review after 25 rounds — accuracy vs Bushnell V6, slope testing, lifetime warranty test, and whether $169 beats $329.',
     excerpt: 'The budget rangefinder with a lifetime warranty — tested against the Bushnell V6 Shift over 120+ shots to see if $169 really performs like $329.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/precision-pro-nx9-review-thumb.webp',
     thumbnail: '/images/thumbnails/precision-pro-nx9-review-thumb.webp',
     intro: "The NX9 HD costs $169. The Bushnell V6 Shift costs $329. The $160 difference buys three rounds of golf. After 25 rounds with the NX9 HD, we can tell you exactly what that $160 buys and whether it matters.",
     testingNotes: 'Precision Pro NX9 HD purchased at retail ($169). Used for 25 rounds. Accuracy compared to Bushnell V6 Shift on 120+ approach shots. Lifetime warranty tested with support call.',
@@ -5913,6 +6040,7 @@ export const ARTICLES: Article[] = [
     bottomLine: '<strong>Garmin S62</strong> is the better golf watch. <strong>Apple Watch</strong> is the better smartwatch. If golf is the reason you are buying, the S62 wins on Virtual Caddie, course maps, hazard detection, and 20-hour golf battery. If you already own an Apple Watch, adding Golfshot ($30/year) is the cheapest way to get GPS golf — but the golf features are a tier below the Garmin.',
     description: 'Garmin Approach S62 vs Apple Watch for golf — GPS accuracy, course maps, shot tracking, battery life, and which is actually better for weekend golfers.',
     excerpt: 'A head-to-head comparison of the Garmin S62 and Apple Watch for golf — GPS accuracy, features, battery, and value.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/garmin-vs-apple-watch-thumb.webp',
     thumbnail: '/images/thumbnails/garmin-vs-apple-watch-thumb.webp',
     intro: "The Garmin Approach S62 ($399) is a golf watch that doubles as a smartwatch. The Apple Watch ($399-$799) is a smartwatch that can add golf apps. We tested both over 15 rounds to determine which is actually better for weekend golfers.",
     toc: ['Head-to-head comparison table', 'GPS accuracy and course maps', 'Shot tracking', 'Club suggestions', 'Battery life', 'Daily smartwatch use', 'Value breakdown', 'Our pick', 'FAQ'],
@@ -5966,6 +6094,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Bushnell Tour V6 Shift</strong> ($329) is the better rangefinder. The <strong>Precision Pro NX9 HD</strong> ($169) is the better purchase. Accuracy is within 1-2 yards. The V6 wins on speed (0.3s vs 0.7s pin lock), build quality, and the physical slope switch. The NX9 wins on price ($160 less) and lifetime warranty. For 80% of weekend golfers, the NX9 is the correct choice.',
     description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — accuracy, speed, slope, build, warranty, and which rangefinder is actually worth $160 more.',
     excerpt: 'The definitive head-to-head comparison — is the Bushnell V6 worth $160 more than the Precision Pro NX9 HD?',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/bushnell-vs-nx9-thumb.webp',
     thumbnail: '/images/thumbnails/bushnell-vs-nx9-thumb.webp',
     intro: "These are the two best rangefinders for weekend golfers. The Bushnell Tour V6 Shift costs $329. The Precision Pro NX9 HD costs $169. We used both for 25 rounds and compared them shot-by-shot on 120+ approaches to find out exactly what $160 buys you.",
     toc: ['Comparison table', 'Accuracy', 'Pin lock speed', 'Slope performance', 'Build quality', 'Warranty', 'Value', 'Our pick', 'FAQ'],
@@ -6018,6 +6147,7 @@ export const ARTICLES: Article[] = [
     bottomLine: '<strong>Arccos Caddie</strong> is the better tracking system with more accurate automatic detection and superior strokes-gained analysis. <strong>Garmin S62</strong> is the better overall golf device with Virtual Caddie, course maps, and no subscription. If tracking data is your priority, Arccos wins. If you want one device that does everything, Garmin wins.',
     description: 'Arccos Caddie vs Garmin S62 for shot tracking — automatic detection accuracy, strokes-gained data, club suggestions, subscription cost, and which is better.',
     excerpt: 'Arccos sensors vs Garmin S62 built-in tracking — which system gives you better data to improve your golf game?',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/arccos-vs-garmin-thumb.webp',
     thumbnail: '/images/thumbnails/arccos-vs-garmin-thumb.webp',
     intro: "Both systems promise to track your shots and tell you where you lose strokes. Arccos uses grip-end sensors ($179 + $99/year). Garmin uses GPS position changes (included with the $399 S62 watch). We used both for 15 rounds to compare tracking accuracy, data quality, and real-world value.",
     toc: ['Comparison table', 'How each system tracks', 'Tracking accuracy', 'Data and analytics', 'Club suggestions', 'Cost over 3 years', 'Our pick', 'FAQ'],
@@ -6050,7 +6180,7 @@ export const ARTICLES: Article[] = [
   // ── COMPARISON: Pro V1 vs Chrome Soft ────────────────────────────────────
   {
     id: 'pro-v1-vs-chrome-soft',
-    slug: '/pro-v1-vs-chrome-soft/',
+    slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/',
     category: 'gear-reviews',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -6068,6 +6198,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Pro V1</strong> is the better golf ball for golfers with 90+ mph swing speed — more distance, more greenside spin, tighter consistency. The <strong>Chrome Soft</strong> is the better choice for golfers with 80-90 mph swing speed or anyone who prioritizes soft feel above all else. At $55 vs $40 per dozen, the Chrome Soft also wins on value.',
     description: 'Titleist Pro V1 vs Callaway Chrome Soft — distance, spin, feel, durability, and which premium golf ball is right for your swing speed in 2026.',
     excerpt: 'Pro V1 vs Chrome Soft head-to-head — distance at multiple swing speeds, greenside spin, feel, and value analysis.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/pro-v1-vs-chrome-soft-thumb.webp',
     thumbnail: '/images/thumbnails/pro-v1-vs-chrome-soft-thumb.webp',
     intro: "The Pro V1 ($55/dozen) and Chrome Soft ($40/dozen) are both premium urethane-cover golf balls competing for a spot in your bag. We played 10 rounds with each, alternating every other round, to compare distance, spin, feel, and value across multiple swing speeds.",
     toc: ['Comparison table', 'Distance at 94 mph and 86 mph', 'Greenside spin', 'Putting feel', 'Durability', 'Value per round', 'Who should play which', 'FAQ'],
@@ -6120,6 +6251,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Rapsodo MLM2PRO</strong> ($699) captures more data — spin axis, club path, and shot tracer video — for golfers who want a complete swing picture. The <strong>Garmin Approach R10</strong> ($499) is simpler, $200 cheaper, and works in any lighting. If you want maximum data for serious practice, get the Rapsodo. If you want reliable distances with minimal setup, get the Garmin.',
     description: 'Rapsodo MLM2PRO vs Garmin R10 — accuracy, metrics, indoor use, simulator support, and which budget launch monitor is right for your practice goals.',
     excerpt: 'The two best launch monitors under $1,000 compared head-to-head — accuracy, features, indoor use, and which one deserves your $500-$700.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rapsodo-vs-garmin-r10-thumb.webp',
     thumbnail: '/images/thumbnails/rapsodo-vs-garmin-r10-thumb.webp',
     intro: "The Rapsodo MLM2PRO ($699) and Garmin Approach R10 ($499) are the two best personal launch monitors for weekend golfers. The $200 price gap raises the obvious question: what do you get for the extra money? We used both for 30+ range sessions to find out.",
     toc: ['Comparison table', 'Technology difference', 'Accuracy', 'Metrics captured', 'Indoor use', 'Simulator support', 'Setup and portability', 'Value', 'Our pick', 'FAQ'],
@@ -6170,6 +6302,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'A 20-handicap needs maximum forgiveness in every club. <strong>Driver:</strong> Callaway Paradym Ai Smoke Max ($499). <strong>Irons:</strong> Ping G430 ($999). <strong>Putter:</strong> Odyssey White Hot OG ($199). <strong>Ball:</strong> Srixon Q-Star Tour ($35/dz). <strong>Bag:</strong> Callaway Fairway 14 ($179). Total: ~$1,911 for a complete bag that will last 3-5 years and help you break 90.',
     description: 'Complete bag guide for 20-handicap golfers — the best driver, irons, putter, ball, and bag tested and recommended for golfers shooting 88-95.',
     excerpt: 'A complete club-by-club guide for 20-handicap golfers — every recommendation tested by weekend golfers who shoot in the low 90s.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/clubs-20-handicap-thumb.webp',
     thumbnail: '/images/thumbnails/clubs-20-handicap-thumb.webp',
     intro: "If you are a 20-handicap, you shoot somewhere around 90-95 on a good day. You hit it fat sometimes, thin occasionally, and pure often enough to know what good contact feels like. You do not need tour-level equipment. You need clubs that make your bad shots playable and your good shots rewarding. Here is every club we recommend for a 20-handicap bag.",
     testingNotes: 'All clubs independently purchased and tested by golfers with 15-22 handicaps over 20+ rounds. Forgiveness prioritized over workability in every category.',
@@ -6224,6 +6357,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'A 15-handicap with 88-95 mph swing speed should play a mid-compression urethane ball. Our top pick: <strong>Srixon Q-Star Tour</strong> ($35/dz) — 72 compression, urethane cover spin, and $20/dozen cheaper than the Pro V1. It matches the Pro V1 on distance at your swing speed while saving $100+ per season.',
     description: 'The best golf ball for a 15-handicap — why compression matters at this level, the top 5 picks by swing speed, and how to stop wasting money on the wrong ball.',
     excerpt: 'Stop playing the wrong golf ball. Here is exactly what a 15-handicap should play based on swing speed, budget, and scoring goals.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/ball-15-handicap-thumb.webp',
     thumbnail: '/images/thumbnails/ball-15-handicap-thumb.webp',
     intro: "A 15-handicap is in the sweet spot — you are good enough for the right ball to matter, but not so good that you need a $55 tour ball. Most 15-handicaps swing between 88-95 mph and shoot 83-88 on a good day. At this level, matching compression to your swing speed gains you 5-8 yards per iron and improves greenside feel without spending premium prices.",
     toc: ['Why compression matters at 15-hdcp', 'Our #1 pick: Srixon Q-Star Tour', 'Runner-up: Vice Pro', 'Premium option: Titleist Pro V1', 'Budget pick: Srixon Soft Feel', 'Value pick: Callaway Chrome Soft', 'Comparison table', 'FAQ'],
@@ -6277,6 +6411,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'High handicappers should buy the most forgiving driver they can afford — MOI matters more than ball speed. Our top pick: <strong>Callaway Paradym Ai Smoke Max</strong> ($499) for the best mishit protection available. Budget pick: <strong>Cleveland Launcher XL2</strong> ($349) for the best performance under $350.',
     description: 'Most forgiving drivers for high handicappers in 2026. Why MOI matters, what shaft flex at what speed, and 5 drivers ranked.',
     excerpt: 'High handicappers need forgiveness, not distance. Here are the 5 most forgiving drivers in 2026, tested by golfers who miss the center more than they hit it.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/driver-high-handicapper-thumb.webp',
     intro: "If you shoot 95+, your driver is not why you shoot 95+. But the wrong driver makes a bad situation worse. A driver that punishes mishits with a 40-yard slice turns a bogey into a triple. A forgiving driver that keeps mishits in play turns that triple back into a bogey. Here are the 5 most forgiving drivers for high handicappers, ranked by the only metric that matters: how much do you lose when you miss the center?",
     testingNotes: 'All 5 drivers tested with deliberate off-center strikes on a launch monitor. Forgiveness measured by ball speed retention and direction stability on toe, heel, and high-face impacts.',
@@ -6334,6 +6469,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Garmin Approach R10</strong> ($499) is the best budget launch monitor for weekend golfers — reliable ball speed, spin, and launch data with E6 Connect simulator included. If you want more data and shot tracer video, the <strong>Rapsodo MLM2PRO</strong> ($699) is worth the extra $200.',
     description: 'Best budget golf launch monitors in 2026 — Garmin R10, Rapsodo MLM2PRO, FlightScope Mevo, and Ernest Sports tested at the range by weekend golfers.',
     excerpt: '4 budget launch monitors under $700 tested at the range — which one gives you the best data for your money?',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-launch-monitors-thumb.webp',
     thumbnail: '/images/thumbnails/budget-launch-monitors-thumb.webp',
     intro: "You do not need a $20,000 TrackMan to get useful practice data. The best budget launch monitors give you ball speed, carry distance, launch angle, and spin rate for under $700 — enough data to make every range session productive. We tested four models to find the best value.",
     toc: ['Best under $600: Garmin R10', 'Best for data: Rapsodo MLM2PRO', 'Most portable: FlightScope Mevo', 'Best under $250: Ernest Sports ES14', 'How to choose', 'FAQ'],
@@ -6383,6 +6519,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Arccos Caddie Smart Sensors</strong> ($179 + $99/yr) is the best swing analyzer for iPhone — automatic shot tracking, AI club suggestions, and strokes-gained analysis that genuinely lowers scores. For no-subscription tracking, the <strong>Shot Scope H4</strong> ($149) offers GPS + auto-tracking at a one-time cost.',
     description: 'Best golf swing analyzers for iPhone in 2026 — Arccos Caddie, Garmin CT10, Shot Scope H4, and Zepp Golf tested on real rounds.',
     excerpt: '4 iPhone-compatible swing analyzers tested on course — automatic tracking, swing data, and which one actually improves your game.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/swing-analyzer-iphone-thumb.webp',
     thumbnail: '/images/thumbnails/swing-analyzer-iphone-thumb.webp',
     intro: "Your iPhone is already in your pocket on the course — adding a swing analyzer turns it into a performance lab. We tested four iPhone-compatible systems to find which delivers the best data with the least friction.",
     toc: ['Best overall: Arccos Caddie', 'Best for Garmin users: CT10', 'Best value: Shot Scope H4', 'Best for swing data: Zepp Golf 2', 'iPhone features to look for', 'FAQ'],
@@ -6429,6 +6566,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Start with a <strong>SKLZ Accelerator Pro Putting Mat</strong> ($55) and a set of <strong>alignment sticks</strong> ($15). These two tools cost $70 total and address putting and alignment — the two areas where home practice produces the fastest score improvement. Add the <strong>Orange Whip Trainer</strong> ($109) for tempo work.',
     description: 'Best golf training aids for home practice in 2026 — putting mats, swing trainers, alignment sticks, and tempo trainers tested by weekend golfers.',
     excerpt: '5 training aids that actually improve your game at home — tested by golfers who practice between rounds.',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/training-aids-home-thumb.webp',
     thumbnail: '/images/thumbnails/training-aids-home-thumb.webp',
     intro: "Most golf training aids collect dust. These five do not — because they address specific weaknesses that home practice can fix. Putting, alignment, tempo, and arm connection are all trainable at home with 15 minutes per day.",
     toc: ['Best for putting: SKLZ Accelerator Pro', 'Best green layout: Putt-A-Bout Par 3', 'Best for arm connection: Tour Striker Smart Ball', 'Most versatile: Alignment Sticks', 'Best for tempo: Orange Whip', '15-minute routine', 'FAQ'],
@@ -6471,6 +6609,7 @@ export const ARTICLES: Article[] = [
     id: 'apartment-golf-simulator',
     slug: '/apartment-golf-simulator-setup/',
     thumb: 'teal',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-under-1000-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
     words: '3,400',
     category: 'golf-tech',
@@ -6560,6 +6699,7 @@ export const ARTICLES: Article[] = [
     id: 'mlm2pro-vs-r50-vs-square',
     slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/mlm2pro-vs-r50-vs-square-thumb.webp',
     thumbnail: '/images/thumbnails/mlm2pro-vs-r50-vs-square-thumb.webp',
     words: '2,900',
     category: 'golf-tech',
@@ -6629,6 +6769,7 @@ export const ARTICLES: Article[] = [
     id: 'arccos-mlm2pro-strokes-dropped',
     slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/arccos-mlm2pro-story-thumb.webp',
     thumbnail: '/images/thumbnails/arccos-mlm2pro-story-thumb.webp',
     words: '2,500',
     category: 'improve-game',
@@ -6681,6 +6822,7 @@ export const ARTICLES: Article[] = [
     id: 'budget-launch-monitor-apartment',
     slug: '/best-budget-launch-monitor-apartment/',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-launch-monitors-thumb.webp',
     thumbnail: '/images/thumbnails/budget-launch-monitors-thumb.webp',
     words: '3,000',
     category: 'golf-tech',
@@ -6763,6 +6905,7 @@ export const ARTICLES: Article[] = [
     slug: '/desk-exercises-fix-golf-slice/',
     quickAnswerProduct: 'alignment-sticks',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/desk-exercises-golf-thumb.webp',
     thumbnail: '/images/thumbnails/desk-exercises-golf-thumb.webp',
     words: '2,800',
     category: 'golf-lifestyle',
@@ -6822,6 +6965,7 @@ export const ARTICLES: Article[] = [
     id: 'rain-gear-midwest',
     slug: '/best-rain-gear-midwest-golfers/',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rain-gear-thumb.webp',
     thumbnail: '/images/thumbnails/rain-gear-thumb.webp',
     words: '2,700',
     category: 'gear-reviews',
@@ -6900,6 +7044,7 @@ export const ARTICLES: Article[] = [
     id: 'golf-gifts-dad-under-100',
     slug: '/best-golf-gifts-for-dad/',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gifts-for-dad-thumb.webp',
     thumbnail: '/images/thumbnails/gifts-for-dad-thumb.webp',
     words: '3,200',
     category: 'gear-reviews',
@@ -6988,6 +7133,7 @@ export const ARTICLES: Article[] = [
     id: 'junior-golf-clubs-guide',
     slug: '/best-junior-golf-clubs/',
     thumb: 'teal',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/junior-golf-clubs-thumb.webp',
     thumbnail: '/images/thumbnails/junior-golf-clubs-thumb.webp',
     words: '3,400',
     category: 'gear-reviews',
@@ -7067,6 +7213,7 @@ export const ARTICLES: Article[] = [
     id: 'golf-gifts-under-50',
     slug: '/best-golf-gifts-under-50/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gifts-under-50-thumb.webp',
     thumbnail: '/images/thumbnails/gifts-under-50-thumb.webp',
     words: '2,800',
     category: 'gear-reviews',
@@ -7129,6 +7276,7 @@ export const ARTICLES: Article[] = [
     id: 'christmas-golf-gifts',
     slug: '/best-christmas-golf-gifts/',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/christmas-gifts-thumb.webp',
     thumbnail: '/images/thumbnails/christmas-gifts-thumb.webp',
     words: '3,500',
     category: 'gear-reviews',
@@ -7183,6 +7331,7 @@ export const ARTICLES: Article[] = [
     id: 'mothers-day-golf-gifts',
     slug: '/best-golf-gifts-for-mom/',
     thumb: 'purple',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gifts-for-mom-thumb.webp',
     thumbnail: '/images/thumbnails/gifts-for-mom-thumb.webp',
     words: '2,600',
     category: 'gear-reviews',
@@ -7241,6 +7390,7 @@ export const ARTICLES: Article[] = [
     id: 'get-kid-into-golf',
     slug: '/how-to-get-your-kid-into-golf/',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/kids-getting-into-golf-thumb.webp',
     thumbnail: '/images/thumbnails/kids-getting-into-golf-thumb.webp',
     words: '2,400',
     category: 'golf-lifestyle',
@@ -7283,6 +7433,7 @@ export const ARTICLES: Article[] = [
     id: 'couples-golf-gifts',
     slug: '/best-golf-gifts-for-couples/',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gifts-for-couples-thumb.webp',
     thumbnail: '/images/thumbnails/gifts-for-couples-thumb.webp',
     words: '2,200',
     category: 'golf-lifestyle',
@@ -7333,6 +7484,7 @@ export const ARTICLES: Article[] = [
     id: 'indoor-putting-green',
     slug: '/best-indoor-putting-green-office-home/',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/improve-putting-thumb.webp',
     thumbnail: '/images/thumbnails/improve-putting-thumb.webp',
     words: '3,200',
     category: 'golf-lifestyle',
@@ -7410,6 +7562,7 @@ export const ARTICLES: Article[] = [
     id: 'left-handed-golf-clubs',
     slug: '/best-left-handed-golf-clubs-2026/',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/left-handed-clubs-thumb.webp',
     thumbnail: '/images/thumbnails/left-handed-clubs-thumb.webp',
     words: '3,000',
     category: 'gear-reviews',
@@ -7482,6 +7635,7 @@ export const ARTICLES: Article[] = [
     id: 'training-aids-slice',
     slug: '/best-training-aids-fix-slice/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/fix-slice-thumb.webp',
     thumbnail: '/images/thumbnails/fix-slice-thumb.webp',
     words: '2,800',
     category: 'improve-game',
@@ -7555,6 +7709,7 @@ export const ARTICLES: Article[] = [
     id: 'golf-hitting-net',
     slug: '/best-golf-hitting-net-apartment-garage/',
     thumb: 'teal',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/indoor-golf-net-thumb.webp',
     thumbnail: '/images/thumbnails/indoor-golf-net-thumb.webp',
     words: '3,600',
     category: 'golf-tech',
@@ -7623,7 +7778,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor' },
       { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
       { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
-          { slug: '/best-golf-net-for-garage/', label: 'Best Golf Nets for Garage' },
+          { slug: '/best-golf-hitting-net-apartment-garage/', label: 'Best Golf Nets for Garage' },
     ],
   },
 
@@ -7633,6 +7788,7 @@ export const ARTICLES: Article[] = [
     id: 'spikeless-golf-shoes',
     slug: '/best-spikeless-golf-shoes-walking-18/',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/spikeless-shoes-thumb.webp',
     thumbnail: '/images/thumbnails/spikeless-shoes-thumb.webp',
     words: '3,100',
     category: 'gear-reviews',
@@ -7711,6 +7867,7 @@ export const ARTICLES: Article[] = [
     id: 'clubs-slow-swing-speed',
     slug: '/best-golf-clubs-slow-swing-speed/',
     thumb: 'purple',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/slow-swing-clubs-thumb.webp',
     thumbnail: '/images/thumbnails/slow-swing-clubs-thumb.webp',
     words: '3,200',
     category: 'gear-reviews',
@@ -7784,6 +7941,7 @@ export const ARTICLES: Article[] = [
     id: 'swing-speed-trainer-over-40',
     slug: '/best-swing-speed-trainer-over-40/',
     thumb: 'teal',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/swing-speed-trainer-thumb.webp',
     thumbnail: '/images/thumbnails/swing-speed-trainer-thumb.webp',
     words: '2,800',
     category: 'improve-game',
@@ -7867,6 +8025,7 @@ export const ARTICLES: Article[] = [
     id: 'office-to-course-playbook',
     slug: '/office-to-golf-course-playbook/',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/morning-practice-routine-thumb.webp',
     thumbnail: '/images/thumbnails/morning-practice-routine-thumb.webp',
     words: '4,200',
     category: 'golf-lifestyle',
@@ -7911,7 +8070,7 @@ export const ARTICLES: Article[] = [
         cons: ['$120 for a trunk-only pair is a commitment', 'Spikeless traction is adequate, not maximum'],
       },
 
-      { h2: 'Under-Desk Putting Mat', badge: 'BEST OFFICE PRACTICE', body: 'The SKLZ Accelerator Pro ($40) fits under most desks and behind most office chairs. I practice 5 minutes during lunch, 5 minutes during afternoon calls. After 6 months my 3-putt rate dropped from 31% to 18%. The ball return means no bending down — critical in an office environment where your coworkers can see you. See our <a href="/office-hacks/">office hacks hub</a> for more ways to practice at work.', price: '~$40', affiliateKey: 'sklz-accelerator-putting-mat', rating: 4.5, ratingCount: '3,670',
+      { h2: 'Under-Desk Putting Mat', badge: 'BEST OFFICE PRACTICE', body: 'The SKLZ Accelerator Pro ($40) fits under most desks and behind most office chairs. I practice 5 minutes during lunch, 5 minutes during afternoon calls. After 6 months my 3-putt rate dropped from 31% to 18%. The ball return means no bending down — critical in an office environment where your coworkers can see you. See our <a href="/improve-your-golf-game/">office hacks hub</a> for more ways to practice at work.', price: '~$40', affiliateKey: 'sklz-accelerator-putting-mat', rating: 4.5, ratingCount: '3,670',
         pros: ['Fits under a desk — invisible when not in use', 'Ball return for discreet practice', '$40 is an easy investment'],
         cons: ['7 ft is short for distance control work', 'Surface wears after 12+ months of daily use'],
       },
@@ -7921,7 +8080,7 @@ export const ARTICLES: Article[] = [
         cons: ['Looks odd if a passenger notices', 'Only addresses grip, not swing mechanics'],
       },
 
-      { h2: 'Wrist and Forearm Stretcher', badge: 'BEST WARM-UP TOOL', body: 'The TheraBand FlexBar ($18) warms up your wrists and forearms in 2 minutes flat. I twist it 20 times on the drive to the course (at red lights — not while driving, obviously) and my wrists feel ready for full swings without the usual stiffness. It also prevents golfer\'s elbow if you type all day and grip a club on weekends. Fits in a golf bag pocket or desk drawer. Pairs well with the full <a href="/golf-fitness-office-golfer/">office golfer fitness routine</a>.', price: '~$18', affiliateKey: 'theraband-flexbar', rating: 4.4, ratingCount: '2,340',
+      { h2: 'Wrist and Forearm Stretcher', badge: 'BEST WARM-UP TOOL', body: 'The TheraBand FlexBar ($18) warms up your wrists and forearms in 2 minutes flat. I twist it 20 times on the drive to the course (at red lights — not while driving, obviously) and my wrists feel ready for full swings without the usual stiffness. It also prevents golfer\'s elbow if you type all day and grip a club on weekends. Fits in a golf bag pocket or desk drawer. Pairs well with the full <a href="/office-to-golf-course-playbook/">office golfer fitness routine</a>.', price: '~$18', affiliateKey: 'theraband-flexbar', rating: 4.4, ratingCount: '2,340',
         pros: ['Prevents golfer elbow for desk-job golfers', 'Warms up wrists in 2 minutes', '$18 — cheaper than one sports massage'],
         cons: ['Looks like a rubber dog toy', 'Only addresses wrists and forearms'],
       },
@@ -7941,7 +8100,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf With a Full-Time Job' },
       { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
-      { slug: '/golf-fitness-office-golfer/', label: 'Office Golfer Fitness Routine' },
+      { slug: '/office-to-golf-course-playbook/', label: 'Office Golfer Fitness Routine' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
     ],
   },
@@ -7960,6 +8119,7 @@ export const ARTICLES: Article[] = [
     id: 'gift-detective-guide',
     slug: '/gifts-for-golfer-who-never-keeps-anything/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gifts-never-keeps-thumb.webp',
     thumbnail: '/images/thumbnails/gifts-never-keeps-thumb.webp',
     words: '2,900',
     category: 'golf-accessories',
@@ -8044,6 +8204,7 @@ export const ARTICLES: Article[] = [
     id: 'approach-wedge-vs-gap-wedge',
     slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/approach-vs-gap-wedge-thumb.webp',
     thumbnail: '/images/thumbnails/approach-vs-gap-wedge-thumb.webp',
     words: '2,800',
     category: 'gear-reviews',
@@ -8132,6 +8293,7 @@ export const ARTICLES: Article[] = [
     id: 'how-to-buy-wedges',
     slug: '/how-to-buy-wedges-4-degree-rule/',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/buy-wedges-thumb.webp',
     thumbnail: '/images/thumbnails/buy-wedges-thumb.webp',
     words: '3,200',
     category: 'gear-reviews',
@@ -8203,6 +8365,7 @@ export const ARTICLES: Article[] = [
     id: 'when-to-replace-wedges',
     slug: '/when-to-replace-wedges-grooves/',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/replace-wedges-thumb.webp',
     thumbnail: '/images/thumbnails/replace-wedges-thumb.webp',
     words: '2,600',
     category: 'gear-reviews',
@@ -8294,6 +8457,7 @@ export const ARTICLES: Article[] = [
     id: 'when-to-replace-grips',
     slug: '/when-to-replace-golf-grips/',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/grip-replacement-thumb.webp',
     thumbnail: '/images/thumbnails/grip-replacement-thumb.webp',
     words: '2,800',
     category: 'gear-reviews',
@@ -8328,7 +8492,7 @@ export const ARTICLES: Article[] = [
 
       { h2: 'The 4 Signs Your Grips Are Done', body: '<strong>1. Shiny patches in the high-contact zones.</strong> Look at where your thumbs and palms sit on the grip. If those areas are shiny, smooth, and visibly different from the rest of the grip surface, the rubber has worn down. Fresh grips have a uniform matte texture across the entire surface.\n\n<strong>2. Slick feel even after washing.</strong> Wash your grips with warm water and dish soap (you should be doing this every 5-10 rounds). If they still feel slick after washing and drying, the surface texture is gone and no amount of cleaning will restore it.\n\n<strong>3. Visible cracks, splits, or hardening.</strong> Rubber degrades over time even if you do not play much. UV exposure, heat, and humidity cause grips to harden and crack. If you see cracks in the surface or the grip feels rigid instead of tacky, it is done regardless of round count.\n\n<strong>4. You have started gripping tighter without realizing.</strong> This is the sneaky one. If you notice grip marks in your glove that are deeper than they used to be, or your forearms are sore after a round, or you feel tension in your hands at setup — your body is compensating for slick grips. This is the sign that costs you strokes.\n\nIf someone is buying you a gift and checks your grips, shiny and slick means a regrip is the perfect present — see our <a href="/gifts-for-golfer-who-never-keeps-anything/">gift detective guide</a> for the full bag-spying strategy.' },
 
-      { h2: 'The Replacement Timeline', body: '<strong>Tour pros:</strong> Every 6 weeks. They regrip constantly because they can feel even small changes in surface texture. This is extreme and unnecessary for recreational golfers.\n\n<strong>Heavy practice (range 3+ times/week):</strong> Every 6-8 months. Range mats accelerate grip wear because the abrasive mat surface transfers grit to your glove and then to your grips.\n\n<strong>Weekend golfer (30-40 rounds/year):</strong> Every 12 months or 40 rounds, whichever comes first. This is the most common schedule and the one Golf Pride recommends.\n\n<strong>Casual golfer (under 20 rounds/year):</strong> Every 18-24 months. At this volume, environmental degradation (UV, heat, humidity) wears your grips more than actual use.\n\n<strong>Putter grip:</strong> Every 3-5 years for most golfers. Putter grips see less impact force and less friction. Replace when the feel changes or the grip shows visible wear in your thumb zones. For putting-specific grip upgrades — especially for shaky hands — see our <a href="/best-putters-shaky-hands-older-golfers/">putter guide for older golfers</a>.\n\nThis mirrors the maintenance schedule from our <a href="/when-to-replace-wedges-grooves/">wedge replacement guide</a>. Between grips (annually) and wedges (every 75-100 rounds), most weekend golfers should budget for one equipment maintenance expense per season.' },
+      { h2: 'The Replacement Timeline', body: '<strong>Tour pros:</strong> Every 6 weeks. They regrip constantly because they can feel even small changes in surface texture. This is extreme and unnecessary for recreational golfers.\n\n<strong>Heavy practice (range 3+ times/week):</strong> Every 6-8 months. Range mats accelerate grip wear because the abrasive mat surface transfers grit to your glove and then to your grips.\n\n<strong>Weekend golfer (30-40 rounds/year):</strong> Every 12 months or 40 rounds, whichever comes first. This is the most common schedule and the one Golf Pride recommends.\n\n<strong>Casual golfer (under 20 rounds/year):</strong> Every 18-24 months. At this volume, environmental degradation (UV, heat, humidity) wears your grips more than actual use.\n\n<strong>Putter grip:</strong> Every 3-5 years for most golfers. Putter grips see less impact force and less friction. Replace when the feel changes or the grip shows visible wear in your thumb zones. For putting-specific grip upgrades — especially for shaky hands — see our <a href="/best-golf-putters-2026/">putter guide for older golfers</a>.\n\nThis mirrors the maintenance schedule from our <a href="/when-to-replace-wedges-grooves/">wedge replacement guide</a>. Between grips (annually) and wedges (every 75-100 rounds), most weekend golfers should budget for one equipment maintenance expense per season.' },
 
       { h2: 'The Cost Reality', body: '<strong>DIY full-set regrip (13 clubs): $60-90.</strong> Grips cost $5-13 each depending on model. Grip tape is $8-12 for a roll. Grip solvent is $6-10. Total materials for 13 clubs: $60-90. Time: 30-45 minutes for a full set once you have done it twice.\n\n<strong>Pro shop install: $80-150.</strong> Most pro shops charge $3-8 per club for labor on top of the grip price. Some shops offer deals if you buy grips and installation together. Club Champion, Golf Galaxy, and PGA Tour Superstore all offer regripping services.\n\n<strong>The math:</strong> DIY saves you $30-60 per regrip. Over 5 years of annual regrips, that is $150-300 saved. If you regrip once and decide DIY is not for you, paying the pro shop is still worth it — the 3-4 strokes you gain per round far outweigh the $80-150 cost.\n\nFor budget-conscious golfers, regripping also qualifies as one of the best upgrades in our <a href="/best-golf-gear-under-100/">best golf gear under $100 guide</a>.' },
 
@@ -8391,7 +8555,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
-      { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Putters for Shaky Hands' },
+      { slug: '/best-golf-putters-2026/', label: 'Putters for Shaky Hands' },
       { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     ],
@@ -8407,6 +8571,7 @@ export const ARTICLES: Article[] = [
     id: 'driver-under-300',
     slug: '/best-golf-driver-under-300/',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/drivers-under-300-thumb.webp',
     thumbnail: '/images/thumbnails/drivers-under-300-thumb.webp',
     words: '2,500',
     category: 'gear-reviews',
@@ -8559,6 +8724,7 @@ export const ARTICLES: Article[] = [
     id: 'driver-slow-swing',
     slug: '/best-golf-driver-slow-swing-speed/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-slow-swing-thumb.webp',
     thumbnail: '/images/thumbnails/driver-slow-swing-thumb.webp',
     words: '3,200',
     category: 'gear-reviews',
@@ -8703,13 +8869,14 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-clubs-slow-swing-speed/', label: 'Best Clubs for Slow Swing Speed' },
-      { slug: '/best-golf-driver-seniors/', label: 'Best Drivers for Seniors' },
+      { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     ],
   },
   {
     id: 'driver-vs-3-wood',
     slug: '/driver-vs-3-wood-off-tee/',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-vs-3wood-thumb.webp',
     thumbnail: '/images/thumbnails/driver-vs-3wood-thumb.webp',
     words: '2,200',
     category: 'improve-game',
@@ -8774,6 +8941,7 @@ export const ARTICLES: Article[] = [
     id: 'fit-yourself-driver',
     slug: '/how-to-fit-yourself-for-driver/',
     thumb: 'teal',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/fit-yourself-driver-thumb.webp',
     thumbnail: '/images/thumbnails/fit-yourself-driver-thumb.webp',
     words: '2,600',
     category: 'gear-reviews',
@@ -8844,6 +9012,7 @@ export const ARTICLES: Article[] = [
     id: 'budget-putters-under-150',
     slug: '/best-budget-putters-under-150/',
     thumb: 'olive',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-putters-thumb.webp',
     thumbnail: '/images/thumbnails/budget-putters-thumb.webp',
     words: '2,800',
     category: 'gear-reviews',
@@ -8967,8 +9136,8 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-      { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
-      { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
     ],
   },
   {
@@ -8976,6 +9145,7 @@ export const ARTICLES: Article[] = [
     slug: '/how-to-choose-putter-length/',
     quickAnswerProduct: 'odyssey-white-hot-og',
     thumb: 'teal',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/putter-length-thumb.webp',
     thumbnail: '/images/thumbnails/putter-length-thumb.webp',
     words: '2,100',
     category: 'improve-game',
@@ -9035,6 +9205,7 @@ export const ARTICLES: Article[] = [
     slug: '/mallet-vs-blade-putter/',
     quickAnswerProduct: 'taylormade-spider-tour',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/mallet-vs-blade-thumb.webp',
     thumbnail: '/images/thumbnails/mallet-vs-blade-thumb.webp',
     words: '2,300',
     category: 'gear-reviews',
@@ -9050,7 +9221,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Mallet vs Blade Putter — Which Should You Use?',
     description: 'Mallet vs blade putter — which design suits your stroke type, skill level, and putting weaknesses. Decision framework with testing data.',
     excerpt: 'Mallet or blade putter? The answer depends on your stroke, your misses, and your handicap.',
-    intro: "The mallet vs blade debate has a clear answer for most golfers — but it is not the answer you expect. The right putter depends on your stroke type, your primary putting weakness, and your handicap. Here is the framework we use to match golfers with the correct putter head type, backed by testing data from 500+ putts per design. For specific putter recommendations, see our <a href=\"/best-golf-putters-2026/\">best putters guide</a>, <a href=\"/best-mallet-putters-2026/\">best mallets</a>, and <a href=\"/best-blade-putters-2026/\">best blades</a>.",
+    intro: "The mallet vs blade debate has a clear answer for most golfers — but it is not the answer you expect. The right putter depends on your stroke type, your primary putting weakness, and your handicap. Here is the framework we use to match golfers with the correct putter head type, backed by testing data from 500+ putts per design. For specific putter recommendations, see our <a href=\"/best-golf-putters-2026/\">best putters guide</a>, <a href=\"/best-golf-putters-2026/\">best mallets</a>, and <a href=\"/best-golf-putters-2026/\">best blades</a>.",
     toc: ['The fundamental difference', 'Stroke type matching', 'Skill level guide', 'The forgiveness gap in numbers', 'When to switch', 'The verdict', 'FAQ'],
     sections: [
       {
@@ -9086,8 +9257,8 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-      { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
-      { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
       { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
     ],
   },
@@ -9100,6 +9271,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'fathers-day-golf-gifts-2026',
     slug: '/fathers-day-golf-gifts-2026/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/fathers-day-golf-gifts-thumb.webp',
     thumbnail: '/images/thumbnails/fathers-day-golf-gifts-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -9151,6 +9323,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'launch-monitors-no-subscription',
     slug: '/best-launch-monitors-no-subscription/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/launch-monitor-no-sub-thumb.webp',
     thumbnail: '/images/thumbnails/launch-monitor-no-sub-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
@@ -9218,6 +9391,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'shot-scope-lm1-vs-garmin-r10',
     slug: '/shot-scope-lm1-vs-garmin-r10/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/lm1-vs-r10-thumb.webp',
     thumbnail: '/images/thumbnails/lm1-vs-r10-thumb.webp',
     category: 'golf-tech',
     pageType: 'comparison',
@@ -9261,6 +9435,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-push-carts-2026',
     slug: '/best-golf-push-carts-2026/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/push-carts-thumb.webp',
     thumbnail: '/images/thumbnails/push-carts-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -9325,6 +9500,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-grips-sweaty-hands',
     slug: '/best-golf-grips-sweaty-hands/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-grips-sweaty-hands-thumb.webp',
     thumbnail: '/images/thumbnails/golf-grips-sweaty-hands-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
@@ -9377,6 +9553,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-hitting-mats-home',
     slug: '/best-golf-hitting-mats-home/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/hitting-mats-thumb.webp',
     thumbnail: '/images/thumbnails/hitting-mats-thumb.webp',
     category: 'golf-tech', pageType: 'buying-guide', quickAnswerProduct: 'spornia-spg-net',
     tag: 'BUYING GUIDE', emoji: '🏠', thumb: 'teal', words: '2,500',
@@ -9421,13 +9598,14 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-hitting-net-apartment-garage/', label: 'Best Golf Hitting Nets' },
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
-      { slug: '/how-to-practice-golf-at-home/', label: 'How to Practice at Home' },
+      { slug: '/golf-practice-drills-at-home/', label: 'How to Practice at Home' },
     ],
   },
 
 {
     id: 'best-impact-screens',
     slug: '/best-impact-screens-golf-simulator/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/impact-screens-thumb.webp',
     thumbnail: '/images/thumbnails/impact-screens-thumb.webp',
     category: 'golf-tech', pageType: 'buying-guide', quickAnswerProduct: 'carls-place-impact-screen',
     tag: 'BUYING GUIDE', emoji: '🖥️', thumb: 'blue', words: '2,200',
@@ -9469,6 +9647,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-golf-simulator-projectors',
     slug: '/best-golf-simulator-projectors/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-projectors-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-projectors-thumb.webp',
     category: 'golf-tech', pageType: 'buying-guide', quickAnswerProduct: 'benq-th671st-projector',
     tag: 'BUYING GUIDE', emoji: '📽️', thumb: 'blue', words: '2,200',
@@ -9512,6 +9691,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'how-much-golf-simulator-cost',
     slug: '/how-much-does-golf-simulator-cost/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-cost-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-cost-thumb.webp',
     category: 'golf-tech', pageType: 'buying-guide', quickAnswerProduct: 'garmin-approach-r10',
     tag: 'COST GUIDE', emoji: '💰', thumb: 'gold', words: '2,800',
@@ -9552,6 +9732,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-electric-push-cart',
     slug: '/best-electric-golf-push-cart/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/electric-push-cart-thumb.webp',
     thumbnail: '/images/thumbnails/electric-push-cart-thumb.webp',
     category: 'golf-accessories', pageType: 'buying-guide', quickAnswerProduct: 'bag-boy-volt-electric',
     tag: 'BUYING GUIDE', emoji: '⚡', thumb: 'green', words: '2,200',
@@ -9592,6 +9773,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-golf-bags-walking',
     slug: '/best-golf-bags-walking-2026/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/walking-bags-thumb.webp',
     thumbnail: '/images/thumbnails/walking-bags-thumb.webp',
     category: 'golf-accessories', pageType: 'buying-guide', quickAnswerProduct: 'sun-mountain-25-plus',
     tag: 'BUYING GUIDE', emoji: '🎒', thumb: 'green', words: '2,400',
@@ -9634,6 +9816,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-golf-rain-gear',
     slug: '/best-golf-rain-gear-2026/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/rain-gear-thumb.webp',
     thumbnail: '/images/thumbnails/rain-gear-thumb.webp',
     category: 'golf-accessories', pageType: 'buying-guide', quickAnswerProduct: 'under-armour-storm-rain',
     tag: 'BUYING GUIDE', emoji: '🌧️', thumb: 'blue', words: '2,200',
@@ -9673,6 +9856,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-golf-shoes-bad-knees',
     slug: '/best-golf-shoes-bad-knees/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/shoes-bad-knees-thumb.webp',
     thumbnail: '/images/thumbnails/shoes-bad-knees-thumb.webp',
     category: 'golf-accessories', pageType: 'buying-guide', quickAnswerProduct: 'skechers-go-golf-elite-5',
     tag: 'BUYING GUIDE', emoji: '👟', thumb: 'green', words: '2,200',
@@ -9721,6 +9905,7 @@ export const ARTICLES: Article[] = [
     id: 'low-ceiling-monitor',
     slug: '/best-launch-monitor-low-ceiling/',
     quickAnswerProduct: 'garmin-approach-r10',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/low-ceiling-monitor-thumb.webp',
     thumbnail: '/images/thumbnails/low-ceiling-monitor-thumb.webp',
     words: '2,400',
     category: 'gear-reviews',
@@ -9781,6 +9966,7 @@ export const ARTICLES: Article[] = [
     id: 'subscription-cost',
     slug: '/launch-monitor-subscription-cost-comparison/',
     quickAnswerProduct: 'shot-scope-lm1',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/subscription-cost-thumb.webp',
     thumbnail: '/images/thumbnails/subscription-cost-thumb.webp',
     words: '2,800',
     category: 'gear-reviews',
@@ -9837,6 +10023,7 @@ export const ARTICLES: Article[] = [
     id: 'trackman-alternatives',
     slug: '/trackman-alternatives-2026/',
     quickAnswerProduct: 'bushnell-launch-pro',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/trackman-alternatives-thumb.webp',
     thumbnail: '/images/thumbnails/trackman-alternatives-thumb.webp',
     words: '2,200',
     category: 'gear-reviews',
@@ -9905,6 +10092,7 @@ export const ARTICLES: Article[] = [
     slug: '/mlm2pro-vs-skytrak-plus/',
     quickAnswerProduct: 'rapsodo-mlm2pro',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/mlm2pro-vs-skytrak-thumb.webp',
     thumbnail: '/images/thumbnails/mlm2pro-vs-skytrak-thumb.webp',
     words: '2,100',
     category: 'gear-reviews',
@@ -9961,6 +10149,7 @@ export const ARTICLES: Article[] = [
     slug: '/bushnell-launch-pro-vs-skytrak-plus/',
     quickAnswerProduct: 'bushnell-launch-pro',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/launch-pro-vs-skytrak-thumb.webp',
     thumbnail: '/images/thumbnails/launch-pro-vs-skytrak-thumb.webp',
     words: '1,900',
     category: 'gear-reviews',
@@ -10014,6 +10203,7 @@ export const ARTICLES: Article[] = [
     slug: '/garmin-r10-vs-square-golf/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/r10-vs-square-thumb.webp',
     thumbnail: '/images/thumbnails/r10-vs-square-thumb.webp',
     words: '1,800',
     category: 'gear-reviews',
@@ -10067,6 +10257,7 @@ export const ARTICLES: Article[] = [
     slug: '/portable-golf-simulator-setup/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/portable-simulator-thumb.webp',
     thumbnail: '/images/thumbnails/portable-simulator-thumb.webp',
     words: '2,000',
     category: 'indoor-golf',
@@ -10124,6 +10315,7 @@ export const ARTICLES: Article[] = [
     slug: '/quiet-golf-simulator-setup/',
     quickAnswerProduct: 'fiberbuilt-flight-deck',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/quiet-simulator-thumb.webp',
     thumbnail: '/images/thumbnails/quiet-simulator-thumb.webp',
     words: '1,800',
     category: 'indoor-golf',
@@ -10179,6 +10371,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-golf-simulator-software-2026/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-software-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-software-thumb.webp',
     words: '2,200',
     category: 'indoor-golf',
@@ -10243,6 +10436,7 @@ export const ARTICLES: Article[] = [
     slug: '/golf-simulator-room-dimensions-guide/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sim-room-dimensions-thumb.webp',
     thumbnail: '/images/thumbnails/sim-room-dimensions-thumb.webp',
     words: '2,200',
     category: 'indoor-golf',
@@ -10301,6 +10495,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-golf-simulator-for-beginners/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sim-beginners-thumb.webp',
     thumbnail: '/images/thumbnails/sim-beginners-thumb.webp',
     words: '2,000',
     category: 'indoor-golf',
@@ -10359,6 +10554,7 @@ export const ARTICLES: Article[] = [
     slug: '/golf-launch-monitor-accuracy-test/',
     quickAnswerProduct: 'bushnell-launch-pro',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/accuracy-test-thumb.webp',
     thumbnail: '/images/thumbnails/accuracy-test-thumb.webp',
     words: '2,400',
     category: 'gear-reviews',
@@ -10418,6 +10614,7 @@ export const ARTICLES: Article[] = [
     slug: '/golf-simulator-projector-distance-calculator/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/projector-calc-thumb.webp',
     thumbnail: '/images/thumbnails/projector-calc-thumb.webp',
     words: '1,600',
     category: 'indoor-golf',
@@ -10469,6 +10666,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-golf-apps-for-apple-watch/',
     quickAnswerProduct: 'garmin-approach-s62',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/apple-watch-apps-thumb.webp',
     thumbnail: '/images/thumbnails/apple-watch-apps-thumb.webp',
     words: '1,800',
     category: 'gear-reviews',
@@ -10501,7 +10699,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Premium App: 18Birdies', body: '<p>18Birdies combines GPS, scoring, social features, and AI-powered club recommendations. The Apple Watch app shows yardage, tracks your score, and logs club distances automatically. At $99/year for premium, it is the best all-around golf app for Apple Watch users who want everything in one place.</p>' },
       { h2: 'Best for Shot Tracking: Arccos Caddie', body: '<p><a href="/arccos-caddie-review-2026/">Arccos Caddie</a> with the sensor system ($199 for sensors + subscription) turns your Apple Watch into an AI caddie. It tracks every shot automatically, builds a strokes gained profile, and tells you which club to hit based on YOUR data — not generic averages.</p><p>This is the most powerful golf app available, but it requires Arccos sensors on your clubs. See our <a href="/arccos-caddie-review-2026/">full Arccos review</a>.</p>', affiliateKey: 'arccos-caddie-sensors' },
       { h2: 'All 7 Apps Compared', body: '<table class="cmp-table"><thead><tr><th>App</th><th>Free Tier</th><th>Premium Price</th><th>GPS</th><th>Scoring</th><th>Shot Tracking</th></tr></thead><tbody><tr><td>Golfshot</td><td>✅ GPS + scoring</td><td>$40/yr</td><td>✅</td><td>✅</td><td>❌</td></tr><tr><td>18Birdies</td><td>✅ Basic GPS</td><td>$99/yr</td><td>✅</td><td>✅</td><td>Manual</td></tr><tr><td>Arccos Caddie</td><td>❌</td><td>$199/yr + sensors</td><td>✅</td><td>✅</td><td>✅ Auto</td></tr><tr><td>Hole19</td><td>✅ GPS</td><td>$70/yr</td><td>✅</td><td>✅</td><td>❌</td></tr><tr><td>SwingU</td><td>✅ GPS</td><td>$100/yr</td><td>✅</td><td>✅</td><td>Manual</td></tr><tr><td>TheGrint</td><td>✅ Handicap</td><td>$80/yr</td><td>✅</td><td>✅</td><td>❌</td></tr><tr><td>V1 Golf</td><td>❌</td><td>$120/yr</td><td>❌</td><td>❌</td><td>Video swing</td></tr></tbody></table>' },
-      { h2: 'Apple Watch vs Dedicated Garmin GPS Watch', body: '<p>The Apple Watch with a golf app gives you 80% of what a <a href="/garmin-s62-vs-apple-watch-golf/">Garmin Approach S62</a> offers — GPS yardage, scoring, and basic shot tracking. The Garmin advantages: longer battery (20+ hours vs 5-6 hours on Apple Watch during GPS use), physical buttons for gloved hands, and built-in golf features without app subscriptions.</p><p>If you already own an Apple Watch, try Golfshot free before buying a Garmin. If GPS golf is a primary use case, the <a href="/best-golf-gps-watches-2026/">dedicated Garmin</a> is the better tool.</p>', affiliateKey: 'garmin-approach-s62' },
+      { h2: 'Apple Watch vs Dedicated Garmin GPS Watch', body: '<p>The Apple Watch with a golf app gives you 80% of what a <a href="/garmin-s62-vs-apple-watch-golf/">Garmin Approach S62</a> offers — GPS yardage, scoring, and basic shot tracking. The Garmin advantages: longer battery (20+ hours vs 5-6 hours on Apple Watch during GPS use), physical buttons for gloved hands, and built-in golf features without app subscriptions.</p><p>If you already own an Apple Watch, try Golfshot free before buying a Garmin. If GPS golf is a primary use case, the <a href="/best-golf-gps-watches/">dedicated Garmin</a> is the better tool.</p>', affiliateKey: 'garmin-approach-s62' },
     ],
     faq: [
       { q: 'What is the best free golf app for Apple Watch?', a: 'Golfshot — free GPS yardage to front/center/back on 45,000+ courses. No payment required for basic features.' },
@@ -10511,8 +10709,8 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'Apple — watchOS Health & Fitness', url: 'https://www.apple.com/watchos/' }],
     related: [
       { slug: '/garmin-s62-vs-apple-watch-golf/', label: 'Garmin vs Apple Watch for Golf' },
-      { slug: '/best-golf-gps-watches-2026/', label: 'Best GPS Watches 2026' },
-      { slug: '/best-golf-apps-2026/', label: 'Best Golf Apps 2026' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' },
+      { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
       { slug: '/arccos-caddie-review-2026/', label: 'Arccos Caddie Review' },
     ],
   },
@@ -10522,6 +10720,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-golf-simulator-under-5000/',
     quickAnswerProduct: 'skytrak-plus',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sim-under-5000-thumb.webp',
     thumbnail: '/images/thumbnails/sim-under-5000-thumb.webp',
     words: '2,000',
     category: 'indoor-golf',
@@ -10574,6 +10773,7 @@ export const ARTICLES: Article[] = [
     slug: '/golf-simulator-vs-driving-range/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sim-vs-range-thumb.webp',
     thumbnail: '/images/thumbnails/sim-vs-range-thumb.webp',
     words: '1,600',
     category: 'indoor-golf',
@@ -10625,6 +10825,7 @@ export const ARTICLES: Article[] = [
     slug: '/how-to-improve-with-launch-monitor/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/improve-monitor-thumb.webp',
     thumbnail: '/images/thumbnails/improve-monitor-thumb.webp',
     words: '2,000',
     category: 'improve-game',
@@ -10683,6 +10884,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-game-improvement-irons-2026/',
     quickAnswerProduct: 'ping-g430-irons',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/game-improvement-irons-thumb.webp',
     thumbnail: '/images/thumbnails/game-improvement-irons-thumb.webp',
     words: '2,200',
     category: 'gear-reviews',
@@ -10741,6 +10943,7 @@ export const ARTICLES: Article[] = [
     slug: '/iron-fitting-guide-beginners/',
     quickAnswerProduct: 'ping-g430-irons',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/iron-fitting-thumb.webp',
     thumbnail: '/images/thumbnails/iron-fitting-thumb.webp',
     words: '2,000',
     category: 'improve-game',
@@ -10795,6 +10998,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-irons-under-500/',
     quickAnswerProduct: 'cleveland-launcher-xl2-irons',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/irons-under-500-thumb.webp',
     thumbnail: '/images/thumbnails/irons-under-500-thumb.webp',
     words: '1,800',
     category: 'gear-reviews',
@@ -10845,6 +11049,7 @@ export const ARTICLES: Article[] = [
     slug: '/wedge-bounce-guide/',
     quickAnswerProduct: 'cleveland-rtx6-52',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/wedge-bounce-thumb.webp',
     thumbnail: '/images/thumbnails/wedge-bounce-thumb.webp',
     words: '1,800',
     category: 'improve-game',
@@ -10897,6 +11102,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-wedges-for-beginners/',
     quickAnswerProduct: 'cleveland-cbx4-wedge',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/wedges-beginners-thumb.webp',
     thumbnail: '/images/thumbnails/wedges-beginners-thumb.webp',
     words: '1,800',
     category: 'gear-reviews',
@@ -10947,6 +11153,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-hybrid-clubs-2026/',
     quickAnswerProduct: 'callaway-paradym-hybrid',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/hybrid-clubs-thumb.webp',
     thumbnail: '/images/thumbnails/hybrid-clubs-thumb.webp',
     words: '1,900',
     category: 'gear-reviews',
@@ -11008,6 +11215,7 @@ export const ARTICLES: Article[] = [
     slug: '/hybrid-vs-long-iron/',
     quickAnswerProduct: 'callaway-paradym-hybrid',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/hybrid-vs-iron-thumb.webp',
     thumbnail: '/images/thumbnails/hybrid-vs-iron-thumb.webp',
     words: '1,600',
     category: 'improve-game',
@@ -11059,6 +11267,7 @@ export const ARTICLES: Article[] = [
     slug: '/shaft-flex-guide/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/shaft-flex-thumb.webp',
     thumbnail: '/images/thumbnails/shaft-flex-thumb.webp',
     words: '1,800',
     category: 'improve-game',
@@ -11113,6 +11322,7 @@ export const ARTICLES: Article[] = [
     slug: '/best-golf-grips-2026/',
     quickAnswerProduct: 'golf-pride-mcc-plus4',
     thumb: 'green',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/grips-2026-thumb.webp',
     thumbnail: '/images/thumbnails/grips-2026-thumb.webp',
     words: '1,600',
     category: 'golf-accessories',
@@ -11168,6 +11378,7 @@ export const ARTICLES: Article[] = [
     slug: '/driver-loft-guide/',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-loft-thumb.webp',
     thumbnail: '/images/thumbnails/driver-loft-thumb.webp',
     words: '1,600',
     category: 'improve-game',
@@ -11219,6 +11430,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'gps-watch-under-300',
     slug: '/best-golf-gps-watch-under-300/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gps-watch-under-300-thumb.webp',
     thumbnail: '/images/thumbnails/gps-watch-under-300-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
@@ -11274,6 +11486,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'launch-monitor-under-500',
     slug: '/best-launch-monitors-under-500/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/launch-monitor-under-500-thumb.webp',
     thumbnail: '/images/thumbnails/launch-monitor-under-500-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',

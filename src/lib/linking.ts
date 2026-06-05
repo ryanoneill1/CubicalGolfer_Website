@@ -19,7 +19,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — 2026 Driver Comparison' },
     { slug: '/compare/',                           label: 'Compare Golf Products Head-to-Head' },
     { slug: '/best-golf-gear-under-100/',          label: 'Best Golf Gear Under $100' },
-    { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Putters for Shaky Hands' },
+    { slug: '/best-golf-putters-2026/', label: 'Putters for Shaky Hands' },
     { slug: '/how-to-buy-wedges-4-degree-rule/',   label: 'How to Buy Wedges' },
     { slug: '/when-to-replace-wedges-grooves/',    label: 'When to Replace Wedges' },
     { slug: '/when-to-replace-golf-grips/',        label: 'When to Replace Grips' },
@@ -45,7 +45,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
     { slug: '/average-golf-handicap/',               label: 'Average Golf Handicap 2026' },
     { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home (15 Min)' },
-    { slug: '/golf-practice-routine-before-work/',   label: '15-Min Morning Practice Routine' },
+    { slug: '/golf-practice-drills-at-home/',   label: '15-Min Morning Practice Routine' },
     { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
     { slug: '/desk-exercises-fix-golf-slice/',       label: 'Desk Exercises That Fix Your Slice' },
     { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
@@ -57,7 +57,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/golf-for-beginners/',              label: 'Golf for Beginners — Complete Guide' },
     { slug: '/best-golf-gifts-for-him/',         label: 'Best Golf Gifts for Him' },
     { slug: '/golf-course-etiquette/',           label: 'Golf Course Etiquette Guide' },
-    { slug: '/golf-desk-accessories-office/',    label: 'Best Golf Desk Accessories' },
+    { slug: '/office-to-golf-course-playbook/',    label: 'Best Golf Desk Accessories' },
     { slug: '/best-rain-gear-midwest-golfers/',  label: 'Best Rain Gear for Midwest Golfers' },
     { slug: '/courses/chicago-il/',              label: 'Best Golf Courses in Chicago' },
     { slug: '/gear-quiz/',                       label: 'Golf Gear Quiz — Find Your Fit' },
@@ -252,12 +252,12 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
-    { slug: '/golf-practice-routine-before-work/',  label: '15-Min Morning Practice Routine' },
+    { slug: '/golf-practice-drills-at-home/',  label: '15-Min Morning Practice Routine' },
   ],
   'improve-putting': [
     { slug: '/how-to-stop-3-putting/',              label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
-    { slug: '/best-putter-high-handicapper/',       label: 'Best Putter for High Handicappers' },
+    { slug: '/best-golf-putters-2026/',       label: 'Best Putter for High Handicappers' },
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
   ],
   'how-to-stop-3-putting': [
@@ -288,7 +288,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'how-to-practice-at-home': [
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
-    { slug: '/best-indoor-golf-net-setup/',         label: 'Best Indoor Golf Net Setup' },
+    { slug: '/best-golf-hitting-net-apartment-garage/',         label: 'Best Indoor Golf Net Setup' },
     { slug: '/best-golf-simulator-small-spaces/',   label: 'Best Golf Simulators for Small Spaces' },
   ],
 
@@ -334,21 +334,21 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'golf-shoes-walking': [
     { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
     { slug: '/best-golf-bags-2026/',                 label: 'Best Golf Bags 2026' },
-    { slug: '/golf-fitness-office-golfer/',           label: 'Golf Fitness for Office Workers' },
+    { slug: '/office-to-golf-course-playbook/',           label: 'Golf Fitness for Office Workers' },
   ],
 
   // ── Putters cluster ────────────────────────────────────────────────────────
   'golf-putters': [
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
-    { slug: '/best-putter-high-handicapper/',         label: 'Best Putter for High Handicappers' },
+    { slug: '/best-golf-putters-2026/',         label: 'Best Putter for High Handicappers' },
   ],
 
   // ── Simulator cluster ──────────────────────────────────────────────────────
   'golf-simulator-small-spaces': [
     { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
     { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Garage Simulator' },
-    { slug: '/best-indoor-golf-net-setup/',           label: 'Best Indoor Golf Net Setup' },
+    { slug: '/best-golf-hitting-net-apartment-garage/',           label: 'Best Indoor Golf Net Setup' },
   ],
   'skytrak-vs-mevo': [
     { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Simulators for Small Spaces' },
@@ -408,20 +408,20 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-accessories-under-50/',      label: 'Best Golf Accessories Under $50' },
     { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
     { slug: '/best-beginner-golf-set-under-500/',    label: 'Best Beginner Set Under $500' },
-    { slug: '/golf-desk-accessories-office/',        label: 'Best Golf Desk Accessories' },
+    { slug: '/office-to-golf-course-playbook/',        label: 'Best Golf Desk Accessories' },
   ],
   'practice-drills-home': [
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
-    { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
+    { slug: '/golf-practice-drills-at-home/',        label: 'How to Practice Golf at Home' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
-    { slug: '/golf-practice-routine-before-work/',   label: '15-Min Morning Practice Routine' },
+    { slug: '/golf-practice-drills-at-home/',   label: '15-Min Morning Practice Routine' },
   ],
   'morning-practice-routine': [
     { slug: '/golf-practice-drills-at-home/',        label: '7 Practice Drills at Home (15 Min)' },
-    { slug: '/how-to-practice-golf-at-home/',        label: 'How to Practice Golf at Home' },
+    { slug: '/golf-practice-drills-at-home/',        label: 'How to Practice Golf at Home' },
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
-    { slug: '/golf-fitness-office-golfer/',           label: 'Golf Fitness for Office Workers' },
+    { slug: '/office-to-golf-course-playbook/',           label: 'Golf Fitness for Office Workers' },
     { slug: '/how-to-break-90/',                     label: 'How to Break 90 This Season' },
   ],
   'beginner-set-under-500': [
@@ -592,7 +592,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
-    { slug: '/golf-desk-accessories-office/', label: 'Golf Desk Accessories' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Golf Desk Accessories' },
   ],
   'left-handed-golf-clubs': [
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
@@ -632,7 +632,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'office-to-course-playbook': [
     { slug: '/how-to-sneak-in-more-golf-rounds/', label: 'How to Play More Golf With a Job' },
     { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
-    { slug: '/golf-fitness-office-golfer/', label: 'Office Golfer Fitness Routine' },
+    { slug: '/office-to-golf-course-playbook/', label: 'Office Golfer Fitness Routine' },
     { slug: '/how-to-break-90/', label: 'How to Break 90' },
     { slug: '/golf-practice-drills-at-home/', label: 'Home Practice Drills' },
   ],
@@ -671,24 +671,24 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   // ── Putters cluster ────────────────────────────────────────────────────
   'best-mallet-putters': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-    { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
     { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right?' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'best-blade-putters': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-    { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
     { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right?' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'budget-putters-under-150': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-    { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
-    { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
   ],
   'putters-yips': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-    { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Best Putters for Shaky Hands' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Putters for Shaky Hands' },
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
   ],
   'putter-length-guide': [
@@ -698,20 +698,20 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'mallet-vs-blade': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-    { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
-    { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
+    { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
     { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
   ],
   'driver-under-300': [
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
-    { slug: '/best-golf-driver-seniors/', label: 'Best Drivers for Seniors' },
+    { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'driver-slow-swing': [
     { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-driver-under-300/', label: 'Best Drivers Under $300' },
-    { slug: '/best-golf-driver-seniors/', label: 'Best Drivers for Seniors' },
+    { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   ],
   'driver-seniors': [
@@ -733,7 +733,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'when-to-replace-grips': [
     { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
-    { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Putters for Shaky Hands' },
+    { slug: '/best-golf-putters-2026/', label: 'Putters for Shaky Hands' },
     { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
   ],

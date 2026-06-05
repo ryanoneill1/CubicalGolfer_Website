@@ -357,7 +357,7 @@ export const COMPARISONS: Comparison[] = [
     dateModified:  '2026-04-14',
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
-      { slug: '/best-golf-driver-seniors/', label: 'Best Drivers for Seniors' },
+      { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
       { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
     ],
   },
@@ -395,7 +395,7 @@ export const COMPARISONS: Comparison[] = [
     dateModified:  '2026-04-20',
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
-      { slug: '/best-blade-putters-2026/', label: 'Best Blade Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
       { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade' },
     ],
   },
@@ -426,8 +426,8 @@ export const COMPARISONS: Comparison[] = [
     dateModified:  '2026-04-20',
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
-      { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
-      { slug: '/best-putters-yips/', label: 'Best Putters for Yips' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Putters for Yips' },
     ],
   },
       // ── Bushnell V6 vs Callaway 300 Pro ────────────────────────────────────
