@@ -191,6 +191,7 @@ export const ARTICLES: Article[] = [
       { label: 'Garmin S12 vs Bushnell Ion Elite', url: '/compare/garmin-s12-vs-bushnell-ion-elite/', description: 'GPS watch vs wrist rangefinder compared' },
     ],
     related: [
+      { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope on a Rangefinder?' },
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
@@ -627,6 +628,8 @@ export const ARTICLES: Article[] = [
       { label: 'Cobra Aerojet Max vs Ping G430 Max', url: '/compare/cobra-aerojet-max-vs-ping-g430-max/', description: 'The top game-improvement drivers tested side by side' },
     ],
     related: [
+      { slug: '/golf-club-distance-chart/', label: 'Golf Club Distance Chart' },
+      { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
       { slug: '/most-forgiving-irons/', label: 'Most Forgiving Irons' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
@@ -759,6 +762,8 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'USGA — Scoring Statistics by Handicap', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }, { label: 'TrackMan — Short Game Performance Data', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     related: [
+      { slug: '/best-left-handed-golf-clubs-2026/', label: 'Best Left-Handed Golf Clubs' },
+      { slug: '/best-wedges-for-beginners/', label: 'Best Wedges for Beginners' },
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice First' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
@@ -871,6 +876,7 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'USGA — GHIN Handicap Index Statistics', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }, { label: 'National Golf Foundation — Golfer Demographics', url: 'https://www.ngf.org/' }],
     related: [
+      { slug: '/how-to-lower-golf-handicap/', label: 'How to Lower Your Handicap' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 and Lower Your Handicap' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
@@ -895,7 +901,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Swing Analyzers — Clip-On, Camera, and Radar Compared',
+    title: 'Best Golf Swing Analyzers (Cheaper Than Lessons)',
     titleDisplay: 'Best Golf Swing Analyzers for Real Feedback',
     bottomLine: 'If you play 25+ rounds per year and want the deepest data, start with <strong>Arccos Caddie</strong>. If you want launch data for practice, the Rapsodo MLM2PRO is the clearest choice. See our GPS watch guide for course tracking →',
     description: "Swing analyzers tested by a golfer who can't afford weekly lessons. Arccos, Rapsodo, and more — which ones give a weekend warrior real feedback.",
@@ -970,7 +976,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Apps — Free and Paid Apps That Actually Help Your Game',
+    title: 'Best Golf Apps That Actually Lower Your Score',
     titleDisplay: 'Best Golf Apps That Actually Improve Your Game',
     bottomLine: 'For most recreational golfers, <strong>The Grint</strong> (free USGA handicap + GPS) covers everything needed without a subscription. Upgrade to Arccos only when you want automatic shot-level analytics. See our handicap tracking guide →',
     description: "The Grint, 18Birdies, Arccos & Golfshot compared by a weekend golfer who just wants GPS and a handicap without paying $15/month. Free and paid picks.",
@@ -1217,6 +1223,8 @@ export const ARTICLES: Article[] = [
       { q: 'How many rounds do walking golf shoes typically last?', a: 'Walking-specific golf shoes last 80-120 rounds for most golfers before the cushioning compresses noticeably and the outsole tread wears smooth. That translates to roughly 2-3 seasons for a golfer playing 40 rounds per year. The midsole cushioning degrades before the upper shows visible wear, so if your feet feel more tired after a round than they used to, the shoes have likely lost their support.' },
     ],
     related: [
+      { slug: '/best-golf-shoes-bad-knees/', label: 'Best Golf Shoes for Bad Knees' },
+      { slug: '/best-spikeless-golf-shoes-walking-18/', label: 'Best Spikeless Golf Shoes' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Should Own' },
       { slug: '/best-golf-gloves-hot-weather/', label: 'Best Golf Gloves for Hot Weather' },
       { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
@@ -1560,6 +1568,7 @@ export const ARTICLES: Article[] = [
     },
     sources: [{ label: 'Titleist — Pro V1 Construction & Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'MyGolfSpy — 2025 Golf Ball Test Methodology', url: 'https://mygolfspy.com/golf-ball-test/' }, { label: 'USGA — Conforming Golf Ball List', url: 'https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/equipment-rules/balls.html' }],
     related: [
+      { slug: '/golf-swing-speed-chart/', label: 'Golf Swing Speed Chart' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
@@ -2094,7 +2103,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Shoes for Walking 2026 — Most Comfortable Picks Tested',
+    title: '5 Best Golf Shoes for Walking 18 Holes (Tested)',
     titleDisplay: 'Best Golf Shoes for Walking 2026',
     bottomLine: 'For most golfers walking 18 holes regularly, the <strong>FootJoy Flex XP</strong> is the clearest choice — comfortable, waterproof, and light enough to walk 36 holes. Upgrade to ECCO Biom C4 if you play in sustained wet weather. See our full shoe guide →',
     description: 'FootJoy Flex XP, ECCO Biom C4 & Skechers Go Golf Pro 5 tested. Best walking golf shoes in 2026 — spikeless vs spiked, comfort & waterproofing compared.',
@@ -2309,7 +2318,7 @@ export const ARTICLES: Article[] = [
     title: "Best Golf Training Aids 2026 (That Actually Work)",
     titleDisplay: "Best Golf Training Aids That Actually Work",
     bottomLine: 'For most golfers, the biggest ROI comes from alignment sticks used consistently. Add impact tape to diagnose your contact pattern, and a putting mirror to fix alignment on the green. One tool at a time, one season at a time. See our full training guide →',
-    description: 'Training aids tested by a weekend golfer — alignment sticks, impact tape, putting mirrors. The ones that actually help, not the ones that collect dust.',
+    description: '9 training aids tested — alignment sticks, putting mirrors, impact bags. We found 5 that improved scores and 4 that collected dust. Honest rankings $12-$120.',
     excerpt: "Training aids that produce real improvement between rounds — no gimmicks, no $200 gadgets that collect dust.",
     intro: "Most golf training aids are gimmicks. A tiny handful genuinely improve your game. We've tested every major category over 3+ years of weekend golf and kept only the ones that produced measurable results.",
     toc: ['The 4 categories worth buying', 'Best alignment: Alignment sticks', 'Best impact feedback: Impact tape', 'Best putting: Putting mirror', 'Best swing tempo: Orange Whip', 'What to avoid', 'FAQ'],
@@ -6467,10 +6476,10 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 15, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Budget Golf Launch Monitor 2026 — Tested at the Range',
+    title: 'Best Budget Launch Monitors Under $700 (We Tested 5)',
     titleDisplay: 'Best Budget Golf Launch Monitor for Weekend Golfers',
     bottomLine: 'The <strong>Garmin Approach R10</strong> ($499) is the best budget launch monitor for weekend golfers — reliable ball speed, spin, and launch data with E6 Connect simulator included. If you want more data and shot tracer video, the <strong>Rapsodo MLM2PRO</strong> ($699) is worth the extra $200.',
-    description: 'Best budget golf launch monitors in 2026 — Garmin R10, Rapsodo MLM2PRO, FlightScope Mevo, and Ernest Sports tested at the range by weekend golfers.',
+    description: '5 budget launch monitors under $700 tested against TrackMan. Garmin R10, Rapsodo MLM2Pro, and Mevo ranked for accuracy without the $2,000 price tag.',
     excerpt: '4 budget launch monitors under $700 tested at the range — which one gives you the best data for your money?',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-launch-monitors-thumb.webp',
     thumbnail: '/images/thumbnails/budget-launch-monitors-thumb.webp',
