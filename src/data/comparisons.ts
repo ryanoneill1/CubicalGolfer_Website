@@ -719,7 +719,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-r10-vs-rapsodo-mlm2pro',
     thumbnail: '/images/thumbnails/compare-launch-monitors.webp',
-    title:         'Garmin R10 vs Rapsodo MLM2Pro — Which Budget Launch Monitor Wins?',
+    title:         'Garmin R10 vs Rapsodo MLM2Pro — Which Wins?',
     description:   'Garmin Approach R10 vs Rapsodo MLM2Pro compared on accuracy, indoor/outdoor performance, app quality, and value. Tested by a weekend golfer.',
     productA:      'garmin-r10',
     productB:      'rapsodo-mlm2pro',
@@ -749,7 +749,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'bushnell-launch-pro-vs-garmin-r10',
     thumbnail: '/images/thumbnails/compare-launch-monitors.webp',
-    title:         'Bushnell Launch Pro vs Garmin R10 — Is 3x the Price Worth It?',
+    title:         'Bushnell Launch Pro vs Garmin R10 — Worth 3x?',
     description:   'Bushnell Launch Pro ($2,000) vs Garmin R10 ($550) — accuracy, features, and whether the premium price is justified for a weekend golfer.',
     productA:      'bushnell-launch-pro',
     productB:      'garmin-r10',
@@ -776,7 +776,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-r50-vs-rapsodo-mlm2pro',
     thumbnail: '/images/thumbnails/compare-launch-monitors.webp',
-    title:         'Garmin R50 vs Rapsodo MLM2Pro — Mid-Range Launch Monitor Showdown',
+    title:         'Garmin R50 vs Rapsodo MLM2Pro — Mid-Range Pick',
     description:   'Garmin Approach R50 vs Rapsodo MLM2Pro — accuracy, radar vs camera, indoor/outdoor performance, and which mid-range launch monitor to buy.',
     productA:      'garmin-r50',
     productB:      'rapsodo-mlm2pro',
@@ -833,7 +833,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-r10-vs-flightscope-mevo',
     thumbnail: '/images/thumbnails/compare-launch-monitors.webp',
-    title:         'Garmin R10 vs FlightScope Mevo — Entry-Level Launch Monitor Battle',
+    title:         'Garmin R10 vs FlightScope Mevo — Which to Buy?',
     description:   'Garmin Approach R10 vs FlightScope Mevo compared for accuracy, features, app quality, and value for recreational golfers.',
     productA:      'garmin-r10',
     productB:      'flightscope-mevo',
@@ -891,7 +891,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'bushnell-pro-x3-vs-tour-v6',
     thumbnail: '/images/thumbnails/compare-rangefinders.webp',
-    title:         'Bushnell Pro X3 vs Tour V6 Shift — Which Bushnell Rangefinder?',
+    title:         'Bushnell Pro X3 vs Tour V6 — Which to Buy?',
     description:   'Bushnell Pro X3 vs Tour V6 Shift comparison. Accuracy, slope, optics, and whether the premium Pro X3 is worth the upgrade for a weekend golfer.',
     productA:      'bushnell-pro-x3',
     productB:      'bushnell-tour-v6',
@@ -919,7 +919,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-s70-vs-apple-watch-golf',
     thumbnail: '/images/thumbnails/compare-gps-watches.webp',
-    title:         'Garmin Approach S70 vs Apple Watch for Golf — Dedicated vs All-Purpose',
+    title:         'Garmin S70 vs Apple Watch for Golf — Which One?',
     description:   'Garmin Approach S70 vs Apple Watch Ultra 2 with golf apps. Which is better for on-course GPS, shot tracking, and the golfer who wears a watch every day?',
     productA:      'garmin-s70',
     productB:      'apple-watch-golf',
@@ -948,7 +948,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'pro-v1-vs-tp5',
     thumbnail: '/images/thumbnails/compare-golf-balls.webp',
-    title:         'Titleist Pro V1 vs TaylorMade TP5 — Premium Golf Ball Showdown',
+    title:         'Pro V1 vs TP5 — Premium Golf Ball Comparison',
     description:   'Pro V1 vs TP5 comparison for distance, spin, feel, and value. Tested at recreational swing speeds by a weekend golfer.',
     productA:      'pro-v1',
     productB:      'tp5',
