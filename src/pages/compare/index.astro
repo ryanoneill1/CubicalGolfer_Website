@@ -96,7 +96,8 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
           <div class="art-thumb">
             <span class="art-badge tag-cmp">COMPARISON</span>
             {c.thumbnail
-              ? <img src={c.thumbnail} alt={c.title} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
+              ? <img src={c.thumbnail} alt={c.title} loading="lazy" decoding="async" width="400" height="260"
+                  class="art-thumb__img" onerror="this.style.display='none'" />
               : <span aria-hidden="true">⚖️</span>
             }
           </div>
@@ -120,13 +121,14 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
               <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
                 <span class="art-badge tag-cmp">{a.tag || 'COMPARISON'}</span>
                 {a.thumbnail
-                  ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
+                  ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" decoding="async" width="400" height="260"
+                      class="art-thumb__img" onerror="this.style.display='none'" />
                   : <span aria-hidden="true">{a.emoji || '⚖️'}</span>
                 }
               </div>
               <div class="art-body">
                 <p class="hub-card-title">{a.titleDisplay || a.title}</p>
-                <p>{a.excerpt?.substring(0, 120)}…</p>
+                <p>{(a.excerpt || a.description || '').substring(0, 120)}…</p>
                 <div class="art-foot">
                   <span class="art-words">{a.words} · Updated 2026</span>
                   <span class="art-read">Read comparison →</span>
