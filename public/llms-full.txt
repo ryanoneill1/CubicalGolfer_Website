@@ -568,3 +568,19 @@ Summary: Costco's $28/dozen urethane ball tested against the Pro V1 and Chrome S
 ## Best Golf Balls for Distance (Tested and Ranked)
 URL: https://www.cubicalgolfer.com/best-golf-balls-for-distance/
 Summary: The best golf balls for maximum distance at every swing speed. Tested at 80, 90, and 100+ mph — low-spin, high-launch picks ranked for real carry.
+
+## Bushnell Launch Pro Review — Worth $2,000?
+URL: https://www.cubicalgolfer.com/bushnell-launch-pro-review/
+Summary: GC3-powered photometric accuracy at $2,000. Tested for simulator quality, fitting-grade data, and whether the premium is justified for a weekend golfer.
+
+## Garmin Approach R50 Review — R10 Upgrade Worth It?
+URL: https://www.cubicalgolfer.com/garmin-approach-r50-review/
+Summary: The R50 adds direct spin measurement to the R10 formula. Tested for accuracy improvement, outdoor reliability, and whether $800 beats the R10 value.
+
+## SkyTrak+ Review — Best Home Simulator Monitor?
+URL: https://www.cubicalgolfer.com/skytrak-plus-review/
+Summary: Photometric accuracy at $2,500 with the broadest simulator software compatibility. Tested for indoor accuracy, simulator experience, and subscription value.
+
+## FlightScope Mevo+ Review — Portable Pro Monitor?
+URL: https://www.cubicalgolfer.com/mevo-plus-review/
+Summary: 3D Doppler radar that works indoors and outdoors. Tested for accuracy, E6 Connect simulator quality, and versatility vs photometric competitors.
