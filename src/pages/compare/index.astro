@@ -111,34 +111,27 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
           </div>
         </a>
       ))}
+      {vsArticles.map(a => (
+        <a href={a.slug} class="article-card">
+          <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
+            <span class="art-badge tag-cmp">{a.tag || 'COMPARISON'}</span>
+            {a.thumbnail
+              ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" decoding="async" width="400" height="260"
+                  class="art-thumb__img" onerror="this.style.display='none'" />
+              : <span aria-hidden="true">{a.emoji || '⚖️'}</span>
+            }
+          </div>
+          <div class="art-body">
+            <p class="hub-card-title">{a.titleDisplay || a.title}</p>
+            <p>{(a.excerpt || a.description || '').substring(0, 120)}…</p>
+            <div class="art-foot">
+              <span class="art-words">{a.words} · Updated 2026</span>
+              <span class="art-read">Read comparison →</span>
+            </div>
+          </div>
+        </a>
+      ))}
     </div>
-    {vsArticles.length > 0 && (
-      <div style="margin-top:32px">
-        <h2 style="font-size:20px;margin-bottom:16px">More head-to-head matchups</h2>
-        <div class="articles-grid">
-          {vsArticles.map(a => (
-            <a href={a.slug} class="article-card">
-              <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
-                <span class="art-badge tag-cmp">{a.tag || 'COMPARISON'}</span>
-                {a.thumbnail
-                  ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" decoding="async" width="400" height="260"
-                      class="art-thumb__img" onerror="this.style.display='none'" />
-                  : <span aria-hidden="true">{a.emoji || '⚖️'}</span>
-                }
-              </div>
-              <div class="art-body">
-                <p class="hub-card-title">{a.titleDisplay || a.title}</p>
-                <p>{(a.excerpt || a.description || '').substring(0, 120)}…</p>
-                <div class="art-foot">
-                  <span class="art-words">{a.words} · Updated 2026</span>
-                  <span class="art-read">Read comparison →</span>
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-      </div>
-    )}
   </div>
   <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
   <section style="max-width:100%;margin:48px auto 72px;padding:0 var(--page-px);">
