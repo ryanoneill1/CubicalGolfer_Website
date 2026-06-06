@@ -2542,5 +2542,43 @@ export function getAffiliateLink(productId: string) {
     price: '~$130', retailer: 'Amazon',
     imgSrc: '/images/products/footjoy-hydrolite-rain-jacket.webp', imgAlt: 'FootJoy HydroLite golf rain jacket',
   },
+
+  // ═══ ACCESSORIES — Prompt 5 ═══
+  'frogger-golf-towel': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=frogger+golf+towel&tag=cubicalgolfer-20',
+    price: '~$25', retailer: 'Amazon',
+  },
+  'club-glove-microfiber-towel': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=club+glove+microfiber+golf+towel&tag=cubicalgolfer-20',
+    price: '~$18', retailer: 'Amazon',
+  },
+  'procella-golf-umbrella': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=procella+golf+umbrella&tag=cubicalgolfer-20',
+    price: '~$30', retailer: 'Amazon',
+  },
+  'ezgo-freedom-rxv': {
+    label: 'Check Price →', url: 'https://www.amazon.com/s?k=ezgo+golf+cart&tag=cubicalgolfer-20',
+    price: '~$8,000', retailer: 'Amazon',
+  },
+  'club-car-onward': {
+    label: 'Check Price →', url: 'https://www.amazon.com/s?k=club+car+golf+cart&tag=cubicalgolfer-20',
+    price: '~$9,000', retailer: 'Amazon',
+  },
+  'callaway-org-14-cart-bag': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=callaway+org+14+cart+bag&tag=cubicalgolfer-20',
+    price: '~$230', retailer: 'Amazon',
+  },
+  'ping-hoofer-14-stand-bag': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=ping+hoofer+14+stand+bag&tag=cubicalgolfer-20',
+    price: '~$270', retailer: 'Amazon',
+  },
+  'ogio-fuse-stand-bag': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=ogio+fuse+stand+bag&tag=cubicalgolfer-20',
+    price: '~$200', retailer: 'Amazon',
+  },
+  'tour-striker-alignment-sticks': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=tour+striker+alignment+sticks&tag=cubicalgolfer-20',
+    price: '~$25', retailer: 'Amazon',
+  },
 };
 }

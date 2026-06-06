@@ -616,3 +616,11 @@ Summary: The complete golf shoe guide. Spiked vs spikeless, walking vs riding, w
 ## Best Golf Simulators — Complete Setups Ranked
 URL: https://www.cubicalgolfer.com/best-golf-simulators/
 Summary: Home golf simulator setups ranked by budget from $700 to $10,000. Garmin R10, SkyTrak+, and Bushnell Launch Pro builds compared with total costs and component lists.
+
+## Golf Handicap Explained
+URL: https://www.cubicalgolfer.com/golf-handicap-explained/
+Summary: What is a golf handicap, how to calculate it, and why every golfer should have one. Beginner-friendly guide with a free calculator link.
+
+## How Many Clubs in a Golf Bag
+URL: https://www.cubicalgolfer.com/how-many-clubs-in-a-golf-bag/
+Summary: The 14-club rule explained with recommended bag setups by handicap level and which clubs most golfers should drop or add.
