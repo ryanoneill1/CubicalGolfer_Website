@@ -359,6 +359,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-hats/', label: 'Best Golf Hats' },
     { slug: '/best-golf-sunglasses/', label: 'Best Golf Sunglasses' },
     { slug: '/best-golf-rain-jacket/', label: 'Best Golf Rain Jacket' },
+    { slug: '/best-golf-shoes/',                label: 'Best Golf Shoes (Pillar)' },
     { slug: '/best-golf-shoes-for-walking/',        label: 'Best Shoes for Walking' },
   ],
 
@@ -652,6 +653,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-hats/', label: 'Best Golf Hats' },
     { slug: '/best-golf-sunglasses/', label: 'Best Golf Sunglasses' },
     { slug: '/best-golf-rain-jacket/', label: 'Best Golf Rain Jacket' },
+    { slug: '/best-golf-shoes/',                label: 'Best Golf Shoes (Pillar)' },
     { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes 2026' },
   ],
   'get-kid-into-golf': [
@@ -724,6 +726,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-hats/', label: 'Best Golf Hats' },
     { slug: '/best-golf-sunglasses/', label: 'Best Golf Sunglasses' },
     { slug: '/best-golf-rain-jacket/', label: 'Best Golf Rain Jacket' },
+    { slug: '/best-golf-shoes/',                label: 'Best Golf Shoes (Pillar)' },
     { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes for Walking 2026' },
     { slug: '/vice-golf-balls/',               label: 'Vice Golf Balls' },
     { slug: '/kirkland-signature-golf-balls/',  label: 'Kirkland Signature Balls' },
