@@ -33,6 +33,7 @@ export const GET: APIRoute = async () => {
     { loc: '/gear-reviews/',            changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('gear-reviews') },
     { loc: '/golf-tech/',               changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('golf-tech') },
     { loc: '/golf-accessories/',        changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('golf-accessories') },
+    { loc: '/golf-apparel/',           changefreq: 'weekly',  priority: '0.8',  lastmod: freshestInCategory('golf-accessories') },
     { loc: '/golf-lifestyle/',          changefreq: 'weekly',  priority: '0.8',  lastmod: freshestInCategory('golf-lifestyle') },
     { loc: '/improve-your-golf-game/',  changefreq: 'weekly',  priority: '0.9',  lastmod: freshestInCategory('improve-game') },
     // /office-hacks/ removed from sitemap — noindexed (off-topic for golf gear authority)

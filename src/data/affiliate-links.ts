@@ -2455,5 +2455,92 @@ export function getAffiliateLink(productId: string) {
     imgSrc: '/images/products/lamkin-crossline.webp',
   },
 
+
+  // ═══ APPAREL ═══
+  'nike-dri-fit-victory-polo': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=nike+dri+fit+victory+golf+polo&tag=cubicalgolfer-20',
+    price: '~$45', retailer: 'Amazon',
+    imgSrc: '/images/products/nike-dri-fit-victory-polo.webp', imgAlt: 'Nike Dri-FIT Victory golf polo',
+  },
+  'footjoy-prodry-polo': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=footjoy+prodry+golf+polo&tag=cubicalgolfer-20',
+    price: '~$60', retailer: 'Amazon',
+    imgSrc: '/images/products/footjoy-prodry-polo.webp', imgAlt: 'FootJoy ProDry golf polo',
+  },
+  'adidas-ultimate365-polo': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=adidas+ultimate365+golf+polo&tag=cubicalgolfer-20',
+    price: '~$55', retailer: 'Amazon',
+    imgSrc: '/images/products/adidas-ultimate365-polo.webp', imgAlt: 'adidas Ultimate365 golf polo',
+  },
+  'puma-cloudspun-polo': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=puma+cloudspun+golf+polo&tag=cubicalgolfer-20',
+    price: '~$50', retailer: 'Amazon',
+    imgSrc: '/images/products/puma-cloudspun-polo.webp', imgAlt: 'Puma Cloudspun golf polo',
+  },
+  'adidas-ultimate365-pants': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=adidas+ultimate365+golf+pants&tag=cubicalgolfer-20',
+    price: '~$65', retailer: 'Amazon',
+    imgSrc: '/images/products/adidas-ultimate365-pants.webp', imgAlt: 'adidas Ultimate365 golf pants',
+  },
+  'nike-dri-fit-golf-pants': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=nike+dri+fit+golf+pants&tag=cubicalgolfer-20',
+    price: '~$70', retailer: 'Amazon',
+    imgSrc: '/images/products/nike-dri-fit-golf-pants.webp', imgAlt: 'Nike Dri-FIT golf pants',
+  },
+  'puma-jackpot-golf-pants': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=puma+jackpot+golf+pants&tag=cubicalgolfer-20',
+    price: '~$55', retailer: 'Amazon',
+    imgSrc: '/images/products/puma-jackpot-golf-pants.webp', imgAlt: 'Puma Jackpot golf pants',
+  },
+  'under-armour-showdown-shorts': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=under+armour+showdown+golf+shorts&tag=cubicalgolfer-20',
+    price: '~$55', retailer: 'Amazon',
+    imgSrc: '/images/products/under-armour-showdown-shorts.webp', imgAlt: 'Under Armour Showdown golf shorts',
+  },
+  'adidas-ultimate365-shorts': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=adidas+ultimate365+golf+shorts&tag=cubicalgolfer-20',
+    price: '~$50', retailer: 'Amazon',
+    imgSrc: '/images/products/adidas-ultimate365-shorts.webp', imgAlt: 'adidas Ultimate365 golf shorts',
+  },
+  'nike-dri-fit-golf-shorts': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=nike+dri+fit+golf+shorts&tag=cubicalgolfer-20',
+    price: '~$55', retailer: 'Amazon',
+    imgSrc: '/images/products/nike-dri-fit-golf-shorts.webp', imgAlt: 'Nike Dri-FIT golf shorts',
+  },
+  'titleist-tour-performance-hat': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=titleist+tour+performance+golf+hat&tag=cubicalgolfer-20',
+    price: '~$30', retailer: 'Amazon',
+    imgSrc: '/images/products/titleist-tour-performance-hat.webp', imgAlt: 'Titleist Tour Performance golf hat',
+  },
+  'callaway-cg-logo-hat': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=callaway+golf+hat&tag=cubicalgolfer-20',
+    price: '~$25', retailer: 'Amazon',
+    imgSrc: '/images/products/callaway-cg-logo-hat.webp', imgAlt: 'Callaway golf hat',
+  },
+  'nike-legacy91-golf-hat': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=nike+legacy91+golf+hat&tag=cubicalgolfer-20',
+    price: '~$28', retailer: 'Amazon',
+    imgSrc: '/images/products/nike-legacy91-golf-hat.webp', imgAlt: 'Nike Legacy91 golf hat',
+  },
+  'maui-jim-banyans-golf': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=maui+jim+banyans+sunglasses&tag=cubicalgolfer-20',
+    price: '~$200', retailer: 'Amazon',
+    imgSrc: '/images/products/maui-jim-banyans-golf.webp', imgAlt: 'Maui Jim Banyans golf sunglasses',
+  },
+  'goodr-golf-sunglasses': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=goodr+golf+sunglasses&tag=cubicalgolfer-20',
+    price: '~$25', retailer: 'Amazon',
+    imgSrc: '/images/products/goodr-golf-sunglasses.webp', imgAlt: 'goodr golf sunglasses',
+  },
+  'under-armour-storm-rain-jacket': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=under+armour+storm+golf+rain+jacket&tag=cubicalgolfer-20',
+    price: '~$80', retailer: 'Amazon',
+    imgSrc: '/images/products/under-armour-storm-rain-jacket.webp', imgAlt: 'Under Armour Storm golf rain jacket',
+  },
+  'footjoy-hydrolite-rain-jacket': {
+    label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=footjoy+hydrolite+rain+jacket&tag=cubicalgolfer-20',
+    price: '~$130', retailer: 'Amazon',
+    imgSrc: '/images/products/footjoy-hydrolite-rain-jacket.webp', imgAlt: 'FootJoy HydroLite golf rain jacket',
+  },
 };
 }

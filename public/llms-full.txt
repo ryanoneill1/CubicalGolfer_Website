@@ -584,3 +584,27 @@ Summary: Photometric accuracy at $2,500 with the broadest simulator software com
 ## FlightScope Mevo+ Review — Portable Pro Monitor?
 URL: https://www.cubicalgolfer.com/mevo-plus-review/
 Summary: 3D Doppler radar that works indoors and outdoors. Tested for accuracy, E6 Connect simulator quality, and versatility vs photometric competitors.
+
+## Best Golf Shirts — Polos That Breathe and Look Good
+URL: https://www.cubicalgolfer.com/best-golf-shirts/
+Summary: Golf polos tested in Midwest summer heat. Nike Dri-FIT, FootJoy ProDry, adidas Ultimate365, and Puma Cloudspun compared for breathability, UV protection, and value.
+
+## Best Golf Pants — Stretch, Style, and Comfort
+URL: https://www.cubicalgolfer.com/best-golf-pants/
+Summary: Golf pants with 4-way stretch tested for walking rounds. adidas, Nike, and Puma compared for comfort, moisture management, and durability.
+
+## Best Golf Shorts — Cool, Stretchy, Course-Legal
+URL: https://www.cubicalgolfer.com/best-golf-shorts/
+Summary: Golf shorts for hot-weather rounds. Under Armour, adidas, and Nike compared for stretch, breathability, and dress code compliance.
+
+## Best Golf Hats — UV Protection That Fits Right
+URL: https://www.cubicalgolfer.com/best-golf-hats/
+Summary: Golf hats tested for fit, UV protection, and sweat management. Titleist, Callaway, and Nike compared.
+
+## Best Golf Sunglasses — See the Green Clearly
+URL: https://www.cubicalgolfer.com/best-golf-sunglasses/
+Summary: Golf sunglasses tested for green-reading contrast enhancement, UV protection, and swing stability. Oakley Prizm Golf, Maui Jim, Tifosi, and goodr compared.
+
+## Best Golf Rain Jacket — Stay Dry, Swing Free
+URL: https://www.cubicalgolfer.com/best-golf-rain-jacket/
+Summary: Golf rain jackets tested in Midwest downpours. Galvin Green Gore-Tex, Under Armour Storm, and FootJoy HydroLite compared for waterproofing and swing freedom.
