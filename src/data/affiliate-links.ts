@@ -2331,7 +2331,14 @@ export function getAffiliateLink(productId: string) {
     retailer: 'Amazon',
     price: 'Check price',
     label: 'See Current Price',
-  
+  };
+}
+
+// ═══ OVERFLOW ENTRIES (were trapped inside getAffiliateLink) ═══
+// These are now a separate object merged back into AFFILIATE above.
+// Moving them into AFFILIATE directly:
+
+Object.assign(AFFILIATE, {
   'flightscope-x3': {
     url: 'https://www.amazon.com/dp/B0BZ8V1ZBH/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
@@ -2580,5 +2587,5 @@ export function getAffiliateLink(productId: string) {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=tour+striker+alignment+sticks&tag=cubicalgolfer-20',
     price: '~$25', retailer: 'Amazon',
   },
-};
-}
+});
+
