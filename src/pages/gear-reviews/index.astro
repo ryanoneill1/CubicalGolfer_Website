@@ -69,19 +69,6 @@ const schemas  = [
       </div>
     </div>
   </section>
-  <!-- ─── HOW WE PICK THE TOP PICK PER CATEGORY ─── -->
-  <section style="max-width:1100px;margin:0 auto 40px;padding:0 var(--page-px);">
-    <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">How a product earns the top spot in any category</h2>
-    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
-      Three things have to be true. First, the product has to perform across mixed conditions — not just the controlled scenarios where every modern flagship looks good. A rangefinder that locks pins in flat sunlight but loses them in heat haze does not win. A driver that produces tour-level ball speed off a center hit but spins wildly off the toe does not win. Second, the product has to deliver value at its price point. A $400 product that performs 5% better than the $200 alternative loses the comparison for most weekend golfers, every time.
-    </p>
-    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
-      Third — and this is the part that disqualifies the most products — the product has to be the right fit for a recreational golfer, not for a tour player. A blade iron with razor-sharp dispersion at center strike is the wrong recommendation for a 22-handicap who needs the mis-hit forgiveness, even if the blade iron is "better" by every measurable metric. Every buying guide on this site assumes you play sometimes, not constantly, and ranks accordingly.
-    </p>
-    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
-      Reviews are refreshed when a new model drops, when a flagship's price falls below the budget pick, or when our own testing surfaces a problem we missed. The "Updated" date on each guide reflects the last time every recommendation was reverified.
-    </p>
-  </section>
   <!-- ─── FEATURED PICK — affiliate CTA moved below editorial ─── -->
   <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
@@ -149,21 +136,44 @@ const schemas  = [
       </>
     )}
   </div>
-  <!-- ─── INTERNAL LINKS TO OTHER HUBS ─── -->
-  <section style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
-    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
-      Already narrowed down to two products? The <a href="/compare/">comparison hub</a> has head-to-head matchups for the most-asked decisions. Want to know what to do with the gear once you own it? The <a href="/improve-your-golf-game/">improve your game hub</a> covers the practice routines that make new equipment actually pay off. Need help on the tech side — launch monitors, simulators, apps? See the <a href="/golf-tech/">golf tech hub</a>.
-    </p>
+  <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
+  <section style="max-width:1100px;margin:48px auto 0;padding:0 var(--page-px);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;" class="hub-bottom-grid">
+      <!-- LEFT: How we pick -->
+      <div>
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How a product earns the top spot in any category</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          Three things have to be true. First, the product has to perform across mixed conditions — not just the controlled scenarios where every modern flagship looks good. A rangefinder that locks pins in flat sunlight but loses them in heat haze does not win. A driver that produces tour-level ball speed off a center hit but spins wildly off the toe does not win. Second, the product has to deliver value at its price point. A $400 product that performs 5% better than the $200 alternative loses the comparison for most weekend golfers, every time.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          Third — and this is the part that disqualifies the most products — the product has to be the right fit for a recreational golfer, not for a tour player. A blade iron with razor-sharp dispersion at center strike is the wrong recommendation for a 22-handicap who needs the mis-hit forgiveness, even if the blade iron is "better" by every measurable metric. Every buying guide on this site assumes you play sometimes, not constantly, and ranks accordingly.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
+          Reviews are refreshed when a new model drops, when a flagship's price falls below the budget pick, or when our own testing surfaces a problem we missed. The "Updated" date on each guide reflects the last time every recommendation was reverified.
+        </p>
+      </div>
+      <!-- RIGHT: Related sections + FAQ -->
+      <div>
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
+          Already narrowed down to two products? The <a href="/compare/">comparison hub</a> has head-to-head matchups for the most-asked decisions. Want to know what to do with the gear once you own it? The <a href="/improve-your-golf-game/">improve your game hub</a> covers the practice routines that make new equipment actually pay off. Need help on the tech side — launch monitors, simulators, apps? See the <a href="/golf-tech/">golf tech hub</a>.
+        </p>
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Gear reviews FAQ</h2>
+        {hubFaq.map(item => (
+          <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+            <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{item.q}</summary>
+            <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
   </section>
-  <!-- ─── FAQ ─── -->
-  <section class="hub-faq" style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Gear reviews FAQ</h2>
-    {hubFaq.map(item => (
-      <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-        <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{item.q}</summary>
-        <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
-      </details>
-    ))}
-  </section>
+  <style>{`
+    @media (max-width: 768px) {
+      .hub-bottom-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+    }
+  `}</style>
 </BaseLayout>
