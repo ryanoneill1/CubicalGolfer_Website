@@ -148,21 +148,48 @@ const schemas  = [
       </>
     )}
   </div>
-  <!-- ─── INTERNAL LINKS ─── -->
-  <section style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections</h2>
-    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
-      The right gear amplifies practice — a worn glove or wrong-flex shaft erases hours of work. See the <a href="/gear-reviews/">gear reviews hub</a> for buying guides aligned to your skill level. For the data side of improvement — apps, shot trackers, launch monitors — see the <a href="/golf-tech/">golf tech hub</a>. For the lifestyle and time-management piece of fitting golf into a busy life, see the <a href="/golf-lifestyle/">golf lifestyle hub</a>.
-    </p>
+  <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
+  <section style="max-width:100%;margin:48px auto 72px;padding:0 var(--page-px);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:160px;align-items:start;" class="hub-bottom-grid">
+      <!-- LEFT: How improvement content is structured -->
+      <div style="padding-right:32px;">
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How we approach improvement content</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          Every guide on this hub starts from the same assumption: you play once or twice a week and practice when you can, not on a structured daily schedule. That constraint changes what advice is useful. A tip that requires 500 repetitions to internalize is useless if you hit 50 balls between rounds. A drill that takes 30 minutes is useless if you have 10 minutes before your tee time. Every recommendation here is filtered for the golfer with limited reps.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          The second filter is measurability. "Swing smoother" is not actionable. "Reduce your backswing to 75% effort and track carry distance on 10 shots" is. Where possible, we tie improvement to a number — strokes gained, putts per round, fairways hit — so you can tell whether the advice is working or whether you need to try something different.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
+          Third, we sequence content from highest-impact to lowest. Putting saves more strokes than driving for any golfer above a 10 handicap. Short game saves more than iron play. Course management saves more than swing mechanics. The guides below are ordered by how much each skill actually moves your score, not by how exciting the topic sounds.
+        </p>
+      </div>
+      <!-- RIGHT: Related sections + FAQ -->
+      <div style="padding-left:32px;">
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
+          The right gear amplifies practice — a worn glove or wrong-flex shaft erases hours of work. See the <a href="/gear-reviews/">gear reviews hub</a> for buying guides aligned to your skill level. For the data side of improvement — apps, shot trackers, launch monitors — see the <a href="/golf-tech/">golf tech hub</a>. For the lifestyle and time-management piece of fitting golf into a busy life, see the <a href="/golf-lifestyle/">golf lifestyle hub</a>.
+        </p>
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Improvement FAQ</h2>
+        {hubFaq.map(item => (
+          <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+            <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{item.q}</summary>
+            <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
   </section>
-  <!-- ─── FAQ ─── -->
-  <section class="hub-faq" style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Improvement FAQ</h2>
-    {hubFaq.map(item => (
-      <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-        <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{item.q}</summary>
-        <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
-      </details>
-    ))}
-  </section>
+  <style>{`
+    @media (max-width: 768px) {
+      .hub-bottom-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .hub-bottom-grid > div {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  `}</style>
 </BaseLayout>

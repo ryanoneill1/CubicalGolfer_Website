@@ -140,20 +140,49 @@ const schemas  = [
   </div>
 
 
-  <section class="hub-faq" style="max-width:960px;margin:40px auto 0;">
-    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Frequently Asked Questions</h2>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">What is the best golf launch monitor for home use in 2026?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">For most home users, the Garmin Approach R10 ($499) offers the best balance of accuracy, simulator compatibility, and price. If you want premium accuracy without subscription fees, the Bushnell Launch Pro ($2,499) is the best investment. See our full launch monitor comparison for every option ranked.</p>
-    </details>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">Can I build a golf simulator for under $2,000?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Yes. A Garmin R10 ($499) plus an impact screen ($199), short-throw projector ($599), hitting mat ($449), and GSPro software ($250/year) totals about $1,996. See our golf simulator cost calculator for exact pricing at every budget level.</p>
-    </details>
-    <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-      <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">Do golf launch monitors require a subscription?</summary>
-      <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">Some do, some do not. The Bushnell Launch Pro, Square Golf, and FlightScope Mevo Gen2 have zero subscription fees. The Garmin R10 and Rapsodo MLM2PRO offer optional subscriptions that unlock additional features. We break down the real 3-year cost of every monitor in our subscription cost comparison.</p>
-    </details>
+  <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
+  <section style="max-width:100%;margin:48px auto 72px;padding:0 var(--page-px);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:160px;align-items:start;" class="hub-bottom-grid">
+      <!-- LEFT: How we evaluate golf tech -->
+      <div style="padding-right:32px;">
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How we evaluate golf tech</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          Golf technology has a unique problem: most of the data it produces is useless without context. A launch monitor that reports ball speed to 0.1 mph precision is meaningless if the golfer cannot repeat their swing within 3 mph. A GPS watch with 40,000 course maps is overkill for someone who plays the same 4 courses. Every review on this hub evaluates tech by how much it helps a weekend golfer who plays once or twice a week — not by how impressive the spec sheet reads.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          The biggest trap in golf tech is the subscription. A $500 launch monitor with a $200/year subscription costs $1,500 over five years. A $2,000 launch monitor with no subscription costs $2,000 over the same period — and the gap closes fast. We calculate the real 3-year and 5-year cost of every product so the price comparison reflects what you actually pay, not just the sticker price.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
+          We test every piece of tech in the same garage simulator setup and at the same Chicago-area courses. This matters because tech that works in a climate-controlled demo room sometimes fails in a cold garage or bright outdoor range. If a product does not survive a Midwest winter or a July afternoon at Harborside, we say so.
+        </p>
+      </div>
+      <!-- RIGHT: Related sections + FAQ -->
+      <div style="padding-left:32px;">
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
+          Tech is the tool — improvement is the goal. See the <a href="/improve-your-golf-game/">improve your game hub</a> for the practice routines that make launch monitor data actionable. For the gear that goes in your bag rather than behind it, see the <a href="/gear-reviews/">gear reviews hub</a> for ranked buying guides. Deciding between two specific monitors or trackers? The <a href="/compare/">comparison hub</a> has the head-to-head data.
+        </p>
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Golf tech FAQ</h2>
+        {hubFaq.map(item => (
+          <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+            <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{item.q}</summary>
+            <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
   </section>
+  <style>{`
+    @media (max-width: 768px) {
+      .hub-bottom-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .hub-bottom-grid > div {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  `}</style>
 
 </BaseLayout>
