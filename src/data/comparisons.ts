@@ -12,8 +12,8 @@ export const COMPARISONS: Comparison[] = [
     slug:        'bushnell-tour-v6-vs-precision-pro-nx9',
     weekendGolfer: 'For the golfer who plays 15-30 rounds a year, the rangefinder decision comes down to one question: does the speed difference justify $160? The Bushnell locks pins in under 0.3 seconds — the fastest we have tested. The NX9 HD takes 0.5-0.8 seconds. That half-second gap is noticeable on the first few holes but becomes irrelevant once you develop the habit of ranging while walking to your ball. Both rangefinders handle slope, both are tournament-legal with a switch, and both deliver ±1 yard accuracy within 250 yards. The real differentiator is the NX9 HD\'s lifetime warranty — if it breaks in year 4, Precision Pro replaces it for free. The Bushnell\'s 2-year warranty means you are buying a replacement at full price. If you are on the fence, ask yourself: how often do you range a target beyond 200 yards? If the answer is rarely or never, the NX9 HD gives you everything you need at half the cost. If you range from the tee box on every hole, the Bushnell\'s speed advantage starts to feel like a necessity rather than a luxury.',
     thumbnail: '/images/thumbnails/compare-bushnell-tour-v6-vs-precision-pro-nx9.webp',
-    title:       'Bushnell Tour V6 vs Precision Pro NX9 HD (2026)',
-    description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — tested side-by-side over 12 rounds. Which rangefinder gives weekend golfers more for their money in 2026?',
+    title:       'Bushnell Tour V6 vs Precision Pro NX9 HD',
+    description: 'Bushnell Tour V6 Shift vs Precision Pro NX9 HD — tested side-by-side over 12 rounds. Which rangefinder gives weekend golfers more for their money in?',
     productA:    'bushnell-tour-v6',
     productB:    'precision-pro-nx9',
     winner:      'precision-pro-nx9',
@@ -46,7 +46,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-01-20',
     dateModified:  '2026-03-28',
     related: [
-      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders' },
       { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell Tour V6 Shift Review' },
       { slug: '/precision-pro-nx9-review/', label: 'Precision Pro NX9 Review' },
     ],
@@ -54,8 +54,8 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'garmin-approach-s62-vs-shot-scope-v5',
     thumbnail: '/images/thumbnails/compare-garmin-approach-s62-vs-shot-scope-v5.webp',
-    title:       'Garmin S62 vs Shot Scope V5: Best GPS Watch 2026',
-    description: 'Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in 2026?',
+    title:       'Garmin S62 vs Shot Scope V5: Best GPS Watch',
+    description: 'Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in?',
     productA:    'garmin-s62',
     productB:    'shot-scope-v5',
     winner:      'shot-scope-v5',
@@ -87,16 +87,16 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-02-01',
     dateModified:  '2026-03-28',
     related: [
-      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
+      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches' },
       { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },
-      { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers 2026' },
+      { slug: '/best-golf-swing-analyzers/', label: 'Best Swing Analyzers' },
     ],
   },
   {
     slug:        'arccos-vs-shot-scope',
     thumbnail: '/images/thumbnails/compare-arccos-vs-shot-scope.webp',
     title:       'Arccos Caddie vs Shot Scope V5: Which to Buy?',
-    description: 'Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscription cost, and data depth compared for weekend golfers in 2026. Honest verdict inside.',
+    description: 'Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscription cost, and data depth compared for weekend golfers in. Honest verdict inside.',
     productA:    'arccos-caddie',
     productB:    'shot-scope-v5',
     winner:      'shot-scope-v5',
@@ -122,8 +122,8 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'callaway-paradym-vs-taylormade-qi35',
     thumbnail: '/images/thumbnails/compare-callaway-paradym-vs-taylormade-qi35.webp',
-    title:       'Qi35 Max vs Paradym Ai Smoke — 2026 Driver Showdown',
-    description: 'Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed, forgiveness, and mis-hit data compared. See which 2026 driver wins for weekend golfers.',
+    title:       'Qi35 Max vs Paradym Ai Smoke — Driver Showdown',
+    description: 'Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed, forgiveness, and mis-hit data compared. See which driver wins for weekend golfers.',
     productA:    'callaway-paradym-max',
     productB:    'taylormade-qi35-max',
     winner:      'taylormade-qi35-max',
@@ -145,8 +145,8 @@ export const COMPARISONS: Comparison[] = [
       { label: 'Our Rating',         a: '4.7/5',              b: '4.8/5',              winner: 'b' as const },
     ],
     weekendGolfer: "If you swing under 95 mph and your miss is a fade or slice, the Qi35 Max is the clearer choice — it retains 97% of ball speed on toe hits versus 95% for the Paradym. That 2% gap translates to roughly 5-7 yards on your worst swings, which are the swings that actually determine your score. If you swing over 100 mph and prioritize feel, the Paradym has a slightly better sound profile and 1 mph more ball speed on pure strikes. But for the <a href=\"/best-driver-for-high-handicapper/\">average weekend golfer</a> who hits the center 40% of the time? Buy the driver that is <a href=\"/best-golf-drivers-forgiveness/\">most forgiving</a> on the other 60%.",
-    winnerReason: 'TaylorMade Qi35 Max wins for most golfers in 2026 — the Qi AI face generates measurably more consistent ball speed on mis-hits, and the larger 460cc head has a higher moment of inertia than the Paradym Ai Smoke Max. Both are elite drivers; the Qi35 Max edges ahead on forgiveness for swing speeds under 95 mph.',
-    intro:       'Both Callaway Paradym Ai Smoke Max and TaylorMade Qi35 Max are the flagship game-improvement drivers from their respective brands for 2026. Both use AI-designed faces, carbon crowns, and moveable weight systems. The choice comes down to marginal differences in forgiveness and feel — and which brand trust you bring to the first tee.',
+    winnerReason: 'TaylorMade Qi35 Max wins for most golfers in — the Qi AI face generates measurably more consistent ball speed on mis-hits, and the larger 460cc head has a higher moment of inertia than the Paradym Ai Smoke Max. Both are elite drivers; the Qi35 Max edges ahead on forgiveness for swing speeds under 95 mph.',
+    intro:       'Both Callaway Paradym Ai Smoke Max and TaylorMade Qi35 Max are the flagship game-improvement drivers from their respective brands for. Both use AI-designed faces, carbon crowns, and moveable weight systems. The choice comes down to marginal differences in forgiveness and feel — and which brand trust you bring to the first tee.',
         sections: [
       { h2: 'Launch Monitor Testing Results', body: '<p>We hit both drivers 50 times each on a Trackman. The Qi35 Max averaged 2.3 MPH higher ball speed on center strikes, translating to 5-7 yards of carry. However, the Paradym Ai Smoke Max maintained ball speed better on mishits, losing only 4-6% versus 7-9% for the Qi35.</p><p>For golfers who hit center 70%+ of the time, the Qi35 produces more distance. For golfers who miss center frequently, the Paradym produces more consistent distances across the face.</p>' },
       { h2: 'Who Should Buy the Callaway Paradym', body: '<p>The Paradym is your driver if:</p><ul><li><strong>You need mishit forgiveness above all:</strong> AI-designed face maintains speed on heel and toe strikes.</li><li><strong>You <a href="/how-to-fix-your-slice/">fight a slice</a>:</strong> Max model has draw bias that reduces fade by 10-15 yards.</li><li><strong>You want newest technology:</strong> Machine learning face design is a genuinely different approach.</li></ul>' },
@@ -164,11 +164,11 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-01-28',
     dateModified:  '2026-03-28',
     related: [
-      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 — Matched to Your Swing Speed' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart 2026' },
-      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026 (All Budgets)' },
+      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls — Matched to Your Swing Speed' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers (All Budgets)' },
       { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Callaway Paradym Ai Smoke Max — Full Review' },
-      { slug: '/best-golf-irons-2026/', label: 'Best Game-Improvement Irons 2026' },
+      { slug: '/best-golf-irons-2026/', label: 'Best Game-Improvement Irons' },
     ],
   },
 
@@ -198,7 +198,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-04-14',
     dateModified: '2026-04-14',
     related: [
-      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
+      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches' },
       { slug: '/garmin-approach-s62-review/', label: 'Garmin S62 Review' },
       { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS Watch Under $200' },
     ],
@@ -258,7 +258,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-04-14',
     dateModified:  '2026-04-14',
     related: [
-      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders' },
       { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell Tour V6 Shift Review' },
       { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
     ],
@@ -273,7 +273,7 @@ export const COMPARISONS: Comparison[] = [
     productB:      'bushnell-ion-elite',
     winner:        'garmin-s12',
     winnerReason:  'The Garmin Approach S12 wins for most golfers due to its 30-hour battery life and 42,000 preloaded courses. The Bushnell Ion Elite wins for senior golfers who need the larger, higher-contrast display and slope-adjusted yardages.',
-    intro:         'These are the two best GPS golf watches under $200 in 2026. Both provide accurate front/middle/back yardages and automatic hole advance. The differences are in the details.',
+    intro:         'These are the two best GPS golf watches under $200 in. Both provide accurate front/middle/back yardages and automatic hole advance. The differences are in the details.',
         sections: [
       { h2: 'Display and Interface', body: '<p>The S12 has a monochrome LCD with button navigation. The Ion Elite has a color LCD with simpler touch interaction. In sunlight, the Ion Elite is easier to read with larger, higher-contrast numbers. The S12 is more capable but takes 3-4 rounds to learn. The Ion Elite auto-detects your course and shows distances immediately with zero setup.</p>' },
       { h2: 'Who Should Buy the Garmin S12', body: '<p>The S12 at ~$149 is better for:</p><ul><li><strong>Maximum battery life:</strong> 5 rounds per charge vs 4 for the Ion Elite.</li><li><strong>Garmin ecosystem users:</strong> Syncs golf rounds into Garmin Connect.</li><li><strong>Shot distance tracking:</strong> Measures how far each shot traveled.</li></ul>' },
@@ -290,7 +290,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-04-14',
     dateModified:  '2026-04-14',
     related: [
-      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
+      { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches' },
       { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS Watch Under $200' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
@@ -302,7 +302,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'cobra-aerojet-max-vs-ping-g430-max',
     thumbnail: '/images/thumbnails/compare-cobra-aerojet-max-vs-ping-g430-max.webp',
-    title:       'Cobra Aerojet Max vs Ping G430 Max Driver (2026)',
+    title:       'Cobra Aerojet Max vs Ping G430 Max Driver',
     description: 'Cobra Aerojet Max vs Ping G430 Max — forgiveness, distance, and value compared. Which mid-range driver is best for weekend golfers?',
     productA:    'cobra-aerojet-max',
     productB:    'ping-g430-max',
@@ -325,15 +325,15 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2025-10-15',
     dateModified:  '2026-04-14',
     related: [
-      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
       { slug: '/best-golf-driver-under-300/', label: 'Best Drivers Under $300' },
-      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
+      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear' },
     ],
   },
   {
     slug:        'cleveland-launcher-xl2-vs-cobra-aerojet-max',
     thumbnail: '/images/thumbnails/compare-cleveland-launcher-xl2-vs-cobra-aerojet-max.webp',
-    title:       'Cleveland Launcher XL2 vs Cobra Aerojet Max (2026)',
+    title:       'Cleveland Launcher XL2 vs Cobra Aerojet Max',
     description: 'Cleveland Launcher XL2 vs Cobra Aerojet Max — lightweight forgiveness vs mid-range power. Which driver is best for seniors and slow swing speeds?',
     productA:    'cleveland-xl2',
     productB:    'cobra-aerojet-max',
@@ -356,7 +356,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2025-09-22',
     dateModified:  '2026-04-14',
     related: [
-      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
+      { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
       { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
       { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
     ],
@@ -368,7 +368,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'odyssey-stroke-lab-vs-scotty-cameron-phantom',
     thumbnail: '/images/thumbnails/compare-odyssey-stroke-lab-vs-scotty-cameron-phantom.webp',
-    title:       'Odyssey Stroke Lab vs Scotty Cameron Phantom X (2026)',
+    title:       'Odyssey Stroke Lab vs Scotty Cameron Phantom X',
     description: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X — feel, performance, and value compared. Which mid-range putter should you buy?',
     productA:    'odyssey-stroke-lab',
     productB:    'scotty-cameron-phantom',
@@ -394,15 +394,15 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2025-08-10',
     dateModified:  '2026-04-20',
     related: [
-      { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters' },
       { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade' },
     ],
   },
   {
     slug:        'lab-golf-df3-vs-odyssey-two-ball-eleven',
     thumbnail: '/images/thumbnails/compare-lab-golf-df3-vs-odyssey-two-ball-eleven.webp',
-    title:       'LAB Golf DF3 vs Odyssey Two Ball Eleven (2026)',
+    title:       'LAB Golf DF3 vs Odyssey Two Ball Eleven',
     description: 'LAB Golf DF3 vs Odyssey Two Ball Eleven — Lie Angle Balanced vs high MOI alignment mallet. Which putter is best for inconsistent putters?',
     productA:    'lab-df3',
     productB:    'odyssey-two-ball',
@@ -425,15 +425,15 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2025-09-05',
     dateModified:  '2026-04-20',
     related: [
-      { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters' },
       { slug: '/best-golf-putters-2026/', label: 'Best Putters for Yips' },
     ],
   },
       // ── Bushnell V6 vs Callaway 300 Pro ────────────────────────────────────
   {
     slug: 'bushnell-tour-v6-vs-callaway-300-pro',
-    title: 'Bushnell Tour V6 Shift vs Callaway 300 Pro (2026)',
+    title: 'Bushnell Tour V6 Shift vs Callaway 300 Pro',
     description: 'Bushnell Tour V6 Shift ($329) vs Callaway 300 Pro ($149) — we tested both over 10 rounds. The V6 is faster and more polished, but the 300 Pro delivers 90% of the accuracy at less than half the price.',
     productA: 'bushnell-tour-v6-shift',
     productB: 'callaway-300-pro',
@@ -459,7 +459,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-05-20',
     dateModified: '2026-05-20',
     related: [
-      { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders' },
       { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell V6 vs NX9 HD' },
     ],
@@ -468,7 +468,7 @@ export const COMPARISONS: Comparison[] = [
   // ── SkyTrak+ vs FlightScope Mevo Gen 2 ─────────────────────────────────
   {
     slug: 'skytrak-plus-vs-flightscope-mevo-gen2',
-    title: 'SkyTrak+ vs FlightScope Mevo Gen 2 (2026)',
+    title: 'SkyTrak+ vs FlightScope Mevo Gen 2',
     description: 'SkyTrak+ ($2,995) vs FlightScope Mevo Gen 2 ($2,199) — two premium launch monitors tested head-to-head over 500+ shots. Which delivers better data for your money?',
     productA: 'skytrak-plus',
     productB: 'flightscope-mevo-gen2',
@@ -496,7 +496,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-05-22',
     dateModified: '2026-05-22',
     related: [
-      { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
+      { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
       { slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak vs Garmin R10' },
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Cost Comparison' },
     ],
@@ -504,12 +504,12 @@ export const COMPARISONS: Comparison[] = [
 
 
 
-  // ── NEW COMPARISONS: May 2026 ────────────────────────────────────────
+  // ── NEW COMPARISONS: May ────────────────────────────────────────
 
   {
     slug:        'taylormade-qi35-vs-callaway-ai-smoke',
     thumbnail:   '/images/thumbnails/compare-qi35-vs-ai-smoke.webp',
-    title:       'TaylorMade Qi35 Max vs Callaway Ai Smoke Max (2026)',
+    title:       'TaylorMade Qi35 Max vs Callaway Ai Smoke Max',
     description: 'Qi35 Max vs Ai Smoke Max — tested over 8 rounds. Which forgiving driver delivers more distance and accuracy for 90-100 mph swing speeds?',
     productA:    'taylormade-qi35-max',
     productB:    'callaway-ai-smoke-max',
@@ -547,7 +547,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'titleist-pro-v1-vs-callaway-chrome-soft',
     thumbnail:   '/images/thumbnails/compare-pro-v1-vs-chrome-soft.webp',
-    title:       'Pro V1 vs Chrome Soft — 200 Shots Tested (2026)',
+    title:       'Pro V1 vs Chrome Soft — 200 Shots Tested',
     description: 'Titleist Pro V1 vs Callaway Chrome Soft tested over 200 shots. Distance, spin, feel, and value — which premium ball is right for your game?',
     productA:    'pro-v1',
     productB:    'chrome-soft',
@@ -629,7 +629,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'skytrak-plus-vs-mevo-plus',
     thumbnail:   '/images/thumbnails/compare-skytrak-vs-mevo-plus.webp',
-    title:       'SkyTrak+ vs Mevo+ — Indoor Launch Monitor Compared (2026)',
+    title:       'SkyTrak+ vs Mevo+ — Indoor Launch Monitor Compared',
     description: 'SkyTrak+ ($2,995) vs Flightscope Mevo+ ($2,499) tested indoors and outdoors. Accuracy, software, subscription costs, and which is better for a home simulator.',
     productA:    'skytrak-plus',
     productB:    'mevo-plus',
@@ -673,7 +673,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'garmin-approach-s62-vs-s70',
     thumbnail:   '/images/thumbnails/compare-garmin-s62-vs-s70.webp',
-    title:       'Garmin Approach S62 vs S70 — Worth the Upgrade? (2026)',
+    title:       'Garmin Approach S62 vs S70 — Worth the Upgrade?',
     description: 'Garmin S62 vs S70 compared after 15 rounds each. New touchscreen, better maps, longer battery — but is it worth $150 more than the proven S62?',
     productA:    'garmin-s62',
     productB:    'garmin-s70',
@@ -839,7 +839,7 @@ export const COMPARISONS: Comparison[] = [
     productB:      'flightscope-mevo',
     winner:        'garmin-r10',
     winnerReason:  'The R10 delivers more data points (club data, simulator compatibility, Garmin integration) at a similar price. The original Mevo is simpler but more limited. The R10 is the better investment.',
-    intro: "Two Doppler-radar launch monitors at the entry level of the market. The Garmin R10 has become the best-selling budget monitor; the FlightScope Mevo was one of the first affordable monitors and still has a following. Which one should you buy in 2026?",
+    intro: "Two Doppler-radar launch monitors at the entry level of the market. The Garmin R10 has become the best-selling budget monitor; the FlightScope Mevo was one of the first affordable monitors and still has a following. Which one should you buy in?",
     weekendGolfer: "The R10 is the better buy for most weekend golfers — more features, better app, simulator compatibility. The Mevo is worth considering only if you find it significantly discounted or want the absolute simplest setup with no app dependency.",
     sections: [
       { h2: 'Data and features', body: "The R10 provides: ball speed, launch angle, spin rate, carry distance, club speed, club path, and face angle. The original Mevo provides: ball speed, launch angle, spin rate, carry distance, and smash factor. The R10 gives you more actionable data, especially on the club side." },
@@ -848,7 +848,7 @@ export const COMPARISONS: Comparison[] = [
     ],
     verdict: 'R10 at full price. Mevo only if deeply discounted.',
     faq: [
-      { q: 'Is the FlightScope Mevo still worth buying in 2026?', a: 'At full retail price, the Garmin R10 is the better buy. The Mevo lacks club data and simulator compatibility. If you find a Mevo under $350, it still delivers reliable ball flight data for basic practice.' },
+      { q: 'Is the FlightScope Mevo still worth buying in?', a: 'At full retail price, the Garmin R10 is the better buy. The Mevo lacks club data and simulator compatibility. If you find a Mevo under $350, it still delivers reliable ball flight data for basic practice.' },
     ],
     datePublished: '2026-06-05',
     dateModified: '2026-06-05',
