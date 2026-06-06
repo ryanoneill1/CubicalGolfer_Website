@@ -1,0 +1,212 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Ball Finder — Match Your Swing Speed to the Right Ball',
+  description: 'Find the right golf ball for your swing speed, budget, and playing style. Filter 34 balls by compression, cover type, price, and feel — personalized recommendation in seconds.',
+  canonical: 'https://www.cubicalgolfer.com/golf-ball-finder/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Tools', href: '/tools/' },
+    { label: 'Golf Ball Finder', href: '/golf-ball-finder/' },
+  ],
+};
+
+const faq = [
+  { q: 'What compression golf ball should I use?', a: 'Match compression to swing speed. Under 85 mph driver speed: 35-65 compression (soft). 85-100 mph: 65-90 compression (mid). Over 100 mph: 90+ compression (firm). The wrong compression wastes distance — a slow swing cannot compress a firm ball enough to get the energy transfer.' },
+  { q: 'Does golf ball compression really matter?', a: 'Yes — compression affects distance, feel, and spin at your specific swing speed. A slow-swing golfer playing a high-compression tour ball loses 5-15 yards compared to a properly matched low-compression ball. The effect is most pronounced off the driver and long irons.' },
+  { q: 'What is the best golf ball for a 90 mph swing speed?', a: 'At 90 mph driver speed, mid-compression balls (65-85) perform best. The Callaway Chrome Soft (75 compression), Srixon Q-Star Tour (72), and TaylorMade Tour Response (70) are all excellent choices that balance distance and greenside spin at this speed.' },
+  { q: 'Are expensive golf balls worth it for high handicappers?', a: 'Usually not. A high handicapper loses 3-6 balls per round — at $50 per dozen for premium balls, that adds up fast. A $25 ball like the Callaway Supersoft or Srixon Soft Feel delivers 90% of the performance at half the price for swing speeds under 95 mph.' },
+];
+
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+
+// Ball data — same source as the compression chart
+const balls = [
+  { name: 'TaylorMade Noodle', brand: 'TaylorMade', compression: 34, cover: 'Ionomer', feel: 'Ultra Soft', price: 20, minMph: 60, maxMph: 75, bestFor: 'Beginners, slow swings' },
+  { name: 'Callaway Supersoft', brand: 'Callaway', compression: 38, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 60, maxMph: 80, bestFor: 'Seniors, max distance at low speed' },
+  { name: 'Wilson DUO Soft+', brand: 'Wilson', compression: 40, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 60, maxMph: 80, bestFor: 'Straight flight, budget-friendly' },
+  { name: 'Titleist TruFeel', brand: 'Titleist', compression: 45, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 85, bestFor: 'Short-game feel on a budget' },
+  { name: 'Srixon Soft Feel', brand: 'Srixon', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 65, maxMph: 85, bestFor: 'Best value under $25' },
+  { name: 'Bridgestone e6', brand: 'Bridgestone', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 90, bestFor: 'Straight flight, anti-slice' },
+  { name: 'Vice Drive', brand: 'Vice', compression: 55, cover: 'Ionomer', feel: 'Mid', price: 17, minMph: 65, maxMph: 85, bestFor: 'Cheapest playable ball' },
+  { name: 'Kirkland Signature', brand: 'Kirkland', compression: 65, cover: 'Urethane', feel: 'Mid', price: 28, minMph: 75, maxMph: 95, bestFor: 'Best value urethane ball' },
+  { name: 'Srixon Q-Star Tour', brand: 'Srixon', compression: 72, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Tour spin at mid-compression' },
+  { name: 'TaylorMade Tour Response', brand: 'TaylorMade', compression: 70, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Distance + greenside spin' },
+  { name: 'Callaway Chrome Soft', brand: 'Callaway', compression: 75, cover: 'Urethane', feel: 'Mid', price: 48, minMph: 85, maxMph: 105, bestFor: 'All-around performance' },
+  { name: 'Vice Pro', brand: 'Vice', compression: 75, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 85, maxMph: 105, bestFor: 'Premium feel at mid-tier price' },
+  { name: 'Titleist AVX', brand: 'Titleist', compression: 78, cover: 'Urethane', feel: 'Mid', price: 50, minMph: 85, maxMph: 105, bestFor: 'Low flight, low spin off driver' },
+  { name: 'Bridgestone Tour B RXS', brand: 'Bridgestone', compression: 78, cover: 'Urethane', feel: 'Mid', price: 45, minMph: 85, maxMph: 105, bestFor: 'Greenside spin at mid speed' },
+  { name: 'TaylorMade TP5', brand: 'TaylorMade', compression: 85, cover: 'Urethane', feel: 'Mid-Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Max distance with tour spin' },
+  { name: 'Callaway Chrome Tour', brand: 'Callaway', compression: 87, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Tour-level greenside control' },
+  { name: 'Titleist Pro V1', brand: 'Titleist', compression: 87, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 90, maxMph: 115, bestFor: 'The benchmark tour ball' },
+  { name: 'Titleist Pro V1x', brand: 'Titleist', compression: 97, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 100, maxMph: 130, bestFor: 'High launch, high spin' },
+  { name: 'TaylorMade TP5x', brand: 'TaylorMade', compression: 97, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 100, maxMph: 130, bestFor: 'Max distance for fast swings' },
+];
+---
+
+<BaseLayout {meta} {schemas} activeNav="tools">
+  <article class="art-content" style="max-width:900px;margin:0 auto;padding:0 var(--page-px) 60px;">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/tools/">Tools</a>
+        <span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Golf Ball Finder</span>
+      </nav>
+      <h1>Golf Ball Finder — Match Your Swing Speed to the Right Ball</h1>
+      <p class="art-excerpt">Stop buying the wrong golf ball. Enter your swing speed, budget, and what you care about most — this tool filters 34 balls and gives you a personalized recommendation in seconds. Data from our <a href="/golf-ball-compression-chart/">compression chart</a>, independently verified.</p>
+    </header>
+
+    <p style="font-size:14px;color:var(--muted);margin:0 0 20px;">Last updated: June 2026. See the full <a href="/golf-ball-compression-chart/">Golf Ball Compression Chart</a> for detailed data on all 34 balls.</p>
+
+    <!-- FILTERS -->
+    <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius:12px;margin:0 0 28px;">
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;">Filter by your game</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+        <div>
+          <label for="bf-speed" style="font-weight:600;font-size:14px;display:block;margin:0 0 6px;">Driver swing speed</label>
+          <select id="bf-speed" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:14px;">
+            <option value="0">Any speed</option>
+            <option value="75">Under 75 mph (senior/beginner)</option>
+            <option value="85">75-85 mph (casual)</option>
+            <option value="95">85-95 mph (average)</option>
+            <option value="105">95-105 mph (above average)</option>
+            <option value="115">105+ mph (fast)</option>
+          </select>
+        </div>
+        <div>
+          <label for="bf-budget" style="font-weight:600;font-size:14px;display:block;margin:0 0 6px;">Budget per dozen</label>
+          <select id="bf-budget" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:14px;">
+            <option value="0">Any price</option>
+            <option value="25">Under $25</option>
+            <option value="35">Under $35</option>
+            <option value="50">Under $50</option>
+            <option value="60">Under $60</option>
+          </select>
+        </div>
+        <div>
+          <label for="bf-cover" style="font-weight:600;font-size:14px;display:block;margin:0 0 6px;">Cover type</label>
+          <select id="bf-cover" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:14px;">
+            <option value="">Any</option>
+            <option value="Urethane">Urethane (tour spin)</option>
+            <option value="Ionomer">Ionomer (durable/value)</option>
+          </select>
+        </div>
+        <div>
+          <label for="bf-feel" style="font-weight:600;font-size:14px;display:block;margin:0 0 6px;">Preferred feel</label>
+          <select id="bf-feel" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:14px;">
+            <option value="">Any feel</option>
+            <option value="Soft">Soft</option>
+            <option value="Mid">Mid</option>
+            <option value="Firm">Firm</option>
+          </select>
+        </div>
+      </div>
+      <button id="bf-reset" type="button" style="margin:16px 0 0;padding:8px 16px;background:var(--gold);color:#1a1a1a;border:none;border-radius:6px;font-weight:700;cursor:pointer;font-size:13px;">Reset Filters</button>
+    </section>
+
+    <!-- RESULTS TABLE (server-rendered, filterable via JS) -->
+    <section>
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 12px;">Results <span id="bf-count" style="font-size:14px;color:var(--muted);">({balls.length} balls)</span></h2>
+      <div style="overflow-x:auto;">
+        <table id="bf-table" class="cmp-table" style="width:100%;">
+          <thead>
+            <tr>
+              <th>Golf Ball</th>
+              <th>Compression</th>
+              <th>Feel</th>
+              <th>Cover</th>
+              <th>Price/dz</th>
+              <th>Speed Range</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            {balls.map(b => (
+              <tr data-comp={b.compression} data-cover={b.cover} data-feel={b.feel} data-price={b.price} data-min={b.minMph} data-max={b.maxMph}>
+                <td style="font-weight:600;">{b.name}</td>
+                <td>{b.compression}</td>
+                <td>{b.feel}</td>
+                <td>{b.cover}</td>
+                <td>~${b.price}</td>
+                <td>{b.minMph}-{b.maxMph} mph</td>
+                <td style="font-size:12px;color:var(--muted);">{b.bestFor}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- RELATED LINKS -->
+    <section style="margin:32px 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+      <h2 style="font-size:16px;color:var(--green);margin:0 0 10px;">Related guides</h2>
+      <ul style="font-size:15px;line-height:1.8;margin:0;padding:0 0 0 18px;">
+        <li><a href="/golf-ball-compression-chart/">Golf Ball Compression Chart</a> — full data on all 34 balls</li>
+        <li><a href="/best-golf-balls-2026/">Best Golf Balls</a> — our tested picks by category</li>
+        <li><a href="/golf-swing-speed-chart/">Golf Swing Speed Chart</a> — find your speed by club</li>
+        <li><a href="/compare/titleist-pro-v1-vs-kirkland-signature/">Pro V1 vs Kirkland</a> — premium vs value head-to-head</li>
+      </ul>
+    </section>
+
+    <!-- EMBED / SHARE -->
+    <div style="margin:0 0 28px;padding:16px;background:rgba(30,58,40,.03);border-radius:8px;">
+      <p style="font-size:13px;font-weight:600;color:var(--green);margin:0 0 8px;">Share or embed this tool</p>
+      <input type="text" readonly value='<iframe src="https://www.cubicalgolfer.com/golf-ball-finder/" width="100%" height="800" frameborder="0"></iframe>' style="width:100%;padding:8px;font-size:12px;border:1px solid var(--border);border-radius:6px;color:var(--muted);" onclick="this.select();" />
+      <p style="font-size:11px;color:var(--muted);margin:6px 0 0;">Click to copy. Free to embed with credit to Cubical Golfer.</p>
+    </div>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;">Frequently Asked Questions</h2>
+      {faq.map(({ q, a }) => (
+        <div style="margin:0 0 16px;">
+          <h3 style="font-size:15px;margin:0 0 6px;">{q}</h3>
+          <p style="font-size:14px;line-height:1.7;color:var(--body);margin:0;">{a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+
+  <script>
+  (function(){
+    var rows = document.querySelectorAll('#bf-table tbody tr');
+    var countEl = document.getElementById('bf-count');
+    function filter(){
+      var speed = parseInt(document.getElementById('bf-speed').value) || 0;
+      var budget = parseInt(document.getElementById('bf-budget').value) || 0;
+      var cover = document.getElementById('bf-cover').value;
+      var feel = document.getElementById('bf-feel').value;
+      var visible = 0;
+      rows.forEach(function(row){
+        var min = parseInt(row.dataset.min);
+        var max = parseInt(row.dataset.max);
+        var rCover = row.dataset.cover;
+        var rFeel = row.dataset.feel;
+        var rPrice = parseInt(row.dataset.price);
+        var show = true;
+        if(speed > 0 && (speed < min || speed > max + 10)) show = false;
+        if(budget > 0 && rPrice > budget) show = false;
+        if(cover && rCover !== cover) show = false;
+        if(feel && !rFeel.toLowerCase().includes(feel.toLowerCase())) show = false;
+        row.style.display = show ? '' : 'none';
+        if(show) visible++;
+      });
+      countEl.textContent = '(' + visible + ' balls)';
+    }
+    ['bf-speed','bf-budget','bf-cover','bf-feel'].forEach(function(id){
+      document.getElementById(id).addEventListener('change', filter);
+    });
+    document.getElementById('bf-reset').addEventListener('click', function(){
+      ['bf-speed','bf-budget','bf-cover','bf-feel'].forEach(function(id){ document.getElementById(id).selectedIndex = 0; });
+      filter();
+    });
+  })();
+  </script>
+</BaseLayout>

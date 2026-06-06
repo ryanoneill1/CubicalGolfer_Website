@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Club Distance Calculator — Your Personalized Distance Chart',
+  description: 'Enter your driver distance to generate a personalized club distance chart for every club in your bag. Based on real data, not tour averages — built for weekend golfers.',
+  canonical: 'https://www.cubicalgolfer.com/club-distance-calculator/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Tools', href: '/tools/' },
+    { label: 'Distance Calculator', href: '/club-distance-calculator/' },
+  ],
+};
+
+const faq = [
+  { q: 'How far should a 7-iron go?', a: 'For an average male golfer with a 90 mph driver swing speed, a 7-iron carry distance is approximately 145-155 yards. For slower swing speeds (80 mph), expect 120-135 yards. For faster swings (100+ mph), 160-170 yards. These are carry distances — total distance with rollout is 5-15 yards more depending on conditions.' },
+  { q: 'Why are my distances shorter than the chart?', a: 'Three common reasons: you are measuring total distance but the chart shows carry distance, your swing speed is slower than you think (most golfers overestimate by 5-10 mph), or you are not making center-face contact consistently. A launch monitor gives you real carry numbers per club — see our launch monitor guide for affordable options.' },
+  { q: 'How do I know my actual club distances?', a: 'The most accurate method is a launch monitor — even a budget Garmin R10 ($550) tracks carry distance per club. The second-best method is playing a GPS-tracked round where you note the yardage to the pin and where the ball lands. Range distances are unreliable because range balls fly 10-15% shorter than regular balls.' },
+];
+
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+
+// Average distance ratios relative to driver carry (based on recreational golfer data)
+const clubs = [
+  { name: 'Driver', ratio: 1.0 },
+  { name: '3-Wood', ratio: 0.87 },
+  { name: '5-Wood', ratio: 0.83 },
+  { name: '4-Hybrid', ratio: 0.80 },
+  { name: '5-Iron', ratio: 0.77 },
+  { name: '6-Iron', ratio: 0.73 },
+  { name: '7-Iron', ratio: 0.69 },
+  { name: '8-Iron', ratio: 0.64 },
+  { name: '9-Iron', ratio: 0.59 },
+  { name: 'PW', ratio: 0.54 },
+  { name: 'GW (50°)', ratio: 0.48 },
+  { name: 'SW (54°)', ratio: 0.42 },
+  { name: 'LW (58°)', ratio: 0.35 },
+];
+---
+
+<BaseLayout {meta} {schemas} activeNav="tools">
+  <article class="art-content" style="max-width:900px;margin:0 auto;padding:0 var(--page-px) 60px;">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/tools/">Tools</a>
+        <span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Distance Calculator</span>
+      </nav>
+      <h1>Golf Club Distance Calculator — Build Your Personal Distance Chart</h1>
+      <p class="art-excerpt">Enter your driver carry distance and this tool generates estimated carry distances for every club in your bag. Based on real recreational-golfer data, not tour averages that make everyone feel inadequate. Print it and tape it to your bag.</p>
+    </header>
+
+    <p style="font-size:14px;color:var(--muted);margin:0 0 20px;">For the full reference chart, see our <a href="/golf-club-distance-chart/">Golf Club Distance Chart</a>. For swing speed data, see the <a href="/golf-swing-speed-chart/">Swing Speed Chart</a>.</p>
+
+    <!-- INPUT -->
+    <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius:12px;margin:0 0 28px;">
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;">Enter your driver carry distance</h2>
+      <p style="font-size:14px;color:var(--muted);margin:0 0 12px;">Carry distance = where the ball lands, not total distance with rollout. If you don't know your exact carry, estimate: most male golfers carry the driver 180-230 yards; most female golfers 130-180 yards.</p>
+      <div style="display:flex;gap:12px;align-items:end;flex-wrap:wrap;">
+        <div>
+          <label for="dc-driver" style="font-weight:600;font-size:14px;display:block;margin:0 0 6px;">Driver carry (yards)</label>
+          <input type="number" id="dc-driver" min="100" max="320" value="210" style="width:140px;padding:12px;border:2px solid var(--green);border-radius:8px;font-size:20px;text-align:center;" />
+        </div>
+        <button id="dc-calc" type="button" style="padding:12px 24px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:15px;height:48px;">Calculate →</button>
+      </div>
+    </section>
+
+    <!-- RESULTS TABLE (server-rendered with default 210yd driver, updated by JS) -->
+    <section>
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 4px;">Your estimated distances</h2>
+      <p style="font-size:13px;color:var(--muted);margin:0 0 16px;">Based on <span id="dc-driver-display">210</span>-yard driver carry. These are carry distances — add 5-15 yards for rollout on firm fairways.</p>
+      <div style="overflow-x:auto;">
+        <table id="dc-table" class="cmp-table" style="width:100%;max-width:500px;">
+          <thead>
+            <tr>
+              <th style="text-align:left;">Club</th>
+              <th>Carry (yards)</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+          <tbody>
+            {clubs.map(c => (
+              <tr>
+                <td style="font-weight:600;">{c.name}</td>
+                <td class="dc-dist" data-ratio={c.ratio} style="text-align:center;font-size:18px;font-weight:700;color:var(--green);">{Math.round(210 * c.ratio)}</td>
+                <td style="text-align:center;color:var(--muted);font-size:13px;">{Math.round(c.ratio * 100)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTEXT -->
+    <section style="margin:28px 0;">
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 12px;">How to use this chart on the course</h2>
+      <p style="font-size:15px;line-height:1.7;">These numbers are carry-distance estimates based on average recreational-golfer ratios. Your actual distances will vary based on strike quality, wind, elevation, and temperature. The most useful way to use this chart: pick the club that matches your target carry distance, then adjust one club up or down for wind and elevation. For more precise numbers, track your distances with a <a href="/best-golf-launch-monitors-2026/">launch monitor</a> or a <a href="/best-golf-gps-watches/">GPS watch</a> with shot tracking.</p>
+      <p style="font-size:15px;line-height:1.7;margin:12px 0 0;">If your real distances do not match this chart, the most common reasons are: <a href="/how-to-fix-your-slice/">a slice that costs distance</a>, inconsistent center-face contact, or a shaft flex that does not match your swing speed. A basic club fitting can diagnose all three — see our <a href="/iron-fitting-guide-beginners/">iron fitting guide</a> for what to expect.</p>
+    </section>
+
+    <!-- RELATED -->
+    <section style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+      <h2 style="font-size:16px;color:var(--green);margin:0 0 10px;">Related guides</h2>
+      <ul style="font-size:15px;line-height:1.8;margin:0;padding:0 0 0 18px;">
+        <li><a href="/golf-club-distance-chart/">Golf Club Distance Chart</a> — full reference by swing speed</li>
+        <li><a href="/golf-swing-speed-chart/">Golf Swing Speed Chart</a> — find your speed by club</li>
+        <li><a href="/average-golf-handicap/">Average Golf Handicap</a> — where you stack up</li>
+        <li><a href="/best-golf-launch-monitors-2026/">Best Launch Monitors</a> — get your real numbers</li>
+        <li><a href="/best-golf-irons-2026/">Best Golf Irons</a> — the right irons for your distances</li>
+      </ul>
+    </section>
+
+    <!-- EMBED -->
+    <div style="margin:0 0 28px;padding:16px;background:rgba(30,58,40,.03);border-radius:8px;">
+      <p style="font-size:13px;font-weight:600;color:var(--green);margin:0 0 8px;">Share or embed this tool</p>
+      <input type="text" readonly value='<iframe src="https://www.cubicalgolfer.com/club-distance-calculator/" width="100%" height="700" frameborder="0"></iframe>' style="width:100%;padding:8px;font-size:12px;border:1px solid var(--border);border-radius:6px;color:var(--muted);" onclick="this.select();" />
+    </div>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;">Frequently Asked Questions</h2>
+      {faq.map(({ q, a }) => (
+        <div style="margin:0 0 16px;">
+          <h3 style="font-size:15px;margin:0 0 6px;">{q}</h3>
+          <p style="font-size:14px;line-height:1.7;color:var(--body);margin:0;">{a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+
+  <script>
+  (function(){
+    var input = document.getElementById('dc-driver');
+    var btn = document.getElementById('dc-calc');
+    var display = document.getElementById('dc-driver-display');
+    var cells = document.querySelectorAll('.dc-dist');
+    function calc(){
+      var d = parseInt(input.value) || 210;
+      if(d < 100) d = 100; if(d > 320) d = 320;
+      display.textContent = d;
+      cells.forEach(function(cell){
+        var ratio = parseFloat(cell.dataset.ratio);
+        cell.textContent = Math.round(d * ratio);
+      });
+    }
+    btn.addEventListener('click', calc);
+    input.addEventListener('keypress', function(e){ if(e.key === 'Enter') calc(); });
+  })();
+  </script>
+</BaseLayout>
