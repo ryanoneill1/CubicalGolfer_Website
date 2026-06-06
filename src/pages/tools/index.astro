@@ -152,15 +152,50 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
       ))}
     </div>
 
-    <section class="hub-faq" style="max-width:960px;margin:40px auto 0;">
-      <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;text-align:center;">Frequently Asked Questions</h2>
-      {toolsFaq.map(f => (
-        <details class="faq-item" style="margin:0 0 12px;border:1px solid var(--border);border-radius:var(--r1);overflow:hidden;">
-          <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{f.q}</summary>
-          <p style="padding:0 18px 14px;margin:0;font-size:14px;line-height:1.7;color:var(--body);">{f.a}</p>
-        </details>
-      ))}
+    <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
+    <section style="max-width:100%;margin:48px auto 72px;padding:0;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:160px;align-items:start;" class="hub-bottom-grid">
+        <!-- LEFT: How our tools are built -->
+        <div style="padding-right:32px;">
+          <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How these tools are built and maintained</h2>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+            Every tool on this page exists because we got tired of doing the same math by hand. The simulator cost calculator started as a spreadsheet where we tracked component prices for our own build. The compression chart started as a notes file where we logged ball data during testing. Once the data got useful enough to share, we turned it into something interactive.
+          </p>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+            The data behind these tools is updated monthly. Retail prices shift — sometimes a $599 launch monitor drops to $499 during a sale and stays there. New products launch and need to be added to the charts. Trackman releases updated distance averages as the amateur population data grows. When data changes, the tools change with it. The "last updated" date on each tool reflects the most recent data refresh, not just the last time we touched the code.
+          </p>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
+            We do not gate any tool behind an email signup or account creation. The tools work the moment you open them because that is how tools should work. Revenue comes from affiliate links on the products these tools recommend — if the compression chart helps you find the right ball and you buy it through our link, that funds the next tool.
+          </p>
+        </div>
+        <!-- RIGHT: Related sections + FAQ -->
+        <div style="padding-left:32px;">
+          <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
+            Tools give you the data — buying guides help you act on it. The <a href="/gear-reviews/">gear reviews hub</a> has ranked recommendations for every product type these tools cover. For the tech that powers the data — launch monitors, swing analyzers, GPS watches — see the <a href="/golf-tech/">golf tech hub</a>. For putting the numbers into practice, the <a href="/improve-your-golf-game/">improve your game hub</a> connects tool insights to on-course improvement.
+          </p>
+          <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Tools FAQ</h2>
+          {toolsFaq.map(f => (
+            <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+              <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{f.q}</summary>
+              <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
     </section>
+    <style>{`
+      @media (max-width: 768px) {
+        .hub-bottom-grid {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+        .hub-bottom-grid > div {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    `}</style>
   </div>
 
 </BaseLayout>
