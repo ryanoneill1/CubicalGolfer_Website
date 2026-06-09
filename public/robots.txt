@@ -7,6 +7,7 @@ Allow: /
 Disallow: /drafts/
 Disallow: /admin/
 Disallow: /api/
+Disallow: /?s=
 
 # Search Engines
 User-agent: Googlebot
