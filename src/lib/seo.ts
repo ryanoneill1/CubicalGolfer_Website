@@ -171,6 +171,7 @@ function categoryLabel(cat: string): string {
     'golf-accessories':'Golf Accessories',
     'improve-game':    'Improve Your Game',
     'golf-lifestyle':  'Golf Lifestyle',
+    'indoor-golf':     'Golf Tech',
   };
   return map[cat] ?? cat;
 }
@@ -182,6 +183,7 @@ function categorySlug(cat: string): string {
     'golf-accessories':'golf-accessories',
     'improve-game':    'improve-your-golf-game',
     'golf-lifestyle':  'golf-lifestyle',
+    'indoor-golf':     'golf-tech',
   };
   return map[cat] ?? cat;
 }
