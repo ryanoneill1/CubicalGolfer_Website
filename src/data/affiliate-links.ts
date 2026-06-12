@@ -2320,6 +2320,22 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/bushnell-phantom-2.webp',
     imgAlt: 'Bushnell Phantom 2 Golf GPS',
   },
+
+  // ═══ MISSING PRICE FIXES — June 2026 ═══
+  'garmin-approach-s70': {
+    url: 'https://www.amazon.com/s?k=garmin+approach+s70&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$550',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/garmin-approach-s70.webp', imgAlt: 'Garmin Approach S70 GPS golf watch',
+  },
+  'titleist-gt2-driver': {
+    url: 'https://www.amazon.com/s?k=titleist+gt2+driver&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$599',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/titleist-gt2-driver.webp', imgAlt: 'Titleist GT2 driver',
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
