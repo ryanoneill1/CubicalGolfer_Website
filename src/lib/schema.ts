@@ -207,13 +207,27 @@ export function comparisonProductsSchema(products: ComparisonProduct[]): object[
         availability: 'https://schema.org/InStock',
         seller: { '@type': 'Organization', name: p.retailer },
       },
-      ...(p.rating ? {
+      ...(p.rating && p.ratingCount ? {
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: p.rating,
-          reviewCount: p.ratingCount ?? 50,
+          reviewCount: typeof p.ratingCount === 'string' ? parseInt(p.ratingCount.replace(/,/g, '')) : p.ratingCount,
           bestRating: 5,
           worstRating: 1,
+        },
+      } : {}),
+      ...(p.rating ? {
+        review: {
+          '@type': 'Review',
+          author: AUTHOR,
+          datePublished: new Date().toISOString().split('T')[0],
+          reviewBody: (p.description || '').slice(0, 300),
+          reviewRating: {
+            '@type': 'Rating',
+            ratingValue: p.rating,
+            bestRating: 5,
+            worstRating: 1,
+          },
         },
       } : {}),
     };
@@ -468,20 +482,40 @@ export function buyingGuideProductSchema(
   const priceMatch = affiliatePrice?.replace(/,/g, '').match(/\d+(?:\.\d+)?/);
   const numericPrice = priceMatch ? priceMatch[0] : '';
 
+  const hasRealCount = section.rating && section.ratingCount;
+  const hasRatingOnly = section.rating && !section.ratingCount;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim(),
     description: section.body?.slice(0, 200) || '',
     image: productImage || `${DOMAIN}/images/og-image.jpg`,
-    // aggregateRating only emitted when we have real review data (section.rating)
-    aggregateRating: section.rating ? {
-      '@type': 'AggregateRating',
-      ratingValue: section.rating,
-      reviewCount: section.ratingCount ? parseInt(section.ratingCount.replace(/,/g, '')) : 50,
-      bestRating: 5,
-      worstRating: 1,
-    } : undefined,
+    // aggregateRating ONLY with real review count — never fabricated
+    ...(hasRealCount ? {
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: section.rating,
+        reviewCount: parseInt(section.ratingCount.replace(/,/g, '')),
+        bestRating: 5,
+        worstRating: 1,
+      },
+    } : {}),
+    // Single editorial review when we have a rating (always)
+    ...(section.rating ? {
+      review: {
+        '@type': 'Review',
+        author: AUTHOR,
+        datePublished: new Date().toISOString().split('T')[0],
+        reviewBody: (section.body?.slice(0, 300) || '').replace(/<[^>]*>/g, '').trim(),
+        reviewRating: {
+          '@type': 'Rating',
+          ratingValue: section.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+      },
+    } : {}),
     offers: {
       '@type': 'Offer',
       url: affiliateUrl,
