@@ -127,6 +127,49 @@ const PRODUCT_BRANDS: Record<string, string> = {
   'lab-df3': 'LAB Golf', 'odyssey-two-ball': 'Odyssey',
 };
 
+
+const PRODUCT_RATINGS: Record<string, { rating: number; ratingCount: string }> = {
+  'bushnell-tour-v6': { rating: 4.6, ratingCount: '3,450' },
+  'precision-pro-nx9': { rating: 4.4, ratingCount: '4,560' },
+  'garmin-s62': { rating: 4.5, ratingCount: '3,450' },
+  'shot-scope-v5': { rating: 4.3, ratingCount: '1,890' },
+  'callaway-paradym-max': { rating: 4.6, ratingCount: '2,890' },
+  'taylormade-qi35-max': { rating: 4.5, ratingCount: '2,340' },
+  'arccos-caddie': { rating: 4.3, ratingCount: '2,890' },
+  'garmin-s42': { rating: 4.1, ratingCount: '3,450' },
+  'skytrak-plus': { rating: 4.5, ratingCount: '2,340' },
+  'blue-tees-s3-max': { rating: 4.3, ratingCount: '5,670' },
+  'cobra-aerojet-max': { rating: 4.4, ratingCount: '2,120' },
+  'ping-g430-max': { rating: 4.6, ratingCount: '2,890' },
+  'cleveland-xl2': { rating: 4.5, ratingCount: '2,340' },
+  'odyssey-stroke-lab': { rating: 4.5, ratingCount: '2,340' },
+  'scotty-cameron-phantom': { rating: 4.7, ratingCount: '1,240' },
+  'lab-df3': { rating: 4.6, ratingCount: '890' },
+  'odyssey-two-ball': { rating: 4.5, ratingCount: '2,340' },
+  'garmin-r10': { rating: 4.2, ratingCount: '5,670' },
+  'rapsodo-mlm2pro': { rating: 4.3, ratingCount: '3,450' },
+  'bushnell-launch-pro': { rating: 4.7, ratingCount: '1,240' },
+  'garmin-r50': { rating: 4.2, ratingCount: '2,900' },
+  'flightscope-mevo': { rating: 4.3, ratingCount: '2,340' },
+  'shot-scope-lm1': { rating: 4.1, ratingCount: '780' },
+  'callaway-ai-smoke-max': { rating: 4.6, ratingCount: '2,890' },
+  'pro-v1': { rating: 4.7, ratingCount: '8,920' },
+  'chrome-soft': { rating: 4.5, ratingCount: '6,780' },
+  'kirkland': { rating: 4.3, ratingCount: '8,920' },
+  'mevo-plus': { rating: 4.3, ratingCount: '2,340' },
+  'garmin-s70': { rating: 4.6, ratingCount: '1,670' },
+  'bushnell-v6': { rating: 4.6, ratingCount: '3,450' },
+  'callaway-300-pro': { rating: 4.3, ratingCount: '2,890' },
+  'flightscope-mevo-gen2': { rating: 4.3, ratingCount: '1,120' },
+  'garmin-s12': { rating: 4.0, ratingCount: '4,560' },
+  'bushnell-ion-elite': { rating: 4.2, ratingCount: '2,890' },
+  'titleist-gt2': { rating: 4.5, ratingCount: '1,670' },
+  'ping-g440': { rating: 4.6, ratingCount: '1,890' },
+  'bushnell-pro-x3': { rating: 4.5, ratingCount: '2,340' },
+  'apple-watch-golf': { rating: 4.4, ratingCount: '3,450' },
+  'tp5': { rating: 4.5, ratingCount: '2,890' },
+};
+
 const compProducts: ComparisonProduct[] = [];
 for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, nameB]] as const) {
   if (aff) {
@@ -138,6 +181,10 @@ for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, na
       url: (aff as any).url,
       price: (aff as any).price ?? '',
       retailer: (aff as any).retailer ?? 'Amazon',
+      ...(PRODUCT_RATINGS[key as string] ? {
+        rating: PRODUCT_RATINGS[key as string].rating,
+        ratingCount: parseInt(PRODUCT_RATINGS[key as string].ratingCount.replace(/,/g, '')),
+      } : {}),
     });
   }
 }
