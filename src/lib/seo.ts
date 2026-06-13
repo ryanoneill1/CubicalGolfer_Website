@@ -107,7 +107,7 @@ export function cityMeta(city: GolfCity): PageMeta {
     canonical,
     ogImage:      OG_IMG,
     ogType:       'article',
-    robots:       'index, follow',
+    robots:       'noindex, follow',
     dateModified: city.dateModified,
     breadcrumbs: [
       { label: 'Home',                       href: '/' },

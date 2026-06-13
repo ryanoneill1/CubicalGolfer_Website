@@ -2294,6 +2294,7 @@ export const ARTICLES: Article[] = [
       'Shoot over 100 -- a driver upgrade will not help as much as lessons',
     ],
     related: [
+      { slug: '/compare/taylormade-qi35-vs-titleist-gt2/', label: 'Qi35 vs GT2 Comparison' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026 (All Budgets)' },
       { slug: '/best-beginner-golf-set-under-500/', label: "Best Beginner Golf Set Under $500" },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice First' },
@@ -11623,6 +11624,7 @@ export const ARTICLES: Article[] = [
       { q: 'Is the Qi35 worth upgrading from the Qi10?', a: 'If you bought the Qi10 Max within the last year, the improvement is marginal — 1-2 mph ball speed on off-center hits. If your current driver is 3+ years old, the cumulative improvement is significant enough to justify the upgrade. The best value is buying a Qi10 Max on closeout at 40% off.' },
     ],
     related: [
+      { slug: '/compare/taylormade-qi35-vs-titleist-gt2/', label: 'Qi35 vs GT2 Comparison' },
       { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Paradym vs Qi35 Comparison' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Most Forgiving Drivers' },
       { slug: '/best-golf-drivers-under-200/', label: 'Best Drivers Under $200' },
@@ -11738,6 +11740,7 @@ export const ARTICLES: Article[] = [
       { q: 'What compression is the Kirkland Signature golf ball?', a: 'Approximately 65 compression — mid-range, suited for swing speeds of 80-100 mph. See our compression chart for where it fits relative to every other ball on the market.' },
     ],
     related: [
+      { slug: '/golf-ball-finder/', label: 'Golf Ball Finder Tool' },
       { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Comparison' },
       { slug: '/vice-golf-balls/', label: 'Vice Golf Balls Guide' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls' },
