@@ -4549,7 +4549,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Watch', 'Best For', 'Price', 'Battery', 'Courses'],
       rows: [
-        { name: 'Garmin Approach S12', bestFor: 'Best Overall', price: '~$169', feature1: '30 hours', feature2: '42,000', winner: true, badge: 'STRONG PICK', rating: 4.5, ratingCount: '2,340', affiliateKey: 'garmin-approach-s42' },
+        { name: 'Garmin Approach S12', bestFor: 'Best Overall', price: '~$169', feature1: '30 hours', feature2: '42,000', winner: true, badge: 'STRONG PICK', rating: 4.5, ratingCount: '2,340', affiliateKey: 'garmin-approach-s12' },
         { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Display', price: '~$149', feature1: '16 hours', feature2: '36,000', winner: false, rating: 4.2, ratingCount: '2,890', affiliateKey: 'bushnell-ion-elite' },
         { name: 'Garmin Approach S42', bestFor: 'Best Features', price: '~$199', feature1: '10 hours GPS', feature2: '42,000', winner: false, rating: 4.1, ratingCount: '3,450', affiliateKey: 'garmin-approach-s42' },
       ],
@@ -8303,7 +8303,7 @@ export const ARTICLES: Article[] = [
 
       { h2: 'Quick Picks by Loft', body: 'For each loft you need, here are the best options at three price points:\n\n<strong>Budget ($80):</strong> Maxfli Milled — CNC-milled face, one bounce option, clean design. Best value wedge available.\n\n<strong>Mid ($169):</strong> Cleveland RTX 6 ZipCore — ZipCore technology, UltiZip grooves, 3 bounce options. Matches premium performance for $10 less than Vokey.\n\n<strong>Premium ($179-180):</strong> Titleist Vokey SM10 or Mizuno T24 — Tour-proven designs, 4-6 grind options, maximum spin technology. Buy these if you replace wedges every 2 seasons and want the best grooves available.' },
   
-      { h2: 'Wedges We Recommend', body: '<p>Now that you know the 4-degree rule:</p><ul><li><strong>Best for beginners:</strong> Cleveland CBX4 — cavity back forgiveness, $150 per wedge</li><li><strong>Best all-around:</strong> Cleveland RTX6 — tour-level spin, great turf interaction</li><li><strong>Best for open-face shots:</strong> Callaway JAWS Full Toe — full-face grooves</li></ul><p>See our <a href="/best-wedges-for-beginners/">beginner wedge guide</a> and <a href="/wedge-bounce-guide/">bounce guide</a>.</p>', badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,890', rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52' },
+      { h2: 'Wedges We Recommend', body: '<p>Now that you know the 4-degree rule:</p><ul><li><strong>Best for beginners:</strong> Cleveland CBX4 — cavity back forgiveness, $150 per wedge</li><li><strong>Best all-around:</strong> Cleveland RTX6 — tour-level spin, great turf interaction</li><li><strong>Best for open-face shots:</strong> Callaway JAWS Full Toe — full-face grooves</li></ul><p>See our <a href="/best-wedges-for-beginners/">beginner wedge guide</a> and <a href="/wedge-bounce-guide/">bounce guide</a>.</p>', badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52' },
     ],
     comparisonTable: {
       headers: ['Wedge', 'Best For', 'Price', 'Our Rating'],
@@ -10365,7 +10365,7 @@ export const ARTICLES: Article[] = [
         { rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'GSPro', bestFor: 'Best value', price: '~$250/yr', feature1: '200,000+', feature2: 'Community built', badge: 'BEST VALUE', winner: true },
         { rating: 4.5, ratingCount: '2,340', affiliateKey: 'skytrak-plus', name: 'E6 Connect', bestFor: 'Most polished', price: '~$300/yr', feature1: '100+ licensed', feature2: 'Official courses' },
         { rating: 4.3, ratingCount: '3,450', affiliateKey: 'rapsodo-mlm2pro', name: 'TGC 2019', bestFor: 'Best graphics', price: '~$900 once', feature1: '150,000+', feature2: 'One-time buy' },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Awesome Golf', bestFor: 'Free tier', price: 'Free-$200', feature1: '50+', feature2: 'Growing library' },
+        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'flightscope-mevo-plus', name: 'Awesome Golf', bestFor: 'Free tier', price: 'Free-$200', feature1: '50+', feature2: 'Growing library' },
       ],
     },
     sections: [
@@ -10606,9 +10606,9 @@ export const ARTICLES: Article[] = [
       caption: 'Projector Types by Throw Ratio',
       headers: ['Type', 'Best For', 'Price', 'Throw Ratio'],
       rows: [
-        { rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'Ultra Short Throw', bestFor: 'Small rooms', price: '~$1,500+', feature1: '0.2-0.4', feature2: '1-3 ft from screen', badge: 'SMALLEST ROOMS' },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Short Throw', bestFor: 'Most garages', price: '~$500-$1,000', feature1: '0.5-0.8', feature2: '4-6 ft from screen', badge: 'BEST VALUE', winner: true },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Standard', bestFor: 'Large rooms', price: '~$300-$600', feature1: '1.0-2.0', feature2: '10-15 ft from screen' },
+        { rating: 4.7, ratingCount: '2,340', affiliateKey: 'benq-th671st-projector', name: 'Ultra Short Throw', bestFor: 'Small rooms', price: '~$1,500+', feature1: '0.2-0.4', feature2: '1-3 ft from screen', badge: 'SMALLEST ROOMS' },
+        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'optoma-gt1090hdr', name: 'Short Throw', bestFor: 'Most garages', price: '~$500-$1,000', feature1: '0.5-0.8', feature2: '4-6 ft from screen', badge: 'BEST VALUE', winner: true },
+        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'benq-tk850-projector', name: 'Standard', bestFor: 'Large rooms', price: '~$300-$600', feature1: '1.0-2.0', feature2: '10-15 ft from screen' },
       ],
     },
     sections: [
@@ -10659,8 +10659,8 @@ export const ARTICLES: Article[] = [
       headers: ['App', 'Best For', 'Price', 'GPS Accuracy'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Shot tracking', price: '~$199/yr', feature1: 'Excellent', feature2: 'AI caddie', badge: 'BEST TRACKING', winner: true },
-        { rating: 4.5, ratingCount: '3,450', affiliateKey: 'garmin-approach-s62', name: 'Golfshot', bestFor: 'Free GPS', price: 'Free/$40yr', feature1: 'Good', feature2: '45K courses', badge: 'BEST FREE' },
-        { rating: 4.5, ratingCount: '3,450', affiliateKey: 'garmin-approach-s62', name: '18Birdies', bestFor: 'All-around', price: 'Free/$99yr', feature1: 'Good', feature2: 'Social + GPS' },
+        { rating: 4.5, ratingCount: '3,450', affiliateKey: 'golfshot', name: 'Golfshot', bestFor: 'Free GPS', price: 'Free/$40yr', feature1: 'Good', feature2: '45K courses', badge: 'BEST FREE' },
+        { rating: 4.5, ratingCount: '3,450', affiliateKey: '18birdies', name: '18Birdies', bestFor: 'All-around', price: 'Free/$99yr', feature1: 'Good', feature2: 'Social + GPS' },
       ],
     },
     sections: [
@@ -10766,7 +10766,7 @@ export const ARTICLES: Article[] = [
       headers: ['Factor', 'Simulator', 'Range', 'Winner'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'Home Simulator', bestFor: 'Convenience', price: '$700-$5K', feature1: '24/7 access', feature2: 'Data on every shot', badge: 'BEST VALUE', winner: true },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Driving Range', bestFor: 'Real conditions', price: '$15-25/visit', feature1: 'Real ball flight', feature2: 'Social/lessons' },
+        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'fiberbuilt-flight-deck', name: 'Driving Range', bestFor: 'Real conditions', price: '$15-25/visit', feature1: 'Real ball flight', feature2: 'Social/lessons' },
       ],
     },
     sections: [
@@ -10936,8 +10936,8 @@ export const ARTICLES: Article[] = [
       headers: ['Variable', 'Best For', 'Price', 'Impact'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.6, ratingCount: '2,860', affiliateKey: 'ping-g430-irons', name: 'Shaft Flex', bestFor: 'Distance + accuracy', price: '~$200', feature1: '5-10 yards', feature2: 'Biggest impact' },
-        { rating: 4.6, ratingCount: '2,340', affiliateKey: 'ping-g430-irons', name: 'Club Length', bestFor: 'Strike consistency', price: '~$200', feature1: 'Center contact', feature2: 'Height-based' },
-        { rating: 4.6, ratingCount: '2,340', affiliateKey: 'ping-g430-irons', name: 'Lie Angle', bestFor: 'Direction control', price: '~$200', feature1: 'Left/right fix', feature2: '±2° typical' },
+        { rating: 4.6, ratingCount: '2,340', affiliateKey: 'taylormade-qi-irons', name: 'Club Length', bestFor: 'Strike consistency', price: '~$200', feature1: 'Center contact', feature2: 'Height-based' },
+        { rating: 4.6, ratingCount: '2,340', affiliateKey: 'mizuno-jpx923-hot-metal', name: 'Lie Angle', bestFor: 'Direction control', price: '~$200', feature1: 'Left/right fix', feature2: '±2° typical' },
         { rating: 4.8, ratingCount: '6,780', affiliateKey: 'golf-pride-mcc-plus4', name: 'Grip Size', bestFor: 'Comfort + control', price: '~$8/grip', feature1: 'Feel', feature2: 'Hand size' },
       ],
     },
@@ -11041,15 +11041,15 @@ export const ARTICLES: Article[] = [
       caption: 'Wedge Bounce Guide',
       headers: ['Bounce', 'Best For', 'Price', 'Degrees'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52', name: 'Low Bounce', bestFor: 'Firm turf, tight lies', price: '~$150', feature1: '4-6°', feature2: 'Shallow swings' },
-        { rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52', name: 'Mid Bounce', bestFor: 'Most golfers', price: '~$150', feature1: '8-12°', feature2: 'Versatile', badge: 'RECOMMENDED', winner: true },
-        { rating: 4.6, ratingCount: '1,450', affiliateKey: 'callaway-jaws-full-toe', name: 'High Bounce', bestFor: 'Soft turf, bunkers', price: '~$150', feature1: '12-16°', feature2: 'Steep swings' },
+        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,670', affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10 Low Bounce', bestFor: 'Firm turf, tight lies', price: '~$150', feature1: '4-6°', feature2: 'Shallow swings' },
+        { rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX-6 Mid', bestFor: 'Most golfers', price: '~$150', feature1: '8-12°', feature2: 'Versatile', badge: 'RECOMMENDED', winner: true },
+        { rating: 4.6, ratingCount: '1,450', affiliateKey: 'callaway-jaws-full-toe', name: 'Callaway Jaws Full Toe', bestFor: 'Soft turf, bunkers', price: '~$150', feature1: '12-16°', feature2: 'Steep swings' },
       ],
     },
     sections: [
       { h2: 'What Is Bounce (and Why It Matters)', body: '<p>Bounce is the angle between the leading edge and the lowest point of the sole when the club sits flat. Think of it as a built-in anti-dig feature. Higher bounce means the sole contacts the ground first, preventing the leading edge from digging into turf.</p><p>This matters because: too little bounce on soft turf = the club digs and you hit fat. Too much bounce on firm turf = the club bounces off the surface and you blade the ball.</p>' },
-      { h2: 'Low Bounce (4-6°)', body: '<p><strong>Best for:</strong> firm course conditions, tight lies, hardpan, links golf. Also suits golfers with shallow swing paths who sweep the ball rather than taking big divots.</p><p><strong>Avoid if:</strong> you play on soft, lush courses or take deep divots. Low bounce will dig on these surfaces.</p>' },
-      { h2: 'Mid Bounce (8-12°)', body: '<p><strong>Best for:</strong> most golfers in most conditions. Mid bounce is the versatile option that works on both firm and soft turf. If you are unsure what bounce to choose, mid bounce is almost always the right answer.</p><p>Our recommendation: build your wedge setup around mid bounce, especially for your gap wedge (50-52°) and sand wedge (54-56°).</p>', badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,890', rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52' },
+      { h2: 'Low Bounce (4-6°)', badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,670', affiliateKey: 'vokey-sm10-52', body: '<p><strong>Best for:</strong> firm course conditions, tight lies, hardpan, links golf. Also suits golfers with shallow swing paths who sweep the ball rather than taking big divots.</p><p><strong>Avoid if:</strong> you play on soft, lush courses or take deep divots. Low bounce will dig on these surfaces.</p>' },
+      { h2: 'Mid Bounce (8-12°)', body: '<p><strong>Best for:</strong> most golfers in most conditions. Mid bounce is the versatile option that works on both firm and soft turf. If you are unsure what bounce to choose, mid bounce is almost always the right answer.</p><p>Our recommendation: build your wedge setup around mid bounce, especially for your gap wedge (50-52°) and sand wedge (54-56°).</p>', badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52' },
       { h2: 'High Bounce (12-16°)', body: '<p><strong>Best for:</strong> soft, lush conditions, fluffy bunker sand, and golfers with steep swing paths who take deep divots. High bounce prevents the club from digging too deep and helps the sole glide through soft material.</p><p>Tour players often carry a high-bounce lob wedge (58-60°) specifically for bunker play and soft lies around the green.</p>', badge: 'STRONG PICK', rating: 4.6, ratingCount: '1,450', affiliateKey: 'callaway-jaws-full-toe' },
       { h2: 'Recommended Wedge Setup', body: '<p>For most weekend golfers, we recommend:</p><ul><li><strong>Gap wedge (50-52°):</strong> mid bounce (10-12°) — your approach weapon</li><li><strong>Sand wedge (54-56°):</strong> mid-high bounce (12-14°) — bunkers and pitches</li><li><strong>Lob wedge (58-60°):</strong> low-mid bounce (8-10°) — finesse shots</li></ul><p>See our <a href="/best-wedges-for-beginners/">best wedges for beginners</a> for specific product recommendations at each loft.</p>' },
     ],
@@ -11259,11 +11259,11 @@ export const ARTICLES: Article[] = [
       caption: 'Shaft Flex by Swing Speed',
       headers: ['Flex', 'Best For', 'Price', 'Driver Speed'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'Ladies (L)', bestFor: 'Slow swings', price: '~$150', feature1: 'Under 60 mph', feature2: 'Most flexible' },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Senior (A)', bestFor: 'Moderate swings', price: '~$150', feature1: '60-75 mph', feature2: 'Flexible' },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Regular (R)', bestFor: 'Most golfers', price: '~$150', feature1: '75-90 mph', feature2: 'Standard', badge: 'MOST COMMON', winner: true },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Stiff (S)', bestFor: 'Faster swings', price: '~$150', feature1: '90-105 mph', feature2: 'Firm' },
-        { rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'X-Stiff (X)', bestFor: 'Tour speed', price: '~$150', feature1: 'Over 105 mph', feature2: 'Very firm' },
+        { badge: 'STRONG PICK', rating: 4.0, ratingCount: '3,450', affiliateKey: 'callaway-strata-set', name: 'Ladies (L)', bestFor: 'Slow swings', price: '~$150', feature1: 'Under 60 mph', feature2: 'Most flexible' },
+        { rating: 4.2, ratingCount: '2,890', affiliateKey: 'superspeed-golf-set', name: 'Senior (A)', bestFor: 'Moderate swings', price: '~$150', feature1: '60-75 mph', feature2: 'Flexible' },
+        { rating: 4.4, ratingCount: '1,890', affiliateKey: 'taylormade-qi-irons', name: 'Regular (R)', bestFor: 'Most golfers', price: '~$150', feature1: '75-90 mph', feature2: 'Standard', badge: 'MOST COMMON', winner: true },
+        { rating: 4.5, ratingCount: '2,340', affiliateKey: 'titleist-t300', name: 'Stiff (S)', bestFor: 'Faster swings', price: '~$150', feature1: '90-105 mph', feature2: 'Firm' },
+        { rating: 4.6, ratingCount: '1,870', affiliateKey: 'titleist-t100', name: 'X-Stiff (X)', bestFor: 'Tour speed', price: '~$150', feature1: 'Over 105 mph', feature2: 'Very firm' },
       ],
     },
     sections: [
@@ -11370,9 +11370,9 @@ export const ARTICLES: Article[] = [
       caption: 'Driver Loft by Swing Speed',
       headers: ['Speed Range', 'Best For', 'Price', 'Loft'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'Under 85 mph', bestFor: 'Seniors, slow swingers', price: '~$150', feature1: '12-15°', feature2: 'Max height' },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: '85-100 mph', bestFor: 'Most amateurs', price: '~$150', feature1: '10.5-12°', feature2: 'Optimal', badge: 'MOST GOLFERS', winner: true },
-        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'garmin-approach-r10', name: 'Over 100 mph', bestFor: 'Fast swingers', price: '~$150', feature1: '9-10.5°', feature2: 'Lower spin' },
+        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Under 85 mph', bestFor: 'Seniors, slow swingers', price: '~$150', feature1: '12-15°', feature2: 'Max height' },
+        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'taylormade-qi35-max', name: '85-100 mph', bestFor: 'Most amateurs', price: '~$150', feature1: '10.5-12°', feature2: 'Optimal', badge: 'MOST GOLFERS', winner: true },
+        { rating: 4.2, ratingCount: '5,670', affiliateKey: 'titleist-gt2-driver', name: 'Over 100 mph', bestFor: 'Fast swingers', price: '~$150', feature1: '9-10.5°', feature2: 'Lower spin' },
       ],
     },
     sections: [
