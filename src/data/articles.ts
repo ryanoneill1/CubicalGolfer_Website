@@ -11051,11 +11051,11 @@ export const ARTICLES: Article[] = [
     whoSkip: ['Golfers happy with their current wedge setup'],
     comparisonTable: {
       caption: 'Wedge Bounce Guide',
-      headers: ['Bounce', 'Best For', 'Price', 'Degrees'],
+      headers: ['Wedge', 'Best For', 'Price', 'Bounce'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,670', affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10 Low Bounce', bestFor: 'Firm turf, tight lies', price: '~$150', feature1: '4-6°', feature2: 'Shallow swings' },
-        { rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX-6 Mid', bestFor: 'Most golfers', price: '~$150', feature1: '8-12°', feature2: 'Versatile', badge: 'RECOMMENDED', winner: true },
-        { rating: 4.6, ratingCount: '1,450', affiliateKey: 'callaway-jaws-full-toe', name: 'Callaway Jaws Full Toe', bestFor: 'Soft turf, bunkers', price: '~$150', feature1: '12-16°', feature2: 'Steep swings' },
+        { badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,670', affiliateKey: 'vokey-sm10-52', name: 'Titleist Vokey SM10', bestFor: 'Firm turf, tight lies', price: '~$179', feature1: '4-6° (Low)', feature2: 'Shallow swings' },
+        { rating: 4.7, ratingCount: '2,890', affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX-6 ZipCore', bestFor: 'Most golfers', price: '~$169', feature1: '8-12° (Mid)', feature2: 'Versatile', badge: 'RECOMMENDED', winner: true },
+        { rating: 4.6, ratingCount: '1,450', affiliateKey: 'callaway-jaws-full-toe', name: 'Callaway Jaws Full Toe', bestFor: 'Soft turf, bunkers', price: '~$180', feature1: '12-16° (High)', feature2: 'Steep swings' },
       ],
     },
     sections: [
