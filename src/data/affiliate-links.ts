@@ -2424,6 +2424,14 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/taylormade-sim2-max-irons.webp', imgAlt: 'TaylorMade SIM2 Max irons',
   },
+
+  'garmin-ct10': {
+    url: 'https://www.amazon.com/s?k=garmin+ct10+golf+sensors&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$299',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/garmin-ct10.webp', imgAlt: 'Garmin CT10 club tracking sensors',
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
@@ -2662,34 +2670,42 @@ Object.assign(AFFILIATE, {
   'club-glove-microfiber-towel': {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=club+glove+microfiber+golf+towel&tag=cubicalgolfer-20',
     price: '~$18', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/club-glove-microfiber-towel.webp', imgAlt: 'Club Glove Microfiber Towel',},
   'procella-golf-umbrella': {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=procella+golf+umbrella&tag=cubicalgolfer-20',
     price: '~$30', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/procella-golf-umbrella.webp', imgAlt: 'Procella Golf Umbrella',},
   'ezgo-freedom-rxv': {
     label: 'Check Price →', url: 'https://www.amazon.com/s?k=ezgo+golf+cart&tag=cubicalgolfer-20',
     price: '~$8,000', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/ezgo-freedom-rxv.webp', imgAlt: 'Ezgo Freedom Rxv',},
   'club-car-onward': {
     label: 'Check Price →', url: 'https://www.amazon.com/s?k=club+car+golf+cart&tag=cubicalgolfer-20',
     price: '~$9,000', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/club-car-onward.webp', imgAlt: 'Club Car Onward',},
   'callaway-org-14-cart-bag': {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=callaway+org+14+cart+bag&tag=cubicalgolfer-20',
     price: '~$230', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/callaway-org-14-cart-bag.webp', imgAlt: 'Callaway Org 14 Cart Bag',},
   'ping-hoofer-14-stand-bag': {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=ping+hoofer+14+stand+bag&tag=cubicalgolfer-20',
     price: '~$270', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/ping-hoofer-14-stand-bag.webp', imgAlt: 'Ping Hoofer 14 Stand Bag',},
   'ogio-fuse-stand-bag': {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=ogio+fuse+stand+bag&tag=cubicalgolfer-20',
     price: '~$200', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/ogio-fuse-stand-bag.webp', imgAlt: 'Ogio Fuse Stand Bag',},
   'tour-striker-alignment-sticks': {
     label: 'Check Price at Amazon →', url: 'https://www.amazon.com/s?k=tour+striker+alignment+sticks&tag=cubicalgolfer-20',
     price: '~$25', retailer: 'Amazon',
-  },
+  
+    imgSrc: '/images/products/tour-striker-alignment-sticks.webp', imgAlt: 'Tour Striker Alignment Sticks',},
 });
 
