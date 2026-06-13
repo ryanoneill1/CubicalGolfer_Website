@@ -11,8 +11,8 @@ const vsArticles = (ARTICLES as any[]).filter(a =>
   !a.slug.startsWith('/compare/')
 ).sort((a: any, b: any) => a.title.localeCompare(b.title));
 const meta = {
-  title: 'Golf Gear Comparisons — Side-by-Side Tested by a Weekend Golfer',
-  description: 'Honest head-to-head golf gear comparisons. Bushnell vs Precision Pro, SkyTrak vs R10, Paradym vs Qi35 — bought, tested, and ranked by a real cubicle golfer.',
+  title: 'Golf Gear Comparisons — Side-by-Side Tested',
+  description: 'Honest head-to-head golf gear comparisons. Bushnell vs Precision Pro, SkyTrak vs R10, Paradym vs Qi35 — bought, tested, and ranked by a real cubicle.',
   canonical: 'https://www.cubicalgolfer.com/compare/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
   ogType: 'website' as const,
