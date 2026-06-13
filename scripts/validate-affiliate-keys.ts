@@ -8,6 +8,12 @@ import { ARTICLES } from '../src/data/articles.ts';
 // Brand keywords (in h2) → expected affiliateKey
 // Order matters: most specific match wins, so list more specific entries first.
 const BRAND_MAP: [string, string][] = [
+  ['callaway paradym ai smoke max irons', 'callaway-paradym-ai-smoke-max-irons'],
+  ['cleveland launcher xl2 driver',     'cleveland-launcher-xl2-driver'],
+  ['taylormade sim2 max irons',         'taylormade-sim2-max-irons'],
+  ['taylormade stealth hd irons',       'taylormade-stealth-hd-irons'],
+  ['cleveland launcher xl halo',        'cleveland-launcher-xl'],
+  ['srixon zx5 mk ii',                 'srixon-zx5-mk-ii'],
   ['bushnell tour v6 shift',          'bushnell-tour-v6-shift'],
   ['bushnell v6 shift',               'bushnell-tour-v6-shift'],
   ['bushnell tour v6',                'bushnell-tour-v6-shift'],
@@ -42,7 +48,9 @@ const BRAND_MAP: [string, string][] = [
   ['callaway paradym ai smoke max iron', 'callaway-paradym-ai-smoke-max-irons'],
   ['callaway paradym ai smoke max', 'callaway-paradym-ai-smoke-max'],
   ['callaway paradym ai smoke',      'callaway-paradym-ai-smoke-max'],
-  ['cobra aerojet',                  'cobra-aerojet-max'],
+  ['cobra aerojet max irons',          'cobra-aerojet-max-irons'],
+  ['cobra aerojet irons',              'cobra-aerojet-max-irons'],
+  ['cobra aerojet',                    'cobra-aerojet-max'],
   ['wilson profile sgi',            'wilson-profile-sgi'],
   ['wilson profile',                'wilson-profile-sgi'],
   ['callaway strata',               'callaway-strata'],

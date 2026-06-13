@@ -2394,6 +2394,36 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/srixon-zx5-mk-ii.webp', imgAlt: 'Srixon ZX5 Mk II irons',
   },
+
+  // ═══ CONTEXT-CORRECT PRODUCT VARIANTS — June 2026 ═══
+  'cleveland-launcher-xl2-driver': {
+    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2+driver&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$349',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/cleveland-launcher-xl2-driver.webp', imgAlt: 'Cleveland Launcher XL2 driver',
+  },
+  'callaway-paradym-ai-smoke-max-irons': {
+    url: 'https://www.amazon.com/s?k=callaway+paradym+ai+smoke+max+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: 'from ~$899',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/callaway-paradym-ai-smoke-max-irons.webp', imgAlt: 'Callaway Paradym Ai Smoke Max irons',
+  },
+  'cobra-aerojet-max-irons': {
+    url: 'https://www.amazon.com/s?k=cobra+aerojet+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$699',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/cobra-aerojet-irons.webp', imgAlt: 'Cobra Aerojet irons',
+  },
+  'taylormade-sim2-max-irons': {
+    url: 'https://www.amazon.com/s?k=taylormade+sim2+max+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$399',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/taylormade-sim2-max-irons.webp', imgAlt: 'TaylorMade SIM2 Max irons',
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
@@ -2481,7 +2511,7 @@ Object.assign(AFFILIATE, {
     price: '~$699',
     imgSrc: '/images/products/cleveland-launcher-xl2-irons.webp',
   },
-  'cobra-aerojet-irons': {
+  'cobra-aerojet-max-irons': {
     url: 'https://www.amazon.com/dp/B0BTRK28F5/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$799',
