@@ -1006,6 +1006,34 @@ export const AFFILIATE: Record<string, {
       'Tour-quality urethane cover for short game spin and control',
     ],
   },
+  'callaway-chrome-tour': {
+    url: 'https://www.amazon.com/s?k=callaway-chrome-tour&crid=QIR72QBZ6WKH&sprefix=callaway-chev-dry%2Caps%2C236&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Amazon',
+    price: '~$40/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/callaway-chrome-tour.webp',
+    imgAlt: 'Callaway Chrome Soft Golf Balls',
+    benefits: [
+      '75 compression — low-compression premium ball for moderate speeds',
+      'Hyper Elastic SoftFast core maximizes ball speed at 90 mph',
+      'Tour-quality urethane cover for short game spin and control',
+    ],
+  },
+  'callaway-chrome-tour-2026': {
+    url: 'https://www.amazon.com/s?k=callaway-chrome-tour-2026&crid=QIR72QBZ6WKH&sprefix=callaway-chev-dry%2Caps%2C236&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Amazon',
+    price: '~$40/dz',
+    label: 'See Current Price',
+    imgSrc: '/images/products/callaway-chrome-tour-2026.webp',
+    imgAlt: 'Callaway Chrome Soft Golf Balls',
+    benefits: [
+      '75 compression — low-compression premium ball for moderate speeds',
+      'Hyper Elastic SoftFast core maximizes ball speed at 90 mph',
+      'Tour-quality urethane cover for short game spin and control',
+    ],
+  },
   'titleist-tour-speed': {
     url: 'https://www.amazon.com/s?k=titleist-tour-speed&crid=29KW4M7QC2V0C&sprefix=titleist-tour-soft%2Caps%2C276&linkCode=ll2&tag=cubicalgolfer-20&linkId=8e3a5b2689ca3023e91440575551a649&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Tour%2520Speed%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -2335,6 +2363,36 @@ export const AFFILIATE: Record<string, {
     price: '~$599',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/titleist-gt2-driver.webp', imgAlt: 'Titleist GT2 driver',
+  },
+
+  // ═══ FORGIVING IRONS + BUDGET PICKS — June 2026 ═══
+  'taylormade-sim2-max': {
+    url: 'https://www.amazon.com/s?k=taylormade+sim2+max+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$399',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/taylormade-sim2-max.webp', imgAlt: 'TaylorMade SIM2 Max irons',
+  },
+  'cleveland-launcher-xl': {
+    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl+halo+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$599',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/cleveland-launcher-xl.webp', imgAlt: 'Cleveland Launcher XL Halo irons',
+  },
+  'taylormade-stealth-hd-irons': {
+    url: 'https://www.amazon.com/s?k=taylormade+stealth+hd+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$549',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/taylormade-stealth-hd.webp', imgAlt: 'TaylorMade Stealth HD irons',
+  },
+  'srixon-zx5-mk-ii': {
+    url: 'https://www.amazon.com/s?k=srixon+zx5+mk+ii+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$699',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/srixon-zx5-mk-ii.webp', imgAlt: 'Srixon ZX5 Mk II irons',
   },
 };
 
