@@ -77,21 +77,46 @@
     var results = document.getElementById('site-search-results');
     if (!input || !results) return;
     var index = null;
+    var loading = false;
+    var pendingQuery = null;
 
-    input.addEventListener('focus', function() {
-      if (index) return;
+    function loadIndex() {
+      if (index || loading) return;
+      loading = true;
       fetch('/api/search-index.json')
-        .then(function(r) { return r.json(); })
-        .then(function(data) { index = data; })
-        .catch(function() {});
-    });
+        .then(function(r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.json();
+        })
+        .then(function(data) {
+          index = data;
+          loading = false;
+          // If user typed while loading, run the search now
+          if (pendingQuery) {
+            doSearch(pendingQuery);
+            pendingQuery = null;
+          }
+        })
+        .catch(function(err) {
+          loading = false;
+          console.warn('Search index failed to load:', err);
+        });
+    }
 
-    input.addEventListener('input', function() {
-      var q = input.value.toLowerCase().trim();
-      if (!q || q.length < 2 || !index) {
+    function doSearch(q) {
+      if (!q || q.length < 2) {
         results.hidden = true;
         return;
       }
+      if (!index) {
+        // Show loading state while index loads
+        results.innerHTML = '<div class="site-search__empty">Loading…</div>';
+        results.hidden = false;
+        pendingQuery = q;
+        loadIndex();
+        return;
+      }
+
       var hits = index.filter(function(a) {
         return a.title.toLowerCase().indexOf(q) !== -1 ||
                (a.excerpt || '').toLowerCase().indexOf(q) !== -1;
@@ -110,6 +135,15 @@
           '<span class="search-result-tag">' + safe(h.tag) + '</span></a>';
       }).join('');
       results.hidden = false;
+    }
+
+    // Load index on focus AND on first keystroke
+    input.addEventListener('focus', loadIndex);
+
+    input.addEventListener('input', function() {
+      var q = input.value.toLowerCase().trim();
+      loadIndex();
+      doSearch(q);
     });
 
     // Close on outside click
