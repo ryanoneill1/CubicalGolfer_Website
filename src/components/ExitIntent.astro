@@ -12,10 +12,11 @@
     <p class="exit-intent__eyebrow">BEFORE YOU GO — FREE PDF</p>
     <h3 class="exit-intent__heading">Grab the Free Compression Cheat Sheet</h3>
     <p class="exit-intent__sub">Match your swing speed to the perfect golf ball in 10 seconds. 34 balls color-coded by compression, cover, and price. One printable page, free.</p>
-    <div class="exit-intent__field" id="exit-intent-field">
-      <input type="email" id="exit-email" class="exit-intent__input" placeholder="you@email.com" aria-label="Email address" />
-      <button id="exit-submit" class="exit-intent__btn">Send Me the Cheat Sheet</button>
-    </div>
+    <form class="exit-intent__field" id="exit-intent-field" data-placement="exit-intent">
+      <input type="email" id="exit-email" name="email" class="exit-intent__input" placeholder="you@email.com" aria-label="Email address" required />
+      <input type="text" name="website" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
+      <button type="submit" id="exit-submit" class="exit-intent__btn">Send Me the Cheat Sheet</button>
+    </form>
     <p class="exit-intent__disclaimer">No spam. Unsubscribe any time.</p>
     <button class="exit-intent__skip" id="exit-intent-skip">No thanks, I'll figure it out myself</button>
     <p class="exit-intent__thanks" id="exit-intent-thanks" hidden>Check your inbox — the compression cheat sheet is on its way!</p>
@@ -93,7 +94,6 @@
     var backdrop = document.getElementById('exit-intent-backdrop');
     var submitBtn = document.getElementById('exit-submit');
     var emailInput = document.getElementById('exit-email');
-    var field = document.getElementById('exit-intent-field');
     var thanks = document.getElementById('exit-intent-thanks');
     var disclaimer = overlay ? overlay.querySelector('.exit-intent__disclaimer') : null;
     if (!overlay) return;
@@ -151,15 +151,15 @@
       if (e.key === 'Escape' && shown) dismiss();
     });
 
-    // Email submission — same ConvertKit form as footer
-    submitBtn.addEventListener('click', function() {
+    // Email submission — form-based with native validation + honeypot
+    var exitForm = document.getElementById('exit-intent-field');
+    exitForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var honeypot = exitForm.querySelector('input[name="website"]');
+      if (honeypot && honeypot.value) return;
+      if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; }
+
       var email = emailInput.value.trim();
-      if (!email || email.indexOf('@') < 1) {
-        emailInput.style.borderColor = '#d63b2f';
-        emailInput.focus();
-        return;
-      }
-      emailInput.style.borderColor = '';
       submitBtn.textContent = 'Sending\u2026';
       submitBtn.disabled = true;
 
@@ -171,7 +171,7 @@
       .then(function(res) { if (!res.ok) throw new Error(res.status); return res.json(); })
       .then(function(data) {
         if (data && data.subscription) {
-          field.setAttribute('hidden', '');
+          exitForm.setAttribute('hidden', '');
           if (disclaimer) disclaimer.setAttribute('hidden', '');
           thanks.removeAttribute('hidden');
           localStorage.setItem(KEY, '1');

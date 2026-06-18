@@ -1,13 +1,7 @@
 ---
 /**
  * EmailCapture.astro
- * Reusable email capture component — used in BaseLayout (footer) and
- * mid-article placement on review/roundup pages.
- *
- * Props:
- *   heading   — Main heading text
- *   variant   — 'footer' (full-width strip) or 'inline' (subtle card)
- *   idSuffix  — Unique suffix for element IDs (prevents collisions when 2 forms on same page)
+ * Reusable email capture with proper <form>, native validation, and honeypot.
  */
 
 interface Props {
@@ -22,11 +16,10 @@ const {
   idSuffix = '',
 } = Astro.props;
 
-const fieldId = `email-field${idSuffix}`;
+const formId = `email-form${idSuffix}`;
 const inputId = `strip-email${idSuffix}`;
-const btnId = `email-submit-btn${idSuffix}`;
-const disclaimerId = `email-disclaimer${idSuffix}`;
 const thanksId = `strip-thanks${idSuffix}`;
+const disclaimerId = `email-disclaimer${idSuffix}`;
 const isInline = variant === 'inline';
 ---
 
@@ -40,20 +33,24 @@ const isInline = variant === 'inline';
     </p>
   </div>
   <div>
-    <div class={isInline ? 'email-inline__field' : 'email-strip__field'} id={fieldId}>
+    <form id={formId} class={isInline ? 'email-inline__field' : 'email-strip__field'} data-placement={isInline ? 'mid-article' : 'footer'}>
       <label for={inputId} class="sr-only">Your email address</label>
       <input
         type="email"
         id={inputId}
+        name="email"
         placeholder="your@email.com"
         required
         autocomplete="email"
         class={isInline ? 'email-inline__input' : 'email-strip__input'}
       />
-      <button type="button" id={btnId} class={isInline ? 'email-inline__btn' : 'email-strip__btn'}>
+      <!-- Honeypot — hidden from humans, bots fill it and get rejected -->
+      <input type="text" name="website" autocomplete="off" tabindex="-1"
+             style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
+      <button type="submit" class={isInline ? 'email-inline__btn' : 'email-strip__btn'}>
         Send Me the PDF →
       </button>
-    </div>
+    </form>
     <p class={isInline ? 'email-inline__disclaimer' : 'email-strip__disclaimer'} id={disclaimerId}>
       No spam. Unsubscribe any time. We email ~twice a month with gear updates.
     </p>
@@ -89,6 +86,7 @@ const isInline = variant === 'inline';
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  position: relative;
 }
 .email-inline__input {
   flex: 1;

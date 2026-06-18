@@ -268,25 +268,31 @@ const NAV_ITEMS = [
     })();
 
     // Email capture — Kit.com (ConvertKit) V3 API
-    // FIX: Supports multiple forms on the same page via ID suffixes
+    // Email capture — form-based with native validation + honeypot
     (function () {
       var suffixes = ['', '-inline'];
       suffixes.forEach(function (sfx) {
-        var btn = document.getElementById('email-submit-btn' + sfx);
-        var input = document.getElementById('strip-email' + sfx);
-        var field = document.getElementById('email-field' + sfx);
+        var form = document.getElementById('email-form' + sfx);
         var disclaimer = document.getElementById('email-disclaimer' + sfx);
         var thanks = document.getElementById('strip-thanks' + sfx);
-        if (!btn || !input || !thanks) return;
+        if (!form || !thanks) return;
 
-        btn.addEventListener('click', function () {
-          var email = input.value.trim();
-          if (!email || email.indexOf('@') === -1 || email.indexOf('.') === -1) {
-            input.style.borderColor = '#d63b2f';
-            input.focus();
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var input = form.querySelector('input[type="email"]');
+          var btn = form.querySelector('button[type="submit"]');
+          var honeypot = form.querySelector('input[name="website"]');
+
+          // Honeypot check — bots fill hidden fields, humans don't
+          if (honeypot && honeypot.value) return;
+
+          // Native validation (type="email" + required)
+          if (!input.checkValidity()) {
+            input.reportValidity();
             return;
           }
-          input.style.borderColor = '';
+
+          var email = input.value.trim();
           btn.textContent = 'Sending\u2026';
           btn.disabled = true;
 
@@ -304,7 +310,7 @@ const NAV_ITEMS = [
           })
           .then(function (data) {
             if (data && data.subscription) {
-              if (field) field.setAttribute('hidden', '');
+              form.setAttribute('hidden', '');
               if (disclaimer) disclaimer.setAttribute('hidden', '');
               thanks.removeAttribute('hidden');
             } else {
@@ -316,10 +322,6 @@ const NAV_ITEMS = [
             btn.disabled = false;
             input.style.borderColor = '#d63b2f';
           });
-        });
-
-        input.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter') { e.preventDefault(); btn.click(); }
         });
       });
     })();
