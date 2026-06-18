@@ -1,66 +1,70 @@
 ---
-// Cookie consent banner — appears on first visit, persists choice in localStorage.
-// Sits at bottom of viewport, doesn't block content.
+/**
+ * PrivacyNotice.astro (replaces CookieBanner.astro)
+ *
+ * This site uses genuinely cookieless analytics:
+ *   - Plausible Analytics: no cookies, no personal data, GDPR-compliant by design
+ *   - Cloudflare Web Analytics: no cookies, no cross-site tracking
+ *
+ * Since no cookies are set and no personal data is collected, the ePrivacy
+ * Directive (Article 5(3)) does not require consent. A consent banner that
+ * says "we use cookies" when we don't is misleading and arguably a GDPR
+ * Art. 13 violation (inaccurate privacy notice).
+ *
+ * This component shows a one-time informational notice — not a consent gate.
+ * No "Accept/Decline" because there's nothing to consent to.
+ *
+ * If cookies or personal-data tracking are ever added (e.g. GA4, Facebook
+ * Pixel), this MUST be converted back to a real consent gate that blocks
+ * those scripts until consent is given.
+ */
 ---
-<div id="cookie-banner" class="cookie-banner" hidden>
-  <div class="cookie-banner__inner">
+<div id="privacy-notice" class="privacy-notice" hidden>
+  <div class="privacy-notice__inner">
     <p>
-      We use cookies for analytics and to track affiliate clicks.
-      <a href="/cookie-policy/">Read our cookie policy</a>.
+      This site uses <strong>cookieless analytics</strong> (Plausible + Cloudflare) that collect
+      no personal data. Affiliate links earn us a commission at no cost to you.
+      <a href="/privacy-policy/">Privacy policy</a>.
     </p>
-    <div class="cookie-banner__actions">
-      <button id="cookie-decline" class="cookie-banner__btn cookie-banner__btn--ghost">
-        Decline
-      </button>
-      <button id="cookie-accept" class="cookie-banner__btn cookie-banner__btn--primary">
-        Accept
-      </button>
-    </div>
+    <button id="privacy-dismiss" class="privacy-notice__btn">Got it</button>
   </div>
 </div>
 <style>
-  .cookie-banner {
+  .privacy-notice {
     position: fixed; bottom: 0; left: 0; right: 0;
     background: var(--green); color: #fff;
-    padding: 16px clamp(1.5rem, 5vw, 4rem);
+    padding: 12px clamp(1.5rem, 5vw, 4rem);
     z-index: 100;
     box-shadow: 0 -4px 12px rgba(0,0,0,.18);
     transform: translateY(100%); transition: transform .4s ease;
   }
-  .cookie-banner.visible { transform: translateY(0); }
-  .cookie-banner__inner {
+  .privacy-notice.visible { transform: translateY(0); }
+  .privacy-notice__inner {
     max-width: 1200px; margin: 0 auto;
     display: flex; gap: 16px; align-items: center;
     flex-wrap: wrap;
   }
-  .cookie-banner p { flex: 1; min-width: 280px; font-size: 14px; line-height: 1.5; margin: 0; }
-  .cookie-banner a { color: var(--gold); text-decoration: underline; }
-  .cookie-banner__actions { display: flex; gap: 8px; }
-  .cookie-banner__btn {
-    padding: 10px 20px; border: none; border-radius: 6px;
-    font-weight: 700; font-size: 14px; cursor: pointer;
+  .privacy-notice p { flex: 1; min-width: 280px; font-size: 13px; line-height: 1.5; margin: 0; }
+  .privacy-notice a { color: var(--gold); text-decoration: underline; }
+  .privacy-notice strong { color: #fff; font-weight: 700; }
+  .privacy-notice__btn {
+    padding: 8px 20px; border: 1px solid rgba(255,255,255,.3); border-radius: 6px;
+    background: transparent; color: #fff;
+    font-weight: 700; font-size: 13px; cursor: pointer;
   }
-  .cookie-banner__btn--primary { background: var(--gold); color: #1a1a1a; }
-  .cookie-banner__btn--primary:hover { background: var(--gold-dark); }
-  .cookie-banner__btn--ghost { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.3); }
-  .cookie-banner__btn--ghost:hover { border-color: #fff; }
+  .privacy-notice__btn:hover { border-color: #fff; background: rgba(255,255,255,.1); }
 </style>
 <script is:inline>
   (function() {
-    var KEY = 'cg-cookie-consent';
-    var existing = localStorage.getItem(KEY);
-    if (existing) return;
-    var banner = document.getElementById('cookie-banner');
-    if (!banner) return;
-    banner.removeAttribute('hidden');
-    setTimeout(function() { banner.classList.add('visible'); }, 500);
-    document.getElementById('cookie-accept').addEventListener('click', function() {
-      localStorage.setItem(KEY, 'accepted');
-      banner.classList.remove('visible');
-    });
-    document.getElementById('cookie-decline').addEventListener('click', function() {
-      localStorage.setItem(KEY, 'declined');
-      banner.classList.remove('visible');
+    var KEY = 'cg-privacy-noticed';
+    if (localStorage.getItem(KEY)) return;
+    var notice = document.getElementById('privacy-notice');
+    if (!notice) return;
+    notice.removeAttribute('hidden');
+    setTimeout(function() { notice.classList.add('visible'); }, 800);
+    document.getElementById('privacy-dismiss').addEventListener('click', function() {
+      localStorage.setItem(KEY, '1');
+      notice.classList.remove('visible');
     });
   })();
 </script>
