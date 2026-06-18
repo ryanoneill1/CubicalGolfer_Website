@@ -207,15 +207,7 @@ export function comparisonProductsSchema(products: ComparisonProduct[]): object[
         availability: 'https://schema.org/InStock',
         seller: { '@type': 'Organization', name: p.retailer },
       },
-      ...(p.rating && p.ratingCount ? {
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: p.rating,
-          reviewCount: typeof p.ratingCount === 'string' ? parseInt(p.ratingCount.replace(/,/g, '')) : p.ratingCount,
-          bestRating: 5,
-          worstRating: 1,
-        },
-      } : {}),
+      // aggregateRating removed — ratingCount is Amazon data, not first-party
       ...(p.rating ? {
         review: {
           '@type': 'Review',
@@ -482,26 +474,19 @@ export function buyingGuideProductSchema(
   const priceMatch = affiliatePrice?.replace(/,/g, '').match(/\d+(?:\.\d+)?/);
   const numericPrice = priceMatch ? priceMatch[0] : '';
 
-  const hasRealCount = section.rating && section.ratingCount;
-  const hasRatingOnly = section.rating && !section.ratingCount;
-
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim(),
     description: section.body?.slice(0, 200) || '',
     image: productImage || `${DOMAIN}/images/og-image.jpg`,
-    // aggregateRating ONLY with real review count — never fabricated
-    ...(hasRealCount ? {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: section.rating,
-        reviewCount: parseInt(section.ratingCount.replace(/,/g, '')),
-        bestRating: 5,
-        worstRating: 1,
-      },
-    } : {}),
-    // Single editorial review when we have a rating (always)
+    // ── Single first-party editorial review only ──
+    // aggregateRating removed: the ratingCount values are Amazon review
+    // counts, not reviews collected on this site. Combining our editorial
+    // score (ratingValue) with Amazon's reviewCount misattributes the
+    // count and risks a Google manual action. A single honest Review with
+    // reviewRating is the policy-compliant way for affiliate sites to
+    // earn star snippets.
     ...(section.rating ? {
       review: {
         '@type': 'Review',

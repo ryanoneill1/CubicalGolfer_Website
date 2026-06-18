@@ -50,7 +50,7 @@ export interface Section {
   cons?:        string[];   // 2–3 bullet points on weaknesses
   items?:       Array<{ name: string; desc: string; affiliateKey?: string }>;
   rating?:      number;     // 1–5 stars
-  ratingCount?: string;     // e.g. "2,847" Amazon reviews
+  ratingCount?: string;     // Amazon review count (displayed in UI only, NOT used in schema)
   affiliateKey?: string;    // Direct affiliate key override for this section
 }
 
