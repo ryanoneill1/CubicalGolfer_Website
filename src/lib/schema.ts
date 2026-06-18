@@ -391,7 +391,7 @@ export function reviewSchema(article: Article): object | null {
   // Use thumbnail or product image
   const image = article.thumbnail
     ? `${DOMAIN}${article.thumbnail}`
-    : `${DOMAIN}/images/og-image.png`;
+    : `${DOMAIN}/images/og-image.jpg`;
 
   // Look up affiliate data for offers
   const affKey = (article as any).quickAnswerProduct || '';
