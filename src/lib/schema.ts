@@ -38,11 +38,11 @@ export function websiteSchema(): object {
     url: `${DOMAIN}/`,
     description: 'Independent golf gear reviews and improvement guides for everyday weekend golfers.',
     inLanguage: 'en-US',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${DOMAIN}/?s={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
+    // SearchAction removed — the site uses client-side search (SiteSearch.astro
+    // reading /api/search-index.json), not a /?s= server endpoint. The old
+    // SearchAction pointed to /?s={search_term_string} which just loaded the
+    // homepage, and robots.txt blocked it. If a /search/ page is ever built,
+    // re-add SearchAction with the correct target.
   };
 }
 
