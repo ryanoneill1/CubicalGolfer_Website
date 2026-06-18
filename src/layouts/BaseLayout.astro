@@ -122,7 +122,7 @@ const NAV_ITEMS = [
       <span></span><span></span><span></span>
     </button>
 
-    <div class="nav-links" id="nav-links" role="menubar">
+    <div class="nav-links" id="nav-links">
       {NAV_ITEMS.map(item => (
         <a
           href={item.href}
@@ -130,7 +130,6 @@ const NAV_ITEMS = [
             activeNav === item.key ? 'active' : '',
             (item as any).cta ? 'nav-cta' : '',
           ]}
-          role="menuitem"
         >{item.label}</a>
       ))}
     </div>

@@ -569,7 +569,7 @@ if (isBuyingGuide) {
           <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
             <tr>
-              {headers.map((h: string) => <th scope="col" tabindex="0" role="button" aria-label={`Sort by ${h}`}>{h}</th>)}
+              {headers.map((h: string) => <th scope="col"><button type="button" class="cmp-sort-btn" aria-sort="none" aria-label={`Sort by ${h}`}>{h}</button></th>)}
               <th scope="col" class="cmp-th-buy">Buy</th>
             </tr>
           </thead>
@@ -1026,20 +1026,22 @@ if (isBuyingGuide) {
     (function() {
       var table = document.querySelector('.cmp-table');
       if (!table) return;
-      var headers = table.querySelectorAll('thead th');
+      var buttons = table.querySelectorAll('thead .cmp-sort-btn');
       var tbody = table.querySelector('tbody');
       if (!tbody) return;
 
       var sortCol = -1;
       var sortDir = 1;
 
-      headers.forEach(function(th, idx) {
-        if (th.classList.contains('cmp-th-buy')) return;
-        function doSort() {
+      buttons.forEach(function(btn, idx) {
+        btn.addEventListener('click', function() {
           if (sortCol === idx) { sortDir *= -1; }
           else { sortCol = idx; sortDir = 1; }
-          headers.forEach(function(h) { h.classList.remove('sort-asc', 'sort-desc'); });
-          th.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
+
+          // Update aria-sort on all buttons, set active one
+          buttons.forEach(function(b) { b.setAttribute('aria-sort', 'none'); b.classList.remove('sort-asc', 'sort-desc'); });
+          btn.setAttribute('aria-sort', sortDir === 1 ? 'ascending' : 'descending');
+          btn.classList.add(sortDir === 1 ? 'sort-asc' : 'sort-desc');
 
           var rows = Array.from(tbody.querySelectorAll('tr'));
           rows.sort(function(a, b) {
@@ -1051,10 +1053,6 @@ if (isBuyingGuide) {
             return aText.localeCompare(bText) * sortDir;
           });
           rows.forEach(function(r) { tbody.appendChild(r); });
-        }
-        th.addEventListener('click', doSort);
-        th.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); doSort(); }
         });
       });
     })();

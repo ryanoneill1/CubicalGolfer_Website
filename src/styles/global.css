@@ -286,18 +286,24 @@ nav.site-nav {
   background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--s1);
 }
 .cmp-table th {
-  background: var(--green); color: #fff; padding: 13px 16px;
+  background: var(--green); color: #fff; padding: 0;
   text-align: left; font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
-  cursor: pointer; user-select: none; position: relative; white-space: nowrap;
+  position: relative; white-space: nowrap;
 }
-.cmp-table th:hover { background: #152c1e; }
-.cmp-table th::after {
+.cmp-sort-btn {
+  background: none; border: none; color: inherit; font: inherit;
+  letter-spacing: inherit; text-transform: inherit;
+  padding: 13px 16px; width: 100%; text-align: left;
+  cursor: pointer; user-select: none;
+}
+.cmp-sort-btn:hover { background: #152c1e; }
+.cmp-sort-btn::after {
   content: '⇅'; opacity: .35; margin-left: 4px; font-size: 10px;
 }
-.cmp-table th.sort-asc::after { content: '▲'; opacity: .9; }
-.cmp-table th.sort-desc::after { content: '▼'; opacity: .9; }
-.cmp-table th.cmp-th-buy { cursor: default; }
-.cmp-table th.cmp-th-buy::after { content: ''; }
+.cmp-sort-btn.sort-asc::after { content: '▲'; opacity: .9; }
+.cmp-sort-btn.sort-desc::after { content: '▼'; opacity: .9; }
+.cmp-sort-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+.cmp-table th.cmp-th-buy { cursor: default; padding: 13px 16px; }
 .cmp-table th.cmp-th-buy:hover { background: var(--green); }
 .cmp-table td {
   padding: 13px 16px; border-bottom: 1px solid var(--border);
