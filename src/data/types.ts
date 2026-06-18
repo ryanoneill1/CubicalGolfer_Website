@@ -19,7 +19,6 @@ export type PageType =
   | 'review'
   | 'listicle'
   | 'lifestyle'
-  | 'review'
   | 'local';
 
 export interface FAQItem {

@@ -546,16 +546,6 @@ if (isBuyingGuide) {
       </details>
     )}
 
-    {/* TABLE OF CONTENTS */}
-    {article.toc && article.toc.length > 0 && (
-      <nav class="toc" aria-label="Table of contents">
-        <p class="toc-heading">In this guide</p>
-        <ol>
-          {article.toc.map(item => <li>{item}</li>)}
-        </ol>
-      </nav>
-    )}
-
     {/* COMPARISON TABLE */}
     {article.comparisonTable && (() => {
       const headers = article.comparisonTable.headers;
@@ -669,7 +659,7 @@ if (isBuyingGuide) {
             const imgElement = sectionImgSrc ? (
               <img src={sectionImgSrc} alt={sectionImgAlt} width="280" height="200"
                 loading="lazy" decoding="async" class="product-section-img"
-                onerror="this.src='/images/products/placeholder.webp'" />
+                onerror="this.onerror=null;this.src='/images/products/placeholder.webp'" />
             ) : (
               <div class="product-img-fallback">
                 <span aria-hidden="true" style="font-size:48px">{article.emoji}</span>
