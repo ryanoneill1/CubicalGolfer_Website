@@ -333,35 +333,50 @@ const NAV_ITEMS = [
       data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_ANALYTICS_TOKEN}"}`}></script>
   )}
 
-  <!-- Affiliate click + email conversion tracking -->
+  <!-- Affiliate click + email conversion tracking (Plausible custom events) -->
   <script is:inline>
     (function() {
-      // Track affiliate link clicks (any sponsored link)
+      // ── Affiliate Click tracking ──
+      // Fires a Plausible custom event with product, retailer, and page.
+      // Requires: Plausible script loaded with data-domain (already in <head>).
+      // In Plausible dashboard: Settings → Goals → Add Goal → "Affiliate Click"
       document.addEventListener('click', function(e) {
         var link = e.target.closest('a[rel*="sponsored"]');
         if (!link) return;
-        var product = link.getAttribute('aria-label') || link.textContent || 'unknown';
-        var url = link.href || '';
-        // Log to console in dev; Cloudflare WA tracks navigation automatically
-        if (typeof console !== 'undefined') {
-          console.log('[CG Analytics] Affiliate click:', product.substring(0, 60), url.substring(0, 80));
+        var product = (link.getAttribute('aria-label') || link.textContent || 'unknown').substring(0, 80).replace('Check price for ', '');
+        var retailer = 'Amazon';
+        if (link.href.indexOf('golfgalaxy') > -1) retailer = 'Golf Galaxy';
+        else if (link.href.indexOf('playbetter') > -1) retailer = 'PlayBetter';
+        else if (link.href.indexOf('bushnell.pxf') > -1) retailer = 'Bushnell';
+        var page = window.location.pathname;
+
+        if (typeof window.plausible === 'function') {
+          window.plausible('Affiliate Click', { props: { product: product, retailer: retailer, page: page } });
         }
-        // If Plausible or GA4 is added later, fire event here:
-        // if (window.plausible) plausible('Affiliate Click', { props: { product: product } });
       });
 
-      // Track email-capture conversion (thanks message becomes visible)
+      // ── Email Signup tracking ──
+      // Watches for ConvertKit's "thanks" element appearing after form submit.
+      // In Plausible dashboard: Settings → Goals → Add Goal → "Email Signup"
       var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(m) {
           if (m.target.classList && m.target.classList.contains('email-strip__thanks')) {
-            if (typeof console !== 'undefined') {
-              console.log('[CG Analytics] Email capture conversion');
+            var placement = 'footer-strip';
+            var el = m.target.closest('[data-placement]');
+            if (el) placement = el.getAttribute('data-placement');
+
+            if (typeof window.plausible === 'function') {
+              window.plausible('Email Signup', { props: { placement: placement } });
             }
           }
         });
       });
       var strip = document.querySelector('.email-strip');
       if (strip) observer.observe(strip, { childList: true, subtree: true });
+
+      // Also watch exit-intent popup
+      var exitPopup = document.querySelector('.exit-intent');
+      if (exitPopup) observer.observe(exitPopup, { childList: true, subtree: true });
     })();
   </script>
 </body>
