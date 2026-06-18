@@ -9,7 +9,8 @@ export type Category =
   | 'golf-tech'
   | 'golf-accessories'
   | 'improve-game'
-  | 'golf-lifestyle';
+  | 'golf-lifestyle'
+  | 'indoor-golf';
 
 export type PageType =
   | 'buying-guide'
@@ -34,6 +35,9 @@ export interface ComparisonRow {
   feature2:    string;
   winner:      boolean;
   affiliateKey?: string;
+  badge?:       string;     // e.g. "TOP PICK", "BEST VALUE"
+  rating?:      number;     // 1–5 stars
+  ratingCount?: string;     // Display-only review count
 }
 
 export interface ComparisonTable {
@@ -52,6 +56,9 @@ export interface Section {
   rating?:      number;     // 1–5 stars
   ratingCount?: string;     // Amazon review count (displayed in UI only, NOT used in schema)
   affiliateKey?: string;    // Direct affiliate key override for this section
+  callout?:      string;    // Callout text (e.g. "Editor's Note")
+  sectionImage?: string;    // Section illustration image path
+  sectionImageAlt?: string; // Alt text for section image
 }
 
 export interface RelatedLink {
@@ -91,6 +98,20 @@ export interface Article {
   faq?:          FAQItem[];
   rating?:       number;        // 1–5 (one decimal) — Review schema rating for pageType 'review'
   related:       RelatedLink[];
+  relatedComparisons?: Array<{ label: string; url: string; description?: string }>;
+  stickyLabel?:  string;      // Label for sticky bar CTA
+  quickPickRating?: number;   // Rating for the quick-pick product
+  quickPickWhy?: string;      // Why this is the top pick (displayed in quick-pick card)
+  authorByline?: {            // Per-article byline overrides
+    roundsTested?: number;
+    lastTested?: string;
+    courseTested?: string;
+  };
+  cgScore?: {                 // Cubical Golfer Score card data
+    overall?: number;
+    rounds?: number;
+    categories?: Array<{ label: string; score: number }>;
+  };
   // ── Auto-injected by linking.ts ─────────────────────────────────────────────
   internalLinks?: RelatedLink[];
 }
