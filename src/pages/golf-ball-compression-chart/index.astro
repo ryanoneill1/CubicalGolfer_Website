@@ -1,4 +1,5 @@
 ---
+import { AUTHOR_PROFILE } from '../../data/author';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
@@ -126,7 +127,7 @@ const schemas = [
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">12-handicap weekend golfer, Chicago, IL</span>
+          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
         </span>
         <span class="author-meta">
           📖 3,400 words &nbsp;·&nbsp;
@@ -143,7 +144,7 @@ const schemas = [
     <ul class="trust-card__list">
       <li><strong>Every ball purchased</strong> — bought with our own money, no manufacturer samples</li>
       <li><strong>Compression data verified</strong> — cross-referenced with manufacturer specs and independent testing</li>
-      <li><strong>12-handicap perspective</strong> — recommendations for weekend golfers, not tour pros</li>
+      <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — recommendations for weekend golfers, not tour pros</li>
       <li><strong>Updated 2026-05-25</strong> — prices and availability checked monthly</li>
     </ul>
     <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>

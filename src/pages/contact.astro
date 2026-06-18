@@ -1,4 +1,5 @@
 ---
+import { AUTHOR_PROFILE } from '../data/author';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { breadcrumbSchema } from '../lib/schema';
 
@@ -46,7 +47,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
 
     <div style="margin-top:40px;padding-top:24px;border-top:1px solid rgba(0,0,0,.1);">
       <p style="font-size:14px;color:var(--muted);">
-        Cubical Golfer is run by Ryan O., a 12-handicap weekend golfer in Chicago, IL.
+        Cubical Golfer is run by Ryan O., a {AUTHOR_PROFILE.handicapLabel} weekend golfer in {AUTHOR_PROFILE.city}.
         <a href="/about/">Learn more about me and how I test →</a>
       </p>
     </div>

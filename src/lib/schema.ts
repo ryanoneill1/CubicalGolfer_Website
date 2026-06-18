@@ -11,6 +11,8 @@
 import type { Article, Comparison, GolfCity, FAQItem } from '../data/types';
 import { AFFILIATE } from '../data/affiliate-links';
 
+import { AUTHOR_SCHEMA as AUTHOR } from '../data/author';
+
 const DOMAIN    = 'https://www.cubicalgolfer.com';
 const LOGO_URL  = `${DOMAIN}/images/cubicalgolfer-logo.webp`;
 const OG_IMAGE  = `${DOMAIN}/images/og-image.jpg`;
@@ -20,26 +22,7 @@ const PUBLISHER = {
   url: DOMAIN,
   logo: { '@type': 'ImageObject', url: LOGO_URL, width: 400, height: 400 },
 };
-const AUTHOR = {
-  '@type': 'Person',
-  name: 'Ryan O.',
-  alternateName: 'Cubical Golfer',
-  url: `${DOMAIN}/about/`,
-  jobTitle: '10-Index Weekend Golfer & Gear Editor',
-  description: 'Got serious about golf in 2012, broke a chronic driver issue in 2020 that dropped him to a 10 index. Tests every piece of gear on his own dime, playing twice a week year-round out of Harborside  in Chicago, IL. No freebies, no manufacturer loans.',
-  image: `${DOMAIN}/images/ryan-author-photo.webp`,
-  '@id': `${DOMAIN}/about/#author`,
-  knowsAbout: [
-    'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
-    'Golf irons', 'Golf drivers', 'Golf balls', 'Golf putters',
-    'Golf swing improvement', 'Golf equipment testing', 'Golf simulator setup',
-    'Weekend golf practice', 'Office golf fitness', 'Budget golf gear',
-    'Golf for beginners', 'Golf course management',
-  ],
-  // sameAs: populate with real profile URLs as accounts are created (Part B).
-  // Empty entries cause schema validation warnings — only include URLs that exist.
-  // Example: sameAs: ['https://linkedin.com/in/...', 'https://x.com/...'],
-};
+// AUTHOR imported from src/data/author.ts — single source of truth
 
 export function schemaTag(obj: object): string {
   return `<script type="application/ld+json">${JSON.stringify(obj)}</script>`;

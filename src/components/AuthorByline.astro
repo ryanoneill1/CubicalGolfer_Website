@@ -3,6 +3,7 @@
  * AuthorByline.astro — EEAT author attribution with per-article testing data.
  * Appears below H1, above article body.
  */
+import { AUTHOR_PROFILE } from '../data/author';
 
 interface Props {
   name?: string;
@@ -14,12 +15,12 @@ interface Props {
 }
 
 const {
-  name = 'Ryan O.',
-  handicap = '12 handicap',
+  name = AUTHOR_PROFILE.name,
+  handicap = AUTHOR_PROFILE.handicapLabel,
   roundsTested,
   lastTested,
   courseTested,
-  photoUrl = '/images/ryan-author-photo.webp',
+  photoUrl = AUTHOR_PROFILE.photoPath,
 } = Astro.props;
 
 const initials = name.split(' ').map(w => w[0]).join('').toUpperCase();

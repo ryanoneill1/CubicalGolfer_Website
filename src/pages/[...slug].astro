@@ -125,12 +125,7 @@ const stickyProduct = (() => {
 })();
 
 // FIX #1: Single named author replaces rotating fake personas (Chief Bogey Officer, etc.)
-const AUTHOR_BYLINE = {
-  name: 'Ryan O.',
-  tagline: '12-handicap weekend golfer, Chicago, IL',
-  bio: 'Tests every piece of gear on his own dime across 25–40 rounds a year.',
-  avatar: '/images/ryan-author-photo.webp',
-};
+import { AUTHOR_BYLINE, AUTHOR_PROFILE } from '../data/author';
 
 // Cross-category "Cubicle Golfer" tips — shown on ALL article pages with category-aware links
 const CUBICLE_TIPS_BY_CAT: Record<string, Array<{ slug: string; label: string }>> = {
@@ -396,7 +391,7 @@ if (isBuyingGuide) {
       <p class="trust-card__heading">Why Trust This Guide</p>
       <ul class="trust-card__list">
         <li><strong>Every product purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
-        <li><strong>10+ real rounds per product</strong> — tested on actual courses, not a simulator or fitting bay</li>
+        <li><strong>{AUTHOR_PROFILE.testingLabel}</strong> — tested on actual courses, not a simulator or fitting bay</li>
         <li><strong>12-handicap perspective</strong> — written for weekend golfers, not scratch players or tour pros</li>
         <li><strong>Updated {article.dateModified}</strong> — prices and picks reviewed regularly</li>
       </ul>
@@ -528,7 +523,7 @@ if (isBuyingGuide) {
     {isBuyingGuide && (
       <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
         <span style="font-size:15px;">✅</span>
-        <span><strong>Updated {article.dateModified || article.datePublished}</strong> — All products independently purchased and tested over 25+ real rounds. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+        <span><strong>Updated {article.dateModified || article.datePublished}</strong> — All products independently purchased and tested over {AUTHOR_PROFILE.siteTestTotal} real rounds. {AUTHOR_PROFILE.gearPolicy} <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
       </div>
     )}
 
