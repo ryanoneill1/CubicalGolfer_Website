@@ -60,6 +60,7 @@ html { scroll-behavior: smooth; font-size: 16px; border: 0; }
   --green-mid:  #264D33;
   --green-card: #2A5038;
   --gold:       #C8A84B;
+  --gold-text:   #80641A;  /* AA on white 5.59:1, on cream 4.96:1 */
   --gold-dark:  #A8882A;
   --cream:      #F4F1EA;
   --cream-dark: #EAE6DD;
