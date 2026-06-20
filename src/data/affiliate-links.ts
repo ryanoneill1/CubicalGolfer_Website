@@ -29,6 +29,7 @@ export const AFFILIATE: Record<string, {
   asin?: string;
   imgSrc?: string;
   imgAlt?: string;
+  golfGalaxyUrl?: string;
   benefits?: string[];
 }> = {
 

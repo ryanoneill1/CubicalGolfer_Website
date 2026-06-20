@@ -6,7 +6,7 @@ import { COMPARISONS } from '../../data/comparisons';
 import { ARTICLES } from '../../data/articles';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 // All "X vs Y" articles that live outside the /compare/ route
-const vsArticles = (ARTICLES as any[]).filter(a =>
+const vsArticles = ARTICLES.filter(a =>
   (a.slug.includes('-vs-') || a.pageType === 'comparison') &&
   !a.slug.startsWith('/compare/')
 ).sort((a: any, b: any) => a.title.localeCompare(b.title));

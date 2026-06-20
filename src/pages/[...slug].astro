@@ -36,7 +36,7 @@ const { article } = Astro.props;
 
 const meta    = articleMeta(article);
 const related = getMergedRelated(article, 6);
-const wordCount = parseInt(((article as any).words ?? '0').replace(/,/g, ''), 10);
+const wordCount = parseInt((article.words ?? '0').replace(/,/g, ''), 10);
 const showBackToTop = wordCount >= 1500;
 
 const schemas: object[] = [
@@ -89,7 +89,7 @@ const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
 // Generate ToC items from article sections (for articles with 4+ sections)
 const tocItems = (() => {
-  const sections = (article as any).sections || [];
+  const sections = article.sections || [];
   if (sections.length < 5) return [];
   // For buying guides with many products, only show guide-level sections (not individual products)
   let items = sections
@@ -100,7 +100,7 @@ const tocItems = (() => {
       indent: false,
     }));
   // Add FAQ if article has faq
-  if ((article as any).faq?.length > 0) {
+  if (article.faq?.length > 0) {
     items.push({ label: 'FAQ', anchor: 'faq', indent: false });
   }
   // Cap at 10 items to prevent sidebar overflow
@@ -114,7 +114,7 @@ const tocItems = (() => {
 // Sticky mobile CTA bar — first product for buying guides
 const stickyProduct = (() => {
   if (!isBuyingGuide) return null;
-  const key = (article as any).quickAnswerProduct
+  const key = article.quickAnswerProduct
     || article.comparisonTable?.rows?.find((r: any) => r.affiliateKey)?.affiliateKey
     || null;
   if (!key) return null;
@@ -319,7 +319,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 if (isBuyingGuide) {
   for (const section of article.sections) {
     if (!section.badge) continue;
-    const sectionAffKey = (section as any).affiliateKey;
+    const sectionAffKey = section.affiliateKey;
     const pid = (sectionAffKey !== undefined)
       ? sectionAffKey
       : (BADGE_TO_PRODUCT[article.id]?.[section.badge || ''] ?? '');
@@ -348,7 +348,7 @@ if (isBuyingGuide) {
         price={topAff.price ?? ''}
         url={topAff.url}
         retailer={topAff.retailer}
-        badge={(article as any).stickyLabel || (topRow.winner ? 'BEST PICK' : topRow.bestFor)}
+        badge={article.stickyLabel || (topRow.winner ? 'BEST PICK' : topRow.bestFor)}
       />
     );
   })()}
@@ -400,11 +400,11 @@ if (isBuyingGuide) {
   )}
 
   {/* ── ENHANCED AUTHOR BYLINE — per-article testing data (EEAT) ── */}
-  {(article as any).authorByline && (
+  {article.authorByline && (
     <AuthorByline
-      roundsTested={(article as any).authorByline.roundsTested}
-      lastTested={(article as any).authorByline.lastTested}
-      courseTested={(article as any).authorByline.courseTested}
+      roundsTested={article.authorByline.roundsTested}
+      lastTested={article.authorByline.lastTested}
+      courseTested={article.authorByline.courseTested}
     />
   )}
 
@@ -423,8 +423,8 @@ if (isBuyingGuide) {
     )}
 
     {/* QUICK ANSWER BOX — buying guides only */}
-    {(article as any).quickAnswerProduct && article.bottomLine && (() => {
-      const qaAff = getAffiliateLink((article as any).quickAnswerProduct);
+    {article.quickAnswerProduct && article.bottomLine && (() => {
+      const qaAff = getAffiliateLink(article.quickAnswerProduct);
       const productCount = article.comparisonTable?.rows?.length ?? article.sections?.length ?? 0;
       if (!qaAff?.url) return null;
       return (
@@ -445,7 +445,7 @@ if (isBuyingGuide) {
 
     {/* ── ABOVE-THE-FOLD PRODUCT CTA — buying guides only ── */}
     {isBuyingGuide && (() => {
-      const ctaKey = (article as any).quickAnswerProduct;
+      const ctaKey = article.quickAnswerProduct;
       if (!ctaKey) return null;
       const ctaAff = getAffiliateLink(ctaKey);
       if (!ctaAff?.url) return null;
@@ -457,31 +457,31 @@ if (isBuyingGuide) {
           productName={ctaName}
           amazonUrl={ctaAff.url}
           amazonPrice={ctaAff.price}
-          altUrl={(ctaAff as any).golfGalaxyUrl || undefined}
-          altLabel={(ctaAff as any).golfGalaxyUrl
-            ? ((ctaAff as any).golfGalaxyUrl.includes('amazon') ? 'Amazon' :
-               (ctaAff as any).golfGalaxyUrl.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy')
+          altUrl={ctaAff.golfGalaxyUrl || undefined}
+          altLabel={ctaAff.golfGalaxyUrl
+            ? (ctaAff.golfGalaxyUrl.includes('amazon') ? 'Amazon' :
+               ctaAff.golfGalaxyUrl.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy')
             : undefined}
           badge={ctaBadge}
-          rating={(article as any).quickPickRating || undefined}
-          imageUrl={(ctaAff as any).imgSrc || undefined}
-          why={(article as any).quickPickWhy || undefined}
-          bestFor={(article as any).quickPickBestFor || ctaRow?.bestFor || undefined}
+          rating={article.quickPickRating || undefined}
+          imageUrl={ctaAff.imgSrc || undefined}
+          why={article.quickPickWhy || undefined}
+          bestFor={article.quickPickBestFor || ctaRow?.bestFor || undefined}
         />
       );
     })()}
 
     {/* ── CG TEST SCORE — visual scoring breakdown ── */}
-    {(article as any).cgScore && (
+    {article.cgScore && (
       <CGScore
-        overallScore={(article as any).cgScore.overall}
-        categories={(article as any).cgScore.categories}
-        verdict={(article as any).cgScore.verdict}
-        rounds={(article as any).cgScore.rounds || 12}
+        overallScore={article.cgScore.overall}
+        categories={article.cgScore.categories}
+        verdict={article.cgScore.verdict}
+        rounds={article.cgScore.rounds || 12}
       />
     )}
 
-    {article.bottomLine && !(article as any).quickAnswerProduct && (
+    {article.bottomLine && !article.quickAnswerProduct && (
       <div class="bottom-line-box" role="note" aria-label="Our verdict">
         <p class="bottom-line-label">Our Verdict</p>
         <p set:html={article.bottomLine} />
@@ -506,9 +506,9 @@ if (isBuyingGuide) {
                 label={aff.label}
                 winner={row.winner}
                 emoji={article.emoji}
-                imgSrc={(aff as any).imgSrc}
-                imgAlt={(aff as any).imgAlt ?? row.name}
-                benefits={(aff as any).benefits}
+                imgSrc={aff.imgSrc}
+                imgAlt={aff.imgAlt ?? row.name}
+                benefits={aff.benefits}
               />
             );
           })}
@@ -528,15 +528,15 @@ if (isBuyingGuide) {
     )}
 
     {/* UPDATE LOG — collapsible changelog */}
-    {(article as any).updateLog && (article as any).updateLog.length > 0 && (
+    {article.updateLog && article.updateLog.length > 0 && (
       <details class="update-log" style="margin:16px 0 24px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:13px;">
         <summary style="padding:10px 16px;cursor:pointer;font-weight:600;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px;">
           <span style="font-size:15px;">📋</span>
-          Update Log — last updated {(article as any).updateLog[0].date}
+          Update Log — last updated {article.updateLog[0].date}
           <span style="margin-left:auto;font-size:11px;color:var(--muted);opacity:.6;">▼</span>
         </summary>
         <div style="padding:4px 16px 14px;border-top:1px solid var(--border);">
-          {(article as any).updateLog.map((entry: {date: string; note: string}) => (
+          {article.updateLog.map((entry: {date: string; note: string}) => (
             <div style="display:flex;gap:10px;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.04);">
               <span style="flex-shrink:0;font-weight:600;color:var(--green);min-width:90px;">{entry.date}</span>
               <span style="color:var(--body);">{entry.note}</span>
@@ -627,7 +627,7 @@ if (isBuyingGuide) {
 
     {/* INDIVIDUAL PRODUCT SECTIONS */}
     {article.sections.map((section, idx) => {
-      const sectionAffKey = (section as any).affiliateKey;
+      const sectionAffKey = section.affiliateKey;
       const productId = (sectionAffKey !== undefined)
         ? sectionAffKey   // explicit affiliateKey on section takes priority ('' = no product)
         : (BADGE_TO_PRODUCT[article.id]?.[section.badge || ''] ?? '');
@@ -640,22 +640,22 @@ if (isBuyingGuide) {
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
 
-          {(section as any).rating && (
-            <div class="product-rating" aria-label={`Rated ${(section as any).rating} out of 5 stars`}>
+          {section.rating && (
+            <div class="product-rating" aria-label={`Rated ${section.rating} out of 5 stars`}>
               <span class="stars" aria-hidden="true">
-                {'★'.repeat(Math.floor((section as any).rating))}{'☆'.repeat(5 - Math.floor((section as any).rating))}
+                {'★'.repeat(Math.floor(section.rating))}{'☆'.repeat(5 - Math.floor(section.rating))}
               </span>
-              <span class="rating-score">{(section as any).rating}/5</span>
-              {(section as any).ratingCount && (
-                <span class="rating-count">({(section as any).ratingCount} reviews)</span>
+              <span class="rating-score">{section.rating}/5</span>
+              {section.ratingCount && (
+                <span class="rating-count">({section.ratingCount} reviews)</span>
               )}
             </div>
           )}
 
           {/* Product image — only shown when a real product key exists */}
           {section.badge && isBuyingGuide && productId && (() => {
-            const sectionImgSrc = aff ? (aff as any).imgSrc : null;
-            const sectionImgAlt = aff ? (aff as any).imgAlt ?? section.h2 : section.h2;
+            const sectionImgSrc = aff ? aff.imgSrc : null;
+            const sectionImgAlt = aff ? aff.imgAlt ?? section.h2 : section.h2;
             const imgElement = sectionImgSrc ? (
               <img src={sectionImgSrc} alt={sectionImgAlt} width="280" height="200"
                 loading="lazy" decoding="async" class="product-section-img"
@@ -677,9 +677,9 @@ if (isBuyingGuide) {
           {section.body && section.body.trim() && <div class="section-body" set:html={section.body} />}
 
           {/* Inline section image — for editorial/lifestyle images in article body */}
-          {(section as any).sectionImage && (() => {
+          {section.sectionImage && (() => {
             const secImg = (
-              <img src={(section as any).sectionImage} alt={(section as any).sectionImageAlt ?? section.h2}
+              <img src={section.sectionImage} alt={section.sectionImageAlt ?? section.h2}
                 width="680" height="400" loading="lazy" decoding="async"
                 style="max-width:100%;height:auto;border-radius:12px;"
                 onerror="this.style.display='none'" />
@@ -693,13 +693,13 @@ if (isBuyingGuide) {
           })()}
 
           {/* Inline cubicle golfer callout — contextual cross-link inside article body */}
-          {(section as any).callout && (
+          {section.callout && (
             <div style="margin:20px 0;padding:16px 20px;background:#f0f7f2;border-left:4px solid var(--green);border-radius:0 8px 8px 0;">
               <p style="margin:0;font-size:14px;line-height:1.6;color:var(--body);">
                 🏢 <strong>Cubicle Golfer Tip:</strong>{' '}
-                {(section as any).callout.text}{' '}
-                <a href={(section as any).callout.link} style="color:var(--green);font-weight:700;text-decoration:underline;">
-                  {(section as any).callout.label} →
+                {section.callout.text}{' '}
+                <a href={section.callout.link} style="color:var(--green);font-weight:700;text-decoration:underline;">
+                  {section.callout.label} →
                 </a>
               </p>
             </div>
@@ -748,7 +748,7 @@ if (isBuyingGuide) {
             <AffiliateCTA
               url={aff.url} price={aff.price} name={section.h2}
               retailer={aff.retailer} label={aff.label}
-              golfGalaxyUrl={(aff as any).golfGalaxyUrl || ''}
+              golfGalaxyUrl={aff.golfGalaxyUrl || ''}
               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
               disclosure={true}
               dateChecked={article.dateModified}
@@ -807,7 +807,7 @@ if (isBuyingGuide) {
     {article.pageType === 'tutorial' && (() => {
       const gearLinks = (article.related || [])
         .filter((r: any) => {
-          const match = (ARTICLES as any[]).find(a => a.slug === r.slug);
+          const match = ARTICLES.find(a => a.slug === r.slug);
           return match && (match.pageType === 'buying-guide' || match.pageType === 'review');
         })
         .slice(0, 3);
@@ -833,13 +833,13 @@ if (isBuyingGuide) {
       const recAff = getAffiliateLink(article.quickAnswerProduct);
       if (!recAff?.url) return null;
       const recName = article.quickAnswerProduct.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
-      const secUrl = (recAff as any).golfGalaxyUrl || '';
+      const secUrl = recAff.golfGalaxyUrl || '';
       const secRetailer = secUrl.includes('amazon') ? 'Amazon'
         : secUrl.includes('playbetter') ? 'PlayBetter'
         : secUrl.includes('golfgalaxy') || secUrl.includes('click-101736949') ? 'Golf Galaxy'
         : '';
-      const recImg = (recAff as any).imgSrc || '';
-      const recAlt = (recAff as any).imgAlt || recName;
+      const recImg = recAff.imgSrc || '';
+      const recAlt = recAff.imgAlt || recName;
       return (
         <div class="rec-product-box" style="margin:32px 0;padding:20px 24px;background:#fff;border:2px solid var(--gold);border-radius:10px;">
           <p style="font-weight:700;font-size:13px;margin:0 0 10px;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">🎯 Our Recommended Gear</p>
@@ -887,10 +887,10 @@ if (isBuyingGuide) {
     <SocialShare url={`https://www.cubicalgolfer.com${article.slug}`} title={article.titleDisplay} />
 
     {/* RELATED COMPARISONS — links to /compare/ pages for better internal linking */}
-    {(article as any).relatedComparisons && (article as any).relatedComparisons.length > 0 && (
+    {article.relatedComparisons && article.relatedComparisons.length > 0 && (
       <RelatedLinks
         heading="Related Comparisons"
-        links={(article as any).relatedComparisons}
+        links={article.relatedComparisons}
       />
     )}
 
@@ -935,14 +935,14 @@ if (isBuyingGuide) {
     <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified}</div>
 
     {/* SOURCES & REFERENCES */}
-    {(article as any).sources && (article as any).sources.length > 0 && (
+    {article.sources && article.sources.length > 0 && (
       <div class="update-stamp" style="margin-top:12px;font-size:12px;line-height:1.8;">
         <strong style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Sources & References</strong>
         <div style="margin-top:6px;">
-          {(article as any).sources.map((src: {label: string; url: string}, i: number) => (
+          {article.sources.map((src: {label: string; url: string}, i: number) => (
             <span>
               <a href={src.url} target="_blank" rel="noopener noreferrer nofollow" style="color:var(--green);text-decoration:underline;">{src.label}</a>
-              {i < (article as any).sources.length - 1 && <span style="color:var(--muted);margin:0 8px;">·</span>}
+              {i < article.sources.length - 1 && <span style="color:var(--muted);margin:0 8px;">·</span>}
             </span>
           ))}
         </div>
@@ -987,10 +987,10 @@ if (isBuyingGuide) {
       <div class="related-grid">
         {sameCategory.map(a => (
           <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
-            <div class={`art-thumb ${(a as any).thumbnail ? '' : a.thumb}`}>
+            <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
               <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
-              {(a as any).thumbnail ? (
-                <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async"
+              {a.thumbnail ? (
+                <img src={a.thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async"
                   width="400" height="260" class="art-thumb__img" onerror="this.style.display='none'" />
               ) : (
                 <span aria-hidden="true">{a.emoji}</span>

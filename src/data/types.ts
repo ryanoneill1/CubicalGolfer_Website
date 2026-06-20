@@ -101,6 +101,7 @@ export interface Article {
   stickyLabel?:  string;      // Label for sticky bar CTA
   quickPickRating?: number;   // Rating for the quick-pick product
   quickPickWhy?: string;      // Why this is the top pick (displayed in quick-pick card)
+  quickPickBestFor?: string;  // "Best for" label on quick-pick card
   authorByline?: {            // Per-article byline overrides
     roundsTested?: number;
     lastTested?: string;
@@ -194,5 +195,6 @@ export interface AffiliateLink {
   retailer: string;
   imgSrc?:  string;
   imgAlt?:  string;
+  golfGalaxyUrl?: string; // Alternative retailer link
   benefits?: string[];
 }

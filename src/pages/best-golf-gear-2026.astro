@@ -104,7 +104,7 @@ const winners: Winner[] = [
 
     <!-- Individual category winners -->
     {winners.map(w => {
-      const aff = getAffiliateLink(w.affiliateKey) as any;
+      const aff = getAffiliateLink(w.affiliateKey);
       return (
         <section class="art-section">
           <h2>{w.emoji} Best {w.category}: {w.name}</h2>
