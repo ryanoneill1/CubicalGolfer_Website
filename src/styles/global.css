@@ -75,9 +75,9 @@ html { scroll-behavior: smooth; font-size: 16px; border: 0; }
   --r2:         12px;
   --r3:         16px;
   --nav-h:      64px;
-  --prose-w:     720px;
-  --content-w:  1140px;
-  --page-px: clamp(1.5rem, 5vw, 4rem);
+  --prose-w:     720px;   /* max width for body text — comfortable line length */
+  --content-w:  1140px;  /* article / compare / city body container */
+  --page-px: clamp(1.5rem, 5vw, 4rem); /* horizontal page padding */
 }
 
 body {
@@ -213,11 +213,14 @@ nav.site-nav {
    Structural elements use full container width.
    Reading text capped at --prose-w for comfortable line lengths.
    ═══════════════════════════════════════════════════════════════ */
-:root {
-  --prose-w:     720px;   /* max width for body text — comfortable line length   */
-  --content-w:  1140px;   /* article / compare / city body container             */
-  --page-px: clamp(1.5rem, 5vw, 4rem);  /* horizontal page padding              */
-}
+/* ── Breakpoint reference (target scale for future consolidation) ──
+ *   --bp-sm:   480px   mobile small
+ *   --bp-md:   768px   tablet / 2-col
+ *   --bp-lg:  1024px   desktop
+ *   --bp-xl:  1280px   wide desktop
+ *   Current file uses ~22 ad-hoc values (380–1200px).
+ *   Migrate one query at a time toward these 4; verify layout each step.
+ */
 
 .art-content {
   max-width: var(--content-w);
