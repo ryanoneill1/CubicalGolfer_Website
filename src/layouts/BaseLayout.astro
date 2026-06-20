@@ -327,13 +327,10 @@ const NAV_ITEMS = [
           btn.textContent = 'Sending\u2026';
           btn.disabled = true;
 
-          fetch('https://api.convertkit.com/v3/forms/9359554/subscribe', {
+          fetch('/api/subscribe', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json; charset=utf-8' },
-            body: JSON.stringify({
-              api_key: 'GODQuWrlCrC__lqMOglU1Q',
-              email: email
-            })
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
           })
           .then(function (res) {
             if (!res.ok) throw new Error(res.status);

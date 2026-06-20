@@ -29,7 +29,7 @@
   # Once you've confirmed zero console errors for a week, change
   # "Content-Security-Policy-Report-Only" to "Content-Security-Policy"
   # to start enforcing.
-  Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self' 'unsafe-inline' https://plausible.io https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.convertkit.com https://plausible.io https://static.cloudflareinsights.com; frame-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; manifest-src 'self'
+  Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self' 'unsafe-inline' https://plausible.io https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://plausible.io https://static.cloudflareinsights.com; frame-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; manifest-src 'self'
 
 # ── Cache immutable hashed assets forever ──
 /_astro/*
