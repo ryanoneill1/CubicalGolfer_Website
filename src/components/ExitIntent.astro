@@ -24,7 +24,7 @@
 </div>
 
 <style>
-  .exit-intent { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center; }
+  .exit-intent { position: fixed; inset: 0; z-index: 2000; display: none; align-items: center; justify-content: center; }
   .exit-intent.visible { display: flex; }
   .exit-intent__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
   .exit-intent__inner {
@@ -105,6 +105,8 @@
     function show() {
       if (shown) return;
       if (Date.now() - pageLoadTime < MIN_DELAY) return;
+      // Don't show exit-intent while another bottom overlay is active
+      if (document.body.classList.contains('has-bottom-banner')) return;
       shown = true;
       overlay.removeAttribute('hidden');
       // Force reflow before adding visible class for animation

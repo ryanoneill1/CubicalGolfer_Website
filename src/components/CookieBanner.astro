@@ -34,7 +34,7 @@
     position: fixed; bottom: 0; left: 0; right: 0;
     background: var(--green); color: #fff;
     padding: 12px clamp(1.5rem, 5vw, 4rem);
-    z-index: 100;
+    z-index: 1000;
     box-shadow: 0 -4px 12px rgba(0,0,0,.18);
     transform: translateY(100%); transition: transform .4s ease;
   }
@@ -61,10 +61,12 @@
     var notice = document.getElementById('privacy-notice');
     if (!notice) return;
     notice.removeAttribute('hidden');
+    document.body.classList.add('has-bottom-banner');
     setTimeout(function() { notice.classList.add('visible'); }, 800);
     document.getElementById('privacy-dismiss').addEventListener('click', function() {
       localStorage.setItem(KEY, '1');
       notice.classList.remove('visible');
+      document.body.classList.remove('has-bottom-banner');
     });
   })();
 </script>

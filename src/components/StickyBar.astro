@@ -57,8 +57,9 @@ if (!url) return;
         const winH = window.innerHeight;
         const threshold = docH * 0.4;
         const nearFooter = scrollY + winH > docH - 300;
+        const bannerOpen = document.body.classList.contains('has-bottom-banner');
 
-        if (scrollY > threshold && !nearFooter) {
+        if (scrollY > threshold && !nearFooter && !bannerOpen) {
           bar.classList.add('sb--visible');
         } else {
           bar.classList.remove('sb--visible');
