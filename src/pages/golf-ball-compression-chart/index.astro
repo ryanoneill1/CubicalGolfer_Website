@@ -127,7 +127,7 @@ const schemas = [
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
+          <span style="font-size:12px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
         </span>
         <span class="author-meta">
           📖 3,400 words &nbsp;·&nbsp;
@@ -256,7 +256,7 @@ const schemas = [
           <tbody>
             {balls.map(ball => (
               <tr data-compression={ball.compression} data-cover={ball.cover} data-price={ball.price} data-min-mph={ball.minMph} data-max-mph={ball.maxMph} data-name={ball.name}>
-                <td><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:10px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:11px;color:var(--muted);line-height:1.3;margin-top:3px;">{ball.notes}</div>}</td>
+                <td><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:11px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:11px;color:var(--muted);line-height:1.3;margin-top:3px;">{ball.notes}</div>}</td>
                 <td>{ball.compression}</td>
                 <td>{ball.cover}</td>
                 <td>~${ball.price}</td>
