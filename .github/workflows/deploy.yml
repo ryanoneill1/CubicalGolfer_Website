@@ -1,1 +1,73 @@
+# ═══════════════════════════════════════════════════════════════
+# CubicalGolfer.com — Build → Deploy → Cache Purge
+# ═══════════════════════════════════════════════════════════════
+# Every push to main triggers a full build, deploys to Cloudflare
+# Pages, then purges the entire CDN cache so visitors immediately
+# see the fresh build (no stale nav, content, or CSS).
+#
+# Required secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN   — API token with Pages:Edit + Zone:Cache Purge
+#   CLOUDFLARE_ACCOUNT_ID  — Cloudflare dashboard → sidebar → Account ID
+#   CLOUDFLARE_ZONE_ID     — cubicalgolfer.com → Overview → Zone ID
+# ═══════════════════════════════════════════════════════════════
 
+name: Deploy & Purge Cache
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Build → Deploy → Purge
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=cubicalgolferwebsite
+
+      - name: Purge Cloudflare cache
+        run: |
+          response=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_ZONE_ID }}/purge_cache" \
+            -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}')
+          
+          http_code=$(echo "$response" | tail -1)
+          body=$(echo "$response" | head -n -1)
+          success=$(echo "$body" | jq -r '.success')
+          
+          echo "HTTP $http_code — success: $success"
+          
+          if [ "$success" != "true" ]; then
+            echo "::error::Cache purge failed"
+            echo "$body" | jq .
+            exit 1
+          fi
+          
+          echo "✅ Cloudflare cache purged — all pages now serve fresh build"
