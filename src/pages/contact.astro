@@ -28,10 +28,61 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
 
     <h1>Contact Cubical Golfer</h1>
 
-    <p>Have a question about a gear review? Spotted an error? Want to suggest a product for testing? I read and respond to every email.</p>
+    <p>Have a question about a gear review? Spotted an error? Want to suggest a product for testing? I read and respond to every message.</p>
 
+    <!-- ── Contact Form ── -->
     <div style="background:var(--cream-dark);border-radius:12px;padding:32px;margin:32px 0;">
-      <h2 style="margin-top:0;">Email</h2>
+      <h2 style="margin-top:0;">Send a Message</h2>
+
+      <form id="contact-form" style="display:flex;flex-direction:column;gap:16px;">
+        <div>
+          <label for="contact-name" style="display:block;font-size:14px;font-weight:600;margin-bottom:4px;">Name</label>
+          <input type="text" id="contact-name" name="name" required autocomplete="name"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;box-sizing:border-box;" />
+        </div>
+
+        <div>
+          <label for="contact-email" style="display:block;font-size:14px;font-weight:600;margin-bottom:4px;">Email</label>
+          <input type="email" id="contact-email" name="email" required autocomplete="email"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;box-sizing:border-box;" />
+        </div>
+
+        <div>
+          <label for="contact-topic" style="display:block;font-size:14px;font-weight:600;margin-bottom:4px;">Topic</label>
+          <select id="contact-topic" name="topic" required
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;background:#fff;box-sizing:border-box;">
+            <option value="">Select a topic…</option>
+            <option value="gear-question">Gear question / recommendation</option>
+            <option value="correction">Correction or error report</option>
+            <option value="partnership">Affiliate or partnership inquiry</option>
+            <option value="content-idea">Content idea or suggestion</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="contact-message" style="display:block;font-size:14px;font-weight:600;margin-bottom:4px;">Message</label>
+          <textarea id="contact-message" name="message" required rows="5"
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
+        </div>
+
+        <!-- Honeypot — hidden from humans, bots fill it and get rejected -->
+        <input type="text" name="website" autocomplete="off" tabindex="-1"
+          style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
+
+        <button type="submit" id="contact-submit"
+          style="background:var(--green);color:#fff;font-size:15px;font-weight:700;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;align-self:flex-start;">
+          Send Message
+        </button>
+      </form>
+
+      <!-- Success/error feedback — aria-live for screen readers -->
+      <div id="contact-feedback" aria-live="polite" style="margin-top:16px;"></div>
+    </div>
+
+    <!-- ── Email fallback ── -->
+    <div style="background:rgba(30,58,40,.04);border-radius:12px;padding:24px;margin:24px 0;">
+      <p style="margin:0 0 4px;font-size:14px;font-weight:600;">Prefer email?</p>
       <p style="font-size:18px;margin-bottom:0;"><a href="mailto:hello@cubicalgolfer.com" style="color:var(--green);font-weight:600;">hello@cubicalgolfer.com</a></p>
       <p style="font-size:14px;color:var(--muted);">Typical response time: within 48 hours</p>
     </div>
@@ -53,3 +104,61 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
     </div>
   </div>
 </BaseLayout>
+
+<script is:inline>
+  (function() {
+    var form = document.getElementById('contact-form');
+    var feedback = document.getElementById('contact-feedback');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Honeypot check
+      var honeypot = form.querySelector('input[name="website"]');
+      if (honeypot && honeypot.value) return;
+
+      // Native validation
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+
+      var btn = document.getElementById('contact-submit');
+      var name = document.getElementById('contact-name').value.trim();
+      var email = document.getElementById('contact-email').value.trim();
+      var topic = document.getElementById('contact-topic').value;
+      var message = document.getElementById('contact-message').value.trim();
+
+      btn.textContent = 'Sending\u2026';
+      btn.disabled = true;
+
+      // Web3Forms — free static form backend
+      // Get your access key at https://web3forms.com (30 seconds, no account needed)
+      // Replace YOUR_WEB3FORMS_KEY below with the key they email you
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_KEY',
+          subject: 'Cubical Golfer Contact: ' + topic,
+          from_name: name,
+          email: email,
+          topic: topic,
+          message: message,
+        })
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.success) {
+          form.style.display = 'none';
+          feedback.innerHTML = '<div style="background:var(--green);color:#fff;padding:20px;border-radius:8px;font-weight:600;">\u2705 Message sent! I\u2019ll respond within 48 hours.</div>';
+        } else {
+          throw new Error(data.message || 'Failed');
+        }
+      })
+      .catch(function() {
+        btn.textContent = 'Send Message';
+        btn.disabled = false;
+        feedback.innerHTML = '<div style="background:#FEE2E2;color:#991B1B;padding:16px;border-radius:8px;font-size:14px;">Something went wrong. Please email <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a> directly.</div>';
+      });
+    });
+  })();
+</script>
