@@ -98,7 +98,10 @@ input, select, textarea { font-size: 16px; } /* ≥16px prevents iOS Safari auto
   color: #fff; padding: 8px 16px; border-radius: 0 0 6px 0; font-size: 14px;
   font-weight: 600; z-index: 9999; }
 .skip:focus { top: 0; left: 0; }
-*:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
+*:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 4px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visible {
+  outline: 2px solid var(--green); outline-offset: 2px; border-radius: 4px;
+}
 
 /* ── NAV ── */
 nav.site-nav {
@@ -303,7 +306,7 @@ nav.site-nav {
 }
 .cmp-sort-btn:hover { background: #152c1e; }
 .cmp-sort-btn::after {
-  content: '⇅'; opacity: .35; margin-left: 4px; font-size: 10px;
+  content: '⇅'; opacity: .35; margin-left: 4px; font-size: 11px;
 }
 .cmp-sort-btn.sort-asc::after { content: '▲'; opacity: .9; }
 .cmp-sort-btn.sort-desc::after { content: '▼'; opacity: .9; }
