@@ -153,10 +153,10 @@ nav.site-nav {
 
 /* ── BREADCRUMB ── */
 .breadcrumb {
-  font-size: 13px; color: rgba(255,255,255,.6); margin-bottom: 16px;
+  font-size: 13px; color: rgba(255,255,255,.72); margin-bottom: 16px;
   display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
 }
-.breadcrumb a { color: rgba(255,255,255,.6); transition: color .2s; }
+.breadcrumb a { color: rgba(255,255,255,.72); transition: color .2s; }
 .breadcrumb a:hover { color: #fff; }
 .bc-sep { color: rgba(255,255,255,.3); }
 
@@ -508,7 +508,7 @@ nav.site-nav {
   border-radius: var(--r2); padding: 20px 28px; min-width: 130px; text-align: center;
 }
 .trust-num { font-size: 30px; font-weight: 800; color: #fff; }
-.trust-lbl { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.6); text-transform: uppercase; margin-top: 4px; }
+.trust-lbl { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.72); text-transform: uppercase; margin-top: 4px; }
 .partner-tags { display: flex; gap: 10px; flex-wrap: wrap; }
 .partner-tag {
   padding: 7px 16px; border-radius: 20px;
@@ -1554,7 +1554,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
     color: #fff;
     width: 100%;
   }
-  .email-strip__input::placeholder { color: rgba(255,255,255,.5); }
+  .email-strip__input::placeholder { color: rgba(255,255,255,.62); }
   .email-strip__btn {
     border-radius: var(--r1);
     text-align: center;
@@ -1691,7 +1691,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   font-family: 'Playfair Display', serif;
   font-size: clamp(28px,3.5vw,44px); color: #fff; margin-bottom: 10px; line-height: 1.15;
 }
-.cat-hero .cat-subhead { font-size: 15px; color: rgba(255,255,255,.6); max-width: 480px; margin: 0 auto 18px; line-height: 1.55; }
+.cat-hero .cat-subhead { font-size: 15px; color: rgba(255,255,255,.72); max-width: 480px; margin: 0 auto 18px; line-height: 1.55; }
 .hero-divider { height: 1px; background: rgba(255,255,255,0.07); max-width: 180px; margin: 0 auto 16px; }
 .hero-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 18px; }
 .hero-stat-num { font-size: 20px; font-weight: 700; color: var(--gold); }
