@@ -571,6 +571,32 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .footer-col h4  { font-size: 11px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.45); text-transform: uppercase; margin-bottom: 16px; }
 .footer-col a   { display: block; font-size: 13.5px; color: rgba(255,255,255,.65); margin-bottom: 10px; transition: color .2s; }
 .footer-col a:hover { color: #fff; }
+
+/* ── Footer accordions (mobile collapse, desktop always open) ── */
+.footer-accordion { border: none; margin: 0; }
+.footer-accordion summary {
+  cursor: pointer; list-style: none; display: flex; align-items: center;
+  justify-content: space-between; padding: 10px 0; margin: 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.footer-accordion summary::-webkit-details-marker { display: none; }
+.footer-accordion summary::after {
+  content: '+'; font-size: 18px; font-weight: 400; color: rgba(255,255,255,.35);
+  transition: transform .2s;
+}
+.footer-accordion[open] summary::after { content: '−'; }
+.footer-accordion__body { padding: 8px 0 4px; }
+.footer-accordion__body a { display: block; font-size: 13.5px; color: rgba(255,255,255,.65); margin-bottom: 8px; transition: color .2s; text-decoration: none; }
+.footer-accordion__body a:hover { color: #fff; }
+
+/* Desktop: force all accordions open, hide toggle */
+@media (min-width: 721px) {
+  .footer-accordion { pointer-events: none; }
+  .footer-accordion summary { pointer-events: none; cursor: default; border-bottom: none; padding: 0 0 12px; }
+  .footer-accordion summary::after { display: none; }
+  .footer-accordion__body { display: block !important; padding: 0; }
+  .footer-accordion__body a { pointer-events: auto; }
+}
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px;
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
