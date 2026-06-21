@@ -152,7 +152,7 @@ const NAV_ITEMS = [
       <div class="footer-brand">
         <img src="/images/cubicalgolfer-logo.webp" alt="Cubical Golfer" class="footer-logo-img" width="56" height="56" />
         <p>Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better.</p>
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">About &amp; Trust</summary>
           <div class="footer-accordion__body">
             <a href="/how-we-test/">How We Test</a>
@@ -163,7 +163,7 @@ const NAV_ITEMS = [
             <a href="/courses/">Golf Courses by City</a>
           </div>
         </details>
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">Legal</summary>
           <div class="footer-accordion__body">
             <a href="/privacy-policy/">Privacy Policy</a>
@@ -174,7 +174,7 @@ const NAV_ITEMS = [
         </details>
       </div>
       <div class="footer-col">
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">Equipment Reviews</summary>
           <div class="footer-accordion__body">
             <a href="/gear-reviews/">All Gear Reviews</a>
@@ -194,7 +194,7 @@ const NAV_ITEMS = [
         </details>
       </div>
       <div class="footer-col">
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">Golf Tech &amp; Simulators</summary>
           <div class="footer-accordion__body">
             <a href="/golf-tech/">Golf Tech Hub</a>
@@ -214,7 +214,7 @@ const NAV_ITEMS = [
         </details>
       </div>
       <div class="footer-col">
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">Improve Your Game</summary>
           <div class="footer-accordion__body">
             <a href="/improve-your-golf-game/">Improvement Hub</a>
@@ -233,7 +233,7 @@ const NAV_ITEMS = [
         </details>
       </div>
       <div class="footer-col">
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">Gift Guides</summary>
           <div class="footer-accordion__body">
             <a href="/best-golf-gifts-for-dad/">Golf Gifts for Dad</a>
@@ -243,7 +243,7 @@ const NAV_ITEMS = [
             <a href="/best-golf-gifts-for-couples/">Gifts for Couples</a>
           </div>
         </details>
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">Tools &amp; Compare</summary>
           <div class="footer-accordion__body">
             <a href="/golf-simulator-cost-calculator/">Simulator Cost Calculator</a>
@@ -255,7 +255,7 @@ const NAV_ITEMS = [
         </details>
       </div>
       <div class="footer-col">
-        <details class="footer-accordion">
+        <details class="footer-accordion" open>
           <summary style="font-weight:700;font-size:14px;color:var(--gold)">More</summary>
           <div class="footer-accordion__body">
             <a href="/golf-practice-drills-at-home/">Practice Drills at Home</a>
@@ -278,6 +278,17 @@ const NAV_ITEMS = [
       </p>
     </div>
   </footer>
+
+  <!-- Collapse footer accordions on mobile (they start open for desktop) -->
+  <script is:inline>
+    (function() {
+      if (window.innerWidth < 721) {
+        document.querySelectorAll('.footer-accordion').forEach(function(d) {
+          d.removeAttribute('open');
+        });
+      }
+    })();
+  </script>
 
   <script is:inline>
     (function () {
