@@ -1,0 +1,150 @@
+---
+/**
+ * EmbedBox.astro — "Embed / Cite This" box for linkable assets.
+ * Shows a copyable iframe embed snippet and a plain attribution link.
+ */
+interface Props {
+  title: string;
+  embedUrl: string;
+  sourceUrl: string;
+  sourceName?: string;
+  height?: number;
+}
+
+const {
+  title,
+  embedUrl,
+  sourceUrl,
+  sourceName = 'CubicalGolfer.com',
+  height = 600,
+} = Astro.props;
+
+const iframeCode = `<iframe src="${embedUrl}" width="100%" height="${height}" style="border:none;border-radius:12px;max-width:720px" title="${title}"></iframe>\n<p style="font-size:12px;margin-top:4px">Source: <a href="${sourceUrl}">${sourceName}</a></p>`;
+const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
+---
+
+<div class="embed-box">
+  <div class="embed-box__header">
+    <span class="embed-box__icon">📋</span>
+    <h3 class="embed-box__title">Embed / Cite This Chart</h3>
+  </div>
+  <p class="embed-box__desc">Free to use on your site with attribution. Copy the embed code or citation link below.</p>
+
+  <div class="embed-box__tabs">
+    <button class="embed-box__tab embed-box__tab--active" data-tab="iframe" type="button">Embed (iframe)</button>
+    <button class="embed-box__tab" data-tab="link" type="button">Citation Link</button>
+  </div>
+
+  <div class="embed-box__panel" data-panel="iframe">
+    <textarea class="embed-box__code" readonly rows="4" aria-label="Embed code">{iframeCode}</textarea>
+    <button class="embed-box__copy" data-copy="iframe" type="button">Copy Embed Code</button>
+  </div>
+
+  <div class="embed-box__panel" data-panel="link" hidden>
+    <textarea class="embed-box__code" readonly rows="2" aria-label="Citation link">{linkCode}</textarea>
+    <button class="embed-box__copy" data-copy="link" type="button">Copy Citation</button>
+  </div>
+</div>
+
+<style>
+.embed-box {
+  background: var(--cream-dark, #EDE9DF);
+  border: 2px solid var(--gold, #C8A84B);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+}
+.embed-box__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.embed-box__icon { font-size: 20px; }
+.embed-box__title {
+  font-family: var(--font-head, serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green, #1E3A28);
+  margin: 0;
+}
+.embed-box__desc {
+  font-size: 14px;
+  color: var(--muted, #556B5C);
+  margin: 0 0 16px;
+}
+.embed-box__tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.embed-box__tab {
+  background: none;
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--muted, #556B5C);
+}
+.embed-box__tab--active {
+  background: var(--green, #1E3A28);
+  color: #fff;
+  border-color: var(--green, #1E3A28);
+}
+.embed-box__code {
+  width: 100%;
+  font-family: monospace;
+  font-size: 12px;
+  padding: 12px;
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: 8px;
+  background: #fff;
+  resize: none;
+  box-sizing: border-box;
+}
+.embed-box__copy {
+  margin-top: 8px;
+  background: var(--green, #1E3A28);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.embed-box__copy:hover { opacity: .9; }
+</style>
+
+<script is:inline>
+(function() {
+  document.querySelectorAll('.embed-box').forEach(function(box) {
+    var tabs = box.querySelectorAll('.embed-box__tab');
+    var panels = box.querySelectorAll('.embed-box__panel');
+
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var target = tab.getAttribute('data-tab');
+        tabs.forEach(function(t) { t.classList.remove('embed-box__tab--active'); });
+        tab.classList.add('embed-box__tab--active');
+        panels.forEach(function(p) {
+          p.hidden = p.getAttribute('data-panel') !== target;
+        });
+      });
+    });
+
+    box.querySelectorAll('.embed-box__copy').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var panel = btn.closest('.embed-box__panel');
+        var textarea = panel.querySelector('textarea');
+        navigator.clipboard.writeText(textarea.value).then(function() {
+          btn.textContent = 'Copied!';
+          setTimeout(function() { btn.textContent = btn.getAttribute('data-copy') === 'iframe' ? 'Copy Embed Code' : 'Copy Citation'; }, 2000);
+        });
+      });
+    });
+  });
+})();
+</script>

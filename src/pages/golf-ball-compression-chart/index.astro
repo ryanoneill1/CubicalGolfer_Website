@@ -5,6 +5,7 @@ import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 import { ARTICLES } from '../../data/articles';
+import EmbedBox from '../../components/EmbedBox.astro';
 
 const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
@@ -371,6 +372,14 @@ const schemas = [
 
   </article>
 
+
+  <EmbedBox
+    title="Golf Ball Compression Chart 2026"
+    embedUrl="https://www.cubicalgolfer.com/embeds/compression-chart.html"
+    sourceUrl="https://www.cubicalgolfer.com/golf-ball-compression-chart/"
+    sourceName="CubicalGolfer.com"
+    height={800}
+  />
 
   <StickyBar
     name="Callaway Supersoft"
