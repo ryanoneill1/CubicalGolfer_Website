@@ -329,7 +329,8 @@ if (isBuyingGuide) {
     // FIX: Pass price, retailer, image — required by Google Product schema
     schemas.push(buyingGuideProductSchema(
       section, aff.url, section.price || aff.price, aff.retailer,
-      aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined
+      aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined,
+      pid
     ));
   }
 }
@@ -472,7 +473,7 @@ if (isBuyingGuide) {
     })()}
 
     {/* ── CG TEST SCORE — visual scoring breakdown ── */}
-    {article.cgScore && (
+    {article.cgScore && typeof article.cgScore === 'object' && article.cgScore.overall && (
       <CGScore
         overallScore={article.cgScore.overall}
         categories={article.cgScore.categories}

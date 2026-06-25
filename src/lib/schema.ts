@@ -451,16 +451,25 @@ export function buyingGuideProductSchema(
   affiliatePrice: string,
   affiliateRetailer: string,
   productImage?: string,
+  affiliateKey?: string,
 ): object {
   // Extract first numeric price from "~$329", "~$2,995", "~$179 + $99/yr", "~$55/dozen"
   // Strips $ and ~ prefix, handles commas, takes first number only
   const priceMatch = affiliatePrice?.replace(/,/g, '').match(/\d+(?:\.\d+)?/);
   const numericPrice = priceMatch ? priceMatch[0] : '';
 
+  // Derive product name: prefer the section heading if it's actually a product name,
+  // otherwise humanize the affiliate key (e.g. 'bushnell-tour-v6-shift' → 'Bushnell Tour V6 Shift')
+  const NON_PRODUCT_HEADINGS = /^(where to buy|quick verdict|the verdict|our pick|buy|pricing|value|cost)/i;
+  let productName = section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim();
+  if (NON_PRODUCT_HEADINGS.test(productName) && affiliateKey) {
+    productName = affiliateKey.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+  }
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim(),
+    name: productName,
     description: section.body?.slice(0, 200) || '',
     image: productImage || `${DOMAIN}/images/og-image.jpg`,
     // ── Single first-party editorial review only ──

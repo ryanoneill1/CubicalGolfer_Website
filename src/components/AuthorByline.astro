@@ -29,7 +29,7 @@ const initials = name.split(' ').map(w => w[0]).join('').toUpperCase();
 <div class="ab">
   <div class="ab__photo">
     {photoUrl ? (
-      <img src={photoUrl} alt={name} width="40" height="40" loading="eager" decoding="async" />
+      <img src={photoUrl} alt={name} width="40" height="40" loading="eager" fetchpriority="high" decoding="async" />
     ) : (
       <span class="ab__initials">{initials}</span>
     )}
