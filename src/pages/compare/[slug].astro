@@ -239,6 +239,21 @@ if (compProducts.length > 0) {
     <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — Both products independently purchased and tested over 20+ rounds. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
   </div>
 
+  {/* ── QUICK VERDICT — above the fold buy box ── */}
+  {winnerAff && (
+    <div style="background:var(--green);border-radius:12px;padding:20px 24px;margin:0 0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;">
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin:0 0 4px;">🏆 Our Pick After Testing</p>
+        <p style="font-size:20px;font-weight:700;color:#fff;margin:0 0 6px;font-family:var(--font-head);">{winnerName}</p>
+        <p style="font-size:14px;color:rgba(255,255,255,.72);margin:0;line-height:1.4;">{c.winnerReason?.split('.')[0]}.</p>
+      </div>
+      <a href={winnerAff.url} target="_blank" rel="sponsored noopener"
+        style="background:var(--gold);color:#1a1a1a;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">
+        Check Price at {winnerAff.retailer} →
+      </a>
+    </div>
+  )}
+
   {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
   <div class="trust-card">
     <p class="trust-card__heading">Why Trust This Comparison</p>

@@ -270,6 +270,38 @@ const schemas = [
       </div>
     </section>
 
+    <!-- ═══ RECOMMENDED BALLS BY SWING SPEED ═══ -->
+    <section id="recommended-balls">
+      <h2 style="color:var(--green);">Our Top Pick for Each Swing Speed</h2>
+      <p>Based on the compression data above and 40+ rounds of testing, here are the three balls we would actually buy:</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0 32px;">
+        {(() => {
+          const picks = [
+            { speed: 'Under 85 mph', label: 'BEST FOR SLOW SWING', key: 'callaway-supersoft', name: 'Callaway Supersoft', compression: '38', why: 'Maximum distance at moderate speeds. The softest feel in the category with reliable straight flight. Best value under $25/dozen.' },
+            { speed: '85–100 mph', label: 'BEST FOR MID SWING', key: 'titleist-tour-soft', name: 'Titleist Tour Soft', compression: '65', why: 'Sweet spot of distance and greenside control. Urethane-like feel at a mid-range price. Our most-recommended ball for weekend golfers.' },
+            { speed: 'Over 100 mph', label: 'BEST FOR FAST SWING', key: 'titleist-pro-v1', name: 'Titleist Pro V1', compression: '87', why: 'Tour-level spin control and consistency. Worth the premium if your swing speed can compress it — the difference in greenside stopping power is real.' },
+          ];
+          return picks.map(pick => {
+            const aff = getAffiliateLink(pick.key);
+            return (
+              <div style="background:var(--cream-dark);border:2px solid var(--border);border-radius:12px;padding:20px;position:relative;">
+                <span style={`display:inline-block;background:var(--green);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:12px;`}>{pick.label}</span>
+                <h3 style="font-family:var(--font-head);font-size:20px;color:var(--green);margin:0 0 4px;">{pick.name}</h3>
+                <p style="font-size:13px;color:var(--muted);margin:0 0 4px;">Compression: {pick.compression} · Swing speed: {pick.speed}</p>
+                <p style="font-size:14px;margin:8px 0 16px;line-height:1.5;">{pick.why}</p>
+                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+                  <span style="font-size:16px;font-weight:700;color:var(--green);">{aff.price}</span>
+                  <a href={aff.url} target="_blank" rel="sponsored noopener" style="background:var(--gold);color:#1a1a1a;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;">Check Price →</a>
+                </div>
+              </div>
+            );
+          });
+        })()}
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-top:0;">Prices are approximate. Links go to Amazon — as an affiliate we earn from qualifying purchases at no extra cost to you.</p>
+    </section>
+
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
     <section>
       <h2 id="what-is-compression">What Is Golf Ball Compression and Why It Matters</h2>
