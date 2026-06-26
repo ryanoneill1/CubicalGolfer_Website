@@ -468,6 +468,7 @@ if (isBuyingGuide) {
           imageUrl={ctaAff.imgSrc || undefined}
           why={article.quickPickWhy || undefined}
           bestFor={article.quickPickBestFor || ctaRow?.bestFor || undefined}
+          priceNote={ctaAff.priceNote || undefined}
         />
       );
     })()}
@@ -510,6 +511,7 @@ if (isBuyingGuide) {
                 imgSrc={aff.imgSrc}
                 imgAlt={aff.imgAlt ?? row.name}
                 benefits={aff.benefits}
+                priceNote={aff.priceNote || ''}
               />
             );
           })}
@@ -750,6 +752,7 @@ if (isBuyingGuide) {
               url={aff.url} price={aff.price} name={section.h2}
               retailer={aff.retailer} label={aff.label}
               golfGalaxyUrl={aff.golfGalaxyUrl || ''}
+              priceNote={aff.priceNote || ''}
               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
               disclosure={true}
               dateChecked={article.dateModified}

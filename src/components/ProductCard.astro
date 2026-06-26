@@ -25,6 +25,7 @@ interface Props {
   verdict?: string;
   whoFor?: string;
   golfGalaxyUrl?: string;
+  priceNote?: string;
 }
 
 const {
@@ -32,7 +33,7 @@ const {
   label = 'Check Today\'s Price',
   imgSrc, imgAlt, badge, benefits, description,
   emoji = '🏌️', winner = false,
-  verdict, whoFor, golfGalaxyUrl = '',
+  verdict, whoFor, golfGalaxyUrl = '', priceNote = '',
 } = Astro.props;
 
 // VALIDATION: skip render if required affiliate fields missing
@@ -91,7 +92,7 @@ if (!url || !imgSrc) return;
     )}
 
     <div class="product-card__price">{price}</div>
-    <p class="product-card__price-note">Prices change — click to see current price</p>
+    <p class="product-card__price-note">💡 {priceNote || 'Prices change — click to see current price'}</p>
   </div>
 
   <!-- CTA 3: Primary button -->
