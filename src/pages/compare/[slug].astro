@@ -6,9 +6,11 @@ import StickyBar from '../../components/StickyBar.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
 import { comparisonSchema, faqSchema, breadcrumbSchema, comparisonProductsSchema } from '../../lib/schema';
+import { getSkipIf } from '../../lib/skip-if';
 import type { ComparisonProduct } from '../../lib/schema';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import type { Comparison } from '../../data/types';
+import TrustCard from '../../components/TrustCard.astro';
 
 export async function getStaticPaths() {
   return COMPARISONS.map(c => ({
@@ -255,16 +257,7 @@ if (compProducts.length > 0) {
   )}
 
   {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
-  <div class="trust-card">
-    <p class="trust-card__heading">Why Trust This Comparison</p>
-    <ul class="trust-card__list">
-      <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
-      <li><strong>20+ real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
-      <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
-      <li><strong>12-handicap perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
-    </ul>
-    <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
-  </div>
+  <TrustCard variant="comparison" rounds="20+" />
 
   <div class="compare-body">
 
@@ -292,6 +285,30 @@ if (compProducts.length > 0) {
         </ol>
       </nav>
     )}
+
+    {/* ── ONE-SENTENCE BOTTOM LINE ── */}
+    <p style="font-size:18px;font-weight:700;color:var(--green);line-height:1.5;margin:0 0 20px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;">
+      <span style="color:var(--gold);margin-right:4px;">⚡</span> Bottom line: {c.winnerReason?.split('.')[0]}.
+    </p>
+
+    {/* ── BUY THIS IF / SKIP THIS IF — quick decision aid ── */}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px;">
+      <div style="padding:14px 16px;background:rgba(30,58,40,.06);border-radius:8px;border-left:3px solid var(--green);">
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 6px;">✅ Buy the {winnerName} if</p>
+        <p style="font-size:13px;color:var(--body);margin:0;line-height:1.5;">you want the better overall value and performance for weekend golf — it won our head-to-head testing.</p>
+      </div>
+      <div style="padding:14px 16px;background:rgba(200,168,75,.06);border-radius:8px;border-left:3px solid var(--gold);">
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 6px;">⚠️ Buy the {c.winner === c.productA ? nameB : nameA} instead if</p>
+        <p style="font-size:13px;color:var(--body);margin:0;line-height:1.5;">{c.winner === c.productA
+          ? (affB?.price && parseInt(affB.price.replace(/[^0-9]/g,'')) < parseInt(affA?.price?.replace(/[^0-9]/g,'') || '9999')
+            ? `budget is your priority — the ${nameB} costs less and still delivers solid performance.`
+            : `you prioritize the specific strengths the ${nameB} offers over raw test results.`)
+          : (affA?.price && parseInt(affA.price.replace(/[^0-9]/g,'')) < parseInt(affB?.price?.replace(/[^0-9]/g,'') || '9999')
+            ? `budget is your priority — the ${nameA} costs less and still delivers solid performance.`
+            : `you prioritize the specific strengths the ${nameA} offers over raw test results.`)
+        }</p>
+      </div>
+    </div>
 
     {/* ── WHO THIS IS FOR ── */}
     <div class="bottom-line-box" role="note" aria-label="Who this comparison is for">
@@ -350,6 +367,9 @@ if (compProducts.length > 0) {
               </a>
             )}
             <span class="compare-buy-urgency">Prices checked today</span>
+            {affA.priceNote && (
+              <span class="compare-buy-tip">💡 {affA.priceNote}</span>
+            )}
           </div>
         )}
         {affB && (
@@ -372,6 +392,9 @@ if (compProducts.length > 0) {
               </a>
             )}
             <span class="compare-buy-urgency">Prices checked today</span>
+            {affB.priceNote && (
+              <span class="compare-buy-tip">💡 {affB.priceNote}</span>
+            )}
           </div>
         )}
       </div>
@@ -416,10 +439,33 @@ if (compProducts.length > 0) {
     {/* ── EDITORIAL SECTIONS — deep analysis, who-should-buy, price-value ── */}
     {c.sections && c.sections.length > 0 && (
       <div class="compare-editorial">
-        {c.sections.map((s: any) => (
+        {c.sections.map((s: any, idx: number) => (
           <section style="margin:28px 0;">
             <h2 id={s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')} style="font-size:20px;color:var(--green);margin:0 0 12px;">{s.h2}</h2>
             <div style="font-size:15px;line-height:1.7;color:var(--body);" set:html={s.body} />
+
+            {/* Skip-this-if on "Who Should Buy" sections */}
+            {s.h2.toLowerCase().includes('who should') && (() => {
+              const isProductA = s.h2.toLowerCase().includes(nameA.split(' ')[0].toLowerCase());
+              const prodKey = isProductA ? c.productA : c.productB;
+              const skipText = getSkipIf(prodKey, `/compare/${c.slug}/`);
+              return skipText ? (
+                <p style="margin:12px 0 0;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:13px;color:var(--muted);line-height:1.5;">
+                  <strong style="color:var(--green);">⚠️ Skip this if:</strong> {skipText}.
+                </p>
+              ) : null;
+            })()}
+
+            {/* Mid-section CTA — after 2nd section to catch ready buyers */}
+            {idx === 1 && winnerAff && (
+              <div style="margin:24px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+                <p style="margin:0;font-size:14px;font-weight:600;color:var(--green);">Ready to decide? {winnerName} won our head-to-head testing.</p>
+                <a href={winnerAff.url} target="_blank" rel="sponsored noopener"
+                  style="background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;">
+                  See {winnerName} Price →
+                </a>
+              </div>
+            )}
           </section>
         ))}
       </div>
@@ -447,18 +493,21 @@ if (compProducts.length > 0) {
       </div>
     )}
 
-    {/* ── ALSO CONSIDER — loser CTA ── */}
+    {/* ── ALSO CONSIDER — runner-up CTA ── */}
     {(() => {
       const loserKey = c.winner === c.productA ? c.productB : c.productA;
       const loserName = c.winner === c.productA ? nameB : nameA;
       const loserAff = c.winner === c.productA ? affB : affA;
       return loserAff ? (
-        <div style="text-align:center;margin:0 0 32px;">
-          <p style="font-size:13px;color:var(--muted);margin:0 0 8px;">Prefer the {loserName}? Still an excellent driver.</p>
-          <a href={loserAff.url} style="color:var(--green);font-weight:700;font-size:14px;" target="_blank" rel="nofollow noopener sponsored">
-            Check {loserName} price at {loserAff.retailer} →
+        <div style="margin:0 0 32px;padding:16px 20px;background:rgba(200,168,75,.06);border-radius:10px;border:1px solid rgba(200,168,75,.2);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+          <div>
+            <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">Not sold on the winner?</p>
+            <p style="font-size:13px;color:var(--muted);margin:0;">The {loserName} is still a strong pick — {loserAff.price} at {loserAff.retailer}.</p>
+          </div>
+          <a href={loserAff.url} style="background:#fff;color:var(--green);border:2px solid var(--green);font-weight:700;font-size:13px;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;" target="_blank" rel="nofollow noopener sponsored">
+            Check {loserName} Price →
           </a>
-          <span style="display:block;font-size:12px;color:var(--muted);margin-top:4px;">Prices checked today</span>
+        </div>
         </div>
       ) : null;
     })()}
