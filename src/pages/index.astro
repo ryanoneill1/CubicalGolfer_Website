@@ -21,7 +21,18 @@ const TOP_PICKS = [
 });
 
 const meta     = homeMeta();
-const featured = getFeaturedArticles(18);
+
+// Homepage article feed: prioritize high-value pages, not just recent updates
+const moneyCategories = ['rangefinder','launch-monitor','golf-tech','improve-game','golf-balls','drivers','irons','putters','gps-watch'];
+const allSorted = [...ARTICLES].sort((a, b) => (b as any).dateModified.localeCompare((a as any).dateModified));
+// First: high-value buying guides and reviews from money categories
+const moneyPages = allSorted.filter((a: any) =>
+  ['buying-guide','review'].includes(a.pageType) &&
+  moneyCategories.some(c => a.category === c || a.slug.includes(c.replace('-','')))
+);
+// Then: everything else
+const otherPages = allSorted.filter(a => !moneyPages.includes(a));
+const featured = [...moneyPages.slice(0, 12), ...otherPages.slice(0, 6)];
 
 const schemas = [
   websiteSchema(),
@@ -117,6 +128,29 @@ const TAG_CLASSES: Record<string, string> = {
   </section>
 
   <TrustBar />
+
+  {/* ── START HERE — route users by intent ── */}
+  <section style="padding:32px clamp(1.5rem,5vw,4rem) 0;max-width:1200px;margin:0 auto;">
+    <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-text);margin:0 0 12px;text-align:center;">NOT SURE WHERE TO START?</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
+      <a href="/gear-quiz/" style="display:block;padding:16px;background:var(--green);border-radius:10px;text-decoration:none;text-align:center;">
+        <p style="font-size:15px;font-weight:700;color:#fff;margin:0 0 4px;">🎯 By Your Game</p>
+        <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">4 questions → personalized picks</p>
+      </a>
+      <a href="/best-golf-gear-under-100/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
+        <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">💰 By Budget</p>
+        <p style="font-size:12px;color:var(--muted);margin:0;">Best gear under $100</p>
+      </a>
+      <a href="/best-golf-gear-2026/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
+        <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">🏆 By Category</p>
+        <p style="font-size:12px;color:var(--muted);margin:0;">#1 pick in every category</p>
+      </a>
+      <a href="/compare/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
+        <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">⚖️ Compare Two</p>
+        <p style="font-size:12px;color:var(--muted);margin:0;">38 head-to-head tests</p>
+      </a>
+    </div>
+  </section>
 
   {/* ── FEATURED PICK ── */}
   {(() => {
@@ -227,9 +261,9 @@ const TAG_CLASSES: Record<string, string> = {
   <!-- ── FEATURED ARTICLES ── -->
   <section class="articles-section" style="padding: 64px clamp(1.5rem,5vw,4rem); background: var(--cream-dark);" aria-labelledby="arts-h">
     <div class="section-header">
-      <p class="section-eyebrow">FRESH PICKS</p>
-      <h2 id="arts-h">Latest Buying Guides &amp; Tutorials</h2>
-      <p>The most useful gear and improvement content for your next round.</p>
+      <p class="section-eyebrow">TESTED & RANKED</p>
+      <h2 id="arts-h">Buying Guides &amp; Reviews</h2>
+      <p>The gear that moves the needle for weekend golfers — tested, ranked, and updated for 2026.</p>
     </div>
     <div class="articles-grid">
       {featured.map(a => (

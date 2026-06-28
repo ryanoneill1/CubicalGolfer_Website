@@ -38,7 +38,7 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Tour V6 Shift — ASIN B0C4PN57LJ ✅ verified
   'bushnell-tour-v6-shift': {
-    heroVerdictLine: 'Our #1 pick after 40+ rounds — nothing locks the pin faster at any price.',
+    heroVerdictLine: '★ Our #1 pick after 40+ rounds — tested against 5 rangefinders, nothing locks the pin faster.',
     heroWhoFor: 'Weekend golfers who want one rangefinder that does everything and lasts 5+ years.',
     url: 'https://bushnell.pxf.io/DWWLOa',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Tour*+V6*+Shift*&ghref=2301%3A1333883',
@@ -129,7 +129,7 @@ export const AFFILIATE: Record<string, {
 
   // Garmin Approach S62 Black — ASIN B083BJSYZ9 ✅ verified (official retail unit)
   'garmin-approach-s62': {
-    heroVerdictLine: 'The smartest watch we tested — Virtual Caddie suggestions actually helped our scores.',
+    heroVerdictLine: '★ The smartest watch we tested — Virtual Caddie beat our club selection on 4 of 18 holes.',
     heroWhoFor: 'Golfers who want yardages, shot tracking, and smart club suggestions on their wrist.',
     asin: 'B083BJSYZ9',
     url: 'https://www.amazon.com/dp/B083BJSYZ9?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e72a18832542c8be1be00a9e4e7c02cf&language=en_US&ref_=as_li_ss_tl',
@@ -279,7 +279,7 @@ export const AFFILIATE: Record<string, {
 
   // Titleist Pro V1 (2025 gen, 25th anniversary) — ASIN B0BR2YF8T6 ✅ verified
   'titleist-pro-v1': {
-    heroVerdictLine: 'Still the gold standard — the ball every other brand is trying to beat in 2026.',
+    heroVerdictLine: '★ Still the gold standard — the ball every other brand is trying to beat in 2026.',
     heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
     asin: 'B0BR2YF8T6',
     url: 'https://www.amazon.com/dp/B0BR2YF8T6?&linkCode=ll2&tag=cubicalgolfer-20&linkId=591502395d795cff42f0e3624096474a&language=en_US&ref_=as_li_ss_tl',
@@ -556,7 +556,7 @@ export const AFFILIATE: Record<string, {
 
   // Arccos Caddie Smart Sensors (3rd Gen) — ASIN B0B5TW3HNG ✅ verified
   'arccos-caddie-sensors': {
-    heroVerdictLine: 'The only gear upgrade that gets smarter the more you play — AI caddie is legit.',
+    heroVerdictLine: '★ The only gear upgrade that gets smarter the more you play — AI caddie is legit.',
     heroWhoFor: 'Data-driven golfers who want to know exactly where they lose strokes each round.',
     asin: 'B0B5TW3HNG',
     url: 'https://www.amazon.com/dp/B09YJ5H6BQ?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=9cb14bd7f2b5cda6a4acf512ad239cda&language=en_US&ref_=as_li_ss_tl',
