@@ -27,7 +27,7 @@ const TAG = 'cubicalgolfer-20';
 
 const balls = [
   { name: 'TaylorMade Noodle', compression: 34, cover: 'Ionomer', price: 20, minMph: 0, maxMph: 75, search: 'TaylorMade+Noodle+golf+balls', brand: 'TaylorMade' , notes: 'Ultra-soft feel at 34 compression; the cheapest ball worth playing for beginners under 75 mph.'},
-  { name: 'Callaway Supersoft', compression: 38, cover: 'Ionomer', price: 25, minMph: 0, maxMph: 80, asin: 'B0F2FSR89S', brand: 'Callaway' , notes: 'Our go-to recommendation for seniors — maximum distance at minimum swing speed with a surprisingly good feel around greens.'},
+  { name: 'Callaway Supersoft', compression: 38, cover: 'Ionomer', price: 25, minMph: 0, maxMph: 80, asin: 'B0F2FSR89S', brand: 'Callaway', badge: 'OUR PICK <85mph' , notes: 'Our go-to recommendation for seniors — maximum distance at minimum swing speed with a surprisingly good feel around greens.'},
   { name: 'Wilson DUO Soft+', compression: 40, cover: 'Ionomer', price: 22, minMph: 0, maxMph: 80, search: 'Wilson+DUO+Soft%2B+golf+balls', brand: 'Wilson' , notes: 'Lightest ball on the market at 40 compression; floats straighter than most soft balls due to 302-dimple pattern.'},
   { name: 'Titleist TruFeel', compression: 45, cover: 'Ionomer', price: 25, minMph: 65, maxMph: 85, search: 'Titleist+TruFeel+golf+balls', brand: 'Titleist' , notes: 'Titleist entry point at $25/dozen; noticeably firmer than Supersoft but better short-game control.'},
   { name: 'TaylorMade Soft Response', compression: 50, cover: 'Ionomer', price: 25, minMph: 70, maxMph: 85, search: 'TaylorMade+Soft+Response+golf+balls', brand: 'TaylorMade' , notes: 'Best mid-price option for 70-85 mph swingers who want more greenside spin than a pure distance ball.'},
@@ -35,7 +35,7 @@ const balls = [
   { name: 'Vice Drive', compression: 55, cover: 'Ionomer', price: 17, minMph: 70, maxMph: 90, search: 'Vice+Drive+golf+balls', brand: 'Vice', badge: 'BUDGET PICK' , notes: 'At $17/dozen, the best value ball on this chart — solid performance for casual rounds when losing balls is likely.'},
   { name: 'Srixon Soft Feel', compression: 60, cover: 'Ionomer', price: 27, minMph: 75, maxMph: 95, asin: 'B0CYDVBYQY', brand: 'Srixon', badge: 'BEST VALUE' , notes: 'Our best-value pick overall — urethane-like greenside feel from an ionomer cover at $27/dozen.'},
   { name: 'Vice Pro Soft', compression: 65, cover: 'Urethane', price: 28, minMph: 80, maxMph: 95, search: 'Vice+Pro+Soft+golf+balls', brand: 'Vice' , notes: 'Urethane cover at $28/dozen makes this the cheapest tour-quality ball; best for 80-95 mph swingers on a budget.'},
-  { name: 'Titleist Tour Soft', compression: 65, cover: 'Ionomer', price: 35, minMph: 80, maxMph: 95, search: 'Titleist+Tour+Soft+golf+balls', brand: 'Titleist' , notes: 'Bridges the gap between distance balls and tour balls; the Titleist pick for golfers who want brand trust without Pro V1 price.'},
+  { name: 'Titleist Tour Soft', compression: 65, cover: 'Ionomer', price: 35, minMph: 80, maxMph: 95, search: 'Titleist+Tour+Soft+golf+balls', brand: 'Titleist', badge: 'OUR PICK 85-100mph' , notes: 'Bridges the gap between distance balls and tour balls; the Titleist pick for golfers who want brand trust without Pro V1 price.'},
   { name: 'Titleist Velocity', compression: 65, cover: 'Ionomer', price: 30, minMph: 85, maxMph: 110, search: 'Titleist+Velocity+golf+balls', brand: 'Titleist' , notes: 'Designed purely for distance — highest ball speed in the Titleist lineup but minimal greenside spin.'},
   { name: 'Callaway Warbird', compression: 68, cover: 'Ionomer', price: 22, minMph: 80, maxMph: 100, search: 'Callaway+Warbird+golf+balls', brand: 'Callaway' , notes: 'High-launch, low-spin design built for golfers who need carry distance more than short-game finesse.'},
   { name: 'Bridgestone Tour B RX', compression: 68, cover: 'Urethane', price: 45, minMph: 85, maxMph: 100, search: 'Bridgestone+Tour+B+RX+golf+balls', brand: 'Bridgestone' , notes: 'Tour-level urethane at 68 compression — designed specifically for swing speeds of 85-100 mph. Excellent value alternative to Pro V1.'},
@@ -304,6 +304,35 @@ const schemas = [
       </div>
       <p style="font-size:13px;color:var(--muted);margin-top:0;">Prices are approximate. Links go to Amazon — as an affiliate we earn from qualifying purchases at no extra cost to you.</p>
     </section>
+
+    <!-- ═══ NEXT STEPS — decision aid ═══ -->
+    <div style="margin:0 0 28px;padding:20px 24px;background:var(--green);border-radius:12px;">
+      <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 8px;">📋 Found your compression range?</p>
+      <p style="font-size:15px;color:#fff;margin:0 0 16px;line-height:1.5;">The chart above narrows it to 5-8 balls. Here's how to pick the final one:</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <a href="/best-golf-balls-2026/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
+          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Full Ball Rankings →</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">14 balls tested over 35+ rounds — sorted by swing speed</p>
+        </a>
+        <a href="/compare/pro-v1-vs-chrome-soft/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
+          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Pro V1 vs Chrome Soft →</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">The two most popular premium balls compared head-to-head</p>
+        </a>
+        <a href="/compare/callaway-chrome-soft-vs-kirkland-signature/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
+          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Chrome Soft vs Kirkland →</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">$27 vs $13 — is the Costco ball really as good?</p>
+        </a>
+        <a href="/gear-quiz/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
+          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Take the Gear Quiz →</p>
+          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">Answer 4 questions, get a personalized ball recommendation</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- ═══ TRUST LINE ═══ -->
+    <p style="font-size:13px;color:var(--muted);margin:0 0 24px;padding:10px 16px;background:rgba(30,58,40,.04);border-radius:8px;line-height:1.5;">
+      <strong style="color:var(--green);">How we built this chart:</strong> All 34 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
+    </p>
 
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
     <section>
