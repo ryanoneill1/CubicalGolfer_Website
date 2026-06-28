@@ -5,11 +5,21 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { ARTICLES } from '../../data/articles';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
-// All "X vs Y" articles that live outside the /compare/ route
-const vsArticles = ARTICLES.filter(a =>
-  (a.slug.includes('-vs-') || a.pageType === 'comparison') &&
-  !a.slug.startsWith('/compare/')
-).sort((a: any, b: any) => a.title.localeCompare(b.title));
+// All genuine "X vs Y" articles that live outside the /compare/ route
+// Excludes buying guides, strategy pieces, and category overviews
+const vsArticles = ARTICLES.filter(a => {
+  if (a.slug.startsWith('/compare/')) return false;
+  if (!a.slug.includes('-vs-')) return false;
+  // Exclude buying guides / category pages tagged as comparison
+  const excludeSlugs = ['/best-golf-gps-watches/', '/best-golf-drivers-forgiveness/'];
+  if (excludeSlugs.includes(a.slug)) return false;
+  // Exclude strategy/guide articles (not true head-to-head)
+  if (['STRATEGY', 'BUYING GUIDE'].includes(a.tag)) return false;
+  // Exclude "type vs type" conceptual articles (not product vs product)
+  const conceptual = ['golf-simulator-vs-driving-range', 'approach-wedge-vs-gap-wedge', 'driver-vs-3-wood-off-tee', 'mallet-vs-blade-putter', 'hybrid-vs-long-iron'];
+  if (conceptual.some(c => a.slug.includes(c))) return false;
+  return true;
+}).sort((a: any, b: any) => a.title.localeCompare(b.title));
 const meta = {
   title: 'Golf Gear Comparisons — Side-by-Side Tested',
   description: 'Honest head-to-head golf gear comparisons. Bushnell vs Precision Pro, SkyTrak vs R10, Paradym vs Qi35 — bought, tested, and ranked by a real cubicle.',
@@ -87,51 +97,87 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
       </div>
     </div>
   </section>
-  <!-- ─── ALL COMPARISONS GRID ─── -->
+  <!-- ─── HEAD-TO-HEAD COMPARISONS — organized by category ─── -->
   <div class="cat-page-body">
-    <h2 style="font-size:20px;margin:0 0 16px;">All comparisons</h2>
-    <div class="articles-grid">
-      {COMPARISONS.map(c => (
-        <a href={`/compare/${c.slug}/`} class="article-card">
-          <div class="art-thumb">
-            <span class="art-badge tag-cmp">COMPARISON</span>
-            {c.thumbnail
-              ? <img src={c.thumbnail} alt={c.title} loading="lazy" decoding="async" width="400" height="260"
-                  class="art-thumb__img" onerror="this.style.display='none'" />
-              : <span aria-hidden="true">⚖️</span>
-            }
+
+    {/* Category groups */}
+    {(() => {
+      const categoryOrder = ['Rangefinders', 'Launch Monitors', 'Drivers', 'GPS & Tracking', 'Putters', 'Golf Balls', 'Irons & Wedges', 'Simulators'];
+      const categoryMap: any = {};
+
+      for (const c of COMPARISONS) {
+        const s = c.slug.toLowerCase();
+        let cat = 'Other';
+        if (s.includes('bushnell') && (s.includes('v6') || s.includes('nx9') || s.includes('300') || s.includes('pro-x')) || s.includes('blue-tees') || s.includes('callaway-300')) cat = 'Rangefinders';
+        else if (s.includes('garmin-r10') || s.includes('garmin-r50') || s.includes('skytrak') || s.includes('mevo') || s.includes('launch-pro') || s.includes('square-golf') || s.includes('sim')) cat = 'Launch Monitors';
+        else if (s.includes('paradym') || s.includes('qi35') || s.includes('aerojet') || s.includes('g430-max') || s.includes('ai-smoke') || s.includes('launcher-xl2') || s.includes('gt2')) cat = 'Drivers';
+        else if (s.includes('s62') || s.includes('s42') || s.includes('s70') || s.includes('s12') || s.includes('shot-scope') || s.includes('arccos') || s.includes('apple-watch') || s.includes('ion')) cat = 'GPS & Tracking';
+        else if (s.includes('odyssey') || s.includes('scotty') || s.includes('putter') || s.includes('lab-golf')) cat = 'Putters';
+        else if (s.includes('pro-v1') || s.includes('chrome-soft') || s.includes('kirkland') || s.includes('tp5')) cat = 'Golf Balls';
+        else if (s.includes('iron') || s.includes('stealth') || s.includes('rtx') || s.includes('jaws') || s.includes('wedge')) cat = 'Irons & Wedges';
+        else if (s.includes('sim')) cat = 'Simulators';
+
+        if (!categoryMap[cat]) categoryMap[cat] = [];
+        categoryMap[cat].push(c);
+      }
+
+      return categoryOrder.filter(cat => categoryMap[cat]?.length > 0).map(cat => (
+        <div style="margin:0 0 32px;">
+          <h2 style="font-size:18px;color:var(--green);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(30,58,40,.1);">{cat}</h2>
+          <div class="articles-grid">
+            {categoryMap[cat].map(c => (
+              <a href={`/compare/${c.slug}/`} class="article-card">
+                <div class="art-thumb">
+                  <span class="art-badge tag-cmp">HEAD TO HEAD</span>
+                  {c.thumbnail
+                    ? <img src={c.thumbnail} alt={c.title} loading="lazy" decoding="async" width="400" height="260"
+                        class="art-thumb__img" onerror="this.style.display='none'" />
+                    : <span aria-hidden="true">⚖️</span>
+                  }
+                </div>
+                <div class="art-body">
+                  <p class="hub-card-title">{c.title}</p>
+                  <p>{typeof c.intro === 'string' ? c.intro.substring(0, 140) : c.description?.substring(0, 140)}…</p>
+                  <div class="art-foot">
+                    <span class="art-words">Tested · Updated {c.dateModified?.substring(0,4) || '2026'}</span>
+                    <span class="art-read">See comparison →</span>
+                  </div>
+                </div>
+              </a>
+            ))}
           </div>
-          <div class="art-body">
-            <p class="hub-card-title">{c.title}</p>
-            <p>{c.intro.substring(0, 120)}…</p>
-            <div class="art-foot">
-              <span class="art-words">Tested · Updated 2026</span>
-              <span class="art-read">See comparison →</span>
-            </div>
-          </div>
-        </a>
-      ))}
-      {vsArticles.map(a => (
-        <a href={a.slug} class="article-card">
-          <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
-            <span class="art-badge tag-cmp">{a.tag || 'COMPARISON'}</span>
-            {a.thumbnail
-              ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" decoding="async" width="400" height="260"
-                  class="art-thumb__img" onerror="this.style.display='none'" />
-              : <span aria-hidden="true">{a.emoji || '⚖️'}</span>
-            }
-          </div>
-          <div class="art-body">
-            <p class="hub-card-title">{a.titleDisplay || a.title}</p>
-            <p>{(a.excerpt || a.description || '').substring(0, 120)}…</p>
-            <div class="art-foot">
-              <span class="art-words">{a.words} · Updated 2026</span>
-              <span class="art-read">Read comparison →</span>
-            </div>
-          </div>
-        </a>
-      ))}
-    </div>
+        </div>
+      ));
+    })()}
+
+    {/* Additional product comparisons from articles */}
+    {vsArticles.length > 0 && (
+      <div style="margin:32px 0 0;">
+        <h2 style="font-size:18px;color:var(--green);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(30,58,40,.1);">More Product Comparisons</h2>
+        <div class="articles-grid">
+          {vsArticles.map(a => (
+            <a href={a.slug} class="article-card">
+              <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
+                <span class="art-badge tag-cmp">HEAD TO HEAD</span>
+                {a.thumbnail
+                  ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" decoding="async" width="400" height="260"
+                      class="art-thumb__img" onerror="this.style.display='none'" />
+                  : <span aria-hidden="true">{a.emoji || '⚖️'}</span>
+                }
+              </div>
+              <div class="art-body">
+                <p class="hub-card-title">{a.titleDisplay || a.title}</p>
+                <p>{(a.excerpt || a.description || '').substring(0, 140)}…</p>
+                <div class="art-foot">
+                  <span class="art-words">Tested · Updated 2026</span>
+                  <span class="art-read">See comparison →</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
   <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
   <section style="max-width:100%;margin:48px auto 72px;padding:0 var(--page-px);">
