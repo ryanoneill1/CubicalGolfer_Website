@@ -2637,6 +2637,77 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Apple Watch prices drop with new model releases. Previous-gen saves 20-30%.',
     label: 'See Today\'s Price →',
   },
+
+  'spornia-spg-7': {
+    url: 'https://www.amazon.com/s?k=spornia+spg-7+golf+net&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$199',
+    priceNote: 'Best value hitting net — pops up in 30 seconds. Price is stable.',
+    label: 'See Today\'s Price →',
+  },
+  'foam-practice-balls': {
+    url: 'https://www.amazon.com/s?k=foam+golf+practice+balls&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$15',
+    priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
+    label: 'See Today\'s Price →',
+  },
+  'acoustic-foam-panels': {
+    url: 'https://www.amazon.com/s?k=acoustic+foam+panels&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$25',
+    priceNote: 'Commodity product — price is stable across brands.',
+    label: 'See Today\'s Price →',
+  },
+  'taylormade-qi-irons': {
+    url: 'https://www.amazon.com/s?k=taylormade+qi+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: 'from ~$899',
+    priceNote: 'New model — prices at full retail. Previous-gen drops when these release.',
+    label: 'See Today\'s Price →',
+  },
+  'cleveland-launcher-xl2-irons': {
+    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: 'from ~$599',
+    priceNote: 'Previous-gen model. Prices have dropped 20-30% since the 2026 lineup launched.',
+    label: 'See Today\'s Price →',
+  },
+  'callaway-jaws-full-toe': {
+    url: 'https://www.amazon.com/s?k=callaway+jaws+full+toe+wedge&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$180',
+    priceNote: 'Wedge prices are stable. Buy when you need — rarely discounted.',
+    label: 'See Today\'s Price →',
+  },
+  'cleveland-cbx4-wedge': {
+    url: 'https://www.amazon.com/s?k=cleveland+cbx4+wedge&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$150',
+    priceNote: 'Best value wedge for beginners. Price is stable year-round.',
+    label: 'See Today\'s Price →',
+  },
+  'callaway-paradym-hybrid': {
+    url: 'https://www.amazon.com/s?k=callaway+paradym+hybrid&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$270',
+    priceNote: 'Previous-gen — prices drop 30-40% when new models release.',
+    label: 'See Today\'s Price →',
+  },
+  'ping-g430-hybrid': {
+    url: 'https://www.amazon.com/s?k=ping+g430+hybrid&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$270',
+    priceNote: 'Hybrid prices are stable. Current price is typical retail.',
+    label: 'See Today\'s Price →',
+  },
+  'square-golf': {
+    url: 'https://www.amazon.com/s?k=square+golf+launch+monitor&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$300',
+    priceNote: 'Newer brand — prices may shift as they establish market position.',
+    label: 'See Today\'s Price →',
+  },
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
