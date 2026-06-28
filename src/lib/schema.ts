@@ -445,6 +445,28 @@ export function reviewSchema(article: Article): object | null {
 // We are an affiliate site — seller must be the actual retailer (Amazon, Bushnell),
 // NOT cubicalgolfer.com. We do NOT emit shippingDetails, returnPolicy, or gtin
 // because we cannot legitimately claim those as an affiliate.
+// ── ItemList for roundup/buying-guide pages (ranked product list) ─────────────
+// Google uses ItemList to show "Best X" carousels in search results.
+// Each item references the Product schema already on the page.
+export function roundupItemListSchema(
+  article: { slug: string; title: string },
+  products: { name: string; position: number; affiliateKey?: string }[],
+): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: article.title,
+    url: `${DOMAIN}${article.slug}`,
+    numberOfItems: products.length,
+    itemListElement: products.map(p => ({
+      '@type': 'ListItem',
+      position: p.position,
+      name: p.name,
+      url: `${DOMAIN}${article.slug}`,
+    })),
+  };
+}
+
 export function buyingGuideProductSchema(
   section: any,
   affiliateUrl: string,

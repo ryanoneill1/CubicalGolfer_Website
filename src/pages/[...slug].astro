@@ -19,7 +19,7 @@ import TrustCard     from '../components/TrustCard.astro';
 import { getSkipIf } from '../lib/skip-if';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
-import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema } from '../lib/schema';
+import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema, roundupItemListSchema } from '../lib/schema';
 import { getMergedRelated } from '../lib/linking';
 import { getAffiliateLink } from '../data/affiliate-links';
 import type { Article } from '../data/types';
@@ -334,6 +334,18 @@ if (isBuyingGuide) {
       aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined,
       pid
     ));
+  }
+
+  // ItemList schema for roundup pages (ranked product list)
+  const rankedProducts = article.sections
+    ?.filter((s: any) => s.badge && s.affiliateKey)
+    .map((s: any, i: number) => ({
+      name: s.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|Best Premium:|Best Value:|Budget Runner-Up:|Best GPS\+Laser Hybrid:|Best for Sim:|Best Mid-Range:|Best Splurge:|Best for Mid-Handicappers:|Editor.s Pick:|🥇|🥈|🥉|🏆)\s*/gi, '').trim(),
+      position: i + 1,
+      affiliateKey: s.affiliateKey,
+    })) || [];
+  if (rankedProducts.length >= 2) {
+    schemas.push(roundupItemListSchema(article, rankedProducts));
   }
 }
 ---
