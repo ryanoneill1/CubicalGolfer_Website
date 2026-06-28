@@ -295,6 +295,8 @@ function selectBudget(b) {
   document.getElementById('budget-result').style.display = 'block';
   document.getElementById('budget-result').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+// Expose to global scope for inline onclick handlers (Astro wraps define:vars in IIFE)
+window.selectBudget = selectBudget;
 </script>
 
 <style>

@@ -198,6 +198,8 @@ function selectTier(tier) {
   document.getElementById('result-area').style.display = 'block';
   document.getElementById('result-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+// Expose to global scope for inline onclick handlers (Astro wraps define:vars in IIFE)
+window.selectTier = selectTier;
 </script>
 
 <style>
