@@ -102,9 +102,20 @@ const schemas  = [
     </div>
   </section>
 
+  <!-- GEAR BRIDGE — connect tech topics to buying guides -->
+  <div style="max-width:100%;margin:0 auto 28px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
+    <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🔧 Ready to buy? Start with our tested picks</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
+      <a href="/best-golf-launch-monitors-2026/" style="color:var(--green);font-weight:600;text-decoration:none;">Best launch monitors 2026 →</a>
+      <a href="/best-golf-swing-analyzers/" style="color:var(--green);font-weight:600;text-decoration:none;">Best swing analyzers →</a>
+      <a href="/best-golf-gps-watches/" style="color:var(--green);font-weight:600;text-decoration:none;">Best GPS watches →</a>
+      <a href="/best-golf-apps/" style="color:var(--green);font-weight:600;text-decoration:none;">Best golf apps →</a>
+    </div>
+  </div>
+
   <div class="cat-page-body">
     {articles.length === 0 ? (
-      <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
+      <p style="color:var(--muted);padding:32px 0">More guides coming soon — browse our <a href="/gear-reviews/" style="color:var(--green);font-weight:600">gear reviews</a> in the meantime.</p>
     ) : (
       <div class="articles-grid">
         {articles.map(a => (

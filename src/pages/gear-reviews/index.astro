@@ -97,10 +97,22 @@ const schemas  = [
       </div>
     </div>
   </section>
+
+  <!-- DECISION AID — help readers find the right starting point -->
+  <div style="max-width:100%;margin:0 auto 28px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
+    <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🤔 Not sure where to start?</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
+      <a href="/gear-quiz/" style="color:var(--green);font-weight:600;text-decoration:none;">Take the 60-second gear quiz →</a>
+      <a href="/compare/" style="color:var(--green);font-weight:600;text-decoration:none;">Compare two products head-to-head →</a>
+      <a href="/best-golf-gear-2026/" style="color:var(--green);font-weight:600;text-decoration:none;">See our #1 pick in every category →</a>
+      <a href="/best-golf-gear-under-100/" style="color:var(--green);font-weight:600;text-decoration:none;">Best gear under $100 →</a>
+    </div>
+  </div>
+
   <!-- ─── ARTICLE GRID — all gear reviews ─── -->
   <div class="cat-page-body">
     {articles.length === 0 ? (
-      <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
+      <p style="color:var(--muted);padding:32px 0">More guides coming soon — browse our <a href="/gear-reviews/" style="color:var(--green);font-weight:600">gear reviews</a> in the meantime.</p>
     ) : (
       <>
         <h2 style="font-size:20px;margin:0 0 16px;">All gear reviews & buying guides</h2>
