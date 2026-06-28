@@ -1088,7 +1088,7 @@ export const AFFILIATE: Record<string, {
     price: '~$40/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
-    imgSrc: '/images/products/callaway-chrome-tour.webp',
+    imgSrc: '/images/products/callaway-chrome-tour-2026.webp',
     imgAlt: 'Callaway Chrome Soft Golf Balls',
     benefits: [
       '75 compression — low-compression premium ball for moderate speeds',
@@ -2551,7 +2551,7 @@ export const AFFILIATE: Record<string, {
     price: '~$550',
     priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/garmin-approach-s70.webp', imgAlt: 'Garmin Approach S70 GPS golf watch',
+    imgSrc: '', imgAlt: 'Garmin Approach S70 GPS golf watch',
   },
   'titleist-gt2-driver': {
     url: 'https://www.amazon.com/s?k=titleist+gt2+driver&tag=cubicalgolfer-20',
@@ -2641,6 +2641,7 @@ export const AFFILIATE: Record<string, {
   'spornia-spg-7': {
     url: 'https://www.amazon.com/s?k=spornia+spg-7+golf+net&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/spornia-spg-7.webp', imgAlt: 'Spornia Spg 7 product image',
     price: '~$199',
     priceNote: 'Best value hitting net — pops up in 30 seconds. Price is stable.',
     label: 'See Today\'s Price →',
@@ -2648,6 +2649,7 @@ export const AFFILIATE: Record<string, {
   'foam-practice-balls': {
     url: 'https://www.amazon.com/s?k=foam+golf+practice+balls&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/foam-practice-balls.webp', imgAlt: 'Foam Practice Balls product image',
     price: '~$15',
     priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
     label: 'See Today\'s Price →',
@@ -2655,6 +2657,7 @@ export const AFFILIATE: Record<string, {
   'acoustic-foam-panels': {
     url: 'https://www.amazon.com/s?k=acoustic+foam+panels&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/acoustic-foam-panels.webp', imgAlt: 'Acoustic Foam Panels product image',
     price: '~$25',
     priceNote: 'Commodity product — price is stable across brands.',
     label: 'See Today\'s Price →',
@@ -2662,6 +2665,7 @@ export const AFFILIATE: Record<string, {
   'taylormade-qi-irons': {
     url: 'https://www.amazon.com/s?k=taylormade+qi+irons&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/taylormade-qi-irons.webp', imgAlt: 'Taylormade Qi Irons product image',
     price: 'from ~$899',
     priceNote: 'New model — prices at full retail. Previous-gen drops when these release.',
     label: 'See Today\'s Price →',
@@ -2669,6 +2673,7 @@ export const AFFILIATE: Record<string, {
   'cleveland-launcher-xl2-irons': {
     url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2+irons&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/cleveland-launcher-xl2-irons.webp', imgAlt: 'Cleveland Launcher Xl2 Irons product image',
     price: 'from ~$599',
     priceNote: 'Previous-gen model. Prices have dropped 20-30% since the 2026 lineup launched.',
     label: 'See Today\'s Price →',
@@ -2676,6 +2681,7 @@ export const AFFILIATE: Record<string, {
   'callaway-jaws-full-toe': {
     url: 'https://www.amazon.com/s?k=callaway+jaws+full+toe+wedge&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/callaway-jaws-full-toe.webp', imgAlt: 'Callaway Jaws Full Toe product image',
     price: '~$180',
     priceNote: 'Wedge prices are stable. Buy when you need — rarely discounted.',
     label: 'See Today\'s Price →',
@@ -2683,6 +2689,7 @@ export const AFFILIATE: Record<string, {
   'cleveland-cbx4-wedge': {
     url: 'https://www.amazon.com/s?k=cleveland+cbx4+wedge&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/cleveland-cbx4-wedge.webp', imgAlt: 'Cleveland Cbx4 Wedge product image',
     price: '~$150',
     priceNote: 'Best value wedge for beginners. Price is stable year-round.',
     label: 'See Today\'s Price →',
@@ -2690,6 +2697,7 @@ export const AFFILIATE: Record<string, {
   'callaway-paradym-hybrid': {
     url: 'https://www.amazon.com/s?k=callaway+paradym+hybrid&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/callaway-paradym-hybrid.webp', imgAlt: 'Callaway Paradym Hybrid product image',
     price: '~$270',
     priceNote: 'Previous-gen — prices drop 30-40% when new models release.',
     label: 'See Today\'s Price →',
@@ -2697,6 +2705,7 @@ export const AFFILIATE: Record<string, {
   'ping-g430-hybrid': {
     url: 'https://www.amazon.com/s?k=ping+g430+hybrid&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/ping-g430-hybrid.webp', imgAlt: 'Ping G430 Hybrid product image',
     price: '~$270',
     priceNote: 'Hybrid prices are stable. Current price is typical retail.',
     label: 'See Today\'s Price →',
@@ -2704,9 +2713,138 @@ export const AFFILIATE: Record<string, {
   'square-golf': {
     url: 'https://www.amazon.com/s?k=square+golf+launch+monitor&tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    imgSrc: '/images/products/square-golf.webp', imgAlt: 'Square Golf product image',
     price: '~$300',
     priceNote: 'Newer brand — prices may shift as they establish market position.',
     label: 'See Today\'s Price →',
+  },
+
+  // ═══ APPAREL — Shirts ═══
+  'nike-dri-fit-victory-polo': {
+    url: `https://www.amazon.com/s?k=nike+dri+fit+victory+golf+polo&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$45', label: `See Today's Price →`,
+    imgSrc: '/images/products/nike-dri-fit-victory-polo.webp', imgAlt: 'Nike Dri-FIT Victory golf polo shirt',
+  },
+  'footjoy-prodry-polo': {
+    url: `https://www.amazon.com/s?k=footjoy+prodry+polo&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$65', label: `See Today's Price →`,
+    imgSrc: '/images/products/footjoy-prodry-polo.webp', imgAlt: 'FootJoy ProDry golf polo shirt',
+  },
+  'adidas-ultimate365-polo': {
+    url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+polo&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$50', label: `See Today's Price →`,
+    imgSrc: '/images/products/adidas-ultimate365-polo.webp', imgAlt: 'Adidas Ultimate365 golf polo shirt',
+  },
+  'puma-cloudspun-polo': {
+    url: `https://www.amazon.com/s?k=puma+cloudspun+golf+polo&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$55', label: `See Today's Price →`,
+    imgSrc: '/images/products/puma-cloudspun-polo.webp', imgAlt: 'Puma Cloudspun golf polo shirt',
+  },
+  // ═══ APPAREL — Pants ═══
+  'adidas-ultimate365-pants': {
+    url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+pants&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$65', label: `See Today's Price →`,
+    imgSrc: '/images/products/adidas-ultimate365-pants.webp', imgAlt: 'Adidas Ultimate365 golf pants',
+  },
+  'nike-dri-fit-golf-pants': {
+    url: `https://www.amazon.com/s?k=nike+dri+fit+golf+pants&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$60', label: `See Today's Price →`,
+    imgSrc: '/images/products/nike-dri-fit-golf-pants.webp', imgAlt: 'Nike Dri-FIT golf pants',
+  },
+  'puma-jackpot-golf-pants': {
+    url: `https://www.amazon.com/s?k=puma+jackpot+golf+pants&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$55', label: `See Today's Price →`,
+    imgSrc: '/images/products/puma-jackpot-golf-pants.webp', imgAlt: 'Puma Jackpot golf pants',
+  },
+  // ═══ APPAREL — Shorts ═══
+  'under-armour-showdown-shorts': {
+    url: `https://www.amazon.com/s?k=under+armour+showdown+golf+shorts&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$55', label: `See Today's Price →`,
+    imgSrc: '/images/products/under-armour-showdown-shorts.webp', imgAlt: 'Under Armour Showdown golf shorts',
+  },
+  'adidas-ultimate365-shorts': {
+    url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+shorts&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$45', label: `See Today's Price →`,
+    imgSrc: '/images/products/adidas-ultimate365-shorts.webp', imgAlt: 'Adidas Ultimate365 golf shorts',
+  },
+  'nike-dri-fit-golf-shorts': {
+    url: `https://www.amazon.com/s?k=nike+dri+fit+golf+shorts&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$50', label: `See Today's Price →`,
+    imgSrc: '/images/products/nike-dri-fit-golf-shorts.webp', imgAlt: 'Nike Dri-FIT golf shorts',
+  },
+  // ═══ APPAREL — Hats ═══
+  'titleist-tour-performance-hat': {
+    url: `https://www.amazon.com/s?k=titleist+tour+performance+hat&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$30', label: `See Today's Price →`,
+    imgSrc: '/images/products/titleist-tour-performance-hat.webp', imgAlt: 'Titleist Tour Performance golf hat',
+  },
+  'callaway-cg-logo-hat': {
+    url: `https://www.amazon.com/s?k=callaway+cg+logo+golf+hat&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$25', label: `See Today's Price →`,
+    imgSrc: '/images/products/callaway-cg-logo-hat.webp', imgAlt: 'Callaway CG Logo golf hat',
+  },
+  'nike-legacy91-golf-hat': {
+    url: `https://www.amazon.com/s?k=nike+legacy91+golf+hat&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$28', label: `See Today's Price →`,
+    imgSrc: '/images/products/nike-legacy91-golf-hat.webp', imgAlt: 'Nike Legacy91 golf hat',
+  },
+  // ═══ ACCESSORIES — Sunglasses ═══
+  'maui-jim-banyans-golf': {
+    url: `https://www.amazon.com/s?k=maui+jim+banyans+golf+sunglasses&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$230', label: `See Today's Price →`,
+    imgSrc: '/images/products/maui-jim-banyans-golf.webp', imgAlt: 'Maui Jim Banyans golf sunglasses',
+  },
+  'goodr-golf-sunglasses': {
+    url: `https://www.amazon.com/s?k=goodr+golf+sunglasses&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$25', label: `See Today's Price →`,
+    imgSrc: '/images/products/goodr-golf-sunglasses.webp', imgAlt: 'Goodr golf sunglasses',
+  },
+  // ═══ ACCESSORIES — Rain Gear ═══
+  'under-armour-storm-rain-jacket': {
+    url: `https://www.amazon.com/s?k=under+armour+storm+golf+rain+jacket&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$80', label: `See Today's Price →`,
+    imgSrc: '/images/products/under-armour-storm-rain-jacket.webp', imgAlt: 'Under Armour Storm golf rain jacket',
+  },
+  'footjoy-hydrolite-rain-jacket': {
+    url: `https://www.amazon.com/s?k=footjoy+hydrolite+rain+jacket&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$120', label: `See Today's Price →`,
+    imgSrc: '/images/products/footjoy-hydrolite-rain-jacket.webp', imgAlt: 'FootJoy HydroLite golf rain jacket',
+  },
+  // ═══ ACCESSORIES — Towel, Umbrella, Bags, Carts ═══
+  'club-glove-microfiber-towel': {
+    url: `https://www.amazon.com/s?k=club+glove+microfiber+golf+towel&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$20', label: `See Today's Price →`,
+    imgSrc: '/images/products/club-glove-microfiber-towel.webp', imgAlt: 'Club Glove microfiber golf towel',
+  },
+  'procella-golf-umbrella': {
+    url: `https://www.amazon.com/s?k=procella+golf+umbrella&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$30', label: `See Today's Price →`,
+    imgSrc: '/images/products/procella-golf-umbrella.webp', imgAlt: 'Procella golf umbrella',
+  },
+  'ezgo-freedom-rxv': {
+    url: `https://www.amazon.com/s?k=ezgo+freedom+rxv+golf+cart&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$8,000+', label: `See Today's Price →`,
+    imgSrc: '/images/products/ezgo-freedom-rxv.webp', imgAlt: 'EZGO Freedom RXV electric golf cart',
+  },
+  'club-car-onward': {
+    url: `https://www.amazon.com/s?k=club+car+onward+golf+cart&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$9,000+', label: `See Today's Price →`,
+    imgSrc: '/images/products/club-car-onward.webp', imgAlt: 'Club Car Onward electric golf cart',
+  },
+  'callaway-org-14-cart-bag': {
+    url: `https://www.amazon.com/s?k=callaway+org+14+cart+bag&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$260', label: `See Today's Price →`,
+    imgSrc: '/images/products/callaway-org-14-cart-bag.webp', imgAlt: 'Callaway Org 14 cart bag',
+  },
+  'ping-hoofer-14-stand-bag': {
+    url: `https://www.amazon.com/s?k=ping+hoofer+14+stand+bag&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$280', label: `See Today's Price →`,
+    imgSrc: '/images/products/ping-hoofer-14-stand-bag.webp', imgAlt: 'Ping Hoofer 14 stand bag',
+  },
+  'ogio-fuse-stand-bag': {
+    url: `https://www.amazon.com/s?k=ogio+fuse+stand+bag&tag=cubicalgolfer-20`,
+    retailer: 'Amazon', price: '~$220', label: `See Today's Price →`,
+    imgSrc: '/images/products/ogio-fuse-stand-bag.webp', imgAlt: 'Ogio Fuse stand bag',
   },
 };
 

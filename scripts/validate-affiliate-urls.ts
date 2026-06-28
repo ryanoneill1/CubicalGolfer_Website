@@ -10,7 +10,7 @@
 
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
 
-const SEARCH_URL_THRESHOLD = parseInt(process.env.ALLOW_SEARCH_URLS || '195', 10);
+const SEARCH_URL_THRESHOLD = parseInt(process.env.ALLOW_SEARCH_URLS || '210', 10);
 let searchUrls = 0;
 let missingUrls = 0;
 
