@@ -58,6 +58,11 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
           <p id="handicap-number" style="font-size:36px;font-weight:800;margin:0;"></p>
           <p id="handicap-desc" style="font-size:14px;color:rgba(255,255,255,.7);margin:8px 0 0;"></p>
         </div>
+        <!-- Dynamic gear recommendation based on handicap -->
+        <div id="handicap-recs" style="display:none;margin-top:16px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎯 Your best gear upgrade based on this handicap</p>
+          <div id="handicap-rec-content" style="font-size:13px;line-height:1.6;"></div>
+        </div>
       </div>
     </section>
 
@@ -105,6 +110,25 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
       var desc = hcp < 5 ? 'Low handicap — top 5% of golfers' : hcp < 15 ? 'Mid handicap — solid weekend golfer' : hcp < 25 ? 'High handicap — room to improve' : 'Beginner — focus on fundamentals';
       document.getElementById('handicap-desc').textContent = desc;
       document.getElementById('handicap-result').style.display = 'block';
+      // Show gear recommendation based on handicap
+      var recsDiv = document.getElementById('handicap-recs');
+      var recContent = document.getElementById('handicap-rec-content');
+      var rec = '';
+      if (hcp < 10) {
+        rec = '<p style="margin:0 0 8px;"><strong>Best first upgrade:</strong> A <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;">precision rangefinder</a> — at your level, exact yardages translate directly to lower scores.</p>' +
+              '<p style="margin:0 0 8px;"><strong>Best overall pick:</strong> <a href="/arccos-caddie-review/" style="color:var(--green);font-weight:600;">Arccos Caddie sensors</a> — strokes-gained data shows exactly where to practice.</p>' +
+              '<p style="margin:0;"><strong>Best budget pick:</strong> <a href="/best-golf-training-aids/" style="color:var(--green);font-weight:600;">Putting mirror ($25)</a> — the cheapest way to drop 1-2 putts per round.</p>';
+      } else if (hcp < 20) {
+        rec = '<p style="margin:0 0 8px;"><strong>Best first upgrade:</strong> <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;">A rangefinder</a> — eliminates 2-3 wrong club selections per round at your level.</p>' +
+              '<p style="margin:0 0 8px;"><strong>Best overall pick:</strong> <a href="/best-golf-drivers-forgiveness/" style="color:var(--green);font-weight:600;">Forgiving driver</a> — the Callaway Paradym Ai Smoke Max retains ball speed on your mishits.</p>' +
+              '<p style="margin:0;"><strong>Best budget pick:</strong> <a href="/best-golf-balls-90-mph-swing-speed/" style="color:var(--green);font-weight:600;">Compression-matched ball</a> — costs $0 extra to switch and adds 5-8 yards.</p>';
+      } else {
+        rec = '<p style="margin:0 0 8px;"><strong>Best first upgrade:</strong> <a href="/best-golf-training-aids/" style="color:var(--green);font-weight:600;">Alignment sticks ($12)</a> — fixes your aim, which fixes half your misses.</p>' +
+              '<p style="margin:0 0 8px;"><strong>Best overall pick:</strong> <a href="/best-golf-drivers-forgiveness/" style="color:var(--green);font-weight:600;">Forgiving driver</a> — game-improvement drivers add 10-15 yards vs a hand-me-down.</p>' +
+              '<p style="margin:0;"><strong>Best budget pick:</strong> <a href="/how-to-break-90/" style="color:var(--green);font-weight:600;">Course management guide</a> — free, saves 3-5 strokes per round overnight.</p>';
+      }
+      recContent.innerHTML = rec;
+      recsDiv.style.display = 'block';
     }
   `}</script>
 </BaseLayout>
