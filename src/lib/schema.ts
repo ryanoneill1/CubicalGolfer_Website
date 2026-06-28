@@ -461,9 +461,21 @@ export function buyingGuideProductSchema(
   // Derive product name: prefer the section heading if it's actually a product name,
   // otherwise humanize the affiliate key (e.g. 'bushnell-tour-v6-shift' → 'Bushnell Tour V6 Shift')
   const NON_PRODUCT_HEADINGS = /^(where to buy|quick verdict|the verdict|our pick|buy|pricing|value|cost)/i;
-  let productName = section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|🥇|🏆)\s*/i, '').trim();
+  let productName = section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|Best Premium:|Best Value:|Budget Runner-Up:|Best GPS\+Laser Hybrid:|Best for Sim:|Best Mid-Range:|Best Splurge:|Editor.s Pick:|🥇|🥈|🥉|🏆)\s*/gi, '').trim();
   if (NON_PRODUCT_HEADINGS.test(productName) && affiliateKey) {
     productName = affiliateKey.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+  }
+
+  // Derive brand from affiliate key (first word, or first two for compound brands)
+  const COMPOUND_BRANDS = ['shot-scope','blue-tees','lab-golf','square-golf','full-swing','rain-or','precision-pro','vice-golf','tour-edge','top-flite','ping-g','cobra-aerojet','cleveland-launcher'];
+  let brandName = '';
+  if (affiliateKey) {
+    const compound = COMPOUND_BRANDS.find(b => affiliateKey.startsWith(b));
+    if (compound) {
+      brandName = compound.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+    } else {
+      brandName = (affiliateKey.split('-')[0] || '').replace(/\b\w/g, (c: string) => c.toUpperCase());
+    }
   }
 
   return {
@@ -472,6 +484,7 @@ export function buyingGuideProductSchema(
     name: productName,
     description: section.body?.slice(0, 200) || '',
     image: productImage || `${DOMAIN}/images/og-image.jpg`,
+    ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
     // ── Single first-party editorial review only ──
     // aggregateRating removed: the ratingCount values are Amazon review
     // counts, not reviews collected on this site. Combining our editorial
