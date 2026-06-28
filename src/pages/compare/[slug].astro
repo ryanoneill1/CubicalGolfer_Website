@@ -596,18 +596,16 @@ if (compProducts.length > 0) {
     {/* ── UPDATE STAMP ── */}
     <div class="update-stamp">Last updated: {c.dateModified}</div>
 
-    {/* ── RELATED GUIDES — dynamic per-comparison + fallback ── */}
-    <div class="rel-cluster" style="margin-top:40px">
-      <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
-      <div class="rel-links">
+    {/* ── NEXT STEPS — category guide + related ── */}
+    <div style="margin-top:40px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
+      <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">📋 Want to see how these rank against the full field?</p>
+      <div class="rel-links" style="display:flex;flex-wrap:wrap;gap:8px;">
         {c.related && c.related.length > 0
-          ? c.related.map((link: any) => <a href={link.slug}>{link.label}</a>)
+          ? c.related.map((link: any) => <a href={link.slug} style="color:var(--green);font-weight:600;font-size:13px;">{link.label} →</a>)
           : <>
-              <a href="/compare/">All Golf Product Comparisons →</a>
-              <a href="/gear-reviews/">All Gear Reviews →</a>
-              <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
-              <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
-              <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers 2026</a>
+              <a href="/compare/" style="color:var(--green);font-weight:600;font-size:13px;">All Comparisons →</a>
+              <a href="/gear-reviews/" style="color:var(--green);font-weight:600;font-size:13px;">All Gear Reviews →</a>
+              <a href="/best-golf-gear-2026/" style="color:var(--green);font-weight:600;font-size:13px;">#1 Pick in Every Category →</a>
             </>
         }
       </div>
