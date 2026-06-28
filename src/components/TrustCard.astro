@@ -9,11 +9,13 @@ import { AUTHOR_PROFILE } from '../data/author';
 interface Props {
   variant?: 'guide' | 'comparison' | 'review';
   rounds?: string;
+  productCount?: number;
 }
 
 const {
   variant = 'guide',
   rounds = '40+',
+  productCount = 0,
 } = Astro.props;
 
 const heading = variant === 'comparison'
@@ -32,7 +34,7 @@ const purchaseLabel = variant === 'comparison'
   <ul class="trust-card__list">
     <li><strong>{purchaseLabel}</strong> — bought with our own money, no manufacturer loans or freebies</li>
     <li><strong>{rounds} real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
-    <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+    {productCount > 0 && <li><strong>Tested against {productCount} alternatives</strong> — every pick earned its ranking against the full field</li>}
     <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers, not scratch players</li>
   </ul>
   <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
