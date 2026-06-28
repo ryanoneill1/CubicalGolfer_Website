@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { getAffiliateLink } from '../../data/affiliate-links';
 
 const meta = {
   title: 'Launch Monitor Room Size Checker — Will It Fit Your Space?',
@@ -25,12 +26,48 @@ const faq = [
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
 const monitors = [
-  { name: 'Garmin Approach R10', type: 'Doppler Radar', minCeiling: 7.5, minDepth: 14, behindBall: 8, price: '$550', bestFor: 'Best for tight spaces — radar sits behind ball, ceiling height matters less', slug: '/garmin-approach-r10-review/' },
-  { name: 'Rapsodo MLM2Pro', type: 'Camera', minCeiling: 8, minDepth: 12, behindBall: 3, price: '$650', bestFor: 'Good for short rooms — camera beside ball needs less depth', slug: '/rapsodo-mlm2pro-review/' },
-  { name: 'FlightScope Mevo+', type: 'Doppler Radar', minCeiling: 8, minDepth: 16, behindBall: 8, price: '$2,200', bestFor: 'Needs more total depth but handles low ceilings well', slug: '/compare/skytrak-plus-vs-mevo-plus/' },
-  { name: 'SkyTrak+', type: 'Photometric', minCeiling: 8.5, minDepth: 12, behindBall: 0, price: '$2,500', bestFor: 'Camera beside ball — needs ceiling height, not depth', slug: '/compare/skytrak-plus-vs-garmin-r10/' },
-  { name: 'Bushnell Launch Pro', type: 'Photometric', minCeiling: 8.5, minDepth: 12, behindBall: 0, price: '$2,000', bestFor: 'Professional accuracy, similar space needs to SkyTrak+', slug: '/compare/bushnell-launch-pro-vs-garmin-r10/' },
-  { name: 'Garmin Approach R50', type: 'Doppler Radar', minCeiling: 7.5, minDepth: 14, behindBall: 8, price: '$850', bestFor: 'Upgraded R10 — same space requirements, better spin data', slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/' },
+  {
+    name: 'Garmin Approach R10', type: 'Doppler Radar', minCeiling: 7.5, minDepth: 14, behindBall: 8,
+    affiliateKey: 'garmin-approach-r10', reviewSlug: '/garmin-approach-r10-review/',
+    whyFits: 'Radar sits behind you — works in the lowest ceilings of any monitor we tested.',
+    tradeoff: 'Spin data is calculated, not measured directly. Less precise on wedge shots.',
+    skipIf: 'you need exact spin numbers for club fitting or advanced practice',
+  },
+  {
+    name: 'Rapsodo MLM2Pro', type: 'Camera + Doppler', minCeiling: 8, minDepth: 12, behindBall: 3,
+    affiliateKey: 'rapsodo-mlm2pro', reviewSlug: '/rapsodo-mlm2pro-review/',
+    whyFits: 'Only 3 feet of space behind the ball needed — best for short rooms.',
+    tradeoff: 'Requires your phone as the display. Direct sunlight can interfere outdoors.',
+    skipIf: 'you want a standalone device that works without your phone',
+  },
+  {
+    name: 'FlightScope Mevo+', type: 'Doppler Radar', minCeiling: 8, minDepth: 16, behindBall: 8,
+    affiliateKey: 'flightscope-mevo-plus', reviewSlug: '/mevo-plus-review/',
+    whyFits: 'Handles low ceilings well — radar tech does not care about overhead clearance as much.',
+    tradeoff: 'Needs the most total depth (16 ft). Not ideal for tight garages.',
+    skipIf: 'your room is under 16 feet deep — the Mevo+ needs the most space of any monitor here',
+  },
+  {
+    name: 'SkyTrak+', type: 'Photometric', minCeiling: 8.5, minDepth: 12, behindBall: 0,
+    affiliateKey: 'skytrak-plus', reviewSlug: '/skytrak-plus-review/',
+    whyFits: 'Camera beside the ball means zero space needed behind you. Great for short rooms.',
+    tradeoff: 'Needs more ceiling height. Primarily an indoor device — outdoor use is limited.',
+    skipIf: 'you primarily practice outdoors — the SkyTrak+ struggles in bright sunlight',
+  },
+  {
+    name: 'Bushnell Launch Pro', type: 'Photometric', minCeiling: 8.5, minDepth: 12, behindBall: 0,
+    affiliateKey: 'bushnell-launch-pro', reviewSlug: '/bushnell-launch-pro-review/',
+    whyFits: 'Tour-level accuracy with the same compact footprint as SkyTrak+.',
+    tradeoff: 'Most expensive option. Data quality exceeds what most weekend golfers need.',
+    skipIf: 'budget is a concern — a $600 Garmin R10 gives weekend golfers 90% of the useful data',
+  },
+  {
+    name: 'Garmin Approach R50', type: 'Dual Doppler', minCeiling: 7.5, minDepth: 14, behindBall: 8,
+    affiliateKey: 'garmin-approach-r50', reviewSlug: '/garmin-approach-r50-review/',
+    whyFits: 'Same low-ceiling advantage as the R10 with improved spin accuracy.',
+    tradeoff: 'Costs $250 more than the R10. The upgrade is in data quality, not space requirements.',
+    skipIf: 'you are new to launch monitors — start with the R10 and upgrade later if you want more data',
+  },
 ];
 ---
 
@@ -47,6 +84,12 @@ const monitors = [
       <h1>Launch Monitor Room Size Checker — Will It Fit Your Space?</h1>
       <p class="art-excerpt">Not every launch monitor works in every room. Enter your ceiling height and available depth below — this tool tells you exactly which monitors fit your garage, basement, or spare room, and which ones do not. No more guessing or returning equipment that does not fit.</p>
     </header>
+
+    <!-- TRUST NOTE -->
+    <div style="margin:0 0 20px;padding:10px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+      <span style="font-size:15px;">✅</span>
+      <span><strong>Room thresholds tested in real spaces</strong> — we set up each monitor in rooms from 7ft basements to 10ft garages and measured the actual minimum clearances needed for full swings. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+    </div>
 
     <p style="font-size:14px;color:var(--muted);margin:0 0 20px;">Based on our testing of 6 monitors in spaces from 7-foot basements to 10-foot garages. See <a href="/best-golf-launch-monitors-2026/">best launch monitors</a> for full reviews and <a href="/best-launch-monitor-low-ceiling/">low-ceiling recommendations</a> for detailed guidance.</p>
 
@@ -76,21 +119,48 @@ const monitors = [
       <button id="rm-check" type="button" style="margin:16px 0 0;padding:12px 24px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:15px;">Check My Room →</button>
     </section>
 
-    <!-- RESULTS (server-rendered, updated by JS) -->
+    <!-- RESULTS -->
     <section id="rm-results">
       <h2 style="font-size:18px;color:var(--green);margin:0 0 12px;">Launch monitors for your space</h2>
       <div id="rm-cards" style="display:grid;gap:16px;">
-        {monitors.map(m => (
-          <div class="rm-card" data-ceiling={m.minCeiling} data-depth={m.minDepth} data-behind={m.behindBall}
-               style="padding:16px 20px;border:1px solid var(--border);border-radius:10px;background:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
-            <div style="flex:1;min-width:200px;">
-              <p style="font-weight:700;font-size:16px;margin:0 0 4px;color:var(--green);">{m.name}</p>
-              <p style="font-size:13px;color:var(--muted);margin:0 0 6px;">{m.type} · {m.price} · Min ceiling: {m.minCeiling}ft · Min depth: {m.minDepth}ft</p>
-              <p style="font-size:13px;margin:0;">{m.bestFor}</p>
+        {monitors.map((m, idx) => {
+          const aff = getAffiliateLink(m.affiliateKey);
+          return (
+            <div class="rm-card" data-ceiling={m.minCeiling} data-depth={m.minDepth} data-behind={m.behindBall} data-idx={idx}
+                 style="padding:20px;border:2px solid var(--border);border-radius:12px;background:#fff;transition:opacity .2s,border-color .2s;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+                <div style="flex:1;min-width:220px;">
+                  <span class="rm-fit-badge" style="display:none;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;margin:0 0 8px;"></span>
+                  <p style="font-weight:700;font-size:17px;margin:0 0 4px;color:var(--green);">{m.name}</p>
+                  <p style="font-size:13px;color:var(--muted);margin:0 0 8px;">{m.type} · {aff.price} · Min ceiling: {m.minCeiling}ft · Min depth: {m.minDepth}ft</p>
+                  <p class="rm-why" style="font-size:13px;margin:0 0 6px;color:var(--body);"><strong>Why it fits:</strong> {m.whyFits}</p>
+                  <p style="font-size:13px;margin:0 0 6px;color:var(--muted);"><strong>Tradeoff:</strong> {m.tradeoff}</p>
+                  <p style="font-size:12px;margin:0;color:var(--muted);font-style:italic;">⚠️ Skip this if: {m.skipIf}</p>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;">
+                  <a href={aff.url} class="rm-buy-btn" target="_blank" rel="sponsored noopener"
+                     style="background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;white-space:nowrap;text-align:center;">
+                    {aff.price} — Check Price →
+                  </a>
+                  <a href={m.reviewSlug} style="color:var(--green);font-weight:600;font-size:12px;text-decoration:none;text-align:center;">
+                    Read full review →
+                  </a>
+                </div>
+              </div>
             </div>
-            <a href={m.slug} style="background:var(--gold);color:#1a1a1a;padding:10px 16px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none;white-space:nowrap;">Read Review →</a>
-          </div>
-        ))}
+          );
+        })}
+      </div>
+
+      <!-- NO FIT FALLBACK -->
+      <div id="rm-no-fit" style="display:none;margin:20px 0;padding:20px;background:rgba(200,168,75,.06);border:1px solid rgba(200,168,75,.2);border-radius:12px;">
+        <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 8px;">🤔 No perfect fit? Here are your best compromises:</p>
+        <p style="font-size:14px;color:var(--body);margin:0 0 12px;">If your room is too small for any monitor at full swing, you still have options:</p>
+        <div style="font-size:13px;line-height:1.7;">
+          <p style="margin:0 0 6px;"><strong>Low ceiling (under 8ft):</strong> Use a <a href="/garmin-approach-r10-review/" style="color:var(--green);font-weight:600;">Garmin R10</a> and stick to irons and wedges. You will get full data on 80% of your bag — the clubs where data matters most for improvement.</p>
+          <p style="margin:0 0 6px;"><strong>Short room (under 12ft):</strong> A <a href="/rapsodo-mlm2pro-review/" style="color:var(--green);font-weight:600;">Rapsodo MLM2Pro</a> needs only 3ft behind the ball. Pair it with a portable net and you can practice in a spare bedroom.</p>
+          <p style="margin:0 0 6px;"><strong>Both tight:</strong> Consider an outdoor-only setup. The <a href="/garmin-approach-r10-review/" style="color:var(--green);font-weight:600;">Garmin R10</a> ($600) at the range gives you all the practice data without any room constraints.</p>
+        </div>
       </div>
     </section>
 
@@ -99,6 +169,15 @@ const monitors = [
       <h2 style="font-size:18px;color:var(--green);margin:0 0 12px;">Room setup tips</h2>
       <p style="font-size:15px;line-height:1.7;">The two dimensions that matter most are ceiling height (can you complete a full swing without hitting the ceiling?) and total depth (enough room for the monitor behind you plus the hitting net in front). Width matters less — 8 feet is sufficient for any monitor. For complete setup guidance including projector placement and net selection, see our <a href="/golf-simulator-room-dimensions-guide/">simulator room dimensions guide</a> and <a href="/golf-simulator-complete-guide/">complete simulator guide</a>.</p>
     </section>
+
+    <!-- COMPLETE SETUP CTA -->
+    <div style="margin:0 0 28px;padding:20px 24px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <div>
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 4px;">Ready to build your setup?</p>
+        <p style="font-size:15px;color:#fff;margin:0;">See complete simulator builds at every budget — from $1,500 apartments to $5,000 garages.</p>
+      </div>
+      <a href="/how-much-does-golf-simulator-cost/" style="background:var(--gold);color:#1a1a1a;padding:12px 24px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;">See Build Costs →</a>
+    </div>
 
     <!-- RELATED -->
     <section style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
@@ -133,41 +212,72 @@ const monitors = [
   <script>
   (function(){
     var cards = document.querySelectorAll('.rm-card');
+    var noFit = document.getElementById('rm-no-fit');
+
     document.getElementById('rm-check').addEventListener('click', function(){
       var ceil = parseFloat(document.getElementById('rm-ceiling').value) || 8.5;
       var depth = parseFloat(document.getElementById('rm-depth').value) || 16;
       var height = parseInt(document.getElementById('rm-height').value) || 0;
-      // Taller golfers need more ceiling clearance
-      var ceilAdj = height > 74 ? 0.5 : 0;
-      var fits = 0;
-      cards.forEach(function(card){
+      var ceilAdj = height > 74 ? 0.5 : height > 70 ? 0.25 : 0;
+
+      var fitCount = 0;
+      var bestFitIdx = -1;
+      var bestMargin = -999;
+
+      // First pass: determine fits and find best fit
+      cards.forEach(function(card, idx){
         var minCeil = parseFloat(card.dataset.ceiling) + ceilAdj;
         var minDepth = parseFloat(card.dataset.depth);
-        if(ceil >= minCeil && depth >= minDepth){
-          card.style.display = 'flex';
-          card.style.borderColor = 'var(--green)';
-          card.style.borderWidth = '2px';
-          fits++;
-        } else {
-          card.style.display = 'flex';
-          card.style.borderColor = '#e0d0d0';
-          card.style.opacity = '0.5';
+        var fits = ceil >= minCeil && depth >= minDepth;
+        card.dataset.fits = fits ? '1' : '0';
+        if (fits) {
+          fitCount++;
+          var margin = (ceil - minCeil) + (depth - minDepth);
+          if (margin > bestMargin) { bestMargin = margin; bestFitIdx = idx; }
         }
       });
-      // Reset opacity after a moment for non-fits
-      setTimeout(function(){
-        cards.forEach(function(card){
-          var minCeil = parseFloat(card.dataset.ceiling) + ceilAdj;
-          var minDepth = parseFloat(card.dataset.depth);
-          if(ceil < minCeil || depth < minDepth){
-            card.style.opacity = '0.4';
-            card.querySelector('a').textContent = 'Does not fit your space';
-            card.querySelector('a').style.background = '#ccc';
+
+      // Second pass: apply styling and labels
+      cards.forEach(function(card, idx){
+        var fits = card.dataset.fits === '1';
+        var badge = card.querySelector('.rm-fit-badge');
+        var buyBtn = card.querySelector('.rm-buy-btn');
+
+        if (fits) {
+          card.style.opacity = '1';
+          card.style.borderColor = idx === bestFitIdx ? 'var(--green)' : 'var(--gold)';
+          card.style.borderWidth = idx === bestFitIdx ? '3px' : '2px';
+          badge.style.display = 'inline-block';
+
+          if (idx === bestFitIdx) {
+            badge.textContent = '🏆 BEST FIT FOR YOUR ROOM';
+            badge.style.background = 'var(--green)';
+            badge.style.color = '#fff';
           } else {
-            card.style.opacity = '1';
+            badge.textContent = '✅ FITS YOUR ROOM';
+            badge.style.background = 'rgba(30,58,40,.08)';
+            badge.style.color = 'var(--green)';
           }
-        });
-      }, 100);
+          buyBtn.style.background = 'var(--gold)';
+        } else {
+          card.style.opacity = '0.4';
+          card.style.borderColor = '#ddd';
+          card.style.borderWidth = '1px';
+          badge.style.display = 'inline-block';
+          badge.textContent = '❌ DOES NOT FIT';
+          badge.style.background = '#f5e6e6';
+          badge.style.color = '#a33';
+          buyBtn.textContent = 'Does not fit your space';
+          buyBtn.style.background = '#ccc';
+          buyBtn.removeAttribute('href');
+        }
+      });
+
+      // Show/hide no-fit fallback
+      noFit.style.display = fitCount === 0 ? 'block' : 'none';
+
+      // Scroll to results
+      document.getElementById('rm-results').scrollIntoView({behavior:'smooth',block:'start'});
     });
   })();
   </script>
