@@ -1,0 +1,91 @@
+---
+/**
+ * TrustCard.astro — "Why Trust This Guide" E-E-A-T block.
+ * Surfaces key credibility proof directly on money pages
+ * so readers don't need to visit /how-we-test/ to see it.
+ */
+import { AUTHOR_PROFILE } from '../data/author';
+
+interface Props {
+  variant?: 'guide' | 'comparison' | 'review';
+  rounds?: string;
+}
+
+const {
+  variant = 'guide',
+  rounds = '40+',
+} = Astro.props;
+
+const heading = variant === 'comparison'
+  ? 'Why Trust This Comparison'
+  : variant === 'review'
+    ? 'Why Trust This Review'
+    : 'Why Trust This Guide';
+
+const purchaseLabel = variant === 'comparison'
+  ? 'Both products purchased'
+  : 'Every product purchased';
+---
+
+<div class="trust-card">
+  <p class="trust-card__heading">{heading}</p>
+  <ul class="trust-card__list">
+    <li><strong>{purchaseLabel}</strong> — bought with our own money, no manufacturer loans or freebies</li>
+    <li><strong>{rounds} real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
+    <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+    <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers, not scratch players</li>
+  </ul>
+  <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
+</div>
+
+<style>
+.trust-card {
+  background: rgba(30, 58, 40, 0.04);
+  border: 1px solid rgba(30, 58, 40, 0.1);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 16px 0 24px;
+}
+.trust-card__heading {
+  font-family: var(--font-head, serif);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green, #1E3A28);
+  margin: 0 0 12px;
+}
+.trust-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .trust-card__list { grid-template-columns: 1fr; }
+}
+.trust-card__list li {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text, #1a2b1f);
+  padding-left: 20px;
+  position: relative;
+}
+.trust-card__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--green, #1E3A28);
+  font-weight: 700;
+}
+.trust-card__list li strong {
+  color: var(--green, #1E3A28);
+}
+.trust-card__link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green, #1E3A28);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+</style>
