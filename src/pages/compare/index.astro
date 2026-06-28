@@ -124,7 +124,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
       return categoryOrder.filter(cat => categoryMap[cat]?.length > 0).map(cat => (
         <div style="margin:0 0 32px;">
           <h2 style="font-size:18px;color:var(--green);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(30,58,40,.1);">{cat}</h2>
-          <div class="articles-grid">
+          <div class="articles-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
             {categoryMap[cat].map(c => (
               <a href={`/compare/${c.slug}/`} class="article-card">
                 <div class="art-thumb" style="background:var(--green);">
@@ -158,7 +158,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
     {vsArticles.length > 0 && (
       <div style="margin:32px 0 0;">
         <h2 style="font-size:18px;color:var(--green);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(30,58,40,.1);">More Product Comparisons</h2>
-        <div class="articles-grid">
+        <div class="articles-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
           {vsArticles.map(a => (
             <a href={a.slug} class="article-card">
               <div class="art-thumb" style="background:var(--green);">
