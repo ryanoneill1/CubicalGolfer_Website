@@ -13172,4 +13172,230 @@ export const ARTICLES: Article[] = [
       { slug: '/hybrid-vs-long-iron/', label: 'Hybrid vs Long Iron' },
     ],
   },
+  // ═══ NEW CONTENT: How Golf Launch Monitors Work ═══
+  {
+    id: 'how-golf-launch-monitors-work',
+    slug: '/how-golf-launch-monitors-work/',
+    ogImage: '/images/og-image.jpg',
+    thumbnail: '/images/thumbnails/launch-monitors-thumb.webp',
+    category: 'golf-tech',
+    pageType: 'tutorial' as const,
+    tag: 'TUTORIAL',
+    emoji: '📡',
+    thumb: 'navy',
+    words: '3,200',
+    datePublished: '2026-06-28',
+    dateModified: '2026-06-28',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2PRO' },
+      { slug: '/compare/skytrak-plus-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
+    ],
+    title: 'How Golf Launch Monitors Work — Radar, Camera & Hybrid Tech Explained',
+    titleDisplay: 'How Golf Launch Monitors Work — Radar, Camera & Hybrid Tech Explained',
+    bottomLine: 'Radar monitors estimate spin from ball flight. Camera monitors measure spin directly from ball markings. Hybrid units do both — and cost more. Understanding the difference saves you from buying the wrong tech for your setup.',
+    description: 'How golf launch monitors work: Doppler radar vs photometric camera vs hybrid systems. What gets measured vs estimated, accuracy tradeoffs, and which technology fits your setup.',
+    excerpt: 'Doppler radar, photometric cameras, and hybrid systems — what each measures, what it estimates, and why it matters for your purchase decision.',
+    intro: 'A launch monitor is not a black box. Understanding how the technology works — and where each type cuts corners — is the difference between buying the right unit and wasting $600.',
+    toc: [
+      { label: 'Three Technologies', anchor: 'three-tech' },
+      { label: 'What Gets Measured vs Estimated', anchor: 'measured-vs-estimated' },
+      { label: 'Accuracy Tradeoffs', anchor: 'accuracy' },
+      { label: 'Indoor vs Outdoor', anchor: 'indoor-outdoor' },
+      { label: 'Which Technology to Buy', anchor: 'which-to-buy' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    sections: [
+      {
+        h2: 'Three Technologies: Radar, Camera, Hybrid',
+        body: `<p>Every consumer launch monitor uses one of three approaches to capture ball and club data. The technology determines what the device <em>measures</em> vs what it <em>estimates</em> — and that distinction matters more than most marketing copy admits.</p>
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
+<th style="padding:8px 12px;">Technology</th><th style="padding:8px 12px;">How It Works</th><th style="padding:8px 12px;">Examples</th><th style="padding:8px 12px;">Price Range</th>
+</tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">Doppler Radar</td><td style="padding:8px 12px;">Emits microwave signals, measures frequency shift as ball moves away</td><td style="padding:8px 12px;">Garmin R10, Mevo+, Swing Caddie SC4</td><td style="padding:8px 12px;">$200–$2,000</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">Photometric (Camera)</td><td style="padding:8px 12px;">High-speed cameras capture ball at impact, measure spin from markings</td><td style="padding:8px 12px;">Rapsodo MLM2PRO, Uneekor Eye MINI</td><td style="padding:8px 12px;">$500–$5,000</td></tr>
+<tr><td style="padding:8px 12px;font-weight:700;">Hybrid (Radar + Camera)</td><td style="padding:8px 12px;">Combines both technologies for maximum data coverage</td><td style="padding:8px 12px;">SkyTrak+, Full Swing KIT, Bushnell Launch Pro</td><td style="padding:8px 12px;">$2,000–$4,000</td></tr>
+</tbody></table>
+<p><strong>Doppler radar</strong> works by bouncing microwave signals off the ball and club head. The frequency of the returning signal shifts based on how fast the object is moving (the Doppler effect — the same principle that makes an ambulance siren change pitch as it passes). Radar excels at measuring speed and angle but cannot directly see the ball's spin axis or surface rotation. It <em>estimates</em> spin from the ball's flight curve.</p>
+<p><strong>Photometric (camera) systems</strong> use one or more high-speed cameras to photograph the ball at the moment of impact and just after launch. By analyzing the rotation of the ball's markings across multiple frames, camera systems can <em>directly measure</em> spin rate and axis — not estimate them. The tradeoff: cameras need good lighting and a controlled environment to work well.</p>
+<p><strong>Hybrid systems</strong> combine radar and camera to cover each other's weaknesses. The radar captures speed and launch data while the camera captures spin and club face data. This is why hybrid units like the <a href="/skytrak-plus-review/">SkyTrak+</a> consistently test as the most accurate consumer monitors — but they also cost the most.</p>`
+      },
+      {
+        h2: 'What Gets Measured vs Estimated',
+        body: `<p>This is the single most important distinction in launch monitor shopping, and most review sites gloss over it. A "measured" data point comes from direct sensor observation. An "estimated" data point is calculated from other measurements using an algorithm. Estimates are usually close — but they can be wrong, especially in edge cases like flop shots, knockdowns, and extreme spin conditions.</p>
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
+<th style="padding:8px 12px;">Data Point</th><th style="padding:8px 12px;">Radar</th><th style="padding:8px 12px;">Camera</th><th style="padding:8px 12px;">Hybrid</th>
+</tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Ball speed</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Club head speed</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">⚠️ Estimated</td><td style="padding:8px 12px;">✅ Measured</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Launch angle</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Spin rate</td><td style="padding:8px 12px;">⚠️ Estimated</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Spin axis</td><td style="padding:8px 12px;">⚠️ Estimated</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Club face angle</td><td style="padding:8px 12px;">⚠️ Estimated</td><td style="padding:8px 12px;">✅ Measured</td><td style="padding:8px 12px;">✅ Measured</td></tr>
+<tr><td style="padding:8px 12px;">Carry distance</td><td style="padding:8px 12px;">✅ Measured (outdoor) / ⚠️ Est (indoor)</td><td style="padding:8px 12px;">⚠️ Estimated</td><td style="padding:8px 12px;">✅ / ⚠️ Mixed</td></tr>
+</tbody></table>
+<p>The takeaway: if you care about spin accuracy (for simulator play, wedge practice, or ball fitting), you need a camera-based or hybrid monitor. If you mainly want speed and distance for range sessions, radar is perfectly good and costs less. Our <a href="/best-golf-launch-monitors-2026/">launch monitor buying guide</a> ranks the best in each category.</p>`
+      },
+      {
+        h2: 'Accuracy: What the Numbers Actually Mean',
+        body: `<p>When a manufacturer says their monitor is "accurate to within 1%," that number applies to the data points the device <em>directly measures</em> — not the ones it estimates. A Garmin R10 measuring ball speed at 148 mph ± 1% means the real speed is between 146.5 and 149.5 mph. That is genuinely useful accuracy.</p>
+<p>But that same R10 <em>estimating</em> spin at 2,800 rpm could be off by 300–500 rpm in certain conditions — which is enough to change a club-fitting recommendation or throw off a simulator's shot shape. This is not a flaw; it is a known limitation of Doppler radar technology. Every manufacturer knows this. Few talk about it.</p>
+<p><strong>Conditions that hurt accuracy:</strong></p>
+<ul>
+<li><strong>Indoor radar without enough space:</strong> Radar needs the ball to travel far enough to build a complete flight model. The Garmin R10 needs about 6 feet behind the ball; the Mevo+ needs 8–10 feet. If you cannot give a radar unit this space, its estimates degrade.</li>
+<li><strong>Camera systems with poor lighting:</strong> Photometric monitors need to clearly see the ball's markings. Dim garages and uneven lighting cause missed reads or inaccurate spin calculations.</li>
+<li><strong>Extreme shots:</strong> Flop shots, punch shots, and anything with unusual launch conditions are where estimation algorithms break down. Direct-measurement systems handle these better.</li>
+</ul>
+<p>We tested 6 monitors against a <a href="/golf-launch-monitor-accuracy-test/">calibrated TrackMan 4</a> to quantify these differences. The results confirmed what the physics predicts: hybrid units track closest, camera units capture spin best, and radar units win on speed data and portability.</p>`
+      },
+      {
+        h2: 'Indoor vs Outdoor: Which Technology Works Where',
+        body: `<p>Your intended setup determines which technology to buy more than any other factor.</p>
+<p><strong>Outdoor range use:</strong> Radar monitors dominate outdoors. They do not need controlled lighting, work in direct sunlight, and measure actual carry distance by tracking the ball's full flight. The <a href="/garmin-approach-r10-review/">Garmin R10</a> and FlightScope Mevo+ are the range workhorses.</p>
+<p><strong>Indoor simulator use:</strong> Camera monitors have the advantage indoors because they capture data at impact — they do not need to see the ball fly. They measure spin directly from the ball's surface markings, which means indoor spin data is just as accurate as outdoor. The <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a> and Uneekor Eye MINI are popular indoor choices.</p>
+<p><strong>Both indoor and outdoor:</strong> Hybrid systems work in both environments because they combine radar flight tracking (outdoor) with camera spin measurement (indoor). The <a href="/skytrak-plus-review/">SkyTrak+</a> is the best-known example — it is the most versatile option but costs roughly 3–4x more than a radar-only or camera-only unit.</p>
+<p>Check your space with our <a href="/launch-monitor-room-checker/">free room checker tool</a> — it tells you which monitors fit your ceiling height, room depth, and width.</p>`
+      },
+      {
+        h2: 'Which Technology Should You Buy?',
+        body: `<p>The decision comes down to three questions:</p>
+<p><strong>1. Where will you use it?</strong> Indoor-only → camera or hybrid. Outdoor-only → radar. Both → hybrid (but budget radar works fine outdoors and adequately indoors with enough space).</p>
+<p><strong>2. How much does spin accuracy matter?</strong> Building a home simulator or doing ball fittings → you need measured spin (camera or hybrid). Range practice and general distance tracking → estimated spin from radar is fine.</p>
+<p><strong>3. What is your budget?</strong> Under $1,000 → radar (Garmin R10 at $599) or camera (Rapsodo MLM2PRO at $749). $1,000–$2,000 → hybrid (SkyTrak+ at $1,995). Over $2,000 → pro-grade options like the Bushnell Launch Pro ($2,999).</p>
+<p>Still not sure? Our <a href="/gear-quiz/">60-second gear quiz</a> asks 4 questions and gives you a personalized recommendation, or browse the <a href="/best-golf-launch-monitors-2026/">full ranked buying guide</a>.</p>`
+      },
+    ],
+    faq: [
+      { q: 'Can a radar launch monitor measure spin accurately?', a: 'Radar monitors estimate spin from ball flight characteristics rather than directly measuring it. For most practice purposes the estimates are useful, but they can be off by 300-500 rpm in edge cases. If spin accuracy is critical for your use case, look for a camera or hybrid unit that directly measures spin from ball markings.' },
+      { q: 'Do I need a subscription to use a launch monitor?', a: 'It depends on the unit. The Garmin R10 has a free basic tier but charges ~$100/year for full simulator features. The FlightScope Mevo+ and Square Golf require no subscription at all. The SkyTrak+ charges ~$200/year for full sim access. Factor subscription costs into your total cost of ownership over 3 years.' },
+      { q: 'Can I use a radar monitor indoors?', a: 'Yes, but radar monitors need space behind the ball (6-10 feet depending on the unit) to accurately track the initial ball flight. If your indoor space is too tight, the monitor\'s distance and spin estimates will be less reliable. Use our room checker tool to verify your space works.' },
+      { q: 'What is the most accurate consumer launch monitor?', a: 'In our testing against a calibrated TrackMan 4, hybrid units (SkyTrak+, Bushnell Launch Pro) tracked closest across all data points. For spin specifically, camera-based monitors (Rapsodo MLM2PRO) measured more accurately than radar-only units. For speed and distance, all modern monitors above $500 are accurate within 1-2%.' },
+    ],
+    sources: [],
+    related: [
+      { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
+      { slug: '/golf-launch-monitor-accuracy-test/', label: 'Launch Monitor Accuracy Test' },
+      { slug: '/launch-monitor-room-checker/', label: 'Room Checker Tool' },
+      { slug: '/best-launch-monitors-no-subscription/', label: 'Best Monitors Without Subscription' },
+    ],
+  },
+
+  // ═══ NEW CONTENT: Average Swing Speed by Age ═══
+  {
+    id: 'average-swing-speed-by-age',
+    slug: '/average-swing-speed-by-age/',
+    ogImage: '/images/og-image.jpg',
+    thumbnail: '/images/thumbnails/swing-speed-trainer-thumb.webp',
+    category: 'improve-game',
+    pageType: 'tutorial' as const,
+    tag: 'TUTORIAL',
+    emoji: '📊',
+    thumb: 'teal',
+    words: '2,800',
+    datePublished: '2026-06-28',
+    dateModified: '2026-06-28',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2PRO' },
+    ],
+    title: 'Average Golf Swing Speed by Age — Driver, 7-Iron & Wedge Data',
+    titleDisplay: 'Average Golf Swing Speed by Age — Driver, 7-Iron & Wedge Data',
+    bottomLine: 'The average male golfer loses about 3 mph of driver speed per decade after 30, accelerating after 60. Knowing where you stand for your age helps you pick the right shaft flex, ball compression, and driver loft — the three cheapest ways to recover lost distance.',
+    description: 'Average golf swing speed by age for men and women — driver, 7-iron, and wedge averages from 20s to 70+. Includes percentile data and gear recommendations by speed range.',
+    excerpt: 'Complete breakdown of average swing speed by age group and gender. See where you stand — and what gear changes actually help.',
+    intro: 'Your swing speed determines which shaft flex, ball compression, and driver loft will maximize your distance. Here is where the average golfer stands at every age — and what to do about it.',
+    toc: [
+      { label: 'Driver Speed by Age', anchor: 'driver-speed' },
+      { label: '7-Iron Speed by Age', anchor: 'iron-speed' },
+      { label: 'Why Speed Declines', anchor: 'why-decline' },
+      { label: 'How to Maintain Speed', anchor: 'maintain' },
+      { label: 'Gear Matched to Your Speed', anchor: 'gear' },
+      { label: 'FAQ', anchor: 'faq' },
+    ],
+    sections: [
+      {
+        h2: 'Average Driver Swing Speed by Age',
+        body: `<p>Driver club head speed is the most commonly tracked measure of athletic performance in golf. The table below reflects aggregated data from launch monitor studies, TrackMan research, and USGA shot-tracking databases — these are <em>recreational</em> golfer numbers, not Tour averages.</p>
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
+<th style="padding:8px 12px;">Age</th><th style="padding:8px 12px;">Male Avg</th><th style="padding:8px 12px;">Female Avg</th><th style="padding:8px 12px;">Male 75th %ile</th><th style="padding:8px 12px;">Male 25th %ile</th><th style="padding:8px 12px;">Est. Carry</th>
+</tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">20–29</td><td style="padding:8px 12px;">100 mph</td><td style="padding:8px 12px;">72 mph</td><td style="padding:8px 12px;">108 mph</td><td style="padding:8px 12px;">93 mph</td><td style="padding:8px 12px;">230–250 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">30–39</td><td style="padding:8px 12px;">97 mph</td><td style="padding:8px 12px;">70 mph</td><td style="padding:8px 12px;">105 mph</td><td style="padding:8px 12px;">90 mph</td><td style="padding:8px 12px;">220–240 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">40–49</td><td style="padding:8px 12px;">94 mph</td><td style="padding:8px 12px;">68 mph</td><td style="padding:8px 12px;">102 mph</td><td style="padding:8px 12px;">87 mph</td><td style="padding:8px 12px;">210–230 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">50–59</td><td style="padding:8px 12px;">90 mph</td><td style="padding:8px 12px;">65 mph</td><td style="padding:8px 12px;">98 mph</td><td style="padding:8px 12px;">83 mph</td><td style="padding:8px 12px;">195–215 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">60–69</td><td style="padding:8px 12px;">85 mph</td><td style="padding:8px 12px;">62 mph</td><td style="padding:8px 12px;">93 mph</td><td style="padding:8px 12px;">78 mph</td><td style="padding:8px 12px;">180–200 yds</td></tr>
+<tr><td style="padding:8px 12px;font-weight:700;">70+</td><td style="padding:8px 12px;">79 mph</td><td style="padding:8px 12px;">57 mph</td><td style="padding:8px 12px;">87 mph</td><td style="padding:8px 12px;">72 mph</td><td style="padding:8px 12px;">160–180 yds</td></tr>
+</tbody></table>
+<p>The overall trajectory from 20s to 70+ represents a loss of about 21 mph for the average male golfer — roughly 3 mph per decade, accelerating after 60. What matters for equipment decisions: a male golfer in his 30s at 97 mph and one in his 40s at 94 mph are separated by just 3 mph, which translates to only 7–10 yards of driver carry. The equipment adjustments that recover those yards are cheap: correct shaft flex, matched ball compression, and optimized driver loft.</p>
+<p>For female golfers, the decline follows a similar curve. The average female golfer in her 20s at 72 mph produces roughly 165–175 yards of carry. By the 70s, 57 mph carries the ball 130–140 yards. At every speed, the right equipment matters more than swing changes — see our <a href="/best-golf-clubs-slow-swing-speed/">best clubs for slow swing speeds</a> guide.</p>`
+      },
+      {
+        h2: 'Average 7-Iron Speed by Age',
+        body: `<p>The 7-iron is the standard reference club for iron speed — it sits in the middle of the bag and is the club most golfers have the most data on. These numbers help determine iron shaft flex, which is different from driver shaft flex for many golfers.</p>
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
+<th style="padding:8px 12px;">Age</th><th style="padding:8px 12px;">Male Avg</th><th style="padding:8px 12px;">Female Avg</th><th style="padding:8px 12px;">Est. Carry</th>
+</tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">20–29</td><td style="padding:8px 12px;">80 mph</td><td style="padding:8px 12px;">60 mph</td><td style="padding:8px 12px;">145–155 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">30–39</td><td style="padding:8px 12px;">78 mph</td><td style="padding:8px 12px;">58 mph</td><td style="padding:8px 12px;">140–150 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">40–49</td><td style="padding:8px 12px;">76 mph</td><td style="padding:8px 12px;">55 mph</td><td style="padding:8px 12px;">135–145 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">50–59</td><td style="padding:8px 12px;">73 mph</td><td style="padding:8px 12px;">52 mph</td><td style="padding:8px 12px;">125–135 yds</td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;font-weight:700;">60–69</td><td style="padding:8px 12px;">69 mph</td><td style="padding:8px 12px;">49 mph</td><td style="padding:8px 12px;">115–125 yds</td></tr>
+<tr><td style="padding:8px 12px;font-weight:700;">70+</td><td style="padding:8px 12px;">65 mph</td><td style="padding:8px 12px;">45 mph</td><td style="padding:8px 12px;">105–115 yds</td></tr>
+</tbody></table>
+<p>7-iron speed is typically 75–80% of driver speed. If your driver speed is 94 mph and your 7-iron is only 68 mph (72%), you are likely decelerating through impact with irons — a common issue that costs 10–15 yards. A lesson focused on iron tempo or a switch to <a href="/best-golf-irons-2026/">more forgiving irons</a> can close that gap without changing your swing mechanics.</p>
+<p>For a detailed breakdown of distances across every club, see our <a href="/how-far-average-golfer-hit-7-iron/">average distances guide</a>.</p>`
+      },
+      {
+        h2: 'Why Swing Speed Declines with Age',
+        body: `<p>Speed loss is not inevitable — it is largely about declining flexibility and reduced fast-twitch muscle fiber recruitment. Understanding the cause helps you target the right fix.</p>
+<p><strong>Flexibility (biggest factor):</strong> The average office worker loses 8–10 degrees of shoulder turn per decade after 30. Less turn means a shorter backswing, which means less time to accelerate the club. A <a href="/office-to-golf-course-playbook/">10-minute pre-round stretching routine</a> can recover 3–5 mph immediately and 5–8 mph over a season of consistent flexibility work.</p>
+<p><strong>Fast-twitch muscle loss:</strong> After 40, the body preferentially loses fast-twitch muscle fibers — the ones responsible for explosive speed. Overspeed training (swinging lightweight clubs faster than normal) retrains the neuromuscular system to recruit these fibers. The <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf system</a> ($199) produces typical gains of 5–8 mph over 6–8 weeks.</p>
+<p><strong>Equipment mismatch (cheapest fix):</strong> Most golfers over 50 are playing shafts that are too heavy and too stiff for their current speed. Dropping from a 65g stiff shaft to a 50g regular shaft can add 2–3 mph with zero swing changes. Similarly, switching from a low-compression tour ball to a <a href="/best-golf-balls-slow-swing-speed/">speed-matched ball</a> adds 5–8 yards for free.</p>`
+      },
+      {
+        h2: 'How to Maintain Speed After 40',
+        body: `<p>The golfers who keep their speed into their 60s share three habits, and none of them involve buying a new driver:</p>
+<p><strong>1. Stretch daily, not just before golf.</strong> Hip flexor stretches, thoracic spine mobility, and shoulder rotation drills — 10 minutes a day keeps your turn full. This is the single highest-ROI activity for aging golfers.</p>
+<p><strong>2. Overspeed train 3x per week.</strong> Products like <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf</a> ($199) and The Stack System ($299) use progressively lighter clubs to train your nervous system to fire faster. Typical results: 5–8 mph gain in 6 weeks, maintained with 2x/week sessions. See our <a href="/best-swing-speed-trainer-over-40/">full speed trainer review</a>.</p>
+<p><strong>3. Optimize equipment every 5 years.</strong> Shaft technology, ball technology, and driver head design all evolve on 3–5 year cycles. A driver from 2018 with the wrong shaft for your current speed is leaving 10–15 yards on the table compared to a <a href="/best-golf-drivers-forgiveness/">current-gen forgiving driver</a> fitted to your actual numbers.</p>`
+      },
+      {
+        h2: 'Gear Matched to Your Speed',
+        body: `<p>Once you know your club head speed, use these ranges to pick the right equipment:</p>
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
+<th style="padding:8px 12px;">Driver Speed</th><th style="padding:8px 12px;">Shaft Flex</th><th style="padding:8px 12px;">Ball Compression</th><th style="padding:8px 12px;">Driver Loft</th><th style="padding:8px 12px;">Our Pick</th>
+</tr></thead>
+<tbody>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">Under 75 mph</td><td style="padding:8px 12px;">Ladies / Senior</td><td style="padding:8px 12px;">40–60</td><td style="padding:8px 12px;">13–15°</td><td style="padding:8px 12px;"><a href="/best-golf-balls-slow-swing-speed/">Best slow-speed balls</a></td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">75–85 mph</td><td style="padding:8px 12px;">Senior / Regular</td><td style="padding:8px 12px;">50–70</td><td style="padding:8px 12px;">11–13°</td><td style="padding:8px 12px;"><a href="/best-golf-clubs-slow-swing-speed/">Best slow-speed clubs</a></td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">85–95 mph</td><td style="padding:8px 12px;">Regular</td><td style="padding:8px 12px;">70–90</td><td style="padding:8px 12px;">10–11°</td><td style="padding:8px 12px;"><a href="/best-golf-balls-90-mph-swing-speed/">Best mid-speed balls</a></td></tr>
+<tr style="border-bottom:1px solid var(--border);"><td style="padding:8px 12px;">95–105 mph</td><td style="padding:8px 12px;">Stiff</td><td style="padding:8px 12px;">90–100</td><td style="padding:8px 12px;">9–10.5°</td><td style="padding:8px 12px;"><a href="/best-golf-balls-2026/">Best tour balls</a></td></tr>
+<tr><td style="padding:8px 12px;">105+ mph</td><td style="padding:8px 12px;">X-Stiff</td><td style="padding:8px 12px;">100+</td><td style="padding:8px 12px;">8–9.5°</td><td style="padding:8px 12px;"><a href="/best-golf-drivers-forgiveness/">Best drivers ranked</a></td></tr>
+</tbody></table>
+<p>Don't know your swing speed? A personal <a href="/best-golf-launch-monitors-2026/">launch monitor</a> is the most accurate way to find out — the <a href="/garmin-approach-r10-review/">Garmin R10</a> measures club head speed to within 1–2 mph for $599. Or use our free <a href="/golf-swing-speed-chart/">swing speed chart</a> to estimate based on your typical driver distance.</p>`
+      },
+    ],
+    faq: [
+      { q: 'What is the average swing speed for a male golfer?', a: 'The average male recreational golfer swings the driver at 93-95 mph across all age groups. This produces roughly 210-230 yards of carry distance under typical conditions. PGA Tour average is 114 mph — recreational golfers should not compare themselves to tour numbers when making equipment decisions.' },
+      { q: 'How much swing speed do you lose per decade?', a: 'The average male golfer loses about 3 mph of driver speed per decade from the 30s through the 50s, then the rate accelerates to 5-6 mph per decade after 60. The biggest cause is lost flexibility, not strength — which means the loss is partially reversible with targeted stretching and overspeed training.' },
+      { q: 'What swing speed do I need for a stiff shaft?', a: 'A stiff shaft is generally recommended for driver swing speeds of 95-105 mph. Below 95 mph, a regular shaft will produce better launch conditions and more distance for most golfers. Above 105 mph, an extra-stiff shaft prevents the excessive spin that costs distance.' },
+      { q: 'Can I increase my swing speed after 50?', a: 'Yes. Overspeed training products like SuperSpeed Golf produce typical gains of 5-8 mph in 6-8 weeks regardless of age. Flexibility work adds another 3-5 mph. Combined with equipment optimization (lighter shaft, matched ball compression), a golfer over 50 can realistically recover 8-12 mph of lost speed.' },
+      { q: 'How do I measure my swing speed at home?', a: 'A personal launch monitor is the most accurate method. The Garmin R10 ($599) and Rapsodo MLM2PRO ($749) both measure club head speed to within 1-2 mph. Budget alternatives include the Shot Scope LM1 ($199) for basic speed tracking, or you can estimate from driver carry distance using our free swing speed chart.' },
+    ],
+    sources: [],
+    related: [
+      { slug: '/golf-swing-speed-chart/', label: 'Swing Speed Chart Tool' },
+      { slug: '/best-swing-speed-trainer-over-40/', label: 'Best Speed Trainers Over 40' },
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speeds' },
+      { slug: '/shaft-flex-guide/', label: 'Shaft Flex Guide' },
+    ],
+  },
 ];
