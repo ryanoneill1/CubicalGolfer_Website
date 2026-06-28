@@ -191,8 +191,7 @@ export const ARTICLES: Article[] = [
       { label: 'Garmin S12 vs Bushnell Ion Elite', url: '/compare/garmin-s12-vs-bushnell-ion-elite/', description: 'GPS watch vs wrist rangefinder compared' },
     ],
     related: [
-      { slug: '/what-is-slope-on-a-rangefinder/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }], label: 'What Is Slope on a Rangefinder?' },
+      { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope on a Rangefinder?' },
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Golf Drivers 2026' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
@@ -344,8 +343,7 @@ export const ARTICLES: Article[] = [
       { label: 'Cleveland XL2 vs Cobra Aerojet Max', url: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', description: 'Senior-friendly vs all-around forgiving' },
     ],
     related: [
-      { slug: '/most-forgiving-irons/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }], label: 'Most Forgiving Irons' },
+      { slug: '/most-forgiving-irons/', label: 'Most Forgiving Irons' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
@@ -379,7 +377,7 @@ export const ARTICLES: Article[] = [
     description: 'The most forgiving drivers for golfers who don\'t always find the center — tested by a weekend player who loses a sleeve per round. Honest 2026 picks.',
     excerpt: 'The most forgiving drivers of 2026 that help weekend golfers find more fairways and hit longer drives.',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/drivers-thumb.webp',
-    thumbnail: '/images/thumbnails/forgiving-drivers-thumb.webp',
+    thumbnail: '/images/thumbnails/forgiving-irons-thumb.webp',
     updateLog: [{ date: 'Apr 10, 2026', note: 'Added Callaway Paradym Ai Smoke Max D as most forgiving option for slicers.' }, { date: 'Feb 14, 2026', note: 'Updated pricing across all 5 drivers; Cobra Aerojet Max dropped to $349.' }, { date: 'Jan 3, 2026', note: 'Full 2026 update — retested with Foresight GC3 launch monitor data.' }],
     intro: "The best driver is the one that keeps the ball in play. For most weekend golfers, that means maximum forgiveness — large MOI, draw bias available, lightweight shaft options. We tested 8 drivers over 30+ rounds.",
     testingNotes: 'All 5 drivers independently purchased and tested over 20+ range sessions and 10+ rounds each. Forgiveness measured on off-center strikes with a launch monitor.',
@@ -550,8 +548,8 @@ export const ARTICLES: Article[] = [
     title: 'Best Golf Irons 2026 — 5 Tested for 10-25 Handicaps',
     titleDisplay: 'Best Golf Irons — Tested for Mid and High Handicappers',
     bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T300 balances feel and forgiveness better than anything else at this price. See our full iron guide → Our top pick: the <strong>Callaway Paradym Ai Smoke Irons</strong> (from ~$899). Our top pick: the <strong>Putting Mirror</strong> (~$25). Our top pick: the <strong>Putting Mirror</strong> (~$25).',
-    description: 'Ping G430, TaylorMade Stealth HD, and 3 more irons tested over 25+ rounds. Ranked by forgiveness, distance, and feel for 10-25 handicappers.',
-    excerpt: 'Ping G430, TaylorMade Stealth HD, and 3 more tested over 25+ rounds. Ranked by forgiveness, distance, and feel for mid and high handicaps.',
+    description: '5 game-improvement irons tested over 30+ rounds by a 12-hdcp. Ping G430 vs Callaway Paradym vs TaylorMade Qi — which set adds the most forgiveness per.',
+    excerpt: 'The best game-improvement, mid-handicap, and players irons of 2026 — tested and ranked for every skill level.',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/irons-thumb.webp',
     thumbnail: '/images/thumbnails/irons-thumb.webp',
     updateLog: [{ date: 'Apr 12, 2026', note: 'Added Ping G440 mention; updated Callaway Paradym Ai Smoke pricing.' }, { date: 'Mar 1, 2026', note: 'Expanded shaft flex guide with swing speed chart.' }, { date: 'Jan 8, 2026', note: 'Full 2026 refresh — retested all iron sets over 10+ rounds each.' }],
@@ -639,8 +637,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/golf-club-distance-chart/', label: 'Golf Club Distance Chart' },
-      { slug: '/driver-loft-guide/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }], label: 'Driver Loft Guide' },
+      { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
       { slug: '/most-forgiving-irons/', label: 'Most Forgiving Irons' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
@@ -781,8 +778,7 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'USGA — Scoring Statistics by Handicap', url: 'https://www.usga.org/content/usga/home-page/handicapping.html' }, { label: 'TrackMan — Short Game Performance Data', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     related: [
       { slug: '/best-left-handed-golf-clubs-2026/', label: 'Best Left-Handed Golf Clubs' },
-      { slug: '/best-wedges-for-beginners/',
-    relatedComparisons: [{ slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' }], label: 'Best Wedges for Beginners' },
+      { slug: '/best-wedges-for-beginners/', label: 'Best Wedges for Beginners' },
       { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice First' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
@@ -1049,8 +1045,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
-          { slug: '/best-golf-apps-for-apple-watch/',
-    relatedComparisons: [{ slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' }, { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos Caddie vs Shot Scope V5: Which to Buy?' }], label: 'Best Golf Apps for Apple Watch' },
+          { slug: '/best-golf-apps-for-apple-watch/', label: 'Best Golf Apps for Apple Watch' },
     ],
   },
 
@@ -1131,8 +1126,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-apps/', label: 'Best Golf Apps 2026' },
       { slug: '/how-to-break-90/', label: "How to Break 90" },
   
-      { slug: '/golf-rangefinder-vs-gps-watch/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }], label: 'Rangefinder vs GPS Watch' },
+      { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
   },
 
@@ -1273,7 +1267,7 @@ export const ARTICLES: Article[] = [
     slug: '/how-to-sneak-in-more-golf-rounds/',
     quickAnswerProduct: 'bag-boy-nitron',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sneak-rounds-thumb.webp',
-    thumbnail: '/images/thumbnails/sneak-rounds-thumb.webp',
+    thumbnail: '/images/thumbnails/golf-shoes-pillar-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'lifestyle',
     tag: 'LIFESTYLE',
@@ -1358,8 +1352,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls',
     slug: '/best-golf-balls-2026/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }], label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'titleist-pro-v1',
@@ -1613,8 +1605,7 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'Titleist — Pro V1 Construction & Specs', url: 'https://www.titleist.com/golf-balls/pro-v1' }, { label: 'MyGolfSpy — 2025 Golf Ball Test Methodology', url: 'https://mygolfspy.com/golf-ball-test/' }, { label: 'USGA — Conforming Golf Ball List', url: 'https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/equipment-rules/balls.html' }],
     related: [
       { slug: '/golf-swing-speed-chart/', label: 'Golf Swing Speed Chart' },
-      { slug: '/golf-ball-compression-chart/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }], label: 'Golf Ball Compression Chart' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
@@ -2017,10 +2008,8 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-      { slug: '/best-golf-balls-slow-swing-speed/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }], label: 'Best Balls for Slow Swing Speed' },
-      { slug: '/best-golf-balls-90-mph-swing-speed/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }], label: 'Best Balls for 90 mph' },
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
+      { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x Comparison' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
     ],
@@ -2289,7 +2278,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-budget-drivers',
     slug: '/best-golf-drivers-under-200/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-budget-drivers-thumb.webp',
     thumbnail: '/images/thumbnails/best-budget-drivers-thumb.webp',
     category: 'gear-reviews',
@@ -2301,14 +2289,19 @@ export const ARTICLES: Article[] = [
     words: '2,000',
     datePublished: '2025-06-08',
     dateModified: '2026-03-26',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Mar 26, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: "Best Golf Drivers Under $200 in 2026 — Tested & Ranked",
     titleDisplay: "Best Budget Golf Drivers Under $200",
     bottomLine: 'The best budget driver depends on your swing. Slicers: start with the <strong>Callaway Big Bertha B21</strong> — the offset will immediately straighten your ball flight. Everyone else: the Cleveland Launcher XL gives maximum forgiveness for the money. See our full driver guide →',
-    description: "Premium drivers at budget prices. 3 drivers under $200 tested over 20+ rounds — previous-gen flagships that outperform new budget models.",
-    excerpt: "Premium drivers at budget prices. We tested 3 under $200 over 20+ rounds — previous-gen flagships that outperform new budget models.",
+    description: "The best golf drivers under $200 in 2026 — TaylorMade RBZ, Callaway Big Bertha & Cleveland Launcher tested. Half the price of premium, real results.",
+    excerpt: "Premium driver performance at budget prices — the best drivers under $200 tested over 20+ rounds.",
     intro: "You don\'t need to spend $599 on a driver. The best drivers under $200 in 2026 are previous-season premium models that have dropped in price, not cheap no-name clubs. We tested 6 budget drivers to find the best.",
     toc: ['Why budget drivers are actually good now', 'Best under $150: TaylorMade SIM Max', 'Best under $200: Callaway Big Bertha', 'Best new budget: Cleveland Launcher XL', 'What to avoid', 'FAQ'],
     sections: [
@@ -2440,7 +2433,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'rangefinder-worth-it',
     slug: '/is-a-rangefinder-worth-it/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }],
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'bushnell-tour-v6-shift',
@@ -2450,6 +2442,11 @@ export const ARTICLES: Article[] = [
     words: '1,600',
     datePublished: '2025-07-21',
     dateModified: '2026-04-13',
+    relatedComparisons: [
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -2522,11 +2519,9 @@ export const ARTICLES: Article[] = [
     },
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-      { slug: '/best-golf-rangefinder-beginners/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }], label: 'Best Rangefinder for Beginners' },
+      { slug: '/best-golf-rangefinder-beginners/', label: 'Best Rangefinder for Beginners' },
       { slug: '/best-golf-gps-watches/', label: 'Best GPS Golf Watches 2026' },
-      { slug: '/bushnell-vs-garmin-rangefinder/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }], label: 'Bushnell vs Garmin Rangefinder' },
+      { slug: '/bushnell-vs-garmin-rangefinder/', label: 'Bushnell vs Garmin Rangefinder' },
     ],
   },
 
@@ -2598,7 +2593,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'what-golf-ball-high-handicapper',
     slug: '/what-golf-ball-for-high-handicapper/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/what-golf-ball-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/what-golf-ball-high-handicapper-thumb.webp',
     category: 'gear-reviews',
@@ -2610,6 +2604,11 @@ export const ARTICLES: Article[] = [
     words: '1,400',
     datePublished: '2025-07-24',
     dateModified: '2026-04-18',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -2779,8 +2778,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth Buying?' },
-      { slug: '/best-golf-rangefinders-under-200/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }], label: 'Best Rangefinders Under $200' },
+      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
     ],
     comparisonTable: {
@@ -3039,7 +3037,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'stop-topping',
     slug: '/how-to-stop-topping-the-ball/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     quickAnswerProduct: 'alignment-sticks',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/stop-topping-thumb.webp',
     thumbnail: '/images/thumbnails/stop-topping-thumb.webp',
@@ -3288,7 +3285,6 @@ export const ARTICLES: Article[] = [
 {
     id: 'how-to-use-rangefinder',
     slug: '/how-to-use-golf-rangefinder/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-to-use-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/how-to-use-rangefinder-thumb.webp',
     category: 'gear-reviews',
@@ -3300,6 +3296,11 @@ export const ARTICLES: Article[] = [
     words: '1,400',
     datePublished: '2025-05-08',
     dateModified: '2026-04-10',
+    relatedComparisons: [
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
+    ],
     updateLog: [
       { date: 'Apr 10, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -3359,7 +3360,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'skytrak-vs-mevo-plus',
     slug: '/skytrak-vs-mevo-plus/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/skytrak-vs-mevo-plus-thumb.webp',
     thumbnail: '/images/thumbnails/skytrak-vs-mevo-plus-thumb.webp',
     category: 'golf-tech',
@@ -3371,6 +3371,11 @@ export const ARTICLES: Article[] = [
     words: '1,700',
     datePublished: '2025-04-20',
     dateModified: '2026-04-09',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     updateLog: [
       { date: 'Apr 9, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -3421,10 +3426,8 @@ export const ARTICLES: Article[] = [
       { q: 'Do I need a subscription with the Mevo+?', a: 'The Mevo+ includes basic data (club and ball speed, launch angle, carry, spin) without a subscription. The $199/year FS Golf subscription adds full simulation software with courses. For range-only use, no subscription is needed.' },
     ],
     related: [
-      { slug: '/how-to-build-garage-golf-simulator/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'How to Build a Garage Golf Simulator' },
-      { slug: '/best-golf-simulator-small-spaces/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Best Golf Simulators for Small Spaces' },
+      { slug: '/how-to-build-garage-golf-simulator/', label: 'How to Build a Garage Golf Simulator' },
+      { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
     ],
@@ -3504,8 +3507,7 @@ export const ARTICLES: Article[] = [
       { q: 'Can I use a regular projector for a golf simulator?', a: 'A standard long-throw projector will not work in a typical garage simulator — the room is not deep enough. You need a short-throw projector with a throw ratio under 0.7. The Optoma EH200ST and BenQ TH671ST are the most commonly recommended options and cost $350-$600.' },
     ],
     related: [
-      { slug: '/best-golf-simulators/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Best Golf Simulators (All Budgets)' },
+      { slug: '/best-golf-simulators/', label: 'Best Golf Simulators (All Budgets)' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Compared' },
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
       { slug: '/best-ai-golf-training-tools/', label: 'Best AI Golf Training Tools' },
@@ -3627,7 +3629,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'gps-watch-high-handicapper',
     slug: '/best-gps-golf-watch-high-handicappers/',
-    relatedComparisons: [{ slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' }, { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos Caddie vs Shot Scope V5: Which to Buy?' }, { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gps-watch-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/gps-watch-high-handicapper-thumb.webp',
     category: 'gear-reviews',
@@ -3639,6 +3640,11 @@ export const ARTICLES: Article[] = [
     words: '1,500',
     datePublished: '2025-04-17',
     dateModified: '2026-04-08',
+    relatedComparisons: [
+      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' },
+      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' },
+      { slug: '/compare/garmin-approach-s62-vs-s70/', label: 'Garmin Approach S62 vs S70' },
+    ],
     updateLog: [
       { date: 'Apr 8, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -3826,7 +3832,6 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-irons-high-handicapper',
     slug: '/best-golf-irons-high-handicapper/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-irons-high-handicapper-thumb.webp',
     thumbnail: '/images/thumbnails/best-irons-high-handicapper-thumb.webp',
     category: 'gear-reviews',
@@ -3838,6 +3843,9 @@ export const ARTICLES: Article[] = [
     words: '2,400',
     datePublished: '2025-08-09',
     dateModified: '2026-04-16',
+    relatedComparisons: [
+      { slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -3968,7 +3976,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-far-7-iron',
     slug: '/how-far-average-golfer-hit-7-iron/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-far-7-iron-thumb.webp',
     thumbnail: '/images/thumbnails/how-far-7-iron-thumb.webp',
     category: 'improve-game',
@@ -3980,6 +3987,9 @@ export const ARTICLES: Article[] = [
     words: '1,600',
     datePublished: '2025-09-13',
     dateModified: '2026-04-17',
+    relatedComparisons: [
+      { slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4023,8 +4033,7 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-lower-golf-handicap/', label: 'How to Lower Your Golf Handicap' },
   
       { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
-      { slug: '/best-game-improvement-irons-2026/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }], label: 'Game Improvement Irons' },
+      { slug: '/best-game-improvement-irons-2026/', label: 'Game Improvement Irons' },
     ],
   },
 
@@ -4092,7 +4101,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-ball-go-right',
     slug: '/why-does-my-golf-ball-go-right/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     quickAnswerProduct: 'alignment-sticks',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-ball-go-right-thumb.webp',
     thumbnail: '/images/thumbnails/golf-ball-go-right-thumb.webp',
@@ -4104,6 +4112,11 @@ export const ARTICLES: Article[] = [
     words: '1,800',
     datePublished: '2025-10-08',
     dateModified: '2026-04-10',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4144,8 +4157,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-drivers-under-200/', label: 'Best Golf Drivers Under $300' },
       { slug: '/best-golf-grip-trainers/', label: 'Best Golf Grip Trainers' },
       { slug: '/how-to-stop-topping-the-ball/', label: 'How to Stop Topping the Ball' },
-      { slug: '/why-do-i-hit-irons-fat/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }], label: 'Why Do I Hit My Irons Fat?' },
+      { slug: '/why-do-i-hit-irons-fat/', label: 'Why Do I Hit My Irons Fat?' },
     ],
   },
 
@@ -4212,7 +4224,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'simulator-under-1000',
     slug: '/best-golf-simulator-under-1000/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-under-1000-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
     category: 'golf-tech',
@@ -4224,6 +4235,9 @@ export const ARTICLES: Article[] = [
     words: '2,100',
     datePublished: '2025-08-25',
     dateModified: '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4280,7 +4294,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-rangefinder-seniors',
     slug: '/best-golf-rangefinder-for-seniors/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-rangefinder-seniors-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-rangefinder-seniors-thumb.webp',
     category: 'gear-reviews',
@@ -4292,6 +4305,11 @@ export const ARTICLES: Article[] = [
     words: '2,200',
     datePublished: '2025-06-27',
     dateModified:  '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4377,7 +4395,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'do-i-need-slope-rangefinder',
     slug: '/do-i-need-slope-on-rangefinder/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/do-i-need-slope-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/do-i-need-slope-rangefinder-thumb.webp',
     category: 'gear-reviews',
@@ -4389,6 +4406,11 @@ export const ARTICLES: Article[] = [
     words: '1,600',
     datePublished: '2025-07-03',
     dateModified:  '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4447,7 +4469,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-balls-seniors',
     slug: '/best-golf-balls-for-seniors/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-balls-seniors-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-balls-seniors-thumb.webp',
     category: 'gear-reviews',
@@ -4459,6 +4480,11 @@ export const ARTICLES: Article[] = [
     words: '2,000',
     datePublished: '2025-06-21',
     dateModified:  '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4606,7 +4632,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-gps-watch-under-200',
     slug: '/best-golf-gps-watch-under-200/',
-    relatedComparisons: [{ slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' }, { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos Caddie vs Shot Scope V5: Which to Buy?' }, { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-gps-watch-under-200-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-gps-watch-under-200-thumb.webp',
     category: 'golf-tech',
@@ -4618,6 +4643,11 @@ export const ARTICLES: Article[] = [
     words: '2,100',
     datePublished: '2025-06-23',
     dateModified:  '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' },
+      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' },
+      { slug: '/compare/garmin-approach-s62-vs-s70/', label: 'Garmin Approach S62 vs S70' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4765,7 +4795,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-irons-seniors',
     slug: '/best-golf-irons-for-seniors/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-irons-seniors-thumb.webp',
     thumbnail: '/images/thumbnails/best-golf-irons-seniors-thumb.webp',
     category: 'gear-reviews',
@@ -4777,6 +4806,9 @@ export const ARTICLES: Article[] = [
     words: '2,000',
     datePublished: '2025-08-05',
     dateModified:  '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4850,7 +4882,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'blue-tees-vs-bushnell-rangefinder',
     slug: '/blue-tees-vs-bushnell-rangefinder/',
-    relatedComparisons: [{ slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' }, { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' }, { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell Tour V6 Shift vs Callaway 300 Pro' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/blue-tees-vs-bushnell-rangefinder-thumb.webp',
     thumbnail: '/images/thumbnails/blue-tees-vs-bushnell-rangefinder-thumb.webp',
     category: 'gear-reviews',
@@ -4862,6 +4893,11 @@ export const ARTICLES: Article[] = [
     words: '1,800',
     datePublished: '2025-09-01',
     dateModified:  '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -4916,7 +4952,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'launch-monitors',
     slug: '/best-golf-launch-monitors-2026/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     category: 'golf-tech',
     pageType: 'buying-guide',
     quickAnswerProduct: 'rapsodo-mlm2pro',
@@ -4926,6 +4961,11 @@ export const ARTICLES: Article[] = [
     words: '3,200',
     datePublished: '2025-10-11',
     dateModified: '2026-04-16',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     title: 'Best Golf Launch Monitors — Budget to Premium (Tested)',
     titleDisplay: 'Best Golf Launch Monitors (Every Price Point)',
     bottomLine: 'The <strong>Rapsodo MLM2PRO (~$749)</strong> is the best launch monitor for most weekend golfers — accurate spin data, shot tracer video, and E6 Connect simulator play. For budget buyers, the <strong>Garmin Approach R10 (~$499)</strong> is the best under $500. For home simulators, the <strong>Bushnell Launch Pro (~$2,499)</strong> delivers Foresight GC3 hardware at 65% less cost.',
@@ -5923,8 +5963,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'paradym-driver-review',
     slug: '/callaway-paradym-ai-smoke-max-review/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
-    cgScore: 4.6,
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
@@ -5934,6 +5972,11 @@ export const ARTICLES: Article[] = [
     words: '2,400',
     datePublished: '2025-12-08',
     dateModified: '2026-04-20',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -5982,7 +6025,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'pro-v1-review',
     slug: '/titleist-pro-v1-review/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'titleist-pro-v1',
@@ -5992,6 +6034,11 @@ export const ARTICLES: Article[] = [
     words: '2,200',
     datePublished: '2026-01-07',
     dateModified: '2026-04-23',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -6166,7 +6213,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'garmin-s62-vs-apple-watch',
     slug: '/garmin-s62-vs-apple-watch-golf/',
-    relatedComparisons: [{ slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' }, { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos Caddie vs Shot Scope V5: Which to Buy?' }],
     category: 'golf-tech',
     pageType: 'comparison',
     tag: 'COMPARISON',
@@ -6176,6 +6222,11 @@ export const ARTICLES: Article[] = [
     words: '2,000',
     datePublished: '2025-12-16',
     dateModified: '2026-04-19',
+    relatedComparisons: [
+      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' },
+      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' },
+      { slug: '/compare/garmin-approach-s62-vs-s70/', label: 'Garmin Approach S62 vs S70' },
+    ],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -6445,7 +6496,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'ball-15-handicap',
     slug: '/best-golf-ball-15-handicap/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'srixon-q-star-tour',
@@ -6455,6 +6505,11 @@ export const ARTICLES: Article[] = [
     words: '1,800',
     datePublished: '2025-11-23',
     dateModified: '2026-04-23',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -6500,7 +6555,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'driver-high-handicapper',
     slug: '/best-driver-for-high-handicapper/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
@@ -6510,6 +6564,11 @@ export const ARTICLES: Article[] = [
     words: '2,000',
     datePublished: '2025-11-20',
     dateModified: '2026-04-19',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -6559,7 +6618,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'budget-launch-monitors',
     slug: '/best-budget-launch-monitor/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     category: 'golf-tech',
     pageType: 'buying-guide',
     quickAnswerProduct: 'garmin-approach-r10',
@@ -6569,14 +6627,19 @@ export const ARTICLES: Article[] = [
     words: '1,800',
     datePublished: '2025-03-08',
     dateModified: '2026-03-15',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     updateLog: [
       { date: 'Mar 15, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best Budget Launch Monitors 2026 — 5 Under $700',
     titleDisplay: 'Best Budget Golf Launch Monitor for Weekend Golfers',
     bottomLine: 'The <strong>Garmin Approach R10</strong> ($499) is the best budget launch monitor for weekend golfers — reliable ball speed, spin, and launch data with E6 Connect simulator included. If you want more data and shot tracer video, the <strong>Rapsodo MLM2PRO</strong> ($699) is worth the extra $200.',
-    description: '5 launch monitors under $700 tested at the range against TrackMan. Garmin R10 wins for sim use, Shot Scope LM1 for pure data — accuracy compared.',
-    excerpt: '5 launch monitors under $700 tested at the range. Garmin R10 wins for sim, Shot Scope LM1 for pure data — full accuracy comparison.',
+    description: '5 budget launch monitors under $700 tested against TrackMan. Garmin R10, Rapsodo MLM2Pro, and Mevo ranked for accuracy without the $2,000 price tag.',
+    excerpt: '4 budget launch monitors under $700 tested at the range — which one gives you the best data for your money?',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-launch-monitors-thumb.webp',
     thumbnail: '/images/thumbnails/budget-launch-monitors-thumb.webp',
     intro: "You do not need a $20,000 TrackMan to get useful practice data. The best budget launch monitors give you ball speed, carry distance, launch angle, and spin rate for under $700 — enough data to make every range session productive. We tested four models to find the best value.",
@@ -6601,9 +6664,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
       { slug: '/best-launch-monitors-under-500/', label: 'Best Under $500' },
-      { slug: '/garmin-approach-r10-review/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
-    cgScore: 4.3, label: 'Garmin R10 Review' },
+      { slug: '/garmin-approach-r10-review/', label: 'Garmin R10 Review' },
     ],
   },
 
@@ -6721,7 +6782,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'apartment-golf-simulator',
     slug: '/apartment-golf-simulator-setup/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     thumb: 'teal',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-under-1000-thumb.webp',
     thumbnail: '/images/thumbnails/simulator-under-1000-thumb.webp',
@@ -6733,6 +6793,9 @@ export const ARTICLES: Article[] = [
     emoji: '🏠',
     datePublished: '2026-01-13',
     dateModified: '2026-05-25',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Apartment Golf Simulator: $1,500 Setup in 8x10ft',
     titleDisplay: 'Best Apartment Golf Simulator Setup — Tested in a 1-BR After 60 Sessions',
     bottomLine: 'The <strong>Rapsodo MLM2PRO</strong> paired with a Spornia SPG-7 net and Fiberbuilt mat is the best apartment simulator setup under $1,500. After 60 indoor sessions, I dropped 3 strokes from my handicap without leaving my living room.',
@@ -6947,7 +7010,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'budget-launch-monitor-apartment',
     slug: '/best-budget-launch-monitor-apartment/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-launch-monitors-thumb.webp',
     thumbnail: '/images/thumbnails/budget-launch-monitors-thumb.webp',
@@ -6959,6 +7021,11 @@ export const ARTICLES: Article[] = [
     emoji: '💰',
     datePublished: '2026-01-17',
     dateModified: '2026-04-23',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     title: 'Best Budget Launch Monitor Under $700 for Apartments',
     titleDisplay: 'Best Budget Launch Monitor Under $700 for Apartment Golfers',
     bottomLine: 'The <strong>Square Golf</strong> ($499) is the best budget launch monitor for apartment use. Camera-based tracking works reliably at short distances, no subscription, and compact enough to store in a desk drawer.',
@@ -8009,8 +8076,8 @@ export const ARTICLES: Article[] = [
     title: 'Best Golf Clubs for Slow Swing Speed 2026 — Tested',
     titleDisplay: 'Best Golf Clubs for Slow Swing Speed — Seniors & Returning Golfers',
     bottomLine: 'The <strong>Callaway Reva driver</strong> ($399) and <strong>Ping G Le3 irons</strong> ($699) are the best combination for sub-85 mph swing speeds. Ultralight designs with maximum launch and forgiveness — the right clubs add 15-20 yards without changing your swing.',
-    description: 'We tested 6 clubs for swing speeds under 90 mph. Gain 15-20 yards without swinging harder — driver, iron, and hybrid picks for seniors and returning golfers.',
-    excerpt: 'We tested 6 clubs for swing speeds under 90 mph. Gain 15-20 yards without swinging harder — driver, irons, and hybrids ranked.',
+    description: 'Best golf clubs for slow swing speed — drivers, irons, hybrids for seniors and returning golfers. Under 85 mph? These clubs add distance without a.',
+    excerpt: 'Best clubs for slow swing speed — add 15-20 yards without swinging harder.',
     intro: 'If your driver swing speed is under 85 mph, most golf clubs are not designed for you. They are too heavy, too stiff, and launch too low. The right clubs — ultralight shafts, high-launch heads, senior or A-flex — can add 15-20 yards to your drives without changing your swing one bit. This is not about being old. It is about physics: lighter club + correct flex = more speed = more distance.',
     testingNotes: 'Clubs evaluated based on published launch data for swing speeds 65-85 mph. Weight, shaft flex, and launch characteristics cross-referenced with manufacturer specs and independent testing.',
     updateLog: [
@@ -8332,7 +8399,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'approach-wedge-vs-gap-wedge',
     slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/',
-    relatedComparisons: [{ slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' }],
     thumb: 'olive',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/approach-vs-gap-wedge-thumb.webp',
     thumbnail: '/images/thumbnails/approach-vs-gap-wedge-thumb.webp',
@@ -8344,6 +8410,9 @@ export const ARTICLES: Article[] = [
     emoji: '⛳',
     datePublished: '2026-03-04',
     dateModified: '2026-04-27',
+    relatedComparisons: [
+      { slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' },
+    ],
     title: 'Approach Wedge vs Gap Wedge — Do You Need It?',
     titleDisplay: 'Approach Wedge vs Gap Wedge: Do You Actually Need the One That Came With Your Set?',
     bottomLine: 'If your pitching wedge is 44° or lower (most modern game-improvement sets), the set AW fills a real distance gap. But if you hit lots of 70-100 yard shots or chip with your wedges, swap it for a specialty 52° like the <strong>Vokey SM10</strong> ($179) — the grooves and versatility are worth the upgrade.',
@@ -8413,10 +8482,8 @@ export const ARTICLES: Article[] = [
       'Scratch golfers who already have a dialed-in wedge setup',
     ],
     related: [
-      { slug: '/how-to-buy-wedges-4-degree-rule/',
-    relatedComparisons: [{ slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' }], label: 'How to Buy Wedges — The 4-Degree Rule' },
-      { slug: '/when-to-replace-wedges-grooves/',
-    relatedComparisons: [{ slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' }], label: 'When to Replace Your Wedges' },
+      { slug: '/how-to-buy-wedges-4-degree-rule/', label: 'How to Buy Wedges — The 4-Degree Rule' },
+      { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
     ],
   },
@@ -8707,7 +8774,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'driver-under-300',
     slug: '/best-golf-driver-under-300/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/drivers-under-300-thumb.webp',
     thumbnail: '/images/thumbnails/drivers-under-300-thumb.webp',
@@ -8719,6 +8785,11 @@ export const ARTICLES: Article[] = [
     emoji: '🏌️',
     datePublished: '2025-09-18',
     dateModified: '2026-04-17',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -8861,7 +8932,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'driver-slow-swing',
     slug: '/best-golf-driver-slow-swing-speed/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
     thumb: 'olive',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-slow-swing-thumb.webp',
     thumbnail: '/images/thumbnails/driver-slow-swing-thumb.webp',
@@ -8873,6 +8943,11 @@ export const ARTICLES: Article[] = [
     emoji: '🏌️',
     datePublished: '2025-10-02',
     dateModified: '2026-04-14',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -9014,7 +9089,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'driver-vs-3-wood',
     slug: '/driver-vs-3-wood-off-tee/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-vs-3wood-thumb.webp',
     thumbnail: '/images/thumbnails/driver-vs-3wood-thumb.webp',
@@ -9026,6 +9100,11 @@ export const ARTICLES: Article[] = [
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
     datePublished: '2025-07-22',
     dateModified: '2026-04-13',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -9081,7 +9160,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'fit-yourself-driver',
     slug: '/how-to-fit-yourself-for-driver/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
     thumb: 'teal',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/fit-yourself-driver-thumb.webp',
     thumbnail: '/images/thumbnails/fit-yourself-driver-thumb.webp',
@@ -9093,6 +9171,11 @@ export const ARTICLES: Article[] = [
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
     datePublished: '2025-11-08',
     dateModified: '2026-04-13',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -9154,7 +9237,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'budget-putters-under-150',
     slug: '/best-budget-putters-under-150/',
-    relatedComparisons: [{ slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X' }, { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB Golf DF3 vs Odyssey Two Ball Eleven' }],
     thumb: 'olive',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/budget-putters-thumb.webp',
     thumbnail: '/images/thumbnails/budget-putters-thumb.webp',
@@ -9166,6 +9248,10 @@ export const ARTICLES: Article[] = [
     emoji: '🏒',
     datePublished: '2025-07-05',
     dateModified: '2026-05-05',
+    relatedComparisons: [
+      { slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X' },
+      { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB Golf DF3 vs Odyssey Two Ball Eleven' },
+    ],
     updateLog: [
       { date: 'May 5, 2026', note: 'Expanded comparison table, added 4 FAQs, fixed product links.' },
       { date: 'Apr 20, 2026', note: 'Annual freshness review — verified pricing and availability.' },
@@ -9173,8 +9259,8 @@ export const ARTICLES: Article[] = [
     title: 'Best Putters Under $150 in 2026 — 4 Tested',
     titleDisplay: '5 Best Putters Under $150',
     bottomLine: 'The <strong>Cleveland Huntington Beach Soft</strong> is the best putter under $150 — Speed Optimized Face technology, solid feel, and classic designs at a price that does not require justification. For maximum forgiveness on a budget, the Odyssey White Hot OG at $199 is worth the stretch.',
-    description: 'You do not need a $300 putter. We tested 4 budget putters under $150 on real greens — Cleveland, Odyssey, and Wilson ranked by feel and forgiveness.',
-    excerpt: 'You do not need a $300 putter. We tested 4 under $150 on real greens — Cleveland, Odyssey, and Wilson ranked by feel and forgiveness.',
+    description: '5 best putters under $150 tested on real greens. Budget putters with real performance for weekend golfers who want to putt better without spending $300+.',
+    excerpt: 'Best putters under $150 — you do not need to spend $300 to putt well.',
     intro: "You do not need to spend $300 on a putter. The gap between a $120 putter and a $350 putter is smaller than the gap between practicing putting 15 minutes a week and not practicing at all. We tested five putters under $150 to find the ones that deliver real performance at a price every golfer can afford. For the complete putter ranking including premium options, see our <a href=\"/best-golf-putters-2026/\">best putters guide</a>.",
     toc: ['How we tested', 'Best overall under $150', 'Best mallet', 'Best blade', 'Best for beginners', 'Best value', 'Comparison table', 'FAQ'],
     sections: [
@@ -9287,7 +9373,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'putter-length-guide',
     slug: '/how-to-choose-putter-length/',
-    relatedComparisons: [{ slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X' }, { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB Golf DF3 vs Odyssey Two Ball Eleven' }],
     quickAnswerProduct: 'odyssey-white-hot-og',
     thumb: 'teal',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/putter-length-thumb.webp',
@@ -9299,6 +9384,10 @@ export const ARTICLES: Article[] = [
     emoji: '📐',
     datePublished: '2025-09-10',
     dateModified: '2026-04-20',
+    relatedComparisons: [
+      { slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X' },
+      { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB Golf DF3 vs Odyssey Two Ball Eleven' },
+    ],
     updateLog: [
       { date: 'Apr 20, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -9342,8 +9431,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
-      { slug: '/mallet-vs-blade-putter/',
-    relatedComparisons: [{ slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Odyssey Stroke Lab vs Scotty Cameron Phantom X' }, { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB Golf DF3 vs Odyssey Two Ball Eleven' }], label: 'Mallet vs Blade Putter' },
+      { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade Putter' },
     ],
   },
 
@@ -9475,7 +9563,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'launch-monitors-no-subscription',
     slug: '/best-launch-monitors-no-subscription/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/launch-monitor-no-sub-thumb.webp',
     thumbnail: '/images/thumbnails/launch-monitor-no-sub-thumb.webp',
     category: 'golf-tech',
@@ -9487,10 +9574,15 @@ export const ARTICLES: Article[] = [
     words: '3,000',
     datePublished: '2026-05-17',
     dateModified: '2026-05-20',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     title: 'Best Launch Monitors With No Subscription 2026',
-    description: "Zero monthly fees, full data. 4 subscription-free launch monitors compared with real 3-year cost analysis — save $300-$1,200 vs subscription models.",
+    description: "Every launch monitor that works without a monthly subscription in 2026. Shot Scope LM1, Mevo Gen2, Voice Caddie SC4 Pro compared. No hidden fees.",
     titleDisplay: 'Best Launch Monitors Without Subscription Fees',
-    excerpt: 'Zero monthly fees, full data. We compared 4 subscription-free launch monitors with 3-year cost analysis — save $300-$1,200 vs subscription models.',
+    excerpt: 'Every launch monitor that works without monthly fees. Shot Scope LM1, Mevo Gen2, SC4 Pro compared with 3-year cost analysis.',
     bottomLine: 'The <strong>Shot Scope LM1</strong> ($199) is the best value if you just want carry distances. The <strong>FlightScope Mevo Gen2</strong> ($1,299) is the best overall — 18 metrics with zero subscription fees, ever.',
     testingNotes: 'All monitors tested over 15+ range sessions outdoors and indoors. Accuracy verified against Trackman baseline data.',
     toc: ['Why Subscriptions Matter', 'Best Budget: Shot Scope LM1', 'Best Mid-Range: Voice Caddie SC4 Pro', 'Best Premium: FlightScope Mevo Gen2', 'Also No Subscription: Square Golf', '3-Year Cost Comparison'],
@@ -9586,8 +9678,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
       { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
   
-      { slug: '/launch-monitor-subscription-cost-comparison/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Subscription Costs' },
+      { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Costs' },
     ],
   },
 
@@ -9611,9 +9702,9 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
     ],
     title: 'Best Golf Push Carts 2026 — 4 Tested on Course',
-    description: "We walked 18 holes with each push cart. KVV wins on value ($139), Bag Boy Nitron on ease. Weight, fold size, and hill stability compared.",
+    description: "Best golf push carts for 2026 tested and ranked. KVV, Bag Boy Nitron, Clicgear, CaddyTek compared. 3-wheel vs 4-wheel, folding, stability, and value.",
     titleDisplay: 'Best Golf Push Carts (Tested on Course)',
-    excerpt: 'We walked 18 with each cart. KVV wins on value at $139, Bag Boy Nitron on ease — full weight, fold, and hill-stability comparison.',
+    excerpt: 'Best golf push carts tested and ranked. KVV, Bag Boy Nitron, Clicgear, CaddyTek compared for weight, stability, and value.',
     bottomLine: 'The <strong>KVV 3-Wheel</strong> ($152) is the best value — 13.6 lbs, ball-bearing wheels, all accessories included. The <strong>Bag Boy Nitron</strong> ($229) is the premium pick with nitrogen auto-open. Our top pick: the <strong>KVV 3-Wheel Push Cart</strong> (~$152).',
     testingNotes: 'Five push carts tested over 3 months of walking rounds on courses with varying terrain and elevation.',
     toc: ['Best Overall: KVV 3-Wheel', 'Best Premium: Bag Boy Nitron', 'Best 4-Wheel: CaddyTek EZ V8', 'Best Maneuverability: Clicgear 4.5', '3-Wheel vs 4-Wheel'],
@@ -9769,12 +9860,14 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-impact-screens',
     slug: '/best-impact-screens-golf-simulator/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/impact-screens-thumb.webp',
     thumbnail: '/images/thumbnails/impact-screens-thumb.webp',
     category: 'golf-tech', pageType: 'buying-guide', quickAnswerProduct: 'carls-place-impact-screen',
     tag: 'BUYING GUIDE', emoji: '🖥️', thumb: 'blue', words: '2,200',
     datePublished: '2026-05-12', dateModified: '2026-05-12',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Best Impact Screens for Golf Simulator',
     titleDisplay: 'Best Impact Screens for Golf Simulator',
     description: 'Best golf simulator impact screens tested for image quality, durability, ball absorption, and noise. Budget to premium options compared.',
@@ -9802,12 +9895,10 @@ export const ARTICLES: Article[] = [
       { q: 'How far should the projector be from the screen?', a: 'Short throw projectors (recommended for simulators) need 4-6 feet from the screen. Standard throw projectors need 8-12 feet. Short throw is strongly recommended to avoid shadows from the golfer.' },
     ],
     related: [
-      { slug: '/best-golf-simulator-projectors/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Best Simulator Projectors' },
+      { slug: '/best-golf-simulator-projectors/', label: 'Best Simulator Projectors' },
       { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
-      { slug: '/how-much-does-golf-simulator-cost/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Simulator Cost Breakdown' },
+      { slug: '/how-much-does-golf-simulator-cost/', label: 'Simulator Cost Breakdown' },
     ],
   },
 
@@ -9895,8 +9986,7 @@ export const ARTICLES: Article[] = [
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
       { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors Without Subscriptions' },
           { slug: '/golf-simulator-vs-driving-range/', label: 'Simulator vs Driving Range' },
-          { slug: '/best-golf-simulator-under-5000/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Simulator Under $5,000' },
+          { slug: '/best-golf-simulator-under-5000/', label: 'Simulator Under $5,000' },
     ],
   },
 
@@ -10079,7 +10169,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'low-ceiling-monitor',
     slug: '/best-launch-monitor-low-ceiling/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/low-ceiling-monitor-thumb.webp',
     thumbnail: '/images/thumbnails/low-ceiling-monitor-thumb.webp',
@@ -10091,6 +10180,11 @@ export const ARTICLES: Article[] = [
     thumb: 'green',
     datePublished: '2026-05-17',
     dateModified: '2026-05-25',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     title: '5 Best Launch Monitors for 8-9ft Ceilings',
     titleDisplay: 'Best Launch Monitors for Low Ceilings (8-9 ft) — Tested',
     description: 'We tested 6 launch monitors in an 8-foot garage. These 5 work without hitting the ceiling or losing data accuracy. Ranked by real indoor use.',
@@ -10328,7 +10422,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'launch-pro-vs-skytrak',
     slug: '/bushnell-launch-pro-vs-skytrak-plus/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'bushnell-launch-pro',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/launch-pro-vs-skytrak-thumb.webp',
@@ -10340,6 +10433,11 @@ export const ARTICLES: Article[] = [
     emoji: '⚖️',
     datePublished: '2026-05-17',
     dateModified: '2026-05-17',
+    relatedComparisons: [
+      { slug: '/compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/', label: 'Rapsodo MLM2PRO vs Bushnell Launch Pro' },
+      { slug: '/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/', label: 'Mevo+ vs Bushnell Launch Pro' },
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+    ],
     title: 'Bushnell Launch Pro vs SkyTrak+',
     titleDisplay: 'Bushnell Launch Pro vs SkyTrak+ — Premium Simulator Showdown',
     description: 'Bushnell Launch Pro vs SkyTrak+ compared for accuracy, simulator quality, and total cost. Two premium monitors tested head to head.',
@@ -10442,7 +10540,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'portable-simulator',
     slug: '/portable-golf-simulator-setup/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'green',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/portable-simulator-thumb.webp',
@@ -10454,6 +10551,9 @@ export const ARTICLES: Article[] = [
     emoji: '📦',
     datePublished: '2026-05-17',
     dateModified: '2026-05-15',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Portable Golf Simulator Setup',
     titleDisplay: 'Best Portable Golf Simulator Setup — Pack It Up in 5 Minutes',
     description: 'Best portable golf simulator setup for apartments, rentals, and temporary spaces. Foldable nets, portable monitors, and setups that pack away in 5 minutes.',
@@ -10491,8 +10591,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/apartment-golf-simulator-setup/', label: 'Apartment Simulator Setup' },
       { slug: '/best-golf-hitting-net-apartment-garage/', label: 'Best Indoor Golf Nets' },
-      { slug: '/quiet-golf-simulator-setup/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }], label: 'Quiet Simulator Setup' },
+      { slug: '/quiet-golf-simulator-setup/', label: 'Quiet Simulator Setup' },
       { slug: '/best-launch-monitor-low-ceiling/', label: 'Best Monitors for Low Ceilings' },
   
       { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
@@ -10561,7 +10660,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'simulator-software',
     slug: '/best-golf-simulator-software-2026/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/simulator-software-thumb.webp',
@@ -10573,6 +10671,9 @@ export const ARTICLES: Article[] = [
     emoji: '🖥️',
     datePublished: '2026-05-17',
     dateModified: '2026-05-18',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Best Golf Simulator Software',
     titleDisplay: 'Best Golf Simulator Software — E6, GSPro, TGC, Awesome Golf Compared',
     description: 'Best golf simulator software compared for 2026. E6 Connect, GSPro, TGC 2019, and Awesome Golf ranked by courses, realism, price, and monitor compatibility.',
@@ -10627,7 +10728,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'sim-room-dimensions',
     slug: '/golf-simulator-room-dimensions-guide/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'green',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sim-room-dimensions-thumb.webp',
@@ -10639,6 +10739,9 @@ export const ARTICLES: Article[] = [
     emoji: '📐',
     datePublished: '2026-05-17',
     dateModified: '2026-05-16',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Golf Simulator Room Dimensions Guide',
     titleDisplay: 'Golf Simulator Room Dimensions Guide — Minimum Space for Every Setup',
     description: 'Complete golf simulator room dimensions guide. Minimum ceiling height, width, depth, and distance requirements for every monitor type and budget tier.',
@@ -10687,7 +10790,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'sim-beginners',
     slug: '/best-golf-simulator-for-beginners/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/sim-beginners-thumb.webp',
@@ -10699,6 +10801,9 @@ export const ARTICLES: Article[] = [
     emoji: '🟢',
     datePublished: '2026-05-17',
     dateModified: '2026-05-16',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Best Golf Simulator for Beginners',
     titleDisplay: 'Best Golf Simulator for Beginners — Setup Guide for First-Timers',
     description: 'Best golf simulator for beginners in 2026. Step-by-step setup guide, budget tiers, and the exact equipment first-timers need.',
@@ -10748,7 +10853,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'accuracy-test',
     slug: '/golf-launch-monitor-accuracy-test/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'bushnell-launch-pro',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/accuracy-test-thumb.webp',
@@ -10760,6 +10864,11 @@ export const ARTICLES: Article[] = [
     emoji: '🎯',
     datePublished: '2026-05-17',
     dateModified: '2026-05-13',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     title: 'Launch Monitor Accuracy Test',
     titleDisplay: 'We Tested 8 Launch Monitors for Accuracy — Here Is the Data',
     description: '8 launch monitors tested against Trackman for carry distance, spin rate, and ball speed accuracy. Real data from 200+ shots per monitor.',
@@ -10809,7 +10918,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'projector-calculator',
     slug: '/golf-simulator-projector-distance-calculator/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/projector-calc-thumb.webp',
@@ -10821,6 +10929,9 @@ export const ARTICLES: Article[] = [
     emoji: '📐',
     datePublished: '2026-05-17',
     dateModified: '2026-05-20',
+    relatedComparisons: [
+      { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
+    ],
     title: 'Projector Distance Calculator',
     titleDisplay: 'Golf Simulator Projector Distance Calculator — Find Your Throw Ratio',
     description: 'Golf simulator projector distance calculator. Enter your room depth and screen size to find the right throw ratio and projector model for your setup.',
@@ -11021,7 +11132,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'improve-with-monitor',
     slug: '/how-to-improve-with-launch-monitor/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/improve-monitor-thumb.webp',
@@ -11033,6 +11143,11 @@ export const ARTICLES: Article[] = [
     emoji: '📈',
     datePublished: '2026-05-17',
     dateModified: '2026-05-16',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     title: 'How to Improve with a Launch Monitor',
     titleDisplay: 'How to Actually Improve Your Game with a Launch Monitor — Practice Guide',
     description: 'How to use a launch monitor to improve your golf game. Structured practice drills, what metrics to track, and a 30-day improvement plan.',
@@ -11132,8 +11247,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026 (All Types)' },
       { slug: '/best-irons-under-500/', label: 'Best Irons Under $500' },
-      { slug: '/iron-fitting-guide-beginners/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }], label: 'Iron Fitting Guide for Beginners' },
+      { slug: '/iron-fitting-guide-beginners/', label: 'Iron Fitting Guide for Beginners' },
       { slug: '/best-golf-irons-high-handicapper/', label: 'Best Irons for High Handicappers' },
     ],
   },
@@ -11250,7 +11364,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'wedge-bounce-guide',
     slug: '/wedge-bounce-guide/',
-    relatedComparisons: [{ slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' }],
     quickAnswerProduct: 'cleveland-rtx6-52',
     thumb: 'green',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/wedge-bounce-thumb.webp',
@@ -11262,6 +11375,9 @@ export const ARTICLES: Article[] = [
     emoji: '📐',
     datePublished: '2026-05-17',
     dateModified: '2026-05-20',
+    relatedComparisons: [
+      { slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/', label: 'Cleveland RTX6 vs Callaway Jaws Raw' },
+    ],
     title: 'Wedge Bounce Explained',
     titleDisplay: 'Wedge Bounce Explained — How to Choose the Right Bounce for Your Game',
     description: 'Wedge bounce explained simply. Low, mid, and high bounce compared with recommendations by course conditions and swing type.',
@@ -11408,8 +11524,7 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'Callaway — Paradym Hybrid Technology', url: 'https://www.callawaygolf.com/' }],
     related: [
-      { slug: '/hybrid-vs-long-iron/',
-    relatedComparisons: [{ slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' }], label: 'Hybrid vs Long Iron' },
+      { slug: '/hybrid-vs-long-iron/', label: 'Hybrid vs Long Iron' },
       { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
       { slug: '/best-game-improvement-irons-2026/', label: 'Best Game Improvement Irons' },
     ],
@@ -11831,8 +11946,6 @@ export const ARTICLES: Article[] = [
   },
   {
     slug: '/taylormade-qi35-review/',
-    relatedComparisons: [{ slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' }, { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }],
-    cgScore: 4.5,
     title: 'TaylorMade Qi35 Driver Review — Worth the Upgrade?',
     titleDisplay: 'TaylorMade Qi35 Review — Tested by a Weekend Golfer',
     tag: 'REVIEW',
@@ -11845,6 +11958,11 @@ export const ARTICLES: Article[] = [
     pageType: 'review',
     datePublished: '2026-06-05',
     dateModified: '2026-06-05',
+    relatedComparisons: [
+      { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
+      { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max Driver' },
+    ],
     words: '2,000',
     rating: 4.3,
     quickAnswerProduct: 'taylormade-qi35-max',
@@ -11878,7 +11996,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'vice-golf-balls',
     slug: '/vice-golf-balls/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'vice-pro',
@@ -11888,6 +12005,11 @@ export const ARTICLES: Article[] = [
     words: '2,800',
     datePublished: '2026-06-06',
     dateModified: '2026-06-06',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     title: 'Vice Golf Balls — Pro vs Pro Plus vs Drive (Tested)',
     titleDisplay: 'Vice Golf Balls — Every Model Compared and Tested',
     description: 'Vice Pro, Pro Plus, Pro Soft, and Drive compared. Which Vice golf ball matches your swing speed and budget? Tested by a weekend golfer.',
@@ -11943,9 +12065,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls' },
       { slug: '/golf-ball-compression-chart/', label: 'Compression Chart' },
-      { slug: '/kirkland-signature-golf-balls/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
-    cgScore: 4.2, label: 'Kirkland Golf Balls' },
+      { slug: '/kirkland-signature-golf-balls/', label: 'Kirkland Golf Balls' },
       { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
     ],
@@ -12001,7 +12121,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-balls-distance',
     slug: '/best-golf-balls-for-distance/',
-    relatedComparisons: [{ slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' }, { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' }],
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'titleist-velocity',
@@ -12011,6 +12130,11 @@ export const ARTICLES: Article[] = [
     words: '2,600',
     datePublished: '2026-06-06',
     dateModified: '2026-06-06',
+    relatedComparisons: [
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
+      { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
+      { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
+    ],
     title: 'Best Golf Balls for Distance (Tested and Ranked)',
     titleDisplay: 'Best Golf Balls for Distance — Tested at Every Swing Speed',
     description: 'The best golf balls for maximum distance tested at 80, 90, and 100+ mph. Low-spin, high-launch picks ranked for real carry — not marketing claims.',
@@ -12074,8 +12198,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'bushnell-launch-pro-rev',
     slug: '/bushnell-launch-pro-review/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
-    cgScore: 4.4,
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'bushnell-launch-pro',
@@ -12085,6 +12207,11 @@ export const ARTICLES: Article[] = [
     words: '2,600',
     datePublished: '2026-06-06',
     dateModified: '2026-06-06',
+    relatedComparisons: [
+      { slug: '/compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/', label: 'Rapsodo MLM2PRO vs Bushnell Launch Pro' },
+      { slug: '/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/', label: 'Mevo+ vs Bushnell Launch Pro' },
+      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
+    ],
     rating: 4.5,
     title: 'Bushnell Launch Pro Review — Worth $2,000?',
     titleDisplay: 'Bushnell Launch Pro Review — Tested by a Weekend Golfer',
@@ -12119,7 +12246,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'garmin-r50-rev',
     slug: '/garmin-approach-r50-review/',
-    cgScore: 4.3,
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'garmin-r50',
@@ -12168,8 +12294,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'skytrak-plus-rev',
     slug: '/skytrak-plus-review/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
-    cgScore: 4.5,
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'skytrak-plus',
@@ -12179,6 +12303,11 @@ export const ARTICLES: Article[] = [
     words: '2,400',
     datePublished: '2026-06-06',
     dateModified: '2026-06-06',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     rating: 4.4,
     title: 'SkyTrak+ Review — Best Home Simulator Monitor?',
     titleDisplay: 'SkyTrak+ Review — Tested by a Weekend Golfer',
@@ -12213,8 +12342,6 @@ export const ARTICLES: Article[] = [
   {
     id: 'mevo-plus-rev',
     slug: '/mevo-plus-review/',
-    relatedComparisons: [{ slug: '/compare/skytrak-vs-garmin-r10/', label: 'SkyTrak+ vs Garmin R10: Which Simulator Wins?' }, { slug: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', label: 'Cleveland Launcher XL2 vs Cobra Aerojet Max' }, { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' }],
-    cgScore: 4.2,
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'flightscope-mevo-plus',
@@ -12224,6 +12351,11 @@ export const ARTICLES: Article[] = [
     words: '2,200',
     datePublished: '2026-06-06',
     dateModified: '2026-06-06',
+    relatedComparisons: [
+      { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
+      { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
+    ],
     rating: 4.1,
     title: 'FlightScope Mevo+ Review — Portable Pro Monitor?',
     titleDisplay: 'FlightScope Mevo+ Review — Tested by a Weekend Golfer',

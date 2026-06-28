@@ -15,6 +15,8 @@ import BackToTop     from '../components/BackToTop.astro';
 import SocialShare   from '../components/SocialShare.astro';
 import ExitIntent    from '../components/ExitIntent.astro';
 import EmailCapture  from '../components/EmailCapture.astro';
+import TrustCard     from '../components/TrustCard.astro';
+import { getSkipIf } from '../lib/skip-if';
 import { ARTICLES }  from '../data/articles';
 import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema } from '../lib/schema';
@@ -528,6 +530,12 @@ if (isBuyingGuide) {
         <span style="font-size:15px;">✅</span>
         <span><strong>Updated {article.dateModified || article.datePublished}</strong> — All products independently purchased and tested over {AUTHOR_PROFILE.siteTestTotal} real rounds. {AUTHOR_PROFILE.gearPolicy} <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
       </div>
+    )}\n\n    {/* TRUST CARD — E-E-A-T proof block on money pages */}
+    {isBuyingGuide && (
+      <TrustCard
+        variant={article.pageType === 'review' ? 'review' : article.pageType === 'comparison' ? 'comparison' : 'guide'}
+        rounds={AUTHOR_PROFILE.siteTestTotal}
+      />
     )}
 
     {/* UPDATE LOG — collapsible changelog */}
@@ -678,6 +686,16 @@ if (isBuyingGuide) {
           })()}
 
           {section.body && section.body.trim() && <div class="section-body" set:html={section.body} />}
+
+          {/* SKIP-THIS-IF — buyer guidance for product sections */}
+          {section.affiliateKey && !section.body?.includes('Skip this if') && (() => {
+            const skipText = getSkipIf(section.affiliateKey, article.slug, section.body);
+            return skipText ? (
+              <p class="skip-if" style="margin:12px 0 16px;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:13px;color:var(--muted);line-height:1.5;">
+                <strong style="color:var(--green);">⚠️ Skip this if:</strong> {skipText}.
+              </p>
+            ) : null;
+          })()}
 
           {/* Inline section image — for editorial/lifestyle images in article body */}
           {section.sectionImage && (() => {
