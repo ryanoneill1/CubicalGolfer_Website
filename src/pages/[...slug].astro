@@ -652,6 +652,26 @@ if (isBuyingGuide) {
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
 
+          {/* SCORE + RANKING — numeric score and competitive context */}
+          {section.badge && section.rating && isBuyingGuide && (() => {
+            const score10 = Math.round(section.rating * 2 * 10) / 10;
+            const rows = article.comparisonTable?.rows || [];
+            const totalProducts = rows.length || article.sections?.filter((s: any) => s.affiliateKey)?.length || 0;
+            const rank = rows.findIndex((r: any) => r.affiliateKey === section.affiliateKey) + 1;
+            return (
+              <div style="display:flex;align-items:center;gap:12px;margin:6px 0 10px;flex-wrap:wrap;">
+                <span style="display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:700;">
+                  {score10}/10
+                </span>
+                {rank > 0 && totalProducts > 0 && (
+                  <span style="font-size:12px;color:var(--muted);font-weight:600;">
+                    #{rank} of {totalProducts} compared
+                  </span>
+                )}
+              </div>
+            );
+          })()}
+
           {section.rating && (
             <div class="product-rating" aria-label={`Rated ${section.rating} out of 5 stars`}>
               <span class="stars" aria-hidden="true">
@@ -684,6 +704,28 @@ if (isBuyingGuide) {
                 {imgElement}
               </div>
             );
+          })()}
+
+          {/* QUICK SPECS — key-value table for scanners */}
+          {section.affiliateKey && isBuyingGuide && (() => {
+            const rows = article.comparisonTable?.rows || [];
+            const row = rows.find((r: any) => r.affiliateKey === section.affiliateKey);
+            const specs: [string, string][] = [];
+            if (row?.price) specs.push(['Price', row.price]);
+            if (row?.feature1 && !row.feature1.includes('★')) specs.push(['Key Spec', row.feature1]);
+            if (row?.feature2) specs.push(['Also', row.feature2]);
+            if (row?.bestFor) specs.push(['Best For', row.bestFor]);
+            if (aff?.retailer) specs.push(['Available at', aff.retailer]);
+            return specs.length >= 2 ? (
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:10px 0 14px;padding:10px 14px;background:rgba(30,58,40,.03);border-radius:8px;font-size:12px;">
+                {specs.map(([k, v]) => (
+                  <>
+                    <span style="font-weight:700;color:var(--green);white-space:nowrap;">{k}</span>
+                    <span style="color:var(--body);">{v}</span>
+                  </>
+                ))}
+              </div>
+            ) : null;
           })()}
 
           {section.body && section.body.trim() && <div class="section-body" set:html={section.body} />}
@@ -983,6 +1025,27 @@ if (isBuyingGuide) {
             <div class="faq-answer">{a}</div>
           </details>
         ))}
+      </div>
+    )}
+
+    {/* CROSS-PROMOTION — quiz + tools on buying guides */}
+    {isBuyingGuide && (
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:24px 0;">
+        <a href="/gear-quiz/" style="display:block;padding:16px 18px;background:var(--green);border-radius:10px;text-decoration:none;">
+          <p style="font-size:13px;font-weight:700;color:var(--gold);margin:0 0 4px;">🧪 Not sure which to pick?</p>
+          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Take the 60-Second Gear Quiz</p>
+          <p style="font-size:11px;color:rgba(255,255,255,.6);margin:0;">Personalized picks based on your game →</p>
+        </a>
+        <a href="/compare/" style="display:block;padding:16px 18px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
+          <p style="font-size:13px;font-weight:700;color:var(--green);margin:0 0 4px;">⚖️ Compare head to head</p>
+          <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">38 Side-by-Side Tests</p>
+          <p style="font-size:11px;color:var(--muted);margin:0;">Same conditions, real data →</p>
+        </a>
+        <a href="/tools/" style="display:block;padding:16px 18px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
+          <p style="font-size:13px;font-weight:700;color:var(--green);margin:0 0 4px;">🧮 Free tools</p>
+          <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">Room Checker · Speed Chart</p>
+          <p style="font-size:11px;color:var(--muted);margin:0;">Data-driven picks, no signup →</p>
+        </a>
       </div>
     )}
 
