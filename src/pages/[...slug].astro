@@ -893,6 +893,86 @@ if (isBuyingGuide) {
       );
     })()}
 
+    {/* GEAR THAT HELPS — contextual product links on tutorial/improvement pages */}
+    {!isBuyingGuide && article.pageType === 'tutorial' && (() => {
+      const slug = article.slug.toLowerCase();
+      type GearRec = { label: string; href: string; why: string };
+      let recs: GearRec[] = [];
+
+      if (slug.includes('slice') || slug.includes('hook') || slug.includes('ball-go-right'))
+        recs = [
+          { label: 'Training aids that fix a slice', href: '/best-training-aids-fix-slice/', why: 'The Speed Trap ($40) forces an inside path — the #1 slice cure' },
+          { label: 'Most forgiving drivers', href: '/best-golf-drivers-forgiveness/', why: 'Draw-biased drivers reduce slice by 30-50% with no swing change' },
+          { label: 'Alignment sticks ($12)', href: '/best-golf-training-aids/', why: 'Shows your actual aim vs where you think you aim' },
+        ];
+      else if (slug.includes('putt') || slug.includes('3-putt'))
+        recs = [
+          { label: 'Best putters by stroke type', href: '/best-golf-putters-2026/', why: 'The right putter head for your stroke saves 1-3 putts per round' },
+          { label: 'Putting mirror ($25)', href: '/best-golf-training-aids/', why: '10 min/day fixes alignment — the #1 cause of missed putts' },
+          { label: 'Putter length guide', href: '/how-to-choose-putter-length/', why: 'Wrong length is the cheapest fix and biggest improvement' },
+        ];
+      else if (slug.includes('chip') || slug.includes('short-game') || slug.includes('wedge'))
+        recs = [
+          { label: 'Best wedges for beginners', href: '/best-wedges-for-beginners/', why: 'Wider sole = less chunking around the green' },
+          { label: 'Wedge bounce guide', href: '/wedge-bounce-guide/', why: 'Wrong bounce causes the fat chips you are trying to fix' },
+          { label: 'Best training aids', href: '/best-golf-training-aids/', why: 'Impact tape ($8) shows where you strike the ball on chips' },
+        ];
+      else if (slug.includes('break-90') || slug.includes('handicap') || slug.includes('management') || slug.includes('scoring'))
+        recs = [
+          { label: 'Best rangefinders', href: '/best-golf-rangefinders-2026/', why: 'Exact yardage eliminates 2-3 wrong club picks per round' },
+          { label: 'Best GPS watches', href: '/best-golf-gps-watches/', why: 'Front/middle/back yardages + shot tracking on your wrist' },
+          { label: 'Arccos Caddie sensors', href: '/arccos-caddie-review/', why: 'AI shows exactly where you lose strokes — then tells you how to fix it' },
+        ];
+      else if (slug.includes('beginner') || slug.includes('tips'))
+        recs = [
+          { label: 'Best complete golf sets', href: '/best-beginner-golf-sets/', why: 'Everything you need in one box for under $350' },
+          { label: 'Best gear under $100', href: '/best-golf-gear-under-100/', why: 'Glove, balls, tees, and a rangefinder — under $100 total' },
+          { label: 'Take the gear quiz', href: '/gear-quiz/', why: '4 questions → personalized picks for your level' },
+        ];
+      else if (slug.includes('iron') || slug.includes('fat') || slug.includes('top'))
+        recs = [
+          { label: 'Most forgiving irons', href: '/best-golf-irons-2026/', why: 'Game-improvement irons keep mishits on the green' },
+          { label: 'Iron fitting guide', href: '/iron-fitting-guide-beginners/', why: 'Correct length and lie angle fixes fat and thin contact' },
+          { label: 'Best training aids', href: '/best-golf-training-aids/', why: 'Impact tape shows your strike pattern — the first step to fixing it' },
+        ];
+      else if (slug.includes('driver') || slug.includes('distance') || slug.includes('speed'))
+        recs = [
+          { label: 'Most forgiving drivers', href: '/best-golf-drivers-forgiveness/', why: 'Modern drivers add 10-15 yards vs anything 5+ years old' },
+          { label: 'Best balls for your speed', href: '/golf-ball-compression-chart/', why: 'Wrong compression costs 5-10 yards — free to fix' },
+          { label: 'Speed trainers', href: '/best-swing-speed-trainer-over-40/', why: 'Overspeed training adds 5-8 mph in 6-8 weeks' },
+        ];
+      else if (slug.includes('practice') || slug.includes('drill') || slug.includes('home'))
+        recs = [
+          { label: 'Best training aids', href: '/best-golf-training-aids/', why: 'The 5 aids that actually transfer to the course' },
+          { label: 'Best hitting nets', href: '/best-golf-hitting-net-apartment-garage/', why: 'Full swings at home — from $80 to $200' },
+          { label: 'Best launch monitors', href: '/best-golf-launch-monitors-2026/', why: 'Practice with data feedback — the Garmin R10 starts at $600' },
+        ];
+      else
+        recs = [
+          { label: 'Best golf gear 2026', href: '/best-golf-gear-2026/', why: '#1 pick in every category — one page, every answer' },
+          { label: 'Take the gear quiz', href: '/gear-quiz/', why: '4 questions → personalized recommendations' },
+          { label: 'Compare products', href: '/compare/', why: '38 head-to-head comparisons tested side by side' },
+        ];
+
+      return recs.length > 0 ? (
+        <div style="margin:24px 0;padding:20px 24px;background:rgba(30,58,40,.04);border-radius:12px;border-left:3px solid var(--green);">
+          <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">🎯 Gear that helps with this</p>
+          <p style="font-size:12px;color:var(--muted);margin:0 0 14px;">Every recommendation is independently purchased and tested over 40+ rounds.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            {recs.map(r => (
+              <a href={r.href} style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:8px;text-decoration:none;transition:border-color .15s;">
+                <div>
+                  <p style="font-size:14px;font-weight:700;color:var(--green);margin:0;">{r.label}</p>
+                  <p style="font-size:12px;color:var(--muted);margin:2px 0 0;">{r.why}</p>
+                </div>
+                <span style="color:var(--green);font-weight:700;font-size:13px;white-space:nowrap;">See picks →</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      ) : null;
+    })()}
+
     {/* FAQ */}
     {article.faq && article.faq.length > 0 && (
       <div class="art-faq" id="faq">
