@@ -637,7 +637,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'budget-launch-monitors': [
     { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' },
-    { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
+    { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Rapsodo vs Garmin R10' },
         { slug: '/best-impact-screens-golf-simulator/', label: 'Best Impact Screens Golf Simulator' },
         { slug: '/golf-simulator-room-dimensions-guide/', label: 'Golf Simulator Room Dimensions Guide' },
     { slug: '/bushnell-launch-pro-review/', label: 'Bushnell Launch Pro Review' },

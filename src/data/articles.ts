@@ -672,7 +672,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Fix 1: Fix Your Grip', body: "The #1 root cause. Most slicers have a weak grip. Rotate both hands clockwise (right-handers) until you see 2.5 knuckles on your left hand and your right palm faces the target. This alone reduces your slice by 50%." },
       { h2: 'Fix 2: Close the Clubface at Address', body: "Most slicers set up with an open face without knowing it. For drivers, tee up slightly higher and close the face 1–2° at address. Look for a 'draw' or 'D' setting on modern drivers." },
       { h2: 'Fix 3: Fix Your Swing Path', body: "The over-the-top move creates the leftward path. Feel like you\'re dropping the club into your back pocket at the start of the downswing, then swinging out to right field." },
-      { h2: '5 Drills to Groove the Fix', body: '', items: [
+      { h2: '5 Drills to Groove the Fix', body: 'These five drills build the muscle memory to square the face at impact. Practice each for 5 minutes per range session — you do not need to do all five every time. Rotate through them across the week so each pattern gets reinforced without overload.', items: [
         { name: 'Alignment stick drill', desc: 'Place a stick pointing at target, swing from inside it.' },
         { name: 'Towel drill', desc: 'Tuck towel under right armpit; keep it tucked through impact.' },
         { name: '10-finger grip drill', desc: 'Hit 20 balls with baseball grip to force face closure.' },
@@ -798,7 +798,7 @@ export const ARTICLES: Article[] = [
     toc: ['Start with the grip', 'Setup fundamentals', 'Course etiquette', 'Focus on contact', 'Practice smarter', 'FAQ'],
     sections: [
       { h2: "Start With the Grip — Everything Flows From Here", body: "The grip is the only connection between you and the club. The 'V' formed by your thumb and index finger on your top hand should point to your right shoulder. This alone helps you square the face at impact." },
-      { h2: 'The Three Setup Fundamentals', body: '', items: [
+      { h2: 'The Three Setup Fundamentals', body: 'Grip, stance, and alignment account for 80% of beginner mistakes. Fix these three before worrying about your swing. A neutral grip, shoulder-width stance, and feet aligned to the target line give you a foundation that makes every other improvement easier.', items: [
         { name: 'Aim the clubface first, then your body', desc: "Most beginners set their body parallel to target and let the face go wherever. Aim the face at the target first, then set your feet parallel." },
         { name: 'Ball position moves with the club', desc: "Driver: opposite lead heel. Irons: move one ball-position back per iron. Pitching wedge: center of stance." },
         { name: 'Bend from the hips, not the waist', desc: "Bend forward from your hip joints until the club reaches the ground naturally." },
@@ -1196,17 +1196,17 @@ export const ARTICLES: Article[] = [
       { h2: 'Walking Shoes We Do Not Recommend', body: "Three types of golf walking shoes that cause more problems than they solve.\n\n<strong>All-leather shoes without waterproof lining.</strong> Traditional leather golf shoes look premium but absorb moisture like a sponge. Without a GORE-TEX or similar membrane, leather uppers get heavy and uncomfortable in morning dew. Modern waterproof shoes use synthetic-leather blends that look nearly as good and perform dramatically better in wet conditions.\n\n<strong>Running-shoe-style golf shoes with low drop.</strong> Several brands market golf shoes with minimal heel-to-toe drop (4-6mm) similar to running shoes. A golf swing generates lateral forces that flat shoes handle poorly — they allow your foot to slide inside the shoe during the downswing. Golf-specific shoes have 8-10mm drop and wider bases for a reason. Save the minimalist shoes for the treadmill.\n\n<strong>Heavy spiked shoes for flat, dry courses.</strong> If your course is flat, drains well, and you rarely play in the rain, spiked shoes add weight and discomfort with no benefit. Traditional spike shoes weigh 13-16 oz — 3-6 oz more than modern spikeless options. Over 6 miles of walking, that extra weight compounds into real foot fatigue." },
 
       { h2: 'How We Tested', body: "We walked more than 12 rounds in each shoe across three courses — a flat municipal, a hilly private course, and a links-style layout with firm fairways. Testing covered dry summer conditions, dewy morning rounds, and two rounds in light rain.\n\nWe measured: comfort at hole 1 vs hole 18 (did the shoe feel worse as the round progressed?), traction on wet grass (how many times did we feel a micro-slip in the backswing?), waterproofing (did moisture reach the sock?), and durability after more than 25 total rounds.\n\nEach shoe was compared against a baseline — our existing gamer shoe (FootJoy Pro SL) that we know well after 50+ rounds. Every comfort and traction observation is relative to that baseline." },
-      { h2: 'Best Golf Accessories Under $15', affiliateKey: 'alignment-sticks', body: '', items: [
+      { h2: 'Best Golf Accessories Under $15', affiliateKey: 'alignment-sticks', body: 'The under-$15 tier is where you find the accessories that deliver the most improvement per dollar spent. Alignment sticks, ball markers, and divot tools cost almost nothing but get used every single round. Start here before spending more.', items: [
         { name: 'Alignment sticks 2-pack (~$12)', desc: 'Best training aid in golf. Check aim, ball position, and swing path every session.', rating: 4.9, ratingCount: '15,203', affiliateKey: 'alignment-sticks' },
         { name: 'Groove cleaning brush (~$8)', desc: 'Dirty grooves cost you spin on short irons. Cheap fix that pays off every round.', rating: 4.4, ratingCount: '5,670', affiliateKey: 'groove-cleaning-brush' },
         { name: 'Magnetic hat clip ball markers (~$8)', desc: 'Get a 3-pack in different colors — never lose your spot on the green.', rating: 4.4, ratingCount: '6,780', affiliateKey: 'magnetic-ball-markers' },
       ]},
-      { h2: 'Best Golf Accessories $15–$30', affiliateKey: 'frogger-amphibian-towel', body: '', items: [
+      { h2: 'Best Golf Accessories $15–$30', affiliateKey: 'frogger-amphibian-towel', body: 'The $15 to $30 range is where accessories start to feel like genuine upgrades rather than basics. A quality microfiber towel, a magnetic ball marker, or a groove sharpener lasts for years and makes your rounds smoother.', items: [
         { name: 'Frogger Amphibian Golf Towel (~$18)', desc: 'Wet side cleans clubs, dry side dries them — the best dual-sided design on the market.', rating: 4.7, ratingCount: '4,230', affiliateKey: 'frogger-amphibian-towel' },
         { name: 'Putting mirror (~$25)', desc: '30 minutes of eye-line and alignment practice beats 2 hours of mindless putting.', rating: 4.6, ratingCount: '3,847', affiliateKey: 'putting-mirror' },
         { name: 'Impact tape (~$12)', desc: 'See exactly where on the face you\'re striking — instant feedback with zero tech.', rating: 4.6, ratingCount: '7,890', affiliateKey: 'impact-tape' },
       ]},
-      { h2: 'Best Golf Accessories $30–$50', affiliateKey: 'eyeline-putting-cup', body: '', items: [
+      { h2: 'Best Golf Accessories $30–$50', affiliateKey: 'eyeline-putting-cup', body: 'At the $30 to $50 price point you can pick up a training aid or accessory that genuinely affects how you practice and play. A putting mirror, a quality rain glove pair, or an insulated cooler bag all fall in this range and earn their spot in your bag.', items: [
         { name: 'Eyeline Golf Edge Putting Cup (~$35)', desc: '10 minutes on your carpet fixes yips and short misses. Narrow gate builds accuracy fast.', rating: 4.7, ratingCount: '8,421', affiliateKey: 'eyeline-putting-cup' },
         { name: 'FootJoy RainGrip Gloves 2-pack (~$32)', desc: 'Grips better when wet than most dry gloves. Essential for humid summer rounds.', rating: 4.6, ratingCount: '2,103', affiliateKey: 'footjoy-raingrip' },
         { name: 'Golf umbrella — Gustbuster Pro Series (~$45)', desc: 'Vented canopy, wind-resistant. Survives 55mph gusts without flipping.', rating: 4.7, ratingCount: '3,890', affiliateKey: 'gustbuster-umbrella' },
@@ -2016,7 +2016,7 @@ export const ARTICLES: Article[] = [
     intro: "The Pro V1 and Pro V1x are the two most popular premium golf balls in the world, yet most golfers who play them don\'t know the key differences. Here's exactly what separates them.",
     toc: ['Core differences', 'Pro V1: lower flight, more feel', 'Pro V1x: higher flight, more spin', 'Which should you play?', 'FAQ'],
     sections: [
-      { h2: 'The Core Differences at a Glance', body: '', items: [
+      { h2: 'The Core Differences at a Glance', body: 'The Pro V1 and Pro V1x share a name but play differently. The V1 launches higher with more spin on short shots, making it the choice for golfers who want maximum greenside control. The V1x launches lower with a firmer feel and less spin off the driver, suiting golfers who already launch high and want to reduce ballooning.', items: [
         { name: 'Compression', desc: 'Pro V1: 87 (softer). Pro V1x: 97 (firmer). The x requires more swing speed to compress fully.' },
         { name: 'Flight', desc: 'Pro V1: mid-high trajectory. Pro V1x: high trajectory. Golfers with naturally low ball flight benefit from the V1x.' },
         { name: 'Spin', desc: 'Pro V1: lower long game spin. Pro V1x: higher spin across all clubs — more workability.' },
@@ -3297,7 +3297,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Common Mistakes',
-        body: '',
+        body: 'Even with a rangefinder in hand, most golfers lose strokes by using it incorrectly or ignoring the data it gives them. These are the mistakes we see most often on course — and the simple fixes that eliminate them.',
         items: [
           { name: 'Ranging after addressing the ball', desc: 'Range before you commit to your setup, not after. Changing clubs mid-routine disrupts your routine.' },
           { name: 'Not confirming the reading', desc: 'If the number looks wrong, range again. Locking onto a tree behind the green costs you a stroke.' },
@@ -3439,7 +3439,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'The Four Core Components',
-        body: '',
+        body: 'Every garage simulator has the same four building blocks regardless of budget. The launch monitor captures your data, the screen shows your shot, the projector displays the image, and the mat protects your body. Here is what to buy at each price point and where cutting corners costs you.',
         items: [
           { name: 'Launch monitor ($500–$3,000)', desc: 'The data engine. This is where quality matters most. SkyTrak+ (~$2,995) is the gold standard for home use. Garmin Approach R10 (~$599) is a budget entry point. Do not buy the cheapest option — inaccurate data destroys practice value.' },
           { name: 'Impact screen ($400–$1,200)', desc: "Do not cheap out. A thin screen warps, breaks, and gives a poor image. Carl's Place or Shop Indoor Golf screens rated for driver impact are the standard. Budget $600+ for a quality 10x8 foot screen." },
@@ -3453,7 +3453,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Complete Budget Breakdown',
-        body: '',
+        body: 'Here is what a complete garage simulator costs at three budget tiers. These prices include every component you need — launch monitor, screen, projector, mat, and frame. Software subscriptions are listed separately since they are ongoing costs.',
         items: [
           { name: 'Budget setup ($2,500–$3,500)', desc: 'Garmin R10 ($599) + basic impact screen ($400) + short-throw projector ($350) + mid-range mat ($300) + frame ($300) = ~$2,000–$2,500 in components. Add software ($199/yr for E6 Connect).' },
           { name: 'Mid-range setup ($4,000–$5,500)', desc: 'SkyTrak+ ($2,995) + quality impact screen ($700) + short-throw projector ($500) + premium mat ($450) + frame and baffles ($400) = ~$5,000.' },
@@ -9527,7 +9527,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
-      { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Rapsodo vs Garmin R10' },
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak vs Mevo+' },
   
       { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
@@ -9577,7 +9577,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors Without Subscriptions' },
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
-      { slug: '/rapsodo-vs-garmin-r10/', label: 'Rapsodo vs Garmin R10' },
+      { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Rapsodo vs Garmin R10' },
   
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Costs' },
     ],
