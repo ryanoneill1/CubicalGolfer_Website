@@ -170,6 +170,8 @@ nav.site-nav {
   font-size: clamp(26px,3.5vw,46px); color: #fff;
   margin-bottom: 16px; line-height: 1.15; max-width: 760px;
 }
+.art-excerpt { color: rgba(255,255,255,.85); font-size: 17px; line-height: 1.6; max-width: 680px; }
+.art-freshness { color: rgba(255,255,255,.6); font-size: 13px; margin-top: 12px; }
 .art-tag-lg {
   display: inline-block; padding: 5px 12px; border-radius: 4px;
   font-size: 12px; font-weight: 700; letter-spacing: .08em; color: #fff; margin-bottom: 16px;
@@ -240,6 +242,11 @@ nav.site-nav {
 .art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 10px; }
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a) {
+  color: var(--green); font-weight: 600; text-decoration: underline;
+  text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
+}
+.art-content a:not(.aff-cta__btn):not(.btn-gold):hover { text-decoration-color: var(--green); }
 
 /* ── PROSE CAP: text inside art-section paragraphs stays at readable width ── */
 .art-section > h2,
@@ -621,6 +628,11 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .compare-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .compare-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
+.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn) {
+  color: var(--green); font-weight: 600; text-decoration: underline;
+  text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
+}
+.compare-body a:not(.aff-cta__btn):not(.btn-gold):hover { text-decoration-color: var(--green); }
 .verdict-box {
   background: #f0f7f2; border: 2px solid var(--green); border-radius: 12px;
   padding: 28px; margin: 36px 0;
