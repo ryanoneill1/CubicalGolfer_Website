@@ -183,7 +183,9 @@ export const ARTICLES: Article[] = [
       { label: 'Bushnell Tour V6 vs Precision Pro NX9', url: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', description: 'Our #1 vs the best value — tested over 12 rounds' },
       { label: 'Blue Tees Series 3 vs Bushnell Tour V6', url: '/compare/blue-tees-vs-bushnell-tour-v6/', description: 'Budget vs premium — is $180 more worth it?' },
       { label: 'Garmin S12 vs Bushnell Ion Elite', url: '/compare/garmin-s12-vs-bushnell-ion-elite/', description: 'GPS watch vs wrist rangefinder compared' },
-    ],
+    
+        { label: 'Bushnell Pro X3 vs Tour V6', url: '/compare/bushnell-pro-x3-vs-tour-v6/', description: 'Premium vs mid-range Bushnell head-to-head' },
+        { label: 'Bushnell Tour V6 vs Callaway 300 Pro', url: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', description: 'The two most popular slope rangefinders compared' },],
     related: [
       { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope on a Rangefinder?' },
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
@@ -1347,7 +1349,9 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Pro V1 vs Chrome Soft' },
       { slug: '/compare/titleist-pro-v1-vs-kirkland-signature/', label: 'Pro V1 vs Kirkland Golf Ball' },
       { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
-    ],
+    
+        { label: 'Chrome Soft vs Kirkland Signature', url: '/compare/callaway-chrome-soft-vs-kirkland-signature/', description: 'Premium vs budget urethane ball' },
+        { label: 'TP5 vs Chrome Soft', url: '/compare/taylormade-tp5-vs-callaway-chrome-soft/', description: 'Two premium 4-piece balls compared' },],
         title: 'Best Golf Balls for Every Handicap (Tested & Ranked)',
     titleDisplay: 'Best Golf Balls for Every Handicap — Tested Over 40+ Rounds',
     bottomLine: 'For golfers with a swing speed above 90 mph, the <strong>Titleist Pro V1</strong> or Callaway Chrome Tour are the correct picks. Below 90 mph, a lower compression ball will give you more distance. See our golf ball compression chart →',
@@ -4897,7 +4901,8 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
       { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
       { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
-    ],
+    
+        { label: 'Garmin R10 vs R50', url: '/compare/garmin-r10-vs-garmin-r50/', description: 'Budget vs mid-range Garmin launch monitor' },],
     title: 'Best Golf Launch Monitors — Budget to Premium (Tested)',
     titleDisplay: 'Best Golf Launch Monitors (Every Price Point)',
     bottomLine: 'The <strong>Rapsodo MLM2PRO (~$749)</strong> is the best launch monitor for most weekend golfers — accurate spin data, shot tracer video, and E6 Connect simulator play. For budget buyers, the <strong>Garmin Approach R10 (~$499)</strong> is the best under $500. For home simulators, the <strong>Bushnell Launch Pro (~$2,499)</strong> delivers Foresight GC3 hardware at 65% less cost.',
@@ -5518,7 +5523,8 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
       { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
       { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
-    ],
+    
+        { label: 'Bushnell Pro X3 vs Tour V6', url: '/compare/bushnell-pro-x3-vs-tour-v6/', description: 'Is the Pro X3 worth the upgrade?' },],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -5667,7 +5673,8 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' },
       { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' },
       { slug: '/compare/garmin-approach-s62-vs-s70/', label: 'Garmin Approach S62 vs S70' },
-    ],
+    
+        { label: 'Garmin S70 vs Apple Watch Golf', url: '/compare/garmin-s70-vs-apple-watch-golf/', description: 'How the next-gen Garmin compares to Apple' },],
     updateLog: [
       { date: 'Apr 22, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -6546,7 +6553,8 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/skytrak-plus-vs-flightscope-mevo-gen2/', label: 'SkyTrak+ vs FlightScope Mevo Gen 2' },
       { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
       { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
-    ],
+    
+        { label: 'Square Golf vs Garmin R10', url: '/compare/square-golf-vs-garmin-r10/', description: 'Newest budget monitor vs the established pick' },],
     updateLog: [
       { date: 'Mar 15, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
@@ -10277,7 +10285,7 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2Pro' },
       { slug: '/compare/garmin-r50-vs-rapsodo-mlm2pro/', label: 'Garmin R50 vs Rapsodo MLM2Pro' },
     ],
-    title: 'MLM2PRO vs SkyTrak+',
+    title: 'Rapsodo MLM2PRO vs SkyTrak+ — Which Launch Monitor Wins?',
     titleDisplay: 'MLM2PRO vs SkyTrak+ — $700 vs $3,000, Is It Worth 4x More?',
     description: 'Rapsodo MLM2PRO vs SkyTrak+ compared for accuracy, features, subscriptions, and total cost. We tested both to find which launch monitor is right for you.',
     excerpt: 'The MLM2PRO costs $700. The SkyTrak+ costs $3,000. Is the premium monitor really 4x better?',
@@ -11448,7 +11456,7 @@ export const ARTICLES: Article[] = [
     relatedComparisons: [
       { slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' },
     ],
-    title: 'Hybrid vs Long Iron',
+    title: 'Hybrid vs Long Iron — Which Should You Carry?',
     titleDisplay: 'Hybrid vs Long Iron — Which Should You Carry? (Data Inside)',
     description: 'Hybrid vs long iron compared with launch monitor data. Distance, forgiveness, launch angle, and who should carry which.',
     excerpt: 'We hit 100 shots with both and measured everything. Here is when hybrids win and when long irons still make sense.',
@@ -11555,7 +11563,7 @@ export const ARTICLES: Article[] = [
     emoji: '✋',
     datePublished: '2026-05-17',
     dateModified: '2026-05-15',
-    title: 'Best Golf Grips',
+    title: 'Best Golf Grips 2026 — Tested for Feel and Durability',
     titleDisplay: 'Best Golf Grips — Every Type Compared',
     description: 'Best golf grips for 2026 compared. Cord, rubber, hybrid, and oversize grips ranked for feel, durability, and weather performance.',
     excerpt: 'Your grips are the only contact point with the club. Worn grips cost distance and accuracy. Here are the best options for every preference.',
@@ -11611,7 +11619,7 @@ export const ARTICLES: Article[] = [
     emoji: '📐',
     datePublished: '2026-05-17',
     dateModified: '2026-05-16',
-    title: 'Driver Loft Guide',
+    title: 'Driver Loft Guide — How to Choose the Right Loft',
     titleDisplay: 'Driver Loft Guide — What Loft Should Your Driver Be?',
     description: 'Driver loft guide for 2026. Swing speed to optimal loft chart, why 10.5 is not for everyone, and how to test your ideal loft.',
     excerpt: 'Most golfers play too little loft on their driver. More loft means higher launch, less side spin, and often MORE distance. Here is how to find your number.',
@@ -13092,7 +13100,7 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2PRO' },
       { slug: '/compare/skytrak-plus-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
     ],
-    title: 'How Golf Launch Monitors Work — Radar, Camera & Hybrid Tech Explained',
+    title: 'How Golf Launch Monitors Work — Radar vs Camera Explained',
     titleDisplay: 'How Golf Launch Monitors Work — Radar, Camera & Hybrid Tech Explained',
     bottomLine: 'Radar monitors estimate spin from ball flight. Camera monitors measure spin directly from ball markings. Hybrid units do both — and cost more. Understanding the difference saves you from buying the wrong tech for your setup.',
     description: 'How golf launch monitors work: Doppler radar vs photometric camera vs hybrid systems. What gets measured vs estimated, accuracy tradeoffs, and which technology fits your setup.',

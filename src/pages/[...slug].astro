@@ -1044,7 +1044,7 @@ if (isBuyingGuide) {
     {isBuyingGuide && (
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:24px 0;">
         <a href="/gear-quiz/" style="display:block;padding:16px 18px;background:var(--green);border-radius:10px;text-decoration:none;">
-          <p style="font-size:13px;font-weight:700;color:var(--gold);margin:0 0 4px;">🧪 Not sure which to pick?</p>
+          <p style="font-size:13px;font-weight:700;color:var(--gold-text);margin:0 0 4px;">🧪 Not sure which to pick?</p>
           <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Take the 60-Second Gear Quiz</p>
           <p style="font-size:11px;color:rgba(255,255,255,.6);margin:0;">Personalized picks based on your game →</p>
         </a>
@@ -1070,7 +1070,7 @@ if (isBuyingGuide) {
         <p style="font-weight:700;font-size:15px;margin:0 0 4px;color:var(--green);">⚖️ Still deciding between two?</p>
         <p style="font-size:13px;color:var(--muted);margin:0 0 12px;">These head-to-head comparisons test the exact products from this guide side by side.</p>
         <div class="rel-links">
-          {article.relatedComparisons.map((link: any) => <a href={link.slug}>{link.label} →</a>)}
+          {article.relatedComparisons.map((link: any) => <a href={link.url || link.slug}>{link.label} →</a>)}
         </div>
       </div>
     )}
