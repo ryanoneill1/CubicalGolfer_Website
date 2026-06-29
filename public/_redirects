@@ -57,3 +57,6 @@
 # ═══ INDEXING FIXES — June 2026 ═══
 /best-budget-rangefinders/  /best-golf-rangefinders-under-200/  301
 /best-golf-balls-distance/  /best-golf-balls-for-distance/  301
+
+# ═══ CATCH-ALL .html → trailing-slash (prevents duplicate URLs in GSC) ═══
+/:path.html  /:path/  301
