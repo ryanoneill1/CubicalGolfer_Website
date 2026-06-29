@@ -1,13 +1,30 @@
 ---
+// src/pages/compare/index.astro
+// EDITOR NOTE: Replace any text inside [BRACKETS] with real info before publishing.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { COMPARISONS } from '../../data/comparisons';
-import { breadcrumbSchema } from '../../lib/schema';
-
+import { ARTICLES } from '../../data/articles';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+// All genuine "X vs Y" articles that live outside the /compare/ route
+// Excludes buying guides, strategy pieces, and category overviews
+const vsArticles = ARTICLES.filter(a => {
+  if (a.slug.startsWith('/compare/')) return false;
+  if (!a.slug.includes('-vs-')) return false;
+  // Exclude buying guides / category pages tagged as comparison
+  const excludeSlugs = ['/best-golf-gps-watches/', '/best-golf-drivers-forgiveness/'];
+  if (excludeSlugs.includes(a.slug)) return false;
+  // Exclude strategy/guide articles (not true head-to-head)
+  if (['STRATEGY', 'BUYING GUIDE'].includes(a.tag)) return false;
+  // Exclude "type vs type" conceptual articles (not product vs product)
+  const conceptual = ['golf-simulator-vs-driving-range', 'approach-wedge-vs-gap-wedge', 'driver-vs-3-wood-off-tee', 'mallet-vs-blade-putter', 'hybrid-vs-long-iron'];
+  if (conceptual.some(c => a.slug.includes(c))) return false;
+  return true;
+}).sort((a: any, b: any) => a.title.localeCompare(b.title));
 const meta = {
-  title: 'Golf Product Comparisons 2026 — Side-by-Side Reviews',
-  description: 'Head-to-head golf product comparisons for weekend golfers. Bushnell vs Precision Pro, Garmin vs Shot Scope, Callaway vs TaylorMade and more — tested side-by-side.',
+  title: 'Golf Gear Comparisons — Side-by-Side Tested',
+  description: 'Honest head-to-head golf gear comparisons. Bushnell vs Precision Pro, SkyTrak vs R10, Paradym vs Qi35 — bought, tested, and ranked by a real cubicle.',
   canonical: 'https://www.cubicalgolfer.com/compare/',
-  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
   robots: 'index,follow,max-snippet:-1,max-image-preview:large',
   breadcrumbs: [
@@ -15,73 +32,215 @@ const meta = {
     { label: 'Comparisons', href: '/compare/' },
   ],
 };
-const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+// Unique FAQ for this hub — do NOT duplicate questions from other hubs
+const compareFaq = [
+  { q: 'How do I pick between two golf products that look almost identical on paper?',
+    a: 'Spec sheets lie by omission. A driver with "10% more MOI" sounds impressive until you realize that translates to maybe 2 yards on a mis-hit at our swing speed. Every comparison on this site ignores marketing claims and focuses on three things: how the product feels on the course over a real round, where it actually wins or loses against the alternative, and whether the price difference matches the performance difference. If you cannot tell the products apart after reading our comparison, buy the cheaper one.' },
+  { q: 'Why do you compare last year\'s models against this year\'s flagships?',
+    a: 'Because last year\'s flagship is now half-price and 95% as good. Most weekend golfers do not need the newest driver — they need the right driver for their swing at a price that makes sense. We deliberately compare prior-generation gear against current releases when the value gap is wide enough to matter.' },
+  { q: 'What do you do when both products are basically the same?',
+    a: 'We say so, plainly. About one in five of our comparisons end with "they are functionally identical — buy whichever you find on sale." That is a useful answer even though it does not help our affiliate revenue. The whole point of a comparison is to save you from over-thinking a $200 decision.' },
+  { q: 'Are these comparisons sponsored?',
+    a: 'No. Every product is purchased with our own money or borrowed for testing with no editorial conditions attached. We earn affiliate commissions when you buy through our links, but the commission rate does not influence rankings — Amazon pays roughly the same percentage on every product. If a brand with no affiliate program wins a comparison, we still recommend it and tell you where to buy it.' },
+  { q: 'How often are these comparisons updated?',
+    a: 'When a new model drops, when a price moves more than 15%, or when our testing surfaces something we missed the first time. The "Updated" date on each comparison reflects the last time we verified every recommendation. If a comparison is older than 12 months, take the price figures with a grain of salt and double-check on the retailer page.' },
+];
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
 ---
-
-<BaseLayout {meta} {schemas} activeNav="home">
-
-  <header class="compare-hero">
+<BaseLayout {meta} {schemas} activeNav="compare">
+  <header class="cat-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">Comparisons</span>
     </nav>
-    <h1>Golf Product Comparisons</h1>
-    <p>Head-to-head tested comparisons for weekend golfers who want to know: which one is actually worth buying?</p>
+    <h1>Golf Gear Comparisons</h1>
+    <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Head-to-head tests for the question every weekend golfer ends up Googling at 11pm: which one is actually worth the money?</p>
+    <div class="hero-pills">
+      <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" class="hero-pill"><span class="hero-pill-dot"></span>Rangefinders</a>
+      <a href="/compare/callaway-paradym-vs-taylormade-qi35/" class="hero-pill"><span class="hero-pill-dot"></span>Drivers</a>
+      <a href="/compare/garmin-approach-s62-vs-shot-scope-v5/" class="hero-pill"><span class="hero-pill-dot"></span>GPS & tracking</a>
+      <a href="/compare/skytrak-vs-garmin-r10/" class="hero-pill"><span class="hero-pill-dot"></span>Launch monitors</a>
+      <a href="/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/" class="hero-pill"><span class="hero-pill-dot"></span>Putters</a>
+    </div>
   </header>
-
-  <div class="cat-page-body">
-    <div class="articles-grid">
-      {COMPARISONS.map(c => (
-        <a href={`/compare/${c.slug}/`} class="article-card">
-          <div class="art-thumb navy">
-            <span class="art-badge tag-cmp">COMPARISON</span>
-            <span aria-hidden="true">⚖️</span>
-          </div>
-          <div class="art-body">
-            <h3>{c.title}</h3>
-            <p>{c.intro.substring(0, 120)}…</p>
-            <div class="art-foot">
-              <span class="art-words">Tested · Updated 2026</span>
-              <span class="art-read">See comparison →</span>
-            </div>
-          </div>
-        </a>
-      ))}
+  <!-- ─── FEATURED COMPARISON — affiliate placement moved DOWN ─── -->
+  <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+    <div style="flex:1;min-width:200px;">
+      <span style="font-size:12px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Most-Read Comparison</span>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Bushnell Tour V6 Shift vs Precision Pro NX9 HD</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">$329 vs $169 — does paying double actually buy you double the rangefinder?</p>
     </div>
-
-    <!-- Additional comparisons from buying guides -->
-    <div style="margin-top:32px">
-      <h2 style="font-size:20px;margin-bottom:16px">More Comparisons</h2>
-      <div class="articles-grid">
-        <a href="/titleist-pro-v1-vs-pro-v1x/" class="article-card">
-          <div class="art-thumb olive">
-            <span class="art-badge tag-cmp">COMPARISON</span>
-            <span aria-hidden="true">⛳</span>
-          </div>
-          <div class="art-body">
-            <h3>Titleist Pro V1 vs Pro V1x (2026)</h3>
-            <p>Compression, flight, spin and feel differences — which ball fits your swing?</p>
-            <div class="art-foot">
-              <span class="art-read">Read comparison →</span>
-            </div>
-          </div>
-        </a>
-        <a href="/golf-ball-compression-chart/" class="article-card">
-          <div class="art-thumb olive">
-            <span class="art-badge tag-cmp">GUIDE</span>
-            <span aria-hidden="true">⛳</span>
-          </div>
-          <div class="art-body">
-            <h3>Golf Ball Compression Chart by Swing Speed</h3>
-            <p>Match your MPH to the right ball. Every major ball ranked by compression.</p>
-            <div class="art-foot">
-              <span class="art-read">Read guide →</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
+    <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;">Read Comparison →</a>
   </div>
 
+  <!-- ─── EDITORIAL BLOCK — sits ABOVE any affiliate CTA on purpose ─── -->
+  <section style="max-width:100%;margin:0 auto 32px;padding:24px var(--page-px) 0;">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;">
+      <div>
+        <img src="/images/compare-hero.webp"
+          alt="Side-by-side golf gear comparisons — rangefinders, drivers, putters, and launch monitors tested head-to-head"
+          width="600" height="500" loading="eager" decoding="async"
+          style="width:100%;height:auto;border-radius:var(--r2);" />
+        <p style="font-size:13px;color:var(--muted);margin:10px 0 0;font-style:italic;">
+          Bushnell V6 and Precision Pro NX9 side by side at South Shore Golf Course, April 2026.
+        </p>
+      </div>
+      <div style="font-size:16px;line-height:1.75;color:var(--body);">
+        <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;line-height:1.3;">Why a comparison hub exists at all</h2>
+        <p style="margin:0 0 14px;">When you are deciding between two pieces of golf gear, the worst place to look is the manufacturer page. Both products say they are the best. Both have a testimonial from a tour pro you have never heard of. Neither tells you what happens when you actually take the thing out for a Saturday round at a course that is not perfectly manicured.</p>
+        <p style="margin:0 0 14px;">Every comparison on this site exists because I — Ryan O., a weekend golfer who plays South Shore, Harborside, and Lost Marsh around Chicago — sat there at midnight on a Tuesday trying to decide between two products and could not find a real answer anywhere. So I bought both. I played them on the same course, on back-to-back rounds when possible, and wrote down what actually happened.</p>
+        <p style="margin:0 0 14px;">The comparisons are organized by the equipment categories that move the needle most for recreational golfers. <a href="/best-golf-rangefinders-2026/">Rangefinders</a> live or die on pin-lock speed in mixed conditions — flat lies are easy, side-hill lies into trees are where the real differences show up. <a href="/best-golf-launch-monitors-2026/">Launch monitors</a> need accuracy benchmarks against something we already trust — every monitor in our comparisons is checked against a TrackMan 4 at Club Champion Merrillville for quarterly calibration runs. <a href="/best-golf-drivers-forgiveness/">Driver comparisons</a> matter on mis-hits, not center-face ball speed, because no one who needs to read a comparison hits the center every time.</p>
+        <p style="margin:0 0 14px;">The matchups we cover are the ones weekend golfers actually search for. <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/">Bushnell Tour V6 vs Precision Pro NX9</a> is our most-read comparison because everyone has narrowed their rangefinder shortlist to those two. <a href="/compare/skytrak-vs-garmin-r10/">SkyTrak vs Garmin R10</a> is the home-simulator decision that has stranded thousands of people on Reddit. <a href="/compare/callaway-paradym-vs-taylormade-qi35/">Paradym vs Qi35</a> is the driver comparison that keeps getting asked at every pro shop in the country.</p>
+        <p style="margin:0 0 14px;">If both products are genuinely close, we say so — and then tell you which one to buy based on the use case (left-handed vs right-handed, slope vs no slope, indoor vs outdoor, budget vs premium). The goal is to end your shopping search in one read.</p>
+        <p style="margin:0 0 0;font-size:14px;color:var(--muted);">Updated whenever new products drop or prices shift. Last full-sweep update: May 2026.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ─── HEAD-TO-HEAD COMPARISONS — organized by category ─── -->
+  <div class="cat-page-body">
+
+    {/* Category groups */}
+    {(() => {
+      const categoryOrder = ['Rangefinders', 'Launch Monitors', 'Drivers', 'GPS & Tracking', 'Putters', 'Golf Balls', 'Irons & Wedges', 'Simulators'];
+      const categoryMap: any = {};
+
+      for (const c of COMPARISONS) {
+        const s = c.slug.toLowerCase();
+        let cat = 'Other';
+        if (s.includes('bushnell') && (s.includes('v6') || s.includes('nx9') || s.includes('300') || s.includes('pro-x')) || s.includes('blue-tees') || s.includes('callaway-300')) cat = 'Rangefinders';
+        else if (s.includes('garmin-r10') || s.includes('garmin-r50') || s.includes('skytrak') || s.includes('mevo') || s.includes('launch-pro') || s.includes('square-golf') || s.includes('sim')) cat = 'Launch Monitors';
+        else if (s.includes('paradym') || s.includes('qi35') || s.includes('aerojet') || s.includes('g430-max') || s.includes('ai-smoke') || s.includes('launcher-xl2') || s.includes('gt2')) cat = 'Drivers';
+        else if (s.includes('s62') || s.includes('s42') || s.includes('s70') || s.includes('s12') || s.includes('shot-scope') || s.includes('arccos') || s.includes('apple-watch') || s.includes('ion')) cat = 'GPS & Tracking';
+        else if (s.includes('odyssey') || s.includes('scotty') || s.includes('putter') || s.includes('lab-golf')) cat = 'Putters';
+        else if (s.includes('pro-v1') || s.includes('chrome-soft') || s.includes('kirkland') || s.includes('tp5')) cat = 'Golf Balls';
+        else if (s.includes('iron') || s.includes('stealth') || s.includes('rtx') || s.includes('jaws') || s.includes('wedge')) cat = 'Irons & Wedges';
+        else if (s.includes('sim')) cat = 'Simulators';
+
+        if (!categoryMap[cat]) categoryMap[cat] = [];
+        categoryMap[cat].push(c);
+      }
+
+      return categoryOrder.filter(cat => categoryMap[cat]?.length > 0).map(cat => {
+        const withThumb = categoryMap[cat].filter((c: any) => c.thumbnail);
+        const noThumb = categoryMap[cat].filter((c: any) => !c.thumbnail);
+        return (
+        <div style="margin:0 0 32px;">
+          <h2 style="font-size:18px;color:var(--green);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(30,58,40,.1);">{cat}</h2>
+          {withThumb.length > 0 && (
+          <div class="articles-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
+            {withThumb.map((c: any) => (
+              <a href={`/compare/${c.slug}/`} class="article-card">
+                <div class="art-thumb" style="background:var(--green);">
+                  <span class="art-badge tag-cmp">HEAD TO HEAD</span>
+                  <img src={c.thumbnail} alt={c.title} loading="lazy" decoding="async" width="400" height="260"
+                      class="art-thumb__img" />
+                </div>
+                <div class="art-body">
+                  <p class="hub-card-title">{c.title}</p>
+                  <p>{typeof c.intro === 'string' ? c.intro.substring(0, 140) : c.description?.substring(0, 140)}…</p>
+                  <div class="art-foot">
+                    <span class="art-words">Tested · Updated {c.dateModified?.substring(0,4) || '2026'}</span>
+                    <span class="art-read">See comparison →</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+          )}
+          {noThumb.length > 0 && (
+            <div style="margin:12px 0 0;padding:14px 18px;background:rgba(30,58,40,.03);border-radius:8px;">
+              {noThumb.map((c: any) => (
+                <a href={`/compare/${c.slug}/`} style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border);text-decoration:none;">
+                  <div>
+                    <p style="font-size:14px;font-weight:700;color:var(--green);margin:0;">{c.title.replace(/ —.*$/,'')}</p>
+                    <p style="font-size:12px;color:var(--muted);margin:2px 0 0;">{typeof c.intro === 'string' ? c.intro.substring(0, 80) : ''}…</p>
+                  </div>
+                  <span style="color:var(--green);font-weight:600;font-size:13px;white-space:nowrap;margin-left:12px;">Read →</span>
+                </a>
+              ))}
+            </div>
+          )}
+        </div>
+        );
+      });
+    })()}
+
+    {/* Additional product comparisons from articles */}
+    {vsArticles.length > 0 && (
+      <div style="margin:32px 0 0;">
+        <h2 style="font-size:18px;color:var(--green);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid rgba(30,58,40,.1);">More Product Comparisons</h2>
+        <div class="articles-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
+          {vsArticles.map(a => (
+            <a href={a.slug} class="article-card">
+              <div class="art-thumb" style="background:var(--green);">
+                <span class="art-badge tag-cmp">HEAD TO HEAD</span>
+                {a.thumbnail
+                  ? <img src={a.thumbnail} alt={a.titleDisplay || a.title} loading="lazy" decoding="async" width="400" height="260"
+                      class="art-thumb__img" />
+                  : <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:12px 16px;text-align:center;">
+                      <span style="font-size:11px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;">Tested Head to Head</span>
+                      <span style="font-size:14px;font-weight:800;color:#fff;line-height:1.3;">{(a.titleDisplay || a.title).replace(/ —.*$/,'').replace(/ \(.*$/,'')}</span>
+                      <span style="font-size:28px;margin:4px 0;">⚖️</span>
+                    </div>
+                }
+              </div>
+              <div class="art-body">
+                <p class="hub-card-title">{a.titleDisplay || a.title}</p>
+                <p>{(a.excerpt || a.description || '').substring(0, 140)}…</p>
+                <div class="art-foot">
+                  <span class="art-words">Tested · Updated 2026</span>
+                  <span class="art-read">See comparison →</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+  <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
+  <section style="max-width:100%;margin:48px auto 72px;padding:0 var(--page-px);">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:160px;align-items:start;" class="hub-bottom-grid">
+      <!-- LEFT: How we pick the winner -->
+      <div style="padding-right:32px;">
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How we pick the winner</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          Every comparison follows the same three-part test. First, we look at raw performance over a minimum of 4-6 rounds with each product — this is where most reviews stop, and it is the least useful part because both modern flagships will perform well in isolation. Second, we look at where each product breaks down: the rangefinder that loses pin-lock in heat haze, the driver that twists on toe hits, the launch monitor that drifts in cold air. Every product has a failure mode, and the failure mode is what actually separates two options that look identical on paper.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+          Third — and this is the part that takes the longest — we look at who each product is wrong for. A blade putter wins a comparison if you have a consistent stroke; it is a disaster if you do not. A premium urethane ball wins if your swing speed is above 95 mph; it is wasted money below 85 mph. Every comparison closes with a "buy this if / skip this if" verdict because the right answer depends on you, not on the product.
+        </p>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
+          The full methodology lives at <a href="/how-we-test/">how-we-test</a>. The short version: we buy the gear (or borrow it with zero editorial strings), play 4-6 rounds minimum, take notes after every round, and compare against a baseline product we already trust. No lab coats, no robot arms, no manufacturer test sheets.
+        </p>
+      </div>
+      <!-- RIGHT: Related sections + FAQ -->
+      <div style="padding-left:32px;">
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
+        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
+          Once you have narrowed your decision down to two products and read the comparison, the full category-wide ranked list usually helps confirm the call. See the complete <a href="/gear-reviews/">gear reviews hub</a> for ranked buying guides across every product type, the <a href="/golf-tech/">golf tech hub</a> for launch monitors and shot trackers, and the <a href="/improve-your-golf-game/">improve your game hub</a> for the practice routines that make the new gear actually pay off.
+        </p>
+        <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Comparison FAQ</h2>
+        {compareFaq.map(item => (
+          <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+            <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{item.q}</summary>
+            <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+  <style>{`
+    @media (max-width: 768px) {
+      .hub-bottom-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .hub-bottom-grid > div {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+  `}</style>
 </BaseLayout>

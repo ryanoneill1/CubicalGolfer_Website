@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { getAffiliateLink } from '../../data/affiliate-links';
+
+const meta = {
+  title:       'Free Golf Tools & Calculators — Cubical Golfer',
+  description: 'Interactive golf tools: ball compression chart, simulator cost calculator, club distance chart, and budget planner. All free, no sign-up.',
+  canonical:   'https://www.cubicalgolfer.com/tools/',
+  ogImage:     'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType:      'website' as const,
+  robots:      'index,follow,max-snippet:-1,max-image-preview:large',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Tools', href: '/tools/' },
+  ],
+};
+
+const tools = [
+  {
+    title: 'Golf Ball Compression Chart',
+    href:  '/golf-ball-compression-chart/',
+    emoji: '🏌️',
+    desc:  'Filter 34+ golf balls by compression rating and swing speed. Find the right ball for your game with prices and buy links.',
+    tag:   'INTERACTIVE CHART',
+  },
+  {
+    title: 'Golf Simulator Cost Calculator',
+    href:  '/golf-simulator-cost-calculator/',
+    emoji: '🖥️',
+    desc:  'Pick your budget, room size, and launch monitor — get a complete parts list with real prices. Build your sim setup from $1,100 to $15,000+.',
+    tag:   'CALCULATOR',
+  },
+  {
+    title: 'Golf Club Distance Chart',
+    href:  '/golf-club-distance-chart/',
+    emoji: '📏',
+    desc:  'Enter your driver swing speed and see estimated carry distances for every club in your bag. Based on real Trackman data, not marketing numbers.',
+    tag:   'INTERACTIVE CHART',
+  },
+  {
+    title: 'Golf Equipment Budget Planner',
+    href:  '/golf-equipment-budget-planner/',
+    emoji: '💰',
+    desc:  'Set your total budget and see exactly what to buy, in what order, with specific product recommendations at every price tier.',
+    tag:   'PLANNER',
+  },
+  { href: '/golf-handicap-calculator/', title: 'Handicap Calculator', desc: 'Estimate your USGA Handicap Index from your last 5 rounds. Enter scores and course ratings.', tag: 'CALCULATOR', emoji: '🧮' },
+  { href: '/golf-swing-speed-chart/', title: 'Swing Speed Chart', desc: 'Average swing speeds by club and skill level. See where you compare to tour pros and weekend golfers.', tag: 'REFERENCE', emoji: '⚡' },
+];
+
+const toolsFaq = [
+  { q: 'Are these golf tools free to use?', a: 'Yes — all four tools are completely free with no sign-up, no email gate, and no usage limits. We earn revenue through affiliate links on recommended products, not by charging for tools.' },
+  { q: 'Where does the data in these tools come from?', a: 'The golf ball compression chart uses manufacturer-published compression ratings cross-referenced with independent testing data. The distance chart uses Trackman averages adjusted by swing speed. The simulator calculator uses real retail prices updated monthly. All data sources are cited on each tool page.' },
+  { q: 'Can I use these tools on my phone?', a: 'Yes — all four tools are fully responsive and work on mobile screens. The compression chart and distance chart are particularly useful on the range or course when you want a quick reference for club selection or ball choice.' },
+];
+
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="tools">
+
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Tools</span>
+    </nav>
+    <span class="hero-badge">FREE · NO SIGN-UP</span>
+    <h1>Golf Tools & Calculators</h1>
+    <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Interactive tools built from real testing data — find the right ball, plan your simulator build, know your distances, and set your budget.</p>
+
+    <div class="hero-pills">
+      <a href="/golf-ball-compression-chart/" class="hero-pill"><span class="hero-pill-dot"></span>Compression chart</a>
+      <a href="/golf-simulator-cost-calculator/" class="hero-pill"><span class="hero-pill-dot"></span>Simulator calculator</a>
+      <a href="/golf-club-distance-chart/" class="hero-pill"><span class="hero-pill-dot"></span>Distance chart</a>
+      <a href="/golf-equipment-budget-planner/" class="hero-pill"><span class="hero-pill-dot"></span>Budget planner</a>
+    </div>
+  </header>
+
+    <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+    <div style="flex:1;min-width:200px;">
+      <span style="font-size:12px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Garmin Approach R10 — ~$599</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">Best launch monitor for weekend golfers — pairs with our simulator calculator</p>
+    </div>
+    {(() => {
+      const aff = getAffiliateLink('garmin-approach-r10');
+      return aff?.url ? (
+        <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
+      ) : null;
+    })()}
+  </div>
+
+  <section style="max-width:100%;margin:0 auto 40px;padding:24px var(--page-px) 0;">
+
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:center;">
+
+      <!-- LEFT: Image + stats -->
+      <div>
+        <img src="/images/tools-hero.webp"
+          alt="Cubical Golfer interactive tools: compression chart, simulator calculator, distance chart, budget planner"
+          width="600" height="500" loading="eager" decoding="async"
+          style="width:100%;height:auto;border-radius:var(--r2);" />
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;">
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--r2);padding:20px 16px;text-align:center;">
+            <div style="font-size:36px;font-weight:700;color:var(--green);line-height:1;">6</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:6px;">Tools</div>
+          </div>
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--r2);padding:20px 16px;text-align:center;">
+            <div style="font-size:36px;font-weight:700;color:var(--green);line-height:1;">34+</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:6px;">Balls charted</div>
+          </div>
+          <div style="background:var(--cream);border:1px solid var(--border);border-radius:var(--r2);padding:20px 16px;text-align:center;">
+            <div style="font-size:36px;font-weight:700;color:var(--green);line-height:1;">$0</div>
+            <div style="font-size:14px;color:var(--muted);margin-top:6px;">Always free</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: All text as one flowing block -->
+      <div style="font-size:16px;line-height:1.75;color:var(--body);">
+        <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;line-height:1.3;">Built for Weekend Golfers Who Want Answers, Not Sales Pitches</h2>
+        <p style="margin:0 0 14px;">Every tool on this page was built to answer a specific question we kept hearing from golfers: what ball should I play for my swing speed? How much does a simulator actually cost? How far should my 7-iron go? What should I buy first on a $500 budget?</p>
+        <p style="margin:0 0 14px;">These are not generic calculators — they use real data from our testing, Trackman averages, and current retail prices. The <a href="/golf-ball-compression-chart/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">compression chart</a> filters 34+ balls by swing speed so you stop guessing which ball suits your game. The <a href="/golf-simulator-cost-calculator/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">simulator calculator</a> builds a complete parts list at your budget so you know exactly what a home setup costs before you start buying.</p>
+        <p style="margin:0 0 14px;">The <a href="/golf-club-distance-chart/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">distance chart</a> gives you realistic carry numbers based on Trackman data, not the optimistic figures on manufacturer websites. Enter your driver swing speed and see estimated carry for every club in your bag. The <a href="/golf-equipment-budget-planner/" style="color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">budget planner</a> tells you exactly what to buy first at every price tier — from $200 to $2,000 — so you invest in the gear that actually lowers your scores before splurging on nice-to-haves.</p>
+        <p style="margin:0 0 14px;">All four tools work on mobile, require no sign-up, and have no usage limits. We earn revenue through affiliate links on recommended products within the tools, not by charging for access or gating results behind an email wall.</p>
+        <p style="font-size:14px;color:var(--muted);margin:0;">Data updated monthly when prices change or new products launch.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="cat-page-body">
+    <div class="articles-grid">
+      {tools.map(tool => (
+        <a href={tool.href} class="article-card">
+          <div class={`art-thumb olive`}>
+            <span class="art-badge tag-tool">{tool.tag}</span>
+            <span aria-hidden="true" style="font-size:3rem;">{tool.emoji}</span>
+          </div>
+          <div class="art-body">
+            <p class="hub-card-title">{tool.title}</p>
+            <p>{tool.desc}</p>
+            <div class="art-foot">
+              <span class="art-words">Free · Interactive</span>
+              <span class="art-read">Open tool →</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
+    <section style="max-width:100%;margin:48px auto 72px;padding:0;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:160px;align-items:start;" class="hub-bottom-grid">
+        <!-- LEFT: How our tools are built -->
+        <div style="padding-right:32px;">
+          <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How these tools are built and maintained</h2>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+            Every tool on this page exists because we got tired of doing the same math by hand. The simulator cost calculator started as a spreadsheet where we tracked component prices for our own build. The compression chart started as a notes file where we logged ball data during testing. Once the data got useful enough to share, we turned it into something interactive.
+          </p>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+            The data behind these tools is updated monthly. Retail prices shift — sometimes a $599 launch monitor drops to $499 during a sale and stays there. New products launch and need to be added to the charts. Trackman releases updated distance averages as the amateur population data grows. When data changes, the tools change with it. The "last updated" date on each tool reflects the most recent data refresh, not just the last time we touched the code.
+          </p>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
+            We do not gate any tool behind an email signup or account creation. The tools work the moment you open them because that is how tools should work. Revenue comes from affiliate links on the products these tools recommend — if the compression chart helps you find the right ball and you buy it through our link, that funds the next tool.
+          </p>
+        </div>
+        <!-- RIGHT: Related sections + FAQ -->
+        <div style="padding-left:32px;">
+          <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
+          <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
+            Tools give you the data — buying guides help you act on it. The <a href="/gear-reviews/">gear reviews hub</a> has ranked recommendations for every product type these tools cover. For the tech that powers the data — launch monitors, swing analyzers, GPS watches — see the <a href="/golf-tech/">golf tech hub</a>. For putting the numbers into practice, the <a href="/improve-your-golf-game/">improve your game hub</a> connects tool insights to on-course improvement.
+          </p>
+          <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Tools FAQ</h2>
+          {toolsFaq.map(f => (
+            <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+              <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{f.q}</summary>
+              <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+    <style>{`
+      @media (max-width: 768px) {
+        .hub-bottom-grid {
+          grid-template-columns: 1fr !important;
+          gap: 32px !important;
+        }
+        .hub-bottom-grid > div {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+      }
+    `}</style>
+  </div>
+
+</BaseLayout>

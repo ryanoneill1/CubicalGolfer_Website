@@ -1,16 +1,33 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { categoryMeta } from '../../lib/seo';
-import { breadcrumbSchema } from '../../lib/schema';
+// src/pages/golf-accessories/index.astro
+// EDITOR NOTE: Replace any text inside [BRACKETS] with real info before publishing.
+import { getAffiliateLink } from '../../data/affiliate-links';
+import BaseLayout        from '../../layouts/BaseLayout.astro';
+import { ARTICLES }      from '../../data/articles';
+import { categoryMeta }  from '../../lib/seo';
 import { getCategoryArticles } from '../../lib/linking';
-const cat = 'golf-accessories';
+import { breadcrumbSchema, collectionPageSchema, faqSchema } from '../../lib/schema';
+const cat      = 'golf-accessories';
 const articles = getCategoryArticles(cat);
-const meta = categoryMeta(cat, articles.length);
-const schemas = [breadcrumbSchema(meta.breadcrumbs)];
-const TAG_CLASS: Record<string, string> = {
-  'BUYING GUIDE':'tag-buy','COMPARISON':'tag-cmp','TUTORIAL':'tag-tut',
-  'LISTICLE':'tag-list','LIFESTYLE':'tag-life','GUIDE':'tag-rev',
-};
+const meta     = categoryMeta(cat);
+// Unique FAQ for accessories — questions a real buyer would ask
+const hubFaq = [
+  { q: 'What is the single best accessory under $25 a weekend golfer should own?',
+    a: 'A divot tool with a built-in ball marker. It costs under $15, lasts forever, and every player ahead of you on the green silently appreciates it. After that, the next best $25 buy is a microfiber towel that clips to the bag — keeps your clubface clean, which adds spin and consistency to your iron shots more than most people realize.' },
+  { q: 'Are expensive golf gloves actually better than cheap ones?',
+    a: 'Sometimes, but not in the way the marketing suggests. A $25 cabretta-leather glove like the FootJoy WeatherSof feels better on hand and grips slightly better in light moisture, but it also wears out faster — typically 8-15 rounds depending on grip pressure. A $10 synthetic glove lasts 25-30 rounds and grips fine in dry conditions. If you play once a week, the cheap glove is the better economic call. If you play three times a week and care about feel, splurge.' },
+  { q: 'Do training aids actually work, or are they all gimmicks?',
+    a: 'About 30% of them work as advertised; the rest are gimmicks. The ones that actually do what they claim: alignment sticks ($15), putting mirrors ($25), a weighted swing trainer for tempo, and a basic chipping net for the backyard. Anything that promises to "lock your wrists" or "fix your slice in 60 seconds" is selling you a placebo. Our <a href="/best-golf-training-aids/">training aids buying guide</a> separates the useful from the gimmicky.' },
+  { q: 'How often should I replace golf grips?',
+    a: 'Every 40-60 rounds, or once a year for the average weekend golfer. Worn grips force you to grip the club tighter, which destroys swing tempo and adds tension to the wrists. Re-gripping a full set runs about $80-120 at a shop and is the single highest-ROI maintenance task in golf — it produces a noticeable feel difference within one or two rounds.' },
+  { q: 'Are golf push carts worth the money over carrying a stand bag?',
+    a: 'If you walk more than 10 rounds a year and you are over 35, yes. A push cart eliminates the shoulder and back fatigue that turns the back nine into a survival exercise. Three-wheelers are easier to push than four-wheelers; spend the extra $50 to get one with a parking brake and a phone holder. You will use the phone holder every round.' },
+];
+const schemas  = [
+  breadcrumbSchema(meta.breadcrumbs),
+  collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
+  faqSchema(hubFaq),
+];
 ---
 <BaseLayout {meta} {schemas} activeNav="golf-accessories">
   <header class="cat-hero">
@@ -19,27 +36,167 @@ const TAG_CLASS: Record<string, string> = {
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">Golf Accessories</span>
     </nav>
-    <h1>🎒 Golf Accessories</h1>
-    <p>Affordable accessories that improve every round — gloves, towels, training aids, and more. Every pick tested and ranked by impact.</p>
+    <h1>Golf Accessories</h1>
+    <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Gloves, gifts, training aids, push carts, and the small purchases that quietly make every round better — ranked by real value per dollar.</p>
+    <div class="hero-pills">
+      <a href="/best-golf-gifts-for-dad/" class="hero-pill"><span class="hero-pill-dot"></span>Gifts</a>
+      <a href="/best-golf-gloves-hot-weather/" class="hero-pill"><span class="hero-pill-dot"></span>Gloves</a>
+      <a href="/best-golf-training-aids/" class="hero-pill"><span class="hero-pill-dot"></span>Training aids</a>
+      <a href="/best-golf-accessories-under-50/" class="hero-pill"><span class="hero-pill-dot"></span>Under $50</a>
+      <a href="/25-golf-accessories-every-golfer-should-own/" class="hero-pill"><span class="hero-pill-dot"></span>Top 25 list</a>
+    </div>
   </header>
-  <div class="cat-page-body">
-    <div class="articles-grid">
-      {articles.map(a => (
-        <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
-          <div class={`art-thumb ${a.thumb}`}>
-            <span class={`art-badge ${TAG_CLASS[a.tag] || 'tag-buy'}`}>{a.tag}</span>
-            <span aria-hidden="true">{a.emoji}</span>
-          </div>
-          <div class="art-body">
-            <h3>{a.titleDisplay}</h3>
-            <p>{a.excerpt}</p>
-            <div class="art-foot">
-              <span class="art-words">{a.words} · Updated 2026</span>
-              <span class="art-read">Read guide →</span>
-            </div>
-          </div>
-        </a>
-      ))}
+
+  <!-- ─── QUICK START ─── -->
+  <div style="max-width:100%;margin:0 auto 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+    <a href="/best-golf-training-aids/" style="display:block;padding:16px;background:#fff;border:2px solid var(--green);border-radius:10px;text-decoration:none;">
+      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">🏆 MOST READ</p>
+      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">Training Aids That Work</p>
+      <p style="font-size:12px;color:var(--muted);margin:0;">$12 alignment sticks to $109 tempo trainers</p>
+    </a>
+    <a href="/best-golf-gifts-for-dad/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
+      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">🎁 GIFTS</p>
+      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">Golf Gifts for Dad</p>
+      <p style="font-size:12px;color:var(--muted);margin:0;">Gear he actually wants, not golf-themed socks</p>
+    </a>
+    <a href="/best-golf-gear-under-100/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
+      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">💰 BUDGET</p>
+      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">Best Gear Under $100</p>
+      <p style="font-size:12px;color:var(--muted);margin:0;">Everything a weekend golfer needs for under $100</p>
+    </a>
+    <a href="/gear-quiz/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
+      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">🎯 QUIZ</p>
+      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">What Should You Buy?</p>
+      <p style="font-size:12px;color:var(--muted);margin:0;">60-second quiz → personalized picks</p>
+    </a>
+  </div>
+
+  <!-- ─── EDITORIAL BLOCK — comes first ─── -->
+  <section style="max-width:100%;margin:0 auto 32px;padding:24px var(--page-px) 0;">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;">
+      <div>
+        <img src="/images/accessories-hero.webp"
+          alt="Best golf accessories for weekend golfers — gloves, towels, divot tools, training aids under $50"
+          width="600" height="500" loading="eager" decoding="async"
+          style="width:100%;height:auto;border-radius:var(--r2);" />
+        <p style="font-size:13px;color:var(--muted);margin:10px 0 0;font-style:italic;">
+          Standard kit I take to every round at South Shore.
+        </p>
+      </div>
+      <div style="font-size:16px;line-height:1.75;color:var(--body);">
+        <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;line-height:1.3;">Accessories that punch above their price tag</h2>
+        <p style="margin:0 0 14px;">Golf accessories are the most overlooked part of equipment shopping. People will spend $500 on a new driver to gain three yards, then refuse to spend $25 on a glove that grips properly in the heat. The category is full of cheap upgrades that genuinely improve your round, and full of $80 gadgets that promise miracles and deliver nothing.</p>
+        <p style="margin:0 0 14px;">This hub is organized by what the accessory actually does for your game. <strong>Performance accessories</strong> — gloves, push carts, <a href="/best-golf-shoes-for-walking/">walking shoes</a>, <a href="/best-golf-training-aids/">training aids</a> — change the physical experience of playing. <strong>Maintenance accessories</strong> — divot tools, towels, club brushes, ball markers — keep your gear and your manners in good shape. <strong>Gift accessories</strong> — <a href="/best-golf-gifts-for-dad/">Father's Day picks</a>, holiday gifts, <a href="/best-golf-gifts-for-couples/">gifts for golfing couples</a> — are organized by recipient because that is the actual problem you are trying to solve when shopping.</p>
+        <p style="margin:0 0 14px;">Every accessory ranked on this site is tested over real rounds. Gloves are worn through at least 8 rounds before being scored on durability. Push carts are used over 10+ rounds on hilly courses where the wheel quality actually matters. Training aids are used at home for 4-6 weeks before being ranked — because the gimmicky ones reveal themselves once the novelty wears off.</p>
+        <p style="margin:0 0 14px;">The accessories worth your money fall into two categories: cheap upgrades that improve your round disproportionately (a $25 putting mirror saves more strokes than a $400 driver), and expensive purchases that last long enough to justify the price (a quality push cart at $200 will serve you for 5+ seasons). The accessories that are not worth your money — most "swing tempo" gadgets, most weighted clubs, most putting alignment lasers — are flagged in our guides so you stop seeing them in your Amazon recommendations.</p>
+        <p style="margin:0 0 0;font-size:14px;color:var(--muted);">All accessories ranked here have been tested by me, Ryan O., over at least one full golf season. The full testing process is documented at <a href="/how-we-test/">how we test</a>.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ─── BEST VALUE PURCHASE BY PRICE TIER — unique editorial section ─── -->
+  <section style="max-width:1100px;margin:0 auto 40px;padding:0 var(--page-px);">
+    <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Best accessory by price tier</h2>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+      If you are starting a kit from scratch, here is the order I would buy in. <strong>Under $15:</strong> a divot tool with a ball marker — it is the entry-level accessory every golfer should own, and the one many never bother to buy. <strong>$15-30:</strong> a microfiber towel that clips to your bag and an alignment stick set (alignment sticks are the most under-bought training aid in the game). <strong>$30-60:</strong> a quality glove that fits your hand, plus a putting mirror for practice. <strong>$60-150:</strong> a basic <a href="/best-golf-rangefinder-for-seniors/">rangefinder</a> if you do not already own one, or a quality push cart if you walk.
+    </p>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
+      Skip the gimmicks at every tier. The "swing analyzer" attachments that clip to your club, the "tempo training" weighted handles, the laser putting alignment systems — none of them earn a spot in the bag for the average weekend golfer. If you want a deeper breakdown, our <a href="/best-golf-accessories-under-50/">accessories under $50 guide</a> ranks the 12 most useful items at that price point.
+    </p>
+  </section>
+  <!-- ─── FEATURED PICK — moved below editorial ─── -->
+  <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+    <div style="flex:1;min-width:200px;">
+      <span style="font-size:12px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Most-Used Accessory</span>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">FootJoy WeatherSof Glove — ~$18</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">The glove I have used for more than a decade running</p>
+    </div>
+    {(() => {
+      const aff = getAffiliateLink('footjoy-weathersof-glove');
+      const secUrl = aff.golfGalaxyUrl || '';
+      const secR = secUrl.includes('amazon') ? 'Amazon' : secUrl.includes('playbetter') ? 'PlayBetter' : secUrl.includes('golfgalaxy') || secUrl.includes('click-101736949') ? 'Golf Galaxy' : '';
+      return (
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+          <a href={aff.url} target="_blank" rel="nofollow noopener sponsored"
+             style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+            Check Price at {aff.retailer} →
+          </a>
+          {secUrl && secR && (
+            <a href={secUrl} target="_blank" rel="nofollow noopener sponsored"
+               style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
+              Check Price at {secR} →
+            </a>
+          )}
+        </div>
+      );
+    })()}
+  </div>
+
+  <!-- GEAR BRIDGE — connect accessories to high-value gear -->
+  <div style="max-width:100%;margin:0 auto 28px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
+    <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎒 Looking for bigger upgrades?</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
+      <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;text-decoration:none;">Best rangefinders — our #1 gear pick →</a>
+      <a href="/best-golf-gps-watches/" style="color:var(--green);font-weight:600;text-decoration:none;">Best GPS watches →</a>
+      <a href="/best-golf-training-aids/" style="color:var(--green);font-weight:600;text-decoration:none;">Training aids that work →</a>
+      <a href="/best-golf-bags-2026/" style="color:var(--green);font-weight:600;text-decoration:none;">Best golf bags →</a>
     </div>
   </div>
+
+  <!-- ─── ARTICLE GRID ─── -->
+  <div class="cat-page-body">
+    {articles.length === 0 ? (
+      <p style="color:var(--muted);padding:32px 0">More guides coming soon — browse our <a href="/gear-reviews/" style="color:var(--green);font-weight:600">gear reviews</a> in the meantime.</p>
+    ) : (
+      <>
+        <h2 style="font-size:20px;margin:0 0 16px;">All accessories guides</h2>
+        <div class="articles-grid">
+          {articles.map(a => (
+            <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
+              <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
+                <span class={
+                  a.tag === 'BUYING GUIDE' ? 'art-badge tag-buy' :
+                  a.tag === 'COMPARISON'   ? 'art-badge tag-cmp' :
+                  a.tag === 'TUTORIAL'     ? 'art-badge tag-tut' :
+                  a.tag === 'LISTICLE'     ? 'art-badge tag-list' :
+                  a.tag === 'LIFESTYLE'    ? 'art-badge tag-life' :
+                  'art-badge tag-rev'
+                }>{a.tag}</span>
+                {a.thumbnail ? (
+                  <img src={a.thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async" width="400" height="260"
+                    class="art-thumb__img" onerror="this.style.display='none'" />
+                ) : (
+                  <span aria-hidden="true">{a.emoji}</span>
+                )}
+              </div>
+              <div class="art-body">
+                <p class="hub-card-title">{a.titleDisplay}</p>
+                <p>{a.excerpt}</p>
+                <div class="art-foot">
+                  <span class="art-words">{a.words} · Updated 2026</span>
+                  <span class="art-read">Read guide →</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </>
+    )}
+  </div>
+  <!-- ─── INTERNAL LINKS ─── -->
+  <section style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections</h2>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
+      Looking for the big-ticket gear like drivers and rangefinders? The <a href="/gear-reviews/">gear reviews hub</a> covers ranked buying guides for everything that goes in the bag. For tech-side accessories like <a href="/best-golf-apps/">golf apps</a>, <a href="/best-golf-swing-analyzers/">swing analyzers</a>, and shot trackers, the <a href="/golf-tech/">golf tech hub</a> has dedicated reviews. And if you want the practice routines that actually use these accessories well, see the <a href="/improve-your-golf-game/">improve your game hub</a>.
+    </p>
+  </section>
+  <!-- ─── FAQ ─── -->
+  <section class="hub-faq" style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Accessories FAQ</h2>
+    {hubFaq.map(item => (
+      <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
+        <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{item.q}</summary>
+        <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+      </details>
+    ))}
+  </section>
 </BaseLayout>

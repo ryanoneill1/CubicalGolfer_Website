@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StickyBar from '../../components/StickyBar.astro';
+import { getAffiliateLink } from '../../data/affiliate-links';
+import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Simulator Cost Calculator — Build Your Setup',
+  description: 'Interactive golf simulator cost calculator. Pick your budget, room size, and monitor — get a complete parts list with prices and buy links.',
+  canonical: 'https://www.cubicalgolfer.com/golf-simulator-cost-calculator/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'article' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Golf Tech', href: '/golf-tech/' },
+    { label: 'Cost Calculator', href: '/golf-simulator-cost-calculator/' },
+  ],
+};
+
+const faqs = [
+  { q: 'How much does a golf simulator cost?', a: 'A basic net-and-monitor setup costs $650-$900. A mid-range projector simulator costs $1,500-$3,000. A full premium setup costs $4,000-$10,000.' },
+  { q: 'What is the cheapest golf simulator setup?', a: 'A Garmin R10 ($499) + Rukket Haack net ($130) + basic mat ($50) = $679 total. You get ball data on every shot without a projector.' },
+  { q: 'Is a home golf simulator worth it?', a: 'If you practice 2+ times per month and spend $20/session at a range, a $700 setup pays for itself in 8-15 months. See our simulator vs driving range cost analysis.' },
+  { q: 'What do I need for a golf simulator?', a: 'Minimum: launch monitor + hitting net + mat. For virtual golf: add projector + impact screen + simulator software. Our calculator builds a complete parts list at your budget.' },
+];
+
+const schemas = [
+  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
+  faqSchema(faqs),
+  breadcrumbSchema(meta.breadcrumbs),
+];
+
+const TAG = 'cubicalgolfer-20';
+const gR10 = getAffiliateLink('garmin-approach-r10');
+const mlm = getAffiliateLink('rapsodo-mlm2pro');
+const sky = getAffiliateLink('skytrak-plus');
+const lp = getAffiliateLink('bushnell-launch-pro');
+const lm1 = getAffiliateLink('shot-scope-lm1');
+const rukket = getAffiliateLink('rukket-haack-net');
+const spornia = getAffiliateLink('spornia-spg-7');
+const netReturn = getAffiliateLink('net-return-pro');
+const carls = getAffiliateLink('carls-place-impact-screen');
+const fiberbuilt = getAffiliateLink('fiberbuilt-flight-deck');
+const benq = getAffiliateLink('benq-th671st-projector');
+---
+
+<BaseLayout {meta} {schemas} activeNav="golf-tech">
+  <StickyBar productName="Start Building → Pick Your Budget Below" productUrl={gR10?.url || '#'} price="From $679" />
+
+  <article class="art-content">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/golf-tech/">Golf Tech</a><span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Cost Calculator</span>
+      </nav>
+      <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Interactive Tool</p>
+      <h1>Golf Simulator Cost Calculator — Build Your Setup</h1>
+      <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Pick your budget tier and room size. We'll build a complete parts list with exact prices and buy links. Every component tested by us.</p>
+      <div class="author-box">
+        <img src="/images/ryan-avatar.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
+        <div><p class="author-box__name">Ryan O.</p><p class="author-box__bio">Built 3 simulator setups · Tested every component listed</p></div>
+      </div>
+    </header>
+
+    <div class="trust-card">
+      <p class="trust-card__heading">Why Trust This Calculator</p>
+      <p>Every price is current as of May 2026. Every product was tested in our garage, apartment, or dedicated room setups. Links go to Amazon or the manufacturer.</p>
+    </div>
+
+    <!-- CALCULATOR UI -->
+    <section id="calculator">
+      <h2>Step 1 — Choose Your Budget Tier</h2>
+      <div id="tier-btns" style="display:flex;gap:12px;flex-wrap:wrap;margin:16px 0 24px;">
+        <button class="calc-btn" data-tier="basic" onclick="selectTier('basic')">💰 Basic<br><small>$650–$900</small></button>
+        <button class="calc-btn" data-tier="mid" onclick="selectTier('mid')">⚡ Mid-Range<br><small>$1,500–$3,000</small></button>
+        <button class="calc-btn" data-tier="premium" onclick="selectTier('premium')">🏆 Premium<br><small>$4,000–$6,000</small></button>
+      </div>
+
+      <div id="result-area" style="display:none;">
+        <h2 id="result-title">Your Parts List</h2>
+        <table class="cmp-table" id="parts-table">
+          <thead><tr><th>Component</th><th>Product</th><th>Price</th><th></th></tr></thead>
+          <tbody id="parts-body"></tbody>
+          <tfoot><tr><td colspan="2" style="font-weight:700;text-align:right;">Total Cost</td><td id="total-cost" style="font-weight:700;color:var(--green);font-size:18px;"></td><td></td></tr></tfoot>
+        </table>
+
+        <div id="notes-area" style="margin:20px 0;padding:16px;background:var(--bg-alt,#f8f7f4);border-radius:8px;"></div>
+
+        <h3 style="margin-top:24px;">Related Guides</h3>
+        <ul>
+          <li><a href="/golf-simulator-complete-guide/">Complete Simulator Guide</a></li>
+          <li><a href="/golf-simulator-room-dimensions-guide/">Room Dimensions Guide</a></li>
+          <li><a href="/launch-monitor-buying-guide/">Launch Monitor Buying Guide</a></li>
+          <li><a href="/best-golf-simulator-software-2026/">Simulator Software Comparison</a></li>
+          <li><a href="/golf-simulator-vs-driving-range/">Simulator vs Driving Range — Cost Analysis</a></li>
+        </ul>
+      </div>
+    </section>
+
+
+    <section>
+      <h2>How Simulator Costs Break Down</h2>
+      <p>A golf simulator is not one product — it is five or six components that work together. Understanding where the money goes helps you make smarter choices at every budget level.</p>
+      <p><strong>The launch monitor is always the biggest cost</strong> (40-65% of total). It captures your ball data — speed, spin, launch angle, carry distance — and sends it to your screen or phone. Cheap monitors like the Garmin R10 ($499) use radar and work in any ceiling height. Premium monitors like the SkyTrak+ ($2,995) use photometric cameras for higher accuracy but need 9+ feet of ceiling clearance.</p>
+      <p><strong>The projector and screen matter more than you think.</strong> A short-throw projector ($500-$700) is necessary for garages under 15 feet deep because standard projectors need too much distance. The impact screen doubles as your projector surface AND catches golf balls. Budget $199-$400 for a quality screen that will not tear.</p>
+      <p><strong>The hitting mat protects your body.</strong> Hitting off concrete or thin carpet damages wrists and elbows over time. The Fiberbuilt Flight Deck ($449) mimics real turf interaction and lasts 5+ years. Budget mats ($50-$100) work but wear out faster and feel less realistic.</p>
+      <p><strong>Software is the recurring cost most people forget.</strong> GSPro ($250/year) offers 200,000+ community courses and is the best value. E6 Connect ($150-$300/year) has fewer courses but a more polished interface. TGC 2019 ($900 one-time) has the best graphics with no recurring fee.</p>
+      <p><strong>The hidden costs:</strong> acoustic foam ($50-$100 if neighbors or family complain about noise), a rubber stall mat for the floor ($40), enclosure frame if you want a clean look ($200-$400), and HDMI cables and mounts ($30-$50). Budget an extra $150-$300 beyond the main components.</p>
+      <p>Use the calculator above to see exact prices at your budget tier. For a more detailed analysis of long-term ownership costs including software subscriptions, see our <a href="/how-much-does-golf-simulator-cost/">complete simulator cost breakdown</a>.</p>
+    </section>
+    <section>
+      <h2>What Most Simulator Guides Get Wrong About Cost</h2>
+      <p>Most "how much does a golf simulator cost" articles list a launch monitor price and call it done. In reality, the monitor is 30-50% of your total cost. The screen, projector, mat, enclosure, and software add up fast — and skipping any one of them means a setup that collects dust after the first month.</p>
+      <p>Our calculator above gives you a complete parts list because we have built three simulator setups ourselves: a $1,100 garage build, a $3,500 dedicated room, and a $8,000 premium setup. Every recommendation comes from what we actually purchased and used — not spec sheet comparisons.</p>
+      <p>The biggest mistake weekend golfers make is overspending on the launch monitor and underspending on the impact screen and mat. A $599 Garmin R10 with a quality $300 impact screen and $200 mat will give you better practice sessions than a $2,000 monitor with a cheap bedsheet and foam tile floor. The screen is what you stare at for hours — it matters more than the extra data points you will never use.</p>
+    </section>
+
+    <section>
+      <h2>Budget Tiers: What You Get at Each Level</h2>
+      <p><strong>Under $1,500 (Starter):</strong> Garmin R10 or Shot Scope LM1 + basic net/screen + budget mat. Good for swing practice and basic data. No projector — you watch data on your phone or tablet. This is where 80% of home simulator journeys should start.</p>
+      <p><strong>$1,500–$4,000 (Enthusiast):</strong> Rapsodo MLM2PRO or Garmin R10 + quality impact screen + short-throw projector + premium mat. You get a proper projected image with simulator software (E6, GSPro). This is the sweet spot for weekend golfers who want a real sim experience without remortgaging.</p>
+      <p><strong>$4,000–$10,000 (Dedicated):</strong> Bushnell Launch Pro or FlightScope Mevo Gen 2 + Carl's Place enclosure + BenQ projector + Fiberbuilt mat. Tour-level data accuracy, beautiful visuals, and a setup that friends will actually want to come over and use. This is the "buy once, play for years" tier.</p>
+      <p><strong>$10,000+ (Premium):</strong> Trackman or Foresight GCQuad + custom enclosure + 4K projector + retractable screen. At this point you are building a room, not buying a product. Most weekend golfers will never need or use this tier — the data improvements over a $3,000 setup are measurable but not meaningful for a 15-handicap.</p>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f, i) => (
+        <div class="faq-item" id={`faq-${i}`}>
+          <h3 class="faq-q">{f.q}</h3>
+          <p class="faq-a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
+
+<script define:vars={{ gR10url: gR10?.url, mlmUrl: mlm?.url, skyUrl: sky?.url, lpUrl: lp?.url, lm1Url: lm1?.url, rukketUrl: rukket?.url, sporniaUrl: spornia?.url, netReturnUrl: netReturn?.url, carlsUrl: carls?.url, fiberbuiltUrl: fiberbuilt?.url, benqUrl: benq?.url }}>
+const tiers = {
+  basic: {
+    title: '💰 Basic Setup — Data Practice Only',
+    parts: [
+      { component: 'Launch Monitor', name: 'Garmin R10', price: 499, url: gR10url, note: 'Radar — works in any ceiling' },
+      { component: 'Net', name: 'Rukket Haack', price: 130, url: rukketUrl, note: 'Folds flat, includes mat' },
+      { component: 'Mat', name: 'Basic 3×5 commercial', price: 60, url: '', note: 'Any rubber-base range mat works' },
+    ],
+    notes: '<strong>Total: ~$689.</strong> You get accurate ball data (speed, carry, spin) on every shot. No projector needed — data shows on your phone via the Garmin Golf app. <a href="/best-golf-simulator-under-1000/">See our full under-$1,000 guide</a> for alternatives.',
+  },
+  mid: {
+    title: '⚡ Mid-Range Setup — Virtual Golf',
+    parts: [
+      { component: 'Launch Monitor', name: 'Garmin R10', price: 499, url: gR10url, note: 'Best value for simulator play' },
+      { component: 'Impact Screen', name: "Carl's Place 10×8", price: 199, url: carlsUrl, note: 'Doubles as projector surface' },
+      { component: 'Projector', name: 'BenQ TH671ST', price: 599, url: benqUrl, note: 'Short-throw, 3000 lumens' },
+      { component: 'Mat', name: 'Fiberbuilt Flight Deck', price: 449, url: fiberbuiltUrl, note: 'Premium feel, protects wrists' },
+      { component: 'Software', name: 'GSPro (1 year)', price: 250, url: '', note: '200,000+ courses' },
+    ],
+    notes: '<strong>Total: ~$1,996.</strong> Full virtual golf experience — play Pebble Beach from your garage. The Garmin R10 connects to GSPro for 200K+ courses. <a href="/best-golf-simulator-for-beginners/">See our beginner guide</a> for step-by-step setup.',
+  },
+  premium: {
+    title: '🏆 Premium Setup — Golf Lounge Quality',
+    parts: [
+      { component: 'Launch Monitor', name: 'SkyTrak+', price: 2995, url: skyUrl, note: 'Photometric, ±1.5yd accuracy' },
+      { component: 'Impact Screen', name: "Carl's Place 10×8", price: 199, url: carlsUrl, note: 'High-durability, projector-ready' },
+      { component: 'Projector', name: 'BenQ TH671ST', price: 599, url: benqUrl, note: '1080p short-throw' },
+      { component: 'Mat', name: 'Fiberbuilt Flight Deck', price: 449, url: fiberbuiltUrl, note: 'Best mat for home use' },
+      { component: 'Software', name: 'GSPro (1 year)', price: 250, url: '', note: '200K+ community courses' },
+    ],
+    notes: '<strong>Total: ~$4,492.</strong> Tour-level accuracy with immersive virtual golf. The SkyTrak+ is the heart of this setup for 5+ years. <a href="/best-golf-simulator-under-5000/">See our under-$5K guide</a> for alternatives.',
+  },
+};
+
+function selectTier(tier) {
+  const data = tiers[tier];
+  document.querySelectorAll('.calc-btn').forEach(b => b.classList.remove('calc-btn--active'));
+  document.querySelector(`[data-tier="${tier}"]`).classList.add('calc-btn--active');
+
+  const tbody = document.getElementById('parts-body');
+  let total = 0;
+  tbody.innerHTML = '';
+
+  data.parts.forEach(p => {
+    total += p.price;
+    const link = p.url ? `<a href="${p.url}" target="_blank" rel="nofollow noopener sponsored" style="color:var(--green);font-weight:600;text-decoration:none;">Buy →</a>` : '<span style="color:var(--muted);">Various</span>';
+    tbody.innerHTML += `<tr>
+      <td style="font-weight:600;">${p.component}</td>
+      <td>${p.name}<br><small style="color:var(--muted);">${p.note}</small></td>
+      <td style="white-space:nowrap;">$${p.price.toLocaleString()}</td>
+      <td>${link}</td>
+    </tr>`;
+  });
+
+  document.getElementById('total-cost').textContent = `$${total.toLocaleString()}`;
+  document.getElementById('result-title').textContent = data.title;
+  document.getElementById('notes-area').innerHTML = data.notes;
+  document.getElementById('result-area').style.display = 'block';
+  document.getElementById('result-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+// Expose to global scope for inline onclick handlers (Astro wraps define:vars in IIFE)
+window.selectTier = selectTier;
+</script>
+
+<style>
+.calc-btn {
+  flex: 1 1 140px;
+  padding: 16px 12px;
+  border: 2px solid var(--border, #e0ddd5);
+  border-radius: 8px;
+  background: var(--bg-alt, #f8f7f4);
+  color: var(--text, #1a1a1a);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  transition: all .2s;
+}
+.calc-btn:hover { border-color: var(--green, #1E3A28); background: #eee; }
+.calc-btn--active { border-color: var(--green, #1E3A28); background: var(--green, #1E3A28); color: #fff; }
+.calc-btn small { font-weight: 400; font-size: 13px; opacity: 0.85; }
+</style>

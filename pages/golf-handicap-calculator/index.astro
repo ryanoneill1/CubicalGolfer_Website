@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+
+const meta = {
+  title: 'Golf Handicap Calculator — Estimate Your Handicap Index',
+  description: 'Calculate your estimated golf handicap index from your last 5 rounds. Enter your scores and course ratings to see where you stand.',
+  canonical: 'https://www.cubicalgolfer.com/golf-handicap-calculator/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+  ogType: 'website' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Tools', href: '/tools/' },
+    { label: 'Handicap Calculator', href: '/golf-handicap-calculator/' },
+  ],
+};
+
+const faq = [
+  { q: 'How is a golf handicap calculated?', a: 'The USGA Handicap Index uses your best 8 of last 20 rounds. For each round, the differential is calculated as (Score - Course Rating) × 113 / Slope Rating. The average of the best 8 differentials, multiplied by 0.96, gives your Handicap Index. Our calculator uses a simplified version with your last 5 rounds to give you an estimate.' },
+  { q: 'What is a good handicap for a weekend golfer?', a: 'The average male golfer has a 14.2 handicap and the average female golfer has a 27.5 handicap. If you shoot in the mid-80s to low-90s consistently, you are an average weekend golfer. Breaking 80 regularly puts you in the top 20% of all golfers.' },
+  { q: 'Do I need an official handicap to play?', a: 'No — you can play any course without a handicap. But an official GHIN handicap ($35/year through any USGA-affiliated club) is required for most tournaments and allows you to play matches with equitable stroke allocations. If you play competitively or want to track your progress officially, it is worth the investment.' },
+];
+
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="tools">
+  <article class="art-content">
+    <header class="art-hero">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="bc-sep" aria-hidden="true">›</span>
+        <a href="/tools/">Tools</a>
+        <span class="bc-sep" aria-hidden="true">›</span>
+        <span aria-current="page">Handicap Calculator</span>
+      </nav>
+      <h1>Golf Handicap Calculator — Estimate Your Handicap Index</h1>
+      <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Enter your last 5 round scores with course and slope ratings to estimate your USGA Handicap Index. Not an official handicap — use this as a quick reference between rounds.</p>
+    </header>
+
+    <section>
+      <div id="handicap-calc" style="max-width:600px;">
+        <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Enter 5 recent rounds. Use your course's scorecard for the Course Rating and Slope Rating.</p>
+        <table class="cmp-table" style="width:100%;">
+          <thead><tr><th>Round</th><th>Score</th><th>Course Rating</th><th>Slope Rating</th></tr></thead>
+          <tbody id="calc-rows">
+            <tr><td>1</td><td><input type="number" id="s1" value="92" style="width:60px;"></td><td><input type="number" id="cr1" value="71.5" step="0.1" style="width:70px;"></td><td><input type="number" id="sl1" value="128" style="width:60px;"></td></tr>
+            <tr><td>2</td><td><input type="number" id="s2" value="89" style="width:60px;"></td><td><input type="number" id="cr2" value="71.5" step="0.1" style="width:70px;"></td><td><input type="number" id="sl2" value="128" style="width:60px;"></td></tr>
+            <tr><td>3</td><td><input type="number" id="s3" value="95" style="width:60px;"></td><td><input type="number" id="cr3" value="72.0" step="0.1" style="width:70px;"></td><td><input type="number" id="sl3" value="131" style="width:60px;"></td></tr>
+            <tr><td>4</td><td><input type="number" id="s4" value="88" style="width:60px;"></td><td><input type="number" id="cr4" value="70.8" step="0.1" style="width:70px;"></td><td><input type="number" id="sl4" value="125" style="width:60px;"></td></tr>
+            <tr><td>5</td><td><input type="number" id="s5" value="91" style="width:60px;"></td><td><input type="number" id="cr5" value="71.5" step="0.1" style="width:70px;"></td><td><input type="number" id="sl5" value="128" style="width:60px;"></td></tr>
+          </tbody>
+        </table>
+        <button onclick="calcHandicap()" class="btn-gold" style="margin-top:12px;">Calculate Handicap →</button>
+        <div id="handicap-result" style="margin-top:16px;padding:20px;background:var(--green);border-radius:12px;color:#fff;text-align:center;display:none;">
+          <p style="font-size:12px;color:var(--gold-text);text-transform:uppercase;letter-spacing:.1em;margin:0 0 4px;">Estimated Handicap Index</p>
+          <p id="handicap-number" style="font-size:36px;font-weight:800;margin:0;"></p>
+          <p id="handicap-desc" style="font-size:14px;color:rgba(255,255,255,.7);margin:8px 0 0;"></p>
+        </div>
+        <!-- Dynamic gear recommendation based on handicap -->
+        <div id="handicap-recs" style="display:none;margin-top:16px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
+          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎯 Your best gear upgrade based on this handicap</p>
+          <div id="handicap-rec-content" style="font-size:13px;line-height:1.6;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>How the Handicap Index Works</h2>
+      <p>The USGA Handicap Index is designed to measure your potential, not your average. It uses your best rounds (best 8 of your last 20) because it represents what you are capable of, not what you score on a bad day. This is why your handicap often feels lower than your typical score — it is supposed to.</p>
+      <p>The formula accounts for course difficulty through two numbers: Course Rating (what a scratch golfer would shoot) and Slope Rating (difficulty for a bogey golfer relative to a scratch golfer, with 113 being average). A score of 90 on a course rated 72.5/135 is a better performance than 90 on a course rated 69.0/118 — and the handicap system reflects this.</p>
+      <p>Our calculator uses a simplified 5-round version. For an official handicap, join a USGA-affiliated club ($35/year) and post 20+ rounds through the GHIN system. Most golf courses and leagues accept GHIN handicaps for tournaments and matches.</p>
+    </section>
+
+    <section>
+      <h2>What Your Handicap Range Means</h2>
+      <p><strong>0-5 (Scratch to Low):</strong> You shoot in the 70s regularly. You are in the top 5% of all golfers. Equipment optimization through <a href="/iron-fitting-guide-beginners/">professional fitting</a> provides measurable gains at this level.</p>
+      <p><strong>6-14 (Mid-Handicap):</strong> You shoot in the low-to-mid 80s. This is the "good golfer" range where most improvement comes from short game and course management, not swing changes. A <a href="/best-golf-rangefinders-2026/">quality rangefinder</a> starts providing real stroke savings here.</p>
+      <p><strong>15-24 (High-Handicap):</strong> You shoot in the high 80s to mid-90s. Focus on consistency and avoiding blow-up holes. <a href="/best-golf-drivers-forgiveness/">Forgiving equipment</a> helps more than premium equipment at this level.</p>
+      <p><strong>25+ (Beginner):</strong> You are breaking 100 or working toward it. Focus on <a href="/golf-tips-for-beginners/">fundamentals</a>, not equipment. The <a href="/golf-equipment-budget-planner/">budget planner</a> can help prioritize your first purchases.</p>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      {faq.map(f => (
+        <details class="faq-item" style="margin:0 0 12px;border:1px solid var(--border);border-radius:var(--r1);overflow:hidden;">
+          <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{f.q}</summary>
+          <p style="padding:0 18px 14px;margin:0;font-size:14px;line-height:1.7;color:var(--body);">{f.a}</p>
+        </details>
+      ))}
+    </section>
+  </article>
+
+  <script is:inline>{`
+    function calcHandicap() {
+      var diffs = [];
+      for (var i = 1; i <= 5; i++) {
+        var s = parseFloat(document.getElementById('s'+i).value);
+        var cr = parseFloat(document.getElementById('cr'+i).value);
+        var sl = parseFloat(document.getElementById('sl'+i).value);
+        if (s && cr && sl) diffs.push((s - cr) * 113 / sl);
+      }
+      if (diffs.length < 3) return;
+      diffs.sort(function(a,b){return a-b;});
+      var best = diffs.slice(0, Math.max(1, Math.floor(diffs.length * 0.4)));
+      var avg = best.reduce(function(a,b){return a+b;},0) / best.length;
+      var hcp = Math.round(avg * 0.96 * 10) / 10;
+      document.getElementById('handicap-number').textContent = hcp.toFixed(1);
+      var desc = hcp < 5 ? 'Low handicap — top 5% of golfers' : hcp < 15 ? 'Mid handicap — solid weekend golfer' : hcp < 25 ? 'High handicap — room to improve' : 'Beginner — focus on fundamentals';
+      document.getElementById('handicap-desc').textContent = desc;
+      document.getElementById('handicap-result').style.display = 'block';
+      // Show gear recommendation based on handicap
+      var recsDiv = document.getElementById('handicap-recs');
+      var recContent = document.getElementById('handicap-rec-content');
+      var rec = '';
+      if (hcp < 10) {
+        rec = '<p style="margin:0 0 8px;"><strong>Best first upgrade:</strong> A <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;">precision rangefinder</a> — at your level, exact yardages translate directly to lower scores.</p>' +
+              '<p style="margin:0 0 8px;"><strong>Best overall pick:</strong> <a href="/arccos-caddie-review/" style="color:var(--green);font-weight:600;">Arccos Caddie sensors</a> — strokes-gained data shows exactly where to practice.</p>' +
+              '<p style="margin:0;"><strong>Best budget pick:</strong> <a href="/best-golf-training-aids/" style="color:var(--green);font-weight:600;">Putting mirror ($25)</a> — the cheapest way to drop 1-2 putts per round.</p>';
+      } else if (hcp < 20) {
+        rec = '<p style="margin:0 0 8px;"><strong>Best first upgrade:</strong> <a href="/best-golf-rangefinders-2026/" style="color:var(--green);font-weight:600;">A rangefinder</a> — eliminates 2-3 wrong club selections per round at your level.</p>' +
+              '<p style="margin:0 0 8px;"><strong>Best overall pick:</strong> <a href="/best-golf-drivers-forgiveness/" style="color:var(--green);font-weight:600;">Forgiving driver</a> — the Callaway Paradym Ai Smoke Max retains ball speed on your mishits.</p>' +
+              '<p style="margin:0;"><strong>Best budget pick:</strong> <a href="/best-golf-balls-90-mph-swing-speed/" style="color:var(--green);font-weight:600;">Compression-matched ball</a> — costs $0 extra to switch and adds 5-8 yards.</p>';
+      } else {
+        rec = '<p style="margin:0 0 8px;"><strong>Best first upgrade:</strong> <a href="/best-golf-training-aids/" style="color:var(--green);font-weight:600;">Alignment sticks ($12)</a> — fixes your aim, which fixes half your misses.</p>' +
+              '<p style="margin:0 0 8px;"><strong>Best overall pick:</strong> <a href="/best-golf-drivers-forgiveness/" style="color:var(--green);font-weight:600;">Forgiving driver</a> — game-improvement drivers add 10-15 yards vs a hand-me-down.</p>' +
+              '<p style="margin:0;"><strong>Best budget pick:</strong> <a href="/how-to-break-90/" style="color:var(--green);font-weight:600;">Course management guide</a> — free, saves 3-5 strokes per round overnight.</p>';
+      }
+      recContent.innerHTML = rec;
+      recsDiv.style.display = 'block';
+    }
+  `}</script>
+</BaseLayout>
