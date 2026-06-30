@@ -3527,15 +3527,17 @@ export const ARTICLES: Article[] = [
           '$15 -- lowest cost training aid in golf',
           'Works on any club you own',
           'Builds muscle memory in 2-3 weeks',
-      
-      { h2: 'How to Use a Grip Trainer Effectively', body: '<p>A grip trainer only works if you use it with intention. Three-step protocol:</p><ol><li><strong>5 minutes daily for 2 weeks.</strong> Wrap your hands around the trainer and hold for 30 seconds, release, repeat. Your hands need to build muscle memory for the correct position — this takes 14+ days of daily repetition.</li><li><strong>Transfer to the club.</strong> After 2 weeks on the trainer, grip a real club and check that your hands match the trainer position. The V between your thumb and index finger should point to your trail shoulder.</li><li><strong>Practice swings, then live shots.</strong> Take 10 practice swings with the correct grip feeling before every range session. Within a month, the new grip will feel natural.</li></ol><p>The most common mistake: using the trainer for one week, then abandoning it when the new grip feels uncomfortable. Discomfort is normal — it means you are changing a habit. Push through the awkward phase.</p>' },
-    ],
+        ],
         cons: [
           'Will not diagnose the problem -- only fixes position',
           'Not useful for full swing practice',
         ],
     
         badge: 'STRONG PICK', rating: 4.9, ratingCount: '15,203', affiliateKey: 'alignment-sticks',
+      },
+      {
+        h2: 'How to Use a Grip Trainer Effectively',
+        body: 'A grip trainer only works if you use it with intention. Start with 5 minutes daily for 2 weeks — wrap your hands around the trainer and hold for 30 seconds, release, and repeat until the correct position becomes muscle memory. After 2 weeks, transfer to a real club and check that the V between your thumb and index finger points to your trail shoulder. Then take 10 practice swings with the correct grip feeling before every range session. Within a month, the new grip will feel natural. The most common mistake is abandoning the trainer after one week because the grip feels uncomfortable — discomfort means you are changing a habit, so push through.',
       },
       {
         h2: '🥈 Best for Connection Feedback: Tour Striker Smart Ball',
@@ -6398,9 +6400,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Club', 'Our Pick', 'Price', 'Budget Alternative', 'Alt Price'], rows: [
       { badge: 'STRONG PICK', rating: 4.8, ratingCount: '3,240', affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Driver', bestFor: 'Callaway Ai Smoke Max', price: '~$499', feature1: 'Cobra Aerojet Max', feature2: '~$399', winner: true },
       { rating: 4.6, ratingCount: '2,340', affiliateKey: 'ping-g430-irons', name: 'Irons', bestFor: 'Ping G430', price: '~$999', feature1: 'Wilson D9', feature2: '~$699', winner: false },
-      { rating: 4.7, ratingCount: '4,620', affiliateKey: 'odyssey-white-hot-og', name: 'Putter', bestFor: 'Odyssey White Hot OG', price: '~$199', feature1: 'Cleveland HB Soft', feature2: '~$129', winner: false },
+      { rating: 4.7, ratingCount: '4,620', affiliateKey: 'odyssey-white-hot-og', name: 'Odyssey White Hot OG', bestFor: 'Feel + forgiveness', price: '~$199', feature1: 'Cleveland HB Soft', feature2: '~$129', winner: false },
       { rating: 4.5, ratingCount: '2,140', affiliateKey: 'srixon-q-star-tour', name: 'Ball', bestFor: 'Srixon Q-Star Tour', price: '~$35/dz', feature1: 'Srixon Soft Feel', feature2: '~$27/dz', winner: false },
-      { badge: 'STRONG PICK', rating: 4.5, ratingCount: '2,560', affiliateKey: 'callaway-fairway-14', name: 'Bag', bestFor: 'Callaway Fairway 14', price: '~$179', feature1: 'Callaway Chev Dry', feature2: '~$129', winner: false },
+      { badge: 'STRONG PICK', rating: 4.5, ratingCount: '2,560', affiliateKey: 'callaway-fairway-14', name: 'Callaway Fairway 14', bestFor: 'Organization + value', price: '~$179', feature1: 'Callaway Chev Dry', feature2: '~$129', winner: false },
     ] },
     faq: [
       { q: 'What clubs does a 20-handicap need?', a: 'Driver, 3-hybrid, 5-PW irons, gap wedge, sand wedge, and putter. That is 12 clubs. Add a 3-wood or lob wedge to reach 14 based on your game. Do not carry a lob wedge until you consistently break 90.' },
@@ -11195,7 +11197,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', rating: 4.6, ratingCount: '2,860', affiliateKey: 'ping-g430-irons', name: 'Ping G430 (Shaft Flex)', bestFor: 'Distance + accuracy', price: '~$200', feature1: '5-10 yards', feature2: 'Biggest impact' },
         { rating: 4.6, ratingCount: '2,340', affiliateKey: 'taylormade-qi-irons', name: 'TM Qi Irons (Club Length)', bestFor: 'Strike consistency', price: '~$200', feature1: 'Center contact', feature2: 'Height-based' },
         { rating: 4.6, ratingCount: '2,340', affiliateKey: 'mizuno-jpx923-hot-metal', name: 'Mizuno JPX923 (Lie Angle)', bestFor: 'Direction control', price: '~$200', feature1: 'Left/right fix', feature2: '±2° typical' },
-        { rating: 4.8, ratingCount: '6,780', affiliateKey: 'golf-pride-mcc-plus4', name: 'Grip Size', bestFor: 'Comfort + control', price: '~$8/grip', feature1: 'Feel', feature2: 'Hand size' },
+        { rating: 4.8, ratingCount: '6,780', affiliateKey: 'golf-pride-mcc-plus4', name: 'Golf Pride MCC Plus4', bestFor: 'Comfort + control', price: '~$8/grip', feature1: 'Feel', feature2: 'Hand size' },
       ],
     },
     sections: [
