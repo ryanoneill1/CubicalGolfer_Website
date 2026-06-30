@@ -135,11 +135,11 @@ nav.site-nav {
 
 /* ── BUTTONS ── */
 .btn-gold {
-  background: var(--gold); color: var(--text); border: none;
+  background: var(--green); color: #fff; border: none;
   padding: 13px 24px; border-radius: var(--r1); font-size: 14px; font-weight: 700;
   cursor: pointer; display: inline-block; transition: background .2s;
 }
-.btn-gold:hover { background: var(--gold-dark); }
+.btn-gold:hover { background: #1a5c35; }
 .btn-outline {
   background: transparent; color: #fff;
   border: 2px solid rgba(255,255,255,.6); padding: 12px 24px;
@@ -864,7 +864,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   transition: background .15s;
 }
 .cmp-buy-btn:hover { background: #1a5c35; }
-.cmp-winner .cmp-buy-btn { background: var(--gold); color: var(--text); }
+.cmp-winner .cmp-buy-btn { background: var(--gold); color: var(--text); font-weight: 800; }
 .cmp-winner .cmp-buy-btn:hover { background: var(--gold-dark); }
 .cmp-no-link { color: var(--muted); font-size: 12px; }
 @media (max-width: 700px) {
@@ -1019,11 +1019,11 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .art-content .quick-answer-box p { color: #ffffffdd; font-size: 15px; line-height: 1.7; }
 .art-content .quick-answer-box strong { color: #fff; font-size: 18px; font-weight: 800; border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
 .quick-answer-cta {
-  display: inline-block; background: var(--gold); color: var(--green);
+  display: inline-block; background: var(--green); color: #fff;
   padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 800;
   text-decoration: none; transition: background .15s, transform .15s;
 }
-.quick-answer-cta:hover { background: var(--gold-dark); transform: scale(1.02); }
+.quick-answer-cta:hover { background: #1a5c35; transform: scale(1.02); }
 .quick-answer-more {
   font-size: 13px; color: #ffffff99; margin: 14px 0 0; font-style: italic;
 }

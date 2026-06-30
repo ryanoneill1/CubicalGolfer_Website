@@ -163,13 +163,13 @@ if (!url || !imgSrc) return;
 .product-card__cta {
   display: flex; flex-direction: column; align-items: center; gap: 2px;
   margin: 12px 16px 16px; padding: 13px 20px;
-  background: var(--gold, #C9A84C); color: #1a1a1a;
+  background: var(--green, #1E3A28); color: #fff;
   border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 14px;
   transition: background .15s, transform .15s; text-align: center;
 }
-.product-card__cta:hover { background: var(--gold-dark, #a8892e); transform: scale(1.02); }
-.product-card__cta--winner { background: var(--green, #1E3A28); color: #fff; }
-.product-card__cta--winner:hover { background: #152c1e; }
+.product-card__cta:hover { background: #1a5c35; transform: scale(1.02); }
+.product-card__cta--winner { background: var(--gold, #C9A84C); color: var(--text, #1A2B1F); font-size: 15px; }
+.product-card__cta--winner:hover { background: var(--gold-dark, #a8892e); }
 .product-card__cta-text { font-size: 14px; font-weight: 800; }
 .product-card__cta-badge { font-size: 11px; font-weight: 500; opacity: .75; }
 .product-card__cta--gg {
