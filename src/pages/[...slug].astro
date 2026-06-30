@@ -696,8 +696,8 @@ if (isBuyingGuide) {
             </div>
           )}
 
-          {/* Product image — only shown when a real product key exists */}
-          {section.badge && isBuyingGuide && productId && (() => {
+          {/* Product image — shown for any section with a product affiliate key */}
+          {isBuyingGuide && productId && (() => {
             const sectionImgSrc = aff ? aff.imgSrc : null;
             const sectionImgAlt = aff ? aff.imgAlt ?? section.h2 : section.h2;
             const imgElement = sectionImgSrc ? (
@@ -789,13 +789,13 @@ if (isBuyingGuide) {
               {section.pros && section.pros.length > 0 && (
                 <ul class="pros-list" aria-label="Pros">
                   <span class="pros-list-label">Pros</span>
-                  {section.pros.map(pro => <li>{pro}</li>)}
+                  {section.pros.map((pro: any) => <li>{typeof pro === 'string' ? pro : ''}</li>)}
                 </ul>
               )}
               {section.cons && section.cons.length > 0 && (
                 <ul class="cons-list" aria-label="Cons">
                   <span class="cons-list-label">Cons</span>
-                  {section.cons.map(con => <li>{con}</li>)}
+                  {section.cons.map((con: any) => <li>{typeof con === 'string' ? con : ''}</li>)}
                 </ul>
               )}
             </div>
