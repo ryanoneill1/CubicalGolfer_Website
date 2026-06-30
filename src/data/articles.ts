@@ -4207,7 +4207,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Component', 'Recommendation', 'Price', 'Essential?'],
       rows: [
-        { name: 'Launch Monitor', bestFor: 'Garmin Approach R10', price: '~$599', feature1: 'Full launch data', feature2: 'Yes — core of setup', winner: true, badge: 'STRONG PICK'},
+        { name: 'Garmin Approach R10', bestFor: 'Best budget launch data', price: '~$599', feature1: 'Full launch data', feature2: 'Yes — core of setup', winner: true, badge: 'STRONG PICK'},
         { name: 'Golf Net', bestFor: 'Rukket 10x7 Haack', price: '~$199', feature1: '10x7 ft, 7-layer', feature2: 'Yes', winner: false},
         { name: 'Hitting Mat', bestFor: 'Country Club Elite', price: '~$200', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
       ],
@@ -6398,10 +6398,10 @@ export const ARTICLES: Article[] = [
       { h2: 'What About Wedges, Hybrids, and Fairway Woods?', body: "A 20-handicap bag should include: driver, 3-hybrid (replaces 3 and 4 iron), 5-iron through pitching wedge, a gap wedge (50-52 degrees), a sand wedge (54-56 degrees), and a putter. That is 12 clubs — leaving room for a 3-wood or a lob wedge depending on your game.\n\nFor wedges, we recommend the Cleveland CBX Full Face ($129 each) — wide sole, full-face grooves, maximum forgiveness from bunkers and rough. For a hybrid, the Callaway Paradym Ai Smoke ($249) matches the iron set.\n\nDo not carry a lob wedge yet. A 20-handicap does not have the touch to use it consistently. Your sand wedge opened slightly does the same job with less risk." },
     ],
     comparisonTable: { headers: ['Club', 'Our Pick', 'Price', 'Budget Alternative', 'Alt Price'], rows: [
-      { badge: 'STRONG PICK', rating: 4.8, ratingCount: '3,240', affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Driver', bestFor: 'Callaway Ai Smoke Max', price: '~$499', feature1: 'Cobra Aerojet Max', feature2: '~$399', winner: true },
-      { rating: 4.6, ratingCount: '2,340', affiliateKey: 'ping-g430-irons', name: 'Irons', bestFor: 'Ping G430', price: '~$999', feature1: 'Wilson D9', feature2: '~$699', winner: false },
+      { badge: 'STRONG PICK', rating: 4.8, ratingCount: '3,240', affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Ai Smoke Max', bestFor: 'Max forgiveness', price: '~$499', feature1: 'Cobra Aerojet Max', feature2: '~$399', winner: true },
+      { rating: 4.6, ratingCount: '2,340', affiliateKey: 'ping-g430-irons', name: 'Ping G430 Irons', bestFor: 'Best feel + forgiveness', price: '~$999', feature1: 'Wilson D9', feature2: '~$699', winner: false },
       { rating: 4.7, ratingCount: '4,620', affiliateKey: 'odyssey-white-hot-og', name: 'Odyssey White Hot OG', bestFor: 'Feel + forgiveness', price: '~$199', feature1: 'Cleveland HB Soft', feature2: '~$129', winner: false },
-      { rating: 4.5, ratingCount: '2,140', affiliateKey: 'srixon-q-star-tour', name: 'Ball', bestFor: 'Srixon Q-Star Tour', price: '~$35/dz', feature1: 'Srixon Soft Feel', feature2: '~$27/dz', winner: false },
+      { rating: 4.5, ratingCount: '2,140', affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best value urethane', price: '~$35/dz', feature1: 'Srixon Soft Feel', feature2: '~$27/dz', winner: false },
       { badge: 'STRONG PICK', rating: 4.5, ratingCount: '2,560', affiliateKey: 'callaway-fairway-14', name: 'Callaway Fairway 14', bestFor: 'Organization + value', price: '~$179', feature1: 'Callaway Chev Dry', feature2: '~$129', winner: false },
     ] },
     faq: [
@@ -6764,7 +6764,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Component', 'Product', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Launch Monitor', bestFor: 'Rapsodo MLM2PRO', price: '~$699', feature1: '4.7/5 ★', winner: true, rating: 4.7, ratingCount: '1,891' },
+        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.7/5 ★', winner: true, rating: 4.7, ratingCount: '1,891' },
         { rating: 4.6, ratingCount: '2,340', affiliateKey: 'spornia-spg-net', name: 'Practice Net', bestFor: 'Spornia SPG-7', price: '~$189', feature1: '4.6/5 ★', winner: false },
         { rating: 4.5, ratingCount: '890', affiliateKey: 'fiberbuilt-studio-mat', name: 'Hitting Mat', bestFor: 'Fiberbuilt Studio', price: '~$449', feature1: '4.5/5 ★', winner: false },
         { rating: 4.4, ratingCount: '560', affiliateKey: 'benq-short-throw-projector', name: 'Projector (Optional)', bestFor: 'BenQ Short-Throw', price: '~$1,799', feature1: '4.4/5 ★', winner: false },
