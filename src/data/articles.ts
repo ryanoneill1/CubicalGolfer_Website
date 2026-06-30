@@ -437,7 +437,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Most Forgiving: Ping G430 Max',
-        affiliateKey: 'callaway-paradym-ai-smoke-max',
+        affiliateKey: 'ping-g430-max-driver',
         body: "The Ping G430 Max has the highest MOI of any driver we tested — and it is not close. If your primary concern is keeping the ball somewhere in the fairway regardless of where you strike the face, this is the driver that does that best.\n\nWe played 4 rounds with the G430 Max and the results were remarkably consistent. Not the longest. Not the best sounding. But the most predictable. On a par 4 where we intentionally aimed down the left side knowing our miss would be a push-fade, the G430 kept every drive on the short grass — even the one we hit off the hosel. That shot with any other driver in our test would have been in the trees. With the Ping, it ended up in the right rough, 210 yards out, with a clear look at the green.\n\nThe numbers tell the story. Our worst drive with the G430 Max went 198 yards. Our worst drive with the Callaway went 185. With the TaylorMade, 179. The Ping does not punish bad swings — it just stubbornly keeps the ball somewhere playable. Average carry was 224 yards at our swing speed, which is about 4 yards shorter than the Callaway on center strikes. But the floor is so much higher that your scoring average may actually improve.\n\nThe turbulators on the crown reduce drag, and the Carbonfly Wrap saves weight for better MOI distribution. Ping's fitting system is the best in golf — they offer more shaft and loft combinations than any manufacturer, and a Ping fitting at an authorized dealer is typically free. This matters because the right shaft in a Ping head is genuinely a different club.\n\nWhat we liked most: the consistency is unmatched. You know what you are going to get with every swing, good or bad. The fitting options are the best in golf. And the build quality is tank-like — Ping drivers last forever.\n\nWhat we did not like: it is not exciting. The sound is a muted, dampened impact that lacks the satisfying crack of the Callaway. Average carry is 4-6 yards shorter than the longest options. And the stock shaft options, while numerous, tend to be heavier than competitors — ask for a lighter option during fitting.\n\nCompared to the Callaway: the Ping is more forgiving on terrible strikes but shorter on good ones. If your handicap is 18+ and consistency matters more than distance, the Ping is the pick. If you are a 10-18 handicap chasing more yards, the Callaway offers the better blend.\n\nBuy this if: you are a high handicapper who needs the driver to save you from yourself — maximum forgiveness, maximum consistency.\n\nSkip this if: you already make decent contact and want to maximize distance — the Callaway or TaylorMade will gain you more yards.",
         price: '~$449 at Amazon',
         pros: [
@@ -2213,13 +2213,13 @@ export const ARTICLES: Article[] = [
     toc: ['Leather vs synthetic', 'Best overall: FootJoy WeatherSof', 'Best premium: Titleist Players Flex', 'Best wet weather: FootJoy RainGrip', 'How to find the right size', 'FAQ'],
     sections: [
       { h2: 'Leather vs Synthetic — Which Should You Use?', body: "Leather gloves (Cabretta) give better feel and mould to your hand over time. Synthetic gloves last longer, hold up better in heat and humidity, and are cheaper. Most weekend golfers play synthetic. Tour players mostly play Cabretta leather. For everyday play, a quality synthetic like the FootJoy WeatherSof is the practical choice." },
-      { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, ratingCount: '12,847', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.",
+      { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, ratingCount: '12,847', affiliateKey: 'footjoy-weathersof-glove', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.",
         pros: ['Best-selling golf glove for a reason — consistent grip in all weather conditions', 'Machine washable construction extends life significantly', 'Available in 20 sizes for a glove that actually fits'],
         cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' },
-      { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
+      { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, ratingCount: '3,421', affiliateKey: 'titleist-players-flex', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
         pros: ['Pure Cabretta leather for tour-level feel and maximum feedback at impact', 'Strategic perforations throughout for breathability in warm weather', 'Snug tour fit holds its shape through the entire round'],
         cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' },
-      { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, ratingCount: '2,103', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfibre palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.",
+      { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, ratingCount: '2,103', affiliateKey: 'footjoy-raingrip', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfibre palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.",
         pros: ['Specifically engineered to grip better when wet — unlike most gloves', 'Works with a wet club grip — no need to dry the grip between shots', 'Two-glove pack provides full hand coverage in sustained rain'],
         cons: ['Bulkier feel than standard gloves in dry conditions', 'Less breathable in hot weather — designed for wet, not heat'], price: '~$32 (2-pack)' },
       { h2: 'How to Find the Right Golf Glove Size', body: "Wrap a flexible tape measure around your hand at the widest point across the knuckles. Under 7in: Small. 7–7.75in: Medium. 7.75–8.25in: Medium-Large. 8.25–9in: Large. Over 9in: XL. A properly fitted glove should be snug across the palm with no extra material at the fingertips. Too loose = less feel. Too tight = restricts blood flow and causes blisters." },
@@ -2289,10 +2289,10 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Under $150: TaylorMade SIM Max (Previous Gen)', affiliateKey: 'taylormade-sim2-max', body: "Speed Injected Twist Face for faster ball speed. 460cc head with draw-biased weighting. The Inertia Generator at the back creates low-spin, high-launch for maximum carry. You're getting 2021 technology for 2026 budget pricing.",
         pros: ['Speed Injected Twist Face delivers consistent ball speed on mis-hits', 'Inertia Generator shifts weight low and back for forgiveness', 'Premium TaylorMade construction at a fraction of current retail'],
         cons: ['Previous generation — technology 2-3 years behind current models', 'Limited adjustability compared to current loft-sleeve drivers'], price: '~$129-149'},
-      { h2: 'Best Under $200: Callaway Big Bertha B21', badge: 'BEST VALUE', rating: 4.6, ratingCount: '1,892', body: "Specifically designed to fight slices. The offset hosel and draw-biased weighting help high-handicappers hit more fairways. Flash Face SS21 cup face for ball speed. If your miss is a slice, this is your driver.",
+      { h2: 'Best Under $200: Callaway Big Bertha B21', badge: 'BEST VALUE', rating: 4.6, ratingCount: '1,892', affiliateKey: 'callaway-big-bertha', body: "Specifically designed to fight slices. The offset hosel and draw-biased weighting help high-handicappers hit more fairways. Flash Face SS21 cup face for ball speed. If your miss is a slice, this is your driver.",
         pros: ['Offset hosel reduces slice angle — specifically designed for high handicappers', 'AI-designed Flash Face for consistent ball speed across the face', 'Callaway quality and resale value at under $200'],
         cons: ['Offset look at address takes visual adjustment — not preferred by better players', 'Lower distance ceiling than non-offset drivers for faster swing speeds'], price: '~$169-199' },
-      { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, ratingCount: '734', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.",
+      { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, ratingCount: '734', affiliateKey: 'cleveland-launcher-xl', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.",
         pros: ['MainFrame variable face thickness for consistent distance on all contact points', 'One of the most forgiving modern drivers available under $400', 'Lightweight design helps generate clubhead speed more easily'],
         cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' },
       { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you\'ve never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
@@ -2630,7 +2630,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥈 Best Budget: Callaway Supersoft',
-        badge: 'BEST BUDGET',
+        badge: 'BEST BUDGET', affiliateKey: 'callaway-supersoft',
         body: 'At compression 38, the Callaway Supersoft is the highest-forgiving ball on the market for slower swingers. If you are over 60, returning to golf after a break, or generating under 75 mph of club head speed, this is the right ball. The extremely low compression maximises energy transfer at slow speeds. The very straight flight helps new golfers build confidence.',
         pros: ['Ultra-low compression for maximum distance under 75 mph', 'Very straight flight — minimal side spin', 'Affordable at $20/dozen'],
         cons: ['Too soft for golfers above 85 mph swing speed', 'Very low spin makes it hard to stop near greens'],
@@ -2814,7 +2814,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Garmin Approach Z82 — What It Does Better',
-        badge: 'BEST HYBRID',
+        badge: 'BEST HYBRID', affiliateKey: 'garmin-approach-z82',
         body: 'The Z82 shows satellite imagery of each hole with distances to hazards, layup targets, and green edges before you pull the laser. You see the whole hole picture from 200 yards out. The laser then confirms your exact pin distance. For golfers who want to improve course management, the extra contextual data has real value.',
         pros: ['Full hole maps with hazard distances', '40,000+ course database', 'Laser confirms GPS — best of both worlds', 'USB charging — no batteries to replace'],
         cons: ['Heavier and bulkier than pure lasers', 'Slower laser mode', 'Costs $170 more than Bushnell'],
@@ -2908,7 +2908,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥈 Best Budget: Callaway Supersoft',
-        badge: 'BEST VALUE',
+        badge: 'BEST VALUE', affiliateKey: 'callaway-supersoft',
         body: 'At compression 38, the Supersoft is the most forgiving ball for swing speeds under 75 mph. Seniors, beginners, and golfers returning after a layoff see the biggest benefit. Very straight flight helps build confidence.',
         pros: ['Ultra-low compression — easiest to compress', 'Very affordable', 'Straightest flight of any ball tested'],
         cons: ['Too soft above 85 mph', 'Very low spin near greens'],
@@ -3378,7 +3378,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥈 Flightscope Mevo+ — Where It Wins',
-        badge: 'BEST FOR OUTDOOR USE',
+        badge: 'BEST FOR OUTDOOR USE', affiliateKey: 'flightscope-mevo-gen2',
         rating: 4.5, ratingCount: '890',
         body: 'Mevo+ at $2,499 uses Doppler radar and works both indoors and outdoors — a genuine advantage if you want to use it at the driving range or in a large garage. It measures 16 data parameters including attack angle and club path (SkyTrak+ does not). The FS Golf software is solid. For golfers who want a portable device for range sessions AND a home simulator, Mevo+ is the more versatile option.',
         pros: ['Works indoors AND outdoors', 'Measures club path and attack angle', 'Slightly cheaper upfront', 'No subscription required for basic data'],
@@ -3835,7 +3835,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: '🥇 Best Overall: Callaway Paradym Ai Smoke Max Irons',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
         rating: 4.7, ratingCount: '2,340',
         body: 'The AI face in the Paradym Ai Smoke Max is the real deal. On mishits 0.5 inches toward the toe, we lost only 4 yards vs a centered hit. On a blade, that same miss costs 15+ yards. The wide sole prevents digging in the turf — critical for high handicappers who tend to hit fat.',
         price: '~$1,099',
@@ -3844,7 +3844,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Budget: Wilson D9 Irons',
-        badge: 'BEST BUDGET',
+        badge: 'BEST BUDGET', affiliateKey: 'wilson-d9-irons',
         body: 'At $499, the Wilson D9 irons are the best value in game-improvement irons. Wide sole, high launch, and excellent forgiveness for the price. Wilson has been making game-improvement irons for 40 years and the D9 shows it.',
         price: '~$499',
         pros: ['$499 — best game-improvement iron for the price', 'Wide sole forgives fat strikes', 'High ball flight helps slower swing speeds get the ball airborne'],
@@ -3852,7 +3852,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best for Seniors: Ping G430 Irons',
-        badge: 'BEST FOR SENIORS',
+        badge: 'BEST FOR SENIORS', affiliateKey: 'ping-g430-irons',
         body: 'The Ping G430 irons combine maximum forgiveness with consistent gapping — critical for senior golfers whose swing speeds have declined. Ping custom fitting is widely available and recommended.',
         price: '~$999',
         pros: ['Maximum forgiveness across the face', 'Consistent gapping from 4-iron through gap wedge', 'Ping fitting ensures correct lie angle and length', 'Excellent resale value'],
@@ -4311,7 +4311,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', affiliateKey: 'bushnell-tour-v6-shift',
         rating: 4.7, ratingCount: '2,340',
         body: 'The JOLT vibration feedback is the feature that matters most for senior golfers with less steady hands. Instead of trying to hold the crosshair perfectly still to confirm pin lock, you simply feel the device vibrate when it hits the flag. The magnetic BITE mount clips to any cart without fumbling. At 5.6 oz it is one of the lightest laser rangefinders available.',
         price: '~$329',
@@ -4320,7 +4320,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🛒 Best for Cart Golfers: Bushnell Ion Elite GPS',
-        badge: 'BEST CART GPS',
+        badge: 'BEST CART GPS', affiliateKey: 'bushnell-ion-elite',
         body: 'The Ion Elite solves the biggest problem for senior cart golfers: you never have to take it out of your bag or aim it at anything. Wrist-based GPS with front, middle, and back of green yardages plus hazard distances. The display is large and high-contrast — readable in direct Florida sun. No subscription, no annual fee.',
         price: '~$149',
         pros: ['No aiming required — yardages on your wrist at all times', 'High-contrast display readable in direct sunlight', '16-hour battery life covers the longest rounds', 'No subscription or annual fee'],
@@ -4481,7 +4481,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: '🥇 Best Overall: Callaway Supersoft',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', affiliateKey: 'callaway-supersoft',
         rating: 4.7, ratingCount: '2,340',
         body: 'At 35 compression the Supersoft is designed specifically for swing speeds under 85 mph. In our testing against a Pro V1 at 79 mph swing speed, the Supersoft carried 12 yards further with the driver while maintaining comparable feel on chips and putts. The SOFT FAST CORE maximizes energy transfer at lower swing speeds in a way high-compression balls cannot.',
         price: '~$28/dozen',
@@ -4490,7 +4490,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🏅 Best All-Around: Srixon Soft Feel',
-        badge: 'BEST ALL-AROUND',
+        badge: 'BEST ALL-AROUND', affiliateKey: 'srixon-soft-feel',
         body: 'The Srixon Soft Feel hits the sweet spot for senior golfers with swing speeds between 75-90 mph. At 60 compression it delivers more distance than a Pro V1 for most seniors while maintaining better greenside feel than the Supersoft. The ionomer cover is durable enough to last a full round without scuffing.',
         price: '~$27/dozen',
         pros: ['Better greenside feel than very-low-compression balls', 'Good for the 75-90 mph swing speed range', 'Durable ionomer cover', 'Affordable at $27/dozen'],
@@ -4640,7 +4640,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: '🥇 Best Overall: Garmin Approach S12',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', affiliateKey: 'garmin-approach-s12',
         rating: 4.7, ratingCount: '2,340',
         body: 'The Garmin Approach S12 is the most reliable GPS watch under $200 for golfers who want accurate yardages without complexity. 42,000 preloaded courses, automatic hole advance, and a 30-hour battery mean you never worry about it dying mid-round. The interface is straightforward — front, back, and center of green displayed clearly on a monochrome screen.',
         price: '~$169',
@@ -4649,7 +4649,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🏅 Best Display: Bushnell Ion Elite',
-        badge: 'BEST DISPLAY',
+        badge: 'BEST DISPLAY', affiliateKey: 'bushnell-ion-elite',
         body: 'The Ion Elite has the largest, highest-contrast display of any watch in this price range — ideal for senior golfers or anyone who struggles reading small displays in sunlight. At $149 it is also the most affordable pick here. Slope-adjusted yardages are included, giving you plays-like distances that account for elevation change.',
         price: '~$149',
         pros: ['Largest, highest-contrast display in this price range', 'Slope-adjusted yardages (rare at this price)', '36,000 preloaded courses', 'Best value at $149'],
@@ -4797,7 +4797,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: '🥇 Best Overall: Callaway Paradym Ai Smoke Max Irons',
-        badge: 'BEST OVERALL',
+        badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
         rating: 4.7, ratingCount: '2,340',
         body: 'The AI Flash Face SS24 technology generates maximum ball speed across the entire face — not just the sweet spot. For senior golfers who no longer consistently hit the center of the face, this is the most important feature available in 2026. The wide sole prevents digging on turf contact, and lightweight graphite shafts are available in a Senior flex that optimizes launch for sub-90 mph swing speeds.',
         price: '~$1,199 (7-iron set)',
@@ -4806,7 +4806,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '💰 Best Value: Wilson D9 Irons',
-        badge: 'BEST VALUE',
+        badge: 'BEST VALUE', affiliateKey: 'wilson-d9-irons',
         body: 'The Wilson D9 irons offer genuine game-improvement performance at roughly 40% of the price of premium alternatives. Power Hole technology creates ball speed across the face similar to more expensive models. Available in a Senior graphite shaft option. For seniors who want forgiving irons without paying for brand prestige, the D9 set is a serious alternative.',
         price: '~$499 (7-iron set)',
         pros: ['40% cheaper than premium alternatives with comparable forgiveness', 'Power Hole technology creates ball speed across the face', 'Available in Senior graphite shaft', 'Excellent resale value for Wilson sets'],
@@ -5347,7 +5347,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Value: Callaway Strata',
-        badge: 'BEST VALUE', rating: 4.6, ratingCount: '14,200',
+        badge: 'BEST VALUE', affiliateKey: 'callaway-strata', rating: 4.6, ratingCount: '14,200',
         body: "The Strata is the best-selling beginner set in golf for a reason. At $249, you get 12 clubs, a stand bag, and headcovers — everything needed to play a full round. The driver has a large 460cc head with a draw bias, which helps beginners who slice. The irons are oversized with wide soles that prevent fat shots. The putter is a basic mallet with alignment aids. Nothing in this set will win design awards, but everything works well enough to learn on and enjoy the game.",
         price: '~$249 at Amazon',
         pros: ['Complete 12-piece set with bag for $249 — unbeatable value', 'Driver has draw bias to reduce the beginner slice', 'Oversized iron heads forgive mishits while you learn', 'Includes a stand bag that actually works for walking'],
@@ -5456,7 +5456,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥈 Best Premium Feel: Callaway Chrome Soft',
-        badge: 'BEST FEEL', rating: 4.6, ratingCount: '8,500',
+        badge: 'BEST FEEL', affiliateKey: 'callaway-chrome-soft', rating: 4.6, ratingCount: '8,500',
         body: "The Callaway Chrome Soft has a 75 compression rating and a Hyper Elastic SoftFast core specifically designed to maximize ball speed at moderate swing speeds. It feels noticeably softer than the Q-Star Tour off the driver and putter face — if feel is your top priority, this is the ball. The 4-piece construction with urethane cover provides excellent spin separation: low spin off the driver for distance, high spin on wedges for control. In our testing, the Chrome Soft carried 1-2 yards longer than the Q-Star Tour on driver shots but produced slightly less greenside spin. At $40/dozen, it costs $5 more than the Q-Star Tour and $15 less than the Pro V1.",
         price: '~$40/dz',
         pros: ['Softest feel of any premium ball in this class', '4-piece construction gives excellent spin separation', 'Hyper Elastic core maximizes ball speed at 90 mph', 'Available everywhere — easy to find and restock'],
@@ -5464,7 +5464,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥉 Best Distance: Titleist Tour Speed',
-        badge: 'BEST DISTANCE', rating: 4.4, ratingCount: '2,100',
+        badge: 'BEST DISTANCE', affiliateKey: 'titleist-tour-speed', rating: 4.4, ratingCount: '2,100',
         body: "The Titleist Tour Speed sits at 80 compression — the firmest ball on this list — and it shows in the distance numbers. In our testing, the Tour Speed carried 4-5 yards longer than the Chrome Soft on driver shots. The reformulated core was specifically designed for golfers in the 85-100 mph range who want more ball speed without going to a full tour ball. The trade-off is the ionomer cover instead of urethane — you get less greenside spin and a slightly firmer feel on chips and putts. But if you prioritize distance off the tee and do not rely heavily on spin around the greens, the Tour Speed is the most yards-per-dollar ball for 90 mph swingers.",
         price: '~$36/dz',
         pros: ['Longest ball in our 90 mph testing — 4-5 yards more carry', 'Titleist quality control and consistency', '80 compression still compresses well at 90 mph', 'Extremely durable — lasts 2-3 rounds without damage'],
@@ -5472,7 +5472,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Soft Feel: TaylorMade Tour Response',
-        badge: 'BEST SOFT FEEL', rating: 4.5, ratingCount: '4,800',
+        badge: 'BEST SOFT FEEL', affiliateKey: 'taylormade-tour-response', rating: 4.5, ratingCount: '4,800',
         body: "The TaylorMade Tour Response has the lowest compression on this list at 70 — and you can feel it immediately. Off the putter face, it has an almost muted, soft click that many mid-handicappers love. The 100% cast urethane cover is the same manufacturing process used in the TP5 and Pro V1, which means genuine tour-quality greenside spin for $20 less per dozen. In our testing, the Tour Response was 2-3 yards shorter than the Q-Star Tour on driver carries but produced the most spin on 50-yard pitch shots. If your game revolves around feel, touch, and short game precision rather than chasing every last yard off the tee, this is your ball.",
         price: '~$35/dz',
         pros: ['Softest compression (70) — maximum feel at moderate speeds', '100% cast urethane cover identical to tour ball manufacturing', 'Best greenside spin of any ball under $40/dozen', 'Tour Flight dimple pattern optimized for mid-speed launch'],
@@ -5480,7 +5480,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'Best Value: Bridgestone e12 Contact',
-        badge: 'BEST VALUE', rating: 4.3, ratingCount: '5,600',
+        badge: 'BEST VALUE', affiliateKey: 'bridgestone-e12-contact', rating: 4.3, ratingCount: '5,600',
         body: "The Bridgestone e12 Contact costs $28/dozen — $7 less than any other ball on this list — and performs shockingly close to balls at $35-$40. The 78-compression core is well-matched to 90 mph swing speeds, and the unique Contact Force dimple design extends contact time with the clubface for straighter flight. In our testing, the e12 Contact produced the straightest drives of any ball we tested — measurably less side spin on off-center hits. Distance was within 5-7 yards of the premium urethane balls on drives. The Surlyn cover means less greenside spin, but for golfers who lose more strokes to crooked drives than to short game, this is the most efficient $28 you can spend.",
         price: '~$28/dz',
         pros: ['Best price — $28/dozen is $7-$27 less than competitors', 'Contact Force dimples produce measurably straighter drives', '78 compression is well-matched to 85-95 mph', 'Excellent durability — survives cart path hits and tree strikes'],
@@ -6519,7 +6519,7 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'Why MOI Matters More Than Ball Speed', body: "MOI (Moment of Inertia) measures how much the clubhead resists twisting on off-center strikes. Higher MOI means less twisting, which means less distance and direction loss on mishits.\n\nHigh handicappers miss the sweet spot on 40-60% of drives. On those mishits, a low-MOI driver can lose 20-30 yards and curve 30 yards offline. A high-MOI driver loses 10-15 yards and curves 10-15 yards. Over 14 drives per round, the high-MOI driver keeps 3-4 more balls in play — saving 4-8 strokes.\n\nDistance off the tee matters far less than keeping the ball in the fairway. A 200-yard drive in the fairway is better than a 230-yard drive in the trees. Every driver below is ranked by forgiveness first, distance second." },
       { h2: 'What Shaft Flex Do You Need?', body: "The wrong shaft flex ruins even the best driver head. Here is the guide:\n\nUnder 80 mph: Senior flex or Ladies flex. These shafts are lighter and more flexible, helping slower swingers generate clubhead speed.\n\n80-90 mph: Regular flex. The most common range for high handicappers. If in doubt, try Regular — it is almost never wrong for this swing speed.\n\n90-100 mph: Stiff flex. Only if you consistently swing above 90. Most high handicappers overestimate their swing speed — get fitted or use a launch monitor to confirm.\n\nWhen in doubt, go one flex softer than you think. A shaft that is too stiff costs distance. A shaft that is slightly too flexible might cost 5 yards of accuracy but gains 10 yards of carry. For high handicappers, the extra distance from a softer shaft helps more than the slight accuracy penalty." },
-      { h2: 'Best Overall: Callaway Paradym Ai Smoke Max ($499)', badge: 'BEST OVERALL', body: "The Ai Smoke Max has the best ball speed retention on mishits of any driver we tested. Toe hits lost only 5% ball speed (7 yards) versus 10-12% for competitors. The AI-designed face creates a wider effective sweet spot that rescues bad contact.\n\nAt 94 mph, average carry was 228 yards with a 55% fairway hit rate. The draw-biased Max D version adds slice correction. The adjustable hosel lets you tweak loft.\n\nThis is the driver that makes bad swings less bad. For high handicappers who miss the center on 40%+ of drives, no other driver produces a better 18-hole average.\n\nFull review: Callaway Paradym Ai Smoke Max Review.", price: '~$499', affiliateKey: 'callaway-paradym-ai-smoke-max' , rating: 4.7, ratingCount: '2,340', },
+      { h2: 'Best Overall: Callaway Paradym Ai Smoke Max ($499)', badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons', body: "The Ai Smoke Max has the best ball speed retention on mishits of any driver we tested. Toe hits lost only 5% ball speed (7 yards) versus 10-12% for competitors. The AI-designed face creates a wider effective sweet spot that rescues bad contact.\n\nAt 94 mph, average carry was 228 yards with a 55% fairway hit rate. The draw-biased Max D version adds slice correction. The adjustable hosel lets you tweak loft.\n\nThis is the driver that makes bad swings less bad. For high handicappers who miss the center on 40%+ of drives, no other driver produces a better 18-hole average.\n\nFull review: Callaway Paradym Ai Smoke Max Review.", price: '~$499', affiliateKey: 'callaway-paradym-ai-smoke-max' , rating: 4.7, ratingCount: '2,340', },
       { h2: 'Most Forgiving: Ping G430 Max ($449)', badge: 'HIGHEST MOI', body: "The Ping G430 Max has the highest raw MOI of any driver in our test. The result: the most consistent driver regardless of strike quality. Our worst drive with the G430 went 198 yards. Our worst with the Callaway went 185.\n\nThe Ping does not punish bad swings — it stubbornly keeps the ball somewhere playable. Average carry was 224 yards at 94 mph, about 4 yards shorter than the Callaway on center strikes. But the floor is so much higher that your scoring average may actually improve.\n\nPing's fitting system offers more shaft combinations than any brand. A fitting at an authorized Ping dealer is typically free — and for high handicappers, the right shaft matters more than the right head.\n\nFull breakdown in our Best Forgiving Drivers guide.", price: '~$449', affiliateKey: 'ping-g430-max-driver' , rating: 4.6, ratingCount: '2,860', },
       { h2: 'Best Value: Cobra Aerojet Max ($399)', badge: 'BEST VALUE', body: "The Aerojet Max delivers 85% of the Callaway forgiveness for $100 less. The H.O.T. Face uses AI technology similar to Callaway's approach. At 94 mph, average carry was 223 yards — 5 yards shorter than the Callaway but the stock shaft is arguably better matched.\n\nThe value proposition is hard to beat: premium-level forgiveness at a sub-$400 price. The savings versus the Callaway can fund 2-3 lessons — which will lower your handicap faster than any equipment upgrade.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$399', affiliateKey: 'cobra-aerojet-max' , rating: 4.5, ratingCount: '1,870', },
       { h2: 'Best Budget: Cleveland Launcher XL2 ($349)', badge: 'BUDGET PICK', body: "The Launcher XL2 is the least expensive driver in our test and has no business performing this well at $349. The oversized 460cc head with deep center of gravity launches the ball high — ideal for slower swing speeds.\n\nAt 82 mph, our slower-swinging tester hit the XL2 almost as far as the Callaway because the higher launch carried the ball further. For high handicappers with swing speeds under 90 mph, the XL2 may actually produce longer drives than premium drivers that launch lower.\n\nNo adjustability (fixed hosel) and plain aesthetics. But for under $350, it delivers genuine forgiveness and distance.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$349', affiliateKey: 'cleveland-launcher-xl2-driver' , rating: 4.3, ratingCount: '1,340', },
