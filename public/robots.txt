@@ -1,61 +1,79 @@
 # robots.txt — CubicalGolfer.com
-# Updated: 2026-05-14
+# Updated: 2026-06-30
+#
+# Single wildcard group carries the Disallow rules.
+# Named bots below only appear when they need an explicit Allow
+# (AI crawlers) — search-engine bots inherit from User-agent: *.
 
 User-agent: *
 Allow: /
-
 Disallow: /drafts/
 Disallow: /admin/
 Disallow: /api/
 
-# Search Engines
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# AI Crawlers
+# AI Crawlers — explicit welcome (these are often blocked by default
+# on other sites, so an explicit Allow signals intent)
 User-agent: GPTBot
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Cohere-ai
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
 User-agent: Meta-ExternalAgent
 Allow: /
+Disallow: /drafts/
+Disallow: /admin/
+Disallow: /api/
 
-# Social Crawlers
+# Social Crawlers — need access for OG/link previews
 User-agent: facebookexternalhit
 Allow: /
 
