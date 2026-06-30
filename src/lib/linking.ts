@@ -54,6 +54,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/golf-handicap-explained/', label: 'Golf Handicap Explained' },
     { slug: '/how-many-clubs-in-a-golf-bag/', label: 'How Many Clubs in a Bag' },
     { slug: '/best-golf-accessories-under-50/',              label: 'Best Golf Accessories Under $50' },
+    { slug: '/best-golf-push-carts-2026/',                   label: 'Best Golf Push Cart for Walking' },
     { slug: '/best-golf-gifts-for-him/',                     label: 'Best Golf Gifts for Him' },
     { slug: '/best-golf-gear-under-100/',                    label: 'Best Golf Gear Under $100' },
   ],
@@ -69,6 +70,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/how-to-buy-wedges-4-degree-rule/',   label: 'How to Buy Wedges' },
     { slug: '/when-to-replace-wedges-grooves/',    label: 'When to Replace Wedges' },
     { slug: '/when-to-replace-golf-grips/',        label: 'When to Replace Grips' },
+    { slug: '/best-golf-push-carts-2026/',        label: 'Best Push Carts for Walking the Course' },
   ],
   'golf-lifestyle': [
     { slug: '/golf-for-beginners/',              label: 'Golf for Beginners — Complete Guide' },
@@ -385,6 +387,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-rain-jacket/', label: 'Best Golf Rain Jacket' },
     { slug: '/best-golf-shoes/',                label: 'Best Golf Shoes (Pillar)' },
     { slug: '/best-golf-shoes-for-walking/',        label: 'Best Shoes for Walking' },
+    { slug: '/best-golf-push-carts-2026/',             label: 'Best Push Cart for Walking Golfers' },
   ],
 
   // ── Balls cluster ──────────────────────────────────────────────────────────
@@ -672,6 +675,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/kirkland-signature-golf-balls/',  label: 'Kirkland Signature Balls' },
     { slug: '/best-golf-balls-for-distance/',   label: 'Best Balls for Distance' },
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+    { slug: '/best-golf-push-carts-2026/', label: 'Walking Carts That Make Great Gifts' },
   ],
   'junior-golf-clubs-guide': [
     { slug: '/how-to-get-your-kid-into-golf/', label: 'How to Get Your Kid Into Golf' },
@@ -689,6 +693,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
     { slug: '/best-golf-gifts-for-couples/', label: 'Golf Gifts for Couples' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+    { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Cart — Top Gift for Walkers' },
   ],
   'mothers-day-golf-gifts': [
     { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },

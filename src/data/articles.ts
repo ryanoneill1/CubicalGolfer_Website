@@ -1164,7 +1164,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him 2026' },
       { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes for Walking 2026' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50 2026' },
-    ],
+    
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Cart 2026' },],
   },
 
   {
@@ -1855,6 +1856,7 @@ export const ARTICLES: Article[] = [
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Cart for Walking 18 Holes' },
     ],
   },
 
@@ -2399,6 +2401,7 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/how-to-fix-your-slice/', label: 'How to Fix Your Slice' },
           { slug: '/best-golf-training-aids-home-practice/', label: 'Best Home Practice Training Aids' },
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Push Cart for Walking Rounds' },
     ],
   },
 
@@ -5182,12 +5185,13 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Push Carts Under $300' },
       { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-gloves-for-men/', label: 'Best Golf Gloves for Men' },
-      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Accessories Every Golfer Needs' },
-    ],
+    
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Push Carts Under $300' },],
   },
 
   {
@@ -7248,7 +7252,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
-    ],
+    
+      { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Cart — Great Gift for Walking Dads' },],
   },
 
   {
