@@ -153,7 +153,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, ratingCount: '2,847', affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '', winner: true },
         { rating: 4.4, ratingCount: '4,560', affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: '4.6/5 ★', feature2: '', winner: false },
-        { rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: '4.4/5 ★', feature2: '', winner: false },
+        { rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: '4.4/5 ★', feature2: '', winner: false },
         { rating: 4.4, ratingCount: '1,890', affiliateKey: 'garmin-approach-z82',    name: 'Garmin Approach Z82',   bestFor: 'Best Hybrid',   price: '~$499', feature1: '4.5/5 ★', feature2: '', winner: false },
         { badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,891', affiliateKey: 'bushnell-pro-xe',        name: 'Bushnell Pro XE',       bestFor: 'Best Premium',  price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: false },
       ],
@@ -1021,8 +1021,8 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['App', 'Best For', 'Free Tier', 'Premium Cost', 'Handicap'],
       rows: [
-      { name: 'The Grint', bestFor: 'Best Free', price: 'Free', feature1: 'Full features', feature2: '$8/mo', winner: true, badge: 'STRONG PICK'},
-      { name: '18Birdies', bestFor: 'Best All-In-One', price: 'Free', feature1: 'Good features', feature2: '$10/mo', winner: false},
+      { name: 'The Grint', affiliateKey: 'the-grint', bestFor: 'Best Free', price: '~$0 (Free)', feature1: 'Full features', feature2: '$8/mo', winner: true, badge: 'STRONG PICK'},
+      { name: '18Birdies', affiliateKey: '18birdies', bestFor: 'Best All-In-One', price: '~$0 (Free)', feature1: 'Good features', feature2: '$10/mo', winner: false},
       { name: 'Arccos Caddie', bestFor: 'Best Analytics', price: '~$179', feature1: 'Basic only', feature2: '$99/yr + sensors', winner: false, rating: 4.7, ratingCount: '2,340', affiliateKey: 'arccos-caddie-sensors' },
       ],
     },
@@ -1578,7 +1578,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: '', winner: true, rating: 4.9, ratingCount: '4,120'},
         { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '~$58', feature1: '~90', feature2: '', winner: false, rating: 4.7, ratingCount: '1,450' },
         { rating: 4.5, ratingCount: '2,140', affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best Under 95mph', price: '~$35', feature1: '72', feature2: '', winner: false},
-        { rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false},
+        { rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false},
         { badge: 'STRONG PICK', affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value Tour', price: '~$33', feature1: '80', feature2: '', winner: false, rating: 4.5, ratingCount: '1,120'},
       ],
     },
@@ -1654,7 +1654,7 @@ export const ARTICLES: Article[] = [
       rows: [
       { name: 'FootJoy WeatherSof', bestFor: 'Best Overall', price: '~$18', feature1: 'Synthetic/mesh', feature2: 'High', winner: true, badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'footjoy-weathersof-glove' },
       { name: 'Titleist Players Flex', bestFor: 'Best Ventilation', price: '~$22', feature1: 'Cabretta/perforated', feature2: 'Very High', winner: false, rating: 4.5, ratingCount: '1,890', affiliateKey: 'titleist-players-flex' },
-      { name: 'Callaway Dawn Patrol', bestFor: 'Best Value', price: '~$12', feature1: 'Synthetic', feature2: 'Medium', winner: false},
+      { name: 'Callaway Dawn Patrol', affiliateKey: 'callaway-dawn-patrol', bestFor: 'Best Value', price: '~$12', feature1: 'Synthetic', feature2: 'Medium', winner: false},
       ],
     },
     related: [
@@ -1940,9 +1940,9 @@ export const ARTICLES: Article[] = [
       headers: ['Golf Ball', 'Compression', 'Cover', 'Price/Dz', 'Best Swing Speed'],
       rows: [
         { name: 'TaylorMade Noodle', bestFor: 'Beginners', price: '~$20', feature1: '34', feature2: 'Ionomer', winner: false , badge: 'STRONG PICK', rating: 3.8, ratingCount: '4,560', affiliateKey: 'taylormade-noodle'},
-        { name: 'Callaway Supersoft', bestFor: 'Under 80 mph', price: '~$25', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft' },
-        { name: 'Wilson DUO Soft+', bestFor: 'Seniors', price: '~$22', feature1: '40', feature2: 'Ionomer', winner: false , rating: 4.1, ratingCount: '3,450', affiliateKey: 'wilson-duo-soft-plus'},
-        { name: 'Titleist TruFeel', bestFor: 'Soft feel', price: '~$25', feature1: '45', feature2: 'Ionomer', winner: false , rating: 4.1, ratingCount: '3,890', affiliateKey: 'titleist-trufeel'},
+        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Under 80 mph', price: '~$25', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft' },
+        { name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Seniors', price: '~$22', feature1: '40', feature2: 'Ionomer', winner: false , rating: 4.1, ratingCount: '3,450', affiliateKey: 'wilson-duo-soft-plus'},
+        { name: 'Titleist TruFeel', affiliateKey: 'titleist-trufeel', bestFor: 'Soft feel', price: '~$25', feature1: '45', feature2: 'Ionomer', winner: false , rating: 4.1, ratingCount: '3,890', affiliateKey: 'titleist-trufeel'},
         { name: 'TaylorMade Soft Response', bestFor: 'Under 85 mph', price: '~$25', feature1: '50', feature2: 'Ionomer', winner: false , badge: 'STRONG PICK', rating: 4.0, ratingCount: '2,340', affiliateKey: 'taylormade-soft-response'},
         { name: 'Bridgestone e12 Contact', bestFor: 'Budget distance', price: '~$28', feature1: '50', feature2: 'Ionomer', winner: false, rating: 4.2, ratingCount: '3,450', affiliateKey: 'bridgestone-e12-contact' },
         { name: 'Vice Drive', bestFor: 'Value', price: '~$17', feature1: '55', feature2: 'Ionomer', winner: false , rating: 4.0, ratingCount: '3,120', affiliateKey: 'vice-drive'},
@@ -2302,7 +2302,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
       rows: [
-        { name: 'TaylorMade SIM Max (prev gen)', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
+        { name: 'TaylorMade SIM Max (prev gen)', affiliateKey: 'taylormade-sim2-max', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
         { badge: 'STRONG PICK', rating: 4.6, ratingCount: '1,892', affiliateKey: 'callaway-big-bertha',           name: 'Callaway Big Bertha B21',     bestFor: 'Anti-Slice',   price: '~$179', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
         { rating: 4.3, ratingCount: '1,120', affiliateKey: 'cleveland-launcher-xl2-driver',         name: 'Cleveland Launcher XL',       bestFor: 'Budget New',   price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
       ],
@@ -2495,7 +2495,7 @@ export const ARTICLES: Article[] = [
       rows: [
       { name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Yes (toggle)', feature2: '2 year', winner: true, badge: 'STRONG PICK', rating: 4.8, ratingCount: '2,847', affiliateKey: 'bushnell-tour-v6-shift' },
       { name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: 'Yes', feature2: 'Lifetime', winner: false, rating: 4.4, ratingCount: '4,560', affiliateKey: 'precision-pro-nx9-hd' },
-      { name: 'Blue Tees Series 3 Max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: 'Yes', feature2: '2 year', winner: false},
+      { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: 'Yes', feature2: '2 year', winner: false},
       ],
     },
     related: [
@@ -2659,8 +2659,8 @@ export const ARTICLES: Article[] = [
       headers: ['Ball', 'Best For', 'Price/Dozen', 'Compression', 'Feel'],
       rows: [
       { name: 'Srixon Soft Feel', bestFor: 'Best Overall', price: '~$27', feature1: 'Low (60)', feature2: 'Soft', winner: true, badge: 'STRONG PICK', rating: 4.3, ratingCount: '6,780', affiliateKey: 'srixon-soft-feel' },
-      { name: 'Callaway Supersoft', bestFor: 'Most Distance', price: '~$28', feature1: 'Very Low (35)', feature2: 'Very Soft', winner: false},
-      { name: 'Titleist TruFeel', bestFor: 'Best Feel', price: '~$30', feature1: 'Low (65)', feature2: 'Soft', winner: false},
+      { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Most Distance', price: '~$28', feature1: 'Very Low (35)', feature2: 'Very Soft', winner: false},
+      { name: 'Titleist TruFeel', affiliateKey: 'titleist-trufeel', bestFor: 'Best Feel', price: '~$30', feature1: 'Low (65)', feature2: 'Soft', winner: false},
       ],
     },
     related: [
@@ -2762,7 +2762,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Warranty'],
       rows: [
         { name: 'Precision Pro NX9 HD', bestFor: 'Best overall for beginners', price: '~$169', feature1: '✅', feature2: 'Lifetime', winner: true, badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,203', affiliateKey: 'precision-pro-nx9-hd' },
-        { name: 'Blue Tees Series 3 Max', bestFor: 'Best budget pick', price: '~$149', feature1: '✅', feature2: '1 year', winner: false, rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best budget pick', price: '~$149', feature1: '✅', feature2: '1 year', winner: false, rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max' },
       ],
     },
   },
@@ -2943,7 +2943,7 @@ export const ARTICLES: Article[] = [
       headers: ['Ball', 'Best For', 'Price/doz', 'Compression', 'Cover'],
       rows: [
         { name: 'Srixon Soft Feel', bestFor: '65-85 mph swing speed', price: '~$22', feature1: '60', feature2: 'Ionomer', winner: true, badge: 'STRONG PICK', rating: 4.3, ratingCount: '6,780', affiliateKey: 'srixon-soft-feel' },
-        { name: 'Callaway Supersoft', bestFor: 'Under 70 mph', price: '~$20', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft' },
+        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Under 70 mph', price: '~$20', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft' },
         { name: 'Titleist Pro V1', bestFor: '90+ mph swing speed', price: '~$55', feature1: '90', feature2: 'Urethane', winner: false, rating: 4.9, ratingCount: '4,120', affiliateKey: 'titleist-pro-v1' },
       ],
     },
@@ -3242,7 +3242,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Price', 'Slope', 'Accuracy', 'Warranty'],
       rows: [
         { name: 'Precision Pro NX9 HD', price: '~$169', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $200', winner: true, badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,203', affiliateKey: 'precision-pro-nx9-hd' },
-        { name: 'Blue Tees Series 3 Max', price: '~$129', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $150', winner: false, rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', price: '~$129', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $150', winner: false, rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max' },
         { name: 'Callaway 300 Pro', price: '~$149', feature1: '❌', feature2: '±1 yard', bestFor: 'Best optics (no slope)', rating: 4.3, ratingCount: '2,890', affiliateKey: 'callaway-300-pro' },
         { name: 'Bushnell Phantom 2 GPS', price: '~$129', feature1: 'N/A (GPS)', feature2: '±3 yards', bestFor: 'Simplest option (GPS, not laser)', rating: 4.1, ratingCount: '3,450', affiliateKey: 'bushnell-phantom-2' },
       ],
@@ -3583,8 +3583,8 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Training Aid', 'Best For', 'Price', 'What It Fixes', 'Where Used'],
       rows: [
-      { name: 'SKLZ Golf Grip Trainer', bestFor: 'Best Overall', price: '~$15', feature1: 'Grip position', feature2: 'Home or range', winner: true },
-      { name: 'Tour Striker Smart Ball', bestFor: 'Best Connection', price: '~$29', feature1: 'Connection + grip', feature2: 'Home or range', winner: false, badge: 'STRONG PICK'},
+      { name: 'SKLZ Golf Grip Trainer', affiliateKey: 'sklz-accelerator-pro', bestFor: 'Best Overall', price: '~$15', feature1: 'Grip position', feature2: 'Home or range', winner: true },
+      { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Best Connection', price: '~$29', feature1: 'Connection + grip', feature2: 'Home or range', winner: false, badge: 'STRONG PICK'},
       ],
     },
     related: [
@@ -3783,7 +3783,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Setup', 'Min Depth', 'Price (Total)', 'Ball Data', 'Visual'],
       rows: [
-      { name: 'Garmin R10 + Rukket Net + Mat', bestFor: 'Best Small Space', price: '~$1,150', feature1: '8 feet', feature2: 'Data only', winner: true, badge: 'STRONG PICK'},
+      { name: 'Garmin R10 + Rukket Net + Mat', affiliateKey: 'garmin-approach-r10', bestFor: 'Best Small Space', price: '~$1,150', feature1: '8 feet', feature2: 'Data only', winner: true, badge: 'STRONG PICK'},
       { name: 'Rapsodo MLM2PRO + Net + Mat', bestFor: 'Best With Video', price: '~$1,250', feature1: '8 feet', feature2: 'Video overlay', winner: false, rating: 4.5, ratingCount: '890', affiliateKey: 'rapsodo-mlm2pro' },
       ],
     },
@@ -4213,9 +4213,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Component', 'Recommendation', 'Price', 'Essential?'],
       rows: [
-        { name: 'Garmin Approach R10', bestFor: 'Best budget launch data', price: '~$599', feature1: 'Full launch data', feature2: 'Yes — core of setup', winner: true, badge: 'STRONG PICK'},
-        { name: 'Golf Net', bestFor: 'Rukket 10x7 Haack', price: '~$199', feature1: '10x7 ft, 7-layer', feature2: 'Yes', winner: false},
-        { name: 'Hitting Mat', bestFor: 'Country Club Elite', price: '~$200', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
+        { name: 'Garmin Approach R10', affiliateKey: 'garmin-approach-r10', bestFor: 'Best budget launch data', price: '~$599', feature1: 'Full launch data', feature2: 'Yes — core of setup', winner: true, badge: 'STRONG PICK'},
+        { name: 'Golf Net', affiliateKey: 'spornia-spg-7', bestFor: 'Rukket 10x7 Haack', price: '~$199', feature1: '10x7 ft, 7-layer', feature2: 'Yes', winner: false},
+        { name: 'Hitting Mat', affiliateKey: 'fiberbuilt-flight-deck', bestFor: 'Country Club Elite', price: '~$200', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
       ],
     },
     sections: [
@@ -4304,7 +4304,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Clear LCD', feature2: 'Yes', winner: true, badge: 'STRONG PICK', rating: 4.8, ratingCount: '2,847', affiliateKey: 'bushnell-tour-v6-shift' },
         { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Cart GPS', price: '~$149', feature1: 'Large', feature2: 'Yes (wrist)', winner: false, rating: 4.2, ratingCount: '2,890', affiliateKey: 'bushnell-ion-elite' },
-        { name: 'Blue Tees Series 3 Max', bestFor: 'Best Value', price: '~$169', feature1: 'Bright mono', feature2: 'Yes', winner: false, rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Value', price: '~$169', feature1: 'Bright mono', feature2: 'Yes', winner: false, rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max' },
         { name: 'Precision Pro NX9 HD', bestFor: 'Best Budget', price: '~$169', feature1: 'Standard', feature2: 'Yes', winner: false, rating: 4.4, ratingCount: '4,560', affiliateKey: 'precision-pro-nx9-hd' },
       ],
     },
@@ -4472,10 +4472,10 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Ball', 'Best For', 'Price/Dozen', 'Compression', 'Feel'],
       rows: [
-        { name: 'Callaway Supersoft', bestFor: 'Most Distance', price: '~$28', feature1: '35 (lowest)', feature2: 'Very Soft', winner: true, badge: 'STRONG PICK', rating: 4.4, ratingCount: '9,310', affiliateKey: 'callaway-supersoft' },
+        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Most Distance', price: '~$28', feature1: '35 (lowest)', feature2: 'Very Soft', winner: true, badge: 'STRONG PICK', rating: 4.4, ratingCount: '9,310', affiliateKey: 'callaway-supersoft' },
         { name: 'Srixon Soft Feel', bestFor: 'Best All-Around', price: '~$27', feature1: '60', feature2: 'Soft', winner: false, rating: 4.2, ratingCount: '5,670', affiliateKey: 'srixon-soft-feel' },
-        { name: 'Titleist TruFeel', bestFor: 'Best Feel', price: '~$30', feature1: '65', feature2: 'Soft', winner: false},
-        { name: 'Wilson DUO Soft+', bestFor: 'Best Budget', price: '~$20', feature1: '29 (ultra)', feature2: 'Ultra Soft', winner: false},
+        { name: 'Titleist TruFeel', affiliateKey: 'titleist-trufeel', bestFor: 'Best Feel', price: '~$30', feature1: '65', feature2: 'Soft', winner: false},
+        { name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Best Budget', price: '~$20', feature1: '29 (ultra)', feature2: 'Ultra Soft', winner: false},
       ],
     },
     sections: [
@@ -5634,7 +5634,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, ratingCount: '2,847', affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: 'Physical switch', winner: true },
         { rating: 4.4, ratingCount: '4,560', affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Value',   price: '~$169', feature1: '4.6/5 ★', feature2: 'Button toggle', winner: false },
-        { rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Best Budget',  price: '~$149', feature1: '4.4/5 ★', feature2: 'Button toggle', winner: false },
+        { rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Budget',  price: '~$149', feature1: '4.4/5 ★', feature2: 'Button toggle', winner: false },
       ],
     },
     faq: [
@@ -6125,7 +6125,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Rangefinder', 'Price', 'Accuracy', 'Warranty', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, ratingCount: '1,203', affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: '4.6/5 ★', feature2: 'Lifetime', winner: true },
       { rating: 4.6, ratingCount: '3,450', affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '2 years', winner: false },
-      { rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', bestFor: 'Cheapest', price: '~$149', feature1: '4.4/5 ★', feature2: '1 year', winner: false },
+      { rating: 4.3, ratingCount: '5,670', affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Cheapest', price: '~$149', feature1: '4.4/5 ★', feature2: '1 year', winner: false },
     ] },
     faq: [
       { q: 'How accurate is the NX9 HD?', a: 'Within 1 yard of Bushnell V6 on 78% and within 2 yards on 94% of 120 side-by-side readings. Functionally identical for club selection.' },
@@ -6186,7 +6186,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Feature', 'Garmin S62', 'Apple Watch + Golfshot'], rows: [
       { rating: 4.5, ratingCount: '3,450', affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best for Golf', price: '~$399', feature1: '4.7/5 ★', feature2: 'Virtual Caddie', winner: true },
-      { badge: 'STRONG PICK', affiliateKey: '', name: 'Apple Watch + Golfshot', bestFor: 'Best Smartwatch', price: '~$429+/yr', feature1: '3.8/5 Golf', feature2: 'Basic GPS', winner: false },
+      { badge: 'STRONG PICK', affiliateKey: '', name: 'Apple Watch + Golfshot', affiliateKey: 'apple-watch-ultra-golf', bestFor: 'Best Smartwatch', price: '~$429+/yr', feature1: '3.8/5 Golf', feature2: 'Basic GPS', winner: false },
     ] },
     faq: [
       { q: 'Can the Apple Watch replace a Garmin for golf?', a: 'For basic yardages, yes — Golfshot provides front/middle/back distances. For course maps, Virtual Caddie, hazard detection, and 20-hour battery life, no. The Garmin S62 is a significantly better golf device.' },
@@ -6591,7 +6591,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Monitor', 'Price', 'Technology', 'Simulator', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Best Budget', price: '~$499', feature1: 'Doppler', feature2: 'E6 (incl)', winner: true },
       { rating: 4.3, ratingCount: '3,450', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Most Data', price: '~$699', feature1: 'Camera', feature2: 'E6 (incl)', winner: false },
-      { affiliateKey: '', name: 'FlightScope Mevo', bestFor: 'Most Portable', price: '~$499', feature1: 'Doppler', feature2: 'No', winner: false },
+      { affiliateKey: '', name: 'FlightScope Mevo', affiliateKey: 'flightscope-mevo-gen2', bestFor: 'Most Portable', price: '~$499', feature1: 'Doppler', feature2: 'No', winner: false },
       { affiliateKey: '', name: 'Ernest Sports ES14', bestFor: 'Cheapest', price: '~$199', feature1: 'Doppler', feature2: 'No', winner: false },
     ] },
     faq: [
@@ -6647,7 +6647,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Analyzer', 'Price', 'Auto-Tracking', 'Subscription', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Overall', price: '~$179+$99/yr', feature1: 'Yes (sensors)', feature2: '$99/yr', winner: true },
-      { affiliateKey: '', name: 'Garmin CT10', bestFor: 'Garmin Users', price: '~$299', feature1: 'Yes (sensors)', feature2: 'None', winner: false },
+      { affiliateKey: '', name: 'Garmin CT10', affiliateKey: 'garmin-ct10', bestFor: 'Garmin Users', price: '~$299', feature1: 'Yes (sensors)', feature2: 'None', winner: false },
       { rating: 4.3, ratingCount: '1,890', affiliateKey: 'shot-scope-v5', name: 'Shot Scope H4', bestFor: 'Best Value', price: '~$149', feature1: 'Yes (tags)', feature2: 'None', winner: false },
       { affiliateKey: '', name: 'Zepp Golf 2', bestFor: 'Swing Metrics', price: '~$149', feature1: 'No', feature2: 'None', winner: false },
     ] },
@@ -6700,10 +6700,10 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Training Aid', 'Price', 'Skill Trained', 'Space Needed', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, ratingCount: '2,340', affiliateKey: 'sklz-accelerator-putting-mat', name: 'SKLZ Accelerator Pro', bestFor: 'Best Overall', price: '~$55', feature1: 'Putting', feature2: '9 ft carpet', winner: true },
-      { affiliateKey: '', name: 'Putt-A-Bout Par 3', bestFor: 'Distance Control', price: '~$35', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
-      { affiliateKey: '', name: 'Tour Striker Smart Ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
-      { affiliateKey: '', name: 'Alignment Sticks (4-pack)', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
-      { badge: 'STRONG PICK', affiliateKey: '', name: 'Orange Whip Trainer', bestFor: 'Tempo', price: '~$109', feature1: 'Tempo', feature2: '10 ft', winner: false },
+      { affiliateKey: '', name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$35', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
+      { affiliateKey: '', name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
+      { affiliateKey: '', name: 'Alignment Sticks (4-pack)', affiliateKey: 'alignment-sticks', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
+      { badge: 'STRONG PICK', affiliateKey: '', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$109', feature1: 'Tempo', feature2: '10 ft', winner: false },
     ] },
     faq: [
       { q: 'What are the most important areas to practice at home?', a: 'Putting and alignment produce the fastest score improvements for most golfers. A putting mat and alignment sticks ($70 total) cover both. Add tempo work if you struggle with rushing your swing.' },
@@ -7511,7 +7511,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'footjoy-flex-xp', name: 'FootJoy Flex XP Shoes', bestFor: 'Best Overall', price: '~$120', feature1: '4.7/5 ★', winner: true, rating: 4.7, ratingCount: '2,340' },
         { rating: 4.5, ratingCount: '1,890', affiliateKey: 'women-golf-glove', name: 'Cabretta Leather Glove', bestFor: 'Best Accessory', price: '~$18', feature1: '4.5/5 ★', winner: false },
-        { rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', bestFor: 'Best Balls', price: '~$25', feature1: '4.6/5 ★', winner: false },
+        { rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Balls', price: '~$25', feature1: '4.6/5 ★', winner: false },
       ],
     },
     faq: [
@@ -12126,9 +12126,9 @@ export const ARTICLES: Article[] = [
       headers: ['Golf Ball', 'Best For', 'Price/Dz', 'Compression', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'titleist-velocity', name: 'Titleist Velocity', bestFor: 'Best Overall Distance', price: '~$35', feature1: '65', feature2: '', winner: true, rating: 4.5, ratingCount: '3,410' },
-        { rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', bestFor: 'Best Under 85 mph', price: '~$25', feature1: '38', feature2: '', winner: false },
+        { rating: 4.3, ratingCount: '6,780', affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85 mph', price: '~$25', feature1: '38', feature2: '', winner: false },
         { rating: 4.4, ratingCount: '1,870', affiliateKey: 'vice-pro-plus', name: 'Vice Pro Plus', bestFor: 'Best 95+ mph', price: '~$37', feature1: '85', feature2: '', winner: false },
-        { rating: 4.1, ratingCount: '3,450', affiliateKey: 'wilson-duo-soft-plus', name: 'Wilson DUO Soft+', bestFor: 'Best Budget', price: '~$22', feature1: '40', feature2: '', winner: false },
+        { rating: 4.1, ratingCount: '3,450', affiliateKey: 'wilson-duo-soft-plus', name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Best Budget', price: '~$22', feature1: '40', feature2: '', winner: false },
       ],
     },
     sections: [
