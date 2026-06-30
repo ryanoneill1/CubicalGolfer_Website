@@ -17,6 +17,29 @@ const OG_IMG  = `${DOMAIN}/images/og-image.jpg`;
 const SITE    = 'Cubical Golfer';
 const MAX_TITLE = 60;
 
+// ── Per-category OG images (1200×630 JPEG) ───────────────────────────────────
+// Falls back to the default OG_IMG when no category-specific image exists.
+// To enable: create the JPEG at public/images/og/<filename> and it auto-resolves.
+const CATEGORY_OG: Record<string, string> = {
+  'gear-reviews':     `${DOMAIN}/images/og/gear-reviews.jpg`,
+  'golf-tech':        `${DOMAIN}/images/og/golf-tech.jpg`,
+  'golf-accessories': `${DOMAIN}/images/og/golf-accessories.jpg`,
+  'improve-game':     `${DOMAIN}/images/og/improve-game.jpg`,
+  'golf-lifestyle':   `${DOMAIN}/images/og/golf-lifestyle.jpg`,
+  'indoor-golf':      `${DOMAIN}/images/og/indoor-golf.jpg`,
+};
+
+function categoryOgImage(category?: string): string {
+  if (!category) return OG_IMG;
+  return CATEGORY_OG[category] ?? OG_IMG;
+}
+
+function normalizeOgImage(img?: string): string | undefined {
+  if (!img) return undefined;
+  if (img.startsWith('http')) return img;
+  return `${DOMAIN}${img}`;
+}
+
 function smartTitle(title: string): string {
   const withSite = `${title} | ${SITE}`;
   return withSite.length <= MAX_TITLE ? withSite : title;
@@ -42,7 +65,7 @@ export function articleMeta(article: Article): PageMeta {
     title:         article.title,
     description:   article.description,
     canonical,
-    ogImage:       OG_IMG,
+    ogImage:       normalizeOgImage(article.ogImage) || categoryOgImage(article.category),
     ogType:        'article',
     robots:        'index, follow',
     datePublished: article.datePublished,
@@ -62,7 +85,7 @@ export function comparisonMeta(c: Comparison): PageMeta {
     title:         smartTitle(c.title),
     description:   c.description,
     canonical,
-    ogImage:       OG_IMG,
+    ogImage:       categoryOgImage('gear-reviews'),
     ogType:        'article',
     robots:        'index, follow',
     datePublished: c.datePublished,
@@ -153,7 +176,7 @@ export function categoryMeta(category: string): PageMeta {
     title:       smartTitle(`${cfg.label} — Weekend Golfer Picks 2026`),
     description: cfg.description,
     canonical:   `${DOMAIN}/${cfg.slug}/`,
-    ogImage:     OG_IMG,
+    ogImage:     categoryOgImage(category),
     ogType:      'website',
     robots:      'index, follow',
     breadcrumbs: [
