@@ -242,11 +242,11 @@ nav.site-nav {
 .art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 10px; }
-.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a) {
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }
-.art-content a:not(.aff-cta__btn):not(.btn-gold):hover { text-decoration-color: var(--green); }
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):hover { text-decoration-color: var(--green); }
 
 /* ── PROSE CAP: text inside art-section paragraphs stays at readable width ── */
 .art-section > h2,
@@ -628,11 +628,11 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .compare-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .compare-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
-.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn) {
+.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }
-.compare-body a:not(.aff-cta__btn):not(.btn-gold):hover { text-decoration-color: var(--green); }
+.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):hover { text-decoration-color: var(--green); }
 .verdict-box {
   background: #f0f7f2; border: 2px solid var(--green); border-radius: 12px;
   padding: 28px; margin: 36px 0;
@@ -853,19 +853,19 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 .cmp-buy-btn {
   display: inline-block;
-  background: var(--gold);
-  color: var(--text);
+  background: var(--green);
+  color: #fff;
   font-size: 13px;
   font-weight: 700;
-  padding: 7px 14px;
+  padding: 8px 16px;
   border-radius: 6px;
   text-decoration: none;
   white-space: nowrap;
   transition: background .15s;
 }
-.cmp-buy-btn:hover { background: var(--gold-dark); }
-.cmp-winner .cmp-buy-btn { background: var(--green); color: #fff; }
-.cmp-winner .cmp-buy-btn:hover { background: #1a5c35; }
+.cmp-buy-btn:hover { background: #1a5c35; }
+.cmp-winner .cmp-buy-btn { background: var(--gold); color: var(--text); }
+.cmp-winner .cmp-buy-btn:hover { background: var(--gold-dark); }
 .cmp-no-link { color: var(--muted); font-size: 12px; }
 @media (max-width: 700px) {
   .cmp-th-buy { display: none; }
