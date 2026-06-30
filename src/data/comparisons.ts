@@ -510,8 +510,8 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'taylormade-qi35-vs-callaway-ai-smoke',
     thumbnail:   '/images/thumbnails/compare-qi35-vs-ai-smoke.webp',
-    title:       'TaylorMade Qi35 Max vs Callaway Ai Smoke Max',
-    description: 'Qi35 Max vs Ai Smoke Max — tested over 8 rounds. Which forgiving driver delivers more distance and accuracy for 90-100 mph swing speeds?',
+    title:       'Qi35 vs Ai Smoke Max — Driver Tested 8 Rounds',
+    description: 'Qi35 vs Ai Smoke Max driver tested over 8 rounds. Distance, forgiveness, and accuracy compared for 90 to 100 mph swing speeds. Full test data.',
     productA:    'taylormade-qi35-max',
     productB:    'callaway-paradym-ai-smoke-max',
     winner:      'callaway-paradym-ai-smoke-max',
@@ -548,8 +548,8 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'titleist-pro-v1-vs-callaway-chrome-soft',
     thumbnail:   '/images/thumbnails/compare-pro-v1-vs-chrome-soft.webp',
-    title:       'Pro V1 vs Chrome Soft — 200 Shots Tested',
-    description: 'Titleist Pro V1 vs Callaway Chrome Soft tested over 200 shots. Distance, spin, feel, and value — which premium ball is right for your game?',
+    title:       'Chrome Soft vs Pro V1 — 200 Shots Tested',
+    description: 'Chrome Soft vs Pro V1 tested over 200 shots. Callaway vs Titleist compared for distance, spin, feel, and value — which premium ball fits your game?',
     productA:    'titleist-pro-v1',
     productB:    'callaway-chrome-soft',
     winner:      'titleist-pro-v1',
@@ -586,7 +586,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'titleist-pro-v1-vs-kirkland-signature',
     thumbnail:   '/images/thumbnails/compare-pro-v1-vs-kirkland.webp',
-    title:       'Pro V1 vs Kirkland Golf Ball — Worth the $27 Difference?',
+    title:       'Kirkland vs Pro V1 — Worth the $27 Difference?',
     description: 'Titleist Pro V1 ($55/dz) vs Kirkland Signature ($28/dz) tested over 150 shots. Is the most popular premium ball really worth twice the price of Costco?',
     productA:    'titleist-pro-v1',
     productB:    'kirkland-signature',
