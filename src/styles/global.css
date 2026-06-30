@@ -90,6 +90,32 @@ body {
 }
 
 a { text-decoration: none; color: inherit; }
+
+/* ── CTA BUTTON COLOR OVERRIDES (global, beats a{color:inherit}) ── */
+/* Primary buy buttons: white text on green */
+.aff-cta--primary .aff-cta__btn,
+.aff-cta--secondary .aff-cta__btn { color: #fff !important; background: var(--green) !important; }
+.aff-cta--primary .aff-cta__btn:hover,
+.aff-cta--secondary .aff-cta__btn:hover { background: #1a5c35 !important; }
+/* Golf Galaxy / secondary retailer: green text on white */
+.aff-cta__btn--gg { color: #1E3A28 !important; background: #fff !important; border: 2px solid #1E3A28; }
+.aff-cta__btn--gg:hover { background: #f0f7f2 !important; }
+/* Button text inside */
+.aff-cta__btn .aff-cta__btn-text { color: inherit; }
+/* Meta line below button */
+.aff-cta__meta { color: var(--body); font-size: 13px; font-weight: 600; }
+/* Urgent variant */
+.aff-cta--urgent .aff-cta__btn { background: #d63b2f !important; color: #fff !important; }
+
+/* Product card CTAs */
+.product-card__cta { color: #fff !important; }
+.product-card__cta--winner { color: var(--text) !important; background: var(--gold) !important; }
+.product-card__cta .product-card__cta-badge { color: rgba(255,255,255,.8); }
+.product-card__cta--winner .product-card__cta-badge { color: rgba(26,43,31,.65); }
+
+/* Quick pick sidebar CTA */
+.qp__cta { color: #fff !important; }
+.qp__cta-price, .qp__cta-text { color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
 input, select, textarea { font-size: 16px; } /* ≥16px prevents iOS Safari auto-zoom on focus */
 
