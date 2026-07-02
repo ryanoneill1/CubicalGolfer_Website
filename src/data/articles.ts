@@ -3816,7 +3816,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 9, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Simulators for Small Spaces',
+    title: 'Best Golf Simulator for Small Rooms (Under 10ft)',
     titleDisplay: 'Best Golf Simulators for Small Spaces',
     bottomLine: 'For spaces under 12 feet deep, a net-and-launch-monitor setup (no screen or projector) is the most practical solution. The Garmin Approach R10 ($599) with a basic hitting net and mat gives you full launch data and indoor practice in as little as 8 feet of depth. Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699).',
     description: 'Best golf simulators for small spaces in 2026 — setups that work in 8-12 feet of depth. Net and launch monitor options that fit where a full simulator.',
@@ -4490,7 +4490,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title:        'Do I Need Slope on a Golf Rangefinder? (Honest Answer)',
+    title:        'Do I Need Slope on My Rangefinder? (Worth It?)',
     titleDisplay: '⛰️ Do I Need Slope on a Golf Rangefinder? Honest Answer',
     bottomLine: 'Yes, slope is worth having — our top pick is the <strong>Bushnell Tour V6 Shift</strong> (~$329). It adjusts distance for elevation and helps with club selection on hilly courses. For tournament play, buy a model with a slope toggle so you can switch it off.',
     description: 'Do you need slope on a rangefinder? Yes for hilly courses, optional for flat ones. Worth the extra $50 for most weekend golfers. Honest answer inside.',
@@ -4567,7 +4567,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title:        'Best Golf Balls for Seniors 2026 — Tested Picks',
+    title:        'Best Golf Balls for Seniors 2026 — Over 60 Guide',
     titleDisplay: '⛳ Best Golf Balls for Seniors — Tested Picks',
     description:  'The best golf balls for seniors in 2026. Low-compression picks for swing speeds under 85 mph — more distance, softer feel, less sting. Tested over 20+.',
     excerpt:      'Swing speed drops with age. The right low-compression ball gives you back 10-15 yards without changing your swing. These are the only 4 we recommend.',
@@ -6818,8 +6818,8 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 15, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Training Aids for Home Practice — Actually Useful',
-    titleDisplay: 'Best Golf Training Aids for Home Practice',
+    title: 'Best Indoor Golf Training Aids — No Yard Required',
+    titleDisplay: 'Best Indoor Golf Training Aids — Practice Without a Yard',
     bottomLine: 'Start with a <strong>SKLZ Accelerator Pro Putting Mat</strong> ($55) and a set of <strong>alignment sticks</strong> ($15). These two tools cost $70 total and address putting and alignment — the two areas where home practice produces the fastest score improvement. Add the <strong>Orange Whip Trainer</strong> ($109) for tempo work.',
     description: 'Best golf training aids for home practice in 2026 — putting mats, swing trainers, alignment sticks, and tempo trainers tested by weekend golfers.',
     excerpt: '5 training aids that actually improve your game at home — tested by golfers who practice between rounds.',
@@ -7567,7 +7567,7 @@ export const ARTICLES: Article[] = [
     emoji: '🎄',
     datePublished: '2026-01-20',
     dateModified: '2026-06-30',
-    title: 'Best Christmas Golf Gifts 2026 — Every Budget Covered',
+    title: 'Best Christmas Golf Gifts 2026 — Holiday Guide',
     titleDisplay: 'Best Golf Christmas Gifts 2026 — Every Budget Covered',
     bottomLine: 'For the biggest smile on Christmas morning: a <strong>Garmin Approach S42 GPS watch</strong> ($249) is the single best golf tech gift — no subscription, instant yardages, and it doubles as a regular smartwatch. Under $50? A <strong>dozen Pro V1s</strong> never fails.',
     description: 'Best golf Christmas gifts 2026 organized by budget — under $25, under $50, under $100, under $250, and splurge picks. Every item tested by a weekend.',
@@ -10960,7 +10960,7 @@ export const ARTICLES: Article[] = [
     relatedComparisons: [
       { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'Garmin R10 vs SkyTrak+ Home Sim Setup' },
     ],
-    title: 'Best Golf Simulator for Beginners',
+    title: 'Best Golf Simulator for Beginners — Setup Guide',
     titleDisplay: 'Best Golf Simulator for Beginners — Setup Guide for First-Timers',
     description: 'Best golf simulator for beginners in 2026 — step-by-step setup guide with three budget tiers and the exact equipment first-timers need to get started at home.',
     excerpt: 'Your first simulator does not need to cost $10,000. Here is exactly what to buy at each budget level.',
