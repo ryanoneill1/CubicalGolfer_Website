@@ -168,7 +168,6 @@ export interface ComparisonProduct {
   price: string;
   retailer: string;
   rating?: number;
-  ratingCount?: number;
 }
 
 export function comparisonProductsSchema(products: ComparisonProduct[]): object[] {

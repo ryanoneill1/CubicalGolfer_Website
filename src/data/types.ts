@@ -36,7 +36,6 @@ export interface ComparisonRow {
   affiliateKey?: string;
   badge?:       string;     // e.g. "TOP PICK", "BEST VALUE"
   rating?:      number;     // 1–5 stars
-  ratingCount?: string;     // Display-only review count
 }
 
 export interface ComparisonTable {
@@ -53,7 +52,6 @@ export interface Section {
   cons?:        string[];   // 2–3 bullet points on weaknesses
   items?:       Array<{ name: string; desc: string; affiliateKey?: string }>;
   rating?:      number;     // 1–5 stars
-  ratingCount?: string;     // Amazon review count (displayed in UI only, NOT used in schema)
   affiliateKey?: string;    // Direct affiliate key override for this section
   callout?:      string;    // Callout text (e.g. "Editor's Note")
   sectionImage?: string;    // Section illustration image path
