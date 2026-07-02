@@ -16,6 +16,7 @@ interface Props {
   dateChecked?: string;
   isWinner?: boolean;
   golfGalaxyUrl?: string;
+  primaryRetailer?: 'direct' | 'amazon';
 }
 
 const {
@@ -30,9 +31,23 @@ const {
   dateChecked = '',
   isWinner = false,
   golfGalaxyUrl = '',
+  primaryRetailer,
 } = Astro.props;
 
-const btnText = `${price} at ${retailer} — Check Today's Price →`;
+// When primaryRetailer is 'direct' and a partner URL exists, swap the buttons:
+// the partner link becomes the big primary button, Amazon becomes secondary.
+const shouldSwap = primaryRetailer === 'direct' && golfGalaxyUrl && !url.includes('playbetter.com') && !url.includes('bushnell.pxf.io') && url.includes('amazon.com');
+const primaryUrl = shouldSwap ? golfGalaxyUrl : url;
+const secondaryUrl = shouldSwap ? url : golfGalaxyUrl;
+
+const primaryRetailerName = shouldSwap
+  ? (golfGalaxyUrl.includes('playbetter.com') ? 'PlayBetter'
+    : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
+    : golfGalaxyUrl.includes('bushnell.pxf.io') ? 'Bushnell'
+    : 'Retailer')
+  : retailer;
+
+const btnText = `${price} at ${primaryRetailerName} — Check Today's Price →`;
 // FIX: Urgency-focused meta line — "Prices checked today" converts better than a static date
 const dateLabel = dateChecked
   ? `Free shipping · Prices checked today`
@@ -44,23 +59,23 @@ const dateLabel = dateChecked
     <span class="aff-cta__winner-badge">💰 Lowest price we've seen</span>
   )}
   <a
-    href={url}
+    href={primaryUrl}
     class="aff-cta__btn"
     target="_blank"
     rel="nofollow noopener sponsored"
-    aria-label={`Check price for ${name} at ${retailer}`}
-    onclick={`window.plausible&&window.plausible('Affiliate Click',{props:{product:'${name.replace(/'/g,"\\'")}',retailer:'${retailer}'}});`}
+    aria-label={`Check price for ${name} at ${primaryRetailerName}`}
+    onclick={`window.plausible&&window.plausible('Affiliate Click',{props:{product:'${name.replace(/'/g,"\\'")}',retailer:'${primaryRetailerName}'}});`}
   >
     <span class="aff-cta__btn-text">{btnText}</span>
   </a>
-  {golfGalaxyUrl && (() => {
-    const secondaryRetailer = golfGalaxyUrl.includes('amazon.com') ? 'Amazon'
-      : golfGalaxyUrl.includes('playbetter.com') ? 'PlayBetter'
-      : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'Golf Galaxy'
+  {secondaryUrl && (() => {
+    const secondaryRetailer = secondaryUrl.includes('amazon.com') ? 'Amazon'
+      : secondaryUrl.includes('playbetter.com') ? 'PlayBetter'
+      : secondaryUrl.includes('golfgalaxy') || secondaryUrl.includes('click-101736949') ? 'Golf Galaxy'
       : 'Retailer';
     return (
     <a
-      href={golfGalaxyUrl}
+      href={secondaryUrl}
       class="aff-cta__btn aff-cta__btn--gg"
       target="_blank"
       rel="nofollow noopener sponsored"

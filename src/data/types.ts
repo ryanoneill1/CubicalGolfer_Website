@@ -197,4 +197,5 @@ export interface AffiliateLink {
   imgAlt?:  string;
   golfGalaxyUrl?: string; // Alternative retailer link
   benefits?: string[];
+  primaryRetailer?: 'direct' | 'amazon'; // Which button renders first
 }
