@@ -288,7 +288,7 @@ const schemas = [
                 <td>{ball.cover}</td>
                 <td>~${ball.price}</td>
                 <td>{ball.minMph}–{ball.maxMph} mph</td>
-                <td><a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a></td>
+                <td><a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound="amazon" style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a></td>
               </tr>
             ))}
           </tbody>
@@ -425,7 +425,7 @@ const schemas = [
                   {brandBalls.map(b => (
                     <tr>
                       <td>{b.name}</td><td>{b.compression}</td><td>{b.cover}</td><td>~${b.price}</td><td>{b.minMph}–{b.maxMph} mph</td>
-                      <td><a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" style="color:var(--green);font-weight:600;">Check price →</a></td>
+                      <td><a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound="amazon" style="color:var(--green);font-weight:600;">Check price →</a></td>
                     </tr>
                   ))}
                 </tbody>

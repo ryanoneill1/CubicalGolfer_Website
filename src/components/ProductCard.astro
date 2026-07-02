@@ -38,6 +38,10 @@ const {
 
 // VALIDATION: skip render if required affiliate fields missing
 if (!url || !imgSrc) return;
+
+// Derive outbound retailer from URL hostname at build time
+const outboundTag = url.includes('amazon.com') ? 'amazon' : url.includes('bushnell') ? 'bushnell' : url.includes('playbetter') ? 'playbetter' : url.includes('golfgalaxy') || url.includes('click-101736949') ? 'golfgalaxy' : 'other';
+const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'amazon' : golfGalaxyUrl.includes('bushnell') ? 'bushnell' : golfGalaxyUrl.includes('playbetter') ? 'playbetter' : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'golfgalaxy' : 'other') : '';
 ---
 
 <div class:list={["product-card", { "product-card--winner": winner }]}>
@@ -51,7 +55,7 @@ if (!url || !imgSrc) return;
 
   <!-- CTA 1: Clickable product image -->
   <a href={url} target="_blank" rel="nofollow noopener sponsored"
-     class="product-card__img-link" aria-label={`View ${name} on ${retailer}`} tabindex="-1">
+     class="product-card__img-link" data-outbound={outboundTag} aria-label={`View ${name} on ${retailer}`} tabindex="-1">
     <div class="product-card__img-wrap">
       <img src={imgSrc} alt={imgAlt ?? name} width="280" height="200"
            loading="lazy" decoding="async" class="product-card__img"
@@ -66,7 +70,7 @@ if (!url || !imgSrc) return;
     <!-- CTA 2: Inline text link on product name -->
     <p class="product-card__name">
       <a href={url} target="_blank" rel="nofollow noopener sponsored"
-         class="product-card__name-link">{name}</a>
+         class="product-card__name-link" data-outbound={outboundTag}>{name}</a>
     </p>
 
     {verdict && (
@@ -110,7 +114,7 @@ if (!url || !imgSrc) return;
       : 'Retailer';
     return (
     <a href={golfGalaxyUrl} class="product-card__cta product-card__cta--gg"
-       target="_blank" rel="nofollow noopener sponsored"
+       target="_blank" rel="nofollow noopener sponsored" data-outbound={ggOutboundTag}
        aria-label={`Check price for ${name} at ${secRetailer}`}>
       <span class="product-card__cta-text">Check Price at {secRetailer} →</span>
     </a>

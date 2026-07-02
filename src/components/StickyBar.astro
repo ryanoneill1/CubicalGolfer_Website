@@ -16,6 +16,7 @@ interface Props {
 const { name, price, url, retailer, badge = 'BEST PICK' } = Astro.props;
 
 if (!url) return;
+const stickyOutbound = url.includes('amazon.com') ? 'amazon' : url.includes('bushnell') ? 'bushnell' : url.includes('playbetter') ? 'playbetter' : url.includes('golfgalaxy') || url.includes('click-101736949') ? 'golfgalaxy' : 'other';
 ---
 
 <div class="sb" id="sticky-bar" aria-label="Top product quick access" role="complementary">
@@ -31,6 +32,7 @@ if (!url) return;
         class="sb__btn"
         target="_blank"
         rel="nofollow noopener sponsored"
+        data-outbound={stickyOutbound}
         aria-label={`Check price for ${name} at ${retailer}`}
       >
         Check Price →

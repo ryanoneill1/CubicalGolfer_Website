@@ -61,6 +61,7 @@ const dateLabel = dateChecked
   <a
     href={primaryUrl}
     class="aff-cta__btn"
+    data-outbound={primaryUrl.includes("amazon.com") ? "amazon" : primaryUrl.includes("bushnell") ? "bushnell" : primaryUrl.includes("playbetter") ? "playbetter" : primaryUrl.includes("golfgalaxy") || primaryUrl.includes("click-101736949") ? "golfgalaxy" : "other"}
     target="_blank"
     rel="nofollow noopener sponsored"
     aria-label={`Check price for ${name} at ${primaryRetailerName}`}
@@ -77,6 +78,7 @@ const dateLabel = dateChecked
     <a
       href={secondaryUrl}
       class="aff-cta__btn aff-cta__btn--gg"
+      data-outbound={secondaryUrl.includes("amazon.com") ? "amazon" : secondaryUrl.includes("bushnell") ? "bushnell" : secondaryUrl.includes("playbetter") ? "playbetter" : secondaryUrl.includes("golfgalaxy") || secondaryUrl.includes("click-101736949") ? "golfgalaxy" : "other"}
       target="_blank"
       rel="nofollow noopener sponsored"
       aria-label={`Check price for ${name} at ${secondaryRetailer}`}

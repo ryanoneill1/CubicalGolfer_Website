@@ -386,25 +386,56 @@ const NAV_ITEMS = [
       data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_ANALYTICS_TOKEN}"}`}></script>
   )}
 
-  <!-- Affiliate click + email conversion tracking (Plausible custom events) -->
+  <!-- Affiliate click + email conversion tracking -->
   <script is:inline>
     (function() {
-      // ── Affiliate Click tracking ──
-      // Fires a Plausible custom event with product, retailer, and page.
-      // Requires: Plausible script loaded with data-domain (already in <head>).
-      // In Plausible dashboard: Settings → Goals → Add Goal → "Affiliate Click"
-      document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[rel*="sponsored"]');
-        if (!link) return;
-        var product = (link.getAttribute('aria-label') || link.textContent || 'unknown').substring(0, 80).replace('Check price for ', '');
-        var retailer = 'Amazon';
-        if (link.href.indexOf('golfgalaxy') > -1) retailer = 'Golf Galaxy';
-        else if (link.href.indexOf('playbetter') > -1) retailer = 'PlayBetter';
-        else if (link.href.indexOf('bushnell.pxf') > -1) retailer = 'Bushnell';
-        var page = window.location.pathname;
+      // ──────────────────────────────────────────────────────────────────────
+      // GA4 SETUP — paste your Measurement ID below to enable GA4 events.
+      // Create a free GA4 property at https://analytics.google.com →
+      // Admin → Create Property → Web stream → copy the G-XXXXXXXXXX ID.
+      // When empty, GA4 tracking no-ops safely (Plausible still fires).
+      // ──────────────────────────────────────────────────────────────────────
+      var GA4_ID = '';
 
+      // Load gtag if GA4 is configured
+      if (GA4_ID) {
+        var gs = document.createElement('script');
+        gs.async = true;
+        gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+        document.head.appendChild(gs);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', GA4_ID, { send_page_view: true });
+      }
+
+      // ── Affiliate Click tracking (data-outbound) ──
+      // Delegated listener: any anchor with data-outbound fires events.
+      // Uses sendBeacon pattern so navigation is never delayed.
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[data-outbound]');
+        if (!link) return;
+
+        var retailer = link.getAttribute('data-outbound') || 'other';
+        var linkUrl = link.href || '';
+        var pagePath = window.location.pathname;
+        var product = (link.getAttribute('aria-label') || link.textContent || '').substring(0, 80).replace('Check price for ', '').replace('Check today\'s price for ', '').trim();
+
+        // Plausible event (existing integration)
         if (typeof window.plausible === 'function') {
-          window.plausible('Affiliate Click', { props: { product: product, retailer: retailer, page: page } });
+          window.plausible('Affiliate Click', { props: { product: product, retailer: retailer, page: pagePath } });
+        }
+
+        // GA4 event (no-ops when GA4_ID is empty)
+        if (GA4_ID && typeof window.gtag === 'function') {
+          window.gtag('event', 'affiliate_click', {
+            retailer: retailer,
+            page_path: pagePath,
+            link_url: linkUrl.substring(0, 200),
+            product: product,
+            send_to: GA4_ID,
+            transport_type: 'beacon'
+          });
         }
       });
 
