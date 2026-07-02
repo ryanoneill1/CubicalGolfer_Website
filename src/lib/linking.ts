@@ -57,6 +57,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-push-carts-2026/',                   label: 'Best Golf Push Cart for Walking' },
     { slug: '/best-golf-gifts-for-him/',                     label: 'Best Golf Gifts for Him' },
     { slug: '/best-golf-gear-under-100/',                    label: 'Best Golf Gear Under $100' },
+    { slug: '/golf-ball-finder/',                             label: 'Golf Ball Finder — Save Balls, Save Money' },
   ],
   'improve-game': [
     { slug: '/how-to-break-90/',                     label: 'How to Break 90 This Season' },
@@ -97,6 +98,10 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinders for Seniors' },
     { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9' },
     { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees vs Bushnell Tour V6' },
+  
+    { slug: '/bushnell-v6-vs-precision-pro-nx9/', label: 'Bushnell V6 vs Precision Pro NX9' },
+    { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell V6 vs Callaway 300 Pro' },
+    { slug: '/compare/bushnell-pro-x3-vs-tour-v6/', label: 'Bushnell Pro X3 vs Tour V6' },
   ],
   'bushnell-v6-review': [
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
@@ -161,6 +166,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5' },
     { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42 GPS Watch' },
     { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Bushnell Ion Elite' },
+  
+    { slug: '/best-golf-gps-watch-under-300/', label: 'Best GPS Watch Under $300' },
+    { slug: '/compare/garmin-s70-vs-apple-watch-golf/', label: 'Garmin S70 vs Apple Watch for Golf' },
   ],
   'garmin-s62-review': [
     { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
@@ -183,12 +191,17 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'golf-balls': [
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — Best Driver 2026' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
+    { slug: '/golf-ball-finder/', label: 'Golf Ball Finder Tool' },
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
         { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
     { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
+  
+    { slug: '/compare/callaway-chrome-soft-vs-kirkland-signature/', label: 'Chrome Soft vs Kirkland Signature' },
+    { slug: '/compare/taylormade-tp5-vs-callaway-chrome-soft/', label: 'TP5 vs Chrome Soft Comparison' },
+    { slug: '/golf-ball-complete-guide/', label: 'Complete Golf Ball Guide' },
   ],
   'golf-ball-compression': [
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym — 2026 Driver Showdown' },
@@ -234,6 +247,12 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
             { slug: '/golf-club-distance-chart/', label: 'Golf Club Distance Chart' },
     { slug: '/golf-swing-speed-chart/', label: 'Golf Swing Speed Chart' },
     { slug: '/best-golf-swing-analyzers/',          label: 'Best Golf Swing Analyzers' },
+  
+    { slug: '/average-swing-speed-by-age/', label: 'Average Swing Speed by Age Chart' },
+    { slug: '/best-golf-courses-weekend-drive/', label: 'Best Golf Courses for Weekend Drives' },
+    { slug: '/best-golf-training-aids-home-practice/', label: 'Home Practice Training Aids' },
+    { slug: '/golf-apparel/', label: 'Golf Apparel Guide' },
+    { slug: '/golf-ball-finder/', label: 'Golf Ball Finder Tools' },
   ],
   'golf-course-etiquette': [
         { slug: '/best-left-handed-golf-clubs-2026/', label: 'Best Left Handed Golf Clubs' },
@@ -404,6 +423,12 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-drivers-forgiveness/',       label: 'Best Forgiving Drivers 2026' },
     { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
+  
+    { slug: '/best-driver-for-high-handicapper/', label: 'Best Driver for High Handicappers' },
+    { slug: '/compare/taylormade-qi35-vs-callaway-ai-smoke/', label: 'Qi35 vs Ai Smoke Driver Test' },
+    { slug: '/compare/taylormade-qi35-vs-titleist-gt2/', label: 'Qi35 vs Titleist GT2 Comparison' },
+    { slug: '/driver-vs-3-wood-off-tee/', label: 'Driver vs 3-Wood Off the Tee' },
+    { slug: '/how-to-fit-yourself-for-driver/', label: 'How to Fit Yourself for a Driver' },
   ],
 
   // ── Shoes cluster ──────────────────────────────────────────────────────────
@@ -426,6 +451,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/how-to-stop-3-putting/',               label: 'How to Stop 3-Putting' },
     { slug: '/best-golf-putters-2026/',         label: 'Best Putter for High Handicappers' },
+  
+    { slug: '/best-budget-putters-under-150/', label: 'Best Putters Under $150' },
   ],
 
   // ── Simulator cluster ──────────────────────────────────────────────────────
@@ -433,6 +460,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
     { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Garage Simulator' },
     { slug: '/best-golf-hitting-net-apartment-garage/',           label: 'Best Indoor Golf Net Setup' },
+  
+    { slug: '/golf-simulator-projector-distance-calculator/', label: 'Simulator Projector Distance Calculator' },
+    { slug: '/golf-simulator-cost-calculator/', label: 'Golf Simulator Cost Calculator' },
   ],
   'skytrak-vs-mevo': [
     { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Simulators for Small Spaces' },
@@ -460,6 +490,16 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
             { slug: '/golf-club-distance-chart/', label: 'Golf Club Distance Chart' },
     { slug: '/golf-swing-speed-chart/', label: 'Golf Swing Speed Chart' },
     { slug: '/best-golf-swing-analyzers/',           label: 'Best Golf Swing Analyzers 2026' },
+  
+    { slug: '/how-golf-launch-monitors-work/', label: 'How Launch Monitors Work' },
+    { slug: '/how-to-improve-with-launch-monitor/', label: 'How to Practice With a Launch Monitor' },
+    { slug: '/garmin-r10-vs-square-golf/', label: 'Garmin R10 vs Square Golf' },
+    { slug: '/compare/garmin-r10-vs-garmin-r50/', label: 'Garmin R10 vs R50 Comparison' },
+    { slug: '/compare/square-golf-vs-garmin-r10/', label: 'Square Golf vs Garmin R10 Test' },
+    { slug: '/compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/', label: 'MLM2PRO vs Launch Pro Comparison' },
+    { slug: '/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/', label: 'Mevo+ vs Launch Pro Test' },
+    { slug: '/arccos-vs-garmin-shot-tracking/', label: 'Arccos vs Garmin Shot Tracking' },
+    { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope Sensors' },
   ],
   'rapsodo-mlm2pro-review': [
         { slug: '/best-impact-screens-golf-simulator/', label: 'Best Impact Screens Golf Simulator' },
@@ -676,6 +716,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-for-distance/',   label: 'Best Balls for Distance' },
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     { slug: '/best-golf-push-carts-2026/', label: 'Walking Carts That Make Great Gifts' },
+  
+    { slug: '/fathers-day-golf-gifts-2026/', label: "Father's Day Golf Gift Guide 2026" },
+    { slug: '/how-to-get-your-kid-into-golf/', label: 'How to Get Your Kid Into Golf' },
   ],
   'junior-golf-clubs-guide': [
     { slug: '/how-to-get-your-kid-into-golf/', label: 'How to Get Your Kid Into Golf' },
