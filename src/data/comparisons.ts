@@ -586,8 +586,8 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'titleist-pro-v1-vs-kirkland-signature',
     thumbnail:   '/images/thumbnails/compare-pro-v1-vs-kirkland.webp',
-    title:       'Kirkland vs Pro V1 — Worth the $27 Difference?',
-    description: 'Titleist Pro V1 ($55/dz) vs Kirkland Signature ($28/dz) tested over 150 shots. Is the most popular premium ball really worth twice the price of Costco?',
+    title:       'Kirkland vs Pro V1 — 150 Shots, $27 Saved?',
+    description: 'Kirkland Signature ($28/dz) vs Titleist Pro V1 ($55/dz) — 150 shots tested for spin, distance, and feel. Is the Costco ball 90% as good at half the price?',
     productA:    'titleist-pro-v1',
     productB:    'kirkland-signature',
     winner:      'kirkland-signature',
