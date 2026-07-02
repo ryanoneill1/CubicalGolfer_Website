@@ -19,9 +19,10 @@ interface Props {
   meta:    PageMeta;
   schemas: object[];
   activeNav?: string;
+  preloadImage?: string; // LCP image URL — adds <link rel="preload"> in <head>
 }
 
-const { meta, schemas, activeNav = 'home' } = Astro.props;
+const { meta, schemas, activeNav = 'home', preloadImage } = Astro.props;
 
 const NAV_ITEMS = [
   { label: 'Home',              href: '/',                            key: 'home'          },
@@ -96,6 +97,9 @@ const NAV_ITEMS = [
   <!-- Self-hosted fonts — no third-party DNS/round-trip needed -->
   <link rel="preload" href="/fonts/dm-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="/fonts/playfair-display-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  {preloadImage && (
+    <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+  )}
 
   <!-- Preconnect to external domains for faster affiliate/image loads -->
   <link rel="preconnect" href="https://plausible.io" crossorigin>
