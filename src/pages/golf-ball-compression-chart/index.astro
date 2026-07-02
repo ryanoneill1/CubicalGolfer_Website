@@ -1,17 +1,15 @@
 ---
-import { AUTHOR_PROFILE } from '../../data/author';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 import { ARTICLES } from '../../data/articles';
-import EmbedBox from '../../components/EmbedBox.astro';
 
 const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
 const meta = {
-  title: 'Golf Ball Compression Chart — 34 Balls Ranked',
-  description: 'Golf ball compression chart with 34 balls ranked low to high. Sortable by brand, price, and swing speed.',
+  title: 'Golf Ball Compression Chart — 34 Balls Ranked Low to High (2026 Update)',
+  description: 'The complete golf ball compression chart with 34 balls ranked from low to high compression. Sortable by brand, cover type, price, and swing speed — find the right ball in 10 seconds.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'article' as const,
@@ -27,7 +25,7 @@ const TAG = 'cubicalgolfer-20';
 
 const balls = [
   { name: 'TaylorMade Noodle', compression: 34, cover: 'Ionomer', price: 20, minMph: 0, maxMph: 75, search: 'TaylorMade+Noodle+golf+balls', brand: 'TaylorMade' , notes: 'Ultra-soft feel at 34 compression; the cheapest ball worth playing for beginners under 75 mph.'},
-  { name: 'Callaway Supersoft', compression: 38, cover: 'Ionomer', price: 25, minMph: 0, maxMph: 80, asin: 'B0F2FSR89S', brand: 'Callaway', badge: 'OUR PICK <85mph' , notes: 'Our go-to recommendation for seniors — maximum distance at minimum swing speed with a surprisingly good feel around greens.'},
+  { name: 'Callaway Supersoft', compression: 38, cover: 'Ionomer', price: 25, minMph: 0, maxMph: 80, asin: 'B0F2FSR89S', brand: 'Callaway' , notes: 'Our go-to recommendation for seniors — maximum distance at minimum swing speed with a surprisingly good feel around greens.'},
   { name: 'Wilson DUO Soft+', compression: 40, cover: 'Ionomer', price: 22, minMph: 0, maxMph: 80, search: 'Wilson+DUO+Soft%2B+golf+balls', brand: 'Wilson' , notes: 'Lightest ball on the market at 40 compression; floats straighter than most soft balls due to 302-dimple pattern.'},
   { name: 'Titleist TruFeel', compression: 45, cover: 'Ionomer', price: 25, minMph: 65, maxMph: 85, search: 'Titleist+TruFeel+golf+balls', brand: 'Titleist' , notes: 'Titleist entry point at $25/dozen; noticeably firmer than Supersoft but better short-game control.'},
   { name: 'TaylorMade Soft Response', compression: 50, cover: 'Ionomer', price: 25, minMph: 70, maxMph: 85, search: 'TaylorMade+Soft+Response+golf+balls', brand: 'TaylorMade' , notes: 'Best mid-price option for 70-85 mph swingers who want more greenside spin than a pure distance ball.'},
@@ -35,7 +33,7 @@ const balls = [
   { name: 'Vice Drive', compression: 55, cover: 'Ionomer', price: 17, minMph: 70, maxMph: 90, search: 'Vice+Drive+golf+balls', brand: 'Vice', badge: 'BUDGET PICK' , notes: 'At $17/dozen, the best value ball on this chart — solid performance for casual rounds when losing balls is likely.'},
   { name: 'Srixon Soft Feel', compression: 60, cover: 'Ionomer', price: 27, minMph: 75, maxMph: 95, asin: 'B0CYDVBYQY', brand: 'Srixon', badge: 'BEST VALUE' , notes: 'Our best-value pick overall — urethane-like greenside feel from an ionomer cover at $27/dozen.'},
   { name: 'Vice Pro Soft', compression: 65, cover: 'Urethane', price: 28, minMph: 80, maxMph: 95, search: 'Vice+Pro+Soft+golf+balls', brand: 'Vice' , notes: 'Urethane cover at $28/dozen makes this the cheapest tour-quality ball; best for 80-95 mph swingers on a budget.'},
-  { name: 'Titleist Tour Soft', compression: 65, cover: 'Ionomer', price: 35, minMph: 80, maxMph: 95, search: 'Titleist+Tour+Soft+golf+balls', brand: 'Titleist', badge: 'OUR PICK 85-100mph' , notes: 'Bridges the gap between distance balls and tour balls; the Titleist pick for golfers who want brand trust without Pro V1 price.'},
+  { name: 'Titleist Tour Soft', compression: 65, cover: 'Ionomer', price: 35, minMph: 80, maxMph: 95, search: 'Titleist+Tour+Soft+golf+balls', brand: 'Titleist' , notes: 'Bridges the gap between distance balls and tour balls; the Titleist pick for golfers who want brand trust without Pro V1 price.'},
   { name: 'Titleist Velocity', compression: 65, cover: 'Ionomer', price: 30, minMph: 85, maxMph: 110, search: 'Titleist+Velocity+golf+balls', brand: 'Titleist' , notes: 'Designed purely for distance — highest ball speed in the Titleist lineup but minimal greenside spin.'},
   { name: 'Callaway Warbird', compression: 68, cover: 'Ionomer', price: 22, minMph: 80, maxMph: 100, search: 'Callaway+Warbird+golf+balls', brand: 'Callaway' , notes: 'High-launch, low-spin design built for golfers who need carry distance more than short-game finesse.'},
   { name: 'Bridgestone Tour B RX', compression: 68, cover: 'Urethane', price: 45, minMph: 85, maxMph: 100, search: 'Bridgestone+Tour+B+RX+golf+balls', brand: 'Bridgestone' , notes: 'Tour-level urethane at 68 compression — designed specifically for swing speeds of 85-100 mph. Excellent value alternative to Pro V1.'},
@@ -128,7 +126,7 @@ const schemas = [
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:12px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
+          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">12-handicap weekend golfer, Chicago, IL</span>
         </span>
         <span class="author-meta">
           📖 3,400 words &nbsp;·&nbsp;
@@ -145,7 +143,7 @@ const schemas = [
     <ul class="trust-card__list">
       <li><strong>Every ball purchased</strong> — bought with our own money, no manufacturer samples</li>
       <li><strong>Compression data verified</strong> — cross-referenced with manufacturer specs and independent testing</li>
-      <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — recommendations for weekend golfers, not tour pros</li>
+      <li><strong>12-handicap perspective</strong> — recommendations for weekend golfers, not tour pros</li>
       <li><strong>Updated 2026-05-25</strong> — prices and availability checked monthly</li>
     </ul>
     <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
@@ -173,7 +171,7 @@ const schemas = [
         <p style="margin:0;font-weight:700;font-size:15px;color:#1a1a1a;">Download the Golf Ball Compression Chart (PDF)</p>
         <p style="margin:4px 0 0;font-size:12px;color:#333;">Printable version — same data, take it to the range or pro shop.</p>
       </div>
-      <a href="/golf-ball-compression-chart/" download style="background:#1a1a1a;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;">Download PDF →</a>
+      <a href="/downloads/golf-ball-compression-chart-2026.pdf" download style="background:#1a1a1a;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:14px;text-decoration:none;white-space:nowrap;">Download PDF →</a>
     </div>
 
     <!-- TOC -->
@@ -257,7 +255,7 @@ const schemas = [
           <tbody>
             {balls.map(ball => (
               <tr data-compression={ball.compression} data-cover={ball.cover} data-price={ball.price} data-min-mph={ball.minMph} data-max-mph={ball.maxMph} data-name={ball.name}>
-                <td><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:11px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:11px;color:var(--muted);line-height:1.3;margin-top:3px;">{ball.notes}</div>}</td>
+                <td><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:10px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:11px;color:var(--muted);line-height:1.3;margin-top:3px;">{ball.notes}</div>}</td>
                 <td>{ball.compression}</td>
                 <td>{ball.cover}</td>
                 <td>~${ball.price}</td>
@@ -269,70 +267,6 @@ const schemas = [
         </table>
       </div>
     </section>
-
-    <!-- ═══ RECOMMENDED BALLS BY SWING SPEED ═══ -->
-    <section id="recommended-balls">
-      <h2 style="color:var(--green);">Our Top Pick for Each Swing Speed</h2>
-      <p>Based on the compression data above and 40+ rounds of testing, here are the three balls we would actually buy:</p>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:24px 0 32px;">
-        {(() => {
-          const picks = [
-            { speed: 'Under 85 mph', label: 'BEST FOR SLOW SWING', key: 'callaway-supersoft', name: 'Callaway Supersoft', compression: '38', why: 'Maximum distance at moderate speeds. The softest feel in the category with reliable straight flight. Best value under $25/dozen.' },
-            { speed: '85–100 mph', label: 'BEST FOR MID SWING', key: 'titleist-tour-soft', name: 'Titleist Tour Soft', compression: '65', why: 'Sweet spot of distance and greenside control. Urethane-like feel at a mid-range price. Our most-recommended ball for weekend golfers.' },
-            { speed: 'Over 100 mph', label: 'BEST FOR FAST SWING', key: 'titleist-pro-v1', name: 'Titleist Pro V1', compression: '87', why: 'Tour-level spin control and consistency. Worth the premium if your swing speed can compress it — the difference in greenside stopping power is real.' },
-          ];
-          return picks.map(pick => {
-            const aff = getAffiliateLink(pick.key);
-            return (
-              <div style="background:var(--cream-dark);border:2px solid var(--border);border-radius:12px;padding:20px;position:relative;">
-                <span style={`display:inline-block;background:var(--green);color:var(--gold-text);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:4px;margin-bottom:12px;`}>{pick.label}</span>
-                <h3 style="font-family:var(--font-head);font-size:20px;color:var(--green);margin:0 0 4px;">{pick.name}</h3>
-                <p style="font-size:13px;color:var(--muted);margin:0 0 4px;">Compression: {pick.compression} · Swing speed: {pick.speed}</p>
-                <p style="font-size:14px;margin:8px 0 16px;line-height:1.5;">{pick.why}</p>
-                <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
-                  <span style="font-size:16px;font-weight:700;color:var(--green);">{aff.price}</span>
-                  <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="background:var(--gold);color:#1a1a1a;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;text-decoration:none;white-space:nowrap;">Check Price →</a>
-                </div>
-                {aff.priceNote && (
-                  <p style="font-size:12px;color:var(--muted);margin:8px 0 0;">💡 {aff.priceNote}</p>
-                )}
-              </div>
-            );
-          });
-        })()}
-      </div>
-      <p style="font-size:13px;color:var(--muted);margin-top:0;">Prices are approximate. Links go to Amazon — as an affiliate we earn from qualifying purchases at no extra cost to you.</p>
-    </section>
-
-    <!-- ═══ NEXT STEPS — decision aid ═══ -->
-    <div style="margin:0 0 28px;padding:20px 24px;background:var(--green);border-radius:12px;">
-      <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 8px;">📋 Found your compression range?</p>
-      <p style="font-size:15px;color:#fff;margin:0 0 16px;line-height:1.5;">The chart above narrows it to 5-8 balls. Here's how to pick the final one:</p>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <a href="/best-golf-balls-2026/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Full Ball Rankings →</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">14 balls tested over 35+ rounds — sorted by swing speed</p>
-        </a>
-        <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Pro V1 vs Chrome Soft →</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">The two most popular premium balls compared head-to-head</p>
-        </a>
-        <a href="/compare/callaway-chrome-soft-vs-kirkland-signature/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Chrome Soft vs Kirkland →</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">$27 vs $13 — is the Costco ball really as good?</p>
-        </a>
-        <a href="/gear-quiz/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Take the Gear Quiz →</p>
-          <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">Answer 4 questions, get a personalized ball recommendation</p>
-        </a>
-      </div>
-    </div>
-
-    <!-- ═══ TRUST LINE ═══ -->
-    <p style="font-size:13px;color:var(--muted);margin:0 0 24px;padding:10px 16px;background:rgba(30,58,40,.04);border-radius:8px;line-height:1.5;">
-      <strong style="color:var(--green);">How we built this chart:</strong> All 34 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
-    </p>
 
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
     <section>
@@ -436,14 +370,6 @@ const schemas = [
 
   </article>
 
-
-  <EmbedBox
-    title="Golf Ball Compression Chart 2026"
-    embedUrl="https://www.cubicalgolfer.com/embeds/compression-chart.html"
-    sourceUrl="https://www.cubicalgolfer.com/golf-ball-compression-chart/"
-    sourceName="CubicalGolfer.com"
-    height={800}
-  />
 
   <StickyBar
     name="Callaway Supersoft"

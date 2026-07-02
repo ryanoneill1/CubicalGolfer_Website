@@ -1886,7 +1886,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Compression is the single most overlooked factor in golf ball selection. Under 85 mph swing speed: play compression 50-65. Between 85-100 mph: play 70-90. Over 100 mph: play 90+. The chart below lists every major ball with its compression, price, and the swing speed it performs best at. Our top pick: the <strong>Callaway Supersoft</strong> (~$25/dozen).',
     description: 'Golf ball compression chart 2026 — every major ball with compression rating, cover type, and matched swing speed. Printable PDF format available.',
     excerpt: 'Every golf ball ranked by compression — find the right ball for your swing speed in 30 seconds.',
-    intro: "Golf ball compression is the most important spec most golfers ignore. It is a number from 30 to 120 that measures how much the ball deforms at impact. Play the wrong compression and you leave distance on the table — a 80 mph swinger using a 100-compression tour ball loses 8-12 yards versus the correct low-compression ball. This chart lists every major golf ball with its compression rating, matched to the swing speed where it performs best. Scroll to the chart, find your swing speed column, and buy the ball that matches. For full reviews of each ball, see our <a href=\"/best-golf-balls-2026/\">best golf balls 2026 guide</a>.",
+    intro: "The right golf ball compression for your swing speed: <strong>under 85 mph use low compression (30-60)</strong>, <strong>85-100 mph use mid compression (65-85)</strong>, and <strong>over 100 mph use high compression (90+)</strong>. Compression is a number from 30 to 120 measuring how much the ball deforms at impact — lower means softer. Most amateurs play a ball that is too firm for their swing speed, leaving 5 to 15 yards on the table. The chart below lists compression ratings for 34 golf balls in 2026, organized by swing speed range. Match your compression to your speed and you gain distance without changing your swing. For full reviews, see our <a href=\"/best-golf-balls-2026/\">best golf balls 2026 guide</a>.",
     toc: ['What is golf ball compression', 'How to find your swing speed', 'Full compression chart', 'Best balls under 85 mph', 'Best balls 85-100 mph', 'Best balls over 100 mph', 'Compression by brand', 'FAQ'],
     sections: [
       {
@@ -1931,6 +1931,9 @@ export const ARTICLES: Article[] = [
         pros: ['Callaway Chrome Tour (90) — longest carry in our 100+ mph testing', 'Titleist Pro V1x (97) — lower launch, less spin for golfers who balloon', 'TaylorMade TP5 (85) — best spin separation between driver and wedge'],
         cons: ['At $50-58/dozen, premium balls are expensive for golfers who lose balls', 'Marginal performance difference between balls at this speed — feel is the differentiator'],
       },
+      { h2: 'How Golf Ball Compression Is Measured', body: 'Compression is measured by placing a golf ball between two flat steel plates and applying 200 pounds (90.7 kg) of force. The amount the ball deforms under that load is converted to a number where modern balls fall between 30 and 120. A ball rated 35 (Callaway Supersoft) deforms significantly more than one rated 100 (Pro V1x). This test uses only 200 pounds of force — an actual driver impact at 100 mph generates over 2,000 pounds. So compression ratings indicate relative softness between balls, not exactly what happens during a real swing. There is no single industry-standard gauge, so ratings can vary 3 to 5 points between manufacturers.' },
+      { h2: 'Temperature and Compression', body: 'Cold weather makes golf balls firmer. A ball rated 90 compression at 70°F can play closer to 100+ compression at 40°F. If you regularly play below 50°F, drop one compression tier from your normal ball. A golfer who plays a Pro V1 (87 compression) in summer might switch to a Chrome Soft (75) or Q-Star Tour (72) for winter rounds to maintain the same feel and launch characteristics. Store your golf balls at room temperature before playing — balls left in a cold car trunk overnight will play 10 to 15 points firmer than their rated compression.' },
+      { h2: 'Does Compression Really Affect Distance?', body: 'Yes, but not the way most golfers assume. Recent robotic testing shows higher compression balls often produce slightly faster ball speeds across all swing speeds — not just fast ones. The old rule that slow swingers must play soft balls has been partially debunked. However, for swing speeds under 85 mph, the distance difference between a 40-compression and 90-compression ball is only 2 to 4 yards off the tee. The bigger factor for most amateurs is feel and confidence — if a softer ball feels better and you swing more freely, you will hit it farther regardless of compression physics. Where compression matters most is around the greens: softer balls check and spin more on wedge shots, while firmer balls release and roll.' },
       {
         h2: 'Golf Ball Compression by Brand',
         body: "Titleist: Pro V1 (87), Pro V1x (97), AVX (77), Tour Speed (78), Tour Soft (65), Velocity (65), TruFeel (45). Callaway: Chrome Tour (90), Chrome Soft (75), Supersoft (38), Warbird (68). TaylorMade: TP5 (85), TP5x (97), Tour Response (77), Soft Response (50), Noodle (34). Bridgestone: Tour B X (100), Tour B XS (90), Tour B RX (68), e12 Contact (50). Srixon: Z-Star (88), Z-Star XV (102), Q-Star Tour (72), Soft Feel (60). Vice: Pro (80), Pro Plus (90), Pro Soft (65), Drive (55). Kirkland: Signature (75). Maxfli: Tour (90), Tour X (100), Straightfli (50). Wilson: Staff Model (87), Chaos (70), DUO Soft+ (40). Pinnacle: Rush (72). This list is based on manufacturer specifications and independent testing. Compression ratings can vary 3-5 points between production batches.",
@@ -1985,13 +1988,16 @@ export const ARTICLES: Article[] = [
       { q: 'What compression are Kirkland golf balls?', a: "Kirkland Signature golf balls have a compression of approximately 75 with a urethane cover. This makes them comparable to the Callaway Chrome Soft (75) at roughly half the price. They perform best for swing speeds between 85-100 mph." },
       { q: 'How do I know what compression golf ball to use based on swing speed?', a: "Use your 7-iron carry distance as a proxy: 110 yards = 75 mph (use compression 40-55), 130 yards = 85 mph (use compression 55-75), 150 yards = 95 mph (use compression 75-90), 170 yards = 105 mph (use compression 85-100). Or visit any golf store for a free swing speed measurement." },
     ],
+    sources: [
+      { label: 'MyGolfSpy — Golf Ball Compression Guide', url: 'https://mygolfspy.com/news-opinion/golf-ball-compression-guide/' },
+      { label: 'Snell Golf — How Compression Affects Performance', url: 'https://www.snellgolf.com/blogs/guides-and-tips/how-golf-ball-compression-ratings-affect-performance' },
+    ],
     related: [
-      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
-      { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
+      { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph Swing Speed' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x Comparison' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
+      { slug: '/best-golf-ball-15-handicap/', label: 'Best Ball for 15 Handicap' },
     ],
   },
 
