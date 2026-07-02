@@ -63,6 +63,7 @@ mkdirSync(dirname(OUT), { recursive: true });
 
 const doc = new PDFDocument({
   size: 'letter',
+  bufferPages: true, // required: footers are drawn per-page after layout
   margins: { top: 50, bottom: 60, left: MARGIN, right: MARGIN },
   info: {
     Title: 'Golf Ball Compression Chart 2026',
@@ -104,6 +105,9 @@ function drawRow(y, cells, opts = {}) {
 
 /* ── Page footer ── */
 function footer(pageNum, pageTotal) {
+  // Writing below the bottom margin makes pdfkit auto-append pages;
+  // zero it for this page while the footer is drawn.
+  doc.page.margins.bottom = 0;
   doc.save()
      .font('Helvetica').fontSize(7).fillColor('#999999')
      .text(
@@ -141,14 +145,21 @@ let tableY = 135;
 drawRow(tableY, HEADERS, { header: true });
 tableY += ROW_H + 2;
 
-const totalPages = 1; // single page fits 34 rows
+const PAGE_BOTTOM = doc.page.height - 60; // stay above bottom margin
 balls.forEach((b, i) => {
+  if (tableY + ROW_H > PAGE_BOTTOM) {
+    doc.addPage();
+    tableY = 60;
+    drawRow(tableY, HEADERS, { header: true });
+    tableY += ROW_H + 2;
+  }
   drawRow(tableY, [b.name, b.compression, b.cover, `$${b.price}`, b.fit], { stripe: i % 2 === 0 });
   tableY += ROW_H;
 });
 
 // Quick-reference box below table
 tableY += 14;
+if (tableY + 60 > PAGE_BOTTOM) { doc.addPage(); tableY = 60; }
 doc.save()
    .roundedRect(MARGIN, tableY, doc.page.width - MARGIN * 2, 60, 6)
    .fill(CREAM);
@@ -160,7 +171,12 @@ doc.font('Helvetica').fontSize(8).fillColor('#333333')
    .text('Over 100 mph  →  Compression 90–102 (Pro V1x, TP5x, Z-Star XV)', MARGIN + 12, tableY + 46);
 doc.restore();
 
-footer(1, 1);
+// Footers on every page with real page numbers
+const range = doc.bufferedPageRange();
+for (let i = 0; i < range.count; i++) {
+  doc.switchToPage(i);
+  footer(i + 1, range.count);
+}
 
 /* ── Finalize ── */
 doc.end();

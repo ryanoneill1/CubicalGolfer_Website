@@ -43,3 +43,11 @@
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
+
+# ── Embeddable pages ───────────────────────────────────────────
+# The "Embed this chart" iframe snippet points third-party sites at
+# /embeds/*. Detach the global SAMEORIGIN rule for this path only so
+# browsers allow the frame (attribution required, CC BY 4.0).
+/embeds/*
+  ! X-Frame-Options
+  Content-Security-Policy: frame-ancestors *
