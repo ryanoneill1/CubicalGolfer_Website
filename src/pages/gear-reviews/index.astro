@@ -13,9 +13,9 @@ const meta     = categoryMeta(cat);
 // Unique FAQ for this hub — questions a real gear shopper would ask before buying
 const hubFaq = [
   { q: 'How much golf experience does the reviewer actually have?',
-    a: 'The site is run by Ryan O., a weekend golfer based in Chicago. I have been playing golf since 2014, average 28 rounds per season, and play primarily out of South Shore Golf Course. I am not a teaching pro, a former mini-tour player, or a club fitter — I am a recreational golfer who got tired of buying gear based on bad reviews. The full author bio is on the about page.' },
+    a: 'The site is run by Ryan O., a [HANDICAP]-handicap weekend golfer based in [LOCATION]. I have been playing golf for [X] years, average [Y] rounds per season, and play primarily out of [HOME COURSE]. I am not a teaching pro, a former mini-tour player, or a club fitter — I am a recreational golfer who got tired of buying gear based on bad reviews. The full author bio is on the about page.' },
   { q: 'What gear do you actually own and use yourself?',
-    a: 'My in-the-bag setup as of 2026 is TaylorMade Stealth 2 Plus, TaylorMade Stealth 2 3-wood, TaylorMade P790 (5-PW), Vokey SM9 50°, 54°, 58°, Odyssey White Hot OG #7, with Titleist Pro V1 and a Bushnell Tour V6 Shift in the cart. I rotate test gear in and out, but my baseline setup stays consistent so I can isolate what each new product is actually doing differently.' },
+    a: 'My in-the-bag setup as of [SEASON YEAR] is [DRIVER MAKE/MODEL], [3-WOOD], [IRONS], [WEDGES], [PUTTER], with [BALL MODEL] and a [RANGEFINDER MODEL] in the cart. I rotate test gear in and out, but my baseline setup stays consistent so I can isolate what each new product is actually doing differently.' },
   { q: 'Why should I trust reviews from one weekend golfer instead of a magazine that tests with a robot?',
     a: 'Robots hit the center of the face every time. You do not. A driver that produces 175 mph ball speed off a robot is irrelevant if your real-world hits are 8-10 mm off center. Every test on this site reflects the dispersion patterns of someone who plays once a week, not someone who hits 500 balls a day. That is the actual question you are trying to answer when shopping for forgiveness.' },
   { q: 'Do you get free gear in exchange for positive reviews?',
@@ -37,7 +37,7 @@ const schemas  = [
       <span aria-current="page">Gear Reviews</span>
     </nav>
     <h1>Golf Gear Reviews</h1>
-    <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Rangefinders, drivers, irons, putters, GPS watches, golf balls — independently tested and ranked by how much they actually move the needle for a weekend golfer.</p>
+    <p class="cat-subhead">Rangefinders, drivers, irons, putters, GPS watches, golf balls — independently tested and ranked by how much they actually move the needle for a weekend golfer.</p>
     <div class="hero-pills">
       <a href="/best-golf-rangefinders-2026/" class="hero-pill"><span class="hero-pill-dot"></span>Rangefinders</a>
       <a href="/best-golf-drivers-forgiveness/" class="hero-pill"><span class="hero-pill-dot"></span>Drivers</a>
@@ -47,41 +47,51 @@ const schemas  = [
       <a href="/best-golf-gps-watches/" class="hero-pill"><span class="hero-pill-dot"></span>GPS watches</a>
     </div>
   </header>
-
-  <!-- ─── QUICK START ─── -->
-  <div style="max-width:100%;margin:0 auto 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
-    <a href="/best-golf-gear-2026/" style="display:block;padding:16px;background:#fff;border:2px solid var(--green);border-radius:10px;text-decoration:none;">
-      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">🏆 WINNERS</p>
-      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">#1 Pick in Every Category</p>
-      <p style="font-size:12px;color:var(--muted);margin:0;">One page, every winner — rangefinder to ball</p>
-    </a>
-    <a href="/compare/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
-      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">⚖️ COMPARE</p>
-      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">Head-to-Head Comparisons</p>
-      <p style="font-size:12px;color:var(--muted);margin:0;">38 product showdowns, tested side by side</p>
-    </a>
-    <a href="/gear-quiz/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
-      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">🎯 QUIZ</p>
-      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">Find Your Perfect Gear</p>
-      <p style="font-size:12px;color:var(--muted);margin:0;">4 questions → personalized recommendations</p>
-    </a>
-    <a href="/best-golf-gear-under-100/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
-      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">💰 BUDGET</p>
-      <p style="font-size:15px;font-weight:700;color:var(--green);margin:0 0 4px;">Best Gear Under $100</p>
-      <p style="font-size:12px;color:var(--muted);margin:0;">Weekend golfer essentials, budget-friendly</p>
-    </a>
-  </div>
-
+  <!-- ─── EDITORIAL BLOCK — must come BEFORE affiliate CTA ─── -->
+  <section style="max-width:100%;margin:0 auto 32px;padding:24px var(--page-px) 0;">
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;">
+      <div>
+        <img src="/images/gear-reviews-hero.webp"
+          alt="Golf bag with rangefinder, GPS watch, and a row of golf balls laid out on grass for a side-by-side gear test"
+          width="600" height="500" loading="eager" decoding="async"
+          style="width:100%;height:auto;border-radius:var(--r2);" />
+        <p style="font-size:13px;color:var(--muted);margin:10px 0 0;font-style:italic;">
+          [PHOTO CAPTION — e.g. "A typical test-day setup at [COURSE], [MONTH] 2026."]
+        </p>
+      </div>
+      <div style="font-size:16px;line-height:1.75;color:var(--body);">
+        <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;line-height:1.3;">Why this hub reads differently than other golf review sites</h2>
+        <p style="margin:0 0 14px;">Most golf gear reviews are written by someone who hits a 250-yard 7-iron and tests 12 drivers in a single afternoon. That is not useful if you play golf the way most people play golf — Saturday mornings, sometimes Sunday afternoons, fitting practice in between work calls and family obligations. Every review on this site reflects that constraint. Products get tested over [4-6] rounds minimum, on real courses, against gear that is already in the bag.</p>
+        <p style="margin:0 0 14px;">The reviewer is Ryan O., a [HANDICAP]-handicap who plays [X] rounds a year out of [HOME COURSE, STATE]. I bought my first rangefinder in [YEAR] and have been writing reviews of golf gear since [YEAR] because the existing reviews never told me what I actually wanted to know: which one is wrong for my swing, which one is overpriced for what it does, and which one is the smart buy if I have $200 and need it to last three seasons.</p>
+        <p style="margin:0 0 14px;">The categories below cover the equipment that matters most. <a href="/best-golf-rangefinders-2026/">Rangefinders</a> save more strokes than any other single piece of gear because guessing yardage is the single biggest source of approach-shot errors for recreational golfers. <a href="/best-golf-drivers-forgiveness/">Drivers</a> for high-handicaps need to be ranked by forgiveness, not ball speed — a 5-yard miss in the fairway beats a 15-yard miss in the rough every time. <a href="/best-golf-balls-2026/">Golf balls</a> need to be matched to your <a href="/golf-ball-compression-chart/">swing speed</a> rather than picked because tour pros use them. <a href="/best-golf-irons-2026/">Irons</a> for weekend players prioritize the mis-hit penalty over the center-strike distance.</p>
+        <p style="margin:0 0 14px;">Where it makes sense, we include a budget pick alongside the premium one. A $169 rangefinder is often 90% of a $329 rangefinder for someone who plays once a week. Where the budget pick is genuinely worse — like with launch monitors below $300, where the accuracy falloff is real — we say so and explain what the cheap option fails to do.</p>
+        <p style="margin:0 0 0;font-size:14px;color:var(--muted);">This site earns affiliate commissions when you buy through our links. Commission rates do not influence rankings — they are roughly equal across products at Amazon. Our full editorial policy is on the <a href="/about/">about page</a>. The testing methodology is documented at <a href="/how-we-test/">how we test</a>.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ─── HOW WE PICK THE TOP PICK PER CATEGORY ─── -->
+  <section style="max-width:1100px;margin:0 auto 40px;padding:0 var(--page-px);">
+    <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">How a product earns the top spot in any category</h2>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+      Three things have to be true. First, the product has to perform across mixed conditions — not just the controlled scenarios where every modern flagship looks good. A rangefinder that locks pins in flat sunlight but loses them in heat haze does not win. A driver that produces tour-level ball speed off a center hit but spins wildly off the toe does not win. Second, the product has to deliver value at its price point. A $400 product that performs 5% better than the $200 alternative loses the comparison for most weekend golfers, every time.
+    </p>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
+      Third — and this is the part that disqualifies the most products — the product has to be the right fit for a recreational golfer, not for a tour player. A blade iron with razor-sharp dispersion at center strike is the wrong recommendation for a 22-handicap who needs the mis-hit forgiveness, even if the blade iron is "better" by every measurable metric. Every buying guide on this site assumes you play sometimes, not constantly, and ranks accordingly.
+    </p>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
+      Reviews are refreshed when a new model drops, when a flagship's price falls below the budget pick, or when our own testing surfaces a problem we missed. The "Updated" date on each guide reflects the last time every recommendation was reverified.
+    </p>
+  </section>
   <!-- ─── FEATURED PICK — affiliate CTA moved below editorial ─── -->
   <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
-      <span style="font-size:12px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Current Top Pick</span>
+      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Current Top Pick</span>
       <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Bushnell Tour V6 Shift — ~$329</p>
-      <p style="font-size:13px;margin:0;color:var(--muted);">Our top-ranked rangefinder for 2026</p>
+      <p style="font-size:13px;margin:0;color:var(--muted);">Our top-ranked rangefinder for [SEASON YEAR]</p>
     </div>
     {(() => {
       const aff = getAffiliateLink('bushnell-tour-v6-shift');
-      const secUrl = aff.golfGalaxyUrl || '';
+      const secUrl = (aff as any).golfGalaxyUrl || '';
       const secR = secUrl.includes('amazon') ? 'Amazon' : secUrl.includes('playbetter') ? 'PlayBetter' : secUrl.includes('golfgalaxy') || secUrl.includes('click-101736949') ? 'Golf Galaxy' : '';
       return (
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
@@ -99,52 +109,17 @@ const schemas  = [
       );
     })()}
   </div>
-
-  <!-- ─── EDITORIAL BLOCK — must come BEFORE affiliate CTA ─── -->
-  <section style="max-width:100%;margin:0 auto 32px;padding:24px var(--page-px) 0;">
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:48px;align-items:start;">
-      <div>
-        <img src="/images/gear-reviews-hero.webp"
-          alt="Independent golf gear reviews — rangefinders, drivers, irons, putters, golf balls tested by a weekend golfer"
-          width="600" height="500" loading="eager" decoding="async"
-          style="width:100%;height:auto;border-radius:var(--r2);" />
-        <p style="font-size:13px;color:var(--muted);margin:10px 0 0;font-style:italic;">
-          A typical test-day layout at South Shore Golf Course, May 2026.
-        </p>
-      </div>
-      <div style="font-size:16px;line-height:1.75;color:var(--body);">
-        <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;line-height:1.3;">Why this hub reads differently than other golf review sites</h2>
-        <p style="margin:0 0 14px;">Most golf gear reviews are written by someone who hits a 250-yard 7-iron and tests 12 drivers in a single afternoon. That is not useful if you play golf the way most people play golf — Saturday mornings, sometimes Sunday afternoons, fitting practice in between work calls and family obligations. Every review on this site reflects that constraint. Products get tested over 4-6 rounds minimum, on real courses, against gear that is already in the bag.</p>
-        <p style="margin:0 0 14px;">The reviewer is Ryan O., a weekend golfer who plays South Shore, Harborside, Lost Marsh, and whatever Chicagoland public course has a tee time open. I started Cubical Golfer in 2026 because every gear review I read felt like it was written in a lab. The average golfer is not consistent — you drive the ball well on Saturday and cannot find the fairway on Sunday. That inconsistency is the whole point of how we test.</p>
-        <p style="margin:0 0 14px;">The categories below cover the equipment that matters most. <a href="/best-golf-rangefinders-2026/">Rangefinders</a> save more strokes than any other single piece of gear because guessing yardage is the single biggest source of approach-shot errors for recreational golfers. <a href="/best-golf-drivers-forgiveness/">Drivers</a> for high-handicaps need to be ranked by forgiveness, not ball speed — a 5-yard miss in the fairway beats a 15-yard miss in the rough every time. <a href="/best-golf-balls-2026/">Golf balls</a> need to be matched to your <a href="/golf-ball-compression-chart/">swing speed</a> rather than picked because tour pros use them. <a href="/best-golf-irons-2026/">Irons</a> for weekend players prioritize the mis-hit penalty over the center-strike distance.</p>
-        <p style="margin:0 0 14px;">Where it makes sense, we include a budget pick alongside the premium one. A $169 rangefinder is often 90% of a $329 rangefinder for someone who plays once a week. Where the budget pick is genuinely worse — like with launch monitors below $300, where the accuracy falloff is real — we say so and explain what the cheap option fails to do.</p>
-        <p style="margin:0 0 0;font-size:14px;color:var(--muted);">This site earns affiliate commissions when you buy through our links. Commission rates do not influence rankings — they are roughly equal across products at Amazon. Our full editorial policy is on the <a href="/about/">about page</a>. The testing methodology is documented at <a href="/how-we-test/">how we test</a>.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DECISION AID — help readers find the right starting point -->
-  <div style="max-width:100%;margin:0 auto 28px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
-    <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🤔 Not sure where to start?</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:13px;">
-      <a href="/gear-quiz/" style="color:var(--green);font-weight:600;text-decoration:none;">Take the 60-second gear quiz →</a>
-      <a href="/compare/" style="color:var(--green);font-weight:600;text-decoration:none;">Compare two products head-to-head →</a>
-      <a href="/best-golf-gear-2026/" style="color:var(--green);font-weight:600;text-decoration:none;">See our #1 pick in every category →</a>
-      <a href="/best-golf-gear-under-100/" style="color:var(--green);font-weight:600;text-decoration:none;">Best gear under $100 →</a>
-    </div>
-  </div>
-
   <!-- ─── ARTICLE GRID — all gear reviews ─── -->
   <div class="cat-page-body">
     {articles.length === 0 ? (
-      <p style="color:var(--muted);padding:32px 0">More guides coming soon — browse our <a href="/gear-reviews/" style="color:var(--green);font-weight:600">gear reviews</a> in the meantime.</p>
+      <p style="color:var(--muted);padding:32px 0">No articles yet — check back soon.</p>
     ) : (
       <>
         <h2 style="font-size:20px;margin:0 0 16px;">All gear reviews & buying guides</h2>
         <div class="articles-grid">
           {articles.map(a => (
             <a href={a.slug} class="article-card" aria-label={`Read: ${a.titleDisplay}`}>
-              <div class={`art-thumb ${a.thumbnail ? '' : a.thumb}`}>
+              <div class={`art-thumb ${(a as any).thumbnail ? '' : a.thumb}`}>
                 <span class={
                   a.tag === 'BUYING GUIDE' ? 'art-badge tag-buy' :
                   a.tag === 'COMPARISON'   ? 'art-badge tag-cmp' :
@@ -153,8 +128,8 @@ const schemas  = [
                   a.tag === 'LIFESTYLE'    ? 'art-badge tag-life' :
                   'art-badge tag-rev'
                 }>{a.tag}</span>
-                {a.thumbnail ? (
-                  <img src={a.thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async" width="400" height="260"
+                {(a as any).thumbnail ? (
+                  <img src={(a as any).thumbnail} alt={a.titleDisplay} loading="lazy" decoding="async" width="400" height="260"
                     class="art-thumb__img" onerror="this.style.display='none'" />
                 ) : (
                   <span aria-hidden="true">{a.emoji}</span>
@@ -174,48 +149,21 @@ const schemas  = [
       </>
     )}
   </div>
-  <!-- ─── TWO-COLUMN: EDITORIAL LEFT + RELATED/FAQ RIGHT ─── -->
-  <section style="max-width:100%;margin:48px auto 72px;padding:0 var(--page-px);">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:160px;align-items:start;" class="hub-bottom-grid">
-      <!-- LEFT: How we pick -->
-      <div style="padding-right:32px;">
-        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;line-height:1.3;">How a product earns the top spot in any category</h2>
-        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
-          Three things have to be true. First, the product has to perform across mixed conditions — not just the controlled scenarios where every modern flagship looks good. A rangefinder that locks pins in flat sunlight but loses them in heat haze does not win. A driver that produces tour-level ball speed off a center hit but spins wildly off the toe does not win. Second, the product has to deliver value at its price point. A $400 product that performs 5% better than the $200 alternative loses the comparison for most weekend golfers, every time.
-        </p>
-        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 14px;">
-          Third — and this is the part that disqualifies the most products — the product has to be the right fit for a recreational golfer, not for a tour player. A blade iron with razor-sharp dispersion at center strike is the wrong recommendation for a 22-handicap who needs the mis-hit forgiveness, even if the blade iron is "better" by every measurable metric. Every buying guide on this site assumes you play sometimes, not constantly, and ranks accordingly.
-        </p>
-        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0;">
-          Reviews are refreshed when a new model drops, when a flagship's price falls below the budget pick, or when our own testing surfaces a problem we missed. The "Updated" date on each guide reflects the last time every recommendation was reverified.
-        </p>
-      </div>
-      <!-- RIGHT: Related sections + FAQ -->
-      <div style="padding-left:32px;">
-        <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
-        <p style="font-size:15px;line-height:1.75;color:var(--body);margin:0 0 28px;">
-          Already narrowed down to two products? The <a href="/compare/">comparison hub</a> has head-to-head matchups for the most-asked decisions. Want to know what to do with the gear once you own it? The <a href="/improve-your-golf-game/">improve your game hub</a> covers the practice routines that make new equipment actually pay off. Need help on the tech side — launch monitors, simulators, apps? See the <a href="/golf-tech/">golf tech hub</a>.
-        </p>
-        <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Gear reviews FAQ</h2>
-        {hubFaq.map(item => (
-          <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
-            <summary style="padding:12px 16px;font-weight:700;font-size:14px;cursor:pointer;color:var(--green);">{item.q}</summary>
-            <p style="padding:0 16px 12px;font-size:13px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
-          </details>
-        ))}
-      </div>
-    </div>
+  <!-- ─── INTERNAL LINKS TO OTHER HUBS ─── -->
+  <section style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 14px;">Related sections of the site</h2>
+    <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0;">
+      Already narrowed down to two products? The <a href="/compare/">comparison hub</a> has head-to-head matchups for the most-asked decisions. Want to know what to do with the gear once you own it? The <a href="/improve-your-golf-game/">improve your game hub</a> covers the practice routines that make new equipment actually pay off. Need help on the tech side — launch monitors, simulators, apps? See the <a href="/golf-tech/">golf tech hub</a>.
+    </p>
   </section>
-  <style>{`
-    @media (max-width: 768px) {
-      .hub-bottom-grid {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
-      }
-      .hub-bottom-grid > div {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-    }
-  `}</style>
+  <!-- ─── FAQ ─── -->
+  <section class="hub-faq" style="max-width:960px;margin:40px auto 0;padding:0 var(--page-px);">
+    <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Gear reviews FAQ</h2>
+    {hubFaq.map(item => (
+      <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
+        <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{item.q}</summary>
+        <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+      </details>
+    ))}
+  </section>
 </BaseLayout>
