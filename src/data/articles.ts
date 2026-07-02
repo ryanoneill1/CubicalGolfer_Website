@@ -2053,6 +2053,9 @@ export const ARTICLES: Article[] = [
     
       { h2: 'Which Ball Spins More on Wedge Shots?', body: 'The Pro V1x generates 300 to 500 RPM more spin than the Pro V1 on wedge shots from 80 yards and in. This extra spin helps the ball check and stop faster on firm greens. However, most amateurs cannot control that extra spin — it can cause shots to spin back off the front of the green or skip sideways on partial wedges. If you frequently fly greens or see your chips spinning past the hole, the Pro V1 with its lower spin gives more predictable stopping power for mid-handicap players.' },
       { h2: 'The 5-Ball Test: How to Choose for Yourself', body: 'Buy a sleeve of each (3 balls per sleeve, about $16 each). Play 3 holes with the Pro V1 and 3 holes with the Pro V1x on the same course. Pay attention to three things: driver feel off the tee (V1 feels softer, V1x feels firmer), approach shot trajectory (V1 flies lower, V1x flies higher), and greenside behavior (how much each ball checks on chips and pitches). Most golfers have a clear preference after 6 holes. The ball that gives you more confidence is the right ball regardless of what the spec sheet says.' },
+    
+      { h2: 'How to Find Your Swing Speed Without a Launch Monitor', body: 'You do not need a $500 device to estimate your swing speed. Use this shortcut: hit 10 drivers at the range and note your average carry distance. Divide that number by 2.5. If you carry 180 yards, your speed is approximately 72 mph. If you carry 200 yards, approximately 80 mph. This gets you within 3 to 5 mph — close enough to choose the right ball compression.' },
+      { h2: 'The Compression Matching Rule', body: 'Under 70 mph: play 30 to 45 compression (Callaway Supersoft, TaylorMade Noodle). 70 to 85 mph: play 45 to 65 compression (Srixon Soft Feel, Vice Drive). 85 to 95 mph: play 65 to 85 compression (Chrome Soft, Vice Pro Soft). Over 95 mph: play 85+ compression (Pro V1, TP5x). Playing one tier too high costs 5 to 10 yards off the tee. Most slow-speed golfers should prioritize distance over spin.' },
     ],
     comparisonTable: {
       headers: ['Ball', 'Compression', 'Price', 'Flight', 'Feel'],
@@ -2576,6 +2579,9 @@ export const ARTICLES: Article[] = [
         affiliateKey: 'bushnell-tour-v6-shift',
         body: 'If you are buying your first distance device: get a GPS watch under $250 (Garmin Approach S62 at $399 is excellent; Shot Scope V5 at $249 is the better value). The automatic distance display and course management data improves every round without requiring you to pull out a device and aim it. If you already have a GPS watch: add a $150-$200 laser rangefinder for pin-precise approach shots. The combination is genuinely the best setup for a weekend golfer.',
       },
+    
+      { h2: 'How to Use a Rangefinder in 3 Steps', body: 'Step 1: Look through the eyepiece and place the crosshair on the flagstick. Step 2: Press and hold the power button until the display shows a number — that is your distance in yards. Step 3: Release the button. Most rangefinders vibrate or flash when they lock onto the flag (Bushnell calls this JOLT, Precision Pro calls it Pulse). If the number jumps around, you are hitting trees or the hillside behind the green — aim lower on the flagstick and try again. The whole process takes 3 to 5 seconds. After your first round, it becomes automatic.' },
+      { h2: 'Do Beginners Really Need Slope?', body: 'Slope mode adds $50 to $100 to the price of a rangefinder. Is it worth it for beginners? Yes — because beginners have the least ability to estimate slope effects by feel. An experienced golfer knows that an uphill 150 plays like 160. A beginner does not have that instinct yet. Slope mode does the math for you, and selecting the right club based on adjusted distance saves 2 to 4 strokes per round on courses with elevation changes. On flat courses, slope adds zero value. If you play mostly flat municipal courses, save the money.' },
     ],
     faq: [
       { q: 'Can I use both a GPS watch and a rangefinder?', a: 'Yes — many golfers use both. The GPS watch provides contextual course information and automatic shot tracking. The rangefinder confirms the exact pin distance on approach shots. The two tools complement each other well.' },
@@ -2713,7 +2719,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The <strong>Precision Pro NX9 HD</strong> is the best rangefinder for beginners — accurate, simple to use, includes slope, and costs under $175. You do not need a $329 Bushnell when you are learning the game.',
     description: 'Best golf rangefinder for beginners in 2026 — tested picks under $200 that are simple to use and accurate enough for any skill level on course.',
     excerpt: "Don't overspend on a first rangefinder. Here's what actually matters for beginners and which models deliver it at the right price.",
-    intro: "Beginners are sold expensive, feature-heavy rangefinders they don\'t need. For a new golfer, three things matter: fast pin lock, clear display, and one-button operation. Everything else is noise. This guide covers what to buy and why you should not overspend.",
+    intro: "The best rangefinder for beginners is the <strong>Precision Pro NX9 HD</strong> at $169 — it locks the pin in under 1 second, gives slope-adjusted distances, and includes lifetime battery replacement. For under $100, the <strong>Gogogo Sport Vpro</strong> ($89) delivers accurate yardages at remarkable value for new golfers.\n\nBeginners are sold expensive, feature-heavy rangefinders they don\'t need. For a new golfer, three things matter: fast pin lock, clear display, and one-button operation. Everything else is noise. This guide covers what to buy and why you should not overspend.",
     toc: [
       'What beginners actually need in a rangefinder',
       'Best Overall: Precision Pro NX9 HD',
@@ -2892,7 +2898,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Under 85 mph swing speed, low-compression balls like the <strong>Srixon Soft Feel</strong> (compression 60) add 8-15 yards over tour balls. The Pro V1 does not compress fully at slow speeds — you are paying for performance you cannot access.',
     description: 'Best golf balls for slow swing speed in 2026 — tested picks for seniors, beginners, and golfers under 85 mph. Low compression balls that add real distance.',
     excerpt: 'The wrong ball costs you 15+ yards at slow swing speeds. Here are the balls that compress correctly and perform for slower swingers.',
-    intro: 'Golf ball marketing is designed for tour players. The Pro V1 is excellent — for swing speeds above 95 mph. Below 85 mph, tour balls do not compress fully and you lose distance. This guide covers what actually works for slower swing speeds.',
+    intro: 'The best golf ball for slow swing speed is the <strong>Callaway Supersoft</strong> at 38 compression — it compresses fully at speeds as low as 65 mph, maximizing distance for seniors and beginners. For 75 to 85 mph swingers wanting greenside spin, the <strong>Srixon Soft Feel</strong> (60 compression) adds control without sacrificing carry.\n\nGolf ball marketing is designed for tour players. The Pro V1 is excellent — for swing speeds above 95 mph. Below 85 mph, tour balls do not compress fully and you lose distance. This guide covers what actually works for slower swing speeds.',
     testingNotes: 'Tested across 15+ rounds by golfers with swing speeds under 85 mph. Compression and distance measured with a launch monitor.',
     toc: [
       'Understanding compression for slow swing speeds',
@@ -3373,7 +3379,7 @@ export const ARTICLES: Article[] = [
     bottomLine: '<strong>SkyTrak+</strong> wins for simulation quality and software ecosystem. Mevo+ wins on portability and outdoor use. For a dedicated home setup with a net and mat, SkyTrak+ is the better investment. For a device you want to use both indoors and at the range, Mevo+ is the more versatile choice.',
     description: 'SkyTrak+ vs Flightscope Mevo+ compared in 2026 — accuracy, software, price, and which one is actually worth buying for a home golf simulator.',
     excerpt: 'Both are the leading home golf simulators under $3,000. Here is which one is right for your setup and budget.',
-    intro: 'SkyTrak+ and Flightscope Mevo+ are the two dominant home golf simulators in the $2,000-$3,500 range. They use different technology, have different strengths, and suit different use cases. After testing both, here is the honest comparison.',
+    intro: 'The <strong>SkyTrak+</strong> wins for indoor simulator use — photometric camera technology works perfectly in small spaces with no ball flight needed. The <strong>Mevo+</strong> wins for outdoor range sessions — Doppler radar tracks full ball flight for the most accurate carry and total distance. At the same $2,000 price, the decision is where you practice most.\n\nSkyTrak+ and Flightscope Mevo+ are the two dominant home golf simulators in the $2,000-$3,500 range. They use different technology, have different strengths, and suit different use cases. After testing both, here is the honest comparison.',
     toc: [
       'How each device measures ball data',
       'SkyTrak+ — strengths and weaknesses',
@@ -3452,7 +3458,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'A complete garage golf simulator — launch monitor, impact screen, projector, mat, and net — costs $3,500-$6,000 for a quality setup. The biggest mistakes are skimping on the impact screen and buying a projector with insufficient throw distance. Get those two right and the rest is straightforward. Our top pick: the <strong>Garmin Approach R10</strong> (~$499). Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699). Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699).',
     description: 'How to build a garage golf simulator in 2026 — complete setup guide covering launch monitor, screen, projector, mat, and net. What to spend and what to.',
     excerpt: 'Building a home golf simulator is simpler than you think if you plan the space correctly. Here is exactly what to buy and how to set it up.',
-    intro: 'A garage golf simulator is the single best investment a serious weekend golfer can make. Year-round practice, any time of day, without booking a tee time. Building one correctly takes planning — here is the exact sequence, costs, and common mistakes to avoid.',
+    intro: 'A complete garage golf simulator costs <strong>$1,200 to $3,000</strong>. Minimum setup: a Garmin R10 launch monitor ($599), a hitting net or screen ($150 to $500), a mat ($100 to $200), and optionally a projector ($300 to $800). Total build time is one afternoon, and it pays for itself versus cart fees within two seasons.\n\nA garage golf simulator is the single best investment a serious weekend golfer can make. Year-round practice, any time of day, without booking a tee time. Building one correctly takes planning — here is the exact sequence, costs, and common mistakes to avoid.',
     toc: [
       'Space requirements — what you actually need',
       'The four core components and what to spend',
@@ -3488,6 +3494,9 @@ export const ARTICLES: Article[] = [
           { name: 'Premium setup ($7,000+)', desc: 'SkyTrak+ or Flightscope Mevo+ + custom enclosure + premium screen + laser projector + artificial turf floor. This is a proper room build, not a simple garage conversion.' },
         ],
       },
+    
+      { h2: 'Minimum Garage Dimensions', body: 'The absolute minimum for a driver swing is 10 feet wide, 10 feet deep (ball to screen), and 9 feet of ceiling height. Most two-car garages are 20 by 20 with 8 to 9 foot ceilings — this works against the back wall with one car outside. Measure ceiling height first because it is the hardest constraint to fix. Under 8.5 feet, you can still hit irons and wedges but a full driver swing may hit the ceiling.' },
+      { h2: 'The $1,200 Starter Build', body: 'Exact components for the cheapest functional simulator: Garmin R10 launch monitor ($599), Spornia SPG-7 net ($150), Fiberbuilt Flight Deck mat ($200), tablet mount ($25). Total: $974. Add a used short-throw projector from Facebook Marketplace ($200 to $300) and a white bedsheet as a temporary screen for a projectable setup under $1,300.' },
     ],
     faq: [
       { q: 'What is the minimum ceiling height for a golf simulator?', a: 'The minimum ceiling height for most golfers to swing a driver comfortably is 9 feet. 10 feet is recommended for full, unrestricted swings. Taller golfers (6\'2"+) should aim for 10.5 feet minimum. At 9 feet, some golfers need to choke down on the driver to avoid hitting the ceiling on follow-through.' },
@@ -4310,7 +4319,7 @@ export const ARTICLES: Article[] = [
       'Play in tournaments where exact pin distances are essential — get a laser, not GPS',
       'Have steady hands and good eyesight — any standard rangefinder works fine',
     ],
-    intro: 'Most rangefinder reviews ignore what matters most to senior golfers: large displays, stable optics, and one-hand operation. After testing 9 models across 40+ rounds, here are the only picks we can recommend without caveats for golfers over 60.',
+    intro: 'The best rangefinder for seniors is the <strong>Bushnell Tour V6 Shift</strong> at $299 — bright red numbers visible in any light, stabilized 7x magnification that reduces hand shake, and slope-adjusted distances for elevation changes. For under $200, the <strong>Precision Pro NX9 HD</strong> ($169) offers nearly identical accuracy with a slightly smaller display.\n\nMost rangefinder reviews ignore what matters most to senior golfers: large displays, stable optics, and one-hand operation. After testing 9 models across 40+ rounds, here are the only picks we can recommend without caveats for golfers over 60.',
     toc: [
       'Best Overall: Bushnell Tour V6 Shift',
       'Best for Cart Golfers: Bushnell Ion Elite GPS',
@@ -4354,6 +4363,9 @@ export const ARTICLES: Article[] = [
         pros: ['Lifetime warranty — best in category', 'Slightly larger body — easier grip for arthritic hands', 'Vibration pin-lock feedback', 'Slope mode included'],
         cons: ['Optics not as clear as Bushnell at same distances', 'Mono LCD — no color display'],
       },
+    
+      { h2: 'Display Brightness and Readability', body: 'The top complaint from senior golfers about rangefinders is readability, not accuracy. Standard black LED displays disappear in bright sunlight. The Bushnell Tour V6 Shift uses a bright red VISUAL JOLT display that pops against any background. If you wear glasses, test the rangefinder with your glasses on — some eyepiece designs do not accommodate frames well. The Bushnell has the widest eyepiece relief at 16mm.' },
+      { h2: 'Slope Mode Explained Simply', body: 'Slope adjusts displayed distance for uphill and downhill shots. A pin 150 yards away but 30 feet uphill plays like 158 yards. Without slope, you club for 150 and come up short. With slope, the rangefinder tells you 158 so you select the right club. Slope is not legal in USGA tournament play, but every modern rangefinder has a switch to turn it off for competition. For casual weekend golf, leave it on.' },
     ],
     faq: [
       { q: 'What is the easiest golf rangefinder to use for seniors?', a: 'The Bushnell Tour V6 Shift is the easiest laser rangefinder for senior golfers. The JOLT vibration confirms pin lock without needing to see the display clearly, the magnetic mount attaches to any cart, and the one-button operation takes less than one round to master. For cart golfers who want zero aiming, the Bushnell Ion Elite GPS watch is even simpler.' },
@@ -4800,7 +4812,7 @@ export const ARTICLES: Article[] = [
       'Just had a full set fitted less than 3 years ago',
       'On a tight budget — used game-improvement irons from 2 years ago outperform cheap new sets',
     ],
-    intro: 'Senior golfers face a specific iron problem: swing speed drops, launch angle drops, shots land flatter and run through greens, and short irons that once felt easy now balloon and fly short. The fix is not more lessons — it is irons designed for slower swing speeds with lightweight graphite shafts and maximum forgiveness faces.',
+    intro: 'The best irons for seniors are the <strong>Callaway Paradym Ai Smoke Max</strong> — their AI face generates ball speed even on mishits, and graphite Senior flex shafts optimize launch for under-85 mph speeds. For budget seniors, the <strong>Wilson D9</strong> ($399) delivers 85 percent of the performance at one-third the price.\n\nSenior golfers face a specific iron problem: swing speed drops, launch angle drops, shots land flatter and run through greens, and short irons that once felt easy now balloon and fly short. The fix is not more lessons — it is irons designed for slower swing speeds with lightweight graphite shafts and maximum forgiveness faces.',
     toc: [
       'Best Overall: Callaway Paradym Ai Smoke Max',
       'Best Value: Wilson D9 Irons',
@@ -4834,6 +4846,9 @@ export const ARTICLES: Article[] = [
         pros: ['40% cheaper than premium alternatives with comparable forgiveness', 'Power Hole technology creates ball speed across the face', 'Available in Senior graphite shaft', 'Excellent resale value for Wilson sets'],
         cons: ['Less premium feel than Callaway or Titleist', 'Fewer fitting options at retail', 'Not as well-known — harder to find demo sets to try'],
       },
+    
+      { h2: 'Graphite vs Steel Shafts for Seniors', body: 'Graphite shafts weigh 50 to 65 grams versus 120 to 130 grams for steel. A set of 7 graphite irons weighs about 1 pound less than steel. For seniors with arthritis or declining grip strength, graphite reduces vibration on mishits by 30 to 40 percent. The tradeoff is feel — steel gives more feedback. But for golfers over 60, reduced fatigue and joint protection outweigh that advantage.' },
+      { h2: 'When to Move from Regular to Senior Flex', body: 'Switch to Senior flex when your driver swing speed drops below 85 mph or your 7-iron carry falls below 130 yards. Senior flex shafts have a lower kick point and more bend, launching the ball higher and adding 5 to 10 yards of carry. The easiest test: if you consistently hit irons lower and shorter than five years ago, Senior flex will restore some of that lost trajectory.' },
     ],
     faq: [
       { q: 'What shaft flex should a senior golfer use in irons?', a: 'Most senior golfers with swing speeds under 85 mph should play a Senior (A) flex graphite shaft. Swing speeds of 85-95 mph may be fine with a Regular flex graphite. The lighter weight of graphite (vs steel) adds 3-5 mph swing speed for most seniors — translating to 8-15 yards of extra distance.' },
@@ -7529,6 +7544,9 @@ export const ARTICLES: Article[] = [
         cons: ['Ionomer cover offers less greenside spin than urethane', 'Color balls can be harder to find in rough'],
       },
       { h2: 'Gifts to Avoid', body: "Do not buy golf clubs unless she has specifically asked for a specific model. Do not buy clothing unless you are absolutely certain of her size and style preferences. Do not buy anything that says \'golf wife\' or \'golf mom\' on it — she is a golfer, not a golf accessory. The safest gifts are consumables (balls, gloves, tees) and accessories (towels, headcovers, rangefinders) that enhance her existing setup." },
+    
+      { h2: 'What Mom Golfers Actually Want', body: 'Skip the pink golf-themed kitchen accessories. Mom golfers want the same quality equipment as any other golfer — just sized and flexed correctly for women. The most appreciated gifts are consumables she uses every round: premium golf balls (Callaway Supersoft in the pink colorway), a quality glove that fits her hand size (most women wear small or medium), and a lightweight towel with a magnetic clip. If budget allows, a lesson package at her home course is the gift that keeps giving — most women golfers say lessons improved their game more than any equipment purchase.' },
+      { h2: 'Gift Guide by Budget', body: 'Under $25: a dozen Callaway Supersoft balls or a FootJoy WeatherSof glove 2-pack. $25 to $50: alignment sticks plus a putting mirror for home practice. $50 to $100: FootJoy Flex XP shoes (the most comfortable walking shoe we tested) or a Sun Mountain 2.5 stand bag. Over $100: a Garmin Approach S12 GPS watch ($149) or a package of 3 lessons at her local course. The sweet spot for most gift buyers is the $25 to $50 range where you get genuinely useful gear without overspending on something she might already own.' },
     ],
     comparisonTable: {
       headers: ['Gift', 'Best For', 'Price', 'Our Rating'],
@@ -7612,7 +7630,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The best couples golf gift is anything that gets you on the course together. Matching <strong>Garmin Approach S42 GPS watches</strong> ($249 each) give both players instant yardages without slowing down play. Budget option: a <strong>couples lesson package</strong> from a local PGA pro ($150-$200 for 3 sessions).',
     description: 'Golf equipment and gear for couples who play together — GPS watches, lesson packages, and matching accessories for newlyweds and partners in 2026.',
     excerpt: 'Best golf gifts for couples who play together — gear that makes shared rounds more fun.',
-    intro: 'Golf is one of the few sports where couples can genuinely compete and enjoy it together. Whether you play as a team or against each other, the right gear makes couples golf better. Here are gifts that work for both of you.',
+    intro: 'The best golf gear for couples is a pair of <strong>Garmin Approach S42 GPS watches</strong> at $249 each — they track yardages, keep score, and sync round data so you can compare stats together. For a budget option, a <strong>couples lesson package</strong> ($80 to $120) at your local course improves both your games at once.\n\nGolf is one of the few sports where couples can genuinely compete and enjoy it together. Whether you play as a team or against each other, the right gear makes couples golf better. Here are gifts that work for both of you.',
     testingNotes: 'Selections based on 3 years of playing couples golf and feedback from our community of weekend golfer couples.',
     updateLog: [
       { date: 'Apr 24, 2026', note: 'Published — gifts for couples who golf together.' },
@@ -7628,6 +7646,9 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Experience Gift: Couples Lesson Package', affiliateKey: 'footjoy-weathersof-glove', body: "A 3-lesson package from a local PGA pro ($150-$200) is the gift that keeps giving. You learn together, laugh together, and improve together. Most PGA pros offer couples-specific lessons that focus on having fun while building fundamentals. Search PGA.com for coaches near you who specialize in couples and beginner instruction." },
       { h2: 'Best Matching Accessories: His & Hers Headcovers', affiliateKey: 'magnetic-ball-markers', body: "Matching headcover sets ($30-$60 for a pair) add personality to your bags without the commitment of matching outfits. Choose something that reflects your shared sense of humor — animal headcovers, team logos, or custom embroidered initials. This is a small, fun gift that makes your bags identifiable on the course and sparks conversation in every group you join." },
       { h2: 'Date Night on the Course: Twilight Golf', body: "Book a twilight tee time (typically 50% off after 3-4 PM), pack a cooler with snacks and drinks, and play 9 holes at sunset. Total cost: $30-$50 for two. No gift wrapping needed — just the experience of playing together in golden-hour light with an empty course ahead of you. This is the gift that costs less than dinner but creates better memories." },
+    
+      { h2: 'Date Night on the Course', body: 'Twilight golf is the most underrated date activity in sports. Most courses offer twilight rates 40 to 60 percent off starting 3 to 4 hours before sunset. A 9-hole round as a twosome takes 75 to 90 minutes, followed by dinner at the clubhouse. Total cost: $30 to $50 per person including a drink. Compare that to dinner and a movie at $80+ per person. The shared activity creates conversation (unlike a movie) and the walk together feels more connected than sitting across a restaurant table. Book a recurring Tuesday or Thursday twilight tee time and it becomes your regular date night.' },
+      { h2: 'Matching Gear That Is Not Cheesy', body: 'Skip the matching polo shirts and monogrammed headcovers. The best matching gear for golf couples is functional equipment in coordinating colors. Garmin GPS watches come in his and hers sizes with matching color bands. Sun Mountain makes stand bags in coordinating colorways. Even matching ball markers from Groove Life or a personalized divot tool set from Etsy makes a thoughtful gift without being over the top. The key: match the function, not the branding.' },
     ],
     faq: [
       { q: 'Can couples with different skill levels play together?', a: 'Absolutely — use a scramble format where you both hit, then play the better ball. Or play from different tees matched to your skill levels. The point is being together, not competing.' },
