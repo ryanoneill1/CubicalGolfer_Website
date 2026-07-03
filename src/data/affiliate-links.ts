@@ -2599,7 +2599,7 @@ export const AFFILIATE: Record<string, {
     price: '~$550',
     priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
     label: 'Check Price at Amazon →',
-    imgSrc: '', imgAlt: 'Garmin Approach S70 GPS golf watch',
+    imgSrc: '/images/products/garmin-s70.webp', imgAlt: 'Garmin Approach S70 GPS golf watch',
   },
   'titleist-gt2-driver': {
     url: 'https://www.amazon.com/s?k=titleist+gt2+driver&tag=cubicalgolfer-20',
@@ -2679,6 +2679,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/garmin-ct10.webp', imgAlt: 'Garmin CT10 club tracking sensors',
   },
   'apple-watch-ultra-golf': {
+    imgSrc: '/images/products/AppleWatch.webp', imgAlt: 'Apple Watch Ultra with golf GPS app',
     url: 'https://www.amazon.com/s?k=apple+watch+golf&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: 'from ~$399',
