@@ -1,13 +1,15 @@
 ---
 /**
  * TrustBar.astro — Horizontal trust indicator pills.
- * Static content, no props. For homepage hero and hub pages.
+ * Testing claim sources from author.ts (single source of truth) so it can
+ * never contradict the byline/schema claims quality raters cross-check.
  */
+import { AUTHOR_PROFILE } from '../data/author';
 ---
 
 <div class="tb" role="complementary" aria-label="Trust indicators">
   <div class="tb__pills">
-    <span class="tb__pill">🏆 40+ rounds tested per product</span>
+    <span class="tb__pill">🏆 {AUTHOR_PROFILE.testingLabel}</span>
     <span class="tb__pill">💳 All gear independently purchased</span>
     <span class="tb__pill">🚫 Zero sponsored content</span>
     <span class="tb__pill">⭐ Real on-course results</span>
