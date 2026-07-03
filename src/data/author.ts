@@ -7,7 +7,7 @@
  *
  * FTC / Google E-E-A-T rationale: Google's quality raters check author
  * consistency across a site. Contradictory claims (e.g. "10 index" in
- * schema vs "12 handicap" in the byline) undermine trust signals.
+ * schema vs "10 handicap" in the byline) undermine trust signals.
  * The FTC's Endorsement Guides require that testing claims be truthful
  * and substantiable. One canonical profile eliminates drift.
  */
@@ -21,17 +21,18 @@ const DOMAIN = 'https://www.cubicalgolfer.com';
 export const AUTHOR_PROFILE = {
   name:           'Ryan O.',
   alternateName:  'Cubical Golfer',
-  handicap:       12,
-  handicapLabel:  '12-handicap',
-  homeCourse:     'South Shore & Harborside',
+  handicap:       10,
+  handicapLabel:  '10-handicap',
+  homeCourse:     'Harborside Golf Course',
   city:           'Chicago, IL',
   roundsPerYear:  '25–40',
+  playingSince:   2010,
   testingMin:     10,           // minimum rounds per product review
   testingLabel:   '10+ real rounds per product',
   siteTestTotal:  '40+',        // total rounds across all reviews combined
   gearPolicy:     'No freebies, no manufacturer loans.',
-  bio:            'Tests every piece of gear on his own dime across 25–40 rounds a year at South Shore and Harborside in Chicago, IL. No freebies, no manufacturer loans.',
-  jobTitle:       '12-Handicap Weekend Golfer & Gear Editor',
+  bio:            'Playing since 2010. Tests every piece of gear on his own dime across 25–40 rounds a year at Harborside Golf Course in Chicago, IL. No freebies, no manufacturer loans.',
+  jobTitle:       '10-Handicap Weekend Golfer & Gear Editor',
   photoPath:      '/images/ryan-author-photo.webp',
   aboutUrl:       `${DOMAIN}/about/`,
 } as const;

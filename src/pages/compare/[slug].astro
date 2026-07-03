@@ -2,6 +2,7 @@
 // src/pages/compare/[slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { AUTHOR_PROFILE } from '../../data/author';
 import StickyBar from '../../components/StickyBar.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
@@ -284,7 +285,7 @@ if (compProducts.length > 0) {
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:12px;font-weight:400;color:#556B5C;margin-left:6px">12-handicap weekend golfer, Chicago, IL</span>
+          <span style="font-size:12px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
         </span>
         <span class="author-meta">
           📅 Updated: {c.dateModified} &nbsp;·&nbsp;
