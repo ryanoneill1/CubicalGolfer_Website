@@ -212,7 +212,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
     { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
-  ],
+  
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls for 2026 — Full Guide' },],
   'golf-balls-slow-swing': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
@@ -335,7 +336,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-putters-2026/',             label: 'Best Golf Putters 2026' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
-  ],
+  
+    { slug: '/best-budget-putters-under-150/', label: 'Top Putters for Under $150' },],
   'why-does-my-golf-ball-go-right': [
     { slug: '/how-to-fix-your-slice/',              label: 'Full Slice Fix Guide' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
@@ -500,7 +502,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/', label: 'Mevo+ vs Launch Pro Test' },
     { slug: '/arccos-vs-garmin-shot-tracking/', label: 'Arccos vs Garmin Shot Tracking' },
     { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope Sensors' },
-  ],
+  
+    { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors With No Subscription' },],
   'rapsodo-mlm2pro-review': [
         { slug: '/best-impact-screens-golf-simulator/', label: 'Best Impact Screens Golf Simulator' },
         { slug: '/golf-simulator-room-dimensions-guide/', label: 'Golf Simulator Room Dimensions Guide' },
@@ -677,7 +680,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 by Swing Speed' },
     { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
     { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
-  ],
+  
+    { slug: '/best-golf-drivers-under-200/', label: 'Drivers Under $200 for Beginners' },],
   'budget-launch-monitors': [
     { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' },
     { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Rapsodo vs Garmin R10' },
@@ -688,7 +692,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/skytrak-plus-review/', label: 'SkyTrak+ Review' },
     { slug: '/mevo-plus-review/', label: 'Mevo+ Review' },
     { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
-  ],
+  
+    { slug: '/best-launch-monitors-no-subscription/', label: 'Subscription-Free Launch Monitors' },],
   'swing-analyzer-iphone': [
     { slug: '/arccos-caddie-review/', label: 'Arccos Caddie Review' },
         { slug: '/best-golf-swing-analyzer-iphone/', label: 'Best Golf Swing Analyzer Iphone' },
@@ -830,7 +835,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     { slug: '/best-golf-gloves-for-men/', label: 'Best Golf Gloves 2026' },
-  ],
+  
+    { slug: '/best-golf-rain-gear-2026/', label: 'Best Golf Rain Gear for 2026' },],
   // ── 7 new buying guide clusters ───────────────────────────────────────
   'indoor-putting-green': [
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
@@ -953,13 +959,15 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade Putter' },
-  ],
+  
+    { slug: '/best-budget-putters-under-150/', label: 'Affordable Putters Under $150' },],
   'mallet-vs-blade': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
     { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
     { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
     { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
-  ],
+  
+    { slug: '/best-budget-putters-under-150/', label: 'Best Budget Putters Under $150' },],
   'driver-under-300': [
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
         { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
@@ -967,7 +975,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
-  ],
+  
+    { slug: '/best-golf-drivers-under-200/', label: 'Best Drivers Under $200' },],
   'driver-slow-swing': [
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
         { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
@@ -1004,6 +1013,51 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-putters-2026/', label: 'Putters for Shaky Hands' },
     { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
+  
+    { slug: '/best-golf-grips-sweaty-hands/', label: 'Best Grips for Sweaty Hands' },],
+
+  'subscription-cost': [
+    { slug: '/best-launch-monitors-no-subscription/', label: 'Best No-Subscription Launch Monitors' },
+  ],
+
+  'driver-loft-guide': [
+    { slug: '/best-golf-drivers-under-200/', label: 'Budget Drivers Under $200' },
+  ],
+
+  'grips-2026': [
+    { slug: '/best-golf-grips-sweaty-hands/', label: 'Grips for Sweaty Hands and Humidity' },
+  ],
+
+  'gloves': [
+    { slug: '/best-golf-grips-sweaty-hands/', label: 'Sweat-Proof Golf Grips' },
+  ],
+
+  'golf-rain-jacket': [
+    { slug: '/best-golf-rain-gear-2026/', label: 'Complete Rain Gear Guide for 2026' },
+  ],
+
+  'golf-umbrella': [
+    { slug: '/best-golf-rain-gear-2026/', label: 'Full Rain Gear Setup for Golfers' },
+  ],
+
+  'best-electric-push-cart': [
+    { slug: '/best-golf-push-carts-2026/', label: 'Best Manual Push Carts for 2026' },
+  ],
+
+  'best-golf-bags-walking': [
+    { slug: '/best-golf-push-carts-2026/', label: 'Golf Push Carts for Walkers' },
+  ],
+
+  'cart-bag': [
+    { slug: '/best-golf-push-carts-2026/', label: 'Push Cart Picks for 2026' },
+  ],
+
+  'handicap-explained': [
+    { slug: '/average-golf-handicap/', label: 'Average Golf Handicap by Age and Skill' },
+  ],
+
+  'lower-handicap': [
+    { slug: '/average-golf-handicap/', label: 'What Is the Average Golf Handicap?' },
   ],
 };
 
