@@ -53,7 +53,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'garmin-approach-s62-vs-shot-scope-v5',
     thumbnail: '/images/thumbnails/compare-garmin-approach-s62-vs-shot-scope-v5.webp',
-    title:       'Garmin S62 vs Shot Scope V5: Best GPS Watch',
+    title:       'Garmin S62 vs Shot Scope V5 — GPS Watch (2026)',
     description: 'Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in?',
     productA:    'garmin-approach-s62',
     productB:    'shot-scope-v5',
@@ -121,7 +121,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'callaway-paradym-vs-taylormade-qi35',
     thumbnail: '/images/thumbnails/compare-callaway-paradym-vs-taylormade-qi35.webp',
-    title:       'Qi35 Max vs Paradym Ai Smoke — Driver Showdown',
+    title:       'Qi35 Max vs Ai Smoke Driver — Winner After 20 Rounds',
     description: 'Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed, forgiveness, and mis-hit data compared. See which driver wins for weekend golfers.',
     productA:    'callaway-paradym-ai-smoke-max',
     productB:    'taylormade-qi35-max',
@@ -234,7 +234,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'blue-tees-vs-bushnell-tour-v6',
     thumbnail: '/images/thumbnails/compare-blue-tees-vs-bushnell-tour-v6.webp',
-    title:         'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift',
+    title:         'Blue Tees vs Bushnell V6 — $100 Difference Worth It?',
     description:   'Blue Tees vs Bushnell rangefinder: we tested both over 30+ rounds. Accuracy is identical — the real differences are optics, vibration feedback, and.',
     productA:      'blue-tees-series-3-max',
     productB:      'bushnell-tour-v6-shift',
@@ -266,7 +266,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-s12-vs-bushnell-ion-elite',
     thumbnail: '/images/thumbnails/compare-garmin-s12-vs-bushnell-ion-elite.webp',
-    title:         'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch',
+    title:         'Garmin S12 vs Bushnell Ion Elite 2026 — Under $200',
     description:   'Garmin Approach S12 vs Bushnell Ion Elite: the two best GPS golf watches under $200. We tested both on course — here is which to buy and why.',
     productA:      'garmin-approach-s12',
     productB:      'bushnell-ion-elite',
@@ -301,7 +301,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'cobra-aerojet-max-vs-ping-g430-max',
     thumbnail: '/images/thumbnails/compare-cobra-aerojet-max-vs-ping-g430-max.webp',
-    title:       'Cobra Aerojet Max vs Ping G430 Max Driver',
+    title:       'Cobra Aerojet Max vs Ping G430 Max — 2026 Test',
     description: 'Cobra Aerojet Max vs Ping G430 Max compared for forgiveness, distance, and value in 2026. Which mid-range driver is the best for weekend golfers?',
     productA:    'cobra-aerojet-max',
     productB:    'ping-g430-max-driver',
@@ -332,7 +332,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'cleveland-launcher-xl2-vs-cobra-aerojet-max',
     thumbnail: '/images/thumbnails/compare-cleveland-launcher-xl2-vs-cobra-aerojet-max.webp',
-    title:       'Cleveland Launcher XL2 vs Cobra Aerojet Max',
+    title:       'Launcher XL2 vs Aerojet Max Driver — 2026 Test',
     description: 'Cleveland Launcher XL2 vs Cobra Aerojet Max — lightweight forgiveness vs mid-range power. Which driver is best for seniors and slow swing speeds?',
     productA:    'cleveland-launcher-xl2',
     productB:    'cobra-aerojet-max',
@@ -401,7 +401,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'lab-golf-df3-vs-odyssey-two-ball-eleven',
     thumbnail: '/images/thumbnails/compare-lab-golf-df3-vs-odyssey-two-ball-eleven.webp',
-    title:       'LAB Golf DF3 vs Odyssey Two Ball Eleven',
+    title:       'LAB DF3 vs Odyssey Two Ball — Putter Test 2026',
     description: 'LAB Golf DF3 vs Odyssey Two Ball Eleven compared — lie angle balanced vs high MOI mallet. Which putter design is better for inconsistent strokes?',
     productA:    'lab-golf-df3',
     productB:    'odyssey-two-ball-eleven',
@@ -433,7 +433,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug: 'bushnell-tour-v6-vs-callaway-300-pro',
     thumbnail: '/images/thumbnails/bushnell-v6-review-thumb.webp',
-    title: 'Bushnell Tour V6 Shift vs Callaway 300 Pro',
+    title: 'Bushnell V6 vs Callaway 300 Pro — $329 vs $149',
     description: 'Bushnell Tour V6 Shift ($329) vs Callaway 300 Pro ($149) — we tested both over 10 rounds. The V6 is faster and more polished, but the 300 Pro delivers.',
     productA: 'bushnell-tour-v6-shift',
     productB: 'callaway-300-pro',
@@ -510,7 +510,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'taylormade-qi35-vs-callaway-ai-smoke',
     thumbnail:   '/images/thumbnails/compare-qi35-vs-ai-smoke.webp',
-    title:       'Qi35 vs Ai Smoke Max — Driver Tested 8 Rounds',
+    title:       'Qi35 vs Ai Smoke Max Driver — 8 Rounds Tested',
     description: 'Qi35 vs Ai Smoke Max driver tested over 8 rounds. Distance, forgiveness, and accuracy compared for 90 to 100 mph swing speeds. Full test data.',
     productA:    'taylormade-qi35-max',
     productB:    'callaway-paradym-ai-smoke-max',
@@ -586,8 +586,8 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:        'titleist-pro-v1-vs-kirkland-signature',
     thumbnail:   '/images/thumbnails/compare-pro-v1-vs-kirkland.webp',
-    title:       'Kirkland vs Pro V1 — 150 Shots, $27 Saved?',
-    description: 'Kirkland Signature ($28/dz) vs Titleist Pro V1 ($55/dz) — 150 shots tested for spin, distance, and feel. Is the Costco ball 90% as good at half the price?',
+    title:       'Pro V1 vs Kirkland: $28 vs $55 — Worth It? (Tested)',
+    description: 'Kirkland at $28/dz vs Pro V1 at $55/dz — 150 shots tested for spin, distance, and feel. Is the Costco ball close enough to save $27 per dozen?',
     productA:    'titleist-pro-v1',
     productB:    'kirkland-signature',
     winner:      'kirkland-signature',
@@ -777,7 +777,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-r50-vs-rapsodo-mlm2pro',
     thumbnail: '/images/thumbnails/mlm2pro-vs-r50-vs-square-thumb.webp',
-    title:         'Garmin R50 vs Rapsodo MLM2Pro — Mid-Range Pick',
+    title:         'Garmin R50 vs MLM2PRO 2026 — Mid-Range Winner',
     description:   'Garmin R50 vs Rapsodo MLM2PRO compared — radar vs camera accuracy, indoor and outdoor tested. Which mid-range launch monitor to buy in 2026?',
     productA: 'garmin-approach-r50',
     productB:      'rapsodo-mlm2pro',
@@ -862,7 +862,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'taylormade-qi35-vs-titleist-gt2',
     thumbnail: '/images/thumbnails/compare-callaway-paradym-vs-taylormade-qi35.webp',
-    title:         'TaylorMade Qi35 vs Titleist GT2 — Which Premium Driver Wins?',
+    title:         'Qi35 vs GT2 Driver — Premium Showdown (2026)',
     description:   'TaylorMade Qi35 Max vs Titleist GT2 driver compared for forgiveness, distance, and feel in 2026. Which premium driver is better for weekend golfers?',
     productA:      'taylormade-qi35-max',
     productB:      'titleist-gt2-driver',
