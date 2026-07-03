@@ -19,7 +19,8 @@ const {
   height = 600,
 } = Astro.props;
 
-const iframeCode = `<iframe src="${embedUrl}" width="100%" height="${height}" style="border:none;border-radius:12px;max-width:720px" title="${title}"></iframe>\n<p style="font-size:12px;margin-top:4px">Source: <a href="${sourceUrl}">${sourceName}</a></p>`;
+const iframeCode = `<iframe src="${embedUrl}" width="100%" height="${height}" style="border:none;border-radius:12px;max-width:720px" title="${title}"></iframe>
+<p style="font-size:12px;margin-top:4px">Source: <a href="${sourceUrl}">${sourceName}</a></p>`;
 const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
 ---
 

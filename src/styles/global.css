@@ -75,8 +75,8 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
   --r2:         12px;
   --r3:         16px;
   --nav-h:      64px;
-  --prose-w:     720px;   /* max width for body text — comfortable line length */
-  --content-w:  1140px;  /* article / compare / city body container */
+  --prose-w:     760px;   /* max width for body text — ~84 chars/line at 17px, upper edge of comfortable */
+  --content-w:  1200px;  /* article / compare / city body container */
   --page-px: clamp(1.5rem, 5vw, 4rem); /* horizontal page padding */
 }
 

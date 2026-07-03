@@ -452,7 +452,7 @@ if (isBuyingGuide) {
             aria-label={`Check price for our #1 pick`}>
             Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price →
           </a>
-          <p class="quick-answer-more">Read the full guide below for all {productCount} products tested.</p>
+          <p class="quick-answer-more">{productCount === 1 ? 'Read the full review below.' : `Read the full guide below for all ${productCount} products tested.`}</p>
         </div>
       );
     })()}
@@ -543,7 +543,9 @@ if (isBuyingGuide) {
         <span style="font-size:15px;">✅</span>
         <span><strong>Updated {article.dateModified || article.datePublished}</strong> — Prices, models, and rankings reverified. All {article.comparisonTable?.rows?.length ?? article.sections?.filter((s: any) => s.affiliateKey)?.length ?? 0} products independently purchased and tested. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
       </div>
-    )}\n\n    {/* TRUST CARD — E-E-A-T proof block on money pages */}
+    )}
+
+    {/* TRUST CARD — E-E-A-T proof block on money pages */}
     {isBuyingGuide && (
       <TrustCard
         variant={article.pageType === 'review' ? 'review' : article.pageType === 'comparison' ? 'comparison' : 'guide'}
