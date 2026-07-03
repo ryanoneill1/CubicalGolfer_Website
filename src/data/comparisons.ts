@@ -627,51 +627,7 @@ export const COMPARISONS: Comparison[] = [
     related: ['/best-golf-balls-2026/', '/golf-ball-compression-chart/'],
   },
 
-  {
-    slug:        'skytrak-plus-vs-mevo-plus',
-    thumbnail:   '/images/thumbnails/compare-skytrak-vs-mevo-plus.webp',
-    title:       'SkyTrak+ vs Mevo+ — Indoor Launch Monitor Compared',
-    description: 'SkyTrak+ ($2,995) vs Flightscope Mevo+ ($2,499) tested indoors and outdoors. Accuracy, software, subscription costs, and which is better for a home.',
-    productA:    'skytrak-plus',
-    productB:    'flightscope-mevo-plus',
-    winner:      'skytrak-plus',
-    winnerReason: 'The SkyTrak+ wins for dedicated indoor setups. Its photometric camera system produces more accurate spin data in small spaces. The Mevo+ wins for golfers who want indoor AND outdoor use — its Doppler radar works in both environments.',
-    intro:       'Two of the most popular launch monitors for home golf simulators, tested over more than 500 shots indoors and outdoors. The SkyTrak+ ($2,995) uses photometric camera technology. The Mevo+ ($2,499) uses Doppler radar. Different technology means different strengths — and for a $500 price difference, the right choice depends entirely on how and where you plan to use it.',
-    weekendGolfer: 'If you are building a permanent garage simulator that stays indoors, buy the SkyTrak+. Its indoor accuracy is measurably better, and the e6 Connect software integration is smoother. If you want to practice at the range AND use a simulator at home, buy the Mevo+ — it is the only monitor in this comparison that works well outdoors without any setup changes.',
-    sections: [
-        { h2: 'The Home Simulator Decision', body: '<p>You are choosing between these two because you want a dedicated launch monitor for indoor golf. Maybe you are building a garage simulator. Maybe you want serious range data. Either way, you have decided that the $500-600 tier (Garmin R10, Rapsodo) is not enough and you are ready to invest $2,500-3,000 in a monitor that delivers genuine accuracy.</p><p>The fundamental difference is technology: the SkyTrak+ uses photometric cameras (positioned beside the ball) while the Mevo+ uses Doppler radar (positioned behind the ball). Different technology means different strengths, different space requirements, and different data sets. This is not a case of one being better — it is a case of each being better for a specific use case.</p>' },
-        { h2: 'Using Each Monitor in Real Conditions', body: '<p>The SkyTrak+ indoor experience is seamless. Place the unit beside the hitting mat, connect via WiFi, and you are hitting into virtual courses within 2 minutes. Ball flight data appears instantly — no lag, no calibration. The spin numbers feel accurate (confirmed against Trackman) and the virtual course play is responsive enough to be genuinely fun.</p><p>The Mevo+ indoor experience requires more room. The unit sits 7-8 feet behind the ball, which means your total room depth needs to be 16+ feet (8 behind you, 8 in front for the hitting area and screen). In our 12-foot deep garage, the Mevo+ radar struggled with accuracy — spin readings were inconsistent. In a purpose-built 18-foot bay, the data was excellent.</p><p>Outdoors, the roles reverse. The Mevo+ shines at the range — set it behind your hitting station and it tracks ball flight with genuine accuracy, including club data (club speed, path, face angle) that the SkyTrak+ cannot measure. The SkyTrak+ works outdoors but requires careful positioning and direct sunlight can affect the camera readings.</p>' },
-      { h2: 'Accuracy Testing: Indoor and Outdoor', body: '<p>We benchmarked both monitors against a Trackman 4 ($25,000) over 200 shots indoors and 200 outdoors. Indoor accuracy: the SkyTrak+ measured ball speed within ±0.5 mph of Trackman and spin within ±150 rpm. The Mevo+ was ±1.2 mph on ball speed and ±300 rpm on spin. For simulator play, the SkyTrak+ data is noticeably more precise.</p><p>Outdoors, the gap narrowed. The Mevo+ measured carry distance within ±2 yards of Trackman — comparable to the SkyTrak+. But the Mevo+ also provides club data (club speed, attack angle, club path) that the SkyTrak+ cannot measure. If you want swing data alongside ball data, the Mevo+ is the only option here.</p>' },
-      { h2: 'Space Requirements and Setup', body: '<p>The SkyTrak+ sits beside the ball at a 45-degree angle. It needs 4-5 feet of clearance beside the hitting mat and works in rooms as short as 8 feet deep. Setup takes 2 minutes — place the unit, connect via WiFi, hit.</p><p>The Mevo+ sits 7-8 feet behind the ball on the target line. This means your room needs 8+ feet behind the ball plus hitting space — total room depth of 16+ feet. In tight garages (10-12 feet total), the SkyTrak+ is the only option that physically fits.</p>' },
-      { h2: 'Software and Subscription Costs', body: '<p>Both monitors require software subscriptions for simulator play. SkyTrak+ Game Improvement plan costs $199/year and includes e6 Connect (100+ courses). The Mevo+ uses Awesome Golf ($299/year) or E6 ($299/year separately). Year-over-year, the SkyTrak+ is $100 cheaper on software.</p><p>Free practice mode (driving range, no courses) is included with both monitors. If you only want launch data without virtual courses, neither charges a subscription.</p>' },
-      { h2: 'Price Breakdown: Total Cost of Ownership', body: '<p><strong>SkyTrak+ Year 1:</strong> $2,995 (monitor) + $199 (software) = $3,194<br/><strong>Mevo+ Year 1:</strong> $2,499 (monitor) + $299 (software) = $2,798</p><p>The Mevo+ is $396 cheaper in year 1. By year 3, the SkyTrak+ catches up due to lower annual software costs. If you plan to use the monitor for 4+ years, total cost is nearly identical.</p>' },
-    
-        { h2: 'Which Monitor for Your Setup', body: '<p><strong>Permanent garage simulator (10-14 ft deep):</strong> SkyTrak+. The side-mounted position fits tight spaces and the photometric accuracy is superior indoors. This is the clear winner for dedicated home setups.</p><p><strong>Large dedicated sim bay (16+ ft deep):</strong> Either works. The Mevo+ adds club data that the SkyTrak+ cannot provide, which makes it the better choice if your space accommodates it.</p><p><strong>Outdoor range primary use:</strong> Mevo+. The Doppler radar was designed for outdoor tracking and it works better in daylight conditions. It also provides club data that helps with swing analysis during range sessions.</p><p><strong>Indoor AND outdoor use:</strong> Mevo+. If you need one device that works in both environments, the Mevo+ is more versatile despite being less accurate indoors than the SkyTrak+. The SkyTrak+ is primarily an indoor device.</p><p><strong>Data nerd who wants every number:</strong> Mevo+. It provides both ball data and club data. The SkyTrak+ measures ball only. If you want to see club path, face angle, and attack angle alongside ball flight, the Mevo+ is the only option here.</p>' },
-      
-
-      
-        {
-      h2: 'What changes if your space has a low ceiling',
-      body: "Indoor space dimensions matter more than most launch monitor reviews acknowledge. The SkyTrak+ uses high-speed cameras positioned beside the hitting area — it needs at least 8 feet of ceiling height to capture the ball flight accurately. Below that, your readings get inconsistent on driver swings. The Mevo+ uses Doppler radar positioned 8 feet behind the ball, which means the ceiling height matters less but you need at least 8 feet of behind-ball clearance. For a typical basement or garage setup with 7-8 foot ceilings, the Mevo+ is the more forgiving choice — you can usually find behind-ball space even when ceiling height is limited. For setups with high ceilings but limited depth (like a converted attic or tall garage with a short bay), the SkyTrak+ has the edge. Measure your actual space before choosing — neither monitor is portable enough to easily relocate."
-    },
-      ],
-    verdict: { buyA: 'Buy the SkyTrak+ for a permanent indoor setup — better accuracy in tight spaces and lower long-term software cost.', buyB: 'Buy the Mevo+ if you want to use it outdoors at the range AND indoors — it is the more versatile option.', skipBoth: 'If budget is tight, the Garmin Approach R10 ($599) gives you 70% of the data at 20% of the price.' },
-    faq: [
-      { q: 'Is SkyTrak+ more accurate than Mevo+?', a: 'Indoors, yes — the SkyTrak+ spin accuracy is ±150 rpm versus ±300 rpm for the Mevo+. Outdoors, accuracy is comparable. For simulator play where spin data drives ball flight, the SkyTrak+ produces more realistic results.' },
-      { q: 'Can you use Mevo+ indoors?', a: 'Yes, but it needs more space — 7-8 feet behind the ball for the radar to track accurately. In rooms shorter than 16 feet total depth, the Mevo+ accuracy degrades. The SkyTrak+ works in rooms as small as 10 feet deep.' },
-      { q: 'Does Mevo+ measure club data?', a: 'Yes — club speed, attack angle, club path, and face angle. The SkyTrak+ measures ball data only (ball speed, launch angle, spin). If you want swing analysis alongside ball tracking, the Mevo+ is the better choice.' },
-      { q: 'Which has better simulator software?', a: 'Both work with E6 Connect. The SkyTrak+ integration is smoother and costs $100/year less ($199 vs $299). The Mevo+ works with more third-party software options including Awesome Golf and GSPro.' },
-      { q: 'Is the Garmin R10 good enough instead?', a: 'For casual practice and basic data, the R10 ($599) is excellent. For a dedicated home simulator with realistic ball flight, the SkyTrak+ or Mevo+ are in a different league — their accuracy enables virtual course play that the R10 cannot match.' },
-    
-      { q: 'Can I build a full simulator with either monitor?', a: 'Yes — both connect to simulation software (E6 Connect, GSPro, Awesome Golf) for virtual course play. The SkyTrak+ has tighter E6 integration and lower annual software cost ($199 vs $299). The Mevo+ works with more third-party options. Both produce realistic enough ball flight for enjoyable simulator rounds.' },
-      { q: 'Is the Garmin R10 good enough instead of these?', a: 'For casual practice and basic data, the R10 ($599) is excellent value. For a dedicated simulator with realistic ball flight, the SkyTrak+ and Mevo+ are in a different accuracy league. The R10 spin estimates are approximations; the SkyTrak+ and Mevo+ measure spin directly. If you are investing $3,000+ in a simulator room, do not pair it with a $599 monitor.' },
-    ],
-    datePublished: '2026-05-25',
-    dateModified:  '2026-05-25',
-    related: ['/best-golf-launch-monitors-2026/', '/how-to-build-garage-golf-simulator/'],
-  },
-
-  {
+{
     slug:        'garmin-approach-s62-vs-s70',
     thumbnail:   '/images/thumbnails/compare-garmin-s62-vs-s70.webp',
     title:       'Garmin Approach S62 vs S70 — Worth the Upgrade?',
@@ -774,35 +730,7 @@ export const COMPARISONS: Comparison[] = [
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
     ],
   },
-  {
-    slug:          'garmin-r50-vs-rapsodo-mlm2pro',
-    thumbnail: '/images/thumbnails/mlm2pro-vs-r50-vs-square-thumb.webp',
-    title:         'Garmin R50 vs MLM2PRO 2026 — Mid-Range Winner',
-    description:   'Garmin R50 vs Rapsodo MLM2PRO compared — radar vs camera accuracy, indoor and outdoor tested. Which mid-range launch monitor to buy in 2026?',
-    productA: 'garmin-approach-r50',
-    productB:      'rapsodo-mlm2pro',
-    winner: 'garmin-approach-r50',
-    winnerReason:  'The R50 upgrades the R10 with better spin accuracy and club data while keeping the outdoor reliability of Doppler radar. At a higher price point than the MLM2Pro, it delivers more consistent data across both indoor and outdoor use.',
-    intro: "The Garmin R50 sits between the budget R10 and professional-tier monitors, adding direct spin measurement and improved club data. The Rapsodo MLM2Pro competes at a lower price with camera-based accuracy that excels indoors. Which mid-range monitor delivers better value?",
-    weekendGolfer: "The R50 is the pick if you want one monitor that works well everywhere — range, garage, and simulator. The MLM2Pro is the pick if indoor accuracy is your top priority and you want to save $200-300.",
-    sections: [
-      { h2: 'Technology difference', body: "The R50 uses enhanced Doppler radar with direct spin measurement — a significant upgrade over the R10 which estimates spin. The MLM2Pro uses high-speed cameras that capture the ball directly. Both approaches have trade-offs: radar handles outdoor conditions better; cameras provide more detailed ball-flight visualization." },
-      { h2: 'Accuracy comparison', body: "Over 120 paired shots, the R50 spin readings were within 180 rpm of our SkyTrak+ baseline on 83% of shots — a meaningful improvement over the R10. The MLM2Pro was within 150 rpm on 78% of shots. Both units delivered more consistent spin data than the R10 thanks to direct measurement. The MLM2Pro remains strong on indoor spin accuracy. Both should be within 2-3% of professional monitors on ball speed and carry." },
-      { h2: 'Value assessment', body: "The R50 runs $800-900; the MLM2Pro runs $600-700. The R50 premium buys you better spin accuracy, the Garmin ecosystem, and reliable outdoor performance. The MLM2Pro offers comparable indoor accuracy at a lower price. For the full launch monitor lineup, see our <a href=\"/best-golf-launch-monitors-2026/\">rankings</a>." },
-    ],
-    verdict: 'R50 for all-around versatility. MLM2Pro for budget-conscious indoor practitioners.',
-    faq: [
-      { q: 'Is the Garmin R50 worth the upgrade over the R10?', a: 'If spin accuracy matters to you (wedge gapping, ball fitting) — yes. If you primarily use the monitor for driver and iron carry distances, the R10 is accurate enough and saves $300+.' },
-    ],
-    datePublished: '2026-06-05',
-    dateModified: '2026-06-05',
-    related: [
-      { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2Pro Review' },
-      { slug: '/garmin-approach-r10-review/', label: 'Garmin R10 Review' },
-      { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
-    ],
-  },
-  {
+{
     slug:          'skytrak-plus-vs-garmin-r10',
     thumbnail: '/images/thumbnails/compare-skytrak-vs-garmin-r10.webp',
     title:         'SkyTrak+ vs Garmin R10 — Camera vs Radar Launch Monitor',
@@ -828,7 +756,7 @@ export const COMPARISONS: Comparison[] = [
     related: [
       { slug: '/garmin-approach-r10-review/', label: 'Garmin R10 Review' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
-      { slug: '/compare/skytrak-plus-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
+      { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
     ],
   },
   {
@@ -1231,41 +1159,7 @@ export const COMPARISONS: Comparison[] = [
       { slug: '/callaway-paradym-ai-smoke-max-review/', label: 'Ai Smoke Max Review' },
     ],
   },
-  {
-    slug:          'square-golf-vs-garmin-r10',
-    title:         'Square Golf vs Garmin R10 — Budget Monitor Face-Off',
-    description:   'Square Golf vs Garmin R10 compared for accuracy, app quality, and sim compatibility in 2026. Two sub-$600 launch monitors tested for home use.',
-    productA: 'square-golf-launch-monitor',
-    productB:      'garmin-approach-r10',
-    winner: 'garmin-approach-r10',
-    winnerReason: 'The Garmin R10 wins on reliability and ecosystem. While the Square Golf monitor offers comparable data at a lower price, the R10 has a two-year track record, proven sim compatibility with E6 and GSPro, and the Garmin Golf app ecosystem. For a first launch monitor, proven reliability matters more than saving $100.',
-    intro: 'Two budget launch monitors under $600, two different technologies. The Square Golf uses camera-based tracking. The Garmin R10 uses Doppler radar. We tested both at the range and in a garage sim setup over 10 sessions to see whether the Square\'s lower price comes with meaningful tradeoffs.',
-    verdict: 'The Garmin R10 is the safer buy for most golfers entering the launch monitor market. It has been on the market longer, has wider simulator compatibility, and integrates with Garmin\'s golf ecosystem. The Square Golf is a viable alternative if you prioritize camera-based spin measurement over the R10\'s calculated spin, but the newer brand means less community support and fewer proven use cases.',
-    weekendGolfer: 'Buy the Garmin R10. For a first launch monitor, you want the device with the most proven track record, the widest sim compatibility, and the largest user community for troubleshooting. The Square Golf may catch up, but right now the R10 is the established choice.',
-    sections: [
-      { h2: 'Accuracy: Ball Speed and Carry Distance', body: '<p>We tested both products over multiple sessions, comparing the key data points side by side. At the range, we hit 20-ball sets with the same club and recorded the readings from each device simultaneously. For approach-shot distances under 150 yards — where most weekend golfers need the most help — both products delivered consistent, reliable data within acceptable margins.</p><p>The differences become more apparent at the extremes: very high swing speeds, very low spin shots, and specialty shots like flop wedges. For the standard iron and driver shots that make up 90% of a recreational round, both products give you the information you need to improve.</p>' },
-      { h2: 'App Experience and Data Depth', body: '<p>We tested both products over multiple sessions, comparing the key data points side by side. At the range, we hit 20-ball sets with the same club and recorded the readings from each device simultaneously. For approach-shot distances under 150 yards — where most weekend golfers need the most help — both products delivered consistent, reliable data within acceptable margins.</p><p>The differences become more apparent at the extremes: very high swing speeds, very low spin shots, and specialty shots like flop wedges. For the standard iron and driver shots that make up 90% of a recreational round, both products give you the information you need to improve.</p>' },
-      { h2: 'Simulator Compatibility', body: '<p>We tested both products over multiple sessions, comparing the key data points side by side. At the range, we hit 20-ball sets with the same club and recorded the readings from each device simultaneously. For approach-shot distances under 150 yards — where most weekend golfers need the most help — both products delivered consistent, reliable data within acceptable margins.</p><p>The differences become more apparent at the extremes: very high swing speeds, very low spin shots, and specialty shots like flop wedges. For the standard iron and driver shots that make up 90% of a recreational round, both products give you the information you need to improve.</p>' },
-      { h2: 'Who Should Buy the Square Golf', body: '<p>The app experience matters more than most golfers expect — you will interact with the software after every session, and a clunky interface drains the motivation to practice. Both apps display the core data clearly, but they differ in session history, trend tracking, and export options.</p><p>Look for: shot-by-shot history, club averages over time, and the ability to compare sessions. These features turn raw data into actionable improvement insights rather than just numbers on a screen.</p>' },
-      { h2: 'Who Should Buy the Garmin R10', body: '<p>Both products work with popular simulator software including E6 Connect and GSPro. The practical differences come down to latency (how quickly the shot appears on screen) and spin accuracy (which affects how realistic the ball flight looks in the simulator). For casual sim use — playing Pebble Beach with friends on a Saturday — both deliver a fun, immersive experience.</p><p>For a dedicated home simulator where you want the most realistic ball flight possible, the device with better spin accuracy will produce more believable shot shapes, especially on approach shots and chips where spin determines where the ball stops.</p>' },
-    ],
-    specs: [
-      { label: 'Price', a: '~$300', b: '~$600' },
-      { label: 'Technology', a: 'Camera-Based', b: 'Doppler Radar' },
-      { label: 'Subscription', a: 'No', b: 'Optional' },
-    ],
-    faq: [
-      { q: 'Which budget monitor is more accurate?', a: 'Both products measure spin, but accuracy differs. The premium option uses technology that directly measures spin at impact, while the budget option calculates spin from ball flight. For full shots the difference is small (within 200 RPM). For short game shots where spin really matters, the direct-measurement approach is more reliable.' },
-      { q: 'Can both work with GSPro?', a: 'Both products measure spin, but accuracy differs. The premium option uses technology that directly measures spin at impact, while the budget option calculates spin from ball flight. For full shots the difference is small (within 200 RPM). For short game shots where spin really matters, the direct-measurement approach is more reliable.' },
-    ],
-    datePublished: '2026-06-25',
-    dateModified:  '2026-06-25',
-    related: [
-      { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
-      { slug: '/garmin-approach-r10-review/', label: 'Garmin R10 Review' },
-    ],
-  },
-  {
+{
     slug:          'cleveland-rtx6-vs-callaway-jaws-raw',
     title:         'Cleveland RTX6 vs Callaway Jaws Raw — Best Wedge for Amateurs',
     description:   'Cleveland RTX6 vs Callaway Jaws Raw wedges compared for spin, feel, versatility, and forgiveness in 2026. Tested for mid and high handicappers.',

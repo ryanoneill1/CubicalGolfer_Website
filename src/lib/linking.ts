@@ -99,7 +99,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9' },
     { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees vs Bushnell Tour V6' },
   
-    { slug: '/bushnell-v6-vs-precision-pro-nx9/', label: 'Bushnell V6 vs Precision Pro NX9' },
+    { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell V6 vs Precision Pro NX9' },
     { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell V6 vs Callaway 300 Pro' },
     { slug: '/compare/bushnell-pro-x3-vs-tour-v6/', label: 'Bushnell Pro X3 vs Tour V6' },
   ],
@@ -495,7 +495,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-improve-with-launch-monitor/', label: 'How to Practice With a Launch Monitor' },
     { slug: '/garmin-r10-vs-square-golf/', label: 'Garmin R10 vs Square Golf' },
     { slug: '/compare/garmin-r10-vs-garmin-r50/', label: 'Garmin R10 vs R50 Comparison' },
-    { slug: '/compare/square-golf-vs-garmin-r10/', label: 'Square Golf vs Garmin R10 Test' },
+    { slug: '/garmin-r10-vs-square-golf/', label: 'Square Golf vs Garmin R10 Test' },
     { slug: '/compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/', label: 'MLM2PRO vs Launch Pro Comparison' },
     { slug: '/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/', label: 'Mevo+ vs Launch Pro Test' },
     { slug: '/arccos-vs-garmin-shot-tracking/', label: 'Arccos vs Garmin Shot Tracking' },

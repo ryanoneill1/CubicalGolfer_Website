@@ -60,3 +60,9 @@
 
 # ═══ CATCH-ALL .html → trailing-slash (prevents duplicate URLs in GSC) ═══
 /:path.html  /:path/  301
+
+# ═══ DUPLICATE COMPARISON MERGES — July 2026 ═══
+/compare/square-golf-vs-garmin-r10/  /garmin-r10-vs-square-golf/  301
+/compare/garmin-r50-vs-rapsodo-mlm2pro/  /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/  301
+/bushnell-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v6-vs-precision-pro-nx9/  301
+/compare/skytrak-plus-vs-mevo-plus/  /skytrak-vs-mevo-plus/  301
