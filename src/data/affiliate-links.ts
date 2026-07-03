@@ -1963,6 +1963,11 @@ export const AFFILIATE: Record<string, {
   'rukket-haack-net': {
     url: 'https://www.amazon.com/dp/B019NXQG3U/?tag=cubicalgolfer-20',
     retailer: 'Amazon',
+    benefits: [
+      '10x7 ft — fits spaces larger nets cannot',
+      'Tri-socket frame sturdy enough for full driver swings',
+      'Net pocket catches balls reliably',
+    ],
     price: '~$130',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'Check Price at Amazon →',
@@ -2445,7 +2450,13 @@ export const AFFILIATE: Record<string, {
   },
   'country-club-elite-mat': {
     url: 'https://www.amazon.com/s?k=country-club-elite-mat&crid=21C3SD5QAJ9AW&sprefix=country-club-elite-mat%2Caps%2C225&linkCode=ll2&tag=cubicalgolfer-20&linkId=3af1d6fae812d0f903cd0b1fe762f342&language=en_US&ref_=as_li_ss_tl',
-    retailer: 'Amazon', price: '~$379',
+    retailer: 'Amazon',
+    benefits: [
+      'Real Feel turf gives honest shot feedback',
+      'Protects clubs and joints vs carpet or thin mats',
+      'One of the quality names in home hitting mats',
+    ],
+    price: '~$379',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/country-club-elite-mat.webp', imgAlt: 'Country Club Elite real feel golf mat',
   },

@@ -115,6 +115,8 @@ a { text-decoration: none; color: inherit; }
 
 /* Quick pick sidebar CTA */
 .qp__cta { color: #fff !important; }
+.rec-gear-btn--primary { color: #fff !important; }
+.rec-gear-btn--secondary { color: var(--green) !important; }
 .qp__cta-price, .qp__cta-text { color: inherit; }
 img { max-width: 100%; height: auto; display: block; }
 input, select, textarea { font-size: 16px; } /* ≥16px prevents iOS Safari auto-zoom on focus */

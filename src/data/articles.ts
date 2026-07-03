@@ -4336,8 +4336,8 @@ export const ARTICLES: Article[] = [
       headers: ['Component', 'Recommendation', 'Price', 'Essential?'],
       rows: [
         { name: 'Garmin Approach R10', affiliateKey: 'garmin-approach-r10', bestFor: 'Best budget launch data', price: '~$599', feature1: 'Full launch data', feature2: 'Yes — core of setup', winner: true, badge: 'STRONG PICK'},
-        { name: 'Golf Net', affiliateKey: 'spornia-spg-7', bestFor: 'Rukket 10x7 Haack', price: '~$199', feature1: '10x7 ft, 7-layer', feature2: 'Yes', winner: false},
-        { name: 'Hitting Mat', affiliateKey: 'fiberbuilt-flight-deck', bestFor: 'Country Club Elite', price: '~$200', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
+        { name: 'Rukket 10x7 HAACK Net', affiliateKey: 'rukket-haack-net', bestFor: 'Best Value Net', price: '~$130', feature1: '10x7 ft, 7-layer', feature2: 'Yes', winner: false},
+        { name: 'Country Club Elite Mat', affiliateKey: 'country-club-elite-mat', bestFor: 'Best Mat', price: '~$379', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
       ],
     },
     sections: [
