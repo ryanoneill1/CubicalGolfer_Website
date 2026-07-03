@@ -53,7 +53,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; border: 0; }
+html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: editorial norm (Wirecutter 18, Medium 20); brings 720px prose to ~80 chars/line */
 
 :root {
   --green:      #1E3A28;
