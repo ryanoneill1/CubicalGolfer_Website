@@ -4,6 +4,7 @@
 import BaseLayout    from '../layouts/BaseLayout.astro';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
+import RecommendedGearGrid from '../components/RecommendedGearGrid.astro';
 import StickyBar     from '../components/StickyBar.astro';
 import ProductCTA    from '../components/ProductCTA.astro';
 import CGScore       from '../components/CGScore.astro';
@@ -817,7 +818,10 @@ if (isBuyingGuide) {
             </ul>
           )}
 
-          {aff && (
+          {section.recommendedGear?.length > 0 && (
+            <RecommendedGearGrid items={section.recommendedGear} dateChecked={article.dateModified} />
+          )}
+          {aff && !(section.recommendedGear?.length > 0) && (
             <AffiliateCTA
               url={aff.url} price={aff.price} name={section.h2}
               retailer={aff.retailer} label={aff.label}

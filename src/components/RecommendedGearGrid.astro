@@ -1,0 +1,111 @@
+---
+/**
+ * RecommendedGearGrid.astro — Multi-product recommendation cards.
+ *
+ * Used by info/how-to sections whose prose recommends MORE THAN ONE product
+ * (e.g. "Best driver: X · Best 3-wood: Y"). Previously these sections rendered
+ * a single ambiguous CTA for only the first product; this grid gives every
+ * recommended product its own labeled card with image, price, and both
+ * retailer links — so the reader can see exactly which buttons belong to
+ * which product.
+ *
+ * Data: section.recommendedGear = [{ key, role, name }]
+ *   key  — AFFILIATE record key (affiliate-links.ts)
+ *   role — the recommendation label, e.g. "Best 3-wood"
+ *   name — display name exactly as written in the article text
+ */
+import { AFFILIATE } from '../data/affiliate-links';
+
+interface GearItem { key: string; role: string; name: string; }
+interface Props { items: GearItem[]; dateChecked?: string; }
+const { items, dateChecked } = Astro.props;
+
+const cards = items
+  .map((it) => ({ ...it, aff: (AFFILIATE as any)[it.key] }))
+  .filter((it) => it.aff?.url);
+
+function retailerOf(url: string): string {
+  try { const h = new URL(url).hostname;
+    if (h.includes('amazon')) return 'amazon';
+    if (h.includes('bushnell')) return 'bushnell';
+    if (h.includes('playbetter')) return 'playbetter';
+    return 'other';
+  } catch { return 'other'; }
+}
+---
+
+{cards.length > 0 && (
+  <div class="rec-gear-grid">
+    {cards.map((c) => (
+      <div class="rec-gear-card">
+        <span class="rec-gear-role">{c.role}</span>
+        <div class="rec-gear-main">
+          {c.aff.imgSrc && (
+            <img src={c.aff.imgSrc} alt={c.aff.imgAlt || c.name}
+              width="88" height="88" loading="lazy" class="rec-gear-img" />
+          )}
+          <div class="rec-gear-info">
+            <p class="rec-gear-name">{c.name}</p>
+            {c.aff.price && <p class="rec-gear-price">{c.aff.price}</p>}
+          </div>
+        </div>
+        <div class="rec-gear-btns">
+          <a href={c.aff.primaryRetailer === 'direct' && c.aff.golfGalaxyUrl ? c.aff.golfGalaxyUrl : c.aff.url}
+             target="_blank" rel="nofollow noopener sponsored"
+             data-outbound={retailerOf(c.aff.primaryRetailer === 'direct' && c.aff.golfGalaxyUrl ? c.aff.golfGalaxyUrl : c.aff.url)}
+             class="rec-gear-btn rec-gear-btn--primary">
+            {c.aff.primaryRetailer === 'direct' && c.aff.golfGalaxyUrl
+              ? `Check Price at ${c.aff.retailer && c.aff.retailer !== 'Amazon' ? c.aff.retailer : 'Golf Galaxy'} →`
+              : 'Check Price at Amazon →'}
+          </a>
+          {(c.aff.primaryRetailer === 'direct' ? c.aff.url : c.aff.golfGalaxyUrl) && (
+            <a href={c.aff.primaryRetailer === 'direct' ? c.aff.url : c.aff.golfGalaxyUrl}
+               target="_blank" rel="nofollow noopener sponsored"
+               data-outbound={retailerOf(c.aff.primaryRetailer === 'direct' ? c.aff.url : c.aff.golfGalaxyUrl)}
+               class="rec-gear-btn rec-gear-btn--secondary">
+              {c.aff.primaryRetailer === 'direct' ? 'Also at Amazon →' : 'Also at Golf Galaxy →'}
+            </a>
+          )}
+        </div>
+      </div>
+    ))}
+    {dateChecked && <p class="rec-gear-note">Prices checked {dateChecked} · Affiliate links — we earn a small commission at no extra cost to you.</p>}
+  </div>
+)}
+
+<style>
+.rec-gear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 18px 0 8px;
+}
+.rec-gear-card {
+  border: 1px solid rgba(30,58,40,.18);
+  border-radius: 10px;
+  padding: 14px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rec-gear-role {
+  font-size: 11px; font-weight: 700; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--gold, #9a7b2e);
+}
+.rec-gear-main { display: flex; align-items: center; gap: 12px; }
+.rec-gear-img {
+  width: 88px; height: 88px; object-fit: contain; flex: 0 0 88px;
+  background: #fff; border-radius: 8px; border: 1px solid rgba(30,58,40,.10);
+}
+.rec-gear-name { font-weight: 700; font-size: 15px; margin: 0; color: var(--green, #1E3A28); line-height: 1.3; }
+.rec-gear-price { margin: 2px 0 0; font-size: 13px; color: var(--muted, #556B5C); }
+.rec-gear-btns { display: flex; flex-direction: column; gap: 6px; margin-top: auto; }
+.rec-gear-btn {
+  display: block; text-align: center; text-decoration: none;
+  font-weight: 700; font-size: 13px; padding: 9px 12px; border-radius: 7px;
+}
+.rec-gear-btn--primary { background: var(--green, #1E3A28); color: #fff; }
+.rec-gear-btn--secondary { border: 1.5px solid var(--green, #1E3A28); color: var(--green, #1E3A28); background: #fff; }
+.rec-gear-note { grid-column: 1 / -1; font-size: 12px; color: var(--muted, #556B5C); font-style: italic; margin: 2px 0 0; }
+</style>

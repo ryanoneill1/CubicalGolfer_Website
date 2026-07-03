@@ -2542,7 +2542,12 @@ export const ARTICLES: Article[] = [
         body: 'The $150-$200 range hits the sweet spot for weekend golfers. You get accurate pin acquisition, slope compensation, and a device that lasts 5+ years. The Precision Pro NX9 HD at $169 with a lifetime warranty is the strongest case in this bracket. Spending $300+ gets you faster pin lock and better optics — meaningful upgrades for competitive golfers, but not necessary for recreational play.',
       },
   
-      { h2: 'Our Rangefinder Recommendations', body: '<p>If this guide convinced you a rangefinder is worth it, here are our top picks by budget:</p><ul><li><strong>Best overall:</strong> Bushnell Tour V6 Shift — fastest acquisition, most reliable slope</li><li><strong>Best value:</strong> Precision Pro NX9 HD — 90% of the Bushnell at 60% of the price</li><li><strong>Best budget:</strong> Blue Tees Series 3 Max — solid accuracy under $200</li></ul><p>See our <a href="/best-golf-rangefinders-2026/">full rangefinder rankings</a> for detailed testing data.</p>', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift' },
+      { h2: 'Our Rangefinder Recommendations', body: '<p>If this guide convinced you a rangefinder is worth it, here are our top picks by budget:</p><ul><li><strong>Best overall:</strong> Bushnell Tour V6 Shift — fastest acquisition, most reliable slope</li><li><strong>Best value:</strong> Precision Pro NX9 HD — 90% of the Bushnell at 60% of the price</li><li><strong>Best budget:</strong> Blue Tees Series 3 Max — solid accuracy under $200</li></ul><p>See our <a href="/best-golf-rangefinders-2026/">full rangefinder rankings</a> for detailed testing data.</p>', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift',
+        recommendedGear: [
+          { key: 'bushnell-tour-v6-shift', role: 'Best overall', name: 'Bushnell Tour V6 Shift' },
+          { key: 'precision-pro-nx9-hd', role: 'Best value', name: 'Precision Pro NX9 HD' },
+          { key: 'blue-tees-series-3-max', role: 'Best budget', name: 'Blue Tees Series 3 Max' },
+        ] },
     ],
     faq: [
       { q: 'How many shots does a rangefinder save per round?', a: 'Consistently 1-3 shots per 18 holes for golfers who previously estimated yardages by pacing or using course markers. The savings come from eliminating wrong club selection on approach shots, particularly on par-3s and approach shots over hazards.' },
@@ -8585,7 +8590,12 @@ export const ARTICLES: Article[] = [
 
       { h2: 'Quick Picks by Loft', body: 'For each loft you need, here are the best options at three price points:\n\n<strong>Budget ($80):</strong> Maxfli Milled — CNC-milled face, one bounce option, clean design. Best value wedge available.\n\n<strong>Mid ($169):</strong> Cleveland RTX 6 ZipCore — ZipCore technology, UltiZip grooves, 3 bounce options. Matches premium performance for $10 less than Vokey.\n\n<strong>Premium ($179-180):</strong> Titleist Vokey SM10 or Mizuno T24 — Tour-proven designs, 4-6 grind options, maximum spin technology. Buy these if you replace wedges every 2 seasons and want the best grooves available.' },
   
-      { h2: 'Wedges We Recommend', body: '<p>Now that you know the 4-degree rule:</p><ul><li><strong>Best for beginners:</strong> Cleveland CBX4 — cavity back forgiveness, $150 per wedge</li><li><strong>Best all-around:</strong> Cleveland RTX6 — tour-level spin, great turf interaction</li><li><strong>Best for open-face shots:</strong> Callaway JAWS Full Toe — full-face grooves</li></ul><p>See our <a href="/best-wedges-for-beginners/">beginner wedge guide</a> and <a href="/wedge-bounce-guide/">bounce guide</a>.</p>', badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'cleveland-rtx6-52' },
+      { h2: 'Wedges We Recommend', body: '<p>Now that you know the 4-degree rule:</p><ul><li><strong>Best for beginners:</strong> Cleveland CBX4 — cavity back forgiveness, $150 per wedge</li><li><strong>Best all-around:</strong> Cleveland RTX6 — tour-level spin, great turf interaction</li><li><strong>Best for open-face shots:</strong> Callaway JAWS Full Toe — full-face grooves</li></ul><p>See our <a href="/best-wedges-for-beginners/">beginner wedge guide</a> and <a href="/wedge-bounce-guide/">bounce guide</a>.</p>', badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'cleveland-rtx6-52',
+        recommendedGear: [
+          { key: 'cleveland-cbx4-wedge', role: 'Best for beginners', name: 'Cleveland CBX4 ZipCore' },
+          { key: 'cleveland-rtx6-52', role: 'Best all-around', name: 'Cleveland RTX 6 ZipCore' },
+          { key: 'callaway-jaws-full-toe', role: 'Best for open-face shots', name: 'Callaway Jaws Full Toe' },
+        ] },
     ],
     comparisonTable: {
       headers: ['Wedge', 'Best For', 'Price', 'Our Rating'],
@@ -9178,7 +9188,11 @@ export const ARTICLES: Article[] = [
         body: 'Tee the ball so half the ball sits above the top edge of the clubface — lower than your driver tee height but higher than hitting a 3-wood off the deck. Use a short tee or push a standard tee down. Ball position should be 1-2 inches inside your left heel (for right-handed golfers), slightly farther back than your driver position. Make a normal swing — do not try to swing easier. The 3-wood\'s shorter shaft and smaller head naturally produce a shorter, more controlled ball flight. The most common mistake weekend golfers make with 3-wood off the tee is topping the ball because they tee it too low or position it too far back in their stance. Err on the side of teeing it slightly higher — a slight high-face hit with a 3-wood still produces a playable shot.',
       },
   
-      { h2: 'Our Recommendations', body: '<p>Most golfers should carry both and use each strategically:</p><ul><li><strong>Best driver for forgiveness:</strong> Callaway Paradym Ai Smoke Max — keeps ball speed on mishits</li><li><strong>Best 3-wood:</strong> TaylorMade Qi35 Max — highest launch, easiest off the deck</li></ul><p>See our <a href="/best-golf-drivers-forgiveness/">driver guide</a> for all options.</p>', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max' },
+      { h2: 'Our Recommendations', body: '<p>Most golfers should carry both and use each strategically:</p><ul><li><strong>Best driver for forgiveness:</strong> Callaway Paradym Ai Smoke Max — keeps ball speed on mishits</li><li><strong>Best 3-wood:</strong> TaylorMade Qi35 Max — highest launch, easiest off the deck</li></ul><p>See our <a href="/best-golf-drivers-forgiveness/">driver guide</a> for all options.</p>', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max',
+        recommendedGear: [
+          { key: 'callaway-paradym-ai-smoke-max', role: 'Best driver for forgiveness', name: 'Callaway Paradym Ai Smoke Max' },
+          { key: 'taylormade-qi35-max', role: 'Best 3-wood', name: 'TaylorMade Qi35 Max' },
+        ] },
     ],
     faq: [
       { q: 'How much distance do you lose with a 3-wood vs driver?', a: 'The average weekend golfer loses 20-30 yards of carry with a 3-wood compared to driver. However, 3-wood dispersion (left-right miss) is typically 30-40% tighter, which means more fairways hit and shorter approach shots.' },
@@ -9249,7 +9263,12 @@ export const ARTICLES: Article[] = [
         body: 'The DIY approach above gets you 85-90% of the way to an optimal driver setup. A professional fitting adds the final 10-15% through three things you cannot do yourself: trying 15-20 shaft options on a launch monitor to find the optimal shaft weight, flex profile, and torque for your swing; dialing in exact loft and lie through adjustable hosel testing with real-time data; and identifying swing characteristics like spin axis tilt and dynamic loft that affect which head design works best. A fitting is worth the $100-200 if you play 30+ rounds per year, you are a single-digit handicapper or aspiring to be one, or you are spending $400+ on a driver anyway (the fitting cost is small relative to the purchase). For golfers playing 15 rounds per year with a 15+ handicap, the DIY approach plus range practice is a better investment than a professional fitting. The performance difference between a DIY-fitted and pro-fitted driver is 3-5 yards and slightly tighter dispersion — meaningful for competitive golfers, negligible for weekend players.',
       },
   
-      { h2: 'Drivers We Recommend After Self-Fitting', body: '<p>Once you know your ideal loft, shaft flex, and face angle:</p><ul><li><strong>Most forgiving:</strong> Callaway Paradym Ai Smoke Max — widest sweet spot</li><li><strong>Best for slow swingers:</strong> Cleveland Launcher XL2 — highest launch at moderate speeds</li><li><strong>Best value:</strong> Cobra Aerojet Max — previous gen, $100 less, 95% of the performance</li></ul><p>See our <a href="/best-golf-drivers-forgiveness/">driver rankings</a>.</p>', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max' },
+      { h2: 'Drivers We Recommend After Self-Fitting', body: '<p>Once you know your ideal loft, shaft flex, and face angle:</p><ul><li><strong>Most forgiving:</strong> Callaway Paradym Ai Smoke Max — widest sweet spot</li><li><strong>Best for slow swingers:</strong> Cleveland Launcher XL2 — highest launch at moderate speeds</li><li><strong>Best value:</strong> Cobra Aerojet Max — previous gen, $100 less, 95% of the performance</li></ul><p>See our <a href="/best-golf-drivers-forgiveness/">driver rankings</a>.</p>', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max',
+        recommendedGear: [
+          { key: 'callaway-paradym-ai-smoke-max', role: 'Most forgiving', name: 'Callaway Paradym Ai Smoke Max' },
+          { key: 'cleveland-launcher-xl2', role: 'Best for slow swingers', name: 'Cleveland Launcher XL2' },
+          { key: 'cobra-aerojet-max', role: 'Best value', name: 'Cobra Aerojet Max' },
+        ] },
     ],
     faq: [
       { q: 'How do I know my driver swing speed without a launch monitor?', a: 'Use your 7-iron carry distance as a proxy: 120 yards carry = ~80 mph driver speed, 140 yards = ~90 mph, 160 yards = ~100 mph, 180 yards = ~110 mph. Alternatively, most golf stores will measure you for free — you do not need to buy anything.' },
@@ -9454,7 +9473,12 @@ export const ARTICLES: Article[] = [
         body: 'The most common mistake is using a standard 34-inch putter without checking whether it fits. Roughly 60% of golfers would putt better with a different length, according to fitting data from Club Champion. The second mistake is using a putter that is too long because it feels more comfortable standing upright. A more upright posture feels easier on the back, but it pushes your eyes inside the ball and causes chronic aiming errors. The solution is to find the correct length and address any back discomfort through setup adjustments (wider stance, less knee flex) rather than using the wrong length putter. The third mistake is changing putter length and expecting immediate improvement. Your brain has calibrated to your old length over hundreds of rounds. Give yourself 3-4 practice sessions (15-20 minutes each) to recalibrate before judging the new length on the course.',
       },
   
-      { h2: 'Putters We Recommend After Fitting', body: '<p>Once you know your ideal length, these putters offer the best performance:</p><ul><li><strong>Premium:</strong> Odyssey White Hot OG (multiple head shapes, 33-35 inch options)</li><li><strong>Mid-range:</strong> Cleveland Huntington Beach SOFT ($130, available in 33-35 inch)</li><li><strong>Budget:</strong> Odyssey DFX ($80, surprisingly good feel)</li></ul><p>See our <a href="/best-golf-putters-2026/">full putter guide</a>.</p>', badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'odyssey-white-hot-og' },
+      { h2: 'Putters We Recommend After Fitting', body: '<p>Once you know your ideal length, these putters offer the best performance:</p><ul><li><strong>Premium:</strong> Odyssey White Hot OG (multiple head shapes, 33-35 inch options)</li><li><strong>Mid-range:</strong> Cleveland Huntington Beach SOFT ($130, available in 33-35 inch)</li><li><strong>Budget:</strong> Odyssey DFX ($80, surprisingly good feel)</li></ul><p>See our <a href="/best-golf-putters-2026/">full putter guide</a>.</p>', badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'odyssey-white-hot-og',
+        recommendedGear: [
+          { key: 'odyssey-white-hot-og', role: 'Premium', name: 'Odyssey White Hot OG' },
+          { key: 'cleveland-huntington-beach', role: 'Mid-range', name: 'Cleveland Huntington Beach Soft' },
+          { key: 'odyssey-dfx', role: 'Budget', name: 'Odyssey DFX' },
+        ] },
     ],
     faq: [
       { q: 'What is the standard putter length?', a: '34 inches for men and 33 inches for women. However, standard does not mean correct — roughly 60% of golfers would benefit from a different length based on their height, arm length, and setup preferences.' },

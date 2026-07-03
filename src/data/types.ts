@@ -105,6 +105,11 @@ export interface Article {
     lastTested?: string;
     courseTested?: string;
   };
+  recommendedGear?: {         // Multi-product recommendation cards
+    key: string;              // AFFILIATE record key
+    role: string;             // e.g. "Best 3-wood"
+    name: string;             // display name as written in the article
+  }[];
   cgScore?: {                 // Cubical Golfer Score card data
     overall?: number;
     rounds?: number;
