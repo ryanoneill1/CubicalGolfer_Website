@@ -1022,7 +1022,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:          'ping-g430-irons-vs-taylormade-stealth-hd',
-    title:         'Ping G430 vs TaylorMade Stealth HD Irons — Forgiveness Battle',
+    title:         'Ping G430 vs Stealth HD Irons — Forgiveness Test',
     description:   'Ping G430 vs TaylorMade Stealth HD irons tested for forgiveness, distance, feel, and looks in 2026. Compared side by side for 10 to 20 handicaps.',
     productA:      'ping-g430-irons',
     productB:      'taylormade-stealth-hd-irons',
@@ -1127,7 +1127,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:          'callaway-ai-smoke-max-vs-ping-g430-max',
-    title:         'Callaway Ai Smoke Max vs Ping G430 Max — Forgiving Driver Duel',
+    title:         'Ai Smoke Max vs G430 Max — Forgiving Driver Test',
     description:   'Callaway Ai Smoke Max vs Ping G430 Max tested on range and course in 2026. Forgiveness, distance, and adjustability compared for weekend golfers.',
     productA:      'callaway-paradym-ai-smoke-max',
     productB:      'ping-g430-max-driver',
@@ -1161,7 +1161,7 @@ export const COMPARISONS: Comparison[] = [
   },
 {
     slug:          'cleveland-rtx6-vs-callaway-jaws-raw',
-    title:         'Cleveland RTX6 vs Callaway Jaws Raw — Best Wedge for Amateurs',
+    title:         'RTX6 vs Jaws Raw — Which Wedge Spins More? (2026)',
     description:   'Cleveland RTX6 vs Callaway Jaws Raw wedges compared for spin, feel, versatility, and forgiveness in 2026. Tested for mid and high handicappers.',
     productA:      'cleveland-rtx6-52',
     productB:      'callaway-jaws-raw-52',

@@ -7703,6 +7703,8 @@ export const ARTICLES: Article[] = [
     
       { h2: 'Date Night on the Course', body: 'Twilight golf is the most underrated date activity in sports. Most courses offer twilight rates 40 to 60 percent off starting 3 to 4 hours before sunset. A 9-hole round as a twosome takes 75 to 90 minutes, followed by dinner at the clubhouse. Total cost: $30 to $50 per person including a drink. Compare that to dinner and a movie at $80+ per person. The shared activity creates conversation (unlike a movie) and the walk together feels more connected than sitting across a restaurant table. Book a recurring Tuesday or Thursday twilight tee time and it becomes your regular date night.' },
       { h2: 'Matching Gear That Is Not Cheesy', body: 'Skip the matching polo shirts and monogrammed headcovers. The best matching gear for golf couples is functional equipment in coordinating colors. Garmin GPS watches come in his and hers sizes with matching color bands. Sun Mountain makes stand bags in coordinating colorways. Even matching ball markers from Groove Life or a personalized divot tool set from Etsy makes a thoughtful gift without being over the top. The key: match the function, not the branding.' },
+    
+      { h2: 'For New Moms Getting Back on the Course', body: 'New moms returning to golf after pregnancy need comfort and flexibility above all. The FootJoy Flex XP walking shoes featured above are ideal — lightweight cushioning supports joints that are still recovering, and the spikeless sole doubles as an everyday shoe for the diaper-bag-and-golf-bag juggle. Pair them with a Callaway Supersoft dozen (the softest ball on this list) for easier distance at swing speeds that may be lower than pre-baby. A couples lesson package works perfectly here too: book a 9-hole twilight round as a date while grandparents watch the baby. Ninety minutes of fresh air and adult conversation on the course is the real gift.' },
     ],
     faq: [
       { q: 'Can couples with different skill levels play together?', a: 'Absolutely — use a scramble format where you both hit, then play the better ball. Or play from different tees matched to your skill levels. The point is being together, not competing.' },
@@ -13464,7 +13466,7 @@ export const ARTICLES: Article[] = [
     relatedComparisons: [
       { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Garmin R10 vs Rapsodo MLM2PRO' },
     ],
-    title: 'Average Golf Swing Speed by Age — Driver, 7-Iron & Wedge Data',
+    title: 'Average Golf Swing Speed by Age — 2026 Data',
     titleDisplay: 'Average Golf Swing Speed by Age — Driver, 7-Iron & Wedge Data',
     bottomLine: 'The average male golfer loses about 3 mph of driver speed per decade after 30, accelerating after 60. Knowing where you stand for your age helps you pick the right shaft flex, ball compression, and driver loft — the three cheapest ways to recover lost distance.',
     description: 'Average golf swing speed by age for men and women in 2026 — driver, 7-iron, and wedge data from 20s to 70+ with gear recommendations by speed.',
