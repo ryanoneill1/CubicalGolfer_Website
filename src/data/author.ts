@@ -39,13 +39,21 @@ export const AUTHOR_PROFILE = {
 // Schema.org Person object — used in Article, Review, and Product schema
 export const AUTHOR_SCHEMA = {
   '@type':         'Person' as const,
+  '@id':           `${DOMAIN}/about/#author`,
   'name':          AUTHOR_PROFILE.name,
   'alternateName': AUTHOR_PROFILE.alternateName,
   'url':           AUTHOR_PROFILE.aboutUrl,
   'jobTitle':      AUTHOR_PROFILE.jobTitle,
   'description':   `Got serious about golf in 2012. ${AUTHOR_PROFILE.handicapLabel} who plays ${AUTHOR_PROFILE.roundsPerYear} rounds a year out of ${AUTHOR_PROFILE.homeCourse} in ${AUTHOR_PROFILE.city}. ${AUTHOR_PROFILE.gearPolicy}`,
   'image':         `${DOMAIN}${AUTHOR_PROFILE.photoPath}`,
-  '@id':           `${DOMAIN}/about/#author`,
+  'sameAs': [
+    'https://x.com/CubicalGolfer',
+  ],
+  'worksFor': {
+    '@type': 'Organization',
+    'name':  'Cubical Golfer',
+    'url':   DOMAIN,
+  },
   'knowsAbout': [
     'Golf rangefinders', 'Golf GPS watches', 'Golf launch monitors',
     'Golf irons', 'Golf drivers', 'Golf balls', 'Golf putters',
