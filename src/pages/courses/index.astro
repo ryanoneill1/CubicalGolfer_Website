@@ -30,7 +30,7 @@ const schemas  = [breadcrumbSchema(meta.breadcrumbs)];
         <a href={`/courses/${city.slug}/`} class="article-card" aria-label={`Golf courses in ${city.city}, ${city.state}`}>
           <div class="art-thumb teal">
             <span class="art-badge tag-rev">COURSE GUIDE</span>
-            <span aria-hidden="true">⛳</span>
+            <img src={`/images/courses/${city.slug}-thumb.webp`} alt={`Golf courses in ${city.city}, ${city.state}`} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
           </div>
           <div class="art-body">
             <p style="font-weight:700;font-size:15px;">Best Golf Courses in {city.city}, {city.state}</p>

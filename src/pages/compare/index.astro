@@ -3,6 +3,13 @@
 // EDITOR NOTE: Replace any text inside [BRACKETS] with real info before publishing.
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { COMPARISONS } from '../../data/comparisons';
+import fs from 'node:fs';
+// Thumbnails generated at build time by scripts/generate-compare-thumbnails.ts
+const generatedThumbs = new Set(
+  fs.existsSync('public/images/thumbnails')
+    ? fs.readdirSync('public/images/thumbnails').filter(f => f.startsWith('compare-'))
+    : []
+);
 import { ARTICLES } from '../../data/articles';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 // All "X vs Y" articles that live outside the /compare/ route
@@ -103,12 +110,16 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
   <div class="cat-page-body">
     <h2 style="font-size:20px;margin:0 0 16px;">All comparisons</h2>
     <div class="articles-grid">
-      {COMPARISONS.map(c => (
+      {COMPARISONS.map(c => {
+        const genThumb = `/images/thumbnails/compare-${c.slug}.webp`;
+        const hasGen = generatedThumbs.has(`compare-${c.slug}.webp`);
+        const thumb = c.thumbnail ?? (hasGen ? genThumb : null);
+        return (
         <a href={`/compare/${c.slug}/`} class="article-card">
           <div class="art-thumb">
             <span class="art-badge tag-cmp">COMPARISON</span>
-            {c.thumbnail
-              ? <img src={c.thumbnail} alt={c.title} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
+            {thumb
+              ? <img src={thumb} alt={`${c.title} — side-by-side comparison`} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
               : <span aria-hidden="true">⚖️</span>
             }
           </div>
@@ -121,7 +132,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
             </div>
           </div>
         </a>
-      ))}
+      );})}
     </div>
     {vsArticles.length > 0 && (
       <div style="margin-top:32px">

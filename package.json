@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "validate": "tsx scripts/validate-affiliate-keys.ts && tsx scripts/validate-thumbnails.ts && tsx scripts/validate-affiliate-urls.ts && tsx scripts/validate-promise-delivery.ts && tsx scripts/validate-prices.ts && tsx scripts/validate-contrast.ts",
-    "build": "npm run validate && tsx scripts/generate-search-index.ts && node scripts/generate-compression-pdf.mjs && astro build",
+    "build": "npm run validate && tsx scripts/generate-search-index.ts && node scripts/generate-compression-pdf.mjs && tsx scripts/generate-compare-thumbnails.ts && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "generate": "node src/lib/generators.js",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@types/node": "^20.0.0",
     "pdfkit": "^0.19.1",
+    "sharp": "^0.35.3",
     "tsx": "^4.21.0",
     "typescript": "^5.4.0"
   }
