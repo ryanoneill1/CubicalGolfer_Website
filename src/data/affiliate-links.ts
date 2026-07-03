@@ -2644,7 +2644,7 @@ export const AFFILIATE: Record<string, {
     price: '~$549',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/taylormade-stealth-hd.webp', imgAlt: 'TaylorMade Stealth HD irons',
+    imgSrc: '/images/products/taylormade-sim2-max-irons.webp', imgAlt: 'TaylorMade Stealth HD irons',
   },
   'srixon-zx5-mk-ii': {
     url: 'https://www.amazon.com/s?k=srixon+zx5+mk+ii+irons&tag=cubicalgolfer-20',
