@@ -49,7 +49,7 @@ function smartTitle(title: string): string {
 export function homeMeta(): PageMeta {
   return {
     title:       `${ARTICLES.length}+ Golf Gear Reviews for Weekend Golfers — Cubical Golfer`,
-    description: 'Rangefinders, drivers, irons, GPS watches, and golf balls tested over 40+ real rounds by a 12-hdcp weekend golfer. No freebies — honest picks only.',
+    description: 'Rangefinders, drivers, irons, GPS watches, and golf balls tested 10+ real rounds each by a 10-hdcp weekend golfer. No freebies — honest picks only.',
     canonical:   `${DOMAIN}/`,
     ogImage:     OG_IMG,
     ogType:      'website',
