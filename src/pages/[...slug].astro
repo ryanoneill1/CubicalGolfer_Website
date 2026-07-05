@@ -577,7 +577,28 @@ if (isBuyingGuide) {
     {article.comparisonTable && (() => {
       const headers = article.comparisonTable.headers;
       const innerHeaderCount = headers.length - 1; // minus the product-name column
-      const innerHeaders = headers.slice(1); // headers after the name column
+      const allInnerHeaders = headers.slice(1); // headers after the name column
+      // Skip non-product objects accidentally present in rows (defensive)
+      const tableRows = article.comparisonTable.rows.filter((r: any) => r && (r.name || r.affiliateKey));
+      // Precompute every row's inner cells so all-empty columns can be dropped
+      const cellFor = (row: any): string[] => {
+        const f1 = row.feature1 || '';
+        const f2 = row.feature2 || '';
+        const isF1Rating = /\/5.*★|\/5$/.test(f1);
+        const isF2Rating = /\/5.*★|\/5$/.test(f2);
+        const pool = isF1Rating ? [f2, row.bestFor || '', f1] : [f1, f2, row.bestFor || ''];
+        let pi = 0;
+        return allInnerHeaders.map((h: string) => {
+          const hl = h.toLowerCase();
+          if (/price|cost|\/dz|\/dozen/.test(hl)) return row.price || '';
+          if (/^best\s*(for|swing)/i.test(h)) return row.bestFor || '';
+          if (/rating|score/i.test(hl)) return row.rating ? `${row.rating}/5 ★` : isF1Rating ? f1 : isF2Rating ? f2 : pool[pi++] || '';
+          return pool[pi++] || '';
+        });
+      };
+      const cellMatrix = tableRows.map(cellFor);
+      const keepIdx = allInnerHeaders.map((_: string, i: number) => cellMatrix.some((r: string[]) => (r[i] || '').trim() !== ''));
+      const innerHeaders = allInnerHeaders.filter((_: string, i: number) => keepIdx[i]);
 
       return (
       <div class="cmp-wrap">
@@ -586,26 +607,14 @@ if (isBuyingGuide) {
           <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
             <tr>
-              {headers.map((h: string) => <th scope="col"><button type="button" class="cmp-sort-btn" aria-sort="none" aria-label={`Sort by ${h}`}>{h}</button></th>)}
+              {[headers[0], ...innerHeaders].map((h: string) => <th scope="col"><button type="button" class="cmp-sort-btn" aria-sort="none" aria-label={`Sort by ${h}`}>{h}</button></th>)}
               <th scope="col" class="cmp-th-buy">Buy</th>
             </tr>
           </thead>
           <tbody>
-            {article.comparisonTable.rows.map((row: any) => {
+            {tableRows.map((row: any, ri: number) => {
               const rowAff = row.affiliateKey ? getAffiliateLink(row.affiliateKey) : null;
-              const f1 = row.feature1 || '';
-              const f2 = row.feature2 || '';
-              const isF1Rating = /\/5.*★|\/5$/.test(f1);
-              const isF2Rating = /\/5.*★|\/5$/.test(f2);
-              const pool = isF1Rating ? [f2, row.bestFor || '', f1] : [f1, f2, row.bestFor || ''];
-              let pi = 0;
-              const innerCells = innerHeaders.map((h: string) => {
-                const hl = h.toLowerCase();
-                if (/price|cost|\/dz|\/dozen/.test(hl)) return row.price || '';
-                if (/^best\s*(for|swing)/i.test(h)) return row.bestFor || '';
-                if (/rating|score/i.test(hl)) return isF1Rating ? f1 : isF2Rating ? f2 : pool[pi++] || '';
-                return pool[pi++] || '';
-              });
+              const innerCells = cellMatrix[ri].filter((_: string, i: number) => keepIdx[i]).map((c: string) => (c || '').trim() || '—');
               return (
                 <tr class={row.winner ? 'cmp-winner' : ''}>
                   <td>

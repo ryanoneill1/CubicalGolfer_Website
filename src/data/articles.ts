@@ -4603,9 +4603,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Ball', 'Best For', 'Price/Dozen', 'Compression', 'Feel'],
       rows: [
-        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Most Distance', price: '~$28', feature1: '35 (lowest)', feature2: 'Very Soft', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'callaway-supersoft' },
-      { h2: 'Why Compression Matters More as You Age', body: 'Swing speed drops about 1 to 1.5 mph per year after age 50. A golfer who swung 100 mph at 50 might swing 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely compresses — you lose 10 to 15 yards versus a 40-compression Supersoft that fully compresses at that speed. The general rule: subtract your age from 130 to get your approximate ideal compression. A 65-year-old should play around 65 compression, a 75-year-old around 55 compression. This is not exact science, but it gets you in the right range.' },
-      { h2: 'Do Seniors Need a Different Ball for Putting?', body: 'No. Compression affects full shots but has almost zero effect on putting speed or feel. A 38-compression Supersoft and a 100-compression Pro V1 roll identically on the green because putting impact forces are too low to compress either ball. Choose your ball based on driver and iron performance, not putting preference. If you prefer a softer feel on chips and pitches, a low-compression ball does feel noticeably different around the greens — but this is a bonus, not the primary selection criterion.' },
+        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Most Distance', price: '~$28', feature1: '35 (lowest)', feature2: 'Very Soft', winner: true, badge: 'STRONG PICK', rating: 4.4 },
         { name: 'Srixon Soft Feel', bestFor: 'Best All-Around', price: '~$27', feature1: '60', feature2: 'Soft', winner: false, rating: 4.2, affiliateKey: 'srixon-soft-feel' },
         { name: 'Titleist TruFeel', affiliateKey: 'titleist-trufeel', bestFor: 'Best Feel', price: '~$30', feature1: '65', feature2: 'Soft', winner: false},
         { name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Best Budget', price: '~$20', feature1: '29 (ultra)', feature2: 'Ultra Soft', winner: false},
@@ -4634,6 +4632,8 @@ export const ARTICLES: Article[] = [
       { h2: 'Do Seniors Need a Different Ball for Putting?', body: 'No. Compression affects full shots but has almost zero effect on putting. A 38-compression Supersoft and a 100-compression Pro V1 roll identically because putting forces cannot compress either ball. Choose your ball based on driver and iron performance. Low-compression balls do feel softer on chips and pitches around the greens — a nice bonus, but not the primary selection criterion.' },
     
       { h2: 'The Best Ball for Each Senior Speed Range', body: '65 to 75 mph driver speed: Callaway Supersoft (38 compression) or TaylorMade Noodle (34) — maximum softness for maximum compression at slow speeds. 75 to 85 mph: Srixon Soft Feel (60) or Titleist TruFeel (45) — slightly firmer for better greenside control while still compressing fully. 85 to 90 mph: Vice Pro Soft (65) or Bridgestone e12 Contact (50) — the transition zone where some seniors can play mid-compression balls. If you do not know your speed, start with the Callaway Supersoft — it works for every senior swing speed and costs only $22 per dozen.' },
+      { h2: 'Why Compression Matters More as You Age', body: 'Swing speed drops about 1 to 1.5 mph per year after age 50. A golfer who swung 100 mph at 50 might swing 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely compresses — you lose 10 to 15 yards versus a 40-compression Supersoft that fully compresses at that speed. The general rule: subtract your age from 130 to get your approximate ideal compression. A 65-year-old should play around 65 compression, a 75-year-old around 55 compression. This is not exact science, but it gets you in the right range.' },
+      { h2: 'Do Seniors Need a Different Ball for Putting?', body: 'No. Compression affects full shots but has almost zero effect on putting speed or feel. A 38-compression Supersoft and a 100-compression Pro V1 roll identically on the green because putting impact forces are too low to compress either ball. Choose your ball based on driver and iron performance, not putting preference. If you prefer a softer feel on chips and pitches, a low-compression ball does feel noticeably different around the greens — but this is a bonus, not the primary selection criterion.' },
     ],
     faq: [
       { q: 'What compression golf ball should a 70-year-old use?', a: 'A 70-year-old golfer should play a ball with 35-60 compression. The Callaway Supersoft (35 compression) and Wilson DUO Soft+ (29 compression) give the most distance for swing speeds under 80 mph. As a general rule: the lower your swing speed, the lower the compression you need.' },
@@ -6873,11 +6873,11 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Component', 'Product', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
-        { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Practice Net', bestFor: 'Spornia SPG-7', price: '~$189', feature1: '4.6/5 ★', winner: false },
-        { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Hitting Mat', bestFor: 'Fiberbuilt Studio', price: '~$449', feature1: '4.5/5 ★', winner: false },
-        { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'Projector (Optional)', bestFor: 'BenQ Short-Throw', price: '~$1,799', feature1: '4.4/5 ★', winner: false },
-        { badge: 'STRONG PICK', affiliateKey: 'diy-impact-screen-enclosure', name: 'Enclosure (Optional)', bestFor: 'DIY Impact Screen', price: '~$299', feature1: '4.3/5 ★', winner: false, rating: 4.3 },
+        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Launch Monitor', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.7/5 ★', feature2: 'Rapsodo MLM2PRO', winner: true, rating: 4.7 },
+        { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Practice Net', bestFor: 'Spornia SPG-7', price: '~$189', feature1: '4.6/5 ★', feature2: 'Spornia SPG-7', winner: false },
+        { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Hitting Mat', bestFor: 'Fiberbuilt Studio', price: '~$449', feature1: '4.5/5 ★', feature2: 'Fiberbuilt Studio Mat', winner: false },
+        { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'Projector (Optional)', bestFor: 'BenQ Short-Throw', price: '~$1,799', feature1: '4.4/5 ★', feature2: 'BenQ TK850 Short-Throw', winner: false },
+        { badge: 'STRONG PICK', affiliateKey: 'diy-impact-screen-enclosure', name: 'Enclosure (Optional)', bestFor: 'DIY Impact Screen', price: '~$299', feature1: '4.3/5 ★', feature2: 'DIY Impact Screen Kit', winner: false, rating: 4.3 },
       ],
     },
     faq: [
