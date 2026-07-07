@@ -37,7 +37,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/mevo-plus-review/', label: 'Mevo+ Review' },
     { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Launch Monitors 2026' },
     { slug: '/best-golf-apps/',  label: 'Best Golf Apps' },
-    { slug: '/compare/skytrak-vs-garmin-r10/',     label: 'SkyTrak+ vs Garmin R10' },
+    { slug: '/compare/skytrak-plus-vs-garmin-r10/',     label: 'SkyTrak+ vs Garmin R10' },
     { slug: '/apartment-golf-simulator-setup/',    label: 'Apartment Simulator Setup Guide' },
     { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
     { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor Under $700' },

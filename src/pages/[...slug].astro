@@ -332,7 +332,7 @@ if (isBuyingGuide) {
     if (!aff?.url) continue;
     // FIX: Pass price, retailer, image — required by Google Product schema
     schemas.push(buyingGuideProductSchema(
-      section, aff.url, section.price || aff.price, aff.retailer,
+      section, aff.url, aff.price || section.price, aff.retailer,
       aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined,
       pid
     ));
@@ -591,7 +591,7 @@ if (isBuyingGuide) {
         let pi = 0;
         return allInnerHeaders.map((h: string) => {
           const hl = h.toLowerCase();
-          if (/price|cost|\/dz|\/dozen/.test(hl)) return row.price || '';
+          if (/price|cost|\/dz|\/dozen/.test(hl)) return (row.affiliateKey && getAffiliateLink(row.affiliateKey)?.price) || row.price || '';
           if (/^best\s*(for|swing)/i.test(h)) return row.bestFor || '';
           if (/rating|score/i.test(hl)) return row.rating ? `${row.rating}/5 ★` : isF1Rating ? f1 : isF2Rating ? f2 : pool[pi++] || '';
           return pool[pi++] || '';
@@ -631,7 +631,7 @@ if (isBuyingGuide) {
                       <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
                         rel="nofollow noopener sponsored"
                         aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}>
-                        {row.price} →
+                        {(row.affiliateKey && getAffiliateLink(row.affiliateKey)?.price) || row.price} →
                       </a>
                     ) : (
                       <span class="cmp-no-link">—</span>
@@ -733,7 +733,7 @@ if (isBuyingGuide) {
             const rows = article.comparisonTable?.rows || [];
             const row = rows.find((r: any) => r.affiliateKey === section.affiliateKey);
             const specs: [string, string][] = [];
-            if (row?.price) specs.push(['Price', row.price]);
+            { const _p = (row?.affiliateKey && getAffiliateLink(row.affiliateKey)?.price) || row?.price; if (_p) specs.push(['Price', _p]); }
             if (row?.feature1 && !row.feature1.includes('★')) specs.push(['Key Spec', row.feature1]);
             if (row?.feature2) specs.push(['Also', row.feature2]);
             if (row?.bestFor) specs.push(['Best For', row.bestFor]);
