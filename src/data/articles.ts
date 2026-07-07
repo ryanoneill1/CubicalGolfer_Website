@@ -220,7 +220,7 @@ export const ARTICLES: Article[] = [
     description: 'Best golf GPS watch for 2026 — 5 models tested on course by a 15-handicap. Garmin, Bushnell, and Shot Scope compared for yardage accuracy and ease of use.',
     excerpt: 'Find the right GPS watch for accurate yardages, score tracking, and shot planning from tee to green.',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/gps-watches-thumb.webp',
-    thumbnail: '/images/thumbnails/gps-watches-thumb.webp',
+    thumbnail: '/images/thumbnails/forgiving-drivers-thumb.webp',
     updateLog: [{ date: 'Apr 15, 2026', note: 'Updated Garmin S62 pricing; added note about Garmin S72 pre-order.' }, { date: 'Feb 20, 2026', note: 'Added Shot Scope V5 as best auto-tracking pick; removed Apple Watch Ultra golf section.' }, { date: 'Jan 5, 2026', note: 'Full 2026 refresh — updated all 5 watches with current pricing.' }],
     intro: "The best golf GPS watch in 2026 is the <strong>Garmin Approach S42</strong> at $249 — front, middle, and back yardages on 42,000 courses with shot tracking and 15-hour battery life. The <strong>Garmin S62</strong> ($450) adds virtual caddie recommendations and wind speed data.\n\nA GPS watch sits on your wrist and tells you front, middle, and back of every green — plus hazards, layup distances, and dog-leg carry — without touching your phone. We tested 6 models over 40+ rounds to find the best for every budget.",
     testingNotes: 'All 5 GPS watches independently purchased and tested over 40+ rounds. Battery life, GPS accuracy, and course mapping evaluated across 4 different courses.',
@@ -342,13 +342,12 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/most-forgiving-irons/', label: 'Most Forgiving Irons' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
-      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-apps/', label: 'Best Golf Apps for Stat Tracking' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
-          { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42' },
-          { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
-          { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Ion Elite' },
+      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42' },
+      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
+      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Ion Elite' },
     ],
   
   },
@@ -539,7 +538,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-06-30',
     title: 'Best Golf Irons 2026 — 5 Sets Tested on Course',
     titleDisplay: 'Best Golf Irons — Tested for Mid and High Handicappers',
-    bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T300 balances feel and forgiveness better than anything else at this price. See our full iron guide → Our top pick: the <strong>Callaway Paradym Ai Smoke Irons</strong> (from ~$899). Our top pick: the <strong>Putting Mirror</strong> (~$25). Our top pick: the <strong>Putting Mirror</strong> (~$25).',
+    bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T300 balances feel and forgiveness better than anything else at this price. See our full iron guide → Our top pick: the <strong>Callaway Paradym Ai Smoke Irons</strong> (from ~$899). Our top pick: the <strong>Putting Mirror</strong> (~$25).',
     description: 'Best golf irons for 2026 — 5 game-improvement sets tested over 30+ rounds. Ping G430, Callaway Paradym, and TaylorMade Qi compared for forgiveness and distance.',
     excerpt: 'The best game-improvement, mid-handicap, and players irons of 2026 — tested and ranked for every skill level.',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/irons-thumb.webp',
@@ -916,7 +915,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Golf Swing Analyzers 2026 — Tested',
     titleDisplay: 'Best Golf Swing Analyzers for Real Feedback',
-    bottomLine: 'If you play 25+ rounds per year and want the deepest data, start with <strong>Arccos Caddie</strong>. If you want launch data for practice, the Rapsodo MLM2PRO is the clearest choice. See our GPS watch guide for course tracking → Our top pick: the <strong>Putting Mirror</strong> (~$25). Our top pick: the <strong>Putting Mirror</strong> (~$25).',
+    bottomLine: 'If you play 25+ rounds per year and want the deepest data, start with <strong>Arccos Caddie</strong>. If you want launch data for practice, the Rapsodo MLM2PRO is the clearest choice. See our GPS watch guide for course tracking → Our top pick: the <strong>Putting Mirror</strong> (~$25).',
     description: "Best golf swing analyzers for 2026 — Arccos, Rapsodo, and 5 more tested. Real swing feedback for weekend golfers who want data without weekly lessons.",
     excerpt: 'Wearable and clip-on analyzers that give you data-driven feedback without a coach on the range.',
     intro: "Swing analyzers record your swing — tempo, club path, face angle, attack angle — and give you data a coach would spend $100/hour to diagnose. The best ones now use AI to suggest drills.",
@@ -994,7 +993,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Golf Apps 2026 — Free and Paid Ranked',
     titleDisplay: 'Best Golf Apps That Actually Improve Your Game',
-    bottomLine: 'For most recreational golfers, <strong>The Grint</strong> (free USGA handicap + GPS) covers everything needed without a subscription. Upgrade to Arccos only when you want automatic shot-level analytics. See our handicap tracking guide → Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699). Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699).',
+    bottomLine: 'For most recreational golfers, <strong>The Grint</strong> (free USGA handicap + GPS) covers everything needed without a subscription. Upgrade to Arccos only when you want automatic shot-level analytics. See our handicap tracking guide → Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699).',
     description: "Best golf apps for 2026 — The Grint, 18Birdies, Arccos, and Golfshot compared. GPS yardages, handicap tracking, and shot stats ranked for free and paid tiers.",
     excerpt: 'Free and paid apps that give you GPS yardages, stat tracking, and handicap management in your pocket.',
     intro: "The best golf app in 2026 is <strong>The Grint</strong> — free GPS on 40,000+ courses, official USGA handicap tracking, and stat analysis without a subscription. For AI club recommendations, <strong>Arccos Caddie</strong> ($179 with sensors) adds real-time strategy based on shot history.\n\nYour phone is already the most powerful golf tool in your bag — if you have the right app. Here are the best options for weekend golfers in 2026 based on testing across 30+ rounds.",
@@ -1157,7 +1156,7 @@ export const ARTICLES: Article[] = [
     ],
     title: '25 Golf Accessories Every Golfer Should Own',
     titleDisplay: '25 Golf Accessories Every Golfer Should Own',
-    bottomLine: 'The 5 must-own golf accessories: a quality glove (\$18), a groove cleaning brush (\$8), magnetic ball markers (\$8), a rain towel (\$18), and alignment sticks (\$12). Total: \$64 for gear you will use every single round. Our top pick: the <strong>Bushnell Tour V6 Shift</strong> (~$329). Our top pick: the <strong>Bushnell Tour V6 Shift</strong> (~$329).',
+    bottomLine: 'The 5 must-own golf accessories: a quality glove (\$18), a groove cleaning brush (\$8), magnetic ball markers (\$8), a rain towel (\$18), and alignment sticks (\$12). Total: \$64 for gear you will use every single round. Our top pick: the <strong>Bushnell Tour V6 Shift</strong> (~$329).',
     description: "25 golf accessories tested by weekend golfers — under $200 total. Every item ranked by how much it actually improves your round on the course.",
     excerpt: 'Useful upgrades for cleaner rounds, better prep, and fewer frustrating mistakes on the course.',
     intro: "You don\'t need a $500 driver to play better golf. Half the strokes you\'re losing are to unforced errors. These 25 accessories fix all of that for under $200 total.",
@@ -1201,7 +1200,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Accessories Under $50 in (Ranked by Impact)',
+    title: 'Best Golf Accessories Under $50 in 2026 (Ranked by Impact)',
     titleDisplay: 'Best Golf Accessories Under $50',
     bottomLine: 'The best golf accessories under \$50 are a putting mirror (\$25), a FootJoy WeatherSof glove (\$18), and a pack of Srixon Soft Feel balls (\$27/dozen). These three items deliver more improvement per dollar than any club upgrade. Our top pick: the <strong>FootJoy WeatherSof Glove</strong> (~$18).',
     description: "Best golf accessories under $50 in 2026 — 12 tested picks that improve your round more than a new driver. Practical gear for weekend golfers on a budget.",
@@ -1331,7 +1330,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Golf Courses Within a Weekend Drive — List',
     titleDisplay: 'Best Golf Courses Within a Weekend Drive',
-    bottomLine: 'The best public golf courses within a weekend drive of major US cities — rated for value, pace of play, and accessibility for weekend golfers who do not have country club memberships. Our top pick: the <strong>Bag Boy Nitron Push Cart</strong> (~$229). Our top pick: the <strong>FootJoy Flex XP</strong> (~$120). Our top pick: the <strong>FootJoy Flex XP</strong> (~$120).',
+    bottomLine: 'The best public golf courses within a weekend drive of major US cities — rated for value, pace of play, and accessibility for weekend golfers who do not have country club memberships. Our top pick: the <strong>Bag Boy Nitron Push Cart</strong> (~$229). Our top pick: the <strong>FootJoy Flex XP</strong> (~$120).',
     description: "Best golf courses within a 2 to 4 hour drive of major US cities. Bucket-list public courses you can play on a Saturday without booking a flight.",
     excerpt: 'Great courses that are worth the drive from major metros — no flight required.',
     intro: "The best golf doesn\'t always require a plane ticket. These courses sit within a 2–4 hour drive of major population centers and rival much more expensive destinations.",
@@ -1636,7 +1635,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Golf Gloves for Hot Weather (Tested in 90°+ Heat)',
     titleDisplay: 'Best Golf Gloves for Hot Weather Rounds',
-    bottomLine: 'For most golfers playing in normal conditions, the <strong>FootJoy WeatherSof</strong> is the right answer — consistent, washable, and available in the right size. See our full glove guide → Our top pick: the <strong>Callaway Supersoft</strong> (~$25/dozen). Our top pick: the <strong>Callaway Supersoft</strong> (~$25/dozen).',
+    bottomLine: 'For most golfers playing in normal conditions, the <strong>FootJoy WeatherSof</strong> is the right answer — consistent, washable, and available in the right size. See our full glove guide → Our top pick: the <strong>Callaway Supersoft</strong> (~$25/dozen).',
     description: "FootJoy WeatherSof, Titleist Players Flex & Callaway Dawn Patrol compared. Which hot-weather golf glove stays grippy longest when you\'re sweating.",
     excerpt: 'Stay-dry, breathable gloves that keep your grip locked in when the temperature climbs.',
     intro: "The best golf glove for hot weather is the <strong>FootJoy WeatherSof</strong> at $18 — mesh back panels vent heat, the microfiber palm stays tacky when wet, and it lasts 15 to 20 rounds in summer conditions. For maximum airflow, the <strong>Titleist Players Flex</strong> ($22) uses a perforated cabretta leather construction that breathes better than any glove we tested.\n\nA sweaty glove is a slipping glove. In hot weather, standard Cabretta leather saturates within 6 holes. These hot-weather picks stay breathable and grippy — tested across multiple summer rounds in 90°+ heat.",
@@ -2748,7 +2747,6 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
-      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     ],
   },
 
@@ -3023,7 +3021,6 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
-      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
     ],
     comparisonTable: {
@@ -3246,7 +3243,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Rangefinder Under $200 in — Top Tested Picks',
+    title: 'Best Golf Rangefinder Under $200 in 2026 — Top Tested Picks',
     titleDisplay: 'Best Golf Rangefinder Under $200 (2026 Picks)',
     bottomLine: 'The <strong>Precision Pro NX9 HD</strong> at $169 is the best rangefinder under $200 — slope included, lifetime warranty, ±1 yard accurate. You do not need to spend $329 to get reliable yardages on every hole.',
     description: 'Best golf rangefinders under $200 in 2026 — tested picks with accurate yardages, slope adjustment, and reliability. Quality optics at a fair price.',
@@ -3526,7 +3523,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Build a Garage Golf Simulator — $1,200 to $5,000',
     titleDisplay: 'How to Build a Garage Golf Simulator',
-    bottomLine: 'A complete garage golf simulator — launch monitor, impact screen, projector, mat, and net — costs $3,500-$6,000 for a quality setup. The biggest mistakes are skimping on the impact screen and buying a projector with insufficient throw distance. Get those two right and the rest is straightforward. Our top pick: the <strong>Garmin Approach R10</strong> (~$499). Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699). Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699).',
+    bottomLine: 'A complete garage golf simulator — launch monitor, impact screen, projector, mat, and net — costs $3,500-$6,000 for a quality setup. The biggest mistakes are skimping on the impact screen and buying a projector with insufficient throw distance. Get those two right and the rest is straightforward. Our top pick: the <strong>Garmin Approach R10</strong> (~$499). Our top pick: the <strong>Rapsodo MLM2PRO</strong> (~$699).',
     description: 'How to build a garage golf simulator in 2026 — complete setup guide covering launch monitor, screen, projector, mat, and net. What to spend and what to.',
     excerpt: 'Building a home golf simulator is simpler than you think if you plan the space correctly. Here is exactly what to buy and how to set it up.',
     intro: 'A complete garage golf simulator costs <strong>$1,200 to $3,000</strong>. Minimum setup: a Garmin R10 launch monitor ($599), a hitting net or screen ($150 to $500), a mat ($100 to $200), and optionally a projector ($300 to $800). Total build time is one afternoon, and it pays for itself versus cart fees within two seasons.\n\nA garage golf simulator is the single best investment a serious weekend golfer can make. Year-round practice, any time of day, without booking a tee time. Building one correctly takes planning — here is the exact sequence, costs, and common mistakes to avoid.',
@@ -4036,7 +4033,6 @@ export const ARTICLES: Article[] = [
     sources: [{ label: 'USGA — Rule 4.3a (Slope & DMDs in Competition)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Bushnell Golf — Slope Technology Explained', url: 'https://www.bushnellgolf.com/' }],
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-      { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinder Under $200' },
       { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinder Under $200' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Golf Rangefinder Worth It?' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
@@ -5343,8 +5339,7 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-gloves-for-men/', label: 'Best Golf Gloves for Men' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Accessories Every Golfer Needs' },
-    
-      { slug: '/best-golf-push-carts-2026/', label: 'Best Push Carts Under $300' },],
+    ],
   },
 
   {
@@ -5437,7 +5432,6 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'TrackMan — Strokes Gained: Short Game Data', url: 'https://blog.trackmangolf.com/strokes-gained/' }, { label: 'PGA of America — Practice Drill Fundamentals', url: 'https://www.pga.com/story/best-putting-drills' }],
     related: [
-      { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/how-to-chip-in-golf/', label: 'How to Chip in Golf' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
@@ -5656,7 +5650,6 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026 (All Swing Speeds)' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Golf Balls for Slow Swing Speeds' },
-      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/titleist-pro-v1-vs-pro-v1x/', label: 'Pro V1 vs Pro V1x Comparison' },
       { slug: '/what-golf-ball-for-high-handicapper/', label: 'What Golf Ball for High Handicappers' },
     ],
@@ -6871,13 +6864,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Results After 60 Indoor Sessions', body: "Hard data from my winter: handicap dropped from 14.2 to 11.4 (2.8 strokes). Driver dispersion tightened from 45-yard spread to 28-yard spread. 7-iron carry increased from 152 to 158 yards. Most importantly, I maintained my game through a Chicago winter without touching real grass for 4 months. Previous winters I would come back in April shooting 6-8 strokes worse than my fall numbers. This year I played my first spring round at 2 over my fall average." },
     ],
     comparisonTable: {
-      headers: ['Component', 'Product', 'Price', 'Our Rating'],
+      headers: ['Product', 'Component', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Launch Monitor', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.7/5 ★', feature2: 'Rapsodo MLM2PRO', winner: true, rating: 4.7 },
-        { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Practice Net', bestFor: 'Spornia SPG-7', price: '~$189', feature1: '4.6/5 ★', feature2: 'Spornia SPG-7', winner: false },
-        { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Hitting Mat', bestFor: 'Fiberbuilt Studio', price: '~$449', feature1: '4.5/5 ★', feature2: 'Fiberbuilt Studio Mat', winner: false },
-        { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'Projector (Optional)', bestFor: 'BenQ Short-Throw', price: '~$1,799', feature1: '4.4/5 ★', feature2: 'BenQ TK850 Short-Throw', winner: false },
-        { badge: 'STRONG PICK', affiliateKey: 'diy-impact-screen-enclosure', name: 'Enclosure (Optional)', bestFor: 'DIY Impact Screen', price: '~$299', feature1: '4.3/5 ★', feature2: 'DIY Impact Screen Kit', winner: false, rating: 4.3 },
+        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.7/5 ★', feature2: 'Launch Monitor', winner: true, rating: 4.7 },
+        { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best value net', price: '~$189', feature1: '4.6/5 ★', feature2: 'Practice Net', winner: false },
+        { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Fiberbuilt Studio Mat', bestFor: 'Joint-friendly turf', price: '~$449', feature1: '4.5/5 ★', feature2: 'Hitting Mat', winner: false },
+        { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TK850 Short-Throw', bestFor: 'Big-screen upgrade', price: '~$1,799', feature1: '4.4/5 ★', feature2: 'Projector (Optional)', winner: false },
+        { badge: 'STRONG PICK', affiliateKey: 'diy-impact-screen-enclosure', name: 'DIY Impact Screen Kit', bestFor: 'Ball containment', price: '~$299', feature1: '4.3/5 ★', feature2: 'Enclosure (Optional)', winner: false, rating: 4.3 },
       ],
     },
     faq: [
@@ -8559,7 +8552,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'How to Buy Wedges: The 4-Degree Rule',
     titleDisplay: 'How to Buy Wedges: The 4-Degree Rule That Eliminates Distance Gaps',
-    bottomLine: 'Find your PW loft, add 4-5 degrees for each wedge, and you have a gapping system with no distance holes. Most weekend golfers should carry 3-4 wedges: PW + gap + sand + optional lob, spaced 4-5 degrees apart. Our top pick: the <strong>Maxfli Tour Milled Wedge</strong> (~$80). Our top pick: the <strong>Maxfli Tour Milled Wedge</strong> (~$80).',
+    bottomLine: 'Find your PW loft, add 4-5 degrees for each wedge, and you have a gapping system with no distance holes. Most weekend golfers should carry 3-4 wedges: PW + gap + sand + optional lob, spaced 4-5 degrees apart. Our top pick: the <strong>Maxfli Tour Milled Wedge</strong> (~$80).',
     description: 'How to buy wedges using the 4-degree gapping rule. PW loft chart, 3 standard configurations, bounce guide, and picks at every price point for 2026.',
     excerpt: 'The 4-degree rule for buying wedges — find your PW loft, do the math, eliminate distance gaps.',
     intro: 'Most golfers buy wedges based on what is on sale or what their buddy plays. Then they wonder why they have a 15-yard gap between their PW and sand wedge where nothing lands clean. The fix is the 4-degree rule: space your wedges 4-5 degrees apart starting from your PW loft. Here is the complete system.\n\n<div class="bottom-line-box" style="margin:24px 0"><p class="bottom-line-label">📚 The Cubical Golfer Wedge Guide</p><p>⤷ <a href="/approach-wedge-vs-gap-wedge-do-you-need-it/">Approach Wedge vs Gap Wedge — do you need it?</a><br>⤷ <strong>How to Buy Wedges — the 4-degree rule</strong> (you are here)<br>⤷ <a href="/when-to-replace-wedges-grooves/">When to Replace Your Wedges — and why</a></p></div>',
@@ -9420,8 +9413,6 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
     ],
   },
   {
@@ -9489,7 +9480,6 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
-      { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
       { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade Putter' },
     ],
   },
@@ -9556,8 +9546,6 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
       { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
     ],
   },
@@ -10141,8 +10129,6 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-simulators/', label: 'Best Golf Simulators (All Budgets)' },
       { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Carts 2026' },
       { slug: '/best-golf-bags-walking-2026/', label: 'Best Walking Golf Bags' },
-      { slug: '/best-golf-push-carts-2026/', label: 'Push Cart vs Riding Cart' },
-  
       { slug: '/best-golf-hitting-mats-home/', label: 'Best Hitting Mats' },
     ],
   },
@@ -11467,7 +11453,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Best Iron Sets Under $500 — Complete Sets That Don\'t Suck',
     description: 'Best irons under $500 in 2026 — game improvement iron sets tested for forgiveness, distance, and feel. Real picks for budget-conscious golfers on course.',
     excerpt: 'You do not need to spend $900 on irons. These under-$500 sets deliver 90% of the performance at half the price.',
-    bottomLine: 'The Cleveland Launcher XL2 irons ($699 retail, often on sale for $499) are the best value. Previous-gen Ping G425 and Callaway Rogue ST sets drop below $500 used. Our top pick: the <strong>Garmin Approach R10</strong> (~$499). Our top pick: the <strong>Garmin Approach R10</strong> (~$499).',
+    bottomLine: 'The Cleveland Launcher XL2 irons ($699 retail, often on sale for $499) are the best value. Previous-gen Ping G425 and Callaway Rogue ST sets drop below $500 used. Our top pick: the <strong>Garmin Approach R10</strong> (~$499).',
     intro: `The best irons under $500 in 2026 are the <strong>Callaway Rogue ST Max</strong> (previous generation, now $449) — they deliver 95 percent of the forgiveness and distance of the current $1,100 Paradym set at less than half the price. For under $300, the <strong>Top Flite XL</strong> set is a legitimate option for beginners who need game improvement irons without the brand premium.\n\nIron sets from major brands cost $800-$1,200 new. But previous-generation models, budget lines, and smart shopping can get you forgiving, well-made irons for under $500. Here are the best options we have tested.`,
     toc: ['Top Picks Under $500', 'New vs Previous-Gen', 'Where to Buy', 'When to Upgrade'],
     updateLog: [{ date: '2026-05-17', note: 'Initial publication' }],
@@ -11562,7 +11548,6 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-wedges-for-beginners/', label: 'Best Wedges for Beginners' },
       { slug: '/how-to-chip-in-golf/', label: 'How to Chip in Golf' },
-      { slug: '/best-wedges-for-beginners/', label: 'Best Wedges 2026' },
     ],
   },
 
@@ -12446,7 +12431,6 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'R50 vs MLM2Pro' },
-      { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2Pro vs R50 vs Square Golf' },
       { slug: '/garmin-approach-r10-review/', label: 'Garmin R10 Review' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
       { slug: '/launch-monitor-subscription-cost-comparison/', label: 'Subscription Cost Comparison' },
@@ -12543,7 +12527,6 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
       { slug: '/compare/garmin-r10-vs-flightscope-mevo/', label: 'R10 vs Mevo' },
-      { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak vs Mevo+' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
       { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
     ],

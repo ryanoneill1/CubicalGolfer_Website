@@ -144,7 +144,7 @@ export const COMPARISONS: Comparison[] = [
       { label: 'Our Rating',         a: '4.7/5',              b: '4.8/5',              winner: 'b' as const },
     ],
     weekendGolfer: "If you swing under 95 mph and your miss is a fade or slice, the Qi35 Max is the clearer choice — it retains 97% of ball speed on toe hits versus 95% for the Paradym. That 2% gap translates to roughly 5-7 yards on your worst swings, which are the swings that actually determine your score. If you swing over 100 mph and prioritize feel, the Paradym has a slightly better sound profile and 1 mph more ball speed on pure strikes. But for the <a href=\"/best-driver-for-high-handicapper/\">average weekend golfer</a> who hits the center 40% of the time? Buy the driver that is <a href=\"/best-golf-drivers-forgiveness/\">most forgiving</a> on the other 60%.",
-    winnerReason: 'TaylorMade Qi35 Max wins for most golfers in — the Qi AI face generates measurably more consistent ball speed on mis-hits, and the larger 460cc head has a higher moment of inertia than the Paradym Ai Smoke Max. Both are elite drivers; the Qi35 Max edges ahead on forgiveness for swing speeds under 95 mph.',
+    winnerReason: 'TaylorMade Qi35 Max wins for most golfers in 2026 — the Qi AI face generates measurably more consistent ball speed on mis-hits, and the larger 460cc head has a higher moment of inertia than the Paradym Ai Smoke Max. Both are elite drivers; the Qi35 Max edges ahead on forgiveness for swing speeds under 95 mph.',
     intro:       'Both Callaway Paradym Ai Smoke Max and TaylorMade Qi35 Max are the flagship game-improvement drivers from their respective brands for. Both use AI-designed faces, carbon crowns, and moveable weight systems. The choice comes down to marginal differences in forgiveness and feel — and which brand trust you bring to the first tee.',
         sections: [
       { h2: 'Launch Monitor Testing Results', body: '<p>We hit both drivers 50 times each on a Trackman. The Qi35 Max averaged 2.3 MPH higher ball speed on center strikes, translating to 5-7 yards of carry. However, the Paradym Ai Smoke Max maintained ball speed better on mishits, losing only 4-6% versus 7-9% for the Qi35.</p><p>For golfers who hit center 70%+ of the time, the Qi35 produces more distance. For golfers who miss center frequently, the Paradym produces more consistent distances across the face.</p>' },
@@ -432,7 +432,6 @@ export const COMPARISONS: Comparison[] = [
       // ── Bushnell V6 vs Callaway 300 Pro ────────────────────────────────────
   {
     slug: 'bushnell-tour-v6-vs-callaway-300-pro',
-    thumbnail: '/images/thumbnails/bushnell-v6-review-thumb.webp',
     title: 'Bushnell V6 vs Callaway 300 Pro — $329 vs $149',
     description: 'Bushnell Tour V6 Shift ($329) vs Callaway 300 Pro ($149) — we tested both over 10 rounds. The V6 is faster and more polished, but the 300 Pro delivers.',
     productA: 'bushnell-tour-v6-shift',

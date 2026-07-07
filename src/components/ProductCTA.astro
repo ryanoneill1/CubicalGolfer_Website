@@ -66,7 +66,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
         rel="nofollow noopener sponsored"
         aria-label={`Check price for ${productName}`}
       >
-        <span class="qp__cta-price">{amazonPrice}</span>
+        {amazonPrice && <span class="qp__cta-price">{amazonPrice}</span>}
         <span class="qp__cta-text">Check Price on Amazon →</span>
       </a>
       {altUrl && altLabel && (

@@ -3,6 +3,7 @@
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { AUTHOR_PROFILE } from '../../data/author';
+import { productName } from '../../data/product-names';
 import StickyBar from '../../components/StickyBar.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
@@ -174,9 +175,9 @@ const PRODUCT_NAMES: Record<string, string> = {
 
 const affA    = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
 const affB    = PRODUCT_AFFILIATE_MAP[c.productB] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB]) : null;
-const nameA   = PRODUCT_NAMES[c.productA] || c.productA.replace(/-/g, ' ');
-const nameB   = PRODUCT_NAMES[c.productB] || c.productB.replace(/-/g, ' ');
-const winnerName = PRODUCT_NAMES[c.winner] || c.winner.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
+const nameA   = PRODUCT_NAMES[c.productA] || productName(c.productA);
+const nameB   = PRODUCT_NAMES[c.productB] || productName(c.productB);
+const winnerName = PRODUCT_NAMES[c.winner] || productName(c.winner);
 const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]) : null;
 
 // ── Product schema for SERP rich results ────────────────────────────────────
@@ -608,8 +609,8 @@ if (compProducts.length > 0) {
     <div style="margin-top:40px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
       <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">📋 Want to see how these rank against the full field?</p>
       <div class="rel-links" style="display:flex;flex-wrap:wrap;gap:8px;">
-        {c.related && c.related.length > 0
-          ? c.related.map((link: any) => <a href={link.slug} style="color:var(--green);font-weight:600;font-size:13px;">{link.label} →</a>)
+        {(c.related || []).filter((l: any) => l.label && l.slug).length > 0
+          ? (c.related || []).filter((l: any) => l.label && l.slug).map((link: any) => <a href={link.slug} style="color:var(--green);font-weight:600;font-size:13px;">{link.label} →</a>)
           : <>
               <a href="/compare/" style="color:var(--green);font-weight:600;font-size:13px;">All Comparisons →</a>
               <a href="/gear-reviews/" style="color:var(--green);font-weight:600;font-size:13px;">All Gear Reviews →</a>

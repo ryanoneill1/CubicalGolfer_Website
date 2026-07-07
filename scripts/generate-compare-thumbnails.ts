@@ -36,11 +36,9 @@ function esc(s: string) {
 }
 
 /** Trim a product name to fit under a plate. */
+import { productName } from '../src/data/product-names';
 function shortName(key: string): string {
-  const p: any = (AFFILIATE as any)[key] ?? {};
-  // Derive a display name from the key: 'bushnell-tour-v6-shift' → 'Bushnell Tour V6 Shift'
-  const fromKey = key.split('-').map(w => w.length <= 3 ? w.toUpperCase() : w[0].toUpperCase() + w.slice(1)).join(' ');
-  const name = (p.displayName as string) ?? fromKey;
+  const name = productName(key);
   return name.length > 24 ? name.slice(0, 23).trimEnd() + '…' : name;
 }
 

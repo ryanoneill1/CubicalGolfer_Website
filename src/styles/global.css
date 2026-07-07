@@ -445,7 +445,7 @@ nav.site-nav {
 .art-thumb.teal   { background: #1A4A44; }
 .art-thumb.olive  { background: #4A5A28; }
 .art-badge {
-  position: absolute; top: 12px; left: 12px; padding: 5px 10px; z-index: 2;
+  position: absolute; top: 12px; right: 12px; left: auto; padding: 5px 10px; z-index: 2; /* right side: thumbnail titles are baked into the image top-left */
   border-radius: 4px; font-size: 12px; font-weight: 700; letter-spacing: .08em; color: #fff;
 }
 .art-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }

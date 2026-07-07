@@ -63,7 +63,7 @@ const TYPE_BADGE: Record<string, string> = {
 
   <article class="art-content">
 
-    <div class="intro-box"><p>{city.intro}</p></div>
+    <div class="intro-box"><p set:html={city.intro}></p></div>
 
     <!-- Quick stats strip -->
     <div class="verdict-quick" style="margin-bottom:32px">
