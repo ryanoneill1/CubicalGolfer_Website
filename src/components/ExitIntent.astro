@@ -125,16 +125,8 @@
       if (e.clientY <= 0) show();
     });
 
-    // Mobile/fallback: 60 seconds of idle
-    var idleTimer;
-    function resetIdle() {
-      clearTimeout(idleTimer);
-      idleTimer = setTimeout(show, 60000);
-    }
-    ['scroll', 'touchstart', 'click'].forEach(function(evt) {
-      document.addEventListener(evt, resetIdle, { passive: true });
-    });
-    resetIdle();
+    // (Idle-timer trigger removed — it fired mid-read and felt like an
+    //  unprompted popup. Exit-intent + mobile scroll-up are the only triggers.)
 
     // Mobile: scroll back UP more than 300px (user is done reading)
     var maxScroll = 0;
