@@ -28,6 +28,30 @@ export const AUTHOR_PROFILE = {
   roundsPerYear:  '25–40',
   playingSince:   2010,
   testingMin:     10,           // minimum rounds per product review
+
+  // ────────────────────────────────────────────────────────
+  // WHAT'S IN THE BAG — fill these with YOUR real clubs and
+  // the /how-we-test/ bag section appears automatically.
+  // Leave a field '' to omit that line. Do not invent gear.
+  // Format examples (delete the examples, keep your reality):
+  //   driver:  'TaylorMade Qi35 Max 10.5° — Fujikura Ventus TR Blue 6-S'
+  //   woods:   'Callaway Paradym 3W · Ping G430 4H'
+  //   irons:   'TaylorMade Stealth HD 5–PW'
+  //   wedges:  'Cleveland RTX 6 52°/56°'
+  //   putter:  'Odyssey White Hot OG #7'
+  //   ball:    'Srixon Q-Star Tour'
+  //   rangefinder: 'Bushnell Tour V6 Shift'
+  // ────────────────────────────────────────────────────────
+  witb: {
+    asOf:        '2026',
+    driver:      '',
+    woods:       '',
+    irons:       '',
+    wedges:      '',
+    putter:      '',
+    ball:        '',
+    rangefinder: '',
+  },
   testingLabel:   '10+ real rounds per product',
   siteTestTotal:  '40+',        // total rounds across all reviews combined
   gearPolicy:     'No freebies, no manufacturer loans.',

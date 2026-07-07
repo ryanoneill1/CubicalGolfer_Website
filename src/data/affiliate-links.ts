@@ -41,7 +41,7 @@ export const AFFILIATE: Record<string, {
   'bushnell-tour-v6-shift': {
     heroVerdictLine: '★ Our #1 pick after 40+ rounds — tested against 5 rangefinders, nothing locks the pin faster.',
     heroWhoFor: 'Weekend golfers who want one rangefinder that does everything and lasts 5+ years.',
-    url: 'https://bushnell.pxf.io/DWWLOa',
+    url: 'https://bushnell.pxf.io/3kRRkX',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Tour*+V6*+Shift*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
     price: '~$329',
@@ -111,11 +111,10 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Pro XE — search (multiple bundle variants)
   'bushnell-pro-xe': {
-    url: 'https://bushnell.pxf.io/DWWLOa',
-    golfGalaxyUrl: 'https://www.amazon.com/s?k=Bushnell+Pro+XE+rangefinder&tag=cubicalgolfer-20',
-    retailer: 'Bushnell',
+    url: 'https://www.amazon.com/s?k=Bushnell+Pro+XE+rangefinder&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
     price: '~$499',
-    primaryRetailer: 'direct',
+    primaryRetailer: 'amazon',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Bushnell →',
     imgSrc: '/images/products/bushnell-pro-xe.webp',
@@ -188,7 +187,7 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Ion Elite — search (colourway/strap variants)
   'bushnell-ion-elite': {
-    url: 'https://bushnell.pxf.io/DWWLOa',
+    url: 'https://bushnell.pxf.io/OYaaez',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Ion*+Elite*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
     price: '~$149',
@@ -928,8 +927,10 @@ export const AFFILIATE: Record<string, {
   },
 
   'bushnell-launch-pro': {
-    url: 'https://www.amazon.com/s?k=bushnell-launch-pro&crid=1O0RGUWVXD74&sprefix=bridgestone-tour-b-xs%2Caps%2C371&linkCode=ll2&tag=cubicalgolfer-20&linkId=5e4ac84f33ffe810257c4067a4602ec5&language=en_US&ref_=as_li_ss_tl',
-    retailer: 'Amazon',
+    url: 'https://bushnell.pxf.io/4aLLGM',
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell-launch-pro&crid=1O0RGUWVXD74&sprefix=bridgestone-tour-b-xs%2Caps%2C371&linkCode=ll2&tag=cubicalgolfer-20&linkId=5e4ac84f33ffe810257c4067a4602ec5&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Bushnell',
+    primaryRetailer: 'direct',
     price: '~$2,499',
     priceNote: 'Rarely discounted — buy when ready. Check for bundle deals.',
     label: 'See Today\'s Price →',
@@ -2594,8 +2595,10 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Callaway 300 Pro Laser Rangefinder',
   },
   'bushnell-phantom-2': {
-    url: 'https://www.amazon.com/s?k=bushnell+phantom+2&linkCode=ll2&tag=cubicalgolfer-20&linkId=014e3b7eabc6c8a8364b16210b2387fb&language=en_US&ref_=as_li_ss_tl',
-    retailer: 'Amazon',
+    url: 'https://bushnell.pxf.io/ZVmmVQ',
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell+phantom+2&linkCode=ll2&tag=cubicalgolfer-20&linkId=014e3b7eabc6c8a8364b16210b2387fb&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Bushnell',
+    primaryRetailer: 'direct',
     price: '~$129',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'Check Price on Amazon',
@@ -2644,7 +2647,7 @@ export const AFFILIATE: Record<string, {
     price: '~$549',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/taylormade-sim2-max-irons.webp', imgAlt: 'TaylorMade Stealth HD irons',
+    imgSrc: '/images/products/taylormade-stealth-hd.webp', imgAlt: 'TaylorMade Stealth HD irons',
   },
   'srixon-zx5-mk-ii': {
     url: 'https://www.amazon.com/s?k=srixon+zx5+mk+ii+irons&tag=cubicalgolfer-20',

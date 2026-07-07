@@ -5,6 +5,7 @@
 // If a fact is uncertain, write a measured version ("more than 8 rounds") rather
 // than inventing a number.
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { AUTHOR_PROFILE } from '../data/author';
 import { breadcrumbSchema } from '../lib/schema';
 const DOMAIN = 'https://www.cubicalgolfer.com';
 const meta = {
@@ -161,10 +162,21 @@ const CATEGORIES = [
         <div style="font-size:16px;line-height:1.75;color:var(--body);">
           <p style="margin:0 0 12px;"><strong>Ryan O.</strong> — founder and lead reviewer. 10-handicap weekend golfer based in Chicago, IL. Started playing golf in 2010 and started Cubical Golfer after getting fed up with golf reviews that read like brochure rewrites.</p>
           <p style="margin:0 0 12px;"><strong>Playing background:</strong> Playing since 2010, 25–40 rounds a year, primarily out of Harborside Golf Course — a public Chicago course where lake wind stress-tests every distance and accuracy claim. Additional rounds at other Chicago-area public courses give our reviews exposure to multiple course conditions.</p>
-          {/* OWNER ACTION: fill your real bag — driver+shaft, woods, irons, wedges,
-     putter, ball, rangefinder — then uncomment. Do NOT publish invented gear:
-  <p style="margin:0 0 12px;"><strong>In the bag (as of 2026):</strong> ...</p>
-  */}
+          {/* Bag renders automatically once witb.driver, witb.irons and witb.putter
+              are filled in src/data/author.ts — edit that file, not this one. */}
+          {AUTHOR_PROFILE.witb?.driver && AUTHOR_PROFILE.witb?.irons && AUTHOR_PROFILE.witb?.putter && (
+            <p style="margin:0 0 12px;"><strong>In the bag (as of {AUTHOR_PROFILE.witb.asOf}):</strong>{' '}
+              {[
+                AUTHOR_PROFILE.witb.driver,
+                AUTHOR_PROFILE.witb.woods,
+                AUTHOR_PROFILE.witb.irons,
+                AUTHOR_PROFILE.witb.wedges,
+                AUTHOR_PROFILE.witb.putter,
+                AUTHOR_PROFILE.witb.ball && `Ball: ${AUTHOR_PROFILE.witb.ball}`,
+                AUTHOR_PROFILE.witb.rangefinder && `Rangefinder: ${AUTHOR_PROFILE.witb.rangefinder}`,
+              ].filter(Boolean).join(' · ')}
+            </p>
+          )}
           <p style="margin:0 0 0;"><strong>Credentials and limits:</strong> Not a teaching pro, not a former mini-tour player, not a certified club fitter. The reviews on this site are written from the perspective of a recreational golfer who plays the same kind of golf the readers play. Where deeper technical knowledge is needed — clubfitting, agronomy, equipment engineering — we cite published sources or interview people who actually have those credentials.</p>
         </div>
       </div>
