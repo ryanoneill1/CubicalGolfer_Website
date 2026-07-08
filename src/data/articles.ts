@@ -622,7 +622,7 @@ export const ARTICLES: Article[] = [
     pageType: 'tutorial',
     tag: 'TUTORIAL',
     emoji: '🎯',
-    quickAnswerProduct: 'putting-mirror',
+    quickAnswerProduct: 'lag-shot-7-iron',
     thumb: 'purple',
     words: '2,800',
     datePublished: '2025-02-01',
@@ -639,7 +639,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: "How to Fix Your Slice: The Weekend Golfer's Complete Guide",
     description: 'The best golf clubs for beginners — complete sets tested under $500. Wilson, Callaway Strata, and Top Flite compared for the golfer who is starting.',
     excerpt: 'Step-by-step drills and gear adjustments that actually stick — no range bucket required.',
-    bottomLine: 'Our top pick for this guide: the <strong>Putting Mirror</strong> (~$25)',
+    bottomLine: 'Our top pick for this guide: the <strong>Lag Shot 7-Iron</strong> (~$119) — the tempo trainer that fixes the over-the-top move behind most slices',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/fix-slice-thumb.webp',
     thumbnail: '/images/thumbnails/fix-slice-thumb.webp',
     intro: 'The slice is the most common miss in amateur golf — and the most misunderstood. The fix is in understanding what actually causes the ball to curve right, then changing one or two variables that matter. And if you are heading to the course straight from work, our <a href="/office-to-golf-course-playbook/">cubicle-to-course playbook</a> has a warm-up routine that prevents the first-tee slice.',
@@ -751,7 +751,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'tips-beginners',
     slug: '/golf-tips-for-beginners/',
-    quickAnswerProduct: 'callaway-strata-set',
+    quickAnswerProduct: 'callaway-strata',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/tips-beginners-thumb.webp',
     thumbnail: '/images/thumbnails/tips-beginners-thumb.webp',
     category: 'improve-game',
@@ -3016,7 +3016,7 @@ export const ARTICLES: Article[] = [
       },
     
       { h2: 'The One-Club Chipping Method', body: 'Pick your sand wedge (54 to 56 degrees) and use it for every chip within 30 yards. Vary the shot by changing ball position: ball back in stance for a low runner, ball center for a standard chip, ball forward for a higher lob. This one-club approach simplifies your short game dramatically — you build feel with one club instead of juggling three. Tour players use multiple wedges because they practice 4 hours daily. Weekend golfers who practice 30 minutes weekly improve faster with one club they know well.' },
-      { h2: 'Distance Control: The Clock System', body: 'Imagine your backswing as a clock face. A 7 o-clock backswing (hands at hip height) produces a 20-yard chip. A 9 o-clock backswing (hands at waist height) produces a 40-yard pitch. A 10 o-clock backswing produces a 60-yard pitch. Practice each position 10 times at the chipping green and note your average distance for each clock position. After one practice session, you will have three reliable distances that cover 80 percent of short game situations. Keep the same swing speed for each — only the backswing length changes.' },
+      { h2: 'Distance Control: The Clock System', body: 'Imagine your backswing as a clock face. A 7 o\'clock backswing (hands at thigh height) produces a 20-yard chip. A 9 o\'clock backswing (hands at hip height) produces a 40-yard pitch. A 10 o\'clock backswing produces a 60-yard pitch. Practice each position 10 times at the chipping green and note your average distance for each clock position. After one practice session, you will have three reliable distances that cover 80 percent of short game situations. Keep the same swing speed for each — only the backswing length changes.' },
     ],
     faq: [
       { q: 'Should I use a 7-iron or wedge for chipping?', a: 'Either works with the deadhands technique. A 7-iron runs more and carries less — useful when the pin is far from the fringe. A pitching wedge carries slightly more and runs less — better near the fringe. Most weekend golfers benefit from using one club (9-iron) consistently until the technique is grooved, then experimenting with other clubs.' },
@@ -7618,7 +7618,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'The best couples golf gift is anything that gets you on the course together. Matching <strong>Garmin Approach S42 GPS watches</strong> ($249 each) give both players instant yardages without slowing down play. Budget option: a <strong>couples lesson package</strong> from a local PGA pro ($150-$200 for 3 sessions).',
     description: 'Golf equipment for couples, newlyweds, and new parents in 2026. GPS watches, lesson packages, and gear from $25 to $250 that both partners use.',
     excerpt: 'Best golf gifts for couples who play together — gear that makes shared rounds more fun.',
-    intro: 'The best golf gear for couples is a pair of <strong>Garmin Approach S42 GPS watches</strong> at $249 each — they track yardages, keep score, and sync round data so you can compare stats together. For a budget option, a <strong>couples lesson package</strong> ($80 to $120) at your local course improves both your games at once.\n\nGolf is one of the few sports where couples can genuinely compete and enjoy it together. Whether you play as a team or against each other, the right gear makes couples golf better. Here are gifts that work for both of you.',
+    intro: 'The best golf gear for couples is a pair of <strong>Garmin Approach S42 GPS watches</strong> at $249 each — they track yardages, keep score, and sync round data so you can compare stats together. For a budget option, a <strong>couples lesson package</strong> ($150 to $200 for three sessions) at your local course improves both your games at once.\n\nGolf is one of the few sports where couples can genuinely compete and enjoy it together. Whether you play as a team or against each other, the right gear makes couples golf better. Here are gifts that work for both of you.',
     testingNotes: 'Selections based on 3 years of playing couples golf and feedback from our community of weekend golfer couples.',
     updateLog: [
       { date: 'Apr 24, 2026', note: 'Published — gifts for couples who golf together.' },
@@ -11276,7 +11276,7 @@ export const ARTICLES: Article[] = [
       headers: ['Iron Set', 'Best For', 'Price', 'Forgiveness'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'ping-g430-irons', name: 'Ping G430', bestFor: 'Best overall', price: '~$899', feature1: 'Exceptional', feature2: 'Clean look', badge: 'BEST OVERALL', winner: true },
-        { rating: 4.6, affiliateKey: 'callaway-big-bertha', name: 'Callaway Big Bertha', bestFor: 'Max forgiveness', price: '~$799', feature1: 'Maximum', feature2: 'Larger head' },
+        { rating: 4.6, affiliateKey: 'callaway-big-bertha-b21-irons', name: 'Callaway Big Bertha B21', bestFor: 'Max forgiveness', price: '~$799', feature1: 'Maximum', feature2: 'Larger head' },
         { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'TaylorMade Qi', bestFor: 'Distance + feel', price: '~$899', feature1: 'High', feature2: 'Best feel' },
         { rating: 4.5, affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Best value', price: '~$699', feature1: 'High', feature2: 'Affordable', badge: 'BEST VALUE' },
         { rating: 4.4, affiliateKey: 'cobra-aerojet-max-irons', name: 'Cobra Aerojet', bestFor: 'Distance', price: '~$799', feature1: 'High', feature2: 'Longest' },
@@ -11394,7 +11394,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Best new under $500', price: '~$499', feature1: 'High', feature2: 'Often on sale', badge: 'BEST VALUE', winner: true },
         { rating: 4.4, affiliateKey: 'cobra-aerojet-max-irons', name: 'Cobra Aerojet (prev gen)', bestFor: 'Distance', price: '~$449 used', feature1: 'High', feature2: 'Long' },
-        { rating: 4.6, affiliateKey: 'callaway-big-bertha', name: 'Callaway Big Bertha (prev)', bestFor: 'Max forgiveness', price: '~$399 used', feature1: 'Maximum', feature2: 'Large head' },
+        { rating: 4.6, affiliateKey: 'callaway-big-bertha-b21-irons', name: 'Big Bertha B21 (prev gen)', bestFor: 'Max forgiveness', price: '~$399 used', feature1: 'Maximum', feature2: 'Large head' },
       ],
     },
     sections: [
@@ -13190,6 +13190,9 @@ export const ARTICLES: Article[] = [
       { h2: 'Golf ball deals', body: 'Amazon runs the best golf ball deals on Prime Day — buy-2-get-1 or 20-30% off multi-dozen packs. Stock up on your preferred ball from our <a href="/best-golf-balls-2026/">rankings</a>. The <a href="/kirkland-signature-golf-balls/">Kirkland Signature</a> is already Amazon-priced but Prime Day sometimes adds further discounts.' },
       { h2: 'Accessories and training aids', body: 'Accessories see 30-40% off on Prime Day. <a href="/best-golf-alignment-sticks/">Alignment sticks</a>, <a href="/best-golf-towel/">towels</a>, <a href="/best-golf-umbrella/">umbrellas</a>, and <a href="/best-golf-training-aids/">training aids</a> are all worth buying at Prime Day prices.' },
       { h2: 'Tech and gadgets', body: 'The <a href="/garmin-approach-r10-review/">Garmin R10</a> and <a href="/best-golf-gps-watches/">GPS watches</a> sometimes see 15-25% Prime Day discounts. The <a href="/best-golf-apps/">golf app</a> subscriptions occasionally run Prime Day promotions too.' },
+      { h2: 'How to Tell a Real Golf Deal From a Fake One', body: 'Golf gear \'discounts\' are often theater: the list price gets inflated in June so the July cut looks dramatic. Two habits protect you. First, check the price history on a tracker like CamelCamelCamel before you believe any percentage — a \'40% off\' rangefinder that sat at the sale price all spring is not a deal. Second, know the honest street price going in: our <a href="/best-golf-rangefinders-2026/">rangefinder guide</a> and <a href="/best-golf-launch-monitors-2026/">launch monitor guide</a> list what each pick actually sells for, which makes a real discount obvious in seconds.' },
+      { h2: 'What Almost Never Goes On Sale (Save Your Clicks)', body: 'Current-year premium balls (Pro V1, TP5, Chrome Tour) hold price within a dollar or two of list all year — buy last season\'s model instead and pocket 30%. Current-generation drivers and irons from the big brands rarely drop more than token amounts until the next release cycle; the real savings live in previous-gen heads, which our <a href="/best-golf-drivers-under-200/">under-$200 driver guide</a> is built around. Launch monitors are the exception worth watching: the Garmin R10 and Rapsodo MLM2PRO both see genuine $50-$100 cuts during major sale events.' },
+      { h2: 'The 10-Minute Prime Day Strategy', body: 'Decide what you need before the event, not during it — a wishlist of two or three items from our guides, each with its normal street price written down. On the day, check those items first, buy anything at 15%+ below street, and ignore everything else. The gear that improves scores is boring and specific: balls you already play, a glove multi-pack, a rangefinder if you still guess yardages. The gear that collects dust is whatever looked exciting at 2am because it was 60% off.' },
     ],
     faq: [
       { q: 'Is Prime Day worth it for golf gear?', a: 'For golf balls and accessories — yes, the savings are genuine. For premium equipment like launch monitors and rangefinders — Black Friday typically has deeper discounts. Use Prime Day for consumables and Black Friday for big-ticket items.' },

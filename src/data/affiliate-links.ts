@@ -1847,6 +1847,15 @@ export const AFFILIATE: Record<string, {
   },
 
   // ── Products added to fix placeholder images (replace URLs with ASINs) ─────
+  'callaway-big-bertha-b21-irons': {
+    url: 'https://www.amazon.com/s?k=callaway+big+bertha+b21+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$799',
+    priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/callaway-big-bertha-b21.webp',
+    imgAlt: 'Callaway Big Bertha B21 irons',
+  },
   'callaway-big-bertha': {
     url: 'https://www.amazon.com/s?k=callaway+big+bertha+driver&crid=2AEGJKHQ2WRM1&sprefix=callaway+big+%2Caps%2C249&linkCode=ll2&tag=cubicalgolfer-20&linkId=f4dfaed6b25f58149ac36736ce8fb6eb&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Big%2520Bertha%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
