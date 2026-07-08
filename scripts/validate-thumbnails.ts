@@ -64,13 +64,13 @@ const AWAITING_PHOTO = new Set<string>([
   'srixon-q-star-tour',               // 6 pages — top priority
   'vice-pro-plus',                    // 3 pages
   'vice-pro-soft',                    // 2 pages
-  'cleveland-launcher-xl-halo-irons', // 2 pages (interim XL2-iron art)
   'cleveland-launcher-xl2-irons',
   'putt-a-bout-putting-green',        // 2 pages
   'under-armour-showdown-shorts',     // 1 page — shorts WINNER card
-  'club-car-onward','cobra-air-x','ezgo-freedom-rxv','maxfli-tour-x',
-  'puma-cloudspun-polo','srixon-zx5-mk-ii','taylormade-noodle',
-  'titleist-gt2-driver','swing-ai',
+  'club-car-onward','cobra-air-x','maxfli-tour-x',
+  'puma-cloudspun-polo','taylormade-noodle',
+  'srixon-zx5-mk-ii',                 // need the IRONS shot — driver photo received, saved as srixon-zx5-mk-ii-driver.webp
+  'swing-ai',
 ]);
 for (const [key, v] of Object.entries(AFFILIATE as any)) {
   const img = (v as any).imgSrc as string | undefined;

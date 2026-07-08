@@ -2630,7 +2630,7 @@ export const AFFILIATE: Record<string, {
     price: '~$599',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/titleist-gt2-driver.webp', imgAlt: 'Titleist GT2 driver',
+    imgSrc: '/images/products/Titleist-GT2-driver.webp', imgAlt: 'Titleist GT2 driver',
   },
 
   // ═══ FORGIVING IRONS + BUDGET PICKS — June 2026 ═══
@@ -2648,7 +2648,7 @@ export const AFFILIATE: Record<string, {
     price: '~$600',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/cleveland-launcher-xl2-irons.webp',
+    imgSrc: '/images/products/cleveland-launcher_xl_halo_irons.webp',
     imgAlt: 'Cleveland Launcher XL Halo irons',
   },
   'cleveland-launcher-xl': {
@@ -2905,7 +2905,7 @@ export const AFFILIATE: Record<string, {
   'ezgo-freedom-rxv': {
     url: `https://www.amazon.com/s?k=ezgo+freedom+rxv+golf+cart&tag=cubicalgolfer-20`,
     retailer: 'Amazon', price: '~$8,000+', label: `See Today's Price →`,
-    imgSrc: '/images/products/ezgo-freedom-rxv.webp', imgAlt: 'EZGO Freedom RXV electric golf cart',
+    imgSrc: '/images/products/E-Z-GO-Freedom-RXV.webp', imgAlt: 'EZGO Freedom RXV electric golf cart',
   },
   'club-car-onward': {
     url: `https://www.amazon.com/s?k=club+car+onward+golf+cart&tag=cubicalgolfer-20`,
