@@ -441,7 +441,7 @@ nav.site-nav {
 .art-thumb {
   height: 160px; position: relative;
   display: flex; align-items: center; justify-content: center; font-size: 52px;
-  background: #2A5038; /* default bg behind contained thumbnails */
+  background: var(--green); /* matches generated-thumbnail canvas for a seamless letterbox */
   border-radius: 12px 12px 0 0;
   overflow: hidden;
 }
