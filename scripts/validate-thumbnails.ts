@@ -51,25 +51,18 @@ for (const article of ARTICLES) {
 // size/color heuristics misfire on dark products and tinted art.
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
 const SILHOUETTE_FILES = new Set<string>([
-  'callaway-strata-senior.webp','carls-place-impact-screen.webp','carls-place-screen.webp',
-  'cleveland-launcher-xl2-driver.webp','cleveland-launcher-xl2-irons.webp','club-car-onward.webp',
-  'cobra-air-x.webp','ezgo-freedom-rxv.webp','maxfli-tour-x.webp','mizuno-jpx923-hot-metal.webp',
-  'puma-cloudspun-polo.webp','putt-a-bout-putting-green.webp','skechers-go-golf.webp',
-  'sklz-accelerator-pro.webp','srixon-q-star-tour.webp','srixon-zx5-mk-ii.webp',
-  'sun-mountain-25-plus.webp','swing-ai.webp','taylormade-noodle.webp','taylormade-sim2-max.webp',
-  'taylormade-stealth-2-hd.webp','taylormade-stealth-hybrid.webp','titleist-gt2-driver.webp',
-  'under-armour-showdown-shorts.webp','vice-pro-plus.webp','vice-pro-soft.webp','vokey-sm10.webp',
+  // Verified 2026-07-08 by template-color analysis (the navy/green "product
+  // name card" template scores ~50% template-pixel share; real photos ≤1.4%).
+  // Earlier visual classification wrongly flagged 22 real white-background
+  // photos (balls, apparel) as art — corrected. Only these are true cards:
+  'taylormade-sim2-max.webp',          // repointed → taylormade-sim-max.webp
+  'cleveland-launcher-xl2-driver.webp',// repointed → cleveland-launcher-xl2.webp
+  'titleist-gt2-driver.webp',          // repointed → Titleist-GT2-driver.webp
+  'club-car-onward.webp',              // still in use — awaiting a real photo
+  'ezgo-freedom-rxv.webp',             // repointed → E-Z-GO-Freedom-RXV.webp
 ]);
 const AWAITING_PHOTO = new Set<string>([
-  'srixon-q-star-tour',               // 6 pages — top priority
-  'vice-pro-plus',                    // 3 pages
-  'vice-pro-soft',                    // 2 pages
-  'cleveland-launcher-xl2-irons',
-  'putt-a-bout-putting-green',        // 2 pages
-  'under-armour-showdown-shorts',     // 1 page — shorts WINNER card
-  'club-car-onward','cobra-air-x','maxfli-tour-x',
-  'puma-cloudspun-polo','taylormade-noodle',
-  'swing-ai',
+  'club-car-onward', // 1 page — the only product still on card art
 ]);
 for (const [key, v] of Object.entries(AFFILIATE as any)) {
   const img = (v as any).imgSrc as string | undefined;
