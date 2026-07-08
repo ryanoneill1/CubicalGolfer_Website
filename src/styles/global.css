@@ -203,6 +203,12 @@ nav.site-nav {
 }
 .breadcrumb a { color: rgba(255,255,255,.72); transition: color .2s; }
 .breadcrumb a:hover { color: #fff; }
+/* Legal/utility pages render breadcrumbs on the cream body, not the dark hero —
+   the default white links are illegible there. (Design audit 2026-07-08.) */
+.breadcrumb--onlight, .breadcrumb--onlight span[aria-current] { color: var(--muted); }
+.breadcrumb--onlight a { color: var(--green); }
+.breadcrumb--onlight a:hover { color: var(--green-dark, #14261B); }
+.breadcrumb--onlight .bc-sep { color: var(--muted); }
 .bc-sep { color: rgba(255,255,255,.3); }
 
 /* ── ARTICLE PAGE ── */

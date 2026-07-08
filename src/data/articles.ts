@@ -689,7 +689,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'break-90',
     slug: '/how-to-break-90/',
-    quickAnswerProduct: 'garmin-approach-r10',
+    quickAnswerProduct: 'putting-mirror',
     category: 'improve-game',
     pageType: 'tutorial',
     tag: 'TUTORIAL',
@@ -705,7 +705,7 @@ export const ARTICLES: Article[] = [
     titleDisplay: "How to Break 90: A Weekend Golfer's Roadmap",
     description: "Breaking 90 means 17 over. You've shot 91 twice and it stings. Here's the scoring math and course management a weekend warrior actually needs to get there.",
     excerpt: 'The exact skills, stats, and mindset shifts that move you from 95 to 89.',
-    bottomLine: 'Our top pick for this guide: the <strong>Garmin Approach R10</strong> (~$599)',
+    bottomLine: 'Our top pick for this guide: the <strong>Putting Mirror</strong> (~$25) — most rounds that break 90 are won inside 100 yards, and this is the cheapest tool that fixes the putts you should never miss',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/break-90-thumb.webp',
     thumbnail: '/images/thumbnails/break-90-thumb.webp',
     intro: "Breaking 90 requires averaging bogey golf — one over par on every hole. It's achievable for any golfer averaging 95–105 who's willing to play smarter, not necessarily better.",
@@ -1256,7 +1256,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'courses',
     slug: '/best-golf-courses-weekend-drive/',
-    quickAnswerProduct: 'bag-boy-nitron',
+    quickAnswerProduct: 'bushnell-tour-v6-shift',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/courses-thumb.webp',
     thumbnail: '/images/thumbnails/courses-thumb.webp',
     category: 'golf-lifestyle',
@@ -11774,7 +11774,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'driver-loft-guide',
     slug: '/driver-loft-guide/',
-    quickAnswerProduct: 'garmin-approach-r10',
+    quickAnswerProduct: 'taylormade-qi35-max',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/driver-loft-thumb.webp',
     thumbnail: '/images/thumbnails/driver-loft-thumb.webp',

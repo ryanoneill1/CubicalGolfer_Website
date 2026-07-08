@@ -69,7 +69,7 @@ for (const file of walk(SRC)) {
     const line = content.slice(lineStart, content.indexOf('\n', m.index!));
     if (/border|background|outline|shadow/.test(line)) continue;
     const ctx = content.slice(Math.max(0, m.index! - 500), m.index! + 200).toLowerCase();
-    const darkCtx = ['footer','green','dark','hero','home-picks','sticky','overlay','trust-','quick-answer','exit-intent','.sb','cat-hero','result-num','email-strip','privacy','backdrop'].some(d => ctx.includes(d)) || ctx.includes('rgba(255,255,255') || ctx.includes('color:#fff') || ctx.includes('color: #fff');
+    const darkCtx = ['footer','green','dark','hero','home-picks','sticky','overlay','trust-','quick-answer','exit-intent','.sb','cat-hero','result-num','email-strip','backdrop'].some(d => ctx.includes(d)) || ctx.includes('rgba(255,255,255') || ctx.includes('color:#fff') || ctx.includes('color: #fff');
     if (!darkCtx) { console.error(`⚠️  ${file}: var(--gold) used as text outside a dark context — use var(--gold-text)`); warnings++; }
   }
 
