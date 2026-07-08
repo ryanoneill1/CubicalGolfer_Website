@@ -113,6 +113,19 @@ a { text-decoration: none; color: inherit; }
 .product-card__cta .product-card__cta-badge { color: rgba(255,255,255,.8); }
 .product-card__cta--winner .product-card__cta-badge { color: rgba(26,43,31,.65); }
 
+/* ── CONTRAST BULLETPROOFING (2026-07) ─────────────────────────────
+   Belt-and-suspenders: force explicit light-on-dark for every child
+   of dark CTA/badge surfaces so no scoped/inline rule can regress them,
+   and give text selection a branded, always-readable style. */
+.product-card__badge { background: var(--green) !important; color: #fff !important; }
+.product-card--winner .product-card__badge { background: var(--gold) !important; color: #1a1a1a !important; }
+.product-card__cta .product-card__cta-text,
+.product-card__cta .product-card__cta-badge { color: inherit !important; }
+.product-card__cta--gg, .product-card__cta--gg .product-card__cta-text { color: var(--green) !important; }
+.qp__cta *, .rec-gear-btn--primary * { color: inherit !important; }
+::selection { background: rgba(201,162,39,.9); color: #1A2B1F; }
+::-moz-selection { background: rgba(201,162,39,.9); color: #1A2B1F; }
+
 /* Quick pick sidebar CTA */
 .qp__cta { color: #fff !important; }
 .rec-gear-btn--primary { color: #fff !important; }
