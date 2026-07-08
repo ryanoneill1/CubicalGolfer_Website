@@ -440,7 +440,7 @@ export const COMPARISONS: Comparison[] = [
   // ── SkyTrak+ vs FlightScope Mevo Gen 2 ─────────────────────────────────
   {
     slug: 'skytrak-plus-vs-flightscope-mevo-gen2',
-    thumbnail: '/images/thumbnails/compare-skytrak-vs-mevo-plus.webp',
+    thumbnail: '/images/thumbnails/compare-skytrak-plus-vs-flightscope-mevo-gen2.webp',
     title: 'SkyTrak+ vs FlightScope Mevo Gen 2',
     description: 'SkyTrak+ ($2,995) vs FlightScope Mevo Gen 2 ($1,299) — two launch monitors tested head-to-head over 500+ shots. Which delivers better data for.',
     productA: 'skytrak-plus',
@@ -481,7 +481,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug:        'taylormade-qi35-vs-callaway-ai-smoke',
-    thumbnail:   '/images/thumbnails/compare-qi35-vs-ai-smoke.webp',
+    thumbnail:   '/images/thumbnails/compare-taylormade-qi35-vs-callaway-ai-smoke.webp',
     title:       'Qi35 vs Ai Smoke Max Driver — 8 Rounds Tested',
     description: 'Qi35 vs Ai Smoke Max driver tested over 8 rounds. Distance, forgiveness, and accuracy compared for 90 to 100 mph swing speeds. Full test data.',
     productA:    'taylormade-qi35-max',
@@ -519,7 +519,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug:        'titleist-pro-v1-vs-callaway-chrome-soft',
-    thumbnail:   '/images/thumbnails/compare-pro-v1-vs-chrome-soft.webp',
+    thumbnail:   '/images/thumbnails/compare-titleist-pro-v1-vs-callaway-chrome-soft.webp',
     title:       'Chrome Soft vs Pro V1 — 200 Shots Tested',
     description: 'Chrome Soft vs Pro V1 tested over 200 shots. Callaway vs Titleist compared for distance, spin, feel, and value — which premium ball fits your game?',
     productA:    'titleist-pro-v1',
@@ -557,7 +557,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug:        'titleist-pro-v1-vs-kirkland-signature',
-    thumbnail:   '/images/thumbnails/compare-pro-v1-vs-kirkland.webp',
+    thumbnail:   '/images/thumbnails/compare-titleist-pro-v1-vs-kirkland-signature.webp',
     title:       'Pro V1 vs Kirkland: $28 vs $55 — Worth It? (Tested)',
     description: 'Kirkland at $28/dz vs Pro V1 at $55/dz — 150 shots tested for spin, distance, and feel. Is the Costco ball close enough to save $27 per dozen?',
     productA:    'titleist-pro-v1',
@@ -601,7 +601,7 @@ export const COMPARISONS: Comparison[] = [
 
 {
     slug:        'garmin-approach-s62-vs-s70',
-    thumbnail:   '/images/thumbnails/compare-garmin-s62-vs-s70.webp',
+    thumbnail:   '/images/thumbnails/compare-garmin-approach-s62-vs-s70.webp',
     title:       'Garmin Approach S62 vs S70 — Worth the Upgrade?',
     description: 'Garmin S62 vs S70 compared after 15 rounds each. New touchscreen, better maps, longer battery — but is it worth $150 more than the proven S62?',
     productA:    'garmin-approach-s62',
@@ -647,7 +647,7 @@ export const COMPARISONS: Comparison[] = [
   // ═══ NEW LAUNCH MONITOR COMPARISONS ═══
   {
     slug:          'garmin-r10-vs-rapsodo-mlm2pro',
-    thumbnail: '/images/thumbnails/rapsodo-vs-garmin-r10-thumb.webp',
+    thumbnail: '/images/thumbnails/compare-garmin-r10-vs-rapsodo-mlm2pro.webp',
     title:         'Garmin R10 vs Rapsodo MLM2Pro — Which Wins?',
     description:   'Garmin Approach R10 vs Rapsodo MLM2Pro compared on accuracy, indoor/outdoor performance, app quality, and value. Tested by a weekend golfer.',
     productA:      'garmin-approach-r10',
@@ -677,7 +677,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:          'bushnell-launch-pro-vs-garmin-r10',
-    thumbnail: '/images/thumbnails/launch-pro-vs-skytrak-thumb.webp',
+    thumbnail: '/images/thumbnails/compare-bushnell-launch-pro-vs-garmin-r10.webp',
     title:         'Bushnell Launch Pro vs Garmin R10 — Worth 3x?',
     description:   'Bushnell Launch Pro at $2,000 vs Garmin R10 at $550. Accuracy and features compared — is the premium price justified for a weekend golfer in 2026?',
     productA:      'bushnell-launch-pro',
@@ -704,7 +704,7 @@ export const COMPARISONS: Comparison[] = [
   },
 {
     slug:          'skytrak-plus-vs-garmin-r10',
-    thumbnail: '/images/thumbnails/compare-skytrak-vs-garmin-r10.webp',
+    thumbnail: '/images/thumbnails/compare-skytrak-plus-vs-garmin-r10.webp',
     title:         'SkyTrak+ vs Garmin R10 — Camera vs Radar Launch Monitor',
     description:   'SkyTrak+ vs Garmin Approach R10 — accuracy, simulator quality, portability, and which launch monitor to buy for home practice and simulation.',
     productA:      'skytrak-plus',
@@ -733,7 +733,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:          'garmin-r10-vs-flightscope-mevo',
-    thumbnail: '/images/thumbnails/skytrak-vs-mevo-plus-thumb.webp',
+    thumbnail: '/images/thumbnails/compare-garmin-r10-vs-flightscope-mevo.webp',
     title:         'Garmin R10 vs FlightScope Mevo — Which to Buy?',
     description:   'Garmin R10 vs FlightScope Mevo compared for accuracy, features, app quality, and value in 2026. Two entry-level launch monitors tested for golfers.',
     productA:      'garmin-approach-r10',
@@ -761,7 +761,7 @@ export const COMPARISONS: Comparison[] = [
   // ═══ DRIVER COMPARISONS ═══
   {
     slug:          'taylormade-qi35-vs-titleist-gt2',
-    thumbnail: '/images/thumbnails/compare-callaway-paradym-vs-taylormade-qi35.webp',
+    thumbnail: '/images/thumbnails/compare-taylormade-qi35-vs-titleist-gt2.webp',
     title:         'Qi35 vs GT2 Driver — Premium Showdown (2026)',
     description:   'TaylorMade Qi35 Max vs Titleist GT2 driver compared for forgiveness, distance, and feel in 2026. Which premium driver is better for weekend golfers?',
     productA:      'taylormade-qi35-max',
@@ -791,7 +791,7 @@ export const COMPARISONS: Comparison[] = [
   // ═══ RANGEFINDER COMPARISON ═══
   {
     slug:          'bushnell-pro-x3-vs-tour-v6',
-    thumbnail: '/images/thumbnails/compare-bushnell-tour-v6-vs-precision-pro-nx9.webp',
+    thumbnail: '/images/thumbnails/compare-bushnell-pro-x3-vs-tour-v6.webp',
     title:         'Bushnell Pro X3 vs Tour V6 — Which to Buy?',
     description:   'Bushnell Pro X3 vs Tour V6 Shift comparison. Accuracy, slope, optics, and whether the premium Pro X3 is worth the upgrade for a weekend golfer.',
     productA:      'bushnell-pro-xe',
@@ -819,7 +819,7 @@ export const COMPARISONS: Comparison[] = [
   // ═══ GPS WATCH COMPARISON ═══
   {
     slug:          'garmin-s70-vs-apple-watch-golf',
-    thumbnail: '/images/thumbnails/compare-garmin-s62-vs-s70.webp',
+    thumbnail: '/images/thumbnails/compare-garmin-s70-vs-apple-watch-golf.webp',
     title:         'Garmin S70 vs Apple Watch for Golf — Which One?',
     description:   'Garmin Approach S70 vs Apple Watch Ultra 2 with golf apps. Which is better for on-course GPS, shot tracking, and the golfer who wears a watch every day?',
     productA:      'garmin-approach-s70',
@@ -848,7 +848,7 @@ export const COMPARISONS: Comparison[] = [
   // ═══ BALL COMPARISON ═══
   {
     slug:          'pro-v1-vs-tp5',
-    thumbnail: '/images/thumbnails/compare-pro-v1-vs-chrome-soft.webp',
+    thumbnail: '/images/thumbnails/compare-pro-v1-vs-tp5.webp',
     title:         'Pro V1 vs TP5 — Premium Golf Ball Comparison',
     description:   'Pro V1 vs TP5 compared for distance, spin, feel, and value in 2026. Both premium golf balls tested at recreational swing speeds by a weekend golfer.',
     productA:      'titleist-pro-v1',

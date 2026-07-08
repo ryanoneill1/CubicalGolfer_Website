@@ -69,7 +69,6 @@ const AWAITING_PHOTO = new Set<string>([
   'under-armour-showdown-shorts',     // 1 page — shorts WINNER card
   'club-car-onward','cobra-air-x','maxfli-tour-x',
   'puma-cloudspun-polo','taylormade-noodle',
-  'srixon-zx5-mk-ii',                 // need the IRONS shot — driver photo received, saved as srixon-zx5-mk-ii-driver.webp
   'swing-ai',
 ]);
 for (const [key, v] of Object.entries(AFFILIATE as any)) {
@@ -80,6 +79,22 @@ for (const [key, v] of Object.entries(AFFILIATE as any)) {
   const file = img.split('/').pop()!;
   if (SILHOUETTE_FILES.has(file) && !AWAITING_PHOTO.has(key)) {
     console.error(`Silhouette art in use: ${file} (key: ${key}) — point at a real photo, or add the key to AWAITING_PHOTO`);
+    errors++;
+  }
+}
+
+// ── COMPARISON THUMBNAILS: strict own-file rule ────────────────────────
+// A comparison's thumbnail must be its own generated compare-{slug}.webp —
+// hand-set legacy paths caused wrong-matchup art on listing cards.
+import { COMPARISONS } from '../src/data/comparisons.ts';
+for (const c of COMPARISONS as any[]) {
+  if (!c.thumbnail) continue;
+  const want = `/images/thumbnails/compare-${c.slug}.webp`;
+  if (c.thumbnail !== want) {
+    console.error(`Comparison thumbnail off-slug: ${c.slug} → ${c.thumbnail} (must be ${want})`);
+    errors++;
+  } else if (!fs.existsSync(path.join(process.cwd(), 'public', want))) {
+    console.error(`Generated compare thumb missing: ${want} — run the generator or check product images for ${c.slug}`);
     errors++;
   }
 }

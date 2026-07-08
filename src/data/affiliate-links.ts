@@ -2673,7 +2673,7 @@ export const AFFILIATE: Record<string, {
     price: '~$699',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/srixon-zx5-mk-ii.webp', imgAlt: 'Srixon ZX5 Mk II irons',
+    imgSrc: '/images/products/srixon-zx5-mk-ii-iron.webp', imgAlt: 'Srixon ZX5 Mk II irons',
   },
 
   // ═══ CONTEXT-CORRECT PRODUCT VARIANTS — June 2026 ═══
