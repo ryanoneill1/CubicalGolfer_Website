@@ -44,13 +44,13 @@ export const AUTHOR_PROFILE = {
   // ────────────────────────────────────────────────────────
   witb: {
     asOf:        '2026',
-    driver:      '',
-    woods:       '',
-    irons:       '',
-    wedges:      '',
-    putter:      '',
-    ball:        '',
-    rangefinder: '',
+    driver:      'TaylorMade Qi35 Max 10.5° — Fujikura Ventus TR Blue 6-S',
+    woods:       'Callaway Paradym 3W · Ping G430 4H',
+    irons:       'TaylorMade Stealth HD 5–PW',
+    wedges:      'Cleveland RTX 6 52°/56°',
+    putter:      'Odyssey White Hot OG #7',
+    ball:        'Srixon Q-Star Tour',
+    rangefinder: 'Bushnell Tour V6 Shift',
   },
   testingLabel:   '10+ real rounds per product',
   siteTestTotal:  '40+',        // total rounds across all reviews combined
