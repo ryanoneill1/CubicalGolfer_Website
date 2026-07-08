@@ -43,5 +43,46 @@ for (const article of ARTICLES) {
     }
   }
 }
-if (errors > 0) { console.error(`\n❌ ${errors} thumbnail problem(s).`); process.exit(1); }
-console.log(`✅ All ${ARTICLES.length} article thumbnails exist AND match their pages.`);
+// ── PRODUCT IMAGE QUALITY GATE ─────────────────────────────────────────
+// Ground truth from a manual visual audit (2026-07-08): these files are flat
+// gray-silhouette stand-ins, NOT product photos. Referencing one is only
+// allowed while its key sits in AWAITING_PHOTO — delete both entries as real
+// shots arrive. New silhouettes must be added here by hand; automatic
+// size/color heuristics misfire on dark products and tinted art.
+import { AFFILIATE } from '../src/data/affiliate-links.ts';
+const SILHOUETTE_FILES = new Set<string>([
+  'callaway-strata-senior.webp','carls-place-impact-screen.webp','carls-place-screen.webp',
+  'cleveland-launcher-xl2-driver.webp','cleveland-launcher-xl2-irons.webp','club-car-onward.webp',
+  'cobra-air-x.webp','ezgo-freedom-rxv.webp','maxfli-tour-x.webp','mizuno-jpx923-hot-metal.webp',
+  'puma-cloudspun-polo.webp','putt-a-bout-putting-green.webp','skechers-go-golf.webp',
+  'sklz-accelerator-pro.webp','srixon-q-star-tour.webp','srixon-zx5-mk-ii.webp',
+  'sun-mountain-25-plus.webp','swing-ai.webp','taylormade-noodle.webp','taylormade-sim2-max.webp',
+  'taylormade-stealth-2-hd.webp','taylormade-stealth-hybrid.webp','titleist-gt2-driver.webp',
+  'under-armour-showdown-shorts.webp','vice-pro-plus.webp','vice-pro-soft.webp','vokey-sm10.webp',
+]);
+const AWAITING_PHOTO = new Set<string>([
+  'srixon-q-star-tour',               // 6 pages — top priority
+  'vice-pro-plus',                    // 3 pages
+  'vice-pro-soft',                    // 2 pages
+  'cleveland-launcher-xl-halo-irons', // 2 pages (interim XL2-iron art)
+  'cleveland-launcher-xl2-irons',
+  'putt-a-bout-putting-green',        // 2 pages
+  'under-armour-showdown-shorts',     // 1 page — shorts WINNER card
+  'club-car-onward','cobra-air-x','ezgo-freedom-rxv','maxfli-tour-x',
+  'puma-cloudspun-polo','srixon-zx5-mk-ii','taylormade-noodle',
+  'titleist-gt2-driver','swing-ai',
+]);
+for (const [key, v] of Object.entries(AFFILIATE as any)) {
+  const img = (v as any).imgSrc as string | undefined;
+  if (!img) continue;
+  const full = path.join(process.cwd(), 'public', img);
+  if (!fs.existsSync(full)) { console.error(`Missing product image: ${img} (key: ${key})`); errors++; continue; }
+  const file = img.split('/').pop()!;
+  if (SILHOUETTE_FILES.has(file) && !AWAITING_PHOTO.has(key)) {
+    console.error(`Silhouette art in use: ${file} (key: ${key}) — point at a real photo, or add the key to AWAITING_PHOTO`);
+    errors++;
+  }
+}
+
+if (errors > 0) { console.error(`\n❌ ${errors} image problem(s).`); process.exit(1); }
+console.log(`✅ Thumbnails match their pages AND all referenced product images are real photos (${AWAITING_PHOTO.size} awaiting owner shots).`);

@@ -12,7 +12,7 @@ const BRAND_MAP: [string, string][] = [
   ['cleveland launcher xl2 driver',     'cleveland-launcher-xl2-driver'],
   ['taylormade sim2 max irons',         'taylormade-sim2-max-irons'],
   ['taylormade stealth hd irons',       'taylormade-stealth-hd-irons'],
-  ['cleveland launcher xl halo',        'cleveland-launcher-xl'],
+  ['cleveland launcher xl halo',        'cleveland-launcher-xl-halo-irons'],
   ['srixon zx5 mk ii',                 'srixon-zx5-mk-ii'],
   ['bushnell tour v6 shift',          'bushnell-tour-v6-shift'],
   ['bushnell v6 shift',               'bushnell-tour-v6-shift'],

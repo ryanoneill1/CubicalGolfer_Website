@@ -802,7 +802,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$249',
     primaryRetailer: 'direct',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
-    imgSrc: '/images/products/sun-mountain-25-plus.webp',
+    imgSrc: '/images/products/sun-mountain-25-bag.webp',
     imgAlt: 'Sun Mountain 2.5+ Carry Golf Bag',
   
     benefits: [
@@ -878,7 +878,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSkechers%2520Go%2520Golf%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon', price: '~$85',
     priceNote: 'Great value at this price point. Rarely drops lower.', label: 'See Today\'s Price →',
-    imgSrc: '/images/products/skechers-go-golf.webp',
+    imgSrc: '/images/products/skechers-go-golf-elite-5.webp',
     imgAlt: 'Skechers Go Golf Pro 5 Golf Shoes',
   },
   'footjoy-tour-alpha': {
@@ -1493,7 +1493,7 @@ export const AFFILIATE: Record<string, {
     price: '~$110',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'See Today\'s Price →',
-    imgSrc: '/images/products/skechers-go-golf.webp',
+    imgSrc: '/images/products/skechers-go-golf-elite-5.webp',
     imgAlt: 'Skechers Go Golf Elite 5 Spikeless Shoes',
     benefits: ['Ultra Go cushioning for 18 holes of walking', 'H2GO waterproof shield', 'Arch Fit insole for all-day comfort'],
   },
@@ -1708,7 +1708,7 @@ export const AFFILIATE: Record<string, {
     price: '~$179',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'See Today\'s Price →',
-    imgSrc: '/images/products/vokey-sm10.webp',
+    imgSrc: '/images/products/vokey-sm10-52.webp',
     imgAlt: 'Titleist Vokey SM10 52-Degree Wedge',
     benefits: [
       'Tour-proven design — most played wedge on Tour',
@@ -2014,7 +2014,7 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'direct',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/taylormade-stealth-2-hd.webp',
+    imgSrc: '/images/products/taylormade-stealth-hd.webp',
     imgAlt: 'TaylorMade Stealth 2 HD driver',
   },
   'tour-striker-smart-ball': {
@@ -2330,7 +2330,7 @@ export const AFFILIATE: Record<string, {
     price: '~$40',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/sklz-accelerator-pro.webp',
+    imgSrc: '/images/products/sklz-accelerator-putting-mat.webp',
     imgAlt: 'SKLZ Accelerator Pro putting mat',
   },
 
@@ -2474,7 +2474,7 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=carls*+place*+impact*+screen*&ghref=2301%3A1333883',
     retailer: 'Amazon', price: '~$199',
     priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/carls-place-impact-screen.webp', imgAlt: 'Carls Place golf simulator impact screen',
+    imgSrc: '/images/products/diy-impact-screen-enclosure.webp', imgAlt: 'Carls Place golf simulator impact screen',
   },
   'homecourse-retractable-screen': {
     url: 'https://www.amazon.com/dp/B09WR1P9S3/?tag=cubicalgolfer-20',
@@ -2571,7 +2571,7 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/s?k=callaway+strate&crid=2HKNLKWI3MLHY&sprefix=callaway+strate%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=681c9e85e3c4f97a143ae9d112830bd9&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Amazon', price: '~$450',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/callaway-strata-senior.webp', imgAlt: 'Callaway Strata senior golf club set',
+    imgSrc: '/images/products/callaway-strata.webp', imgAlt: 'Callaway Strata senior golf club set',
   },
   'cleveland-launcher-xl-senior': {
     url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2&crid=2OYYW71NTMTFL&sprefix=cleveland+launcher+xl2%2Caps%2C302&linkCode=ll2&tag=cubicalgolfer-20&linkId=3b3e126df2448bd1026ec4b7f2a62a15&language=en_US&ref_=as_li_ss_tl',
@@ -2635,12 +2635,21 @@ export const AFFILIATE: Record<string, {
 
   // ═══ FORGIVING IRONS + BUDGET PICKS — June 2026 ═══
   'taylormade-sim2-max': {
-    url: 'https://www.amazon.com/s?k=taylormade+sim2+max+irons&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=taylormade+sim+max+driver&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$399',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/taylormade-sim2-max.webp', imgAlt: 'TaylorMade SIM2 Max irons',
+    imgSrc: '/images/products/taylormade-sim-max.webp', imgAlt: 'TaylorMade SIM Max driver',
+  },
+  'cleveland-launcher-xl-halo-irons': {
+    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl+halo+irons&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$600',
+    priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/cleveland-launcher-xl2-irons.webp',
+    imgAlt: 'Cleveland Launcher XL Halo irons',
   },
   'cleveland-launcher-xl': {
     url: 'https://www.amazon.com/s?k=cleveland+launcher+xl+halo+irons&tag=cubicalgolfer-20',
@@ -2648,7 +2657,7 @@ export const AFFILIATE: Record<string, {
     price: '~$599',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/cleveland-launcher-xl.webp', imgAlt: 'Cleveland Launcher XL Halo irons',
+    imgSrc: '/images/products/cleveland-launcher-xl.webp', imgAlt: 'Cleveland Launcher XL driver',
   },
   'taylormade-stealth-hd-irons': {
     url: 'https://www.amazon.com/s?k=taylormade+stealth+hd+irons&tag=cubicalgolfer-20',
@@ -2674,7 +2683,7 @@ export const AFFILIATE: Record<string, {
     price: '~$349',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/cleveland-launcher-xl2-driver.webp', imgAlt: 'Cleveland Launcher XL2 driver',
+    imgSrc: '/images/products/cleveland-launcher-xl2.webp', imgAlt: 'Cleveland Launcher XL2 driver',
   },
   'cobra-aerojet-max-irons': {
     url: 'https://www.amazon.com/s?k=cobra+aerojet+irons&tag=cubicalgolfer-20',
