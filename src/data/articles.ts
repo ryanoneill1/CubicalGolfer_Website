@@ -4288,6 +4288,11 @@ export const ARTICLES: Article[] = [
     
       { h2: 'The $849 Starter Package', body: 'Garmin R10 launch monitor ($599) plus Spornia SPG-7 net ($150) plus a budget hitting mat ($100). This gives you accurate launch data on every swing, a simulation mode through the Garmin Golf app, and a safe ball-catching net for indoor or garage use. Display the app on a tablet propped against the wall. It is not a projector experience, but the data feedback is identical to setups costing 5x more. Most golfers who start here say the data alone improved their game — they never knew their actual carry distances before.' },
       { h2: 'Upgrade Path: $1,000 to $2,500', body: 'When you are ready to upgrade, add components in this order. First priority: a better hitting mat like the Fiberbuilt Flight Deck ($300) — your joints will thank you. Second: a short-throw projector ($400 to $600) and an impact screen ($200 to $400) for visual ball flight. Third: upgrade the launch monitor to a Rapsodo MLM2PRO ($699) or FlightScope Mevo Gen2 ($1,299) for better spin accuracy. This staged approach lets you spread costs over months rather than buying everything at once.' },
+    {
+      h2: 'Best Launch Monitor Under $500',
+      affiliateKey: 'square-golf-launch-monitor',
+      body: 'If your budget question is really \'what is the best launch monitor under $500\' — the answer in 2026 is a two-horse race. The <strong>Square Golf Launch Monitor</strong> (~$499) is the only unit at this price with true camera-based ball AND club data, which is why it anchors our under-$1,000 sim builds. The <strong>Swing Caddie SC4 Pro</strong> (~$499) counters with a built-in display and no-phone-required simplicity that range-session golfers love. Both work indoors and out, and neither charges a subscription for core data. Full head-to-head testing, including accuracy versus our Garmin R10 baseline, lives in our <a href="/best-budget-launch-monitor/">budget launch monitor guide</a>.',
+      },
     ],
     faq: [
       { q: 'What is the cheapest real golf simulator?', a: 'The Garmin Approach R10 ($599) paired with a basic net ($150–$200) and a mat ($150–$350) is the cheapest full-data home golf setup. Total: $900–$1,150. For full visual simulation (projector + screen + software), minimum realistic budget is $2,500–$3,500.' },
@@ -7613,10 +7618,10 @@ export const ARTICLES: Article[] = [
     emoji: '💑',
     datePublished: '2026-01-23',
     dateModified: '2026-06-30',
-    title: 'Golf Equipment for Couples & Newlyweds (2026)',
-    titleDisplay: 'Golf Equipment for Couples, Newlyweds & New Parents — 2026 Guide',
+    title: 'Best Golf Gifts for Couples (2026) — Tested Picks from $25',
+    titleDisplay: 'Best Golf Gifts for Couples — Newlyweds, New Parents & Office Golfers (2026)',
     bottomLine: 'The best couples golf gift is anything that gets you on the course together. Matching <strong>Garmin Approach S42 GPS watches</strong> ($249 each) give both players instant yardages without slowing down play. Budget option: a <strong>couples lesson package</strong> from a local PGA pro ($150-$200 for 3 sessions).',
-    description: 'Golf equipment for couples, newlyweds, and new parents in 2026. GPS watches, lesson packages, and gear from $25 to $250 that both partners use.',
+    description: 'Golf gifts couples actually use — tested picks for newlyweds, new parents, and office golfers. From $25 stocking stuffers to $200 lesson packages.',
     excerpt: 'Best golf gifts for couples who play together — gear that makes shared rounds more fun.',
     intro: 'The best golf gear for couples is a pair of <strong>Garmin Approach S42 GPS watches</strong> at $249 each — they track yardages, keep score, and sync round data so you can compare stats together. For a budget option, a <strong>couples lesson package</strong> ($150 to $200 for three sessions) at your local course improves both your games at once.\n\nGolf is one of the few sports where couples can genuinely compete and enjoy it together. Whether you play as a team or against each other, the right gear makes couples golf better. Here are gifts that work for both of you.',
     testingNotes: 'Selections based on 3 years of playing couples golf and feedback from our community of weekend golfer couples.',
@@ -10961,7 +10966,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'projector-calculator',
     slug: '/golf-simulator-projector-distance-calculator/',
-    quickAnswerProduct: 'garmin-approach-r10',
+    quickAnswerProduct: 'benq-th671st-projector',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/projector-calc-thumb.webp',
     thumbnail: '/images/thumbnails/projector-calc-thumb.webp',

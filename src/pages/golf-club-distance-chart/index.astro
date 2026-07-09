@@ -18,11 +18,30 @@ const meta = {
 
 const faqs = [
   { q: 'How far should I hit each club?', a: 'It depends on your swing speed. A 90 mph driver swing speed typically produces: driver 220yd, 7-iron 150yd, PW 120yd. Enter your speed in our calculator above for personalized numbers.' },
-  { q: 'How do I find my swing speed?', a: 'Use a launch monitor (Garmin R10 at $499 is the most affordable), visit a golf store with a fitting bay, or estimate from driver carry: 200yd carry ≈ 90mph, 230yd ≈ 100mph, 260yd ≈ 110mph.' },
+  { q: 'How do I find my swing speed?', a: 'Use a launch monitor (Garmin R10 at ~$599 is the most popular), visit a golf store with a fitting bay, or estimate from driver carry: 200yd carry ≈ 90mph, 230yd ≈ 100mph, 260yd ≈ 110mph.' },
   { q: 'What is the gap between each club?', a: 'Ideally 10-15 yards between consecutive clubs. If you have gaps larger than 20 yards, consider adding a hybrid or gap wedge to fill them.' },
   { q: 'Why do I hit my clubs shorter than average?', a: 'Off-center hits, incorrect shaft flex, or technique issues all reduce distance. A launch monitor can diagnose the cause — see our practice guide.' },
   { q: 'Should I carry a 3-iron or a hybrid?', a: 'Almost every golfer below scratch handicap hits a hybrid farther and more consistently than a 3-iron. The hybrid launches higher and is more forgiving on mishits.' },
 ];
+
+// Server-rendered defaults (90 mph) so the table is crawlable without JS.
+const CLUBS: [string, number, number, string][] = [
+  ['Driver',1.00,20,'wood'],['3-Wood',0.86,14,'wood'],['5-Wood',0.80,12,'wood'],
+  ['4-Hybrid',0.76,8,'hybrid'],['5-Iron',0.72,6,'iron'],['6-Iron',0.68,5,'iron'],
+  ['7-Iron',0.64,4,'iron'],['8-Iron',0.59,3,'iron'],['9-Iron',0.54,3,'iron'],
+  ['PW',0.49,2,'wedge'],['GW (50\u00b0)',0.44,2,'wedge'],['SW (56\u00b0)',0.36,1,'wedge'],['LW (60\u00b0)',0.30,1,'wedge'],
+];
+const dc90 = Math.round(90 * 2.44 - 6);
+const rows90 = CLUBS.map(([name, ratio, roll, type]) => {
+  const carry = Math.round(dc90 * ratio); const total = carry + roll;
+  const pct = Math.round((total / (dc90 + 20)) * 100);
+  const color = type==='wood' ? 'var(--green,#1E3A28)' : type==='hybrid' ? 'var(--gold,#C9A84C)' : type==='iron' ? '#4a7c5f' : '#8B7355';
+  return { name, carry, total, pct, color };
+});
+const TIERS = [75, 85, 95, 105, 115];
+const refRows = CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW')).map(([name, ratio]) => ({
+  name, vals: TIERS.map(t => Math.round((t * 2.44 - 6) * ratio)),
+}));
 
 const schemas = [
   articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
@@ -67,7 +86,16 @@ const schemas = [
 
       <table class="cmp-table" id="dist-table">
         <thead><tr><th>Club</th><th>Carry (yds)</th><th>Total (yds)</th><th style="width:30%;">Bar</th></tr></thead>
-        <tbody id="dist-body"></tbody>
+        <tbody id="dist-body">
+          {rows90.map(r => (
+            <tr>
+              <td style="font-weight:600;white-space:nowrap;">{r.name}</td>
+              <td style="text-align:center;font-weight:600;">{r.carry}</td>
+              <td style="text-align:center;">{r.total}</td>
+              <td><div style={`height:16px;border-radius:4px;background:${r.color};width:${r.pct}%;min-width:8px;`}></div></td>
+            </tr>
+          ))}
+        </tbody>
       </table>
 
       <div id="gap-alert" style="display:none;margin:20px 0;padding:16px;border-left:4px solid var(--gold,#C9A84C);background:var(--bg-alt,#f8f7f4);border-radius:0 8px 8px 0;">
@@ -102,7 +130,28 @@ const schemas = [
         <li><a href="/best-golf-irons-2026/">Best Irons 2026</a> — upgrade your distance</li>
         <li><a href="/best-golf-drivers-forgiveness/">Most Forgiving Drivers</a></li>
         <li><a href="/how-to-break-90/">How to Break 90</a></li>
+        <li><a href="/golf-swing-speed-chart/">Golf Swing Speed Chart</a> — averages by age & handicap</li>
+        <li><a href="/shaft-flex-guide/">Shaft Flex Guide</a> — match flex to your speed</li>
       </ul>
+    </section>
+
+    <section id="reference-table">
+      <h2>Golf Club Distance Chart by Swing Speed</h2>
+      <p>Prefer a fixed reference? Carry distances (yards) for five driver swing-speed bands — from senior and slower swings at 75 mph to fast swings at 115 mph. Find your column using the estimator above, then read down for every club.</p>
+      <div style="overflow-x:auto;">
+        <table class="cmp-table" style="width:100%;">
+          <thead><tr><th>Club</th>{TIERS.map(t => <th style="text-align:center;">{t} mph</th>)}</tr></thead>
+          <tbody>
+            {refRows.map(r => (
+              <tr>
+                <td style="font-weight:600;white-space:nowrap;">{r.name}</td>
+                {r.vals.map(v => <td style="text-align:center;">{v}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13px;color:var(--muted,#888);">Carry only — add 5-20 yards of roll depending on club and fairway firmness. 75 mph ≈ many senior golfers · 95 mph ≈ average male amateur · 115 mph ≈ tour speed. Related: our <a href="/golf-swing-speed-chart/">swing speed chart</a> breaks these bands down by age and handicap.</p>
     </section>
 
     <section>

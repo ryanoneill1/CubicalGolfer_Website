@@ -10,7 +10,7 @@ import EmbedBox from '../../components/EmbedBox.astro';
 const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
 const meta = {
-  title: 'Golf Ball Compression Chart — 34 Balls Ranked',
+  title: 'Golf Ball Compression Chart 2026 — All 34 Balls + PDF',
   description: 'Golf ball compression chart with 34 balls ranked low to high. Sortable by brand, price, and swing speed.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
@@ -417,7 +417,7 @@ const schemas = [
         const brandBalls = balls.filter(b => b.brand === brand);
         return (
           <div style="margin-bottom:28px;">
-            <h3>{brand} Golf Ball Compression</h3>
+            <h3 id={brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{brand} Golf Ball Compression</h3>
             <div style="overflow-x:auto;">
               <table class="cmp-table" style="width:100%;">
                 <thead><tr><th>Ball</th><th>Compression</th><th>Cover</th><th>Price/dz</th><th>Speed Range</th><th>Buy</th></tr></thead>
@@ -584,13 +584,13 @@ const schemas = [
   @media (max-width: 600px) { .speed-input-group { flex-direction: column; align-items: stretch; } .finder-picks { grid-template-columns: 1fr; } }
 </style>
     <section>
-      <h2 id="by-brand">Compression Chart by Brand</h2>
+      <h2 id="brand-summary">Compression Chart by Brand — Quick Summary</h2>
       <p>Here is every ball on our chart grouped by manufacturer. This helps if you already play a brand and want to find the right compression within their lineup.</p>
       <p><strong>Titleist (7 balls):</strong> TruFeel (45), Tour Soft (65), Velocity (65), AVX (77), Tour Speed (78), Pro V1 (87), Pro V1x (97). The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
       <p><strong>Callaway (4 balls):</strong> Supersoft (38), Warbird (68), Chrome Soft (75), Chrome Tour (90). The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
       <p><strong>TaylorMade (5 balls):</strong> Noodle (34), Soft Response (50), Tour Response (77), TP5 (85), TP5x (97). The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
       <p><strong>Srixon (4 balls):</strong> Soft Feel (60), Q-Star Tour (72), Z-Star (88), Z-Star XV (102). The Q-Star Tour is the standout — urethane cover at $35 for 85-100 mph swingers.</p>
-      <p><strong>Bridgestone (3 balls):</strong> e12 Contact (50), Tour B RX (68), Tour B XS (90), Tour B X (100). The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
+      <p><strong>Bridgestone (4 balls):</strong> e12 Contact (50), Tour B RX (68), Tour B XS (90), Tour B X (100). The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
     </section>
 
     <section>

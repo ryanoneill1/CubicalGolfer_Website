@@ -4,7 +4,8 @@
 
 import { ARTICLES } from '../src/data/articles.ts';
 
-const NUMBER_PATTERN = /\b(\d{1,2})\s+(best|tested|top|picks?|products?|reviewed|ranked)\b/i;
+// (?<![$\d]) — dollar amounts like "from $25" are prices, not count promises
+const NUMBER_PATTERN = /(?<![$\d])(\d{1,2})\s+(best|tested|top|picks?|products?|reviewed|ranked)\b/i;
 
 interface Issue {
   slug: string;
