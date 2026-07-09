@@ -10,6 +10,7 @@ Allow: /
 Disallow: /drafts/
 Disallow: /admin/
 Disallow: /api/
+Disallow: /*?s=
 
 # AI Crawlers — explicit welcome (these are often blocked by default
 # on other sites, so an explicit Allow signals intent)
