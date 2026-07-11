@@ -31,25 +31,18 @@
   src: url('/fonts/dm-sans-latin-700-normal.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Playfair Display';
+  font-family: 'DM Serif Display';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url('/fonts/playfair-display-latin-700-normal.woff2') format('woff2');
+  src: url('/fonts/dm-serif-display-latin-400-normal.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Playfair Display';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url('/fonts/playfair-display-latin-800-normal.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Playfair Display';
+  font-family: 'DM Serif Display';
   font-style: italic;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url('/fonts/playfair-display-latin-700-italic.woff2') format('woff2');
+  src: url('/fonts/dm-serif-display-latin-400-italic.woff2') format('woff2');
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -214,7 +207,8 @@ nav.site-nav {
 /* ── ARTICLE PAGE ── */
 .art-hero { background: var(--green); padding: 56px clamp(1.5rem,5vw,4rem) 48px; }
 .art-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
   font-size: clamp(26px,3.5vw,46px); color: #fff;
   margin-bottom: 16px; line-height: 1.15; max-width: 760px;
 }
@@ -535,7 +529,8 @@ nav.site-nav {
   color: rgba(255,255,255,.85); margin-bottom: 24px;
 }
 .hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
   font-size: clamp(36px,5vw,60px); line-height: 1.05; color: #fff; margin-bottom: 20px;
 }
 .hero h1 em { font-style: italic; color: var(--gold); }
@@ -589,7 +584,8 @@ nav.site-nav {
 /* ── CAT PAGE ── */
 .cat-hero { background: var(--green); padding: 60px clamp(1.5rem,5vw,4rem); }
 .cat-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
   font-size: clamp(32px,4vw,52px); color: #fff; margin-bottom: 16px; line-height: 1.1;
 }
 .cat-hero p { font-size: 16px; color: rgba(255,255,255,.75); max-width: 560px; line-height: 1.65; }
@@ -598,7 +594,8 @@ nav.site-nav {
 /* ── ABOUT PAGE ── */
 .about-hero { background: var(--green); padding: 80px clamp(1.5rem,5vw,4rem); }
 .about-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
   font-size: clamp(32px,4vw,56px); color: #fff; margin-bottom: 20px; line-height: 1.1;
 }
 .about-hero p { font-size: 17px; color: rgba(255,255,255,.78); max-width: 560px; line-height: 1.75; }
@@ -668,12 +665,12 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 /* ── 404 ── */
 .not-found { text-align: center; padding: 120px clamp(1.5rem,5vw,4rem); }
 .not-found-emoji { font-size: 72px; margin-bottom: 16px; }
-.not-found h1 { font-family: 'Playfair Display', serif; font-size: clamp(24px,3vw,36px); font-weight: 700; margin-bottom: 14px; }
+.not-found h1 { font-family: 'DM Serif Display', serif; font-size: clamp(24px,3vw,36px); font-weight: 400; margin-bottom: 14px; }
 .not-found p  { font-size: 18px; color: var(--muted); margin-bottom: 32px; }
 
 /* ── COMPARE PAGE ── */
 .compare-hero { background: var(--green); padding: 60px clamp(1.5rem,5vw,4rem); }
-.compare-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
+.compare-hero h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .compare-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
 .compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta) {
@@ -690,7 +687,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── LOCAL (COURSES) PAGE ── */
 .local-hero { background: var(--green); padding: 60px clamp(1.5rem,5vw,4rem); }
-.local-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; }
+.local-hero h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; }
 .local-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .local-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
 .course-card {
@@ -1544,9 +1541,9 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   margin: 0 0 10px;
 }
 .email-strip__heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'DM Serif Display', Georgia, serif;
   font-size: clamp(22px, 2.4vw, 28px);
-  font-weight: 800;
+  font-weight: 400;
   color: #fff;
   line-height: 1.25;
   margin: 0 0 12px;
@@ -1760,7 +1757,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   padding: 4px 16px; border-radius: 20px; margin-bottom: 14px;
 }
 .cat-hero h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
+  font-weight: 400;
   font-size: clamp(28px,3.5vw,44px); color: #fff; margin-bottom: 10px; line-height: 1.15;
 }
 .cat-hero .cat-subhead { font-size: 16px; color: rgba(255,255,255,.72); max-width: 480px; margin: 0 auto 18px; line-height: 1.55; }
