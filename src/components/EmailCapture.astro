@@ -45,7 +45,7 @@ const isInline = variant === 'inline';
         class={isInline ? 'email-inline__input' : 'email-strip__input'}
       />
       <!-- Honeypot — hidden from humans, bots fill it and get rejected -->
-      <input type="text" name="website" autocomplete="off" tabindex="-1"
+      <input type="text" name="website" aria-hidden="true" autocomplete="off" tabindex="-1"
              style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
       <button type="submit" class={isInline ? 'email-inline__btn' : 'email-strip__btn'}>
         Send Me the PDF →

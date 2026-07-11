@@ -1790,7 +1790,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   --sp-1: 8px; --sp-2: 16px; --sp-3: 24px; --sp-4: 32px;
   --sp-5: 48px; --sp-6: 64px; --sp-7: 96px;
 }
-button, .quiz-btn, .calc-btn, .btn-buy-cta, .iron-btn, .btn-gold,
+button, a[class*="btn"], a[class*="cta"], .qp__alt,
+.quiz-btn, .calc-btn, .btn-buy-cta, .iron-btn, .btn-gold,
 .btn-buy-badge, .btn-buy-affiliate, .quick-answer-box__cta, .btn-outline {
   min-height: 48px;
   min-width: 48px;
@@ -1798,7 +1799,9 @@ button, .quiz-btn, .calc-btn, .btn-buy-cta, .iron-btn, .btn-gold,
   align-items: center;
   justify-content: center;
 }
-:focus-visible {
-  outline: 2px solid var(--gold-dark);
+:focus-visible,
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--gold-dark) !important;
   outline-offset: 2px;
 }
