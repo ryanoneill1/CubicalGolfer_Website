@@ -1818,3 +1818,11 @@ select:focus-visible, [tabindex]:focus-visible {
 .quick-picks-list li { margin: 4px 0; }
 .quick-picks-list a { color: var(--green, #1E3A28); font-weight: 600; }
 .quick-picks-badge { color: var(--muted, #3D5243); font-size: 16px; }
+
+/* ═══ BATCH 3: review structures ═══ */
+.review-glance { margin: 16px 0 8px; padding: 14px 20px; background: var(--cream-dark, #EAE6DD); border-radius: 8px; }
+.review-glance__title { margin: 0 0 8px; font-weight: 700; color: var(--green, #1E3A28); }
+.review-glance__list { margin: 0; padding-left: 20px; }
+.review-glance__list li { margin: 4px 0; }
+.section-review-link { margin: 6px 0 0; }
+.section-review-link a { color: var(--green, #1E3A28); font-weight: 600; }

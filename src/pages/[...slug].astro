@@ -20,6 +20,7 @@ import EmailCapture  from '../components/EmailCapture.astro';
 import TrustCard     from '../components/TrustCard.astro';
 import { getSkipIf } from '../lib/skip-if';
 import { ARTICLES }  from '../data/articles';
+import { COMPARISONS } from '../data/comparisons';
 import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema, roundupItemListSchema } from '../lib/schema';
 import { getMergedRelated } from '../lib/linking';
@@ -89,6 +90,10 @@ const prevArticle = currentIdx > 0 ? categoryArticles[currentIdx - 1] : null;
 const nextArticle = currentIdx < categoryArticles.length - 1 ? categoryArticles[currentIdx + 1] : null;
 
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison' || article.pageType === 'review';
+const REVIEW_SLUGS: Record<string, string> = {};
+for (const _a of ARTICLES as any[]) {
+  if (_a.pageType === 'review' && _a.quickAnswerProduct) REVIEW_SLUGS[_a.quickAnswerProduct] = _a.slug;
+}
 const isCommercial  = isBuyingGuide || article.pageType === 'listicle';
 
 // Generate ToC items from article sections (for articles with 4+ sections)
@@ -461,6 +466,13 @@ if (isBuyingGuide) {
     )}
 
     {/* QUICK ANSWER BOX — buying guides only */}
+    {!article.quickAnswerProduct && article.bottomLine && (
+      <div class="quick-answer-box quick-answer-box--plain">
+        <div class="quick-answer-header">📌 Quick Answer</div>
+        <p class="quick-answer-text" set:html={article.bottomLine} />
+      </div>
+    )}
+
     {article.quickAnswerProduct && article.bottomLine && (() => {
       const qaAff = getAffiliateLink(article.quickAnswerProduct);
       const productCount = article.comparisonTable?.rows?.length ?? article.sections?.filter((s: any) => s.affiliateKey)?.length ?? 0;
@@ -475,6 +487,25 @@ if (isBuyingGuide) {
             Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price ↗
           </a>
           <p class="quick-answer-more">{productCount === 0 ? 'Read the full guide below.' : productCount === 1 ? 'Read the full review below.' : `Read the full guide below for all ${productCount} products tested.`}</p>
+        </div>
+      );
+    })()}
+
+    {article.pageType === 'review' && article.quickAnswerProduct && (() => {
+      const gAff = getAffiliateLink(article.quickAnswerProduct);
+      const alts = (COMPARISONS as any[])
+        .filter((c: any) => c.productA === article.quickAnswerProduct || c.productB === article.quickAnswerProduct)
+        .slice(0, 3);
+      if (!gAff && alts.length === 0) return null;
+      return (
+        <div class="review-glance" role="note" aria-label="At a glance">
+          <p class="review-glance__title">At a Glance</p>
+          <ul class="review-glance__list">
+            {article.rating ? <li><strong>Our rating:</strong> ★ {article.rating}/5</li> : null}
+            {gAff?.price ? <li><strong>Price:</strong> {gAff.price}{gAff.retailer ? ` at ${gAff.retailer}` : ''}</li> : null}
+            <li><strong>How we test:</strong> <a href="/how-we-test/">10+ rounds per product on real courses</a></li>
+            {alts.length > 0 ? <li><strong>Compare it:</strong> {alts.map((c: any, i: number) => <span>{i > 0 ? ' · ' : ''}<a href={`/compare/${c.slug}/`}>{c.title}</a></span>)}</li> : null}
+          </ul>
         </div>
       );
     })()}
@@ -697,6 +728,9 @@ if (isBuyingGuide) {
         <div class="art-section" id={`pick-${idx + 1}`}>
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
+          {productId && REVIEW_SLUGS[productId] && REVIEW_SLUGS[productId] !== article.slug && (
+            <p class="section-review-link"><a href={REVIEW_SLUGS[productId]}>Read our full review →</a></p>
+          )}
 
           {/* SCORE + RANKING — numeric score and competitive context */}
           {section.badge && section.rating && isBuyingGuide && (() => {
@@ -880,6 +914,19 @@ if (isBuyingGuide) {
     })}
 
     {/* WHO SHOULD BUY / SKIP — required on buying guides */}
+    {article.pros && article.cons && (
+      <div class="pros-cons-grid" style="margin:28px 0;">
+        <ul class="pros-list" aria-label="Pros">
+          <span class="pros-list-label">Pros</span>
+          {article.pros.map((item: string) => <li>{item}</li>)}
+        </ul>
+        <ul class="cons-list" aria-label="Cons">
+          <span class="cons-list-label">Cons</span>
+          {article.cons.map((item: string) => <li>{item}</li>)}
+        </ul>
+      </div>
+    )}
+
     {(article.whoFor || article.whoSkip) && (
       <div class="who-box">
         <h2 class="who-box-heading">Who Should Buy This — And Who Should Skip It</h2>
