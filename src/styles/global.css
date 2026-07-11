@@ -1805,3 +1805,16 @@ select:focus-visible, [tabindex]:focus-visible {
   outline: 2px solid var(--gold-dark) !important;
   outline-offset: 2px;
 }
+
+/* ═══ BATCH 2: Quick Picks box ═══ */
+.quick-picks-box {
+  margin: 20px 0 8px; padding: 16px 20px;
+  background: var(--cream-dark, #EAE6DD);
+  border-left: 4px solid var(--gold, #C8A84B);
+  border-radius: 8px;
+}
+.quick-picks-title { margin: 0 0 8px; font-weight: 700; color: var(--green, #1E3A28); }
+.quick-picks-list { margin: 0; padding-left: 22px; }
+.quick-picks-list li { margin: 4px 0; }
+.quick-picks-list a { color: var(--green, #1E3A28); font-weight: 600; }
+.quick-picks-badge { color: var(--muted, #3D5243); font-size: 16px; }

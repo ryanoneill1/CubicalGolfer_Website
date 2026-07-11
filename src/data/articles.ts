@@ -152,7 +152,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '', winner: true },
-        { rating: 4.4, affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: '4.6/5 ★', feature2: '', winner: false },
+        { rating: 4.6, affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: '4.6/5 ★', feature2: '', winner: false },
         { rating: 4.3, affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: '4.4/5 ★', feature2: '', winner: false },
         { rating: 4.4, affiliateKey: 'garmin-approach-z82',    name: 'Garmin Approach Z82',   bestFor: 'Best Hybrid',   price: '~$499', feature1: '4.5/5 ★', feature2: '', winner: false },
         { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'bushnell-pro-xe',        name: 'Bushnell Pro XE',       bestFor: 'Best Premium',  price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: false },
@@ -314,7 +314,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['GPS Watch', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Best Overall',      price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: true },
+        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Best Overall',      price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: true },
         { rating: 4.3, affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$249', feature1: '4.5/5 ★', feature2: '', winner: false },
         { rating: 4.2, affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget',        price: '~$149', feature1: 'No',        feature2: '16 hrs', winner: false },
         { rating: 4.1, affiliateKey: 'garmin-approach-s42',    name: 'Garmin Approach S42', bestFor: 'Best Mid-Range',     price: '~$249', feature1: 'Via phone', feature2: '15 hrs', winner: false },
@@ -471,7 +471,7 @@ export const ARTICLES: Article[] = [
       headers: ['Driver', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max',  name: 'Callaway Paradym AI Smoke Max', bestFor: 'Best Overall', price: '~$499', feature1: '4.8/5 ★', feature2: '', winner: true },
-        { rating: 4.5, affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: '4.6/5 ★', feature2: '', winner: false },
+        { rating: 4.3, affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: '4.6/5 ★', feature2: '', winner: false },
         { rating: 4.4, affiliateKey: 'cobra-aerojet-max',               name: 'Cobra Aerojet Max', bestFor: 'Best Value', price: '~$399', feature1: '4.5/5 ★', feature2: '', winner: false },
         { rating: 4.6, affiliateKey: 'ping-g430-max-driver',            name: 'Ping G430 Max', bestFor: 'Most Forgiving', price: '~$449', feature1: '4.6/5 ★', feature2: '', winner: false },
         { badge: 'STRONG PICK', rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver',          name: 'Cleveland Launcher XL2', bestFor: 'Best Budget', price: '~$349', feature1: '4.3/5 ★', feature2: '', winner: false },
@@ -917,8 +917,8 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Analyzer', 'Best For', 'Price', 'Auto-Track', 'Subscription'],
       rows: [
-      { name: 'Arccos Caddie Smart Sensors', bestFor: 'Best All-Round', price: '$179 + $99/yr', feature1: 'Yes (automatic)', feature2: '$99/yr', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors' },
-      { name: 'Rapsodo MLM2PRO', bestFor: 'Best Launch Monitor', price: '~$699', feature1: 'Range only', feature2: 'Optional', winner: false, rating: 4.3, affiliateKey: 'rapsodo-mlm2pro' },
+      { name: 'Arccos Caddie Smart Sensors', bestFor: 'Best All-Round', price: '$179 + $99/yr', feature1: 'Yes (automatic)', feature2: '$99/yr', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'arccos-caddie-sensors' },
+      { name: 'Rapsodo MLM2PRO', bestFor: 'Best Launch Monitor', price: '~$699', feature1: 'Range only', feature2: 'Optional', winner: false, rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
       { name: 'Swing Caddie SC4', bestFor: 'Best Budget', price: '~$499', feature1: 'Range only', feature2: 'None', winner: false, rating: 4.2, affiliateKey: 'swing-caddie-sc4-pro' },
       ],
     },
@@ -987,7 +987,7 @@ export const ARTICLES: Article[] = [
       rows: [
       { name: 'The Grint', affiliateKey: 'the-grint', bestFor: 'Best Free', price: '~$0 (Free)', feature1: 'Full features', feature2: '$8/mo', winner: true, badge: 'STRONG PICK'},
       { name: '18Birdies', affiliateKey: '18birdies', bestFor: 'Best All-In-One', price: '~$0 (Free)', feature1: 'Good features', feature2: '$10/mo', winner: false},
-      { name: 'Arccos Caddie', bestFor: 'Best Analytics', price: '~$179', feature1: 'Basic only', feature2: '$99/yr + sensors', winner: false, rating: 4.7, affiliateKey: 'arccos-caddie-sensors' },
+      { name: 'Arccos Caddie', bestFor: 'Best Analytics', price: '~$179', feature1: 'Basic only', feature2: '$99/yr + sensors', winner: false, rating: 4.6, affiliateKey: 'arccos-caddie-sensors' },
       ],
     },
     related: [
@@ -1073,7 +1073,7 @@ export const ARTICLES: Article[] = [
       headers: ['Tool', 'Best For', 'Price', 'Ball Data', 'Works At'],
       rows: [
       { name: 'Rapsodo MLM2PRO', bestFor: 'Best All-Around', price: '~$699', feature1: 'Full launch data', feature2: 'Home and range', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
-      { name: 'SkyTrak+', bestFor: 'Best Home Simulator', price: '~$2,995', feature1: 'Full launch data', feature2: 'Indoor only', winner: false, rating: 4.5, affiliateKey: 'skytrak-plus' },
+      { name: 'SkyTrak+', bestFor: 'Best Home Simulator', price: '~$2,995', feature1: 'Full launch data', feature2: 'Indoor only', winner: false, rating: 4.4, affiliateKey: 'skytrak-plus' },
       { name: 'Blast Motion Sensor', bestFor: 'Best Putting Tool', price: '~$99', feature1: 'Stroke data only', feature2: 'Home practice', winner: false, rating: 4.4, affiliateKey: 'blast-motion-sensor' },
       ],
     },
@@ -2503,7 +2503,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Warranty'],
       rows: [
       { name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Yes (toggle)', feature2: '2 year', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift' },
-      { name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: 'Yes', feature2: 'Lifetime', winner: false, rating: 4.4, affiliateKey: 'precision-pro-nx9-hd' },
+      { name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: 'Yes', feature2: 'Lifetime', winner: false, rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
       { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: 'Yes', feature2: '2 year', winner: false},
       ],
     },
@@ -2779,7 +2779,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Warranty'],
       rows: [
-        { name: 'Precision Pro NX9 HD', bestFor: 'Best overall for beginners', price: '~$169', feature1: '✅', feature2: 'Lifetime', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'precision-pro-nx9-hd' },
+        { name: 'Precision Pro NX9 HD', bestFor: 'Best overall for beginners', price: '~$169', feature1: '✅', feature2: 'Lifetime', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
         { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best budget pick', price: '~$149', feature1: '✅', feature2: '1 year', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
       ],
     },
@@ -2865,7 +2865,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Bushnell Tour V6 Shift', bestFor: 'Pure laser, fastest pin lock', price: '~$329', feature1: '❌', feature2: '<0.3 sec', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift' },
         { name: 'Garmin Approach Z82', bestFor: 'GPS + Laser hybrid', price: '~$499', feature1: '✅', feature2: '~1-2 sec', winner: false, rating: 4.4, affiliateKey: 'garmin-approach-z82' },
-        { name: 'Precision Pro NX9 HD', bestFor: 'Budget laser accuracy', price: '~$169', feature1: '❌', feature2: '~0.5 sec', winner: false, rating: 4.4, affiliateKey: 'precision-pro-nx9-hd' },
+        { name: 'Precision Pro NX9 HD', bestFor: 'Budget laser accuracy', price: '~$169', feature1: '❌', feature2: '~0.5 sec', winner: false, rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
       ],
     },
   },
@@ -3264,7 +3264,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Rangefinder', 'Price', 'Slope', 'Accuracy', 'Warranty'],
       rows: [
-        { name: 'Precision Pro NX9 HD', price: '~$169', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $200', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'precision-pro-nx9-hd' },
+        { name: 'Precision Pro NX9 HD', price: '~$169', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $200', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
         { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', price: '~$129', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $150', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
         { name: 'Callaway 300 Pro', price: '~$149', feature1: '❌', feature2: '±1 yard', bestFor: 'Best optics (no slope)', rating: 4.3, affiliateKey: 'callaway-300-pro' },
         { name: 'Bushnell Phantom 2 GPS', price: '~$129', feature1: 'N/A (GPS)', feature2: '±3 yards', bestFor: 'Simplest option (GPS, not laser)', rating: 4.1, affiliateKey: 'bushnell-phantom-2' },
@@ -3431,8 +3431,8 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Simulator', 'Best For', 'Price', 'Technology', 'Outdoor Use'],
       rows: [
-        { name: 'SkyTrak+', bestFor: 'Dedicated home setup', price: '~$2,995', feature1: 'Photometric', feature2: 'Indoor only', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'skytrak-plus' },
-        { name: 'Flightscope Mevo+', affiliateKey: 'flightscope-mevo-plus', bestFor: 'Portable & outdoor', price: '~$2,499', feature1: 'Doppler Radar', feature2: 'Indoor + outdoor', winner: false, rating: 4.3},
+        { name: 'SkyTrak+', bestFor: 'Dedicated home setup', price: '~$2,995', feature1: 'Photometric', feature2: 'Indoor only', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'skytrak-plus' },
+        { name: 'Flightscope Mevo+', affiliateKey: 'flightscope-mevo-plus', bestFor: 'Portable & outdoor', price: '~$2,499', feature1: 'Doppler Radar', feature2: 'Indoor + outdoor', winner: false, rating: 4.1},
       ],
     },
   },
@@ -4367,7 +4367,7 @@ export const ARTICLES: Article[] = [
         { name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Clear LCD', feature2: 'Yes', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift' },
         { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Cart GPS', price: '~$149', feature1: 'Large', feature2: 'Yes (wrist)', winner: false, rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
         { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Value', price: '~$169', feature1: 'Bright mono', feature2: 'Yes', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
-        { name: 'Precision Pro NX9 HD', bestFor: 'Best Budget', price: '~$169', feature1: 'Standard', feature2: 'Yes', winner: false, rating: 4.4, affiliateKey: 'precision-pro-nx9-hd' },
+        { name: 'Precision Pro NX9 HD', bestFor: 'Best Budget', price: '~$169', feature1: 'Standard', feature2: 'Yes', winner: false, rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
       ],
     },
     sections: [
@@ -5019,10 +5019,10 @@ export const ARTICLES: Article[] = [
       headers: ['Product', 'Best For', 'Price', 'Technology', 'Rating'],
       rows: [
         { name: 'Rapsodo MLM2PRO', price: '~$749', bestFor: 'Best Overall', feature1: 'Doppler + Camera', feature2: '4.8/5', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
-        { name: 'Garmin Approach R10', price: '~$599', bestFor: 'Best Budget', feature1: 'Doppler Radar', feature2: '4.6/5', rating: 4.2, affiliateKey: 'garmin-approach-r10' },
+        { name: 'Garmin Approach R10', price: '~$599', bestFor: 'Best Budget', feature1: 'Doppler Radar', feature2: '4.6/5', rating: 4, affiliateKey: 'garmin-approach-r10' },
         { name: 'Voice Caddie SC4 Pro', price: '~$499', bestFor: 'Best Screen', feature1: 'Doppler Radar', feature2: '4.5/5', rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro' },
-        { name: 'SkyTrak+', price: '~$2,995', bestFor: 'Home Simulator', feature1: 'Photometric', feature2: '4.7/5', rating: 4.5, affiliateKey: 'skytrak-plus' },
-        { name: 'Bushnell Launch Pro', price: '~$2,499', bestFor: 'Best Value Premium', feature1: 'Photometric (GC3)', feature2: '4.8/5', badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-launch-pro' },
+        { name: 'SkyTrak+', price: '~$2,995', bestFor: 'Home Simulator', feature1: 'Photometric', feature2: '4.7/5', rating: 4.4, affiliateKey: 'skytrak-plus' },
+        { name: 'Bushnell Launch Pro', price: '~$2,499', bestFor: 'Best Value Premium', feature1: 'Photometric (GC3)', feature2: '4.5/5', badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'bushnell-launch-pro' },
         { name: 'FlightScope Mevo Gen 2', price: '~$2,199', bestFor: 'Best Portable Premium', feature1: '3D Doppler', feature2: '4.7/5', rating: 4.7, affiliateKey: 'flightscope-mevo-gen2' },
       ],
     },
@@ -5122,7 +5122,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Trackman 4', bestFor: 'Outdoor Tracking', price: '~$21,995', feature1: 'Dual Doppler Radar + OERT', feature2: 'Full ball flight tracking', winner: false, badge: 'STRONG PICK', rating: 4.9, affiliateKey: 'trackman-4' },
         { name: 'Foresight GCQuad', bestFor: 'Indoor Accuracy', price: '~$14,500', feature1: 'Quadroscopic 4-Camera', feature2: '2x more consistent spin', winner: true, rating: 4.8, affiliateKey: 'foresight-gcquad' },
-        { name: 'Bushnell Launch Pro', bestFor: 'Best Value Premium', price: '~$2,499', feature1: 'Foresight GC3 Hardware', feature2: '83% less than GCQuad', rating: 4.7, affiliateKey: 'bushnell-launch-pro' },
+        { name: 'Bushnell Launch Pro', bestFor: 'Best Value Premium', price: '~$2,499', feature1: 'Foresight GC3 Hardware', feature2: '83% less than GCQuad', rating: 4.5, affiliateKey: 'bushnell-launch-pro' },
       ],
     },
     sections: [
@@ -5714,7 +5714,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Price', 'Pin Lock', 'Slope', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: 'Physical switch', winner: true },
-        { rating: 4.4, affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Value',   price: '~$169', feature1: '4.6/5 ★', feature2: 'Button toggle', winner: false },
+        { rating: 4.6, affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Value',   price: '~$169', feature1: '4.6/5 ★', feature2: 'Button toggle', winner: false },
         { rating: 4.3, affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Budget',  price: '~$149', feature1: '4.4/5 ★', feature2: 'Button toggle', winner: false },
       ],
     },
@@ -5869,7 +5869,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Watch', 'Price', 'Best For', 'Tracking', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best Overall', price: '~$399', feature1: '4.7/5 ★', feature2: 'Manual tag', winner: true },
+        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best Overall', price: '~$399', feature1: '4.7/5 ★', feature2: 'Manual tag', winner: true },
         { rating: 4.3, affiliateKey: 'shot-scope-v5',       name: 'Shot Scope V5',      bestFor: 'Best Tracking', price: '~$249', feature1: '4.6/5 ★', feature2: 'Auto (tags)', winner: false },
         { rating: 4.1, affiliateKey: 'garmin-approach-s42',  name: 'Garmin Approach S42', bestFor: 'Best Mid-Range', price: '~$249', feature1: '4.5/5 ★', feature2: 'Via phone', winner: false },
         { rating: 4.2, affiliateKey: 'bushnell-ion-elite',   name: 'Bushnell Ion Elite',  bestFor: 'Best Budget', price: '~$149', feature1: '4.3/5 ★', feature2: 'None', winner: false },
@@ -5956,8 +5956,8 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Launch Monitor', 'Price', 'Technology', 'Best For', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Under $1K', price: '~$699', feature1: '4.5/5 ★', feature2: 'Camera', winner: true },
-      { rating: 4.2, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Simplest', price: '~$599', feature1: '4.3/5 ★', feature2: 'Doppler', winner: false },
-      { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Best Indoor', price: '~$2,995', feature1: '4.8/5 ★', feature2: 'Photometric', winner: false },
+      { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Simplest', price: '~$599', feature1: '4.3/5 ★', feature2: 'Doppler', winner: false },
+      { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Best Indoor', price: '~$2,995', feature1: '4.8/5 ★', feature2: 'Photometric', winner: false },
     ] },
     faq: [
       { q: 'How accurate is the Rapsodo MLM2PRO compared to Trackman?', a: 'Within 3-5 yards on carry distance and within 1 mph on ball speed for 85% of shots versus a Foresight GC3 reference unit. Spin rate reads 200-400 RPM higher. Accuracy is more than sufficient for amateur practice.' },
@@ -6020,7 +6020,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Driver', 'Price', 'Forgiveness', 'Distance', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'Most Forgiving', price: '~$499', feature1: '4.8/5 ★', feature2: 'Best', winner: true },
-      { rating: 4.5, affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: '4.6/5 ★', feature2: 'Longest', winner: false },
+      { rating: 4.3, affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '~$499', feature1: '4.6/5 ★', feature2: 'Longest', winner: false },
       { rating: 4.4, affiliateKey: 'cobra-aerojet-max', name: 'Cobra Aerojet Max', bestFor: 'Best Value', price: '~$399', feature1: '4.5/5 ★', feature2: 'Good', winner: false },
     ] },
     faq: [
@@ -6141,9 +6141,9 @@ export const ARTICLES: Article[] = [
         cons: ['$99/year subscription — $476 over 3 years', 'Phone required in pocket during rounds', 'Shot Scope V5 offers similar tracking for $249 one-time', 'Occasional false shots from practice swings', 'AI needs 5+ rounds to learn your game'] },
     ],
     comparisonTable: { headers: ['System', 'Price', 'AI Caddie', 'Subscription', 'Rating'], rows: [
-      { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best AI', price: '~$179+$99/yr', feature1: '4.6/5 ★', feature2: 'Yes', winner: true },
+      { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best AI', price: '~$179+$99/yr', feature1: '4.6/5 ★', feature2: 'Yes', winner: true },
       { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$249', feature1: '4.5/5 ★', feature2: 'None', winner: false },
-      { rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin S62', bestFor: 'Best Watch', price: '~$399', feature1: '4.7/5 ★', feature2: 'None', winner: false },
+      { rating: 4.7, affiliateKey: 'garmin-approach-s62', name: 'Garmin S62', bestFor: 'Best Watch', price: '~$399', feature1: '4.7/5 ★', feature2: 'None', winner: false },
     ] },
     faq: [
       { q: 'Does Arccos actually improve scores?', a: 'We dropped 2.1 strokes in 4 months from AI suggestions (right 64% vs 52%) and strokes-gained data revealing approach-shot weaknesses.' },
@@ -6204,8 +6204,8 @@ export const ARTICLES: Article[] = [
         cons: ['Pin lock 0.7-1.0s vs Bushnell 0.3s', 'Second press needed 15% of the time on busy backgrounds', 'No magnetic cart mount', 'Plastic housing less premium', 'Pulse vibration less distinct than JOLT'] },
     ],
     comparisonTable: { headers: ['Rangefinder', 'Price', 'Accuracy', 'Warranty', 'Rating'], rows: [
-      { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: '4.6/5 ★', feature2: 'Lifetime', winner: true },
-      { rating: 4.6, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '2 years', winner: false },
+      { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: '4.6/5 ★', feature2: 'Lifetime', winner: true },
+      { rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '2 years', winner: false },
       { rating: 4.3, affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Cheapest', price: '~$149', feature1: '4.4/5 ★', feature2: '1 year', winner: false },
     ] },
     faq: [
@@ -6266,7 +6266,7 @@ export const ARTICLES: Article[] = [
         badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62' },
     ],
     comparisonTable: { headers: ['Feature', 'Garmin S62', 'Apple Watch + Golfshot'], rows: [
-      { rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best for Golf', price: '~$399', feature1: '4.7/5 ★', feature2: 'Virtual Caddie', winner: true },
+      { rating: 4.7, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best for Golf', price: '~$399', feature1: '4.7/5 ★', feature2: 'Virtual Caddie', winner: true },
       { badge: 'STRONG PICK', affiliateKey: '', name: 'Apple Watch + Golfshot', affiliateKey: 'apple-watch-ultra-golf', bestFor: 'Best Smartwatch', price: '~$429+/yr', feature1: '3.8/5 Golf', feature2: 'Basic GPS', winner: false },
     ] },
     faq: [
@@ -6324,8 +6324,8 @@ export const ARTICLES: Article[] = [
         badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors' },
     ],
     comparisonTable: { headers: ['System', 'Price', 'Tracking', 'Subscription', 'Rating'], rows: [
-      { rating: 4.3, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Tracking', price: '~$179+$99/yr', feature1: '94% auto', feature2: '$99/yr', winner: false },
-      { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin S62', bestFor: 'Best Overall', price: '~$399', feature1: '70% auto', feature2: 'None', winner: true },
+      { rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Tracking', price: '~$179+$99/yr', feature1: '94% auto', feature2: '$99/yr', winner: false },
+      { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-s62', name: 'Garmin S62', bestFor: 'Best Overall', price: '~$399', feature1: '70% auto', feature2: 'None', winner: true },
       { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$249', feature1: '90% auto', feature2: 'None', winner: false },
     ] },
     faq: [
@@ -6613,8 +6613,8 @@ export const ARTICLES: Article[] = [
       { h2: 'How to Choose a Budget Launch Monitor', body: "The three numbers that drive improvement are ball speed (tells you how efficiently you compress the ball), launch angle (tells you whether your angle of attack is optimal), and carry distance (tells you your real distances, not what you think you hit). Spin rate matters for advanced players but is less critical for beginners. If you want all three core metrics plus simulator play, the Garmin R10 is the value pick. If you want diagnostic data to understand your swing, the Rapsodo MLM2PRO is worth the upgrade." },
     ],
     comparisonTable: { headers: ['Monitor', 'Price', 'Technology', 'Simulator', 'Rating'], rows: [
-      { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Best Budget', price: '~$599', feature1: 'Doppler', feature2: 'E6 (incl)', winner: true },
-      { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Most Data', price: '~$699', feature1: 'Camera', feature2: 'E6 (incl)', winner: false },
+      { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Best Budget', price: '~$599', feature1: 'Doppler', feature2: 'E6 (incl)', winner: true },
+      { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Most Data', price: '~$699', feature1: 'Camera', feature2: 'E6 (incl)', winner: false },
       { affiliateKey: '', name: 'FlightScope Mevo', affiliateKey: 'flightscope-mevo-gen2', bestFor: 'Most Portable', price: '~$499', feature1: 'Doppler', feature2: 'No', winner: false },
       { affiliateKey: '', name: 'Ernest Sports ES14', bestFor: 'Cheapest', price: '~$199', feature1: 'Doppler', feature2: 'No', winner: false },
     ] },
@@ -6673,7 +6673,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Free vs Paid: Is Premium Worth It?', body: 'Free apps like V1 Golf and Hudl Technique provide basic video recording and slow-motion playback — enough for casual self-review. Paid apps ($5 to $15 per month) add AI-powered analysis, automatic angle measurement, comparison to tour players, and drill recommendations. Arccos Caddie at $179 per year (with sensors) is the most expensive but provides the most actionable data: it tells you which club to hit on every shot based on your personal distance data. If you play 20+ rounds per year and want measurable improvement, the paid tier pays for itself in 2 to 3 strokes per round.' },
     ],
     comparisonTable: { headers: ['Analyzer', 'Price', 'Auto-Tracking', 'Subscription', 'Rating'], rows: [
-      { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Overall', price: '~$179+$99/yr', feature1: 'Yes (sensors)', feature2: '$99/yr', winner: true },
+      { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Overall', price: '~$179+$99/yr', feature1: 'Yes (sensors)', feature2: '$99/yr', winner: true },
       { affiliateKey: '', name: 'Garmin CT10', affiliateKey: 'garmin-ct10', bestFor: 'Garmin Users', price: '~$299', feature1: 'Yes (sensors)', feature2: 'None', winner: false },
       { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope H4', bestFor: 'Best Value', price: '~$149', feature1: 'Yes (tags)', feature2: 'None', winner: false },
       { affiliateKey: '', name: 'Zepp Golf 2', bestFor: 'Swing Metrics', price: '~$149', feature1: 'No', feature2: 'None', winner: false },
@@ -6807,7 +6807,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Product', 'Component', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.7/5 ★', feature2: 'Launch Monitor', winner: true, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.5/5 ★', feature2: 'Launch Monitor', winner: true, rating: 4.5 },
         { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best value net', price: '~$189', feature1: '4.6/5 ★', feature2: 'Practice Net', winner: false },
         { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Fiberbuilt Studio Mat', bestFor: 'Joint-friendly turf', price: '~$449', feature1: '4.5/5 ★', feature2: 'Hitting Mat', winner: false },
         { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TK850 Short-Throw', bestFor: 'Big-screen upgrade', price: '~$1,799', feature1: '4.4/5 ★', feature2: 'Projector (Optional)', winner: false },
@@ -6899,7 +6899,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Launch Monitor', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Overall', price: '~$699', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Overall', price: '~$699', feature1: '4.5/5 ★', winner: true, rating: 4.5 },
         { rating: 4.5, affiliateKey: 'square-golf-launch-monitor', name: 'Square Golf', bestFor: 'Best for Apartments', price: '~$499', feature1: '4.5/5 ★', winner: false },
         { rating: 4.6, affiliateKey: 'garmin-approach-r50', name: 'Garmin Approach R50', bestFor: 'All-in-one premium', price: '~$4,999', feature1: '4.6/5 ★', winner: false },
       ],
@@ -7036,9 +7036,9 @@ export const ARTICLES: Article[] = [
       headers: ['Launch Monitor', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'square-golf-launch-monitor', name: 'Square Golf', bestFor: 'Best for Apartments', price: '~$499', feature1: '4.5/5 ★', winner: true, rating: 4.5 },
-        { rating: 4.2, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Best Value', price: '~$399', feature1: '4.4/5 ★', winner: false },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Best Value', price: '~$399', feature1: '4.4/5 ★', winner: false },
         { rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro', name: 'Voice Caddie SC4 Pro', bestFor: 'Best Display', price: '~$499', feature1: '4.4/5 ★', winner: false },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Upgrade', price: '~$699', feature1: '4.7/5 ★', winner: false },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Upgrade', price: '~$699', feature1: '4.7/5 ★', winner: false },
       ],
     },
     faq: [
@@ -7268,7 +7268,7 @@ export const ARTICLES: Article[] = [
         { rating: 4.6, affiliateKey: 'personalized-golf-balls', name: 'Personalized Golf Balls', bestFor: 'Best Under $30', price: '~$30', feature1: '4.6/5 ★', winner: false },
         { rating: 4.5, affiliateKey: 'golf-towel-personalized', name: 'Microfiber Golf Towel', bestFor: 'Best Under $15', price: '~$15', feature1: '4.5/5 ★', winner: false },
         { rating: 4.6, affiliateKey: 'putting-mirror', name: 'Putting Mirror', bestFor: 'Best Training Aid', price: '~$25', feature1: '4.5/5 ★', winner: false },
-        { badge: 'STRONG PICK', affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'Best Splurge', price: '~$169', feature1: '4.7/5 ★', winner: false, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'Best Splurge', price: '~$169', feature1: '4.6/5 ★', winner: false, rating: 4.6 },
       ],
     },
     faq: [
@@ -7482,7 +7482,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'garmin-approach-s42', name: 'Garmin Approach S42', bestFor: 'Best Under $250', price: '~$249', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
         { rating: 4.9, affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1 (dozen)', bestFor: 'Best Under $50', price: '~$55', feature1: '4.9/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof 3-Pack', bestFor: 'Best Under $50', price: '~$36', feature1: '4.7/5 ★', winner: false },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Splurge', price: '~$699', feature1: '4.7/5 ★', winner: false },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Splurge', price: '~$699', feature1: '4.7/5 ★', winner: false },
       ],
     },
     faq: [
@@ -9529,7 +9529,7 @@ export const ARTICLES: Article[] = [
       headers: ['Gift', 'Best For', 'Price', 'Category'],
       rows: [
         { name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Rangefinder', feature2: '', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift' },
-        { name: 'Precision Pro NX9', bestFor: 'Best Value', price: '~$169', feature1: 'Rangefinder', feature2: '', winner: false, rating: 4.4, affiliateKey: 'precision-pro-nx9-hd' },
+        { name: 'Precision Pro NX9', bestFor: 'Best Value', price: '~$169', feature1: 'Rangefinder', feature2: '', winner: false, rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
         { name: 'Putting Mirror', bestFor: 'Best Under $50', price: '~$30', feature1: 'Training', feature2: '', winner: false, rating: 4.6, affiliateKey: 'putting-mirror' },
         { name: 'FootJoy WeatherSof', bestFor: 'Best Under $25', price: '~$18', feature1: 'Glove', feature2: '', winner: false, rating: 4.7, affiliateKey: 'footjoy-weathersof-glove' },
       ],
@@ -10239,11 +10239,11 @@ export const ARTICLES: Article[] = [
       caption: 'Best Launch Monitors for Low Ceilings — 2026',
       headers: ['Monitor', 'Best For', 'Price', 'Min Ceiling'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: '8ft ceilings', price: '~$599', feature1: '7 ft min', feature2: 'Radar', badge: 'BEST OVERALL', winner: true },
+        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: '8ft ceilings', price: '~$599', feature1: '7 ft min', feature2: 'Radar', badge: 'BEST OVERALL', winner: true },
         { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Budget', price: '~$199', feature1: '7 ft min', feature2: 'Radar', badge: 'BEST VALUE' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Most metrics', price: '~$699', feature1: '8.5 ft min', feature2: 'Camera' },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '9 ft min', feature2: 'Photometric' },
-        { rating: 4.8, affiliateKey: 'bushnell-launch-pro', name: 'Launch Pro', bestFor: 'Accuracy', price: '~$2,499', feature1: '9 ft min', feature2: 'Photometric' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Most metrics', price: '~$699', feature1: '8.5 ft min', feature2: 'Camera' },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '9 ft min', feature2: 'Photometric' },
+        { rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Launch Pro', bestFor: 'Accuracy', price: '~$2,499', feature1: '9 ft min', feature2: 'Photometric' },
       ],
     },
     sections: [
@@ -10301,10 +10301,10 @@ export const ARTICLES: Article[] = [
       headers: ['Monitor', 'Best For', 'Price', '3-Year Cost'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Zero fees', price: '~$199', feature1: '$199', feature2: 'No sub', badge: 'BEST VALUE', winner: true },
-        { rating: 4.2, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Mid-range', price: '~$599', feature1: '$599-$896', feature2: '$99/yr opt', badge: 'BEST MID' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Most data', price: '~$699', feature1: '$1,296', feature2: '$199/yr' },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Mid-range', price: '~$599', feature1: '$599-$896', feature2: '$99/yr opt', badge: 'BEST MID' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Most data', price: '~$699', feature1: '$1,296', feature2: '$199/yr' },
         { rating: 4.7, affiliateKey: 'flightscope-mevo-gen2', name: 'Mevo Gen2', bestFor: 'All-around', price: '~$1,299', feature1: '$1,299', feature2: 'No mandatory' },
-        { rating: 4.7, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '$3,592', feature2: '$199/yr' },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '$3,592', feature2: '$199/yr' },
       ],
     },
     sections: [
@@ -10357,11 +10357,11 @@ export const ARTICLES: Article[] = [
       caption: 'Trackman Alternatives Ranked — 2026',
       headers: ['Monitor', 'Best For', 'Price', 'Accuracy vs TM'],
       rows: [
-        { rating: 4.8, affiliateKey: 'bushnell-launch-pro', name: 'Launch Pro', bestFor: 'Accuracy', price: '~$2,499', feature1: '±1.2 yd', feature2: 'No sub', badge: 'BEST ACCURACY', winner: true },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '±1.5 yd', feature2: '$199/yr', badge: 'BEST SIM' },
+        { rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Launch Pro', bestFor: 'Accuracy', price: '~$2,499', feature1: '±1.2 yd', feature2: 'No sub', badge: 'BEST ACCURACY', winner: true },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '±1.5 yd', feature2: '$199/yr', badge: 'BEST SIM' },
         { rating: 4.7, affiliateKey: 'flightscope-mevo-gen2', name: 'Mevo Gen2', bestFor: 'All-around', price: '~$1,299', feature1: '±2.0 yd', feature2: 'No sub' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Under $1K', price: '~$699', feature1: '±3.5 yd', feature2: '$199/yr', badge: 'BEST UNDER $1K' },
-        { rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget', price: '~$599', feature1: '±4.0 yd', feature2: '$99/yr', badge: 'BEST BUDGET' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Under $1K', price: '~$699', feature1: '±3.5 yd', feature2: '$199/yr', badge: 'BEST UNDER $1K' },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget', price: '~$599', feature1: '±4.0 yd', feature2: '$99/yr', badge: 'BEST BUDGET' },
         { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Cheapest', price: '~$199', feature1: '±4.5 yd', feature2: 'No sub' },
         { rating: 4.6, affiliateKey: 'flightscope-x3', name: 'FlightScope X3', bestFor: 'Pro-level', price: '~$15,995', feature1: '±0.5 yd', feature2: 'No sub' },
       ],
@@ -10431,7 +10431,7 @@ export const ARTICLES: Article[] = [
       headers: ['Feature', 'MLM2PRO', 'SkyTrak+', 'Winner'],
       rows: [
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Budget + data', price: '~$699', feature1: '12 metrics', feature2: '$199/yr sub', badge: 'BEST VALUE', winner: true },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Accuracy + sim', price: '~$2,995', feature1: '18 metrics', feature2: '$199/yr opt' },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Accuracy + sim', price: '~$2,995', feature1: '18 metrics', feature2: '$199/yr opt' },
       ],
     },
     sections: [
@@ -10492,8 +10492,8 @@ export const ARTICLES: Article[] = [
       caption: 'Bushnell Launch Pro vs SkyTrak+',
       headers: ['Feature', 'Launch Pro', 'SkyTrak+', 'Winner'],
       rows: [
-        { rating: 4.8, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Accuracy + no sub', price: '~$2,499', feature1: 'Foresight tech', feature2: 'No subscription', badge: 'BEST ACCURACY', winner: true },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Sim experience', price: '~$2,995', feature1: '18 metrics', feature2: '$199/yr optional' },
+        { rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Accuracy + no sub', price: '~$2,499', feature1: 'Foresight tech', feature2: 'No subscription', badge: 'BEST ACCURACY', winner: true },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Sim experience', price: '~$2,995', feature1: '18 metrics', feature2: '$199/yr optional' },
       ],
     },
     sections: [
@@ -10554,7 +10554,7 @@ export const ARTICLES: Article[] = [
       caption: 'Garmin R10 vs Square Golf',
       headers: ['Feature', 'Garmin R10', 'Square Golf', 'Winner'],
       rows: [
-        { rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Ecosystem', price: '~$599', feature1: 'Radar', feature2: '$99/yr opt', badge: 'BEST OVERALL', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Ecosystem', price: '~$599', feature1: 'Radar', feature2: '$99/yr opt', badge: 'BEST OVERALL', winner: true },
         { rating: 4.2, affiliateKey: 'square-golf', name: 'Square Golf', bestFor: 'No fees', price: '~$699', feature1: 'Photometric', feature2: 'No sub ever', badge: 'ZERO FEES' },
       ],
     },
@@ -10614,9 +10614,9 @@ export const ARTICLES: Article[] = [
       caption: 'Best Portable Simulator Setups — 2026',
       headers: ['Setup', 'Best For', 'Price', 'Pack Time'],
       rows: [
-        { rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10 + Spornia Net', bestFor: 'Best overall portable', price: '~$749', feature1: '3 min pack', feature2: 'Radar monitor', badge: 'BEST OVERALL', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10 + Spornia Net', bestFor: 'Best overall portable', price: '~$749', feature1: '3 min pack', feature2: 'Radar monitor', badge: 'BEST OVERALL', winner: true },
         { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'LM1 + Rukket Net', bestFor: 'Budget portable', price: '~$329', feature1: '2 min pack', feature2: 'No sub', badge: 'BUDGET PICK' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO + Impact Screen', bestFor: 'Full sim portable', price: '~$898', feature1: '5 min pack', feature2: 'With projector' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO + Impact Screen', bestFor: 'Full sim portable', price: '~$898', feature1: '5 min pack', feature2: 'With projector' },
       ],
     },
     sections: [
@@ -10736,10 +10736,10 @@ export const ARTICLES: Article[] = [
       caption: 'Golf Simulator Software Compared — 2026',
       headers: ['Software', 'Best For', 'Price', 'Courses'],
       rows: [
-        { rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'GSPro + R10 ($250/yr)', bestFor: 'Best value', price: '~$250/yr', feature1: '200,000+', feature2: 'Community built', badge: 'BEST VALUE', winner: true },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'E6 Connect + SkyTrak ($300/yr)', bestFor: 'Most polished', price: '~$300/yr', feature1: '100+ licensed', feature2: 'Official courses' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'TGC 2019 + MLM2PRO ($900)', bestFor: 'Best graphics', price: '~$900 once', feature1: '150,000+', feature2: 'One-time buy' },
-        { rating: 4.2, affiliateKey: 'flightscope-mevo-plus', name: 'Awesome Golf + Mevo ($15/mo)', bestFor: 'Free tier', price: 'Free-$200', feature1: '50+', feature2: 'Growing library' },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'GSPro + R10 ($250/yr)', bestFor: 'Best value', price: '~$250/yr', feature1: '200,000+', feature2: 'Community built', badge: 'BEST VALUE', winner: true },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'E6 Connect + SkyTrak ($300/yr)', bestFor: 'Most polished', price: '~$300/yr', feature1: '100+ licensed', feature2: 'Official courses' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'TGC 2019 + MLM2PRO ($900)', bestFor: 'Best graphics', price: '~$900 once', feature1: '150,000+', feature2: 'One-time buy' },
+        { rating: 4.1, affiliateKey: 'flightscope-mevo-plus', name: 'Awesome Golf + Mevo ($15/mo)', bestFor: 'Free tier', price: 'Free-$200', feature1: '50+', feature2: 'Growing library' },
       ],
     },
     sections: [
@@ -10804,9 +10804,9 @@ export const ARTICLES: Article[] = [
       caption: 'Room Requirements by Setup Type',
       headers: ['Setup', 'Best For', 'Price', 'Min Room'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Radar + Net (basic)', bestFor: 'Smallest rooms', price: '~$650', feature1: '8x8x10 ft', feature2: 'Irons only', badge: 'SMALLEST', winner: true },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Camera + Net', bestFor: 'Mid-size rooms', price: '~$850', feature1: '9x9x12 ft', feature2: 'All clubs' },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'Full Simulator', bestFor: 'Dedicated room', price: '~$5,000+', feature1: '9x10x15 ft', feature2: 'Projector + screen' },
+        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Radar + Net (basic)', bestFor: 'Smallest rooms', price: '~$650', feature1: '8x8x10 ft', feature2: 'Irons only', badge: 'SMALLEST', winner: true },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Camera + Net', bestFor: 'Mid-size rooms', price: '~$850', feature1: '9x9x12 ft', feature2: 'All clubs' },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'Full Simulator', bestFor: 'Dedicated room', price: '~$5,000+', feature1: '9x10x15 ft', feature2: 'Projector + screen' },
       ],
     },
     sections: [
@@ -10866,9 +10866,9 @@ export const ARTICLES: Article[] = [
       caption: 'Best Simulator Setups for Beginners — 2026',
       headers: ['Setup Tier', 'Best For', 'Price', 'What You Get'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Starter (R10 + Net)', bestFor: 'First-timers', price: '~$700', feature1: 'Data + practice', feature2: 'No projector', badge: 'START HERE', winner: true },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Mid-Range (MLM2PRO + Screen)', bestFor: 'Sim play', price: '~$2,000', feature1: 'Virtual golf', feature2: 'E6 included' },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'Full Setup (SkyTrak+ Package)', bestFor: 'Dedicated room', price: '~$5,000', feature1: 'Tour accuracy', feature2: 'Premium sim' },
+        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Starter (R10 + Net)', bestFor: 'First-timers', price: '~$700', feature1: 'Data + practice', feature2: 'No projector', badge: 'START HERE', winner: true },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Mid-Range (MLM2PRO + Screen)', bestFor: 'Sim play', price: '~$2,000', feature1: 'Virtual golf', feature2: 'E6 included' },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'Full Setup (SkyTrak+ Package)', bestFor: 'Dedicated room', price: '~$5,000', feature1: 'Tour accuracy', feature2: 'Premium sim' },
       ],
     },
     sections: [
@@ -10931,11 +10931,11 @@ export const ARTICLES: Article[] = [
       caption: 'Launch Monitor Accuracy Rankings — 2026',
       headers: ['Monitor', 'Best For', 'Price', 'Carry Deviation'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Best accuracy', price: '~$2,499', feature1: '1.2 yd avg', feature2: 'Foresight tech', badge: 'MOST ACCURATE', winner: true },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Sim + accuracy', price: '~$2,995', feature1: '1.5 yd avg', feature2: 'Photometric' },
+        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Best accuracy', price: '~$2,499', feature1: '1.2 yd avg', feature2: 'Foresight tech', badge: 'MOST ACCURATE', winner: true },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Sim + accuracy', price: '~$2,995', feature1: '1.5 yd avg', feature2: 'Photometric' },
         { rating: 4.7, affiliateKey: 'flightscope-mevo-gen2', name: 'Mevo Gen2', bestFor: 'All-around', price: '~$1,299', feature1: '2.0 yd avg', feature2: 'Radar fusion' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Under $1K', price: '~$699', feature1: '3.5 yd avg', feature2: 'Camera' },
-        { rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget', price: '~$599', feature1: '4.0 yd avg', feature2: 'Radar', badge: 'BEST VALUE' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Under $1K', price: '~$699', feature1: '3.5 yd avg', feature2: 'Camera' },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget', price: '~$599', feature1: '4.0 yd avg', feature2: 'Radar', badge: 'BEST VALUE' },
         { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Cheapest', price: '~$199', feature1: '4.5 yd avg', feature2: 'Radar' },
       ],
     },
@@ -11049,7 +11049,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Golf Apps for Apple Watch — 2026',
       headers: ['App', 'Best For', 'Price', 'GPS Accuracy'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Shot tracking', price: '~$199/yr', feature1: 'Excellent', feature2: 'AI caddie', badge: 'BEST TRACKING', winner: true },
+        { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Shot tracking', price: '~$199/yr', feature1: 'Excellent', feature2: 'AI caddie', badge: 'BEST TRACKING', winner: true },
         { rating: 4.5, affiliateKey: 'golfshot', name: 'Golfshot', bestFor: 'Free GPS', price: 'Free/$40yr', feature1: 'Good', feature2: '45K courses', badge: 'BEST FREE' },
         { rating: 4.5, affiliateKey: '18birdies', name: '18Birdies', bestFor: 'All-around', price: 'Free/$99yr', feature1: 'Good', feature2: 'Social + GPS' },
       ],
@@ -11106,9 +11106,9 @@ export const ARTICLES: Article[] = [
       caption: 'Complete Simulator Packages Under $5,000',
       headers: ['Package', 'Best For', 'Price', 'Monitor'],
       rows: [
-        { rating: 4.7, affiliateKey: 'skytrak-plus', name: 'Premium Sim Package', bestFor: 'Best experience', price: '~$4,492', feature1: 'SkyTrak+', feature2: '18 metrics', badge: 'BEST OVERALL', winner: true },
-        { rating: 4.7, affiliateKey: 'bushnell-launch-pro', name: 'Accuracy Package', bestFor: 'Best data', price: '~$3,946', feature1: 'Launch Pro', feature2: 'No subscription' },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Value Package', bestFor: 'Under $2K', price: '~$1,897', feature1: 'MLM2PRO', feature2: 'E6 included' },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'Premium Sim Package', bestFor: 'Best experience', price: '~$4,492', feature1: 'SkyTrak+', feature2: '18 metrics', badge: 'BEST OVERALL', winner: true },
+        { rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Accuracy Package', bestFor: 'Best data', price: '~$3,946', feature1: 'Launch Pro', feature2: 'No subscription' },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Value Package', bestFor: 'Under $2K', price: '~$1,897', feature1: 'MLM2PRO', feature2: 'E6 included' },
       ],
     },
     sections: [
@@ -11162,7 +11162,7 @@ export const ARTICLES: Article[] = [
       caption: 'Simulator vs Range — Side by Side',
       headers: ['Factor', 'Simulator', 'Range', 'Winner'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10 Setup (Home)', bestFor: 'Convenience', price: '$700-$5K', feature1: '24/7 access', feature2: 'Data on every shot', badge: 'BEST VALUE', winner: true },
+        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10 Setup (Home)', bestFor: 'Convenience', price: '$700-$5K', feature1: '24/7 access', feature2: 'Data on every shot', badge: 'BEST VALUE', winner: true },
         { rating: 4.2, affiliateKey: 'fiberbuilt-flight-deck', name: 'FiberBuilt Mat (Range)', bestFor: 'Real conditions', price: '$15-25/visit', feature1: 'Real ball flight', feature2: 'Social/lessons' },
       ],
     },
@@ -11221,9 +11221,9 @@ export const ARTICLES: Article[] = [
       caption: 'Launch Monitor Practice Tools',
       headers: ['Monitor', 'Best For', 'Price', 'Practice Features'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget practice', price: '~$599', feature1: 'Home Tee Hero', feature2: 'Virtual range', badge: 'BEST FOR PRACTICE', winner: true },
-        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Video feedback', price: '~$699', feature1: 'Video replay', feature2: 'Data overlay' },
-        { rating: 4.3, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'On-course', price: '~$199/yr', feature1: 'Strokes gained', feature2: 'AI caddie' },
+        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget practice', price: '~$599', feature1: 'Home Tee Hero', feature2: 'Virtual range', badge: 'BEST FOR PRACTICE', winner: true },
+        { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Video feedback', price: '~$699', feature1: 'Video replay', feature2: 'Data overlay' },
+        { rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'On-course', price: '~$199/yr', feature1: 'Strokes gained', feature2: 'AI caddie' },
       ],
     },
     sections: [
@@ -11804,8 +11804,8 @@ export const ARTICLES: Article[] = [
       caption: 'Driver Loft by Swing Speed',
       headers: ['Speed Range', 'Best For', 'Price', 'Loft'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Ai Smoke Max (Under 85 mph)', bestFor: 'Seniors, slow swingers', price: '~$150', feature1: '12-15°', feature2: 'Max height' },
-        { rating: 4.2, affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max (85-100 mph)', bestFor: 'Most amateurs', price: '~$150', feature1: '10.5-12°', feature2: 'Optimal', badge: 'MOST GOLFERS', winner: true },
+        { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Ai Smoke Max (Under 85 mph)', bestFor: 'Seniors, slow swingers', price: '~$150', feature1: '12-15°', feature2: 'Max height' },
+        { rating: 4.3, affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max (85-100 mph)', bestFor: 'Most amateurs', price: '~$150', feature1: '10.5-12°', feature2: 'Optimal', badge: 'MOST GOLFERS', winner: true },
         { rating: 4.2, affiliateKey: 'titleist-gt2-driver', name: 'Titleist GT2 Driver (Over 100 mph)', bestFor: 'Fast swingers', price: '~$150', feature1: '9-10.5°', feature2: 'Lower spin' },
       ],
     },
@@ -11911,7 +11911,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Launch Monitor', 'Price', 'Technology', 'Best For', 'Sim Compatible'],
       rows: [
-        { name: 'Garmin Approach R10', badge: 'BEST OVERALL', rating: 4.7, affiliateKey: 'garmin-approach-r10', price: '~$599', bestFor: 'Practice + simulator — most versatile under $500', feature1: 'Doppler radar', feature2: 'Yes (E6, Home Tee Hero)' },
+        { name: 'Garmin Approach R10', badge: 'BEST OVERALL', rating: 4, affiliateKey: 'garmin-approach-r10', price: '~$599', bestFor: 'Practice + simulator — most versatile under $500', feature1: 'Doppler radar', feature2: 'Yes (E6, Home Tee Hero)' },
         { name: 'Shot Scope LM1', badge: 'BEST VALUE', rating: 4.1, affiliateKey: 'shot-scope-lm1', price: '~$199', bestFor: 'Range practice data on a tight budget', feature1: 'Radar', feature2: 'No' },
         { name: 'Swing Caddie SC4 Pro', badge: 'BEST DISPLAY', rating: 4.2, affiliateKey: 'swing-caddie-sc4-pro', price: '~$499', bestFor: 'Standalone use without a phone', feature1: 'Doppler radar', feature2: 'Limited' },
       ],
@@ -12868,9 +12868,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Setup', 'Best For', 'Total Cost', 'Monitor', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'garmin-approach-r10', name: 'R10 Budget Setup', bestFor: 'Best Value', price: '~$1,200', feature1: 'Garmin R10', feature2: '', winner: false, rating: 4.2 },
-        { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+ Setup', bestFor: 'Best Overall', price: '~$3,800', feature1: 'SkyTrak+', feature2: '', winner: true },
-        { rating: 4.7, affiliateKey: 'bushnell-launch-pro', name: 'Launch Pro Setup', bestFor: 'Best Accuracy', price: '~$6,000', feature1: 'Bushnell LP', feature2: '', winner: false },
+        { badge: 'STRONG PICK', affiliateKey: 'garmin-approach-r10', name: 'R10 Budget Setup', bestFor: 'Best Value', price: '~$1,200', feature1: 'Garmin R10', feature2: '', winner: false, rating: 4 },
+        { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+ Setup', bestFor: 'Best Overall', price: '~$3,800', feature1: 'SkyTrak+', feature2: '', winner: true },
+        { rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Launch Pro Setup', bestFor: 'Best Accuracy', price: '~$6,000', feature1: 'Bushnell LP', feature2: '', winner: false },
       ],
     },
     sections: [

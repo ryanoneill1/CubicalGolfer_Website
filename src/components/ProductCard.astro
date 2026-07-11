@@ -103,7 +103,7 @@ const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'a
   <a href={url} class:list={["product-card__cta", { "product-card__cta--winner": winner }]}
      target="_blank" rel="nofollow noopener sponsored"
      aria-label={`Check today's price for ${name} on ${retailer}`}>
-    <span class="product-card__cta-text">Check Today's Price →</span>
+    <span class="product-card__cta-text">Check Today's Price ↗</span>
     <span class="product-card__cta-badge">at {retailer} · Free shipping</span>
   </a>
 
@@ -116,7 +116,7 @@ const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'a
     <a href={golfGalaxyUrl} class="product-card__cta product-card__cta--gg"
        target="_blank" rel="nofollow noopener sponsored" data-outbound={ggOutboundTag}
        aria-label={`Check price for ${name} at ${secRetailer}`}>
-      <span class="product-card__cta-text">Check Price at {secRetailer} →</span>
+      <span class="product-card__cta-text">Check Price at {secRetailer} ↗</span>
     </a>
     );
   })()}

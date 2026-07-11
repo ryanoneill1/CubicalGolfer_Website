@@ -396,9 +396,25 @@ if (isBuyingGuide) {
           <p class="early-disclosure" style="margin:4px 0 0;font-size:16px;color:var(--muted);">We may earn a commission from links on this page — it never affects our picks. <a href="/affiliate-disclosure/" style="color:var(--green);">Disclosure</a></p>
         )}
 
+        {isBuyingGuide && (() => {
+          const picks = article.sections.map((s: any, i: number) => ({ s, i })).filter((x: any) => x.s.affiliateKey).slice(0, 3);
+          if (picks.length < 2) return null;
+          return (
+            <nav class="quick-picks-box" aria-label="Quick picks">
+              <p class="quick-picks-title">🏆 Quick Picks</p>
+              <ol class="quick-picks-list">
+                {picks.map((p: any) => (
+                  <li><a href={`#pick-${p.i + 1}`}>{p.s.h2.replace(/^(🥇|🥈|🥉|🏆)\s*/,'')}</a>{p.s.badge ? <span class="quick-picks-badge"> — {p.s.badge}</span> : null}</li>
+                ))}
+              </ol>
+            </nav>
+          );
+        })()}
+
   {/* Sticky bar for buying guides */}
   {isBuyingGuide && (() => {
-    const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
+    const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey)
+      ?? (() => { const fs = article.sections?.find((x: any) => x.affiliateKey); return fs ? { affiliateKey: fs.affiliateKey, name: fs.h2.replace(/^(🥇|🥈|🥉|🏆)\s*/,'').replace(/^(Best Overall:|Best Budget:|Best Premium:|Best Value:)\s*/i,'') } : null; })();
     const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
     if (!topAff) return null;
     return (
@@ -451,12 +467,12 @@ if (isBuyingGuide) {
       if (!qaAff?.url) return null;
       return (
         <div class="quick-answer-box">
-          <div class="quick-answer-header">⚡ Quick Answer</div>
+          <div class="quick-answer-header">{article.pageType === 'review' && article.rating ? `⚡ Our Verdict — ★ ${article.rating}/5` : '⚡ Quick Answer'}</div>
           <p class="quick-answer-text" set:html={article.bottomLine} />
           <a href={qaAff.url} class="quick-answer-cta" target="_blank"
             rel="nofollow noopener sponsored"
             aria-label={`Check price for our #1 pick`}>
-            Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price →
+            Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price ↗
           </a>
           <p class="quick-answer-more">{productCount === 0 ? 'Read the full guide below.' : productCount === 1 ? 'Read the full review below.' : `Read the full guide below for all ${productCount} products tested.`}</p>
         </div>
@@ -678,7 +694,7 @@ if (isBuyingGuide) {
       const showMidEmail = idx === 2 && isBuyingGuide && article.sections.length >= 5;
       return (
         <>
-        <div class="art-section">
+        <div class="art-section" id={`pick-${idx + 1}`}>
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
 

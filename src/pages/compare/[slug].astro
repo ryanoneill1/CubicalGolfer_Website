@@ -5,6 +5,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { AUTHOR_PROFILE } from '../../data/author';
 import { productName } from '../../data/product-names';
 import StickyBar from '../../components/StickyBar.astro';
+import { ARTICLES } from '../../data/articles';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
 import { comparisonSchema, faqSchema, breadcrumbSchema, comparisonProductsSchema } from '../../lib/schema';
@@ -176,6 +177,12 @@ const PRODUCT_NAMES: Record<string, string> = {
 const affA    = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
 const affB    = PRODUCT_AFFILIATE_MAP[c.productB] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB]) : null;
 const nameA   = PRODUCT_NAMES[c.productA] || productName(c.productA);
+const REVIEW_SLUGS: Record<string, string> = {};
+for (const _a of (ARTICLES as any[])) {
+  if (_a.pageType === 'review' && _a.quickAnswerProduct) REVIEW_SLUGS[_a.quickAnswerProduct] = _a.slug;
+}
+const revA = REVIEW_SLUGS[c.productA];
+const revB = REVIEW_SLUGS[c.productB];
 const nameB   = PRODUCT_NAMES[c.productB] || productName(c.productB);
 const winnerName = PRODUCT_NAMES[c.winner] || productName(c.winner);
 const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]) : null;
@@ -416,6 +423,15 @@ schemas.push({
         </table>
         </div>
       </div>
+    )}
+
+    {(revA || revB) && (
+      <p class="cmp-review-links" style="margin:12px 0 0;font-size:16px;">
+        Read the full reviews:&nbsp;
+        {revA ? <a href={revA}>{nameA}</a> : <span>{nameA}</span>}
+        &nbsp;·&nbsp;
+        {revB ? <a href={revB}>{nameB}</a> : <span>{nameB}</span>}
+      </p>
     )}
 
     {/* ── BUY BOTH — above fold ── */}
