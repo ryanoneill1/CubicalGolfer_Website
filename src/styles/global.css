@@ -1826,3 +1826,14 @@ select:focus-visible, [tabindex]:focus-visible {
 .review-glance__list li { margin: 4px 0; }
 .section-review-link { margin: 6px 0 0; }
 .section-review-link a { color: var(--green, #1E3A28); font-weight: 600; }
+
+/* ═══ BATCH 4: mobile table scroll cue (#74) ═══ */
+@media (max-width: 720px) {
+  .comparison-table-wrapper, .cmp-wrap { position: relative; }
+  .comparison-table-wrapper::after, .cmp-wrap::after {
+    content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 28px;
+    background: linear-gradient(to left, rgba(30,58,40,0.12), transparent);
+    pointer-events: none; border-radius: 0 8px 8px 0;
+  }
+}
+.footer-independence { margin: 8px 0 0; font-size: 16px; opacity: 0.85; }
