@@ -53,7 +53,7 @@ const schemas  = [
           alt="Golfer walking off the 18th green in late afternoon light after a weekday after-work round"
           width="600" height="500" loading="eager" decoding="async"
           style="width:100%;height:auto;border-radius:var(--r2);" />
-        <p style="font-size:13px;color:var(--muted);margin:10px 0 0;font-style:italic;">
+        <p style="font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic;">
         </p>
       </div>
       <div style="font-size:16px;line-height:1.75;color:var(--body);">
@@ -62,7 +62,7 @@ const schemas  = [
         <p style="margin:0 0 14px;">This hub is built for that reality. <strong>Time hacks</strong> like <a href="/how-to-sneak-in-more-golf-rounds/">how to play more rounds without taking PTO</a> and <a href="/office-to-golf-course-playbook/">the office-to-course playbook</a> address the actual constraint — time, not skill. <strong>Fitness</strong> for golfers who sit at desks all week and need to undo the damage before Saturday, covered in the <a href="/desk-exercises-fix-golf-slice/">desk-exercise routine</a>. <strong>Travel</strong> recommendations weighted toward drive-distance destinations that fit a long weekend rather than a week-long trip, in our <a href="/best-golf-courses-weekend-drive/">weekend-drive courses guide</a>.</p>
         <p style="margin:0 0 14px;">There is also a culture piece. Golf has rules of etiquette that are taught informally on the course, which works fine if you grew up at a club and is a nightmare if you did not. Our <a href="/golf-course-etiquette/">etiquette guide</a> is written for people who taught themselves golf later in life and would rather not figure it out by getting glared at by the group behind them.</p>
         <p style="margin:0 0 14px;">The lifestyle articles share one assumption: that golf should make your life better, not harder. If a recommendation does not survive contact with a Tuesday work crisis or a Saturday morning kid emergency, it does not belong on this site. Every routine, every fitness plan, every travel suggestion is filterable through the question: does this actually fit into the life of someone who works for a living and wants to play golf?</p>
-        <p style="margin:0 0 0;font-size:14px;color:var(--muted);">Written from the perspective of Ryan O., a 10-handicap who plays 25–40 rounds per year out of Harborside Golf Course in Chicago, IL. Full bio on the <a href="/about/">about page</a>.</p>
+        <p style="margin:0 0 0;font-size:16px;color:var(--muted);">Written from the perspective of Ryan O., a 10-handicap who plays 25–40 rounds per year out of Harborside Golf Course in Chicago, IL. Full bio on the <a href="/about/">about page</a>.</p>
       </div>
     </div>
   </section>
@@ -79,9 +79,9 @@ const schemas  = [
   <!-- ─── FEATURED PICK — below editorial ─── -->
   <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
-      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ At-Home Pick</span>
+      <span style="font-size:16px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ At-Home Pick</span>
       <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Putting Mirror — ~$30</p>
-      <p style="font-size:13px;margin:0;color:var(--muted);">10 minutes on the carpet is worth more than two hours at the range</p>
+      <p style="font-size:16px;margin:0;color:var(--muted);">10 minutes on the carpet is worth more than two hours at the range</p>
     </div>
     {(() => {
       const aff = getAffiliateLink('putting-mirror');
@@ -90,12 +90,12 @@ const schemas  = [
       return (
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
           <a href={aff.url} target="_blank" rel="nofollow noopener sponsored"
-             style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+             style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;">
             Check Price at {aff.retailer} →
           </a>
           {secUrl && secR && (
             <a href={secUrl} target="_blank" rel="nofollow noopener sponsored"
-               style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
+               style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
               Check Price at {secR} →
             </a>
           )}
@@ -155,8 +155,8 @@ const schemas  = [
     <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Golf lifestyle FAQ</h2>
     {hubFaq.map(item => (
       <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-        <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{item.q}</summary>
-        <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+        <summary style="padding:14px 18px;font-weight:700;font-size:16px;cursor:pointer;color:var(--green);">{item.q}</summary>
+        <p style="padding:0 18px 14px;font-size:16px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
       </details>
     ))}
   </section>

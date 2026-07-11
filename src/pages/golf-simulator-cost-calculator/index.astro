@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
-import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { articleSchema, faqSchema, breadcrumbSchema , webApplicationSchema } from '../../lib/schema';
 
 const meta = {
   title: 'Golf Simulator Cost Calculator — Build Your Setup',
@@ -26,6 +26,7 @@ const faqs = [
 ];
 
 const schemas = [
+  webApplicationSchema({ name: 'Golf Simulator Cost Calculator', description: 'Price out a complete home golf simulator build for your space and budget.', url: '/golf-simulator-cost-calculator/' }),
   articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
@@ -78,7 +79,7 @@ const benq = getAffiliateLink('benq-th671st-projector');
         <button class="calc-btn" data-tier="premium" onclick="selectTier('premium')">🏆 Premium<br><small>$4,000–$6,000</small></button>
       </div>
 
-      <div id="result-area" style="display:none;">
+      <div id="result-area" style="display:none;" aria-live="polite">
         <h2 id="result-title">Your Parts List</h2>
         <table class="cmp-table" id="parts-table">
           <thead><tr><th>Component</th><th>Product</th><th>Price</th><th></th></tr></thead>
@@ -211,12 +212,12 @@ window.selectTier = selectTier;
   background: var(--bg-alt, #f8f7f4);
   color: var(--text, #1a1a1a);
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
   text-align: center;
   transition: all .2s;
 }
 .calc-btn:hover { border-color: var(--green, #1E3A28); background: #eee; }
 .calc-btn--active { border-color: var(--green, #1E3A28); background: var(--green, #1E3A28); color: #fff; }
-.calc-btn small { font-weight: 400; font-size: 13px; opacity: 0.85; }
+.calc-btn small { font-weight: 400; font-size: 16px; opacity: 0.85; }
 </style>

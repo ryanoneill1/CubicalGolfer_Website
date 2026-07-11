@@ -254,6 +254,18 @@ for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, na
 }
 if (compProducts.length > 0) {
   schemas.push(...comparisonProductsSchema(compProducts));
+// ItemList wrapper referencing both products (vs-page rich-result eligibility)
+schemas.push({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: c.title,
+  url: `https://www.cubicalgolfer.com/compare/${c.slug}/`,
+  numberOfItems: 2,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: c.productAName || 'Product A', url: `https://www.cubicalgolfer.com/compare/${c.slug}/` },
+    { '@type': 'ListItem', position: 2, name: c.productBName || 'Product B', url: `https://www.cubicalgolfer.com/compare/${c.slug}/` },
+  ],
+});
 }
 ---
 
@@ -286,7 +298,7 @@ if (compProducts.length > 0) {
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:12px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
+          <span style="font-size:16px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
         </span>
         <span class="author-meta">
           📅 Updated: {c.dateModified} &nbsp;·&nbsp;
@@ -298,8 +310,8 @@ if (compProducts.length > 0) {
   </header>
 
   {/* ── FRESHNESS BANNER ── */}
-  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
-    <span style="font-size:15px;">✅</span>
+  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+    <span style="font-size:16px;">✅</span>
     <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — Prices, availability, and verdict reverified. Both products independently purchased and tested. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
   </div>
 
@@ -307,12 +319,12 @@ if (compProducts.length > 0) {
   {winnerAff && (
     <div style="background:var(--green);border-radius:12px;padding:20px 24px;margin:0 0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
       <div style="flex:1;min-width:200px;">
-        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-text);margin:0 0 4px;">🏆 Our Pick After Testing</p>
+        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-text);margin:0 0 4px;">🏆 Our Pick After Testing</p>
         <p style="font-size:20px;font-weight:700;color:#fff;margin:0 0 6px;font-family:var(--font-head);">{winnerName}</p>
-        <p style="font-size:14px;color:rgba(255,255,255,.72);margin:0;line-height:1.4;">{c.winnerReason?.split('.')[0]}.</p>
+        <p style="font-size:16px;color:rgba(255,255,255,.72);margin:0;line-height:1.4;">{c.winnerReason?.split('.')[0]}.</p>
       </div>
       <a href={winnerAff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={winnerAff.url.includes("amazon.com") ? "amazon" : winnerAff.url.includes("bushnell") ? "bushnell" : winnerAff.url.includes("playbetter") ? "playbetter" : "other"}
-        style="background:var(--gold);color:#1a1a1a;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">
+        style="background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">
         Check Price at {winnerAff.retailer} →
       </a>
     </div>
@@ -356,12 +368,12 @@ if (compProducts.length > 0) {
     {/* ── BUY THIS IF / SKIP THIS IF — quick decision aid ── */}
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px;">
       <div style="padding:14px 16px;background:rgba(30,58,40,.06);border-radius:8px;border-left:3px solid var(--green);">
-        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 6px;">✅ Buy the {winnerName} if</p>
-        <p style="font-size:13px;color:var(--body);margin:0;line-height:1.5;">you want the better overall value and performance for weekend golf — it won our head-to-head testing.</p>
+        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 6px;">✅ Buy the {winnerName} if</p>
+        <p style="font-size:16px;color:var(--body);margin:0;line-height:1.5;">you want the better overall value and performance for weekend golf — it won our head-to-head testing.</p>
       </div>
       <div style="padding:14px 16px;background:rgba(200,168,75,.06);border-radius:8px;border-left:3px solid var(--gold);">
-        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 6px;">⚠️ Buy the {c.winner === c.productA ? nameB : nameA} instead if</p>
-        <p style="font-size:13px;color:var(--body);margin:0;line-height:1.5;">{c.winner === c.productA
+        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 6px;">⚠️ Buy the {c.winner === c.productA ? nameB : nameA} instead if</p>
+        <p style="font-size:16px;color:var(--body);margin:0;line-height:1.5;">{c.winner === c.productA
           ? (affB?.price && parseInt(affB.price.replace(/[^0-9]/g,'')) < parseInt(affA?.price?.replace(/[^0-9]/g,'') || '9999')
             ? `budget is your priority — the ${nameB} costs less and still delivers solid performance.`
             : `you prioritize the specific strengths the ${nameB} offers over raw test results.`)
@@ -424,7 +436,7 @@ if (compProducts.length > 0) {
             {affA.golfGalaxyUrl && (
               <a href={affA.golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
                 rel="nofollow noopener sponsored" data-outbound={affA.golfGalaxyUrl?.includes("amazon.com") ? "amazon" : affA.golfGalaxyUrl?.includes("playbetter") ? "playbetter" : "other"}
-                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:16px;">
                 <span class="btn-buy-cta">Check Price at {affA.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : affA.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
               </a>
             )}
@@ -449,7 +461,7 @@ if (compProducts.length > 0) {
             {affB.golfGalaxyUrl && (
               <a href={affB.golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
                 rel="nofollow noopener sponsored" data-outbound={affB.golfGalaxyUrl?.includes("amazon.com") ? "amazon" : affB.golfGalaxyUrl?.includes("playbetter") ? "playbetter" : "other"}
-                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:16px;">
                 <span class="btn-buy-cta">Check Price at {affB.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : affB.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
               </a>
             )}
@@ -477,7 +489,7 @@ if (compProducts.length > 0) {
       {winnerAff?.golfGalaxyUrl && (
         <a href={winnerAff.golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg"
           target="_blank" rel="nofollow noopener sponsored"
-          style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+          style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:16px;">
           <span class="btn-buy-cta">Check Price at {winnerAff?.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : winnerAff?.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
         </a>
       )}
@@ -494,7 +506,7 @@ if (compProducts.length > 0) {
     {c.weekendGolfer && (
       <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;">
         <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters for Weekend Golfers</h2>
-        <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
+        <p style="font-size:16px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
       </div>
     )}
 
@@ -504,7 +516,7 @@ if (compProducts.length > 0) {
         {c.sections.map((s: any, idx: number) => (
           <section style="margin:28px 0;">
             <h2 id={s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')} style="font-size:20px;color:var(--green);margin:0 0 12px;">{s.h2}</h2>
-            <div style="font-size:15px;line-height:1.7;color:var(--body);" set:html={s.body} />
+            <div style="font-size:16px;line-height:1.7;color:var(--body);" set:html={s.body} />
 
             {/* Skip-this-if on "Who Should Buy" sections */}
             {s.h2.toLowerCase().includes('who should') && (() => {
@@ -512,7 +524,7 @@ if (compProducts.length > 0) {
               const prodKey = isProductA ? c.productA : c.productB;
               const skipText = getSkipIf(prodKey, `/compare/${c.slug}/`);
               return skipText ? (
-                <p style="margin:12px 0 0;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:13px;color:var(--muted);line-height:1.5;">
+                <p style="margin:12px 0 0;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:16px;color:var(--muted);line-height:1.5;">
                   <strong style="color:var(--green);">⚠️ Skip this if:</strong> {skipText}.
                 </p>
               ) : null;
@@ -521,9 +533,9 @@ if (compProducts.length > 0) {
             {/* Mid-section CTA — after 2nd section to catch ready buyers */}
             {idx === 1 && winnerAff && (
               <div style="margin:24px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-                <p style="margin:0;font-size:14px;font-weight:600;color:var(--green);">Ready to decide? {winnerName} won our head-to-head testing.</p>
+                <p style="margin:0;font-size:16px;font-weight:600;color:var(--green);">Ready to decide? {winnerName} won our head-to-head testing.</p>
                 <a href={winnerAff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={winnerAff.url.includes("amazon.com") ? "amazon" : winnerAff.url.includes("bushnell") ? "bushnell" : winnerAff.url.includes("playbetter") ? "playbetter" : "other"}
-                  style="background:var(--green);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;">
+                  style="background:var(--green);color:#fff;font-size:16px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;">
                   See {winnerName} Price →
                 </a>
               </div>
@@ -548,9 +560,9 @@ if (compProducts.length > 0) {
     {/* ── POST-VERDICT CTA — enhanced with urgency ── */}
     {winnerAff && (
       <div class="post-verdict-cta" style="background:var(--green);border-radius:12px;padding:28px;margin:32px 0;text-align:center;">
-        <p style="color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
+        <p style="color:var(--gold);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
         <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;">🏆 {winnerName}</p>
-        <p style="color:rgba(255,255,255,.8);font-size:14px;margin:0 0 16px;">
+        <p style="color:rgba(255,255,255,.8);font-size:16px;margin:0 0 16px;">
           {winnerAff.price} at {winnerAff.retailer} · Free shipping · Prices checked today
         </p>
         <a href={winnerAff.url} class="post-verdict-btn" target="_blank"
@@ -559,7 +571,7 @@ if (compProducts.length > 0) {
           style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:800;padding:16px 40px;border-radius:10px;text-decoration:none;transition:transform .15s,background .15s;">
           Check Today's Price →
         </a>
-        <p style="color:rgba(255,255,255,.62);font-size:11px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>
+        <p style="color:rgba(255,255,255,.62);font-size:16px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>
       </div>
     )}
 
@@ -571,10 +583,10 @@ if (compProducts.length > 0) {
       return loserAff ? (
         <div style="margin:0 0 32px;padding:16px 20px;background:rgba(200,168,75,.06);border-radius:10px;border:1px solid rgba(200,168,75,.2);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
           <div>
-            <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">Not sold on the winner?</p>
-            <p style="font-size:13px;color:var(--muted);margin:0;">The {loserName} is still a strong pick — {loserAff.price} at {loserAff.retailer}.</p>
+            <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">Not sold on the winner?</p>
+            <p style="font-size:16px;color:var(--muted);margin:0;">The {loserName} is still a strong pick — {loserAff.price} at {loserAff.retailer}.</p>
           </div>
-          <a href={loserAff.url} style="background:#fff;color:var(--green);border:2px solid var(--green);font-weight:700;font-size:13px;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;" target="_blank" rel="nofollow noopener sponsored">
+          <a href={loserAff.url} style="background:#fff;color:var(--green);border:2px solid var(--green);font-weight:700;font-size:16px;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;" target="_blank" rel="nofollow noopener sponsored">
             Check {loserName} Price →
           </a>
         </div>
@@ -607,22 +619,22 @@ if (compProducts.length > 0) {
 
     {/* ── NEXT STEPS — category guide + related ── */}
     <div style="margin-top:40px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
-      <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">📋 Want to see how these rank against the full field?</p>
+      <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">📋 Want to see how these rank against the full field?</p>
       <div class="rel-links" style="display:flex;flex-wrap:wrap;gap:8px;">
         {(c.related || []).filter((l: any) => l.label && l.slug).length > 0
-          ? (c.related || []).filter((l: any) => l.label && l.slug).map((link: any) => <a href={link.slug} style="color:var(--green);font-weight:600;font-size:13px;">{link.label} →</a>)
+          ? (c.related || []).filter((l: any) => l.label && l.slug).map((link: any) => <a href={link.slug} style="color:var(--green);font-weight:600;font-size:16px;">{link.label} →</a>)
           : <>
-              <a href="/compare/" style="color:var(--green);font-weight:600;font-size:13px;">All Comparisons →</a>
-              <a href="/gear-reviews/" style="color:var(--green);font-weight:600;font-size:13px;">All Gear Reviews →</a>
-              <a href="/best-golf-gear-2026/" style="color:var(--green);font-weight:600;font-size:13px;">#1 Pick in Every Category →</a>
+              <a href="/compare/" style="color:var(--green);font-weight:600;font-size:16px;">All Comparisons →</a>
+              <a href="/gear-reviews/" style="color:var(--green);font-weight:600;font-size:16px;">All Gear Reviews →</a>
+              <a href="/best-golf-gear-2026/" style="color:var(--green);font-weight:600;font-size:16px;">#1 Pick in Every Category →</a>
             </>
         }
       </div>
     </div>
 
     <div class="rel-cluster" style="background:var(--green);border:none;margin-top:24px;">
-      <p style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
-      <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
+      <p style="color:var(--gold);font-size:16px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
+      <p style="color:rgba(255,255,255,.7);font-size:16px;margin-bottom:16px;line-height:1.6;">
         You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
       </p>
       <div class="rel-links">

@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { breadcrumbSchema, faqSchema , datasetSchema } from '../../lib/schema';
 
 const meta = {
   title: 'Golf Swing Speed Chart by Club — Driver Through Wedge',
@@ -23,7 +23,8 @@ const faq = [
   { q: 'What shaft flex should I use for my swing speed?', a: 'Under 75 mph: Ladies or Senior flex. 75-85 mph: Senior or Regular flex. 85-95 mph: Regular flex. 95-105 mph: Stiff flex. 105+ mph: Extra Stiff. Most weekend golfers play shafts that are too stiff — if you are between flex categories, go with the softer option.' },
 ];
 
-const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+const schemas = [
+  datasetSchema({ name: 'Golf Swing Speed Chart — Averages by Age & Handicap', description: 'Average driver swing speeds by age group, gender, and handicap band.', url: '/golf-swing-speed-chart/', dateModified: '2026-07-09', keywords: ['swing speed', 'driver speed by age'] }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
 const speeds = [
   { club: 'Driver', tour: 114, scratch: 104, mid: 93, high: 83, senior: 75 },
@@ -108,8 +109,8 @@ const speeds = [
       <h2>Frequently Asked Questions</h2>
       {faq.map(f => (
         <details class="faq-item" style="margin:0 0 12px;border:1px solid var(--border);border-radius:var(--r1);overflow:hidden;">
-          <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{f.q}</summary>
-          <p style="padding:0 18px 14px;margin:0;font-size:14px;line-height:1.7;color:var(--body);">{f.a}</p>
+          <summary style="padding:14px 18px;font-weight:700;font-size:16px;cursor:pointer;color:var(--green);">{f.q}</summary>
+          <p style="padding:0 18px 14px;margin:0;font-size:16px;line-height:1.7;color:var(--body);">{f.a}</p>
         </details>
       ))}
     </section>
@@ -117,27 +118,27 @@ const speeds = [
     <!-- GEAR MATCHED TO YOUR SPEED -->
     <section style="margin:24px 0 0;">
       <div style="padding:20px 24px;background:var(--green);border-radius:12px;">
-        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 12px;">🎯 Our tested picks by swing speed</p>
+        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 12px;">🎯 Our tested picks by swing speed</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
           <a href="/best-golf-balls-slow-swing-speed/" style="display:block;padding:14px 16px;background:rgba(255,255,255,.1);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.15);">
-            <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Under 85 mph</p>
-            <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">Best balls for slow swing speed →</p>
+            <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Under 85 mph</p>
+            <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">Best balls for slow swing speed →</p>
           </a>
           <a href="/best-golf-balls-90-mph-swing-speed/" style="display:block;padding:14px 16px;background:rgba(255,255,255,.1);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.15);">
-            <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">85–100 mph</p>
-            <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">Best balls for mid swing speed →</p>
+            <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">85–100 mph</p>
+            <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">Best balls for mid swing speed →</p>
           </a>
           <a href="/best-golf-balls-2026/" style="display:block;padding:14px 16px;background:rgba(255,255,255,.1);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.15);">
-            <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">100+ mph</p>
-            <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">Best tour balls ranked →</p>
+            <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">100+ mph</p>
+            <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">Best tour balls ranked →</p>
           </a>
           <a href="/best-golf-drivers-forgiveness/" style="display:block;padding:14px 16px;background:rgba(255,255,255,.1);border-radius:8px;text-decoration:none;border:1px solid rgba(255,255,255,.15);">
-            <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Best drivers</p>
-            <p style="font-size:12px;color:rgba(255,255,255,.7);margin:0;">Matched to your speed →</p>
+            <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Best drivers</p>
+            <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">Matched to your speed →</p>
           </a>
         </div>
       </div>
-      <p style="font-size:12px;color:var(--muted);margin:8px 0 0;text-align:center;">All recommendations based on products we independently purchased and tested. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></p>
+      <p style="font-size:16px;color:var(--muted);margin:8px 0 0;text-align:center;">All recommendations based on products we independently purchased and tested. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></p>
     </section>
   </article>
 </BaseLayout>

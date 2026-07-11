@@ -344,6 +344,36 @@ export function collectionPageSchema(opts: {
   };
 }
 
+// ── Dataset schema (data/reference pages whose payload is a table of values) ──
+export function datasetSchema(opts: { name: string; description: string; url: string; dateModified?: string; keywords?: string[] }): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: opts.name,
+    description: opts.description,
+    url: `${DOMAIN}${opts.url}`,
+    creator: { '@type': 'Person', name: 'Ryan O.', url: `${DOMAIN}/about/` },
+    license: `${DOMAIN}/terms/`,
+    dateModified: opts.dateModified,
+    keywords: opts.keywords,
+  };
+}
+
+// ── WebApplication schema (interactive tools/calculators) ────────────────────
+export function webApplicationSchema(opts: { name: string; description: string; url: string }): object {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: opts.name,
+    description: opts.description,
+    url: `${DOMAIN}${opts.url}`,
+    applicationCategory: 'SportsApplication',
+    operatingSystem: 'Any',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    provider: { '@type': 'Organization', name: 'Cubical Golfer', url: DOMAIN },
+  };
+}
+
 // ── HowTo schema (for tutorial page types) ───────────────────────────────────
 export function howToSchema(article: any): object | null {
   if (article.pageType !== 'tutorial') return null;

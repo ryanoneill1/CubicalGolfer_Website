@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { breadcrumbSchema, faqSchema , webApplicationSchema } from '../../lib/schema';
 
 const meta = {
   title: 'Golf Handicap Calculator — Estimate Your Handicap Index',
@@ -22,7 +22,8 @@ const faq = [
   { q: 'Do I need an official handicap to play?', a: 'No — you can play any course without a handicap. But an official GHIN handicap ($35/year through any USGA-affiliated club) is required for most tournaments and allows you to play matches with equitable stroke allocations. If you play competitively or want to track your progress officially, it is worth the investment.' },
 ];
 
-const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+const schemas = [
+  webApplicationSchema({ name: 'Golf Handicap Calculator', description: 'Calculate your USGA handicap index from your recent scores, course ratings, and slopes.', url: '/golf-handicap-calculator/' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">
@@ -41,27 +42,27 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
     <section>
       <div id="handicap-calc" style="max-width:600px;">
-        <p style="font-size:14px;color:var(--muted);margin-bottom:16px;">Enter 5 recent rounds. Use your course's scorecard for the Course Rating and Slope Rating.</p>
+        <p style="font-size:16px;color:var(--muted);margin-bottom:16px;">Enter 5 recent rounds. Use your course's scorecard for the Course Rating and Slope Rating.</p>
         <table class="cmp-table" style="width:100%;">
           <thead><tr><th>Round</th><th>Score</th><th>Course Rating</th><th>Slope Rating</th></tr></thead>
           <tbody id="calc-rows">
-            <tr><td>1</td><td><input type="number" id="s1" value="92" style="width:60px;"></td><td><input type="number" id="cr1" value="71.5" step="0.1" style="width:70px;"></td><td><input type="number" id="sl1" value="128" style="width:60px;"></td></tr>
-            <tr><td>2</td><td><input type="number" id="s2" value="89" style="width:60px;"></td><td><input type="number" id="cr2" value="71.5" step="0.1" style="width:70px;"></td><td><input type="number" id="sl2" value="128" style="width:60px;"></td></tr>
-            <tr><td>3</td><td><input type="number" id="s3" value="95" style="width:60px;"></td><td><input type="number" id="cr3" value="72.0" step="0.1" style="width:70px;"></td><td><input type="number" id="sl3" value="131" style="width:60px;"></td></tr>
-            <tr><td>4</td><td><input type="number" id="s4" value="88" style="width:60px;"></td><td><input type="number" id="cr4" value="70.8" step="0.1" style="width:70px;"></td><td><input type="number" id="sl4" value="125" style="width:60px;"></td></tr>
-            <tr><td>5</td><td><input type="number" id="s5" value="91" style="width:60px;"></td><td><input type="number" id="cr5" value="71.5" step="0.1" style="width:70px;"></td><td><input type="number" id="sl5" value="128" style="width:60px;"></td></tr>
+            <tr><td>1</td><td><input type="number" id="s1" value="92" style="width:60px;" aria-label="Round 1 score"></td><td><input type="number" id="cr1" value="71.5" step="0.1" style="width:70px;" aria-label="Round 1 course rating"></td><td><input type="number" id="sl1" value="128" style="width:60px;" aria-label="Round 1 slope rating"></td></tr>
+            <tr><td>2</td><td><input type="number" id="s2" value="89" style="width:60px;" aria-label="Round 2 score"></td><td><input type="number" id="cr2" value="71.5" step="0.1" style="width:70px;" aria-label="Round 2 course rating"></td><td><input type="number" id="sl2" value="128" style="width:60px;" aria-label="Round 2 slope rating"></td></tr>
+            <tr><td>3</td><td><input type="number" id="s3" value="95" style="width:60px;" aria-label="Round 3 score"></td><td><input type="number" id="cr3" value="72.0" step="0.1" style="width:70px;" aria-label="Round 3 course rating"></td><td><input type="number" id="sl3" value="131" style="width:60px;" aria-label="Round 3 slope rating"></td></tr>
+            <tr><td>4</td><td><input type="number" id="s4" value="88" style="width:60px;" aria-label="Round 4 score"></td><td><input type="number" id="cr4" value="70.8" step="0.1" style="width:70px;" aria-label="Round 4 course rating"></td><td><input type="number" id="sl4" value="125" style="width:60px;" aria-label="Round 4 slope rating"></td></tr>
+            <tr><td>5</td><td><input type="number" id="s5" value="91" style="width:60px;" aria-label="Round 5 score"></td><td><input type="number" id="cr5" value="71.5" step="0.1" style="width:70px;" aria-label="Round 5 course rating"></td><td><input type="number" id="sl5" value="128" style="width:60px;" aria-label="Round 5 slope rating"></td></tr>
           </tbody>
         </table>
         <button onclick="calcHandicap()" class="btn-gold" style="margin-top:12px;">Calculate Handicap →</button>
-        <div id="handicap-result" style="margin-top:16px;padding:20px;background:var(--green);border-radius:12px;color:#fff;text-align:center;display:none;">
-          <p style="font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin:0 0 4px;">Estimated Handicap Index</p>
+        <div id="handicap-result" style="margin-top:16px;padding:20px;background:var(--green);border-radius:12px;color:#fff;text-align:center;display:none;" aria-live="polite">
+          <p style="font-size:16px;color:var(--gold);text-transform:uppercase;letter-spacing:.1em;margin:0 0 4px;">Estimated Handicap Index</p>
           <p id="handicap-number" style="font-size:36px;font-weight:800;margin:0;"></p>
-          <p id="handicap-desc" style="font-size:14px;color:rgba(255,255,255,.7);margin:8px 0 0;"></p>
+          <p id="handicap-desc" style="font-size:16px;color:rgba(255,255,255,.7);margin:8px 0 0;"></p>
         </div>
         <!-- Dynamic gear recommendation based on handicap -->
         <div id="handicap-recs" style="display:none;margin-top:16px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
-          <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎯 Your best gear upgrade based on this handicap</p>
-          <div id="handicap-rec-content" style="font-size:13px;line-height:1.6;"></div>
+          <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎯 Your best gear upgrade based on this handicap</p>
+          <div id="handicap-rec-content" style="font-size:16px;line-height:1.6;"></div>
         </div>
       </div>
     </section>
@@ -85,8 +86,8 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
       <h2>Frequently Asked Questions</h2>
       {faq.map(f => (
         <details class="faq-item" style="margin:0 0 12px;border:1px solid var(--border);border-radius:var(--r1);overflow:hidden;">
-          <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{f.q}</summary>
-          <p style="padding:0 18px 14px;margin:0;font-size:14px;line-height:1.7;color:var(--body);">{f.a}</p>
+          <summary style="padding:14px 18px;font-weight:700;font-size:16px;cursor:pointer;color:var(--green);">{f.q}</summary>
+          <p style="padding:0 18px 14px;margin:0;font-size:16px;line-height:1.7;color:var(--body);">{f.a}</p>
         </details>
       ))}
     </section>

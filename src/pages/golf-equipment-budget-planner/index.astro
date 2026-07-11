@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
-import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { articleSchema, faqSchema, breadcrumbSchema , webApplicationSchema } from '../../lib/schema';
 
 const meta = {
   title: 'Golf Equipment Budget Planner — What to Buy First',
@@ -25,6 +25,7 @@ const faqs = [
 ];
 
 const schemas = [
+  webApplicationSchema({ name: 'Golf Equipment Budget Planner', description: 'Allocate any golf budget across clubs, balls, and tech with tested recommendations.', url: '/golf-equipment-budget-planner/' }),
   articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
@@ -79,11 +80,11 @@ const products = {
         <button class="calc-btn" data-b="5000" onclick="selectBudget(5000)">$5,000</button>
         <button class="calc-btn" data-b="10000" onclick="selectBudget(10000)">$10,000</button>
       </div>
-      <div id="budget-result" style="display:none;">
+      <div id="budget-result" style="display:none;" aria-live="polite">
         <h2 id="budget-title"></h2>
 
         <!-- Visual allocation bar -->
-        <div id="alloc-bar" style="display:flex;height:32px;border-radius:8px;overflow:hidden;margin:8px 0 20px;font-size:11px;font-weight:600;color:#fff;"></div>
+        <div id="alloc-bar" style="display:flex;height:32px;border-radius:8px;overflow:hidden;margin:8px 0 20px;font-size:16px;font-weight:600;color:#fff;"></div>
 
         <div id="budget-sections"></div>
 

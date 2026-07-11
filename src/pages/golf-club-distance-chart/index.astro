@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { articleSchema, faqSchema, breadcrumbSchema , datasetSchema } from '../../lib/schema';
 
 const meta = {
   title: 'Golf Club Distance Chart — Enter Your Swing Speed',
@@ -44,6 +44,7 @@ const refRows = CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW')
 }));
 
 const schemas = [
+  datasetSchema({ name: 'Golf Club Distance Chart — Carry by Swing Speed', description: 'Carry and total distances for all 13 clubs across five driver swing-speed bands (75–115 mph), derived from launch-monitor testing.', url: '/golf-club-distance-chart/', dateModified: '2026-07-09', keywords: ['golf club distances', 'carry distance', 'swing speed'] }),
   articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
@@ -79,10 +80,10 @@ const schemas = [
         <input type="range" id="speed-slider" min="60" max="120" value="90" step="1" style="flex:1;height:8px;accent-color:var(--green,#1E3A28);" />
         <div style="display:flex;align-items:baseline;gap:4px;">
           <input type="number" id="speed-input" value="90" min="60" max="120" style="width:56px;font-size:20px;font-weight:700;text-align:center;border:2px solid var(--border,#e0ddd5);border-radius:6px;padding:4px;" />
-          <span style="font-size:14px;color:var(--muted,#888);">mph</span>
+          <span style="font-size:16px;color:var(--muted,#888);">mph</span>
         </div>
       </div>
-      <p style="color:var(--muted,#888);font-size:13px;margin-bottom:24px;">Average male amateur: 93 mph · Average female: 72 mph · PGA Tour avg: 114 mph</p>
+      <p style="color:var(--muted,#888);font-size:16px;margin-bottom:24px;">Average male amateur: 93 mph · Average female: 72 mph · PGA Tour avg: 114 mph</p>
 
       <table class="cmp-table" id="dist-table">
         <thead><tr><th>Club</th><th>Carry (yds)</th><th>Total (yds)</th><th style="width:30%;">Bar</th></tr></thead>
@@ -151,7 +152,7 @@ const schemas = [
           </tbody>
         </table>
       </div>
-      <p style="font-size:13px;color:var(--muted,#888);">Carry only — add 5-20 yards of roll depending on club and fairway firmness. 75 mph ≈ many senior golfers · 95 mph ≈ average male amateur · 115 mph ≈ tour speed. Related: our <a href="/golf-swing-speed-chart/">swing speed chart</a> breaks these bands down by age and handicap.</p>
+      <p style="font-size:16px;color:var(--muted,#888);">Carry only — add 5-20 yards of roll depending on club and fairway firmness. 75 mph ≈ many senior golfers · 95 mph ≈ average male amateur · 115 mph ≈ tour speed. Related: our <a href="/golf-swing-speed-chart/">swing speed chart</a> breaks these bands down by age and handicap.</p>
     </section>
 
     <section>

@@ -54,7 +54,7 @@ const schemas  = [
           alt="Golf bag with glove, towel, ball marker, divot tool, and tees laid out for a kit photo"
           width="600" height="500" loading="eager" decoding="async"
           style="width:100%;height:auto;border-radius:var(--r2);" />
-        <p style="font-size:13px;color:var(--muted);margin:10px 0 0;font-style:italic;">
+        <p style="font-size:16px;color:var(--muted);margin:10px 0 0;font-style:italic;">
         </p>
       </div>
       <div style="font-size:16px;line-height:1.75;color:var(--body);">
@@ -63,7 +63,7 @@ const schemas  = [
         <p style="margin:0 0 14px;">This hub is organized by what the accessory actually does for your game. <strong>Performance accessories</strong> — gloves, push carts, <a href="/best-golf-shoes-for-walking/">walking shoes</a>, <a href="/best-golf-training-aids/">training aids</a> — change the physical experience of playing. <strong>Maintenance accessories</strong> — divot tools, towels, club brushes, ball markers — keep your gear and your manners in good shape. <strong>Gift accessories</strong> — <a href="/best-golf-gifts-for-dad/">Father's Day picks</a>, holiday gifts, <a href="/best-golf-gifts-for-couples/">gifts for golfing couples</a> — are organized by recipient because that is the actual problem you are trying to solve when shopping.</p>
         <p style="margin:0 0 14px;">Every accessory ranked on this site is tested over real rounds. Gloves are worn through at least 8 rounds before being scored on durability. Push carts are used over 10+ rounds on hilly courses where the wheel quality actually matters. Training aids are used at home for 4–6 weeks before being ranked — because the gimmicky ones reveal themselves once the novelty wears off.</p>
         <p style="margin:0 0 14px;">The accessories worth your money fall into two categories: cheap upgrades that improve your round disproportionately (a $25 putting mirror saves more strokes than a $400 driver), and expensive purchases that last long enough to justify the price (a quality push cart at $200 will serve you for 5+ seasons). The accessories that are not worth your money — most "swing tempo" gadgets, most weighted clubs, most putting alignment lasers — are flagged in our guides so you stop seeing them in your Amazon recommendations.</p>
-        <p style="margin:0 0 0;font-size:14px;color:var(--muted);">All accessories ranked here have been tested by me, Ryan O., over at least one full golf season. The full testing process is documented at <a href="/how-we-test/">how we test</a>.</p>
+        <p style="margin:0 0 0;font-size:16px;color:var(--muted);">All accessories ranked here have been tested by me, Ryan O., over at least one full golf season. The full testing process is documented at <a href="/how-we-test/">how we test</a>.</p>
       </div>
     </div>
   </section>
@@ -80,9 +80,9 @@ const schemas  = [
   <!-- ─── FEATURED PICK — moved below editorial ─── -->
   <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
-      <span style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Most-Used Accessory</span>
+      <span style="font-size:16px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:0.5px;">⭐ Most-Used Accessory</span>
       <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">FootJoy WeatherSof Glove — ~$18</p>
-      <p style="font-size:13px;margin:0;color:var(--muted);">The glove I have used for multiple seasons running</p>
+      <p style="font-size:16px;margin:0;color:var(--muted);">The glove I have used for multiple seasons running</p>
     </div>
     {(() => {
       const aff = getAffiliateLink('footjoy-weathersof-glove');
@@ -91,12 +91,12 @@ const schemas  = [
       return (
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
           <a href={aff.url} target="_blank" rel="nofollow noopener sponsored"
-             style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+             style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;">
             Check Price at {aff.retailer} →
           </a>
           {secUrl && secR && (
             <a href={secUrl} target="_blank" rel="nofollow noopener sponsored"
-               style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
+               style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
               Check Price at {secR} →
             </a>
           )}
@@ -156,8 +156,8 @@ const schemas  = [
     <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Accessories FAQ</h2>
     {hubFaq.map(item => (
       <details style="margin:0 0 12px;border:1px solid var(--border);border-radius:8px;padding:0;">
-        <summary style="padding:14px 18px;font-weight:700;font-size:15px;cursor:pointer;color:var(--green);">{item.q}</summary>
-        <p style="padding:0 18px 14px;font-size:14px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
+        <summary style="padding:14px 18px;font-weight:700;font-size:16px;cursor:pointer;color:var(--green);">{item.q}</summary>
+        <p style="padding:0 18px 14px;font-size:16px;line-height:1.7;color:var(--body);margin:0;">{item.a}</p>
       </details>
     ))}
   </section>

@@ -3982,8 +3982,8 @@ export const ARTICLES: Article[] = [
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-far-7-iron-thumb.webp',
     thumbnail: '/images/thumbnails/how-far-7-iron-thumb.webp',
     category: 'improve-game',
-    pageType: 'tutorial',
-    tag: 'TUTORIAL',
+    pageType: 'listicle',
+    tag: 'GUIDE',
     emoji: '📏',
     quickAnswerProduct: 'arccos-caddie-sensors',
     thumb: 'purple',
@@ -13313,7 +13313,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Three Technologies: Radar, Camera, Hybrid',
         body: `<p>Every consumer launch monitor uses one of three approaches to capture ball and club data. The technology determines what the device <em>measures</em> vs what it <em>estimates</em> — and that distinction matters more than most marketing copy admits.</p>
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:16px;">
 <thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
 <th style="padding:8px 12px;">Technology</th><th style="padding:8px 12px;">How It Works</th><th style="padding:8px 12px;">Examples</th><th style="padding:8px 12px;">Price Range</th>
 </tr></thead>
@@ -13329,7 +13329,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'What Gets Measured vs Estimated',
         body: `<p>This is the single most important distinction in launch monitor shopping, and most review sites gloss over it. A "measured" data point comes from direct sensor observation. An "estimated" data point is calculated from other measurements using an algorithm. Estimates are usually close — but they can be wrong, especially in edge cases like flop shots, knockdowns, and extreme spin conditions.</p>
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:16px;">
 <thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
 <th style="padding:8px 12px;">Data Point</th><th style="padding:8px 12px;">Radar</th><th style="padding:8px 12px;">Camera</th><th style="padding:8px 12px;">Hybrid</th>
 </tr></thead>
@@ -13395,8 +13395,8 @@ export const ARTICLES: Article[] = [
     ogImage: '/images/og-image.jpg',
     thumbnail: '/images/thumbnails/swing-speed-trainer-thumb.webp',
     category: 'improve-game',
-    pageType: 'tutorial' as const,
-    tag: 'TUTORIAL',
+    pageType: 'listicle' as const,
+    tag: 'GUIDE',
     emoji: '📊',
     thumb: 'teal',
     words: '2,800',
@@ -13425,7 +13425,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Average Driver Swing Speed by Age',
         body: `<p>Driver club head speed is the most commonly tracked measure of athletic performance in golf. The table below reflects aggregated data from launch monitor studies, TrackMan research, and USGA shot-tracking databases — these are <em>recreational</em> golfer numbers, not Tour averages.</p>
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:16px;">
 <thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
 <th style="padding:8px 12px;">Age</th><th style="padding:8px 12px;">Male Avg</th><th style="padding:8px 12px;">Female Avg</th><th style="padding:8px 12px;">Male 75th %ile</th><th style="padding:8px 12px;">Male 25th %ile</th><th style="padding:8px 12px;">Est. Carry</th>
 </tr></thead>
@@ -13443,7 +13443,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Average 7-Iron Speed by Age',
         body: `<p>The 7-iron is the standard reference club for iron speed — it sits in the middle of the bag and is the club most golfers have the most data on. These numbers help determine iron shaft flex, which is different from driver shaft flex for many golfers.</p>
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:16px;">
 <thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
 <th style="padding:8px 12px;">Age</th><th style="padding:8px 12px;">Male Avg</th><th style="padding:8px 12px;">Female Avg</th><th style="padding:8px 12px;">Est. Carry</th>
 </tr></thead>
@@ -13475,7 +13475,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Gear Matched to Your Speed',
         body: `<p>Once you know your club head speed, use these ranges to pick the right equipment:</p>
-<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;">
+<table style="width:100%;border-collapse:collapse;margin:16px 0;font-size:16px;">
 <thead><tr style="border-bottom:2px solid var(--green);text-align:left;">
 <th style="padding:8px 12px;">Driver Speed</th><th style="padding:8px 12px;">Shaft Flex</th><th style="padding:8px 12px;">Ball Compression</th><th style="padding:8px 12px;">Driver Loft</th><th style="padding:8px 12px;">Our Pick</th>
 </tr></thead>

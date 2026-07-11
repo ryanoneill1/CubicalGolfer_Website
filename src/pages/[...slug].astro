@@ -322,7 +322,7 @@ const BADGE_TO_PRODUCT: Record<string, Record<string, string>> = {
 // Product schema for buying-guide sections with badges + affiliate links
 if (isBuyingGuide) {
   for (const section of article.sections) {
-    if (!section.badge) continue;
+    if (!section.badge && !section.affiliateKey) continue; // FIX: badge no longer required
     const sectionAffKey = section.affiliateKey;
     const pid = (sectionAffKey !== undefined)
       ? sectionAffKey
@@ -340,7 +340,7 @@ if (isBuyingGuide) {
 
   // ItemList schema for roundup pages (ranked product list)
   const rankedProducts = article.sections
-    ?.filter((s: any) => s.badge && s.affiliateKey)
+    ?.filter((s: any) => s.affiliateKey)
     .map((s: any, i: number) => ({
       name: s.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|Best Premium:|Best Value:|Budget Runner-Up:|Best GPS\+Laser Hybrid:|Best for Sim:|Best Mid-Range:|Best Splurge:|Best for Mid-Handicappers:|Editor.s Pick:|🥇|🥈|🥉|🏆)\s*/gi, '').trim(),
       position: i + 1,
@@ -354,21 +354,7 @@ if (isBuyingGuide) {
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
 
-  {/* Sticky bar for buying guides */}
-  {isBuyingGuide && (() => {
-    const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
-    const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
-    if (!topAff) return null;
-    return (
-      <StickyBar
-        name={topRow.name}
-        price={topAff.price ?? ''}
-        url={topAff.url}
-        retailer={topAff.retailer}
-        badge={article.stickyLabel || (topRow.winner ? 'BEST PICK' : topRow.bestFor)}
-      />
-    );
-  })()}
+
 
   {/* ── HERO ───────────────────────────────────────────────────────────────── */}
   <header class="art-hero">
@@ -390,7 +376,7 @@ if (isBuyingGuide) {
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">{AUTHOR_BYLINE.name}</a>
-          <span style="font-size:12px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_BYLINE.tagline}</span>
+          <span style="font-size:16px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_BYLINE.tagline}</span>
         </span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
@@ -406,6 +392,25 @@ if (isBuyingGuide) {
   {(isBuyingGuide || article.pageType === 'listicle') && (
     <div class="trust-card">
       <p class="trust-card__heading">Why Trust This Guide</p>
+        {isBuyingGuide && (
+          <p class="early-disclosure" style="margin:4px 0 0;font-size:16px;color:var(--muted);">We may earn a commission from links on this page — it never affects our picks. <a href="/affiliate-disclosure/" style="color:var(--green);">Disclosure</a></p>
+        )}
+
+  {/* Sticky bar for buying guides */}
+  {isBuyingGuide && (() => {
+    const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey);
+    const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
+    if (!topAff) return null;
+    return (
+      <StickyBar
+        name={topRow.name}
+        price={topAff.price ?? ''}
+        url={topAff.url}
+        retailer={topAff.retailer}
+        badge={article.stickyLabel || (topRow.winner ? 'BEST PICK' : topRow.bestFor)}
+      />
+    );
+  })()}
       <ul class="trust-card__list">
         <li><strong>Every product purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
         <li><strong>{AUTHOR_PROFILE.testingLabel}</strong> — tested on actual courses, not a simulator or fitting bay</li>
@@ -540,8 +545,8 @@ if (isBuyingGuide) {
 
     {/* FRESHNESS BANNER — buying guides only */}
     {isBuyingGuide && (
-      <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
-        <span style="font-size:15px;">✅</span>
+      <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+        <span style="font-size:16px;">✅</span>
         <span><strong>Updated {article.dateModified || article.datePublished}</strong> — Prices, models, and rankings reverified. {(() => { const n = article.comparisonTable?.rows?.length ?? article.sections?.filter((s: any) => s.affiliateKey)?.length ?? 0; return n > 0 ? `All ${n} products independently purchased and tested.` : 'Every product we recommend is independently purchased and tested.'; })()} <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
       </div>
     )}
@@ -557,11 +562,11 @@ if (isBuyingGuide) {
 
     {/* UPDATE LOG — collapsible changelog */}
     {article.updateLog && article.updateLog.length > 0 && (
-      <details class="update-log" style="margin:16px 0 24px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:13px;">
+      <details class="update-log" style="margin:16px 0 24px;border:1px solid var(--border);border-radius:8px;background:#fff;font-size:16px;">
         <summary style="padding:10px 16px;cursor:pointer;font-weight:600;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px;">
-          <span style="font-size:15px;">📋</span>
+          <span style="font-size:16px;">📋</span>
           Update Log — last updated {article.updateLog[0].date}
-          <span style="margin-left:auto;font-size:11px;color:var(--muted);opacity:.6;">▼</span>
+          <span style="margin-left:auto;font-size:16px;color:var(--muted);opacity:.6;">▼</span>
         </summary>
         <div style="padding:4px 16px 14px;border-top:1px solid var(--border);">
           {article.updateLog.map((entry: {date: string; note: string}) => (
@@ -685,11 +690,11 @@ if (isBuyingGuide) {
             const rank = rows.findIndex((r: any) => r.affiliateKey === section.affiliateKey) + 1;
             return (
               <div style="display:flex;align-items:center;gap:12px;margin:6px 0 10px;flex-wrap:wrap;">
-                <span style="display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;padding:4px 10px;border-radius:6px;font-size:13px;font-weight:700;">
+                <span style="display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;padding:4px 10px;border-radius:6px;font-size:16px;font-weight:700;">
                   {score10}/10
                 </span>
                 {rank > 0 && totalProducts > 0 && (
-                  <span style="font-size:12px;color:var(--muted);font-weight:600;">
+                  <span style="font-size:16px;color:var(--muted);font-weight:600;">
                     #{rank} of {totalProducts} compared
                   </span>
                 )}
@@ -739,7 +744,7 @@ if (isBuyingGuide) {
             if (row?.bestFor) specs.push(['Best For', row.bestFor]);
             if (aff?.retailer) specs.push(['Available at', aff.retailer]);
             return specs.length >= 2 ? (
-              <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:10px 0 14px;padding:10px 14px;background:rgba(30,58,40,.03);border-radius:8px;font-size:12px;">
+              <div style="display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:10px 0 14px;padding:10px 14px;background:rgba(30,58,40,.03);border-radius:8px;font-size:16px;">
                 {specs.map(([k, v]) => (
                   <>
                     <span style="font-weight:700;color:var(--green);white-space:nowrap;">{k}</span>
@@ -756,7 +761,7 @@ if (isBuyingGuide) {
           {section.affiliateKey && !section.body?.includes('Skip this if') && (() => {
             const skipText = getSkipIf(section.affiliateKey, article.slug, section.body);
             return skipText ? (
-              <p class="skip-if" style="margin:12px 0 16px;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:13px;color:var(--muted);line-height:1.5;">
+              <p class="skip-if" style="margin:12px 0 16px;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:16px;color:var(--muted);line-height:1.5;">
                 <strong style="color:var(--green);">⚠️ Skip this if:</strong> {skipText}.
               </p>
             ) : null;
@@ -781,7 +786,7 @@ if (isBuyingGuide) {
           {/* Inline cubicle golfer callout — contextual cross-link inside article body */}
           {section.callout && (
             <div style="margin:20px 0;padding:16px 20px;background:#f0f7f2;border-left:4px solid var(--green);border-radius:0 8px 8px 0;">
-              <p style="margin:0;font-size:14px;line-height:1.6;color:var(--body);">
+              <p style="margin:0;font-size:16px;line-height:1.6;color:var(--body);">
                 🏢 <strong>Cubicle Golfer Tip:</strong>{' '}
                 {section.callout.text}{' '}
                 <a href={section.callout.link} style="color:var(--green);font-weight:700;text-decoration:underline;">
@@ -884,8 +889,8 @@ if (isBuyingGuide) {
     {/* WHY TRUST THIS GUIDE — buying guides only */}
     {isBuyingGuide && (
       <div class="trust-block" style="margin:32px 0;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
-        <p style="font-weight:700;font-size:15px;margin:0 0 10px;color:var(--green);">🔒 Why Trust This Guide</p>
-        <ul style="margin:0;padding:0 0 0 18px;font-size:14px;line-height:1.7;color:var(--muted);">
+        <p style="font-weight:700;font-size:16px;margin:0 0 10px;color:var(--green);">🔒 Why Trust This Guide</p>
+        <ul style="margin:0;padding:0 0 0 18px;font-size:16px;line-height:1.7;color:var(--muted);">
           <li><strong>Independently purchased</strong> — every product bought with our own money, never loaned by manufacturers</li>
           <li><strong>10+ real rounds</strong> per product tested on Chicago-area courses in all conditions</li>
           <li><strong>10-handicap weekend golfer</strong> — we test like you play, not like a tour pro</li>
@@ -905,11 +910,11 @@ if (isBuyingGuide) {
       if (gearLinks.length === 0) return null;
       return (
         <div class="gear-helps" style="margin:32px 0;padding:20px 24px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.2);border-radius:10px;">
-          <p style="font-weight:700;font-size:15px;margin:0 0 12px;color:#1E3A28;">🏌️ Gear That Helps With This</p>
+          <p style="font-weight:700;font-size:16px;margin:0 0 12px;color:#1E3A28;">🏌️ Gear That Helps With This</p>
           <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;">
             {gearLinks.map((r: any) => (
               <li>
-                <a href={r.slug} style="color:var(--green);font-weight:600;font-size:14px;text-decoration:none;">
+                <a href={r.slug} style="color:var(--green);font-weight:600;font-size:16px;text-decoration:none;">
                   {r.label} →
                 </a>
               </li>
@@ -933,7 +938,7 @@ if (isBuyingGuide) {
       const recAlt = recAff.imgAlt || recName;
       return (
         <div class="rec-product-box" style="margin:32px 0;padding:20px 24px;background:#fff;border:2px solid var(--gold);border-radius:10px;">
-          <p style="font-weight:700;font-size:13px;margin:0 0 10px;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">🎯 Our Recommended Gear</p>
+          <p style="font-weight:700;font-size:16px;margin:0 0 10px;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">🎯 Our Recommended Gear</p>
           <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
             {recImg && (
               <img src={recImg} alt={recAlt} width="80" height="80" loading="lazy"
@@ -942,15 +947,15 @@ if (isBuyingGuide) {
             )}
             <div style="flex:1;min-width:200px;">
               <p style="font-weight:700;font-size:17px;margin:0 0 2px;color:var(--green);">{recName}</p>
-              {recAff.price && <p style="font-size:14px;margin:0 0 10px;color:var(--muted);">{recAff.price} — the product we use and recommend for this topic.</p>}
+              {recAff.price && <p style="font-size:16px;margin:0 0 10px;color:var(--muted);">{recAff.price} — the product we use and recommend for this topic.</p>}
               <div style="display:flex;flex-wrap:wrap;gap:10px;">
                 <a href={recAff.url} target="_blank" rel="nofollow noopener sponsored"
-                   style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;">
+                   style="display:inline-block;background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;">
                   Check Price at {recAff.retailer} →
                 </a>
                 {secUrl && secRetailer && (
                   <a href={secUrl} target="_blank" rel="nofollow noopener sponsored"
-                     style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
+                     style="display:inline-block;background:#fff;color:var(--green);padding:10px 18px;border-radius:8px;font-size:16px;font-weight:700;text-decoration:none;border:2px solid var(--green);">
                     Check Price at {secRetailer} →
                   </a>
                 )}
@@ -1024,16 +1029,16 @@ if (isBuyingGuide) {
 
       return recs.length > 0 ? (
         <div style="margin:24px 0;padding:20px 24px;background:rgba(30,58,40,.04);border-radius:12px;border-left:3px solid var(--green);">
-          <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">🎯 Gear that helps with this</p>
-          <p style="font-size:12px;color:var(--muted);margin:0 0 14px;">Every recommendation is independently purchased and tested over 40+ rounds.</p>
+          <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">🎯 Gear that helps with this</p>
+          <p style="font-size:16px;color:var(--muted);margin:0 0 14px;">Every recommendation is independently purchased and tested over 40+ rounds.</p>
           <div style="display:flex;flex-direction:column;gap:10px;">
             {recs.map(r => (
               <a href={r.href} style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:8px;text-decoration:none;transition:border-color .15s;">
                 <div>
-                  <p style="font-size:14px;font-weight:700;color:var(--green);margin:0;">{r.label}</p>
-                  <p style="font-size:12px;color:var(--muted);margin:2px 0 0;">{r.why}</p>
+                  <p style="font-size:16px;font-weight:700;color:var(--green);margin:0;">{r.label}</p>
+                  <p style="font-size:16px;color:var(--muted);margin:2px 0 0;">{r.why}</p>
                 </div>
-                <span style="color:var(--green);font-weight:700;font-size:13px;white-space:nowrap;">See picks →</span>
+                <span style="color:var(--green);font-weight:700;font-size:16px;white-space:nowrap;">See picks →</span>
               </a>
             ))}
           </div>
@@ -1058,19 +1063,19 @@ if (isBuyingGuide) {
     {isBuyingGuide && (
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:24px 0;">
         <a href="/gear-quiz/" style="display:block;padding:16px 18px;background:var(--green);border-radius:10px;text-decoration:none;">
-          <p style="font-size:13px;font-weight:700;color:var(--gold);margin:0 0 4px;">🧪 Not sure which to pick?</p>
-          <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">Take the 60-Second Gear Quiz</p>
-          <p style="font-size:11px;color:rgba(255,255,255,.6);margin:0;">Personalized picks based on your game →</p>
+          <p style="font-size:16px;font-weight:700;color:var(--gold);margin:0 0 4px;">🧪 Not sure which to pick?</p>
+          <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Take the 60-Second Gear Quiz</p>
+          <p style="font-size:16px;color:rgba(255,255,255,.6);margin:0;">Personalized picks based on your game →</p>
         </a>
         <a href="/compare/" style="display:block;padding:16px 18px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
-          <p style="font-size:13px;font-weight:700;color:var(--green);margin:0 0 4px;">⚖️ Compare head to head</p>
-          <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">38 Side-by-Side Tests</p>
-          <p style="font-size:11px;color:var(--muted);margin:0;">Same conditions, real data →</p>
+          <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">⚖️ Compare head to head</p>
+          <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">38 Side-by-Side Tests</p>
+          <p style="font-size:16px;color:var(--muted);margin:0;">Same conditions, real data →</p>
         </a>
         <a href="/tools/" style="display:block;padding:16px 18px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
-          <p style="font-size:13px;font-weight:700;color:var(--green);margin:0 0 4px;">🧮 Free tools</p>
-          <p style="font-size:14px;font-weight:700;color:var(--green);margin:0 0 4px;">Room Checker · Speed Chart</p>
-          <p style="font-size:11px;color:var(--muted);margin:0;">Data-driven picks, no signup →</p>
+          <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">🧮 Free tools</p>
+          <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">Room Checker · Speed Chart</p>
+          <p style="font-size:16px;color:var(--muted);margin:0;">Data-driven picks, no signup →</p>
         </a>
       </div>
     )}
@@ -1081,8 +1086,8 @@ if (isBuyingGuide) {
     {/* RELATED COMPARISONS — links to /compare/ pages for better internal linking */}
     {article.relatedComparisons && article.relatedComparisons.length > 0 && (
       <div class="rel-cluster" style="border-left:3px solid var(--gold);background:rgba(200,168,75,.04);">
-        <p style="font-weight:700;font-size:15px;margin:0 0 4px;color:var(--green);">⚖️ Still deciding between two?</p>
-        <p style="font-size:13px;color:var(--muted);margin:0 0 12px;">These head-to-head comparisons test the exact products from this guide side by side.</p>
+        <p style="font-weight:700;font-size:16px;margin:0 0 4px;color:var(--green);">⚖️ Still deciding between two?</p>
+        <p style="font-size:16px;color:var(--muted);margin:0 0 12px;">These head-to-head comparisons test the exact products from this guide side by side.</p>
         <div class="rel-links">
           {article.relatedComparisons.map((link: any) => <a href={link.url || link.slug}>{link.label} →</a>)}
         </div>
@@ -1092,7 +1097,7 @@ if (isBuyingGuide) {
     {/* RELATED GUIDES */}
     {related.length > 0 && (
       <div class="rel-cluster">
-        <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
+        <p style="font-weight:700;font-size:16px;margin:0 0 12px;">Related Guides</p>
         <div class="rel-links">
           {related.map(link => <a href={link.slug}>{link.label}</a>)}
         </div>
@@ -1102,8 +1107,8 @@ if (isBuyingGuide) {
     {/* MORE FOR CUBICLE GOLFERS — cross-category links on ALL article pages */}
     {cubicleGolferLinks.length > 0 && (
       <div class="rel-cluster" style="background:var(--green);border:none;">
-        <p style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
-        <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
+        <p style="color:var(--gold);font-size:16px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
+        <p style="color:rgba(255,255,255,.7);font-size:16px;margin-bottom:16px;line-height:1.6;">
           You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
         </p>
         <div class="rel-links">
@@ -1131,8 +1136,8 @@ if (isBuyingGuide) {
 
     {/* SOURCES & REFERENCES */}
     {article.sources && article.sources.length > 0 && (
-      <div class="update-stamp" style="margin-top:12px;font-size:12px;line-height:1.8;">
-        <strong style="font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Sources & References</strong>
+      <div class="update-stamp" style="margin-top:12px;font-size:16px;line-height:1.8;">
+        <strong style="font-size:16px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);">Sources & References</strong>
         <div style="margin-top:6px;">
           {article.sources.map((src: {label: string; url: string}, i: number) => (
             <span>
@@ -1149,7 +1154,7 @@ if (isBuyingGuide) {
       <p style="font-weight:700;font-size:16px;margin:0 0 10px;">Ready to find the right gear?</p>
       <p>Take our 60-second gear quiz for a personalized recommendation based on your handicap, budget, and playing style.</p>
       <a href="/gear-quiz/" class="btn-gold" style="display:inline-block;margin-top:8px;">Take the Gear Quiz →</a>
-      <a href="/gear-reviews/" style="display:inline-block;margin-top:8px;margin-left:12px;font-size:14px;color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Browse All Reviews</a>
+      <a href="/gear-reviews/" style="display:inline-block;margin-top:8px;margin-left:12px;font-size:16px;color:var(--green);font-weight:600;text-decoration:underline;text-underline-offset:2px;">Browse All Reviews</a>
     </div>
 
   </article>
@@ -1192,7 +1197,7 @@ if (isBuyingGuide) {
               )}
             </div>
             <div class="art-body">
-              <p style="font-weight:700;font-size:15px;margin:4px 0;">{a.titleDisplay}</p>
+              <p style="font-weight:700;font-size:16px;margin:4px 0;">{a.titleDisplay}</p>
               <p>{a.excerpt}</p>
               <div class="art-foot">
                 <span class="art-words">{a.words} · Updated 2026</span>
