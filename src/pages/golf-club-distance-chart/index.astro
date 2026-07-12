@@ -17,6 +17,8 @@ const meta = {
 };
 
 const faqs = [
+  { q: 'Are these distances carry or total?', a: 'Carry only — the distance the ball travels through the air before landing. Add 5-20 yards of roll for total distance depending on the club and fairway firmness. Drivers on firm fairways roll the most; high-lofted wedges barely roll at all. When in doubt, plan around carry, because carry is what clears trouble.' },
+  { q: 'Why do I hit my 7-iron a different distance every round?', a: 'Round-to-round variance of 5-10 yards is normal and usually environmental: temperature alone moves carry 1-2 yards per 10°F, and strike quality moves it more. Track your median over several rounds instead of reacting to any single one — if the median itself shifts by a club, then re-run a gapping session.' },
   { q: 'How far should I hit each club?', a: 'It depends on your swing speed. A 90 mph driver swing speed typically produces: driver 220yd, 7-iron 150yd, PW 120yd. Enter your speed in our calculator above for personalized numbers.' },
   { q: 'How do I find my swing speed?', a: 'Use a launch monitor (Garmin R10 at ~$599 is the most popular), visit a golf store with a fitting bay, or estimate from driver carry: 200yd carry ≈ 90mph, 230yd ≈ 100mph, 260yd ≈ 110mph.' },
   { q: 'What is the gap between each club?', a: 'Ideally 10-15 yards between consecutive clubs. If you have gaps larger than 20 yards, consider adding a hybrid or gap wedge to fill them.' },
@@ -167,6 +169,44 @@ const schemas = [
       <p>The distance chart uses Trackman averages collected from thousands of golfers across amateur and professional levels, adjusted by swing speed band. We cross-referenced with data from our own launch monitor testing (Garmin R10 and Rapsodo MLM2PRO) across 200+ shots per club category.</p>
       <p>The swing speed input scales all distances proportionally. This is a simplification — in reality, a golfer with a 90 mph driver speed and excellent technique will hit further than a 95 mph swinger with poor strike quality. Use the chart as a starting point, then adjust based on your on-course results.</p>
       <p>For the most accurate personal distances, track your shots over 5+ rounds using a GPS watch or shot tracking app. Your real-world averages matter more than any chart — because they account for your swing, your strike pattern, your typical course conditions, and the balls you actually play.</p>
+    </section>
+
+    <section>
+      <h2>Run Your Own Gapping Session</h2>
+      <p>The chart above is a starting point; your real distances come from a <strong>gapping session</strong> — one focused hour that replaces guesswork with your own numbers for good. Here's the protocol we use:</p>
+      <p><strong>1. Pick a calm day and warm up fully.</strong> Wind corrupts everything, and cold muscles swing 3-5 mph slow. <strong>2. Hit 8-10 balls per club</strong> at normal on-course effort, starting with wedges and working up. <strong>3. Record the median, not the best.</strong> Your flushed career 7-iron is not your 7-iron distance — the shot you hit six times out of ten is. <strong>4. Note carry separately from total</strong> if your measuring tool allows it; carry is what clears the bunker.</p>
+      <p>A launch monitor makes this trivial — even a budget unit measures carry within a few yards outdoors — but an open range with known markers and honest median-keeping gets you 90% there. Write the numbers on a card, tape it inside your bag, and re-run the session each spring. Distances drift with speed, fitness, and ball changes more than most golfers expect.</p>
+    </section>
+
+    <section>
+      <h2>Typical Gaps Between Clubs</h2>
+      <p>Healthy iron gapping runs <strong>10-15 yards per club</strong> through the set, tightening to 8-12 yards in the wedges, where a rule of thumb holds well: every 4 degrees of wedge loft is worth roughly 10-12 yards. When your gapping session breaks that pattern, the numbers are telling you something specific.</p>
+      <p>A <strong>gap over 20 yards</strong> between two adjacent clubs means you're missing a club — most commonly between the pitching wedge and sand wedge, which is exactly the hole a gap wedge exists to fill. A <strong>gap under 6 yards</strong> means two clubs are doing one job; long irons and hybrids are the usual culprits, and it's why many golfers should carry one or the other, not both. And if your longest iron flies barely past the one below it, that's the classic sign the club has fallen below your launch threshold — a hybrid will restore the gap.</p>
+      <p>The top of the bag is where gapping decisions get personal, and swing speed decides them. Below roughly 85 mph of driver speed, a 4-iron rarely flies high enough to hold its gap — a 4-hybrid or 7-wood covers the same yardage with usable height. Between 85 and 95, it's genuinely player's choice: hybrids forgive, driving irons flight lower in wind. Above 95, long irons come back into play. Whatever you choose, the test is the same one this whole page teaches: the club has to produce a distinct median carry with enough height to stop. If it can't, it's a decoration, not a gap-filler.</p>
+    </section>
+
+    <section>
+      <h2>Temperature, Altitude, and the Ball You Play</h2>
+      <p>Three environmental factors move your distances more than any swing thought. <strong>Temperature:</strong> the commonly used rule is 1-2 yards of carry per 10°F — a 45° morning round plays a full club shorter than a 90° afternoon, and neither means your swing changed. <strong>Altitude:</strong> thinner air adds roughly 2% of carry per 1,000 feet of elevation, which is why your Denver buddy's "260 carry" is about 245 at sea level.</p>
+      <p><strong>The ball:</strong> compression matching matters most at lower swing speeds. A high-compression tour ball struck at 80 mph never fully activates, costing carry against a softer ball — our <a href="/golf-ball-compression-chart/">compression chart</a> maps speed to ball construction in detail. If your distances suddenly changed and your swing didn't, check what ball went in the bag before booking a lesson.</p>
+    </section>
+
+    <section>
+      <h2>What the USGA's Research Says About Real-World Distance</h2>
+      <p>If the chart's numbers feel humbling, the governing bodies' own research agrees with them. The USGA and The R&A's <a href="https://www.usga.org/content/usga/home-page/advancing-the-game/distance-insights.html" rel="noopener" target="_blank">Distance Insights project</a> — over a century of hitting-distance data across elite and recreational golfers — found recreational distances sit far below what most players estimate, and that many golfers play tees longer than their actual hitting distance supports.</p>
+      <p>The practical takeaway matches our advice throughout this page: measure rather than estimate, and pick tees and clubs off your median carry, not your best-ever strike. Golfers who do both routinely report hitting more greens with <em>more</em> club and less ego — the cheapest scoring improvement in the game.</p>
+    </section>
+
+    <section>
+      <h2>Wind: The Distance Variable Everyone Misreads</h2>
+      <p>Wind is not symmetrical, and misjudging that costs more greens than any chart error. The commonly used rule: a headwind costs roughly <strong>1% of carry per mph</strong>, while a tailwind gives back only about half that. A 10 mph headwind turns a 150-yard 8-iron shot into a 165-yard problem; the same wind behind you adds maybe 7-8 yards, not 15. Golfers who apply the same adjustment both directions come up short into the wind all day.</p>
+      <p>The reason is spin. Into the wind, backspin gets amplified — the ball climbs, stalls, and drops. That is why the old advice holds: <em>take more club and swing easier</em>. A smooth three-quarter 6-iron flies lower with less spin and cuts wind far better than a hard 8-iron. Downwind, the opposite: the wind flattens spin's effect, shots fly lower and run out more, so land the ball shorter than the number. Crosswinds move the ball roughly one yard per mph at mid-iron distances — aim adjustments, not club changes.</p>
+    </section>
+
+    <section>
+      <h2>Building Your Personal Distance Card</h2>
+      <p>The gapping session gives you data; a distance card turns it into decisions. Write each club's <strong>median carry</strong> — one number per club, no ranges — on a card that lives in your bag or a note on your phone. On the course, the workflow is three steps: get the yardage to carry the trouble (not to the pin), adjust for conditions, pick the club whose number covers it.</p>
+      <p>The two adjustments worth doing in your head: temperature (a club shorter below 50°F than your summer numbers) and wind (the 1% per mph headwind rule above). Everything else — adrenaline, elevation on your home course, the ball you settled on — is already baked into your medians if you gapped honestly. Update the card each spring and any time you change balls. Most golfers who build one report the same thing: they stop coming up short, because the card doesn't remember career shots. It remembers real ones.</p>
     </section>
 
     <section id="faq" class="faq-section">
