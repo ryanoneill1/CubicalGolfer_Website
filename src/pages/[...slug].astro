@@ -504,6 +504,7 @@ if (isBuyingGuide) {
             {article.rating ? <li><strong>Our rating:</strong> ★ {article.rating}/5</li> : null}
             {gAff?.price ? <li><strong>Price:</strong> {gAff.price}{gAff.retailer ? ` at ${gAff.retailer}` : ''}</li> : null}
             <li><strong>How we test:</strong> <a href="/how-we-test/">10+ rounds per product on real courses</a></li>
+            {['garmin','bushnell','callaway','taylormade','titleist'].includes(article.quickAnswerProduct.split('-')[0]) ? <li><strong>More from this brand:</strong> <a href={`/brands/${article.quickAnswerProduct.split('-')[0]}/`}>Every {article.quickAnswerProduct.split('-')[0].charAt(0).toUpperCase() + article.quickAnswerProduct.split('-')[0].slice(1)} product we've tested →</a></li> : null}
             {alts.length > 0 ? <li><strong>Compare it:</strong> {alts.map((c: any, i: number) => <span>{i > 0 ? ' · ' : ''}<a href={`/compare/${c.slug}/`}>{c.title}</a></span>)}</li> : null}
           </ul>
         </div>

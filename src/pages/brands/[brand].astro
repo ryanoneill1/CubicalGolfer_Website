@@ -1,0 +1,142 @@
+---
+// src/pages/brands/[brand].astro — Brand hub pages (review-2 item #41)
+// Everything below the authored intro derives from live site data:
+// reviews, comparisons, and roundup appearances are computed at build time.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { BRANDS } from '../../data/brands';
+import { ARTICLES } from '../../data/articles';
+import { COMPARISONS } from '../../data/comparisons';
+import { AFFILIATE, getAffiliateLink } from '../../data/affiliate-links';
+import { productName } from '../../data/product-names';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+
+export function getStaticPaths() {
+  return BRANDS.map(b => ({ params: { brand: b.slug }, props: { brand: b } }));
+}
+const { brand } = Astro.props;
+const prefix = brand.slug + '-';
+
+// ── Derived data ──
+const productKeys = Object.keys(AFFILIATE as any).filter(k => k.startsWith(prefix));
+const reviews = (ARTICLES as any[])
+  .filter(a => a.pageType === 'review' && a.quickAnswerProduct?.startsWith(prefix))
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+const comparisons = (COMPARISONS as any[])
+  .filter(c => c.productA?.startsWith(prefix) || c.productB?.startsWith(prefix))
+  .sort((a, b) => a.title.localeCompare(b.title));
+// Roundup appearances: any article whose comparison table features a brand product
+const appearances: { title: string; slug: string; product: string; badge: string }[] = [];
+for (const a of ARTICLES as any[]) {
+  if (a.pageType === 'review') continue;
+  for (const r of (a.comparisonTable?.rows || [])) {
+    if (r.affiliateKey?.startsWith(prefix)) {
+      appearances.push({ title: a.titleDisplay || a.title, slug: a.slug, product: r.name || productName(r.affiliateKey), badge: r.bestFor || r.badge || '' });
+    }
+  }
+}
+appearances.sort((a, b) => a.title.localeCompare(b.title));
+
+const meta = {
+  title: `${brand.name} Golf Gear — Tested Reviews & Comparisons`,
+  description: `Every ${brand.name} product we've bought and tested: honest reviews with ratings, head-to-head comparisons, and where it ranks in our buying guides.`,
+  canonical: `https://www.cubicalgolfer.com/brands/${brand.slug}/`,
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
+  ogType: 'website' as const,
+  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Brands', href: '/brands/' },
+    { label: brand.name, href: `/brands/${brand.slug}/` },
+  ],
+};
+
+const itemList = reviews.length ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: `${brand.name} products reviewed by Cubical Golfer`,
+  itemListElement: reviews.map((r: any, i: number) => ({
+    '@type': 'ListItem', position: i + 1,
+    url: `https://www.cubicalgolfer.com${r.slug}`,
+    name: r.titleDisplay || r.title,
+  })),
+} : null;
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(brand.faq), ...(itemList ? [itemList] : [])];
+---
+<BaseLayout {meta} {schemas}>
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/brands/">Brands</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">{brand.name}</span>
+    </nav>
+    <span class="hero-badge">{productKeys.length} PRODUCTS PRICED · {reviews.length} FULL REVIEWS · {comparisons.length} HEAD-TO-HEADS</span>
+    <h1>{brand.name} Golf Gear, Actually Tested</h1>
+    <p>{brand.tagline}</p>
+  </header>
+
+  <main class="cat-page-body">
+    <section>
+      {brand.intro.map((p: string) => <p style="max-width:76ch;margin-bottom:14px;">{p}</p>)}
+      {brand.bagNote && (
+        <p class="review-glance" style="max-width:76ch;"><strong>From our bag:</strong> {brand.bagNote}</p>
+      )}
+    </section>
+
+    {reviews.length > 0 && (
+      <section>
+        <h2>{brand.name} Reviews — Rated After Real Rounds</h2>
+        <table class="cmp-table" style="max-width:720px;">
+          <caption class="sr-only">{brand.name} products reviewed, with our rating and current price</caption>
+          <thead><tr><th scope="col">Product</th><th scope="col">Our Rating</th><th scope="col">Price</th><th scope="col">Review</th></tr></thead>
+          <tbody>
+            {reviews.map((r: any) => {
+              const aff = getAffiliateLink(r.quickAnswerProduct);
+              return (
+                <tr>
+                  <td>{productName(r.quickAnswerProduct)}</td>
+                  <td>{r.rating ? `★ ${r.rating}/5` : '—'}</td>
+                  <td>{aff?.price || '—'}</td>
+                  <td><a href={r.slug}>Read the review →</a></td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </section>
+    )}
+
+    {comparisons.length > 0 && (
+      <section>
+        <h2>{brand.name} Head-to-Head Comparisons</h2>
+        <ul style="max-width:76ch;">
+          {comparisons.map((c: any) => (
+            <li style="margin:6px 0;"><a href={`/compare/${c.slug}/`}>{c.title}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {appearances.length > 0 && (
+      <section>
+        <h2>Where {brand.name} Ranks in Our Buying Guides</h2>
+        <ul style="max-width:76ch;">
+          {appearances.map(a => (
+            <li style="margin:6px 0;"><strong>{a.product}</strong>{a.badge ? ` — ${a.badge}` : ''} in <a href={a.slug}>{a.title}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    <section id="faq" class="faq-section">
+      <h2>{brand.name} Questions, Answered Straight</h2>
+      {brand.faq.map((f: any) => (
+        <details class="faq-item">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </section>
+  </main>
+</BaseLayout>

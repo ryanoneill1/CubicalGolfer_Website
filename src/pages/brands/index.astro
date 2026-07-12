@@ -1,0 +1,57 @@
+---
+// src/pages/brands/index.astro — Brand hub index (review-2 item #41)
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { BRANDS } from '../../data/brands';
+import { ARTICLES } from '../../data/articles';
+import { COMPARISONS } from '../../data/comparisons';
+import { AFFILIATE } from '../../data/affiliate-links';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const stats = BRANDS.map(b => {
+  const prefix = b.slug + '-';
+  return {
+    ...b,
+    products: Object.keys(AFFILIATE as any).filter(k => k.startsWith(prefix)).length,
+    reviews: (ARTICLES as any[]).filter(a => a.pageType === 'review' && a.quickAnswerProduct?.startsWith(prefix)).length,
+    cmps: (COMPARISONS as any[]).filter(c => c.productA?.startsWith(prefix) || c.productB?.startsWith(prefix)).length,
+  };
+});
+const meta = {
+  title: 'Golf Brands We Test — Reviews by Manufacturer',
+  description: 'Garmin, Bushnell, Callaway, TaylorMade, and Titleist gear we have bought and tested — brand-by-brand reviews, ratings, and honest head-to-head comparisons.',
+  canonical: 'https://www.cubicalgolfer.com/brands/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og-image.png',
+  ogType: 'website' as const,
+  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Brands', href: '/brands/' },
+  ],
+};
+const schemas = [breadcrumbSchema(meta.breadcrumbs)];
+---
+<BaseLayout {meta} {schemas}>
+  <header class="cat-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Brands</span>
+    </nav>
+    <h1>Golf Brands, Tested Brand by Brand</h1>
+    <p>Every hub below collects what we have actually bought, tested, and rated from one manufacturer — reviews, head-to-heads, and where their gear lands in our buying guides.</p>
+  </header>
+  <main class="cat-page-body">
+    <section>
+      <ul style="max-width:76ch;list-style:none;padding:0;">
+        {stats.map(b => (
+          <li class="review-glance" style="margin-bottom:16px;">
+            <p class="review-glance__title"><a href={`/brands/${b.slug}/`}>{b.name} →</a></p>
+            <p style="margin:0 0 6px;">{b.tagline}.</p>
+            <p style="margin:0;font-size:16px;">{b.products} products priced · {b.reviews} full reviews · {b.cmps} head-to-head comparisons</p>
+          </li>
+        ))}
+      </ul>
+      <p style="max-width:76ch;">Why only five? Because a brand hub earns its place with tested coverage, not a logo grid. These are the manufacturers where we have enough bought-and-played data — reviews, comparisons, and guide rankings — to say something useful. As our testing expands, so will this page.</p>
+    </section>
+  </main>
+</BaseLayout>
