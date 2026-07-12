@@ -153,7 +153,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '', winner: true },
         { rating: 4.6, affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Budget',  price: '~$169', feature1: '4.6/5 ★', feature2: '', winner: false },
-        { rating: 4.3, affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: '4.4/5 ★', feature2: '', winner: false },
+        { rating: 4.3, name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Budget Runner-Up', price: '~$149', feature1: '4.4/5 ★', feature2: '', winner: false },
         { rating: 4.4, affiliateKey: 'garmin-approach-z82',    name: 'Garmin Approach Z82',   bestFor: 'Best Hybrid',   price: '~$499', feature1: '4.5/5 ★', feature2: '', winner: false },
         { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'bushnell-pro-xe',        name: 'Bushnell Pro XE',       bestFor: 'Best Premium',  price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: false },
       ],
@@ -209,11 +209,6 @@ export const ARTICLES: Article[] = [
     words: '4,200',
     datePublished: '2025-01-26',
     dateModified: '2026-06-30',
-    relatedComparisons: [
-      { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9 HD' },
-      { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees Series 3 Max vs Bushnell Tour V6 Shift' },
-      { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin Approach S12 vs Bushnell Ion Elite GPS Watch' },
-    ],
     title: 'Best Golf GPS Watch 2026 — 4 Tested',
     titleDisplay: 'Best Golf GPS Watches for Everyday Players',
     bottomLine: 'The <strong>Garmin Approach S62</strong> is the best GPS golf watch for weekend golfers — 41,000+ courses, Virtual Caddie, and a battery that lasts 20 hours. For budget buyers, the <strong>Bushnell Ion Elite</strong> at ~\$149 does front/middle/back with zero fuss.',
@@ -356,9 +351,6 @@ export const ARTICLES: Article[] = [
     words: '3,200',
     datePublished: '2025-02-08',
     dateModified: '2026-06-30',
-    relatedComparisons: [
-      { slug: '/compare/ping-g430-irons-vs-taylormade-stealth-hd/', label: 'Ping G430 vs TaylorMade Stealth HD Irons' },
-    ],
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
     title: 'Most Forgiving Driver 2026 — 5 Tested',
     titleDisplay: 'Most Forgiving Drivers for Weekend Golfers',
@@ -528,7 +520,7 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Best for High Handicappers: Callaway Paradym Ai Smoke Max Irons',
-        badge: 'MOST FORGIVING', rating: 4.7,
+        
         body: "We played the Paradym Ai Smoke Max irons for 12 rounds and the effect on our consistency was dramatic. Shots that used to come up 15 yards short on heel strikes were suddenly reaching the green. The AI-designed face is not marketing fluff — it measurably widens the effective sweet spot.\n\nAt our 88 mph 7-iron swing speed, the Ai Smoke Max carried 158 yards on center strikes. On deliberate toe hits, carry dropped to 148 yards — just a 10-yard penalty. On our old cavity backs, the same toe strike lost 18 yards. That 8-yard improvement across 14 iron shots per round translates to 2-3 fewer chunked approaches and more looks at par.\n\nThe wide sole cuts through rough without snagging. The deep cavity back gets the ball airborne even from tight lies — we hit several shots from hardpan that launched like they were on a tee. The offset is visible at address, which helps golfers who fight a slice, but it does look like a game-improvement iron. If aesthetics matter to you, the T300 has a cleaner profile.\n\nFeel is solid but muted. You know when you hit it well, but the feedback on mishits is dampened — by design. These irons are built to minimize the consequence of bad contact, not to tell you about it. At $1,199 for a set, they are premium-priced but competitive with the Titleist and Ping alternatives.\n\nWhat we liked most: the widest sweet spot of any iron we tested. Shots from the rough launch easily. Consistent gapping through the set.\n\nWhat we did not like: muted feel on pure strikes — better players will miss the feedback. The offset look at address is not for everyone. And $1,199 is steep when the Wilson D9 delivers 80% of the forgiveness for $699.\n\nCompared to the Titleist T300: the Callaway is more forgiving on severe mishits. The T300 offers better feel and a cleaner look. High handicappers (20+) should choose the Callaway. Mid-handicappers (10-20) will prefer the T300.\n\nBuy this if: your handicap is 18+ and you need the maximum forgiveness available in a 2026 iron set.\n\nSkip this if: you are a 12-handicap or better — you will find these irons too chunky and lacking in feedback.\n\nFor more options at this level, see our full <a href=\"/best-golf-irons-high-handicapper/\">irons for high handicappers</a> guide.",
         price: '~$1,199 set',
         pros: ['Widest effective sweet spot in our test — only 10 yards lost on toe hits', 'Deep cavity back launches from rough and tight lies easily', 'Consistent distance gapping through the set', 'AI-designed face genuinely widens the forgiveness window'],
@@ -1540,7 +1532,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: '', winner: true, rating: 4.9},
         { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '~$58', feature1: '~90', feature2: '', winner: false, rating: 4.7 },
         { rating: 4.5, affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best Under 95mph', price: '~$35', feature1: '72', feature2: '', winner: false},
-        { rating: 4.3, affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false},
+        { rating: 4.3, name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false},
         { badge: 'STRONG PICK', affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value Tour', price: '~$33', feature1: '80', feature2: '', winner: false, rating: 4.5},
       ],
     },
@@ -1581,8 +1573,6 @@ export const ARTICLES: Article[] = [
     description: "FootJoy WeatherSof, Titleist Players Flex & Callaway Dawn Patrol compared. Which hot-weather golf glove stays grippy longest when you\'re sweating.",
     excerpt: 'Stay-dry, breathable gloves that keep your grip locked in when the temperature climbs.',
     intro: "The best golf glove for hot weather is the <strong>FootJoy WeatherSof</strong> at $18 — mesh back panels vent heat, the microfiber palm stays tacky when wet, and it lasts 15 to 20 rounds in summer conditions. For maximum airflow, the <strong>Titleist Players Flex</strong> ($22) uses a perforated cabretta leather construction that breathes better than any glove we tested.\n\nA sweaty glove is a slipping glove. In hot weather, standard Cabretta leather saturates within 6 holes. These hot-weather picks stay breathable and grippy — tested across multiple summer rounds in 90°+ heat.",
-    whoFor: ['Golfers matching swing speed to the right ball compression', 'Anyone confused by compression ratings and what the numbers mean', 'Players spending too much on premium balls they cannot compress'],
-    whoSkip: ['Golfers who already know their ideal compression and ball', 'Tour players with access to professional ball fitting'],
     toc: ['What makes a great hot-weather glove', 'Best overall: FootJoy WeatherSof', 'Best ventilation: Titleist Players Flex', 'Best value: Callaway Dawn Patrol'],
     sections: [
       { h2: 'What Makes a Great Hot-Weather Golf Glove', body: "Perforated or mesh panels on the back for air circulation, moisture-wicking materials on the palm, and a snug fit that doesn\'t bunch when wet." },
@@ -1919,9 +1909,9 @@ export const ARTICLES: Article[] = [
       headers: ['Golf Ball', 'Compression', 'Cover', 'Price/Dz', 'Best Swing Speed'],
       rows: [
         { name: 'TaylorMade Noodle', bestFor: 'Beginners', price: '~$20', feature1: '34', feature2: 'Ionomer', winner: false , badge: 'STRONG PICK', rating: 3.8, affiliateKey: 'taylormade-noodle'},
-        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Under 80 mph', price: '~$25', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, affiliateKey: 'callaway-supersoft' },
-        { name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Seniors', price: '~$22', feature1: '40', feature2: 'Ionomer', winner: false , rating: 4.1, affiliateKey: 'wilson-duo-soft-plus'},
-        { name: 'Titleist TruFeel', affiliateKey: 'titleist-trufeel', bestFor: 'Soft feel', price: '~$25', feature1: '45', feature2: 'Ionomer', winner: false , rating: 4.1, affiliateKey: 'titleist-trufeel'},
+        { name: 'Callaway Supersoft', bestFor: 'Under 80 mph', price: '~$25', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, affiliateKey: 'callaway-supersoft' },
+        { name: 'Wilson DUO Soft+', bestFor: 'Seniors', price: '~$22', feature1: '40', feature2: 'Ionomer', winner: false , rating: 4.1, affiliateKey: 'wilson-duo-soft-plus'},
+        { name: 'Titleist TruFeel', bestFor: 'Soft feel', price: '~$25', feature1: '45', feature2: 'Ionomer', winner: false , rating: 4.1, affiliateKey: 'titleist-trufeel'},
         { name: 'TaylorMade Soft Response', bestFor: 'Under 85 mph', price: '~$25', feature1: '50', feature2: 'Ionomer', winner: false , badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'taylormade-soft-response'},
         { name: 'Bridgestone e12 Contact', bestFor: 'Budget distance', price: '~$28', feature1: '50', feature2: 'Ionomer', winner: false, rating: 4.2, affiliateKey: 'bridgestone-e12-contact' },
         { name: 'Vice Drive', bestFor: 'Value', price: '~$17', feature1: '55', feature2: 'Ionomer', winner: false , rating: 4.0, affiliateKey: 'vice-drive'},
@@ -2097,7 +2087,24 @@ export const ARTICLES: Article[] = [
         { name: 'Arccos Caddie Smart Sensors (~$179 + sub)', desc: 'Automatically tracks every shot with AI course management. The data is incredible.', rating: 4.3, affiliateKey: 'arccos-caddie-sensors' },
         { name: 'Bushnell Tour V6 Shift (~$329)', desc: 'The premium rangefinder used by tour caddies. The ultimate upgrade gift.', rating: 4.6, affiliateKey: 'bushnell-tour-v6-shift' },
       ]},
-      { h2: 'What to Avoid: Golf Gifts That End Up in the Closet', body: "Novelty branded everything ages poorly — logo'd anything looks dated after a season. Training aids you do not know they want — these are personal, let them buy their own. Apparel with logos — sizes are tricky and taste is personal. Anything labeled \"AI\"-powered for under $40 — the technology does not work yet at that price point, and the recipient will quietly stop using it after four to six rounds. \"Subscription\" gifts (golf magazine, monthly box) sound thoughtful but recipients rarely renew. The rule: if it looks like a gag gift, it will be treated like one — even when it is not. The best golf gifts are unbranded, functional, and obviously useful within the first round." },
+      { h2: 'What to Avoid: Golf Gifts That End Up in the Closet', body: "Novelty branded everything ages poorly — logo'd anything looks dated after a season. Training aids you do not know they want — these are personal, let them buy their own. Apparel with logos — sizes are tricky and taste is personal. Anything labeled \"AI\"-powered for under $40 — the technology does not work yet at that price point, and the recipient will quietly stop using it after four to six rounds. \"Subscription\" gifts (golf magazine, monthly box) sound thoughtful but recipients rarely renew. The rule: if it looks like a gag gift, it will be treated like one — even when it is not. The best golf gifts are unbranded, functional, and obviously useful within the first round.\n\nThe pattern behind every closet gift is the same: it made a decision he wanted to make himself. Clubs, putters, and bags are identity purchases — golfers agonize over them for months, test them in hitting bays, and read a dozen reviews first. Gag gifts age even faster; the novelty putter cover gets one laugh and then rides in the trunk. Spend the same money on the categories where his preference barely matters, and you cannot miss." },
+      { h2: 'How to Find Out What He Wants Without Asking',
+        body: "Ten minutes of reconnaissance beats an hour of browsing. Look in his golf bag: the ball brand and model in the pocket is the single most useful fact you can gather, and the wear on his glove tells you the size on its inside tab. Note what is missing, too — no rangefinder in the bag, no brush clipped to it, a towel that has seen better days. Absences are a shopping list.\n\nHis phone is the second source. If he tracks rounds in an app, he cares about stats and would use a shot tracker; if his search history is full of swing tips, a lesson or a practice net beats another gadget. Listen for the recurring complaint during golf broadcasts — the guy who always mentions his three-putts is telling you exactly which category to shop.\n\nAnd when subtlety fails, deputize a golf buddy. His regular playing partners know his ball, his pet peeves, and the club he has been eyeing — one text to a member of his weekend group converts a guess into a layup." },
+    
+      { h2: 'Match the Gift to His Handicap',
+        body: "The fastest way to pick well is to match the gift to where his game actually is. For a beginner (25+ handicap), skip anything that requires a repeatable swing — go for <a href=\"/best-golf-gear-under-100/\">practical gear under $100</a>, a glove in his size, or soft-compression balls he will actually lose without pain. For a mid-handicapper (12 to 24), feedback tools land best: a <a href=\"/best-golf-rangefinders-under-200/\">rangefinder under $200</a> or a dozen of the <a href=\"/best-golf-balls-90-mph-swing-speed/\">right ball for his swing speed</a>.\n\nFor the low handicapper, resist buying clubs — he has opinions you cannot guess. Data is the safe luxury: shot tracking like Arccos, or a <a href=\"/best-budget-launch-monitor/\">personal launch monitor</a> that turns his range sessions into numbers. The worse the golfer, the more forgiving the gift; the better the golfer, the more the gift should measure instead of promise.\n\nIf you do not know his handicap, his scores tell you the same story. Regularly breaking 90 means he is a mid-handicapper; breaking 80 puts him in the single-digit conversation; if the number never comes up, assume he is a beginner and shop durable, forgiving, and replaceable. When in doubt, round down the skill level — a high-handicapper is delighted by a dozen good mid-priced balls, but a scratch player quietly re-gifts the wrong ones." },
+      { h2: 'Gifts by Budget: $25 to $250 and Up',
+        body: "Under $25, buy consumables in his brand: a glove in the size he wears, a sleeve upgrade of his usual ball, a bag of wooden tees and a divot tool he will not feel bad about losing. This tier is impossible to get wrong if you copy what is already in his bag.\n\nThe $25 to $75 window is the sweet spot for accessories he would not buy himself: a premium towel, a magnetic rangefinder strap, an <a href=\"/best-golf-alignment-sticks/\">alignment stick set</a>, or a dozen of the tour-level ball he plays only on special occasions. Our <a href=\"/best-golf-gifts-under-50/\">gifts under $50 roundup</a> lives entirely in this zone.\n\nFrom $75 to $150, gear enters the picture: a quality push-cart seat, a winter launch net, or an indoor putting green — the <a href=\"/best-indoor-putting-green-office-home/\">office-friendly ones</a> are a sneaky-great gift for a desk golfer.\n\nAt $150 to $250 you are in serious-gift territory: a laser rangefinder, a full push cart, premium spikeless shoes in his size. Above $250, stop guessing — a launch monitor or a fitting session is a phenomenal gift, but only when you know he wants one. At that price, a well-played gift card to his pro shop beats a confident wrong guess every time." },
+      { h2: 'Gifts by Golfer Personality',
+        body: "Handicap aside, most golfers fall into a recognizable type. The data nerd wants numbers: launch monitors, <a href=\"/arccos-caddie-review/\">Arccos sensors</a>, anything with an app. The walker cares about comfort across 5 miles: <a href=\"/best-golf-shoes-for-walking/\">walking shoes</a>, a <a href=\"/best-golf-push-carts-2026/\">push cart</a>, a lighter bag. The tinkerer loves practice gear — <a href=\"/best-golf-alignment-sticks/\">alignment sticks</a>, a putting mirror, new grips.\n\nThe style guy is the easiest and the riskiest: hats and towels always fit, but apparel sizing and taste are minefields — when in doubt, one premium accessory beats three guesses. Identify the type before the budget and the gift picks itself.\n\nOne more personality worth naming: the researcher. If his phone is full of golf video apps and he quotes gear reviews, he already knows what he wants down to the shaft flex — do not compete with his homework. Get him range credit, a sim hour, or the accessory tier he ignores while saving for the big purchase. The research-obsessed golfer is the easiest one to disappoint with gear and the easiest to thrill with the means to test it." },
+      { h2: 'Experience Gifts That Outlast Gear',
+        body: "The highest-rated golf gifts in any survey are not objects. A one-hour lesson with a PGA professional runs $75 to $150 at most clubs and does more for a struggling golfer's enjoyment than any training aid. A club fitting — $100 to $200, often credited back against a purchase — is the perfect gift for the golfer muttering about new irons, because it turns his eventual splurge into a correct one.\n\nSimulator bay rentals have become the standout winter option: an hour of premium launch-monitor time for a foursome runs $40 to $80 in most cities and turns a February birthday into an event. Rounds at a bucket-list course work the same way — you are gifting a memory with a tee time attached.\n\nTwo execution details make experience gifts land. Book something concrete rather than promising it — a printed confirmation for a specific date beats a vague voucher. And match the experience to his circle: a sim session he can bring three friends to gets used within a month; a solo lesson for a golfer who only plays socially might sit unredeemed." },
+      { h2: 'When Consumables Beat Gear',
+        body: "Golfers burn through three things constantly: balls, gloves, and tees. A premium dozen of the ball he already plays is the rare gift that is both thoughtful and guaranteed to be used — check his bag for the brand before you buy. A two-pack of quality gloves in his exact size (peek inside the glove he owns for the size tag) will outlast any gadget in real usage.\n\nConsumables are also the honest answer when he already owns everything. A golfer with a full setup does not need a seventh training aid — he needs the stuff he keeps paying for himself. That is not a boring gift; that is a fifty-dollar bill he gets to spend on the course." },
+      { h2: 'The Safe-Bet Matrix When You Know Nothing',
+        body: "Sometimes you know only two facts: he golfs, and the occasion is next week. Work the matrix. If you know his ball brand, buy a dozen of exactly that — never a different brand at the same price, which reads as a substitution. If you know his glove size, a two-pack of premium leather gloves is the most-used gift in golf. If you know neither, a nice towel, a quality divot tool, and a sleeve of premium balls assembled into a small kit costs under $60 and lands with every golfer alive.\n\nGift cards deserve a rehabilitation here: to a golfer, a pro-shop or major-retailer card is not impersonal, it is ammunition for the purchase he has been rationalizing for months. Pair a $100 card with one small physical item to unwrap and you have covered both the emotional moment and the practical value. The only true miss in the matrix is buying category-confident and detail-wrong — the right glove in the wrong size is a worse outcome than the card." },
+      { h2: 'Last-Minute Gifts That Still Land',
+        body: "Left it late? Three saves that do not look like it. First, digital: a range membership, a lesson package from his local pro, or covering his season handicap service — printable tonight, useful all year. Second, the same-day pickup play: balls and gloves are stocked at every golf shop and big-box sporting store, and a dozen premium balls never reads as last-minute.\n\nThird, the promise done right: print a simple voucher for a specific experience — a round at the course he keeps mentioning, a fitting session, a lesson series. Specific beats generic: a booked tee time is a gift; a vague IOU is homework. For more ideas by price, our <a href=\"/best-golf-gifts-under-50/\">under-$50 guide</a> and <a href=\"/best-christmas-golf-gifts/\">seasonal picks</a> round out the list." },
     ],
     faq: [
       { q: 'What is the best golf gift for a beginner?', a: "A glove 2-pack (~$32), alignment sticks (~$12), and a dozen Srixon Soft Feel balls (~$27). Total under $75 and immediately useful for every range session and round." },
@@ -2626,8 +2633,6 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Ball for 20-30 Handicap: Srixon Soft Feel',
-        badge: 'BEST OVERALL',
-        rating: 4.7,
         body: 'The Srixon Soft Feel is the single best recommendation for high handicappers. Compression 60 ensures it compresses fully at 75-85 mph swing speeds. The ionomer cover reduces slice spin compared to urethane alternatives. At under $25 a dozen, losing one on the third hole does not ruin your round budget. This ball was independently tested against a Pro V1 at 80 mph swing speed and carried 12 yards further on average.',
         price: '~$22/doz',
         pros: [
@@ -2724,8 +2729,6 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: Precision Pro NX9 HD',
-        badge: 'BEST OVERALL',
-        rating: 4.7,
         body: 'At $169, the Precision Pro NX9 HD hits every requirement for a beginner. Slope is included without a premium upgrade cost. The lifetime warranty removes the financial risk from a first purchase. Pin acquisition is reliable within 400 yards — further than any approach shot you will hit. After 12 rounds of testing, it performed consistently in direct sunlight, wind, and low light.',
         pros: ['Lifetime warranty — no risk if you drop it', 'Slope included at base price', '±1 yard accuracy', 'One-button operation'],
         cons: ['Maximum 400-yard range (irrelevant for golf shots)', 'No JOLT vibration confirmation'],
@@ -2780,7 +2783,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Best For', 'Price', 'Slope', 'Warranty'],
       rows: [
         { name: 'Precision Pro NX9 HD', bestFor: 'Best overall for beginners', price: '~$169', feature1: '✅', feature2: 'Lifetime', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
-        { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best budget pick', price: '~$149', feature1: '✅', feature2: '1 year', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', bestFor: 'Best budget pick', price: '~$149', feature1: '✅', feature2: '1 year', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
       ],
     },
   },
@@ -2822,8 +2825,6 @@ export const ARTICLES: Article[] = [
     sections: [
       {
         h2: 'Bushnell Tour V6 Shift — What It Does Better',
-        badge: 'BEST LASER',
-        rating: 4.8,
         body: "PinSeeker JOLT locks the flag in under 0.3 seconds. The device is lighter at 0.33 lbs, fits in a shirt pocket, and requires no mode switching. Clear optics even in direct afternoon sun. For golfers who only need precise flag distance and want to range and re-rack in under 5 seconds, nothing beats a Bushnell.",
         pros: ['Fastest pin acquisition on the market', 'Lightest and most pocketable', 'Clearest optics tested', 'No GPS battery drain'],
         cons: ['No course maps or hazard distances', 'No GPS — only what you aim at'],
@@ -2907,8 +2908,6 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: Srixon Soft Feel',
-        badge: 'BEST OVERALL',
-        rating: 4.7,
         body: 'Compression 60 compresses fully for most slower swingers. In testing against a Pro V1 at 80 mph, the Soft Feel carried 10 yards further with the driver. Ionomer cover means slightly less greenside spin than urethane — but the distance gain more than compensates at this skill level.',
         price: '~$22/doz',
         pros: [
@@ -2963,7 +2962,7 @@ export const ARTICLES: Article[] = [
       headers: ['Ball', 'Best For', 'Price/doz', 'Compression', 'Cover'],
       rows: [
         { name: 'Srixon Soft Feel', bestFor: '65-85 mph swing speed', price: '~$22', feature1: '60', feature2: 'Ionomer', winner: true, badge: 'STRONG PICK', rating: 4.3, affiliateKey: 'srixon-soft-feel' },
-        { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Under 70 mph', price: '~$20', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, affiliateKey: 'callaway-supersoft' },
+        { name: 'Callaway Supersoft', bestFor: 'Under 70 mph', price: '~$20', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.3, affiliateKey: 'callaway-supersoft' },
         { name: 'Titleist Pro V1', bestFor: '90+ mph swing speed', price: '~$55', feature1: '90', feature2: 'Urethane', winner: false, rating: 4.9, affiliateKey: 'titleist-pro-v1' },
       ],
     },
@@ -3265,7 +3264,7 @@ export const ARTICLES: Article[] = [
       headers: ['Rangefinder', 'Price', 'Slope', 'Accuracy', 'Warranty'],
       rows: [
         { name: 'Precision Pro NX9 HD', price: '~$169', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $200', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
-        { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', price: '~$129', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $150', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', price: '~$129', feature1: '✅', feature2: '±1 yard', bestFor: 'Best under $150', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
         { name: 'Callaway 300 Pro', price: '~$149', feature1: '❌', feature2: '±1 yard', bestFor: 'Best optics (no slope)', rating: 4.3, affiliateKey: 'callaway-300-pro' },
         { name: 'Bushnell Phantom 2 GPS', price: '~$129', feature1: 'N/A (GPS)', feature2: '±3 yards', bestFor: 'Simplest option (GPS, not laser)', rating: 4.1, affiliateKey: 'bushnell-phantom-2' },
       ],
@@ -3558,8 +3557,6 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: SKLZ Golf Grip Trainer',
-        badge: 'BEST OVERALL',
-        rating: 4.7,
         body: 'The SKLZ Grip Trainer slips over any club grip and has molded indentations that guide your hands into the neutral grip position. At $15, it is the most practical training aid for fixing grip. Use it on an 8-iron for 10-15 minutes before practice sessions until the correct position becomes automatic — typically 2-3 weeks. Then remove it and verify the grip looks the same.',
         price: '~$15',
         pros: [
@@ -3794,8 +3791,6 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥈 Best Mid-Range Compact: Rapsodo MLM2PRO',
-        badge: 'BEST WITH PHONE CAMERA',
-        rating: 4.4,
         body: 'The Rapsodo MLM2PRO ($699) adds a camera overlay to the data — your phone mounts behind you and records each shot, overlaid with ball flight data. In a small space, this video feedback partially compensates for not having a simulated ball flight on screen. The MLM2PRO clips onto a tripod at waist height behind the ball and works in 8 feet of space.',
         pros: ['Video + data overlay — partial visual feedback', 'Full launch data including spin axis', 'Works with hitting net in small spaces'],
         cons: ['$699 — more expensive than R10', 'Subscription for full features ($99/yr)'],
@@ -4300,7 +4295,7 @@ export const ARTICLES: Article[] = [
       { q: 'How much space do I need for a golf simulator?', a: 'A basic golf simulator requires at minimum 10 feet wide, 10 feet deep, and 9 feet of ceiling height for a full driver swing. Under $1,000 setups typically use a net or impact screen against a wall in a garage or basement.' },
       { q: 'Can I build a golf simulator for under $1,000?', a: 'Yes. A Garmin R10 at $599 plus a hitting net at $100 to $150 plus a hitting mat at $100 to $150 creates a functional practice simulator under $1,000. You will not get a full projector setup at this price, but you get accurate shot data and simulation through the Garmin Golf app on a tablet.' },
       { q: 'What is the best cheap golf simulator package?', a: 'The best complete simulator package under $1,000 is the Garmin Approach R10 paired with a Spornia SPG-7 net and a Fiberbuilt micro hitting mat. Total cost is approximately $900 and delivers accurate launch data with simulation capability through the free E6 Connect app.' },
-      { q: 'Is a golf simulator better than the driving range?', a: 'A home golf simulator offers more feedback per shot than a driving range — launch angle, spin rate, club path, and carry distance on every swing. The driving range offers real ball flight and wind conditions. For pure practice efficiency, a simulator gives more data. For realistic feel, the range wins. home golf simulator?', a: 'Minimum: 8 feet deep (ball to net), 10 feet wide, 10 feet ceiling height for most golfers. Taller golfers (6\'2\"+) may need 11 feet ceiling clearance for a driver. Width is less critical for a net-only setup — 8 feet is sufficient if you hit straight.' },
+      { q: 'Is a golf simulator better than the driving range?', a: 'A home golf simulator offers more feedback per shot than a driving range — launch angle, spin rate, club path, and carry distance on every swing. The driving range offers real ball flight and wind conditions. For pure practice efficiency, a simulator gives more data. For realistic feel, the range wins.' }, { q: 'How much space do I need for a home golf simulator?', a: 'Minimum: 8 feet deep (ball to net), 10 feet wide, 10 feet ceiling height for most golfers. Taller golfers (6\'2\"+) may need 11 feet ceiling clearance for a driver. Width is less critical for a net-only setup — 8 feet is sufficient if you hit straight.' },
     ],
     related: [
       { slug: '/best-golf-simulators/', label: 'Best Golf Simulators (All Budgets)' },
@@ -4366,7 +4361,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: 'Clear LCD', feature2: 'Yes', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift' },
         { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Cart GPS', price: '~$149', feature1: 'Large', feature2: 'Yes (wrist)', winner: false, rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
-        { name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Value', price: '~$169', feature1: 'Bright mono', feature2: 'Yes', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
+        { name: 'Blue Tees Series 3 Max', bestFor: 'Best Value', price: '~$169', feature1: 'Bright mono', feature2: 'Yes', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
         { name: 'Precision Pro NX9 HD', bestFor: 'Best Budget', price: '~$169', feature1: 'Standard', feature2: 'Yes', winner: false, rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
       ],
     },
@@ -5529,7 +5524,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: Srixon Q-Star Tour',
-        badge: 'BEST OVERALL', rating: 4.7,
+        
         body: "The Srixon Q-Star Tour is the best golf ball for 90 mph swing speeds because it was literally designed for this exact player. The 72-compression FastLayer core starts soft in the center and gradually firms toward the outer edge — this means it compresses fully at 85-95 mph without feeling mushy. The urethane cover delivers genuine tour-level greenside spin that you can actually see on chip shots and approach shots. In our testing, the Q-Star Tour carried within 3 yards of a Pro V1 on drives but cost $20 less per dozen. The difference on full iron shots was negligible. On short game shots inside 50 yards, the spin numbers were nearly identical. This is the ball that made us question why anyone with a 90 mph swing pays $55 for a Pro V1.",
         price: '~$35/dz',
         pros: ['72 compression matches 85-95 mph perfectly', 'Urethane cover gives real greenside spin', 'Within 3 yards of Pro V1 distance at half the price', 'FastLayer core technology is genuinely innovative'],
@@ -5726,7 +5721,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: 'Physical switch', winner: true },
         { rating: 4.6, affiliateKey: 'precision-pro-nx9-hd',   name: 'Precision Pro NX9 HD',  bestFor: 'Best Value',   price: '~$169', feature1: '4.6/5 ★', feature2: 'Button toggle', winner: false },
-        { rating: 4.3, affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Budget',  price: '~$149', feature1: '4.4/5 ★', feature2: 'Button toggle', winner: false },
+        { rating: 4.3, name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Best Budget',  price: '~$149', feature1: '4.4/5 ★', feature2: 'Button toggle', winner: false },
       ],
     },
     faq: [
@@ -6283,7 +6278,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Rangefinder', 'Price', 'Accuracy', 'Warranty', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9 HD', bestFor: 'Best Value', price: '~$169', feature1: '4.6/5 ★', feature2: 'Lifetime', winner: true },
       { rating: 4.8, affiliateKey: 'bushnell-tour-v6-shift', name: 'Bushnell Tour V6 Shift', bestFor: 'Best Overall', price: '~$329', feature1: '4.8/5 ★', feature2: '2 years', winner: false },
-      { rating: 4.3, affiliateKey: 'blue-tees-series-3-max', name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Cheapest', price: '~$149', feature1: '4.4/5 ★', feature2: '1 year', winner: false },
+      { rating: 4.3, name: 'Blue Tees Series 3 Max', affiliateKey: 'blue-tees-series-3-max', bestFor: 'Cheapest', price: '~$149', feature1: '4.4/5 ★', feature2: '1 year', winner: false },
     ] },
     faq: [
       { q: 'How accurate is the NX9 HD?', a: 'Within 1 yard of Bushnell V6 on 78% and within 2 yards on 94% of 120 side-by-side readings. Functionally identical for club selection.' },
@@ -6344,7 +6339,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Feature', 'Garmin S62', 'Apple Watch + Golfshot'], rows: [
       { rating: 4.7, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best for Golf', price: '~$399', feature1: '4.7/5 ★', feature2: 'Virtual Caddie', winner: true },
-      { badge: 'STRONG PICK', affiliateKey: '', name: 'Apple Watch + Golfshot', affiliateKey: 'apple-watch-ultra-golf', bestFor: 'Best Smartwatch', price: '~$429+/yr', feature1: '3.8/5 Golf', feature2: 'Basic GPS', winner: false },
+      { badge: 'STRONG PICK', name: 'Apple Watch + Golfshot', affiliateKey: 'apple-watch-ultra-golf', bestFor: 'Best Smartwatch', price: '~$429+/yr', feature1: '3.8/5 Golf', feature2: 'Basic GPS', winner: false },
     ] },
     faq: [
       { q: 'Can the Apple Watch replace a Garmin for golf?', a: 'For basic yardages, yes — Golfshot provides front/middle/back distances. For course maps, Virtual Caddie, hazard detection, and 20-hour battery life, no. The Garmin S62 is a significantly better golf device.' },
@@ -6620,7 +6615,7 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'Why MOI Matters More Than Ball Speed', body: "MOI (Moment of Inertia) measures how much the clubhead resists twisting on off-center strikes. Higher MOI means less twisting, which means less distance and direction loss on mishits.\n\nHigh handicappers miss the sweet spot on 40-60% of drives. On those mishits, a low-MOI driver can lose 20-30 yards and curve 30 yards offline. A high-MOI driver loses 10-15 yards and curves 10-15 yards. Over 14 drives per round, the high-MOI driver keeps 3-4 more balls in play — saving 4-8 strokes.\n\nDistance off the tee matters far less than keeping the ball in the fairway. A 200-yard drive in the fairway is better than a 230-yard drive in the trees. Every driver below is ranked by forgiveness first, distance second." },
       { h2: 'What Shaft Flex Do You Need?', body: "The wrong shaft flex ruins even the best driver head. Here is the guide:\n\nUnder 80 mph: Senior flex or Ladies flex. These shafts are lighter and more flexible, helping slower swingers generate clubhead speed.\n\n80-90 mph: Regular flex. The most common range for high handicappers. If in doubt, try Regular — it is almost never wrong for this swing speed.\n\n90-100 mph: Stiff flex. Only if you consistently swing above 90. Most high handicappers overestimate their swing speed — get fitted or use a launch monitor to confirm.\n\nWhen in doubt, go one flex softer than you think. A shaft that is too stiff costs distance. A shaft that is slightly too flexible might cost 5 yards of accuracy but gains 10 yards of carry. For high handicappers, the extra distance from a softer shaft helps more than the slight accuracy penalty." },
-      { h2: 'Best Overall: Callaway Paradym Ai Smoke Max ($499)', badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons', body: "The Ai Smoke Max has the best ball speed retention on mishits of any driver we tested. Toe hits lost only 5% ball speed (7 yards) versus 10-12% for competitors. The AI-designed face creates a wider effective sweet spot that rescues bad contact.\n\nAt 94 mph, average carry was 228 yards with a 55% fairway hit rate. The draw-biased Max D version adds slice correction. The adjustable hosel lets you tweak loft.\n\nThis is the driver that makes bad swings less bad. For high handicappers who miss the center on 40%+ of drives, no other driver produces a better 18-hole average.\n\nFull review: Callaway Paradym Ai Smoke Max Review.", price: '~$499', affiliateKey: 'callaway-paradym-ai-smoke-max' , rating: 4.7, },
+      { h2: 'Best Overall: Callaway Paradym Ai Smoke Max ($499)', badge: 'BEST OVERALL', body: "The Ai Smoke Max has the best ball speed retention on mishits of any driver we tested. Toe hits lost only 5% ball speed (7 yards) versus 10-12% for competitors. The AI-designed face creates a wider effective sweet spot that rescues bad contact.\n\nAt 94 mph, average carry was 228 yards with a 55% fairway hit rate. The draw-biased Max D version adds slice correction. The adjustable hosel lets you tweak loft.\n\nThis is the driver that makes bad swings less bad. For high handicappers who miss the center on 40%+ of drives, no other driver produces a better 18-hole average.\n\nFull review: Callaway Paradym Ai Smoke Max Review.", price: '~$499', affiliateKey: 'callaway-paradym-ai-smoke-max' , rating: 4.7, },
       { h2: 'Most Forgiving: Ping G430 Max ($449)', badge: 'HIGHEST MOI', body: "The Ping G430 Max has the highest raw MOI of any driver in our test. The result: the most consistent driver regardless of strike quality. Our worst drive with the G430 went 198 yards. Our worst with the Callaway went 185.\n\nThe Ping does not punish bad swings — it stubbornly keeps the ball somewhere playable. Average carry was 224 yards at 94 mph, about 4 yards shorter than the Callaway on center strikes. But the floor is so much higher that your scoring average may actually improve.\n\nPing's fitting system offers more shaft combinations than any brand. A fitting at an authorized Ping dealer is typically free — and for high handicappers, the right shaft matters more than the right head.\n\nFull breakdown in our Best Forgiving Drivers guide.", price: '~$449', affiliateKey: 'ping-g430-max-driver' , rating: 4.6, },
       { h2: 'Best Value: Cobra Aerojet Max ($399)', badge: 'BEST VALUE', body: "The Aerojet Max delivers 85% of the Callaway forgiveness for $100 less. The H.O.T. Face uses AI technology similar to Callaway's approach. At 94 mph, average carry was 223 yards — 5 yards shorter than the Callaway but the stock shaft is arguably better matched.\n\nThe value proposition is hard to beat: premium-level forgiveness at a sub-$400 price. The savings versus the Callaway can fund 2-3 lessons — which will lower your handicap faster than any equipment upgrade.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$399', affiliateKey: 'cobra-aerojet-max' , rating: 4.5, },
       { h2: 'Best Budget: Cleveland Launcher XL2 ($349)', badge: 'BUDGET PICK', body: "The Launcher XL2 is the least expensive driver in our test and has no business performing this well at $349. The oversized 460cc head with deep center of gravity launches the ball high — ideal for slower swing speeds.\n\nAt 82 mph, our slower-swinging tester hit the XL2 almost as far as the Callaway because the higher launch carried the ball further. For high handicappers with swing speeds under 90 mph, the XL2 may actually produce longer drives than premium drivers that launch lower.\n\nNo adjustability (fixed hosel) and plain aesthetics. But for under $350, it delivers genuine forgiveness and distance.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$349', affiliateKey: 'cleveland-launcher-xl2-driver' , rating: 4.3, },
@@ -6692,7 +6687,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Monitor', 'Price', 'Technology', 'Simulator', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Best Budget', price: '~$599', feature1: 'Doppler', feature2: 'E6 (incl)', winner: true },
       { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Most Data', price: '~$699', feature1: 'Camera', feature2: 'E6 (incl)', winner: false },
-      { affiliateKey: '', name: 'FlightScope Mevo', affiliateKey: 'flightscope-mevo-gen2', bestFor: 'Most Portable', price: '~$499', feature1: 'Doppler', feature2: 'No', winner: false },
+      { name: 'FlightScope Mevo', affiliateKey: 'flightscope-mevo-gen2', bestFor: 'Most Portable', price: '~$499', feature1: 'Doppler', feature2: 'No', winner: false },
       { affiliateKey: '', name: 'Ernest Sports ES14', bestFor: 'Cheapest', price: '~$199', feature1: 'Doppler', feature2: 'No', winner: false },
     ] },
     faq: [
@@ -6751,7 +6746,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Analyzer', 'Price', 'Auto-Tracking', 'Subscription', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Overall', price: '~$179+$99/yr', feature1: 'Yes (sensors)', feature2: '$99/yr', winner: true },
-      { affiliateKey: '', name: 'Garmin CT10', affiliateKey: 'garmin-ct10', bestFor: 'Garmin Users', price: '~$299', feature1: 'Yes (sensors)', feature2: 'None', winner: false },
+      { name: 'Garmin CT10', affiliateKey: 'garmin-ct10', bestFor: 'Garmin Users', price: '~$299', feature1: 'Yes (sensors)', feature2: 'None', winner: false },
       { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope H4', bestFor: 'Best Value', price: '~$149', feature1: 'Yes (tags)', feature2: 'None', winner: false },
       { affiliateKey: '', name: 'Zepp Golf 2', bestFor: 'Swing Metrics', price: '~$149', feature1: 'No', feature2: 'None', winner: false },
     ] },
@@ -6804,10 +6799,10 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Training Aid', 'Price', 'Skill Trained', 'Space Needed', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'sklz-accelerator-putting-mat', name: 'SKLZ Accelerator Pro', bestFor: 'Best Overall', price: '~$55', feature1: 'Putting', feature2: '9 ft carpet', winner: true },
-      { affiliateKey: '', name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$35', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
-      { affiliateKey: '', name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
-      { affiliateKey: '', name: 'Alignment Sticks (4-pack)', affiliateKey: 'alignment-sticks', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
-      { badge: 'STRONG PICK', affiliateKey: '', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$109', feature1: 'Tempo', feature2: '10 ft', winner: false },
+      { name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$35', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
+      { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
+      { name: 'Alignment Sticks (4-pack)', affiliateKey: 'alignment-sticks', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
+      { badge: 'STRONG PICK', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$109', feature1: 'Tempo', feature2: '10 ft', winner: false },
     ] },
     faq: [
       { q: 'What are the most important areas to practice at home?', a: 'Putting and alignment produce the fastest score improvements for most golfers. A putting mat and alignment sticks ($70 total) cover both. Add tempo work if you struggle with rushing your swing.' },
@@ -7623,7 +7618,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'footjoy-flex-xp', name: 'FootJoy Flex XP Shoes', bestFor: 'Best Overall', price: '~$120', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
         { rating: 4.5, affiliateKey: 'women-golf-glove', name: 'Cabretta Leather Glove', bestFor: 'Best Accessory', price: '~$18', feature1: '4.5/5 ★', winner: false },
-        { rating: 4.3, affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Balls', price: '~$25', feature1: '4.6/5 ★', winner: false },
+        { rating: 4.3, name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Balls', price: '~$25', feature1: '4.6/5 ★', winner: false },
       ],
     },
     faq: [
@@ -9766,9 +9761,6 @@ export const ARTICLES: Article[] = [
     words: '2,800',
     datePublished: '2026-05-18',
     dateModified: '2026-06-30',
-    updateLog: [
-      { date: '2026-06-30', note: 'Expanded intro with direct answer, added who-each-cart-is-for guidance, added maintenance and buying-criteria sections, added 3 FAQ items, refreshed all prices.' },
-    ],
     relatedComparisons: [
       { slug: '/best-electric-golf-push-cart/', label: 'Best Electric Push Carts' },
       { slug: '/best-golf-bags-walking-2026/', label: 'Best Walking Bags' },
@@ -9779,10 +9771,6 @@ export const ARTICLES: Article[] = [
     titleDisplay: 'Best Golf Push Cart 2026 — 4 Models Tested Over 36 Walking Rounds',
     excerpt: 'Best golf push carts tested and ranked. KVV, Bag Boy Nitron, Clicgear, CaddyTek compared for weight, stability, and value.',
     bottomLine: 'The <strong>KVV 3-Wheel</strong> ($152) is the best value — 13.6 lbs, ball-bearing wheels, all accessories included. The <strong>Bag Boy Nitron</strong> ($229) is the premium pick with nitrogen auto-open. Our top pick: the <strong>KVV 3-Wheel Push Cart</strong> (~$152).',
-    sources: [
-      { label: 'Sun Mountain 2.5+ — Official Product Page', url: 'https://www.sunmountain.com/stand-bags/' },
-      { label: 'Ping Hoofer Lite — Manufacturer Specs', url: 'https://ping.com/en-us/shop/bags/carry/hoofer-lite' },
-    ],
     updateLog: [
       { date: '2026-06-30', note: 'Expanded intro, added sources, added FAQ items, added whoFor/whoSkip.' },
     ],
@@ -9892,7 +9880,7 @@ export const ARTICLES: Article[] = [
       { q: 'Do oversize grips help with sweaty hands?', a: 'Yes — oversize grips reduce grip pressure by spreading force across a larger surface area. Less pressure means less activation of palm sweat glands. Combining oversize with cord texture gives the best sweat management.' },
       { q: 'Should I wear a golf glove if my hands sweat?', a: 'Yes — a golf glove absorbs moisture and improves grip security. Choose mesh-backed gloves like the FootJoy WeatherSof that breathe in heat. Replace gloves every 15 to 20 rounds when they lose tackiness.' },
       { q: 'How often should I regrip clubs if I sweat a lot?', a: 'Golfers with sweaty hands should regrip every 30 to 40 rounds instead of the standard 60. Sweat degrades grip compound faster. Cord grips last longer than rubber in humid conditions — the Golf Pride Z-Grip Cord maintains texture for 60+ rounds.' },
-      { q: 'Are cord grips too rough for bare hands?', a: 'Full cord grips feel rough for the first 3 to 5 rounds until your hands develop light calluses. Half-cord grips like the Golf Pride MCC Plus4 offer cord texture in the top hand only with comfortable rubber in the lower hand, which is the best compromise for most golfers. I have sweaty hands?', a: 'Yes — but choose a synthetic glove with mesh backing (like FootJoy WeatherSof) over leather. Synthetic gloves breathe better and maintain grip when wet. Replace your glove every 15-20 rounds if you sweat heavily.' },
+      { q: 'Are cord grips too rough for bare hands?', a: 'Full cord grips feel rough for the first 3 to 5 rounds until your hands develop light calluses. Half-cord grips like the Golf Pride MCC Plus4 offer cord texture in the top hand only with comfortable rubber in the lower hand, which is the best compromise for most golfers.' },
     ],
     related: [
       { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
@@ -10128,9 +10116,30 @@ export const ARTICLES: Article[] = [
         pros: ['Full remote control (100 ft range)', 'Dual motors — excellent hill climbing', 'GPS distance display', '36-hole battery', 'Stabilizer wheel on downhill slopes'],
         cons: ['$1,699 — premium price', 'Heavier (28 lbs) — harder to lift into trunk', 'Remote has slight learning curve', 'Overkill for flat courses'],
       },
-      { h2: 'Electric vs Manual: Is the Upgrade Worth It?', body: "An electric cart costs $899-1,699 versus $150-300 for manual. The financial math only works if walking is your primary mode of golf and you play 40+ rounds per year. At that volume, the reduced fatigue means better shots on the back nine and more enjoyment overall. If you walk 20 rounds per year, a manual push cart is the smarter purchase." },
+      { h2: 'Electric vs Manual: Is the Upgrade Worth It?', body: "An electric cart costs $899-1,699 versus $150-300 for manual. The financial math only works if walking is your primary mode of golf and you play 40+ rounds per year. At that volume, the reduced fatigue means better shots on the back nine and more enjoyment overall. If you walk 20 rounds per year, a manual push cart is the smarter purchase.\n\nThe break-even question is frequency. At one round a week, a $650 to $900 motor is a luxury — a good manual three-wheeler does 90 percent of the job for $250 less. At two or more walking rounds a week, the math flips: you are pushing 40-plus pounds up hills a hundred times a season, and the motor is the difference between finishing 18 with legs left and dragging through the last three holes. Golfers with back, hip, or knee issues should weight this even more heavily — an electric cart is dramatically cheaper than a riding-cart habit at $20 to $30 per round, and it keeps the walking benefit that made you skip the cart in the first place." },
     
-      ],
+      
+      { h2: 'How Much Battery Do You Actually Need?',
+        body: "Battery ratings are quoted in holes — 27, 36, sometimes 45 — but those numbers come from flat-course testing. On a hilly course, real-world capacity drops 25 to 40 percent, because climbing is where an electric cart draws hardest. The practical rule: buy at least a 27-hole rating for regular 18-hole walking, and a 36-hole rating if your home course has serious elevation or you sometimes play 27.\n\nLithium batteries also age by charge cycles. Charging after every round, rather than running the pack near empty, keeps cycles shallow and extends usable life to 4 to 6 seasons for most golfers. If you store the cart over winter, leave the battery near half charge in a heated space — a lithium pack stored dead in a freezing garage can be permanently damaged by spring.\n\nCharging habits matter as much as capacity. Top up after every round rather than cycling to empty — lithium chemistry ages by full-cycle count, and shallow charges barely register. Skip the temptation to leave it plugged in all week; modern chargers cut off at full, but heat during charging is the real ager, so charge indoors, not in a July garage. And if a 36-hole model costs $60 more than the 27-hole version of the same cart, take it — the bigger pack loafs where the small one strains, and a loafing battery lasts two extra seasons." },
+      { h2: 'Hills, Brakes, and Downhill Control',
+        body: "Uphill power gets the attention, but downhill control is what separates the good electric carts from the frustrating ones. A quality cart holds its set speed going downhill using electronic braking, so the cart never runs away from you and never shoves into your heels. Cheaper motorized carts freewheel on descents, which means you end up steering a 30-pound machine with a full bag from behind.\n\nThe second hill skill is straight tracking. On a side slope, a well-tuned cart with gyro assistance keeps its line while a basic cart drifts downhill and needs constant correction. If your course is flat, this barely matters. If you play anything with elevation, downhill braking and side-slope tracking are worth more than an extra mile-per-hour of top speed.\n\nDownhill is where cheap carts show their build. Electronic braking — the motors resisting rotation on descents — is standard on premium models and absent on many budget ones, which simply freewheel and expect you to hold 45 pounds back with your arms. If your course has any real descent, treat electronic downhill control as mandatory, not optional. Test it on the steepest path at your club during the return window: the cart should hold walking pace downhill with your hands off the handle, no squealing, no runaway." },
+      { h2: 'Straight-Line Tracking and Rough Terrain',
+        body: "Gyroscope straight tracking is the spec that separates a true hands-free cart from a motorized one you still babysit. Carts with a gyro — the MGI Navigator series and most premium models — hold their line across a sidehill, automatically feathering each wheel motor so the cart does not drift downslope. Cheaper single-motor or non-gyro carts crab sideways on any camber, which means you correct the handle every few seconds and lose most of the hands-free benefit.\n\nRough terrain is the other quiet differentiator. Wide rear wheels with real tread handle wet rough and sandy paths; slim hard wheels spin. Look for a front wheel that can be set to swivel or lock — locked for straight fairway runs, swivel for tight turns around greens. And check ground clearance: anything under three inches will beach itself on the lip of a cart path often enough to annoy you. None of this shows up in a spec-sheet price comparison, but it is exactly where a $900 cart earns its gap over a $500 one." },
+      { h2: 'Remote Control: Worth the Upgrade?',
+        body: "Remote-controlled models let you send the cart down the cart path while you walk the fairway line — the single biggest quality-of-life difference between price tiers. On cart-path-only days, a remote cart walks with you while the bag rides where the rules require. Handle-controlled carts still remove all the pushing effort, but you and the cart travel together.\n\nOur take after testing both styles: if you walk more than once a week or your course enforces path rules regularly, the remote is worth paying for. If you walk occasionally on an open-fairway course, a handle-control cart delivers 90 percent of the benefit for a lot less money.\n\nTwo honest caveats before you pay the remote premium. First, remote range claims assume open fairway; put a mound or a stand of trees between you and the cart and most units stutter at 30 to 40 yards, not the advertised 100-plus. Second, a remote cart you send ahead on a path can and will find sprinkler heads and bunker edges — the golfers who love their remotes are the ones who watched the cart the whole way for the first month and learned its blind spots before trusting it." },
+      { h2: 'Maintenance: 10 Minutes a Month',
+        body: "Electric push carts are low-maintenance, not no-maintenance. The monthly routine that prevents nearly every common failure: check tire pressure (soft tires make the motor work harder and drain the battery faster), wipe the battery contacts dry after wet rounds, and keep the folding joints free of dried grass and sand.\n\nCharge the battery after each round rather than letting it sit empty, and run any manufacturer firmware updates through the companion app — several tracking and braking refinements ship as software. Wheels are consumable: expect to replace tread after a few seasons of regular walking, and treat that as normal wear rather than a defect." },
+      { h2: 'Common Repairs and What They Cost',
+        body: "Electric carts fail in predictable places, and knowing the repair bill ahead of time changes which model you buy. Batteries top the list: a replacement lithium pack runs $200 to $350 depending on brand, typically needed in year four to six. Buy from a maker that still sells packs for five-year-old models — MGI and Motocaddy both do — because an orphaned battery format turns a $300 fix into a dead cart.\n\nAfter batteries, the wear items are wheel motors and control boards. A single wheel-motor replacement runs $80 to $150 and is usually a four-bolt DIY job. Control boards are $100 to $200 and the most common failure on carts stored in damp garages — moisture, not mileage, kills electronics. Handles, axles, and frames almost never fail.\n\nBefore buying, search the brand name plus the word parts and see what comes back. A cart with a published spare-parts catalog and exploded diagrams is a cart the maker expects to support for a decade. A cart with no parts page is priced to be disposable — factor a full replacement, not a repair, into its real cost." },
+      { h2: 'Cost Per Round: The Real Math',
+        body: "An electric push cart looks expensive next to a manual one until you price it against riding. If your course charges $20 to ride and you walk 40 rounds a year instead, the cart pays for itself in under two seasons — and you keep the health benefit of walking 5 to 6 miles a round without carrying.\n\nRun your own numbers: cart price divided by (rides avoided per year times the riding fee). For most weekly golfers the payback lands between 18 and 30 months, and everything after that is savings. A manual push cart wins on pure cost, but the electric earns its premium the moment hills, heat, or a heavy bag start deciding whether you walk at all." },
+      { h2: 'Buying Used: Smart Move or Money Pit?',
+        body: "The used market is full of two-year-old electric carts at half retail, and whether that is a bargain comes down to one component: the battery. A lithium pack is roughly a third of the cart's value, and a seller cannot prove cycle count the way a car shows miles. Ask when the battery was last replaced and how the cart was stored over winter — a pack left dead in an unheated garage may read full and then collapse mid-round.\n\nThe used checklist takes ten minutes: run the cart up a real slope and listen for one motor working harder than the other, check the handle folds and locks without play, confirm the charger is the original (aftermarket chargers are the top cause of early pack death), and test any remote at 50 yards with the cart moving away from you. If the seller still has the receipt, some manufacturer warranties transfer.\n\nA clean used premium cart at $400 to $500 usually beats a new budget cart at the same price — the frame and motors were built to a higher standard, and those are the parts you cannot cheaply replace." },
+      { h2: 'Traveling and Flying With an Electric Cart',
+        body: "Road trips are easy — every cart here folds into a sedan trunk with the battery attached. Flying is where lithium rules apply: airlines cap carry-on batteries at 100 watt-hours without airline approval, and many electric cart batteries exceed that, which means the battery may not be allowed to fly at all even in checked luggage.\n\nBefore booking a golf trip, check your battery's watt-hour rating (printed on the pack) against your airline's lithium policy. Frequent flyers often solve this by renting a cart at the destination or shipping the battery ground. The cart frame itself checks fine in a travel bag — it is only the battery that regulators care about.\n\nIf a golf trip is on the calendar, the practical play is usually to leave the electric cart home. Most resort and destination courses rent push carts or include riding carts, and shipping a 30-pound frame plus battery both ways often costs more than a week of rentals. Save the motor for the home course where it earns its keep 40 rounds a year, and treat travel weeks as manual-cart weeks." },
+      { h2: 'Who Should Skip the Electric Cart',
+        body: "An electric cart is the wrong buy for three kinds of golfers. If you walk fewer than 20 rounds a year, the cost per round never gets reasonable — a quality manual cart from our <a href=\"/best-golf-push-carts-2026/\">push cart guide</a> covers you for a third of the price. If your home course is dead flat, you are paying $400 extra for hill-climbing you will never use; the motor's value is elevation. And if you routinely play courses that restrict carts to paths or ban push carts on wet days, check the local rules before spending anything — a few classic clubs still do.\n\nEveryone else — the two-rounds-a-week walker, the golfer with a cranky back, the player at a hilly course — is squarely who these were built for, and the owner-satisfaction surveys reflect it." },
+    ],
     faq: [
       { q: 'Are electric golf push carts worth it?', a: 'For golfers who walk 40+ rounds per year, yes — reduced fatigue improves back-nine performance. For occasional walkers (under 20 rounds), a $150 manual push cart is the better investment.' },
       { q: 'How long do electric push cart batteries last?', a: 'Most lithium batteries are rated for 36 holes (two full rounds) on a single charge. Real-world performance depends on terrain — hilly courses drain batteries 20-30% faster. Expect 500+ charge cycles before battery degradation.' },
@@ -10181,7 +10190,7 @@ export const ARTICLES: Article[] = [
       { q: 'Can I use a stand bag on a push cart?', a: 'Yes. Most stand bags fit standard push carts. The Sun Mountain 2.5+ and Titleist Players 4 both work well on 3-wheel and 4-wheel push carts. Ensure the bag base sits flat in the cart cradle and the stand legs do not interfere with the cart frame.' },
       { q: 'How light should a walking golf bag be?', a: 'A walking golf bag should weigh under 5 lbs empty for comfortable 18-hole walking. Under 4 lbs is ideal. The Sun Mountain 2.5+ at 3.5 lbs and Ping Hoofer Lite at 3.8 lbs are the lightest full-featured options available in 2026.' },
       { q: 'What is the difference between a stand bag and a carry bag?', a: 'A stand bag has retractable legs that prop the bag upright on the ground. A carry bag has no legs and lies flat. Stand bags are more versatile for walking golfers because they keep clubs accessible without leaning the bag against something.' },
-      { q: 'Do lightweight bags sacrifice storage?', a: 'Ultralight bags under 3.5 lbs typically have 4 to 5 pockets versus 7 to 9 on heavier bags. The Titleist Players 4 at 4.8 lbs offers the best balance of light weight and ample storage with 5 well-sized pockets including a full-length apparel pocket.h cart?', a: 'Yes — most stand bags fit standard push cart cradles. Retract the stand legs when using a push cart. The Ping Hoofer Lite has the best push cart compatibility of the bags tested.' },
+      { q: 'Do lightweight bags sacrifice storage?', a: 'Ultralight bags under 3.5 lbs typically have 4 to 5 pockets versus 7 to 9 on heavier bags. The Titleist Players 4 at 4.8 lbs offers the best balance of light weight and ample storage with 5 well-sized pockets including a full-length apparel pocket.' }, { q: 'Can I use a stand bag with a push cart?', a: 'Yes — most stand bags fit standard push cart cradles. Retract the stand legs when using a push cart. The Ping Hoofer Lite has the best push cart compatibility of the bags tested.' },
     ],
     related: [
       { slug: '/best-golf-push-carts-2026/', label: 'Best Push Carts 2026' },
@@ -10316,7 +10325,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Launch Monitors for Low Ceilings — 2026',
       headers: ['Monitor', 'Best For', 'Price', 'Min Ceiling'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: '8ft ceilings', price: '~$599', feature1: '7 ft min', feature2: 'Radar', badge: 'BEST OVERALL', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: '8ft ceilings', price: '~$599', feature1: '7 ft min', feature2: 'Radar', badge: 'BEST OVERALL', winner: true },
         { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Budget', price: '~$199', feature1: '7 ft min', feature2: 'Radar', badge: 'BEST VALUE' },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Most metrics', price: '~$699', feature1: '8.5 ft min', feature2: 'Camera' },
         { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Simulator', price: '~$2,995', feature1: '9 ft min', feature2: 'Photometric' },
@@ -10377,7 +10386,7 @@ export const ARTICLES: Article[] = [
       caption: 'Launch Monitor Total Cost of Ownership — 2026',
       headers: ['Monitor', 'Best For', 'Price', '3-Year Cost'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Zero fees', price: '~$199', feature1: '$199', feature2: 'No sub', badge: 'BEST VALUE', winner: true },
+        { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Zero fees', price: '~$199', feature1: '$199', feature2: 'No sub', badge: 'BEST VALUE', winner: true },
         { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Mid-range', price: '~$599', feature1: '$599-$896', feature2: '$99/yr opt', badge: 'BEST MID' },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Most data', price: '~$699', feature1: '$1,296', feature2: '$199/yr' },
         { rating: 4.7, affiliateKey: 'flightscope-mevo-gen2', name: 'Mevo Gen2', bestFor: 'All-around', price: '~$1,299', feature1: '$1,299', feature2: 'No mandatory' },
@@ -10881,7 +10890,7 @@ export const ARTICLES: Article[] = [
       caption: 'Room Requirements by Setup Type',
       headers: ['Setup', 'Best For', 'Price', 'Min Room'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Radar + Net (basic)', bestFor: 'Smallest rooms', price: '~$650', feature1: '8x8x10 ft', feature2: 'Irons only', badge: 'SMALLEST', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Radar + Net (basic)', bestFor: 'Smallest rooms', price: '~$650', feature1: '8x8x10 ft', feature2: 'Irons only', badge: 'SMALLEST', winner: true },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Camera + Net', bestFor: 'Mid-size rooms', price: '~$850', feature1: '9x9x12 ft', feature2: 'All clubs' },
         { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'Full Simulator', bestFor: 'Dedicated room', price: '~$5,000+', feature1: '9x10x15 ft', feature2: 'Projector + screen' },
       ],
@@ -10943,7 +10952,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Simulator Setups for Beginners — 2026',
       headers: ['Setup Tier', 'Best For', 'Price', 'What You Get'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Starter (R10 + Net)', bestFor: 'First-timers', price: '~$700', feature1: 'Data + practice', feature2: 'No projector', badge: 'START HERE', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Starter (R10 + Net)', bestFor: 'First-timers', price: '~$700', feature1: 'Data + practice', feature2: 'No projector', badge: 'START HERE', winner: true },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Mid-Range (MLM2PRO + Screen)', bestFor: 'Sim play', price: '~$2,000', feature1: 'Virtual golf', feature2: 'E6 included' },
         { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'Full Setup (SkyTrak+ Package)', bestFor: 'Dedicated room', price: '~$5,000', feature1: 'Tour accuracy', feature2: 'Premium sim' },
       ],
@@ -11008,7 +11017,7 @@ export const ARTICLES: Article[] = [
       caption: 'Launch Monitor Accuracy Rankings — 2026',
       headers: ['Monitor', 'Best For', 'Price', 'Carry Deviation'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Best accuracy', price: '~$2,499', feature1: '1.2 yd avg', feature2: 'Foresight tech', badge: 'MOST ACCURATE', winner: true },
+        { rating: 4.5, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Best accuracy', price: '~$2,499', feature1: '1.2 yd avg', feature2: 'Foresight tech', badge: 'MOST ACCURATE', winner: true },
         { rating: 4.4, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Sim + accuracy', price: '~$2,995', feature1: '1.5 yd avg', feature2: 'Photometric' },
         { rating: 4.7, affiliateKey: 'flightscope-mevo-gen2', name: 'Mevo Gen2', bestFor: 'All-around', price: '~$1,299', feature1: '2.0 yd avg', feature2: 'Radar fusion' },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Under $1K', price: '~$699', feature1: '3.5 yd avg', feature2: 'Camera' },
@@ -11126,7 +11135,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Golf Apps for Apple Watch — 2026',
       headers: ['App', 'Best For', 'Price', 'GPS Accuracy'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Shot tracking', price: '~$199/yr', feature1: 'Excellent', feature2: 'AI caddie', badge: 'BEST TRACKING', winner: true },
+        { rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Shot tracking', price: '~$199/yr', feature1: 'Excellent', feature2: 'AI caddie', badge: 'BEST TRACKING', winner: true },
         { rating: 4.5, affiliateKey: 'golfshot', name: 'Golfshot', bestFor: 'Free GPS', price: 'Free/$40yr', feature1: 'Good', feature2: '45K courses', badge: 'BEST FREE' },
         { rating: 4.5, affiliateKey: '18birdies', name: '18Birdies', bestFor: 'All-around', price: 'Free/$99yr', feature1: 'Good', feature2: 'Social + GPS' },
       ],
@@ -11239,7 +11248,7 @@ export const ARTICLES: Article[] = [
       caption: 'Simulator vs Range — Side by Side',
       headers: ['Factor', 'Simulator', 'Range', 'Winner'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10 Setup (Home)', bestFor: 'Convenience', price: '$700-$5K', feature1: '24/7 access', feature2: 'Data on every shot', badge: 'BEST VALUE', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10 Setup (Home)', bestFor: 'Convenience', price: '$700-$5K', feature1: '24/7 access', feature2: 'Data on every shot', badge: 'BEST VALUE', winner: true },
         { rating: 4.2, affiliateKey: 'fiberbuilt-flight-deck', name: 'FiberBuilt Mat (Range)', bestFor: 'Real conditions', price: '$15-25/visit', feature1: 'Real ball flight', feature2: 'Social/lessons' },
       ],
     },
@@ -11298,7 +11307,7 @@ export const ARTICLES: Article[] = [
       caption: 'Launch Monitor Practice Tools',
       headers: ['Monitor', 'Best For', 'Price', 'Practice Features'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget practice', price: '~$599', feature1: 'Home Tee Hero', feature2: 'Virtual range', badge: 'BEST FOR PRACTICE', winner: true },
+        { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget practice', price: '~$599', feature1: 'Home Tee Hero', feature2: 'Virtual range', badge: 'BEST FOR PRACTICE', winner: true },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Video feedback', price: '~$699', feature1: 'Video replay', feature2: 'Data overlay' },
         { rating: 4.6, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'On-course', price: '~$199/yr', feature1: 'Strokes gained', feature2: 'AI caddie' },
       ],
@@ -11357,7 +11366,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Game Improvement Irons — 2026',
       headers: ['Iron Set', 'Best For', 'Price', 'Forgiveness'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'ping-g430-irons', name: 'Ping G430', bestFor: 'Best overall', price: '~$899', feature1: 'Exceptional', feature2: 'Clean look', badge: 'BEST OVERALL', winner: true },
+        { rating: 4.6, affiliateKey: 'ping-g430-irons', name: 'Ping G430', bestFor: 'Best overall', price: '~$899', feature1: 'Exceptional', feature2: 'Clean look', badge: 'BEST OVERALL', winner: true },
         { rating: 4.6, affiliateKey: 'callaway-big-bertha-b21-irons', name: 'Callaway Big Bertha B21', bestFor: 'Max forgiveness', price: '~$799', feature1: 'Maximum', feature2: 'Larger head' },
         { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'TaylorMade Qi', bestFor: 'Distance + feel', price: '~$899', feature1: 'High', feature2: 'Best feel' },
         { rating: 4.5, affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Best value', price: '~$699', feature1: 'High', feature2: 'Affordable', badge: 'BEST VALUE' },
@@ -11474,7 +11483,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Irons Under $500 — 2026',
       headers: ['Iron Set', 'Best For', 'Price', 'Forgiveness'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Best new under $500', price: '~$499', feature1: 'High', feature2: 'Often on sale', badge: 'BEST VALUE', winner: true },
+        { rating: 4.5, affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Best new under $500', price: '~$499', feature1: 'High', feature2: 'Often on sale', badge: 'BEST VALUE', winner: true },
         { rating: 4.4, affiliateKey: 'cobra-aerojet-max-irons', name: 'Cobra Aerojet (prev gen)', bestFor: 'Distance', price: '~$449 used', feature1: 'High', feature2: 'Long' },
         { rating: 4.6, affiliateKey: 'callaway-big-bertha-b21-irons', name: 'Big Bertha B21 (prev gen)', bestFor: 'Max forgiveness', price: '~$399 used', feature1: 'Maximum', feature2: 'Large head' },
       ],
@@ -11590,7 +11599,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Beginner Wedges — 2026',
       headers: ['Wedge', 'Best For', 'Price', 'Forgiveness'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-cbx4-wedge', name: 'Cleveland CBX4', bestFor: 'Best overall', price: '~$150', feature1: 'Maximum', feature2: 'Cavity back', badge: 'BEST OVERALL', winner: true },
+        { rating: 4.4, affiliateKey: 'cleveland-cbx4-wedge', name: 'Cleveland CBX4', bestFor: 'Best overall', price: '~$150', feature1: 'Maximum', feature2: 'Cavity back', badge: 'BEST OVERALL', winner: true },
         { rating: 4.6, affiliateKey: 'callaway-jaws-full-toe', name: 'Callaway JAWS Full Toe', bestFor: 'Open-face shots', price: '~$180', feature1: 'High', feature2: 'Full-face grooves' },
         { rating: 4.5, affiliateKey: 'taylormade-hi-toe-3', name: 'TaylorMade Hi-Toe 3', bestFor: 'Versatility', price: '~$170', feature1: 'High', feature2: 'Full-face scoring' },
       ],
@@ -11645,7 +11654,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Hybrid Clubs — 2026',
       headers: ['Hybrid', 'Best For', 'Price', 'Launch'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: 'Callaway Paradym', bestFor: 'Best overall', price: '~$250', feature1: 'High', feature2: 'Long + forgiving', badge: 'BEST OVERALL', winner: true },
+        { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: 'Callaway Paradym', bestFor: 'Best overall', price: '~$250', feature1: 'High', feature2: 'Long + forgiving', badge: 'BEST OVERALL', winner: true },
         { rating: 4.6, affiliateKey: 'ping-g430-hybrid', name: 'Ping G430', bestFor: 'Max forgiveness', price: '~$260', feature1: 'Highest', feature2: 'Most consistent' },
         { rating: 4.4, affiliateKey: 'taylormade-stealth-hybrid', name: 'TaylorMade Stealth', bestFor: 'Best value', price: '~$180', feature1: 'High', feature2: 'Prev gen deal', badge: 'BEST VALUE' },
         { rating: 4.3, affiliateKey: 'cobra-aerojet-hybrid', name: 'Cobra Aerojet', bestFor: 'Distance', price: '~$200', feature1: 'High', feature2: 'Longest in test' },
@@ -11710,7 +11719,7 @@ export const ARTICLES: Article[] = [
       caption: 'Hybrid vs 3-Iron — Test Results',
       headers: ['Metric', 'Best For', 'Price', '3-Hybrid Result'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: '3-Hybrid', bestFor: 'Most golfers', price: '~$250', feature1: '185 yd carry', feature2: '18° launch', badge: 'RECOMMENDED', winner: true },
+        { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: '3-Hybrid', bestFor: 'Most golfers', price: '~$250', feature1: '185 yd carry', feature2: '18° launch', badge: 'RECOMMENDED', winner: true },
         { rating: 4.6, affiliateKey: 'ping-g430-irons', name: '3-Iron', bestFor: 'Low handicappers', price: '~$200', feature1: '175 yd carry', feature2: '14° launch' },
       ],
     },
@@ -12371,9 +12380,9 @@ export const ARTICLES: Article[] = [
       headers: ['Golf Ball', 'Best For', 'Price/Dz', 'Compression', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'titleist-velocity', name: 'Titleist Velocity', bestFor: 'Best Overall Distance', price: '~$35', feature1: '65', feature2: '', winner: true, rating: 4.5 },
-        { rating: 4.3, affiliateKey: 'callaway-supersoft', name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85 mph', price: '~$25', feature1: '38', feature2: '', winner: false },
+        { rating: 4.3, name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85 mph', price: '~$25', feature1: '38', feature2: '', winner: false },
         { rating: 4.4, affiliateKey: 'vice-pro-plus', name: 'Vice Pro Plus', bestFor: 'Best 95+ mph', price: '~$37', feature1: '85', feature2: '', winner: false },
-        { rating: 4.1, affiliateKey: 'wilson-duo-soft-plus', name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Best Budget', price: '~$22', feature1: '40', feature2: '', winner: false },
+        { rating: 4.1, name: 'Wilson DUO Soft+', affiliateKey: 'wilson-duo-soft-plus', bestFor: 'Best Budget', price: '~$22', feature1: '40', feature2: '', winner: false },
       ],
     },
     sections: [
@@ -13116,7 +13125,7 @@ export const ARTICLES: Article[] = [
       { q: 'How much space do I need for a golf simulator?', a: 'A basic golf simulator requires at minimum 10 feet wide, 10 feet deep, and 9 feet of ceiling height for a full driver swing. Under $1,000 setups typically use a net or impact screen against a wall in a garage or basement.' },
       { q: 'Can I build a golf simulator for under $1,000?', a: 'Yes. A Garmin R10 at $599 plus a hitting net at $100 to $150 plus a hitting mat at $100 to $150 creates a functional practice simulator under $1,000. You will not get a full projector setup at this price, but you get accurate shot data and simulation through the Garmin Golf app on a tablet.' },
       { q: 'What is the best cheap golf simulator package?', a: 'The best complete simulator package under $1,000 is the Garmin Approach R10 paired with a Spornia SPG-7 net and a Fiberbuilt micro hitting mat. Total cost is approximately $900 and delivers accurate launch data with simulation capability through the free E6 Connect app.' },
-      { q: 'Is a golf simulator better than the driving range?', a: 'A home golf simulator offers more feedback per shot than a driving range — launch angle, spin rate, club path, and carry distance on every swing. The driving range offers real ball flight and wind conditions. For pure practice efficiency, a simulator gives more data. For realistic feel, the range wins. golf simulator?', a: 'Minimum: 8.5-foot ceiling, 10-foot depth, 10-foot width. Ideal: 9+ foot ceiling, 15+ foot depth, 12+ foot width. Use our room size checker tool to verify your specific space works with your preferred monitor.' },
+      { q: 'Is a golf simulator better than the driving range?', a: 'A home golf simulator offers more feedback per shot than a driving range — launch angle, spin rate, club path, and carry distance on every swing. The driving range offers real ball flight and wind conditions. For pure practice efficiency, a simulator gives more data. For realistic feel, the range wins.' }, { q: 'How much space do I need for a golf simulator?', a: 'Minimum: 8.5-foot ceiling, 10-foot depth, 10-foot width. Ideal: 9+ foot ceiling, 15+ foot depth, 12+ foot width. Use our room size checker tool to verify your specific space works with your preferred monitor.' },
       { q: 'Can I build a golf simulator in an apartment?', a: 'Yes — with limitations. A Garmin R10 or Rapsodo MLM2Pro with a net (no projector) works in a 10x10 room with 8+ foot ceilings. See our dedicated apartment simulator guide for the specific setup.' },
     ],
     related: [
@@ -13271,13 +13280,32 @@ export const ARTICLES: Article[] = [
       { rating: 4.5, affiliateKey: 'tour-striker-alignment-sticks', name: 'Tour Striker Set', bestFor: 'Best Kit', price: '~$25', feature1: 'Fiberglass + guide', feature2: '', winner: false },
     ]},
     sections: [
-      { h2: 'Why alignment sticks work', body: 'Most golfers think they are aimed at the target. They are not. Studies show recreational golfers aim 5-15 yards right or left of their target without realizing it. Alignment sticks placed on the ground give you visual confirmation of your aim line, ball position, and stance width — eliminating the guesswork that causes mis-aimed shots.\n\nThey also help diagnose swing path: place a stick along your target line and notice whether your club travels over it (outside-in, causing slices) or under it (inside-out, causing hooks). This is the same feedback a $150 lesson provides — for $12.' },
+      { h2: 'Why alignment sticks work', body: 'Most golfers think they are aimed at the target. They are not. Studies show recreational golfers aim 5-15 yards right or left of their target without realizing it. Alignment sticks placed on the ground give you visual confirmation of your aim line, ball position, and stance width — eliminating the guesswork that causes mis-aimed shots.\n\nThey also help diagnose swing path: place a stick along your target line and notice whether your club travels over it (outside-in, causing slices) or under it (inside-out, causing hooks). This is the same feedback a $150 lesson provides — for $12.\n\nThere is a reason coaches reach for sticks before any electronic aid: feedback speed. A camera tells you after the swing what went wrong; a stick on the ground shapes the swing while it happens, with zero setup time and no screen to interpret. That immediacy is what builds a habit — you are not analyzing alignment, you are practicing it. Fifty balls hit beside a stick rewire your eyes more than five hundred hit without one, because every single rep either matched the reference or visibly did not.' },
       { h2: 'Best Alignment Sticks', badge: 'STRONG PICK', affiliateKey: 'alignment-sticks', rating: 4.8, body: 'I use a $12 pair of orange fiberglass alignment sticks from Amazon — the exact same sticks I see on Tour practice ranges. They have survived 3 seasons of range use, being stepped on, and being jammed into frozen ground in March. I bought a second pair so I can set up alignment and swing path drills simultaneously. There is genuinely no reason to spend more.\n\nHonestly, any 48-inch fiberglass alignment stick pair works. The $12 basic pair from Amazon is identical in function to $25 branded versions. Buy two pairs — one for alignment, one for swing path drills. The Tour Striker kit adds a ground holder and drill guide for $25, which is helpful for beginners who want structured practice.', price: '~$12',
         pros: ['The most cost-effective training aid in golf at $12', 'Universally recommended by teaching pros', 'Dozens of drills from alignment to swing path to ball position'],
         cons: ['Fiberglass can splinter if stepped on — handle with basic care', 'No instruction included — you need to learn the drills separately'] },
-      { h2: '5 essential alignment stick drills', body: '<strong>1. Target line:</strong> Place one stick parallel to your target line, 2 feet ahead of the ball. Confirms your alignment before every practice shot.\n\n<strong>2. Ball position:</strong> Place one stick perpendicular to your target line, pointing at the ball. Shows exactly where the ball sits in your stance — it should be center for irons, forward for driver.\n\n<strong>3. Swing path gate:</strong> Place two sticks 8 inches apart along your target line. Swing between them without hitting either — trains an inside-out path and eliminates over-the-top moves.\n\n<strong>4. Putting gate:</strong> Place two sticks just wider than your putter head on either side of the ball. Putt through the gate — trains a straight-back, straight-through stroke.\n\n<strong>5. Hip turn:</strong> Hold a stick across your hips at address. Make backswings and check that the stick rotates 45 degrees — trains proper hip turn.\n\nFor more drills, see our <a href="/golf-practice-drills-at-home/">home practice guide</a> and <a href="/best-golf-training-aids/">training aids rankings</a>.' },
+      
     
       { h2: '5 Drills That Actually Improve Your Swing', body: 'Drill 1 — Target line: Place one stick on the ground pointing at your target, parallel to your feet. This fixes aim, which is wrong for 80 percent of amateurs. Drill 2 — Ball position: Place a stick perpendicular to the target line at the ball position. Check it matches your intended position for each club. Drill 3 — Swing plane: Stick the alignment stick in the ground at 45 degrees behind you. Your club should trace below it on the backswing. Drill 4 — Hip turn: Hold a stick across your hips and turn — the stick should point at the ball at the top of the backswing. Drill 5 — Gate drill: Place two sticks 6 inches apart just in front of the ball. Swing through the gate without hitting either stick. This forces center-face contact.' },
+      { h2: 'The 6 Mistakes That Make Sticks Useless',
+        body: "Alignment sticks fail golfers in six repeatable ways, and every one of them is fixable in a single range session.\n\nMistake one: aiming the stick at the target. The stick sits on your toe line or ball line, which runs parallel-left of the target for a right-hander — a stick pointed at the flag has you aimed right before you swing. Two: laying down one stick when the drill needs two; a foot line without a ball line lets your shoulders open while your feet look perfect. Three: setting the station once and never re-checking it — sticks get kicked a degree or two off line every dozen swings, and a crooked reference trains a crooked aim.\n\nFour: practicing only straight, flat lies. Real golf happens on slopes and with shaped shots; once the basic station feels easy, angle the stick for a fade window or set it on an uphill practice lie. Five: parking the sticks in the garage. They weigh nothing — if they are not in the bag, they are not a practice tool, they are a purchase. Six: using the stick as decoration while you rake balls. The stick only works when you walk out of the station between shots and re-enter your routine every time, the way you would on the course." },
+    
+      { h2: 'The Putting Gate Drill',
+        body: "Alignment sticks earn their spot on the practice green, not just the range. Lay two sticks parallel, a putter-head-width plus a ball apart, aimed at a straight 5-foot putt. Stroke putts through the gate: if the putter or ball clips a stick, your face angle or path broke down. Ten minutes of gate work trains a square strike better than an hour of casual putting.\n\nProgress it by narrowing the gate or moving to 8 feet. Tour players live on this drill because start line is 80 percent of holing short putts — and two sticks give you instant, unmissable feedback on it.\n\nScale the gate to your miss. Start the gates a putter-head-width apart at three feet and shrink toward a ball-width-plus-a-thumb as your make rate climbs past 80 percent. Track a simple score — makes out of 20 — and stop each session on a make. If you practice on carpet at home, an <a href=\"/best-indoor-putting-green-office-home/\">indoor putting green</a> with a real cup keeps the gate drill honest through the winter months when your stroke would otherwise hibernate." },
+      { h2: 'Short Game and Bunker Uses Most Golfers Miss',
+        body: "The sticks in your bag are a short-game tool kit most owners never open. Around the greens, lay one stick three feet onto the green from the fringe as a landing-spot reference and chip to carry it — chipping to a landing zone instead of the hole is the single fastest way to control distance, and the stick makes the zone impossible to ignore. For distance-wedge calibration, two sticks laid at 10 and 20 yards turn any corner of the range into a ladder drill.\n\nIn the bunker, a stick laid a grip-length outside the ball on the target line gives you an entry-point reference: the goal is sand first, and the stick's position makes it obvious when you hit ball-first by mistake. Push a stick vertically into the sand a foot behind your ball and it becomes a shaft-lean and steepness check — clip it on the way down and your angle of attack is too shallow for the shot.\n\nEven the walk to the first tee has a use: two sticks make a perfect pre-round gate for six-footers on the practice green, which is a better use of ten minutes than draining meaningless thirty-footers before you play." },
+      { h2: 'Build a Full Practice Station',
+        body: "One stick checks alignment. Three sticks build a station that checks alignment, ball position, and swing path at once. Stick one lies along your target line beyond the ball. Stick two sits parallel along your toe line. Stick three lies perpendicular between them, pointing at the ball, marking ball position for the club you are practicing.\n\nSet the station up first at every range session — it takes 90 seconds — and every ball you hit is now a rep with verified fundamentals instead of a guess. When shots leak right or contact goes thin, the station tells you immediately whether setup drifted, which is the answer more often than the swing." },
+      { h2: 'A 20-Minute Range Session Built Around Two Sticks',
+        body: "Most range sessions die from having no plan. Here is one that fits a lunch bucket of 50 balls and two sticks.\n\nMinutes one through five: calibration. One stick on the ball line pointed at a specific flag, one on your foot line. Hit five easy wedges doing nothing but matching your setup to the sticks — the goal is boring, centered contact while your eyes recalibrate to what square actually looks like.\n\nMinutes six through twelve: the scoring block. Pick a target 130 to 160 yards out, keep both sticks down, and play a nine-shot game — three balls each with a wedge, a mid-iron, and a hybrid, scoring a point for every ball that starts inside your window. Walk out of the station between every shot. This block is where the stick earns its money, because your full routine happens against a verified-square reference.\n\nMinutes thirteen through seventeen: the fault block. Move one stick to whatever your miss is — outside the ball line as a path fence for slicers, under the trail armpit for connection, vertical in the ground as a start-line gate. Six to eight deliberate, slower swings.\n\nFinal three minutes: take the sticks away and hit five shots to a new target with full routine. The transfer test is the whole point — practice that never leaves the station never reaches the course." },
+      { h2: 'Swing Plane Checkpoints With One Stick',
+        body: "Push a stick into the ground behind the ball, leaning at your shaft angle at address, tilted toward the target. On the takeaway, the club should track just inside the stick — if you whip the club inside or lift it outside, you will feel the stick's line immediately.\n\nThe same setup checks the downswing: an over-the-top move approaches from outside the stick's plane. This is the drill for golfers fighting a slice, and it pairs directly with the path fixes in our <a href=\"/how-to-fix-your-slice/\">slice guide</a>. One stick, stuck in the ground at the right angle, is the cheapest swing-plane trainer ever made.\n\nA second high-value plane setup: the trail-hip stick. Push a stick into the ground just outside your trail foot, leaning at your shaft angle. On the backswing, the club should swing up parallel to it; a takeaway that whips inside will point noticeably flatter within the first two feet. This is the checkpoint that fixes the over-the-top loop most slicers fight, because the loop starts with that inside takeaway — catch it at hip height and the downswing never has to be rescued. Ten slow rehearsals against the stick before a range session are worth more than fifty full-speed swings guessing." },
+      { h2: 'Sticks vs String Line vs Chalk',
+        body: "On the practice green, alignment sticks compete with two classics: a string line and chalk. The string line (two pegs, taut string over the ball line) is the gold standard for reading whether putts start on line, but it takes longer to set up and needs a dead-straight putt. Chalk lines are fast and visual but wash away and are banned on some greens.\n\nSticks are the versatile middle: instant setup, reusable, and they double for every full-swing drill in this guide. If you practice putting seriously at home, add a chalk line for the carpet. On the course-side green, sticks do the job in one-tenth the setup time.\n\nThe practical answer for most golfers is sticks plus one chalk line a month. Sticks travel and set up in seconds, which makes them the everyday tool; the chalk line is the periodic audit, because it shows your putter face and eye line against a reference the sticks cannot draw on a green. String lines remain the choice for green-reading nerds and putting-lab sessions — brilliant feedback, but a five-minute setup kills daily compliance, and the tool you actually deploy beats the perfect one in the garage." },
+      { h2: 'Specs That Matter: Length, Diameter, and Material',
+        body: "Alignment sticks look like commodities until one snaps in your trunk or whips your shin on a windy day. Three specs separate the good ones. Length first: 48 inches is the working standard — long enough to read at address and to double as a swing-plane reference — while 36-inch travel sticks fit a carry bag better but disappear visually on the ball line. Collapsible three-section sticks solve the trunk problem for a few dollars more.\n\nDiameter and stiffness decide durability. The classic quarter-inch fiberglass driveway marker flexes in wind and splinters when a cart runs it over; a five-sixteenths or three-eighths rod stays put and survives abuse. If you will ever stick one vertically in firm ground — for gate drills or takeaway checks — the pointed metal tip matters more than any other feature.\n\nMaterial is fiberglass versus the newer molded polymer sticks: fiberglass is cheaper and stiffer, polymer is rounder-edged and kinder to club faces when you use a stick as a putting-gate rail. Color is not cosmetic — buy two different bright colors so the ball line and foot line never get confused mid-drill, and skip white, which vanishes against range mats." },
+      { h2: 'How Many Sticks Do You Need — and How to Carry Them',
+        body: "Two sticks cover alignment and the putting gate. Three unlock the full practice station. Most sets ship as pairs, so a single set covers 90 percent of golfers; buy two sets only if you build stations regularly.\n\nCarrying is simpler than it looks: sticks slide down the side of any stand bag between the dividers and the bag wall, or inside a travel tube in a cart bag's full-length pocket. At 30 inches or so they disappear into the bag — which is exactly why they beat every bulkier training aid: the best practice tool is the one that is always with you.\n\nStorage tip that saves both sticks and tempers: run them down the divider tube with grips up, or clip them to the outside of the bag with a rubber cinch — loose sticks rattling across your irons all round is how graphite shafts pick up mystery scratches." },
     ],
     faq: [
       { q: 'Are expensive alignment sticks better than cheap ones?', a: 'No. The $12 fiberglass pair is functionally identical to $25+ branded versions. Save your money for something that actually varies by quality — like a putting mirror or impact bag.' },

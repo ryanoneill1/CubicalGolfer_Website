@@ -1835,3 +1835,10 @@ select:focus-visible, [tabindex]:focus-visible {
   }
 }
 .footer-independence { margin: 8px 0 0; font-size: 16px; opacity: 0.85; }
+
+/* ═══ READABILITY — July 2026: prose measure cap (#64) + tag chip AA contrast ═══ */
+.art-section p, .art-section ul, .art-section ol,
+main section > p, main section ul, main section ol {
+  max-width: 76ch;
+}
+.art-tag-lg.tag-buy { background: var(--gold-text, #80641A); }
