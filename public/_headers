@@ -1,7 +1,53 @@
-# Security headers — Cloudflare Workers Static Assets (same mechanism as _redirects).
-# Conservative set: real protection, zero breakage risk for a static site.
+# ═══════════════════════════════════════════════════════════════
+# Cloudflare HTTP Headers — CubicalGolfer.com
+# Served via Workers Static Assets (same mechanism as _redirects).
+# Merged July 2026: original security+cache rules restored, plus
+# enforced baseline CSP and PDF canonicals.
+# ═══════════════════════════════════════════════════════════════
+
 /*
+  # ── HSTS: force HTTPS for 1 year, include subdomains ──
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # ── Prevent MIME-type sniffing ──
   X-Content-Type-Options: nosniff
+
+  # ── Prevent clickjacking (legacy header; CSP frame-ancestors is authoritative) ──
+  X-Frame-Options: SAMEORIGIN
+
+  # ── Control referrer leakage ──
   Referrer-Policy: strict-origin-when-cross-origin
-  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+  # ── Disable browser features we don't use ──
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()
+
+  # ── Enforced baseline CSP: safe directives only ──
   Content-Security-Policy: upgrade-insecure-requests; frame-ancestors 'self'
+
+  # ── Full strict policy in REPORT-ONLY (telemetry toward future enforcement) ──
+  Content-Security-Policy-Report-Only: default-src 'none'; script-src 'self' 'unsafe-inline' https://plausible.io https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://plausible.io https://static.cloudflareinsights.com; frame-src 'none'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'; manifest-src 'self'
+
+# ── Cache immutable hashed assets forever ──
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ── Cache images for 1 month ──
+/images/*
+  Cache-Control: public, max-age=2592000
+
+# ── Cache fonts for 1 year ──
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# ── Embeddable chart pages: allow third-party iframes ──
+/embeds/*
+  ! X-Frame-Options
+  ! Content-Security-Policy
+  Content-Security-Policy: upgrade-insecure-requests; frame-ancestors *
+
+# ── Self-referential canonicals for indexable PDFs ──
+/downloads/golf-ball-compression-chart-2026.pdf
+  Link: <https://www.cubicalgolfer.com/downloads/golf-ball-compression-chart-2026.pdf>; rel="canonical"
+/downloads/compression-cheat-sheet.pdf
+  Link: <https://www.cubicalgolfer.com/downloads/compression-cheat-sheet.pdf>; rel="canonical"

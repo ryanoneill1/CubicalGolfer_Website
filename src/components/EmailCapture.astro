@@ -26,7 +26,7 @@ const isInline = variant === 'inline';
 <div class={isInline ? 'email-inline' : 'email-strip__inner'}>
   <div class={isInline ? 'email-inline__copy' : 'email-strip__copy'}>
     {!isInline && <p class="email-strip__eyebrow">FREE DOWNLOAD</p>}
-    <h2 class={isInline ? 'email-inline__heading' : 'email-strip__heading'}>{heading}</h2>
+    <p class={isInline ? 'email-inline__heading' : 'email-strip__heading'}>{heading}</p>
     <p class={isInline ? 'email-inline__sub' : 'email-strip__sub'}>
       One-page PDF: the single best pick in every category — rangefinder, GPS watch,
       ball, glove, putter — based on 40+ rounds of testing. Print it, take it to the store, and stop second-guessing.

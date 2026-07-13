@@ -366,7 +366,7 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'What Does Forgiveness Actually Mean?', body: "A forgiving driver has high MOI (Moment of Inertia) — off-center hits lose less distance and direction. AI-designed faces also maximize ball speed across the entire face, not just the center.", sectionImage: '/images/products/driver-forgiveness-testing.webp', sectionImageAlt: 'Testing driver forgiveness on off-center strikes — the difference a weekend golfer actually feels' },
       {
-        h2: '🥇 Best Overall: Callaway Paradym AI Smoke Max',
+        h2: '🥇 Most Forgiving Overall: Callaway Paradym AI Smoke Max',
         affiliateKey: 'callaway-paradym-ai-smoke-max',
         body: "We hit roughly 200 balls with the Paradym Ai Smoke Max across four range sessions and six full rounds before forming an opinion. By the second round, it had permanently displaced the driver that had been in our bag for 18 months. The difference was not subtle — it was the kind of improvement that made us angry we had not switched sooner.\n\nThe headline is forgiveness on mishits. Callaway uses AI to design the face of every individual head, optimizing flex patterns so off-center strikes still produce competitive ball speed. We tested this deliberately: toe hits that would have lost 20 yards with our old driver lost about 8-10 yards with the Smoke Max. Heel strikes that used to balloon right held their line with only a gentle fade. On a 412-yard par 4 where we pulled our tee shot toward the left rough, the ball still carried 235 yards and rolled into the first cut instead of the trees. That is forgiveness you can feel.\n\nLaunch monitor data backed up what we saw on the course. Average carry was 228 yards at our 94 mph swing speed, with a dispersion pattern about 15% tighter than the TaylorMade Qi35 Max. Ball speed on center strikes averaged 148 mph, but the key number was ball speed on mishits — 141 mph, which is only a 5% drop. Most drivers lose 8-12% on off-center contact.\n\nThe sound is a deep, muted crack that feels powerful without being loud. The adjustable hosel lets you tweak loft and lie angle, and the draw-biased Max D version is available if you fight a slice. At 10.5 degrees with the stock Aldila Ascent shaft in regular flex, the launch conditions were ideal for our swing without any adjustments.\n\nWhat we liked most: the mishit forgiveness is genuinely a tier above everything else we tested. The AI face technology is not marketing fluff — the data proves it. The sound and feel are premium. And the adjustability means you can dial it in without a fitting, though we still recommend one.\n\nWhat we did not like: the price. At $499, this is a serious investment. The Cobra Aerojet Max delivers roughly 85% of this performance for $100 less. The stock shaft is serviceable but not exceptional — a $50 aftermarket shaft upgrade makes this driver even better, which feels like it should not be necessary at this price.\n\nCompared to the TaylorMade Qi35 Max: the Qi35 is slightly longer on pure center strikes, but the Callaway holds up significantly better on mishits. For a weekend golfer who misses the center on 40% of drives, the Callaway produces better average results across 18 holes.\n\nBuy this if: you want the most forgiving premium driver available and mishit recovery matters more to you than 3 extra yards on perfect strikes.\n\nSkip this if: you are on a budget — the Cobra Aerojet Max at $399 is the smarter play for most weekend golfers.",
         price: '~$499 at Amazon',
@@ -1341,7 +1341,7 @@ export const ARTICLES: Article[] = [
         sectionImageAlt: 'Golf ball compression testing — matching the right ball to your swing speed',
       },
       {
-        h2: 'What Actually Matters for Weekend Golfers',
+        h2: 'What Actually Matters in a Golf Ball',
         body: "Stop overthinking golf balls. Here are the only three things that matter for a 9-to-5 golfer: (1) Compression matched to swing speed — playing a Pro V1 at 80 mph costs you 8-12 yards versus a Supersoft. That is a full club of distance you are leaving on the table. (2) Urethane cover vs ionomer — if you want greenside spin, you need urethane (Pro V1, Chrome Tour, Q-Star Tour, Vice Pro). Ionomer-covered balls (Supersoft, Soft Feel) go straighter but do not stop on greens. (3) Price per ball — if you lose 4+ balls per round, a $55 dozen costs you $15-$20 per round in lost balls alone. Play a $25 ball until you keep them in play. Everything else — dimple patterns, core gradients, alignment aids — is marketing.",
       },
       {
@@ -1576,7 +1576,7 @@ export const ARTICLES: Article[] = [
     toc: ['What makes a great hot-weather glove', 'Best overall: FootJoy WeatherSof', 'Best ventilation: Titleist Players Flex', 'Best value: Callaway Dawn Patrol'],
     sections: [
       { h2: 'What Makes a Great Hot-Weather Golf Glove', body: "Perforated or mesh panels on the back for air circulation, moisture-wicking materials on the palm, and a snug fit that doesn\'t bunch when wet." },
-      { h2: 'Best Overall: FootJoy WeatherSof', affiliateKey: 'footjoy-weathersof-glove',
+      { h2: 'Best Hot-Weather Glove: FootJoy WeatherSof', affiliateKey: 'footjoy-weathersof-glove',
         body: "The #1 selling golf glove. Soft synthetic leather, Taction² palm for grip when sweaty, mesh back stays cool. Lasts 3–4x longer than premium leather.",
         rating: 4.7,
         pros: ['Hybrid microfiber and leather palm delivers consistent grip in all conditions', 'Machine washable — extends the life of each glove significantly', 'Available in 20 size variations for a precise, repeatable fit'],
@@ -2217,7 +2217,7 @@ export const ARTICLES: Article[] = [
     toc: ['Leather vs synthetic', 'Best overall: FootJoy WeatherSof', 'Best premium: Titleist Players Flex', 'Best wet weather: FootJoy RainGrip', 'How to find the right size', 'FAQ'],
     sections: [
       { h2: 'Leather vs Synthetic — Which Should You Use?', body: "Leather gloves (Cabretta) give better feel and mold to your hand over time. Synthetic gloves last longer, hold up better in heat and humidity, and are cheaper. Most weekend golfers play synthetic. Tour players mostly play Cabretta leather. For everyday play, a quality synthetic like the FootJoy WeatherSof is the practical choice." },
-      { h2: 'Best Overall: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, affiliateKey: 'footjoy-weathersof-glove', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.",
+      { h2: 'Best Overall for Men: FootJoy WeatherSof', badge: 'BEST OVERALL', rating: 4.8, affiliateKey: 'footjoy-weathersof-glove', body: "The WeatherSof is the best-selling golf glove in the world for a reason. SofTrex material is soft, breathable, and grips well even in light moisture. The FlexZone cutouts at the knuckles allow full range of motion. Comes in a 2-pack that makes it one of the best-value glove options available.",
         pros: ['Best-selling golf glove for a reason — consistent grip in all weather conditions', 'Machine washable construction extends life significantly', 'Available in 20 sizes for a glove that actually fits'],
         cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' },
       { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, affiliateKey: 'titleist-players-flex', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
@@ -3868,7 +3868,7 @@ export const ARTICLES: Article[] = [
     },
     sections: [
       {
-        h2: '🥇 Best Overall: Callaway Paradym Ai Smoke Max Irons',
+        h2: '🥇 Best for High Handicappers: Callaway Paradym Ai Smoke Max Irons',
         badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
         rating: 4.7,
         body: 'The AI face in the Paradym Ai Smoke Max is the real deal. On mishits 0.5 inches toward the toe, we lost only 4 yards vs a centered hit. On a blade, that same miss costs 15+ yards. The wide sole prevents digging in the turf — critical for high handicappers who tend to hit fat.',
@@ -4366,7 +4366,7 @@ export const ARTICLES: Article[] = [
     },
     sections: [
       {
-        h2: '🥇 Best Overall: Bushnell Tour V6 Shift',
+        h2: '🥇 Best for Seniors: Bushnell Tour V6 Shift',
         badge: 'BEST OVERALL', affiliateKey: 'bushnell-tour-v6-shift',
         rating: 4.7,
         body: 'The JOLT vibration feedback is the feature that matters most for senior golfers with less steady hands. Instead of trying to hold the crosshair perfectly still to confirm pin lock, you simply feel the device vibrate when it hits the flag. The magnetic BITE mount clips to any cart without fumbling. At 5.6 oz it is one of the lightest laser rangefinders available.',
@@ -4867,7 +4867,7 @@ export const ARTICLES: Article[] = [
     },
     sections: [
       {
-        h2: '🥇 Best Overall: Callaway Paradym Ai Smoke Max Irons',
+        h2: '🥇 Best for Seniors: Callaway Paradym Ai Smoke Max Irons',
         badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
         rating: 4.7,
         body: 'The AI Flash Face SS24 technology generates maximum ball speed across the entire face — not just the sweet spot. For senior golfers who no longer consistently hit the center of the face, this is the most important feature available in 2026. The wide sole prevents digging on turf contact, and lightweight graphite shafts are available in a Senior flex that optimizes launch for sub-90 mph swing speeds.',
@@ -5120,7 +5120,7 @@ export const ARTICLES: Article[] = [
     },
     sections: [
       {
-        h2: 'Technology: Radar vs Photometric',
+        h2: 'Technology: Trackman Radar vs GCQuad Photometric',
         body: "Trackman 4 uses dual Doppler radar combined with an HD camera (OERT — Optically Enhanced Radar Tracking). One radar measures launch conditions at impact, the second tracks the ball throughout its entire flight until it lands. This gives Trackman the unique ability to measure actual total distance, roll, and landing angle — data that no camera-based system can capture directly. Foresight GCQuad uses four high-speed cameras that photograph the ball and clubface through the impact zone, capturing over 200 images per shot. Every metric — ball speed, spin rate, spin axis, launch angle — is measured directly from these images, not calculated from algorithms. The key difference: Trackman derives some impact data (like spin axis) from ball flight modeling. Foresight measures it directly at impact. For center strikes, both are equally accurate. For mishits, Foresight delivers more consistent data because it is not affected by wind, lighting, or environmental factors that can influence radar readings.",
       },
       {
@@ -5651,7 +5651,7 @@ export const ARTICLES: Article[] = [
     ],
     sections: [
       {
-        h2: 'Quick Verdict: 4.8 out of 5',
+        h2: 'Quick Verdict on the Tour V6 Shift: 4.8 out of 5',
         badge: 'EDITOR\'S CHOICE',
         rating: 4.8,
         body: "After 40 rounds, the Bushnell Tour V6 Shift has permanently displaced every other rangefinder we own. PinSeeker JOLT locks the pin in under 0.3 seconds — even with trees, buildings, or hills behind the green. The Slope Switch is a physical toggle that makes tournament compliance effortless. Build quality is tank-like. At $329, it is the most expensive rangefinder we recommend, but it is also the only one we recommend without caveats.\n\nRating: 4.8/5 — The best rangefinder for golfers who want the best and are willing to pay for it.",
@@ -6044,7 +6044,7 @@ export const ARTICLES: Article[] = [
     testingNotes: 'Purchased at retail ($499) in 10.5° with stock Aldila Ascent Regular. Tested over 20 rounds and 300+ launch monitor shots. Mishit testing against TaylorMade Qi35 Max.',
     toc: ['Quick verdict', 'Who this is for', 'AI face technology', 'On-course testing', 'Forgiveness data', 'Sound and feel', 'Compared to Qi35 Max and Cobra Aerojet Max', 'Final verdict', 'FAQ'],
     sections: [
-      { h2: 'Quick Verdict: 4.8 out of 5', badge: 'MOST FORGIVING DRIVER', body: "The Ai Smoke Max does exactly what Callaway promises — it protects distance on off-center hits better than anything else available. Our launch monitor confirms 5% ball speed loss on toe hits versus 10-12% for competitors. For weekend golfers who hit the sweet spot 60% of the time, this driver produces the best average result across 18 holes.\n\nRating: 4.8/5 — The driver that makes bad swings less bad.", price: '~$499 at Amazon' },
+      { h2: 'Quick Verdict on the Paradym AI Smoke Max: 4.8 out of 5', badge: 'MOST FORGIVING DRIVER', body: "The Ai Smoke Max does exactly what Callaway promises — it protects distance on off-center hits better than anything else available. Our launch monitor confirms 5% ball speed loss on toe hits versus 10-12% for competitors. For weekend golfers who hit the sweet spot 60% of the time, this driver produces the best average result across 18 holes.\n\nRating: 4.8/5 — The driver that makes bad swings less bad.", price: '~$499 at Amazon' },
       { h2: 'Who This Driver Is For', body: "Handicaps of 10-25 with inconsistent driver contact. If 40% of your drives are mishits, the Ai Smoke Max produces the best 18-hole average of any driver tested.\n\nWho should skip: consistent ball strikers wanting maximum distance should look at the TaylorMade Qi35 Max (3-5 yards longer on center). Budget golfers should consider the Cobra Aerojet Max ($399) which delivers 85% of this forgiveness for $100 less." },
       { h2: 'The AI Face — What It Actually Does', body: "Callaway uses AI to design the face thickness pattern for each individual head configuration. Thin areas flex more on off-center impact, compensating for energy lost when the ball misses the sweet spot. Each head shape and loft gets its own AI-optimized face — not a one-size-fits-all stamp.\n\nWe confirmed with Callaway engineering that each configuration is individually designed. Whether this is 10% better or 2% better than TaylorMade's approach is debatable — but the data shows better ball speed retention on mishits, and that is what matters on the course." },
       { h2: 'On-Course Testing — 20 Rounds', body: "Average driving distance: 238 yards total (228 carry at 94 mph). Fairway hit rate improved from 48% with our old driver to 55%. The improvement came from mishit results — drives that would have been in the rough stayed in the fairway because they did not curve as far offline.\n\nThe moment that sold us: a par 4 where we pulled the drive toward left trees. With our old driver, that produces a pull-hook into the woods. The Ai Smoke Max held the ball in the left rough — 220 yards out with a clear shot to the green. The high MOI resisted face closure. That pattern repeated 3-4 times per round.\n\nLaunch conditions at 10.5° with Regular flex: mid-high launch, 2,400 RPM spin — ideal for our swing without adjustments." },
@@ -6187,7 +6187,7 @@ export const ARTICLES: Article[] = [
     testingNotes: 'Arccos Smart Sensors (3rd Gen) purchased at retail ($179). Used for 25 rounds over 4 months. AI suggestions tracked vs our own selection. Strokes-gained analyzed monthly.',
     toc: ['Quick verdict', 'Who this is for', 'Setup and sensors', 'Automatic tracking accuracy', 'AI Caddie — does it help?', 'Strokes-gained analysis', 'Subscription math', 'Compared to Shot Scope V5 and Garmin S62', 'Final verdict', 'FAQ'],
     sections: [
-      { h2: 'Quick Verdict: 4.6 out of 5', badge: 'BEST AI CADDIE', body: "Arccos works. AI suggestions were right 64% vs 52% for our instincts. Strokes-gained revealed we were losing 3.4 strokes/round on 125-175 yard approaches — a blind spot we never knew existed. After targeted practice, we dropped 2.1 handicap strokes in 4 months.\n\nThe subscription is the downside. $179 sensors + $99/year = $476 over 3 years. Shot Scope V5 costs $249 with no subscription. But Arccos has the better AI caddie — and that caddie moves scores.\n\nRating: 4.6/5 — Best AI caddie, held back by subscription price.", price: '~$179 + $99/yr' },
+      { h2: 'Quick Verdict on Arccos Caddie: 4.6 out of 5', badge: 'BEST AI CADDIE', body: "Arccos works. AI suggestions were right 64% vs 52% for our instincts. Strokes-gained revealed we were losing 3.4 strokes/round on 125-175 yard approaches — a blind spot we never knew existed. After targeted practice, we dropped 2.1 handicap strokes in 4 months.\n\nThe subscription is the downside. $179 sensors + $99/year = $476 over 3 years. Shot Scope V5 costs $249 with no subscription. But Arccos has the better AI caddie — and that caddie moves scores.\n\nRating: 4.6/5 — Best AI caddie, held back by subscription price.", price: '~$179 + $99/yr' },
       { h2: 'Who This System Is For', body: "Data-driven golfers playing 15+ rounds per year who want to know exactly where they gain and lose strokes. If you track stats mentally, Arccos automates it with zero effort during the round.\n\nWho should skip: fewer than 10 rounds/year — not enough data for AI learning. Budget-conscious golfers should look at Shot Scope V5 ($249 one-time). Golfers who refuse to carry their phone should note Arccos requires phone in pocket or on belt for shot detection." },
       { h2: 'Sensor Setup', body: "Sensors screw into the grip end of each club — the hole where the end cap sits. Installation: 20 minutes for 14 clubs. They add 3 grams each — imperceptible during the swing. Flush with grip end, no impact on look or feel. Pairing via Bluetooth takes 5 minutes. Assign each sensor to a club. Batteries (CR2032 coin-cell) last 12 months and cost $1 each." },
       { h2: 'Automatic Tracking — 94% Accuracy', body: "Sensors detect impact vibration and communicate with your phone via Bluetooth. The app records GPS location and identifies the club used. After the round: full shot map with every shot, club, and distance.\n\nOver 25 rounds, tracking correctly identified 94% of full shots. Occasional misses: tap-in putts, half-swing chips, and practice swings counted as shots. Post-round editing to fix errors takes 3-5 minutes — swipe to delete false shots, tap to correct clubs. Annoying but manageable." },
@@ -6262,7 +6262,7 @@ export const ARTICLES: Article[] = [
     testingNotes: 'Precision Pro NX9 HD purchased at retail ($169). Used for 25 rounds. Accuracy compared to Bushnell V6 Shift on 120+ approach shots. Lifetime warranty tested with support call.',
     toc: ['Quick verdict', 'Who this is for', 'Accuracy vs Bushnell V6', 'Pin lock speed', 'Build quality', 'The lifetime warranty', 'Compared to Bushnell V6 and Blue Tees', 'Final verdict', 'FAQ'],
     sections: [
-      { h2: 'Quick Verdict: 4.6 out of 5', badge: 'BEST VALUE RANGEFINDER', body: "The NX9 HD is the rangefinder we recommend to everyone who asks. Not because it is the best — the Bushnell V6 is faster and better built. Because it is 90% as good at 51% of the price with a warranty that lasts forever.\n\nRating: 4.6/5 — Best value in the rangefinder market.", price: '~$169 at Amazon' },
+      { h2: 'Quick Verdict on the NX9 HD: 4.6 out of 5', badge: 'BEST VALUE RANGEFINDER', body: "The NX9 HD is the rangefinder we recommend to everyone who asks. Not because it is the best — the Bushnell V6 is faster and better built. Because it is 90% as good at 51% of the price with a warranty that lasts forever.\n\nRating: 4.6/5 — Best value in the rangefinder market.", price: '~$169 at Amazon' },
       { h2: 'Who This Is For', body: "Every golfer who wants accurate slope-adjusted yardages without spending $300+. Play 10-25 rounds per year, want reliability that lasts indefinitely, and would rather spend $160 on green fees than a rangefinder premium.\n\nWho should skip: golfers playing 25+ rounds per year in tournaments should consider the Bushnell V6 for faster pin lock and the physical slope switch. Competitive golfers needing instant acquisition in high-pressure situations will notice the speed gap." },
       { h2: 'Accuracy — Within 1-2 Yards of the Bushnell V6', body: "120 side-by-side readings over 10 rounds: NX9 HD within 1 yard of V6 on 78% of readings. Within 2 yards on 94%. Maximum discrepancy: 3 yards at 230 yards — both rangefinders at their practical limits.\n\nSlope readings: within 1-2 yards of Bushnell slope on every test. Different algorithms, indistinguishable results for club selection.\n\nThe bottom line: on accuracy alone, there is no meaningful difference between a $169 rangefinder and a $329 rangefinder." },
       { h2: 'Pin Lock Speed — Where the Bushnell Earns Its Premium', body: "NX9 HD locks pins in 0.7-1.0 seconds. Bushnell V6 locks in under 0.3 seconds. You notice the difference — V6 feels instant, NX9 requires a beat. On busy backgrounds (trees, buildings), the NX9 needed a second press about 15% of the time. The Bushnell almost never did.\n\nPulse vibration confirms pin lock but is subtler than Bushnell JOLT. In 25 rounds, 3 misreads where NX9 locked onto background objects — second press corrected each time.\n\nFor casual play, NX9 speed is perfectly adequate. For tournament pressure, the Bushnell advantage is meaningful." },
@@ -9020,7 +9020,7 @@ export const ARTICLES: Article[] = [
         body: 'At 110 mph, almost any modern driver performs well — the ball compresses fully, launch angle is high enough, and spin is manageable. Below 90 mph, everything changes. The ball does not compress as much, so you need a face designed to flex more at lower impact speeds. You need more loft to achieve optimal launch angle (12-15° for 85 mph vs 10-12° for 100 mph). And you need a lighter total weight so your body can generate maximum clubhead speed without extra effort. Most drivers are designed and marketed for the 95-105 mph golfer. The five drivers below are the exceptions — they perform their best at 80-90 mph.',
       },
       {
-        h2: '🥇 Best Overall: Callaway Paradym AI Smoke Max',
+        h2: '🥇 Best for Slow Swing Speeds: Callaway Paradym AI Smoke Max',
         badge: 'BEST OVERALL',
         price: '~$499 at Amazon',
         rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max',
@@ -13548,7 +13548,7 @@ export const ARTICLES: Article[] = [
     title: 'How Golf Launch Monitors Work — Radar vs Camera Explained',
     titleDisplay: 'How Golf Launch Monitors Work — Radar, Camera & Hybrid Tech Explained',
     bottomLine: 'Radar monitors estimate spin from ball flight. Camera monitors measure spin directly from ball markings. Hybrid units do both — and cost more. Understanding the difference saves you from buying the wrong tech for your setup.',
-    description: 'How golf launch monitors work — Doppler radar vs photometric camera vs hybrid explained. What gets measured, what gets estimated, and accuracy tradeoffs.',
+    description: 'How golf launch monitors work — Doppler radar vs photometric camera explained, what is measured vs estimated, and the accuracy tradeoffs.',
     excerpt: 'Doppler radar, photometric cameras, and hybrid systems — what each measures, what it estimates, and why it matters for your purchase decision.',
     intro: 'A launch monitor is not a black box. Understanding how the technology works — and where each type cuts corners — is the difference between buying the right unit and wasting $600.',
     toc: [
