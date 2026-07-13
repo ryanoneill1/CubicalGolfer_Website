@@ -134,8 +134,8 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'evnroll-er2': "Evnroll ER2",
   'net-return-pro': "Net Return Pro",
   'odyssey-stroke-lab': "Odyssey Stroke Lab",
-  'odyssey-tri-hot-5k': "Odyssey Tri Hot 5K",
-  'odyssey-two-ball-eleven': "Odyssey Two Ball Eleven",
+  'odyssey-tri-hot-5k': "Odyssey Tri-Hot 5K",
+  'odyssey-two-ball-eleven': "Odyssey 2-Ball Eleven",
   'orange-whip-trainer': "Orange Whip Trainer",
   'ping-g430-sft': "Ping G430 SFT",
   'ping-sigma-2': "Ping Sigma 2",
@@ -258,6 +258,17 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'callaway-org-14-cart-bag': "Callaway Org 14 Cart Bag",
   'ping-hoofer-14-stand-bag': "Ping Hoofer 14 Stand Bag",
   'ogio-fuse-stand-bag': "Ogio Fuse Stand Bag",
+  'benq-tk850-projector': "BenQ TK850 Projector",
+  'callaway-big-bertha-b21-irons': "Callaway Big Bertha B21 Irons",
+  'callaway-strata-set': "Callaway Strata Complete Set",
+  'cleveland-launcher-xl-halo-irons': "Cleveland Launcher XL Halo Irons",
+  'cobra-aerojet-hybrid': "Cobra Aerojet Hybrid",
+  'flightscope-x3': "FlightScope X3",
+  'lamkin-crossline': "Lamkin Crossline Grips",
+  'mizuno-jpx923-hot-metal': "Mizuno JPX923 Hot Metal",
+  'taylormade-hi-toe-3': "TaylorMade Hi-Toe 3",
+  'taylormade-stealth-hybrid': "TaylorMade Stealth Hybrid",
+  'tour-striker-alignment-sticks': "Tour Striker Alignment Sticks",
 };
 
 /** Proper display name for an affiliate key ("golf-pride-mcc-plus4" -> "Golf Pride MCC Plus4"). */
