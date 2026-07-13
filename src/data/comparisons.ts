@@ -750,7 +750,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-r10-vs-rapsodo-mlm2pro',
     thumbnail: '/images/thumbnails/compare-garmin-r10-vs-rapsodo-mlm2pro.webp',
-    title:         'Garmin R10 vs Rapsodo MLM2Pro — Which Wins?',
+    title:         'Garmin R10 vs Rapsodo MLM2PRO — Home Range Verdict',
     description:   'Garmin Approach R10 vs Rapsodo MLM2Pro compared on accuracy, indoor/outdoor performance, app quality, and value. Tested by a weekend golfer.',
     productA:      'garmin-approach-r10',
     productB:      'rapsodo-mlm2pro',
@@ -1041,7 +1041,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug:          'rapsodo-mlm2pro-vs-bushnell-launch-pro',
-    title:         'Rapsodo MLM2PRO vs Bushnell Launch Pro — Which Monitor Wins?',
+    title:         'MLM2PRO vs Bushnell Launch Pro — Which Wins?',
     description:   'Rapsodo MLM2PRO vs Bushnell Launch Pro compared. Accuracy, app quality, sim compatibility, and 3-year cost breakdown for home and range use.',
     productA:      'rapsodo-mlm2pro',
     productB:      'bushnell-launch-pro',
@@ -1115,7 +1115,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:          'flightscope-mevo-plus-vs-bushnell-launch-pro',
-    title:         'Mevo+ vs Bushnell Launch Pro — Mid-Range Monitor Showdown',
+    title:         'Mevo+ vs Bushnell Launch Pro — Mid-Range Verdict',
     description:   'FlightScope Mevo+ vs Bushnell Launch Pro compared for accuracy, portability, sim compatibility, and value. Two $2K monitors, different strengths.',
     productA:      'flightscope-mevo-plus',
     productB:      'bushnell-launch-pro',
@@ -1220,7 +1220,7 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug:          'taylormade-tp5-vs-callaway-chrome-soft',
-    title:         'TP5 vs Chrome Soft — Tour Ball Showdown for Weekend Golfers',
+    title:         'TP5 vs Chrome Soft — Tour Ball Showdown',
     description:   'TaylorMade TP5 vs Chrome Soft tested for spin, feel, distance, and durability in 2026. Compared for mid-handicappers swinging 85 to 100 mph.',
     productA:      'taylormade-tp5',
     productB:      'callaway-chrome-soft',
@@ -1323,7 +1323,7 @@ export const COMPARISONS: Comparison[] = [
   {
     slug:          'garmin-r10-home-sim-vs-skytrak-plus-home-sim',
     title:         'Garmin R10 vs SkyTrak+ Home Sim Setup — $2K vs $5K Builds',
-    description:   'Complete home golf simulator builds compared: Garmin R10 at ~$2K vs SkyTrak+ at ~$5K. What the extra $3K gets you in accuracy, immersion, and sim quality.',
+    description:   'Complete home golf simulator builds compared: Garmin R10 at ~$2K vs SkyTrak+ at ~$5K. What the extra $3K buys in accuracy and immersion.',
     productA:      'garmin-approach-r10',
     productB:      'skytrak-plus',
     winner: 'garmin-approach-r10',
