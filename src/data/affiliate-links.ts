@@ -413,7 +413,7 @@ export const AFFILIATE: Record<string, {
 
   // Titleist T300 Irons — search (shaft variants)
   'titleist-t300': {
-    url: 'https://www.amazon.com/dp/B0BG2JTV5J/?tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=titleist+t300+irons&tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520T300%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: 'from ~$999',
@@ -538,8 +538,8 @@ export const AFFILIATE: Record<string, {
 
   // FootJoy WeatherSof — ASIN B072LZV5Z6 ✅ verified (sold by FJ directly)
   'footjoy-weathersof-glove': {
-    asin: 'B072LZV5Z6',
-    url: 'https://www.amazon.com/dp/B072LZV5Z6?&linkCode=ll2&tag=cubicalgolfer-20&linkId=8c98c4f782152b9bdfd5e95384505561&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0F6TWQZMS',
+    url: 'https://www.amazon.com/dp/B0F6TWQZMS?tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520WeatherSof%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$18',
@@ -669,7 +669,7 @@ export const AFFILIATE: Record<string, {
   'swing-caddie-sc4-pro': {
     asin: 'B0DK24YKBD',
     url: 'https://www.amazon.com/dp/B0DK24YKBD?&linkCode=ll2&tag=cubicalgolfer-20&linkId=5c9ef5f218ddecbb1d865de38ae35fbb&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Voice*+Caddie*+SC4*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Swing*+Caddie*+SC4*+Pro*+launch*+monitor*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$499',
     primaryRetailer: 'direct',
@@ -920,7 +920,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-chev-dry': {
-    url: 'https://www.amazon.com/Callaway-Golf-2021-Chev-Stand/dp/B08F9BNM9C?crid=25GRGZPZU1D8J&dib=eyJ2IjoiMSJ9.bu1-1tkh1F5DoeQnxxsxu2NLVaHd9WKh7QOXlXgMUJI20VoRcdbrhbfoZlIkOsGpfzwXrdAMuMBtK8769lexJ8NcQYIWQTzPs6XVBqtZ2QMVyriodIs7DXyd0wJ98ovPvX3w1pL7xnl0_WeA9RiM74xFJsCyCvOauUVM5Rxo2PZfkHXG8yf3xAxrBU9FiOoyldNv8gJSe6VP18k6vmYHertdW_gYfCaOW6-zum7gfZRBiJsdwmWIF2iRz9N46Pql075SfHDSUpym81RGWTj1isQfo-EYOR4f-ld3Bhxxe00.uoj6FS6Q_Dy_ZFJjI6VBbeHAoOkbUpTAuJIL_ZLpgJQ&dib_tag=se&keywords=callaway%2Bchev%2Bdry&qid=1779149341&sprefix=callaway%2Bchev%2Bdry%2Caps%2C245&sr=8-9&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=89fa1ec083a5761da4e212bb6d075b17&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Callaway+Chev+Dry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-chev-dry.webp',
@@ -1001,7 +1001,7 @@ export const AFFILIATE: Record<string, {
 
   'voice-caddie-sc4-pro': {
     url: 'https://www.amazon.com/s?k=voice-caddie-sc4-pro&crid=R0YFUFN6YD9F&sprefix=voice-caddie-sc4-pro%2Caps%2C259&linkCode=ll2&tag=cubicalgolfer-20&linkId=8e2fa05dc74c59d62dc3f1ac29978eb8&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Voice*+Caddie*+SC4*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Swing*+Caddie*+SC4*+Pro*+launch*+monitor*&ghref=2301%3A1333883',
     retailer: 'Amazon',
     price: '~$499',
     primaryRetailer: 'direct',
@@ -1271,7 +1271,8 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'fiberbuilt-studio-mat': {
-    url: 'https://www.amazon.com/dp/B06Y5NX641?&linkCode=ll2&tag=cubicalgolfer-20&linkId=392946ce8eaf9e04f6904dca407e4464&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B09M46XSL4',
+    url: 'https://www.amazon.com/dp/B09M46XSL4?tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$449',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
@@ -1483,7 +1484,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['Ball return chute — no bending to retrieve', 'Alignment guides printed on surface', 'Compact 7-foot length fits most offices'],
   },
   'birdieball-putting-green': {
-    url: 'https://www.amazon.com/s?k=birdieball-putting-green&crid=2O7P9PE8BWNV0&sprefix=birdieball-putting-green%2Caps%2C337&ref=nb_sb_noss_2',
+    url: 'https://www.amazon.com/s?k=birdieball+putting+green&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$169',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
@@ -1851,7 +1852,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'maxfli-milled-52': {
-    url: 'https://www.amazon.com/dp/B0D4P8BQRL/?tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=maxfli+milled+52+degree+wedge&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$80',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1922,7 +1923,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'superstroke-s-tech': {
-    url: 'https://www.amazon.com/dp/B07WFHYZJG/?tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=SuperStroke+S-Tech+golf+grip&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$13/grip',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -2086,7 +2087,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Ping Sigma 2 Anser blade putter',
   },
   'rukket-haack-net': {
-    url: 'https://www.amazon.com/dp/B019NXQG3U/?tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=rukket+haack+golf+net&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     benefits: [
       '10x7 ft — fits spaces larger nets cannot',
@@ -2615,7 +2616,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'super-stroke-s-tech': {
-    url: 'https://www.amazon.com/dp/B07WFHYZJG/?tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=SuperStroke+S-Tech+golf+grip&tag=cubicalgolfer-20',
     retailer: 'Amazon',
     price: '~$7',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -2917,9 +2918,9 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Cleveland Launcher XL Halo irons',
   },
   'cleveland-launcher-xl': {
-    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl+halo+irons&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl+driver&tag=cubicalgolfer-20',
     retailer: 'Amazon',
-    price: '~$599',
+    price: '~$199',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/cleveland-launcher-xl.webp', imgAlt: 'Cleveland Launcher XL driver',
@@ -3361,6 +3362,30 @@ export const AFFILIATE: Record<string, {
       'Reliable legs that deploy on any surface',
       '14-way top prevents club tangling',
     ],
+  },
+  'callaway-rogue-st-max': {
+    asin: 'B09KNV2CDV',
+    url: 'https://www.amazon.com/dp/B09KNV2CDV?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$299',
+    priceNote: 'Previous-gen flagship — deep discounts since the Paradym release.',
+    label: 'Check Price at Amazon →',
+  },
+  'bushnell-pro-x3': {
+    asin: 'B0D6GVX8JZ',
+    url: 'https://www.amazon.com/dp/B0D6GVX8JZ?tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$479',
+    primaryRetailer: 'amazon',
+    priceNote: 'Price is typical for this category. Check link for any current promotions.',
+    label: 'Check Price at Amazon →',
+  },
+  'callaway-chev-dry': {
+    url: 'https://www.amazon.com/s?k=callaway+chev+dry+stand+bag&tag=cubicalgolfer-20',
+    retailer: 'Amazon',
+    price: '~$129',
+    priceNote: 'Chev Dry stock on Amazon comes and goes — link shows current Chev availability.',
+    label: 'Check Price at Amazon →',
   },
 };
 

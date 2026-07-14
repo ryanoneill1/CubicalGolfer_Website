@@ -7233,7 +7233,7 @@ export const ARTICLES: Article[] = [
         pros: ['25,000mm waterproof — survived 4-hour sideways rain', 'Full swing mobility — no restriction on any shot', 'Taped seams prevent shoulder leaks', 'Longer back hem stays tucked during swing'],
         cons: ['$299 for full suit is a real investment', 'Not as breathable as lighter jackets in July heat', 'Only available online — no retail try-on'],
       },
-      { h2: 'Best Rain Glove: FootJoy RainGrip', badge: 'BEST RAIN GLOVE', body: "Regular leather golf gloves become useless wet rags in rain. The FootJoy RainGrip is specifically designed to grip better when wet — the synthetic material actually gets tackier with moisture. I wear them as a pair (both hands) in rain rounds, and my grip is more secure in a downpour than my normal glove is on a dry day. At $18 per glove ($36 for a pair) they are the cheapest insurance against losing a club in the rain. They last 15-20 wet rounds before the grip surface wears.", price: '~$18', affiliateKey: 'footjoy-raingrip', rating: 4.5,
+      { h2: 'Best Rain Glove: FootJoy RainGrip', badge: 'BEST RAIN GLOVE', body: "Regular leather golf gloves become useless wet rags in rain. The FootJoy RainGrip is specifically designed to grip better when wet — the synthetic material actually gets tackier with moisture. I wear them as a pair (both hands) in rain rounds, and my grip is more secure in a downpour than my normal glove is on a dry day. At about $13 per glove (~$26 for the 2-pack) they are the cheapest insurance against losing a club in the rain. They last 15-20 wet rounds before the grip surface wears.", price: '~$18', affiliateKey: 'footjoy-raingrip', rating: 4.5,
         pros: ['Grips better wet than dry — by design', 'Under $20 per glove', 'Lasts 15-20 wet rounds', 'Available in both left and right hand'],
         cons: ['Thicker feel than regular gloves — some golfers dislike', 'Not ideal for dry conditions', 'Sizing runs slightly large'],
       },
@@ -7459,7 +7459,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-06-30',
     title: 'Best Golf Gifts Under $50 That Golfers Actually Use (2026)',
     titleDisplay: 'Best Golf Gifts Under $50 That Actually Get Used',
-    bottomLine: 'The best golf gifts under $50 are the ones that get used every single round. A <strong>3-pack of FootJoy WeatherSof gloves</strong> ($36), a <strong>groove cleaning brush</strong> ($8), and a <strong>dozen Srixon Soft Feels</strong> ($22) will make any golfer happy — and cost $66 total for all three.',
+    bottomLine: 'The best golf gifts under $50 are the ones that get used every single round. A <strong>2-pack of FootJoy WeatherSof gloves</strong> ($26), a <strong>groove cleaning brush</strong> ($8), and a <strong>dozen Srixon Soft Feels</strong> ($22) will make any golfer happy — and cost $66 total for all three.',
     description: 'The 4 golf gifts under $50 that golfers actually use every round. No novelty junk — just gloves, balls, towels, and training aids picked by a weekend.',
     excerpt: '4 golf gifts under $50 that golfers actually use — no novelty junk, just gear for every round.',
     intro: 'The best golf gift under $50 is a <strong>dozen Srixon Soft Feel balls</strong> at $27 — every golfer needs balls, and these perform well for all skill levels. For a more personal gift, a <strong>FootJoy WeatherSof 2-pack</strong> ($30) gives two premium gloves that last 20+ rounds each. Every pick on this list was chosen because golfers actually want it — not because it says golf on the box.\n\nThe best golf gifts are not the most expensive ones — they are the ones that end up in the bag and get used every round. Here are the 4 gifts under $50 that every golfer needs, wants, and will not buy for themselves.',
@@ -7469,7 +7469,7 @@ export const ARTICLES: Article[] = [
     ],
     toc: ['Best glove set', 'Best golf balls under $30', 'Best towel', 'Best groove brush', 'Best training aid', 'Comparison table', 'FAQ'],
     sections: [
-      { h2: 'Best Glove Set: FootJoy WeatherSof 3-Pack', badge: 'BEST OVERALL', body: "Gloves wear out. Every golfer needs fresh ones, and most are playing a ratty glove they should have replaced 10 rounds ago. A 3-pack of FootJoy WeatherSofs ($36) gives them a full season of grip. These are the most popular golf glove on the planet for a reason — soft leather feel, durable construction, and consistent sizing.", price: '~$36', affiliateKey: 'footjoy-weathersof-glove', rating: 4.7,
+      { h2: 'Best Glove Set: FootJoy WeatherSof 2-Pack', badge: 'BEST OVERALL', body: "Gloves wear out. Every golfer needs fresh ones, and most are playing a ratty glove they should have replaced 10 rounds ago. A 3-pack of FootJoy WeatherSofs ($36) gives them a full season of grip. These are the most popular golf glove on the planet for a reason — soft leather feel, durable construction, and consistent sizing.", price: '~$36', affiliateKey: 'footjoy-weathersof-glove', rating: 4.7,
         pros: ['3-pack lasts a full season', 'Most popular golf glove in the world', 'Consistent sizing — no guessing'],
         cons: ['Need to know their glove size and hand (L/R)', 'Leather wears faster in humid climates'],
       },
@@ -7491,7 +7491,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Gift', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof 3-Pack', bestFor: 'Best Overall', price: '~$36', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof 2-Pack', bestFor: 'Best Overall', price: '~$26', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
         { rating: 4.2, affiliateKey: 'srixon-soft-feel', name: 'Srixon Soft Feel (dozen)', bestFor: 'Best Balls', price: '~$22', feature1: '4.5/5 ★', winner: false },
         { rating: 4.4, affiliateKey: 'groove-cleaning-brush', name: 'Groove Cleaning Brush', bestFor: 'Best Under $10', price: '~$8', feature1: '4.4/5 ★', winner: false },
         { rating: 4.9, affiliateKey: 'alignment-sticks', name: 'Alignment Sticks', bestFor: 'Best Training Aid', price: '~$12', feature1: '4.6/5 ★', winner: false },
@@ -7551,7 +7551,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'garmin-approach-s42', name: 'Garmin Approach S42', bestFor: 'Best Under $250', price: '~$249', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
         { rating: 4.9, affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1 (dozen)', bestFor: 'Best Under $50', price: '~$55', feature1: '4.9/5 ★', winner: false },
-        { rating: 4.7, affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof 3-Pack', bestFor: 'Best Under $50', price: '~$36', feature1: '4.7/5 ★', winner: false },
+        { rating: 4.7, affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof 2-Pack', bestFor: 'Best Under $50', price: '~$26', feature1: '4.7/5 ★', winner: false },
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Splurge', price: '~$699', feature1: '4.7/5 ★', winner: false },
       ],
     },
@@ -8943,7 +8943,7 @@ export const ARTICLES: Article[] = [
         h2: 'Honorable Mention: Callaway Rogue ST Max',
         badge: 'ALSO GREAT',
         price: '~$249 at Amazon',
-        rating: 4.6, affiliateKey: 'callaway-reva-driver',
+        rating: 4.6, affiliateKey: 'callaway-rogue-st-max',
         body: 'The Callaway Rogue ST Max frequently drops below $250 on sale, making it the best value in golf when you catch it at the right price. The Jailbreak AI Speed Frame connects the sole to the crown, stiffening the body so more energy transfers to the ball at impact. At 92 mph, we measured 235 yards of carry — respectable for a driver that costs less than a dozen Pro V1s at full retail. The Rogue ST Max has a higher spin profile than the Cobra or TaylorMade options in this group, which helps golfers with slower swing speeds (under 90 mph) get the ball airborne. Faster swingers may find it launches too high. Adjustability includes an OptiFit hosel with standard and draw settings. The main limitation is the older Jailbreak technology — it works well but has been superseded by the Paradym AI design. For golfers who care about performance per dollar and are willing to buy a 2-generation-old driver, the Rogue ST Max is hard to beat.',
         pros: [
           'Frequently available under $250 — best value when on sale',
@@ -8965,7 +8965,7 @@ export const ARTICLES: Article[] = [
         { name: 'Cleveland Launcher XL2', bestFor: 'Budget / Seniors', price: '~$249', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver' },
         { name: 'Ping G430 SFT', bestFor: 'Slicers', price: '~$299', feature1: '4.5/5 ★', feature2: '', winner: false, rating: 4.5, affiliateKey: 'ping-g430-sft' },
         { name: 'TaylorMade Stealth 2 HD', bestFor: 'Max Distance', price: '~$279', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.4, affiliateKey: 'taylormade-stealth-2-hd' },
-        { name: 'Callaway Rogue ST Max', bestFor: 'Value Pick', price: '~$249', feature1: '4.3/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-reva-driver' },
+        { name: 'Callaway Rogue ST Max', bestFor: 'Value Pick', price: '~$249', feature1: '4.3/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-rogue-st-max' },
       ],
     },
     faq: [

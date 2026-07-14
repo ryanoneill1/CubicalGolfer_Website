@@ -931,7 +931,7 @@ export const COMPARISONS: Comparison[] = [
     thumbnail: '/images/thumbnails/compare-bushnell-pro-x3-vs-tour-v6.webp',
     title:         'Bushnell Pro X3 vs Tour V6 — Which to Buy?',
     description:   'Bushnell Pro X3 vs Tour V6 Shift comparison. Accuracy, slope, optics, and whether the premium Pro X3 is worth the upgrade for a weekend golfer.',
-    productA:      'bushnell-pro-xe',
+    productA:      'bushnell-pro-x3',
     productB:      'bushnell-tour-v6-shift',
     winner:        'bushnell-tour-v6-shift',
     specs: [

@@ -6,6 +6,8 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'blue-tees-series-3-max': "Blue Tees Series 3 Max",
   'garmin-approach-z82': "Garmin Approach Z82",
   'bushnell-pro-xe': "Bushnell Pro XE",
+  'bushnell-pro-x3': "Bushnell Pro X3",
+  'callaway-rogue-st-max': "Callaway Rogue ST Max",
   'garmin-approach-s62': "Garmin Approach S62",
   'garmin-approach-s42': "Garmin Approach S42",
   'shot-scope-v5': "Shot Scope V5",
