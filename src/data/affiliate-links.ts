@@ -135,7 +135,7 @@ export const AFFILIATE: Record<string, {
     heroWhoFor: 'Golfers who want yardages, shot tracking, and smart club suggestions on their wrist.',
     asin: 'B083BJSYZ9',
     url: 'https://www.amazon.com/dp/B083BJSYZ9?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e72a18832542c8be1be00a9e4e7c02cf&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s62-premium-golf-gps-smartwatch-20gmnupprchs62blcgps%2F20gmnupprchs62blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S62',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fgarmin-approach-s62%2Fsearch',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -208,7 +208,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Paradym AI Smoke Max (2024) — search (shaft/loft variants)
   'callaway-paradym-ai-smoke-max': {
     url: 'https://www.amazon.com/s?k=callaway-paradym-ai-smoke-max&crid=92H1TORWBRWG&sprefix=callaway-paradym-ai-smoke-max%2Caps%2C273&linkCode=ll2&tag=cubicalgolfer-20&linkId=d31411ba8352b4d9f7296f9db3a8a1cc&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Paradym%2520AI%2520Smoke%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-paradym-ai-smoke-max%2Fsearch',
     retailer: 'Amazon',
     price: '~$499',
     primaryRetailer: 'direct',
@@ -226,7 +226,7 @@ export const AFFILIATE: Record<string, {
   // TaylorMade Qi35 Max (2025) — search (shaft/loft variants)
   'taylormade-qi35-max': {
     url: 'https://www.amazon.com/s?k=taylormade-qi35-max&crid=3FDRIP5XMD1B3&sprefix=taylormade-noodle%2Caps%2C251&linkCode=ll2&tag=cubicalgolfer-20&linkId=c62574dee5a02cfe82a43e560fd5577a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Qi35%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-qi35-max%2Fsearch',
     retailer: 'Amazon',
     price: '~$599',
     primaryRetailer: 'direct',
@@ -244,7 +244,7 @@ export const AFFILIATE: Record<string, {
   // Cobra Aerojet Max — search (shaft/loft variants)
   'cobra-aerojet-max': {
     url: 'https://www.amazon.com/s?k=cobra-aerojet-max&crid=269HHYD8SEIV8&sprefix=cobra-aerojet-max%2Caps%2C227&linkCode=ll2&tag=cubicalgolfer-20&linkId=b4b26642d6a85f8ba3f4b990168c5170&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCobra%2520Aerojet%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcobra-aerojet-max%2Fsearch',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -262,7 +262,7 @@ export const AFFILIATE: Record<string, {
   // Ping G430 Max Driver — search (shaft/loft variants)
   'ping-g430-max-driver': {
     url: 'https://www.amazon.com/s?k=ping-g430-max-driver&crid=1HU7Q4J68VJSR&sprefix=ping-g430-irons%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=851dc1f118c6e16c2e9e00068f21d081&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G430%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-g430-max%2Fsearch',
     retailer: 'Amazon',
     price: '~$449',
     primaryRetailer: 'direct',
@@ -296,7 +296,7 @@ export const AFFILIATE: Record<string, {
     heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
     asin: 'B0BR2YF8T6',
     url: 'https://www.amazon.com/dp/B0BR2YF8T6?&linkCode=ll2&tag=cubicalgolfer-20&linkId=591502395d795cff42f0e3624096474a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Pro%2520V1%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-pro-v1%2Fsearch',
     retailer: 'Amazon',
     price: '~$55/dozen',
     priceNote: 'Best value: buy 2+ dozen during Prime Day or Black Friday.',
@@ -313,7 +313,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Chrome Tour 2026 — search (very new Jan 2026, single ASIN not yet stable)
   'callaway-chrome-tour-2026': {
     url: 'https://www.amazon.com/s?k=callaway-chrome-tour-2026&crid=11X1E4VP7YO2A&sprefix=callaway-chrome-tour-2026%2Caps%2C293&linkCode=ll2&tag=cubicalgolfer-20&linkId=5ca2d959a8efc39ebff64533f50ab93a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Tour%25202026%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-chrome-tour-2026%2Fsearch',
     retailer: 'Amazon',
     price: '~$58/dozen',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -331,7 +331,7 @@ export const AFFILIATE: Record<string, {
   // TaylorMade TP5 2024 — search (colour/generation variants)
   'taylormade-tp5': {
     url: 'https://www.amazon.com/s?k=taylormade-tp5&crid=YNIGUF63T20Q&sprefix=taylormade-tour-response%2Caps%2C265&linkCode=ll2&tag=cubicalgolfer-20&linkId=9b4f4e88a08115c2f4c0c1b2ab4aef74&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520TP5%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-tp5%2Fsearch',
     retailer: 'Amazon',
     price: '~$50/dozen',
     priceNote: 'Best value: buy 2+ dozen during Prime Day or Black Friday.',
@@ -343,7 +343,7 @@ export const AFFILIATE: Record<string, {
   // Srixon Soft Feel — search (dozen size variants)
   'srixon-soft-feel': {
     url: 'https://www.amazon.com/s?k=srixon-soft-feel&crid=2XPA2W584MVXT&sprefix=srixon-soft-feel%2Caps%2C223&linkCode=ll2&tag=cubicalgolfer-20&linkId=29063a8fe9a84c4409ae436a1300a492&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Soft%2520Feel%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsrixon-soft-feel%2Fsearch',
     retailer: 'Amazon',
     price: '~$27/dozen',
     priceNote: 'Already a value pick — rarely goes lower than listed price.',
@@ -377,7 +377,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Supersoft (mentioned in FAQ of balls page)
   'callaway-supersoft': {
     url: 'https://www.amazon.com/dp/B0F2FSR89S?&linkCode=ll2&tag=cubicalgolfer-20&linkId=297672ce5a5cae9464ffce71f539e866&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Supersoft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-supersoft%2Fsearch',
     retailer: 'Amazon',
     price: '~$25/dozen',
     priceNote: 'Already a value pick — rarely goes lower than listed price.',
@@ -396,7 +396,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Paradym AI Smoke Max Irons (2024) — search (shaft/set config)
   'callaway-paradym-ai-smoke-max-irons': {
     url: 'https://www.amazon.com/s?k=callaway-paradym-ai-smoke-max-irons&crid=28O9JXUM3YLK4&sprefix=callaway-paradym-ai-smoke-max-irons%2Caps%2C223&linkCode=ll2&tag=cubicalgolfer-20&linkId=9af1d0fce2ba7b72cb5355dbe4525b99&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Paradym%2520AI%2520Smoke%2520Max%2520Irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-paradym-ai-smoke-max-irons%2Fsearch',
     retailer: 'Amazon',
     price: 'from ~$899',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
@@ -414,7 +414,7 @@ export const AFFILIATE: Record<string, {
   // Titleist T300 Irons — search (shaft variants)
   'titleist-t300': {
     url: 'https://www.amazon.com/s?k=titleist+t300+irons&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520T300%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-t300%2Fsearch',
     retailer: 'Amazon',
     price: 'from ~$999',
     priceNote: 'Click to see current price — prices change frequently.',
@@ -431,8 +431,8 @@ export const AFFILIATE: Record<string, {
 
   // Titleist T100 Irons — search (shaft variants)
   'titleist-t100': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtitleist%2520t100%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520T100%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-t100%2Fsearch',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-t100%2Fsearch',
     retailer: 'Amazon',
     price: 'from ~$1,099',
     priceNote: 'Click to see current price — prices change frequently.',
@@ -444,7 +444,7 @@ export const AFFILIATE: Record<string, {
   // Ping G430 Irons — search (shaft variants)
   'ping-g430-irons': {
     url: 'https://www.amazon.com/s?k=ping-g430-irons&crid=26DOLJQXUKNCK&sprefix=ping-g-le3-irons%2Caps%2C281&linkCode=ll2&tag=cubicalgolfer-20&linkId=0b6addcf8c874447523eb837b6e5b3f2&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-g430-irons-22pngmg430gph4pwlirn%2F22pngmg430gph4pwlirn%3FenteredSearchTerm%3DPing%2520G430%2520Irons',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-g430-irons%2Fsearch',
     retailer: 'Amazon',
     price: 'from ~$999',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
@@ -460,8 +460,8 @@ export const AFFILIATE: Record<string, {
 
   // Wilson D9 Irons — search (shaft variants)
   'wilson-d9-irons': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dwilson%2520d9%2520irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520D9%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fwilson-d9-irons%2Fsearch',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fwilson-d9%2Fsearch',
     retailer: 'Amazon',
     price: 'from ~$599',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
@@ -481,7 +481,7 @@ export const AFFILIATE: Record<string, {
   'wilson-profile-sgi': {
     asin: 'B09X2FJ9XX',
     url: 'https://www.amazon.com/dp/B07HN4LLQN?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=9726fc10d4ec76b9e69609e363b6f47f&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520Profile%2520SGI%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fwilson-profile-sgi%2Fsearch',
     retailer: 'Amazon',
     price: '~$299',
     primaryRetailer: 'direct',
@@ -500,7 +500,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Strata Complete Set — search (varies by piece count / gender)
   'callaway-strata': {
     url: 'https://www.amazon.com/s?k=callaway-strata&crid=NX1FUJPIBPHI&sprefix=callaway-strata%2Caps%2C237&linkCode=ll2&tag=cubicalgolfer-20&linkId=f8eee3914245b8609f8a6c2f47dc6e7f&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-strata%2Fsearch',
     retailer: 'Amazon',
     price: '~$249',
     primaryRetailer: 'direct',
@@ -518,8 +518,8 @@ export const AFFILIATE: Record<string, {
 
   // TaylorMade RBZ Speed Lite — search (current model name varies by year)
   'taylormade-rbz-lite': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520rbz%2520lite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.golfgalaxy.com/search/SearchDisplay?cjdata=MXxOfDB8WXww&searchTerm=taylormade%20rbz%20speedlite&storeId=10701&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&fromPage=Search&searchSource=Q&pageView=&beginIndex=0&DSGsearchType=Keyword&selectedStore=1521&camp=AFF:mediapartner:TEXT_link::7938781:Cubical%20Golfer&cjevent=2616ecc1480c11f183a200680a82b820',
+    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-rbz-lite%2Fsearch',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-rbz-speedlite%2Fsearch',
     retailer: 'Amazon',
     price: '~$499',
     primaryRetailer: 'direct',
@@ -540,7 +540,7 @@ export const AFFILIATE: Record<string, {
   'footjoy-weathersof-glove': {
     asin: 'B0F6TWQZMS',
     url: 'https://www.amazon.com/dp/B0F6TWQZMS?tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520WeatherSof%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ffootjoy-weathersof%2Fsearch',
     retailer: 'Amazon',
     price: '~$18',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.',
@@ -611,7 +611,7 @@ export const AFFILIATE: Record<string, {
     heroWhoFor: 'Data-driven golfers who want to know exactly where they lose strokes each round.',
     asin: 'B0B5TW3HNG',
     url: 'https://www.amazon.com/dp/B09YJ5H6BQ?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=9cb14bd7f2b5cda6a4acf512ad239cda&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DArccos%2520Caddie%2520Sensors%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Farccos-caddie-sensors%2Fsearch',
     retailer: 'Amazon',
     price: '~$179 + $99/yr',
     priceNote: 'Watch for sensor + subscription bundles that save $30-50.',
@@ -825,7 +825,7 @@ export const AFFILIATE: Record<string, {
   // ── PUTTERS ───────────────────────────────────────────────────────────────
   'odyssey-white-hot-og': {
     url: 'https://www.amazon.com/s?k=odyssey-white-hot-og&crid=16YH6OZ4FJA4I&sprefix=odyssey-white-hot-og%2Caps%2C228&linkCode=ll2&tag=cubicalgolfer-20&linkId=3d89d732d7ee894fc9bfdf10993f57f2&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520white%2520hot%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-white-hot%2Fsearch',
     retailer: 'Amazon', price: '~$199',
     priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/odyssey-white-hot-og.webp',
@@ -839,7 +839,7 @@ export const AFFILIATE: Record<string, {
   },
   'scotty-cameron-phantom': {
     url: 'https://www.amazon.com/s?k=scotty-cameron-phantom&crid=16726EA46FP7R&sprefix=rypstick-trainer%2Caps%2C243&linkCode=ll2&tag=cubicalgolfer-20&linkId=1464eccecd943e0623bab127841e999e&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DScotty%2520Cameron%2520Phantom%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fscotty-cameron-phantom%2Fsearch',
     retailer: 'Amazon', price: '~$399',
     primaryRetailer: 'direct',
     priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.', label: 'See Today\'s Price →',
@@ -853,7 +853,7 @@ export const AFFILIATE: Record<string, {
   },
   'cleveland-hb-soft-milled': {
     url: 'https://www.amazon.com/s?k=cleveland-hb-soft-milled&crid=30EY0R7HUBJ6N&sprefix=cleveland-hb-soft-milled%2Caps%2C285&linkCode=ll2&tag=cubicalgolfer-20&linkId=9bf4b0b7d293ce2e5b7002a99448e433&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520HB%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcleveland-hb-soft%2Fsearch',
     retailer: 'Amazon', price: '~$129',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/cleveland-hb-soft-milled.webp',
@@ -867,7 +867,7 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-spider-tour': {
     url: 'https://www.amazon.com/s?k=taylormade-spider-tour&crid=3N32I6ST6E4JX&sprefix=taylormade-spider-gt%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=574eb1ab3ec838c23feb93200150c327&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Spider%2520Tour%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-spider-tour%2Fsearch',
     retailer: 'Amazon', price: '~$349',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'See Today\'s Price →',
@@ -877,8 +877,8 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BAGS ─────────────────────────────────────────────────────────────
   'sun-mountain-25-plus': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dsun%2520mountain%25202.5%2520plus%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSun%2520Mountain%25202.5%2520%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsun-mountain-2-5-plus%2Fsearch',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsun-mountain-2-5%2Fsearch',
     retailer: 'Amazon', price: '~$249',
     primaryRetailer: 'direct',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
@@ -893,7 +893,7 @@ export const AFFILIATE: Record<string, {
   },
   'titleist-players-4': {
     url: 'https://www.amazon.com/s?k=titleist-players-4&crid=1HNFQNUSMRDUT&sprefix=titleist-avx%2Caps%2C259&linkCode=ll2&tag=cubicalgolfer-20&linkId=07e9785b91ed0a519f0b9a0eb36d063e&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Players%25204%2520StaDry%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-players-4-stadry%2Fsearch',
     retailer: 'Amazon', price: '~$279',
     primaryRetailer: 'direct',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
@@ -908,7 +908,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-fairway-14': {
     url: 'https://www.amazon.com/s?k=callaway-fairway-14&crid=34KQ76QT6T3ZQ&sprefix=callaway-fairway-14%2Caps%2C209&linkCode=ll2&tag=cubicalgolfer-20&linkId=f722c38b6fcc256597908f7d426b38a1&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Fairway%252014%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-fairway-14%2Fsearch',
     retailer: 'Amazon', price: '~$179',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-fairway-14.webp',
@@ -922,7 +922,7 @@ export const AFFILIATE: Record<string, {
   'callaway-chev-dry': {
     url: 'https://www.amazon.com/s?k=Callaway+Chev+Dry+stand+bag&tag=cubicalgolfer-20',
     retailer: 'Amazon', price: '~$129',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
+    priceNote: 'Chev Dry stock on Amazon comes and goes — link shows current Chev availability.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-chev-dry.webp',
     imgAlt: 'Callaway Chev Dry Stand Bag',
   },
@@ -930,7 +930,7 @@ export const AFFILIATE: Record<string, {
   // ── GOLF BALLS (additional) ───────────────────────────────────────────────
   'titleist-pro-v1x': {
     url: 'https://www.amazon.com/s?k=titleist-pro-v1x&crid=1BMO392SRDU90&sprefix=titleist-players-flex%2Caps%2C265&linkCode=ll2&tag=cubicalgolfer-20&linkId=be654cecda572a69e7ef645e46400c56&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Pro%2520V1x%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-pro-v1x%2Fsearch',
     retailer: 'Amazon', price: '~$55/dozen',
     priceNote: 'Best value: buy 2+ dozen during Prime Day or Black Friday.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-pro-v1x.webp',
@@ -946,7 +946,7 @@ export const AFFILIATE: Record<string, {
   // ── GOLF SHOES ────────────────────────────────────────────────────────────
   'footjoy-flex-xp': {
     url: 'https://www.amazon.com/s?k=footjoy-flex-xp&crid=2EM96HIZRA5WX&sprefix=footjoy-flex-xp%2Caps%2C227&linkCode=ll2&tag=cubicalgolfer-20&linkId=a1a22933a6b5955d23e1d1d51a312607&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520Flex%2520XP%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ffootjoy-flex-xp%2Fsearch',
     retailer: 'Amazon', price: '~$120',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-flex-xp.webp',
@@ -960,7 +960,7 @@ export const AFFILIATE: Record<string, {
   },
   'skechers-go-golf': {
     url: 'https://www.amazon.com/s?k=skechers-go-golf&crid=2A722I92PMVWE&sprefix=scotty-cameron-phantom-x%2Caps%2C255&linkCode=ll2&tag=cubicalgolfer-20&linkId=2977c6eb7f014d49fc6ec1b9576ac456&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSkechers%2520Go%2520Golf%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fskechers-go-golf%2Fsearch',
     retailer: 'Amazon', price: '~$85',
     priceNote: 'Great value at this price point. Rarely drops lower.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/skechers-go-golf-elite-5.webp',
@@ -968,7 +968,7 @@ export const AFFILIATE: Record<string, {
   },
   'footjoy-tour-alpha': {
     url: 'https://www.amazon.com/s?k=footjoy-tour-alpha&crid=D1UBUESKM0FM&sprefix=footjoy-tour-alpha%2Caps%2C262&linkCode=ll2&tag=cubicalgolfer-20&linkId=74fc8fb909fb433edd9ecc408eaf9126&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ffootjoy-mens-2022-tour-alpha-golf-shoesprevious-season-style-21fjymtrlph22whtbgsh%2F21fjymtrlph22whtbgsh%3FenteredSearchTerm%3DFootJoy%2520Tour%2520Alpha',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ffootjoy-tour-alpha-golf-shoes%2Fsearch',
     retailer: 'Amazon', price: '~$200',
     primaryRetailer: 'direct',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.', label: 'See Today\'s Price →',
@@ -1166,7 +1166,7 @@ export const AFFILIATE: Record<string, {
   // ── Golf Balls for 90 MPH Swing Speed ────────────────────────────────────────
   'srixon-q-star-tour': {
     url: 'https://www.amazon.com/s?k=srixon-q-star-tour&crid=O3KE1R8W1XUG&sprefix=square-golf-monitor%2Caps%2C283&linkCode=ll2&tag=cubicalgolfer-20&linkId=9afc1540365836166be1ec0145e07847&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Q-Star%2520Tour%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsrixon-q-star-tour%2Fsearch',
     retailer: 'Amazon',
     price: '~$35/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1181,7 +1181,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-chrome-soft': {
     url: 'https://www.amazon.com/s?k=callaway-chrome-soft&crid=QIR72QBZ6WKH&sprefix=callaway-chev-dry%2Caps%2C236&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-chrome-soft%2Fsearch',
     retailer: 'Amazon',
     price: '~$40/dz',
     priceNote: 'Best value: buy 2+ dozen during Prime Day or Black Friday.',
@@ -1196,7 +1196,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-chrome-tour': {
     url: 'https://www.amazon.com/s?k=callaway-chrome-tour&crid=QIR72QBZ6WKH&sprefix=callaway-chev-dry%2Caps%2C236&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-chrome-soft%2Fsearch',
     retailer: 'Amazon',
     price: '~$40/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1211,7 +1211,7 @@ export const AFFILIATE: Record<string, {
   },
   'titleist-tour-speed': {
     url: 'https://www.amazon.com/s?k=titleist-tour-speed&crid=29KW4M7QC2V0C&sprefix=titleist-tour-soft%2Caps%2C276&linkCode=ll2&tag=cubicalgolfer-20&linkId=8e3a5b2689ca3023e91440575551a649&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Tour%2520Speed%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-tour-speed%2Fsearch',
     retailer: 'Amazon',
     price: '~$36/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1226,7 +1226,7 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-tour-response': {
     url: 'https://www.amazon.com/s?k=taylormade-tour-response&crid=3V83T1RSHXXW4&sprefix=taylormade-tp5%2Caps%2C256&linkCode=ll2&tag=cubicalgolfer-20&linkId=1314dec90a229cf663c156629b1d4b3f&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Tour%2520Response%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-tour-response%2Fsearch',
     retailer: 'Amazon',
     price: '~$35/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1241,7 +1241,7 @@ export const AFFILIATE: Record<string, {
   },
   'bridgestone-e12-contact': {
     url: 'https://www.amazon.com/s?k=bridgestone-e12-contact&crid=YP7TB3ITPBR&sprefix=bridgestone-e12-contact%2Caps%2C260&linkCode=ll2&tag=cubicalgolfer-20&linkId=88e507d4794ca2c148818b873bcdacc4&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBridgestone%2520e12%2520Contact%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fbridgestone-e12-contact%2Fsearch',
     retailer: 'Amazon',
     price: '~$28/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1374,7 +1374,7 @@ export const AFFILIATE: Record<string, {
   // ── New: gift guides + junior golf ────────────────────────────────────────
   'callaway-xj-junior-set': {
     url: 'https://www.amazon.com/s?k=callaway-xj-junior-set&crid=34FFNM49JMUWP&sprefix=callaway-xj-junior-set%2Caps%2C228&linkCode=ll2&tag=cubicalgolfer-20&linkId=a51a505ea395f371acb4367f21a849c7&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520XJ%2520Junior%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-xj-junior%2Fsearch',
     retailer: 'Amazon',
     price: '~$250',
     primaryRetailer: 'direct',
@@ -1389,8 +1389,8 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'us-kids-tour-series': {
-    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dus%2520kids%2520tour%2520series%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DUS%2520Kids%2520Tour%2520Series%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fus-kids-tour-series%2Fsearch',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fus-kids-tour-series%2Fsearch',
     retailer: 'Amazon',
     price: '~$350',
     primaryRetailer: 'direct',
@@ -1406,7 +1406,7 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-team-tm-junior': {
     url: 'https://www.amazon.com/s?k=taylormade-team-tm-junior&crid=1XV7QEXEITCL1&sprefix=taylormade-team-tm-junior%2Caps%2C197&linkCode=ll2&tag=cubicalgolfer-20&linkId=da82011f67d7a798838a2728ffabc031&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.golfgalaxy.com/search/SearchDisplay?cjdata=MXxOfDB8WXww&searchTerm=TaylorMade%20Team%20TM%20Junior&storeId=10701&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&fromPage=Search&searchSource=Q&pageView=&beginIndex=0&DSGsearchType=Keyword&selectedStore=1521&camp=AFF:mediapartner:TEXT_link::7938781:Cubical%20Golfer&cjevent=757cd6a9481811f1800600840a82b839',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-team-tm-junior%2Fsearch',
     retailer: 'Amazon',
     price: '~$200',
     primaryRetailer: 'direct',
@@ -1421,7 +1421,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'personalized-golf-balls': {
-    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dpersonalized%2520golf%2520balls%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fpersonalized-golf-balls%2Fsearch',
     retailer: 'Amazon',
     price: '~$30',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1474,7 +1474,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['9-foot roll with ball return for repetitive practice', 'Non-skid rubber backing on any floor', 'Folds flat for storage under a desk'],
   },
   'sklz-accelerator-putting-mat': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dsklz%2520accelerator%2520putting%2520mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsklz-accelerator-putting-mat%2Fsearch',
     retailer: 'Amazon',
     price: '~$40',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -1555,7 +1555,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-reva-driver': {
     url: 'https://www.amazon.com/s?k=callaway-reva-driver&crid=2EXRQ37CMNGO4&sprefix=callaway-reva-driver%2Caps%2C260&linkCode=ll2&tag=cubicalgolfer-20&linkId=daac30540553e88cd0d623d76195f6c6&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Reva%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-reva%2Fsearch',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -1566,8 +1566,8 @@ export const AFFILIATE: Record<string, {
     benefits: ['Ultralight design for sub-85 mph swing speeds', 'High launch with low spin for maximum carry', 'Available in left-hand'],
   },
   'ping-g-le3-irons': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520g%2520le%25203%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G%2520Le3%2520Irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-g-le-3%2Fsearch',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-g-le3-irons%2Fsearch',
     retailer: 'Amazon',
     price: '~$699',
     primaryRetailer: 'direct',
@@ -1579,7 +1579,7 @@ export const AFFILIATE: Record<string, {
   },
   'skechers-go-golf-elite-5': {
     url: 'https://www.amazon.com/s?k=skechers-go-golf-elite-5&linkCode=ll2&tag=cubicalgolfer-20&linkId=992351eda694d048b42a9d7a2eb581f8&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fskechers-mens-go-golf-elite-vortex-golf-shoes-25skemgglfltvrtxcgsh%2F25skemgglfltvrtxcgsh%3FenteredSearchTerm%3DSkechers%2520Go%2520Golf%2520Elite%25205',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fskechers-go-golf-elite-5%2Fsearch',
     retailer: 'Amazon',
     price: '~$110',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
@@ -1590,7 +1590,7 @@ export const AFFILIATE: Record<string, {
   },
   'ecco-biom-c4': {
     url: 'https://www.amazon.com/s?k=ecco-biom-c4&crid=RG8WR5111194&sprefix=ecco-biom-c4%2Caps%2C237&linkCode=ll2&tag=cubicalgolfer-20&linkId=fac4cce8223d8586d182efd74248099b&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DECCO%2520Biom%2520C4%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fecco-biom-c4%2Fsearch',
     retailer: 'Amazon',
     price: '~$200',
     primaryRetailer: 'direct',
@@ -1602,7 +1602,7 @@ export const AFFILIATE: Record<string, {
   },
   'nike-air-max-90-golf': {
     url: 'https://www.amazon.com/s?k=nike-air-max-90-golf&crid=1JWE4X03USP3I&sprefix=new-balance-breeze-v2%2Caps%2C270&linkCode=ll2&tag=cubicalgolfer-20&linkId=12367bd6920ef5a19590b4e0eed65fb5&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DNike%2520Air%2520Max%252090%2520G%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fnike-air-max-90-g%2Fsearch',
     retailer: 'Amazon',
     price: '~$150',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
@@ -1642,7 +1642,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── New: Putters for shaky hands / older golfers ──────────────────────
   'lab-golf-df3': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520DF3%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Flab-golf-df3%2Fsearch',
     retailer: 'Golf Galaxy',
     price: '~$449',
     primaryRetailer: 'direct',
@@ -1657,7 +1657,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-df3i': {
-    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520DF3i%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Flab-golf-df3i%2Fsearch',
     retailer: 'Golf Galaxy',
     price: '~$469',
     primaryRetailer: 'direct',
@@ -1672,7 +1672,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-mezz1-max': {
-    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520Mezz.1%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Flab-golf-mezz-1-max%2Fsearch',
     retailer: 'Golf Galaxy',
     price: '~$449',
     primaryRetailer: 'direct',
@@ -1687,7 +1687,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'lab-golf-oz1': {
-    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DLAB%2520Golf%2520OZ1%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Flab-golf-oz1%2Fsearch',
     retailer: 'Golf Galaxy',
     price: '~$449',
     primaryRetailer: 'direct',
@@ -1702,8 +1702,8 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'taylormade-spider-5k-zt': {
-    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520spider%25205k%2520zt%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Spider%25205K%2520ZT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-spider-5k-zt%2Fsearch',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-spider-5k-zt%2Fsearch',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -1732,8 +1732,8 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'odyssey-jailbird-zt': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520jailbird%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520Tri-Beam%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-jailbird%2Fsearch',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-tri-beam%2Fsearch',
     retailer: 'Amazon',
     price: '~$329',
     primaryRetailer: 'direct',
@@ -1763,7 +1763,7 @@ export const AFFILIATE: Record<string, {
   },
   'odyssey-tri-beam-arm-lock': {
     url: 'https://www.amazon.com/s?k=odyssey+tri+beam&crid=2SRJH3JMKF0XZ&sprefix=odyssey+tri+beam%2Caps%2C157&linkCode=ll2&tag=cubicalgolfer-20&linkId=bd877383aad74ee8f1df3358f680290c&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520Tri-Beam%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-tri-beam%2Fsearch',
     retailer: 'Amazon',
     price: '~$329',
     primaryRetailer: 'direct',
@@ -1794,7 +1794,7 @@ export const AFFILIATE: Record<string, {
   // ── New: Wedge cluster products ───────────────────────────────────────
   'vokey-sm10-52': {
     url: 'https://www.amazon.com/s?k=vokey-sm10-52&crid=2K0IGHSTPKV0I&sprefix=vice-drive%2Caps%2C281&linkCode=ll2&tag=cubicalgolfer-20&linkId=8058d42dd8839d1af62fca8fe3ddef15&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVokey%2520SM10%252052%C2%B0%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fvokey-sm10-52%2Fsearch',
     retailer: 'Amazon',
     price: '~$179',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
@@ -1809,7 +1809,7 @@ export const AFFILIATE: Record<string, {
   },
   'cleveland-rtx6-52': {
     url: 'https://www.amazon.com/s?k=cleveland-rtx6-52&crid=3872V7V1UM0LJ&sprefix=cleveland-rtx6-52%2Caps%2C219&linkCode=ll2&tag=cubicalgolfer-20&linkId=f3682a247b3ccaa80d9bed7fe8d29727&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcleveland-rtx-6-zipcore-wedge-22clemrtx6blckstnwdg%2F22clemrtx6blckstnwdg%3FenteredSearchTerm%3DCleveland%2520RTX-6%252052%C2%B0',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcleveland-rtx-6-zipcore-wedge%2Fsearch',
     retailer: 'Amazon',
     price: '~$169',
     priceNote: 'Wedge prices hold steady. Buy when ready — grooves wear out before prices drop.',
@@ -1823,8 +1823,8 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-jaws-raw-52': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dcallaway%2520JAWS%2520RAW%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Jaws%2520Raw%252052%C2%B0%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-jaws-raw%2Fsearch',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-jaws-raw-52%2Fsearch',
     retailer: 'Amazon',
     price: '~$169',
     priceNote: 'Wedge prices hold steady. Buy when ready — grooves wear out before prices drop.',
@@ -1954,7 +1954,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-big-bertha': {
     url: 'https://www.amazon.com/s?k=callaway+big+bertha+driver&crid=2AEGJKHQ2WRM1&sprefix=callaway+big+%2Caps%2C249&linkCode=ll2&tag=cubicalgolfer-20&linkId=f4dfaed6b25f58149ac36736ce8fb6eb&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Big%2520Bertha%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcallaway-big-bertha%2Fsearch',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -1970,7 +1970,7 @@ export const AFFILIATE: Record<string, {
   },
   'cleveland-huntington-beach': {
     url: 'https://www.amazon.com/s?k=cleveland-huntington-beach&crid=3C8J68DFQY6NG&sprefix=cleveland-huntington-beach%2Caps%2C216&linkCode=ll2&tag=cubicalgolfer-20&linkId=617afd44bb037581ed3ec6df8c0ff467&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Huntington%2520Beach%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcleveland-huntington-beach%2Fsearch',
     retailer: 'Amazon',
     price: '~$129',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
@@ -1985,7 +1985,7 @@ export const AFFILIATE: Record<string, {
   },
   'cobra-air-x': {
     url: 'https://www.amazon.com/s?k=cobra-air-x&crid=1LCFL0C96S86O&sprefix=cobra-air-x%2Caps%2C225&linkCode=ll2&tag=cubicalgolfer-20&linkId=76f41070be3591f91345a4b9e3bdbf10&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcobra-air-x-12-piece-complete-set-23cbrmrx2stl12pcmset%2F23cbrmrx2stl12pcmset',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fcobra-air-x-complete-set%2Fsearch',
     retailer: 'Amazon',
     price: '~$349',
     primaryRetailer: 'direct',
@@ -1996,7 +1996,7 @@ export const AFFILIATE: Record<string, {
   },
   'evnroll-er2': {
     url: 'https://www.amazon.com/s?k=evnroll-er2&crid=15T4H7XDB4OUI&sprefix=evnroll-er2%2Caps%2C219&linkCode=ll2&tag=cubicalgolfer-20&linkId=593e2b287e2b9ea031db29ba722fc5e6&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DEvnroll%2520ER2%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fevnroll-er2%2Fsearch',
     retailer: 'Amazon',
     price: '~$349',
     primaryRetailer: 'direct',
@@ -2020,8 +2020,8 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'odyssey-stroke-lab': {
-    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520STROKE%2520LAB%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520Stroke%2520Lab%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-stroke-lab%2Fsearch',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-stroke-lab%2Fsearch',
     retailer: 'Amazon',
     price: '~$199',
     priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.',
@@ -2031,7 +2031,7 @@ export const AFFILIATE: Record<string, {
   },
   'odyssey-tri-hot-5k': {
     url: 'https://www.amazon.com/s?k=odyssey-tri-hot-5k&crid=10KOQ0QGU7Z42&sprefix=odyssey-tri-hot-5k%2Caps%2C270&linkCode=ll2&tag=cubicalgolfer-20&linkId=71d8684f8b48e0c9fd3340f34c6d7e33&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520Tri-Hot%25205K%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-tri-hot-5k%2Fsearch',
     retailer: 'Amazon',
     price: '~$299',
     primaryRetailer: 'direct',
@@ -2042,7 +2042,7 @@ export const AFFILIATE: Record<string, {
   },
   'odyssey-two-ball-eleven': {
     url: 'https://www.amazon.com/s?k=odyssey+two+ball+eleven&crid=1DW3FD77SR4FH&sprefix=odysseytwo+ball+eleven%2Caps%2C183&linkCode=ll2&tag=cubicalgolfer-20&linkId=f726b6756beb4e2390b313a2dba70850&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520two%2520ball%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fodyssey-two-ball%2Fsearch',
     retailer: 'Amazon',
     price: '~$249',
     primaryRetailer: 'direct',
@@ -2062,8 +2062,8 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Orange Whip golf swing trainer',
   },
   'ping-g430-sft': {
-    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520g430%2520sft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G430%2520SFT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-g430-sft%2Fsearch',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-g430-sft%2Fsearch',
     retailer: 'Amazon',
     price: '~$449',
     primaryRetailer: 'direct',
@@ -2102,7 +2102,7 @@ export const AFFILIATE: Record<string, {
   },
   'scotty-cameron-phantom-x': {
     url: 'https://www.amazon.com/s?k=scotty-cameron-phantom-x&crid=1JC6HE15IOZS1&sprefix=shot-scope-lm1%2Caps%2C255&linkCode=ll2&tag=cubicalgolfer-20&linkId=d508835832ac0f2ce6b6bcfc46f41865&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DScotty%2520Cameron%2520Phantom%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fscotty-cameron-phantom%2Fsearch',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -2113,7 +2113,7 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-spider-gt': {
     url: 'https://www.amazon.com/s?k=taylormade-spider-gt&crid=NG3Y2Z4IVULR&sprefix=taylormade-spider-5k-zt%2Caps%2C420&linkCode=ll2&tag=cubicalgolfer-20&linkId=e438a7919fc5e9a6332d7657897b0d7e&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Spider%2520GT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-spider-gt%2Fsearch',
     retailer: 'Amazon',
     price: '~$299',
     primaryRetailer: 'direct',
@@ -2124,7 +2124,7 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-stealth-2-hd': {
     url: 'https://www.amazon.com/s?k=taylormade-stealth-2-hd&crid=1LGUGTSWYN4AY&sprefix=taylormade-spider-tour%2Caps%2C270&linkCode=ll2&tag=cubicalgolfer-20&linkId=3df86920906cf0e5501395116322223a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Stealth%25202%2520HD%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-stealth-2-hd%2Fsearch',
     retailer: 'Amazon',
     price: '~$349',
     primaryRetailer: 'direct',
@@ -2237,7 +2237,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/titleist-trufeel.webp',
     imgAlt: 'Titleist TruFeel golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520TruFeel%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-trufeel%2Fsearch',
     benefits: [
       '35 compression — maximum distance for swing speeds under 85 mph',
       'Soft feel on greenside shots without being mushy',
@@ -2245,7 +2245,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'taylormade-soft-response': {
-    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520soft%2520response%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-soft-response%2Fsearch',
     retailer: 'Amazon',
     price: '~$25/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -2284,7 +2284,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/titleist-tour-soft.webp',
     imgAlt: 'Titleist Tour Soft golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Tour%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-tour-soft%2Fsearch',
   },
   'titleist-velocity': {
     url: 'https://www.amazon.com/s?k=titleist-velocity&linkCode=ll2&tag=cubicalgolfer-20&linkId=14bd96cc80f9293e6937d517e934e29d&language=en_US&ref_=as_li_ss_tl',
@@ -2294,7 +2294,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/titleist-velocity.webp',
     imgAlt: 'Titleist Velocity golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Velocity%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-velocity%2Fsearch',
     benefits: [
       'Specifically engineered for maximum distance across swing speeds',
       'Low spin off the driver reduces ballooning and adds roll',
@@ -2318,7 +2318,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bridgestone-tour-b-rx.webp',
     imgAlt: 'Bridgestone Tour B RX golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBridgestone%2520Tour%2520B%2520RX%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fbridgestone-tour-b-rx%2Fsearch',
   },
   'kirkland-signature': {
     url: 'https://www.amazon.com/s?k=kirkland-signature&crid=2QKPBRUXFX2UQ&sprefix=impact-tape%2Caps%2C229&linkCode=ll2&tag=cubicalgolfer-20&linkId=1ea49994a8f0d80175037ba0b428c459&language=en_US&ref_=as_li_ss_tl',
@@ -2337,7 +2337,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/titleist-avx.webp',
     imgAlt: 'Titleist AVX golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520AVX%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftitleist-avx%2Fsearch',
   },
   'wilson-staff-model': {
     url: 'https://www.amazon.com/s?k=wilson-staff-model&i=sporting&crid=VPFV3NY6D8C1&sprefix=wilson-staff-model%2Csporting%2C127&linkCode=ll2&tag=cubicalgolfer-20&linkId=bbb72a5a862d30bed5e9b7a78f2dde4b&language=en_US&ref_=as_li_ss_tl',
@@ -2356,7 +2356,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/srixon-z-star.webp',
     imgAlt: 'Srixon Z-Star golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Z-Star%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsrixon-z-star%2Fsearch',
   },
   'bridgestone-tour-b-xs': {
     url: 'https://www.amazon.com/s?k=bridgestone-tour-b-xs&crid=32SL2G8ERB1MB&sprefix=bridgestone-tour-b-xs%2Caps%2C272&linkCode=ll2&tag=cubicalgolfer-20&linkId=c8c26307638e444d0446d78ff7048f05&language=en_US&ref_=as_li_ss_tl',
@@ -2366,7 +2366,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bridgestone-tour-b-xs.webp',
     imgAlt: 'Bridgestone Tour B XS golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBridgestone%2520Tour%2520B%2520XS%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fbridgestone-tour-b-xs%2Fsearch',
   },
   'vice-pro-plus': {
     url: 'https://www.amazon.com/s?k=vice-pro-plus&crid=WGUFXIKOW2FM&sprefix=vice-pro-plus%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=0c5923c70dbed2d38485b381ce63747a&language=en_US&ref_=as_li_ss_tl',
@@ -2390,7 +2390,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/taylormade-tp5x.webp',
     imgAlt: 'TaylorMade TP5x golf balls',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520TP5x%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ftaylormade-tp5x%2Fsearch',
   },
   'bridgestone-tour-b-x': {
     url: 'https://www.amazon.com/s?k=bridgestone-tour-b-x&crid=E1YFURZ6JMN6&sprefix=bridgestone-tour-b-x%2Caps%2C225&linkCode=ll2&tag=cubicalgolfer-20&linkId=04ca273bbb792f3f094f4f78967287c6&language=en_US&ref_=as_li_ss_tl',
@@ -2409,10 +2409,10 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/srixon-z-star-xv.webp',
     imgAlt: 'Srixon Z-Star XV golf balls',
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Z-Star%2520XV%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsrixon-z-star-xv%2Fsearch',
   },
   'maxfli-tour-x': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dmaxfli%2520tour%2520x%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fmaxfli-tour-x%2Fsearch',
     retailer: 'Amazon',
     price: '~$35/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
@@ -2652,7 +2652,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Wellputt 10-foot putting mat',
   },
   'putt-out-trainer': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dputtout%2520trainer%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fputtout-trainer%2Fsearch',
     retailer: 'Amazon',
     price: '~$30',
     priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
@@ -2749,7 +2749,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/sun-mountain-25-bag.webp', imgAlt: 'Sun Mountain 2.5 stand bag',
   },
   'ping-hoofer-lite': {
-    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520hoofer%2520lite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fping-hoofer-lite%2Fsearch',
     retailer: 'Amazon', price: '~$265',
     primaryRetailer: 'direct',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'Check Price at Amazon →',
@@ -3378,13 +3378,6 @@ export const AFFILIATE: Record<string, {
     price: '~$479',
     primaryRetailer: 'amazon',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
-    label: 'Check Price at Amazon →',
-  },
-  'callaway-chev-dry': {
-    url: 'https://www.amazon.com/s?k=callaway+chev+dry+stand+bag&tag=cubicalgolfer-20',
-    retailer: 'Amazon',
-    price: '~$129',
-    priceNote: 'Chev Dry stock on Amazon comes and goes — link shows current Chev availability.',
     label: 'Check Price at Amazon →',
   },
 };
