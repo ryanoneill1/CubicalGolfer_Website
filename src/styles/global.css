@@ -1856,3 +1856,16 @@ main section > p, main section ul, main section ol {
   background: #fff;
   border-top: 1px solid var(--border, #e0ddd5);
 }
+
+/* ═══ Homepage CRO batch — July 2026 ═══ */
+.hero-author { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.hero-author img { border-radius: 50%; object-fit: cover; }
+.hero-author p { margin: 0; font-size: 15px; color: var(--cream, #f5f0e6); opacity: 0.92; }
+.hero-author a { color: var(--gold, #c9a84c); font-weight: 600; }
+.hero-alt { display: none; margin: 10px 0 0; font-size: 15px; }
+.hero-alt a { color: var(--cream, #f5f0e6); text-decoration: underline; }
+.featured-review-link { display: inline-block; border: 2px solid var(--green); color: var(--green); padding: 8px 18px; border-radius: 6px; font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+@media (max-width: 640px) {
+  .hero-secondary { display: none; }
+  .hero-alt { display: block; }
+}

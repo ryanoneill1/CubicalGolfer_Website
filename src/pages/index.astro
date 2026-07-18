@@ -97,8 +97,13 @@ const TAG_CLASSES: Record<string, string> = {
       <p class="hero-sub">Every product independently purchased and tested over 10+ real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>
-        <a href="/gear-reviews/" class="btn-outline">Browse All Reviews</a>
-        <a href="/compare/" class="btn-outline">Compare Products</a>
+        <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
+        <a href="/compare/" class="btn-outline hero-secondary">Compare Products</a>
+        <p class="hero-alt"><a href="/gear-reviews/">Browse reviews</a> · <a href="/compare/">Compare products</a></p>
+        <div class="hero-author">
+          <img src="/images/ryan-author-photo.webp" alt="Ryan, founder of Cubical Golfer" width="44" height="44" loading="eager" />
+          <p>Tested by <a href="/about/">Ryan</a> — 10-handicap weekend golfer, Chicagoland. No sponsors, no freebies.</p>
+        </div>
       </div>
       <div class="hero-quick-links">
         <span class="hero-quick-label">Popular:</span>
@@ -166,6 +171,7 @@ const TAG_CLASSES: Record<string, string> = {
           {aff?.url && (
             <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
           )}
+          <a href="/compare/callaway-paradym-vs-taylormade-qi35/" class="featured-review-link">See Our Full Test →</a>
           {aff?.priceNote && (
             <p style="font-size:16px;color:var(--green);background:rgba(30,58,40,.06);padding:6px 10px;border-radius:6px;margin:4px 0 0;width:100%;font-weight:500;">💡 {aff.priceNote}</p>
           )}
