@@ -30,11 +30,19 @@ for (const a of ARTICLES as any[]) {
   if (a.pageType === 'review') continue;
   for (const r of (a.comparisonTable?.rows || [])) {
     if (r.affiliateKey?.startsWith(prefix)) {
-      appearances.push({ title: a.titleDisplay || a.title, slug: a.slug, product: r.name || productName(r.affiliateKey), badge: r.bestFor || r.badge || '' });
+      appearances.push({ title: a.titleDisplay || a.title, slug: a.slug, product: r.name || productName(r.affiliateKey), badge: r.bestFor || r.badge || '', key: r.affiliateKey });
     }
   }
 }
 appearances.sort((a, b) => a.title.localeCompare(b.title));
+// Group appearances by product for the imaged card grid
+const productCards: { key: string; name: string; aff: any; seen: { title: string; slug: string; badge: string }[] }[] = [];
+for (const ap of appearances as any[]) {
+  let g = productCards.find(p => p.key === ap.key);
+  if (!g) { g = { key: ap.key, name: productName(ap.key) || ap.product, aff: getAffiliateLink(ap.key), seen: [] }; productCards.push(g); }
+  if (g.seen.length < 3 && !g.seen.find(s => s.slug === ap.slug)) g.seen.push({ title: ap.title, slug: ap.slug, badge: ap.badge });
+}
+
 
 const meta = {
   title: `${brand.name} Golf Gear — Tested Reviews & Comparisons`,
@@ -121,11 +129,19 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(brand.faq), ...(i
     {appearances.length > 0 && (
       <section>
         <h2>Where {brand.name} Ranks in Our Buying Guides</h2>
-        <ul style="max-width:76ch;">
-          {appearances.map(a => (
-            <li style="margin:6px 0;"><strong>{a.product}</strong>{a.badge ? ` — ${a.badge}` : ''} in <a href={a.slug}>{a.title}</a></li>
+        <div class="brand-prod-grid">
+          {productCards.map(p => (
+            <div class="brand-prod-card">
+              {p.aff?.imgSrc && <img src={p.aff.imgSrc} alt={p.name} width="140" height="105" loading="lazy" />}
+              <div class="brand-prod-body">
+                <p class="brand-prod-name">{p.name}</p>
+                {p.aff?.price && <p class="brand-prod-price">{p.aff.price}</p>}
+                {p.aff?.url && <a href={p.aff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={p.aff.url.includes('amazon.com') ? 'amazon' : p.aff.url.includes('pxf.io') ? 'bushnell' : p.aff.url.includes('playbetter') ? 'playbetter' : 'other'} class="brand-prod-cta">Check Price →</a>}
+                <p class="brand-prod-seen">Featured in: {p.seen.map((s, si) => (<span>{si > 0 && ' · '}<a href={s.slug}>{s.title.length > 34 ? s.title.slice(0, 32) + '…' : s.title}</a></span>))}</p>
+              </div>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
     )}
 

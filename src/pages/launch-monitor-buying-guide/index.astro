@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RecommendedGearGrid from '../../components/RecommendedGearGrid.astro';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
@@ -39,6 +40,7 @@ const schemas = [
 ];
 
 const quickProduct = getAffiliateLink('garmin-approach-r10');
+const GUIDE_GEAR = [ { key: 'shot-scope-lm1', role: 'Under $500 — simplest accurate pick', name: 'Shot Scope LM1' }, { key: 'garmin-approach-r10', role: 'Under $500 — best app ecosystem', name: 'Garmin Approach R10' }, { key: 'square-golf-launch-monitor', role: '$500–$1,000 — no subscription', name: 'Square Golf' }, { key: 'rapsodo-mlm2pro', role: '$500–$1,000 — video replay', name: 'Rapsodo MLM2PRO' }, { key: 'flightscope-mevo-plus', role: '$1,000–$2,000 — sim-ready', name: 'FlightScope Mevo+' }, { key: 'skytrak-plus', role: '$2,000+ — simulator-grade', name: 'SkyTrak+' } ];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-tech">
@@ -199,4 +201,5 @@ const quickProduct = getAffiliateLink('garmin-approach-r10');
       ))}
     </section>
   </article>
-</BaseLayout>
+</BaseLayout><section style="margin:34px 0;"><h2>The Monitors From This Guide, Side by Side</h2><p>Every monitor named above, with our current pick per budget tier.</p><RecommendedGearGrid items={GUIDE_GEAR} /></section>
+      
