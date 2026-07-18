@@ -24,6 +24,10 @@ const cards = items
   .map((it) => ({ ...it, aff: (AFFILIATE as any)[it.key] }))
   .filter((it) => it.aff?.url);
 
+function retailerName(url: string): string {
+  const r = retailerOf(url);
+  return r === 'amazon' ? 'Amazon' : r === 'bushnell' ? 'Bushnell' : r === 'playbetter' ? 'PlayBetter' : r === 'golfgalaxy' ? 'Golf Galaxy' : 'Retailer';
+}
 function retailerOf(url: string): string {
   try { const h = new URL(url).hostname;
     if (h.includes('amazon')) return 'amazon';
@@ -50,20 +54,18 @@ function retailerOf(url: string): string {
           </div>
         </div>
         <div class="rec-gear-btns">
-          <a href={c.aff.primaryRetailer === 'direct' && c.aff.golfGalaxyUrl ? c.aff.golfGalaxyUrl : c.aff.url}
+          <a href={c.aff.url}
              target="_blank" rel="nofollow noopener sponsored"
-             data-outbound={retailerOf(c.aff.primaryRetailer === 'direct' && c.aff.golfGalaxyUrl ? c.aff.golfGalaxyUrl : c.aff.url)}
+             data-outbound={retailerOf(c.aff.url)}
              class="rec-gear-btn rec-gear-btn--primary">
-            {c.aff.primaryRetailer === 'direct' && c.aff.golfGalaxyUrl
-              ? `Check Price at ${c.aff.retailer && c.aff.retailer !== 'Amazon' ? c.aff.retailer : 'Golf Galaxy'} →`
-              : 'Check Price at Amazon →'}
+            {'Check Price at ' + retailerName(c.aff.url) + ' →'}
           </a>
-          {(c.aff.primaryRetailer === 'direct' ? c.aff.url : c.aff.golfGalaxyUrl) && (
-            <a href={c.aff.primaryRetailer === 'direct' ? c.aff.url : c.aff.golfGalaxyUrl}
+          {(c.aff.golfGalaxyUrl) && (
+            <a href={c.aff.golfGalaxyUrl}
                target="_blank" rel="nofollow noopener sponsored"
-               data-outbound={retailerOf(c.aff.primaryRetailer === 'direct' ? c.aff.url : c.aff.golfGalaxyUrl)}
+               data-outbound={retailerOf(c.aff.golfGalaxyUrl)}
                class="rec-gear-btn rec-gear-btn--secondary">
-              {c.aff.primaryRetailer === 'direct' ? 'Also at Amazon →' : 'Also at Golf Galaxy →'}
+              {'Also at ' + retailerName(c.aff.golfGalaxyUrl) + ' →'}
             </a>
           )}
         </div>
