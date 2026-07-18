@@ -519,7 +519,7 @@ export const AFFILIATE: Record<string, {
   // TaylorMade RBZ Speed Lite — search (current model name varies by year)
   'taylormade-rbz-lite': {
     url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520rbz%2520lite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    golfGalaxyUrl: 'https://www.golfgalaxy.com/search/SearchDisplay?cjdata=MXxOfDB8WXww&searchTerm=taylormade%20rbz%20speedlite&storeId=10701&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&fromPage=Search&searchSource=Q&pageView=&beginIndex=0&DSGsearchType=Keyword&selectedStore=1521&camp=AFF:mediapartner:TEXT_link::7938781:Cubical%20Golfer&cjevent=2616ecc1480c11f183a200680a82b820',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3Fcjdata%3DMXxOfDB8WXww%26searchTerm%3Dtaylormade%2520rbz%2520speedlite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$499',
     primaryRetailer: 'direct',
@@ -1406,7 +1406,7 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-team-tm-junior': {
     url: 'https://www.amazon.com/s?k=taylormade-team-tm-junior&crid=1XV7QEXEITCL1&sprefix=taylormade-team-tm-junior%2Caps%2C197&linkCode=ll2&tag=cubicalgolfer-20&linkId=da82011f67d7a798838a2728ffabc031&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.golfgalaxy.com/search/SearchDisplay?cjdata=MXxOfDB8WXww&searchTerm=TaylorMade%20Team%20TM%20Junior&storeId=10701&catalogId=10051&langId=-1&sType=SimpleSearch&resultCatEntryType=2&showResultsPage=true&fromPage=Search&searchSource=Q&pageView=&beginIndex=0&DSGsearchType=Keyword&selectedStore=1521&camp=AFF:mediapartner:TEXT_link::7938781:Cubical%20Golfer&cjevent=757cd6a9481811f1800600840a82b839',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3Fcjdata%3DMXxOfDB8WXww%26searchTerm%3DTaylorMade%2520Team%2520TM%2520Junior%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$200',
     primaryRetailer: 'direct',

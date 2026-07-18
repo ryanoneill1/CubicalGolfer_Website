@@ -178,7 +178,7 @@ export const ARTICLES: Article[] = [
       'Primarily use a GPS watch and rarely aim at the pin',
       'Play fewer than 8 rounds per year -- pacing off is fine at that frequency',
     ],
-    sources: [{ label: 'Bushnell Golf — Tour V6 Shift Specs', url: 'https://www.bushnellgolf.com/products/laser-rangefinders/tour-v6-shift/' }, { label: 'USGA — Rule 4.3a (Distance-Measuring Devices)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Precision Pro Golf — NX9 HD Specifications', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
+    sources: [{ label: 'Bushnell Golf — Tour V6 Shift Specs', url: 'https://bushnell.pxf.io/3kRRkX' }, { label: 'USGA — Rule 4.3a (Distance-Measuring Devices)', url: 'https://www.usga.org/content/usga/home-page/rules-hub/rules-modernization/major-changes/distance-measuring-devices.html' }, { label: 'Precision Pro Golf — NX9 HD Specifications', url: 'https://precisionprogolf.com/products/nx9-hd-slope' }],
     relatedComparisons: [
       { label: 'Bushnell Tour V6 vs Precision Pro NX9', url: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', description: 'Our #1 vs the best value — tested over 12 rounds' },
       { label: 'Blue Tees Series 3 vs Bushnell Tour V6', url: '/compare/blue-tees-vs-bushnell-tour-v6/', description: 'Budget vs premium — is $180 more worth it?' },
@@ -5741,7 +5741,7 @@ export const ARTICLES: Article[] = [
       'Want GPS course mapping -- consider Garmin Approach Z82 instead',
     ],
     sources: [
-      { label: 'Bushnell Golf — Tour V6 Shift Specifications', url: 'https://www.bushnellgolf.com/products/laser-rangefinders/tour-v6-shift/' },
+      { label: 'Bushnell Golf — Tour V6 Shift Specifications', url: 'https://bushnell.pxf.io/3kRRkX' },
       { label: 'USGA — Distance Measuring Device Rules', url: 'https://www.usga.org/content/usga/home-page/rules-hub/topics/equipment.html' },
     ],
     related: [
