@@ -339,7 +339,7 @@ if (isBuyingGuide) {
     // The SAME effective value drives the visible score panel below, so any
     // rating that reaches schema is guaranteed to be visible on the page.
     const rowRating = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === pid)?.rating;
-    const schemaEffRating = section.rating ?? rowRating;
+    const schemaEffRating = (section as any).testedStatus === 'research' ? undefined : (section.rating ?? rowRating);
     const schemaSection = schemaEffRating && !section.rating ? { ...section, rating: schemaEffRating } : section;
     // FIX: Pass price, retailer, image — required by Google Product schema
     schemas.push(buyingGuideProductSchema(
@@ -735,6 +735,7 @@ if (isBuyingGuide) {
         <div class="art-section" id={`pick-${idx + 1}`}>
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
+          {(section as any).testedStatus === 'research' && <span class="badge-pill" style="background:#8a8377;color:#fff;">RESEARCH PICK — NOT YET IN OUR TEST BAG</span>}
           {productId && REVIEW_SLUGS[productId] && REVIEW_SLUGS[productId] !== article.slug && (
             <p class="section-review-link"><a href={REVIEW_SLUGS[productId]}>Read our full review →</a></p>
           )}
