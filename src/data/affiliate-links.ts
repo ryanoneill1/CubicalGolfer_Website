@@ -116,7 +116,7 @@ export const AFFILIATE: Record<string, {
     price: '~$499',
     primaryRetailer: 'amazon',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
-    label: 'Check Price at Bushnell →',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bushnell-pro-xe.webp',
     imgAlt: 'Bushnell Pro XE Golf Rangefinder',
   
@@ -433,7 +433,7 @@ export const AFFILIATE: Record<string, {
   'titleist-t100': {
     url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtitleist%2520t100%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520T100%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: 'from ~$1,099',
     priceNote: 'Click to see current price — prices change frequently.',
     label: 'See Today\'s Price →',
@@ -462,7 +462,7 @@ export const AFFILIATE: Record<string, {
   'wilson-d9-irons': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dwilson%2520d9%2520irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520D9%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: 'from ~$599',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'See Today\'s Price →',
@@ -520,7 +520,7 @@ export const AFFILIATE: Record<string, {
   'taylormade-rbz-lite': {
     url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520rbz%2520lite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3Fcjdata%3DMXxOfDB8WXww%26searchTerm%3Dtaylormade%2520rbz%2520speedlite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$499',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
@@ -879,7 +879,7 @@ export const AFFILIATE: Record<string, {
   'sun-mountain-25-plus': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dsun%2520mountain%25202.5%2520plus%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSun%2520Mountain%25202.5%2520%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon', price: '~$249',
+    retailer: 'Golf Galaxy', price: '~$249',
     primaryRetailer: 'direct',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/sun-mountain-25-bag.webp',
@@ -1050,7 +1050,7 @@ export const AFFILIATE: Record<string, {
 
   'trackman-4': {
     url: 'https://www.playbetter.com/products/trackman-4-golf-launch-monitor?_pos=2&_sid=cccaaba82&_ss=r&ghref=2301%3A1333883',
-    retailer: 'Amazon',
+    retailer: 'PlayBetter',
     price: '~$21,995',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
@@ -1329,7 +1329,7 @@ export const AFFILIATE: Record<string, {
   },
   'square-golf-launch-monitor': {
     url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=square*+golf*&ghref=2301%3A1333883',
-    retailer: 'Amazon',
+    retailer: 'PlayBetter',
     price: '~$499',
     primaryRetailer: 'direct',
     priceNote: 'Steady price — occasional $25-50 off during Prime Day and Black Friday.',
@@ -1391,7 +1391,7 @@ export const AFFILIATE: Record<string, {
   'us-kids-tour-series': {
     url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dus%2520kids%2520tour%2520series%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DUS%2520Kids%2520Tour%2520Series%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$350',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
@@ -1422,7 +1422,7 @@ export const AFFILIATE: Record<string, {
   },
   'personalized-golf-balls': {
     url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dpersonalized%2520golf%2520balls%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$30',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
@@ -1475,7 +1475,7 @@ export const AFFILIATE: Record<string, {
   },
   'sklz-accelerator-putting-mat': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dsklz%2520accelerator%2520putting%2520mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$40',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
@@ -1505,7 +1505,7 @@ export const AFFILIATE: Record<string, {
   },
   'lag-shot-7-iron': {
     url: 'https://www.playbetter.com/products/lag-shot-7-iron-swing-trainer?_pos=1&_sid=6bc53f9e3&_ss=r&ghref=2301%3A1333883',
-    retailer: 'Amazon',
+    retailer: 'PlayBetter',
     price: '~$119',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'See Today\'s Price →',
@@ -1568,7 +1568,7 @@ export const AFFILIATE: Record<string, {
   'ping-g-le3-irons': {
     url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520g%2520le%25203%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G%2520Le3%2520Irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$699',
     primaryRetailer: 'direct',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
@@ -1704,7 +1704,7 @@ export const AFFILIATE: Record<string, {
   'taylormade-spider-5k-zt': {
     url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520spider%25205k%2520zt%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Spider%25205K%2520ZT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$399',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
@@ -1734,7 +1734,7 @@ export const AFFILIATE: Record<string, {
   'odyssey-jailbird-zt': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520jailbird%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520Tri-Beam%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$329',
     primaryRetailer: 'direct',
     priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.',
@@ -1825,7 +1825,7 @@ export const AFFILIATE: Record<string, {
   'callaway-jaws-raw-52': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dcallaway%2520JAWS%2520RAW%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Jaws%2520Raw%252052%C2%B0%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$169',
     priceNote: 'Wedge prices hold steady. Buy when ready — grooves wear out before prices drop.',
     label: 'See Today\'s Price →',
@@ -2022,10 +2022,10 @@ export const AFFILIATE: Record<string, {
   'odyssey-stroke-lab': {
     url: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520STROKE%2520LAB%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17023849?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520Stroke%2520Lab%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$199',
     priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/odyssey-stroke-lab.webp',
     imgAlt: 'Odyssey Stroke Lab putter',
   },
@@ -2064,11 +2064,11 @@ export const AFFILIATE: Record<string, {
   'ping-g430-sft': {
     url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520g430%2520sft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G430%2520SFT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$449',
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/ping-g430-sft.webp',
     imgAlt: 'Ping G430 SFT draw-biased driver',
     benefits: [
@@ -2246,10 +2246,10 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-soft-response': {
     url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520soft%2520response%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$25/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/taylormade-soft-response.webp',
     imgAlt: 'TaylorMade Soft Response golf balls',
   },
@@ -2413,10 +2413,10 @@ export const AFFILIATE: Record<string, {
   },
   'maxfli-tour-x': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dmaxfli%2520tour%2520x%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$35/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/maxfli-tour-x.webp',
     imgAlt: 'Maxfli Tour X golf balls',
   },
@@ -2551,11 +2551,11 @@ export const AFFILIATE: Record<string, {
   },
   'square-golf-monitor': {
     url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=square*+golf*&ghref=2301%3A1333883',
-    retailer: 'Amazon',
+    retailer: 'PlayBetter',
     price: '~$699',
     primaryRetailer: 'direct',
     priceNote: 'Steady price — occasional $25-50 off during Prime Day and Black Friday.',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at PlayBetter →',
     imgSrc: '/images/products/square-golf-monitor.webp',
     imgAlt: 'Square Golf launch monitor',
     benefits: [
@@ -2653,10 +2653,10 @@ export const AFFILIATE: Record<string, {
   },
   'putt-out-trainer': {
     url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dputtout%2520trainer%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    retailer: 'Golf Galaxy',
     price: '~$30',
     priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
-    label: 'Check Price at Amazon →',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/putt-out-trainer.webp',
     imgAlt: 'PuttOut pressure putt trainer',
   },
@@ -2693,8 +2693,8 @@ export const AFFILIATE: Record<string, {
   },
   'carls-place-impact-screen': {
     url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=carls*+place*+impact*+screen*&ghref=2301%3A1333883',
-    retailer: 'Amazon', price: '~$199',
-    priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at Amazon →',
+    retailer: 'PlayBetter', price: '~$199',
+    priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at PlayBetter →',
     imgSrc: '/images/products/diy-impact-screen-enclosure.webp', imgAlt: 'Carls Place golf simulator impact screen',
     benefits: [
       'Excellent projected image quality',
@@ -2750,9 +2750,9 @@ export const AFFILIATE: Record<string, {
   },
   'ping-hoofer-lite': {
     url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520hoofer%2520lite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon', price: '~$265',
+    retailer: 'Golf Galaxy', price: '~$265',
     primaryRetailer: 'direct',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'Check Price at Amazon →',
+    priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/ping-hoofer-lite.webp', imgAlt: 'Ping Hoofer Lite stand bag',
   },
   'titleist-players-4-bag': {
@@ -2866,7 +2866,7 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'direct',
     price: '~$129',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
-    label: 'Check Price on Amazon',
+    label: 'Check Price on Bushnell',
     imgSrc: '/images/products/bushnell-phantom-2.webp',
     imgAlt: 'Bushnell Phantom 2 Golf GPS',
   },
