@@ -2105,6 +2105,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DScotty%2520Cameron%2520Phantom%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$399',
+    benefits: ['Tour-proven mallet stability with precision-milled face feel', 'High-MOI Phantom X shaping resists twisting on off-center strikes', 'Alignment-first topline that frames the ball at address'],
     primaryRetailer: 'direct',
     priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.',
     label: 'Check Price at Amazon →',
@@ -2845,6 +2846,12 @@ export const AFFILIATE: Record<string, {
 
 
   // ── NEW PRODUCTS (May 2026) ────────────────────────────────────────────
+  'nikon-coolshot-50i': {
+    url: 'https://www.amazon.com/s?k=nikon+coolshot+50i+rangefinder&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    label: 'Check Price at Amazon \u2192',
+    retailer: 'Amazon',
+    price: '~$219',
+  },
   'callaway-300-pro': {
     url: 'https://www.amazon.com/s?k=callaway+300+pro&linkCode=ll2&tag=cubicalgolfer-20&linkId=96a921ff0acbd88ccdeb2a5e29e4cfe4&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Amazon',
