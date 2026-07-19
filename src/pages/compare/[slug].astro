@@ -261,6 +261,27 @@ for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, na
   }
 }
 if (compProducts.length > 0) {
+// REC-02: mirror the visible 'Our Rating' spec row (e.g. '4.8/5') into product
+// schema when PRODUCT_RATINGS lacks the key — readers already see this value.
+const __ratingSpec = c.specs?.find((s: any) => /our rating/i.test(s.label || ''));
+const __parse5 = (v: string) => { const m = /([\d.]+)\s*\/\s*5/.exec(v || ''); return m ? parseFloat(m[1]) : undefined; };
+if (__ratingSpec) {
+  if (compProducts[0] && compProducts[0].rating == null) (compProducts[0] as any).rating = __parse5(__ratingSpec.a);
+  if (compProducts[1] && compProducts[1].rating == null) (compProducts[1] as any).rating = __parse5(__ratingSpec.b);
+}
+// Inverse direction: if schema carries ratings (via PRODUCT_RATINGS) that the
+// visible spec table doesn't show, render them — synthesize the Our Rating row
+// so every rating in markup is on the page. Visibility by construction.
+if (!__ratingSpec && (compProducts[0]?.rating != null || compProducts[1]?.rating != null)) {
+  const ra = compProducts[0]?.rating; const rb = compProducts[1]?.rating;
+  c.specs = c.specs || [];
+  c.specs.unshift({
+    label: 'Our Rating',
+    a: ra != null ? `${ra}/5` : '—',
+    b: rb != null ? `${rb}/5` : '—',
+    winner: ra != null && rb != null ? (ra > rb ? 'a' : rb > ra ? 'b' : 'tie') : 'tie',
+  });
+}
   schemas.push(...comparisonProductsSchema(compProducts));
 // ItemList wrapper referencing both products (vs-page rich-result eligibility)
 schemas.push({

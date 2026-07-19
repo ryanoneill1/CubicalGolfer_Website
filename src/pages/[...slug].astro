@@ -335,9 +335,15 @@ if (isBuyingGuide) {
     if (!pid) continue;
     const aff = getAffiliateLink(pid);
     if (!aff?.url) continue;
+    // REC-02: effective rating = section's own, else its comparison-table row's.
+    // The SAME effective value drives the visible score panel below, so any
+    // rating that reaches schema is guaranteed to be visible on the page.
+    const rowRating = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === pid)?.rating;
+    const schemaEffRating = section.rating ?? rowRating;
+    const schemaSection = schemaEffRating && !section.rating ? { ...section, rating: schemaEffRating } : section;
     // FIX: Pass price, retailer, image — required by Google Product schema
     schemas.push(buyingGuideProductSchema(
-      section, aff.url, aff.price || section.price, aff.retailer,
+      schemaSection, aff.url, aff.price || section.price, aff.retailer,
       aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined,
       pid
     ));
@@ -734,16 +740,18 @@ if (isBuyingGuide) {
           )}
 
           {/* SCORE + RANKING — numeric score and competitive context */}
-          {section.badge && section.rating && isBuyingGuide && (() => {
-            const score10 = Math.round(section.rating * 2 * 10) / 10;
+          {(section.affiliateKey || section.badge) && (section.rating ?? article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === section.affiliateKey)?.rating) && isBuyingGuide && (() => {
+            const effRating = section.rating ?? article.comparisonTable?.rows?.find((r: any) => r.affiliateKey === section.affiliateKey)?.rating;
+            const score10 = Math.round(effRating * 2 * 10) / 10;
             const rows = article.comparisonTable?.rows || [];
             const totalProducts = rows.length || article.sections?.filter((s: any) => s.affiliateKey)?.length || 0;
             const rank = rows.findIndex((r: any) => r.affiliateKey === section.affiliateKey) + 1;
             return (
               <div style="display:flex;align-items:center;gap:12px;margin:6px 0 10px;flex-wrap:wrap;">
                 <span style="display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;padding:4px 10px;border-radius:6px;font-size:16px;font-weight:700;">
-                  {score10}/10
+                  ★ {effRating}/5
                 </span>
+                <span style="font-size:15px;color:var(--muted);font-weight:600;">{score10}/10</span>
                 {rank > 0 && totalProducts > 0 && (
                   <span style="font-size:16px;color:var(--muted);font-weight:600;">
                     #{rank} of {totalProducts} compared
