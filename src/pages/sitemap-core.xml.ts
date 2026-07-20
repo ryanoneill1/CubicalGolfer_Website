@@ -52,7 +52,6 @@ export const GET: APIRoute = async () => {
     { loc: '/club-distance-calculator/',     changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
     { loc: '/golf-ball-finder/',             changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
     { loc: '/launch-monitor-room-checker/',  changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
-    { loc: '/golf-simulator-projector-distance-calculator/', changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
   ];
 
   return new Response(buildSitemapXml(entries), {

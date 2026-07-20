@@ -4,6 +4,16 @@
 import type { APIRoute } from 'astro';
 import { ARTICLES } from '../data/articles';
 import { buildSitemapXml } from '../lib/sitemap-utils';
+import { existsSync } from 'node:fs';
+
+// REC-05: each URL lives in exactly one sitemap.
+// 1) Slugs rendered by standalone src/pages files belong to sitemap-core
+//    (auto-derived — covers all current and future standalone conversions).
+// 2) The /compare/ namespace belongs to sitemap-comparisons.
+const ownedElsewhere = (slug: string) =>
+  slug.startsWith('/compare/') || existsSync('src/pages' + slug + 'index.astro');
+
+
 
 const FALLBACK = '2026-04-14';
 
@@ -17,7 +27,7 @@ const freqByType: Record<string, string> = {
 };
 
 export const GET: APIRoute = async () => {
-  const entries = ARTICLES.map(a => ({
+  const entries = ARTICLES.filter((a: any) => !ownedElsewhere(a.slug)).map(a => ({
     loc:        a.slug,
     lastmod:    a.dateModified ?? a.datePublished ?? FALLBACK,
     changefreq: freqByType[a.pageType] ?? 'monthly',
