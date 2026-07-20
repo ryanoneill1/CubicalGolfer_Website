@@ -1,222 +1,52 @@
 # CubicalGolfer.com
-> Independent golf gear reviews and buying guides for weekend golfers.
 
-## Pages
+> Independent golf gear reviews for weekend and desk-job golfers. Every rated product is bought with our own money and tested on-course — no sponsors, no free review units. Research picks are labeled as such and carry no rating.
 
-- Homepage: https://www.cubicalgolfer.com/
-- About: https://www.cubicalgolfer.com/about/
-- How We Test: https://www.cubicalgolfer.com/how-we-test/
+## Start Here
 
-## Accessories & Deals
+- [How We Test](https://www.cubicalgolfer.com/how-we-test/): The protocol behind every rating — rounds played, what gets measured, what disqualifies a product.
+- [About](https://www.cubicalgolfer.com/about/): Who runs the site and why a 10-handicap desk golfer's testing is the point.
+- [Gear Reviews Hub](https://www.cubicalgolfer.com/gear-reviews/): Every buying guide and review, organized by category.
+- [Comparisons Hub](https://www.cubicalgolfer.com/compare/): All head-to-head product matchups.
+- [Tools Hub](https://www.cubicalgolfer.com/tools/): Interactive calculators and finders.
 
-- Best Golf Towels: https://www.cubicalgolfer.com/best-golf-towel/
-- Best Golf Umbrellas: https://www.cubicalgolfer.com/best-golf-umbrella/
-- Best Electric Golf Carts: https://www.cubicalgolfer.com/best-electric-golf-cart/
-- Best Golf Alignment Sticks: https://www.cubicalgolfer.com/best-golf-alignment-sticks/
-- Best Golf Cart Bags: https://www.cubicalgolfer.com/best-golf-cart-bag/
-- Best Golf Stand Bags: https://www.cubicalgolfer.com/best-golf-stand-bag/
-- Black Friday Golf Deals: https://www.cubicalgolfer.com/black-friday-golf-deals/
-- Prime Day Golf Deals: https://www.cubicalgolfer.com/prime-day-golf-deals/
+## Buying Guides
 
-## Informational Guides
+- [Best Golf Rangefinders](https://www.cubicalgolfer.com/best-golf-rangefinders-2026/): Eight picks, five tested on-course, from $149 budget to premium.
+- [Best Golf Launch Monitors](https://www.cubicalgolfer.com/best-golf-launch-monitors-2026/): Nine options from $199 to $4,999, segmented by budget and use case.
+- [Best Golf Irons](https://www.cubicalgolfer.com/best-golf-irons-2026/): Eight sets by handicap level, five tested on-course.
+- [Best Putters](https://www.cubicalgolfer.com/best-golf-putters-2026/): Nine putters across blade, mallet, and zero-torque, tested on real greens.
+- [Most Forgiving Drivers](https://www.cubicalgolfer.com/best-golf-drivers-forgiveness/): Eight drivers ranked for mishit tolerance, five tested.
+- [Best Golf Balls](https://www.cubicalgolfer.com/best-golf-balls-2026/): Ranked by swing speed with compression matching.
+- [Best Golf Shoes](https://www.cubicalgolfer.com/best-golf-shoes/): Spiked, spikeless, and walking picks.
+- [Best Golf Simulators](https://www.cubicalgolfer.com/best-golf-simulators/): Complete setups ranked by budget tier.
 
-- Golf Handicap Explained: https://www.cubicalgolfer.com/golf-handicap-explained/
-- How Many Clubs in a Golf Bag: https://www.cubicalgolfer.com/how-many-clubs-in-a-golf-bag/
+## Head-to-Head Comparisons
 
-## Pillar Pages
+- [Callaway Paradym vs TaylorMade Qi35](https://www.cubicalgolfer.com/compare/callaway-paradym-vs-taylormade-qi35/): The two flagship forgiveness drivers, tested side by side.
+- [Shot Scope LM1 vs Garmin R10](https://www.cubicalgolfer.com/shot-scope-lm1-vs-garmin-r10/): Budget launch monitor showdown from the same net sessions.
+- [Pro V1 vs Chrome Soft](https://www.cubicalgolfer.com/compare/titleist-pro-v1-vs-callaway-chrome-soft/): Premium ball comparison by distance, spin, and feel.
+- [SkyTrak+ vs FlightScope Mevo Gen 2](https://www.cubicalgolfer.com/compare/skytrak-plus-vs-flightscope-mevo-gen2/): Sim-build monitors compared on accuracy and total cost.
+- [Garmin R10 vs Garmin R50](https://www.cubicalgolfer.com/compare/garmin-r10-vs-garmin-r50/): What the premium all-in-one buys over the budget favorite.
 
-- Best Golf Shoes — Spiked, Spikeless, and Walking: https://www.cubicalgolfer.com/best-golf-shoes/
-- Best Golf Simulators — Complete Setups Ranked: https://www.cubicalgolfer.com/best-golf-simulators/
+## Tools & Calculators
 
-## Golf Apparel
+- [Golf Ball Finder](https://www.cubicalgolfer.com/golf-ball-finder/): Two questions to a three-ball shortlist matched to swing speed.
+- [Golf Ball Compression Chart](https://www.cubicalgolfer.com/golf-ball-compression-chart/): 34 balls charted by compression with photos and picks.
+- [Handicap Calculator](https://www.cubicalgolfer.com/golf-handicap-calculator/): Official-method handicap from as few as three scores.
+- [Club Distance Calculator](https://www.cubicalgolfer.com/club-distance-calculator/): Map real gaps across every club in the bag.
+- [Projector Distance Calculator](https://www.cubicalgolfer.com/golf-simulator-projector-distance-calculator/): Throw-ratio math for garage sim builds.
 
-- Best Golf Shirts — Polos That Breathe and Look Good: https://www.cubicalgolfer.com/best-golf-shirts/
-- Best Golf Pants — Stretch, Style, and Comfort: https://www.cubicalgolfer.com/best-golf-pants/
-- Best Golf Shorts — Cool, Stretchy, Course-Legal: https://www.cubicalgolfer.com/best-golf-shorts/
-- Best Golf Hats — UV Protection That Fits Right: https://www.cubicalgolfer.com/best-golf-hats/
-- Best Golf Sunglasses — See the Green Clearly: https://www.cubicalgolfer.com/best-golf-sunglasses/
-- Best Golf Rain Jacket — Stay Dry, Swing Free: https://www.cubicalgolfer.com/best-golf-rain-jacket/
+## Flagship Reviews
 
-## Launch Monitor Reviews
+- [Bushnell Tour V6 Shift](https://www.cubicalgolfer.com/bushnell-tour-v6-shift-review/): 40-round rangefinder review, 4.8/5.
+- [Callaway Paradym AI Smoke Max](https://www.cubicalgolfer.com/callaway-paradym-ai-smoke-max-review/): 20-round driver test with mishit dispersion data, 4.8/5.
+- [Titleist Pro V1](https://www.cubicalgolfer.com/titleist-pro-v1-review/): The benchmark ball tested at 94 mph, 4.9/5.
+- [Rapsodo MLM2PRO](https://www.cubicalgolfer.com/rapsodo-mlm2pro-review/): The launch monitor we actually bought for cubicle life, 4.5/5.
+- [Garmin Approach S62](https://www.cubicalgolfer.com/garmin-approach-s62-review/): GPS watch daily-wear and on-course review, 4.7/5.
 
-- Bushnell Launch Pro Review — Worth $2,000?: https://www.cubicalgolfer.com/bushnell-launch-pro-review/
-- Garmin Approach R50 Review — R10 Upgrade Worth It?: https://www.cubicalgolfer.com/garmin-approach-r50-review/
-- SkyTrak+ Review — Best Home Simulator Monitor?: https://www.cubicalgolfer.com/skytrak-plus-review/
-- FlightScope Mevo+ Review — Portable Pro Monitor?: https://www.cubicalgolfer.com/mevo-plus-review/
+## Optional
 
-## Golf Ball Guides
-
-- Vice Golf Balls — Pro vs Pro Plus vs Drive (Tested): https://www.cubicalgolfer.com/vice-golf-balls/
-- Kirkland Signature Golf Balls — Worth the Hype?: https://www.cubicalgolfer.com/kirkland-signature-golf-balls/
-- Best Golf Balls for Distance (Tested and Ranked): https://www.cubicalgolfer.com/best-golf-balls-for-distance/
-
-## Gear Reviews
-
-- 5 Best Golf Rangefinders in 2026 (Tested & Ranked): https://www.cubicalgolfer.com/best-golf-rangefinders-2026/
-- Best Golf GPS Watches for Smarter Rounds 2026: https://www.cubicalgolfer.com/best-golf-gps-watches/
-- Most Forgiving Golf Drivers 2026 (Tested & Ranked): https://www.cubicalgolfer.com/best-golf-drivers-forgiveness/
-- Best Golf Irons 2026 — For Every Handicap: https://www.cubicalgolfer.com/best-golf-irons-2026/
-- Best Golf Balls for Weekend Golfers 2026: https://www.cubicalgolfer.com/best-golf-balls-2026/
-- Best Golf Putters 2026 — Blade, Mallet & Mid-Mallet: https://www.cubicalgolfer.com/best-golf-putters-2026/
-- Best Golf Bags 2026 — Carry, Cart & Stand: https://www.cubicalgolfer.com/best-golf-bags-2026/
-- Titleist Pro V1 vs Pro V1x — Full Comparison: https://www.cubicalgolfer.com/titleist-pro-v1-vs-pro-v1x/
-- Best Budget Golf Drivers Under $200: https://www.cubicalgolfer.com/best-golf-drivers-under-200/
-- Is a Golf Rangefinder Worth It?: https://www.cubicalgolfer.com/is-a-rangefinder-worth-it/
-- Rangefinder vs GPS Watch: Which Is Actually Better?: https://www.cubicalgolfer.com/golf-rangefinder-vs-gps-watch/
-- What Golf Ball Should a High Handicapper Use?: https://www.cubicalgolfer.com/what-golf-ball-for-high-handicapper/
-- Best Golf Rangefinder for Beginners 2026: https://www.cubicalgolfer.com/best-golf-rangefinder-beginners/
-- Bushnell vs Garmin Rangefinder: Which Should You Buy?: https://www.cubicalgolfer.com/bushnell-vs-garmin-rangefinder/
-- Best Golf Balls for Slow Swing Speed 2026: https://www.cubicalgolfer.com/best-golf-balls-slow-swing-speed/
-- Best Golf Rangefinder Under $200 (2026 Picks): https://www.cubicalgolfer.com/best-golf-rangefinder-under-200/
-- How to Use a Golf Rangefinder on the Course: https://www.cubicalgolfer.com/how-to-use-golf-rangefinder/
-- Best GPS Golf Watch for High Handicappers 2026: https://www.cubicalgolfer.com/best-gps-golf-watch-high-handicappers/
-- Best Golf Irons for High Handicappers in 2026: https://www.cubicalgolfer.com/best-golf-irons-high-handicapper/
-- What Is Slope on a Golf Rangefinder? (Actually Explained): https://www.cubicalgolfer.com/what-is-slope-on-a-rangefinder/
-- Best Putter for High Handicappers in 2026: https://www.cubicalgolfer.com/best-putter-high-handicapper/
-- 🏌️ Best Golf Rangefinder for Seniors 2026 — Tested Picks: https://www.cubicalgolfer.com/best-golf-rangefinder-for-seniors/
-- ⛰️ Do I Need Slope on a Golf Rangefinder? Honest Answer: https://www.cubicalgolfer.com/do-i-need-slope-on-rangefinder/
-- ⛳ Best Golf Balls for Seniors 2026 — Tested Picks: https://www.cubicalgolfer.com/best-golf-balls-for-seniors/
-- 🏌️ Best Golf Irons for Seniors 2026 — Tested Picks: https://www.cubicalgolfer.com/best-golf-irons-for-seniors/
-- 🔭 Blue Tees vs Bushnell Rangefinder — Which Is Better?: https://www.cubicalgolfer.com/blue-tees-vs-bushnell-rangefinder/
-- Best Beginner Golf Set Under $500 (2026): https://www.cubicalgolfer.com/best-beginner-golf-set-under-500/
-- Best Golf Balls for 90 MPH Swing Speed (2026): https://www.cubicalgolfer.com/best-golf-balls-90-mph-swing-speed/
-- Bushnell Tour V6 Shift Review — 40 Rounds Later: https://www.cubicalgolfer.com/bushnell-tour-v6-shift-review/
-- Callaway Paradym Ai Smoke Max Driver — 20 Rounds Later: https://www.cubicalgolfer.com/callaway-paradym-ai-smoke-max-review/
-- Titleist Pro V1 Review — Still the Best in 2026?: https://www.cubicalgolfer.com/titleist-pro-v1-review/
-- Precision Pro NX9 HD Review — 25 Rounds Later: https://www.cubicalgolfer.com/precision-pro-nx9-review/
-- Titleist Pro V1 vs Callaway Chrome Soft: https://www.cubicalgolfer.com/pro-v1-vs-chrome-soft/
-- Best Golf Clubs for a 20 Handicap — Complete Bag: https://www.cubicalgolfer.com/best-golf-clubs-20-handicap/
-- Best Golf Ball for a 15 Handicap: https://www.cubicalgolfer.com/best-golf-ball-15-handicap/
-- Best Driver for High Handicappers (2026): https://www.cubicalgolfer.com/best-driver-for-high-handicapper/
-- Best Rain Gear for Midwest Golfers 2026 — 20 Soggy Rounds Tested: https://www.cubicalgolfer.com/best-rain-gear-midwest-golfers/
-- Best Golf Gifts for Dad 2026 — 5 Picks Under $100: https://www.cubicalgolfer.com/best-golf-gifts-for-dad/
-- Best Junior Golf Clubs 2026 — Getting Your Kid Started the Right Way: https://www.cubicalgolfer.com/best-junior-golf-clubs/
-- Best Golf Gifts Under $50 That Actually Get Used: https://www.cubicalgolfer.com/best-golf-gifts-under-50/
-- Best Golf Christmas Gifts 2026 — Every Budget Covered: https://www.cubicalgolfer.com/best-christmas-golf-gifts/
-- Best Golf Gifts for Mom 2026 — Gear She Actually Wants: https://www.cubicalgolfer.com/best-golf-gifts-for-mom/
-- Best Left-Handed Golf Clubs 2026 — Weekend Golfer Guide: https://www.cubicalgolfer.com/best-left-handed-golf-clubs-2026/
-- Best Spikeless Golf Shoes for Walking 18 Holes 2026: https://www.cubicalgolfer.com/best-spikeless-golf-shoes-walking-18/
-- Best Golf Clubs for Slow Swing Speed — Seniors & Returning Golfers: https://www.cubicalgolfer.com/best-golf-clubs-slow-swing-speed/
-- Best Putters for Shaky Hands & Older Golfers — LAB, Zero-Torque & More: https://www.cubicalgolfer.com/best-putters-shaky-hands-older-golfers/
-- Approach Wedge vs Gap Wedge: Do You Actually Need the One That Came With Your Set?: https://www.cubicalgolfer.com/approach-wedge-vs-gap-wedge-do-you-need-it/
-- How to Buy Wedges: The 4-Degree Rule That Eliminates Distance Gaps: https://www.cubicalgolfer.com/how-to-buy-wedges-4-degree-rule/
-- When to Replace Your Wedges (and Why Sharpening Grooves Is a Bad Idea): https://www.cubicalgolfer.com/when-to-replace-wedges-grooves/
-- When to Replace Your Golf Grips (and Why It Is Costing You 3-4 Strokes): https://www.cubicalgolfer.com/when-to-replace-golf-grips/
-- 5 Best Golf Drivers Under $300 (2026): https://www.cubicalgolfer.com/best-golf-driver-under-300/
-- Best Drivers for Swing Speed Under 90mph: https://www.cubicalgolfer.com/best-golf-driver-slow-swing-speed/
-- Best Golf Drivers for Seniors (2026): https://www.cubicalgolfer.com/best-golf-driver-seniors/
-- How to Fit Yourself for a Driver (No Pro Shop Needed): https://www.cubicalgolfer.com/how-to-fit-yourself-for-driver/
-- 5 Best Mallet Putters (2026): https://www.cubicalgolfer.com/best-mallet-putters-2026/
-- 5 Best Blade Putters (2026): https://www.cubicalgolfer.com/best-blade-putters-2026/
-- 5 Best Putters Under $150 (2026): https://www.cubicalgolfer.com/best-budget-putters-under-150/
-- Best Putters for the Yips (2026): https://www.cubicalgolfer.com/best-putters-yips/
-- Mallet vs Blade Putter — Which Should You Use?: https://www.cubicalgolfer.com/mallet-vs-blade-putter/
-
-## Improve Game
-
-- How to Fix Your Slice: The Weekend Golfer's Complete Guide: https://www.cubicalgolfer.com/how-to-fix-your-slice/
-- How to Break 90: A Weekend Golfer's Roadmap: https://www.cubicalgolfer.com/how-to-break-90/
-- Golf Tips for Beginners: https://www.cubicalgolfer.com/golf-tips-for-beginners/
-- Average Golf Handicap — What's Normal in 2026?: https://www.cubicalgolfer.com/average-golf-handicap/
-- Golf Ball Compression Chart 2026 — Match Your Swing Speed: https://www.cubicalgolfer.com/golf-ball-compression-chart/
-- How to Chip in Golf: Simple Technique That Works: https://www.cubicalgolfer.com/how-to-chip-in-golf/
-- How to Stop Topping the Ball in Golf: https://www.cubicalgolfer.com/how-to-stop-topping-the-ball/
-- How Far Does the Average Golfer Hit a 7 Iron?: https://www.cubicalgolfer.com/how-far-average-golfer-hit-7-iron/
-- How to Lower Your Golf Handicap: What Actually Works: https://www.cubicalgolfer.com/how-to-lower-golf-handicap/
-- Why Does My Golf Ball Keep Going Right? (Causes + Fixes): https://www.cubicalgolfer.com/why-does-my-golf-ball-go-right/
-- Why Do I Keep Hitting My Irons Fat? Causes and Fixes: https://www.cubicalgolfer.com/why-do-i-hit-irons-fat/
-- How to Practice Golf at Home: 8 Things That Actually Work: https://www.cubicalgolfer.com/how-to-practice-golf-at-home/
-- 🎯 How to Stop 3-Putting — 5 Drills That Fix It Fast (2026): https://www.cubicalgolfer.com/how-to-stop-3-putting/
-- 🏌️‍♂️ Golf for Beginners — Complete 2026 Guide: https://www.cubicalgolfer.com/golf-for-beginners/
-- 7 Golf Practice Drills at Home (15 Minutes): https://www.cubicalgolfer.com/golf-practice-drills-at-home/
-- 15-Minute Golf Practice Routine Before Work (2026): https://www.cubicalgolfer.com/golf-practice-routine-before-work/
-- Best Golf Training Aids for Home Practice in 2026: https://www.cubicalgolfer.com/best-golf-training-aids-home-practice/
-- How I Dropped 5 Strokes With Arccos + MLM2PRO Data (15 Rounds/Year): https://www.cubicalgolfer.com/how-i-dropped-5-strokes-arccos-mlm2pro/
-- Best Training Aids to Fix Your Slice — 5 That Actually Work: https://www.cubicalgolfer.com/best-training-aids-fix-slice/
-- Best Swing Speed Trainers for Golfers Over 40: https://www.cubicalgolfer.com/best-swing-speed-trainer-over-40/
-- Driver vs 3-Wood Off the Tee — Which Should You Hit?: https://www.cubicalgolfer.com/driver-vs-3-wood-off-tee/
-- How to Choose Putter Length (No Fitting Required): https://www.cubicalgolfer.com/how-to-choose-putter-length/
-
-## Golf Tech
-
-- Best Golf Swing Analyzers for Instant Feedback: https://www.cubicalgolfer.com/best-golf-swing-analyzers/
-- Best Golf Apps for Tracking Your Game: https://www.cubicalgolfer.com/best-golf-apps/
-- Best AI Golf Training Tools for Home Practice: https://www.cubicalgolfer.com/best-ai-golf-training-tools/
-- SkyTrak+ vs Mevo+: The Honest 2026 Comparison: https://www.cubicalgolfer.com/skytrak-vs-mevo-plus/
-- How to Build a Garage Golf Simulator in 2026: https://www.cubicalgolfer.com/how-to-build-garage-golf-simulator/
-- Best Golf Simulators for Small Spaces 2026: https://www.cubicalgolfer.com/best-golf-simulator-small-spaces/
-- Best Indoor Golf Net Setup 2026: https://www.cubicalgolfer.com/best-indoor-golf-net-setup/
-- Best Golf Simulator Under $1,000 in 2026: https://www.cubicalgolfer.com/best-golf-simulator-under-1000/
-- ⌚ Best Golf GPS Watch Under $200 (2026) — Tested Picks: https://www.cubicalgolfer.com/best-golf-gps-watch-under-200/
-- Best Golf Launch Monitors 2026 (Every Price Point): https://www.cubicalgolfer.com/best-golf-launch-monitors-2026/
-- Trackman 4 vs Foresight GCQuad: The Definitive Comparison: https://www.cubicalgolfer.com/trackman-vs-foresight-gcquad/
-- Garmin Approach S62 Review — 30 Rounds Later: https://www.cubicalgolfer.com/garmin-approach-s62-review/
-- Rapsodo MLM2PRO Review — 6 Months Later: https://www.cubicalgolfer.com/rapsodo-mlm2pro-review/
-- Arccos Caddie Review — Is $99/Year Worth It?: https://www.cubicalgolfer.com/arccos-caddie-review/
-- Garmin Approach S62 vs Apple Watch for Golf: https://www.cubicalgolfer.com/garmin-s62-vs-apple-watch-golf/
-- Arccos Caddie vs Garmin S62 Shot Tracking: https://www.cubicalgolfer.com/arccos-vs-garmin-shot-tracking/
-- Rapsodo MLM2PRO vs Garmin Approach R10: https://www.cubicalgolfer.com/rapsodo-vs-garmin-r10/
-- Best Budget Golf Launch Monitor for Weekend Golfers: https://www.cubicalgolfer.com/best-budget-launch-monitor/
-- Best Golf Swing Analyzer for iPhone in 2026: https://www.cubicalgolfer.com/best-golf-swing-analyzer-iphone/
-- Best Apartment Golf Simulator Setup 2026 — Tested in a 1-BR After 60 Sessions: https://www.cubicalgolfer.com/apartment-golf-simulator-setup/
-- MLM2PRO vs Garmin R50 vs Square Golf — Weekend Golfer Launch Monitor Test: https://www.cubicalgolfer.com/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/
-- Best Budget Launch Monitor Under $700 for Apartment Golfers 2026: https://www.cubicalgolfer.com/best-budget-launch-monitor-apartment/
-- Best Golf Hitting Nets — Apartment, Garage & Backyard: https://www.cubicalgolfer.com/best-golf-hitting-net-apartment-garage/
-- Best Launch Monitors Without Subscription Fees (2026): https://www.cubicalgolfer.com/best-launch-monitors-no-subscription/
-- Shot Scope LM1 vs Garmin R10 — Which Budget Monitor Wins?: https://www.cubicalgolfer.com/shot-scope-lm1-vs-garmin-r10/
-- Best Golf Hitting Mats for Home (2026): https://www.cubicalgolfer.com/best-golf-hitting-mats-home/
-- Best Impact Screens for Golf Simulator (2026): https://www.cubicalgolfer.com/best-impact-screens-golf-simulator/
-- Best Projectors for Golf Simulator (2026): https://www.cubicalgolfer.com/best-golf-simulator-projectors/
-- How Much Does a Golf Simulator Cost? (2026): https://www.cubicalgolfer.com/how-much-does-golf-simulator-cost/
-
-## Golf Accessories
-
-- 25 Golf Accessories Every Golfer Should Own: https://www.cubicalgolfer.com/25-golf-accessories-every-golfer-should-own/
-- Best Golf Accessories Under $50: https://www.cubicalgolfer.com/best-golf-accessories-under-50/
-- Best Golf Gloves for Hot Weather Rounds: https://www.cubicalgolfer.com/best-golf-gloves-hot-weather/
-- Best Golf Gifts for Him 2026 — Every Budget: https://www.cubicalgolfer.com/best-golf-gifts-for-him/
-- Best Golf Shoes for Walking 2026: https://www.cubicalgolfer.com/best-golf-shoes-for-walking/
-- Best Men's Golf Gloves 2026: https://www.cubicalgolfer.com/best-golf-gloves-for-men/
-- Best Golf Training Aids That Actually Work: https://www.cubicalgolfer.com/best-golf-training-aids/
-- Best Golf Grip Trainers 2026: https://www.cubicalgolfer.com/best-golf-grip-trainers/
-- Best Golf Gear Under $100 (2026): https://www.cubicalgolfer.com/best-golf-gear-under-100/
-- Gifts for the Golfer Who Never Keeps Anything You Buy Him: https://www.cubicalgolfer.com/gifts-for-golfer-who-never-keeps-anything/
-- Best Father's Day Golf Gifts 2026: https://www.cubicalgolfer.com/fathers-day-golf-gifts-2026/
-- Best Golf Push Carts 2026 (Tested on Course): https://www.cubicalgolfer.com/best-golf-push-carts-2026/
-- Best Golf Grips for Sweaty Hands (2026): https://www.cubicalgolfer.com/best-golf-grips-sweaty-hands/
-- Best Electric Golf Push Carts 2026: https://www.cubicalgolfer.com/best-electric-golf-push-cart/
-- Best Golf Bags for Walking 2026: https://www.cubicalgolfer.com/best-golf-bags-walking-2026/
-- Best Golf Rain Gear 2026 (Tested in Rain): https://www.cubicalgolfer.com/best-golf-rain-gear-2026/
-- Best Golf Shoes for Bad Knees (2026): https://www.cubicalgolfer.com/best-golf-shoes-bad-knees/
-
-## Golf Lifestyle
-
-- How to Sneak In More Golf Rounds This Year: https://www.cubicalgolfer.com/how-to-sneak-in-more-golf-rounds/
-- Golf Fitness Routines for the Office Golfer: https://www.cubicalgolfer.com/golf-fitness-office-golfer/
-- Best Golf Courses Within a Weekend Drive: https://www.cubicalgolfer.com/best-golf-courses-weekend-drive/
-- Golf Course Etiquette: The Complete Guide: https://www.cubicalgolfer.com/golf-course-etiquette/
-- Best Golf Desk Accessories & Office Gifts for Golfers (2026): https://www.cubicalgolfer.com/golf-desk-accessories-office/
-- 7 Desk Exercises That Fixed My Weekend Slice — Cubicle Golfer Edition: https://www.cubicalgolfer.com/desk-exercises-fix-golf-slice/
-- How to Get Your Kid Into Golf — A Weekend Dad's Honest Guide: https://www.cubicalgolfer.com/how-to-get-your-kid-into-golf/
-- Best Golf Gifts for Couples 2026 — Play Together, Score Together: https://www.cubicalgolfer.com/best-golf-gifts-for-couples/
-- Best Indoor Putting Greens for Office & Home 2026: https://www.cubicalgolfer.com/best-indoor-putting-green-office-home/
-- The Cubicle-to-Course Playbook: How to Leave Work and Shoot Under 90: https://www.cubicalgolfer.com/office-to-golf-course-playbook/
-
-## Office Hacks
-
-- Best Indoor Putting Greens for Office & Home (2026): https://www.cubicalgolfer.com/best-indoor-putting-green-office/
-
-## Comparisons
-
-- undefined: https://www.cubicalgolfer.com/compare/bushnell-tour-v6-vs-precision-pro-nx9/
-- undefined: https://www.cubicalgolfer.com/compare/garmin-approach-s62-vs-shot-scope-v5/
-- undefined: https://www.cubicalgolfer.com/compare/arccos-vs-shot-scope/
-- undefined: https://www.cubicalgolfer.com/compare/callaway-paradym-vs-taylormade-qi35/
-- undefined: https://www.cubicalgolfer.com/compare/garmin-approach-s62-vs-s42/
-- undefined: https://www.cubicalgolfer.com/compare/skytrak-vs-garmin-r10/
-- undefined: https://www.cubicalgolfer.com/compare/blue-tees-vs-bushnell-tour-v6/
-- undefined: https://www.cubicalgolfer.com/compare/garmin-s12-vs-bushnell-ion-elite/
-- undefined: https://www.cubicalgolfer.com/compare/cobra-aerojet-max-vs-ping-g430-max/
-- undefined: https://www.cubicalgolfer.com/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/
-- undefined: https://www.cubicalgolfer.com/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/
-- undefined: https://www.cubicalgolfer.com/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/
+- [Full page index](https://www.cubicalgolfer.com/llms-full.txt): Every page on the site with descriptions.
+- [Sitemap](https://www.cubicalgolfer.com/sitemap.xml): Machine-readable URL index with lastmod dates.
+- [Brand hubs](https://www.cubicalgolfer.com/brands/): Every product we cover, grouped by manufacturer.
