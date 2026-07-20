@@ -735,7 +735,7 @@ if (isBuyingGuide) {
         <div class="art-section" id={`pick-${idx + 1}`}>
           <h2>{section.h2}</h2>
           {section.badge && <span class="badge-pill">{section.badge}</span>}
-          {(section as any).testedStatus === 'research' && <span class="badge-pill" style="background:#8a8377;color:#fff;">RESEARCH PICK — NOT YET IN OUR TEST BAG</span>}
+          {(section as any).testedStatus === 'research' && <span class="badge-pill" style="background:#6A645A;color:#fff;">RESEARCH PICK — NOT YET IN OUR TEST BAG</span>}
           {productId && REVIEW_SLUGS[productId] && REVIEW_SLUGS[productId] !== article.slug && (
             <p class="section-review-link"><a href={REVIEW_SLUGS[productId]}>Read our full review →</a></p>
           )}
