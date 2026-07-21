@@ -9948,6 +9948,15 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-grips-sweaty-hands',
     slug: '/best-golf-grips-sweaty-hands/',
+    comparisonTable: {
+      headers: ['Grip', 'Best For', 'Texture', 'Price', 'Key Trait'],
+      rows: [
+        { name: 'Golf Pride Z-Grip Cord', bestFor: 'Heavy Sweat', feature1: 'Full cord', price: '~$6/grip', feature2: 'Tackier when wet', winner: true, badge: 'BEST FOR SWEAT', rating: 4.5, affiliateKey: 'golf-pride-z-grip' },
+        { name: 'Golf Pride MCC Plus4', bestFor: 'Comfort + Grip', feature1: 'Half cord', price: '~$8/grip', feature2: 'Reduced lower taper', winner: false, badge: 'MOST POPULAR', rating: 4.8, affiliateKey: 'golf-pride-mcc-plus4' },
+        { name: 'Lamkin Sonar', bestFor: 'Budget', feature1: 'Tacky rubber', price: '~$6/grip', feature2: 'Genesis material', winner: false, affiliateKey: 'lamkin-sonar' },
+        { name: 'Super Stroke S-Tech', bestFor: 'Oversize', feature1: 'Midsize tack', price: '~$7/grip', feature2: 'Lower grip pressure', winner: false, affiliateKey: 'super-stroke-s-tech' },
+      ],
+    },
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/golf-grips-sweaty-hands-thumb.webp',
     thumbnail: '/images/thumbnails/golf-grips-sweaty-hands-thumb.webp',
     category: 'golf-accessories',
@@ -10270,6 +10279,14 @@ export const ARTICLES: Article[] = [
 {
     id: 'best-golf-bags-walking',
     slug: '/best-golf-bags-walking-2026/',
+    comparisonTable: {
+      headers: ['Bag', 'Best For', 'Weight', 'Price', 'Standout Feature'],
+      rows: [
+        { name: 'Sun Mountain 2.5+', bestFor: 'Lightest', feature1: '2.5 lbs', price: '~$230', feature2: '4-way top', winner: true, badge: 'LIGHTEST', rating: 4.6, affiliateKey: 'sun-mountain-25-plus' },
+        { name: 'Ping Hoofer Lite', bestFor: 'Strap Comfort', feature1: '3.2 lbs', price: '~$265', feature2: 'SensorCool strap', winner: false, badge: 'MOST COMFORTABLE', rating: 4.6, affiliateKey: 'ping-hoofer-lite' },
+        { name: 'Titleist Players 4', bestFor: 'Storage', feature1: '3.5 lbs', price: '~$250', feature2: 'Cooler + 4 pockets', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'titleist-players-4' },
+      ],
+    },
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/walking-bags-thumb.webp',
     thumbnail: '/images/thumbnails/walking-bags-thumb.webp',
     category: 'golf-accessories', pageType: 'buying-guide', quickAnswerProduct: 'sun-mountain-25-plus',
