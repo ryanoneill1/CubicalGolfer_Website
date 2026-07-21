@@ -52,6 +52,14 @@ export const GET: APIRoute = async () => {
     { loc: '/club-distance-calculator/',     changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
     { loc: '/golf-ball-finder/',             changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
     { loc: '/launch-monitor-room-checker/',  changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
+    // Brand hubs + course hub — indexable pages that were missing from the sitemap (added 2026-07)
+    { loc: '/brands/',                   changefreq: 'monthly', priority: '0.70', lastmod: freshestOverall() },
+    { loc: '/brands/garmin/',            changefreq: 'monthly', priority: '0.70', lastmod: freshestInCategory('golf-tech') },
+    { loc: '/brands/bushnell/',          changefreq: 'monthly', priority: '0.70', lastmod: freshestInCategory('gear-reviews') },
+    { loc: '/brands/callaway/',          changefreq: 'monthly', priority: '0.70', lastmod: freshestInCategory('gear-reviews') },
+    { loc: '/brands/taylormade/',        changefreq: 'monthly', priority: '0.70', lastmod: freshestInCategory('gear-reviews') },
+    { loc: '/brands/titleist/',          changefreq: 'monthly', priority: '0.70', lastmod: freshestInCategory('gear-reviews') },
+    { loc: '/courses/',                  changefreq: 'monthly', priority: '0.60', lastmod: '2026-05-17' },
   ];
 
   return new Response(buildSitemapXml(entries), {
