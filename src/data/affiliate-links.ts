@@ -3386,6 +3386,7 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'amazon',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/bushnell-pro-x3.webp', imgAlt: 'Bushnell Pro X3 rangefinder',
   },
 };
 
