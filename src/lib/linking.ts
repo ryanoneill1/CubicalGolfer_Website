@@ -169,6 +169,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   
     { slug: '/best-golf-gps-watch-under-300/', label: 'Best GPS Watch Under $300' },
     { slug: '/compare/garmin-s70-vs-apple-watch-golf/', label: 'Garmin S70 vs Apple Watch for Golf' },
+  
+    { slug: '/compare/garmin-s62-vs-apple-watch-ultra-golf/', label: 'Garmin S62 vs Apple Watch for Golf' },
   ],
   'garmin-s62-review': [
     { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
@@ -185,6 +187,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
     { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
     { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+  
+    { slug: '/compare/garmin-s62-vs-apple-watch-ultra-golf/', label: 'Garmin S62 vs Apple Watch Showdown' },
   ],
 
   // ── Ball cluster ──────────────────────────────────────────────────────────────
@@ -202,6 +206,10 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/compare/callaway-chrome-soft-vs-kirkland-signature/', label: 'Chrome Soft vs Kirkland Signature' },
     { slug: '/compare/taylormade-tp5-vs-callaway-chrome-soft/', label: 'TP5 vs Chrome Soft Comparison' },
     { slug: '/golf-ball-complete-guide/', label: 'Complete Golf Ball Guide' },
+  
+    { slug: '/compare/vice-pro-vs-titleist-pro-v1/', label: 'Vice Pro vs Pro V1 Comparison' },
+    { slug: '/compare/callaway-supersoft-vs-srixon-soft-feel/', label: 'Supersoft vs Soft Feel Head-to-Head' },
+    { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft Comparison' },
   ],
   'golf-ball-compression': [
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym — 2026 Driver Showdown' },
@@ -213,18 +221,28 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
     { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
   
-    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls for 2026 — Full Guide' },],
+    { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls for 2026 — Full Guide' },
+    { slug: '/compare/vice-pro-vs-titleist-pro-v1/', label: 'Vice Pro vs Pro V1 — Half the Price?' },
+    { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft — Mid-Price Test' },
+    { slug: '/golf-ball-complete-guide/', label: 'Golf Ball Guide — Everything You Need to Know' },
+  ],
   'golf-balls-slow-swing': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
     { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
+  
+    { slug: '/compare/vice-pro-vs-titleist-pro-v1/', label: 'How the Vice Pro Compares to the Pro V1' },
+    { slug: '/compare/callaway-supersoft-vs-srixon-soft-feel/', label: 'Supersoft vs Soft Feel for Slow Swingers' },
   ],
   'what-golf-ball-high-handicapper': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
+  
+    { slug: '/golf-ball-complete-guide/', label: 'Full Golf Ball Guide for All Levels' },
+    { slug: '/compare/callaway-supersoft-vs-srixon-soft-feel/', label: 'Supersoft vs Soft Feel for High Handicappers' },
   ],
   'golf-balls-90-mph': [
     { slug: '/vice-golf-balls/',               label: 'Vice Golf Balls' },
@@ -238,6 +256,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/kirkland-signature-golf-balls/',  label: 'Kirkland Signature Balls' },
     { slug: '/best-golf-balls-for-distance/',   label: 'Best Balls for Distance' },
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
+  
+    { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft for Mid Speeds' },
   ],
 
   // ── Fix previously orphaned pages ─────────────────────────────────────────────
@@ -297,6 +317,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
     { slug: '/how-to-fix-your-slice/',              label: 'How to Fix Your Slice' },
     { slug: '/golf-course-etiquette/',             label: 'Golf Course Etiquette Guide' },
+  
+    { slug: '/golf-equipment-budget-planner/', label: 'Golf Equipment Budget Planning Tool' },
   ],
   'tips-beginners': [
     { slug: '/golf-for-beginners/',                 label: 'Golf for Beginners — Complete Guide' },
@@ -310,6 +332,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-course-etiquette/',              label: 'Golf Course Etiquette Guide' },
     { slug: '/best-beginner-golf-set-under-500/',   label: 'Best Beginner Set Under $500' },
     { slug: '/best-golf-gear-under-100/',           label: 'Best Golf Gear Under $100' },
+  
+    { slug: '/golf-equipment-budget-planner/', label: 'Plan Your Golf Equipment Budget' },
   ],
 
   // ── Improvement cluster ───────────────────────────────────────────────────────
@@ -337,7 +361,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids' },
     { slug: '/golf-practice-drills-at-home/',       label: '7 Practice Drills at Home (15 Min)' },
   
-    { slug: '/best-budget-putters-under-150/', label: 'Top Putters for Under $150' },],
+    { slug: '/best-budget-putters-under-150/', label: 'Top Putters for Under $150' },
+    { slug: '/compare/scotty-cameron-phantom-vs-lab-golf-df3/', label: 'Scotty Cameron vs LAB DF3 for Yips' },
+  ],
   'why-does-my-golf-ball-go-right': [
     { slug: '/how-to-fix-your-slice/',              label: 'Full Slice Fix Guide' },
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
@@ -379,6 +405,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-rangefinder-for-seniors/',  label: 'Best Rangefinder for Seniors' },
     { slug: '/best-golf-irons-for-seniors/',        label: 'Best Golf Irons for Seniors' },
     { slug: '/best-golf-balls-slow-swing-speed/',   label: 'Best Balls for Slow Swing Speed' },
+  
+    { slug: '/compare/callaway-supersoft-vs-srixon-soft-feel/', label: 'Supersoft vs Soft Feel — Which Budget Ball Wins?' },
   ],
   'best-golf-irons-seniors': [
     { slug: '/best-golf-rangefinder-for-seniors/',  label: 'Best Rangefinder for Seniors' },
@@ -446,6 +474,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-accessories-under-50/',      label: 'Best Accessories Under $50' },
     { slug: '/best-golf-bags-2026/',                 label: 'Best Golf Bags 2026' },
     { slug: '/office-to-golf-course-playbook/',           label: 'Golf Fitness for Office Workers' },
+  
+    { slug: '/golf-apparel/', label: 'Golf Apparel — Shirts, Shorts & More' },
   ],
 
   // ── Putters cluster ────────────────────────────────────────────────────────
@@ -455,6 +485,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-putters-2026/',         label: 'Best Putter for High Handicappers' },
   
     { slug: '/best-budget-putters-under-150/', label: 'Best Putters Under $150' },
+  
+    { slug: '/compare/taylormade-spider-tour-vs-odyssey-white-hot-og/', label: 'Spider Tour vs White Hot OG Comparison' },
+    { slug: '/compare/scotty-cameron-phantom-vs-lab-golf-df3/', label: 'Scotty Cameron vs LAB DF3 Comparison' },
   ],
 
   // ── Simulator cluster ──────────────────────────────────────────────────────
@@ -503,7 +536,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/arccos-vs-garmin-shot-tracking/', label: 'Arccos vs Garmin Shot Tracking' },
     { slug: '/compare/arccos-vs-shot-scope/', label: 'Arccos vs Shot Scope Sensors' },
   
-    { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors With No Subscription' },],
+    { slug: '/best-launch-monitors-no-subscription/', label: 'Launch Monitors With No Subscription' },
+  ],
   'rapsodo-mlm2pro-review': [
         { slug: '/best-impact-screens-golf-simulator/', label: 'Best Impact Screens Golf Simulator' },
         { slug: '/golf-simulator-room-dimensions-guide/', label: 'Golf Simulator Room Dimensions Guide' },
@@ -576,6 +610,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gifts-for-him/',             label: 'Best Golf Gifts for Him' },
     { slug: '/best-beginner-golf-set-under-500/',    label: 'Best Beginner Set Under $500' },
     { slug: '/office-to-golf-course-playbook/',        label: 'Best Golf Desk Accessories' },
+  
+    { slug: '/golf-equipment-budget-planner/', label: 'Golf Equipment Budget Planner Tool' },
   ],
   'practice-drills-home': [
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
@@ -667,6 +703,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
     { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 mph' },
+  
+    { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft for 15 Handicappers' },
   ],
   'driver-high-handicapper': [
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
@@ -681,7 +719,9 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
     { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
   
-    { slug: '/best-golf-drivers-under-200/', label: 'Drivers Under $200 for Beginners' },],
+    { slug: '/best-golf-drivers-under-200/', label: 'Drivers Under $200 for Beginners' },
+    { slug: '/compare/callaway-big-bertha-vs-ping-g430-max/', label: 'Big Bertha vs G430 Max for High Handicappers' },
+  ],
   'budget-launch-monitors': [
     { slug: '/rapsodo-mlm2pro-review/', label: 'Rapsodo MLM2PRO Review' },
     { slug: '/compare/garmin-r10-vs-rapsodo-mlm2pro/', label: 'Rapsodo vs Garmin R10' },
@@ -693,7 +733,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/mevo-plus-review/', label: 'Mevo+ Review' },
     { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors 2026' },
   
-    { slug: '/best-launch-monitors-no-subscription/', label: 'Subscription-Free Launch Monitors' },],
+    { slug: '/best-launch-monitors-no-subscription/', label: 'Subscription-Free Launch Monitors' },
+  ],
   'swing-analyzer-iphone': [
     { slug: '/arccos-caddie-review/', label: 'Arccos Caddie Review' },
         { slug: '/best-golf-swing-analyzer-iphone/', label: 'Best Golf Swing Analyzer Iphone' },
@@ -836,7 +877,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     { slug: '/best-golf-gloves-for-men/', label: 'Best Golf Gloves 2026' },
   
-    { slug: '/best-golf-rain-gear-2026/', label: 'Best Golf Rain Gear for 2026' },],
+    { slug: '/best-golf-rain-gear-2026/', label: 'Best Golf Rain Gear for 2026' },
+  ],
   // ── 7 new buying guide clusters ───────────────────────────────────────
   'indoor-putting-green': [
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
@@ -915,6 +957,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
+  
+    { slug: '/compare/cleveland-cbx4-vs-callaway-jaws-full-toe/', label: 'CBX4 vs Jaws Full Toe for Amateurs' },
   ],
   'how-to-buy-wedges': [
     { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
@@ -949,6 +993,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
     { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
     { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
+  
+    { slug: '/compare/taylormade-spider-tour-vs-odyssey-white-hot-og/', label: 'Spider Tour vs White Hot OG — Mallet vs Blade' },
   ],
   'putters-yips': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
@@ -960,14 +1006,18 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade Putter' },
   
-    { slug: '/best-budget-putters-under-150/', label: 'Affordable Putters Under $150' },],
+    { slug: '/best-budget-putters-under-150/', label: 'Affordable Putters Under $150' },
+  ],
   'mallet-vs-blade': [
     { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
     { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters 2026' },
     { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters 2026' },
     { slug: '/how-to-choose-putter-length/', label: 'How to Choose Putter Length' },
   
-    { slug: '/best-budget-putters-under-150/', label: 'Best Budget Putters Under $150' },],
+    { slug: '/best-budget-putters-under-150/', label: 'Best Budget Putters Under $150' },
+    { slug: '/compare/taylormade-spider-tour-vs-odyssey-white-hot-og/', label: 'Spider Tour vs White Hot OG Tested' },
+    { slug: '/compare/scotty-cameron-phantom-vs-lab-golf-df3/', label: 'Scotty Cameron vs LAB DF3 — Premium Putters' },
+  ],
   'driver-under-300': [
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
         { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
@@ -976,7 +1026,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   
-    { slug: '/best-golf-drivers-under-200/', label: 'Best Drivers Under $200' },],
+    { slug: '/best-golf-drivers-under-200/', label: 'Best Drivers Under $200' },
+  ],
   'driver-slow-swing': [
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
         { slug: '/driver-loft-guide/', label: 'Driver Loft Guide' },
@@ -1014,7 +1065,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
   
-    { slug: '/best-golf-grips-sweaty-hands/', label: 'Best Grips for Sweaty Hands' },],
+    { slug: '/best-golf-grips-sweaty-hands/', label: 'Best Grips for Sweaty Hands' },
+  ],
 
   'subscription-cost': [
     { slug: '/best-launch-monitors-no-subscription/', label: 'Best No-Subscription Launch Monitors' },
@@ -1030,6 +1082,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   'gloves': [
     { slug: '/best-golf-grips-sweaty-hands/', label: 'Sweat-Proof Golf Grips' },
+  
+    { slug: '/golf-apparel/', label: 'Complete Golf Apparel Roundup' },
   ],
 
   'golf-rain-jacket': [
@@ -1058,6 +1112,30 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   'lower-handicap': [
     { slug: '/average-golf-handicap/', label: 'What Is the Average Golf Handicap?' },
+  ],
+
+  'apple-watch-apps': [
+    { slug: '/compare/garmin-s62-vs-apple-watch-ultra-golf/', label: 'Garmin S62 vs Apple Watch — Full Comparison' },
+  ],
+
+  'drivers': [
+    { slug: '/compare/callaway-big-bertha-vs-ping-g430-max/', label: 'Big Bertha vs G430 Max — Forgiveness Test' },
+  ],
+
+  'best-budget-drivers': [
+    { slug: '/compare/callaway-big-bertha-vs-ping-g430-max/', label: 'Big Bertha vs G430 Max Driver Comparison' },
+  ],
+
+  'wedges-beginners': [
+    { slug: '/compare/cleveland-cbx4-vs-callaway-jaws-full-toe/', label: 'CBX4 vs Jaws Full Toe — Beginner Wedge Test' },
+  ],
+
+  'wedge-bounce-guide': [
+    { slug: '/compare/cleveland-cbx4-vs-callaway-jaws-full-toe/', label: 'CBX4 vs Jaws Full Toe Wedge Comparison' },
+  ],
+
+  'golf-shorts': [
+    { slug: '/golf-apparel/', label: 'Full Golf Apparel Guide' },
   ],
 };
 
