@@ -456,7 +456,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
   
     { slug: '/best-driver-for-high-handicapper/', label: 'Best Driver for High Handicappers' },
-    { slug: '/compare/taylormade-qi35-vs-callaway-ai-smoke/', label: 'Qi35 vs Ai Smoke Driver Test' },
+    { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Ai Smoke Driver Test' },
     { slug: '/compare/taylormade-qi35-vs-titleist-gt2/', label: 'Qi35 vs Titleist GT2 Comparison' },
     { slug: '/driver-vs-3-wood-off-tee/', label: 'Driver vs 3-Wood Off the Tee' },
     { slug: '/how-to-fit-yourself-for-driver/', label: 'How to Fit Yourself for a Driver' },

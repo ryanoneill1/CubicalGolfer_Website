@@ -7,7 +7,9 @@ import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
 import { comparisonSchema, faqSchema, breadcrumbSchema, comparisonProductsSchema } from '../../lib/schema';
 import type { ComparisonProduct } from '../../lib/schema';
-import { getAffiliateLink } from '../../data/affiliate-links';
+import { getAffiliateLink, AFFILIATE } from '../../data/affiliate-links';
+import { productName, PRODUCT_DISPLAY } from '../../data/product-names';
+import { getProductImage } from '../../lib/image-map';
 import type { Comparison } from '../../data/types';
 
 export async function getStaticPaths() {
@@ -24,126 +26,58 @@ const meta = comparisonMeta(c);
 const schemas: object[] = [comparisonSchema(c), breadcrumbSchema(meta.breadcrumbs)];
 if (c.faq && c.faq.length > 0) schemas.push(faqSchema(c.faq));
 
-const PRODUCT_AFFILIATE_MAP: Record<string, string> = {
-  'rapsodo-mlm2pro':       'rapsodo-mlm2pro',
-  'bushnell-launch-pro':   'bushnell-launch-pro',
-  'garmin-r50':            'garmin-r50',
-  'flightscope-mevo':      'flightscope-mevo-gen2',
-  'ping-g440':             'ping-g430-max-driver',
-  'titleist-gt2':          'titleist-tsi3-driver',
-  'bushnell-pro-x3':       'bushnell-pro-xe',
-  'apple-watch-golf':      'garmin-approach-s62',
-  'tp5':                   'taylormade-tp5',
-  'bushnell-tour-v6':     'bushnell-tour-v6-shift',
-  'precision-pro-nx9':    'precision-pro-nx9-hd',
-  'garmin-s62':           'garmin-approach-s62',
-  'shot-scope-v5':        'shot-scope-v5',
-  'callaway-paradym-max': 'callaway-paradym-ai-smoke-max',
-  'taylormade-qi35-max':  'taylormade-qi35-max',
-  'arccos-caddie':        'arccos-caddie-sensors',
-  'garmin-s42':           'garmin-approach-s42',
-  'skytrak-plus':         'skytrak-plus',
-  'blue-tees-s3-max':     'blue-tees-series-3-max',
-  'cobra-aerojet-max':    'cobra-aerojet-max',
-  'ping-g430-max':        'ping-g430-max-driver',
-  'cleveland-xl2':        'cleveland-launcher-xl2',
-  'odyssey-stroke-lab':    'odyssey-stroke-lab',
-  'scotty-cameron-phantom':'scotty-cameron-phantom-x',
-  'lab-df3':               'lab-golf-df3',
-  'odyssey-two-ball':      'odyssey-two-ball-eleven',
-  'garmin-r10':            'garmin-approach-r10',
-  'shot-scope-lm1':        'shot-scope-lm1',
-  'callaway-ai-smoke-max': 'callaway-paradym-ai-smoke-max',
-  'pro-v1':                'titleist-pro-v1',
-  'chrome-soft':           'callaway-chrome-soft',
-  'kirkland':              'kirkland-signature',
-  'mevo-plus':             'flightscope-mevo-plus',
-  'garmin-s70':            'garmin-approach-s70',
-  'bushnell-v6':           'bushnell-tour-v6-shift',
-  'callaway-300-pro':      'callaway-300-pro',
-  'flightscope-mevo-gen2': 'flightscope-mevo-gen2',
-  'garmin-s12':            'garmin-approach-s12',
-  'bushnell-ion-elite':    'bushnell-ion-elite',
-};
+// ── Fail-loud product resolution ────────────────────────────────────────────
+// Comparison product keys are canonical AFFILIATE-registry ids. getStaticPaths
+// runs at build time, so an unresolved key THROWS AND BREAKS THE BUILD instead
+// of silently dropping a monetized card or leaking a lowercase key as the name.
+function resolveProduct(key: string, role: string, slug: string) {
+  const aff = AFFILIATE[key];
+  if (!aff) {
+    throw new Error(
+      `[compare/${slug}] ${role} key "${key}" is missing from the AFFILIATE registry ` +
+      `(src/data/affiliate-links.ts). Fix the key in comparisons.ts or add the product — ` +
+      `unresolved keys used to silently drop the product card.`,
+    );
+  }
+  if (!PRODUCT_DISPLAY[key]) {
+    throw new Error(
+      `[compare/${slug}] ${role} key "${key}" has no PRODUCT_DISPLAY name ` +
+      `(src/data/product-names.ts) — would render a lowercase name leak. Add it.`,
+    );
+  }
+  return {
+    ...aff,
+    imgSrc: aff.imgSrc || getProductImage(key),
+    imgAlt: aff.imgAlt || productName(key),
+    name: productName(key),
+  };
+}
 
-const PRODUCT_NAMES: Record<string, string> = {
-  'rapsodo-mlm2pro':       'Rapsodo MLM2Pro',
-  'bushnell-launch-pro':   'Bushnell Launch Pro',
-  'garmin-r50':            'Garmin Approach R50',
-  'flightscope-mevo':      'FlightScope Mevo',
-  'ping-g440':             'Ping G440 Max Driver',
-  'titleist-gt2':          'Titleist GT2 Driver',
-  'bushnell-pro-x3':       'Bushnell Pro X3',
-  'apple-watch-golf':      'Apple Watch Ultra 2 (Golf)',
-  'tp5':                   'TaylorMade TP5',
-  'bushnell-tour-v6':     'Bushnell Tour V6 Shift',
-  'precision-pro-nx9':    'Precision Pro NX9 HD',
-  'garmin-s62':           'Garmin Approach S62',
-  'shot-scope-v5':        'Shot Scope V5',
-  'callaway-paradym-max': 'Callaway Paradym AI Smoke Max',
-  'taylormade-qi35-max':  'TaylorMade Qi35 Max',
-  'arccos-caddie':        'Arccos Caddie Smart Sensors',
-  'garmin-s42':           'Garmin Approach S42',
-  'skytrak-plus':         'SkyTrak+',
-  'blue-tees-s3-max':     'Blue Tees Series 3 Max',
-  'cobra-aerojet-max':    'Cobra Aerojet Max',
-  'ping-g430-max':        'Ping G430 Max',
-  'cleveland-xl2':        'Cleveland Launcher XL2',
-  'odyssey-stroke-lab':    'Odyssey Stroke Lab',
-  'scotty-cameron-phantom':'Scotty Cameron Phantom X',
-  'lab-df3':               'LAB Golf DF3',
-  'odyssey-two-ball':      'Odyssey Two Ball Eleven',
-  'garmin-r10':            'Garmin Approach R10',
-  'shot-scope-lm1':        'Shot Scope LM1',
-  'callaway-ai-smoke-max': 'Callaway Paradym Ai Smoke Max',
-  'pro-v1':                'Titleist Pro V1',
-  'chrome-soft':           'Callaway Chrome Soft',
-  'kirkland':              'Kirkland Signature',
-  'mevo-plus':             'Flightscope Mevo+',
-  'garmin-s70':            'Garmin Approach S70',
-  'bushnell-v6':           'Bushnell Tour V6 Shift',
-  'callaway-300-pro':      'Callaway 300 Pro',
-  'flightscope-mevo-gen2': 'Flightscope Mevo Gen2',
-  'garmin-s12':            'Garmin Approach S12',
-  'bushnell-ion-elite':    'Bushnell ION Elite',
-};
+if (c.winner !== c.productA && c.winner !== c.productB) {
+  throw new Error(
+    `[compare/${c.slug}] winner "${c.winner}" is neither productA (${c.productA}) ` +
+    `nor productB (${c.productB}).`,
+  );
+}
 
-const affA    = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
-const affB    = PRODUCT_AFFILIATE_MAP[c.productB] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB]) : null;
-const nameA   = PRODUCT_NAMES[c.productA] || c.productA.replace(/-/g, ' ');
-const nameB   = PRODUCT_NAMES[c.productB] || c.productB.replace(/-/g, ' ');
-const winnerName = PRODUCT_NAMES[c.winner] || c.winner.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
-const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]) : null;
+const affA       = resolveProduct(c.productA, 'productA', c.slug);
+const affB       = resolveProduct(c.productB, 'productB', c.slug);
+const nameA      = affA.name;
+const nameB      = affB.name;
+const winnerAff  = c.winner === c.productA ? affA : affB;
+const winnerName = winnerAff.name;
 
 // ── Product schema for SERP rich results ────────────────────────────────────
-const PRODUCT_BRANDS: Record<string, string> = {
-  'bushnell-tour-v6': 'Bushnell', 'precision-pro-nx9': 'Precision Pro',
-  'garmin-s62': 'Garmin', 'shot-scope-v5': 'Shot Scope',
-  'callaway-paradym-max': 'Callaway', 'taylormade-qi35-max': 'TaylorMade',
-  'arccos-caddie': 'Arccos', 'garmin-s42': 'Garmin',
-  'skytrak-plus': 'SkyTrak', 'blue-tees-s3-max': 'Blue Tees',
-  'cobra-aerojet-max': 'Cobra', 'ping-g430-max': 'Ping', 'cleveland-xl2': 'Cleveland',
-  'odyssey-stroke-lab': 'Odyssey', 'scotty-cameron-phantom': 'Scotty Cameron',
-  'lab-df3': 'LAB Golf', 'odyssey-two-ball': 'Odyssey',
-};
-
-const compProducts: ComparisonProduct[] = [];
-for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, nameB]] as const) {
-  if (aff) {
-    compProducts.push({
-      name: name as string,
-      brand: PRODUCT_BRANDS[key as string] ?? (name as string).split(' ')[0],
-      description: c.description,
-      image: (aff as any).imgSrc,
-      url: (aff as any).url,
-      price: (aff as any).price ?? '',
-      retailer: (aff as any).retailer ?? 'Amazon',
-    });
-  }
-}
-if (compProducts.length > 0) {
-  schemas.push(...comparisonProductsSchema(compProducts));
-}
+const compProducts: ComparisonProduct[] = [affA, affB].map((p) => ({
+  name: p.name,
+  brand: p.name.split(' ')[0],
+  description: c.description,
+  image: p.imgSrc,
+  url: p.url,
+  price: p.price ?? '',
+  retailer: p.retailer ?? 'Amazon',
+}));
+schemas.push(...comparisonProductsSchema(compProducts));
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home">
@@ -364,7 +298,7 @@ if (compProducts.length > 0) {
     )}
 
     {/* ── FULL COMPARISON ── */}
-    <h2 id="winner-and-full-verdict">Full Comparison: {nameA} vs {nameB}</h2>
+    <h2 id="winner-and-full-verdict">Winner &amp; Full Verdict: {nameA} vs {nameB}</h2>
     <p>{c.verdict}</p>
 
     {/* ── POST-VERDICT CTA — enhanced with urgency ── */}
