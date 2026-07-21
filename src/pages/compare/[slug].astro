@@ -2,18 +2,13 @@
 // src/pages/compare/[slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { AUTHOR_PROFILE } from '../../data/author';
-import { productName } from '../../data/product-names';
 import StickyBar from '../../components/StickyBar.astro';
-import { ARTICLES } from '../../data/articles';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
 import { comparisonSchema, faqSchema, breadcrumbSchema, comparisonProductsSchema } from '../../lib/schema';
-import { getSkipIf } from '../../lib/skip-if';
 import type { ComparisonProduct } from '../../lib/schema';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import type { Comparison } from '../../data/types';
-import TrustCard from '../../components/TrustCard.astro';
 
 export async function getStaticPaths() {
   return COMPARISONS.map(c => ({
@@ -35,7 +30,7 @@ const PRODUCT_AFFILIATE_MAP: Record<string, string> = {
   'garmin-r50':            'garmin-r50',
   'flightscope-mevo':      'flightscope-mevo-gen2',
   'ping-g440':             'ping-g430-max-driver',
-  'titleist-gt2':          'titleist-gt2-driver',
+  'titleist-gt2':          'titleist-tsi3-driver',
   'bushnell-pro-x3':       'bushnell-pro-xe',
   'apple-watch-golf':      'garmin-approach-s62',
   'tp5':                   'taylormade-tp5',
@@ -69,38 +64,6 @@ const PRODUCT_AFFILIATE_MAP: Record<string, string> = {
   'flightscope-mevo-gen2': 'flightscope-mevo-gen2',
   'garmin-s12':            'garmin-approach-s12',
   'bushnell-ion-elite':    'bushnell-ion-elite',
-  // ── Full keys (identity mappings for corrected comparisons.ts) ──
-  'bushnell-tour-v6-shift':       'bushnell-tour-v6-shift',
-  'precision-pro-nx9-hd':         'precision-pro-nx9-hd',
-  'garmin-approach-s62':           'garmin-approach-s62',
-  'garmin-approach-s42':           'garmin-approach-s42',
-  'garmin-approach-s70':           'garmin-approach-s70',
-  'garmin-approach-s12':           'garmin-approach-s12',
-  'garmin-approach-r10':           'garmin-approach-r10',
-  'garmin-approach-r50':           'garmin-approach-r50',
-  'arccos-caddie-sensors':         'arccos-caddie-sensors',
-  'callaway-paradym-ai-smoke-max': 'callaway-paradym-ai-smoke-max',
-  'blue-tees-series-3-max':       'blue-tees-series-3-max',
-  'ping-g430-max-driver':         'ping-g430-max-driver',
-  'cleveland-launcher-xl2':       'cleveland-launcher-xl2',
-  'lab-golf-df3':                  'lab-golf-df3',
-  'odyssey-two-ball-eleven':       'odyssey-two-ball-eleven',
-  'titleist-pro-v1':               'titleist-pro-v1',
-  'callaway-chrome-soft':          'callaway-chrome-soft',
-  'kirkland-signature':            'kirkland-signature',
-  'flightscope-mevo-plus':        'flightscope-mevo-plus',
-  'flightscope-mevo-gen-2':       'flightscope-mevo-gen2',
-  'taylormade-tp5':                'taylormade-tp5',
-  'titleist-gt2-driver':          'titleist-gt2-driver',
-  'bushnell-pro-xe':               'bushnell-pro-xe',
-  'bushnell-pro-x3':               'bushnell-pro-x3',
-  'apple-watch-ultra-golf':       'apple-watch-ultra-golf',
-  'cleveland-rtx6-52':             'cleveland-rtx6-52',
-  'callaway-jaws-raw-52':         'callaway-jaws-raw-52',
-  'square-golf-launch-monitor':   'square-golf-launch-monitor',
-  'ping-g430-irons':               'ping-g430-irons',
-  'taylormade-stealth-hd-irons':  'taylormade-stealth-hd-irons',
-  'taylormade-qi35-max':           'taylormade-qi35-max',
 };
 
 const PRODUCT_NAMES: Record<string, string> = {
@@ -143,49 +106,13 @@ const PRODUCT_NAMES: Record<string, string> = {
   'flightscope-mevo-gen2': 'Flightscope Mevo Gen2',
   'garmin-s12':            'Garmin Approach S12',
   'bushnell-ion-elite':    'Bushnell ION Elite',
-  // ── Full keys (identity names for corrected comparisons.ts) ──
-  'bushnell-tour-v6-shift':       'Bushnell Tour V6 Shift',
-  'precision-pro-nx9-hd':         'Precision Pro NX9 HD',
-  'garmin-approach-s62':           'Garmin Approach S62',
-  'garmin-approach-s42':           'Garmin Approach S42',
-  'garmin-approach-s70':           'Garmin Approach S70',
-  'garmin-approach-s12':           'Garmin Approach S12',
-  'garmin-approach-r10':           'Garmin Approach R10',
-  'garmin-approach-r50':           'Garmin Approach R50',
-  'arccos-caddie-sensors':         'Arccos Caddie Smart Sensors',
-  'callaway-paradym-ai-smoke-max': 'Callaway Paradym Ai Smoke Max',
-  'blue-tees-series-3-max':       'Blue Tees Series 3 Max',
-  'ping-g430-max-driver':         'Ping G430 Max Driver',
-  'cleveland-launcher-xl2':       'Cleveland Launcher XL2',
-  'lab-golf-df3':                  'LAB Golf DF3',
-  'odyssey-two-ball-eleven':       'Odyssey Two Ball Eleven',
-  'titleist-pro-v1':               'Titleist Pro V1',
-  'callaway-chrome-soft':          'Callaway Chrome Soft',
-  'kirkland-signature':            'Kirkland Signature',
-  'flightscope-mevo-plus':        'FlightScope Mevo+',
-  'flightscope-mevo-gen2':        'FlightScope Mevo Gen2',
-  'taylormade-tp5':                'TaylorMade TP5',
-  'titleist-gt2-driver':          'Titleist GT2 Driver',
-  'bushnell-pro-xe':               'Bushnell Pro XE',
-  'apple-watch-ultra-golf':       'Apple Watch Ultra 2 (Golf)',
-  'cleveland-rtx6-52':             'Cleveland RTX6',
-  'callaway-jaws-raw-52':         'Callaway Jaws Raw',
-  'square-golf-launch-monitor':   'Square Golf',
-  'ping-g430-irons':               'Ping G430 Irons',
-  'taylormade-stealth-hd-irons':  'TaylorMade Stealth HD Irons',
 };
 
 const affA    = PRODUCT_AFFILIATE_MAP[c.productA] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productA]) : null;
 const affB    = PRODUCT_AFFILIATE_MAP[c.productB] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.productB]) : null;
-const nameA   = PRODUCT_NAMES[c.productA] || productName(c.productA);
-const REVIEW_SLUGS: Record<string, string> = {};
-for (const _a of (ARTICLES as any[])) {
-  if (_a.pageType === 'review' && _a.quickAnswerProduct) REVIEW_SLUGS[_a.quickAnswerProduct] = _a.slug;
-}
-const revA = REVIEW_SLUGS[c.productA];
-const revB = REVIEW_SLUGS[c.productB];
-const nameB   = PRODUCT_NAMES[c.productB] || productName(c.productB);
-const winnerName = PRODUCT_NAMES[c.winner] || productName(c.winner);
+const nameA   = PRODUCT_NAMES[c.productA] || c.productA.replace(/-/g, ' ');
+const nameB   = PRODUCT_NAMES[c.productB] || c.productB.replace(/-/g, ' ');
+const winnerName = PRODUCT_NAMES[c.winner] || c.winner.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase());
 const winnerAff  = PRODUCT_AFFILIATE_MAP[c.winner] ? getAffiliateLink(PRODUCT_AFFILIATE_MAP[c.winner]) : null;
 
 // ── Product schema for SERP rich results ────────────────────────────────────
@@ -200,49 +127,6 @@ const PRODUCT_BRANDS: Record<string, string> = {
   'lab-df3': 'LAB Golf', 'odyssey-two-ball': 'Odyssey',
 };
 
-
-const PRODUCT_RATINGS: Record<string, { rating: number }> = {
-  'bushnell-tour-v6': { rating: 4.6 },
-  'precision-pro-nx9': { rating: 4.4 },
-  'garmin-s62': { rating: 4.5 },
-  'shot-scope-v5': { rating: 4.3 },
-  'callaway-paradym-max': { rating: 4.6 },
-  'taylormade-qi35-max': { rating: 4.5 },
-  'arccos-caddie': { rating: 4.3 },
-  'garmin-s42': { rating: 4.1 },
-  'skytrak-plus': { rating: 4.5 },
-  'blue-tees-s3-max': { rating: 4.3 },
-  'cobra-aerojet-max': { rating: 4.4 },
-  'ping-g430-max': { rating: 4.6 },
-  'cleveland-xl2': { rating: 4.5 },
-  'odyssey-stroke-lab': { rating: 4.5 },
-  'scotty-cameron-phantom': { rating: 4.7 },
-  'lab-df3': { rating: 4.6 },
-  'odyssey-two-ball': { rating: 4.5 },
-  'garmin-r10': { rating: 4.2 },
-  'rapsodo-mlm2pro': { rating: 4.3 },
-  'bushnell-launch-pro': { rating: 4.7 },
-  'garmin-r50': { rating: 4.2 },
-  'flightscope-mevo': { rating: 4.3 },
-  'shot-scope-lm1': { rating: 4.1 },
-  'callaway-ai-smoke-max': { rating: 4.6 },
-  'pro-v1': { rating: 4.7 },
-  'chrome-soft': { rating: 4.5 },
-  'kirkland': { rating: 4.3 },
-  'mevo-plus': { rating: 4.3 },
-  'garmin-s70': { rating: 4.6 },
-  'bushnell-v6': { rating: 4.6 },
-  'callaway-300-pro': { rating: 4.3 },
-  'flightscope-mevo-gen2': { rating: 4.3 },
-  'garmin-s12': { rating: 4.0 },
-  'bushnell-ion-elite': { rating: 4.2 },
-  'titleist-gt2': { rating: 4.5 },
-  'ping-g440': { rating: 4.6 },
-  'bushnell-pro-x3': { rating: 4.5 },
-  'apple-watch-golf': { rating: 4.4 },
-  'tp5': { rating: 4.5 },
-};
-
 const compProducts: ComparisonProduct[] = [];
 for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, nameB]] as const) {
   if (aff) {
@@ -250,51 +134,15 @@ for (const [key, aff, name] of [[c.productA, affA, nameA], [c.productB, affB, na
       name: name as string,
       brand: PRODUCT_BRANDS[key as string] ?? (name as string).split(' ')[0],
       description: c.description,
-      image: aff.imgSrc,
-      url: aff.url,
-      price: aff.price ?? '',
-      retailer: aff.retailer ?? 'Amazon',
-      ...(PRODUCT_RATINGS[key as string] ? {
-        rating: PRODUCT_RATINGS[key as string].rating,
-      } : {}),
+      image: (aff as any).imgSrc,
+      url: (aff as any).url,
+      price: (aff as any).price ?? '',
+      retailer: (aff as any).retailer ?? 'Amazon',
     });
   }
 }
 if (compProducts.length > 0) {
-// REC-02: mirror the visible 'Our Rating' spec row (e.g. '4.8/5') into product
-// schema when PRODUCT_RATINGS lacks the key — readers already see this value.
-const __ratingSpec = c.specs?.find((s: any) => /our rating/i.test(s.label || ''));
-const __parse5 = (v: string) => { const m = /([\d.]+)\s*\/\s*5/.exec(v || ''); return m ? parseFloat(m[1]) : undefined; };
-if (__ratingSpec) {
-  if (compProducts[0] && compProducts[0].rating == null) (compProducts[0] as any).rating = __parse5(__ratingSpec.a);
-  if (compProducts[1] && compProducts[1].rating == null) (compProducts[1] as any).rating = __parse5(__ratingSpec.b);
-}
-// Inverse direction: if schema carries ratings (via PRODUCT_RATINGS) that the
-// visible spec table doesn't show, render them — synthesize the Our Rating row
-// so every rating in markup is on the page. Visibility by construction.
-if (!__ratingSpec && (compProducts[0]?.rating != null || compProducts[1]?.rating != null)) {
-  const ra = compProducts[0]?.rating; const rb = compProducts[1]?.rating;
-  c.specs = c.specs || [];
-  c.specs.unshift({
-    label: 'Our Rating',
-    a: ra != null ? `${ra}/5` : '—',
-    b: rb != null ? `${rb}/5` : '—',
-    winner: ra != null && rb != null ? (ra > rb ? 'a' : rb > ra ? 'b' : 'tie') : 'tie',
-  });
-}
   schemas.push(...comparisonProductsSchema(compProducts));
-// ItemList wrapper referencing both products (vs-page rich-result eligibility)
-schemas.push({
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: c.title,
-  url: `https://www.cubicalgolfer.com/compare/${c.slug}/`,
-  numberOfItems: 2,
-  itemListElement: [
-    { '@type': 'ListItem', position: 1, name: c.productAName || 'Product A', url: `https://www.cubicalgolfer.com/compare/${c.slug}/` },
-    { '@type': 'ListItem', position: 2, name: c.productBName || 'Product B', url: `https://www.cubicalgolfer.com/compare/${c.slug}/` },
-  ],
-});
 }
 ---
 
@@ -327,7 +175,7 @@ schemas.push({
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:16px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
+          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">12-handicap weekend golfer, Chicago, IL</span>
         </span>
         <span class="author-meta">
           📅 Updated: {c.dateModified} &nbsp;·&nbsp;
@@ -339,28 +187,22 @@ schemas.push({
   </header>
 
   {/* ── FRESHNESS BANNER ── */}
-  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
-    <span style="font-size:16px;">✅</span>
-    <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — Prices, availability, and verdict reverified. Both products independently purchased and tested. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+    <span style="font-size:15px;">✅</span>
+    <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — Both products independently purchased and tested over 20+ rounds. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
   </div>
 
-  {/* ── QUICK VERDICT — above the fold buy box ── */}
-  {winnerAff && (
-    <div style="background:var(--green);border-radius:12px;padding:20px 24px;margin:0 0 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
-      <div style="flex:1;min-width:200px;">
-        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-text);margin:0 0 4px;">🏆 Our Pick After Testing</p>
-        <p style="font-size:20px;font-weight:700;color:#fff;margin:0 0 6px;font-family:var(--font-head);">{winnerName}</p>
-        <p style="font-size:16px;color:rgba(255,255,255,.72);margin:0;line-height:1.4;">{c.winnerReason?.split('.')[0]}.</p>
-      </div>
-      <a href={winnerAff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={winnerAff.url.includes("amazon.com") ? "amazon" : winnerAff.url.includes("bushnell") ? "bushnell" : winnerAff.url.includes("playbetter") ? "playbetter" : "other"}
-        style="background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:700;padding:12px 24px;border-radius:8px;text-decoration:none;white-space:nowrap;flex-shrink:0;">
-        Check Price at {winnerAff.retailer} →
-      </a>
-    </div>
-  )}
-
   {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
-  <TrustCard variant="comparison" rounds="20+" />
+  <div class="trust-card">
+    <p class="trust-card__heading">Why Trust This Comparison</p>
+    <ul class="trust-card__list">
+      <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
+      <li><strong>20+ real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
+      <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+      <li><strong>12-handicap perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
+    </ul>
+    <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
+  </div>
 
   <div class="compare-body">
 
@@ -389,30 +231,6 @@ schemas.push({
       </nav>
     )}
 
-    {/* ── ONE-SENTENCE BOTTOM LINE ── */}
-    <p style="font-size:18px;font-weight:700;color:var(--green);line-height:1.5;margin:0 0 20px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;">
-      <span style="color:var(--gold-text);margin-right:4px;">⚡</span> Bottom line: {c.winnerReason?.split('.')[0]}.
-    </p>
-
-    {/* ── BUY THIS IF / SKIP THIS IF — quick decision aid ── */}
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 24px;">
-      <div style="padding:14px 16px;background:rgba(30,58,40,.06);border-radius:8px;border-left:3px solid var(--green);">
-        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 6px;">✅ Buy the {winnerName} if</p>
-        <p style="font-size:16px;color:var(--body);margin:0;line-height:1.5;">you want the better overall value and performance for weekend golf — it won our head-to-head testing.</p>
-      </div>
-      <div style="padding:14px 16px;background:rgba(200,168,75,.06);border-radius:8px;border-left:3px solid var(--gold);">
-        <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 6px;">⚠️ Buy the {c.winner === c.productA ? nameB : nameA} instead if</p>
-        <p style="font-size:16px;color:var(--body);margin:0;line-height:1.5;">{c.winner === c.productA
-          ? (affB?.price && parseInt(affB.price.replace(/[^0-9]/g,'')) < parseInt(affA?.price?.replace(/[^0-9]/g,'') || '9999')
-            ? `budget is your priority — the ${nameB} costs less and still delivers solid performance.`
-            : `you prioritize the specific strengths the ${nameB} offers over raw test results.`)
-          : (affA?.price && parseInt(affA.price.replace(/[^0-9]/g,'')) < parseInt(affB?.price?.replace(/[^0-9]/g,'') || '9999')
-            ? `budget is your priority — the ${nameA} costs less and still delivers solid performance.`
-            : `you prioritize the specific strengths the ${nameA} offers over raw test results.`)
-        }</p>
-      </div>
-    </div>
-
     {/* ── WHO THIS IS FOR ── */}
     <div class="bottom-line-box" role="note" aria-label="Who this comparison is for">
       <p class="bottom-line-label">Who This Comparison Is For</p>
@@ -422,7 +240,7 @@ schemas.push({
     {/* ── SPECS COMPARISON TABLE ── */}
     {c.specs && c.specs.length > 0 && (
       <div id="quick-specs-comparison" class="cmp-wrap" style="margin-top:24px">
-        <h2>Quick Specs: {nameA} vs {nameB}</h2>
+        <h2>Quick Specs Comparison</h2>
         <div class="comparison-table-wrapper">
         <table class="cmp-table" role="table">
           <caption class="sr-only">Side-by-side specs: {nameA} vs {nameB}</caption>
@@ -447,15 +265,6 @@ schemas.push({
       </div>
     )}
 
-    {(revA || revB) && (
-      <p class="cmp-review-links" style="margin:12px 0 0;font-size:16px;">
-        Read the full reviews:&nbsp;
-        {revA ? <a href={revA}>{nameA}</a> : <span>{nameA}</span>}
-        &nbsp;·&nbsp;
-        {revB ? <a href={revB}>{nameB}</a> : <span>{nameB}</span>}
-      </p>
-    )}
-
     {/* ── BUY BOTH — above fold ── */}
     {(affA || affB) && (
       <div class="compare-buy-row">
@@ -467,21 +276,18 @@ schemas.push({
             <span class="compare-buy-label">{nameA}</span>
             <span class="compare-buy-price">{affA.price}</span>
             <a href={affA.url} class="btn-buy-affiliate" target="_blank"
-              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameA}`} data-outbound={affA.url.includes("amazon.com") ? "amazon" : "other"}>
+              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameA}`}>
               <span class="btn-buy-cta">Check Today's Price →</span>
               <span class="btn-buy-badge">at {affA.retailer} · Free shipping</span>
             </a>
-            {affA.golfGalaxyUrl && (
-              <a href={affA.golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
-                rel="nofollow noopener sponsored" data-outbound={affA.golfGalaxyUrl?.includes("amazon.com") ? "amazon" : affA.golfGalaxyUrl?.includes("playbetter") ? "playbetter" : "other"}
-                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:16px;">
-                <span class="btn-buy-cta">Check Price at {affA.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : affA.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
+            {(affA as any).golfGalaxyUrl && (
+              <a href={(affA as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
+                rel="nofollow noopener sponsored"
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                <span class="btn-buy-cta">Check Price at {(affA as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (affA as any).golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
               </a>
             )}
             <span class="compare-buy-urgency">Prices checked today</span>
-            {affA.priceNote && (
-              <span class="compare-buy-tip">💡 {affA.priceNote}</span>
-            )}
           </div>
         )}
         {affB && (
@@ -492,21 +298,18 @@ schemas.push({
             <span class="compare-buy-label">{nameB}</span>
             <span class="compare-buy-price">{affB.price}</span>
             <a href={affB.url} class="btn-buy-affiliate" target="_blank"
-              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameB}`} data-outbound={affB.url.includes("amazon.com") ? "amazon" : "other"}>
+              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameB}`}>
               <span class="btn-buy-cta">Check Today's Price →</span>
               <span class="btn-buy-badge">at {affB.retailer} · Free shipping</span>
             </a>
-            {affB.golfGalaxyUrl && (
-              <a href={affB.golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
-                rel="nofollow noopener sponsored" data-outbound={affB.golfGalaxyUrl?.includes("amazon.com") ? "amazon" : affB.golfGalaxyUrl?.includes("playbetter") ? "playbetter" : "other"}
-                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:16px;">
-                <span class="btn-buy-cta">Check Price at {affB.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : affB.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
+            {(affB as any).golfGalaxyUrl && (
+              <a href={(affB as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
+                rel="nofollow noopener sponsored"
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                <span class="btn-buy-cta">Check Price at {(affB as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (affB as any).golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
               </a>
             )}
             <span class="compare-buy-urgency">Prices checked today</span>
-            {affB.priceNote && (
-              <span class="compare-buy-tip">💡 {affB.priceNote}</span>
-            )}
           </div>
         )}
       </div>
@@ -524,11 +327,11 @@ schemas.push({
           <span class="btn-buy-badge">at {winnerAff.retailer}</span>
         </a>
       )}
-      {winnerAff?.golfGalaxyUrl && (
-        <a href={winnerAff.golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg"
+      {(winnerAff as any)?.golfGalaxyUrl && (
+        <a href={(winnerAff as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg"
           target="_blank" rel="nofollow noopener sponsored"
-          style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:16px;">
-          <span class="btn-buy-cta">Check Price at {winnerAff?.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : winnerAff?.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
+          style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+          <span class="btn-buy-cta">Check Price at {(winnerAff as any)?.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (winnerAff as any)?.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
         </a>
       )}
     </div>
@@ -543,41 +346,18 @@ schemas.push({
     {/* ── WHAT ACTUALLY MATTERS FOR WEEKEND GOLFERS ── */}
     {c.weekendGolfer && (
       <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;">
-        <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters: {nameA} vs {nameB}</h2>
-        <p style="font-size:16px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
+        <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters for Weekend Golfers</h2>
+        <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
       </div>
     )}
 
     {/* ── EDITORIAL SECTIONS — deep analysis, who-should-buy, price-value ── */}
     {c.sections && c.sections.length > 0 && (
       <div class="compare-editorial">
-        {c.sections.map((s: any, idx: number) => (
+        {c.sections.map((s: any) => (
           <section style="margin:28px 0;">
             <h2 id={s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')} style="font-size:20px;color:var(--green);margin:0 0 12px;">{s.h2}</h2>
-            <div style="font-size:16px;line-height:1.7;color:var(--body);" set:html={s.body} />
-
-            {/* Skip-this-if on "Who Should Buy" sections */}
-            {s.h2.toLowerCase().includes('who should') && (() => {
-              const isProductA = s.h2.toLowerCase().includes(nameA.split(' ')[0].toLowerCase());
-              const prodKey = isProductA ? c.productA : c.productB;
-              const skipText = getSkipIf(prodKey, `/compare/${c.slug}/`);
-              return skipText ? (
-                <p style="margin:12px 0 0;padding:10px 14px;background:rgba(200,168,75,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;font-size:16px;color:var(--muted);line-height:1.5;">
-                  <strong style="color:var(--green);">⚠️ Skip this if:</strong> {skipText}.
-                </p>
-              ) : null;
-            })()}
-
-            {/* Mid-section CTA — after 2nd section to catch ready buyers */}
-            {idx === 1 && winnerAff && (
-              <div style="margin:24px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-                <p style="margin:0;font-size:16px;font-weight:600;color:var(--green);">Ready to decide? {winnerName} won our head-to-head testing.</p>
-                <a href={winnerAff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={winnerAff.url.includes("amazon.com") ? "amazon" : winnerAff.url.includes("bushnell") ? "bushnell" : winnerAff.url.includes("playbetter") ? "playbetter" : "other"}
-                  style="background:var(--green);color:#fff;font-size:16px;font-weight:700;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;">
-                  See {winnerName} Price →
-                </a>
-              </div>
-            )}
+            <div style="font-size:15px;line-height:1.7;color:var(--body);" set:html={s.body} />
           </section>
         ))}
       </div>
@@ -585,22 +365,14 @@ schemas.push({
 
     {/* ── FULL COMPARISON ── */}
     <h2 id="winner-and-full-verdict">Full Comparison: {nameA} vs {nameB}</h2>
-    {typeof c.verdict === 'string' ? (
-      <p>{c.verdict}</p>
-    ) : (
-      <div class="verdict-structured" style="margin:0 0 24px;">
-        {c.verdict.buyA && <p style="margin:0 0 12px;"><strong style="color:var(--green);">Buy {nameA} if:</strong> {c.verdict.buyA}</p>}
-        {c.verdict.buyB && <p style="margin:0 0 12px;"><strong style="color:var(--green);">Buy {nameB} if:</strong> {c.verdict.buyB}</p>}
-        {c.verdict.skipBoth && <p style="margin:0 0 12px;"><strong style="color:var(--muted);">Skip both if:</strong> {c.verdict.skipBoth}</p>}
-      </div>
-    )}
+    <p>{c.verdict}</p>
 
     {/* ── POST-VERDICT CTA — enhanced with urgency ── */}
     {winnerAff && (
       <div class="post-verdict-cta" style="background:var(--green);border-radius:12px;padding:28px;margin:32px 0;text-align:center;">
-        <p style="color:var(--gold);font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
+        <p style="color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
         <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;">🏆 {winnerName}</p>
-        <p style="color:rgba(255,255,255,.8);font-size:16px;margin:0 0 16px;">
+        <p style="color:rgba(255,255,255,.8);font-size:14px;margin:0 0 16px;">
           {winnerAff.price} at {winnerAff.retailer} · Free shipping · Prices checked today
         </p>
         <a href={winnerAff.url} class="post-verdict-btn" target="_blank"
@@ -609,25 +381,22 @@ schemas.push({
           style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:800;padding:16px 40px;border-radius:10px;text-decoration:none;transition:transform .15s,background .15s;">
           Check Today's Price →
         </a>
-        <p style="color:rgba(255,255,255,.62);font-size:16px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>
+        <p style="color:rgba(255,255,255,.5);font-size:11px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>
       </div>
     )}
 
-    {/* ── ALSO CONSIDER — runner-up CTA ── */}
+    {/* ── ALSO CONSIDER — loser CTA ── */}
     {(() => {
       const loserKey = c.winner === c.productA ? c.productB : c.productA;
       const loserName = c.winner === c.productA ? nameB : nameA;
       const loserAff = c.winner === c.productA ? affB : affA;
       return loserAff ? (
-        <div style="margin:0 0 32px;padding:16px 20px;background:rgba(200,168,75,.06);border-radius:10px;border:1px solid rgba(200,168,75,.2);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
-          <div>
-            <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">Not sold on the winner?</p>
-            <p style="font-size:16px;color:var(--muted);margin:0;">The {loserName} is still a strong pick — {loserAff.price} at {loserAff.retailer}.</p>
-          </div>
-          <a href={loserAff.url} style="background:#fff;color:var(--green);border:2px solid var(--green);font-weight:700;font-size:16px;padding:10px 20px;border-radius:8px;text-decoration:none;white-space:nowrap;" target="_blank" rel="nofollow noopener sponsored">
-            Check {loserName} Price →
+        <div style="text-align:center;margin:0 0 32px;">
+          <p style="font-size:13px;color:var(--muted);margin:0 0 8px;">Prefer the {loserName}? Still an excellent driver.</p>
+          <a href={loserAff.url} style="color:var(--green);font-weight:700;font-size:14px;" target="_blank" rel="nofollow noopener sponsored">
+            Check {loserName} price at {loserAff.retailer} →
           </a>
-        </div>
+          <span style="display:block;font-size:11px;color:var(--muted);margin-top:4px;">Prices checked today</span>
         </div>
       ) : null;
     })()}
@@ -655,24 +424,26 @@ schemas.push({
     {/* ── UPDATE STAMP ── */}
     <div class="update-stamp">Last updated: {c.dateModified}</div>
 
-    {/* ── NEXT STEPS — category guide + related ── */}
-    <div style="margin-top:40px;padding:16px 20px;background:rgba(30,58,40,.04);border-radius:10px;border-left:3px solid var(--green);">
-      <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">📋 Want to see how these rank against the full field?</p>
-      <div class="rel-links" style="display:flex;flex-wrap:wrap;gap:8px;">
-        {(c.related || []).filter((l: any) => l.label && l.slug).length > 0
-          ? (c.related || []).filter((l: any) => l.label && l.slug).map((link: any) => <a href={link.slug} style="color:var(--green);font-weight:600;font-size:16px;">{link.label} →</a>)
+    {/* ── RELATED GUIDES — dynamic per-comparison + fallback ── */}
+    <div class="rel-cluster" style="margin-top:40px">
+      <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
+      <div class="rel-links">
+        {c.related && c.related.length > 0
+          ? c.related.map((link: any) => <a href={link.slug}>{link.label}</a>)
           : <>
-              <a href="/compare/" style="color:var(--green);font-weight:600;font-size:16px;">All Comparisons →</a>
-              <a href="/gear-reviews/" style="color:var(--green);font-weight:600;font-size:16px;">All Gear Reviews →</a>
-              <a href="/best-golf-gear-2026/" style="color:var(--green);font-weight:600;font-size:16px;">#1 Pick in Every Category →</a>
+              <a href="/compare/">All Golf Product Comparisons →</a>
+              <a href="/gear-reviews/">All Gear Reviews →</a>
+              <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
+              <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
+              <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers 2026</a>
             </>
         }
       </div>
     </div>
 
     <div class="rel-cluster" style="background:var(--green);border:none;margin-top:24px;">
-      <p style="color:var(--gold);font-size:16px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
-      <p style="color:rgba(255,255,255,.7);font-size:16px;margin-bottom:16px;line-height:1.6;">
+      <p style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
+      <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
         You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
       </p>
       <div class="rel-links">
