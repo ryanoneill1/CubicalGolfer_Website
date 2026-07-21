@@ -225,7 +225,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/compare/vice-pro-vs-titleist-pro-v1/', label: 'Vice Pro vs Pro V1 — Half the Price?' },
     { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft — Mid-Price Test' },
     { slug: '/golf-ball-complete-guide/', label: 'Golf Ball Guide — Everything You Need to Know' },
-  ],
+  
+    { slug: '/compare/taylormade-tp5-vs-callaway-chrome-soft/', label: 'TP5 vs Chrome Soft Tested' },],
   'golf-balls-slow-swing': [
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
     { slug: '/golf-ball-compression-chart/',        label: 'Golf Ball Compression Chart 2026' },
@@ -1137,10 +1138,15 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'golf-shorts': [
     { slug: '/golf-apparel/', label: 'Full Golf Apparel Guide' },
   ],
+
+  'golf-apps': [
+    { slug: '/compare/garmin-s70-vs-apple-watch-golf/', label: 'S70 vs Apple Watch — Full Comparison' },
+    { slug: '/compare/garmin-s62-vs-apple-watch-ultra-golf/', label: 'Garmin S62 vs Apple Watch for Golf' },
+  ],
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
-export function getMergedRelated(article: Article, limit = 5): RelatedLink[] {
+export function getMergedRelated(article: Article, limit = 10): RelatedLink[] {
   const seen = new Set<string>([article.slug]);
   const result: RelatedLink[] = [];
 
