@@ -72,3 +72,9 @@
 # ═══ SAFETY 301s — July 2026 (growth-audit follow-up) ═══
 /methodology/  /how-we-test/  301
 /editorial-policy/  /about/  301
+
+# ═══ Broken internal-link 404 fixes — July 2026 (GSC crawl-waste, 2.82% of crawl) ═══
+/compare/srixon-q-star-tour-vs-callaway-chrome-soft/  /compare/titleist-pro-v1-vs-callaway-chrome-soft/  301
+/compare/callaway-supersoft-vs-srixon-soft-feel/  /golf-ball-compression-chart/  301
+/compare/vice-pro-vs-titleist-pro-v1/  /compare/pro-v1-vs-tp5/  301
+/compare/taylormade-qi35-vs-callaway-ai-smoke/  /compare/callaway-paradym-vs-taylormade-qi35/  301
