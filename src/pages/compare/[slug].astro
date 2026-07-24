@@ -77,7 +77,7 @@ const compProducts: ComparisonProduct[] = [affA, affB].map((p) => ({
   price: p.price ?? '',
   retailer: p.retailer ?? 'Amazon',
 }));
-schemas.push(...comparisonProductsSchema(compProducts));
+schemas.push(...comparisonProductsSchema(compProducts, c.dateModified || c.datePublished));
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home">

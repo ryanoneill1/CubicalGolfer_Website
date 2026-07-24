@@ -170,7 +170,7 @@ export interface ComparisonProduct {
   rating?: number;
 }
 
-export function comparisonProductsSchema(products: ComparisonProduct[]): object[] {
+export function comparisonProductsSchema(products: ComparisonProduct[], reviewDate?: string): object[] {
   return products.map(p => {
     const priceMatch = (p.price ?? '').match(/\$?([\d,]+(?:\.\d{2})?)/);
     const numericPrice = priceMatch ? priceMatch[1].replace(/,/g, '') : '';
@@ -194,7 +194,7 @@ export function comparisonProductsSchema(products: ComparisonProduct[]): object[
         review: {
           '@type': 'Review',
           author: AUTHOR,
-          datePublished: new Date().toISOString().split('T')[0],
+          datePublished: reviewDate,
           reviewBody: (p.description || '').slice(0, 300),
           reviewRating: {
             '@type': 'Rating',
@@ -503,6 +503,7 @@ export function buyingGuideProductSchema(
   affiliateRetailer: string,
   productImage?: string,
   affiliateKey?: string,
+  reviewDate?: string,
 ): object {
   // Extract first numeric price from "~$329", "~$2,995", "~$179 + $99/yr", "~$55/dozen"
   // Strips $ and ~ prefix, handles commas, takes first number only
@@ -547,7 +548,7 @@ export function buyingGuideProductSchema(
       review: {
         '@type': 'Review',
         author: AUTHOR,
-        datePublished: new Date().toISOString().split('T')[0],
+        datePublished: reviewDate,
         reviewBody: (section.body?.slice(0, 300) || '').replace(/<[^>]*>/g, '').trim(),
         reviewRating: {
           '@type': 'Rating',

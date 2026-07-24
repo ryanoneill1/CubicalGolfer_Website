@@ -345,7 +345,8 @@ if (isBuyingGuide) {
     schemas.push(buyingGuideProductSchema(
       schemaSection, aff.url, aff.price || section.price, aff.retailer,
       aff.imgSrc ? `https://www.cubicalgolfer.com${aff.imgSrc}` : undefined,
-      pid
+      pid,
+      article.dateModified || article.datePublished
     ));
   }
 
