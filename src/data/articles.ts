@@ -1924,8 +1924,9 @@ export const ARTICLES: Article[] = [
     thumb: 'navy',
     words: '3,200',
     datePublished: '2025-03-10',
-    dateModified: '2026-06-30',
+    dateModified: '2026-07-24',
     updateLog: [
+      { date: 'Jul 24, 2026', note: 'Added dedicated per-brand compression chart sections (Titleist, Callaway, TaylorMade and more) with brand FAQs.' },
       { date: 'Apr 26, 2026', note: 'Expanded chart to 25 balls, added swing speed brackets and brand-by-brand compression data.' },
       { date: 'Mar 10, 2026', note: 'Added 2026 Callaway Chrome Tour and Bridgestone Tour B X compression data.' },
     ],

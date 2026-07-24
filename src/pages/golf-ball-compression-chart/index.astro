@@ -85,6 +85,8 @@ const faqs = [
   { q: 'What is a good compression for a senior golfer?', a: 'Most senior golfers benefit from compression between 35-65. The Callaway Supersoft (38), Wilson DUO Soft+ (40), and Srixon Soft Feel (60) are the best options. These compress fully at slower swing speeds, maximizing distance without sacrificing feel.' },
   { q: 'Is higher or lower compression better?', a: 'Neither — it depends on your swing speed. Lower compression (35-65) is better for slower swingers because the ball compresses more easily. Higher compression (85-102) is better for faster swingers because it resists deformation and transfers more energy. Playing the wrong compression in either direction costs distance.' },
   { q: 'What compression are Kirkland golf balls?', a: 'Kirkland Signature golf balls have a compression of approximately 75 with a urethane cover. At $28 per dozen ($2.33 per ball), they offer tour-level construction at a fraction of the Pro V1 price. Best for swing speeds of 85-100 mph.' },
+  { q: 'What compression is a TaylorMade TP5?', a: 'The TaylorMade TP5 has a compression of 85, and the firmer TP5x sits at 97. TaylorMade\'s lineup on this chart runs from the ultra-soft Noodle (34) and Soft Response (50) up through the Tour Response (77) to the TP5 (85) and TP5x (97) — so there is a TaylorMade ball for every swing speed from beginner to tour.' },
+  { q: 'What compression is a Callaway Chrome Soft?', a: 'The Callaway Chrome Soft has a compression of 75 with a urethane cover, making it one of the softest tour balls available. Callaway\'s range on this chart spans the Supersoft (38) for slow swings up to the Chrome Tour (90) for fast swings, with the Chrome Soft and Warbird (68) in between.' },
   { q: 'How do I know what compression golf ball to use based on swing speed?', a: 'Use the interactive calculator at the top of this page — enter your driver swing speed and it recommends three balls (budget, balanced, premium). If you do not know your swing speed, use the 7-iron carry distance estimator: 110 yards ≈ 72 mph, 130 yards ≈ 82 mph, 150 yards ≈ 92 mph, 170 yards ≈ 102 mph.' },
   { q: 'Does temperature affect golf ball compression?', a: 'Yes. Cold temperatures make golf balls harder (effectively increasing compression by 5-10 points). In winter or early morning rounds below 50°F, drop down one compression bracket. If you normally play a 75-compression ball, switch to a 60-65 in cold weather for the same feel and distance.' },
 ];
@@ -220,7 +222,7 @@ const schemas = [
         <li><a href="#under-85">Best Balls Under 85 mph</a></li>
         <li><a href="#85-100">Best Balls 85-100 mph</a></li>
         <li><a href="#over-100">Best Balls Over 100 mph</a></li>
-        <li><a href="#by-brand">Compression by Brand</a></li>
+        <li><a href="#by-brand">Compression Chart by Brand</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ol>
     </nav>
@@ -419,14 +421,24 @@ const schemas = [
 
     <!-- ═══ BRAND SUB-TABLES ═══ -->
     <section>
-      <h2 id="by-brand">Golf Ball Compression by Brand</h2>
+      <h2 id="by-brand">Golf Ball Compression Chart by Brand</h2>
+      <p>Shopping one brand? Here is the compression of every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, and Kirkland golf ball from the chart above, split out by brand and ranked softest to firmest.</p>
       {brands.map(brand => {
-        const brandBalls = balls.filter(b => b.brand === brand);
+        const brandBalls = balls.filter(b => b.brand === brand).sort((a, b) => a.compression - b.compression);
+        const soft = brandBalls[0];
+        const firm = brandBalls[brandBalls.length - 1];
+        const loPrice = Math.min(...brandBalls.map(b => b.price));
+        const hiPrice = Math.max(...brandBalls.map(b => b.price));
+        const priceRange = loPrice === hiPrice ? `~$${loPrice}` : `$${loPrice}–$${hiPrice}`;
+        const blurb = brandBalls.length === 1
+          ? `${brand}'s entry on this chart is the ${soft.name} at ${soft.compression} compression (${priceRange}/dozen).`
+          : `${brand}'s ${brandBalls.length} balls on this chart run from ${soft.compression} compression (${soft.name}, the softest) up to ${firm.compression} (${firm.name}, the firmest), priced ${priceRange}/dozen. Ranked softest to firmest:`;
         return (
           <div style="margin-bottom:28px;">
-            <h3 id={brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{brand} Golf Ball Compression</h3>
+            <h3 id={brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{brand} Golf Ball Compression Chart</h3>
+            <p style="margin:0 0 10px;color:var(--muted);">{blurb}</p>
             <div style="overflow-x:auto;">
-              <table class="cmp-table" style="width:100%;"><caption class="sr-only">Golf Ball Compression by Brand</caption>
+              <table class="cmp-table" style="width:100%;"><caption class="sr-only">{brand} Golf Ball Compression Chart</caption>
                 <thead><tr><th scope="col">Ball</th><th scope="col">Compression</th><th scope="col">Cover</th><th scope="col">Price/dz</th><th scope="col">Speed Range</th><th scope="col">Buy</th></tr></thead>
                 <tbody>
                   {brandBalls.map(b => (
