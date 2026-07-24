@@ -2198,6 +2198,10 @@ export const ARTICLES: Article[] = [
       { q: 'What is the best golf gift under $50?', a: "A dozen Titleist Pro V1 balls (~$55) is the most appreciated golf gift near $50. Strictly under $50: a putting mirror ($25) is the best training aid gift." },
     ],
     related: [
+      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
+      { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
+      { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gifts' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Needs' },
@@ -7468,6 +7472,10 @@ export const ARTICLES: Article[] = [
       'Dads who only play once a year — a $20 sleeve of balls is plenty',
     ],
     related: [
+      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Him' },
+      { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
+      { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
@@ -7614,6 +7622,8 @@ export const ARTICLES: Article[] = [
       { q: 'Are golf balls a good gift?', a: 'Yes — golf balls are the best consumable golf gift. A dozen premium balls ($45-$55) or two dozen value balls ($22-$30) are always appreciated and always used.' },
     ],
     related: [
+      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
+      { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
       { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
@@ -7672,6 +7682,7 @@ export const ARTICLES: Article[] = [
       { q: 'When should I order golf Christmas gifts?', a: 'Order by December 10 for standard shipping. Personalized items (custom golf balls, embroidered towels) need 2-3 weeks lead time — order by November 25.' },
     ],
     related: [
+      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
       { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
@@ -9728,6 +9739,10 @@ export const ARTICLES: Article[] = [
       { q: "What golf gift should I avoid?", a: "Avoid novelty items (funny headcovers, joke balls, gag gifts). Golfers appreciate functional gear they will actually use. A $12 pack of alignment sticks improves his game more than a $40 novelty item." },
     ],
     related: [
+      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Him' },
+      { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
+      { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gifts' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/best-golf-training-aids/', label: 'Best Training Aids' },
