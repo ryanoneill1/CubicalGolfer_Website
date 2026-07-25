@@ -1,51 +1,63 @@
-# Product images on non-buying-guide pages — fix
+# Upload these 6 files. Nothing else.
 
-## Why `/how-i-dropped-5-strokes-arccos-mlm2pro/` had no images
-
-That page is `pageType: 'tutorial'`. In `src/pages/[...slug].astro`, the product
-image block was gated behind `isBuyingGuide` (which is only true for
-`buying-guide`, `comparison`, and `review` pages):
+Regenerated 2026-07-25 against your **current GitHub HEAD** (commit 4377a03), so
+nothing you've pushed gets overwritten.
 
 ```
-{isBuyingGuide && productId && (() => { …render product image… })()}
+_redirects
+src/data/articles.ts
+src/pages/about.astro
+src/pages/how-we-test.astro
+scripts/fix-orphaned-urls.mjs      <- optional, provenance only
+scripts/reconcile-claims.mjs       <- optional, provenance only
 ```
 
-So a tutorial (or listicle) that discusses a product via an affiliate key never
-rendered the product image, and these sections also had no editorial
-`sectionImage` — so the page showed no pictures at all, even though it discusses
-the Arccos Caddie and Rapsodo MLM2PRO (both of which have real images in
-`public/images/products/`).
+## The 8 deletions are already done
 
-## The fix (one line, root cause)
+I re-checked GitHub. `articles.ts`, `affiliate-links.ts`, `schema.ts`, `lib/schema.ts`,
+`data/*` and `courses/src/data/*` are all gone from the repo already, and
+`check-duplicates.ts` passes against HEAD. **Nothing to delete. Just upload the 6.**
 
-```diff
-- {isBuyingGuide && productId && (() => {
-+ {(isBuyingGuide || !section.sectionImage) && productId && (() => {
+## What's in them
+
+`src/data/articles.ts` — cumulative, both steps:
+- 33 internal links repointed off dead URLs
+- 7 "Trackman baseline" claims rewritten, plus "Trackman 4 ($22,000)"
+- 16 "over 40+/30+ rounds" claims de-precisioned
+- 166 articles, unchanged count
+
+`_redirects` — 20 new 301s recovering 3,696 orphaned impressions; placeholder
+`# /old-404-url-N/` block removed.
+
+`src/pages/about.astro` — loan contradiction resolved against how-we-test.astro.
+
+`src/pages/how-we-test.astro` — new "Why round counts overlap" section.
+
+## Verified against HEAD after the change
+
+```
+✓ check-duplicates: no duplicate articles.ts / affiliate-links.ts / schema.ts outside canonical paths.
+✅ Affiliate key validation passed for 181 articles (437 sections checked).
+✓ check-affiliate-links: all 262 entries have a program with active tracking (or are Amazon).
+
+articles defined: 166      brace balance: 0
+internal hrefs: 135        unresolved: 0
+first-person Trackman claims: 0
 ```
 
-Now **any section that discusses a product shows the product image, on every page
-type.** The `|| !section.sectionImage` guard means: on non-buying-guide pages we
-skip the auto product image only when the section already carries its own
-editorial `sectionImage`, so a section never renders two images. Buying-guide
-behavior is unchanged.
+One warning will appear in the Action log and is expected:
 
-## Improve-section audit (all pages verified in the rebuilt `dist/`)
+```
+⚠️  Affiliate URL check: 210 search URL(s) remain — convert to direct ASINs
+```
 
-9 tutorial pages (15 product sections) were missing images; all now render.
-28 product sections across the improve section were checked — **all show a picture,
-none doubled.**
+That's the P1 Amazon work you're still on. It's a warning, not a failure.
 
-See `IMPROVE-AUDIT.md` for the per-page before/after table.
+## After the push
 
-## Verification
+Your workflow builds and deploys automatically on push to `main`. Watch the Actions tab
+for green, then:
 
-- `npm run build` succeeds (265 pages).
-- `/how-i-dropped-5-strokes-arccos-mlm2pro/` now renders the Arccos and MLM2PRO
-  product images.
-- The one improve page with both an affiliate key and its own `sectionImage`
-  (`/golf-practice-drills-at-home/`) shows a single image — no doubling.
-- Only `src/pages/[...slug].astro` changed (`slug-template.patch` is the diff).
-
-Note: this is a site-wide template fix — it also restores product images on
-product-discussion sections in other categories' tutorials/listicles, which is the
-same intended behavior.
+- Load `/most-forgiving-irons/` — should 301 to `/best-golf-irons-2026/`
+- Load `/best-golf-sunglasses/` — should 301 to `/golf-apparel/`
+- Request indexing on `/best-golf-irons-2026/` and `/golf-apparel/`
