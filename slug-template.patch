@@ -1,0 +1,18 @@
+diff --git a/src/pages/[...slug].astro b/src/pages/[...slug].astro
+index d19237e..4c5562c 100644
+--- a/src/pages/[...slug].astro
++++ b/src/pages/[...slug].astro
+@@ -772,8 +772,11 @@ if (isBuyingGuide) {
+             </div>
+           )}
+ 
+-          {/* Product image — shown for any section with a product affiliate key */}
+-          {isBuyingGuide && productId && (() => {
++          {/* Product image — shown for any section that discusses a product (has an
++              affiliate key), on every page type. On non-buying-guide pages we skip it
++              only when the section already carries its own editorial sectionImage,
++              to avoid rendering two images for the same section. */}
++          {(isBuyingGuide || !section.sectionImage) && productId && (() => {
+             const sectionImgSrc = aff ? aff.imgSrc : null;
+             const sectionImgAlt = aff ? aff.imgAlt ?? section.h2 : section.h2;
+             const imgElement = sectionImgSrc ? (

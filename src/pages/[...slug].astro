@@ -392,7 +392,7 @@ if (isBuyingGuide) {
         </span>
         <span class="author-meta">
           📖 {article.words} words &nbsp;·&nbsp;
-          📅 Updated: {article.dateModified ?? article.datePublished} &nbsp;·&nbsp;
+          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
           ⛳ <a href="/how-we-test/">How we test →</a>
         </span>
       </div>
@@ -443,7 +443,7 @@ if (isBuyingGuide) {
         <li><strong>Every product purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
         <li><strong>{AUTHOR_PROFILE.testingLabel}</strong> — tested on actual courses, not a simulator or fitting bay</li>
         <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers, not scratch players or tour pros</li>
-        <li><strong>Updated {article.dateModified ?? article.datePublished}</strong> — prices and picks reviewed regularly</li>
+        <li><strong>Updated {article.dateModified}</strong> — prices and picks reviewed regularly</li>
       </ul>
       <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
     </div>
@@ -772,8 +772,11 @@ if (isBuyingGuide) {
             </div>
           )}
 
-          {/* Product image — shown for any section with a product affiliate key */}
-          {isBuyingGuide && productId && (() => {
+          {/* Product image — shown for any section that discusses a product (has an
+              affiliate key), on every page type. On non-buying-guide pages we skip it
+              only when the section already carries its own editorial sectionImage,
+              to avoid rendering two images for the same section. */}
+          {(isBuyingGuide || !section.sectionImage) && productId && (() => {
             const sectionImgSrc = aff ? aff.imgSrc : null;
             const sectionImgAlt = aff ? aff.imgAlt ?? section.h2 : section.h2;
             const imgElement = sectionImgSrc ? (
@@ -898,7 +901,7 @@ if (isBuyingGuide) {
           )}
 
           {section.recommendedGear?.length > 0 && (
-            <RecommendedGearGrid items={section.recommendedGear} dateChecked={article.dateModified ?? article.datePublished} />
+            <RecommendedGearGrid items={section.recommendedGear} dateChecked={article.dateModified} />
           )}
           {aff && !(section.recommendedGear?.length > 0) && (
             <AffiliateCTA
@@ -909,7 +912,7 @@ if (isBuyingGuide) {
               priceNote={aff.priceNote || ''}
               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
               disclosure={true}
-              dateChecked={article.dateModified ?? article.datePublished}
+              dateChecked={article.dateModified}
               isWinner={section.badge?.includes('BEST OVERALL') || section.badge?.includes('EDITOR') || section.badge?.includes('BEST PICK') || false}
             />
           )}
@@ -1207,7 +1210,7 @@ if (isBuyingGuide) {
     )}
 
     {/* UPDATE STAMP */}
-    <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified ?? article.datePublished}</div>
+    <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified}</div>
 
     {/* SOURCES & REFERENCES */}
     {article.sources && article.sources.length > 0 && (
