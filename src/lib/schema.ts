@@ -530,11 +530,52 @@ export function buyingGuideProductSchema(
 
   // Derive product name: prefer the section heading if it's actually a product name,
   // otherwise humanize the affiliate key (e.g. 'bushnell-tour-v6-shift' → 'Bushnell Tour V6 Shift')
-  const NON_PRODUCT_HEADINGS = /^(where to buy|quick verdict|the verdict|our pick|buy|pricing|value|cost)/i;
-  let productName = section.h2.replace(/^[^\w]+/, '').replace(/^(Best Overall:|Best Budget:|Best Premium:|Best Value:|Budget Runner-Up:|Best GPS\+Laser Hybrid:|Best for Sim:|Best Mid-Range:|Best Splurge:|Editor.s Pick:|🥇|🥈|🥉|🏆)\s*/gi, '').trim();
-  if (NON_PRODUCT_HEADINGS.test(productName) && affiliateKey) {
-    productName = affiliateKey.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
+  const NON_PRODUCT_HEADINGS = /^(where to buy|quick verdict|the verdict|our pick|buy|pricing|value|cost|what to look for|how we|keep reading|faq)/i;
+
+  // Editorial framing that precedes the actual product name. Previously a
+  // hardcoded list, which left 71 of 479 Product blocks named things like
+  // "Best Irons: Ping G Le3" and "Best for Analytics: Shot Scope V5 ($249)".
+  // A leading "<anything up to 45 chars>:" is framing, not part of the name.
+  const BADGE_PREFIX = /^(best|top|our|editor.s|budget|premium|value|runner.up|honorable[ -]mention|most|cheapest|splurge|upgrade|alternative)[^:]{0,45}:\s*/i;
+
+  // A heading with no product in it — "Best Putters for High Handicappers",
+  // "Best Matching Accessories". Plural category words with no brand token.
+  const CATEGORY_ONLY = /^(best|top)\b[^:]*\b(putters|irons|drivers|wedges|balls|bags|carts|shoes|gloves|watches|monitors|nets|mats|screens|projectors|picks|setup|accessories|options|golfers|handicappers|seniors|beginners|women|men|kids)\b/i;
+
+  let productName = section.h2
+    .replace(/^[^\w]+/, '')      // leading emoji / punctuation
+    .replace(BADGE_PREFIX, '')
+    .replace(/\s*\(\$[\d,]+(?:[^)]*)\)\s*$/, '')  // trailing "($249)" / "($179 + $99/yr)"
+    .replace(/\s*[—–-]\s*\$[\d,]+.*$/, '')          // trailing "— $249"
+    .trim();
+
+  // Fall back to the affiliate key whenever the heading did not resolve to a
+  // product. The affiliate key IS the product being linked, so it is always
+  // the more accurate name.
+  const humanizedKey = affiliateKey
+    ? affiliateKey.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())
+    : '';
+  // Token-correspondence check. Word lists are brittle — "Best for 8-Foot
+  // Ceilings" and "Our Testing Setup" both carry an affiliateKey but name no
+  // product. If the cleaned heading shares no meaningful token with the
+  // affiliate key, the heading is editorial framing and the key is the product.
+  const STOP = new Set(['best','top','our','the','for','and','with','golf','2026','pick','picks','review']);
+  const tokens = (t: string) =>
+    new Set(t.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2 && !STOP.has(w)));
+  const nameTok = tokens(productName);
+  const keyTok = affiliateKey ? tokens(affiliateKey) : new Set<string>();
+  const shares = [...keyTok].some(k => [...nameTok].some(n => n === k || n.includes(k) || k.includes(n)));
+
+  if (affiliateKey && (NON_PRODUCT_HEADINGS.test(productName) || CATEGORY_ONLY.test(productName) || productName.length < 3 || !shares)) {
+    productName = humanizedKey;
   }
+
+  // Belt and braces: no price should survive into a product name. If one does
+  // (e.g. "What About the Rapsodo MLM2PRO ($699)?"), the heading is editorial
+  // prose, so use the affiliate key instead.
+  productName = productName.replace(/\s*[([]\$[\d,][^)\]]*[)\]]/g, '').replace(/\s{2,}/g, ' ').trim();
+  if (/\$[\d,]/.test(productName) && humanizedKey) productName = humanizedKey;
+  productName = productName.replace(/[?:—–-]\s*$/, '').trim();
 
   // Derive brand from affiliate key (first word, or first two for compound brands)
   const COMPOUND_BRANDS = ['shot-scope','blue-tees','lab-golf','square-golf','full-swing','rain-or','precision-pro','vice-golf','tour-edge','top-flite','ping-g','cobra-aerojet','cleveland-launcher'];
@@ -552,7 +593,10 @@ export function buyingGuideProductSchema(
     '@context': 'https://schema.org',
     '@type': 'Product',
     name: productName,
-    description: section.body?.slice(0, 200) || '',
+    // Plain text only — schema.org description must not contain markup.
+    // reviewBody below already strips tags; this field previously did not,
+    // leaving 80 Product blocks with raw "<p>..." in the description.
+    description: (section.body || '').replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim().slice(0, 200),
     image: productImage || `${DOMAIN}/images/og-image.jpg`,
     ...(brandName ? { brand: { '@type': 'Brand', name: brandName } } : {}),
     // ── Single first-party editorial review only ──
