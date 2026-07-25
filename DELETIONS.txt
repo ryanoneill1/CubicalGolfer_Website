@@ -1,0 +1,20 @@
+Deleted (8 dead duplicate files — none imported by the deployed build):
+
+  affiliate-links.ts                        (root, 28 KB)
+  articles.ts                               (root, 144 KB)
+  schema.ts                                 (root, 12 KB)
+  data/affiliate-links.ts                   (24 KB)
+  data/articles.ts                          (1.7 MB)
+  lib/schema.ts                             (12 KB)
+  courses/src/data/affiliate-links.ts       (40 KB)
+  courses/src/data/articles.ts              (228 KB)
+
+Canonical copies kept (the only ones the build consumes):
+  src/data/articles.ts
+  src/data/affiliate-links.ts
+  src/lib/schema.ts
+
+Apply with:
+  git rm affiliate-links.ts articles.ts schema.ts \
+         data/affiliate-links.ts data/articles.ts lib/schema.ts \
+         courses/src/data/affiliate-links.ts courses/src/data/articles.ts

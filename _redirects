@@ -95,6 +95,15 @@
 /compare/callaway-big-bertha-vs-ping-g430-max/  /compare/cobra-aerojet-max-vs-ping-g430-max/  301
 /compare/vice-pro-vs-titleist-pro-v1/  /compare/titleist-pro-v1-vs-callaway-chrome-soft/  301
 /compare/scotty-cameron-phantom-vs-lab-golf-df3/  /compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/  301
-/best-game-improvement-irons-2026/  /best-golf-irons-2026/  301
-/most-forgiving-irons/  /best-golf-irons-2026/  301
-/best-golf-irons-high-handicapper/  /best-golf-irons-2026/  301
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Search Console "Not found (404)" — paste the 5 exported URLs below and set each
+# target to its closest live page, then uncomment. A dist/ crawl found ZERO
+# internal links to missing pages (see docs/broken-links.md), so these five are
+# historical/external and cannot be derived from the repo — they must come from
+# the Search Console export.
+# /old-404-url-1/  /best-golf-irons-2026/  301
+# /old-404-url-2/  /best-golf-irons-2026/  301
+# /old-404-url-3/  /best-golf-irons-2026/  301
+# /old-404-url-4/  /best-golf-irons-2026/  301
+# /old-404-url-5/  /best-golf-irons-2026/  301

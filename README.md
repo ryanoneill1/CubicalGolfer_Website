@@ -1,50 +1,59 @@
-# Iron consolidation — CubicalGolfer
+# CubicalGolfer
 
-Resolves keyword cannibalization across four overlapping iron articles by merging
-three into a single canonical page. Full analysis and rationale:
-`docs/iron-consolidation-plan.md`.
+Source for [cubicalgolfer.com](https://www.cubicalgolfer.com) — independent golf gear reviews, comparisons, and buying guides for weekend golfers.
 
-## Survivor: `/best-golf-irons-2026/`
+## Stack
 
-Chosen on the data (default confirmed): 26 inbound internal links vs 5–8 for the
-others, 2,551 words vs 431–882, 8 products + 7 FAQs already the widest coverage,
-and the oldest URL (published 2025-03-22) with the strongest ranking history.
+- Astro static site generator (output: static, trailingSlash: always)
+- Cloudflare Workers hosting (deployed via GitHub Actions on push to main)
+- Amazon Associates + Golf Galaxy (CJ) affiliate integration
+- Schema.org structured data (Article, Product, Review, FAQ, Person)
 
-## What changed
+## Deploy
 
-- **`src/data/articles.ts`**
-  - Merged genuinely-unique content into the survivor: **3 product picks** whose
-    affiliate keys existed only on a retired page (`cleveland-launcher-xl-halo-irons`,
-    `taylormade-stealth-hd-irons`, `srixon-zx5-mk-ii`), **4 unique advice sections**,
-    and **5 unique FAQs** (7 → 12). Near-duplicate paragraphs were not carried.
-  - Removed the 3 retired article objects.
-  - Repointed every internal link that pointed at a retired slug to the survivor
-    (related entries repointed + relabeled; body links repointed; the survivor's
-    own links to the merged pages converted to plain text). **Zero remaining
-    references** to any retired slug.
-  - Survivor `datePublished` preserved (2025-03-22); `dateModified` → 2026-07-25.
-- **`_redirects`** — three 301s appended in the existing format:
-  ```
-  /best-game-improvement-irons-2026/  /best-golf-irons-2026/  301
-  /most-forgiving-irons/              /best-golf-irons-2026/  301
-  /best-golf-irons-high-handicapper/  /best-golf-irons-2026/  301
-  ```
+**Auto-deploy on push to `main`** via GitHub Actions (`.github/workflows/deploy.yml`).
+The workflow runs `npm ci` → `npm run build` → `wrangler deploy` → purge cache → IndexNow ping.
 
-## Verification
+Requires three GitHub repo secrets: `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_ZONE_ID`.
+See `GITHUB_ACTIONS_SETUP.md` for one-time setup instructions.
 
-- `articles.ts` parses — 181 articles (was 184).
-- No affiliate key lost — `validate-affiliate-keys` passes (437 sections); all 11
-  survivor products (incl. the 3 carried keys) emit Product schema in the build.
-- Zero remaining references to any retired slug; no duplicate `related` entries.
-- `npm run validate` passes (incl. promise-delivery); `npm run build` builds 262
-  pages; `sitemap-articles.xml` no longer emits the retired URLs.
+> **⚠️ When pushing via the GitHub web UI:** never upload `dist/`, `node_modules/`, or any built HTML files. Only push changes to `src/`, `public/`, `scripts/`, and root config files.
 
-## Task 6 — reported, not fixed
+## Content
 
-Two title-overlap pairs flagged for operator review:
-`/best-rain-gear-midwest-golfers/` ↔ `/best-golf-rain-gear-2026/` (genuine overlap
-candidate) and `/best-golf-rangefinders-2026/` ↔ `/best-golf-irons-2026/` (false
-positive — shared title template, unrelated intent). Details in the plan doc.
+- 160+ in-depth gear guides and tutorials
+- 28 head-to-head product comparisons
+- 168 affiliate products with dual-retailer buttons
+- 34-ball golf ball compression chart with PDF download
+- 3 interactive tools (ball finder, room checker, distance calculator)
 
-`scripts/consolidate-irons.ts` is the consolidation engine (quote/brace-aware
-source surgery), included for reproducibility.
+## Canonical file locations — edit only these
+
+The site's data and schema live in **exactly one place each**. The build (and
+everything under `scripts/`) imports only these paths:
+
+| What | Canonical path — the ONLY copy to edit |
+|---|---|
+| Article content & metadata | `src/data/articles.ts` |
+| Affiliate product registry | `src/data/affiliate-links.ts` |
+| Structured-data / schema helpers | `src/lib/schema.ts` |
+| Comparison content | `src/data/comparisons.ts` |
+| City / course data | `src/data/cities.ts` |
+
+Do **not** create copies of `articles.ts`, `affiliate-links.ts`, or `schema.ts`
+anywhere else (repo root, `/data/`, `/lib/`, `/courses/…`). Stale duplicates used
+to exist there; an edit to the wrong copy **silently never ships**. A CI guard —
+`scripts/check-duplicates.ts`, run in `.github/workflows/deploy.yml` and in
+`npm run validate` — now fails the build if any of those three filenames reappears
+outside its canonical path. See `docs/file-inventory.md` for the full audit.
+
+> The `/courses/` directory is a dead v2.0.0 snapshot with its own `package.json`;
+> it is never built or deployed. Don't edit content there expecting it to ship.
+
+## Development
+
+```bash
+npm install
+npm run build    # builds to dist/
+npx wrangler deploy  # deploys to Cloudflare
+```
