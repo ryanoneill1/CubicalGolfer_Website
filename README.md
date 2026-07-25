@@ -1,65 +1,69 @@
-# Date remediation — CubicalGolfer
+# Internal-link equity — CubicalGolfer
 
-Fixes publish/modified dates in the site's content data so the archive is
-internally consistent with the site's own founding (`SITE_LAUNCH = '2026-01'`;
-About page: "Started Cubical Golfer: 2026").
+Gives the site's highest-value tools the same internal-link equity as its
+best-performing page (the golf-ball compression chart, 669 clicks/3mo).
 
-## Problems found (audit: `docs/date-audit.md`)
+## The problem
 
-| Check | Count |
-|---|---:|
-| `datePublished` before the founding month | **88** (84 in articles.ts + 4 in comparisons.ts) |
-| `dateModified` equal to the bulk stamp `2026-06-30` | **150** |
-| `dateModified` earlier than `datePublished` | 0 (none in raw data) |
-| Any future-dated field | 0 |
+The compression chart proves the pattern — tools rank and convert here — yet the
+highest-AOV simulator tools ($500–$5,000 category) sat almost unlinked:
+`launch-monitor-room-checker` had 5 inbound internal links, `golf-simulator-cost-calculator`
+had 2, and `golf-simulator-projector-distance-calculator` / `golf-equipment-budget-planner`
+had 0.
 
-## What was changed
+## What changed (only `src/data/articles.ts`)
 
-- **`src/data/articles.ts`** — 84 pre-2026 `datePublished` values remapped into
-  the real window **2026-01 … 2026-07**, distributed evenly (~12/month) in their
-  existing chronological order so the archive still reads correctly. 150
-  `dateModified` fields equal to the bulk `2026-06-30` stamp were **removed**
-  (not re-faked); 34 genuine `dateModified` values were kept. A field is only
-  removed, never invented.
-- **`src/data/comparisons.ts`** (scope extension) — the 4 live `/compare/` pages
-  dated in 2025 were remapped into 2026-01…2026-04, each kept **≤ its existing
-  `dateModified`** so no inversion is introduced. Not in the named output list,
-  but these render the same pre-founding-date defect on live pages.
-- **`src/data/types.ts`** — `Article.dateModified` made optional.
-- **`src/lib/schema.ts`** — `articleSchema()` / `reviewSchema()` / `howToSchema()`
-  now emit `dateModified ?? datePublished`, so an un-updated article still ships
-  a valid, non-inverted `dateModified` in its JSON-LD.
-- **`src/lib/linking.ts`** and **`src/pages/index.astro`** — article sorts used
-  `.dateModified.localeCompare(...)`, which **crashed the build** once the field
-  could be absent. Now sort on `dateModified ?? datePublished`.
-- **`src/pages/[...slug].astro`** and **`golf-ball-compression-chart/index.astro`**
-  — "Updated" stamps and a dataset schema now fall back to `datePublished`
-  (the compression-chart page previously hard-coded the bulk `2026-06-30`).
-- **`src/pages/sitemap-articles.xml.ts`** — already falls back
-  `dateModified ?? datePublished ?? FALLBACK`; **verified correct, unchanged**.
-  `lastmod` now equals `datePublished` for the 150 de-stamped articles.
+Contextual, in-body links were inserted into the articles whose own subject makes
+each tool useful, plus a matching entry in each article's `related[]` block. Both
+forms render as real `<a>` links and pass equity. Anchor text is varied per
+insertion; never more than 2 tool links were inserted per article; no tool was
+linked from an irrelevant article.
 
-## Verification (all green)
+| Tool | Before | After |
+|---|---:|---:|
+| launch-monitor-room-checker (priority) | 5 | **23** |
+| golf-simulator-cost-calculator (priority) | 2 | **24** |
+| golf-simulator-projector-distance-calculator | 0 | **6** |
+| golf-equipment-budget-planner | 0 | **10** |
+| golf-ball-finder | 3 | **9** |
+| golf-swing-speed-chart | 3 | **9** |
+| golf-ball-compression-chart (benchmark) | 22 | 22 |
 
-- `articles.ts` and `comparisons.ts` parse; 184 articles / 37 comparisons.
-- 0 pre-founding dates, 0 `dateModified < datePublished`, 0 bulk `2026-06-30`,
-  0 future dates (re-audit table at the bottom of `docs/date-audit.md`).
-- `npm run validate` passes; `npm run build` builds 265 pages.
-- Built sitemap `lastmod` and rendered JSON-LD confirmed: de-stamped articles
-  show `dateModified == datePublished`; genuine updates preserved (e.g.
-  `/golf-tips-for-beginners/` → published 2026-02-16, modified 2026-07-21).
+32 contextual body links + 36 `related[]` entries across ~30 articles. The two
+priority simulator tools now match the compression chart's equity. Full per-link
+record in `insertion-log.json`; per-target counts and orphan list in
+`docs/internal-links.md`.
 
-## Reproduce
+## Relevance mapping used
 
-`SITE_LAUNCH` is the constant at the top of both scripts — change it if the real
-launch month differs.
+- **room-checker** → launch-monitor / simulator articles where physical space
+  matters (garage, apartment, ceiling, room dimensions).
+- **cost-calculator** → simulator build / budget / cost articles.
+- **projector-distance-calculator** → projector / impact-screen / throw-distance
+  articles.
+- **budget-planner** → "best X under $Y" / beginner-set articles.
+- **ball-finder** → golf-ball articles.
+- **swing-speed-chart** → swing-speed / shaft-flex / driver-loft articles.
 
-```bash
-npx tsx scripts/audit-dates.ts    # writes docs/date-audit.md
-npx tsx scripts/fix-dates.ts      # remaps articles.ts (idempotent-safe on clean data)
-npm run validate && npm run build
-```
+## Verification
 
-Files mirror the repo layout — drop them in over the same paths, or apply
-`date-remediation.patch` for the non-articles.ts source edits (articles.ts is
-1.97 MB; use the full copy in `src/data/`).
+- `src/data/articles.ts` parses (184 articles).
+- Every inserted link resolves against the real 264-page build list — **no 404s**.
+- All 9 tools remain in `src/pages/sitemap-core.xml.ts` (unchanged).
+- Anchor text varied per tool (10 distinct anchors for room-checker, etc.).
+- Each insertion capped at ≤2 tool links/article. (Two pre-existing articles —
+  `/vice-golf-balls/`, `/how-many-clubs-in-a-golf-bag/` — already carried 3 tool
+  links before this work and were left untouched.)
+- `npm run validate` passes; `npm run build` builds 265 pages; inserted links
+  confirmed rendering in the built HTML.
+
+## Scripts
+
+- `scripts/audit-internal-links.ts` → `docs/internal-links.md`. Counts every
+  internal link in articles.ts by target (both `href="/…"` in bodies and
+  `slug` refs in `related[]`/`relatedComparisons[]`), lists orphan pages. Run it
+  against the delivered file to confirm the after-state.
+- `scripts/insert-tool-links.ts` — the insertion engine (curated, varied-anchor
+  list; delimiter-aware source splicing). Included for reproducibility.
+
+Files mirror the repo layout — drop `src/data/articles.ts` in over the same path.
