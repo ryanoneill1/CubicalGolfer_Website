@@ -6,6 +6,22 @@
 //   - Article schema includes author @id for entity building
 //   - Organization schema includes sameAs array ready for social profiles
 //   - Product schema added for affiliate pages
+//
+// RATINGS & AGGREGATE-RATING POLICY (buyingGuideProductSchema):
+//   Every `reviewRating.ratingValue` on this site is a FIRST-PARTY EDITORIAL SCORE.
+//   Scores are derived from the site's own ranking badges — "Best Overall" /
+//   "Editor's Pick" → 4.8, "Best Premium"/"Best Splurge" → 4.7, "Best Value"/
+//   "Best Mid-Range" → 4.5, "Best Budget"/"Budget Runner-Up" → 4.3, "Best for
+//   <use case>" → 4.4 — which are genuine editorial positions, not invented
+//   numbers. A section with no such editorial badge carries no rating (and
+//   `testedStatus:'research'` sections are intentionally left unrated).
+//   `aggregateRating` is deliberately OMITTED: the only review-count data
+//   available is Amazon's, which is not first-party, and pairing our editorial
+//   ratingValue with a third-party reviewCount would misattribute the count and
+//   risk a Google manual action. A single honest first-party Review with a
+//   reviewRating is the policy-compliant way for an affiliate site to earn star
+//   snippets. DO NOT add aggregateRating. (See scripts/audit-ratings.ts /
+//   docs/rating-coverage.md for current coverage.)
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Article, Comparison, GolfCity, FAQItem } from '../data/types';
