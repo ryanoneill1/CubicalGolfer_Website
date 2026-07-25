@@ -1,0 +1,39 @@
+diff --git a/src/pages/golf-ball-compression-chart/index.astro b/src/pages/golf-ball-compression-chart/index.astro
+index 46cc80c..1c421d5 100644
+--- a/src/pages/golf-ball-compression-chart/index.astro
++++ b/src/pages/golf-ball-compression-chart/index.astro
+@@ -17,8 +17,8 @@ import EmbedBox from '../../components/EmbedBox.astro';
+ const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
+ 
+ const meta = {
+-  title: 'Golf Ball Compression Chart 2026 — All 34 Balls + PDF',
+-  description: 'Golf ball compression chart with 34 balls ranked low to high. Sortable by brand, price, and swing speed.',
++  title: 'Golf Ball Compression Chart 2026 — 34 Balls + PDF',
++  description: 'Compression ratings for 34 golf balls — Pro V1, Supersoft, Noodle — matched to your swing speed. Grab the free printable PDF chart to take to the shop.',
+   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
+   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+   ogType: 'article' as const,
+@@ -154,7 +154,7 @@ const schemas = [
+     </nav>
+ 
+     <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
+-    <h1>Golf Ball Compression Chart — Find the Right Ball for Your Swing Speed</h1>
++    <h1>Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed</h1>
+ 
+     <div class="author-box">
+       <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
+diff --git a/src/pages/golf-club-distance-chart/index.astro b/src/pages/golf-club-distance-chart/index.astro
+index b5fa4d3..cc6dbc7 100644
+--- a/src/pages/golf-club-distance-chart/index.astro
++++ b/src/pages/golf-club-distance-chart/index.astro
+@@ -3,8 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
+ import { articleSchema, faqSchema, breadcrumbSchema , datasetSchema } from '../../lib/schema';
+ 
+ const meta = {
+-  title: 'Golf Club Distance Chart — Enter Your Swing Speed',
+-  description: 'Interactive golf club distance chart. Enter your driver swing speed and see estimated carry distances for every club in your bag.',
++  title: 'Golf Club Distance Chart — Carry by Swing Speed',
++  description: 'Golf club distance chart for all 13 clubs, driver through wedge, across swing speeds of 75–115 mph. Enter your speed for a carry-distance table built for you.',
+   canonical: 'https://www.cubicalgolfer.com/golf-club-distance-chart/',
+   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
+   ogType: 'article' as const,

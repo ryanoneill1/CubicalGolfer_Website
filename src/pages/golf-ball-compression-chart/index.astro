@@ -17,8 +17,8 @@ import EmbedBox from '../../components/EmbedBox.astro';
 const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
 const meta = {
-  title: 'Golf Ball Compression Chart 2026 — All 34 Balls + PDF',
-  description: 'Golf ball compression chart with 34 balls ranked low to high. Sortable by brand, price, and swing speed.',
+  title: 'Golf Ball Compression Chart 2026 — 34 Balls + PDF',
+  description: 'Compression ratings for 34 golf balls — Pro V1, Supersoft, Noodle — matched to your swing speed. Grab the free printable PDF chart to take to the shop.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'article' as const,
@@ -119,7 +119,7 @@ const datasetSchema = {
     url: 'https://www.cubicalgolfer.com',
   },
   license: 'https://creativecommons.org/licenses/by/4.0/',
-  dateModified: article.dateModified || article.datePublished,
+  dateModified: article.dateModified || '2026-06-30',
   distribution: {
     '@type': 'DataDownload',
     encodingFormat: 'application/pdf',
@@ -154,7 +154,7 @@ const schemas = [
     </nav>
 
     <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
-    <h1>Golf Ball Compression Chart — Find the Right Ball for Your Swing Speed</h1>
+    <h1>Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed</h1>
 
     <div class="author-box">
       <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
