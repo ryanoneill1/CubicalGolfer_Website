@@ -2,122 +2,49 @@
 /**
  * scripts/fix-orphaned-urls.mjs
  * ─────────────────────────────────────────────────────────────────────────────
- * Repairs URLs that Google still has indexed but the site no longer serves.
+ * Adds 301s for URLs Google has indexed that the site no longer builds.
  *
- * Two things happen here:
- *   1. A 301 is added to _redirects for every orphaned URL.
- *   2. Every internal <a href> in articles.ts that points at an orphan is
- *      repointed to that orphan's redirect target, so no live article links
- *      to a 404.
+ * The orphan list was derived by diffing the Search Console page export against
+ * `dist/` AFTER a real `astro build` — not by parsing articles.ts. Parsing is
+ * unreliable here because articles use two slug formats:
+ *     id: 'x',\n    slug: '/y/'        and        id: 'x', slug: '/y/'
+ * A regex anchored to the first form silently misses ~15 live articles.
  *
- * Orphans were identified by diffing Search Console's page export against
- * every route the repo actually produces (articles.ts slug definitions,
- * comparisons.ts slugs, cities, brands, and static src/pages routes).
- *
- * Re-runnable: skips redirects that already exist.
+ * This script only writes _redirects. It does NOT touch articles.ts — every
+ * internal href in articles.ts resolves against the built output.
  */
 import fs from 'fs';
-
-const ARTICLES = 'src/data/articles.ts';
 const REDIRECTS = '_redirects';
 
-// orphan -> live target. Every target verified present in the route list.
+// orphan -> live target. Verified: each key absent from dist/, each value present.
 const MAP = {
-  '/best-golf-sunglasses/':                          '/golf-apparel/',
-  '/best-golf-rain-jacket/':                         '/best-golf-rain-gear-2026/',
-  '/best-golf-irons-high-handicapper/':              '/best-golf-irons-2026/',
-  '/best-game-improvement-irons-2026/':              '/best-golf-irons-2026/',
-  '/most-forgiving-irons/':                          '/best-golf-irons-2026/',
-  '/best-golf-stand-bag/':                           '/best-golf-bags-walking-2026/',
-  '/best-golf-pants/':                               '/golf-apparel/',
-  '/rapsodo-vs-garmin-r10/':                         '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/',
-  '/best-golf-towel/':                               '/best-golf-accessories-under-50/',
-  '/prime-day-golf-deals/':                          '/best-golf-gear-under-100/',
-  '/best-golf-shorts/':                              '/golf-apparel/',
-  '/golf-handicap-explained/':                       '/average-golf-handicap/',
-  '/how-many-clubs-in-a-golf-bag/':                  '/best-golf-bags-2026/',
-  '/best-electric-golf-cart/':                       '/best-electric-golf-push-cart/',
-  '/best-golf-alignment-sticks/':                    '/best-golf-training-aids/',
-  '/compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/':'/bushnell-launch-pro-vs-skytrak-plus/',
-  '/best-golf-hats/':                                '/golf-apparel/',
-  '/best-golf-cart-bag/':                            '/best-golf-bags-2026/',
-  '/golf-mental-game-tips/':                         '/improve-your-golf-game/',
-  '/golf-club-fitting-guide/':                       '/iron-fitting-guide-beginners/',
+  '/best-golf-irons-high-handicapper/':               '/best-golf-irons-2026/',
+  '/best-game-improvement-irons-2026/':               '/best-golf-irons-2026/',
+  '/most-forgiving-irons/':                           '/best-golf-irons-2026/',
+  '/rapsodo-vs-garmin-r10/':                          '/compare/garmin-r10-vs-rapsodo-mlm2pro/',
+  '/golf-mental-game-tips/':                          '/improve-your-golf-game/',
+  '/golf-club-fitting-guide/':                        '/iron-fitting-guide-beginners/',
 };
 
-
-// Broken internal links with no Search Console history (never indexed, so no
-// redirect needed — the link is simply repointed to the closest live page).
-const LINK_ONLY = {
-  '/best-golf-umbrella/':                                  '/best-golf-rain-gear-2026/',
-  '/black-friday-golf-deals/':                             '/best-golf-gear-under-100/',
-  '/compare/garmin-r10-vs-garmin-r50/':                    '/compare/garmin-r50-vs-rapsodo-mlm2pro/',
-  '/compare/rapsodo-mlm2pro-vs-flightscope-mevo-plus/':    '/compare/skytrak-plus-vs-mevo-plus/',
-};
-
-const art0 = fs.readFileSync(ARTICLES, 'utf8');
-const red0 = fs.readFileSync(REDIRECTS, 'utf8');
-
-// ── BEFORE ──────────────────────────────────────────────────────────────────
-const before = {};
-for (const o of Object.keys(MAP)) before[o] = (art0.match(new RegExp(o.replace(/[/]/g, '\\/'), 'g')) || []).length;
-const beforeTotal = Object.values(before).reduce((a, b) => a + b, 0);
+const before = fs.readFileSync(REDIRECTS, 'utf8');
 const existing = new Set(
-  red0.split('\n').filter(l => l.trim() && !l.trim().startsWith('#')).map(l => l.trim().split(/\s+/)[0]),
+  before.split('\n').filter(l => l.trim() && !l.trim().startsWith('#')).map(l => l.trim().split(/\s+/)[0]),
 );
+const added = Object.entries(MAP).filter(([o]) => !existing.has(o)).map(([o, t]) => `${o}  ${t}  301`);
 
-// ── 1. internal links ───────────────────────────────────────────────────────
-let art = art0;
-for (const [orphan, target] of Object.entries(MAP)) {
-  art = art.split(orphan).join(target);
-}
-for (const [broken, target] of Object.entries(LINK_ONLY)) {
-  art = art.split(broken).join(target);
-}
-
-// ── 2. redirects ────────────────────────────────────────────────────────────
-const added = [];
-for (const [orphan, target] of Object.entries(MAP)) {
-  if (existing.has(orphan)) continue;
-  added.push(`${orphan}  ${target}  301`);
-}
-let red = red0.replace(
+let out = before.replace(
   /# ─+\n# Search Console "Not found \(404\)"[\s\S]*?# \/old-404-url-5\/  \/best-golf-irons-2026\/  301\n?/,
   '',
 ).trimEnd();
 if (added.length) {
-  red += '\n\n# ─────────────────────────────────────────────────────────────────────────────\n'
-       + '# Orphaned URLs — indexed by Google, no longer served by the site.\n'
-       + '# Identified by diffing the Search Console page export against every route\n'
-       + '# the repo produces. Generated by scripts/fix-orphaned-urls.mjs\n'
+  out += '\n\n# ─────────────────────────────────────────────────────────────────────────────\n'
+       + '# Orphaned URLs — indexed by Google, no longer produced by the build.\n'
+       + '# Verified against dist/ after a real astro build.\n'
        + added.join('\n') + '\n';
 }
+fs.writeFileSync(REDIRECTS, out);
 
-fs.writeFileSync(ARTICLES, art);
-fs.writeFileSync(REDIRECTS, red);
-
-// ── AFTER + report ──────────────────────────────────────────────────────────
-const art1 = fs.readFileSync(ARTICLES, 'utf8');
-const after = {};
-for (const o of Object.keys(MAP)) after[o] = (art1.match(new RegExp(o.replace(/[/]/g, '\\/'), 'g')) || []).length;
-const afterTotal = Object.values(after).reduce((a, b) => a + b, 0);
-
-console.log('── ORPHANED URL REPAIR ──────────────────────────────────────────────');
-console.log('%-50s %7s %6s', 'orphan URL', 'before', 'after');
-for (const o of Object.keys(MAP)) {
-  if (before[o] || after[o]) console.log(o.padEnd(50), String(before[o]).padStart(7), String(after[o]).padStart(6));
-}
-console.log('');
-console.log(`internal links to orphans:  ${beforeTotal} -> ${afterTotal}`);
-console.log(`301 redirects added:        ${added.length}`);
+console.log('── ORPHAN REDIRECTS ─────────────────────────────────────────────────');
+console.log(`301s added: ${added.length}`);
 for (const a of added) console.log('   ' + a);
-
-const linkOnlyLeft = Object.keys(LINK_ONLY)
-  .reduce((n, b) => n + (art1.match(new RegExp(b.replace(/[/]/g, '\\/'), 'g')) || []).length, 0);
-console.log(`broken link-only refs remaining: ${linkOnlyLeft}`);
-
-const braces = (art1.match(/\{/g) || []).length - (art1.match(/\}/g) || []).length;
-console.log('');
-console.log(`brace balance in articles.ts: ${braces} (0 = well-formed)`);
-if (afterTotal !== 0 || linkOnlyLeft !== 0 || braces !== 0) { console.error('\nFAILED: orphan links remain or file is malformed'); process.exit(1); }
-console.log('OK');
+console.log(`placeholder old-404-url block removed: ${before.includes('old-404-url') && !out.includes('old-404-url')}`);
