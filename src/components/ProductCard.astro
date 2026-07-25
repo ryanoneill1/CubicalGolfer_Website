@@ -102,9 +102,9 @@ const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'a
   <!-- CTA 3: Primary button -->
   <a href={url} class:list={["product-card__cta", { "product-card__cta--winner": winner }]}
      target="_blank" rel="nofollow noopener sponsored"
-     aria-label={`Check today's price for ${name} on ${retailer}`}>
-    <span class="product-card__cta-text">Check Today's Price ↗</span>
-    <span class="product-card__cta-badge">at {retailer} · Free shipping</span>
+     aria-label={`Check price for ${name} at ${retailer}`}>
+    <span class="product-card__cta-text">Check Price at {retailer} ↗</span>
+    <span class="product-card__cta-badge">Prices checked today</span>
   </a>
 
   {golfGalaxyUrl && (() => {
