@@ -1,54 +1,50 @@
-# Title & meta rewrites — 16 underperforming pages (CTR)
+# Iron consolidation — CubicalGolfer
 
-Rewrites the `title` and `description` for 16 pages holding 84,977 impressions but
-only 1,199 clicks (1.41% CTR). Full before/after table with character counts and
-per-page rationale: `docs/title-meta-changes.md`.
+Resolves keyword cannibalization across four overlapping iron articles by merging
+three into a single canonical page. Full analysis and rationale:
+`docs/iron-consolidation-plan.md`.
 
-## Approach
+## Survivor: `/best-golf-irons-2026/`
 
-- **Titles** lead with the exact head term a searcher types, stay **under 60
-  characters**, and add a verifiable differentiator (count, price ceiling, year).
-  No unsupported testing claims — the old "Tested against TrackMan" and "Tested
-  Over 40+ Rounds" framings were replaced with things the body supports ("4 Under
-  $700", "9 Balls by Swing Speed", "8 Models Compared"). Formats are varied, not
-  one template.
-- **Descriptions** are **140–158 characters**, answer the query in the first
-  clause, cite a concrete detail (a price, a product, a number), and end with a
-  reason to click rather than a generic CTA.
+Chosen on the data (default confirmed): 26 inbound internal links vs 5–8 for the
+others, 2,551 words vs 431–882, 8 products + 7 FAQs already the widest coverage,
+and the oldest URL (published 2025-03-22) with the strongest ranking history.
 
-## Compression chart (Task 4)
+## What changed
 
-`/golf-ball-compression-chart/` ranked 6.9 for "golf ball compression chart 2026"
-but 23.4 for the un-suffixed query. Its title **and H1** now carry **both**
-variants ("Golf Ball Compression Chart" + "2026"), and the description surfaces
-the **free PDF** — the "golf ball compression chart pdf" query converts at 19.85%.
-
-## Files changed — note on scope
-
-The task named `src/data/articles.ts` as the only code output, but two of the 16
-slugs render from **standalone `.astro` pages** whose own `title`/`description`
-(and, for the chart, `<h1>`) override the articles.ts entry — so the SEO-visible
-fix has to live there:
-
-- `src/data/articles.ts` — 15 titles + 15 descriptions (the compression-chart
-  articles.ts entry title/description were also aligned for internal-listing
-  consistency).
-- `src/pages/golf-club-distance-chart/index.astro` — title + description.
-- `src/pages/golf-ball-compression-chart/index.astro` — title + description + H1
-  (Task 4).
-
-Nothing else was touched. Diff of the two page files: `astro-pages.patch`.
+- **`src/data/articles.ts`**
+  - Merged genuinely-unique content into the survivor: **3 product picks** whose
+    affiliate keys existed only on a retired page (`cleveland-launcher-xl-halo-irons`,
+    `taylormade-stealth-hd-irons`, `srixon-zx5-mk-ii`), **4 unique advice sections**,
+    and **5 unique FAQs** (7 → 12). Near-duplicate paragraphs were not carried.
+  - Removed the 3 retired article objects.
+  - Repointed every internal link that pointed at a retired slug to the survivor
+    (related entries repointed + relabeled; body links repointed; the survivor's
+    own links to the merged pages converted to plain text). **Zero remaining
+    references** to any retired slug.
+  - Survivor `datePublished` preserved (2025-03-22); `dateModified` → 2026-07-25.
+- **`_redirects`** — three 301s appended in the existing format:
+  ```
+  /best-game-improvement-irons-2026/  /best-golf-irons-2026/  301
+  /most-forgiving-irons/              /best-golf-irons-2026/  301
+  /best-golf-irons-high-handicapper/  /best-golf-irons-2026/  301
+  ```
 
 ## Verification
 
-- `src/data/articles.ts` parses (184 articles); only `title`/`description` lines
-  changed there (plus the two standalone pages above).
-- `npm run validate` passes — including `validate-promise-delivery`, which caught
-  an early "9 Ranked" title whose promised count the comparison table did not
-  back; it was reworded to the verifiable "9 Balls by Swing Speed".
-- `npm run build` builds 265 pages; rendered `<title>`, `<meta description>`, and
-  `<h1>` confirmed in the built HTML for the standalone pages.
-- Every title < 60 chars; every description 140–158 chars (counts in the doc).
+- `articles.ts` parses — 181 articles (was 184).
+- No affiliate key lost — `validate-affiliate-keys` passes (437 sections); all 11
+  survivor products (incl. the 3 carried keys) emit Product schema in the build.
+- Zero remaining references to any retired slug; no duplicate `related` entries.
+- `npm run validate` passes (incl. promise-delivery); `npm run build` builds 262
+  pages; `sitemap-articles.xml` no longer emits the retired URLs.
 
-`scripts/rewrite-meta.ts` is the (idempotent, delimiter-aware) rewrite engine,
-included for reproducibility.
+## Task 6 — reported, not fixed
+
+Two title-overlap pairs flagged for operator review:
+`/best-rain-gear-midwest-golfers/` ↔ `/best-golf-rain-gear-2026/` (genuine overlap
+candidate) and `/best-golf-rangefinders-2026/` ↔ `/best-golf-irons-2026/` (false
+positive — shared title template, unrelated intent). Details in the plan doc.
+
+`scripts/consolidate-irons.ts` is the consolidation engine (quote/brace-aware
+source surgery), included for reproducibility.
