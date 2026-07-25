@@ -510,7 +510,7 @@ if (isBuyingGuide) {
           <ul class="review-glance__list">
             {article.rating ? <li><strong>Our rating:</strong> ★ {article.rating}/5</li> : null}
             {gAff?.price ? <li><strong>Price:</strong> {gAff.price}{gAff.retailer ? ` at ${gAff.retailer}` : ''}</li> : null}
-            <li><strong>How we test:</strong> <a href="/how-we-test/">10+ rounds per product on real courses</a></li>
+            <li><strong>How we test:</strong> <a href="/how-we-test/">Tested across a full season on real courses</a></li>
             {['garmin','bushnell','callaway','taylormade','titleist'].includes(article.quickAnswerProduct.split('-')[0]) ? <li><strong>More from this brand:</strong> <a href={`/brands/${article.quickAnswerProduct.split('-')[0]}/`}>Every {article.quickAnswerProduct.split('-')[0].charAt(0).toUpperCase() + article.quickAnswerProduct.split('-')[0].slice(1)} product we've tested →</a></li> : null}
             {alts.length > 0 ? <li><strong>Compare it:</strong> {alts.map((c: any, i: number) => <span>{i > 0 ? ' · ' : ''}<a href={`/compare/${c.slug}/`}>{c.title}</a></span>)}</li> : null}
           </ul>
@@ -1105,7 +1105,7 @@ if (isBuyingGuide) {
       return recs.length > 0 ? (
         <div style="margin:24px 0;padding:20px 24px;background:rgba(30,58,40,.04);border-radius:12px;border-left:3px solid var(--green);">
           <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">🎯 Gear that helps with this</p>
-          <p style="font-size:16px;color:var(--muted);margin:0 0 14px;">Every recommendation is independently purchased and tested over 40+ rounds.</p>
+          <p style="font-size:16px;color:var(--muted);margin:0 0 14px;">Every recommendation is independently purchased and tested across a full season.</p>
           <div style="display:flex;flex-direction:column;gap:10px;">
             {recs.map(r => (
               <a href={r.href} style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;background:#fff;border:1px solid var(--border);border-radius:8px;text-decoration:none;transition:border-color .15s;">
