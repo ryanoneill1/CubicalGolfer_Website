@@ -1,0 +1,196 @@
+diff --git a/src/data/comparisons.ts b/src/data/comparisons.ts
+index e13d82b..6874a11 100644
+--- a/src/data/comparisons.ts
++++ b/src/data/comparisons.ts
+@@ -294,7 +294,7 @@ export const COMPARISONS: Comparison[] = [
+       { q: 'Are these still worth buying as previous-gen models?', a: 'Absolutely. Driver technology improves 1-3 yards per year. Both are within 2-3 yards of successors at $150-200 less.' },
+       { q: 'Which is better for a high handicapper?', a: 'Both are excellent. The Cobra launches slightly higher which helps slower swingers. The Ping has more adjustability for fitting. Off the rack, the Cobra slight edge for most high handicappers.' },
+     ],
+-    datePublished: '2025-10-15',
++    datePublished: '2026-04-10',
+     dateModified:  '2026-04-14',
+     related: [
+       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
+@@ -325,7 +325,7 @@ export const COMPARISONS: Comparison[] = [
+       { q: 'Is the Cleveland XL2 only for seniors?', a: 'No. It is for any golfer under 95 MPH regardless of age. Many younger golfers with naturally slower swings benefit from the lightweight high-launch design.' },
+       { q: 'Can I use the Cobra with a senior flex shaft?', a: 'Yes. The Aerojet Max comes in senior flex. With that shaft it performs similarly to the XL2 while offering a more versatile head design.' },
+     ],
+-    datePublished: '2025-09-22',
++    datePublished: '2026-03-15',
+     dateModified:  '2026-04-14',
+     related: [
+       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
+@@ -363,7 +363,7 @@ export const COMPARISONS: Comparison[] = [
+       { q: 'Is a $400 putter twice as good as a $200 putter?', a: 'No. Performance differences are minimal in blind testing. The Scotty premium pays for milling precision, brand prestige, resale value, and feel preference.' },
+       { q: 'Which is more forgiving on mishits?', a: 'The Odyssey. The White Hot insert dampens distance loss from off-center strikes. The milled Scotty face loses slightly more speed on mishits.' },
+     ],
+-    datePublished: '2025-08-10',
++    datePublished: '2026-01-15',
+     dateModified:  '2026-04-20',
+     related: [
+       { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
+@@ -394,7 +394,7 @@ export const COMPARISONS: Comparison[] = [
+       { q: 'Do LAB putters really help with yips?', a: 'Many golfers report significant improvement. Lie angle balance reduces hand manipulation during the stroke. However, yips can be psychological too. LAB offers a 30-day trial period.' },
+       { q: 'Is the Two Ball alignment system gimmicky?', a: 'No. It has been validated by 25 years of tour and amateur success. Two circles create a visual reference line that reduces misaim by 2-4 degrees consistently.' },
+     ],
+-    datePublished: '2025-09-05',
++    datePublished: '2026-02-15',
+     dateModified:  '2026-04-20',
+     related: [
+       { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
+diff --git a/src/data/types.ts b/src/data/types.ts
+index 489e0e3..d35d0f0 100644
+--- a/src/data/types.ts
++++ b/src/data/types.ts
+@@ -75,7 +75,9 @@ export interface Article {
+   thumb:         'green' | 'brown' | 'navy' | 'purple' | 'teal' | 'olive';
+   words:         string;
+   datePublished: string;      // ISO: "2026-01-15"
+-  dateModified:  string;      // ISO: "2026-03-24"
++  dateModified?: string;      // ISO: "2026-03-24" — optional: omitted when the
++                              // article has no genuine update (schema + sitemap
++                              // fall back to datePublished)
+   title:         string;      // <title> tag (≤60 chars)
+   titleDisplay:  string;      // H1 (can be longer)
+   description:   string;      // meta description (150–160 chars)
+diff --git a/src/lib/linking.ts b/src/lib/linking.ts
+index 42c651b..3003855 100644
+--- a/src/lib/linking.ts
++++ b/src/lib/linking.ts
+@@ -1183,18 +1183,22 @@ export function getAllSlugs(): Set<string> {
+   return new Set(ARTICLES.map(a => a.slug));
+ }
+ 
++// Sort key: dateModified when present, else datePublished (a field may be
++// omitted for articles that have had no genuine update).
++const sortDate = (a: Article) => a.dateModified ?? a.datePublished;
++
+ export function getCategoryArticles(category: string): Article[] {
+   return ARTICLES
+     .filter(a => a.category === category)
+-    .sort((a, b) => b.dateModified.localeCompare(a.dateModified));
++    .sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
+ }
+ 
+ export function getFeaturedArticles(limit = 6): Article[] {
+-  return ARTICLES
+-    .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
++  return [...ARTICLES]
++    .sort((a, b) => sortDate(b).localeCompare(sortDate(a)))
+     .slice(0, limit);
+ }
+ 
+ export function getAllArticles(): Article[] {
+-  return [...ARTICLES].sort((a, b) => b.dateModified.localeCompare(a.dateModified));
++  return [...ARTICLES].sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
+ }
+diff --git a/src/lib/schema.ts b/src/lib/schema.ts
+index a4e9ddd..11ef29c 100644
+--- a/src/lib/schema.ts
++++ b/src/lib/schema.ts
+@@ -101,7 +101,9 @@ export function articleSchema(article: Article): object {
+     headline: article.title,
+     description: article.description,
+     datePublished: article.datePublished,
+-    dateModified: article.dateModified,
++    // Fall back to datePublished when an article has no genuine update, so the
++    // Article schema always carries a valid, non-inverted dateModified.
++    dateModified: article.dateModified ?? article.datePublished,
+     author: {
+       ...AUTHOR,
+       '@id': `${DOMAIN}/about/#author`,
+@@ -410,7 +412,7 @@ export function howToSchema(article: any): object | null {
+     description: article.description,
+     url: `${DOMAIN}${article.slug}`,
+     step: steps,
+-    dateModified: article.dateModified,
++    dateModified: article.dateModified ?? article.datePublished,
+   };
+ }
+ 
+@@ -479,7 +481,7 @@ export function reviewSchema(article: Article): object | null {
+     },
+     publisher: PUBLISHER,
+     datePublished: article.datePublished,
+-    dateModified: article.dateModified,
++    dateModified: article.dateModified ?? article.datePublished,
+     reviewBody: reviewBody,
+     url: `${DOMAIN}${article.slug}`,
+   };
+diff --git a/src/pages/[...slug].astro b/src/pages/[...slug].astro
+index d19237e..d2b1f3d 100644
+--- a/src/pages/[...slug].astro
++++ b/src/pages/[...slug].astro
+@@ -392,7 +392,7 @@ if (isBuyingGuide) {
+         </span>
+         <span class="author-meta">
+           📖 {article.words} words &nbsp;·&nbsp;
+-          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
++          📅 Updated: {article.dateModified ?? article.datePublished} &nbsp;·&nbsp;
+           ⛳ <a href="/how-we-test/">How we test →</a>
+         </span>
+       </div>
+@@ -443,7 +443,7 @@ if (isBuyingGuide) {
+         <li><strong>Every product purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
+         <li><strong>{AUTHOR_PROFILE.testingLabel}</strong> — tested on actual courses, not a simulator or fitting bay</li>
+         <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers, not scratch players or tour pros</li>
+-        <li><strong>Updated {article.dateModified}</strong> — prices and picks reviewed regularly</li>
++        <li><strong>Updated {article.dateModified ?? article.datePublished}</strong> — prices and picks reviewed regularly</li>
+       </ul>
+       <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
+     </div>
+@@ -898,7 +898,7 @@ if (isBuyingGuide) {
+           )}
+ 
+           {section.recommendedGear?.length > 0 && (
+-            <RecommendedGearGrid items={section.recommendedGear} dateChecked={article.dateModified} />
++            <RecommendedGearGrid items={section.recommendedGear} dateChecked={article.dateModified ?? article.datePublished} />
+           )}
+           {aff && !(section.recommendedGear?.length > 0) && (
+             <AffiliateCTA
+@@ -909,7 +909,7 @@ if (isBuyingGuide) {
+               priceNote={aff.priceNote || ''}
+               variant={section.badge?.includes('BEST OVERALL') || section.badge?.includes('BEST PICK') ? 'secondary' : 'primary'}
+               disclosure={true}
+-              dateChecked={article.dateModified}
++              dateChecked={article.dateModified ?? article.datePublished}
+               isWinner={section.badge?.includes('BEST OVERALL') || section.badge?.includes('EDITOR') || section.badge?.includes('BEST PICK') || false}
+             />
+           )}
+@@ -1207,7 +1207,7 @@ if (isBuyingGuide) {
+     )}
+ 
+     {/* UPDATE STAMP */}
+-    <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified}</div>
++    <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified ?? article.datePublished}</div>
+ 
+     {/* SOURCES & REFERENCES */}
+     {article.sources && article.sources.length > 0 && (
+diff --git a/src/pages/golf-ball-compression-chart/index.astro b/src/pages/golf-ball-compression-chart/index.astro
+index 46cc80c..eabebb2 100644
+--- a/src/pages/golf-ball-compression-chart/index.astro
++++ b/src/pages/golf-ball-compression-chart/index.astro
+@@ -119,7 +119,7 @@ const datasetSchema = {
+     url: 'https://www.cubicalgolfer.com',
+   },
+   license: 'https://creativecommons.org/licenses/by/4.0/',
+-  dateModified: article.dateModified || '2026-06-30',
++  dateModified: article.dateModified || article.datePublished,
+   distribution: {
+     '@type': 'DataDownload',
+     encodingFormat: 'application/pdf',
+diff --git a/src/pages/index.astro b/src/pages/index.astro
+index 43557cd..9f0fc31 100644
+--- a/src/pages/index.astro
++++ b/src/pages/index.astro
+@@ -24,7 +24,7 @@ const meta     = homeMeta();
+ 
+ // Homepage article feed: prioritize high-value pages, not just recent updates
+ const moneyCategories = ['rangefinder','launch-monitor','golf-tech','improve-game','golf-balls','drivers','irons','putters','gps-watch'];
+-const allSorted = [...ARTICLES].sort((a, b) => (b as any).dateModified.localeCompare((a as any).dateModified));
++const allSorted = [...ARTICLES].sort((a, b) => ((b as any).dateModified ?? (b as any).datePublished).localeCompare((a as any).dateModified ?? (a as any).datePublished));
+ // First: high-value buying guides and reviews from money categories
+ const moneyPages = allSorted.filter((a: any) =>
+   ['buying-guide','review'].includes(a.pageType) &&
+ src/data/articles.ts | 334 ++++++++++++++-------------------------------------
+ 1 file changed, 92 insertions(+), 242 deletions(-)

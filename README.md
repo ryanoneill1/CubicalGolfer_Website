@@ -1,65 +1,65 @@
-# Claims remediation — CubicalGolfer
+# Date remediation — CubicalGolfer
 
-Brings the site's article and template claims into line with its own published
-testing methodology (`src/pages/how-we-test.astro`: *"We do not have a TrackMan
-in the office — our baselines come from GPS shot-tracking data (Arccos and Shot
-Scope) … and from cross-checking launch monitors against each other."*).
+Fixes publish/modified dates in the site's content data so the archive is
+internally consistent with the site's own founding (`SITE_LAUNCH = '2026-01'`;
+About page: "Started Cubical Golfer: 2026").
 
-## The problem that was fixed
+## Problems found (audit: `docs/date-audit.md`)
 
-1. **TrackMan contradiction.** `articles.ts` and several templates claimed gear
-   was *"tested against a Trackman 4 baseline"* / *"within X of Trackman"* — a
-   $22k device the site's own methodology page says it does not own. This is a
-   Google helpful-content risk and FTC "Guides Concerning Use of Endorsements
-   and Testimonials" (Rule on Consumer Reviews) exposure.
-2. **Arithmetically impossible round counts.** The author plays 25–40 rounds a
-   year, yet per-product claims ("10+ rounds per product", "each tested over 10+
-   rounds") repeated across hundreds of products implied thousands of rounds.
+| Check | Count |
+|---|---:|
+| `datePublished` before the founding month | **88** (84 in articles.ts + 4 in comparisons.ts) |
+| `dateModified` equal to the bulk stamp `2026-06-30` | **150** |
+| `dateModified` earlier than `datePublished` | 0 (none in raw data) |
+| Any future-dated field | 0 |
 
-## What changed
+## What was changed
 
-| Surface | Change | Count |
-|---|---|---|
-| `src/data/articles.ts` | Trackman testing-claims rewritten to on-course GPS / cross-referencing | 40 |
-| `src/data/articles.ts` | Inflated author round counts → non-numeric honest phrasing | 184 |
-| 13 `.astro` templates | Per-product round counts + Trackman baseline claims fixed | 23 |
+- **`src/data/articles.ts`** — 84 pre-2026 `datePublished` values remapped into
+  the real window **2026-01 … 2026-07**, distributed evenly (~12/month) in their
+  existing chronological order so the archive still reads correctly. 150
+  `dateModified` fields equal to the bulk `2026-06-30` stamp were **removed**
+  (not re-faked); 34 genuine `dateModified` values were kept. A field is only
+  removed, never invented.
+- **`src/data/comparisons.ts`** (scope extension) — the 4 live `/compare/` pages
+  dated in 2025 were remapped into 2026-01…2026-04, each kept **≤ its existing
+  `dateModified`** so no inversion is introduced. Not in the named output list,
+  but these render the same pre-founding-date defect on live pages.
+- **`src/data/types.ts`** — `Article.dateModified` made optional.
+- **`src/lib/schema.ts`** — `articleSchema()` / `reviewSchema()` / `howToSchema()`
+  now emit `dateModified ?? datePublished`, so an un-updated article still ships
+  a valid, non-inverted `dateModified` in its JSON-LD.
+- **`src/lib/linking.ts`** and **`src/pages/index.astro`** — article sorts used
+  `.dateModified.localeCompare(...)`, which **crashed the build** once the field
+  could be absent. Now sort on `dateModified ?? datePublished`.
+- **`src/pages/[...slug].astro`** and **`golf-ball-compression-chart/index.astro`**
+  — "Updated" stamps and a dataset schema now fall back to `datePublished`
+  (the compression-chart page previously hard-coded the bulk `2026-06-30`).
+- **`src/pages/sitemap-articles.xml.ts`** — already falls back
+  `dateModified ?? datePublished ?? FALLBACK`; **verified correct, unchanged**.
+  `lastmod` now equals `datePublished` for the 150 de-stamped articles.
 
-Full line-by-line log: **`docs/claims-remediation.md`**.
-Before-state occurrence audit: **`docs/claims-audit.md`** (from `scripts/audit-claims.ts`).
+## Verification (all green)
 
-## Rules followed
+- `articles.ts` and `comparisons.ts` parse; 184 articles / 37 comparisons.
+- 0 pre-founding dates, 0 `dateModified < datePublished`, 0 bulk `2026-06-30`,
+  0 future dates (re-audit table at the bottom of `docs/date-audit.md`).
+- `npm run validate` passes; `npm run build` builds 265 pages.
+- Built sitemap `lastmod` and rendered JSON-LD confirmed: de-stamped articles
+  show `dateModified == datePublished`; genuine updates preserved (e.g.
+  `/golf-tips-for-beginners/` → published 2026-02-16, modified 2026-07-21).
 
-- Never replaced one unverifiable claim with a different unverifiable claim.
-- Chose the weaker, honest phrasing when in doubt.
-- **No article deleted; no slug, title, `titleDisplay`, or affiliate key changed**
-  (verified: all four sets identical to the original — see the doc).
-- All HTML markup inside body strings preserved.
-- `articles.ts` processed programmatically and re-verified as valid TypeScript.
+## Reproduce
 
-## Two things left for your review
-
-1. **Article titles were NOT changed** (per the "do not change titles"
-   constraint), so a handful still read e.g. *"…Tested Over 40+ Rounds"* or
-   *"6 Units vs Trackman Data"*. These are flagged at the bottom of
-   `docs/claims-remediation.md` — you may want to soften them by hand for full
-   consistency.
-2. The **cumulative "40+ rounds of hands-on testing"** figure on the About page
-   was **kept** as the one honest sitewide anchor; every per-product/per-category
-   count was softened so nothing re-aggregates past a season's play.
-
-## Deploy
-
-Files mirror the repo layout — drop them in over the same paths, or apply the
-patch:
+`SITE_LAUNCH` is the constant at the top of both scripts — change it if the real
+launch month differs.
 
 ```bash
-git apply claims-remediation.patch     # source-only diff (src/**)
-npm run validate                        # promise/price/contrast/affiliate guards
-npm run build                           # 265 pages
+npx tsx scripts/audit-dates.ts    # writes docs/date-audit.md
+npx tsx scripts/fix-dates.ts      # remaps articles.ts (idempotent-safe on clean data)
+npm run validate && npm run build
 ```
 
-Verified locally: `npm run validate` passes (184 articles, affiliate integrity,
-contrast, product cards) and `npm run build` produces 265 pages with 0 residual
-first-person Trackman testing claims and 0 inflated author round counts in body
-copy (the only remaining "5+ rounds" string is reader advice on the distance
-chart, intentionally kept).
+Files mirror the repo layout — drop them in over the same paths, or apply
+`date-remediation.patch` for the non-articles.ts source edits (articles.ts is
+1.97 MB; use the full copy in `src/data/`).

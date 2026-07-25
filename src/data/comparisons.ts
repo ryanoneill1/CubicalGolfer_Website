@@ -294,7 +294,7 @@ export const COMPARISONS: Comparison[] = [
       { q: 'Are these still worth buying as previous-gen models?', a: 'Absolutely. Driver technology improves 1-3 yards per year. Both are within 2-3 yards of successors at $150-200 less.' },
       { q: 'Which is better for a high handicapper?', a: 'Both are excellent. The Cobra launches slightly higher which helps slower swingers. The Ping has more adjustability for fitting. Off the rack, the Cobra slight edge for most high handicappers.' },
     ],
-    datePublished: '2025-10-15',
+    datePublished: '2026-04-10',
     dateModified:  '2026-04-14',
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
@@ -325,7 +325,7 @@ export const COMPARISONS: Comparison[] = [
       { q: 'Is the Cleveland XL2 only for seniors?', a: 'No. It is for any golfer under 95 MPH regardless of age. Many younger golfers with naturally slower swings benefit from the lightweight high-launch design.' },
       { q: 'Can I use the Cobra with a senior flex shaft?', a: 'Yes. The Aerojet Max comes in senior flex. With that shaft it performs similarly to the XL2 while offering a more versatile head design.' },
     ],
-    datePublished: '2025-09-22',
+    datePublished: '2026-03-15',
     dateModified:  '2026-04-14',
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
@@ -363,7 +363,7 @@ export const COMPARISONS: Comparison[] = [
       { q: 'Is a $400 putter twice as good as a $200 putter?', a: 'No. Performance differences are minimal in blind testing. The Scotty premium pays for milling precision, brand prestige, resale value, and feel preference.' },
       { q: 'Which is more forgiving on mishits?', a: 'The Odyssey. The White Hot insert dampens distance loss from off-center strikes. The milled Scotty face loses slightly more speed on mishits.' },
     ],
-    datePublished: '2025-08-10',
+    datePublished: '2026-01-15',
     dateModified:  '2026-04-20',
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
@@ -394,7 +394,7 @@ export const COMPARISONS: Comparison[] = [
       { q: 'Do LAB putters really help with yips?', a: 'Many golfers report significant improvement. Lie angle balance reduces hand manipulation during the stroke. However, yips can be psychological too. LAB offers a 30-day trial period.' },
       { q: 'Is the Two Ball alignment system gimmicky?', a: 'No. It has been validated by 25 years of tour and amateur success. Two circles create a visual reference line that reduces misaim by 2-4 degrees consistently.' },
     ],
-    datePublished: '2025-09-05',
+    datePublished: '2026-02-15',
     dateModified:  '2026-04-20',
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters' },

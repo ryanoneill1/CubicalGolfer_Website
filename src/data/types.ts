@@ -75,7 +75,9 @@ export interface Article {
   thumb:         'green' | 'brown' | 'navy' | 'purple' | 'teal' | 'olive';
   words:         string;
   datePublished: string;      // ISO: "2026-01-15"
-  dateModified:  string;      // ISO: "2026-03-24"
+  dateModified?: string;      // ISO: "2026-03-24" — optional: omitted when the
+                              // article has no genuine update (schema + sitemap
+                              // fall back to datePublished)
   title:         string;      // <title> tag (≤60 chars)
   titleDisplay:  string;      // H1 (can be longer)
   description:   string;      // meta description (150–160 chars)

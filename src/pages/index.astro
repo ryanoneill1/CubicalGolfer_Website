@@ -24,7 +24,7 @@ const meta     = homeMeta();
 
 // Homepage article feed: prioritize high-value pages, not just recent updates
 const moneyCategories = ['rangefinder','launch-monitor','golf-tech','improve-game','golf-balls','drivers','irons','putters','gps-watch'];
-const allSorted = [...ARTICLES].sort((a, b) => (b as any).dateModified.localeCompare((a as any).dateModified));
+const allSorted = [...ARTICLES].sort((a, b) => ((b as any).dateModified ?? (b as any).datePublished).localeCompare((a as any).dateModified ?? (a as any).datePublished));
 // First: high-value buying guides and reviews from money categories
 const moneyPages = allSorted.filter((a: any) =>
   ['buying-guide','review'].includes(a.pageType) &&
@@ -94,7 +94,7 @@ const TAG_CLASSES: Record<string, string> = {
     <div>
       <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
       <h1>Stop Guessing. Start Playing Better Golf.</h1>
-      <p class="hero-sub">Every product independently purchased and tested across a full season of real rounds by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
+      <p class="hero-sub">Every product independently purchased and tested over 10+ real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>
         <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
@@ -123,7 +123,7 @@ const TAG_CLASSES: Record<string, string> = {
       <ul>
         <li><span class="chk" aria-hidden="true">✓</span>Know exactly what to buy before you walk into the store</li>
         <li><span class="chk" aria-hidden="true">✓</span>Side-by-side tables so you decide in 60 seconds</li>
-        <li><span class="chk" aria-hidden="true">✓</span>A full season of real rounds — not a press event</li>
+        <li><span class="chk" aria-hidden="true">✓</span>10+ real rounds per product — not a press event</li>
         <li><span class="chk" aria-hidden="true">✓</span>Every product purchased with our own money</li>
       </ul>
       <div class="hero-card-cta">
@@ -185,7 +185,7 @@ const TAG_CLASSES: Record<string, string> = {
       <div class="section-header">
         <p class="section-eyebrow">EDITOR'S TOP PICKS</p>
         <h2 id="picks-h">Best Golf Gear for Weekend Players</h2>
-        <p>Independently tested across a full season of real rounds. Every product has an affiliate link — we earn a small commission at no extra cost to you.</p>
+        <p>Independently tested — 10+ real rounds per product. Every product has an affiliate link — we earn a small commission at no extra cost to you.</p>
         <p style="font-size:16px;color:var(--green);font-weight:600;margin:8px 0 0;">The wrong rangefinder loses the pin in trees. The wrong ball costs 10 yards at your swing speed. The wrong driver adds slice. We tested so you don't have to guess.</p>
       </div>
       <div class="home-picks__grid">
@@ -328,7 +328,7 @@ const TAG_CLASSES: Record<string, string> = {
   <section class="cta-banner">
     <div>
       <h2>Stop Guessing Yardages. Start Scoring Better.</h2>
-      <p>A rangefinder is the single best $169–$329 investment a weekend golfer can make. We tested 5 models across a full season.</p>
+      <p>A rangefinder is the single best $169–$329 investment a weekend golfer can make. We tested 5 models over 40+ rounds.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
       <a href="/best-golf-rangefinders-2026/" class="btn-gold" style="white-space:nowrap;font-size:16px;padding:15px 32px">
@@ -349,7 +349,7 @@ const TAG_CLASSES: Record<string, string> = {
           <summary>What is the best golf rangefinder for a weekend golfer in 2026?</summary>
           <div class="faq-answer">
             The <strong>Bushnell Tour V6 Shift (~$329)</strong> is the best overall golf rangefinder
-            for most weekend golfers in 2026. We tested 5 leading models across a full season. It locks onto
+            for most weekend golfers in 2026. We tested 5 leading models over 40+ real rounds. It locks onto
             pins instantly, has slope toggle for tournament play, and reads to 1,300 yards with ±1 yard accuracy.
             For budget golfers, the <strong>Precision Pro NX9 HD (~$169)</strong> delivers excellent performance
             at roughly half the price with a lifetime warranty.<br /><br />

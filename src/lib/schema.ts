@@ -101,7 +101,9 @@ export function articleSchema(article: Article): object {
     headline: article.title,
     description: article.description,
     datePublished: article.datePublished,
-    dateModified: article.dateModified,
+    // Fall back to datePublished when an article has no genuine update, so the
+    // Article schema always carries a valid, non-inverted dateModified.
+    dateModified: article.dateModified ?? article.datePublished,
     author: {
       ...AUTHOR,
       '@id': `${DOMAIN}/about/#author`,
@@ -410,7 +412,7 @@ export function howToSchema(article: any): object | null {
     description: article.description,
     url: `${DOMAIN}${article.slug}`,
     step: steps,
-    dateModified: article.dateModified,
+    dateModified: article.dateModified ?? article.datePublished,
   };
 }
 
@@ -479,7 +481,7 @@ export function reviewSchema(article: Article): object | null {
     },
     publisher: PUBLISHER,
     datePublished: article.datePublished,
-    dateModified: article.dateModified,
+    dateModified: article.dateModified ?? article.datePublished,
     reviewBody: reviewBody,
     url: `${DOMAIN}${article.slug}`,
   };

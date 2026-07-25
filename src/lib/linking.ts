@@ -1183,18 +1183,22 @@ export function getAllSlugs(): Set<string> {
   return new Set(ARTICLES.map(a => a.slug));
 }
 
+// Sort key: dateModified when present, else datePublished (a field may be
+// omitted for articles that have had no genuine update).
+const sortDate = (a: Article) => a.dateModified ?? a.datePublished;
+
 export function getCategoryArticles(category: string): Article[] {
   return ARTICLES
     .filter(a => a.category === category)
-    .sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+    .sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
 }
 
 export function getFeaturedArticles(limit = 6): Article[] {
-  return ARTICLES
-    .sort((a, b) => b.dateModified.localeCompare(a.dateModified))
+  return [...ARTICLES]
+    .sort((a, b) => sortDate(b).localeCompare(sortDate(a)))
     .slice(0, limit);
 }
 
 export function getAllArticles(): Article[] {
-  return [...ARTICLES].sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+  return [...ARTICLES].sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
 }
