@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "validate": "tsx scripts/check-duplicates.ts && tsx scripts/validate-affiliate-keys.ts && tsx scripts/validate-thumbnails.ts && tsx scripts/validate-affiliate-urls.ts && tsx scripts/validate-promise-delivery.ts && tsx scripts/validate-prices.ts && tsx scripts/validate-contrast.ts && tsx scripts/validate-retailer-integrity.ts && tsx scripts/validate-product-cards.ts && tsx scripts/check-affiliate-links.ts && tsx scripts/validate-headings.ts",
-    "build": "npm run validate && tsx scripts/generate-search-index.ts && node scripts/generate-compression-pdf.mjs && tsx scripts/generate-compare-thumbnails.ts && astro build && tsx scripts/verify-retailer-labels.ts",
+    "build": "npm run validate && tsx scripts/generate-search-index.ts && node scripts/generate-compression-pdf.mjs && tsx scripts/generate-compare-thumbnails.ts && astro build && tsx scripts/verify-retailer-labels.ts && tsx scripts/validate-redirects.ts",
     "preview": "astro preview",
     "check": "astro check",
     "generate": "node src/lib/generators.js",

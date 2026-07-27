@@ -1080,7 +1080,7 @@ export const COMPARISONS: Comparison[] = [
     dateModified:  "2026-06-25",
     related: [
       { slug: "/best-golf-irons-2026/", label: "Best Golf Irons" },
-      { slug: "/most-forgiving-irons/", label: "Most Forgiving Irons" },
+      { slug: "/best-golf-irons-2026/", label: "Most Forgiving Irons" },
     ],
   },
   {

@@ -3065,9 +3065,9 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
     
-      { slug: '/compare/callaway-supersoft-vs-srixon-soft-feel/', label: 'Supersoft vs Soft Feel Head-to-Head' },
+      { slug: '/golf-ball-compression-chart/', label: 'Supersoft vs Soft Feel Head-to-Head' },
     
-      { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft — Mid-Price Test' },
+      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft — Mid-Price Test' },
     ],
     comparisonTable: {
       headers: ['Ball', 'Best For', 'Price/doz', 'Compression', 'Cover'],

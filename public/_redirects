@@ -1,4 +1,7 @@
-# 301 redirects
+# Cloudflare _redirects — THE ONLY DEPLOYED COPY.
+# Astro copies public/ into dist/. A _redirects file at the repo root is dead code.
+# Verified by scripts/validate-redirects.ts, which fails the build if one reappears.
+
 /office-hacks/  /improve-your-golf-game/  301
 /best-golf-rangefinder-under-200/  /best-golf-rangefinders-under-200/  301
 /best-golf-rangefinder-beginners.html  /best-golf-rangefinder-beginners/  301
@@ -45,36 +48,64 @@
 /used-golf-clubs-buying-guide/  /best-beginner-golf-set-under-500/  301
 /best-golf-swing-analyzers-iphone/  /best-golf-swing-analyzers/  301
 /privacy/  /privacy-policy/  301
-/rapsodo-vs-garmin-r10/ /rapsodo-mlm2pro-review/ 301
-
-# ═══ 404 FIXES — June 2026 ═══
+/rapsodo-vs-garmin-r10/  /rapsodo-mlm2pro-review/  301
 /golf-mental-game-tips/  /how-to-break-90/  301
 /arccos-caddie-review-2026/  /arccos-caddie-review/  301
 /best-golf-wedges-2026/  /best-wedges-for-beginners/  301
 /golf-club-fitting-guide/  /iron-fitting-guide-beginners/  301
 /golf-stretching-routine/  /office-to-golf-course-playbook/  301
 /push-cart-vs-riding-cart-golf/  /best-golf-push-carts-2026/  301
-
-# ═══ INDEXING FIXES — June 2026 ═══
 /best-budget-rangefinders/  /best-golf-rangefinders-under-200/  301
 /best-golf-balls-distance/  /best-golf-balls-for-distance/  301
-
-# ═══ CATCH-ALL .html → trailing-slash (prevents duplicate URLs in GSC) ═══
 /:path.html  /:path/  301
-
-# ═══ DUPLICATE COMPARISON MERGES — July 2026 ═══
-/compare/square-golf-vs-garmin-r10/  /garmin-r10-vs-square-golf/  301
-/compare/garmin-r50-vs-rapsodo-mlm2pro/  /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/  301
 /bushnell-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v6-vs-precision-pro-nx9/  301
-/compare/skytrak-plus-vs-mevo-plus/  /skytrak-vs-mevo-plus/  301
-/compare/skytrak-vs-garmin-r10/ /compare/skytrak-plus-vs-garmin-r10/ 301
-
-# ═══ SAFETY 301s — July 2026 (growth-audit follow-up) ═══
+/compare/skytrak-vs-garmin-r10/  /compare/skytrak-plus-vs-garmin-r10/  301
 /methodology/  /how-we-test/  301
 /editorial-policy/  /about/  301
-
-# ═══ Broken internal-link 404 fixes — July 2026 (GSC crawl-waste, 2.82% of crawl) ═══
 /compare/srixon-q-star-tour-vs-callaway-chrome-soft/  /compare/titleist-pro-v1-vs-callaway-chrome-soft/  301
 /compare/callaway-supersoft-vs-srixon-soft-feel/  /golf-ball-compression-chart/  301
 /compare/vice-pro-vs-titleist-pro-v1/  /compare/pro-v1-vs-tp5/  301
 /compare/taylormade-qi35-vs-callaway-ai-smoke/  /compare/callaway-paradym-vs-taylormade-qi35/  301
+/bushnell-tour-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v6-vs-precision-pro-nx9/  301
+/garmin-approach-s62-vs-shot-scope-v5/  /compare/garmin-approach-s62-vs-shot-scope-v5/  301
+/callaway-paradym-vs-taylormade-qi35/  /compare/callaway-paradym-vs-taylormade-qi35/  301
+/garmin-approach-s62-vs-s42/  /compare/garmin-approach-s62-vs-s42/  301
+/blue-tees-vs-bushnell-tour-v6/  /compare/blue-tees-vs-bushnell-tour-v6/  301
+/garmin-s12-vs-bushnell-ion-elite/  /compare/garmin-s12-vs-bushnell-ion-elite/  301
+/cobra-aerojet-max-vs-ping-g430-max/  /compare/cobra-aerojet-max-vs-ping-g430-max/  301
+/cleveland-launcher-xl2-vs-cobra-aerojet-max/  /compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/  301
+/odyssey-stroke-lab-vs-scotty-cameron-phantom/  /compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/  301
+/lab-golf-df3-vs-odyssey-two-ball-eleven/  /compare/lab-golf-df3-vs-odyssey-two-ball-eleven/  301
+/bushnell-tour-v6-vs-callaway-300-pro/  /compare/bushnell-tour-v6-vs-callaway-300-pro/  301
+/skytrak-plus-vs-flightscope-mevo-gen2/  /compare/skytrak-plus-vs-flightscope-mevo-gen2/  301
+/titleist-pro-v1-vs-callaway-chrome-soft/  /compare/titleist-pro-v1-vs-callaway-chrome-soft/  301
+/titleist-pro-v1-vs-kirkland-signature/  /compare/titleist-pro-v1-vs-kirkland-signature/  301
+/skytrak-plus-vs-mevo-plus/  /compare/skytrak-plus-vs-mevo-plus/  301
+/garmin-approach-s62-vs-s70/  /compare/garmin-approach-s62-vs-s70/  301
+/garmin-r10-vs-rapsodo-mlm2pro/  /compare/garmin-r10-vs-rapsodo-mlm2pro/  301
+/bushnell-launch-pro-vs-garmin-r10/  /compare/bushnell-launch-pro-vs-garmin-r10/  301
+/garmin-r50-vs-rapsodo-mlm2pro/  /compare/garmin-r50-vs-rapsodo-mlm2pro/  301
+/skytrak-plus-vs-garmin-r10/  /compare/skytrak-plus-vs-garmin-r10/  301
+/garmin-r10-vs-flightscope-mevo/  /compare/garmin-r10-vs-flightscope-mevo/  301
+/taylormade-qi35-vs-titleist-gt2/  /compare/taylormade-qi35-vs-titleist-gt2/  301
+/bushnell-pro-x3-vs-tour-v6/  /compare/bushnell-pro-x3-vs-tour-v6/  301
+/garmin-s70-vs-apple-watch-golf/  /compare/garmin-s70-vs-apple-watch-golf/  301
+/pro-v1-vs-tp5/  /compare/pro-v1-vs-tp5/  301
+/rapsodo-mlm2pro-vs-bushnell-launch-pro/  /compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/  301
+/garmin-r10-vs-garmin-r50/  /compare/garmin-r10-vs-garmin-r50/  301
+/flightscope-mevo-plus-vs-bushnell-launch-pro/  /compare/flightscope-mevo-plus-vs-bushnell-launch-pro/  301
+/ping-g430-irons-vs-taylormade-stealth-hd/  /compare/ping-g430-irons-vs-taylormade-stealth-hd/  301
+/callaway-chrome-soft-vs-kirkland-signature/  /compare/callaway-chrome-soft-vs-kirkland-signature/  301
+/taylormade-tp5-vs-callaway-chrome-soft/  /compare/taylormade-tp5-vs-callaway-chrome-soft/  301
+/callaway-ai-smoke-max-vs-ping-g430-max/  /compare/callaway-ai-smoke-max-vs-ping-g430-max/  301
+/square-golf-vs-garmin-r10/  /compare/square-golf-vs-garmin-r10/  301
+/cleveland-rtx6-vs-callaway-jaws-raw/  /compare/cleveland-rtx6-vs-callaway-jaws-raw/  301
+/garmin-r10-home-sim-vs-skytrak-plus-home-sim/  /compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/  301
+/compare/cleveland-cbx4-vs-callaway-jaws-full-toe/  /compare/cleveland-rtx6-vs-callaway-jaws-raw/  301
+/compare/taylormade-spider-tour-vs-odyssey-white-hot-og/  /best-golf-putters-2026/  301
+/compare/garmin-s62-vs-apple-watch-ultra-golf/  /compare/garmin-s70-vs-apple-watch-golf/  301
+/compare/callaway-big-bertha-vs-ping-g430-max/  /compare/cobra-aerojet-max-vs-ping-g430-max/  301
+/compare/scotty-cameron-phantom-vs-lab-golf-df3/  /compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/  301
+/best-golf-irons-high-handicapper/  /best-golf-irons-2026/  301
+/best-game-improvement-irons-2026/  /best-golf-irons-2026/  301
+/most-forgiving-irons/  /best-golf-irons-2026/  301

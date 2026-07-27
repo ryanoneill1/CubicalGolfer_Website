@@ -16,7 +16,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026' },
     { slug: '/best-golf-gps-watches/',             label: 'Best Golf GPS Watches 2026' },
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/',              label: 'Best Golf Irons 2026' },
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Paradym — 2026 Driver Comparison' },
@@ -306,11 +306,11 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-break-90/',                    label: 'How to Break 90' },
   ],
   'how-far-average-golfer-hit-7-iron': [
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/',               label: 'Best Golf Irons 2026' },
     { slug: '/how-to-break-90/',                    label: 'How to Break 90' },
-    { slug: '/best-golf-irons-high-handicapper/',   label: 'Best Irons for High Handicappers' },
+    { slug: '/best-golf-irons-2026/',   label: 'Best Irons for High Handicappers' },
   ],
 
   // ── Beginner cluster ──────────────────────────────────────────────────────────
@@ -374,7 +374,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'why-do-i-hit-irons-fat': [
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/',               label: 'Best Golf Irons 2026' },
     { slug: '/how-to-break-90/',                    label: 'How to Break 90' },
@@ -412,7 +412,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'best-golf-irons-seniors': [
     { slug: '/best-golf-rangefinder-for-seniors/',  label: 'Best Rangefinder for Seniors' },
     { slug: '/best-golf-balls-for-seniors/',        label: 'Best Golf Balls for Seniors' },
-    { slug: '/best-golf-irons-high-handicapper/',   label: 'Best Irons for High Handicappers' },
+    { slug: '/best-golf-irons-2026/',   label: 'Best Irons for High Handicappers' },
   ],
 
   // ── Bags cluster ───────────────────────────────────────────────────────────
@@ -561,7 +561,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/',                label: 'Best Golf Balls 2026 by Swing Speed' },
     { slug: '/golf-ball-compression-chart/',          label: 'Golf Ball Compression Chart 2026' },
     { slug: '/how-to-fix-your-slice/',               label: 'Fix Your Slice' },
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/',                label: 'Best Irons 2026' },
   ],
@@ -631,7 +631,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'beginner-set-under-500': [
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
     { slug: '/golf-for-beginners/',                  label: 'Golf for Beginners Guide' },
-    { slug: '/best-golf-irons-high-handicapper/',    label: 'Best Irons for High Handicappers' },
+    { slug: '/best-golf-irons-2026/',    label: 'Best Irons for High Handicappers' },
     { slug: '/best-golf-gear-under-100/',            label: 'Best Golf Gear Under $100' },
   ],
   'golf-desk-accessories': [
@@ -688,7 +688,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-build-garage-golf-simulator/', label: 'Build a Simulator' },
   ],
   'clubs-20-handicap': [
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
@@ -888,7 +888,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/office-to-golf-course-playbook/', label: 'Golf Desk Accessories' },
   ],
   'left-handed-golf-clubs': [
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
@@ -915,7 +915,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-bags-2026/', label: 'Best Golf Bags 2026' },
   ],
   'clubs-slow-swing-speed': [
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
@@ -955,7 +955,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'approach-wedge-vs-gap-wedge': [
     { slug: '/how-to-buy-wedges-4-degree-rule/', label: 'How to Buy Wedges — 4-Degree Rule' },
     { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
   
@@ -964,7 +964,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'how-to-buy-wedges': [
     { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
     { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
   ],
@@ -972,7 +972,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/approach-wedge-vs-gap-wedge-do-you-need-it/', label: 'Approach Wedge vs Gap Wedge' },
     { slug: '/how-to-buy-wedges-4-degree-rule/', label: 'How to Buy Wedges — 4-Degree Rule' },
     { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
-    { slug: '/most-forgiving-irons/',          label: 'Most Forgiving Irons' },
+    { slug: '/best-golf-irons-2026/',          label: 'Most Forgiving Irons' },
         { slug: '/best-wedges-for-beginners/', label: 'Best Wedges For Beginners' },
     { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
   ],
