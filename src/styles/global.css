@@ -1878,3 +1878,25 @@ main section > p, main section ul, main section ol {
 .brand-prod-price { margin: 0; color: var(--muted); font-size: 15px; }
 .brand-prod-cta { display: inline-block; background: var(--gold); color: var(--text); padding: 8px 14px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; align-self: flex-start; }
 .brand-prod-seen { margin: 2px 0 0; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
+
+/* ── Comparison table: sticky first column on narrow viewports ──────────────
+   The wrapper already scrolls (overflow-x: auto). The failure was that the
+   product-name column scrolled out of view with everything else, so a mobile
+   reader saw "Best Overall — ~$329 — 4.8/5" with no idea which product it
+   described. Measured: 683px table inside a 348px wrapper at 390px viewport,
+   0 of 31 comparison tables had a sticky first column.
+   Pinning it keeps the product name visible while the specs scroll. */
+@media (max-width: 900px) {
+  .cmp-table th:first-child,
+  .cmp-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: #fff;
+    /* separator so the pinned column reads as pinned, not overlapping */
+    box-shadow: 1px 0 0 0 var(--border, #e0ddd5);
+  }
+  .cmp-table th:first-child { background: var(--green, #1E3A28); z-index: 3; }
+  .cmp-table tr:nth-child(even) td:first-child { background: #fafaf8; }
+  /* the existing ::after gradient already hints at scrollability */
+}
