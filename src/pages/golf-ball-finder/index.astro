@@ -1,4 +1,5 @@
 ---
+import { AFFILIATE } from '../../data/affiliate-links';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { breadcrumbSchema, faqSchema , webApplicationSchema } from '../../lib/schema';
 
@@ -27,26 +28,32 @@ const schemas = [
   webApplicationSchema({ name: 'Golf Ball Finder', description: 'Filter 19 tested golf balls by swing speed, budget, and feel to find your ball.', url: '/golf-ball-finder/' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
 // Ball data — same source as the compression chart
+// Tracked buy links per ball, resolved from src/data/affiliate-links.ts.
+// Only affiliate keys that already exist are used — no products were invented.
+// Bridgestone e6 has no entry; the tool lists "Tour B RXS" but only a "Tour B RX"
+// entry exists and they are different compressions, so both stay unlinked.
+const BALL_URLS: Record<string,string> = Object.fromEntries(
+  Object.entries(AFFILIATE as any).map(([k, v]: any) => [k, v.url]));
 const balls = [
-  { name: 'TaylorMade Noodle', brand: 'TaylorMade', compression: 34, cover: 'Ionomer', feel: 'Ultra Soft', price: 20, minMph: 60, maxMph: 75, bestFor: 'Beginners, slow swings' },
-  { name: 'Callaway Supersoft', brand: 'Callaway', compression: 38, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 60, maxMph: 80, bestFor: 'Seniors, max distance at low speed' },
-  { name: 'Wilson DUO Soft+', brand: 'Wilson', compression: 40, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 60, maxMph: 80, bestFor: 'Straight flight, budget-friendly' },
-  { name: 'Titleist TruFeel', brand: 'Titleist', compression: 45, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 85, bestFor: 'Short-game feel on a budget' },
-  { name: 'Srixon Soft Feel', brand: 'Srixon', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 65, maxMph: 85, bestFor: 'Best value under $25' },
+  { name: 'TaylorMade Noodle', brand: 'TaylorMade', compression: 34, cover: 'Ionomer', feel: 'Ultra Soft', price: 20, minMph: 60, maxMph: 75, bestFor: 'Beginners, slow swings', affiliateKey: 'taylormade-noodle' },
+  { name: 'Callaway Supersoft', brand: 'Callaway', compression: 38, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 60, maxMph: 80, bestFor: 'Seniors, max distance at low speed', affiliateKey: 'callaway-supersoft' },
+  { name: 'Wilson DUO Soft+', brand: 'Wilson', compression: 40, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 60, maxMph: 80, bestFor: 'Straight flight, budget-friendly', affiliateKey: 'wilson-duo-soft-plus' },
+  { name: 'Titleist TruFeel', brand: 'Titleist', compression: 45, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 85, bestFor: 'Short-game feel on a budget', affiliateKey: 'titleist-trufeel' },
+  { name: 'Srixon Soft Feel', brand: 'Srixon', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 65, maxMph: 85, bestFor: 'Best value under $25', affiliateKey: 'srixon-soft-feel' },
   { name: 'Bridgestone e6', brand: 'Bridgestone', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 90, bestFor: 'Straight flight, anti-slice' },
-  { name: 'Vice Drive', brand: 'Vice', compression: 55, cover: 'Ionomer', feel: 'Mid', price: 17, minMph: 65, maxMph: 85, bestFor: 'Cheapest playable ball' },
-  { name: 'Kirkland Signature', brand: 'Kirkland', compression: 65, cover: 'Urethane', feel: 'Mid', price: 28, minMph: 75, maxMph: 95, bestFor: 'Best value urethane ball' },
-  { name: 'Srixon Q-Star Tour', brand: 'Srixon', compression: 72, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Tour spin at mid-compression' },
-  { name: 'TaylorMade Tour Response', brand: 'TaylorMade', compression: 70, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Distance + greenside spin' },
-  { name: 'Callaway Chrome Soft', brand: 'Callaway', compression: 75, cover: 'Urethane', feel: 'Mid', price: 48, minMph: 85, maxMph: 105, bestFor: 'All-around performance' },
-  { name: 'Vice Pro', brand: 'Vice', compression: 75, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 85, maxMph: 105, bestFor: 'Premium feel at mid-tier price' },
-  { name: 'Titleist AVX', brand: 'Titleist', compression: 78, cover: 'Urethane', feel: 'Mid', price: 50, minMph: 85, maxMph: 105, bestFor: 'Low flight, low spin off driver' },
+  { name: 'Vice Drive', brand: 'Vice', compression: 55, cover: 'Ionomer', feel: 'Mid', price: 17, minMph: 65, maxMph: 85, bestFor: 'Cheapest playable ball', affiliateKey: 'vice-drive' },
+  { name: 'Kirkland Signature', brand: 'Kirkland', compression: 65, cover: 'Urethane', feel: 'Mid', price: 28, minMph: 75, maxMph: 95, bestFor: 'Best value urethane ball', affiliateKey: 'kirkland-signature' },
+  { name: 'Srixon Q-Star Tour', brand: 'Srixon', compression: 72, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Tour spin at mid-compression', affiliateKey: 'srixon-q-star-tour' },
+  { name: 'TaylorMade Tour Response', brand: 'TaylorMade', compression: 70, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Distance + greenside spin', affiliateKey: 'taylormade-tour-response' },
+  { name: 'Callaway Chrome Soft', brand: 'Callaway', compression: 75, cover: 'Urethane', feel: 'Mid', price: 48, minMph: 85, maxMph: 105, bestFor: 'All-around performance', affiliateKey: 'callaway-chrome-soft' },
+  { name: 'Vice Pro', brand: 'Vice', compression: 75, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 85, maxMph: 105, bestFor: 'Premium feel at mid-tier price', affiliateKey: 'vice-pro' },
+  { name: 'Titleist AVX', brand: 'Titleist', compression: 78, cover: 'Urethane', feel: 'Mid', price: 50, minMph: 85, maxMph: 105, bestFor: 'Low flight, low spin off driver', affiliateKey: 'titleist-avx' },
   { name: 'Bridgestone Tour B RXS', brand: 'Bridgestone', compression: 78, cover: 'Urethane', feel: 'Mid', price: 45, minMph: 85, maxMph: 105, bestFor: 'Greenside spin at mid speed' },
-  { name: 'TaylorMade TP5', brand: 'TaylorMade', compression: 85, cover: 'Urethane', feel: 'Mid-Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Max distance with tour spin' },
-  { name: 'Callaway Chrome Tour', brand: 'Callaway', compression: 87, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Tour-level greenside control' },
-  { name: 'Titleist Pro V1', brand: 'Titleist', compression: 87, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 90, maxMph: 115, bestFor: 'The benchmark tour ball' },
-  { name: 'Titleist Pro V1x', brand: 'Titleist', compression: 97, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 100, maxMph: 130, bestFor: 'High launch, high spin' },
-  { name: 'TaylorMade TP5x', brand: 'TaylorMade', compression: 97, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 100, maxMph: 130, bestFor: 'Max distance for fast swings' },
+  { name: 'TaylorMade TP5', brand: 'TaylorMade', compression: 85, cover: 'Urethane', feel: 'Mid-Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Max distance with tour spin', affiliateKey: 'taylormade-tp5' },
+  { name: 'Callaway Chrome Tour', brand: 'Callaway', compression: 87, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Tour-level greenside control', affiliateKey: 'callaway-chrome-tour' },
+  { name: 'Titleist Pro V1', brand: 'Titleist', compression: 87, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 90, maxMph: 115, bestFor: 'The benchmark tour ball', affiliateKey: 'titleist-pro-v1' },
+  { name: 'Titleist Pro V1x', brand: 'Titleist', compression: 97, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 100, maxMph: 130, bestFor: 'High launch, high spin', affiliateKey: 'titleist-pro-v1x' },
+  { name: 'TaylorMade TP5x', brand: 'TaylorMade', compression: 97, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 100, maxMph: 130, bestFor: 'Max distance for fast swings', affiliateKey: 'taylormade-tp5x' },
 ];
 ---
 
@@ -126,6 +133,7 @@ const balls = [
               <th>Price/dz</th>
               <th>Speed Range</th>
               <th>Best For</th>
+              <th>Buy</th>
             </tr>
           </thead>
           <tbody>
@@ -138,6 +146,17 @@ const balls = [
                 <td>~${b.price}</td>
                 <td>{b.minMph}-{b.maxMph} mph</td>
                 <td style="font-size:16px;color:var(--muted);">{b.bestFor}</td>
+                <td style="white-space:nowrap;">
+                  {(b as any).affiliateKey && BALL_URLS[(b as any).affiliateKey] ? (
+                    <a href={BALL_URLS[(b as any).affiliateKey]} target="_blank"
+                       rel="nofollow noopener sponsored"
+                       style="background:var(--gold);color:#1a1a1a;font-size:15px;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;">
+                      Check Price →
+                    </a>
+                  ) : (
+                    <span style="font-size:15px;color:var(--muted);">—</span>
+                  )}
+                </td>
               </tr>
             ))}
           </tbody>

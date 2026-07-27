@@ -44,6 +44,35 @@ const netReturn = getAffiliateLink('net-return-pro');
 const carls = getAffiliateLink('carls-place-impact-screen');
 const fiberbuilt = getAffiliateLink('fiberbuilt-flight-deck');
 const benq = getAffiliateLink('benq-th671st-projector');
+const optoma = getAffiliateLink('optoma-gt1090hdr');
+const homecourse = getAffiliateLink('homecourse-retractable-screen');
+const sporniaMat = getAffiliateLink('spornia-spg-hitting-mat');
+
+// ── Link routing by expected value ───────────────────────────────────────────
+// EV = price x commission% x conversion-multiplier x link-quality
+//   conversion-multiplier : Amazon 3.0 (existing accounts, saved cards, one-click),
+//                           Golf Galaxy / PlayBetter / Bushnell 1.0
+//   link-quality          : product page 1.0, Amazon search-results page 0.30
+//                           (a search link lands the buyer on a list, not a buy button)
+// Only APPROVED programs are used — Carl's Place and Shop Indoor Golf have an empty
+// trackingParam in affiliate-programs.ts, so linking there would be untracked and unpaid.
+//
+// The search-link discount flips four picks away from Amazon despite its 3x conversion
+// edge. Those are marked below.
+const pick = (a: any, b: any) => (a?.url ? a : b);
+const ev = {
+  r10:        gR10?.url,                          // amazon  3% search   EV $16  (only option)
+  mlm:        mlm?.url,                           // amazon  3% product  EV $63  <- best in tier
+  launchPro:  lp?.url,                            // bushnell 5% product EV $125 <- beats Amazon search EV $67
+  rukket:     rukket?.golfGalaxyUrl || rukket?.url,        // golfgalaxy 8% product EV $10 > amazon search EV $4
+  sporniaMat: sporniaMat?.golfGalaxyUrl || sporniaMat?.url,// golfgalaxy 8% product EV $13 > amazon search EV $4
+  netReturn:  netReturn?.golfGalaxyUrl || netReturn?.url,  // golfgalaxy 8% product EV $28 > amazon search EV $9
+  fiberbuilt: fiberbuilt?.url,                    // amazon  3% product  EV $40 > golfgalaxy EV $36
+  benq:       benq?.url,                          // amazon  3% search   EV $22  (only option)
+  optoma:     optoma?.url,                        // amazon  3% search   EV $30  (only option)
+  carls:      carls?.url,                         // playbetter 5%       EV $3   (only option)
+  homecourse: homecourse?.url,                    // amazon  3% product  EV $54  (only option)
+};
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-tech">
@@ -146,38 +175,41 @@ const benq = getAffiliateLink('benq-th671st-projector');
     </section>
   </article>
 
-<script define:vars={{ gR10url: gR10?.url, mlmUrl: mlm?.url, skyUrl: sky?.url, lpUrl: lp?.url, lm1Url: lm1?.url, rukketUrl: rukket?.url, sporniaUrl: spornia?.url, netReturnUrl: netReturn?.url, carlsUrl: carls?.url, fiberbuiltUrl: fiberbuilt?.url, benqUrl: benq?.url }}>
+<script define:vars={{ ev }}>
 const tiers = {
   basic: {
-    title: '💰 Basic Setup — Data Practice Only',
+    title: '💰 Basic Setup — Data Practice, No Projector',
     parts: [
-      { component: 'Launch Monitor', name: 'Garmin R10', price: 499, url: gR10url, note: 'Radar — works in any ceiling' },
-      { component: 'Net', name: 'Rukket Haack', price: 130, url: rukketUrl, note: 'Folds flat, includes mat' },
-      { component: 'Mat', name: 'Basic 3×5 commercial', price: 60, url: '', note: 'Any rubber-base range mat works' },
+      { component: 'Launch Monitor', name: 'Garmin Approach R10',        price: 599, url: ev.r10,        note: 'Radar — works under any ceiling height' },
+      { component: 'Hitting Net',    name: 'Rukket Haack Net',           price: 130, url: ev.rukket,     note: 'Folds flat, 10x7ft hitting area' },
+      { component: 'Hitting Mat',    name: 'Spornia Hitting Mat',        price: 159, url: ev.sporniaMat, note: 'Forgiving surface, protects wrists' },
+      { component: 'Display',        name: 'Your phone or tablet',       price: 0,   url: '',            note: 'Garmin Golf app — no projector needed at this tier' },
     ],
-    notes: '<strong>Total: ~$689.</strong> You get accurate ball data (speed, carry, spin) on every shot. No projector needed — data shows on your phone via the Garmin Golf app. <a href="/best-golf-simulator-under-1000/">See our full under-$1,000 guide</a> for alternatives.',
+    notes: '<strong>Total: ~$888.</strong> You get real ball data — speed, carry, spin, launch angle — on every shot, viewed on your phone. No virtual course play. This is where most home setups should start: it proves whether you will actually use a simulator before you spend four figures. <a href="/best-golf-simulator-under-1000/">See the full under-$1,000 guide</a>.',
   },
   mid: {
-    title: '⚡ Mid-Range Setup — Virtual Golf',
+    title: '⚡ Mid-Range Setup — Full Virtual Golf',
     parts: [
-      { component: 'Launch Monitor', name: 'Garmin R10', price: 499, url: gR10url, note: 'Best value for simulator play' },
-      { component: 'Impact Screen', name: "Carl's Place 10×8", price: 199, url: carlsUrl, note: 'Doubles as projector surface' },
-      { component: 'Projector', name: 'BenQ TH671ST', price: 599, url: benqUrl, note: 'Short-throw, 3000 lumens' },
-      { component: 'Mat', name: 'Fiberbuilt Flight Deck', price: 449, url: fiberbuiltUrl, note: 'Premium feel, protects wrists' },
-      { component: 'Software', name: 'GSPro (1 year)', price: 250, url: '', note: '200,000+ courses' },
+      { component: 'Launch Monitor', name: 'Rapsodo MLM2PRO',            price: 699, url: ev.mlm,        note: 'Camera + radar, dual-band, includes club data' },
+      { component: 'Impact Screen',  name: "Carl's Place 10x8 Screen",   price: 199, url: ev.carls,      note: 'Doubles as the projection surface' },
+      { component: 'Projector',      name: 'BenQ TH671ST',               price: 799, url: ev.benq,       note: 'Short-throw, 3,000 lumens, 1080p' },
+      { component: 'Hitting Mat',    name: 'Fiberbuilt Flight Deck',     price: 449, url: ev.fiberbuilt, note: 'Hit down without wrist shock' },
+      { component: 'Software',       name: 'GSPro (1 year)',             price: 250, url: '',            note: 'No affiliate program — buy direct from gsprogolf.com' },
+      { component: 'Computer',       name: 'Windows PC, GTX 1660+',      price: 0,   url: '',            note: 'GSPro needs a Windows machine. Use one you own if you can.' },
     ],
-    notes: '<strong>Total: ~$1,996.</strong> Full virtual golf experience — play Pebble Beach from your garage. The Garmin R10 connects to GSPro for 200K+ courses. <a href="/best-golf-simulator-for-beginners/">See our beginner guide</a> for step-by-step setup.',
+    notes: '<strong>Total: ~$2,396 plus a PC.</strong> Full virtual golf — play Pebble Beach from the garage. The MLM2PRO is the value pick here: it is the only monitor in this range with a direct product link and real club data. <a href="/best-golf-simulator-for-beginners/">See the beginner setup guide</a>.',
   },
   premium: {
-    title: '🏆 Premium Setup — Golf Lounge Quality',
+    title: '🏆 Premium Setup — Golf-Lounge Quality',
     parts: [
-      { component: 'Launch Monitor', name: 'SkyTrak+', price: 2995, url: skyUrl, note: 'Photometric, ±1.5yd accuracy' },
-      { component: 'Impact Screen', name: "Carl's Place 10×8", price: 199, url: carlsUrl, note: 'High-durability, projector-ready' },
-      { component: 'Projector', name: 'BenQ TH671ST', price: 599, url: benqUrl, note: '1080p short-throw' },
-      { component: 'Mat', name: 'Fiberbuilt Flight Deck', price: 449, url: fiberbuiltUrl, note: 'Best mat for home use' },
-      { component: 'Software', name: 'GSPro (1 year)', price: 250, url: '', note: '200K+ community courses' },
+      { component: 'Launch Monitor', name: 'Bushnell Launch Pro',        price: 2499, url: ev.launchPro,  note: 'Photometric, tour-level accuracy, ±1yd' },
+      { component: 'Impact Screen',  name: 'HomeCourse Retractable',     price: 599,  url: ev.homecourse, note: 'Retracts into the ceiling when not in use' },
+      { component: 'Projector',      name: 'Optoma GT1090HDR',           price: 1099, url: ev.optoma,     note: 'Ultra short-throw, 4,200 lumens' },
+      { component: 'Hitting Mat',    name: 'Fiberbuilt Flight Deck',     price: 449,  url: ev.fiberbuilt, note: 'The mat you will not want to replace' },
+      { component: 'Software',       name: 'GSPro (1 year)',             price: 250,  url: '',            note: 'No affiliate program — buy direct' },
+      { component: 'Computer',       name: 'Windows PC, RTX 3060+',      price: 0,    url: '',            note: 'Premium software settings need real GPU headroom' },
     ],
-    notes: '<strong>Total: ~$4,492.</strong> Tour-level accuracy with immersive virtual golf. The SkyTrak+ is the heart of this setup for 5+ years. <a href="/best-golf-simulator-under-5000/">See our under-$5K guide</a> for alternatives.',
+    notes: '<strong>Total: ~$4,896 plus a PC.</strong> Tour-level ball and club data with an immersive screen. We route the Launch Pro to Bushnell rather than Amazon: Amazon does not reliably stock it, and Bushnell is a direct product link with a 30-day cookie. <a href="/bushnell-launch-pro-review/">Read the Launch Pro review</a>.',
   },
 };
 
