@@ -16,11 +16,39 @@ import path from 'path';
 
 let errors = 0;
 
-// ── 1. no stray root _redirects ────────────────────────────────────────────
+// ── 1. stray root _redirects ───────────────────────────────────────────────
+// Astro only copies public/ into dist/, so a root _redirects never deploys.
+// The DANGER is a rule that exists only there — it silently never takes effect.
+// A root file whose rules all also live in public/ is merely dead weight, so it
+// warns rather than failing. That distinction matters: a file upload cannot
+// delete a file, so a repo legitimately passes through the "uploaded the new
+// public/_redirects but haven't deleted the root one yet" state.
+const parseRules = (p: string): Map<string, string> => {
+  const m = new Map<string, string>();
+  if (!fs.existsSync(p)) return m;
+  for (const line of fs.readFileSync(p, 'utf8').split('\n')) {
+    const s = line.trim();
+    if (!s || s.startsWith('#')) continue;
+    const x = s.split(/\s+/);
+    if (x.length >= 3 && (x[2] === '301' || x[2] === '302')) m.set(x[0], x[1]);
+  }
+  return m;
+};
+
 if (fs.existsSync('_redirects')) {
-  console.error('✗ A _redirects file exists at the repo root. Astro never copies it into dist/,');
-  console.error('  so every rule in it is dead code. The only deployed copy is public/_redirects.');
-  errors++;
+  const rootRules = parseRules('_redirects');
+  const pubRules = parseRules('public/_redirects');
+  const orphaned = [...rootRules.keys()].filter(k => !pubRules.has(k));
+  if (orphaned.length > 0) {
+    console.error(`✗ ${orphaned.length} redirect rule(s) exist ONLY in the root _redirects file.`);
+    console.error('  Astro never copies that file into dist/, so these rules never take effect.');
+    console.error('  Merge them into public/_redirects, then delete the root file.');
+    for (const o of orphaned.slice(0, 10)) console.error(`      ${o}`);
+    errors++;
+  } else {
+    console.warn('⚠️  A _redirects file exists at the repo root. Every rule in it also exists in');
+    console.warn('    public/_redirects, so nothing is lost — but it is dead code. Delete it.');
+  }
 }
 
 // ── 2. public/_redirects must survive into dist/ ────────────────────────────
