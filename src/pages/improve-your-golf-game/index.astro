@@ -28,6 +28,7 @@ const schemas  = [
   collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
   faqSchema(hubFaq),
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 <BaseLayout {meta} {schemas} activeNav="improve-game">
   <header class="cat-hero">
@@ -38,6 +39,7 @@ const schemas  = [
     </nav>
     <span class="hero-badge">{articles.length} PRACTICAL GUIDES · NO SWING REBUILDS</span>
     <h1>Improve Your Golf Game</h1>
+      <EarlyDisclosure />
     <p class="cat-subhead">Practical guides for weekend golfers who want lower scores without quitting their day jobs to do it.</p>
     <div class="hero-pills">
       <a href="/golf-practice-drills-at-home/" class="hero-pill"><span class="hero-pill-dot"></span>At-home practice</a>

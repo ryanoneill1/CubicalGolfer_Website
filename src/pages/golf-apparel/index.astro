@@ -28,6 +28,7 @@ const hubFaq = [
 ];
 
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(hubFaq), collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles })];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-apparel">
@@ -40,6 +41,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(hubFaq), collecti
     </nav>
     <span class="hero-badge">6 GUIDES · TESTED IN HEAT</span>
     <h1>Golf Apparel</h1>
+      <EarlyDisclosure />
     <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Performance golf clothing tested by a weekend golfer in Midwest heat and rain. Polos, pants, shorts, hats, sunglasses, and rain jackets — compared for comfort, fabric, UV protection, and whether premium brands actually outperform budget options.</p>
 
     <div class="hero-pills">

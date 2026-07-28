@@ -69,6 +69,7 @@ const itemList = reviews.length ? {
   })),
 } : null;
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(brand.faq), ...(itemList ? [itemList] : [])];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 <BaseLayout {meta} {schemas}>
   <header class="cat-hero">
@@ -81,6 +82,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(brand.faq), ...(i
     </nav>
     <span class="hero-badge">{productKeys.length} PRODUCTS PRICED · {reviews.length} FULL REVIEWS · {comparisons.length} HEAD-TO-HEADS</span>
     <h1>{brand.name} Golf Gear, Actually Tested</h1>
+      <EarlyDisclosure />
     <p>{brand.tagline}</p>
   </header>
 

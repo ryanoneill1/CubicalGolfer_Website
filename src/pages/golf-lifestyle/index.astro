@@ -28,6 +28,7 @@ const schemas  = [
   collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
   faqSchema(hubFaq),
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 <BaseLayout {meta} {schemas} activeNav="golf-lifestyle">
   <header class="cat-hero">
@@ -37,6 +38,7 @@ const schemas  = [
       <span aria-current="page">Golf Lifestyle</span>
     </nav>
     <h1>Golf Lifestyle</h1>
+      <EarlyDisclosure />
     <p class="cat-subhead">Fitness, travel, time hacks, and routines for golfers with day jobs who refuse to let work get in the way of a good round.</p>
     <div class="hero-pills">
       <a href="/desk-exercises-fix-golf-slice/" class="hero-pill"><span class="hero-pill-dot"></span>Fitness</a>

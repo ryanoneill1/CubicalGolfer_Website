@@ -43,6 +43,7 @@ const compareFaq = [
     a: 'When a new model drops, when a price moves more than 15%, or when our testing surfaces something we missed the first time. The "Updated" date on each comparison reflects the last time we verified every recommendation. If a comparison is older than 12 months, take the price figures with a grain of salt and double-check on the retailer page.' },
 ];
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 <BaseLayout {meta} {schemas} activeNav="compare">
   <header class="cat-hero">
@@ -53,6 +54,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
     </nav>
     <span class="hero-badge">{COMPARISONS.length + vsArticles.length} HEAD-TO-HEAD TESTS</span>
     <h1>Golf Gear Comparisons</h1>
+      <EarlyDisclosure />
     <p class="cat-subhead">Head-to-head tests for the question every weekend golfer ends up Googling at 11pm: which one is actually worth the money?</p>
     <div class="hero-pills">
       <a href="/compare/bushnell-tour-v6-vs-precision-pro-nx9/" class="hero-pill"><span class="hero-pill-dot"></span>Rangefinders</a>

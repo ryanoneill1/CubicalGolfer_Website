@@ -21,6 +21,7 @@ const schemas  = [
   collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles }),
   faqSchema(hubFaq),
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-tech">
@@ -33,6 +34,7 @@ const schemas  = [
     </nav>
     <span class="hero-badge">29 ARTICLES · REAL DATA</span>
     <h1>Golf Tech</h1>
+      <EarlyDisclosure />
     <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Launch monitors, golf simulators, swing analysers, and shot tracking apps — tested with real on-course data and cross-referenced against other launch monitors, not manufacturer claims.</p>
 
     <div class="hero-pills">

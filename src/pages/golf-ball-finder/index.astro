@@ -55,6 +55,7 @@ const balls = [
   { name: 'Titleist Pro V1x', brand: 'Titleist', compression: 97, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 100, maxMph: 130, bestFor: 'High launch, high spin', affiliateKey: 'titleist-pro-v1x' },
   { name: 'TaylorMade TP5x', brand: 'TaylorMade', compression: 97, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 100, maxMph: 130, bestFor: 'Max distance for fast swings', affiliateKey: 'taylormade-tp5x' },
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">
@@ -68,6 +69,7 @@ const balls = [
         <span aria-current="page">Golf Ball Finder</span>
       </nav>
       <h1>Golf Ball Finder — Match Your Swing Speed to the Right Ball</h1>
+      <EarlyDisclosure />
       <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Stop buying the wrong golf ball. Enter your swing speed, budget, and what you care about most — this tool filters 19 of the most-played balls and gives you a personalized recommendation in seconds. Data from our <a href="/golf-ball-compression-chart/" style="color:#C8A84B;text-decoration:underline;">compression chart</a>, independently verified.</p>
     </header>
 

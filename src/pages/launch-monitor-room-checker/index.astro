@@ -70,6 +70,7 @@ const monitors = [
     skipIf: 'you are new to launch monitors — start with the R10 and upgrade later if you want more data',
   },
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">
@@ -83,6 +84,7 @@ const monitors = [
         <span aria-current="page">Room Size Checker</span>
       </nav>
       <h1>Launch Monitor Room Size Checker — Will It Fit Your Space?</h1>
+      <EarlyDisclosure />
       <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Not every launch monitor works in every room. Enter your ceiling height and available depth below — this tool tells you exactly which monitors fit your garage, basement, or spare room, and which ones do not. No more guessing or returning equipment that does not fit.</p>
     </header>
 

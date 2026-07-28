@@ -1,3 +1,8 @@
+// REC/FTC: never emit offers pointing at Amazon SEARCH urls — a search page is
+// not the product; Google treats that as structured-data misrepresentation.
+// When only a search url exists, the Product keeps name/image/review, no offers.
+const isSearchUrl = (u?: string) => !!u && (/amazon\.[a-z.]+\/s([/?]|%3F)/i.test(u) || u.includes('s?k='));
+
 // src/lib/schema.ts
 // ─────────────────────────────────────────────────────────────────────────────
 // Centralised JSON-LD schema generator.
@@ -199,14 +204,14 @@ export function comparisonProductsSchema(products: ComparisonProduct[], reviewDa
       description: p.description,
       image: p.image ? `${DOMAIN}${p.image}` : OG_IMAGE,
       brand: { '@type': 'Brand', name: p.brand },
-      offers: {
+      ...(isSearchUrl(p.url) ? {} : { offers: {
         '@type': 'Offer',
         url: p.url,
         priceCurrency: 'USD',
         ...(numericPrice ? { price: numericPrice } : {}),
         availability: 'https://schema.org/InStock',
         seller: { '@type': 'Organization', name: p.retailer },
-      },
+      } }),
       // aggregateRating removed — ratingCount is Amazon data, not first-party
       ...(p.rating ? {
         review: {
@@ -296,12 +301,12 @@ export function productSchema(opts: {
     description:   opts.description,
     image:         opts.image ?? `https://www.cubicalgolfer.com/images/og-image.jpg`,
     brand:         opts.brand ? { '@type': 'Brand', name: opts.brand } : undefined,
-    offers: {
+    ...(isSearchUrl(opts.url) ? {} : { offers: {
       '@type':      'Offer',
       url:          opts.url,
       priceCurrency:'USD',
       price:         opts.price?.replace(/[^0-9.]/g, '') ?? '0',
-    },
+    } }),
   };
 }
 
@@ -387,7 +392,7 @@ export function webApplicationSchema(opts: { name: string; description: string; 
     url: `${DOMAIN}${opts.url}`,
     applicationCategory: 'SportsApplication',
     operatingSystem: 'Any',
-    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    ...(isSearchUrl(undefined) ? {} : { offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' } }),
     provider: { '@type': 'Organization', name: 'Cubical Golfer', url: DOMAIN },
   };
 }
@@ -459,14 +464,14 @@ export function reviewSchema(article: Article): object | null {
       brand: { '@type': 'Brand', name: brand },
       image: image,
       ...(aff ? {
-        offers: {
+        ...(isSearchUrl(aff.url) ? {} : { offers: {
           '@type': 'Offer',
           url: aff.url,
           priceCurrency: 'USD',
           price: priceNum,
           availability: 'https://schema.org/InStock',
           seller: { '@type': 'Organization', name: aff.retailer || 'Amazon' },
-        },
+        } }),
       } : {}),
     },
     reviewRating: {
@@ -620,7 +625,7 @@ export function buyingGuideProductSchema(
         },
       },
     } : {}),
-    offers: {
+    ...(isSearchUrl(affiliateUrl) ? {} : { offers: {
       '@type': 'Offer',
       url: affiliateUrl,
       priceCurrency: 'USD',
@@ -630,7 +635,7 @@ export function buyingGuideProductSchema(
         '@type': 'Organization',
         name: affiliateRetailer || 'Amazon.com',
       },
-    },
+    } }),
   };
 }
 

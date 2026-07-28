@@ -85,6 +85,7 @@ const TAG_CLASSES: Record<string, string> = {
   'BUYING GUIDE': 'tag-buy', 'COMPARISON': 'tag-cmp', 'TUTORIAL': 'tag-tut',
   'LISTICLE': 'tag-list', 'LIFESTYLE': 'tag-life', 'GUIDE': 'tag-rev',
 };
+import EarlyDisclosure from '../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home" preloadImage="/images/cubicalgolfer-hero.webp">
@@ -94,6 +95,7 @@ const TAG_CLASSES: Record<string, string> = {
     <div>
       <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
       <h1>Stop Guessing. Start Playing Better Golf.</h1>
+      <EarlyDisclosure />
       <p class="hero-sub">Every product independently purchased and tested over 10+ real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>

@@ -362,6 +362,7 @@ if (isBuyingGuide) {
     schemas.push(roundupItemListSchema(article, rankedProducts));
   }
 }
+import EarlyDisclosure from '../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
@@ -380,6 +381,7 @@ if (isBuyingGuide) {
 
     <span class={`art-tag-lg ${TAG_CLASS[article.tag] || 'tag-buy'}`}>{article.tag}</span>
     <h1>{article.titleDisplay}</h1>
+      <EarlyDisclosure />
 
     <div class="author-box">
       <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
@@ -404,9 +406,7 @@ if (isBuyingGuide) {
   {(isBuyingGuide || article.pageType === 'listicle') && (
     <div class="trust-card">
       <p class="trust-card__heading">Why Trust This Guide</p>
-        {isBuyingGuide && (
-          <p class="early-disclosure" style="margin:4px 0 0;font-size:16px;color:var(--muted);">We may earn a commission from links on this page — it never affects our picks. <a href="/affiliate-disclosure/" style="color:var(--green);">Disclosure</a></p>
-        )}
+
 
         {isBuyingGuide && (() => {
           const picks = article.sections.map((s: any, i: number) => ({ s, i })).filter((x: any) => x.s.affiliateKey).slice(0, 3);

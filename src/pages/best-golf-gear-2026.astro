@@ -42,6 +42,7 @@ const winners: Winner[] = [
   { category: 'Tech', emoji: '📱', name: 'Arccos Caddie Sensors', affiliateKey: 'arccos-caddie-sensors', price: '~$179 + $99/yr', benefit: 'AI caddie that gets smarter every round — automatic shot tracking', guideSlug: '/best-golf-swing-analyzers/', guideLabel: 'Best Swing Analyzers' },
   { category: 'Training Aid', emoji: '🎯', name: 'SuperSpeed Golf Set', affiliateKey: 'superspeed-golf-set', price: '~$199', benefit: 'Add 5-8% swing speed in 6 weeks with 15 min 3x per week', guideSlug: '/best-swing-speed-trainer-over-40/', guideLabel: 'Best Speed Trainers' },
 ];
+import EarlyDisclosure from '../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="best-2026">
@@ -53,6 +54,7 @@ const winners: Winner[] = [
       <span aria-current="page">Best Golf Gear 2026</span>
     </nav>
     <h1>Best Golf Gear of 2026 — The Weekend Golfer's Definitive Guide</h1>
+      <EarlyDisclosure />
     <p style="color:rgba(255,255,255,.72);max-width:560px;line-height:1.65;font-size:16px;">
       We tested rangefinders, GPS watches, drivers, irons, putters, balls, bags, gloves, shoes,
       wedges, and training tech across a full season on four courses. These are the single best picks

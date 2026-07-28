@@ -78,9 +78,11 @@ const compProducts: ComparisonProduct[] = [affA, affB].map((p) => ({
   retailer: p.retailer ?? 'Amazon',
 }));
 schemas.push(...comparisonProductsSchema(compProducts, c.dateModified || c.datePublished));
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home">
+  <EarlyDisclosure />
 
   {/* FIX: Sticky "Buy Winner" bar — shows after 400px scroll, same as article pages */}
   {winnerAff && (

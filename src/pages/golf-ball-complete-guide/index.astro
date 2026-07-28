@@ -40,6 +40,7 @@ const schemas = [
 ];
 
 const quickProduct = getAffiliateLink('callaway-supersoft');
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="gear-reviews">
@@ -55,6 +56,7 @@ const quickProduct = getAffiliateLink('callaway-supersoft');
       </nav>
       <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Comprehensive Guide</p>
       <h1>Golf Ball Guide — Find Your Perfect Ball by Swing Speed</h1>
+      <EarlyDisclosure />
       <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Everything you need to know about golf balls: compression, covers, construction, and the right ball for your swing speed and handicap. Plus links to every golf ball guide on the site.</p>
       <div class="author-box">
         <img src="/images/ryan-author-photo.webp" alt="Ryan — Cubicle Golfer" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />

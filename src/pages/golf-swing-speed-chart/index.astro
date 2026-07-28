@@ -41,6 +41,7 @@ const speeds = [
   { club: 'PW', tour: 79, scratch: 72, mid: 62, high: 55, senior: 50 },
   { club: 'SW', tour: 74, scratch: 68, mid: 58, high: 52, senior: 47 },
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">
@@ -54,6 +55,7 @@ const speeds = [
         <span aria-current="page">Swing Speed Chart</span>
       </nav>
       <h1>Golf Swing Speed Chart by Club — Driver Through Wedge</h1>
+      <EarlyDisclosure />
       <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Average swing speeds in mph by club type and skill level. Data compiled from Trackman averages and our own launch monitor testing across 500+ golfer sessions.</p>
     </header>
 

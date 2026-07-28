@@ -138,6 +138,7 @@ const schemas = [
   breadcrumbSchema(meta.breadcrumbs),
   faqSchema(faqs),
 ];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 <BaseLayout meta={meta} schemas={schemas}>
 
@@ -155,6 +156,7 @@ const schemas = [
 
     <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
     <h1>Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed</h1>
+      <EarlyDisclosure />
 
     <div class="author-box">
       <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
