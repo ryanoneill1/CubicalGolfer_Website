@@ -56,9 +56,11 @@ const toolsFaq = [
 ];
 
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(toolsFaq)];
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">
+  <EarlyDisclosure />
 
   <header class="cat-hero">
     <nav class="breadcrumb" aria-label="Breadcrumb">
