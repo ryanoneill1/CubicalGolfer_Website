@@ -363,6 +363,24 @@ if (isBuyingGuide) {
   }
 }
 import EarlyDisclosure from '../components/EarlyDisclosure.astro';
+
+// Prompt-6(a): word count computed from actual content at build time —
+// the hardcoded article.words field drifted badly after prose edits.
+// Deep-walk every visible-text string in the article object.
+const __wcSkip = new Set(['slug','id','thumbnail','image','imgSrc','sectionImage','sectionImageAlt','canonical','href','url','affiliateKey','dateModified','datePublished','alt','icon','anchor','pageType','words','category']);
+function __wcWalk(v: any, key?: string): string {
+  if (v == null) return '';
+  if (typeof v === 'string') return (key && __wcSkip.has(key)) || /^(\/|https?:)/.test(v) ? '' : v + ' ';
+  if (Array.isArray(v)) return v.map((x) => __wcWalk(x)).join('');
+  if (typeof v === 'object') return Object.entries(v).map(([k, x]) => __wcWalk(x, k)).join('');
+  return '';
+}
+const __wcRegistry = (((article as any).sections) || [])
+  .map((s: any) => s.affiliateKey && getAffiliateLink(s.affiliateKey))
+  .filter(Boolean)
+  .map((a: any) => [a.name, a.price, a.retailer, a.caption, ...(a.benefits || [])].filter(Boolean).join(' '))
+  .join(' ');
+const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>/g, ' ').match(/[A-Za-z0-9][A-Za-z0-9'-]*/g) || []).length;
 ---
 
 <BaseLayout {meta} {schemas} activeNav={article.category}>
@@ -393,7 +411,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
           <span style="font-size:16px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_BYLINE.tagline}</span>
         </span>
         <span class="author-meta">
-          📖 {article.words} words &nbsp;·&nbsp;
+          📖 {Math.max(1, Math.round(computedWords / 220))} min read &nbsp;·&nbsp;
           📅 Updated: {article.dateModified} &nbsp;·&nbsp;
           ⛳ <a href="/how-we-test/">How we test →</a>
         </span>
