@@ -46,54 +46,27 @@ export const AFFILIATE: Record<string, {
 
   // ── RANGEFINDERS ─────────────────────────────────────────────────────────
 
-  // Bushnell Tour V6 Shift — ASIN B0C4PN57LJ ✅ verified
-  // Bushnell Tour V6 Shift — superseded by the V7 Shift (2026). Still sold new at
-  // Golf Galaxy ($349.99, in stock). Bushnell's own /golf-laser-rangefinders/ page no
-  // longer lists the V6, so the primary CTA now routes to a retailer that stocks it.
-  'bushnell-tour-v6-shift': {
-    heroVerdictLine: '★ Our tested pick after 20+ rounds — nothing in this price band locks the pin faster.',
-    heroWhoFor: 'Weekend golfers who want a proven rangefinder and do not need the newest generation.',
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBushnell%2BTour%2BV6%2BShift%26storeId%3D10701%26catalogId%3D12301%26langId%3D-1',
-    program: 'golfgalaxy',
-    commissionPct: 5,
-    cookieDays: 30,
-    golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell+tour+v6+shift+rangefinder&tag=cubicalgolfer-20',
-    retailer: 'Golf Galaxy',
-    price: '~$349',
-    primaryRetailer: 'direct',
-    priceNote: 'Superseded by the Tour V7 Shift — expect the V6 to drift toward clearance pricing.',
-    label: 'Check Price at Golf Galaxy →',
-    imgSrc: '/images/products/bushnell-tour-v6-shift.webp',
-    imgAlt: 'Bushnell Tour V6 Shift Golf Rangefinder',
-    benefits: [
-        'PinSeeker JOLT locks onto flag in <0.3 seconds',
-        'Slope Switch — legal toggle for tournament play',
-        '±1 yard accuracy to 1,300 yards',
-      ],
-  },
-
-  // Bushnell Tour V7 Shift — current generation (replaced the V6 Shift in 2026).
-  // NOT yet in our test bag; surfaced as a RESEARCH PICK so no hands-on claim is made.
-  // NOTE FOR RYAN: no real V7 product photo on file yet — imgSrc deliberately omitted
-  // rather than reusing the V6 photo. Add /images/products/bushnell-tour-v7-shift.webp
-  // when you have one and set imgSrc below.
+  // Bushnell Tour V7 Shift — current generation, replaced the V7 Shift in 2026.
   'bushnell-tour-v7-shift': {
-    heroVerdictLine: 'Bushnell\'s current-generation Tour rangefinder, and the direct replacement for the V6 Shift.',
-    heroWhoFor: 'Golfers who want the newest Bushnell laser rather than the outgoing generation.',
-    url: 'https://bushnell.pxf.io/3kRRkX',
+    heroVerdictLine: '★ Our #1 pick — nothing locks the pin faster, and the Slope Switch keeps it tournament legal.',
+    heroWhoFor: 'Weekend golfers who want one rangefinder that does everything and lasts 5+ years.',
+    asin: 'B0GLV94273',
+    url: 'https://bushnell.pxf.io/DWWLOa',
     program: 'bushnell',
     commissionPct: 5,
     cookieDays: 30,
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Tour*+V7*+Shift*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.amazon.com/Bushnell-Golf-Shift-Laser-Rangefinder/dp/B0GLV94273?crid=1KM4DLKP318KU&dib_tag=se&keywords=bushnell%2Bv7%2Bshift&qid=1785632474&sprefix=bushnell%2Bv7%2Caps%2C289&sr=8-1&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=7db43164c6639f0feab5a6a970ee5c2e&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Bushnell',
     price: '~$399',
     primaryRetailer: 'direct',
-    priceNote: 'Current generation — priced at $399.99 direct from Bushnell.',
+    priceNote: 'Stable price year-round. Previous models drop when new ones release.',
     label: 'Check Price at Bushnell →',
+    imgSrc: '/images/products/Bushnell_TOUR_V7_.webp',
+    imgAlt: 'Bushnell Tour V7 Shift Golf Rangefinder',
     benefits: [
-        'PinSeeker with Visual JOLT flag confirmation',
+        'PinSeeker with Visual JOLT locks onto the flag in <0.3 seconds',
         'Slope Switch — legal toggle for tournament play',
-        'Current-generation replacement for the Tour V6 Shift',
+        '±1 yard accuracy to 1,300 yards',
       ],
   },
 

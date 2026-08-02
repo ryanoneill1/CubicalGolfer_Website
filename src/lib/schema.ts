@@ -279,7 +279,7 @@ export function homeFaqSchema(): object {
   return faqSchema([
     {
       q: 'What is the best golf rangefinder for a weekend golfer in 2026?',
-      a: "The Bushnell Tour V6 Shift (~$349) is the best overall golf rangefinder for most weekend golfers. We tested 5 leading models over 20+ real rounds each. For budget golfers, the Precision Pro NX9 (~$219) delivers excellent performance at roughly half the price with a lifetime warranty.",
+      a: "The Bushnell Tour V7 Shift (~$399) is the best overall golf rangefinder for most weekend golfers. We tested 5 leading models over 20+ real rounds each. For budget golfers, the Precision Pro NX9 (~$219) delivers excellent performance at roughly half the price with a lifetime warranty.",
     },
     {
       q: 'How do I fix my golf slice permanently?',
@@ -544,7 +544,7 @@ export function buyingGuideProductSchema(
   const numericPrice = priceMatch ? priceMatch[0] : '';
 
   // Derive product name: prefer the section heading if it's actually a product name,
-  // otherwise humanize the affiliate key (e.g. 'bushnell-tour-v6-shift' → 'Bushnell Tour V6 Shift')
+  // otherwise humanize the affiliate key (e.g. 'bushnell-tour-v7-shift' → 'Bushnell Tour V7 Shift')
   const NON_PRODUCT_HEADINGS = /^(where to buy|quick verdict|the verdict|our pick|buy|pricing|value|cost|what to look for|how we|keep reading|faq)/i;
 
   // Editorial framing that precedes the actual product name. Previously a

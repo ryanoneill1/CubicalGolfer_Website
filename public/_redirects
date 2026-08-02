@@ -58,7 +58,7 @@
 /best-budget-rangefinders/  /best-golf-rangefinders-under-200/  301
 /best-golf-balls-distance/  /best-golf-balls-for-distance/  301
 /:path.html  /:path/  301
-/bushnell-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v6-vs-precision-pro-nx9/  301
+/bushnell-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v7-vs-precision-pro-nx9/  301
 /compare/skytrak-vs-garmin-r10/  /compare/skytrak-plus-vs-garmin-r10/  301
 /methodology/  /how-we-test/  301
 /editorial-policy/  /about/  301
@@ -66,17 +66,17 @@
 /compare/callaway-supersoft-vs-srixon-soft-feel/  /golf-ball-compression-chart/  301
 /compare/vice-pro-vs-titleist-pro-v1/  /compare/pro-v1-vs-tp5/  301
 /compare/taylormade-qi35-vs-callaway-ai-smoke/  /compare/callaway-paradym-vs-taylormade-qi35/  301
-/bushnell-tour-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v6-vs-precision-pro-nx9/  301
+/bushnell-tour-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v7-vs-precision-pro-nx9/  301
 /garmin-approach-s62-vs-shot-scope-v5/  /compare/garmin-approach-s62-vs-shot-scope-v5/  301
 /callaway-paradym-vs-taylormade-qi35/  /compare/callaway-paradym-vs-taylormade-qi35/  301
 /garmin-approach-s62-vs-s42/  /compare/garmin-approach-s62-vs-s42/  301
-/blue-tees-vs-bushnell-tour-v6/  /compare/blue-tees-vs-bushnell-tour-v6/  301
+/blue-tees-vs-bushnell-tour-v6/  /compare/blue-tees-vs-bushnell-tour-v7/  301
 /garmin-s12-vs-bushnell-ion-elite/  /compare/garmin-s12-vs-bushnell-ion-elite/  301
 /cobra-aerojet-max-vs-ping-g430-max/  /compare/cobra-aerojet-max-vs-ping-g430-max/  301
 /cleveland-launcher-xl2-vs-cobra-aerojet-max/  /compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/  301
 /odyssey-stroke-lab-vs-scotty-cameron-phantom/  /compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/  301
 /lab-golf-df3-vs-odyssey-two-ball-eleven/  /compare/lab-golf-df3-vs-odyssey-two-ball-eleven/  301
-/bushnell-tour-v6-vs-callaway-300-pro/  /compare/bushnell-tour-v6-vs-callaway-300-pro/  301
+/bushnell-tour-v6-vs-callaway-300-pro/  /compare/bushnell-tour-v7-vs-callaway-300-pro/  301
 /skytrak-plus-vs-flightscope-mevo-gen2/  /compare/skytrak-plus-vs-flightscope-mevo-gen2/  301
 /titleist-pro-v1-vs-callaway-chrome-soft/  /compare/titleist-pro-v1-vs-callaway-chrome-soft/  301
 /titleist-pro-v1-vs-kirkland-signature/  /compare/titleist-pro-v1-vs-kirkland-signature/  301
@@ -88,7 +88,7 @@
 /skytrak-plus-vs-garmin-r10/  /compare/skytrak-plus-vs-garmin-r10/  301
 /garmin-r10-vs-flightscope-mevo/  /compare/garmin-r10-vs-flightscope-mevo/  301
 /taylormade-qi35-vs-titleist-gt2/  /compare/taylormade-qi35-vs-titleist-gt2/  301
-/bushnell-pro-x3-vs-tour-v6/  /compare/bushnell-pro-x3-vs-tour-v6/  301
+/bushnell-pro-x3-vs-tour-v6/  /compare/bushnell-pro-x3-vs-tour-v7/  301
 /garmin-s70-vs-apple-watch-golf/  /compare/garmin-s70-vs-apple-watch-golf/  301
 /pro-v1-vs-tp5/  /compare/pro-v1-vs-tp5/  301
 /rapsodo-mlm2pro-vs-bushnell-launch-pro/  /compare/rapsodo-mlm2pro-vs-bushnell-launch-pro/  301
@@ -109,3 +109,12 @@
 /best-golf-irons-high-handicapper/  /best-golf-irons-2026/  301
 /best-game-improvement-irons-2026/  /best-golf-irons-2026/  301
 /most-forgiving-irons/  /best-golf-irons-2026/  301
+
+# ── Bushnell Tour V6 Shift → V7 Shift (Aug 2026) ──────────────────────────────
+# The V6 Shift was superseded by the V7 Shift. Product pages renamed; these 301s
+# preserve inbound links and rankings from the v6 URLs.
+/bushnell-tour-v6-shift-review/  /bushnell-tour-v7-shift-review/  301
+/compare/blue-tees-vs-bushnell-tour-v6/  /compare/blue-tees-vs-bushnell-tour-v7/  301
+/compare/bushnell-tour-v6-vs-precision-pro-nx9/  /compare/bushnell-tour-v7-vs-precision-pro-nx9/  301
+/compare/bushnell-tour-v6-vs-callaway-300-pro/  /compare/bushnell-tour-v7-vs-callaway-300-pro/  301
+/compare/bushnell-pro-x3-vs-tour-v6/  /compare/bushnell-pro-x3-vs-tour-v7/  301

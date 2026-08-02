@@ -34,13 +34,13 @@ export const BRANDS: Brand[] = [
     name: 'Bushnell',
     tagline: 'The rangefinder benchmark, plus Foresight-powered launch data',
     intro: [
-      `Ask on any tee box what rangefinder the low-handicapper is holding and the answer is usually Bushnell. The brand earned that position the boring way — decades of optics that lock onto flags fast and read true — and our testing backs the reputation: the Tour V6 Shift locked pins in under 0.3 seconds, the fastest we've measured, with accuracy inside a yard across a full season of rounds.`,
+      `Ask on any tee box what rangefinder the low-handicapper is holding and the answer is usually Bushnell. The brand earned that position the boring way — decades of optics that lock onto flags fast and read true — and our testing backs the reputation: the Tour V7 Shift locked pins in under 0.3 seconds, the fastest we've measured, with accuracy inside a yard across a full season of rounds.`,
       `The interesting move is the Launch Pro, which is Foresight's GC3 camera technology in Bushnell packaging. In our accuracy test it landed within ±1.2 yards of reference numbers — professional-grade photometric data at roughly half the price of a GCQuad, with the honest asterisks that it needs an annual subscription for full features and a capable PC to shine as a simulator.`,
       `Bushnell's premium is real: you can get 90-95% of the rangefinder experience for half the price elsewhere, and we say so plainly in our comparisons. What you're paying for is the last half-second of lock speed, the cleanest slope toggle in golf, and glass that doesn't hunt. Whether that's worth it depends entirely on how much the wait annoys you.`,
     ],
-    bagNote: `The Tour V6 Shift is the rangefinder in our own bag — it survived our full What's In The Bag testing season and never gave the number back.`,
+    bagNote: `The Tour V7 Shift is the rangefinder in our own bag — it survived our full What's In The Bag testing season and never gave the number back.`,
     faq: [
-      { q: 'Is the Tour V6 Shift really worth double the Precision Pro NX9?',
+      { q: 'Is the Tour V7 Shift really worth double the Precision Pro NX9?',
         a: 'Depends what the extra $160 buys you. In our head-to-head, the NX9 landed within 1-2 yards of the Bushnell on accuracy — the real gaps are lock speed (0.3s vs 0.5-0.8s), build quality, and Bushnell\'s slope toggle. The NX9 counters with a lifetime warranty we actually tested. If you range while walking and hate waiting, buy the Bushnell; if you want 90% of the experience at half the price, the NX9 is the value play.' },
       { q: 'Does the Bushnell Launch Pro need a subscription?',
         a: 'Yes — that\'s its biggest honest drawback. The hardware is Foresight GC3 camera tech and the accuracy is professional-grade, but full features require an annual plan on top of a roughly $2,000 entry price. Budget for both, or look at our no-subscription launch monitor guide if ongoing fees are a dealbreaker.' },

@@ -14,7 +14,7 @@ export function getSkipIf(affiliateKey: string, articleSlug: string, bodyText?: 
   const s = articleSlug.toLowerCase();
 
   // ── Rangefinders ──
-  if (k.includes('bushnell-tour-v6') || k.includes('bushnell-pro-x'))
+  if (k.includes('bushnell-tour-v7') || k.includes('bushnell-pro-x'))
     return 'you play fewer than 10 rounds a year — a budget rangefinder gives 90% of the performance at half the price';
   if (k.includes('precision-pro') || k.includes('blue-tees'))
     return 'you play tournaments regularly — the slope lock is less refined than the Bushnell';

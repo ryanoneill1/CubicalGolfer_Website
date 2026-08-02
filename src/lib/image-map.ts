@@ -18,7 +18,7 @@
  *
  * ALL 57 PRODUCT IDs:
  * ─────────────────────────────────────────────────────────────────────────────
- * RANGEFINDERS:  bushnell-tour-v6-shift, precision-pro-nx9-hd,
+ * RANGEFINDERS:  bushnell-tour-v7-shift, precision-pro-nx9-hd,
  *                blue-tees-series-3-max, garmin-approach-z82,
  *                bushnell-pro-xe, bushnell-ion-elite
  *
@@ -69,7 +69,7 @@ export function getProductImage(productId: string): string {
  */
 export const ALL_PRODUCT_IDS: readonly string[] = [
   // Rangefinders
-  'bushnell-tour-v6-shift', 'precision-pro-nx9-hd', 'blue-tees-series-3-max',
+  'bushnell-tour-v7-shift', 'precision-pro-nx9-hd', 'blue-tees-series-3-max',
   'garmin-approach-z82', 'bushnell-pro-xe', 'bushnell-ion-elite',
   // GPS Watches
   'garmin-approach-s62', 'garmin-approach-s42', 'shot-scope-v5',

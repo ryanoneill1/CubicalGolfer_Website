@@ -41,7 +41,7 @@ export const AUTHOR_PROFILE = {
   //   wedges:  'Cleveland RTX 6 52°/56°'
   //   putter:  'Odyssey White Hot OG #7'
   //   ball:    'Srixon Q-Star Tour'
-  //   rangefinder: 'Bushnell Tour V6 Shift'
+  //   rangefinder: 'Bushnell Tour V7 Shift'
   // ────────────────────────────────────────────────────────
   witb: {
     asOf:        '2026',

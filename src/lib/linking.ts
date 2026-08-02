@@ -92,18 +92,18 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── Rangefinder cluster: every rangefinder page links to the others ──────────
   'rangefinders': [
-    { slug: '/bushnell-tour-v6-shift-review/',  label: 'Bushnell Tour V6 Shift Review (40 Rounds)' },
+    { slug: '/bushnell-tour-v7-shift-review/',  label: 'Bushnell Tour V7 Shift Review (40 Rounds)' },
     { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
     { slug: '/do-i-need-slope-on-rangefinder/',  label: 'Do I Need Slope on a Rangefinder?' },
     { slug: '/best-golf-rangefinder-for-seniors/', label: 'Best Rangefinders for Seniors' },
-    { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell Tour V6 vs Precision Pro NX9' },
-    { slug: '/compare/blue-tees-vs-bushnell-tour-v6/', label: 'Blue Tees vs Bushnell Tour V6' },
+    { slug: '/compare/bushnell-tour-v7-vs-precision-pro-nx9/', label: 'Bushnell Tour V7 vs Precision Pro NX9' },
+    { slug: '/compare/blue-tees-vs-bushnell-tour-v7/', label: 'Blue Tees vs Bushnell Tour V7' },
   
-    { slug: '/compare/bushnell-tour-v6-vs-precision-pro-nx9/', label: 'Bushnell V6 vs Precision Pro NX9' },
-    { slug: '/compare/bushnell-tour-v6-vs-callaway-300-pro/', label: 'Bushnell V6 vs Callaway 300 Pro' },
-    { slug: '/compare/bushnell-pro-x3-vs-tour-v6/', label: 'Bushnell Pro X3 vs Tour V6' },
+    { slug: '/compare/bushnell-tour-v7-vs-precision-pro-nx9/', label: 'Bushnell V7 vs Precision Pro NX9' },
+    { slug: '/compare/bushnell-tour-v7-vs-callaway-300-pro/', label: 'Bushnell V7 vs Callaway 300 Pro' },
+    { slug: '/compare/bushnell-pro-x3-vs-tour-v7/', label: 'Bushnell Pro X3 vs Tour V7' },
   ],
-  'bushnell-v6-review': [
+  'bushnell-v7-review': [
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
     { slug: '/best-golf-rangefinders-2026/',      label: 'Best Golf Rangefinders 2026 (All 11 Tested)' },
     { slug: '/bushnell-vs-garmin-rangefinder/',    label: 'Bushnell vs Garmin Rangefinder' },
@@ -584,7 +584,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'precision-pro-nx9-review': [
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
     { slug: '/best-golf-rangefinders-2026/',          label: 'Best Rangefinders 2026' },
-    { slug: '/bushnell-tour-v6-shift-review/',        label: 'Bushnell V6 Review' },
+    { slug: '/bushnell-tour-v7-shift-review/',        label: 'Bushnell V7 Review' },
     { slug: '/best-golf-rangefinders-under-200/',      label: 'Best Under $200' },
   ],
   'trackman-vs-foresight': [
@@ -654,8 +654,8 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' },
     { slug: '/best-golf-apps/', label: 'Best Golf Apps' },
   ],
-  'bushnell-v6-vs-nx9': [
-    { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' },
+  'bushnell-v7-vs-nx9': [
+    { slug: '/bushnell-tour-v7-shift-review/', label: 'Bushnell V7 Review' },
     { slug: '/precision-pro-nx9-review/', label: 'NX9 Review' },
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
     { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
