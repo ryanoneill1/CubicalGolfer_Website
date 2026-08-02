@@ -3600,16 +3600,6 @@ export const AFFILIATE: Record<string, {
       'Stretch fabric — minimal swing restriction',
     ],
   },
-  'under-armour-storm-rain': {
-    url: 'https://www.amazon.com/s?k=under-armour-storm-rain&crid=1ANCV4L88BXG9&sprefix=vice-pro-plus%2Caps%2C264&linkCode=ll2&tag=cubicalgolfer-20&linkId=ef627637d351dccf74496bb56524ba00&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DUnder%2520Armour%2520Storm%2520Rain%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon', price: '~$100',
-    priceNote: 'Great value at this price point. Rarely drops lower.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/under-armour-storm-rain.webp', imgAlt: 'Under Armour Storm golf rain jacket',
-  },
   'oakley-prizm-golf': {
     url: 'https://www.amazon.com/s?k=oakley-prizm-golf&crid=WBZ6SKF9PFXB&sprefix=oakley-prizm-golf%2Caps%2C272&linkCode=ll2&tag=cubicalgolfer-20&linkId=3b0b00bfdbe3497c8aecbf6e69ec7f66&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOakley%2520Prizm%2520Golf%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -4249,7 +4239,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$80', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$60', label: `See Today's Price →`,
     imgSrc: '/images/products/under-armour-storm-rain-jacket.webp', imgAlt: 'Under Armour Storm golf rain jacket',
     benefits: [
       'Gore-Tex waterproofing is virtually impervious to rain',

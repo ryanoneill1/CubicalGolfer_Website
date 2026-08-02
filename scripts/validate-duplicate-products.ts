@@ -25,11 +25,7 @@ const norm = (s?: string) =>
     .replace(/[^a-z0-9]+/g, ' ').trim();
 
 const entries = Object.entries(AFFILIATE as any) as Array<[string, any]>;
-// Known, unresolved duplicate awaiting an owner decision. Remove the entry once
-// the real price is confirmed and the two keys are consolidated.
-// TODO(ryan): Under Armour Storm rain jacket exists twice — ~$100 and ~$80.
-// Confirm which is correct, then merge to one key and delete this allowlist line.
-const PENDING_MERGE = new Set(['under armour storm rain jacket']);
+const PENDING_MERGE = new Set<string>([]); // no known unresolved duplicates
 
 const problems: string[] = [];
 const nearMiss: string[] = [];
