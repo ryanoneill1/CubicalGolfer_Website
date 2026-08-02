@@ -2629,7 +2629,7 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'direct',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/taylormade-stealth-hd.webp',
+    imgSrc: '/images/products/taylormade-stealth-2-hd.webp',
     imgAlt: 'TaylorMade Stealth 2 HD driver',
   },
   'tour-striker-smart-ball': {
@@ -3602,6 +3602,8 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon \u2192',
     retailer: 'Amazon',
     price: '~$219',
+    imgSrc: '/images/products/nikon-coolshot-50i.webp',
+    imgAlt: 'Nikon Coolshot 50i GII Golf Rangefinder',
   },
   'callaway-300-pro': {
     url: 'https://www.amazon.com/s?k=callaway+300+pro&linkCode=ll2&tag=cubicalgolfer-20&linkId=96a921ff0acbd88ccdeb2a5e29e4cfe4&language=en_US&ref_=as_li_ss_tl',
@@ -4299,6 +4301,8 @@ export const AFFILIATE: Record<string, {
     price: '~$299',
     priceNote: 'Previous-gen flagship — deep discounts since the Paradym release.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/callaway-rogue-st-max.webp',
+    imgAlt: 'Callaway Rogue ST Max Driver',
   },
   'bushnell-pro-x3': {
     asin: 'B0D6GVX8JZ',
