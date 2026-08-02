@@ -1,6 +1,9 @@
 // REC/FTC: never emit offers pointing at Amazon SEARCH urls — a search page is
 // not the product; Google treats that as structured-data misrepresentation.
 // When only a search url exists, the Product keeps name/image/review, no offers.
+import { brandFor } from './brand-map';
+import { PRODUCT_DISPLAY } from '../data/product-names';
+
 const isSearchUrl = (u?: string) => !!u && (/amazon\.[a-z.]+\/s([/?]|%3F)/i.test(u) || u.includes('s?k='));
 
 // src/lib/schema.ts
@@ -213,15 +216,15 @@ export function comparisonProductsSchema(products: ComparisonProduct[], reviewDa
       name: p.name,
       description: p.description,
       image: p.image ? `${DOMAIN}${p.image}` : OG_IMAGE,
-      brand: { '@type': 'Brand', name: p.brand },
-      ...(isSearchUrl(p.url) ? {} : { offers: {
+      ...((brandFor(p.name) ?? p.brand) ? { brand: { '@type': 'Brand', name: brandFor(p.name) ?? p.brand } } : {}),
+      ...(numericPrice ? { offers: {
         '@type': 'Offer',
-        url: p.url,
+        ...(isSearchUrl(p.url) ? {} : { url: p.url }),
         priceCurrency: 'USD',
-        ...(numericPrice ? { price: numericPrice } : {}),
+        price: numericPrice,
         availability: 'https://schema.org/InStock',
         seller: { '@type': 'Organization', name: p.retailer },
-      } }),
+      } } : {}),
       // aggregateRating removed — ratingCount is Amazon data, not first-party
       ...(p.rating ? {
         review: {
@@ -310,13 +313,14 @@ export function productSchema(opts: {
     name:          opts.name,
     description:   opts.description,
     image:         opts.image ?? `https://www.cubicalgolfer.com/images/og-image.jpg`,
-    brand:         opts.brand ? { '@type': 'Brand', name: opts.brand } : undefined,
-    ...(isSearchUrl(opts.url) ? {} : { offers: {
+    ...((brandFor(opts.name) ?? opts.brand) ? { brand: { '@type': 'Brand', name: brandFor(opts.name) ?? opts.brand } } : {}),
+    ...(opts.price ? { offers: {
       '@type':      'Offer',
-      url:          opts.url,
+      ...(isSearchUrl(opts.url) ? {} : { url: opts.url }),
       priceCurrency:'USD',
-      price:         opts.price?.replace(/[^0-9.]/g, '') ?? '0',
-    } }),
+      price:         opts.price.replace(/[^0-9.]/g, ''),
+      availability: 'https://schema.org/InStock',
+    } } : {}),
   };
 }
 
@@ -443,8 +447,10 @@ export function reviewSchema(article: Article): object | null {
     .replace(/\s*\d{4}\s*$/, '')
     .trim();
 
-  // Extract brand (first word of product name)
-  const brand = productName.split(/\s+/)[0];
+  // B7: resolve the real manufacturer instead of taking the first token of the
+  // product name. Returns undefined for generic accessories, in which case the
+  // brand property is omitted entirely rather than emitting a junk value.
+  const brand = brandFor(productName) ?? brandFor((article as any).quickAnswerProduct);
 
   // Strip HTML from bottomLine for reviewBody
   const reviewBody = (article.bottomLine || article.description || '')
@@ -471,17 +477,17 @@ export function reviewSchema(article: Article): object | null {
       '@type': 'Product',
       name: productName,
       description: reviewBody.slice(0, 200),
-      brand: { '@type': 'Brand', name: brand },
+      ...(brand ? { brand: { '@type': 'Brand', name: brand } } : {}),
       image: image,
       ...(aff ? {
-        ...(isSearchUrl(aff.url) ? {} : { offers: {
+        ...(priceNum ? { offers: {
           '@type': 'Offer',
-          url: aff.url,
+          ...(isSearchUrl(aff.url) ? {} : { url: aff.url }),
           priceCurrency: 'USD',
           price: priceNum,
           availability: 'https://schema.org/InStock',
           seller: { '@type': 'Organization', name: aff.retailer || 'Amazon' },
-        } }),
+        } } : {}),
       } : {}),
     },
     reviewRating: {
@@ -567,8 +573,12 @@ export function buyingGuideProductSchema(
   // Fall back to the affiliate key whenever the heading did not resolve to a
   // product. The affiliate key IS the product being linked, so it is always
   // the more accurate name.
+  // Round-1 D4-11: title-casing the key mangles model numbers ("Rapsodo Mlm2pro",
+  // "Precision Pro Nx9 Hd", "Lab Golf Df3"). PRODUCT_DISPLAY is the canonical
+  // display-name table — prefer it, and only fall back to humanising the key.
   const humanizedKey = affiliateKey
-    ? affiliateKey.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase())
+    ? (PRODUCT_DISPLAY[affiliateKey]
+       ?? affiliateKey.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()))
     : '';
   // Token-correspondence check. Word lists are brittle — "Best for 8-Foot
   // Ceilings" and "Our Testing Setup" both carry an affiliateKey but name no
@@ -593,16 +603,9 @@ export function buyingGuideProductSchema(
   productName = productName.replace(/[?:—–-]\s*$/, '').trim();
 
   // Derive brand from affiliate key (first word, or first two for compound brands)
-  const COMPOUND_BRANDS = ['shot-scope','blue-tees','lab-golf','square-golf','full-swing','rain-or','precision-pro','vice-golf','tour-edge','top-flite','ping-g','cobra-aerojet','cleveland-launcher'];
-  let brandName = '';
-  if (affiliateKey) {
-    const compound = COMPOUND_BRANDS.find(b => affiliateKey.startsWith(b));
-    if (compound) {
-      brandName = compound.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
-    } else {
-      brandName = (affiliateKey.split('-')[0] || '').replace(/\b\w/g, (c: string) => c.toUpperCase());
-    }
-  }
+  // B7: single explicit lookup (src/lib/brand-map.ts) resolves multi-word brands
+  // and preserves manufacturer casing. Undefined for generic accessories.
+  const brandName = brandFor(productName) ?? brandFor(affiliateKey) ?? '';
 
   return {
     '@context': 'https://schema.org',
@@ -635,17 +638,23 @@ export function buyingGuideProductSchema(
         },
       },
     } : {}),
-    ...(isSearchUrl(affiliateUrl) ? {} : { offers: {
+    // B8: previously offers were suppressed whenever the affiliate link was an
+    // Amazon *search* URL, which left 346 Product nodes with no price and no
+    // rich-result eligibility. price/priceCurrency/availability are what Google
+    // needs; `url` is optional. So always emit the offer when we know a price,
+    // and include `url` only when it resolves to a real product page — that
+    // keeps the Amazon ToS guard (never present a search page as a PDP offer).
+    ...(numericPrice ? { offers: {
       '@type': 'Offer',
-      url: affiliateUrl,
+      ...(isSearchUrl(affiliateUrl) ? {} : { url: affiliateUrl }),
       priceCurrency: 'USD',
-      ...(numericPrice ? { price: numericPrice } : {}),
+      price: numericPrice,
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
         name: affiliateRetailer || 'Amazon.com',
       },
-    } }),
+    } } : {}),
   };
 }
 

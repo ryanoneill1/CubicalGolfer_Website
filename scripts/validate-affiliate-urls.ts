@@ -14,7 +14,11 @@ import { AFFILIATE } from '../src/data/affiliate-links.ts';
 // 2-pack) went permanently "Currently unavailable" on Amazon while still serving as the
 // site's #1 glove pick on 13 pages. A tagged search URL converts; a dead PDP earns $0.
 // Replace with a live /dp/<ASIN>/ link and drop this back to 210 when one is confirmed.
-const SEARCH_URL_THRESHOLD = parseInt(process.env.ALLOW_SEARCH_URLS || '211', 10);
+// 2026-08 Round-2: 211 → 212. Two dead-ASIN links (Bushnell Pro XE, Blast Motion)
+// were promoted from search to real /dp/ PDPs (-2), while three new products with no
+// known ASIN (Srixon Z 785, Cobra DARKSPEED X, Ernest Sports ES14, FlightScope Mevo,
+// Bushnell Pro X3+ LINK) added tagged search fallbacks (+3). Net +1.
+const SEARCH_URL_THRESHOLD = parseInt(process.env.ALLOW_SEARCH_URLS || '212', 10);
 let searchUrls = 0;
 let missingUrls = 0;
 

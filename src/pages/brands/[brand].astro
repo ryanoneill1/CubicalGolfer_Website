@@ -18,9 +18,14 @@ const prefix = brand.slug + '-';
 
 // ── Derived data ──
 const productKeys = Object.keys(AFFILIATE as any).filter(k => k.startsWith(prefix));
+// Round-2 B5: two articles can share a quickAnswerProduct (e.g. the Launch Pro
+// review AND the multi-brand accuracy test), which rendered the same product
+// twice — once rated, once with an empty rating. Sort by rating first, then keep
+// only the first article per product so the populated row always wins.
 const reviews = (ARTICLES as any[])
   .filter(a => a.pageType === 'review' && a.quickAnswerProduct?.startsWith(prefix))
-  .sort((a, b) => (b.rating || 0) - (a.rating || 0));
+  .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+  .filter((a, i, arr) => arr.findIndex(x => x.quickAnswerProduct === a.quickAnswerProduct) === i);
 const comparisons = (COMPARISONS as any[])
   .filter(c => c.productA?.startsWith(prefix) || c.productB?.startsWith(prefix))
   .sort((a, b) => a.title.localeCompare(b.title));

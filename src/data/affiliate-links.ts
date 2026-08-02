@@ -44,6 +44,115 @@ export const AFFILIATE: Record<string, {
   cookieDays?: number;
 }> = {
 
+  // ── ADDED Aug 2026 — genuine sub-$300 drivers for /best-golf-driver-under-300/ ──
+  // Both verified live at Golf Galaxy at $299.99 on 2 Aug 2026.
+  'srixon-z-785': {
+    heroVerdictLine: 'A tour-profile, low-spin head at a clearance price — the most driver you can buy under $300.',
+    heroWhoFor: 'Players with an aggressive tempo who want low spin and a compact look at address.',
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fsrixon-z-785-driver-19clemz785drvrxxxdrv%2F19clemz785drvrxxxdrv',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=srixon+z+785+driver&tag=cubicalgolfer-20',
+    retailer: 'Golf Galaxy',
+    price: '~$299',
+    primaryRetailer: 'direct',
+    priceNote: 'Marked down from $499.99 — clearance pricing on a previous-generation head.',
+    label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/Srixon_Z_785_Driver.webp',
+    imgAlt: 'Srixon Z 785 Driver',
+    benefits: [
+        'Ti51AF titanium cup face for higher ball speed',
+        'Lightweight carbon crown moves weight to the perimeter for forgiveness',
+        'Quick Tune System — adjustable loft, lie and face angle',
+      ],
+  },
+
+  'cobra-darkspeed-x': {
+    heroVerdictLine: 'A 2024 Hot List Gold winner at half its launch price — the best speed-per-dollar under $300.',
+    heroWhoFor: 'Golfers who want a current-generation, low-spin head without paying current-generation money.',
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcobra-darkspeed-x-driver-23cbrmdrkspdxdrvldrv%2F23cbrmdrkspdxdrvldrv',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=cobra+darkspeed+x+driver&tag=cubicalgolfer-20',
+    retailer: 'Golf Galaxy',
+    price: '~$299',
+    primaryRetailer: 'direct',
+    priceNote: 'Marked down from $549.99. 2024 Golf Digest Hot List Gold winner.',
+    label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/Cobra_DARKSPEED_X_Driver.webp',
+    imgAlt: 'Cobra DARKSPEED X Driver',
+    benefits: [
+        '10% larger PWRSHELL L-cup face with A.I.-designed H.O.T. Face',
+        'PWR-BRIDGE weight sits low and forward for faster ball speed and less spin',
+        'Adjustable loft across 9.0°, 10.5° and 12.0° heads',
+      ],
+  },
+
+  // Pro X3+ LINK is a DIFFERENT model from the Pro X3 — kept as its own record so
+  // PlayBetter/Golf Galaxy results can no longer be conflated (Round-2 finding C1).
+  'bushnell-pro-x3-plus-link': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fbushnell-pro-x3-laser-rangefinder-24busuprx3lsrrngfrng%2F24busuprx3lsrrngfrng',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell+pro+x3+plus+link+rangefinder&tag=cubicalgolfer-20',
+    retailer: 'Golf Galaxy',
+    price: '~$599',
+    primaryRetailer: 'direct',
+    label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/Bushnell_Pro_X3+_LINK_Laser.webp',
+    imgAlt: 'Bushnell Pro X3+ LINK Laser Rangefinder',
+    benefits: [
+        'Adds Bushnell LINK connectivity to the Pro X3 platform',
+        'Slope-switch toggle for tournament-legal play',
+        'Locking magnetic cart mount',
+      ],
+  },
+
+  // ── ADDED Aug 2026 (Round-2 B2/B3) ────────────────────────────────────────
+  // B2: the ES14 section rendered with an image and a price but ZERO buy buttons
+  // after it was correctly unbound from the Swing Caddie SC4 Pro. It needs its
+  // own record so the section monetises the product it actually names.
+  'ernest-sports-es14': {
+    url: 'https://www.amazon.com/s?k=ernest+sports+es14+launch+monitor&tag=cubicalgolfer-20',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DErnest%2520Sports%2520ES14%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    retailer: 'Amazon',
+    price: '~$199',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/ernest-sports-es14.webp',
+    imgAlt: 'Ernest Sports ES14 launch monitor',
+    benefits: [
+        'Ball speed and estimated carry from Doppler radar',
+        'No subscription required for core numbers',
+        'The cheapest way to confirm your real club distances',
+      ],
+  },
+
+  // B3: the base Mevo — distinct from the ~$2,199 Mevo+. The "Most Portable" slot
+  // on /best-budget-launch-monitor/ was headed "Mevo" but linked the Mevo+.
+  'flightscope-mevo': {
+    url: 'https://www.amazon.com/s?k=flightscope+mevo+launch+monitor&tag=cubicalgolfer-20',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Flightscope*+Mevo*&ghref=2301%3A1333883',
+    retailer: 'Amazon',
+    price: '~$549',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/flightscope-mevo-gen2.webp',
+    imgAlt: 'FlightScope Mevo Gen2 portable launch monitor',
+    benefits: [
+        'Pocket-sized — the most portable unit in this guide',
+        'Ball speed, carry, launch angle and spin from a phone app',
+        'Works indoors with a net or outdoors on any range',
+      ],
+  },
+
   // ── RANGEFINDERS ─────────────────────────────────────────────────────────
 
   // Bushnell Tour V7 Shift — current generation, replaced the V7 Shift in 2026.
@@ -136,8 +245,7 @@ export const AFFILIATE: Record<string, {
 
   // Bushnell Pro XE — search (multiple bundle variants)
   'bushnell-pro-xe': {
-    url: 'https://www.amazon.com/s?k=Bushnell+Pro+XE+rangefinder&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Pro*+XE*&ghref=2301%3A1333883',
+    url: 'https://www.amazon.com/Bushnell-Pro-Golf-Laser-Rangefinder/dp/B07NYVC7SC?crid=88S17KL0OL28&dib_tag=se&keywords=Bushnell%2BPro%2BXE&qid=1785681998&sprefix=bushnell%2Bpro%2Bxe%2Caps%2C148&sr=8-1&linkCode=ll2&tag=cubicalgolfer-20&linkId=11a4b5da78c7cd4d66b38da92be6411b&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -185,7 +293,7 @@ export const AFFILIATE: Record<string, {
   // Garmin Approach S42 — search (multiple colourway variants)
   'garmin-approach-s42': {
     url: 'https://www.amazon.com/s?k=garmin-approach-s42&crid=2U6QI9J6CM5DG&sprefix=garmin-approach-s42%2Caps%2C241&linkCode=ll2&tag=cubicalgolfer-20&linkId=0ee9b47e59d438ed01242683974bb6f4&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+S42*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s42-golf-gps-smartwatch-21gmnupprchs42blcgps%2F21gmnupprchs42blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S42',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -291,11 +399,11 @@ export const AFFILIATE: Record<string, {
 
   // Cobra Aerojet Max — search (shaft/loft variants)
   'cobra-aerojet-max': {
-    url: 'https://www.amazon.com/s?k=cobra-aerojet-max&crid=269HHYD8SEIV8&sprefix=cobra-aerojet-max%2Caps%2C227&linkCode=ll2&tag=cubicalgolfer-20&linkId=b4b26642d6a85f8ba3f4b990168c5170&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0BJ4TQN5G',
+    url: 'https://www.amazon.com/Cobra-Golf-D7615LGR105A-Aerojet-Driver/dp/B0BJ4TQN5G?crid=20LUVHF17H85X&dib_tag=se&keywords=Cobra%2BAerojet%2BMax%2BDriver&qid=1785683075&sprefix=cobra%2Baerojet%2Bmax%2Bdriver%2Caps%2C329&sr=8-1&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=f8048f262070d2bb900a413149c7465b&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCobra%2520Aerojet%2520Max%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -333,8 +441,8 @@ export const AFFILIATE: Record<string, {
 
   // Cleveland Launcher XL2 Driver — budget forgiving driver
   'cleveland-launcher-xl2': {
-    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2&crid=2OYYW71NTMTFL&sprefix=cleveland+launcher+xl2%2Caps%2C302&linkCode=ll2&tag=cubicalgolfer-20&linkId=3b3e126df2448bd1026ec4b7f2a62a15&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Launcher%2520XL2%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    asin: 'B0CP9WFMJW',
+    url: 'https://www.amazon.com/Cleveland-Golf-Launcher-Graphite-Regular/dp/B0CP9WFMJW?crid=1LMWKUO4CG20Q&dib_tag=se&keywords=Cleveland%2BLauncher%2BXL2&qid=1785683001&sprefix=cleveland%2Blauncher%2Bxl2%2Caps%2C219&sr=8-1&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=b3cd6c7f0d39405e7cb6e120cccb8c88&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -769,8 +877,7 @@ export const AFFILIATE: Record<string, {
   // Blast Motion Golf Swing & Stroke Analyzer — ASIN B00UNFHKUK ✅ verified
   'blast-motion-sensor': {
     asin: 'B00UNFHKUK',
-    url: 'https://www.amazon.com/dp/B00UNFHKUK?&linkCode=ll2&tag=cubicalgolfer-20&linkId=0b47f0f86cbea45f9d7b37f657983ea9&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Blast*+Motion*+Sensor*&ghref=2301%3A1333883',
+    url: 'https://www.amazon.com/Blast-Analyzes-Highlights-Compatible-Technology/dp/B00UNFHKUK?crid=KDAFPPZX2G4L&dib_tag=se&keywords=Blast%2BMotion%2BSensor&qid=1785682045&sprefix=blast%2Bmotion%2Bsensor%2Caps%2C194&sr=8-2&linkCode=ll2&tag=cubicalgolfer-20&linkId=011cf9ee23c0ab94060616e2f785acc2&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1547,7 +1654,7 @@ export const AFFILIATE: Record<string, {
   'fiberbuilt-studio-mat': {
     asin: 'B09M46XSL4',
     url: 'https://www.amazon.com/dp/B09M46XSL4?tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFiberbuilt%2520Studio%2520Mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.playbetter.com/products/fiberbuilt-grass-series-practice-station?ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2403,11 +2510,11 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-big-bertha': {
-    url: 'https://www.amazon.com/s?k=callaway+big+bertha+driver&crid=2AEGJKHQ2WRM1&sprefix=callaway+big+%2Caps%2C249&linkCode=ll2&tag=cubicalgolfer-20&linkId=f4dfaed6b25f58149ac36736ce8fb6eb&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B08BQDPPS9',
+    url: 'https://www.amazon.com/Callaway-Bertha-Graphite-Regular-Degrees/dp/B08BQDPPS9?crid=IJS2IOANMCC5&dib_tag=se&keywords=Callaway%2BBig%2BBertha%2BB21%2BDriver&qid=1785683140&sprefix=callaway%2Bbig%2Bbertha%2Bb21%2Bdriver%2Caps%2C328&sr=8-1&linkCode=ll2&tag=cubicalgolfer-20&linkId=2f05dd5820757ea6bcffff91881eaf33&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Big%2520Bertha%2520B21%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -2531,7 +2638,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Orange*+Whip*+Trainer*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Forange-whip-swing-trainer-18jhaurngwhptrnrxtrn%2F18jhaurngwhptrnrxtrn%3FProduct%3DProductSuggest',
     retailer: 'Amazon',
     price: '~$109',
     priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
@@ -3104,7 +3211,7 @@ export const AFFILIATE: Record<string, {
 
   'garmin-approach-s12': {
     url: 'https://www.amazon.com/s?k=garmin-approach-s12&crid=QM7PZXRF034V&sprefix=garmin-approach-s12%2Caps%2C267&linkCode=ll2&tag=cubicalgolfer-20&linkId=2e044130b701e021c30adcf3297663bb&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+S12*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s12-golf-gps-smartwatch-21gmnupprchs12blcgps%2F21gmnupprchs12blcgps%3FenteredSearchTerm%3Dgarmin%2520approach%2520s12',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3335,11 +3442,11 @@ export const AFFILIATE: Record<string, {
   },
   'fiberbuilt-flight-deck': {
     url: 'https://www.amazon.com/dp/B06Y5NX641?&linkCode=ll2&tag=cubicalgolfer-20&linkId=4d5e63f98b55edd2c8a1582bbc86ca49&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFiberbuilt%2520Hitting%2520Mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.playbetter.com/products/fiberbuilt-grass-series-practice-station?ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$449',
+    retailer: 'Amazon', price: '~$499',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/fiberbuilt-flight-deck.webp', imgAlt: 'Fiberbuilt Flight Deck golf hitting mat',
     benefits: [
@@ -3595,7 +3702,7 @@ export const AFFILIATE: Record<string, {
   // ── NEW PRODUCTS (May 2026) ────────────────────────────────────────────
   'nikon-coolshot-50i': {
     url: 'https://www.amazon.com/s?k=nikon+coolshot+50i+rangefinder&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Nikon*+Coolshot*+50i*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fnikon-coolshot-50i-gii-rangefinder-25nknuclsht50grngrng%2F25nknuclsht50grngrng%3FenteredSearchTerm%3DNikon%2520Coolshot%252050i',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3739,8 +3846,8 @@ export const AFFILIATE: Record<string, {
 
   // ═══ CONTEXT-CORRECT PRODUCT VARIANTS — June 2026 ═══
   'cleveland-launcher-xl2-driver': {
-    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2+driver&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Launcher%2520XL2%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    asin: 'B0CP9WFMJW',
+    url: 'https://www.amazon.com/Cleveland-Golf-Launcher-Graphite-Regular/dp/B0CP9WFMJW?crid=1LMWKUO4CG20Q&dib_tag=se&keywords=Cleveland%2BLauncher%2BXL2&qid=1785683001&sprefix=cleveland%2Blauncher%2Bxl2%2Caps%2C219&sr=8-1&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=b3cd6c7f0d39405e7cb6e120cccb8c88&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -4307,7 +4414,7 @@ export const AFFILIATE: Record<string, {
   'bushnell-pro-x3': {
     asin: 'B0D6GVX8JZ',
     url: 'https://www.amazon.com/dp/B0D6GVX8JZ?tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Pro*+X3*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fbushnell-pro-x3-laser-rangefinder-22busuprx3lsrrngfrng%2F22busuprx3lsrrngfrng',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,

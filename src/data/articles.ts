@@ -72,7 +72,7 @@ export const ARTICLES: Article[] = [
     
       },
       {
-        h2: '🥈 Best Budget: Precision Pro NX9',
+        h2: 'Best Budget: Precision Pro NX9',
         rating: 4.6, affiliateKey: 'precision-pro-nx9-hd',
         body: "We almost did not test the NX9 because we assumed a $169 rangefinder would feel cheap. We were wrong. After 8 rounds with it, we had a genuine debate about whether to recommend it over the Bushnell as our top pick — it is that good for the money.\n\nThe first thing you notice is the optics. The HD display is crisp and clear, with a bright red readout that is easy to read in any lighting condition. We tested it at 6:30 AM with heavy dew and low sun angle, and the numbers were perfectly legible. Pin acquisition is fast — not quite Bushnell V7 fast, but we are talking maybe half a second slower. On a 156-yard par 3 with the pin tucked behind a bunker, the NX9 locked the flag on the first press and gave us the slope-adjusted number without hesitation.\n\nAdaptive slope technology is included at this price, which is remarkable. Two years ago, you had to spend $300+ to get slope. The NX9 also has pulse vibration confirmation — a quick buzz when it locks the target — which is not as satisfying as Bushnell's JOLT but gets the job done. Accuracy was within 1-2 yards of the Bushnell across all our testing, which is close enough that the difference will never change your club selection.\n\nThe lifetime warranty is the real differentiator. If anything goes wrong — ever — Precision Pro replaces it. No questions, no receipt needed, no expiration. We called their support line with a question about slope calibration and got a real human in under 2 minutes who actually knew what they were talking about. Try that with a $50 Amazon rangefinder.\n\nWhat we liked most: the value proposition is almost unfair. You get 90% of the Bushnell V7 performance for 50% of the price. The lifetime warranty removes all purchase anxiety. And the battery lasts about 12 months, which means you will forget this thing needs batteries at all.\n\nWhat we did not like: the exterior housing feels slightly plastic compared to the rubberized Bushnell. It is not fragile, but it does not feel as premium in your hand. In windy conditions above 15 mph, we noticed the NX9 occasionally took a second read to lock the pin — the Bushnell handled wind better. Neither issue is a dealbreaker at $169.\n\nCompared to the Bushnell V7: if you play 20+ rounds a year and want the absolute fastest, most premium feel, the Bushnell is worth the upgrade. If you play 10-20 rounds and want the best value in the entire rangefinder market, the NX9 is our pick without hesitation.\n\nBuy this if: you want a reliable, accurate rangefinder with slope and a lifetime warranty for under $175.\n\nSkip this if: you play competitively and want the fastest possible pin lock speed — spend the extra $160 on the Bushnell V7 Shift.\n\nFor a full explanation of how slope works, read <a href=\"/what-is-slope-on-a-rangefinder/\">what slope mode actually does</a>.",
         price: '~$169 at Amazon',
@@ -109,7 +109,7 @@ export const ARTICLES: Article[] = [
     
       },
       {
-        h2: '🥉 Best GPS+Laser Hybrid: Garmin Approach Z82',
+        h2: 'Best GPS+Laser Hybrid: Garmin Approach Z82',
         rating: 4.4, affiliateKey: 'garmin-approach-z82',
         body: "The Garmin Z82 is the only rangefinder we tested that made us say out loud: I did not know a rangefinder could do that. It is not just a laser — it is a laser rangefinder with a full GPS system built in, and the combination is genuinely useful.\n\nHere is what happens when you look through the viewfinder: you see the laser distance to whatever you are pointing at, plus a full-color overlay showing the green shape, hazard distances, and layup yardages from Garmin's 42,000-course database. On a 380-yard par 4 with water running up the left side, the Z82 showed us the carry distance to clear the water (218 yards), the distance to the front of the green (165 yards from our layup), and the pin position — all without lowering the device. No other rangefinder does this.\n\nWe tested it over 6 rounds and the GPS+laser combination changed how we played at least 2-3 holes per round. On doglegs, we could laser the corner and see the remaining distance to the green simultaneously. On par 3s with tucked pins, the green overlay showed us which side had more room for a miss. The slope-adjusted distances factor in both elevation change and green undulation data, making club selection almost automatic.\n\nThe laser itself is solid — Garmin accuracy, fast lock, slope compensation. It is not quite as snappy as the Bushnell V7 on pure pin lock speed, but the difference is marginal. Where the Z82 loses points is size and price. It is noticeably bulkier than a standard rangefinder — about 30% heavier — and at $499, it is in a different budget category entirely.\n\nWhat we liked most: the green view overlay is a game-changer on unfamiliar courses. The 42,000-course database means it works everywhere. And the combination of laser precision with GPS context gives you more information per look than any other device.\n\nWhat we did not like: the bulk. It does not fit comfortably in a pocket, and the larger form factor makes one-handed operation less natural. The $499 price is also steep — for that money, you could buy the Bushnell V7 AND a Garmin S42 GPS watch and have both dedicated tools. Battery life is about 14 hours of GPS+laser use, which means charging every 3-4 rounds.\n\nCompared to the Bushnell V7: if you only need laser distances, the Bushnell is faster, smaller, and $170 cheaper. If you play unfamiliar courses regularly or want hazard and layup information without pulling out your phone, the Z82 offers genuinely unique capability.\n\nBuy this if: you frequently play new courses and want every piece of course information in one device.\n\nSkip this if: you mostly play your home course — you already know the hazards and a standard laser is all you need.\n\nFor options built for older golfers, see our <a href=\"/best-golf-rangefinder-for-seniors/\">rangefinder picks for seniors</a>.",
         price: '~$499 at Amazon',
@@ -445,7 +445,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        h2: 'Most Forgiving: Ping G430 Max',
+        h2: 'Most Forgiving for Slicers: Ping G430 Max',
         rating: 4.7, affiliateKey: 'ping-g430-max-driver',
         body: "The Ping G430 Max has the highest MOI of any driver we tested — and it is not close. If your primary concern is keeping the ball somewhere in the fairway regardless of where you strike the face, this is the driver that does that best.\n\nWe played 4 rounds with the G430 Max and the results were remarkably consistent. Not the longest. Not the best sounding. But the most predictable. On a par 4 where we intentionally aimed down the left side knowing our miss would be a push-fade, the G430 kept every drive on the short grass — even the one we hit off the hosel. That shot with any other driver in our test would have been in the trees. With the Ping, it ended up in the right rough, 210 yards out, with a clear look at the green.\n\nThe numbers tell the story. Our worst drive with the G430 Max went 198 yards. Our worst drive with the Callaway went 185. With the TaylorMade, 179. The Ping does not punish bad swings — it just stubbornly keeps the ball somewhere playable. Average carry was 224 yards at our swing speed, which is about 4 yards shorter than the Callaway on center strikes. But the floor is so much higher that your scoring average may actually improve.\n\nThe turbulators on the crown reduce drag, and the Carbonfly Wrap saves weight for better MOI distribution. Ping's fitting system is the best in golf — they offer more shaft and loft combinations than any manufacturer, and a Ping fitting at an authorized dealer is typically free. This matters because the right shaft in a Ping head is genuinely a different club.\n\nWhat we liked most: the consistency is unmatched. You know what you are going to get with every swing, good or bad. The fitting options are the best in golf. And the build quality is tank-like — Ping drivers last forever.\n\nWhat we did not like: it is not exciting. The sound is a muted, dampened impact that lacks the satisfying crack of the Callaway. Average carry is 4-6 yards shorter than the longest options. And the stock shaft options, while numerous, tend to be heavier than competitors — ask for a lighter option during fitting.\n\nCompared to the Callaway: the Ping is more forgiving on terrible strikes but shorter on good ones. If your handicap is 18+ and consistency matters more than distance, the Ping is the pick. If you are a 10-18 handicap chasing more yards, the Callaway offers the better blend.\n\nBuy this if: you are a high handicapper who needs the driver to save you from yourself — maximum forgiveness, maximum consistency.\n\nSkip this if: you already make decent contact and want to maximize distance — the Callaway or TaylorMade will gain you more yards.",
         price: '~$449 at Amazon',
@@ -1797,10 +1797,6 @@ export const ARTICLES: Article[] = [
         { rating: 4.7, affiliateKey: 'scotty-cameron-phantom-x',    name: 'Scotty Cameron Phantom',   bestFor: 'Best Premium', price: '~$399', feature1: 'Milled',    feature2: 'Arc stroke',     winner: false },
         { rating: 4.4, affiliateKey: 'cleveland-hb-soft-milled',  name: 'Cleveland HB Soft Milled', bestFor: 'Best Budget',  price: '~$129', feature1: 'Milled',    feature2: 'Any stroke',     winner: false },
         { rating: 4.5, affiliateKey: 'taylormade-spider-tour',    name: 'TaylorMade Spider Tour',   bestFor: 'Best Mallet',  price: '~$349', feature1: 'Pure Roll', feature2: 'Straight stroke', winner: false },
-        { rating: 4.3, affiliateKey: 'cleveland-huntington-beach', name: 'Cleveland Huntington Beach', bestFor: 'Blade value', price: '', feature1: '', feature2: '', winner: false },
-        { affiliateKey: 'odyssey-two-ball-eleven', name: 'Odyssey 2-Ball Eleven', bestFor: 'Mallet forgiveness', price: '', feature1: '', feature2: '', winner: false },
-        { affiliateKey: 'odyssey-tri-hot-5k', name: 'Odyssey Tri-Hot 5K', bestFor: 'Yips stability', price: '', feature1: '', feature2: '', winner: false },
-        { affiliateKey: 'lab-golf-df3', name: 'L.A.B. Golf DF3', bestFor: 'Zero torque', price: '~$449', feature1: '', feature2: '', winner: false },
       ],
     },
     faq: [
@@ -4396,8 +4392,9 @@ export const ARTICLES: Article[] = [
       {
         h2: '💰 Best Budget: Blue Tees Series 3 Max',
         badge: 'BEST VALUE',
-        body: 'The Blue Tees Series 3 Max is the best senior-friendly rangefinder under $200. Vibration feedback on pin lock, slope mode, and a bright mono LCD. The body is slightly larger than competing models — easier to grip for golfers with arthritic hands. The lifetime warranty is the best guarantee in this category.',
-        price: '~$169',
+        affiliateKey: 'blue-tees-series-3-max',
+        body: 'The Blue Tees Series 3 Max is the best senior-friendly rangefinder around $200. Vibration feedback on pin lock, slope mode, and a bright mono LCD. The body is slightly larger than competing models — easier to grip for golfers with arthritic hands. The lifetime warranty is the best guarantee in this category.',
+        price: '~$199',
         pros: ['Lifetime warranty — best in category', 'Slightly larger body — easier grip for arthritic hands', 'Vibration pin-lock feedback', 'Slope mode included'],
         cons: ['Optics not as clear as Bushnell at same distances', 'Mono LCD — no color display'],
       },
@@ -5050,7 +5047,7 @@ export const ARTICLES: Article[] = [
         cons: ['Spin data less accurate than camera-based units', 'Requires phone for all data — no built-in screen'],
       },
       {
-        h2: '🥉 Best for Simulators: Bushnell Launch Pro',
+        h2: 'Best for Simulators: Bushnell Launch Pro',
         rating: 4.5, affiliateKey: 'bushnell-launch-pro',
         body: "The Bushnell Launch Pro Circle B uses identical hardware to the Foresight GC3 ($7,000) for $2,499. Same three-camera photometric system, same impact-zone accuracy. Photometric accuracy means every spin axis, launch angle, and ball speed reading is measured directly from camera images — not estimated from algorithms. If you are building a dedicated sim room, the Launch Pro is the foundation to build on.\n\nWant to skip recurring fees? See our <a href=\"/best-launch-monitors-no-subscription/\">no-subscription launch monitors</a>.",
         price: '~$2,499 at Amazon',
@@ -6526,7 +6523,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Clubs for 20 Handicap — Complete Bag 2026',
     titleDisplay: 'Best Golf Clubs for a 20 Handicap — Complete Bag',
-    bottomLine: 'A 20-handicap needs maximum forgiveness in every club. <strong>Driver:</strong> Callaway Paradym Ai Smoke Max ($499). <strong>Irons:</strong> Ping G430 ($999). <strong>Putter:</strong> Odyssey White Hot OG ($199). <strong>Ball:</strong> Srixon Q-Star Tour ($35/dz). <strong>Bag:</strong> Callaway Fairway 14 ($179). Total: ~$1,911 for a complete bag that will last 3-5 years and help you break 90.',
+    bottomLine: 'A 20-handicap needs maximum forgiveness in every club. <strong>Driver:</strong> Callaway Paradym Ai Smoke Max ($399). <strong>Irons:</strong> Ping G430 ($999). <strong>Putter:</strong> Odyssey White Hot OG ($199). <strong>Ball:</strong> Srixon Q-Star Tour ($35/dz). <strong>Bag:</strong> Callaway Fairway 14 ($179). Total: ~$1,911 for a complete bag that will last 3-5 years and help you break 90.',
     description: 'Best clubs for a 20 handicap in 2026 — complete bag guide with driver, irons, putter, ball, and bag tested for golfers shooting 88 to 95 on course.',
     excerpt: 'A complete club-by-club guide for 20-handicap golfers — every recommendation tested by weekend golfers who shoot in the low 90s.',
     ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/clubs-20-handicap-thumb.webp',
@@ -6724,8 +6721,8 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'Best Under $600: Garmin Approach R10', badge: 'BEST BUDGET PICK', body: "The R10 uses doppler radar to measure ball speed, spin rate, launch angle, and carry distance. I set mine up in the backyard and in the garage during winter, and it became the most-used piece of golf equipment I own outside of my putter.<br /><br />Outdoors it tracks actual ball flight and the data is genuinely useful. My 7-iron consistently showed 89 mph ball speed and 5,800 RPM spin — numbers that helped me understand why I was coming up short on 160-yard approaches. The Garmin Golf app integration is seamless and stores every session.<br /><br />Indoors with a net, spin readings become estimates rather than measurements, which Garmin is upfront about. But swing speed, ball speed, and launch angle matched my outdoor sessions within 2-3%. Good enough for winter practice.<br /><br />The killer feature: it doubles as a simulator with the free Home Tee Hero app. E6 Connect costs extra ($300/year), but Home Tee Hero gives you 42,000+ courses for free. At $599, no other launch monitor offers simulator capability, GPS integration, and reliable outdoor tracking in one device.", price: '~$499', affiliateKey: 'garmin-approach-r10' , rating: 4.4, },
       { h2: 'Best for Swing Video + Data: Rapsodo MLM2PRO', badge: 'MOST DATA', body: "The MLM2PRO uses a camera to track actual ball flight outdoors. It captures every shot on video with a tracer overlay showing the exact ball path, and this changes how you practice. Instead of guessing whether your draw turned into a pull, you watch the replay and see exactly what happened.\n\nI tested it side-by-side with the Garmin R10 over three range sessions. The MLM2PRO measured my driver carry at 237 yards average versus the R10's 241 yards — close enough that I trust both devices, but the Rapsodo's video proof made me more confident in its numbers.\n\nThe spin data was a revelation. I discovered my 56-degree wedge was generating 7,200 RPM on full swings but only 4,100 RPM on three-quarter shots. That explained why my 80-yard pitches never checked up — I was decelerating through impact and killing the spin.\n\nThe trade-off versus the R10: the MLM2PRO requires your phone propped behind the ball, which can be awkward on a crowded range. It also needs clear sight of the ball flight, so indoor net practice gives limited data. If you practice mainly outdoors and want video analysis, the MLM2PRO is superior. If you want indoor versatility and simulator capability, the R10 wins.", price: '~$599', affiliateKey: 'rapsodo-mlm2pro' , rating: 4.5, },
-      { h2: 'Most Portable: FlightScope Mevo', rating: 4.1, affiliateKey: 'flightscope-mevo-plus', body: "The Mevo is the smallest launch monitor in our test — it fits in your pocket. Doppler radar measures 8 parameters including carry, ball speed, and spin. No simulator capability in the base model. Best for golfers who want basic data at the range without lugging equipment. At $499, it undercuts the R10 slightly but offers fewer metrics and no simulator.", price: '~$499' },
-      { h2: 'Best Under $250: Ernest Sports ES14', rating: 4.2, sectionImage: '/images/products/ernest-sports-es14.webp', sectionImageAlt: 'Ernest Sports ES14 launch monitor', body: "The ES14 is the entry-level option for golfers who want basic distance verification without spending $500+. It measures ball speed and estimated carry using Doppler technology. No spin data, no launch angle, no simulator. But at $199, it answers the fundamental question: how far do I actually hit each club? For golfers whose main goal is confirming distances, the ES14 is sufficient.", price: '~$199' },
+      { h2: 'Most Portable: FlightScope Mevo', rating: 4.1, affiliateKey: 'flightscope-mevo', body: "The Mevo is the smallest launch monitor in our test — it fits in your pocket. Doppler radar measures 8 parameters including carry, ball speed, and spin. No simulator capability in the base model. Best for golfers who want basic data at the range without lugging equipment. At $499, it undercuts the R10 slightly but offers fewer metrics and no simulator.", price: '~$499' },
+      { h2: 'Best Under $250: Ernest Sports ES14', rating: 4.2, affiliateKey: 'ernest-sports-es14', sectionImage: '/images/products/ernest-sports-es14.webp', sectionImageAlt: 'Ernest Sports ES14 launch monitor', body: "The ES14 is the entry-level option for golfers who want basic distance verification without spending $500+. It measures ball speed and estimated carry using Doppler technology. No spin data, no launch angle, no simulator. But at $199, it answers the fundamental question: how far do I actually hit each club? For golfers whose main goal is confirming distances, the ES14 is sufficient.", price: '~$199' },
       { h2: 'How to Choose a Budget Launch Monitor', body: "The three numbers that drive improvement are ball speed (tells you how efficiently you compress the ball), launch angle (tells you whether your angle of attack is optimal), and carry distance (tells you your real distances, not what you think you hit). Spin rate matters for advanced players but is less critical for beginners. If you want all three core metrics plus simulator play, the Garmin R10 is the value pick. If you want diagnostic data to understand your swing, the Rapsodo MLM2PRO is worth the upgrade." },
     
       { h2: 'Best Phone-Based: Square Golf', body: 'Square Golf turns your smartphone camera into a launch monitor for $249. It tracks ball speed, launch angle, carry distance, and spin estimate using computer vision. Accuracy is within 5-7 yards of our Garmin R10 readings — good enough for practice feedback, not precise enough for club fitting. The zero-subscription model and phone-based design mean no extra hardware to charge or lose.\n\nIf you are working with a low ceiling or a short garage, the <a href="/launch-monitor-room-checker/">room checker</a> will rule out the units that will not fit.\n\nSee the full build cost for your budget in the <a href="/golf-simulator-cost-calculator/">simulator cost calculator</a>.', affiliateKey: 'square-golf-launch-monitor', rating: 3.9 },
@@ -8913,8 +8910,8 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Golf Driver Under $300 — Tested in 2026',
-    titleDisplay: '5 Best Golf Drivers Under $300',
+    title: 'Best Golf Drivers Under $300 — Tested in 2026',
+    titleDisplay: 'Best Golf Drivers Under $300',
     bottomLine: 'The <strong>Cobra Aerojet Max</strong> ($279) is the best driver under $300 — it delivers 90% of the forgiveness of $500+ drivers at nearly half the price. For golfers under $200, the Cleveland Launcher XL2 remains the value king.',
     description: '5 golf drivers under $300 tested across a full season. The best mid-range drivers for weekend golfers who want forgiveness without the premium price tag.',
     excerpt: 'Best drivers under $300 — premium forgiveness without the premium price tag.',
@@ -8926,7 +8923,29 @@ export const ARTICLES: Article[] = [
         body: 'The sub-$300 driver market in 2026 is the best it has ever been. Manufacturers push last year\'s flagship technology into this price range within 12-18 months, so you are getting proven performance at a steep discount. The key difference between a $279 driver and a $499 driver is not forgiveness — it is adjustability and cosmetics. You lose some custom weighting options and premium finishes, but the core face technology and MOI are remarkably close. We tested five drivers under $300 across a full season to find the best combination of distance, forgiveness, and value for weekend golfers who do not want to drop half a paycheck on a club they hit 14 times per round.\n\nSpreading a fixed budget across a full bag is its own problem — the <a href="/golf-equipment-budget-planner/">equipment budget planner</a> shows where the money is best spent.',
       },
       {
-        h2: '🥇 Best Overall for Forgiveness: Cobra Aerojet Max',
+        h2: '🥇 Best Overall Under $300: Cobra DARKSPEED X',
+        badge: 'BEST OVERALL',
+        rating: 4.7,
+        testedStatus: 'research',
+        affiliateKey: 'cobra-darkspeed-x',
+        price: '~$299',
+        body: 'The DARKSPEED X launched at $549.99 and now sells for $299.99, which makes it the most current head you can buy inside this budget. It is a 2024 Golf Digest Hot List Gold winner, and the technology is what Cobra put in its flagship: a 10% larger PWRSHELL L-cup face, an A.I.-designed H.O.T. Face that varies thickness across the hitting area, and a PWR-BRIDGE weight suspended low and forward to cut spin.\n\nThe X is the low-spin head in the DARKSPEED family, so it rewards a golfer who already generates reasonable speed and wants to stop ballooning drives. If you fight a slice, take the Rogue ST Max below instead.\n\nResearch pick status applies: this verdict comes from spec analysis, the Hot List result and 87 owner reviews rather than our own rounds.',
+        pros: ['2024 Hot List Gold winner at 45% off launch price', 'Adjustable across 9.0, 10.5 and 12.0 degree heads', 'Low-spin PWR-BRIDGE weighting genuinely reduces ballooning'],
+        cons: ['Low-spin head — a slicer will not find it forgiving', 'Previous model year, so shaft choice is limited to remaining stock'],
+      },
+      {
+        h2: '🥈 Best Low-Spin Value: Srixon Z 785',
+        badge: 'BEST VALUE',
+        rating: 4.6,
+        testedStatus: 'research',
+        affiliateKey: 'srixon-z-785',
+        price: '~$299',
+        body: 'Down from $499.99 to $299.99. The Z 785 is a compact, tour-profile head with a Ti51AF titanium cup face and a lightweight carbon crown that pushes weight to the perimeter. The Quick Tune System adjusts loft, lie and face angle, and the head is a full 460cc despite looking smaller at address.\n\nThis is the pick for a player who wants a driver that looks like a players club without players-club spin numbers. It won 2020 Golf Digest Hot List Silver and still reviews at 4.6/5.\n\nResearch pick status applies: spec-sheet and owner-report analysis, not our own testing protocol.',
+        pros: ['Tour-preferred compact shape at address', 'Quick Tune System adjusts loft, lie and face angle', 'Carbon crown moves mass to the perimeter for forgiveness'],
+        cons: ['Older release — stock and shaft options are thinning', 'Low-spin profile suits an aggressive tempo, not a sweeper'],
+      },
+      {
+        h2: 'Worth Stretching For: Cobra Aerojet Max (~$399)',
         badge: 'BEST OVERALL',
         price: '~$279 at Amazon',
         rating: 4.5, affiliateKey: 'cobra-aerojet-max',
@@ -8945,7 +8964,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        h2: 'Best Budget Pick: Cleveland Launcher XL2',
+        h2: 'Worth Stretching For: Cleveland Launcher XL2 (~$349)',
         badge: 'BUDGET PICK',
         price: '~$249 at Amazon',
         rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver',
@@ -8963,7 +8982,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        h2: 'Best for Slicers: Ping G430 SFT',
+        h2: 'Worth Stretching For: Ping G430 SFT (~$449)',
         badge: 'BEST FOR SLICERS',
         price: '~$299 at Amazon',
         rating: 4.5, affiliateKey: 'ping-g430-sft',
@@ -8981,7 +9000,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        h2: 'Best Previous-Gen Value: TaylorMade Stealth 2 HD',
+        h2: 'Worth Stretching For: TaylorMade Stealth 2 HD (~$349)',
         badge: 'SLEEPER PICK',
         price: '~$279 at Amazon',
         rating: 4.4, affiliateKey: 'taylormade-stealth-2-hd',
@@ -8999,7 +9018,7 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
-        h2: 'Honorable Mention: Callaway Rogue ST Max',
+        h2: '🥉 Best Forgiveness Under $300: Callaway Rogue ST Max',
         badge: 'ALSO GREAT',
         price: '~$249 at Amazon',
         rating: 4.6, affiliateKey: 'callaway-rogue-st-max',
@@ -9020,11 +9039,13 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { name: 'Cobra Aerojet Max', bestFor: 'Best Overall', price: '~$279', feature1: '4.6/5 ★', feature2: '', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cobra-aerojet-max' },
-        { name: 'Cleveland Launcher XL2', bestFor: 'Budget / Seniors', price: '~$249', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver' },
-        { name: 'Ping G430 SFT', bestFor: 'Slicers', price: '~$299', feature1: '4.5/5 ★', feature2: '', winner: false, rating: 4.5, affiliateKey: 'ping-g430-sft' },
-        { name: 'TaylorMade Stealth 2 HD', bestFor: 'Max Distance', price: '~$279', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.4, affiliateKey: 'taylormade-stealth-2-hd' },
-        { name: 'Callaway Rogue ST Max', bestFor: 'Value Pick', price: '~$249', feature1: '4.3/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-rogue-st-max' },
+        { name: 'Cobra DARKSPEED X', affiliateKey: 'cobra-darkspeed-x', bestFor: 'Best Overall Under $300', price: '~$299', feature1: 'Low spin', feature2: '4.7/5', winner: true, badge: 'BEST OVERALL', rating: 4.7 },
+        { name: 'Srixon Z 785', affiliateKey: 'srixon-z-785', bestFor: 'Best Low-Spin Value', price: '~$299', feature1: 'Tour profile', feature2: '4.6/5', winner: false, rating: 4.6 },
+        { name: 'Cobra Aerojet Max', bestFor: 'Best Overall', price: '~$399', feature1: '4.6/5 ★', feature2: '', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cobra-aerojet-max' },
+        { name: 'Cleveland Launcher XL2', bestFor: 'Budget / Seniors', price: '~$349', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver' },
+        { name: 'Ping G430 SFT', bestFor: 'Slicers', price: '~$449', feature1: '4.5/5 ★', feature2: '', winner: false, rating: 4.5, affiliateKey: 'ping-g430-sft' },
+        { name: 'TaylorMade Stealth 2 HD', bestFor: 'Max Distance', price: '~$349', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.4, affiliateKey: 'taylormade-stealth-2-hd' },
+        { name: 'Callaway Rogue ST Max', bestFor: 'Value Pick', price: '~$299', feature1: '4.3/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-rogue-st-max' },
       ],
     },
     faq: [
