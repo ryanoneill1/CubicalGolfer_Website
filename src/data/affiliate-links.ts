@@ -1724,11 +1724,12 @@ export const AFFILIATE: Record<string, {
   },
   'square-golf-launch-monitor': {
     url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=square*+golf*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=square+golf+launch+monitor&tag=cubicalgolfer-20',
     program: 'playbetter',
     commissionPct: 5,
     cookieDays: 30,
     retailer: 'PlayBetter',
-    price: '~$499',
+    price: '~$699',
     primaryRetailer: 'direct',
     priceNote: 'Steady price — occasional $25-50 off during Prime Day and Black Friday.',
     label: 'See Today\'s Price →',
@@ -3279,24 +3280,6 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/mevo-gen2.webp',
     imgAlt: 'FlightScope Mevo Gen2 launch monitor',
   },
-  'square-golf-monitor': {
-    url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=square*+golf*&ghref=2301%3A1333883',
-    program: 'playbetter',
-    commissionPct: 5,
-    cookieDays: 30,
-    retailer: 'PlayBetter',
-    price: '~$699',
-    primaryRetailer: 'direct',
-    priceNote: 'Steady price — occasional $25-50 off during Prime Day and Black Friday.',
-    label: 'Check Price at PlayBetter →',
-    imgSrc: '/images/products/square-golf-monitor.webp',
-    imgAlt: 'Square Golf launch monitor',
-    benefits: [
-      'True camera ball + club data at $499',
-      'Needs just 6 feet of ball flight — apartment-ready',
-      'Anchors our under-$1,000 sim builds',
-    ],
-  },
   'kvv-push-cart': {
     url: 'https://www.amazon.com/s?k=kvv-push-cart&crid=1U001KIXZGN4C&sprefix=kvv-push-cart%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=7b216cbaa0777f33c9ab5dacd094e502&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DKVV%2520Push%2520Cart%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -4070,24 +4053,6 @@ export const AFFILIATE: Record<string, {
       'Best-looking hybrid at address',
     ],
   },
-  'square-golf': {
-    url: 'https://www.amazon.com/s?k=square+golf+launch+monitor&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Square*+Golf*&ghref=2301%3A1333883',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon',
-    imgSrc: '/images/products/square-golf.webp', imgAlt: 'Square Golf product image',
-    price: '~$300',
-    priceNote: 'Newer brand — prices may shift as they establish market position.',
-    label: 'See Today\'s Price →',
-    benefits: [
-      'True camera ball + club data at $499',
-      'Needs just 6 feet of ball flight — apartment-ready',
-      'Anchors our under-$1,000 sim builds',
-    ],
-  },
-
   // ═══ APPAREL — Shirts ═══
   'nike-dri-fit-victory-polo': {
     url: `https://www.amazon.com/s?k=nike-dri-fit-victory-golf-polo&tag=cubicalgolfer-20`,
