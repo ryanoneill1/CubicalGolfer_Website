@@ -102,3 +102,35 @@ if (!rootCss.includes('CONTRAST BULLETPROOFING')) {
 
 if (warnings > 0) { console.error(`\n❌ ${warnings} contrast problem(s).`); process.exit(1); }
 console.log('✅ Contrast checks passed (gold-on-light + dark-on-dark pair scan + bulletproof block present).');
+
+// ── FTC disclosure legibility (added Aug 2026) ───────────────────────────────
+// The early-disclosure paragraph shipped with inline colour:var(--muted) and a
+// var(--green) link. Inside the hero blocks that is dark-on-dark: 2.12:1 for the
+// text and 1.00:1 for the link — literally invisible on 205 of 268 pages.
+// FTC 16 CFR 255 requires the disclosure to be clear and conspicuous, so an
+// inline colour on this element is now a build failure. Colours belong in
+// global.css where they can adapt to the background.
+{
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  const comp = path.join(process.cwd(), 'src', 'components', 'EarlyDisclosure.astro');
+  if (fs.existsSync(comp)) {
+    const src = fs.readFileSync(comp, 'utf8');
+    const tag = src.match(/<p class="early-disclosure"[^>]*>/)?.[0] ?? '';
+    if (/style\s*=/.test(tag) && /color\s*:/.test(tag)) {
+      console.error('\n❌ EarlyDisclosure carries an inline colour. It renders on dark hero');
+      console.error('   backgrounds, where a hard-coded colour becomes unreadable.');
+      console.error('   Style it from .early-disclosure in global.css instead.\n');
+      process.exit(1);
+    }
+  }
+  const css = path.join(process.cwd(), 'src', 'styles', 'global.css');
+  const g = fs.readFileSync(css, 'utf8');
+  for (const sel of ['.hero .early-disclosure', '.cat-hero .early-disclosure', '.art-hero .early-disclosure']) {
+    if (!g.includes(sel)) {
+      console.error(`\n❌ Missing dark-background rule "${sel}" — the FTC disclosure would render dark-on-dark there.\n`);
+      process.exit(1);
+    }
+  }
+  console.log('✅ FTC disclosure: no inline colour, dark-hero overrides present for all 3 hero types.');
+}

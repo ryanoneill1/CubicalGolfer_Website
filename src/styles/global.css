@@ -1912,3 +1912,20 @@ main section > p, main section ul, main section ol {
 
 /* ── Prompt-6(c): readable measure + body size inside articles (tables/images unaffected) ── */
 .article-card p, .article-card li { max-width: 68ch; font-size: 17px; }
+
+/* ── FTC early disclosure ──────────────────────────────────────────────────
+   Must be legible wherever it renders. It previously carried inline
+   colour:var(--muted) with a var(--green) link, which is dark-on-dark inside
+   the hero blocks — invisible on 205 pages. Inline styles beat class
+   selectors, so the colours live here instead and adapt to the background.
+   FTC 16 CFR 255 requires the disclosure be clear and conspicuous. */
+.early-disclosure { margin: 8px 0 0; font-size: 16px; color: var(--muted); }
+.early-disclosure a { color: var(--green); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Dark hero backgrounds — white text, gold link */
+.hero .early-disclosure,
+.cat-hero .early-disclosure,
+.art-hero .early-disclosure { color: rgba(255,255,255,.88); }
+.hero .early-disclosure a,
+.cat-hero .early-disclosure a,
+.art-hero .early-disclosure a { color: var(--gold); }
