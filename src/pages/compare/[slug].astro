@@ -10,6 +10,7 @@ import type { ComparisonProduct } from '../../lib/schema';
 import { getAffiliateLink, AFFILIATE } from '../../data/affiliate-links';
 import { productName, PRODUCT_DISPLAY } from '../../data/product-names';
 import { getProductImage } from '../../lib/image-map';
+import { AUTHOR_PROFILE } from '../../data/author';
 import type { Comparison } from '../../data/types';
 
 export async function getStaticPaths() {
@@ -111,7 +112,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       <div style="flex:1">
         <span class="author-name">
           <a href="/about/">Ryan O.</a>
-          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">12-handicap weekend golfer, Chicago, IL</span>
+          <span style="font-size:11px;font-weight:400;color:#556B5C;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
         </span>
         <span class="author-meta">
           📅 Updated: {c.dateModified} &nbsp;·&nbsp;
@@ -133,9 +134,9 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
     <p class="trust-card__heading">Why Trust This Comparison</p>
     <ul class="trust-card__list">
       <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
-      <li><strong>20+ real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
+      <li><strong>{AUTHOR_PROFILE.testingRounds} real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
       <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
-      <li><strong>12-handicap perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
+      <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
     </ul>
     <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
   </div>

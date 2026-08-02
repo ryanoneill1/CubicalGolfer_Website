@@ -656,7 +656,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
   'bushnell-v6-vs-nx9': [
     { slug: '/bushnell-tour-v6-shift-review/', label: 'Bushnell V6 Review' },
-    { slug: '/precision-pro-nx9-review/', label: 'NX9 HD Review' },
+    { slug: '/precision-pro-nx9-review/', label: 'NX9 Review' },
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
     { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
   ],

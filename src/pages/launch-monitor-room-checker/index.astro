@@ -60,7 +60,7 @@ const monitors = [
     affiliateKey: 'bushnell-launch-pro', reviewSlug: '/bushnell-launch-pro-review/',
     whyFits: 'Tour-level accuracy with the same compact footprint as SkyTrak+.',
     tradeoff: 'Most expensive option. Data quality exceeds what most weekend golfers need.',
-    skipIf: 'budget is a concern — a $600 Garmin R10 gives weekend golfers 90% of the useful data',
+    skipIf: 'budget is a concern — a $499 Garmin R10 gives weekend golfers 90% of the useful data',
   },
   {
     name: 'Garmin Approach R50', type: 'Dual Doppler', minCeiling: 7.5, minDepth: 14, behindBall: 8,
@@ -130,6 +130,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
           const aff = getAffiliateLink(m.affiliateKey);
           return (
             <div class="rm-card" data-ceiling={m.minCeiling} data-depth={m.minDepth} data-behind={m.behindBall} data-idx={idx}
+              data-tier={m.type === 'Photometric' ? 3 : m.type === 'Dual Doppler' ? 2 : m.type === 'Camera + Doppler' ? 1 : 0}
                  style="padding:20px;border:2px solid var(--border);border-radius:12px;background:#fff;transition:opacity .2s,border-color .2s;">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
                 <div style="flex:1;min-width:220px;">
@@ -162,7 +163,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         <div style="font-size:16px;line-height:1.7;">
           <p style="margin:0 0 6px;"><strong>Low ceiling (under 8ft):</strong> Use a <a href="/garmin-approach-r10-review/" style="color:var(--green);font-weight:600;">Garmin R10</a> and stick to irons and wedges. You will get full data on 80% of your bag — the clubs where data matters most for improvement.</p>
           <p style="margin:0 0 6px;"><strong>Short room (under 12ft):</strong> A <a href="/rapsodo-mlm2pro-review/" style="color:var(--green);font-weight:600;">Rapsodo MLM2Pro</a> needs only 3ft behind the ball. Pair it with a portable net and you can practice in a spare bedroom.</p>
-          <p style="margin:0 0 6px;"><strong>Both tight:</strong> Consider an outdoor-only setup. The <a href="/garmin-approach-r10-review/" style="color:var(--green);font-weight:600;">Garmin R10</a> ($600) at the range gives you all the practice data without any room constraints.</p>
+          <p style="margin:0 0 6px;"><strong>Both tight:</strong> Consider an outdoor-only setup. The <a href="/garmin-approach-r10-review/" style="color:var(--green);font-weight:600;">Garmin R10</a> ($499) at the range gives you all the practice data without any room constraints.</p>
         </div>
       </div>
     </section>
@@ -226,6 +227,8 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       var fitCount = 0;
       var bestFitIdx = -1;
       var bestMargin = -999;
+      var bestTier = -1;
+      var bestCeil = 999;
 
       // First pass: determine fits and find best fit
       cards.forEach(function(card, idx){
@@ -235,8 +238,23 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         card.dataset.fits = fits ? '1' : '0';
         if (fits) {
           fitCount++;
-          var margin = (ceil - minCeil) + (depth - minDepth);
-          if (margin > bestMargin) { bestMargin = margin; bestFitIdx = idx; }
+          // Score must actually depend on the user's room, so use PROPORTIONAL
+          // headroom rather than an absolute margin (an absolute margin cancels
+          // the user's dimensions algebraically and always crowns the same unit).
+          // Headroom is capped so a cavernous room doesn't drown out data quality.
+          var ceilRatio  = Math.min((ceil  - minCeil)  / minCeil,  0.40);
+          var depthRatio = Math.min((depth - minDepth) / minDepth, 0.40);
+          var tier = parseFloat(card.dataset.tier) || 0;     // data-quality tier
+          var margin = (ceilRatio * 1.25) + (depthRatio * 1.25) + (tier * 0.20);
+          // Explicit, deterministic tie-break: higher tier wins, then more headroom,
+          // then lower minimum ceiling. Never fall through to DOM order silently.
+          if (margin > bestMargin + 1e-9) {
+            bestMargin = margin; bestFitIdx = idx; bestTier = tier; bestCeil = minCeil;
+          } else if (Math.abs(margin - bestMargin) <= 1e-9) {
+            if (tier > bestTier || (tier === bestTier && minCeil < bestCeil)) {
+              bestMargin = margin; bestFitIdx = idx; bestTier = tier; bestCeil = minCeil;
+            }
+          }
         }
       });
 

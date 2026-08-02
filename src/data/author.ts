@@ -27,7 +27,8 @@ export const AUTHOR_PROFILE = {
   city:           'Chicago, IL',
   roundsPerYear:  '25–40',
   playingSince:   2010,
-  testingMin:     10,           // minimum rounds per product review
+  testingMin:     20,           // minimum rounds per product review
+  testingRounds:  '20+',        // CANONICAL per-product rounds claim — used everywhere
 
   // ────────────────────────────────────────────────────────
   // WHAT'S IN THE BAG — fill these with YOUR real clubs and
@@ -50,10 +51,10 @@ export const AUTHOR_PROFILE = {
     wedges:      'Cleveland RTX 6 52°/56°',
     putter:      'Odyssey White Hot OG #7',
     ball:        'Srixon Q-Star Tour',
-    rangefinder: 'Bushnell Tour V6 Shift',
+    rangefinder: 'Bushnell Tour V7 Shift',
   },
-  testingLabel:   '10+ real rounds per product',
-  siteTestTotal:  '40+',        // total rounds across all reviews combined
+  testingLabel:   '20+ real rounds per product',
+  siteTestTotal:  '20+',        // deprecated alias — kept equal to testingRounds to prevent drift
   gearPolicy:     'No freebies, no manufacturer loans.',
   bio:            'Playing since 2010. Tests every piece of gear on his own dime across 25–40 rounds a year at Harborside Golf Course in Chicago, IL. No freebies, no manufacturer loans.',
   jobTitle:       '10-Handicap Weekend Golfer & Gear Editor',

@@ -47,19 +47,22 @@ export const AFFILIATE: Record<string, {
   // ── RANGEFINDERS ─────────────────────────────────────────────────────────
 
   // Bushnell Tour V6 Shift — ASIN B0C4PN57LJ ✅ verified
+  // Bushnell Tour V6 Shift — superseded by the V7 Shift (2026). Still sold new at
+  // Golf Galaxy ($349.99, in stock). Bushnell's own /golf-laser-rangefinders/ page no
+  // longer lists the V6, so the primary CTA now routes to a retailer that stocks it.
   'bushnell-tour-v6-shift': {
-    heroVerdictLine: '★ Our #1 pick after 40+ rounds — tested against 5 rangefinders, nothing locks the pin faster.',
-    heroWhoFor: 'Weekend golfers who want one rangefinder that does everything and lasts 5+ years.',
-    url: 'https://bushnell.pxf.io/3kRRkX',
-    program: 'bushnell',
+    heroVerdictLine: '★ Our tested pick after 20+ rounds — nothing in this price band locks the pin faster.',
+    heroWhoFor: 'Weekend golfers who want a proven rangefinder and do not need the newest generation.',
+    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBushnell%2BTour%2BV6%2BShift%26storeId%3D10701%26catalogId%3D12301%26langId%3D-1',
+    program: 'golfgalaxy',
     commissionPct: 5,
     cookieDays: 30,
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Tour*+V6*+Shift*&ghref=2301%3A1333883',
-    retailer: 'Bushnell',
-    price: '~$329',
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell+tour+v6+shift+rangefinder&tag=cubicalgolfer-20',
+    retailer: 'Golf Galaxy',
+    price: '~$349',
     primaryRetailer: 'direct',
-    priceNote: 'Stable price year-round. Previous models drop when new ones release.',
-    label: 'Check Price at Bushnell →',
+    priceNote: 'Superseded by the Tour V7 Shift — expect the V6 to drift toward clearance pricing.',
+    label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/bushnell-tour-v6-shift.webp',
     imgAlt: 'Bushnell Tour V6 Shift Golf Rangefinder',
     benefits: [
@@ -69,7 +72,33 @@ export const AFFILIATE: Record<string, {
       ],
   },
 
-  // Precision Pro NX9 HD (slope switch model) — ASIN B0DP3GL8RN ✅ verified
+  // Bushnell Tour V7 Shift — current generation (replaced the V6 Shift in 2026).
+  // NOT yet in our test bag; surfaced as a RESEARCH PICK so no hands-on claim is made.
+  // NOTE FOR RYAN: no real V7 product photo on file yet — imgSrc deliberately omitted
+  // rather than reusing the V6 photo. Add /images/products/bushnell-tour-v7-shift.webp
+  // when you have one and set imgSrc below.
+  'bushnell-tour-v7-shift': {
+    heroVerdictLine: 'Bushnell\'s current-generation Tour rangefinder, and the direct replacement for the V6 Shift.',
+    heroWhoFor: 'Golfers who want the newest Bushnell laser rather than the outgoing generation.',
+    url: 'https://bushnell.pxf.io/3kRRkX',
+    program: 'bushnell',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Tour*+V7*+Shift*&ghref=2301%3A1333883',
+    retailer: 'Bushnell',
+    price: '~$399',
+    primaryRetailer: 'direct',
+    priceNote: 'Current generation — priced at $399.99 direct from Bushnell.',
+    label: 'Check Price at Bushnell →',
+    benefits: [
+        'PinSeeker with Visual JOLT flag confirmation',
+        'Slope Switch — legal toggle for tournament play',
+        'Current-generation replacement for the Tour V6 Shift',
+      ],
+  },
+
+
+  // Precision Pro NX9 (slope switch model) — ASIN B0DP3GL8RN ✅ verified
   'precision-pro-nx9-hd': {
     asin: 'B0DP3GL8RN',
     url: 'https://www.amazon.com/dp/B0DP3GL8RN?&linkCode=ll2&tag=cubicalgolfer-20&linkId=adcfb2c9ee28bb4bdd808a2f066fdb4b&language=en_US&ref_=as_li_ss_tl',
@@ -78,11 +107,11 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Precision*+Pro*+NX9*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$169',
+    price: '~$219',
     priceNote: 'Stable price year-round. Previous models drop when new ones release.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/precision-pro-nx9-hd.webp',
-    imgAlt: 'Precision Pro NX9 HD Golf Rangefinder',
+    imgAlt: 'Precision Pro NX9 Golf Rangefinder',
     benefits: [
         'Adaptive slope technology adjusts for incline',
         '1-year battery life — forget it\'s in your bag',
@@ -98,7 +127,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$149',
+    price: '~$199',
     priceNote: 'Consumable — buy in multi-packs for best per-unit price.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/blue-tees-series-3-max.webp',
@@ -230,7 +259,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 30,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Ion*+Elite*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
-    price: '~$149',
+    price: '~$219',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'Check Price at Bushnell →',
     imgSrc: '/images/products/bushnell-ion-elite.webp',
@@ -245,7 +274,7 @@ export const AFFILIATE: Record<string, {
 
   // ── DRIVERS ──────────────────────────────────────────────────────────────
 
-  // Callaway Paradym AI Smoke Max (2024) — search (shaft/loft variants)
+  // Callaway Paradym Ai Smoke Max (2024) — search (shaft/loft variants)
   'callaway-paradym-ai-smoke-max': {
     url: 'https://www.amazon.com/s?k=callaway-paradym-ai-smoke-max&crid=92H1TORWBRWG&sprefix=callaway-paradym-ai-smoke-max%2Caps%2C273&linkCode=ll2&tag=cubicalgolfer-20&linkId=d31411ba8352b4d9f7296f9db3a8a1cc&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -253,12 +282,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Paradym%2520AI%2520Smoke%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$499',
+    price: '~$399',
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-paradym-ai-smoke-max.webp',
-    imgAlt: 'Callaway Paradym AI Smoke Max Driver',
+    imgAlt: 'Callaway Paradym Ai Smoke Max Driver',
     benefits: [
       'AI-designed face optimized for consistent ball speed',
       'Jailbreak + Batwing tech for stability on mishits',
@@ -293,7 +322,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCobra%2520Aerojet%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCobra%2520Aerojet%2520Max%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -346,7 +375,7 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BALLS ───────────────────────────────────────────────────────────
 
-  // Titleist Pro V1 (2025 gen, 25th anniversary) — ASIN B0BR2YF8T6 ✅ verified
+  // Titleist Pro V1 (2026 gen, 25th anniversary) — ASIN B0BR2YF8T6 ✅ verified
   'titleist-pro-v1': {
     heroVerdictLine: '★ Still the gold standard — the ball every other brand is trying to beat in 2026.',
     heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
@@ -361,7 +390,7 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Best value: buy 2+ dozen during Prime Day or Black Friday.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-pro-v1.webp',
-    imgAlt: 'Titleist Pro V1 Golf Balls 2025',
+    imgAlt: 'Titleist Pro V1 Golf Balls 2026',
     benefits: [
         'Soft feel with exceptional greenside spin',
         'Consistent distance across all shot types',
@@ -429,7 +458,6 @@ export const AFFILIATE: Record<string, {
   // Vice Pro — sold direct-to-consumer; not on Amazon as brand-sold
   'vice-pro': {
     url: 'https://www.amazon.com/s?k=vice-pro&crid=36ML87WOQ3K5&sprefix=vice-pro%2Caps%2C237&linkCode=ll2&tag=cubicalgolfer-20&linkId=1feedb1220ad3038e570b0d0b7c74ea1&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVice%2520Pro%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -468,7 +496,7 @@ export const AFFILIATE: Record<string, {
 
   // ── IRONS ────────────────────────────────────────────────────────────────
 
-  // Callaway Paradym AI Smoke Max Irons (2024) — search (shaft/set config)
+  // Callaway Paradym Ai Smoke Max Irons (2024) — search (shaft/set config)
   'callaway-paradym-ai-smoke-max-irons': {
     url: 'https://www.amazon.com/s?k=callaway-paradym-ai-smoke-max-irons&crid=28O9JXUM3YLK4&sprefix=callaway-paradym-ai-smoke-max-irons%2Caps%2C223&linkCode=ll2&tag=cubicalgolfer-20&linkId=9af1d0fce2ba7b72cb5355dbe4525b99&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -480,7 +508,7 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-paradym-ai-smoke-max-irons.webp',
-    imgAlt: 'Callaway Paradym AI Smoke Max Irons',
+    imgAlt: 'Callaway Paradym Ai Smoke Max Irons',
   
     benefits: [
       'AI-designed Flash Face for distance on every club',
@@ -637,15 +665,14 @@ export const AFFILIATE: Record<string, {
 
   // FootJoy WeatherSof — ASIN B072LZV5Z6 ✅ verified (sold by FJ directly)
   'footjoy-weathersof-glove': {
-    asin: 'B0F6TWQZMS',
-    url: 'https://www.amazon.com/dp/B0F6TWQZMS?tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=footjoy+weathersof+golf+glove&tag=cubicalgolfer-20',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520WeatherSof%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$18',
-    priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.',
+    priceNote: 'Single-glove pricing. 2-packs run ~$30. Last season\'s colors drop 30-40%.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-weathersof-glove.webp',
     imgAlt: 'FootJoy WeatherSof Golf Glove',
@@ -723,12 +750,12 @@ export const AFFILIATE: Record<string, {
   'arccos-caddie-sensors': {
     heroVerdictLine: '★ The only gear upgrade that gets smarter the more you play — AI caddie is legit.',
     heroWhoFor: 'Data-driven golfers who want to know exactly where they lose strokes each round.',
-    asin: 'B0B5TW3HNG',
+    asin: 'B09YJ5H6BQ',
     url: 'https://www.amazon.com/dp/B09YJ5H6BQ?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=9cb14bd7f2b5cda6a4acf512ad239cda&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DArccos%2520Caddie%2520Sensors%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DArccos%2520Smart%2520Sensors%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$179 + $99/yr',
     priceNote: 'Watch for sensor + subscription bundles that save $30-50.',
@@ -752,7 +779,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Rapsodo*+MLM2PRO*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$699',
+    price: '~$599',
     primaryRetailer: 'direct',
     priceNote: 'Steady price — occasional $25-50 off during Prime Day and Black Friday.',
     label: 'See Today\'s Price →',
@@ -819,7 +846,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=SkyTrak%2B*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$2,995',
+    price: '~$1,495',
     primaryRetailer: 'direct',
     priceNote: 'Rarely discounted — buy when ready. Check for bundle deals.',
     label: 'See Today\'s Price →',
@@ -1124,7 +1151,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$55/dozen',
     priceNote: 'Best value: buy 2+ dozen during Prime Day or Black Friday.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-pro-v1x.webp',
-    imgAlt: 'Titleist Pro V1x Golf Balls 2025',
+    imgAlt: 'Titleist Pro V1x Golf Balls 2026',
   
     benefits: [
       'Higher flight and more spin than the standard Pro V1',
@@ -1190,7 +1217,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$599',
+    price: '~$499',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/garmin-approach-r10.webp',
@@ -1230,7 +1257,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell-launch-pro&crid=1O0RGUWVXD74&sprefix=bridgestone-tour-b-xs%2Caps%2C371&linkCode=ll2&tag=cubicalgolfer-20&linkId=5e4ac84f33ffe810257c4067a4602ec5&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Bushnell',
     primaryRetailer: 'direct',
-    price: '~$2,499',
+    price: '~$2,999',
     priceNote: 'Rarely discounted — buy when ready. Check for bundle deals.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/bushnell-launch-pro.webp',
@@ -1528,7 +1555,7 @@ export const AFFILIATE: Record<string, {
   // ── New: apartment simulator, launch monitors, rain gear, desk exercises ──
   'spornia-spg-net': {
     url: 'https://www.amazon.com/s?k=spornia-spg-net&crid=2HSOAB7QOKWF6&sprefix=srixon-q-star-tour%2Caps%2C292&linkCode=ll2&tag=cubicalgolfer-20&linkId=1a834939cf3eb10fc53bcd15c579ce47&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSpornia%2520SPG%2520Net%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520Hitting%2520Net%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2206,7 +2233,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVokey%2520SM10%252052%C2%B0%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVokey%2520SM10%2520Wedge%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$179',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
@@ -2242,7 +2269,7 @@ export const AFFILIATE: Record<string, {
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Jaws%2520Raw%252052%C2%B0%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Jaws%2520Raw%2520Wedge%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Golf Galaxy',
     price: '~$169',
     priceNote: 'Wedge prices hold steady. Buy when ready — grooves wear out before prices drop.',
@@ -2407,7 +2434,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Big%2520Bertha%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Big%2520Bertha%2520B21%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$399',
     primaryRetailer: 'direct',
@@ -2540,11 +2567,11 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Orange Whip golf swing trainer',
   },
   'ping-g430-sft': {
-    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520g430%2520sft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G440%2520SFT%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G430%2520SFT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G440%2520SFT%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Golf Galaxy',
     price: '~$449',
     primaryRetailer: 'direct',
@@ -2671,7 +2698,7 @@ export const AFFILIATE: Record<string, {
   },
   '18birdies': {
     url: 'https://www.amazon.com/s?k=golf+GPS+rangefinder+accessory&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3D18Birdies%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520GPS%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2707,7 +2734,7 @@ export const AFFILIATE: Record<string, {
   },
   'swing-ai': {
     url: 'https://www.amazon.com/s?k=golf+swing+analyzer+training+aid&linkCode=ll2&tag=cubicalgolfer-20&linkId=62fa8113647330c1ae8f2c5e54faee38&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSwing%2520AI%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DArccos%2520Smart%2520Sensors%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2788,7 +2815,6 @@ export const AFFILIATE: Record<string, {
   },
   'vice-drive': {
     url: 'https://www.amazon.com/s?k=vice-drive&crid=3AC551UVSU8CC&sprefix=vice-drive%2Caps%2C243&linkCode=ll2&tag=cubicalgolfer-20&linkId=f459afc5930c5bab4ef0b02829174be3&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVice%2520Drive%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2801,7 +2827,6 @@ export const AFFILIATE: Record<string, {
   },
   'vice-pro-soft': {
     url: 'https://www.amazon.com/s?k=vice-pro-plus&crid=1Z3W2M00LC6PU&sprefix=vice-pro%2Caps%2C283&linkCode=ll2&tag=cubicalgolfer-20&linkId=b751a0abee57b374eddaf951818042f7&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVice%2520Pro%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2876,7 +2901,6 @@ export const AFFILIATE: Record<string, {
   },
   'kirkland-signature': {
     url: 'https://www.amazon.com/s?k=kirkland-signature&crid=2QKPBRUXFX2UQ&sprefix=impact-tape%2Caps%2C229&linkCode=ll2&tag=cubicalgolfer-20&linkId=1ea49994a8f0d80175037ba0b428c459&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DKirkland%2520Signature%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2941,7 +2965,6 @@ export const AFFILIATE: Record<string, {
   },
   'vice-pro-plus': {
     url: 'https://www.amazon.com/s?k=vice-pro-plus&crid=WGUFXIKOW2FM&sprefix=vice-pro-plus%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=0c5923c70dbed2d38485b381ce63747a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVice%2520Pro%2520Plus%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3339,7 +3362,7 @@ export const AFFILIATE: Record<string, {
   },
   'fiberbuilt-flight-deck': {
     url: 'https://www.amazon.com/dp/B06Y5NX641?&linkCode=ll2&tag=cubicalgolfer-20&linkId=4d5e63f98b55edd2c8a1582bbc86ca49&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFiberbuilt%2520Flight%2520Deck%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFiberbuilt%2520Hitting%2520Mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3633,11 +3656,11 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell+phantom+2&linkCode=ll2&tag=cubicalgolfer-20&linkId=014e3b7eabc6c8a8364b16210b2387fb&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Bushnell',
     primaryRetailer: 'direct',
-    price: '~$129',
+    price: '~$169',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'Check Price on Bushnell',
     imgSrc: '/images/products/bushnell-phantom-2.webp',
-    imgAlt: 'Bushnell Phantom 2 Golf GPS',
+    imgAlt: 'Bushnell Phantom 3 Slope Golf GPS',
   },
 
   // ═══ MISSING PRICE FIXES — June 2026 ═══
@@ -3742,7 +3765,7 @@ export const AFFILIATE: Record<string, {
   // ═══ CONTEXT-CORRECT PRODUCT VARIANTS — June 2026 ═══
   'cleveland-launcher-xl2-driver': {
     url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2+driver&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Launcher%2520XL2%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Launcher%2520XL2%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3985,7 +4008,7 @@ export const AFFILIATE: Record<string, {
 
   // ═══ APPAREL — Shirts ═══
   'nike-dri-fit-victory-polo': {
-    url: `https://www.amazon.com/s?k=nike+dri+fit+victory+golf+polo&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/s?k=nike-dri-fit-victory-golf-polo&tag=cubicalgolfer-20`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,

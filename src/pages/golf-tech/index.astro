@@ -11,8 +11,8 @@ const cat      = 'golf-tech';
 const articles = getCategoryArticles(cat);
 const meta     = categoryMeta(cat);
 const hubFaq = [
-  { q: 'What is the best golf launch monitor for home use in 2026?', a: 'For most home users, the Garmin Approach R10 ($499) offers the best balance of accuracy, simulator compatibility, and price. If you want premium accuracy without subscription fees, the Bushnell Launch Pro ($2,499) is the best investment. See our full launch monitor comparison for every option ranked.' },
-  { q: 'Can I build a golf simulator for under $2,000?', a: 'Yes. A Garmin R10 ($499) plus an impact screen ($199), short-throw projector ($599), hitting mat ($449), and GSPro software ($250/year) totals about $1,996. See our golf simulator cost calculator for exact pricing at every budget level.' },
+  { q: 'What is the best golf launch monitor for home use in 2026?', a: 'For most home users, the Garmin Approach R10 ($499) offers the best balance of accuracy, simulator compatibility, and price. If you want premium accuracy without subscription fees, the Bushnell Launch Pro ($2,999) is the best investment. See our full launch monitor comparison for every option ranked.' },
+  { q: 'Can I build a golf simulator for under $2,000?', a: 'Yes. A Garmin R10 ($499) plus an impact screen ($199), short-throw projector ($499), hitting mat ($449), and GSPro software ($250/year) totals about $1,996. See our golf simulator cost calculator for exact pricing at every budget level.' },
   { q: 'Do golf launch monitors require a subscription?', a: 'Some do, some do not. The Bushnell Launch Pro, Square Golf, and FlightScope Mevo Gen2 have zero subscription fees. The Garmin R10 and Rapsodo MLM2PRO offer optional subscriptions that unlock additional features. We break down the real 3-year cost of every monitor in our subscription cost comparison.' },
 ];
 
@@ -32,7 +32,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       <span class="bc-sep" aria-hidden="true">›</span>
       <span aria-current="page">Golf Tech</span>
     </nav>
-    <span class="hero-badge">29 ARTICLES · REAL DATA</span>
+    <span class="hero-badge">{articles.length} ARTICLES · REAL DATA</span>
     <h1>Golf Tech</h1>
       <EarlyDisclosure />
     <p class="cat-subhead" style="color:rgba(255,255,255,.72);">Launch monitors, golf simulators, swing analysers, and shot tracking apps — tested with real on-course data and cross-referenced against other launch monitors, not manufacturer claims.</p>
@@ -65,14 +65,14 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
     <a href="/shot-scope-lm1-vs-garmin-r10/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;">
       <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold-text);margin:0 0 4px;">⚖️ COMPARE</p>
       <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">LM1 vs Garmin R10</p>
-      <p style="font-size:16px;color:var(--muted);margin:0;">$199 vs $599 — is the Garmin worth 3x?</p>
+      <p style="font-size:16px;color:var(--muted);margin:0;">$199 vs $499 — is the Garmin worth 3x?</p>
     </a>
   </div>
 
   <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
       <span style="font-size:16px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
-      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Rapsodo MLM2PRO — ~$699</p>
+      <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Rapsodo MLM2PRO — ~$599</p>
       <p style="font-size:16px;margin:0;color:var(--muted);">Best launch monitor for weekend golfers</p>
     </div>
     {(() => {

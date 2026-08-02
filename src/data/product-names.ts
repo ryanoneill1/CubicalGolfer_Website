@@ -2,7 +2,8 @@
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
   'bushnell-tour-v6-shift': "Bushnell Tour V6 Shift",
-  'precision-pro-nx9-hd': "Precision Pro NX9 HD",
+  'bushnell-tour-v7-shift': "Bushnell Tour V7 Shift",
+  'precision-pro-nx9-hd': "Precision Pro NX9",
   'blue-tees-series-3-max': "Blue Tees Series 3 Max",
   'garmin-approach-z82': "Garmin Approach Z82",
   'bushnell-pro-xe': "Bushnell Pro XE",
@@ -214,7 +215,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'golf-pride-cp2-wrap-jumbo': "Golf Pride CP2 Wrap Jumbo",
   'winn-dri-tac-oversize': "Winn Dri-Tac Oversize",
   'callaway-300-pro': "Callaway 300 Pro",
-  'bushnell-phantom-2': "Bushnell Phantom 2",
+  'bushnell-phantom-2': "Bushnell Phantom 3 Slope",
   'garmin-approach-s70': "Garmin Approach S70",
   'titleist-gt2-driver': "Titleist GT2 Driver",
   'taylormade-sim2-max': "TaylorMade SIM2 Max",

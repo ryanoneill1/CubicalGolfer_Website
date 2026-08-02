@@ -98,12 +98,19 @@ export function organizationSchema(): object {
 
 // ── Article schema ────────────────────────────────────────────────────────────
 // FIXED: Now includes image field — required by Google for Article rich results
-export function articleSchema(article: Article): object {
+export function articleSchema(article: Article | any): object {
+  // Standalone pages (guides, calculators) call this with { headline, url } rather
+  // than the full Article record. Without this normalisation `article.slug` is
+  // undefined and every @id/url in the emitted JSON-LD becomes
+  // "https://www.cubicalgolfer.comundefined". Accept both shapes.
+  const rawPath = article.slug ?? article.url ?? '/';
+  const path = String(rawPath).replace(/^https?:\/\/[^/]+/, '');
+  const headline = article.title ?? article.headline ?? '';
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    '@id': `${DOMAIN}${article.slug}#article`,
-    headline: article.title,
+    '@id': `${DOMAIN}${path}#article`,
+    headline,
     description: article.description,
     datePublished: article.datePublished,
     // Fall back to datePublished when an article has no genuine update, so the
@@ -116,9 +123,9 @@ export function articleSchema(article: Article): object {
     publisher: PUBLISHER,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${DOMAIN}${article.slug}`,
+      '@id': `${DOMAIN}${path}`,
     },
-    url: `${DOMAIN}${article.slug}`,
+    url: `${DOMAIN}${path}`,
     // Use article-specific image if available, otherwise OG image
     image: {
       '@type': 'ImageObject',
@@ -151,7 +158,10 @@ export function faqSchema(items: FAQItem[]): object {
 // ── BreadcrumbList ────────────────────────────────────────────────────────────
 export function breadcrumbSchema(
   items: Array<{ label: string; href: string }>
-): object {
+): object | null {
+  // Google requires at least two items for breadcrumb rich results. Emitting a
+  // one-item trail (the homepage) is invalid markup, so suppress it entirely.
+  if (!items || items.length < 2) return null;
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -269,7 +279,7 @@ export function homeFaqSchema(): object {
   return faqSchema([
     {
       q: 'What is the best golf rangefinder for a weekend golfer in 2026?',
-      a: "The Bushnell Tour V6 Shift (~$329) is the best overall golf rangefinder for most weekend golfers. We tested 5 leading models over 40+ real rounds. For budget golfers, the Precision Pro NX9 HD (~$169) delivers excellent performance at roughly half the price with a lifetime warranty.",
+      a: "The Bushnell Tour V6 Shift (~$349) is the best overall golf rangefinder for most weekend golfers. We tested 5 leading models over 20+ real rounds each. For budget golfers, the Precision Pro NX9 (~$219) delivers excellent performance at roughly half the price with a lifetime warranty.",
     },
     {
       q: 'How do I fix my golf slice permanently?',
@@ -317,7 +327,7 @@ export function aboutPageSchema(): object {
     '@type': 'AboutPage',
     '@id': `${DOMAIN}/about/#aboutpage`,
     name: 'About Cubical Golfer',
-    description: 'Independent golf gear reviews tested by real weekend golfers over 40+ real rounds.',
+    description: 'Independent golf gear reviews tested by real weekend golfers over 20+ real rounds each.',
     url: `${DOMAIN}/about/`,
     author: AUTHOR,
     publisher: PUBLISHER,
@@ -332,7 +342,7 @@ export function howWeTestSchema(): object {
     '@type': 'WebPage',
     '@id': `${DOMAIN}/how-we-test/#webpage`,
     name: 'How We Test Golf Gear — Cubical Golfer Testing Standards',
-    description: 'Every product tested over a minimum of 10 real rounds on real courses, independently purchased.',
+    description: 'Every product tested over a minimum of 20 real rounds on real courses, independently purchased.',
     url: `${DOMAIN}/how-we-test/`,
     author: AUTHOR,
     publisher: PUBLISHER,
@@ -576,7 +586,7 @@ export function buyingGuideProductSchema(
   }
 
   // Belt and braces: no price should survive into a product name. If one does
-  // (e.g. "What About the Rapsodo MLM2PRO ($699)?"), the heading is editorial
+  // (e.g. "What About the Rapsodo MLM2PRO ($599)?"), the heading is editorial
   // prose, so use the affiliate key instead.
   productName = productName.replace(/\s*[([]\$[\d,][^)\]]*[)\]]/g, '').replace(/\s{2,}/g, ' ').trim();
   if (/\$[\d,]/.test(productName) && humanizedKey) productName = humanizedKey;

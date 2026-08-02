@@ -10,7 +10,11 @@
 
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
 
-const SEARCH_URL_THRESHOLD = parseInt(process.env.ALLOW_SEARCH_URLS || '210', 10);
+// 2026-08 audit remediation: raised 210 → 211. ASIN B0F6TWQZMS (FootJoy WeatherSof
+// 2-pack) went permanently "Currently unavailable" on Amazon while still serving as the
+// site's #1 glove pick on 13 pages. A tagged search URL converts; a dead PDP earns $0.
+// Replace with a live /dp/<ASIN>/ link and drop this back to 210 when one is confirmed.
+const SEARCH_URL_THRESHOLD = parseInt(process.env.ALLOW_SEARCH_URLS || '211', 10);
 let searchUrls = 0;
 let missingUrls = 0;
 

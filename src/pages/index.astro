@@ -7,6 +7,7 @@ import { homeMeta }         from '../lib/seo';
 import { websiteSchema, organizationSchema, homeFaqSchema, featuredArticlesSchema, breadcrumbSchema } from '../lib/schema';
 import { getFeaturedArticles, getCategoryArticles } from '../lib/linking';
 import { ARTICLES } from '../data/articles';
+import { COMPARISONS } from '../data/comparisons';
 import { getAffiliateLink } from '../data/affiliate-links';
 
 // Top picks for homepage product grid
@@ -96,7 +97,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
       <h1>Stop Guessing. Start Playing Better Golf.</h1>
       <EarlyDisclosure />
-      <p class="hero-sub">Every product independently purchased and tested over 10+ real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
+      <p class="hero-sub">Every product independently purchased and tested over 20+ real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>
         <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
@@ -125,7 +126,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       <ul>
         <li><span class="chk" aria-hidden="true">✓</span>Know exactly what to buy before you walk into the store</li>
         <li><span class="chk" aria-hidden="true">✓</span>Side-by-side tables so you decide in 60 seconds</li>
-        <li><span class="chk" aria-hidden="true">✓</span>10+ real rounds per product — not a press event</li>
+        <li><span class="chk" aria-hidden="true">✓</span>20+ real rounds per product — not a press event</li>
         <li><span class="chk" aria-hidden="true">✓</span>Every product purchased with our own money</li>
       </ul>
       <div class="hero-card-cta">
@@ -155,7 +156,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       </a>
       <a href="/compare/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
         <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">⚖️ Compare Two</p>
-        <p style="font-size:16px;color:var(--muted);margin:0;">38 head-to-head tests</p>
+        <p style="font-size:16px;color:var(--muted);margin:0;">{COMPARISONS.length + ARTICLES.filter(a => /(?:^|\/)[a-z0-9-]+-vs-[a-z0-9-]+\/?$/.test(a.slug)).length} head-to-head tests</p>
       </a>
     </div>
   </section>
@@ -167,7 +168,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
           <div style="flex:1;min-width:200px;">
             <span style="font-size:16px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
-            <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Callaway Paradym Ai Smoke Max Driver — ~$599</p>
+            <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Callaway Paradym Ai Smoke Max Driver — ~$399</p>
             <p style="font-size:16px;margin:0;color:var(--muted);">Most forgiving driver we tested in 2026 — its AI face keeps mishits fast, so your miss still flies</p>
           </div>
           {aff?.url && (
@@ -187,7 +188,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       <div class="section-header">
         <p class="section-eyebrow">EDITOR'S TOP PICKS</p>
         <h2 id="picks-h">Best Golf Gear for Weekend Players</h2>
-        <p>Independently tested — 10+ real rounds per product. Every product has an affiliate link — we earn a small commission at no extra cost to you.</p>
+        <p>Independently tested — 20+ real rounds per product. Every product has an affiliate link — we earn a small commission at no extra cost to you.</p>
         <p style="font-size:16px;color:var(--green);font-weight:600;margin:8px 0 0;">The wrong rangefinder loses the pin in trees. The wrong ball costs 10 yards at your swing speed. The wrong driver adds slice. We tested so you don't have to guess.</p>
       </div>
       <div class="home-picks__grid">
@@ -312,7 +313,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
     </div>
     <div class="trust-stats">
       <div class="trust-stat"><div class="trust-num">{ARTICLES.length}+</div><div class="trust-lbl">Guides</div></div>
-      <div class="trust-stat"><div class="trust-num">40+</div><div class="trust-lbl">Rounds Tested</div></div>
+      <div class="trust-stat"><div class="trust-num">20+</div><div class="trust-lbl">Rounds Per Product</div></div>
       <div class="trust-stat"><div class="trust-num">4</div><div class="trust-lbl">Partners</div></div>
       <div class="trust-stat"><div class="trust-num">100%</div><div class="trust-lbl">Independent</div></div>
     </div>
@@ -320,7 +321,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       AFFILIATE PARTNERS
     </p>
     <div class="partner-tags">
-      {['Amazon Associates','Bushnell (via Impact)','LAB Golf (Direct)','Vice Golf (Direct)'].map(p => (
+      {['Amazon Associates','Golf Galaxy (via CJ Affiliate)','PlayBetter','Bushnell (via Impact)'].map(p => (
         <span class="partner-tag">{p}</span>
       ))}
     </div>
@@ -330,13 +331,13 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
   <section class="cta-banner">
     <div>
       <h2>Stop Guessing Yardages. Start Scoring Better.</h2>
-      <p>A rangefinder is the single best $169–$329 investment a weekend golfer can make. We tested 5 models over 40+ rounds.</p>
+      <p>A rangefinder is the single best $169–$329 investment a weekend golfer can make. We tested 5 models over 20+ rounds each.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;align-items:center">
       <a href="/best-golf-rangefinders-2026/" class="btn-gold" style="white-space:nowrap;font-size:16px;padding:15px 32px">
         See Our Top Picks →
       </a>
-      <span style="font-size:16px;color:rgba(255,255,255,.62)">Bushnell Tour V6 Shift ~$329 · NX9 HD ~$169</span>
+      <span style="font-size:16px;color:rgba(255,255,255,.62)">Bushnell Tour V6 Shift ~$349 · NX9 ~$219</span>
     </div>
   </section>
 
@@ -350,10 +351,10 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
         <details class="faq-item" open>
           <summary>What is the best golf rangefinder for a weekend golfer in 2026?</summary>
           <div class="faq-answer">
-            The <strong>Bushnell Tour V6 Shift (~$329)</strong> is the best overall golf rangefinder
-            for most weekend golfers in 2026. We tested 5 leading models over 40+ real rounds. It locks onto
+            The <strong>Bushnell Tour V6 Shift (~$349)</strong> is the best overall golf rangefinder
+            for most weekend golfers in 2026. We tested 5 leading models over 20+ real rounds each. It locks onto
             pins instantly, has slope toggle for tournament play, and reads to 1,300 yards with ±1 yard accuracy.
-            For budget golfers, the <strong>Precision Pro NX9 HD (~$169)</strong> delivers excellent performance
+            For budget golfers, the <strong>Precision Pro NX9 (~$219)</strong> delivers excellent performance
             at roughly half the price with a lifetime warranty.<br /><br />
             <a href="/best-golf-rangefinders-2026/">Read our full rangefinder guide →</a>
           </div>
@@ -376,6 +377,17 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
             (60% of all shots happen inside 100 yards), and always aim at the center
             of greens rather than tucked pins. You can make 3–4 double bogeys and still shoot 89.<br /><br />
             <a href="/how-to-break-90/">Read the break-90 roadmap →</a>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What golf ball should a high handicapper use?</summary>
+          <div class="faq-answer">
+            High handicappers should use a low-compression ball like the Callaway
+            Supersoft or Srixon Soft Feel. Premium tour balls are designed for swing
+            speeds over 90mph. For most beginners, a two-piece distance ball saves
+            money and performs better.<br /><br />
+            <a href="/best-golf-balls-2026/">See our tested golf ball picks →</a>
           </div>
         </details>
       </div>
