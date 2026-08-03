@@ -1929,3 +1929,10 @@ main section > p, main section ul, main section ol {
 .hero .early-disclosure a,
 .cat-hero .early-disclosure a,
 .art-hero .early-disclosure a { color: var(--gold); }
+
+/* Author byline tagline — sits inside the dark hero blocks, so it cannot carry a
+   hard-coded muted colour (#556B5C scored 2.15:1 on the green hero, 221 pages). */
+.byline-tagline { color: var(--muted); }
+.hero .byline-tagline,
+.cat-hero .byline-tagline,
+.art-hero .byline-tagline { color: rgba(255,255,255,.72); }
