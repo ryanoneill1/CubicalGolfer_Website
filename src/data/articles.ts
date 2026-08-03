@@ -2984,6 +2984,8 @@ export const ARTICLES: Article[] = [
   {
     id: 'how-to-choose-golf-ball-compression',
     slug: '/how-to-choose-golf-ball-compression/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/how-to-choose-golf-ball-compression-thumb.webp',
+    thumbnail: '/images/thumbnails/how-to-choose-golf-ball-compression-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'srixon-q-star-tour',
@@ -3079,6 +3081,8 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-balls-under-30',
     slug: '/best-golf-balls-under-30/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-balls-under-30-thumb.webp',
+    thumbnail: '/images/thumbnails/best-golf-balls-under-30-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'srixon-soft-feel',
@@ -3183,6 +3187,8 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-balls-for-beginners',
     slug: '/best-golf-balls-for-beginners/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-balls-for-beginners-thumb.webp',
+    thumbnail: '/images/thumbnails/best-golf-balls-for-beginners-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'callaway-supersoft',
@@ -3292,6 +3298,8 @@ export const ARTICLES: Article[] = [
   {
     id: 'best-golf-balls-under-40',
     slug: '/best-golf-balls-under-40/',
+    ogImage: 'https://www.cubicalgolfer.com/images/thumbnails/best-golf-balls-under-40-thumb.webp',
+    thumbnail: '/images/thumbnails/best-golf-balls-under-40-thumb.webp',
     category: 'gear-reviews',
     pageType: 'buying-guide',
     quickAnswerProduct: 'srixon-q-star-tour',
