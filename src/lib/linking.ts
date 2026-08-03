@@ -720,7 +720,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-fix-your-slice/', label: 'Fix Your Slice' },
     { slug: '/best-golf-clubs-20-handicap/', label: 'Best Clubs for 20 Handicap' },
   
-    { slug: '/best-golf-drivers-under-200/', label: 'Drivers Under $200 for Beginners' },
+    { slug: '/best-golf-drivers-under-400/', label: 'Drivers Under $200 for Beginners' },
     { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra Aerojet Max vs Ping G430 Max' },
   ],
   'budget-launch-monitors': [
@@ -1027,7 +1027,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
     { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026' },
   
-    { slug: '/best-golf-drivers-under-200/', label: 'Best Drivers Under $200' },
+    { slug: '/best-golf-drivers-under-400/', label: 'Best Drivers Under $200' },
   ],
   'driver-slow-swing': [
     { slug: '/taylormade-qi35-review/',            label: 'TaylorMade Qi35 Review' },
@@ -1074,7 +1074,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
 
   'driver-loft-guide': [
-    { slug: '/best-golf-drivers-under-200/', label: 'Budget Drivers Under $200' },
+    { slug: '/best-golf-drivers-under-400/', label: 'Budget Drivers Under $200' },
   ],
 
   'grips-2026': [
