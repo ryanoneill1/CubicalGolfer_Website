@@ -136,20 +136,43 @@ export const AFFILIATE: Record<string, {
   // B3: the base Mevo — distinct from the ~$2,199 Mevo+. The "Most Portable" slot
   // on /best-budget-launch-monitor/ was headed "Mevo" but linked the Mevo+.
   'flightscope-mevo': {
-    url: 'https://www.amazon.com/s?k=flightscope+mevo+launch+monitor&tag=cubicalgolfer-20',
-    program: 'amazon',
+    url: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fflightscope-mevo-launch-monitor-24gjuumvlnchmntrxtch%2F24gjuumvlnchmntrxtch%3FenteredSearchTerm%3Dmevo',
+    program: 'golfgalaxy',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Flightscope*+Mevo*&ghref=2301%3A1333883',
-    retailer: 'Amazon',
-    price: '~$549',
-    label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/flightscope-mevo-gen2.webp',
-    imgAlt: 'FlightScope Mevo Gen2 portable launch monitor',
+    retailer: 'Golf Galaxy',
+    price: '~$349',
+    priceNote: 'Marked down from $499. Currently store-pickup only at Golf Galaxy — shipping shows unavailable.',
+    label: 'Check Price at Golf Galaxy →',
     benefits: [
         'Pocket-sized — the most portable unit in this guide',
         'Ball speed, carry, launch angle and spin from a phone app',
         'Works indoors with a net or outdoors on any range',
+      ],
+  },
+
+  // Q3 (Aug 2026): the site quoted ~$249 for "Callaway Strata" while Golf Galaxy
+  // sells the Ultimate 16-Piece at $699.99 — a $450 gap that also hid a ceiling
+  // violation. They are genuinely two different sets, so both now exist with
+  // their own honest price rather than one record averaging the truth.
+  'callaway-strata-ultimate-16': {
+    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%2520Ultimate%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=callaway+strata+ultimate+16+piece&tag=cubicalgolfer-20',
+    retailer: 'Golf Galaxy',
+    price: '~$699',
+    primaryRetailer: 'direct',
+    priceNote: 'The full 16-piece set — driver, woods, hybrid, irons, wedge, putter and bag.',
+    label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-strata-set.webp',
+    imgAlt: 'Callaway Strata Ultimate 16-Piece Complete Set',
+    benefits: [
+        'Everything a beginner needs in one box, including the bag',
+        '16 pieces vs 12 in the standard Strata',
+        'Titanium driver with a large, forgiving face',
       ],
   },
 
@@ -709,10 +732,10 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$249',
     primaryRetailer: 'direct',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    priceNote: 'The 12-piece starter set. The 16-piece Strata Ultimate is a different, larger set at ~$699.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-strata.webp',
-    imgAlt: 'Callaway Strata Complete Golf Set',
+    imgAlt: 'Callaway Strata 12-Piece Complete Set',
   
     benefits: [
       '12-piece complete set with stand bag included',
@@ -838,11 +861,11 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DArccos%2520Smart%2520Sensors%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$179 + $99/yr',
-    priceNote: 'Watch for sensor + subscription bundles that save $30-50.',
+    price: '~$249 + $99/yr',
+    priceNote: 'Gen 4 at $249.99 is the shipping model. The Gen 3 at $179.99 still appears at some retailers but is no longer available to ship or pick up.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/arccos-caddie-sensors.webp',
-    imgAlt: 'Arccos Caddie Smart Sensors 3rd Gen',
+    imgAlt: 'Arccos Caddie Smart Sensors Gen 4',
     benefits: [
         'AI caddie suggests clubs based on your stats',
         'Automatic tracking — no phone in pocket needed',
@@ -2648,18 +2671,18 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Orange Whip golf swing trainer',
   },
   'ping-g430-sft': {
-    url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G440%2520SFT%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-g440-sft-driver-24pngmg440sftdrltdrv%2F24pngmg440sftdrltdrv%3FProduct%3DProductSuggest',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G440%2520SFT%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Golf Galaxy',
-    price: '~$449',
+    price: '~$619',
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/ping-g430-sft.webp',
-    imgAlt: 'Ping G430 SFT draw-biased driver',
+    imgAlt: 'Ping G440 SFT Driver',
     benefits: [
       'Best price-to-performance ratio under $300 — within 5 yards of $500 drivers',
       'High launch with low spin suits 85-100 mph swing speeds perfectly',

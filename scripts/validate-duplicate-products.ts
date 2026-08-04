@@ -28,15 +28,10 @@ const entries = Object.entries(AFFILIATE as any) as Array<[string, any]>;
 const PENDING_MERGE = new Set<string>([]); // no known unresolved NAME duplicates
 
 // Image+price pairs awaiting an owner decision. Remove each line once resolved.
-// TODO(ryan): flightscope-mevo (~$549) vs flightscope-mevo-gen2 (~$1,299) — the
-//   base Mevo record has no image of its own and borrowed the Gen2 photo.
-//   PlayBetter stocks no sub-$700 Mevo; awaiting a Golf Galaxy link or a decision
-//   to drop the slot.
 // TODO(ryan): cleveland-launcher-xl (~$199, driver) vs cleveland-launcher-xl-senior
 //   (~$799, complete set) — genuinely different products sharing one photo.
 //   Needs its own image, or the senior set needs a different one.
 const PENDING_IMAGE_PAIR = new Set<string>([
-  'flightscope-mevo|flightscope-mevo-gen2',
   'cleveland-launcher-xl|cleveland-launcher-xl-senior',
 ]);
 

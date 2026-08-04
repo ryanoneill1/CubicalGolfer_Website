@@ -140,7 +140,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'odyssey-tri-hot-5k': "Odyssey Tri-Hot 5K",
   'odyssey-two-ball-eleven': "Odyssey 2-Ball Eleven",
   'orange-whip-trainer': "Orange Whip Trainer",
-  'ping-g430-sft': "Ping G430 SFT",
+  'ping-g430-sft': "Ping G440 SFT",
   'ping-sigma-2': "Ping Sigma 2",
   'rukket-haack-net': "Rukket Haack Net",
   'scotty-cameron-phantom-x': "Scotty Cameron Phantom X",
