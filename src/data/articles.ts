@@ -7088,7 +7088,7 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'Why MOI Matters More Than Ball Speed', body: "MOI (Moment of Inertia) measures how much the clubhead resists twisting on off-center strikes. Higher MOI means less twisting, which means less distance and direction loss on mishits.\n\nHigh handicappers miss the sweet spot on 40-60% of drives. On those mishits, a low-MOI driver can lose 20-30 yards and curve 30 yards offline. A high-MOI driver loses 10-15 yards and curves 10-15 yards. Over 14 drives per round, the high-MOI driver keeps 3-4 more balls in play — saving 4-8 strokes.\n\nDistance off the tee matters far less than keeping the ball in the fairway. A 200-yard drive in the fairway is better than a 230-yard drive in the trees. Every driver below is ranked by forgiveness first, distance second." },
       { h2: 'What Shaft Flex Do You Need?', body: "The wrong shaft flex ruins even the best driver head. Here is the guide:\n\nUnder 80 mph: Senior flex or Ladies flex. These shafts are lighter and more flexible, helping slower swingers generate clubhead speed.\n\n80-90 mph: Regular flex. The most common range for high handicappers. If in doubt, try Regular — it is almost never wrong for this swing speed.\n\n90-100 mph: Stiff flex. Only if you consistently swing above 90. Most high handicappers overestimate their swing speed — get fitted or use a launch monitor to confirm.\n\nWhen in doubt, go one flex softer than you think. A shaft that is too stiff costs distance. A shaft that is slightly too flexible might cost 5 yards of accuracy but gains 10 yards of carry. For high handicappers, the extra distance from a softer shaft helps more than the slight accuracy penalty." },
-      { h2: 'Best Overall: Callaway Paradym Ai Smoke Max ($499)', badge: 'BEST OVERALL', body: "The Ai Smoke Max has the best ball speed retention on mishits of any driver we tested. Toe hits lost only 5% ball speed (7 yards) versus 10-12% for competitors. The AI-designed face creates a wider effective sweet spot that rescues bad contact.\n\nAt 94 mph, average carry was 228 yards with a 55% fairway hit rate. The draw-biased Max D version adds slice correction. The adjustable hosel lets you tweak loft.\n\nThis is the driver that makes bad swings less bad. For high handicappers who miss the center on 40%+ of drives, no other driver produces a better 18-hole average.\n\nFull review: Callaway Paradym Ai Smoke Max Review.", price: '~$399', affiliateKey: 'callaway-paradym-ai-smoke-max' , rating: 4.6, },
+      { h2: 'Best Overall: Callaway Paradym Ai Smoke Max ($399)', badge: 'BEST OVERALL', body: "The Ai Smoke Max has the best ball speed retention on mishits of any driver we tested. Toe hits lost only 5% ball speed (7 yards) versus 10-12% for competitors. The AI-designed face creates a wider effective sweet spot that rescues bad contact.\n\nAt 94 mph, average carry was 228 yards with a 55% fairway hit rate. The draw-biased Max D version adds slice correction. The adjustable hosel lets you tweak loft.\n\nThis is the driver that makes bad swings less bad. For high handicappers who miss the center on 40%+ of drives, no other driver produces a better 18-hole average.\n\nFull review: Callaway Paradym Ai Smoke Max Review.", price: '~$399', affiliateKey: 'callaway-paradym-ai-smoke-max' , rating: 4.6, },
       { h2: 'Most Forgiving: Ping G430 Max ($449)', badge: 'HIGHEST MOI', body: "The Ping G430 Max has the highest raw MOI of any driver in our test. The result: the most consistent driver regardless of strike quality. Our worst drive with the G430 went 198 yards. Our worst with the Callaway went 185.\n\nThe Ping does not punish bad swings — it stubbornly keeps the ball somewhere playable. Average carry was 224 yards at 94 mph, about 4 yards shorter than the Callaway on center strikes. But the floor is so much higher that your scoring average may actually improve.\n\nPing's fitting system offers more shaft combinations than any brand. A fitting at an authorized Ping dealer is typically free — and for high handicappers, the right shaft matters more than the right head.\n\nFull breakdown in our Best Forgiving Drivers guide.", price: '~$449', affiliateKey: 'ping-g430-max-driver' , rating: 4.6, },
       { h2: 'Best Value: Cobra Aerojet Max ($399)', badge: 'BEST VALUE', body: "The Aerojet Max delivers 85% of the Callaway forgiveness for $100 less. The H.O.T. Face uses AI technology similar to Callaway's approach. At 94 mph, average carry was 223 yards — 5 yards shorter than the Callaway but the stock shaft is arguably better matched.\n\nThe value proposition is hard to beat: premium-level forgiveness at a sub-$400 price. The savings versus the Callaway can fund 2-3 lessons — which will lower your handicap faster than any equipment upgrade.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$399', affiliateKey: 'cobra-aerojet-max' , rating: 4.5, },
       { h2: 'Best Budget: Cleveland Launcher XL2 ($349)', badge: 'BUDGET PICK', body: "The Launcher XL2 is the least expensive driver in our test and has no business performing this well at $349. The oversized 460cc head with deep center of gravity launches the ball high — ideal for slower swing speeds.\n\nAt 82 mph, our slower-swinging tester hit the XL2 almost as far as the Callaway because the higher launch carried the ball further. For high handicappers with swing speeds under 90 mph, the XL2 may actually produce longer drives than premium drivers that launch lower.\n\nNo adjustability (fixed hosel) and plain aesthetics. But for under $350, it delivers genuine forgiveness and distance.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$349', affiliateKey: 'cleveland-launcher-xl2-driver' , rating: 4.3, },
@@ -9382,6 +9382,24 @@ export const ARTICLES: Article[] = [
         cons: ['Older release — stock and shaft options are thinning', 'Low-spin profile suits an aggressive tempo, not a sweeper'],
       },
       {
+        h2: '🥉 Best Forgiveness Under $300: Callaway Rogue ST Max',
+        badge: 'ALSO GREAT',
+        price: '~$249 at Amazon',
+        rating: 4.6, affiliateKey: 'callaway-rogue-st-max',
+        body: 'The Callaway Rogue ST Max frequently drops below $250 on sale, making it the best value in golf when you catch it at the right price. The Jailbreak AI Speed Frame connects the sole to the crown, stiffening the body so more energy transfers to the ball at impact. At 92 mph, we measured 235 yards of carry — respectable for a driver that costs less than a dozen Pro V1s at full retail. The Rogue ST Max has a higher spin profile than the Cobra or TaylorMade options in this group, which helps golfers with slower swing speeds (under 90 mph) get the ball airborne. Faster swingers may find it launches too high. Adjustability includes an OptiFit hosel with standard and draw settings. The main limitation is the older Jailbreak technology — it works well but has been superseded by the Paradym Ai design. For golfers who care about performance per dollar and are willing to buy a 2-generation-old driver, the Rogue ST Max is hard to beat.',
+        pros: [
+          'Frequently available under $250 — best value when on sale',
+          'Higher spin profile helps slower swing speeds get airborne',
+          'Jailbreak AI Speed Frame proven over millions of rounds',
+          'OptiFit hosel with draw setting',
+        ],
+        cons: [
+          'Two generations behind current Callaway tech',
+          'Higher spin hurts distance for faster swingers (95+ mph)',
+          'Stock shaft is heavier than competitors — may slow down seniors',
+        ],
+      },
+      {
         h2: 'Worth Stretching For: Cobra Aerojet Max (~$399)',
         badge: 'BEST OVERALL',
         price: '~$279 at Amazon',
@@ -9452,24 +9470,6 @@ export const ARTICLES: Article[] = [
           'Previous generation — will not have latest tech updates',
           'Carbon face sound is different — some golfers find it too muted',
           'Limited color and shaft options at this price point',
-        ],
-      },
-      {
-        h2: '🥉 Best Forgiveness Under $300: Callaway Rogue ST Max',
-        badge: 'ALSO GREAT',
-        price: '~$249 at Amazon',
-        rating: 4.6, affiliateKey: 'callaway-rogue-st-max',
-        body: 'The Callaway Rogue ST Max frequently drops below $250 on sale, making it the best value in golf when you catch it at the right price. The Jailbreak AI Speed Frame connects the sole to the crown, stiffening the body so more energy transfers to the ball at impact. At 92 mph, we measured 235 yards of carry — respectable for a driver that costs less than a dozen Pro V1s at full retail. The Rogue ST Max has a higher spin profile than the Cobra or TaylorMade options in this group, which helps golfers with slower swing speeds (under 90 mph) get the ball airborne. Faster swingers may find it launches too high. Adjustability includes an OptiFit hosel with standard and draw settings. The main limitation is the older Jailbreak technology — it works well but has been superseded by the Paradym Ai design. For golfers who care about performance per dollar and are willing to buy a 2-generation-old driver, the Rogue ST Max is hard to beat.',
-        pros: [
-          'Frequently available under $250 — best value when on sale',
-          'Higher spin profile helps slower swing speeds get airborne',
-          'Jailbreak AI Speed Frame proven over millions of rounds',
-          'OptiFit hosel with draw setting',
-        ],
-        cons: [
-          'Two generations behind current Callaway tech',
-          'Higher spin hurts distance for faster swingers (95+ mph)',
-          'Stock shaft is heavier than competitors — may slow down seniors',
         ],
       },
     ],

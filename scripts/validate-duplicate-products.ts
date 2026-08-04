@@ -25,7 +25,20 @@ const norm = (s?: string) =>
     .replace(/[^a-z0-9]+/g, ' ').trim();
 
 const entries = Object.entries(AFFILIATE as any) as Array<[string, any]>;
-const PENDING_MERGE = new Set<string>([]); // no known unresolved duplicates
+const PENDING_MERGE = new Set<string>([]); // no known unresolved NAME duplicates
+
+// Image+price pairs awaiting an owner decision. Remove each line once resolved.
+// TODO(ryan): flightscope-mevo (~$549) vs flightscope-mevo-gen2 (~$1,299) — the
+//   base Mevo record has no image of its own and borrowed the Gen2 photo.
+//   PlayBetter stocks no sub-$700 Mevo; awaiting a Golf Galaxy link or a decision
+//   to drop the slot.
+// TODO(ryan): cleveland-launcher-xl (~$199, driver) vs cleveland-launcher-xl-senior
+//   (~$799, complete set) — genuinely different products sharing one photo.
+//   Needs its own image, or the senior set needs a different one.
+const PENDING_IMAGE_PAIR = new Set<string>([
+  'flightscope-mevo|flightscope-mevo-gen2',
+  'cleveland-launcher-xl|cleveland-launcher-xl-senior',
+]);
 
 const problems: string[] = [];
 const nearMiss: string[] = [];
@@ -70,10 +83,22 @@ for (const [k, v] of entries) {
   bySize.get(sig)!.push(k);
 }
 // Variants legitimately share a photo (winn-dri-tac vs -oversize, strata vs -senior),
-// so a shared image alone is a warning, never a build failure.
+// so a shared image alone is only a warning. BUT a shared image with a large price
+// gap is a different animal: that is one product entered twice, not two variants.
+// This is what let flightscope-mevo (~$549) and flightscope-mevo-gen2 (~$1,299)
+// ship pointing at the same photo — caught by an external audit, not by this check.
 const shared: string[] = [];
+const num = (p?: string) => { const m = p?.match(/\$\s*([\d,]+)/); return m ? parseFloat(m[1].replace(/,/g, '')) : null; };
 for (const [, keys] of bySize) {
-  if (keys.length > 1) shared.push(keys.join(', '));
+  if (keys.length < 2) continue;
+  const prices = keys.map(k => num((AFFILIATE as any)[k].price)).filter((v): v is number => v !== null);
+  const lo = Math.min(...prices), hi = Math.max(...prices);
+  const sig = [...keys].sort().join('|');
+  if (prices.length > 1 && lo > 0 && hi / lo >= 2 && !PENDING_IMAGE_PAIR.has(sig)) {
+    problems.push(`same image shared by ${keys.join(', ')} with a ${(hi / lo).toFixed(1)}x price gap ($${lo} vs $${hi}) — one product entered twice?`);
+  } else {
+    shared.push(keys.join(', '));
+  }
 }
 
 if (problems.length) {
