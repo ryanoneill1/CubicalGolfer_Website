@@ -750,7 +750,7 @@ export const AFFILIATE: Record<string, {
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
-    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3Fcjdata%3DMXxOfDB8WXww%26searchTerm%3Dtaylormade%2520rbz%2520speedlite%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520RBZ%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
     retailer: 'Golf Galaxy',
     price: '~$499',
     primaryRetailer: 'direct',
@@ -1008,7 +1008,7 @@ export const AFFILIATE: Record<string, {
   // Magnetic hat clip ball markers
   'magnetic-ball-markers': {
     url: 'https://www.amazon.com/s?k=magnetic-ball-markers&crid=220WWNXVYP0FD&sprefix=magnetic-ball-marker-desk%2Caps%2C271&linkCode=ll2&tag=cubicalgolfer-20&linkId=d55bb4829684e552451afe74f1ae3469&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DMagnetic%2520Ball%2520Markers%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dball%2520Markers%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1023,7 +1023,7 @@ export const AFFILIATE: Record<string, {
   // Frogger Amphibian Golf Towel
   'frogger-amphibian-towel': {
     url: 'https://www.amazon.com/s?k=frogger-amphibian-towel&crid=3SFSGTFNJJF9M&sprefix=%2Caps%2C197&linkCode=ll2&tag=cubicalgolfer-20&linkId=8488e6f4a289cea80766f82c606e384b&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFrogger%2520Amphibian%2520Towel%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ff%2Fgolf-towels',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1269,7 +1269,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520Flex%2520XP%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520Flex%2520XP%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
     retailer: 'Amazon', price: '~$120',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-flex-xp.webp',
@@ -1507,7 +1507,7 @@ export const AFFILIATE: Record<string, {
   },
   'magnetic-ball-marker-desk': {
     url: 'https://www.amazon.com/s?k=magnetic-ball-marker-desk&crid=3SQJM99NXSU5O&sprefix=magnetic-ball-marker-desk%2Caps%2C217&linkCode=ll2&tag=cubicalgolfer-20&linkId=fd88ddb04f2220a3c61e7abbac632964&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DMagnetic%2520Ball%2520Marker%2520Desk%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dball%2520Markers%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1878,7 +1878,7 @@ export const AFFILIATE: Record<string, {
   },
   'golf-towel-personalized': {
     url: 'https://www.amazon.com/s?k=golf-towel-personalized&crid=1MZJBZOY73XP8&sprefix=golf-towel-personalized%2Caps%2C255&linkCode=ll2&tag=cubicalgolfer-20&linkId=032ba8b0f2ad3380634bca63d3f92951&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520Towel%2520Personalized%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ff%2Fgolf-towels',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2406,7 +2406,7 @@ export const AFFILIATE: Record<string, {
   },
   'maxfli-milled-52': {
     url: 'https://www.amazon.com/s?k=maxfli+milled+52+degree+wedge&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DMaxfli%2520Milled%252052%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DMaxfli%2520wedge%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3004,7 +3004,8 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBridgestone%2520Tour%2520B%2520RX%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
   'kirkland-signature': {
-    url: 'https://www.amazon.com/s?k=kirkland-signature&crid=2QKPBRUXFX2UQ&sprefix=impact-tape%2Caps%2C229&linkCode=ll2&tag=cubicalgolfer-20&linkId=1ea49994a8f0d80175037ba0b428c459&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0C54GXFQ8',
+    url: 'https://www.amazon.com/Kirkland-Signature-Balls-3-Piece-Urethane/dp/B0C54GXFQ8?crid=3Q1JXH1PLNWPQ&dib_tag=se&keywords=Kirkland+Signature&qid=1785875018&sprefix=kirkland+signature%2Caps%2C202&sr=8-1&linkCode=ll2&tag=cubicalgolfer-20&linkId=0f56da124556c580ae93e0ca6d4d0169&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3570,7 +3571,7 @@ export const AFFILIATE: Record<string, {
   },
   'titleist-players-4-bag': {
     url: 'https://www.amazon.com/s?k=titleist-players-4-bag&crid=15X65IZGWEUS3&sprefix=titleist-players-4-bag%2Caps%2C238&linkCode=ll2&tag=cubicalgolfer-20&linkId=1c7734665a5c9f0c5c32893d79dd4db8&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Players%25204%2520Bag%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-2023-players-4-stand-bag-23ttlu2023plyrs4sbaga%2F23ttlu2023plyrs4sbaga%3Fcolor%3DBlack%252FBlack%252FRed',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3671,7 +3672,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$799',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/cleveland-launcher-xl-senior.webp', imgAlt: 'Cleveland Launcher XL senior golf set',
+    imgSrc: '/images/products/cleveland_launcher_xl.webp', imgAlt: 'Cleveland Launcher XL senior golf set',
   },
   'golf-pride-cp2-wrap-jumbo': {
     url: 'https://www.amazon.com/s?k=golf-pride-cp2-wrap-jumbo&crid=33QL3B7X0U38O&sprefix=golf-mouse-pad%2Caps%2C234&linkCode=ll2&tag=cubicalgolfer-20&linkId=a4ab7e103b9a2ff8b5e878fc4f482bc5&language=en_US&ref_=as_li_ss_tl',
@@ -3890,7 +3891,6 @@ export const AFFILIATE: Record<string, {
 
   'garmin-ct10': {
     url: 'https://www.amazon.com/s?k=garmin+ct10+golf+sensors&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+CT10*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
