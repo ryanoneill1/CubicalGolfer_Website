@@ -976,8 +976,8 @@ export const ARTICLES: Article[] = [
         rating: 4.5,
         pros: ['Full launch data: ball speed, spin, launch angle, club path, carry distance', 'No subscription required for core data access', 'Works outdoors on any range or in a backyard'],
         cons: ['Requires specific camera angle for accuracy — not always plug-and-play', 'App data visualization less intuitive than Arccos for beginners'], price: '~$699 at Rapsodo' },
-      { h2: 'Best Budget: Voice Caddie Swing Caddie SC4 PRO', affiliateKey: 'voice-caddie-sc4-pro',
-        body: "The Voice Caddie SC4 PRO is the entry point for golfers who want launch monitor data without spending $699+. At $499, it uses portable Doppler radar to measure ball speed, carry distance, smash factor, and launch angle. Setup takes 30 seconds — place the unit 4-5 feet behind the ball on the target line and hit.\n\nAccuracy is within 5 yards of Trackman on carry distance — less precise than the Rapsodo but accurate enough to build a reliable distance chart for each club. The built-in display means you do not need a phone connection for basic data, which is convenient at the range.\n\nThe limitation: the SC4 PRO does not measure spin rate or club path, which means it cannot help with ball flight diagnosis. If you hit a slice, this unit tells you the ball went right but not why. The Rapsodo gives you the spin data to diagnose the cause.\n\nBuy this if you want a simple, affordable way to learn your real carry distances. Skip this if you want full swing diagnosis — step up to the Rapsodo or a Garmin R10.",
+      { h2: 'Best Budget: Swing Caddie SC4 PRO', affiliateKey: 'voice-caddie-sc4-pro',
+        body: "The Swing Caddie SC4 Pro is the entry point for golfers who want launch monitor data without spending $699+. At $499, it uses portable Doppler radar to measure ball speed, carry distance, smash factor, and launch angle. Setup takes 30 seconds — place the unit 4-5 feet behind the ball on the target line and hit.\n\nAccuracy is within 5 yards of Trackman on carry distance — less precise than the Rapsodo but accurate enough to build a reliable distance chart for each club. The built-in display means you do not need a phone connection for basic data, which is convenient at the range.\n\nThe limitation: the SC4 PRO does not measure spin rate or club path, which means it cannot help with ball flight diagnosis. If you hit a slice, this unit tells you the ball went right but not why. The Rapsodo gives you the spin data to diagnose the cause.\n\nBuy this if you want a simple, affordable way to learn your real carry distances. Skip this if you want full swing diagnosis — step up to the Rapsodo or a Garmin R10.",
         rating: 4.4,
         pros: ['The most affordable launch monitor with a built-in screen and real ball data', 'Ball speed, smash factor, carry, and swing speed without a subscription', 'Portable — fits in a bag pocket, works anywhere'],
         cons: ['Less accurate than premium units above $500', 'No club path or face angle data — ball flight metrics only'], price: '~$499' },
@@ -5440,7 +5440,7 @@ export const ARTICLES: Article[] = [
       'Best for simulators: Bushnell Launch Pro',
       'Best premium portable: FlightScope Mevo Gen 2',
       'Best under $200: Shot Scope LM1',
-      'Best for range sessions: Voice Caddie SC4 Pro',
+      'Best for range sessions: Swing Caddie SC4 Pro',
       'Best no-subscription value: Square Golf',
       'Best for permanent sim builds: SkyTrak+',
       'Best money-no-object: Garmin Approach R50',
@@ -5450,7 +5450,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Rapsodo MLM2PRO', price: '~$599', bestFor: 'Best Overall', feature1: 'Doppler + Camera', feature2: '4.8/5', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
         { name: 'Garmin Approach R10', price: '~$499', bestFor: 'Best Budget', feature1: 'Doppler Radar', feature2: '4.6/5', rating: 4, affiliateKey: 'garmin-approach-r10' },
-        { name: 'Voice Caddie SC4 Pro', price: '~$499', bestFor: 'Best Screen', feature1: 'Doppler Radar', feature2: '4.5/5', rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro' },
+        { name: 'Swing Caddie SC4 Pro', price: '~$499', bestFor: 'Best Screen', feature1: 'Doppler Radar', feature2: '4.5/5', rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro' },
         { name: 'SkyTrak+', price: '~$1,495', bestFor: 'Home Simulator', feature1: 'Photometric', feature2: '4.7/5', rating: 4.4, affiliateKey: 'skytrak-plus' },
         { name: 'Bushnell Launch Pro', price: '~$2,999', bestFor: 'Best Value Premium', feature1: 'Photometric (GC3)', feature2: '4.5/5', badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'bushnell-launch-pro' },
         { name: 'FlightScope Mevo Gen 2', price: '~$2,199', bestFor: 'Best Portable Premium', feature1: '3D Doppler', feature2: '4.7/5', rating: 4.7, affiliateKey: 'flightscope-mevo-gen2' },
@@ -5504,7 +5504,7 @@ export const ARTICLES: Article[] = [
         affiliateKey: 'shot-scope-lm1',
         body: 'At around $199 the Shot Scope LM1 is the cheapest launch monitor we recommend to anyone. It reads the core ball numbers that actually change practice sessions — carry distance, ball speed, launch, and clubhead speed — with no subscription attached to any of it. That last part matters more than the spec sheet suggests, because the sub-$700 category is full of devices that hold their best data behind a monthly fee.\n\nWe put the LM1 head to head with the Garmin R10 across the same net sessions, and the full breakdown lives in our <a href="/shot-scope-lm1-vs-garmin-r10/">LM1 vs R10 comparison</a>. The short version: the R10 wins on app depth and simulation, the LM1 wins on price and zero-friction setup.\n\nWho it fits: the golfer who wants honest carry numbers in the garage without a second bill, and does not care about simulator rounds.\n\nOur rating: 4.1/5 — cross-referenced from our <a href=\"/best-launch-monitors-no-subscription/\">published comparison data</a>, where this exact score already appears.\n\nCeiling height decides more of this than price does — run your dimensions through the <a href="/launch-monitor-room-checker/">room checker</a> first.\n\nBudget first, then shop. The <a href="/golf-simulator-cost-calculator/">simulator cost calculator</a> shows what a complete setup runs at each tier.',
       },
-      { h2: 'Best for Range Sessions: Voice Caddie SC4 Pro',
+      { h2: 'Best for Range Sessions: Swing Caddie SC4 Pro',
         rating: 4.4,
         badge: 'RANGE SESSIONS',
         affiliateKey: 'voice-caddie-sc4-pro',
@@ -5533,7 +5533,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Want data-driven practice instead of mindless range sessions', 'Are building or considering a home golf simulator', 'Want to know your actual carry distances for better club selection'],
     whoSkip: ['Only play 5-10 rounds per year and rarely practice', 'Already have a recent launch monitor', 'Prefer feel-based practice without data'],
     faq: [
-      { q: 'What is the best golf launch monitor under $500?', a: 'The Garmin Approach R10 ($599 list, regularly on sale under $500) is the best budget pick in 2026. It tracks 14+ metrics with accuracy within 1-3% of Trackman on ball speed and carry distance. The Voice Caddie SC4 Pro ($499) is a close second if you prefer a built-in screen.' },
+      { q: 'What is the best golf launch monitor under $500?', a: 'The Garmin Approach R10 ($599 list, regularly on sale under $500) is the best budget pick in 2026. It tracks 14+ metrics with accuracy within 1-3% of Trackman on ball speed and carry distance. The Swing Caddie SC4 Pro ($499) is a close second if you prefer a built-in screen.' },
       { q: 'Are cheap launch monitors accurate?', a: 'Yes — modern budget launch monitors ($200-$500) are accurate within 2-5% of professional-grade Trackman on ball speed and carry distance. Spin data is where cheaper units fall short — spend $700+ for reliable spin.' },
       { q: 'Is the Bushnell Launch Pro the same as the Foresight GC3?', a: 'Yes — identical three-camera photometric hardware. The difference is the software ecosystem: Launch Pro uses Bushnell FSX Play, the GC3 uses Foresight FSX Pro. For most home users, the Launch Pro at $2,499 is the better value.' },
     ],
@@ -5560,7 +5560,7 @@ export const ARTICLES: Article[] = [
     thumb: 'navy',
     words: '3,400',
     datePublished: '2026-04-16',
-    quickAnswerProduct: 'trackman-range',
+    quickAnswerProduct: 'trackman-4',
     dateModified: '2026-07-13',
     updateLog: [
       { date: 'Apr 16, 2026', note: 'Annual freshness review — verified pricing and availability.' },
@@ -7561,7 +7561,7 @@ export const ARTICLES: Article[] = [
       'What apartment golfers need in a launch monitor',
       'Best overall under $700: Square Golf',
       'Best value: Garmin Approach R10',
-      'Best display: Voice Caddie SC4 Pro',
+      'Best display: Swing Caddie SC4 Pro',
       'Best upgrade: Rapsodo MLM2PRO',
       'Comparison table',
       'FAQ',
@@ -7576,7 +7576,7 @@ export const ARTICLES: Article[] = [
         pros: ['Proven reliability — 3+ years on market', 'Free Home Tee Hero simulator mode', 'Garmin ecosystem integration', 'Lowest price at $399'],
         cons: ['Single radar — indoor accuracy drops under 8 feet', 'Older model superseded by R50', 'Occasionally misreads low wedge shots indoors'],
       },
-      { h2: 'Best Display: Voice Caddie SC4 Pro', badge: 'BEST DISPLAY', body: "The SC4 Pro is the only budget monitor with a built-in touchscreen display — no phone required. You see ball speed, carry, and spin rate instantly on the device itself. For apartment golfers who do not want to fumble with phone mounts and Bluetooth connections, this standalone simplicity is valuable. Indoor accuracy is solid at 8+ feet. The V-Sim simulation mode works on the device screen. At $499 it matches the Square Golf price with a different set of trade-offs.", price: '~$699', affiliateKey: 'voice-caddie-sc4-pro', rating: 4.4,
+      { h2: 'Best Display: Swing Caddie SC4 Pro', badge: 'BEST DISPLAY', body: "The SC4 Pro is the only budget monitor with a built-in touchscreen display — no phone required. You see ball speed, carry, and spin rate instantly on the device itself. For apartment golfers who do not want to fumble with phone mounts and Bluetooth connections, this standalone simplicity is valuable. Indoor accuracy is solid at 8+ feet. The V-Sim simulation mode works on the device screen. At $499 it matches the Square Golf price with a different set of trade-offs.", price: '~$699', affiliateKey: 'voice-caddie-sc4-pro', rating: 4.4,
         pros: ['Built-in touchscreen — no phone needed', 'V-Sim simulation mode on device', 'Reliable radar tracking at 8+ feet', 'Clean UI shows key metrics instantly'],
         cons: ['Less accurate than camera-based monitors at short range', 'Heavier and bulkier than Square Golf', 'Battery life shorter at 2-3 hours'],
       },
@@ -7590,7 +7590,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'square-golf-launch-monitor', name: 'Square Golf', bestFor: 'Best for Apartments', price: '~$699', feature1: '4.5/5 ★', winner: true, rating: 4.5 },
         { rating: 4.4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Best Value', price: '~$499', feature1: '4.4/5 ★', winner: false },
-        { rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro', name: 'Voice Caddie SC4 Pro', bestFor: 'Best Display', price: '~$499', feature1: '4.4/5 ★', winner: false },
+        { rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro', name: 'Swing Caddie SC4 Pro', bestFor: 'Best Display', price: '~$499', feature1: '4.4/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best Upgrade', price: '~$599', feature1: '4.7/5 ★', winner: false },
       ],
     },
@@ -10170,7 +10170,7 @@ export const ARTICLES: Article[] = [
     testingNotes: 'All monitors tested over 15+ range sessions outdoors and indoors. Accuracy cross-verified against the other monitors in this test and Arccos on-course data.',
     whoFor: ['Golfers who refuse to pay monthly fees on top of the purchase price', 'Budget-conscious buyers who want full data ownership', 'Home simulator builders who want a one-time purchase'],
     whoSkip: ['Golfers who want the absolute most accurate data (subscription models often lead)', 'Anyone who already has a monitor with an active subscription', 'Players who only care about GPS yardage, not launch data'],
-    toc: ['Why Subscriptions Matter', 'Best Budget: Shot Scope LM1', 'Best Mid-Range: Voice Caddie SC4 Pro', 'Best Premium: FlightScope Mevo Gen2', 'Also No Subscription: Square Golf', '3-Year Cost Comparison'],
+    toc: ['Why Subscriptions Matter', 'Best Budget: Shot Scope LM1', 'Best Mid-Range: Swing Caddie SC4 Pro', 'Best Premium: FlightScope Mevo Gen2', 'Also No Subscription: Square Golf', '3-Year Cost Comparison'],
     intro: "The best launch monitor without a subscription is the <strong>Shot Scope LM1</strong> at $199 — it delivers accurate carry distance, ball speed, and launch angle with zero monthly fees and full data ownership. For golfers who want more metrics, the <strong>FlightScope Mevo Gen2</strong> ($1,299) tracks 18 parameters including spin with no subscription required.\n\nSubscription fees are the hidden cost nobody talks about. A $599 launch monitor that charges $99/year costs $896 over three years. Here are the monitors that charge you once and never again.",
     sections: [
       { h2: 'Why Subscriptions Matter More Than Price', body: "The true cost of a launch monitor is not the sticker price — it is the total cost over 3 years. The Garmin R10 at $599 plus $99/year in subscriptions costs $896 over three years. The Shot Scope LM1 at $199 with zero subscriptions costs $199 forever. That math changes which monitor is actually the best value. I learned this the hard way. I bought a launch monitor thinking it was a one-time purchase, then discovered I needed a $99/year subscription to access the simulator and a $199/year subscription for full data history. Three years in, I had paid more in subscriptions than the device cost. That experience is why I put this guide together — so you do not make the same mistake." },
@@ -10178,7 +10178,7 @@ export const ARTICLES: Article[] = [
         pros: ['Zero subscription fees — ever', 'No phone or app required', 'Built-in color screen', 'Setup in under 60 seconds', 'Accurate carry distance within ±3 yards'],
         cons: ['Limited to 5 metrics (no spin data)', 'No simulator capability', 'No video analysis'],
       },
-      { h2: 'Best Mid-Range: Voice Caddie SC4 Pro ($499)', badge: 'BEST ALL-ROUNDER', body: "Eight metrics on a built-in display, voice feedback, and a 3D driving range simulator — all without a subscription. The SC4 Pro sits in the perfect spot between basic data and full simulator capability. The voice feedback is surprisingly addictive. After every swing, the SC4 Pro announces your carry distance out loud — which means you keep your eyes on your ball flight instead of staring at a screen. Over a 90-ball range session, I found myself more focused on my swing and less distracted by technology. The built-in simulator is basic but functional for garage net sessions.", price: '~$499', rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro',
+      { h2: 'Best Mid-Range: Swing Caddie SC4 Pro ($499)', badge: 'BEST ALL-ROUNDER', body: "Eight metrics on a built-in display, voice feedback, and a 3D driving range simulator — all without a subscription. The SC4 Pro sits in the perfect spot between basic data and full simulator capability. The voice feedback is surprisingly addictive. After every swing, the SC4 Pro announces your carry distance out loud — which means you keep your eyes on your ball flight instead of staring at a screen. Over a 90-ball range session, I found myself more focused on my swing and less distracted by technology. The built-in simulator is basic but functional for garage net sessions.", price: '~$499', rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro',
         pros: ['No subscription fees', 'Built-in 3D simulator', 'Voice feedback (no screen staring)', '8 metrics including launch angle and apex', 'Works indoors and outdoors'],
         cons: ['No spin data at this price', 'Simulator graphics are basic', 'Heavier than portable options'],
       },
@@ -10190,7 +10190,7 @@ export const ARTICLES: Article[] = [
         pros: ['No subscription', 'Camera-based (great indoors)', 'Club data included', 'Accurate spin readings'],
         cons: ['Newer brand — less track record', 'App still maturing'],
       },
-      { h2: '3-Year Cost Comparison', body: "Here is what each monitor actually costs when you include subscription fees over 3 years of ownership:\n\nShot Scope LM1: $199 + $0 = $199\nVoice Caddie SC4 Pro: $499 + $0 = $499\nSquare Golf: $699 + $0 = $699\nGarmin R10: $599 + $699 = $899\nRapsodo MLM2PRO: $699 + $597 = $1,296\nFlightScope Mevo Gen2: $1,299 + $0 = $1,299\n\nThe Mevo Gen2 and MLM2PRO cost nearly the same over 3 years, but the Mevo gives you 18 parameters versus 12, includes E6 courses, and never asks for another payment." },
+      { h2: '3-Year Cost Comparison', body: "Here is what each monitor actually costs when you include subscription fees over 3 years of ownership:\n\nShot Scope LM1: $199 + $0 = $199\nSwing Caddie SC4 Pro: $499 + $0 = $499\nSquare Golf: $699 + $0 = $699\nGarmin R10: $599 + $699 = $899\nRapsodo MLM2PRO: $699 + $597 = $1,296\nFlightScope Mevo Gen2: $1,299 + $0 = $1,299\n\nThe Mevo Gen2 and MLM2PRO cost nearly the same over 3 years, but the Mevo gives you 18 parameters versus 12, includes E6 courses, and never asks for another payment." },
     
       { h2: 'Best Premium No-Sub: Bushnell Launch Pro', body: 'The Launch Pro (powered by Foresight Sports) delivers tour-level accuracy at $2,499 with no subscription for basic practice mode. Ball speed, launch, spin, and carry are measured with photometric precision. The FSX Play simulator software costs $300/year extra, but the core launch data is free forever. For golfers building a premium home setup, the Launch Pro data quality is unmatched at this price.\n\nMeasure first. Our <a href="/launch-monitor-room-checker/">room size checker</a> shows which monitors physically fit before you spend anything.\n\nThe monitor is rarely the whole cost. Our <a href="/golf-simulator-cost-calculator/">cost calculator</a> adds up the mat, net, screen, projector and software too.', affiliateKey: 'bushnell-launch-pro', rating: 4.7 },
       { h2: 'Best Budget No-Sub: Square Golf Monitor', body: 'Square Golf at $249 uses your phone camera — no separate hardware, no subscription, no hidden costs. Accuracy is within 5-7 yards on carry distance. It will not replace a $2,500 unit for club fitting, but for casual practice feedback at the range, it delivers enough data to make each session purposeful.', affiliateKey: 'square-golf-launch-monitor', rating: 3.9 },
@@ -10199,16 +10199,16 @@ export const ARTICLES: Article[] = [
       headers: ['Monitor', 'Price', 'Subscription', '3-Year Cost', 'Metrics'],
       rows: [
         { name: 'Shot Scope LM1', bestFor: 'Best Budget', price: '$199', feature1: 'None', feature2: '5', winner: false, badge: 'STRONG PICK', rating: 4.1, affiliateKey: 'shot-scope-lm1' },
-        { name: 'Voice Caddie SC4 Pro', bestFor: 'Best Mid-Range', price: '$499', feature1: 'None', feature2: '8', winner: false, rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro' },
+        { name: 'Swing Caddie SC4 Pro', bestFor: 'Best Mid-Range', price: '$499', feature1: 'None', feature2: '8', winner: false, rating: 4.4, affiliateKey: 'voice-caddie-sc4-pro' },
         { name: 'Square Golf', bestFor: 'Best Camera', price: '~$699', feature1: 'None', feature2: '12', winner: false, rating: 4.2, affiliateKey: 'square-golf-launch-monitor' },
         { name: 'FlightScope Mevo Gen2', bestFor: 'Best Overall', price: '$1,299', feature1: 'None', feature2: '18', winner: true, rating: 4.3, affiliateKey: 'mevo-gen2' },
       ],
     },
     faq: [
-      { q: 'Do all launch monitors require subscriptions?', a: 'No. The Shot Scope LM1 ($199), Voice Caddie SC4 Pro ($499), Square Golf ($699), and FlightScope Mevo Gen2 ($1,299) all work without any subscription fees. The Garmin R10 and Rapsodo MLM2PRO require paid subscriptions for full features.' },
+      { q: 'Do all launch monitors require subscriptions?', a: 'No. The Shot Scope LM1 ($199), Swing Caddie SC4 Pro ($499), Square Golf ($699), and FlightScope Mevo Gen2 ($1,299) all work without any subscription fees. The Garmin R10 and Rapsodo MLM2PRO require paid subscriptions for full features.' },
       { q: 'Which launch monitor has the lowest total cost?', a: 'The Shot Scope LM1 at $199 with zero subscription fees has the lowest total cost. Over 3 years, it costs $700 less than a Garmin R10 with subscriptions.' },
       { q: 'Is the Mevo Gen2 worth $1,299 without a subscription?', a: 'Yes — when compared to the Rapsodo MLM2PRO ($699 + $199/year subscription), the Mevo Gen2 costs roughly the same over 3 years but includes 18 data parameters, E6 simulator courses, and 6-hour battery life. Zero future payments.' },
-      { q: 'Can I use a launch monitor without a phone?', a: 'The Shot Scope LM1 and Voice Caddie SC4 Pro both have built-in screens and work completely without a phone. The LM1 is the simplest — turn it on and swing.' },
+      { q: 'Can I use a launch monitor without a phone?', a: 'The Shot Scope LM1 and Swing Caddie SC4 Pro both have built-in screens and work completely without a phone. The LM1 is the simplest — turn it on and swing.' },
       { q: 'What is the best no-subscription launch monitor for indoor use?', a: 'The Square Golf ($699) is the best subscription-free option for indoor use. Camera-based technology works better indoors than radar-based alternatives, and it provides accurate spin data without needing extended ball flight.' },
       { q: 'Do no-subscription monitors get software updates?', a: 'Yes. The Shot Scope LM1, FlightScope Mevo Gen2, and Square Golf all receive firmware and app updates at no additional cost. Subscription-based monitors often lock new features behind paid tiers, but no-subscription models include all updates in the purchase price.' },
     ],
@@ -10992,7 +10992,7 @@ export const ARTICLES: Article[] = [
         { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'MLM2PRO', bestFor: 'Under $1K', price: '~$599', feature1: '±3.5 yd', feature2: '$199/yr', badge: 'BEST UNDER $1K' },
         { rating: 4, affiliateKey: 'garmin-approach-r10', name: 'Garmin R10', bestFor: 'Budget', price: '~$499', feature1: '±4.0 yd', feature2: '$99/yr', badge: 'BEST BUDGET' },
         { rating: 4.1, affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Cheapest', price: '~$199', feature1: '±4.5 yd', feature2: 'No sub' },
-        { rating: 4.6, affiliateKey: 'flightscope-x3', name: 'FlightScope X3', bestFor: 'Pro-level', price: '~$15,995', feature1: '±0.5 yd', feature2: 'No sub' },
+        { rating: 4.6, name: 'FlightScope X3', bestFor: 'Pro-level', price: '~$15,995', feature1: '±0.5 yd', feature2: 'No sub' },
       ],
     },
     sections: [
@@ -11625,7 +11625,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { rating: 4.4, affiliateKey: 'benq-th671st-projector', name: 'BenQ TH671ST (Ultra Short)', bestFor: 'Small rooms', price: '~$1,500+', feature1: '0.2-0.4', feature2: '1-3 ft from screen', badge: 'SMALLEST ROOMS' },
         { rating: 4.3, affiliateKey: 'optoma-gt1090hdr', name: 'Optoma GT1090 (Short Throw)', bestFor: 'Most garages', price: '~$500-$1,000', feature1: '0.5-0.8', feature2: '4-6 ft from screen', badge: 'BEST VALUE', winner: true },
-        { rating: 4.2, affiliateKey: 'benq-tk850-projector', name: 'BenQ TK850 (Standard)', bestFor: 'Large rooms', price: '~$300-$600', feature1: '1.0-2.0', feature2: '10-15 ft from screen' },
+        { rating: 4.2, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TK850 (Standard)', bestFor: 'Large rooms', price: '~$300-$600', feature1: '1.0-2.0', feature2: '10-15 ft from screen' },
       ],
     },
     sections: [
@@ -11916,7 +11916,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'ping-g430-irons', name: 'Ping G430 (Shaft Flex)', bestFor: 'Distance + accuracy', price: '~$200', feature1: '5-10 yards', feature2: 'Biggest impact' },
         { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'TM Qi Irons (Club Length)', bestFor: 'Strike consistency', price: '~$200', feature1: 'Center contact', feature2: 'Height-based' },
-        { rating: 4.6, affiliateKey: 'mizuno-jpx923-hot-metal', name: 'Mizuno JPX923 (Lie Angle)', bestFor: 'Direction control', price: '~$200', feature1: 'Left/right fix', feature2: '±2° typical' },
+        { rating: 4.6, name: 'Mizuno JPX923 (Lie Angle)', bestFor: 'Direction control', price: '~$200', feature1: 'Left/right fix', feature2: '±2° typical' },
         { rating: 4.8, affiliateKey: 'golf-pride-mcc-plus4', name: 'Golf Pride MCC Plus4', bestFor: 'Comfort + control', price: '~$8/grip', feature1: 'Feel', feature2: 'Hand size' },
       ],
     },
@@ -12086,7 +12086,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { rating: 4.4, affiliateKey: 'cleveland-cbx4-wedge', name: 'Cleveland CBX4', bestFor: 'Best overall', price: '~$150', feature1: 'Maximum', feature2: 'Cavity back', badge: 'BEST OVERALL', winner: true },
         { rating: 4.6, affiliateKey: 'callaway-jaws-full-toe', name: 'Callaway JAWS Full Toe', bestFor: 'Open-face shots', price: '~$180', feature1: 'High', feature2: 'Full-face grooves' },
-        { rating: 4.5, affiliateKey: 'taylormade-hi-toe-3', name: 'TaylorMade Hi-Toe 3', bestFor: 'Versatility', price: '~$170', feature1: 'High', feature2: 'Full-face scoring' },
+        { rating: 4.5, name: 'TaylorMade Hi-Toe 3', bestFor: 'Versatility', price: '~$170', feature1: 'High', feature2: 'Full-face scoring' },
       ],
     },
     sections: [
@@ -12141,8 +12141,8 @@ export const ARTICLES: Article[] = [
       rows: [
         { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: 'Callaway Paradym', bestFor: 'Best overall', price: '~$250', feature1: 'High', feature2: 'Long + forgiving', badge: 'BEST OVERALL', winner: true },
         { rating: 4.6, affiliateKey: 'ping-g430-hybrid', name: 'Ping G430', bestFor: 'Max forgiveness', price: '~$260', feature1: 'Highest', feature2: 'Most consistent' },
-        { rating: 4.4, affiliateKey: 'taylormade-stealth-hybrid', name: 'TaylorMade Stealth', bestFor: 'Best value', price: '~$180', feature1: 'High', feature2: 'Prev gen deal', badge: 'BEST VALUE' },
-        { rating: 4.3, affiliateKey: 'cobra-aerojet-hybrid', name: 'Cobra Aerojet', bestFor: 'Distance', price: '~$200', feature1: 'High', feature2: 'Longest in test' },
+        { rating: 4.4, name: 'TaylorMade Stealth', bestFor: 'Best value', price: '~$180', feature1: 'High', feature2: 'Prev gen deal', badge: 'BEST VALUE' },
+        { rating: 4.3, name: 'Cobra Aerojet', bestFor: 'Distance', price: '~$200', feature1: 'High', feature2: 'Longest in test' },
       ],
     },
     sections: [
@@ -12258,7 +12258,7 @@ export const ARTICLES: Article[] = [
       caption: 'Shaft Flex by Swing Speed',
       headers: ['Flex', 'Best For', 'Price', 'Driver Speed'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'callaway-strata-set', name: 'Ladies — Callaway Strata Set', bestFor: 'Slow swings', price: '~$150', feature1: 'Under 60 mph', feature2: 'Most flexible' },
+        { badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'callaway-strata', name: 'Ladies — Callaway Strata Set', bestFor: 'Slow swings', price: '~$150', feature1: 'Under 60 mph', feature2: 'Most flexible' },
         { rating: 4.7, affiliateKey: 'superspeed-golf-set', name: 'Senior — SuperSpeed Training', bestFor: 'Moderate swings', price: '~$150', feature1: '60-75 mph', feature2: 'Flexible' },
         { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'Regular — TaylorMade Qi Irons', bestFor: 'Most golfers', price: '~$150', feature1: '75-90 mph', feature2: 'Standard', badge: 'MOST COMMON', winner: true },
         { rating: 4.5, affiliateKey: 'titleist-t300', name: 'Stiff — Titleist T300 Irons', bestFor: 'Faster swings', price: '~$150', feature1: '90-105 mph', feature2: 'Firm' },
@@ -12314,7 +12314,7 @@ export const ARTICLES: Article[] = [
       headers: ['Grip', 'Best For', 'Price', 'Type'],
       rows: [
         { rating: 4.8, affiliateKey: 'golf-pride-mcc-plus4', name: 'Golf Pride MCC Plus4', bestFor: 'Best overall', price: '~$8', feature1: 'Hybrid', feature2: 'Cord + rubber', badge: 'BEST OVERALL', winner: true },
-        { rating: 4.4, affiliateKey: 'lamkin-crossline', name: 'Lamkin Crossline', bestFor: 'Classic feel', price: '~$5', feature1: 'Rubber', feature2: 'Tour standard', badge: 'BEST VALUE' },
+        { rating: 4.4, affiliateKey: 'lamkin-crossline-cord', name: 'Lamkin Crossline', bestFor: 'Classic feel', price: '~$5', feature1: 'Rubber', feature2: 'Tour standard', badge: 'BEST VALUE' },
         { rating: 4.6, affiliateKey: 'superstroke-s-tech', name: 'SuperStroke S-Tech', bestFor: 'Soft feel', price: '~$7', feature1: 'Rubber', feature2: 'Tacky' },
         { rating: 4.5, affiliateKey: 'winn-dri-tac', name: 'Winn Dri-Tac', bestFor: 'Arthritis/soft feel', price: '~$6', feature1: 'Polymer', feature2: 'Softest option' },
       ],
@@ -13719,7 +13719,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Every golfer — these are universally useful'], whoSkip: ['Nobody — $15 is the best investment in golf'],
     comparisonTable: { headers: ['Sticks', 'Best For', 'Price', 'Material', 'Our Rating'], rows: [
       { badge: 'STRONG PICK', affiliateKey: 'alignment-sticks', name: 'Standard Fiberglass Pair', bestFor: 'Best Value', price: '~$12', feature1: 'Fiberglass', feature2: '', winner: true, rating: 4.8 },
-      { rating: 4.5, affiliateKey: 'tour-striker-alignment-sticks', name: 'Tour Striker Set', bestFor: 'Best Kit', price: '~$25', feature1: 'Fiberglass + guide', feature2: '', winner: false },
+      { rating: 4.5, affiliateKey: 'alignment-sticks', name: 'Tour Striker Set', bestFor: 'Best Kit', price: '~$25', feature1: 'Fiberglass + guide', feature2: '', winner: false },
     ]},
     sections: [
       { h2: 'Why alignment sticks work', body: 'Most golfers think they are aimed at the target. They are not. Studies show recreational golfers aim 5-15 yards right or left of their target without realizing it. Alignment sticks placed on the ground give you visual confirmation of your aim line, ball position, and stance width — eliminating the guesswork that causes mis-aimed shots.\n\nThey also help diagnose swing path: place a stick along your target line and notice whether your club travels over it (outside-in, causing slices) or under it (inside-out, causing hooks). This is the same feedback a $150 lesson provides — for $12.\n\nThere is a reason coaches reach for sticks before any electronic aid: feedback speed. A camera tells you after the swing what went wrong; a stick on the ground shapes the swing while it happens, with zero setup time and no screen to interpret. That immediacy is what builds a habit — you are not analyzing alignment, you are practicing it. Fifty balls hit beside a stick rewire your eyes more than five hundred hit without one, because every single rep either matched the reference or visibly did not.' },

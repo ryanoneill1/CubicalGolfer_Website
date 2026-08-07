@@ -62,7 +62,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'skechers-go-golf': "Skechers Go Golf",
   'footjoy-tour-alpha': "FootJoy Tour Alpha",
   'garmin-approach-r10': "Garmin Approach R10",
-  'voice-caddie-sc4-pro': "Voice Caddie SC4 Pro",
+  'voice-caddie-sc4-pro': "Swing Caddie SC4 Pro",
   'bushnell-launch-pro': "Bushnell Launch Pro",
   'flightscope-mevo-gen2': "FlightScope Mevo Gen2",
   'trackman-4': "TrackMan 4",
