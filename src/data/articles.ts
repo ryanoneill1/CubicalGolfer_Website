@@ -9834,8 +9834,8 @@ export const ARTICLES: Article[] = [
       { date: 'May 5, 2026', note: 'Expanded comparison table, added 4 FAQs, fixed product links.' },
       { date: 'Apr 20, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Best Putters for the Money 2026 — 4 Under $150',
-    titleDisplay: '4 Best Putters Under $150',
+    title: 'Best Putters Under $150 in 2026 — 4 Tested Picks',
+    titleDisplay: '4 Best Putters Under $150 (Plus One Worth Stretching For)',
     bottomLine: 'The <strong>Cleveland Huntington Beach Soft</strong> is the best putter under $150 — Speed Optimized Face technology, solid feel, and classic designs at a price that does not require justification. For maximum forgiveness on a budget, the Odyssey White Hot OG at $199 is worth the stretch.',
     description: 'Best putters for the money in 2026 — 4 models under $150 tested on real greens. Budget putters with tour-level feel for golfers who refuse to spend $300+.',
     excerpt: 'Best putters under $150 — you do not need to spend $300 to putt well.',
@@ -9871,7 +9871,7 @@ export const ARTICLES: Article[] = [
         badge: 'BEST MALLET',
         price: '~$129 at Amazon',
         rating: 4.2, affiliateKey: 'odyssey-dfx',
-        body: 'The Odyssey DFX is a mallet putter that brings Odyssey design and alignment expertise to the sub-$150 market. While it uses a different insert than the premium White Hot OG, the DFX face provides a softer feel than most budget competitors. The high-MOI mallet head resists twisting on mishits, making it the most forgiving budget putter for golfers who struggle with contact consistency. The alignment system uses a simple but effective sight line on the flange. Odyssey\'s alignment engineering is the best in the business, and even their budget models benefit from decades of research into visual aim aids. From 6 feet, the DFX converted 56% in our testing — within 2% of the much more expensive Cleveland mallet. For golfers who want a mallet putter without the $200+ price tag, the DFX delivers the fundamentals: high MOI, decent feel, and good alignment.',
+        body: 'The DFX comes in both mallet and blade head shapes — the mallet at ~$129 and the blade closer to $99, so check which head you are ordering. The Odyssey DFX is a mallet putter that brings Odyssey design and alignment expertise to the sub-$150 market. While it uses a different insert than the premium White Hot OG, the DFX face provides a softer feel than most budget competitors. The high-MOI mallet head resists twisting on mishits, making it the most forgiving budget putter for golfers who struggle with contact consistency. The alignment system uses a simple but effective sight line on the flange. Odyssey\'s alignment engineering is the best in the business, and even their budget models benefit from decades of research into visual aim aids. From 6 feet, the DFX converted 56% in our testing — within 2% of the much more expensive Cleveland mallet. For golfers who want a mallet putter without the $200+ price tag, the DFX delivers the fundamentals: high MOI, decent feel, and good alignment.',
         pros: [
           'Odyssey alignment expertise in a budget package',
           'High MOI mallet head — most forgiving option under $150',
@@ -9921,12 +9921,12 @@ export const ARTICLES: Article[] = [
         ],
       },
     
-      { h2: 'Best Blade Under $100: Odyssey DFX', body: 'The DFX is Odyssey entry-level putter at $99 with a simplified White Hot insert. It lacks the micro-hinge technology of the premium models but delivers 85% of the feel at 50% of the price. The blade version suits golfers with an arcing stroke who want clean feedback without spending $200+.', affiliateKey: 'odyssey-dfx', rating: 4.2 },
-      { h2: 'Best Premium Mallet: TaylorMade Spider GT', body: 'The Spider GT brings high-MOI mallet stability to the $140 price point. The True Path alignment system makes aiming noticeably easier than any other putter at this price. Heavier head weight (360g) dampens mishit feedback, which is a feature for nervous short-putters and a drawback for feel-oriented lag putters.', affiliateKey: 'taylormade-spider-gt', rating: 4.2 },
+      { h2: 'Worth Stretching For: TaylorMade Spider GT — ~$299 (over the $150 budget)', body: 'The Spider GT brings high-MOI mallet stability to the $140 price point. The True Path alignment system makes aiming noticeably easier than any other putter at this price. Heavier head weight (360g) dampens mishit feedback, which is a feature for nervous short-putters and a drawback for feel-oriented lag putters.', affiliateKey: 'taylormade-spider-gt', rating: 4.2 },
     ],
     comparisonTable: {
       headers: ['Putter', 'Best For', 'Type', 'Price', 'Face Tech'],
       rows: [
+        { name: 'TaylorMade Spider GT', affiliateKey: 'taylormade-spider-gt', bestFor: 'Premium step-up', price: '~$299', feature1: 'Mallet', feature2: 'Over budget', winner: false, rating: 4.5 },
         { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$129', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'Odyssey DFX', bestFor: 'Best Mallet', price: '~$129', feature1: 'Mallet', feature2: 'DFX Insert', winner: false, rating: 4.2, affiliateKey: 'odyssey-dfx' },
         { name: 'Wilson Staff Infinite', bestFor: 'Value Blade', price: '~$99', feature1: 'Blade', feature2: 'Double Milled', winner: false, rating: 4.1, affiliateKey: 'wilson-staff-infinite' },
