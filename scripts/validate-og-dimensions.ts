@@ -65,13 +65,10 @@ for (const file of htmlFiles('dist')) {
     failures.push(`${page} → ${path} is ${info.w}x${info.h}; below the ${MIN_W}x${MIN_H} minimum for a social card`);
 }
 
-// THRESHOLD, deliberately. 181 pages already point og:image at a 400x260 WebP
-// article thumbnail — 226 of the 271 thumbnails are below Facebook's 600x315
-// minimum. That is a real finding and a real job (153 distinct files), but it
-// predates this check and breaking the build over it would just get the check
-// deleted. So: the number is recorded, and the build fails only if it GROWS.
-// Lower it as thumbnails are converted; at 0, delete this paragraph.
-const KNOWN_SMALL_OR_WEBP = 181;
+// Was 181 while every article shared a 400x260 WebP thumbnail as its social image.
+// Sprint 6 gave all 183 articles a real 1200x630 JPG card, so the allowance is gone
+// and any regression fails the build.
+const KNOWN_SMALL_OR_WEBP = 0;
 
 if (failures.length > KNOWN_SMALL_OR_WEBP) {
   console.error(`\n❌ ${failures.length} social image(s) will not render as a card (was ${KNOWN_SMALL_OR_WEBP}):`);

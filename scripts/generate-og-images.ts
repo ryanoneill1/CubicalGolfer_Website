@@ -124,7 +124,7 @@ async function build(card: Card) {
       const inRow = Math.min(PER_ROW, art.length - row * PER_ROW);
       const rowW = inRow * D + (inRow - 1) * GAP;
       const left = Math.round(W - 72 - rowW + col * (D + GAP));
-      const circle = await sharp(`public/images/products/${p}.webp`)
+      const circle = await sharp(`public/images/products/${p}.webp`).flatten({ background: '#ffffff' })
         .resize(D, D, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } })
         .composite([{ input: mask, blend: 'dest-in' }])
         .png().toBuffer();
@@ -145,3 +145,117 @@ for (const c of CARDS) {
 }
 console.log(`✅ og images: generated ${made.length} social cards at ${W}x${H}`);
 for (const m of made) console.log('   ' + m);
+
+/* ─────────────────────────────────────────────────────────────────────────────
+ * ARTICLE CARDS
+ *
+ * 183 articles shipped og:image pointing at their 400x260 WebP article thumbnail.
+ * That is below Facebook's 600x315 minimum and WebP is unreliable on LinkedIn, so
+ * those pages have effectively been sharing with no image at all.
+ *
+ * These reuse the same layout as the tool cards above, with the article's own
+ * product photography where it has any — so a driver guide shows drivers rather
+ * than a generic template.
+ * ──────────────────────────────────────────────────────────────────────────── */
+const CATEGORY_LABEL: Record<string, string> = {
+  'gear-reviews': 'GEAR REVIEWS',
+  'improve-game': 'IMPROVE YOUR GAME',
+  'golf-tech': 'GOLF TECH',
+  'golf-accessories': 'ACCESSORIES',
+  'golf-lifestyle': 'GOLF LIFESTYLE',
+  'indoor-golf': 'INDOOR GOLF',
+};
+
+// Greedy wrap on an estimated advance width — SVG text does not wrap on its own,
+// and an unwrapped title runs straight off the card or under the artwork.
+function wrap(text: string, maxChars: number, maxLines: number): string[] {
+  const words = text.split(/\s+/);
+  const lines: string[] = [];
+  let line = '';
+  for (const w of words) {
+    if (!line) { line = w; continue; }
+    if ((line + ' ' + w).length <= maxChars) line += ' ' + w;
+    else { lines.push(line); line = w; if (lines.length === maxLines - 1) break; }
+  }
+  const rest = words.slice(lines.join(' ').split(/\s+/).filter(Boolean).length).join(' ');
+  if (lines.length < maxLines && (line || rest)) lines.push(rest || line);
+  return lines.slice(0, maxLines);
+}
+
+const { ARTICLES } = await import('../src/data/articles.ts');
+const { AFFILIATE } = await import('../src/data/affiliate-links.ts');
+
+// Card art must not be mistaken for product photography on a social card.
+const CARD_ART = new Set(['taylormade-sim2-max.webp','cleveland-launcher-xl2-driver.webp',
+  'titleist-gt2-driver.webp','club-car-onward.webp','ezgo-freedom-rxv.webp','cobra-ds-adapt-max-k.webp']);
+
+let articleCards = 0, withArt = 0;
+for (const a of ARTICLES as any[]) {
+  const slugName = String(a.slug).replace(/^\/|\/$/g, '').replace(/\//g, '-');
+  const heading = String(a.titleDisplay || a.title || '').replace(/\s*[—–-]\s*\d{4}.*$/, '').trim();
+  if (!heading) continue;
+
+  const keys: string[] = [
+    ...(a.sections ?? []).map((x: any) => x.affiliateKey),
+    ...((a.comparisonTable?.rows ?? []).map((x: any) => x.affiliateKey)),
+  ].filter(Boolean);
+  const imgs: string[] = [];
+  for (const k of keys) {
+    const src = (AFFILIATE as any)[k]?.imgSrc as string | undefined;
+    if (!src) continue;
+    const file = src.split('/').pop()!;
+    if (CARD_ART.has(file)) continue;
+    const disk = 'public' + src;
+    if (!existsSync(disk) || imgs.includes(disk)) continue;
+    imgs.push(disk);
+    if (imgs.length === 4) break;
+  }
+
+  const hasArt = imgs.length >= 2;   // one lone photo looks accidental
+  const col = hasArt ? 600 : W - 144;
+  const size = Math.max(40, Math.min(hasArt ? 58 : 66, Math.floor((col - 72) / (Math.max(...wrap(heading, hasArt ? 22 : 30, 3).map(l => l.length)) * 0.60))));
+  const lines = wrap(heading, hasArt ? 22 : 30, 3);
+  const eyebrow = CATEGORY_LABEL[a.category] ?? 'CUBICAL GOLFER';
+  const top = Math.round((H - lines.length * size * 1.16) / 2) + size;
+
+  const svg = `
+  <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
+    <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${GREEN_MID}"/><stop offset="100%" stop-color="${GREEN}"/>
+    </linearGradient></defs>
+    <rect width="${W}" height="${H}" fill="url(#bg)"/>
+    <rect x="0" y="0" width="${W}" height="10" fill="${GOLD}"/>
+    <text x="72" y="${top - 72}" font-family="${SERIF}" font-size="24" font-weight="bold"
+          letter-spacing="4" fill="${GOLD}">${esc(eyebrow)}</text>
+    ${lines.map((l, i) => `<text x="72" y="${top + i * Math.round(size * 1.16)}" font-family="${SERIF}"
+          font-size="${size}" font-weight="bold" fill="${CREAM}">${esc(l)}</text>`).join('\n    ')}
+    <rect x="72" y="${H - 96}" width="72" height="5" fill="${GOLD}"/>
+    <text x="72" y="${H - 50}" font-family="${SERIF}" font-size="28" font-weight="bold"
+          fill="${GOLD}">CubicalGolfer.com</text>
+  </svg>`;
+
+  let img = sharp(Buffer.from(svg)).resize(W, H);
+  if (hasArt) {
+    const D = 150, GAP = 26, PER_ROW = 2;
+    const maskBuf = Buffer.from(`<svg width="${D}" height="${D}"><circle cx="${D/2}" cy="${D/2}" r="${D/2}" fill="#fff"/></svg>`);
+    const rows = Math.ceil(imgs.length / PER_ROW);
+    const top0 = Math.round((H - (rows * D + (rows - 1) * GAP)) / 2);
+    const plates = await Promise.all(imgs.map(async (src, i) => {
+      const r = Math.floor(i / PER_ROW), c = i % PER_ROW;
+      const inRow = Math.min(PER_ROW, imgs.length - r * PER_ROW);
+      const rowW = inRow * D + (inRow - 1) * GAP;
+      return {
+        input: await sharp(src).flatten({ background: '#ffffff' })
+          .resize(D, D, { fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 1 } })
+          .composite([{ input: maskBuf, blend: 'dest-in' }]).png().toBuffer(),
+        left: Math.round(W - 72 - rowW + c * (D + GAP)),
+        top: top0 + r * (D + GAP),
+      };
+    }));
+    img = sharp(await img.png().toBuffer()).composite(plates);
+    withArt++;
+  }
+  await img.jpeg({ quality: 82, progressive: true }).toFile(join(OUT, `${slugName}.jpg`));
+  articleCards++;
+}
+console.log(`✅ og images: generated ${articleCards} article cards (${withArt} with product photography)`);
