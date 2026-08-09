@@ -429,6 +429,31 @@ export const AFFILIATE: Record<string, {
   },
 
   // Cobra Aerojet Max — search (shaft/loft variants)
+  // Cobra DS-Adapt MAX-K — ASIN B0DC88GLHK ✅ verified live 9 Aug 2026: $299.99,
+  // In Stock, sold by Amazon. Replaces the Aerojet Max, which Amazon lists as
+  // "Currently unavailable" and which Golf Galaxy no longer carries at all — its
+  // search lands on a women's used demo fairway wood.
+  // Image is card art, registered in AWAITING_PHOTO in validate-thumbnails.ts.
+  // Using the DARKSPEED X photo would be a different club under the same name.
+  'cobra-ds-adapt-max-k': {
+    asin: 'B0DC88GLHK',
+    url: 'https://www.amazon.com/dp/B0DC88GLHK?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '~$299',
+    priceNote: 'Current-generation head at a previous-generation price.',
+    label: 'Check Price at Amazon \u2192',
+    imgSrc: '/images/products/cobra-ds-adapt-max-k.webp',
+    imgAlt: 'Cobra DS-Adapt MAX-K Driver',
+    benefits: [
+        'FutureFit33 hosel — 33 loft and lie settings, adjustable ±2° independently',
+        'Adaptive Weighting System with a combined MOI up to 10,000 (9° and 10.5°)',
+        'SMARTPAD keeps the face square whatever setting you pick',
+      ],
+  },
+
   'cobra-aerojet-max': {
     asin: 'B0BJ4TQN5G',
     url: 'https://www.amazon.com/Cobra-Golf-D7615LGR105A-Aerojet-Driver/dp/B0BJ4TQN5G?crid=20LUVHF17H85X&dib_tag=se&keywords=Cobra%2BAerojet%2BMax%2BDriver&qid=1785683075&sprefix=cobra%2Baerojet%2Bmax%2Bdriver%2Caps%2C329&sr=8-1&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=f8048f262070d2bb900a413149c7465b&language=en_US&ref_=as_li_ss_tl',

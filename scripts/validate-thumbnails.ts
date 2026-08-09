@@ -60,9 +60,11 @@ const SILHOUETTE_FILES = new Set<string>([
   'titleist-gt2-driver.webp',          // repointed → Titleist-GT2-driver.webp
   'club-car-onward.webp',              // still in use — awaiting a real photo
   'ezgo-freedom-rxv.webp',             // repointed → E-Z-GO-Freedom-RXV.webp
+  'cobra-ds-adapt-max-k.webp',         // still in use — awaiting a real photo
 ]);
 const AWAITING_PHOTO = new Set<string>([
-  'club-car-onward', // 1 page — the only product still on card art
+  'club-car-onward',        // 1 page
+  'cobra-ds-adapt-max-k',   // 6 pages — replaced the discontinued Aerojet Max 9 Aug 2026
 ]);
 for (const [key, v] of Object.entries(AFFILIATE as any)) {
   const img = (v as any).imgSrc as string | undefined;
