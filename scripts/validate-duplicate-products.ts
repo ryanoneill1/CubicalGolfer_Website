@@ -96,6 +96,40 @@ for (const [, keys] of bySize) {
   }
 }
 
+// MODEL-CODE COLLISION. 'voice-caddie-sc4-pro' ($599, search URL) and
+// 'swing-caddie-sc4-pro' ($499, real PDP) were the same launch monitor under two
+// keys. Neither the name check nor the shared-image check caught it: the imgAlt
+// strings differ ("Voice Caddie SC4 Pro" vs "Voice Caddie Swing Caddie SC4 PRO")
+// and each had its own photo. What they share is the model code. So: if two keys
+// carry the same alphanumeric model token AND the same brand, they are the same
+// product until proven otherwise, and two different prices is a contradiction.
+const MODEL = /\b([A-Z]{1,4}\d{1,3}[A-Z+]{0,4}|\d{2,3}[A-Z]{1,3})\b/;
+const modelDupes: string[] = [];
+const byModel = new Map<string, string[]>();
+for (const [key, v] of entries as [string, any][]) {
+  const alt: string = v.imgAlt || '';
+  const m = alt.toUpperCase().match(MODEL);
+  if (!m) continue;
+  const brand = alt.trim().split(/\s+/)[0].toLowerCase();
+  const sig = `${brand}|${m[1]}`;
+  if (!byModel.has(sig)) byModel.set(sig, []);
+  byModel.get(sig)!.push(key);
+}
+for (const [sig, keys] of byModel) {
+  if (keys.length < 2) continue;
+  const priced = keys.map(k => [k, num((AFFILIATE as any)[k].price)] as const)
+                     .filter((x): x is readonly [string, number] => x[1] !== null);
+  const vals = new Set(priced.map(x => x[1]));
+  if (vals.size > 1) {
+    // WARNING, not a failure. A driver, an irons set and a hybrid legitimately share
+    // brand and model code (Ping G430), so this cannot distinguish a real variant from
+    // a real duplicate on its own. It is a short list for a human to glance at — which
+    // is how the SC4 PRO and Launcher XL2 duplicates were actually spotted.
+    modelDupes.push(`brand + model "${sig.split('|')[1]}" under ${keys.length} keys at different prices: ` +
+      priced.map(([k, v]) => `${k} ($${v})`).join(', '));
+  }
+}
+
 if (problems.length) {
   console.error(`\n❌ ${problems.length} possible duplicate product record(s):`);
   for (const p of [...new Set(problems)]) console.error('   ' + p);
@@ -105,6 +139,10 @@ if (problems.length) {
 if (nearMiss.length) {
   console.log(`⚠️  ${nearMiss.length} key(s) extend another key at a different price — usually a real variant (Mevo vs Mevo+, driver vs irons). Verify, don't assume:`);
   for (const m of [...new Set(nearMiss)].slice(0, 10)) console.log('   ' + m);
+}
+if (modelDupes.length) {
+  console.log(`⚠️  ${modelDupes.length} brand+model group(s) priced differently — variant or duplicate? Glance, don't assume:`);
+  for (const m of modelDupes) console.log('   ' + m);
 }
 if (shared.length) {
   console.log(`⚠️  ${shared.length} key pair(s) share a product image — fine for variants, worth a glance:`);

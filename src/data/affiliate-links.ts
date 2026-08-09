@@ -115,21 +115,25 @@ export const AFFILIATE: Record<string, {
   // B2: the ES14 section rendered with an image and a price but ZERO buy buttons
   // after it was correctly unbound from the Swing Caddie SC4 Pro. It needs its
   // own record so the section monetises the product it actually names.
-  'ernest-sports-es14': {
-    url: 'https://www.amazon.com/s?k=ernest+sports+es14+launch+monitor&tag=cubicalgolfer-20',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DErnest%2520Sports%2520ES14%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
-    price: '~$199',
-    label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/ernest-sports-es14.webp',
-    imgAlt: 'Ernest Sports ES14 launch monitor',
+  // Ernest Sports ES B1 — Golf Galaxy /p/ verified live 7 Aug 2026.
+  // Golf Galaxy displays "See Price In Cart" (MAP restriction); its own structured
+  // data carries $292.97, which is what the cart charges. The ES14 this replaces
+  // returned zero Ernest Sports products on Amazon.
+  'ernest-sports-es-b1': {
+    url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fernest-sports-es-b1-portable-launch-monitor-20ersusb1prtbllnctch%2F20ersusb1prtbllnctch%3FenteredSearchTerm%3DErnest%2520Sports',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '~$293',
+    priceNote: 'Golf Galaxy shows this one as "See Price In Cart" — the price appears at checkout.',
+    label: 'Check Price at Golf Galaxy \u2192',
+    imgSrc: '/images/products/Ernest Sports ES_B1_LM.webp',
+    imgAlt: 'Ernest Sports ES B1 portable launch monitor',
     benefits: [
-        'Ball speed and estimated carry from Doppler radar',
-        'No subscription required for core numbers',
-        'The cheapest way to confirm your real club distances',
+        'Six data points: ball speed, club speed, distance, smash factor, spin rate, launch angle',
+        'Reads on its own LCD — the free iOS app is optional, and there is no subscription',
+        'Rechargeable lithium battery, works indoors or out',
       ],
   },
 
@@ -907,6 +911,9 @@ export const AFFILIATE: Record<string, {
   // Swing Caddie SC4 PRO (2024/2025 model) — ASIN B0DK24YKBD ✅ verified
   // NOTE: The article previously said "SC4" but the current product is the SC4 PRO.
   //       Body text and article data have been updated to reflect this.
+  // Swing Caddie SC4 PRO — Amazon B0DK24YKBD verified live 7 Aug 2026: $499.98,
+  // In Stock, sold by the Voice Caddie Official Store. Absorbed the duplicate
+  // 'voice-caddie-sc4-pro' record, which held a search URL and a $599 PlayBetter price.
   'swing-caddie-sc4-pro': {
     asin: 'B0DK24YKBD',
     url: 'https://www.amazon.com/dp/B0DK24YKBD?&linkCode=ll2&tag=cubicalgolfer-20&linkId=5c9ef5f218ddecbb1d865de38ae35fbb&language=en_US&ref_=as_li_ss_tl',
@@ -1319,25 +1326,6 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
-  'voice-caddie-sc4-pro': {
-    url: 'https://www.amazon.com/s?k=voice-caddie-sc4-pro&crid=R0YFUFN6YD9F&sprefix=voice-caddie-sc4-pro%2Caps%2C259&linkCode=ll2&tag=cubicalgolfer-20&linkId=8e2fa05dc74c59d62dc3f1ac29978eb8&language=en_US&ref_=as_li_ss_tl',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Swing*+Caddie*+SC4*+Pro*+launch*+monitor*&ghref=2301%3A1333883',
-    retailer: 'Amazon',
-    price: '~$599',
-    primaryRetailer: 'direct',
-    priceNote: 'Price is typical for this category. Check link for any current promotions.',
-    label: 'See Today\'s Price →',
-    imgSrc: '/images/products/voice-caddie-sc4-pro.webp',
-    imgAlt: 'Voice Caddie SC4 Pro Golf Launch Monitor',
-    benefits: [
-      'Built-in color screen — no phone needed on the range',
-      'E6 Connect compatible for home simulator play',
-      'No subscription — all features included at purchase',
-    ],
-  },
 
   'bushnell-launch-pro': {
     url: 'https://bushnell.pxf.io/4aLLGM',
