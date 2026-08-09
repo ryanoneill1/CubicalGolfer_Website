@@ -406,13 +406,13 @@ export const AFFILIATE: Record<string, {
 
   // TaylorMade Qi35 Max (2025) — search (shaft/loft variants)
   'taylormade-qi35-max': {
-    url: 'https://www.amazon.com/s?k=taylormade-qi35-max&crid=3FDRIP5XMD1B3&sprefix=taylormade-noodle%2Caps%2C251&linkCode=ll2&tag=cubicalgolfer-20&linkId=c62574dee5a02cfe82a43e560fd5577a&language=en_US&ref_=as_li_ss_tl',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Qi35%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
-    price: '~$599',
+    url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftaylormade-qi35-max-driver-24tymmnvmxdvrrspddrv%2F24tymmnvmxdvrrspddrv',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=taylormade-qi35-max&crid=3FDRIP5XMD1B3&sprefix=taylormade-noodle%2Caps%2C251&linkCode=ll2&tag=cubicalgolfer-20&linkId=c62574dee5a02cfe82a43e560fd5577a&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Golf Galaxy',
+    price: '~$449',
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'See Today\'s Price →',
@@ -448,12 +448,12 @@ export const AFFILIATE: Record<string, {
 
   // Ping G430 Max Driver — search (shaft/loft variants)
   'ping-g430-max-driver': {
-    url: 'https://www.amazon.com/s?k=ping-g430-max-driver&crid=1HU7Q4J68VJSR&sprefix=ping-g430-irons%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=851dc1f118c6e16c2e9e00068f21d081&language=en_US&ref_=as_li_ss_tl',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G430%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
+    url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-g430-max-driver-22pngmg430mxdrltcdrv%2F22pngmg430mxdrltcdrv',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/s?k=ping-g430-max-driver&crid=1HU7Q4J68VJSR&sprefix=ping-g430-irons%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=851dc1f118c6e16c2e9e00068f21d081&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Golf Galaxy',
     price: '~$449',
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
@@ -3750,13 +3750,14 @@ export const AFFILIATE: Record<string, {
 
   // ═══ FORGIVING IRONS + BUDGET PICKS — June 2026 ═══
   'taylormade-sim2-max': {
-    url: 'https://www.amazon.com/s?k=taylormade+sim+max+driver&tag=cubicalgolfer-20',
+    asin: 'B08QSKHMQG',
+    url: 'https://www.amazon.com/TaylorMade-Driver-Graphite-Degree-Ventus/dp/B08QSKHMQG?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e3c2025b714f5401fe1503827bb320bf&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520SIM2%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$399',
+    price: '~$349',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/taylormade-sim-max.webp', imgAlt: 'TaylorMade SIM Max driver',

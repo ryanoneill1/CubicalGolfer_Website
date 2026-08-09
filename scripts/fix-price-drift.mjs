@@ -39,11 +39,15 @@ const VERIFIED = {
   'callaway-rogue-st-max':         [299,  'Amazon $299.99'],
   'callaway-paradym-ai-smoke-max': [399,  'Amazon $399.99'],
   'callaway-big-bertha':           [349,  'Amazon $349.95 (B21)'],
-  'voice-caddie-sc4-pro':          [599,  'PlayBetter $599.99 / Amazon SC4 PRO'],
   'garmin-approach-s12':           [199,  'Golf Galaxy /p/ $199.99'],
   'garmin-approach-s62':           [499,  'Golf Galaxy /p/ $499.99'],
   'flightscope-mevo-gen2':         [1299, 'PlayBetter $1,299.00'],
   'skytrak-plus':                  [1495, 'PlayBetter $1,495.00'],
+  // 9 Aug 2026
+  'taylormade-qi35-max':           [449,  'Golf Galaxy /p/ $449.99 (was $599.99)'],
+  'taylormade-sim2-max':           [349,  'Amazon B08QSKHMQG $349.00 in stock'],
+  'swing-caddie-sc4-pro':          [499,  'Amazon B0DK24YKBD $499.98 in stock'],
+  'ernest-sports-es-b1':           [293,  'Golf Galaxy structured data $292.97'],
 };
 
 /* ---------- registry ---------- */
@@ -151,7 +155,16 @@ for (const m of src0.matchAll(/affiliateKey: '([a-z0-9-]+)'/g)) (() => {
     for (const mm of blk.matchAll(re)) {
       if (depth[mm.index] !== 1) continue;          // nested object — not ours
       const numTxt = mm[2];
-      if (parseFloat(numTxt.replace(/,/g, '')) === reg.num) continue;
+      const cur = parseFloat(numTxt.replace(/,/g, ''));
+      if (cur === reg.num) continue;
+      // A figure this far from the registry is probably not this product's price at
+      // all — a row named "SIM Max (prev gen)" at $129 pointing at the SIM2 Max key,
+      // or a loft table reusing the price column. Rewriting those would make a
+      // mislabelled row look correct. Surface instead.
+      if (cur > reg.num * 2.5 || cur < reg.num / 2.5) {
+        manual.push(`MANUAL ${m[1]}: ${label} $${numTxt} vs registry $${W} — too far apart, left alone`);
+        continue;
+      }
       const at = os + mm.index + mm[1].length;
       push(at, at + numTxt.length, W, `STRUCT ${label} ${m[1]}: $${numTxt} -> $${W}`);
     }
