@@ -203,16 +203,17 @@ export const AFFILIATE: Record<string, {
   },
 
 
-  // Precision Pro NX9 (slope switch model) — ASIN B0DP3GL8RN ✅ verified
+  // Precision Pro NX9 Slope — ASIN B0B9DLL9X9 ✅ verified live 7 Aug 2026: $199.99, In Stock, sold by Precision Pro Golf.
+  // Previous ASIN B0DP3GL8RN was dead. PlayBetter has the same unit at $219.99; Amazon is the lead link.
   'precision-pro-nx9-hd': {
-    asin: 'B0DP3GL8RN',
-    url: 'https://www.amazon.com/dp/B0DP3GL8RN?&linkCode=ll2&tag=cubicalgolfer-20&linkId=adcfb2c9ee28bb4bdd808a2f066fdb4b&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0B9DLL9X9',
+    url: 'https://www.amazon.com/dp/B0B9DLL9X9?&linkCode=ll2&tag=cubicalgolfer-20&linkId=fa4468225963d0d9b01bc2a621d23007&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Precision*+Pro*+NX9*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$219',
+    price: '~$199',
     priceNote: 'Stable price year-round. Previous models drop when new ones release.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/precision-pro-nx9-hd.webp',
@@ -300,7 +301,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s62-premium-golf-gps-smartwatch-20gmnupprchs62blcgps%2F20gmnupprchs62blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S62',
     retailer: 'Amazon',
-    price: '~$399',
+    price: '~$499',
     primaryRetailer: 'direct',
     priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
     label: 'See Today\'s Price →',
@@ -462,20 +463,6 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
-  // Cleveland Launcher XL2 Driver — budget forgiving driver
-  'cleveland-launcher-xl2': {
-    asin: 'B0CP9WFMJW',
-    url: 'https://www.amazon.com/Cleveland-Golf-Launcher-Graphite-Regular/dp/B0CP9WFMJW?crid=1LMWKUO4CG20Q&dib_tag=se&keywords=Cleveland%2BLauncher%2BXL2&qid=1785683001&sprefix=cleveland%2Blauncher%2Bxl2%2Caps%2C219&sr=8-1&th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=b3cd6c7f0d39405e7cb6e120cccb8c88&language=en_US&ref_=as_li_ss_tl',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon',
-    price: '~$349',
-    priceNote: 'Previous-year models drop 30-40% when new models release each January.',
-    label: 'See Today\'s Price →',
-    imgSrc: '/images/products/cleveland-launcher-xl2.webp',
-    imgAlt: 'Cleveland Launcher XL2 Golf Driver',
-  },
 
   // ── GOLF BALLS ───────────────────────────────────────────────────────────
 
@@ -1339,7 +1326,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Swing*+Caddie*+SC4*+Pro*+launch*+monitor*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$499',
+    price: '~$599',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'See Today\'s Price →',
@@ -2540,7 +2527,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$399',
+    price: '~$349',
     primaryRetailer: 'direct',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Amazon →',
@@ -3241,7 +3228,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$149',
+    price: '~$199',
     priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/garmin-approach-s12.webp',
@@ -3849,7 +3836,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$349',
+    price: '~$299',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/cleveland-launcher-xl2.webp', imgAlt: 'Cleveland Launcher XL2 driver',

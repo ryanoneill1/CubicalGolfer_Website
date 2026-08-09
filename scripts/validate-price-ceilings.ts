@@ -50,6 +50,30 @@ for (const article of ARTICLES as any[]) {
   }
 }
 
+// A price promise is a promise wherever it is written. Section headings were
+// already covered; comparison-table `bestFor` cells and card `badge` labels were
+// not, so "Best under $150" sat above a $199 button until a live price check
+// exposed it. Same rule, every surface that makes the claim.
+for (const article of ARTICLES as any[]) {
+  const rows = [...(article.comparisonTable?.rows ?? []), ...(article.sections ?? [])];
+  for (const row of rows) {
+    const key = row.affiliateKey;
+    if (!key) continue;
+    const entry = (AFFILIATE as any)[key];
+    const price = toNumber(entry?.price);
+    if (price === null) continue;
+    for (const field of ['bestFor', 'badge', 'label', 'role'] as const) {
+      const v = row[field];
+      if (typeof v !== 'string') continue;
+      // "$1K"/"$2K" are shorthand, not a literal ceiling — skip them.
+      const m = v.match(/under \$([\d,]+)(?!\s*[Kk])\b/i);
+      if (!m) continue;
+      const cap = parseFloat(m[1].replace(/,/g, ''));
+      if (price > cap) violations.push(`${article.slug} → [${field}] "${v}" links ${key} at ${entry.price}`);
+    }
+  }
+}
+
 if (violations.length) {
   console.error(`\n❌ ${violations.length} product(s) exceed their page's stated price ceiling:`);
   for (const v of violations) console.error('   ' + v);

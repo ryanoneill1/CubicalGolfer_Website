@@ -17,7 +17,6 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'taylormade-qi35-max': "TaylorMade Qi35 Max",
   'cobra-aerojet-max': "Cobra Aerojet Max",
   'ping-g430-max-driver': "Ping G430 Max Driver",
-  'cleveland-launcher-xl2': "Cleveland Launcher XL2",
   'titleist-pro-v1': "Titleist Pro V1",
   'callaway-chrome-tour-2026': "Callaway Chrome Tour 2026",
   'taylormade-tp5': "TaylorMade TP5",

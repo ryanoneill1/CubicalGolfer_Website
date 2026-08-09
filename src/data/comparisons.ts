@@ -306,9 +306,9 @@ export const COMPARISONS: Comparison[] = [
     thumbnail: '/images/thumbnails/compare-cleveland-launcher-xl2-vs-cobra-aerojet-max.webp',
     title:       'Cleveland Launcher XL2 vs Cobra Aerojet Max',
     description: 'Cleveland Launcher XL2 vs Cobra Aerojet Max — lightweight forgiveness vs mid-range power. Which driver is best for seniors and slow swing speeds?',
-    productA:    'cleveland-launcher-xl2',
+    productA:    'cleveland-launcher-xl2-driver',
     productB:    'cobra-aerojet-max',
-    winner:      'cleveland-launcher-xl2',
+    winner:      'cleveland-launcher-xl2-driver',
     winnerReason: 'The Cleveland Launcher XL2 wins for seniors and golfers under 85 mph — lighter weight, higher launch, and $80 less than the Cobra. The Cobra wins for golfers 85-95 mph who want more distance potential without going premium.',
     intro:       'Two budget-friendly forgiving drivers, two different approaches. The Cleveland goes all-in on lightweight and high launch. The Cobra balances forgiveness with more distance technology. After testing both at 80-90 mph swing speeds, here is the honest verdict.',
         sections: [
