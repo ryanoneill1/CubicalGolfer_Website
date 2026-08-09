@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema , datasetSchema } from '../../lib/schema';
 
 const meta = {
@@ -64,6 +66,7 @@ const schemas = [
       </nav>
       <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Interactive Tool</p>
       <h1>Golf Club Distance Chart — Enter Your Swing Speed</h1>
+      <EarlyDisclosure />
       <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Slide to your driver swing speed and instantly see estimated carry distances for every club. Spot gaps in your bag and know which clubs to add.</p>
       <div class="author-box">
         <img src="/images/ryan-author-photo.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
@@ -112,7 +115,7 @@ const schemas = [
           25 yards, that is a club you are missing, and it is the most common gap in a weekend bag. A
           hybrid fills it more reliably than a 3- or 4-iron for most swing speeds.
         </p>
-        <p style="margin:0;"><a href="https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520G430%2520Hybrid%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521" target="_blank" rel="nofollow noopener sponsored" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid ~$270 →</a> <a href="https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DKirkland%2520Signature%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521" target="_blank" rel="nofollow noopener sponsored" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Kirkland Signature ~$28/dz →</a></p>
+        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('kirkland-signature').url} target="_blank" rel="nofollow noopener sponsored" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Kirkland Signature {getAffiliateLink('kirkland-signature').price} →</a></p>
         <p style="font-size:15px;color:var(--muted);margin:10px 0 0;">
           More on gapping: <a href="/best-hybrid-clubs-2026/">best hybrids</a> ·
           <a href="/golf-club-distance-chart/">full distance chart</a> ·
