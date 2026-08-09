@@ -3231,6 +3231,29 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
+  // SKLZ Golf Grip Trainer — ASIN B015N2NX3A ✅ verified live 9 Aug 2026: $17.99,
+  // In Stock, sold by Amazon, 9,433 ratings. The product this page has claimed as its
+  // #1 pick all along; the section was wired to alignment sticks and the table row to
+  // the sklz-accelerator-pro swing trainer, so neither button sold it.
+  'sklz-golf-grip-trainer': {
+    asin: 'B015N2NX3A',
+    url: 'https://www.amazon.com/dp/B015N2NX3A?&linkCode=ll2&tag=cubicalgolfer-20&linkId=b489f4543b205b5c27ef701b0697826c&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '~$18',
+    priceNote: 'Stable — this one rarely moves.',
+    label: 'Check Price at Amazon \u2192',
+    imgSrc: '/images/products/sklz-golf-grip-trainer.webp',
+    imgAlt: 'SKLZ Golf Grip Trainer',
+    benefits: [
+        'Moulds both hands into the same grip every time you pick up the club',
+        'Clips to any standard grip, driver through wedge',
+        'Small enough to leave in the bag and use as a pre-round warm-up',
+      ],
+  },
+
   'sklz-accelerator-pro': {
     url: 'https://www.amazon.com/s?k=sklz-accelerator-pro&crid=1DQTJCNAP33OO&sprefix=skechers-go-golf-elite-5%2Caps%2C274&linkCode=ll2&tag=cubicalgolfer-20&linkId=5057e45ae31497697c80106ab198c79c&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSKLZ%2520Accelerator%2520Pro%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',

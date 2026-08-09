@@ -4060,7 +4060,7 @@ export const ARTICLES: Article[] = [
     thumbnail: '/images/thumbnails/golf-grip-trainers-thumb.webp',
     category: 'golf-accessories',
     pageType: 'buying-guide',
-    quickAnswerProduct: 'alignment-sticks',
+    quickAnswerProduct: 'sklz-golf-grip-trainer',
     tag: 'BUYING GUIDE',
     emoji: '🏌️',
     thumb: 'brown',
@@ -4075,7 +4075,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Golf Grip Trainers — Fix Your Grip in 10 Minutes',
     titleDisplay: 'Best Golf Grip Trainers',
-    bottomLine: 'The SKLZ Golf Grip Trainer is the best all-around pick — it attaches to any club, positions your hands correctly, and builds muscle memory in 2-3 weeks of regular use. For immediate grip feedback, the Tour Striker Smart Ball is more versatile. Neither costs more than $30. Our top pick: the <strong>Alignment Sticks</strong> (~$12).',
+    bottomLine: 'The SKLZ Golf Grip Trainer is the best all-around pick — it attaches to any club, positions your hands correctly, and builds muscle memory in 2-3 weeks of regular use. For immediate grip feedback, the Tour Striker Smart Ball is more versatile. Neither costs more than $30. Our top pick: the <strong>SKLZ Golf Grip Trainer</strong> (~$18).',
     description: 'Best golf grip trainers in 2026 — the training aids that fix your grip fast. Reviewed picks under $30 that build correct hand position through repetition.',
     excerpt: 'A correct grip is the foundation of everything in golf. These training aids build the right hand position through repetition — without needing a lesson for every session.',
     intro: 'The grip is the only connection between you and the club. A poor grip makes a good swing almost impossible. These training aids physically guide your hands into the correct position and let muscle memory do the rest over 2-3 weeks of regular use.',
@@ -4092,7 +4092,9 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥇 Best Overall: SKLZ Golf Grip Trainer',
-        body: 'The SKLZ Grip Trainer slips over any club grip and has molded indentations that guide your hands into the neutral grip position. At $15, it is the most practical training aid for fixing grip. Use it on an 8-iron for 10-15 minutes before practice sessions until the correct position becomes automatic — typically 2-3 weeks. Then remove it and verify the grip looks the same.',
+        sectionImage: '/images/products/sklz-golf-grip-trainer.webp',
+        sectionImageAlt: 'SKLZ Golf Grip Trainer',
+        body: 'The SKLZ Grip Trainer slips over any club grip and has molded indentations that guide your hands into the neutral grip position. At $18, it is the most practical training aid for fixing grip. Use it on an 8-iron for 10-15 minutes before practice sessions until the correct position becomes automatic — typically 2-3 weeks. Then remove it and verify the grip looks the same.',
         price: '~$15',
         pros: [
           'Physically molds hands into correct position -- no guesswork',
@@ -4105,7 +4107,7 @@ export const ARTICLES: Article[] = [
           'Not useful for full swing practice',
         ],
     
-        badge: 'STRONG PICK', rating: 4.9, affiliateKey: 'alignment-sticks',
+        badge: 'STRONG PICK', rating: 4.9, affiliateKey: 'sklz-golf-grip-trainer',
       },
       {
         h2: 'How to Use a Grip Trainer Effectively',
@@ -4113,6 +4115,7 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: '🥈 Best for Connection Feedback: Tour Striker Smart Ball',
+        affiliateKey: 'tour-striker-smart-ball',
         badge: 'BEST FEEDBACK',
         body: 'The Smart Ball is an inflatable ball that fits between your forearms and teaches connection — keeping your arms unified through the swing. While not a grip trainer per se, poor grip is often connected to poor arm connection. At $29, it is the most versatile training aid for fixing multiple setup flaws simultaneously. Used by teaching pros for warm-up drills.',
         price: '~$29',
@@ -4149,7 +4152,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Training Aid', 'Best For', 'Price', 'What It Fixes', 'Where Used'],
       rows: [
-      { name: 'SKLZ Golf Grip Trainer', affiliateKey: 'sklz-accelerator-pro', bestFor: 'Best Overall', price: '~$15', feature1: 'Grip position', feature2: 'Home or range', winner: true },
+      { name: 'SKLZ Golf Grip Trainer', affiliateKey: 'sklz-golf-grip-trainer', bestFor: 'Best Overall', price: '~$18', feature1: 'Grip position', feature2: 'Home or range', winner: true },
       { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Best Connection', price: '~$29', feature1: 'Connection + grip', feature2: 'Home or range', winner: false, badge: 'STRONG PICK'},
       ],
     },
