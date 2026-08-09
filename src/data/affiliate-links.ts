@@ -295,16 +295,19 @@ export const AFFILIATE: Record<string, {
   // ── GPS WATCHES ──────────────────────────────────────────────────────────
 
   // Garmin Approach S62 Black — ASIN B083BJSYZ9 ✅ verified (official retail unit)
+  // Golf Galaxy leads: verified $499.99 as normal retail stock. Amazon's buy box for
+  // this ASIN is a rotating third-party seller with one unit ('CoJack407' 7 Aug,
+  // 'Top Sports' 9 Aug) — too fragile to be the #1 CTA on two pages.
   'garmin-approach-s62': {
     heroVerdictLine: '★ The smartest watch we tested — Virtual Caddie beat our club selection on 4 of 18 holes.',
     heroWhoFor: 'Golfers who want yardages, shot tracking, and smart club suggestions on their wrist.',
     asin: 'B083BJSYZ9',
-    url: 'https://www.amazon.com/dp/B083BJSYZ9?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e72a18832542c8be1be00a9e4e7c02cf&language=en_US&ref_=as_li_ss_tl',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s62-premium-golf-gps-smartwatch-20gmnupprchs62blcgps%2F20gmnupprchs62blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S62',
-    retailer: 'Amazon',
+    url: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s62-premium-golf-gps-smartwatch-20gmnupprchs62blcgps%2F20gmnupprchs62blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S62',
+    program: 'golfgalaxy',
+    commissionPct: 5,
+    cookieDays: 30,
+    golfGalaxyUrl: 'https://www.amazon.com/dp/B083BJSYZ9?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e72a18832542c8be1be00a9e4e7c02cf&language=en_US&ref_=as_li_ss_tl',
+    retailer: 'Golf Galaxy',
     price: '~$499',
     primaryRetailer: 'direct',
     priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
