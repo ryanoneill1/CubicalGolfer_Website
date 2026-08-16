@@ -23,7 +23,7 @@ import { ARTICLES }  from '../data/articles';
 import { COMPARISONS } from '../data/comparisons';
 import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema, roundupItemListSchema } from '../lib/schema';
-import { getMergedRelated } from '../lib/linking';
+import { getMergedRelated, brandHubsFor } from '../lib/linking';
 import { getAffiliateLink } from '../data/affiliate-links';
 import type { Article } from '../data/types';
 
@@ -41,6 +41,8 @@ const { article } = Astro.props;
 
 const meta    = articleMeta(article);
 const related = getMergedRelated(article, 6);
+// Brand hubs this page actually features — see brandHubsFor() for why.
+const brandHubs = brandHubsFor(article);
 const wordCount = parseInt((article.words ?? '0').replace(/,/g, ''), 10);
 const showBackToTop = wordCount >= 1500;
 
@@ -1196,6 +1198,16 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
         <p style="font-weight:700;font-size:16px;margin:0 0 12px;">Related Guides</p>
         <div class="rel-links">
           {related.map(link => <a href={link.slug}>{link.label}</a>)}
+        </div>
+      </div>
+    )}
+
+    {/* BRAND HUBS — only the brands whose products appear on this page */}
+    {brandHubs.length > 0 && (
+      <div class="rel-cluster">
+        <p style="font-weight:700;font-size:16px;margin:0 0 12px;">More from these brands</p>
+        <div class="rel-links">
+          {brandHubs.map(link => <a href={link.slug}>{link.label}</a>)}
         </div>
       </div>
     )}

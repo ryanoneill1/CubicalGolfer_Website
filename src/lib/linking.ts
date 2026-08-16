@@ -1146,6 +1146,77 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 };
 
 // ── Main export ───────────────────────────────────────────────────────────────
+
+// ── Brand hubs ────────────────────────────────────────────────────────────────
+// Aug 2026. GSC showed all five brand hubs in "Discovered — currently not
+// indexed": Google had never crawled them. Each had FOUR inbound internal links,
+// against 1,469 pointing at /how-we-test/ and 528 at /privacy-policy/. They are
+// also the best-matched pages on the site for brand+product commercial searches,
+// so they were earning nothing while being impossible to find.
+//
+// Rather than pad a link list, derive the brands a page actually features from
+// its own product keys. A driver guide featuring Callaway and TaylorMade links
+// those two hubs and no others — useful to the reader, and it gives Google a
+// contextual path it will actually follow.
+const BRAND_HUBS: Record<string, string> = {
+  garmin:     'Garmin',
+  callaway:   'Callaway',
+  titleist:   'Titleist',
+  taylormade: 'TaylorMade',
+  bushnell:   'Bushnell',
+};
+
+export function brandHubsFor(article: Article): Array<{ slug: string; label: string }> {
+  const keys: string[] = [
+    ...(article.sections ?? []).map((s: any) => s.affiliateKey),
+    ...((article.comparisonTable?.rows ?? []).map((r: any) => r.affiliateKey)),
+    ...(article.quickAnswerProduct ? [article.quickAnswerProduct] : []),
+  ].filter(Boolean);
+
+  const found: string[] = [];
+  for (const key of keys) {
+    for (const brand of Object.keys(BRAND_HUBS)) {
+      if (String(key).startsWith(brand + '-') && !found.includes(brand)) found.push(brand);
+    }
+  }
+  return found.map(b => ({ slug: `/brands/${b}/`, label: `All ${BRAND_HUBS[b]} gear we've tested` }));
+}
+
+// ── Crawl-starved pages ───────────────────────────────────────────────────────
+// The rest of the "never crawled" list. These are real pages with 2-8 inbound
+// links each, which is below what Google will spend crawl budget discovering.
+// Each article deterministically surfaces one, so the set gains links evenly
+// without displacing the curated anchors above it. Deterministic (not random)
+// so the link graph is stable between builds.
+const CRAWL_STARVED: Array<{ slug: string; label: string }> = [
+  { slug: '/how-golf-launch-monitors-work/',              label: 'How Golf Launch Monitors Work' },
+  { slug: '/compare/square-golf-vs-garmin-r10/',          label: 'Square Golf vs Garmin R10' },
+  { slug: '/compare/garmin-r10-vs-garmin-r50/',           label: 'Garmin R10 vs R50' },
+  { slug: '/compare/garmin-s70-vs-apple-watch-golf/',     label: 'Garmin S70 vs Apple Watch' },
+  { slug: '/average-swing-speed-by-age/',                 label: 'Average Swing Speed by Age' },
+  { slug: '/best-golf-balls-for-beginners/',              label: 'Best Golf Balls for Beginners' },
+  { slug: '/best-golf-umbrella/',                         label: 'Best Golf Umbrellas' },
+  { slug: '/best-spikeless-golf-shoes-walking-18/',       label: 'Best Spikeless Shoes for Walking 18' },
+  { slug: '/taylormade-qi35-review/',                     label: 'TaylorMade Qi35 Review' },
+  { slug: '/vice-golf-balls/',                            label: 'Vice Golf Balls Reviewed' },
+  { slug: '/launch-monitor-room-checker/',                label: 'Will a Launch Monitor Fit Your Room?' },
+  { slug: '/compare/callaway-chrome-soft-vs-kirkland-signature/', label: 'Chrome Soft vs Kirkland' },
+  { slug: '/compare/taylormade-tp5-vs-callaway-chrome-soft/',     label: 'TP5 vs Chrome Soft' },
+  { slug: '/compare/cleveland-rtx6-vs-callaway-jaws-raw/',        label: 'RTX6 vs Jaws Raw' },
+  { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/',     label: 'Ai Smoke Max vs G430 Max' },
+  { slug: '/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/', label: 'Mevo+ vs Bushnell Launch Pro' },
+  { slug: '/compare/rapsodo-mlm2pro-vs-flightscope-mevo-plus/',   label: 'MLM2PRO vs Mevo+' },
+  { slug: '/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/', label: 'R10 vs SkyTrak+ Home Sim' },
+];
+
+function starvedFor(article: Article): Array<{ slug: string; label: string }> {
+  let h = 0;
+  const id = String(article.id ?? article.slug);
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  const pick = CRAWL_STARVED[h % CRAWL_STARVED.length];
+  return pick.slug === article.slug ? [] : [pick];
+}
+
 export function getMergedRelated(article: Article, limit = 10): RelatedLink[] {
   const seen = new Set<string>([article.slug]);
   const result: RelatedLink[] = [];
@@ -1162,7 +1233,10 @@ export function getMergedRelated(article: Article, limit = 10): RelatedLink[] {
   // 1. Explicit related links from the article data (highest priority)
   push(article.related ?? []);
 
-  // 2. Article-specific cluster links (topical authority)
+  // 2. One crawl-starved page, deterministically chosen for this article
+  push(starvedFor(article));
+
+  // 3. Article-specific cluster links (topical authority)
   push(ARTICLE_ANCHORS[article.id] ?? []);
 
   // 3. Category-specific anchors
