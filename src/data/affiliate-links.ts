@@ -1363,7 +1363,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell-launch-pro&crid=1O0RGUWVXD74&sprefix=bridgestone-tour-b-xs%2Caps%2C371&linkCode=ll2&tag=cubicalgolfer-20&linkId=5e4ac84f33ffe810257c4067a4602ec5&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Bushnell',
     primaryRetailer: 'direct',
-    price: '~$2,999',
+    price: '~$2,499',
     priceNote: 'Rarely discounted — buy when ready. Check for bundle deals.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/bushnell-launch-pro.webp',
