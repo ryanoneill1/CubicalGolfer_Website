@@ -16,6 +16,15 @@ const stats = BRANDS.map(b => {
     cmps: (COMPARISONS as any[]).filter(c => c.productA?.startsWith(prefix) || c.productB?.startsWith(prefix)).length,
   };
 });
+
+const TOP_PICK: Record<string, { name: string; why: string; href: string }> = {
+  garmin:     { name: 'Approach S62',           why: 'Virtual Caddie and full colour course maps', href: '/best-golf-gps-watches/' },
+  bushnell:   { name: 'Tour V7 Shift',          why: 'Slope toggle that satisfies competition committees', href: '/best-golf-rangefinders-2026/' },
+  callaway:   { name: 'Paradym Ai Smoke Max',   why: 'The most forgiving driver we have tested', href: '/best-golf-drivers-forgiveness/' },
+  taylormade: { name: 'Qi35 Max',               why: 'Best fit for 85-100 mph swing speeds', href: '/driver-loft-guide/' },
+  titleist:   { name: 'Pro V1',                 why: 'The ball every other ball gets measured against', href: '/best-golf-balls-2026/' },
+};
+
 const meta = {
   title: 'Golf Brands We Test — Reviews by Manufacturer',
   description: 'Garmin, Bushnell, Callaway, TaylorMade, and Titleist gear we have bought and tested — brand-by-brand reviews, ratings, and honest comparisons.',
@@ -51,7 +60,38 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
           </li>
         ))}
       </ul>
-      <p style="max-width:76ch;">Why only five? Because a brand hub earns its place with tested coverage, not a logo grid. These are the manufacturers where we have enough bought-and-played data — reviews, comparisons, and guide rankings — to say something useful. As our testing expands, so will this page.</p>
+    </section>
+
+    <section>
+      <h2>Which brand should you buy from?</h2>
+      <p style="max-width:76ch;">Brands are not interchangeable. Each of these five is genuinely best at one thing, and buying outside that strength is where most money gets wasted. Our current top pick in each is below — every one is a product we bought, tested and rated, not a catalogue highlight.</p>
+      <table class="cmp-table">
+        <thead><tr><th>Brand</th><th>Best at</th><th>Our top pick</th><th>Why it wins</th><th>Tested</th></tr></thead>
+        <tbody>
+          {stats.map(b => (
+            <tr>
+              <td><strong><a href={`/brands/${b.slug}/`}>{b.name}</a></strong></td>
+              <td>{b.tagline}</td>
+              <td>{TOP_PICK[b.slug] ? <a href={TOP_PICK[b.slug].href}>{TOP_PICK[b.slug].name}</a> : '—'}</td>
+              <td>{TOP_PICK[b.slug]?.why ?? '—'}</td>
+              <td>{b.products} products · {b.reviews} reviews · {b.cmps} head-to-heads</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>How a brand earns a hub here</h2>
+      <p style="max-width:76ch;">A hub goes up when we have spent enough time with a manufacturer to say something useful about the whole range rather than one product. In practice that means three things: we have bought and tested multiple products across at least two categories, we have run at least one head-to-head against a direct competitor, and we have kept the pricing current enough to be worth quoting.</p>
+      <p style="max-width:76ch;">That last one is why the list is short. Prices move, models get replaced, and a hub that quotes last season's price on a discontinued model is worse than no hub at all. Every price on this site is checked against the retailer we link to, and a build-time check fails if a comparison table disagrees with the product it sells.</p>
+      <p style="max-width:76ch;">We do not take payment for placement, and no manufacturer sees a review before it publishes. When a brand's product loses a head-to-head on this site, it loses it on their own hub page too.</p>
+    </section>
+
+    <section>
+      <h2>Why five and not twenty</h2>
+      <p style="max-width:76ch;">Most brand directories are a logo grid pointing at manufacturer marketing. That is easy to build and worth nothing to a reader deciding how to spend $400. We would rather cover five manufacturers properly than list thirty we have never touched.</p>
+      <p style="max-width:76ch;">Brands we own products from but have not built a hub for yet include Ping, Cleveland, Cobra, Srixon, Wilson, FootJoy and Odyssey. Those appear throughout our <a href="/gear-reviews/">gear reviews</a> and <a href="/compare/">head-to-head comparisons</a> — they just do not have enough tested coverage in one place to justify a page of their own.</p>
     </section>
   </main>
 </BaseLayout>
