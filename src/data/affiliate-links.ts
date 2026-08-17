@@ -388,7 +388,7 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Paradym Ai Smoke Max (2024) — search (shaft/loft variants)
   'callaway-paradym-ai-smoke-max': {
-    url: 'https://www.amazon.com/s?k=callaway-paradym-ai-smoke-max&crid=92H1TORWBRWG&sprefix=callaway-paradym-ai-smoke-max%2Caps%2C273&linkCode=ll2&tag=cubicalgolfer-20&linkId=d31411ba8352b4d9f7296f9db3a8a1cc&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Callaway-Paradym-Degrees-Regular-Standard/dp/B0FVB2B895?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -965,12 +965,12 @@ export const AFFILIATE: Record<string, {
 
   // SkyTrak+ Launch Monitor — search (primarily sold direct / specialty retail)
   'skytrak-plus': {
-    url: 'https://www.amazon.com/s?k=skytrak-plus&crid=XN2PCR7J4ICU&sprefix=sklz-accelerator-putting-mat%2Caps%2C284&linkCode=ll2&tag=cubicalgolfer-20&linkId=078a0970a6ce5d71e4e140e4ade340ec&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=SkyTrak%2B*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=SkyTrak%2B*&ghref=2301%3A1333883',
-    retailer: 'Amazon',
+    retailer: 'PlayBetter',
     price: '~$2,995',
     primaryRetailer: 'direct',
     priceNote: 'Lists at $2,995. PlayBetter periodically runs $500-$1,000 bundle discounts.',
@@ -1336,7 +1336,7 @@ export const AFFILIATE: Record<string, {
 
   'garmin-approach-r10': {
     asin: 'B096B5JR5D',
-    url: 'https://www.amazon.com/s?k=garmin-approach-r10&crid=AWZ8FFFKGC2J&sprefix=garmin-approach-r10%2Caps%2C221&linkCode=ll2&tag=cubicalgolfer-20&linkId=46ccb5b66ca58f69d53706151a8b29d5&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Garmin-Approach-R10-Portable-Launch/dp/B096B5JR5D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+R10*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -3300,7 +3300,7 @@ export const AFFILIATE: Record<string, {
 
   // ── Month 1 New Products ──────────────────────────────────────────────
   'shot-scope-lm1': {
-    url: 'https://www.amazon.com/s?k=shot-scope-lm1&crid=8X6EGXC7VCTR&sprefix=scotty-cameron-phantom-x%2Caps%2C246&linkCode=ll2&tag=cubicalgolfer-20&linkId=45cb5783af3d9f27d435795e7ffbf4f5&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Shot-Scope-Portable-Launch-Monitor/dp/B0GP22ZYY5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Shot*+Scope*+LM1*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
