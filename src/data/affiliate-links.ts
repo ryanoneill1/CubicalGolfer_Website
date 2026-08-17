@@ -559,7 +559,7 @@ export const AFFILIATE: Record<string, {
 
   // Srixon Soft Feel — search (dozen size variants)
   'srixon-soft-feel': {
-    url: 'https://www.amazon.com/s?k=srixon-soft-feel&crid=2XPA2W584MVXT&sprefix=srixon-soft-feel%2Caps%2C223&linkCode=ll2&tag=cubicalgolfer-20&linkId=29063a8fe9a84c4409ae436a1300a492&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Srixon-Soft-Feel-Balls-Dozen/dp/B07FB92M1V?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -580,7 +580,7 @@ export const AFFILIATE: Record<string, {
 
   // Vice Pro — sold direct-to-consumer; not on Amazon as brand-sold
   'vice-pro': {
-    url: 'https://www.amazon.com/s?k=vice-pro&crid=36ML87WOQ3K5&sprefix=vice-pro%2Caps%2C237&linkCode=ll2&tag=cubicalgolfer-20&linkId=1feedb1220ad3038e570b0d0b7c74ea1&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Vice-Golf-Pro-Balls/dp/B08FQ5P4XF?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1550,7 +1550,7 @@ export const AFFILIATE: Record<string, {
 
   // ── Golf Balls for 90 MPH Swing Speed ────────────────────────────────────────
   'srixon-q-star-tour': {
-    url: 'https://www.amazon.com/s?k=srixon-q-star-tour&crid=O3KE1R8W1XUG&sprefix=square-golf-monitor%2Caps%2C283&linkCode=ll2&tag=cubicalgolfer-20&linkId=9afc1540365836166be1ec0145e07847&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Srixon-Q-Star-Tour-Golf-Balls/dp/B0CRZ9M7VT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1640,7 +1640,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'bridgestone-e12-contact': {
-    url: 'https://www.amazon.com/s?k=bridgestone-e12-contact&crid=YP7TB3ITPBR&sprefix=bridgestone-e12-contact%2Caps%2C260&linkCode=ll2&tag=cubicalgolfer-20&linkId=88e507d4794ca2c148818b873bcdacc4&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Bridgestone-Golf-Contact-Balls-Dozen/dp/B08YSM8SZM?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3072,7 +3072,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBridgestone%2520Tour%2520B%2520XS%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
   'vice-pro-plus': {
-    url: 'https://www.amazon.com/s?k=vice-pro-plus&crid=WGUFXIKOW2FM&sprefix=vice-pro-plus%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=0c5923c70dbed2d38485b381ce63747a&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Vice-Plus-Golf-Balls-Dozen/dp/B08FFM64C6?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
