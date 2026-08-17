@@ -820,7 +820,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-players-flex.webp',
     imgAlt: 'Titleist Players Flex Golf Glove',
-      },
+        benefits: [
+      'Pure Cabretta leather palm for tour-level feel',
+      'Perforations across the back and fingers — the most breathable leather glove we tested',
+      'Moulds to your hand after three or four rounds',
+    ],
+  },
 
   // Callaway Dawn Patrol Glove — search (size variants)
   'callaway-dawn-patrol': {
@@ -835,7 +840,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-dawn-patrol.webp',
     imgAlt: 'Callaway Dawn Patrol Golf Glove',
-      },
+        benefits: [
+      'Three gloves for about the price of one premium pair',
+      'Synthetic build breathes well and grips reliably once your hands warm up',
+      'Solidly made for an all-weather budget glove',
+    ],
+  },
 
   // FootJoy RainGrip (mentioned in accessories-50 page)
   'footjoy-raingrip': {
@@ -1045,7 +1055,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/frogger-amphibian-towel.webp',
     imgAlt: 'Frogger Amphibian Golf Towel',
-      },
+        benefits: [
+      'Dual-texture design: scrub side cleans grooves, waffle side dries grips',
+      'Still absorbs like new after 30-plus washes across three seasons on the bag',
+      'Carabiner clip is as tight as the day it arrived',
+    ],
+  },
 
   // Putting mirror
   'putting-mirror': {
@@ -1564,7 +1579,12 @@ export const AFFILIATE: Record<string, {
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-chrome-soft.webp',
     imgAlt: 'Callaway Chrome Soft Golf Balls',
-      },
+        benefits: [
+      '75 compression — the lowest of any urethane-cover ball in our test',
+      'Carried 222 yards at 94 mph, trading a little distance for feel',
+      'Muffled, almost click-free off the putter',
+    ],
+  },
   'callaway-chrome-tour': {
     url: 'https://www.amazon.com/s?k=callaway-chrome-tour&crid=QIR72QBZ6WKH&sprefix=callaway-chev-dry%2Caps%2C236&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -2524,7 +2544,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/callaway-big-bertha.webp',
     imgAlt: 'Callaway Big Bertha driver',
-      },
+        benefits: [
+      'Launches higher than anything else in its class — aimed at swing speeds under 80 mph that struggle to get airborne',
+      'Built-in draw bias and offset hosel help a slicer square the face',
+      'Less adjustable than its rivals — you are locked into the stock configuration',
+    ],
+  },
   'cleveland-huntington-beach': {
     url: 'https://www.amazon.com/s?k=cleveland-huntington-beach&crid=3C8J68DFQY6NG&sprefix=cleveland-huntington-beach%2Caps%2C216&linkCode=ll2&tag=cubicalgolfer-20&linkId=617afd44bb037581ed3ec6df8c0ff467&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -2767,7 +2792,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/the-grint.webp',
     imgAlt: 'The Grint golf GPS and handicap tracking app',
-      },
+        benefits: [
+      'Official USGA handicap tracking on the free tier, with no trial period or feature gates',
+      'GPS yardages on 40,000-plus courses without paying',
+      'Premium adds strokes-gained analysis, which most golfers under 20 rounds a year will not use',
+    ],
+  },
   '18birdies': {
     url: 'https://www.amazon.com/s?k=golf+GPS+rangefinder+accessory&tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520GPS%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -2780,7 +2810,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/18birdies.webp',
     imgAlt: '18Birdies golf GPS and rangefinder app',
-      },
+        benefits: [
+      'GPS, scoring, handicap, stat tracking and a virtual caddie in one interface',
+      'Cleanest GPS screen we tested — large, high-contrast, readable in direct sun',
+      'Apple Watch app mirrors the key data without cramming in the full feature set',
+    ],
+  },
   'golfshot': {
     url: 'https://www.amazon.com/s?k=golf+GPS+watch+accessories&tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolfshot%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -2844,7 +2879,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/wilson-duo-soft-plus.webp',
     imgAlt: 'Wilson DUO Soft+ golf balls',
-      },
+        benefits: [
+      'Carried 213 yards at 92 mph in our testing',
+      'The cheapest route to compression matching for swing speeds under 85 mph',
+      'Cover shows wear faster than premium balls — fine for 18 holes, not for a season',
+    ],
+  },
   'titleist-trufeel': {
     url: 'https://www.amazon.com/s?k=titleist-trufeel&crid=10ZT28639WBVZ&sprefix=titleist-trufeel%2Caps%2C268&linkCode=ll2&tag=cubicalgolfer-20&linkId=9b59f37691d59bbdb9d9d1eab0c031a4&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -2857,7 +2897,12 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/titleist-trufeel.webp',
     imgAlt: 'Titleist TruFeel golf balls',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520TruFeel%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-      },
+        benefits: [
+      'Ionomer cover keeps the price down while holding a genuinely soft feel',
+      'Aimed at golfers who want feel off the putter more than greenside spin',
+      'The softest-feeling ball in the Titleist range at the budget end',
+    ],
+  },
   'taylormade-soft-response': {
     url: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtaylormade%2520soft%2520response%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'golfgalaxy',
@@ -2893,7 +2938,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/vice-pro-soft.webp',
     imgAlt: 'Vice Pro Soft golf balls',
-      },
+        benefits: [
+      'The most affordable urethane ball that still performs at 90 mph',
+      '65 compression launches higher for golfers at the lower end of the 85-95 mph range',
+      'Greenside spin lands within about 10 percent of balls costing far more',
+    ],
+  },
   'titleist-tour-soft': {
     url: 'https://www.amazon.com/s?k=titleist-tour-soft&crid=1OYCI22K092XX&sprefix=titleist-t100%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=7635bd54cce35d2e11d3130bcdf31ddf&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -3027,7 +3077,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/vice-pro-plus.webp',
     imgAlt: 'Vice Pro Plus golf balls',
-      },
+        benefits: [
+      'Higher compression and lower driver spin, built for swing speeds above 95 mph',
+      'Carried 222 yards at 92 mph — the real gain arrives above 100 mph',
+      'Firmer off the face, with slightly less greenside spin than the standard Pro',
+    ],
+  },
   'taylormade-tp5x': {
     url: 'https://www.amazon.com/s?k=taylormade-tp5x&crid=3A2LPETAQO5FF&sprefix=taylormade-tour-response%2Caps%2C269&linkCode=ll2&tag=cubicalgolfer-20&linkId=e3c2c45f03a1f2001870d7efddc934cb&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -3282,7 +3337,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/kvv-push-cart.webp',
     imgAlt: 'KVV 3-wheel golf push cart',
-      },
+        benefits: [
+      'Ultra-light aluminium frame at 13.6 lbs — the lightest cart in our test',
+      'Compact fold fits in any boot',
+      'Over 1,000 five-star reviews at this price point',
+    ],
+  },
   'bag-boy-nitron': {
     url: 'https://www.amazon.com/s?k=bag-boy-nitron&crid=1CUSXIXKQGXKR&sprefix=bag-boy-nitron%2Caps%2C237&linkCode=ll2&tag=cubicalgolfer-20&linkId=28cc649d7409e84694563493833bc310&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBag%2520Boy%2520Nitron%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -3295,7 +3355,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bag-boy-nitron.webp',
     imgAlt: 'Bag Boy Nitron auto-open push cart',
-      },
+        benefits: [
+      'Nitrogen auto-open springs the cart open in about a second — no wrestling with joints',
+      'Widest wheelbase we tested, and it stays put on a steep par-3 where lighter carts tip',
+      'Foot brake holds on gradients that roll other carts',
+    ],
+  },
   'clicgear-model-45': {
     url: 'https://www.amazon.com/s?k=clicgear-model-45&crid=3CN8ATBACTW08&sprefix=clicgear-model-45%2Caps%2C187&linkCode=ll2&tag=cubicalgolfer-20&linkId=67893ffe50a4c79af70592ec2cc32d94&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DClicgear%2520Model%252045%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -3321,7 +3386,12 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/caddytek-ez-v8.webp',
     imgAlt: 'CaddyTek EZ V8 4-wheel push cart',
-      },
+        benefits: [
+      'Four wheels give maximum stability on side-hill lies and uneven ground',
+      'One-click fold is genuinely one click',
+      '17 lbs — heavier than a three-wheel, and the trade for that stability',
+    ],
+  },
   'super-stroke-s-tech': {
     url: 'https://www.amazon.com/s?k=SuperStroke+S-Tech+golf+grip&tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSuper%2520Stroke%2520S-Tech%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -3589,7 +3659,12 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$35',
     priceNote: 'Great value at this price point. Rarely drops lower.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/tifosi-seek-fc.webp', imgAlt: 'Tifosi Seek FC sport sunglasses',
-      },
+        benefits: [
+      'Photochromic Fototec lens darkens and lightens as the light changes — built for rounds that start overcast',
+      'Transition takes 60 to 90 seconds, so expect one hole of adjustment when the sun breaks',
+      'Lens clarity sits below the premium tier but is more than adequate for recreational play',
+    ],
+  },
   'callaway-strata-senior': {
     url: 'https://www.amazon.com/s?k=callaway+strate&crid=2HKNLKWI3MLHY&sprefix=callaway+strate%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=681c9e85e3c4f97a143ae9d112830bd9&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%2520Senior%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -4024,7 +4099,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$65', label: `See Today's Price →`,
     imgSrc: '/images/products/footjoy-prodry-polo.webp', imgAlt: 'FootJoy ProDry golf polo shirt',
-      },
+        benefits: [
+      'ProDry lisle fabric is thicker and more structured than a standard performance knit',
+      'Held its shape best in the test after 10 washes — collar still crisp, zero pilling',
+      'Pays for itself on durability at 25-plus rounds a year',
+    ],
+  },
   'adidas-ultimate365-polo': {
     url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+polo&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4032,7 +4112,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$50', label: `See Today's Price →`,
     imgSrc: '/images/products/adidas-ultimate365-polo.webp', imgAlt: 'Adidas Ultimate365 golf polo shirt',
-      },
+        benefits: [
+      'The most stretch of any polo we tested — you feel the fabric give across the shoulders at the top of the backswing',
+      'Recovers after 10 washes with no bagging at the elbows or waist',
+      'Made from recycled polyester',
+    ],
+  },
   'puma-cloudspun-polo': {
     url: `https://www.amazon.com/s?k=puma+cloudspun+golf+polo&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4049,7 +4134,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$65', label: `See Today's Price →`,
     imgSrc: '/images/products/adidas-ultimate365-pants.webp', imgAlt: 'Adidas Ultimate365 golf pants',
-      },
+        benefits: [
+      '4-way stretch lets you squat for a putt read with no pull at the knees',
+      'Waistband stayed dry walking 18 holes in 84°F',
+      'Tapered fit held its shape after 8 rounds and 6 washes',
+    ],
+  },
   'nike-dri-fit-golf-pants': {
     url: `https://www.amazon.com/s?k=nike+dri+fit+golf+pants&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4057,7 +4147,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$60', label: `See Today's Price →`,
     imgSrc: '/images/products/nike-dri-fit-golf-pants.webp', imgAlt: 'Nike Dri-FIT golf pants',
-      },
+        benefits: [
+      'The most modern silhouette here — slim through the leg with a tapered ankle',
+      'Lighter and cooler on the skin, with a little less give in exchange',
+      'Works with golf shoes on the course and street shoes off it',
+    ],
+  },
   'puma-jackpot-golf-pants': {
     url: `https://www.amazon.com/s?k=puma+jackpot+golf+pants&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4065,7 +4160,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$55', label: `See Today's Price →`,
     imgSrc: '/images/products/puma-jackpot-golf-pants.webp', imgAlt: 'Puma Jackpot golf pants',
-      },
+        benefits: [
+      'Delivers close to premium stretch and comfort at a value price',
+      'Fabric feels thinner in the hand, but the difference disappears on the course',
+      'Frequently discounted well below retail',
+    ],
+  },
   // ═══ APPAREL — Shorts ═══
   'under-armour-showdown-shorts': {
     url: `https://www.amazon.com/s?k=under+armour+showdown+golf+shorts&tag=cubicalgolfer-20`,
@@ -4074,7 +4174,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$55', label: `See Today's Price →`,
     imgSrc: '/images/products/under-armour-showdown-shorts.webp', imgAlt: 'Under Armour Showdown golf shorts',
-      },
+        benefits: [
+      'Stayed comfortable through 18 holes walked in 92°F heat',
+      'Flat front passed a strict club dress code without question',
+      'Quick-dry fabric recovers between rounds',
+    ],
+  },
   'adidas-ultimate365-shorts': {
     url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+shorts&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4082,7 +4187,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$45', label: `See Today's Price →`,
     imgSrc: '/images/products/adidas-ultimate365-shorts.webp', imgAlt: 'Adidas Ultimate365 golf shorts',
-      },
+        benefits: [
+      'Same stretch construction as the trousers, so mobility is excellent for the money',
+      'Regularly available on sale, which makes it an easy rotation pair',
+      'Standard inseam that suits most heights',
+    ],
+  },
   'nike-dri-fit-golf-shorts': {
     url: `https://www.amazon.com/s?k=nike+dri+fit+golf+shorts&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4090,7 +4200,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$50', label: `See Today's Price →`,
     imgSrc: '/images/products/nike-dri-fit-golf-shorts.webp', imgAlt: 'Nike Dri-FIT golf shorts',
-      },
+        benefits: [
+      'The slimmest cut here — modern and athletic on leaner builds',
+      'Runs tight through the thigh, so size up if you are between sizes',
+      '7-inch inseam sits shorter than the traditional golf cut',
+    ],
+  },
   // ═══ APPAREL — Hats ═══
   'titleist-tour-performance-hat': {
     url: `https://www.amazon.com/s?k=titleist+tour+performance+hat&tag=cubicalgolfer-20`,
@@ -4099,7 +4214,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$30', label: `See Today's Price →`,
     imgSrc: '/images/products/titleist-tour-performance-hat.webp', imgAlt: 'Titleist Tour Performance golf hat',
-      },
+        benefits: [
+      'Sweatband never saturated to dripping across 28 rounds, including 90°F days',
+      'Structured fit holds its shape after being stuffed into a bag pocket',
+      'UPF 50+ — the highest sun protection of the three we tested',
+    ],
+  },
   'callaway-cg-logo-hat': {
     url: `https://www.amazon.com/s?k=callaway+cg+logo+golf+hat&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4107,7 +4227,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$25', label: `See Today's Price →`,
     imgSrc: '/images/products/callaway-cg-logo-hat.webp', imgAlt: 'Callaway CG Logo golf hat',
-      },
+        benefits: [
+      'Solid performer at the lowest price of the three',
+      'Sweatband copes for 12 to 14 holes before feeling damp on the hottest days',
+      'UPF 30+',
+    ],
+  },
   'nike-legacy91-golf-hat': {
     url: `https://www.amazon.com/s?k=nike+legacy91+golf+hat&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4115,7 +4240,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$28', label: `See Today's Price →`,
     imgSrc: '/images/products/nike-legacy91-golf-hat.webp', imgAlt: 'Nike Legacy91 golf hat',
-      },
+        benefits: [
+      'Driest sweatband of the three through 18 holes on the hottest days',
+      'Less structured fit that reads more casual',
+      'UPF 40+',
+    ],
+  },
   // ═══ ACCESSORIES — Sunglasses ═══
   'maui-jim-banyans-golf': {
     url: `https://www.amazon.com/s?k=maui+jim+banyans+golf+sunglasses&tag=cubicalgolfer-20`,
@@ -4124,7 +4254,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$230', label: `See Today's Price →`,
     imgSrc: '/images/products/maui-jim-banyans-golf.webp', imgAlt: 'Maui Jim Banyans golf sunglasses',
-      },
+        benefits: [
+      'HCL Bronze lens gives the most natural colour reproduction we tested — true-to-life with added contrast',
+      'Polarisation excels against glare off water and sand',
+      'Slightly flattens green contours — worth lifting them to read subtle breaks on fast greens',
+    ],
+  },
   'goodr-golf-sunglasses': {
     url: `https://www.amazon.com/s?k=goodr+golf+sunglasses&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4141,7 +4276,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$60', label: `See Today's Price →`,
     imgSrc: '/images/products/under-armour-storm-rain-jacket.webp', imgAlt: 'Under Armour Storm golf rain jacket',
-      },
+        benefits: [
+      'Handles moderate rain for two to three hours before moisture starts to seep through at the shoulders',
+      'Stretch fabric cost only 1 mph of driver ball speed against wearing no jacket at all',
+      'Runs warm once humidity climbs above 80 percent',
+    ],
+  },
   'footjoy-hydrolite-rain-jacket': {
     url: `https://www.amazon.com/s?k=footjoy+hydrolite+rain+jacket&tag=cubicalgolfer-20`,
     program: 'amazon',
@@ -4149,7 +4289,12 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$120', label: `See Today's Price →`,
     imgSrc: '/images/products/footjoy-hydrolite-rain-jacket.webp', imgAlt: 'FootJoy HydroLite golf rain jacket',
-      },
+        benefits: [
+      'Stayed genuinely waterproof through a full 18 holes of moderate rain — no penetration at all',
+      'Golf-specific articulated sleeves keep swing freedom close to premium shells',
+      'Slight clamminess inside on warmer walking rounds above 70°F',
+    ],
+  },
   // ═══ ACCESSORIES — Towel, Umbrella, Bags, Carts ═══
   'club-glove-microfiber-towel': {
     url: `https://www.amazon.com/s?k=club+glove+microfiber+golf+towel&tag=cubicalgolfer-20`,
