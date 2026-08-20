@@ -902,7 +902,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Rapsodo*+MLM2PRO*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$599',
+    price: '~$699',
     primaryRetailer: 'direct',
     priceNote: 'Steady price — occasional $25-50 off during Prime Day and Black Friday.',
     label: 'See Today\'s Price →',
