@@ -496,7 +496,7 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Chrome Tour 2026 — search (very new Jan 2026, single ASIN not yet stable)
   'callaway-chrome-tour-2026': {
-    url: 'https://www.amazon.com/s?k=callaway-chrome-tour-2026&crid=11X1E4VP7YO2A&sprefix=callaway-chrome-tour-2026%2Caps%2C293&linkCode=ll2&tag=cubicalgolfer-20&linkId=5ca2d959a8efc39ebff64533f50ab93a&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Callaway+Chrome+Tour+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=5ca2d959a8efc39ebff64533f50ab93a&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -517,7 +517,7 @@ export const AFFILIATE: Record<string, {
 
   // TaylorMade TP5 2024 — search (colour/generation variants)
   'taylormade-tp5': {
-    url: 'https://www.amazon.com/s?k=taylormade-tp5&crid=YNIGUF63T20Q&sprefix=taylormade-tour-response%2Caps%2C265&linkCode=ll2&tag=cubicalgolfer-20&linkId=9b4f4e88a08115c2f4c0c1b2ab4aef74&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=TaylorMade+TP5+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=9b4f4e88a08115c2f4c0c1b2ab4aef74&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1241,7 +1241,7 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BALLS (additional) ───────────────────────────────────────────────
   'titleist-pro-v1x': {
-    url: 'https://www.amazon.com/s?k=titleist-pro-v1x&crid=1BMO392SRDU90&sprefix=titleist-players-flex%2Caps%2C265&linkCode=ll2&tag=cubicalgolfer-20&linkId=be654cecda572a69e7ef645e46400c56&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Titleist+Pro+V1x+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=be654cecda572a69e7ef645e46400c56&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1541,7 +1541,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-chrome-soft': {
-    url: 'https://www.amazon.com/s?k=callaway-chrome-soft&crid=QIR72QBZ6WKH&sprefix=callaway-chev-dry%2Caps%2C236&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Callaway+Chrome+Soft+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=f149acca562ed2c5be4885a11bef7119&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1572,7 +1572,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Callaway Chrome Soft Golf Balls',
       },
   'titleist-tour-speed': {
-    url: 'https://www.amazon.com/s?k=titleist-tour-speed&crid=29KW4M7QC2V0C&sprefix=titleist-tour-soft%2Caps%2C276&linkCode=ll2&tag=cubicalgolfer-20&linkId=8e3a5b2689ca3023e91440575551a649&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Titleist+Tour+Speed+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=8e3a5b2689ca3023e91440575551a649&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1590,7 +1590,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'taylormade-tour-response': {
-    url: 'https://www.amazon.com/s?k=taylormade-tour-response&crid=3V83T1RSHXXW4&sprefix=taylormade-tp5%2Caps%2C256&linkCode=ll2&tag=cubicalgolfer-20&linkId=1314dec90a229cf663c156629b1d4b3f&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=TaylorMade+Tour+Response+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=1314dec90a229cf663c156629b1d4b3f&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2266,7 +2266,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'odyssey-tri-beam-arm-lock': {
-    url: 'https://www.amazon.com/s?k=odyssey+tri+beam&crid=2SRJH3JMKF0XZ&sprefix=odyssey+tri+beam%2Caps%2C157&linkCode=ll2&tag=cubicalgolfer-20&linkId=bd877383aad74ee8f1df3358f680290c&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Odyssey+Tri-Beam+Arm+Lock+Putter&linkCode=ll2&tag=cubicalgolfer-20&linkId=bd877383aad74ee8f1df3358f680290c&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2823,7 +2823,7 @@ export const AFFILIATE: Record<string, {
 
   // ── Golf Balls (compression chart) ──────────────────────────────────────────
   'taylormade-noodle': {
-    url: 'https://www.amazon.com/s?k=taylormade-noodle&crid=2RB7ZCHJB53RI&sprefix=taylormade-noodle%2Caps%2C231&linkCode=ll2&tag=cubicalgolfer-20&linkId=e7b1aae09ea64ba9a1bb110cdbc9ece6&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=TaylorMade+Noodle+Long+and+Soft+Golf+Balls&linkCode=ll2&tag=cubicalgolfer-20&linkId=e7b1aae09ea64ba9a1bb110cdbc9ece6&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Noodle%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -2841,7 +2841,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'wilson-duo-soft-plus': {
-    url: 'https://www.amazon.com/s?k=wilson-duo-soft-plus&crid=290YB0DRKWGN5&sprefix=wilson-duo-soft-plus%2Caps%2C244&linkCode=ll2&tag=cubicalgolfer-20&linkId=7c204a76f5667987e8de0c180d5f12e4&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Wilson+DUO+Soft+Plus+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=7c204a76f5667987e8de0c180d5f12e4&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520Duo%2520Soft%2520Plus%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -2859,7 +2859,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'titleist-trufeel': {
-    url: 'https://www.amazon.com/s?k=titleist-trufeel&crid=10ZT28639WBVZ&sprefix=titleist-trufeel%2Caps%2C268&linkCode=ll2&tag=cubicalgolfer-20&linkId=9b59f37691d59bbdb9d9d1eab0c031a4&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Titleist+TruFeel+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=9b59f37691d59bbdb9d9d1eab0c031a4&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2889,7 +2889,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'TaylorMade Soft Response golf balls',
   },
   'vice-drive': {
-    url: 'https://www.amazon.com/s?k=vice-drive&crid=3AC551UVSU8CC&sprefix=vice-drive%2Caps%2C243&linkCode=ll2&tag=cubicalgolfer-20&linkId=f459afc5930c5bab4ef0b02829174be3&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Vice+Drive+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=f459afc5930c5bab4ef0b02829174be3&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2901,7 +2901,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Vice Drive golf balls',
   },
   'vice-pro-soft': {
-    url: 'https://www.amazon.com/s?k=vice-pro-plus&crid=1Z3W2M00LC6PU&sprefix=vice-pro%2Caps%2C283&linkCode=ll2&tag=cubicalgolfer-20&linkId=b751a0abee57b374eddaf951818042f7&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Vice+Pro+Soft+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=b751a0abee57b374eddaf951818042f7&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2918,7 +2918,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'titleist-tour-soft': {
-    url: 'https://www.amazon.com/s?k=titleist-tour-soft&crid=1OYCI22K092XX&sprefix=titleist-t100%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=7635bd54cce35d2e11d3130bcdf31ddf&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Titleist+Tour+Soft+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=7635bd54cce35d2e11d3130bcdf31ddf&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2931,7 +2931,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Tour%2520Soft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
   'titleist-velocity': {
-    url: 'https://www.amazon.com/s?k=titleist-velocity&linkCode=ll2&tag=cubicalgolfer-20&linkId=14bd96cc80f9293e6937d517e934e29d&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Titleist+Velocity+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=14bd96cc80f9293e6937d517e934e29d&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2949,7 +2949,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-warbird': {
-    url: 'https://www.amazon.com/s?k=callaway-warbird&crid=19G8XQY7ZVCSL&sprefix=callaway-warbird%2Caps%2C250&linkCode=ll2&tag=cubicalgolfer-20&linkId=aebc088d25243e7692933d8909217bae&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Callaway+Warbird+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=aebc088d25243e7692933d8909217bae&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Warbird%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -2962,7 +2962,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Callaway Warbird golf balls',
   },
   'bridgestone-tour-b-rx': {
-    url: 'https://www.amazon.com/s?k=bridgestone-tour-b-rx&crid=1AHZL5C9YSBIY&sprefix=bridgestone-tour-b-rx%2Caps%2C272&linkCode=ll2&tag=cubicalgolfer-20&linkId=438aad089e45b346e57e6d25fba2e454&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Bridgestone+Tour+B+RX+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=438aad089e45b346e57e6d25fba2e454&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2988,7 +2988,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Kirkland Signature golf balls',
   },
   'titleist-avx': {
-    url: 'https://www.amazon.com/s?k=titleist-avx&crid=2K63S0C7TC1QJ&sprefix=tifosi-seek-fc%2Caps%2C250&linkCode=ll2&tag=cubicalgolfer-20&linkId=9363a91c07a7107214aee2db99e56b92&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Titleist+AVX+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=9363a91c07a7107214aee2db99e56b92&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3001,7 +3001,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520AVX%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
   'wilson-staff-model': {
-    url: 'https://www.amazon.com/s?k=wilson-staff-model&i=sporting&crid=VPFV3NY6D8C1&sprefix=wilson-staff-model%2Csporting%2C127&linkCode=ll2&tag=cubicalgolfer-20&linkId=bbb72a5a862d30bed5e9b7a78f2dde4b&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Wilson+Staff+Model+Golf+Balls+One+Dozen&i=sporting&linkCode=ll2&tag=cubicalgolfer-20&linkId=bbb72a5a862d30bed5e9b7a78f2dde4b&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520Staff%2520Model%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3014,7 +3014,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Wilson Staff Model golf balls',
   },
   'srixon-z-star': {
-    url: 'https://www.amazon.com/s?k=srixon-z-star&crid=2CKLZ3YC1AWP1&sprefix=srixon-z-star%2Caps%2C226&linkCode=ll2&tag=cubicalgolfer-20&linkId=a665af8e74387be4299282a5036f9553&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Srixon+Z-Star+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=a665af8e74387be4299282a5036f9553&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3027,7 +3027,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Z-Star%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
   'bridgestone-tour-b-xs': {
-    url: 'https://www.amazon.com/s?k=bridgestone-tour-b-xs&crid=32SL2G8ERB1MB&sprefix=bridgestone-tour-b-xs%2Caps%2C272&linkCode=ll2&tag=cubicalgolfer-20&linkId=c8c26307638e444d0446d78ff7048f05&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Bridgestone+Tour+B+XS+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=c8c26307638e444d0446d78ff7048f05&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3057,7 +3057,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'taylormade-tp5x': {
-    url: 'https://www.amazon.com/s?k=taylormade-tp5x&crid=3A2LPETAQO5FF&sprefix=taylormade-tour-response%2Caps%2C269&linkCode=ll2&tag=cubicalgolfer-20&linkId=e3c2c45f03a1f2001870d7efddc934cb&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=TaylorMade+TP5x+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=e3c2c45f03a1f2001870d7efddc934cb&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3070,7 +3070,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520TP5x%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
   'bridgestone-tour-b-x': {
-    url: 'https://www.amazon.com/s?k=bridgestone-tour-b-x&crid=E1YFURZ6JMN6&sprefix=bridgestone-tour-b-x%2Caps%2C225&linkCode=ll2&tag=cubicalgolfer-20&linkId=04ca273bbb792f3f094f4f78967287c6&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Bridgestone+Tour+B+X+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=04ca273bbb792f3f094f4f78967287c6&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBridgestone%2520Tour%2520B%2520X%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3083,7 +3083,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Bridgestone Tour B X golf balls',
   },
   'srixon-z-star-xv': {
-    url: 'https://www.amazon.com/s?k=srixon+z-star-xv&linkCode=ll2&tag=cubicalgolfer-20&linkId=fc7e8ecaa846af8cd7d6490968144654&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Srixon+Z-Star+XV+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=fc7e8ecaa846af8cd7d6490968144654&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3108,7 +3108,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Maxfli Tour X golf balls',
   },
   'wilson-chaos': {
-    url: 'https://www.amazon.com/s?k=wilson-chaos&crid=2LDQEDBPN81RW&sprefix=wilson-chaos%2Caps%2C284&linkCode=ll2&tag=cubicalgolfer-20&linkId=3a9c6543852efc44b796cb5da30c4b45&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Wilson+Chaos+Golf+Balls&linkCode=ll2&tag=cubicalgolfer-20&linkId=3a9c6543852efc44b796cb5da30c4b45&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520Chaos%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3623,7 +3623,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-strata-senior': {
-    url: 'https://www.amazon.com/s?k=callaway+strate&crid=2HKNLKWI3MLHY&sprefix=callaway+strate%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=681c9e85e3c4f97a143ae9d112830bd9&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Callaway+Strata+Senior+Complete+Golf+Set&linkCode=ll2&tag=cubicalgolfer-20&linkId=681c9e85e3c4f97a143ae9d112830bd9&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%2520Senior%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3633,7 +3633,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/callaway-strata.webp', imgAlt: 'Callaway Strata senior golf club set',
   },
   'cleveland-launcher-xl-senior': {
-    url: 'https://www.amazon.com/s?k=cleveland+launcher+xl2&crid=2OYYW71NTMTFL&sprefix=cleveland+launcher+xl2%2Caps%2C302&linkCode=ll2&tag=cubicalgolfer-20&linkId=3b3e126df2448bd1026ec4b7f2a62a15&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Cleveland+Launcher+XL+Senior+Flex+Irons&linkCode=ll2&tag=cubicalgolfer-20&linkId=3b3e126df2448bd1026ec4b7f2a62a15&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Launcher%2520XL%2520Senior%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3829,7 +3829,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'cobra-aerojet-max-irons': {
-    url: 'https://www.amazon.com/s?k=cobra+aerojet+irons&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=Cobra+Aerojet+Max+Irons&tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCobra%2520Aerojet%2520Max%2520Irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3876,7 +3876,7 @@ export const AFFILIATE: Record<string, {
   },
   'apple-watch-ultra-golf': {
     imgSrc: '/images/products/AppleWatch.webp', imgAlt: 'Apple Watch Ultra with golf GPS app',
-    url: 'https://www.amazon.com/s?k=apple+watch+golf&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/s?k=Apple+Watch+Ultra&tag=cubicalgolfer-20',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Apple*+Watch*+Ultra*+Golf*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
