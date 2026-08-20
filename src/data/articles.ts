@@ -902,7 +902,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Average Golf Handicap by Age & Gender (2026)',
     titleDisplay: 'Average Golf Handicap by Age and Gender — 2026 Data',
-    description: "Average golf handicap by age and gender in 2026 — men average 14.2, women 27.5. Breakdown by age group from 20s to 70+ with USGA data.",
+    description: "Average golf handicap by age and gender — 14.2 for men, 27.5 for women. See the age-by-age table and what percentile your own handicap puts you in.",
     excerpt: "What's an average golf handicap? See the latest data by age, gender and skill level — and how to lower yours.",
     bottomLine: 'Our top pick: the <strong>Arccos Caddie Sensors</strong> (~$249 + $99/yr).',
     intro: "The average golf handicap in 2026 is <strong>14.2 for men</strong> and <strong>27.5 for women</strong>, based on USGA handicap data. The average handicap by age rises steadily with age — 13.4 for men in the 30 to 39 bracket, climbing to 17.2 for golfers over 70. About 20 percent of male golfers hold a single-digit handicap, and only about 1 percent play to scratch or better.\n\nUnderstanding where you stand among golfers helps you set realistic goals. Here's the latest data on average golf handicaps in 2026, broken down by age, gender, and experience level.",
