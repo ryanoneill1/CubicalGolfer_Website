@@ -21,6 +21,13 @@
 //
 //   So this bucket means "check for a parent listing first", not "never touch".
 //
+//   Sprint 34 widened it again. Putters, drivers, hybrids and grips are also
+//   fitting choices — hand, loft, shaft, length, standard-vs-midsize — and the
+//   "Odyssey White Hot OG" is a LINE (One, Double Wide, #5 SB, #7 ...), not a
+//   product. My first pass called all of those convertible, which overstated
+//   the queue. Better to have an honest smaller number than a list that wastes
+//   a verification pass.
+//
 //   SUPERSEDED PRODUCTS. Blue Tees "Series 3 Max" now returns only a
 //   REFURBISHED listing; the live product is the "Series 3 Max+", with
 //   different magnification. Converting the URL would quietly swap the product
@@ -36,7 +43,7 @@ import { COMPARISONS } from '../src/data/comparisons';
 
 /** Sold per loft / size / hand. Convert ONLY if a parent listing exists —
  *  see the header. Shoes and gloves usually have one; wedges usually do not. */
-const VARIANT_BOUND = /(-\d{2}$|wedge|glove|shoe|spikeless|boot|sandal|polo|shirt|trouser|pant|short|jacket|rain|belt|hat|cap|shaft|flex|-irons$|-lh$|-rh$)/i;
+const VARIANT_BOUND = /(-\d{2}$|wedge|glove|shoe|spikeless|boot|sandal|polo|shirt|trouser|pant|short|jacket|rain|belt|hat|cap|shaft|flex|-irons$|-lh$|-rh$|putter|driver|hybrid|-wood$|grip|blade|mallet|-og$)/i;
 
 const money = (s: any) => { const m = String(s ?? '').match(/\$\s*([0-9][0-9,]*)/); return m ? Number(m[1].replace(/,/g, '')) : 0; };
 const isSearch = (u: string) => /\/s\?/.test(u);

@@ -3233,7 +3233,7 @@ export const AFFILIATE: Record<string, {
   },
 
   'garmin-approach-s12': {
-    url: 'https://www.amazon.com/s?k=garmin-approach-s12&crid=QM7PZXRF034V&sprefix=garmin-approach-s12%2Caps%2C267&linkCode=ll2&tag=cubicalgolfer-20&linkId=2e044130b701e021c30adcf3297663bb&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Garmin-Approach-Preloaded-Courses-010-02472-00/dp/B08X1L2CDK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s12-golf-gps-smartwatch-21gmnupprchs12blcgps%2F21gmnupprchs12blcgps%3FenteredSearchTerm%3Dgarmin%2520approach%2520s12',
     program: 'amazon',
     commissionPct: 3,
@@ -3311,19 +3311,6 @@ export const AFFILIATE: Record<string, {
       'No phone or app required',
       'Built-in color screen',
     ],
-  },
-  'mevo-gen2': {
-    url: 'https://www.amazon.com/s?k=mevo-gen2&crid=2KHQMKKLCKN0A&sprefix=maxi-tour-x%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=fbf7082609b00a3da5633913c75c347a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Mevo*+Gen2*&ghref=2301%3A1333883',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon',
-    price: '~$1,299',
-    priceNote: 'Rarely discounted — buy when ready. Check for bundle deals.',
-    label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/mevo-gen2.webp',
-    imgAlt: 'FlightScope Mevo Gen2 launch monitor',
   },
   'kvv-push-cart': {
     url: 'https://www.amazon.com/s?k=kvv-push-cart&crid=1U001KIXZGN4C&sprefix=kvv-push-cart%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=7b216cbaa0777f33c9ab5dacd094e502&language=en_US&ref_=as_li_ss_tl',

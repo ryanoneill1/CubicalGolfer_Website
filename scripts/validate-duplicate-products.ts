@@ -130,6 +130,30 @@ for (const [sig, keys] of byModel) {
   }
 }
 
+// ── Same product, SAME price, two keys ──────────────────────────────
+// Sprint 34: 'mevo-gen2' and 'flightscope-mevo-gen2' were both ~$1,299 and
+// both live, splitting one product across two buy links over 8 pages. Every
+// check above passed, because they all hinge on the prices DIFFERING — the
+// heuristic below this one even treats "one key extends another" as evidence
+// of a legitimate variant. That is true only when the price moves with it.
+// If one key contains another AND the price is identical, it is not a variant.
+// It is the same product entered twice.
+{
+  const keys = entries.map(([k]) => k);
+  for (const a of keys) for (const b of keys) {
+    // PRECISION. "contains" alone is far too loose: pro-v1 / pro-v1x and
+    // phantom / phantom-x are genuinely different products that happen to cost
+    // the same. Those differ by a model SUFFIX. A duplicate differs only by a
+    // brand PREFIX — 'mevo-gen2' vs 'flightscope-mevo-gen2' — so require that
+    // b is exactly "<something>-<a>".
+    if (a === b || !b.endsWith('-' + a)) continue;
+    const pa = String((AFFILIATE as any)[a].price ?? '');
+    const pb = String((AFFILIATE as any)[b].price ?? '');
+    if (!pa || pa !== pb) continue;
+    problems.push(`"${a}" and "${b}" are the same product at the same price (${pa}) — one key contains the other. Merge them.`);
+  }
+}
+
 if (problems.length) {
   console.error(`\n❌ ${problems.length} possible duplicate product record(s):`);
   for (const p of [...new Set(problems)]) console.error('   ' + p);

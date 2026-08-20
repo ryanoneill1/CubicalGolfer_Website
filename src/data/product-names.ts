@@ -179,7 +179,6 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'garmin-approach-s12': "Garmin Approach S12",
   'sklz-accelerator-pro': "SKLZ Accelerator Pro",
   'shot-scope-lm1': "Shot Scope LM1",
-  'mevo-gen2': "Mevo Gen2",
   'kvv-push-cart': "KVV Push Cart",
   'bag-boy-nitron': "Bag Boy Nitron",
   'clicgear-model-45': "Clicgear Model 45",
