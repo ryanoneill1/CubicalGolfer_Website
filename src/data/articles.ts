@@ -13852,6 +13852,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'bf-golf-deals', slug: '/black-friday-golf-deals/', category: 'golf-lifestyle', pageType: 'listicle',
+    quickAnswerProduct: 'garmin-approach-r10',
     tag: 'DEALS', emoji: '🏷️', thumb: 'olive',
     words: '2,000', datePublished: '2026-06-06', dateModified: '2026-06-06',
     title: 'Black Friday Golf Deals — Best Discounts by Category',
@@ -13864,11 +13865,11 @@ export const ARTICLES: Article[] = [
     intro: 'This page is updated annually with the best Black Friday golf deals. Bookmark it and check back in early November when deals start dropping. We only list deals we would actually buy ourselves — no filler.\n\n<strong>Last updated: June 2026</strong> — deals from Black Friday 2025 below. The 2026 update goes live in early November.\n\nFor our year-round recommendations by category, see the links below.',
     toc: ['Launch Monitors', 'Rangefinders', 'Golf Balls', 'Drivers', 'Shoes and Apparel'],
     sections: [
-      { h2: 'Launch monitor deals', body: 'Launch monitors see the biggest Black Friday discounts — 25-40% off. The <a href="/garmin-approach-r10-review/">Garmin R10</a> typically drops to $400-450 (from $550). The <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a> drops to $450-500 (from $650). See our <a href="/best-golf-launch-monitors-2026/">full launch monitor rankings</a> to decide which to buy before the deals start.' },
-      { h2: 'Rangefinder deals', body: 'The <a href="/best-golf-rangefinders-2026/">Bushnell Tour V7</a> typically drops $50-80 on Black Friday. The <a href="/precision-pro-nx9-review/">Precision Pro NX9</a> often runs buy-one-get-accessories bundles. Check our <a href="/best-golf-rangefinders-2026/">rangefinder rankings</a> to shortlist before the sale.' },
-      { h2: 'Golf ball deals', body: 'Titleist, Callaway, and TaylorMade run buy-3-get-1-free deals on premium balls. The <a href="/vice-golf-balls/">Vice</a> bulk pricing (5+ dozen) is already competitive but they add 10-15% off for Black Friday. Stock up — golf balls do not expire. See our <a href="/best-golf-balls-2026/">ball rankings</a>.' },
-      { h2: 'Driver deals', body: 'Previous-generation drivers see the biggest markdowns: 40-50% off. A 2025 model driver is 95% as good as the 2026 model at half the price. See our <a href="/best-golf-drivers-forgiveness/">forgiving drivers</a> and <a href="/best-golf-drivers-under-400/">drivers under $200</a> guides.' },
-      { h2: 'Shoes and apparel deals', body: 'Golf apparel sees 30-50% Black Friday discounts across <a href="/best-golf-shirts/">shirts</a>, <a href="/best-golf-shoes/">shoes</a>, <a href="/best-golf-rain-jacket/">rain jackets</a>, and accessories. Stock up on <a href="/best-golf-gloves-for-men/">gloves</a> — they wear out and the savings compound.' },
+      { h2: 'Launch monitor deals', body: 'Launch monitors see the biggest Black Friday discounts — 25-40% off. The <a href="/garmin-approach-r10-review/">Garmin R10</a> typically drops to $400-450 (from $599). The <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a> drops to $450-500 (from $699). See our <a href="/best-golf-launch-monitors-2026/">full launch monitor rankings</a> to decide which to buy before the deals start.' , affiliateKey: 'garmin-approach-r10', price: '~$599', rating: 4.4, badge: 'WATCH THIS ONE'},
+      { h2: 'Rangefinder deals', body: 'The <a href="/best-golf-rangefinders-2026/">Bushnell Tour V7</a> typically drops $50-80 on Black Friday. The <a href="/precision-pro-nx9-review/">Precision Pro NX9</a> often runs buy-one-get-accessories bundles. Check our <a href="/best-golf-rangefinders-2026/">rangefinder rankings</a> to shortlist before the sale.' , affiliateKey: 'precision-pro-nx9-hd', price: '~$199', rating: 4.5, badge: 'BEST VALUE'},
+      { h2: 'Golf ball deals', body: 'Titleist, Callaway, and TaylorMade run buy-3-get-1-free deals on premium balls. The <a href="/vice-golf-balls/">Vice</a> bulk pricing (5+ dozen) is already competitive but they add 10-15% off for Black Friday. Stock up — golf balls do not expire. See our <a href="/best-golf-balls-2026/">ball rankings</a>.' , affiliateKey: 'kirkland-signature', price: '~$28/2dz', rating: 4.3, badge: 'BEST PRICE'},
+      { h2: 'Driver deals', body: 'Previous-generation drivers see the biggest markdowns: 40-50% off. A 2025 model driver is 95% as good as the 2026 model at half the price. See our <a href="/best-golf-drivers-forgiveness/">forgiving drivers</a> and <a href="/best-golf-drivers-under-400/">drivers under $200</a> guides.' , affiliateKey: 'ping-g430-max-driver', price: '~$449', rating: 4.7, badge: 'PREV-GEN PICK'},
+      { h2: 'Shoes and apparel deals', body: 'Golf apparel sees 30-50% Black Friday discounts across <a href="/best-golf-shirts/">shirts</a>, <a href="/best-golf-shoes/">shoes</a>, <a href="/best-golf-rain-jacket/">rain jackets</a>, and accessories. Stock up on <a href="/best-golf-gloves-for-men/">gloves</a> — they wear out and the savings compound.' , affiliateKey: 'footjoy-flex-xp', price: '~$120', rating: 4.4, badge: 'DEEPEST CUTS'},
       { h2: 'Keep reading', body: 'For year-round deals: <a href="/prime-day-golf-deals/">Prime Day golf deals</a>. For gift shopping: <a href="/best-golf-gifts-for-him/">gifts for him</a>, <a href="/best-golf-gifts-under-50/">gifts under $50</a>.' },
     ],
     faq: [
@@ -13883,6 +13884,7 @@ export const ARTICLES: Article[] = [
   },
   {
     id: 'prime-day-deals', slug: '/prime-day-golf-deals/', category: 'golf-lifestyle', pageType: 'listicle',
+    quickAnswerProduct: 'kirkland-signature',
     tag: 'DEALS', emoji: '🏷️', thumb: 'teal',
     words: '1,600', datePublished: '2026-06-06', dateModified: '2026-06-06',
     title: 'Prime Day Golf Deals — Best Amazon Discounts',
@@ -13895,9 +13897,9 @@ export const ARTICLES: Article[] = [
     intro: 'Amazon Prime Day (typically mid-July) is the best time to stock up on golf balls, accessories, and Amazon-exclusive golf tech. This page is updated annually with the deals worth buying.\n\n<strong>Last updated: June 2026</strong> — the 2026 Prime Day update goes live when deals are announced.\n\nFor Black Friday deals (typically better for premium equipment): <a href="/black-friday-golf-deals/">Black Friday golf deals</a>.',
     toc: ['Golf Balls', 'Accessories', 'Tech and Gadgets'],
     sections: [
-      { h2: 'Golf ball deals', body: 'Amazon runs the best golf ball deals on Prime Day — buy-2-get-1 or 20-30% off multi-dozen packs. Stock up on your preferred ball from our <a href="/best-golf-balls-2026/">rankings</a>. The <a href="/kirkland-signature-golf-balls/">Kirkland Signature</a> is already Amazon-priced but Prime Day sometimes adds further discounts.' },
-      { h2: 'Accessories and training aids', body: 'Accessories see 30-40% off on Prime Day. <a href="/best-golf-alignment-sticks/">Alignment sticks</a>, <a href="/best-golf-towel/">towels</a>, <a href="/best-golf-umbrella/">umbrellas</a>, and <a href="/best-golf-training-aids/">training aids</a> are all worth buying at Prime Day prices.' },
-      { h2: 'Tech and gadgets', body: 'The <a href="/garmin-approach-r10-review/">Garmin R10</a> and <a href="/best-golf-gps-watches/">GPS watches</a> sometimes see 15-25% Prime Day discounts. The <a href="/best-golf-apps/">golf app</a> subscriptions occasionally run Prime Day promotions too.' },
+      { h2: 'Golf ball deals', body: 'Amazon runs the best golf ball deals on Prime Day — buy-2-get-1 or 20-30% off multi-dozen packs. Stock up on your preferred ball from our <a href="/best-golf-balls-2026/">rankings</a>. The <a href="/kirkland-signature-golf-balls/">Kirkland Signature</a> is already Amazon-priced but Prime Day sometimes adds further discounts.' , affiliateKey: 'kirkland-signature', price: '~$28/2dz', rating: 4.3, badge: 'BEST PRICE'},
+      { h2: 'Accessories and training aids', body: 'Accessories see 30-40% off on Prime Day. <a href="/best-golf-alignment-sticks/">Alignment sticks</a>, <a href="/best-golf-towel/">towels</a>, <a href="/best-golf-umbrella/">umbrellas</a>, and <a href="/best-golf-training-aids/">training aids</a> are all worth buying at Prime Day prices.' , affiliateKey: 'sklz-golf-grip-trainer', price: '~$18', rating: 4.2, badge: 'UNDER $20'},
+      { h2: 'Tech and gadgets', body: 'The <a href="/garmin-approach-r10-review/">Garmin R10</a> and <a href="/best-golf-gps-watches/">GPS watches</a> sometimes see 15-25% Prime Day discounts. The <a href="/best-golf-apps/">golf app</a> subscriptions occasionally run Prime Day promotions too.' , affiliateKey: 'garmin-approach-s12', price: '~$199', rating: 4.3, badge: 'AMAZON DEVICE'},
       { h2: 'How to Tell a Real Golf Deal From a Fake One', body: 'Golf gear \'discounts\' are often theater: the list price gets inflated in June so the July cut looks dramatic. Two habits protect you. First, check the price history on a tracker like CamelCamelCamel before you believe any percentage — a \'40% off\' rangefinder that sat at the sale price all spring is not a deal. Second, know the honest street price going in: our <a href="/best-golf-rangefinders-2026/">rangefinder guide</a> and <a href="/best-golf-launch-monitors-2026/">launch monitor guide</a> list what each pick actually sells for, which makes a real discount obvious in seconds.' },
       { h2: 'What Almost Never Goes On Sale (Save Your Clicks)', body: 'Current-year premium balls (Pro V1, TP5, Chrome Tour) hold price within a dollar or two of list all year — buy last season\'s model instead and pocket 30%. Current-generation drivers and irons from the big brands rarely drop more than token amounts until the next release cycle; the real savings live in previous-gen heads, which our <a href="/best-golf-drivers-under-400/">under-$200 driver guide</a> is built around. Launch monitors are the exception worth watching: the Garmin R10 and Rapsodo MLM2PRO both see genuine $50-$100 cuts during major sale events.' },
       { h2: 'The 10-Minute Prime Day Strategy', body: 'Decide what you need before the event, not during it — a wishlist of two or three items from our guides, each with its normal street price written down. On the day, check those items first, buy anything at 15%+ below street, and ignore everything else. The gear that improves scores is boring and specific: balls you already play, a glove multi-pack, a rangefinder if you still guess yardages. The gear that collects dust is whatever looked exciting at 2am because it was 60% off.' },
@@ -13982,6 +13984,7 @@ export const ARTICLES: Article[] = [
   // ═══ NEW CONTENT: How Golf Launch Monitors Work ═══
   {
     id: 'how-golf-launch-monitors-work',
+    quickAnswerProduct: 'garmin-approach-r10',
     slug: '/how-golf-launch-monitors-work/',
     ogImage: '/images/og-image.jpg',
     thumbnail: '/images/thumbnails/launch-monitors-thumb.webp',
@@ -14012,6 +14015,16 @@ export const ARTICLES: Article[] = [
       { label: 'Which Technology to Buy', anchor: 'which-to-buy' },
       { label: 'FAQ', anchor: 'faq' },
     ],
+    comparisonTable: {
+      headers: ['Launch Monitor', 'Best For', 'Price', 'Technology', 'Spin Data'],
+      rows: [
+        { rating: 4.4, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Outdoor range use', price: '~$599', feature1: 'Doppler radar', feature2: 'Estimated', badge: 'BEST VALUE' },
+        { rating: 4.3, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Indoors and out', price: '~$699', feature1: 'Radar + camera', feature2: 'Measured', winner: true, badge: 'BEST HYBRID' },
+        { rating: 4.5, affiliateKey: 'flightscope-mevo-gen2', name: 'FlightScope Mevo Gen2', bestFor: 'No subscription', price: '~$1,299', feature1: 'Doppler radar', feature2: 'Measured' },
+        { rating: 4.7, affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Fitting accuracy', price: '~$2,499', feature1: 'Camera', feature2: 'Measured' },
+        { rating: 4.6, affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Home simulators', price: '~$2,995', feature1: 'Camera + radar', feature2: 'Measured' },
+      ],
+    },
     sections: [
       {
         h2: 'Three Technologies: Radar, Camera, Hybrid',
@@ -14046,7 +14059,7 @@ export const ARTICLES: Article[] = [
 <tr><td style="padding:8px 12px;">Carry distance</td><td style="padding:8px 12px;">✅ Measured (outdoor) / ⚠️ Est (indoor)</td><td style="padding:8px 12px;">⚠️ Estimated</td><td style="padding:8px 12px;">✅ / ⚠️ Mixed</td></tr>
 </tbody></table>
 <p>The takeaway: if you care about spin accuracy (for simulator play, wedge practice, or ball fitting), you need a camera-based or hybrid monitor. If you mainly want speed and distance for range sessions, radar is perfectly good and costs less. Our <a href="/best-golf-launch-monitors-2026/">launch monitor buying guide</a> ranks the best in each category.</p>`
-      },
+      , affiliateKey: 'bushnell-launch-pro', price: '~$2,499', rating: 4.7, badge: 'MEASURED SPIN'},
       {
         h2: 'Accuracy: What the Numbers Actually Mean',
         body: `<p>When a manufacturer says their monitor is "accurate to within 1%," that number applies to the data points the device <em>directly measures</em> — not the ones it estimates. A Garmin R10 measuring ball speed at 148 mph ± 1% means the real speed is between 146.5 and 149.5 mph. That is genuinely useful accuracy.</p>
@@ -14066,7 +14079,7 @@ export const ARTICLES: Article[] = [
 <p><strong>Indoor simulator use:</strong> Camera monitors have the advantage indoors because they capture data at impact — they do not need to see the ball fly. They measure spin directly from the ball's surface markings, which means indoor spin data is just as accurate as outdoor. The <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a> and Uneekor Eye MINI are popular indoor choices.</p>
 <p><strong>Both indoor and outdoor:</strong> Hybrid systems work in both environments because they combine radar flight tracking (outdoor) with camera spin measurement (indoor). The <a href="/skytrak-plus-review/">SkyTrak+</a> is the best-known example — it is the most versatile option but costs roughly 3–4x more than a radar-only or camera-only unit.</p>
 <p>Check your space with our <a href="/launch-monitor-room-checker/">free room checker tool</a> — it tells you which monitors fit your ceiling height, room depth, and width.</p>`
-      },
+      , affiliateKey: 'garmin-approach-r10', price: '~$599', rating: 4.4, badge: 'BEST OUTDOORS'},
       {
         h2: 'Which Technology Should You Buy?',
         body: `<p>The decision comes down to three questions:</p>
@@ -14074,7 +14087,7 @@ export const ARTICLES: Article[] = [
 <p><strong>2. How much does spin accuracy matter?</strong> Building a home simulator or doing ball fittings → you need measured spin (camera or hybrid). Range practice and general distance tracking → estimated spin from radar is fine.</p>
 <p><strong>3. What is your budget?</strong> Under $1,000 → radar (Garmin R10 at $699) or camera (Rapsodo MLM2PRO at $699). $1,000–$2,000 → hybrid (SkyTrak+ at $2,995). Over $2,000 → pro-grade options like the Bushnell Launch Pro ($2,499).</p>
 <p>Still not sure? Our <a href="/gear-quiz/">60-second gear quiz</a> asks 4 questions and gives you a personalized recommendation, or browse the <a href="/best-golf-launch-monitors-2026/">full ranked buying guide</a>.</p>`
-      },
+      , affiliateKey: 'rapsodo-mlm2pro', price: '~$699', rating: 4.3, badge: 'BEST HYBRID'},
     ],
     faq: [
       { q: 'Can a radar launch monitor measure spin accurately?', a: 'Radar monitors estimate spin from ball flight characteristics rather than directly measuring it. For most practice purposes the estimates are useful, but they can be off by 300-500 rpm in edge cases. If spin accuracy is critical for your use case, look for a camera or hybrid unit that directly measures spin from ball markings.' },
@@ -14095,6 +14108,7 @@ export const ARTICLES: Article[] = [
   // ═══ NEW CONTENT: Average Swing Speed by Age ═══
   {
     id: 'average-swing-speed-by-age',
+    quickAnswerProduct: 'superspeed-golf-set',
     slug: '/average-swing-speed-by-age/',
     ogImage: '/images/og-image.jpg',
     thumbnail: '/images/thumbnails/swing-speed-trainer-thumb.webp',
@@ -14175,7 +14189,7 @@ export const ARTICLES: Article[] = [
 <p><strong>1. Stretch daily, not just before golf.</strong> Hip flexor stretches, thoracic spine mobility, and shoulder rotation drills — 10 minutes a day keeps your turn full. This is the single highest-ROI activity for aging golfers.</p>
 <p><strong>2. Overspeed train 3x per week.</strong> Products like <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf</a> ($199) and The Stack System ($299) use progressively lighter clubs to train your nervous system to fire faster. Typical results: 5–8 mph gain in 6 weeks, maintained with 2x/week sessions. See our <a href="/best-swing-speed-trainer-over-40/">full speed trainer review</a>.</p>
 <p><strong>3. Optimize equipment every 5 years.</strong> Shaft technology, ball technology, and driver head design all evolve on 3–5 year cycles. A driver from 2018 with the wrong shaft for your current speed is leaving 10–15 yards on the table compared to a <a href="/best-golf-drivers-forgiveness/">current-gen forgiving driver</a> fitted to your actual numbers.</p>`
-      },
+      , affiliateKey: 'superspeed-golf-set', price: '~$199', rating: 4.4, badge: 'SPEED TRAINING'},
       {
         h2: 'Gear Matched to Your Speed',
         body: `<p>Once you know your club head speed, use these ranges to pick the right equipment:</p>
@@ -14191,7 +14205,7 @@ export const ARTICLES: Article[] = [
 <tr><td style="padding:8px 12px;">105+ mph</td><td style="padding:8px 12px;">X-Stiff</td><td style="padding:8px 12px;">100+</td><td style="padding:8px 12px;">8–9.5°</td><td style="padding:8px 12px;"><a href="/best-golf-drivers-forgiveness/">Best drivers ranked</a></td></tr>
 </tbody></table>
 <p>Don't know your swing speed? A personal <a href="/best-golf-launch-monitors-2026/">launch monitor</a> is the most accurate way to find out — the <a href="/garmin-approach-r10-review/">Garmin R10</a> measures club head speed to within 1–2 mph for $599. Or use our free <a href="/golf-swing-speed-chart/">swing speed chart</a> to estimate based on your typical driver distance.</p>`
-      },
+      , affiliateKey: 'garmin-approach-r10', price: '~$599', rating: 4.4, badge: 'MEASURE FIRST'},
     ],
     faq: [
       { q: 'What is the average swing speed for a male golfer?', a: 'The average male recreational golfer swings the driver at 93-95 mph across all age groups. This produces roughly 210-230 yards of carry distance under typical conditions. PGA Tour average is 114 mph — recreational golfers should not compare themselves to tour numbers when making equipment decisions.' },
