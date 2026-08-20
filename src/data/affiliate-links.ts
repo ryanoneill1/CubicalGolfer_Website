@@ -92,33 +92,6 @@ export const AFFILIATE: Record<string, {
 
   // Pro X3+ LINK is a DIFFERENT model from the Pro X3 — kept as its own record so
   // PlayBetter/Golf Galaxy results can no longer be conflated (Round-2 finding C1).
-  'bushnell-pro-x3-plus-link': {
-    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fbushnell-pro-x3-laser-rangefinder-24busuprx3lsrrngfrng%2F24busuprx3lsrrngfrng',
-    program: 'golfgalaxy',
-    commissionPct: 5,
-    cookieDays: 30,
-    golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell+pro+x3+plus+link+rangefinder&tag=cubicalgolfer-20',
-    retailer: 'Golf Galaxy',
-    price: '~$599',
-    primaryRetailer: 'direct',
-    label: 'Check Price at Golf Galaxy →',
-    imgSrc: '/images/products/Bushnell_Pro_X3+_LINK_Laser.webp',
-    imgAlt: 'Bushnell Pro X3+ LINK Laser Rangefinder',
-    benefits: [
-        'Adds Bushnell LINK connectivity to the Pro X3 platform',
-        'Slope-switch toggle for tournament-legal play',
-        'Locking magnetic cart mount',
-      ],
-  },
-
-  // ── ADDED Aug 2026 (Round-2 B2/B3) ────────────────────────────────────────
-  // B2: the ES14 section rendered with an image and a price but ZERO buy buttons
-  // after it was correctly unbound from the Swing Caddie SC4 Pro. It needs its
-  // own record so the section monetises the product it actually names.
-  // Ernest Sports ES B1 — Golf Galaxy /p/ verified live 7 Aug 2026.
-  // Golf Galaxy displays "See Price In Cart" (MAP restriction); its own structured
-  // data carries $292.97, which is what the cart charges. The ES14 this replaces
-  // returned zero Ernest Sports products on Amazon.
   'ernest-sports-es-b1': {
     url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fernest-sports-es-b1-portable-launch-monitor-20ersusb1prtbllnctch%2F20ersusb1prtbllnctch%3FenteredSearchTerm%3DErnest%2520Sports',
     program: 'golfgalaxy',
@@ -1376,7 +1349,7 @@ export const AFFILIATE: Record<string, {
   },
 
   'flightscope-mevo-gen2': {
-    url: 'https://www.amazon.com/s?k=flightscope-mevo-gen2&crid=11DZF65IZ87JX&sprefix=flightscope-mevo-gen2%2Caps%2C217&linkCode=ll2&tag=cubicalgolfer-20&linkId=b74d9fc6e79e9ff9b09097d6ed0dcf43&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/FlightScope-Mevo-Gen2-Parameters-Simulation/dp/B0G1ZRXTJ4?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=FlightScope*+Mevo*+Gen2*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -1726,7 +1699,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'garmin-approach-r50': {
-    url: 'https://www.amazon.com/s?k=garmin-approach-r50&crid=28V9UEWIUGBFZ&sprefix=garmin-approach-r50%2Caps%2C269&linkCode=ll2&tag=cubicalgolfer-20&linkId=ab645438d8ff0e061fdb5965508756c7&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Garmin-Approach%C2%AE-Premium-Simulator-Touchscreen/dp/B0DM6NYRYN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+R50*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -3505,15 +3478,6 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/homecourse-retractable-screen.webp', imgAlt: 'HomeCourse retractable golf screen',
   },
-  'benq-th671st-projector': {
-    url: 'https://www.amazon.com/s?k=benq-th671st-projector&crid=28ZYC7QVJ3921&sprefix=benq-th671st-projector%2Caps%2C269&linkCode=ll2&tag=cubicalgolfer-20&linkId=6e4a6c508cc257e9e45a77ddaaa94cbc&language=en_US&ref_=as_li_ss_tl',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon', price: '~$799',
-    priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/benq-th671st-projector.webp', imgAlt: 'BenQ TH671ST short throw projector for golf simulator',
-      },
   'optoma-zw350st': {
     url: 'https://www.amazon.com/Optoma-ZW350ST-Technology-Short-Throw-Projector/dp/B0D9HW1XVY?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon', commissionPct: 3, cookieDays: 1, retailer: 'Amazon',

@@ -40,6 +40,8 @@
 import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
+import fs from 'fs';
+import path from 'path';
 
 /** Sold per loft / size / hand. Convert ONLY if a parent listing exists —
  *  see the header. Shoes and gloves usually have one; wedges usually do not. */
@@ -50,14 +52,47 @@ const isSearch = (u: string) => /\/s\?/.test(u);
 
 const pages = new Map<string, Set<string>>();
 const ctas = new Map<string, number>();
+const known = new Set(Object.keys(AFFILIATE as any));
 const note = (k: any, slug: string) => { if (!k) return; if (!pages.has(k)) pages.set(k, new Set()); pages.get(k)!.add(slug); };
+/** Walk EVERY string in a record. Sprint 35: enumerating named fields
+ *  (affiliateKey, quickAnswerProduct, rows, products) missed productA,
+ *  productB, winner and id — which made this audit report 17 entries as
+ *  unreferenced when only 2 actually were. Deleting on that advice would
+ *  have broken a live compare page. Never enumerate fields when you can
+ *  walk values. */
+const walkAll = (o: any, slug: string) => {
+  if (!o || typeof o !== 'object') return;
+  for (const v of Object.values(o)) {
+    if (typeof v === 'string') { if (known.has(v)) note(v, slug); }
+    else if (typeof v === 'object') walkAll(v, slug);
+  }
+};
 
 for (const a of [...(ARTICLES as any), ...(COMPARISONS as any)]) {
   const slug = String(a.slug);
-  if (a.quickAnswerProduct) { ctas.set(a.quickAnswerProduct, (ctas.get(a.quickAnswerProduct) ?? 0) + 1); note(a.quickAnswerProduct, slug); }
-  for (const s of (a.sections ?? [])) note(s.affiliateKey, slug);
-  for (const r of (a.comparisonTable?.rows ?? [])) note(r.affiliateKey, slug);
-  for (const p of (a.products ?? [])) note(p.key ?? p.affiliateKey, slug);
+  if (a.quickAnswerProduct) ctas.set(a.quickAnswerProduct, (ctas.get(a.quickAnswerProduct) ?? 0) + 1);
+  walkAll(a, slug);
+}
+
+// .astro pages call getAffiliateLink() directly. Sprint 35: this audit called
+// 'spornia-spg-hitting-mat' unreferenced and it is wired into a tool page —
+// deleting on that advice would have broken a live buy link. Data is not the
+// only place a key gets used.
+{
+  const walk = (dir: string) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      if (!/\.(astro|ts|tsx)$/.test(e.name) || full.includes('affiliate-links.ts')) continue;
+      // Match ANY mention of a known key, not just getAffiliateLink() calls —
+      // keys turn up in hardcoded maps, arrays and props too.
+      const text = fs.readFileSync(full, 'utf8');
+      const where = full.replace(/^.*?src\//, 'src/');
+      for (const k of known)
+        if (text.includes(`'${k}'`) || text.includes(`"${k}"`)) note(k, where);
+    }
+  };
+  walk('src');
 }
 
 type Row = { key: string; np: number; cta: number; price: number; score: number };
