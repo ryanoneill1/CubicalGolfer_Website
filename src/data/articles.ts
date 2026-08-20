@@ -358,6 +358,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gps-watch-under-300/', label: 'Best GPS watch under $300' },
       { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS watch under $200' },
+      { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS watch for high handicappers' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
