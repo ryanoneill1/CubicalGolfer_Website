@@ -14726,6 +14726,71 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best golf rangefinders' },
     ],
   },
+  {
+    id: 'golf-green-speed-chart',
+    slug: '/golf-green-speed-chart/',
+    ogImage: 'https://www.cubicalgolfer.com/images/og/golf-green-speed-chart.jpg',
+    category: 'improve-game',
+    pageType: 'tutorial',
+    tag: 'REFERENCE',
+    emoji: '🟢',
+    thumb: 'green',
+    words: '1,700',
+    datePublished: '2026-08-20',
+    dateModified: '2026-08-20',
+    updateLog: [
+      { date: 'Aug 20, 2026', note: 'Published — every figure computed from the Stimpmeter definition.' },
+    ],
+    title: 'Golf Green Speed Chart — What Stimp Does to Your Putt',
+    titleDisplay: 'Green Speed Chart: What Stimp Actually Does to Your Putt',
+    bottomLine: 'On a green stimping 10, a 2 percent downslope plays like <strong>stimp 15.6</strong> — faster than any tournament green you will ever see. Slope changes green speed far more than the number on the pin sheet does. Charts for distance, break and slope below.',
+    description: 'What green speed actually does to a putt: how far your stroke rolls at stimp 8 through 13, how much more the ball breaks, and why a downhill putt plays far faster than the stimp reading suggests.',
+    excerpt: 'Everyone explains what a Stimpmeter is. Nobody tells you what the number does to your putt. Here is the arithmetic.',
+    intro: 'Green speed is the one course condition golfers are given a number for and still cannot use. You are told the greens are running 11 today, and then what? Here is what that number actually does to your distance, your break, and — the part that surprises people — how completely slope overrides it.',
+    toc: ['Distance control', 'Slope beats stimp', 'How much more it breaks', 'When a ball never stops', 'What this leaves out'],
+    sections: [
+      {
+        h2: 'What Green Speed Does to Your Distance',
+        body: '<p>Roll distance scales directly with the stimp reading, because that is what the reading measures. Make the stroke that holes a 20-footer on a stimp 10 green, and on a stimp 12 green the same stroke sends the ball 24 feet.</p><table class="cmp-table"><thead><tr><th>Putt you are playing</th><th>Stimp 8</th><th>Stimp 9</th><th>Stimp 10</th><th>Stimp 11</th><th>Stimp 12</th><th>Stimp 13</th></tr></thead><tbody><tr><td><strong>5 ft</strong></td><td>4.0 ft<span style="opacity:.55"> (-1.0)</span></td><td>4.5 ft<span style="opacity:.55"> (-0.5)</span></td><td>5.0 ft<span style="opacity:.55"> (on line)</span></td><td>5.5 ft<span style="opacity:.55"> (+0.5)</span></td><td>6.0 ft<span style="opacity:.55"> (+1.0)</span></td><td>6.5 ft<span style="opacity:.55"> (+1.5)</span></td></tr><tr><td><strong>10 ft</strong></td><td>8.0 ft<span style="opacity:.55"> (-2.0)</span></td><td>9.0 ft<span style="opacity:.55"> (-1.0)</span></td><td>10.0 ft<span style="opacity:.55"> (on line)</span></td><td>11.0 ft<span style="opacity:.55"> (+1.0)</span></td><td>12.0 ft<span style="opacity:.55"> (+2.0)</span></td><td>13.0 ft<span style="opacity:.55"> (+3.0)</span></td></tr><tr><td><strong>15 ft</strong></td><td>12.0 ft<span style="opacity:.55"> (-3.0)</span></td><td>13.5 ft<span style="opacity:.55"> (-1.5)</span></td><td>15.0 ft<span style="opacity:.55"> (on line)</span></td><td>16.5 ft<span style="opacity:.55"> (+1.5)</span></td><td>18.0 ft<span style="opacity:.55"> (+3.0)</span></td><td>19.5 ft<span style="opacity:.55"> (+4.5)</span></td></tr><tr><td><strong>20 ft</strong></td><td>16.0 ft<span style="opacity:.55"> (-4.0)</span></td><td>18.0 ft<span style="opacity:.55"> (-2.0)</span></td><td>20.0 ft<span style="opacity:.55"> (on line)</span></td><td>22.0 ft<span style="opacity:.55"> (+2.0)</span></td><td>24.0 ft<span style="opacity:.55"> (+4.0)</span></td><td>26.0 ft<span style="opacity:.55"> (+6.0)</span></td></tr><tr><td><strong>30 ft</strong></td><td>24.0 ft<span style="opacity:.55"> (-6.0)</span></td><td>27.0 ft<span style="opacity:.55"> (-3.0)</span></td><td>30.0 ft<span style="opacity:.55"> (on line)</span></td><td>33.0 ft<span style="opacity:.55"> (+3.0)</span></td><td>36.0 ft<span style="opacity:.55"> (+6.0)</span></td><td>39.0 ft<span style="opacity:.55"> (+9.0)</span></td></tr><tr><td><strong>40 ft</strong></td><td>32.0 ft<span style="opacity:.55"> (-8.0)</span></td><td>36.0 ft<span style="opacity:.55"> (-4.0)</span></td><td>40.0 ft<span style="opacity:.55"> (on line)</span></td><td>44.0 ft<span style="opacity:.55"> (+4.0)</span></td><td>48.0 ft<span style="opacity:.55"> (+8.0)</span></td><td>52.0 ft<span style="opacity:.55"> (+12.0)</span></td></tr></tbody></table><p>The bracket is how far past or short of the hole you finish. Read down your usual green speed to see what your calibration is worth somewhere else — a member at a stimp 9 club playing a stimp 12 resort green leaves every long putt <strong>a third of the way past</strong>.</p>',
+      },
+      {
+        h2: 'Slope Beats Stimp, and It Is Not Close',
+        body: '<p>This is the part worth internalising. A Stimpmeter measures a flat green. Almost no putt is on a flat green.</p><p>Gravity adds to or subtracts from the friction slowing the ball, so a slope does not nudge the effective speed — it transforms it. On a green stimping 10:</p><table class="cmp-table"><thead><tr><th>Slope</th><th>Playing downhill</th><th>Playing uphill</th></tr></thead><tbody><tr><td><strong>1%</strong></td><td>12.2</td><td>8.5</td></tr><tr><td><strong>2%</strong></td><td>15.6</td><td>7.4</td></tr><tr><td><strong>3%</strong></td><td>21.6</td><td>6.5</td></tr><tr><td><strong>4%</strong></td><td>35.1</td><td>5.8</td></tr><tr><td><strong>5%</strong></td><td>94.4</td><td>5.3</td></tr></tbody></table><p>A <strong>2 percent downslope</strong> — barely visible, the kind you walk over without noticing — plays like <strong>stimp 15.6</strong>. No golf course on earth maintains greens that fast. At 3 percent you are putting on the equivalent of stimp 21.</p><p>The same slope uphill drops you to about 7.4, slower than a municipal course in the wet. That is why the uphill-downhill difference on the same green feels like two different sports, and why "the greens are quick today" is much less useful information than the slope you are actually standing on.</p>',
+      },
+      {
+        h2: 'How Much More the Ball Breaks',
+        body: '<p>Faster greens break more, because the ball travels more slowly for longer and gravity has more time to work on it. The working formula is <strong>slope percent x distance in feet x stimp / 20</strong>, which gives inches of break. At stimp 10 that reduces to the old caddie rule of half the slope percentage in inches per foot.</p><p>Break on a 2 percent slope:</p><table class="cmp-table"><thead><tr><th>Putt length</th><th>Stimp 8</th><th>Stimp 9</th><th>Stimp 10</th><th>Stimp 11</th><th>Stimp 12</th><th>Stimp 13</th></tr></thead><tbody><tr><td><strong>3 ft</strong></td><td>2 in</td><td>3 in</td><td>3 in</td><td>3 in</td><td>4 in</td><td>4 in</td></tr><tr><td><strong>6 ft</strong></td><td>5 in</td><td>5 in</td><td>6 in</td><td>7 in</td><td>7 in</td><td>8 in</td></tr><tr><td><strong>10 ft</strong></td><td>8 in</td><td>9 in</td><td>10 in</td><td>11 in</td><td>12 in</td><td>13 in</td></tr><tr><td><strong>15 ft</strong></td><td>12 in</td><td>14 in</td><td>15 in</td><td>17 in</td><td>18 in</td><td>20 in</td></tr><tr><td><strong>20 ft</strong></td><td>16 in</td><td>18 in</td><td>20 in</td><td>22 in</td><td>24 in</td><td>26 in</td></tr></tbody></table><p>A 20-footer that breaks 16 inches at your home club breaks two full feet on a tournament-speed green. Aim at the same spot and you miss on the low side every time — which is the single most common miss in amateur putting.</p>',
+      },
+      {
+        h2: 'The Slope Where a Ball Never Stops',
+        body: '<p>Push the arithmetic far enough and it produces a hard limit. When the slope exceeds the rolling resistance of the surface, gravity beats friction and the ball does not come to rest at all.</p><table class="cmp-table"><thead><tr><th>Green speed</th><th>Ball never stops above</th></tr></thead><tbody><tr><td><strong>Stimp 8</strong></td><td>7.0%</td></tr><tr><td><strong>Stimp 9</strong></td><td>6.2%</td></tr><tr><td><strong>Stimp 10</strong></td><td>5.6%</td></tr><tr><td><strong>Stimp 11</strong></td><td>5.1%</td></tr><tr><td><strong>Stimp 12</strong></td><td>4.7%</td></tr><tr><td><strong>Stimp 13</strong></td><td>4.3%</td></tr></tbody></table><p>This is not a curiosity — it is the constraint that governs where a superintendent can cut a hole. At stimp 8 there is room to use a 6 percent shoulder. At stimp 13 anything past 4.3 percent is unusable, which is why greens get demonstrably flatter in the hole locations as tournament week goes on, and why you occasionally see a ball on television trickle away from a stopped position.</p><p>It is also the honest answer to why your club cannot simply run the greens at 13 because it sounds impressive. Speed removes pin positions.</p>',
+      },
+      {
+        h2: 'What This Chart Leaves Out',
+        body: '<p>The arithmetic is clean; greens are not. Four things move the real number.</p><p><strong>Water.</strong> Morning dew or a recent rain can take two or three points off the effective speed, and no pin sheet will tell you.</p><p><strong>Grain.</strong> On bermuda especially, a putt into the grain plays materially slower than the same putt down-grain on the same green. Look at the sheen: shiny is down-grain and fast.</p><p><strong>Wind.</strong> On very fast greens a strong wind genuinely moves the ball, which is why tournaments slow greens down when it blows rather than risk balls oscillating at rest.</p><p><strong>Slope in two directions.</strong> The tables treat downhill and side-slope separately. A putt that is both is worse than either, because the extra speed from the fall line increases the time the side-slope has to act.</p><p>Use the charts to calibrate, then trust your eyes. For the rest of the distance picture, our <a href="/golf-wind-adjustment-chart/">wind chart</a> and <a href="/golf-distance-temperature-chart/">temperature chart</a> cover the full-swing side.</p>',
+      },
+    ],
+    faq: [
+      { q: 'What is a normal green speed?', a: 'Most public courses run between 8 and 10 on the Stimpmeter. Better private clubs sit around 10 to 12, and PGA Tour setups are typically 11 to 13. Anything above 13 is exceptional and usually short-lived.' },
+      { q: 'How much faster does a downhill putt play?', a: 'Far more than most golfers expect. On a green stimping 10, a 2 percent downslope plays like stimp 15.6 and a 3 percent downslope like stimp 21.6. Slope changes effective speed much more than the difference between two courses does.' },
+      { q: 'Does a putt break more on faster greens?', a: 'Yes, and roughly in proportion to the green speed. Use slope percent times distance in feet times stimp divided by 20 to get inches of break. A 20-foot putt on a 2 percent slope breaks about 16 inches at stimp 8 and about 24 inches at stimp 12.' },
+      { q: 'Why do fast greens have flatter hole locations?', a: 'Because above a certain slope the ball will not stay still. At stimp 8 that limit is about 7 percent; at stimp 13 it drops to about 4.3 percent. Raising green speed physically removes the steeper pin positions from play.' },
+      { q: 'How do I adjust coming from slow greens to fast ones?', a: 'Scale your stroke by the ratio of the two speeds. Going from stimp 9 to stimp 12 means every putt needs about a quarter less pace — a 20-footer struck as usual will run roughly 27 feet. Spend the practice green working on long lag putts, not short ones.' },
+    ],
+    sources: [
+      { label: 'USGA — the Stimpmeter and green speed', url: 'https://www.usga.org/course-care/forethegolfer/green-speed.html' },
+      { label: 'Golf Science Lab — green reading and break formulas', url: 'https://golfsciencelab.com/' },
+      { label: 'GolfWRX — how drastically slope affects green speed', url: 'https://www.golfwrx.com/522438/how-drastically-does-slope-effect-green-speed-more-than-you-even-think/' },
+    ],
+    related: [
+      { slug: '/how-to-stop-3-putting/', label: 'How to stop three-putting' },
+      { slug: '/golf-wind-adjustment-chart/', label: 'Golf wind adjustment chart' },
+      { slug: '/golf-distance-temperature-chart/', label: 'Golf distance by temperature' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf ball compression chart' },
+      { slug: '/best-golf-putters-2026/', label: 'Best golf putters' },
+    ],
+  },
+
 
 
 
