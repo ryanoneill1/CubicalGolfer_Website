@@ -371,7 +371,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 30,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Ion*+Elite*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
-    price: '~$219',
+    price: '~$199',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'Check Price at Bushnell →',
     imgSrc: '/images/products/bushnell-ion-elite.webp',

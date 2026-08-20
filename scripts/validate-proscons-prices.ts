@@ -32,7 +32,7 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 
-const THRESHOLD = 18; // set from the real backlog below
+const THRESHOLD = 6; // set from the real backlog below
 
 const money = (s: string) => Number(s.replace(/[$,]/g, ''));
 const regPrice = (s: any) => {
