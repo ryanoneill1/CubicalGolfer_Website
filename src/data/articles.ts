@@ -5550,6 +5550,7 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'Garmin — Approach R10 Specifications', url: 'https://www.garmin.com/en-US/p/695391' }, { label: 'Rapsodo — MLM2PRO Technology Overview', url: 'https://rapsodo.com/golf/mlm2pro/' }, { label: 'Foresight Sports — GCQuad Technical Specs', url: 'https://www.foresightsports.com/gcquad' }],
     related: [
+      { slug: '/best-launch-monitors-no-subscription/', label: 'Best No-Subscription Launch Monitors' },
       { slug: '/trackman-vs-foresight-gcquad/', label: 'Trackman 4 vs Foresight GCQuad' },
       { slug: '/best-golf-simulator-small-spaces/', label: 'Best Golf Simulators for Small Spaces' },
       { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers 2026' },
@@ -7189,6 +7190,7 @@ export const ARTICLES: Article[] = [
       { q: 'What is the cheapest golf launch monitor that works?', a: 'The Ernest Sports ES14 at $249 is the cheapest launch monitor that delivers reliable ball speed, carry distance, and launch angle. Below $200, most devices lack the accuracy needed for meaningful practice feedback.' },
     ],
     related: [
+      { slug: '/best-launch-monitors-no-subscription/', label: 'Best No-Subscription Launch Monitors' },
       { slug: '/shot-scope-lm1-vs-garmin-r10/', label: 'Shot Scope LM1 vs Garmin R10' },
       { slug: '/how-golf-launch-monitors-work/', label: 'How Launch Monitors Work' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
@@ -7620,6 +7622,7 @@ export const ARTICLES: Article[] = [
       'Tour-level data needs — spend $2K+ for Bushnell Launch Pro or Trackman',
     ],
     related: [
+      { slug: '/best-launch-monitors-no-subscription/', label: 'Best No-Subscription Launch Monitors' },
       { slug: '/shot-scope-lm1-vs-garmin-r10/', label: 'Shot Scope LM1 vs Garmin R10' },
       { slug: '/apartment-golf-simulator-setup/', label: 'Full Apartment Simulator Setup Guide' },
       { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
@@ -12510,6 +12513,7 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'Garmin — Approach R10 Specifications', url: 'https://www.garmin.com/en-US/p/695391/' }, { label: 'Trackman — Ball Flight Laws', url: 'https://www.trackman.com/golf/knowledgebase' }],
     related: [
+      { slug: '/best-launch-monitors-no-subscription/', label: 'Best No-Subscription Launch Monitors' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors (All Prices)' },
       { slug: '/best-budget-launch-monitor/', label: 'Best Budget Launch Monitors' },
       { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
