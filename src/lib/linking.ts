@@ -1189,6 +1189,9 @@ export function brandHubsFor(article: Article): Array<{ slug: string; label: str
 // without displacing the curated anchors above it. Deterministic (not random)
 // so the link graph is stable between builds.
 const CRAWL_STARVED: Array<{ slug: string; label: string }> = [
+  // New pages start here so they are not born crawl-starved. Sprint 9 found
+  // pages sitting at 3-4 inbound links that Google had never crawled at all.
+  { slug: '/golf-distance-temperature-chart/',            label: 'Golf Distance by Temperature' },
   { slug: '/how-golf-launch-monitors-work/',              label: 'How Golf Launch Monitors Work' },
   { slug: '/compare/square-golf-vs-garmin-r10/',          label: 'Square Golf vs Garmin R10' },
   { slug: '/compare/garmin-r10-vs-garmin-r50/',           label: 'Garmin R10 vs R50' },

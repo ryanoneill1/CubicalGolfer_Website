@@ -14605,5 +14605,65 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for the Office Golfer' },
     ],
   },
+  {
+    id: 'golf-distance-temperature-chart',
+    slug: '/golf-distance-temperature-chart/',
+    ogImage: 'https://www.cubicalgolfer.com/images/og/golf-distance-temperature-chart.jpg',
+    category: 'improve-game',
+    pageType: 'tutorial',
+    tag: 'REFERENCE',
+    emoji: '🌡️',
+    thumb: 'olive',
+    words: '1,500',
+    datePublished: '2026-08-16',
+    dateModified: '2026-08-16',
+    updateLog: [
+      { date: 'Aug 16, 2026', note: 'Published — chart computed from the published per-club temperature rule.' },
+    ],
+    title: 'Golf Distance Temperature Chart — How Much You Lose in Cold',
+    titleDisplay: 'Golf Distance by Temperature: How Many Yards Cold Costs You',
+    bottomLine: 'Below 75°F you lose roughly 2 yards per 10°F with a driver and about 1.3 with a wedge. At 40°F your 150-yard 7-iron plays about 144. The chart below covers every club from 30°F to 90°F.',
+    description: 'How many yards you lose in cold weather, by club and temperature. A lookup chart from 30°F to 90°F, plus why short irons lose proportionally more.',
+    excerpt: 'Cold air is denser and a cold ball compresses less. Here is what that costs you, club by club, from 30°F to 90°F.',
+    intro: 'Every golfer knows the ball goes shorter in the cold. Almost nobody knows by how much, and the guesses tend to be wrong in both directions. This chart gives you the number for your club at your temperature, and explains the part most articles get backwards.',
+    toc: ['The temperature chart', 'Why cold costs you distance', 'Why short irons lose proportionally more', 'What this does not cover'],
+    sections: [
+      {
+        h2: 'Golf Distance by Temperature: The Chart',
+        body: '<p>Carry distance at 75°F is the baseline. Find your club down the left and the temperature across the top; the figure in brackets is yards gained or lost against a normal day.</p><table class="cmp-table"><thead><tr><th>Club</th><th>Normal carry</th><th>30°F</th><th>40°F</th><th>50°F</th><th>60°F</th><th>70°F</th><th>80°F</th><th>90°F</th></tr></thead><tbody><tr><td><strong>Driver</strong></td><td>250 yds</td><td>241<span style="opacity:.55"> (-9)</span></td><td>243<span style="opacity:.55"> (-7)</span></td><td>245<span style="opacity:.55"> (-5)</span></td><td>247<span style="opacity:.55"> (-3)</span></td><td>249<span style="opacity:.55"> (-1)</span></td><td>251<span style="opacity:.55"> (+1)</span></td><td>253<span style="opacity:.55"> (+3)</span></td></tr><tr><td><strong>3-wood</strong></td><td>225 yds</td><td>216<span style="opacity:.55"> (-9)</span></td><td>218<span style="opacity:.55"> (-7)</span></td><td>220<span style="opacity:.55"> (-5)</span></td><td>222<span style="opacity:.55"> (-3)</span></td><td>224<span style="opacity:.55"> (-1)</span></td><td>226<span style="opacity:.55"> (+1)</span></td><td>228<span style="opacity:.55"> (+3)</span></td></tr><tr><td><strong>5-iron</strong></td><td>175 yds</td><td>167<span style="opacity:.55"> (-8)</span></td><td>169<span style="opacity:.55"> (-6)</span></td><td>171<span style="opacity:.55"> (-4)</span></td><td>172<span style="opacity:.55"> (-3)</span></td><td>174<span style="opacity:.55"> (-1)</span></td><td>176<span style="opacity:.55"> (+1)</span></td><td>178<span style="opacity:.55"> (+3)</span></td></tr><tr><td><strong>7-iron</strong></td><td>150 yds</td><td>142<span style="opacity:.55"> (-8)</span></td><td>144<span style="opacity:.55"> (-6)</span></td><td>146<span style="opacity:.55"> (-4)</span></td><td>147<span style="opacity:.55"> (-3)</span></td><td>149<span style="opacity:.55"> (-1)</span></td><td>151<span style="opacity:.55"> (+1)</span></td><td>153<span style="opacity:.55"> (+3)</span></td></tr><tr><td><strong>9-iron</strong></td><td>125 yds</td><td>118<span style="opacity:.55"> (-7)</span></td><td>120<span style="opacity:.55"> (-5)</span></td><td>121<span style="opacity:.55"> (-4)</span></td><td>123<span style="opacity:.55"> (-2)</span></td><td>124<span style="opacity:.55"> (-1)</span></td><td>126<span style="opacity:.55"> (+1)</span></td><td>127<span style="opacity:.55"> (+2)</span></td></tr><tr><td><strong>Pitching wedge</strong></td><td>105 yds</td><td>99<span style="opacity:.55"> (-6)</span></td><td>100<span style="opacity:.55"> (-5)</span></td><td>102<span style="opacity:.55"> (-3)</span></td><td>103<span style="opacity:.55"> (-2)</span></td><td>104<span style="opacity:.55"> (-1)</span></td><td>106<span style="opacity:.55"> (+1)</span></td><td>107<span style="opacity:.55"> (+2)</span></td></tr></tbody></table><p><strong>How to read it:</strong> a 150-yard 7-iron plays about 144 yards at 40°F. That is most of a club, and it is the difference between the middle of the green and the front bunker.</p><p>The chart assumes a still, dry day at sea level. For elevation change on the shot itself, see our <a href="/what-is-slope-on-a-rangefinder/">slope adjustment chart</a> — the two effects stack.</p>',
+      },
+      {
+        h2: 'Why Cold Costs You Distance',
+        body: '<p>Two things happen at once, and they are separate effects.</p><p><strong>The air gets denser.</strong> Cold air is heavier than warm air, so the ball meets more resistance for the whole flight. This is the part that scales with how far the ball travels, which is why the driver loses the most yards in absolute terms.</p><p><strong>The ball gets firmer.</strong> A cold golf ball does not compress as fully at impact, so it leaves the face with less energy. A ball left in a car boot overnight in January is measurably firmer than the same ball at room temperature.</p><p>That second effect is why keeping a spare ball in a trouser pocket and rotating every few holes is not superstition. It is the only variable here you can actually control.</p>',
+      },
+      {
+        h2: 'Why Short Irons Lose Proportionally More',
+        body: '<p>This is the part most articles get backwards, and the chart makes it obvious.</p><p>A driver loses about 2 yards per 10°F from 250, which is 0.8 percent. A pitching wedge loses about 1.3 yards from 105, which is 1.2 percent. In absolute yards the driver loses more; as a share of the shot, the wedge loses more.</p><p>The reason is that the compression penalty applies at impact regardless of how far the ball is going to travel, while the air-density penalty accumulates over the flight. On a wedge there is very little flight for air density to work on, so compression dominates.</p><p>The practical version: in the cold, your gaps at the short end tighten up more than you expect. If you normally have 10 yards between wedges, expect closer to 8 or 9 at 40°F.</p>',
+      },
+      {
+        h2: 'What This Chart Does Not Cover',
+        body: '<p>Temperature is one of four things moving your carry number, and it is rarely the biggest.</p><p><strong>Wind</strong> dwarfs it. A 10 mph headwind costs a mid-iron more than a 30-degree temperature drop.</p><p><strong>Altitude</strong> works the other way and is roughly 1.1 to 1.2 percent per 1,000 feet of elevation. A Denver round plays about 6 percent longer than the same round at sea level, which more than cancels a cold morning.</p><p><strong>Ball choice</strong> matters at the margins. Lower-compression balls hold up slightly better in the cold, which is the one time a soft ball has a genuine performance argument rather than a feel argument. Our <a href="/golf-ball-compression-chart/">compression chart</a> lists every ball we have measured.</p><p>Use the chart for club selection, not for rebuilding your yardage book. One club at the extremes, nothing at all between 65 and 80.</p>',
+      },
+    ],
+    faq: [
+      { q: 'How many yards do you lose in cold weather golf?', a: 'Roughly 2 yards per 10°F below 75°F with a driver, and about 1.3 yards per 10°F with a pitching wedge. At 40°F that is about 7 yards off a 250-yard drive and about 4 yards off a 105-yard wedge.' },
+      { q: 'At what temperature does golf ball distance start to drop?', a: 'The effect is continuous rather than a cliff, but it becomes noticeable below about 60°F and material below 50°F. Between 65 and 80°F the difference is under a yard for most clubs and not worth clubbing for.' },
+      { q: 'Does keeping golf balls warm actually help?', a: 'Yes, modestly. A warm ball compresses more fully at impact, and that is one of the two effects costing you distance. Rotating a ball from a trouser pocket every few holes recovers part of the compression loss, though nothing you do changes the air density.' },
+      { q: 'Should I use a different golf ball in winter?', a: 'A lower-compression ball holds up slightly better in the cold, so if you play a firm tour ball in summer there is a genuine case for going softer in winter. See our compression chart for the figures.' },
+      { q: 'Does altitude cancel out cold weather?', a: 'Often, yes. Altitude adds roughly 1.1 to 1.2 percent per 1,000 feet, so a mile-high course plays about 6 percent longer. That outweighs a 20-degree temperature drop comfortably.' },
+    ],
+    sources: [
+      { label: 'USGA — ball performance and temperature', url: 'https://www.usga.org/' },
+      { label: 'Titleist Learning Lab — temperature and golf ball performance', url: 'https://www.titleist.com/learning-lab/performance/temperature-and-golf-ball-performance' },
+    ],
+    related: [
+      { slug: '/what-is-slope-on-a-rangefinder/', label: 'Slope adjustment chart' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf ball compression chart' },
+      { slug: '/golf-club-distance-chart/', label: 'Club distance by swing speed' },
+      { slug: '/average-swing-speed-by-age/', label: 'Average swing speed by age' },
+      { slug: '/best-golf-rain-gear-2026/', label: 'Best golf rain gear' },
+    ],
+  },
+
 
 ];
