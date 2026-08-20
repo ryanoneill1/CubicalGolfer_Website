@@ -25,17 +25,19 @@
 import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
+import fs from 'fs';
+import path from 'path';
 
 /**
  * Ratchet. Only ever goes down.
  *
- * The 12 on the books are all genuine conflicts, but each needs a live price
+ * The 11 on the books are all genuine conflicts, but each needs a live price
  * check before it can be fixed — and which side is wrong is NOT obvious. The
  * Bushnell Launch Pro taught that: 78 pages said $2,499 against a registry
  * saying $2,999, and the pages were right. Assuming the registry wins would
  * have made 78 correct statements wrong.
  */
-const THRESHOLD = 12;
+const THRESHOLD = 11;
 
 const money = (s: string) => Number(s.replace(/[$,]/g, ''));
 
@@ -55,6 +57,33 @@ const NOT_A_PRICE = /\b(less|more|off|cheaper|extra|save[sd]?|saving|difference|
 const QUALIFIED = /\b(used|refurb\w*|open box|prev(?:ious)?[- ]gen\w*|closeout|renewed|\d+\s*-?\s*(pack|pk|dozen|pairs?)|bundle|package|kit|set of)\b/i;
 
 const all: any[] = [...(ARTICLES as any), ...(COMPARISONS as any)];
+
+/**
+ * .astro pages are prose too, and Sprint 23 missed them: eight wrong Bushnell
+ * Launch Pro prices were sitting in four hand-written page files, invisible to
+ * a check that only read the data records. Same blind spot Sprint 3 found for
+ * affiliate links.
+ */
+function astroSources(): Array<{ slug: string; text: string }> {
+  const out: Array<{ slug: string; text: string }> = [];
+  const walk = (dir: string, base = '') => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full, `${base}/${e.name}`); continue; }
+      if (!e.name.endsWith('.astro')) continue;
+      if (base.includes('[') || e.name.includes('[')) continue;   // dynamic routes render data records
+      const slug = e.name === 'index.astro' ? `${base || ''}/` : `${base}/${e.name.replace(/\.astro$/, '')}/`;
+      out.push({ slug, text: fs.readFileSync(full, 'utf8') });
+    }
+  };
+  walk('src/pages');
+  return out;
+}
+
+const sources: Array<{ slug: string; text: string }> = [
+  ...all.map(a => ({ slug: String(a.slug), text: JSON.stringify(a) })),
+  ...astroSources(),
+];
 
 /** Display names harvested from table rows, longest first so "Pro V1x" beats "Pro V1". */
 const names: Array<{ key: string; name: string; reg: number }> = [];
@@ -89,10 +118,9 @@ const ALL_NAMES = names.map(n => n.name);
 type Hit = { slug: string; key: string; name: string; reg: number; said: number; quote: string };
 const hits: Hit[] = [];
 
-for (const a of all) {
-  const blob = JSON.stringify(a);
+for (const a of sources) {
   // Work sentence by sentence so a claim can never reach across a full stop.
-  const text = blob.replace(/<[^>]+>/g, ' ').replace(/\\n/g, ' ');
+  const text = a.text.replace(/<[^>]+>/g, ' ').replace(/\\n/g, ' ');
   const sentences = text.split(/(?<=[.!?])\s+|","|\},\{/);
 
   for (const raw of sentences) {
@@ -142,7 +170,7 @@ for (const a of all) {
       // Ignore trivial drift; we are hunting wrong numbers, not rounding.
       if (Math.max(said / reg, reg / said) < 1.2) continue;
 
-      hits.push({ slug: String(a.slug), key, name, reg, said, quote: sentence.slice(Math.max(0, at - 45), at + name.length + 45) });
+      hits.push({ slug: a.slug, key, name, reg, said, quote: sentence.slice(Math.max(0, at - 45), at + name.length + 45) });
       break; // one claim per sentence per product
     }
   }
@@ -159,4 +187,12 @@ if (hits.length > THRESHOLD) {
   process.exit(1);
 }
 
-console.log(`✅ Prose prices: no sentence attributes a price to a product that contradicts the registry.`);
+if (hits.length) {
+  // Under the ceiling, but still worth seeing. A silent pass hides the backlog.
+  console.log(`✅ Prose prices: ${hits.length} known conflict(s) within ceiling ${THRESHOLD}:`);
+  for (const h of hits) {
+    console.log(`   ${h.slug} — "${h.name}" says $${h.said.toLocaleString()}, registry says $${h.reg.toLocaleString()}`);
+  }
+} else {
+  console.log(`✅ Prose prices: no sentence attributes a price to a product that contradicts the registry.`);
+}
