@@ -234,7 +234,7 @@ export const ARTICLES: Article[] = [
     words: '4,200',
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
-    title: 'Best Golf GPS Watch 2026 — 4 Tested',
+    title: 'Best Golf GPS Watch 2026 — 4 Models [Tested on Course]',
     titleDisplay: 'Best Golf GPS Watches for Everyday Players',
     bottomLine: 'The <strong>Garmin Approach S62</strong> is the best GPS golf watch for weekend golfers — 41,000+ courses, Virtual Caddie, and a battery that lasts 20 hours. For budget buyers, the <strong>Bushnell Ion Elite</strong> at ~\$199 does front/middle/back with zero fuss.',
     description: 'Best golf GPS watch for 2026 — 4 models tested on course. Garmin, Bushnell, and Shot Scope compared for yardage accuracy and ease of use.',
@@ -356,6 +356,8 @@ export const ARTICLES: Article[] = [
       { label: 'Cleveland XL2 vs Cobra DS-Adapt MAX-K', url: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', description: 'Senior-friendly vs all-around forgiving' },
     ],
     related: [
+      { slug: '/best-golf-gps-watch-under-300/', label: 'Best GPS watch under $300' },
+      { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS watch under $200' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
@@ -5112,7 +5114,7 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title:        'Best Golf GPS Watch Under $200 — 2026 Picks',
+    title:        'Best Golf GPS Watch Under $200 (2026) — 4 Tested',
     titleDisplay: '⌚ Best Golf GPS Watch Under $200 — Tested Picks',
     description:  'The 4 best golf GPS watches under $200 in 2026. Accurate yardages, no subscription, simple to use. Tested on real courses — not a spec sheet roundup.',
     excerpt:      'You do not need to spend $400 on a GPS watch. These 4 models under $200 give you accurate front-middle-back yardages, hazard distances, and automatic hole advance.',
@@ -12422,9 +12424,9 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'May 19, 2026', note: 'Initial publish — all four watches tested over 10+ rounds each' },
     ],
-    title: 'Best Golf GPS Watch Under $300 — Premium Picks',
+    title: 'Best Golf GPS Watch Under $300 (2026) — 4 Tested',
     titleDisplay: 'Best Golf GPS Watch Under $300 — Premium Features, Lower Price',
-    description: 'Four GPS golf watches under $300 tested across a full season. The Garmin Approach S42 wins for most golfers — here is why, plus three strong alternatives at.',
+    description: 'Four GPS golf watches under $300, tested across a full season. The Garmin Approach S42 wins for most golfers — here is why, plus three alternatives worth a look.',
     bottomLine: 'The <strong>Garmin Approach S42</strong> ($299) is the best GPS golf watch under $300. It covers 42,000+ courses, shows front/middle/back distances with hazard overlays, tracks your shots automatically, and does not require a subscription. The interface is fast, the battery lasts 3 rounds, and it doubles as a capable daily smartwatch. If $249 is too much, the <strong>Garmin S12</strong> ($149) gives you the same course data in a simpler package.',
     excerpt: 'Four GPS golf watches under $300 tested — Garmin S42 wins for most weekend golfers.',
     comparisonTable: {
