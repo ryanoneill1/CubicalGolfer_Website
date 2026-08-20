@@ -3291,7 +3291,7 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-ball-compression-chart/', label: 'Full Compression Chart' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
-      { slug: '/best-beginner-golf-club-sets/', label: 'Best Beginner Club Sets' },
+      { slug: '/golf-tips-for-beginners/', label: 'Golf Tips for Beginners' },
     ],
   },
 
@@ -14350,7 +14350,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-      { slug: '/best-putters-shaky-hands-older-golfers/', label: 'Best Putters for Shaky Hands' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Golf Putters 2026' },
       { slug: '/how-to-stop-3-putting/', label: 'How to Stop 3-Putting' },
     
       { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
@@ -14501,7 +14501,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026 (All Types)' },
-      { slug: '/best-mallet-putters-2026/', label: 'Best Mallet Putters 2026' },
+      { slug: '/best-golf-putters-2026/', label: 'Best Golf Putters 2026' },
       { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade — Which Is Right for You?' },
     
       { slug: '/best-indoor-putting-green-office-home/', label: 'Indoor Putting Greens' },
@@ -14596,12 +14596,12 @@ export const ARTICLES: Article[] = [
       { q: 'Are golf desk accessories appropriate for a professional office?', a: 'A mug, mouse pad, and ball markers are subtle and professional. A putting mat can roll up under your desk. A chipping net is a bit more conspicuous — save that for offices with a relaxed culture or your own private office.' },
     ],
     related: [
-      { slug: '/office-hacks/', label: 'Office Hacks Hub' },
+      { slug: '/office-to-golf-course-playbook/', label: 'Office-to-Course Playbook' },
       { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Him 2026' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
       { slug: '/golf-practice-drills-at-home/', label: '7 Practice Drills at Home' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Accessories Under $50' },
-      { slug: '/golf-fitness-office-golfer/', label: 'Golf Fitness for the Office Golfer' },
+      { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises for Golfers' },
     ],
   },
   {
