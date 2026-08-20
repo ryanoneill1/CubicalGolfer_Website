@@ -323,7 +323,7 @@ export const AFFILIATE: Record<string, {
 
   // Garmin Approach S42 — search (multiple colourway variants)
   'garmin-approach-s42': {
-    url: 'https://www.amazon.com/s?k=garmin-approach-s42&crid=2U6QI9J6CM5DG&sprefix=garmin-approach-s42%2Caps%2C241&linkCode=ll2&tag=cubicalgolfer-20&linkId=0ee9b47e59d438ed01242683974bb6f4&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Garmin-Smartwatch-Lightweight-Touchscreen-010-02572-10/dp/B08X167FJG?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s42-golf-gps-smartwatch-21gmnupprchs42blcgps%2F21gmnupprchs42blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S42',
     program: 'amazon',
     commissionPct: 3,
@@ -788,7 +788,7 @@ export const AFFILIATE: Record<string, {
 
   // FootJoy WeatherSof — ASIN B072LZV5Z6 ✅ verified (sold by FJ directly)
   'footjoy-weathersof-glove': {
-    url: 'https://www.amazon.com/s?k=footjoy+weathersof+golf+glove&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/FootJoy-Mens-WeatherSof-Glove-White/dp/B09HCM416D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1287,7 +1287,7 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF SHOES ────────────────────────────────────────────────────────────
   'footjoy-flex-xp': {
-    url: 'https://www.amazon.com/s?k=footjoy-flex-xp&crid=2EM96HIZRA5WX&sprefix=footjoy-flex-xp%2Caps%2C227&linkCode=ll2&tag=cubicalgolfer-20&linkId=a1a22933a6b5955d23e1d1d51a312607&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/FootJoy-Flex-XP-Black/dp/B0BV2WBRVP?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1655,7 +1655,7 @@ export const AFFILIATE: Record<string, {
 
   // ── New: apartment simulator, launch monitors, rain gear, desk exercises ──
   'spornia-spg-net': {
-    url: 'https://www.amazon.com/s?k=spornia-spg-net&crid=2HSOAB7QOKWF6&sprefix=srixon-q-star-tour%2Caps%2C292&linkCode=ll2&tag=cubicalgolfer-20&linkId=1a834939cf3eb10fc53bcd15c579ce47&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/Spornia-Spg-7-Golf-Practice-Net/dp/B07NHJSG3R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520Hitting%2520Net%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
