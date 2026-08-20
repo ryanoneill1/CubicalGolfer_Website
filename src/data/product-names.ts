@@ -194,7 +194,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'country-club-elite-mat': "Country Club Elite Mat",
   'carls-place-impact-screen': "Carl's Place Impact Screen",
   'homecourse-retractable-screen': "HomeCourse Retractable Screen",
-  'benq-th671st-projector': "BenQ TH671ST Projector",
+  'optoma-zw350st': "Optoma ZW350ST Projector",
   'optoma-gt2000hdr': "Optoma GT2000HDR",
   'bag-boy-volt-electric': "Bag Boy Volt Electric",
   'mgi-zip-navigator': "MGI Zip Navigator",

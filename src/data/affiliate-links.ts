@@ -3527,6 +3527,16 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/benq-th671st-projector.webp', imgAlt: 'BenQ TH671ST short throw projector for golf simulator',
       },
+  'optoma-zw350st': {
+    url: 'https://www.amazon.com/Optoma-ZW350ST-Technology-Short-Throw-Projector/dp/B0D9HW1XVY?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon', commissionPct: 3, cookieDays: 1, retailer: 'Amazon',
+    price: '~$909',
+    priceNote: 'MSRP is $999; street runs about $909. Simulator gear drops 10-20% during Black Friday.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/placeholder.webp',
+    imgAlt: 'Optoma ZW350ST short throw laser golf simulator projector',
+    benefits: ['Laser light source rated 30,000 hours — no lamp to buy, ever', '3,600 lumens stays visible with garage lights on', '0.521:1 throw fills a 120-inch screen from under 5 feet'],
+  },
   'optoma-gt2000hdr': {
     url: 'https://www.amazon.com/Optoma-GT2000HDR-Compact-Theater-Projector/dp/B0C5BBCXRK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
