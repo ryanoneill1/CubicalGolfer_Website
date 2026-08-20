@@ -47,6 +47,41 @@ const shadowed = [...(ARTICLES as any), ...(COMPARISONS as any)]
 
 const unexpected = shadowed.filter(s => !(s.slug in INTENTIONAL));
 
+// ── Records that shadow OTHER RECORDS ────────────────────────────────────────
+// The check above only compares records against hand-built .astro routes. It
+// missed the other way a slug can be claimed twice: the SAME slug declared in
+// both articles.ts and comparisons.ts. Astro builds one page; the loser's prose
+// is dead weight that still looks authoritative in the editor.
+//
+// Found in Sprint 45: /compare/titleist-pro-v1-vs-callaway-chrome-soft/ exists
+// in both files under different titles and different dateModified values. The
+// comparisons record renders; the 8,069-char articles record does not, and had
+// been edited on 2026-07-21 with no way for that edit to reach a reader. Same
+// trap as Sprint 37, through a different door.
+const norm = (s: string) => '/' + String(s).replace(/^\//, '').replace(/\/$/, '') + '/';
+const artSlugs = new Map<string, any>();
+for (const a of ARTICLES as any[]) artSlugs.set(norm(a.slug), a);
+
+const DUPLICATE_RECORDS: Record<string, string> = {
+  '/compare/titleist-pro-v1-vs-callaway-chrome-soft/':
+    'Known duplicate. The comparisons.ts record is the one that renders; the articles.ts record is dead and awaiting a merge-or-delete decision.',
+};
+
+const dupes: string[] = [];
+for (const c of COMPARISONS as any[]) {
+  const slug = norm('/compare/' + String(c.slug).replace(/^\//, ''));
+  if (artSlugs.has(slug) && !(slug in DUPLICATE_RECORDS)) {
+    dupes.push(`  ${slug}\n      articles.ts:    "${String(artSlugs.get(slug).title).slice(0, 60)}"\n      comparisons.ts: "${String(c.title).slice(0, 60)}"  <-- this one renders`);
+  }
+}
+if (dupes.length) {
+  console.error(`\nFAIL: ${dupes.length} slug(s) declared in BOTH articles.ts and comparisons.ts.`);
+  console.error('Only one can render. Decide which owns the URL before shipping:\n');
+  dupes.forEach(d => console.error(d));
+  process.exit(1);
+}
+console.log(`validate-shadowed-records: also checked ${(COMPARISONS as any[]).length} comparison slugs against articles.ts — ${Object.keys(DUPLICATE_RECORDS).length} known duplicate, 0 new`);
+
 if (unexpected.length) {
   console.error(`\n❌ ${unexpected.length} article record(s) are shadowed by a hand-built .astro page and will never render:\n`);
   for (const s of unexpected) console.error(`   ${s.slug}  (${s.words} words of content that no reader sees)`);

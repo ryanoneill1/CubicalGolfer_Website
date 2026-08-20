@@ -16,6 +16,17 @@ function freshestInCategory(cat: string): string {
   return dates.pop() || '2026-04-14';
 }
 
+// A core entry that ALSO has an ARTICLES record must take its date from that
+// record. /golf-ball-compression-chart/ carried a hardcoded '2026-05-22' while
+// its record said '2026-07-23' — so Google was told the site's biggest page
+// (12% of all impressions) was two months staler than it is, which suppresses
+// recrawl. Hardcoding a date next to a record that owns one is a bug waiting
+// to happen; validate-sitemap-lastmod.ts now fails the build if they diverge.
+function fromRecord(slug: string, fallback: string): string {
+  const rec = (ARTICLES as any[]).find(a => String(a.slug) === slug);
+  return rec?.dateModified ?? rec?.datePublished ?? fallback;
+}
+
 function freshestOverall(): string {
   const dates = (ARTICLES as any[])
     .map(a => a.dateModified ?? a.datePublished)
@@ -48,7 +59,7 @@ export const GET: APIRoute = async () => {
     { loc: '/golf-equipment-budget-planner/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
     { loc: '/golf-handicap-calculator/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
     { loc: '/golf-swing-speed-chart/',       changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
-    { loc: '/golf-ball-compression-chart/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
+    { loc: '/golf-ball-compression-chart/',  changefreq: 'monthly', priority: '0.85', lastmod: fromRecord('/golf-ball-compression-chart/', '2026-05-22') },
     { loc: '/club-distance-calculator/',     changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
     { loc: '/golf-ball-finder/',             changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
     { loc: '/launch-monitor-room-checker/',  changefreq: 'monthly', priority: '0.80', lastmod: '2026-05-22' },
