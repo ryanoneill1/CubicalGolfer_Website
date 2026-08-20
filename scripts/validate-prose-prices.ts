@@ -31,13 +31,13 @@ import path from 'path';
 /**
  * Ratchet. Only ever goes down.
  *
- * The 11 on the books are all genuine conflicts, but each needs a live price
+ * The 10 on the books are all genuine conflicts, but each needs a live price
  * check before it can be fixed — and which side is wrong is NOT obvious. The
  * Bushnell Launch Pro taught that: 78 pages said $2,499 against a registry
  * saying $2,999, and the pages were right. Assuming the registry wins would
  * have made 78 correct statements wrong.
  */
-const THRESHOLD = 11;
+const THRESHOLD = 10;
 
 const money = (s: string) => Number(s.replace(/[$,]/g, ''));
 
