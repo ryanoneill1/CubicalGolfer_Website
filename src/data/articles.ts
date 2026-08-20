@@ -14664,6 +14664,70 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-rain-gear-2026/', label: 'Best golf rain gear' },
     ],
   },
+  {
+    id: 'golf-wind-adjustment-chart',
+    slug: '/golf-wind-adjustment-chart/',
+    ogImage: 'https://www.cubicalgolfer.com/images/og/golf-wind-adjustment-chart.jpg',
+    category: 'improve-game',
+    pageType: 'tutorial',
+    tag: 'REFERENCE',
+    emoji: '💨',
+    thumb: 'green',
+    words: '1,600',
+    datePublished: '2026-08-16',
+    dateModified: '2026-08-16',
+    updateLog: [
+      { date: 'Aug 16, 2026', note: 'Published — charts computed from the published wind rule.' },
+    ],
+    title: 'Golf Wind Adjustment Chart — Headwind, Tailwind, Crosswind',
+    titleDisplay: 'Golf Wind Chart: How Many Yards Wind Actually Costs You',
+    bottomLine: 'A headwind adds about 1 yard per mph. A tailwind only gives back half a yard per mph. So a 10 mph headwind costs you 10 yards, while the same wind behind you returns just 5. Charts for every club below.',
+    description: 'How many yards to add or subtract for wind, by club and wind speed. Headwind, tailwind and crosswind lookup charts, plus why the two do not cancel out.',
+    excerpt: 'Wind is the biggest thing moving your carry number, and it is not symmetrical. Here is what to add and subtract, club by club.',
+    intro: 'Wind moves your ball further than temperature, elevation or altitude, and golfers routinely under-club into it and over-club with it. The reason is that most people assume a headwind and a tailwind cancel out. They do not — not even close.',
+    toc: ['Into the wind', 'Downwind', 'Crosswind aim', 'Why they do not cancel out', 'What the rule does not cover'],
+    sections: [
+      {
+        h2: 'Headwind: What to Add',
+        body: '<p>Into the wind, add roughly one yard for every mile per hour. Find your club and the wind speed; the figure in brackets is the yards to add.</p><table class="cmp-table"><thead><tr><th>Club</th><th>Normal carry</th><th>5 mph</th><th>10 mph</th><th>15 mph</th><th>20 mph</th><th>25 mph</th></tr></thead><tbody><tr><td><strong>Driver</strong></td><td>250 yds</td><td>255<span style="opacity:.55"> (+5)</span></td><td>260<span style="opacity:.55"> (+10)</span></td><td>265<span style="opacity:.55"> (+15)</span></td><td>270<span style="opacity:.55"> (+20)</span></td><td>275<span style="opacity:.55"> (+25)</span></td></tr><tr><td><strong>5-iron</strong></td><td>175 yds</td><td>180<span style="opacity:.55"> (+5)</span></td><td>185<span style="opacity:.55"> (+10)</span></td><td>190<span style="opacity:.55"> (+15)</span></td><td>195<span style="opacity:.55"> (+20)</span></td><td>200<span style="opacity:.55"> (+25)</span></td></tr><tr><td><strong>7-iron</strong></td><td>150 yds</td><td>155<span style="opacity:.55"> (+5)</span></td><td>160<span style="opacity:.55"> (+10)</span></td><td>165<span style="opacity:.55"> (+15)</span></td><td>170<span style="opacity:.55"> (+20)</span></td><td>175<span style="opacity:.55"> (+25)</span></td></tr><tr><td><strong>9-iron</strong></td><td>125 yds</td><td>130<span style="opacity:.55"> (+5)</span></td><td>135<span style="opacity:.55"> (+10)</span></td><td>140<span style="opacity:.55"> (+15)</span></td><td>145<span style="opacity:.55"> (+20)</span></td><td>150<span style="opacity:.55"> (+25)</span></td></tr><tr><td><strong>Pitching wedge</strong></td><td>105 yds</td><td>110<span style="opacity:.55"> (+5)</span></td><td>115<span style="opacity:.55"> (+10)</span></td><td>120<span style="opacity:.55"> (+15)</span></td><td>125<span style="opacity:.55"> (+20)</span></td><td>130<span style="opacity:.55"> (+25)</span></td></tr></tbody></table><p>A 15 mph headwind turns a 150-yard 7-iron into a 165-yard shot. That is a club and a half, and it is why so many approach shots into the wind come up short — golfers take one more club when they need two.</p>',
+      },
+      {
+        h2: 'Tailwind: What to Subtract',
+        body: '<p>Downwind, you only get back about half a yard per mile per hour.</p><table class="cmp-table"><thead><tr><th>Club</th><th>Normal carry</th><th>5 mph</th><th>10 mph</th><th>15 mph</th><th>20 mph</th><th>25 mph</th></tr></thead><tbody><tr><td><strong>Driver</strong></td><td>250 yds</td><td>248<span style="opacity:.55"> (−2)</span></td><td>245<span style="opacity:.55"> (−5)</span></td><td>243<span style="opacity:.55"> (−7)</span></td><td>240<span style="opacity:.55"> (−10)</span></td><td>238<span style="opacity:.55"> (−12)</span></td></tr><tr><td><strong>5-iron</strong></td><td>175 yds</td><td>173<span style="opacity:.55"> (−2)</span></td><td>170<span style="opacity:.55"> (−5)</span></td><td>168<span style="opacity:.55"> (−7)</span></td><td>165<span style="opacity:.55"> (−10)</span></td><td>163<span style="opacity:.55"> (−12)</span></td></tr><tr><td><strong>7-iron</strong></td><td>150 yds</td><td>148<span style="opacity:.55"> (−2)</span></td><td>145<span style="opacity:.55"> (−5)</span></td><td>143<span style="opacity:.55"> (−7)</span></td><td>140<span style="opacity:.55"> (−10)</span></td><td>138<span style="opacity:.55"> (−12)</span></td></tr><tr><td><strong>9-iron</strong></td><td>125 yds</td><td>123<span style="opacity:.55"> (−2)</span></td><td>120<span style="opacity:.55"> (−5)</span></td><td>118<span style="opacity:.55"> (−7)</span></td><td>115<span style="opacity:.55"> (−10)</span></td><td>113<span style="opacity:.55"> (−12)</span></td></tr><tr><td><strong>Pitching wedge</strong></td><td>105 yds</td><td>103<span style="opacity:.55"> (−2)</span></td><td>100<span style="opacity:.55"> (−5)</span></td><td>98<span style="opacity:.55"> (−7)</span></td><td>95<span style="opacity:.55"> (−10)</span></td><td>93<span style="opacity:.55"> (−12)</span></td></tr></tbody></table><p>The same 15 mph wind that cost you 15 yards into it gives back only about 8 with it. Most golfers subtract too much downwind and fly the green.</p>',
+      },
+      {
+        h2: 'Crosswind: How Far to Aim Off',
+        body: '<p>A crosswind does not change your club, it changes your target. Aim about 1.2 yards into the wind per mile per hour on a full shot. A lower, knockdown flight is in the air less and drifts about 30 percent less.</p><table class="cmp-table"><thead><tr><th>Crosswind</th><th>Aim off (full shot)</th><th>Aim off (knockdown)</th></tr></thead><tbody><tr><td><strong>5 mph</strong></td><td>6 yds</td><td>4 yds</td></tr><tr><td><strong>10 mph</strong></td><td>12 yds</td><td>8 yds</td></tr><tr><td><strong>15 mph</strong></td><td>18 yds</td><td>13 yds</td></tr><tr><td><strong>20 mph</strong></td><td>24 yds</td><td>17 yds</td></tr><tr><td><strong>25 mph</strong></td><td>30 yds</td><td>21 yds</td></tr></tbody></table><p>If the wind is helping your natural shape — a left-to-right wind on a fade — expect more drift than the table shows, not less. Two effects stacking is how a fade becomes a slice.</p>',
+      },
+      {
+        h2: 'Why a Headwind and Tailwind Do Not Cancel Out',
+        body: '<p>This is the part worth internalising, because it changes how you play a round in wind rather than a single shot.</p><p>Into the wind, the ball climbs. The headwind increases the effective air speed over the ball, which increases lift as well as drag, so the ball balloons — and a ball that goes up steeply lands steeply and short. You lose distance twice: to drag, and to the higher, shorter trajectory.</p><p>Downwind, the opposite happens but weakly. The tailwind reduces air speed over the ball, which reduces drag but also reduces lift. The ball flies flatter and lands hotter, which recovers some distance on the roll, but you have given up carry height to get it.</p><p>That asymmetry is why the practical rule is 1 yard per mph one way and half a yard the other. On a windy day with an out-and-back nine, you do not break even.</p>',
+      },
+      {
+        h2: 'What This Rule Does Not Cover',
+        body: '<p>The chart is calibrated for mid and long irons, which is where most approach shots live. Three things shift it.</p><p><strong>Flight time.</strong> Wind acts on the ball for as long as it is in the air. A 50-yard pitch is barely affected by a wind that moves a 4-iron 20 yards. If you hit the ball noticeably low or high, scale accordingly.</p><p><strong>Your trajectory.</strong> A high ball flight is punished harder into the wind and helped more downwind than these figures suggest. The knockdown column in the crosswind table exists for the same reason.</p><p><strong>Everything else, which stacks.</strong> Wind combines with elevation and temperature rather than replacing them. Our <a href="/what-is-slope-on-a-rangefinder/">slope chart</a> covers uphill and downhill shots, and the <a href="/golf-distance-temperature-chart/">temperature chart</a> covers cold. A cold, uphill shot into the wind is all three at once.</p>',
+      },
+    ],
+    faq: [
+      { q: 'How many yards does a 10 mph headwind take off?', a: 'About 10 yards — the working rule is one yard per mile per hour into the wind. A 150-yard shot into a 10 mph headwind plays about 160.' },
+      { q: 'Does a tailwind help as much as a headwind hurts?', a: 'No, and this is the most common wind mistake. A tailwind returns roughly half a yard per mph, against a full yard per mph lost into the wind. A 10 mph wind costs 10 yards into it and gives back about 5 behind you.' },
+      { q: 'How far should I aim into a crosswind?', a: 'About 1.2 yards per mile per hour on a full shot, so roughly 12 yards for a 10 mph crosswind. A lower knockdown flight drifts around 30 percent less.' },
+      { q: 'Why does the ball balloon into the wind?', a: 'A headwind increases the air speed over the ball, which raises lift as well as drag. The ball climbs, and a steeper climb means a steeper, shorter landing — so you lose distance to both the drag and the trajectory.' },
+      { q: 'Does wind affect wedges as much as long irons?', a: 'No. Wind acts on the ball for as long as it is airborne, so a short wedge is affected far less than a long iron in the same conditions. Treat the chart as calibrated for mid and long irons.' },
+    ],
+    sources: [
+      { label: 'Andrew Rice Golf — wind formula', url: 'https://www.andrewricegolf.com/andrew-rice-golf/tag/wind+formula' },
+      { label: 'Golf Digest — wind formula and the headwind mistake', url: 'https://www.golfdigest.com/story/wind-formula-mistake-downhead-headwind-effects' },
+    ],
+    related: [
+      { slug: '/golf-distance-temperature-chart/', label: 'Golf distance by temperature' },
+      { slug: '/what-is-slope-on-a-rangefinder/', label: 'Slope adjustment chart' },
+      { slug: '/golf-club-distance-chart/', label: 'Club distance by swing speed' },
+      { slug: '/golf-ball-compression-chart/', label: 'Golf ball compression chart' },
+      { slug: '/best-golf-rangefinders-2026/', label: 'Best golf rangefinders' },
+    ],
+  },
+
 
 
 ];
