@@ -196,7 +196,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'carls-place-impact-screen': "Carl's Place Impact Screen",
   'homecourse-retractable-screen': "HomeCourse Retractable Screen",
   'benq-th671st-projector': "BenQ TH671ST Projector",
-  'optoma-gt1090hdr': "Optoma GT1090HDR",
+  'optoma-gt2000hdr': "Optoma GT2000HDR",
   'bag-boy-volt-electric': "Bag Boy Volt Electric",
   'mgi-zip-navigator': "MGI Zip Navigator",
   'sun-mountain-25-bag': "Sun Mountain 25 Bag",

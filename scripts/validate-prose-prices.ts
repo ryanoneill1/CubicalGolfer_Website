@@ -37,7 +37,7 @@ import path from 'path';
  * saying $2,999, and the pages were right. Assuming the registry wins would
  * have made 78 correct statements wrong.
  */
-const THRESHOLD = 10;
+const THRESHOLD = 8;
 
 const money = (s: string) => Number(s.replace(/[$,]/g, ''));
 

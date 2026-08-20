@@ -725,6 +725,10 @@ Summary: Most golfers play too little loft on their driver. More loft means high
 URL: https://www.cubicalgolfer.com/driver-vs-3-wood-off-tee/
 Summary: When to hit 3-wood off the tee instead of driver — the data says more often than you think.
 
+## Golf Distance by Temperature: How Many Yards Cold Costs You
+URL: https://www.cubicalgolfer.com/golf-distance-temperature-chart/
+Summary: Cold air is denser and a cold ball compresses less. Here is what that costs you, club by club, from 30°F to 90°F.
+
 ## 🏌️‍♂️ Golf for Beginners — Complete Guide
 URL: https://www.cubicalgolfer.com/golf-for-beginners/
 Summary: Everything a complete beginner needs to start playing golf in 2026. Gear, fundamentals, practice routines, and realistic expectations — in one place.
@@ -740,6 +744,10 @@ Summary: Quick golf practice drills for the golfer who works all week and cannot
 ## Golf Tips for Beginners
 URL: https://www.cubicalgolfer.com/golf-tips-for-beginners/
 Summary: The essential golf tips every beginner needs — without the jargon and without the overwhelming advice.
+
+## Golf Wind Chart: How Many Yards Wind Actually Costs You
+URL: https://www.cubicalgolfer.com/golf-wind-adjustment-chart/
+Summary: Wind is the biggest thing moving your carry number, and it is not symmetrical. Here is what to add and subtract, club by club.
 
 ## How Far Does the Average Golfer Hit a 7 Iron?
 URL: https://www.cubicalgolfer.com/how-far-average-golfer-hit-7-iron/
@@ -959,7 +967,7 @@ Summary: I spent six months with the Rapsodo MLM2PRO and the FlightScope Mevo+ �
 
 ## SkyTrak+ vs FlightScope Mevo Gen 2
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-flightscope-mevo-gen2/
-Summary: SkyTrak+ ($2,995) vs FlightScope Mevo Gen 2 ($2,199) — two premium launch monitors tested head-to-head over 500+ shots. Which delivers better data for.
+Summary: SkyTrak+ ($2,995) vs FlightScope Mevo Gen 2 ($1,299) — two premium launch monitors tested head-to-head over 500+ shots. Which delivers better data for.
 
 ## SkyTrak+ vs Garmin R10 — Camera vs Radar Launch Monitor
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-garmin-r10/

@@ -3474,14 +3474,10 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$499',
+    retailer: 'Amazon', price: '~$99',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/fiberbuilt-flight-deck.webp', imgAlt: 'Fiberbuilt Flight Deck golf hitting mat',
-    benefits: [
-      'Most realistic turf feel tested',
-      'Floating surface protects joints',
-      'Replaceable hitting strip ($59)',
-    ],
+    imgSrc: '/images/products/fiberbuilt-flight-deck.webp', imgAlt: 'Fiberbuilt Flight Deck oval golf hitting mat with adjustable tee',
+    benefits: ['Genuine Fiberbuilt Grass turf in a stowable 21 x 13 in oval', 'Adjustable-height tee built in for driver through wedge', 'Backed by the same 300,000-shot guarantee as the big mats'],
   },
   'country-club-elite-mat': {
     url: 'https://www.amazon.com/s?k=country-club-elite-mat&crid=21C3SD5QAJ9AW&sprefix=country-club-elite-mat%2Caps%2C225&linkCode=ll2&tag=cubicalgolfer-20&linkId=3af1d6fae812d0f903cd0b1fe762f342&language=en_US&ref_=as_li_ss_tl',
@@ -3531,14 +3527,14 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/benq-th671st-projector.webp', imgAlt: 'BenQ TH671ST short throw projector for golf simulator',
       },
-  'optoma-gt1090hdr': {
-    url: 'https://www.amazon.com/s?k=optoma-gt1090hdr&crid=1VNFYPQ5VDU7C&sprefix=office-putting-mat%2Caps%2C243&linkCode=ll2&tag=cubicalgolfer-20&linkId=639dfb73d7ccb2f941516b2f20948f2d&language=en_US&ref_=as_li_ss_tl',
+  'optoma-gt2000hdr': {
+    url: 'https://www.amazon.com/Optoma-GT2000HDR-Compact-Theater-Projector/dp/B0C5BBCXRK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$1,099',
+    retailer: 'Amazon', price: '~$1,199',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/optoma-gt1090hdr.webp', imgAlt: 'Optoma GT1090HDR short throw projector',
+    imgSrc: '/images/products/optoma-gt1090hdr.webp', imgAlt: 'Optoma GT2000HDR short throw golf simulator projector',
       },
   'bag-boy-volt-electric': {
     url: 'https://www.amazon.com/s?k=bag-boy-volt-electric&crid=16LMO50A5SS3M&sprefix=bag-boy-volt-electric%2Caps%2C272&linkCode=ll2&tag=cubicalgolfer-20&linkId=e256e146c00315a9bbb8ace4d22a072c&language=en_US&ref_=as_li_ss_tl',
