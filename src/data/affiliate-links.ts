@@ -3534,7 +3534,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'Amazon', price: '~$1,199',
     priceNote: 'Price is typical for this category. Check link for any current promotions.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/optoma-gt1090hdr.webp', imgAlt: 'Optoma GT2000HDR short throw golf simulator projector',
+    imgSrc: '/images/products/optoma-gt2000hdr.webp', imgAlt: 'Optoma GT2000HDR short throw golf simulator projector',
       },
   'bag-boy-volt-electric': {
     url: 'https://www.amazon.com/s?k=bag-boy-volt-electric&crid=16LMO50A5SS3M&sprefix=bag-boy-volt-electric%2Caps%2C272&linkCode=ll2&tag=cubicalgolfer-20&linkId=e256e146c00315a9bbb8ace4d22a072c&language=en_US&ref_=as_li_ss_tl',
