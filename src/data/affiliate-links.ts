@@ -751,7 +751,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/taylormade-rbz-lite.webp',
     imgAlt: 'TaylorMade RBZ Speed Lite Golf Set',
     benefits: [
-      'Complete 12-piece set with bag for $249 — unbeatable value',
+      'Complete 12-piece set with bag — everything a new golfer needs in one box',
       'Driver has draw bias to reduce the beginner slice',
       'Oversized iron heads forgive mishits while you learn',
     ],
@@ -2111,7 +2111,7 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/theraband-flexbar.webp',
-    imgAlt: 'TheraFlex FlexBar hand exerciser',
+    imgAlt: 'TheraBand FlexBar hand exerciser',
     benefits: [
       'Prevents golfer elbow (medial epicondylitis)',
       'Warms up wrists and forearms in 2 minutes',
@@ -2653,9 +2653,9 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/ping-g430-sft.webp',
-    imgAlt: 'Ping G440 SFT Driver',
+    imgAlt: 'Ping G430 SFT Driver',
     benefits: [
-      'Best price-to-performance ratio under $300 — within 5 yards of $500 drivers',
+      'Carries within a few yards of drivers costing considerably more',
       'High launch with low spin suits 85-100 mph swing speeds perfectly',
       'Lightweight stock shaft adds 1-2 mph vs heavier competitors',
     ],
@@ -3838,7 +3838,7 @@ export const AFFILIATE: Record<string, {
     price: '~$699',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/cobra-aerojet-irons.webp', imgAlt: 'Cobra Aerojet irons',
+    imgSrc: '/images/products/cobra-aerojet-irons.webp', imgAlt: 'Cobra Aerojet Max irons',
     benefits: [
       'Longest irons in our distance test',
       'High launch keeps long-iron carries airborne',
@@ -4276,7 +4276,7 @@ export const AFFILIATE: Record<string, {
     benefits: [
       'Vented canopy survives 55+ mph gusts without inverting',
       'Lightweight fiberglass shaft is strong but not heavy',
-      'At $35, outstanding value for the engineering',
+      'Outstanding value for the engineering',
     ],
   },
   'ezgo-freedom-rxv': {
