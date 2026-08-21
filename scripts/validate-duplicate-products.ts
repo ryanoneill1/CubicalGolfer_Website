@@ -33,6 +33,15 @@ const PENDING_MERGE = new Set<string>([]); // no known unresolved NAME duplicate
 //   Needs its own image, or the senior set needs a different one.
 const PENDING_IMAGE_PAIR = new Set<string>([
   'cleveland-launcher-xl|cleveland-launcher-xl-senior',
+  // Sprint 50: verifying the Frogger Amphibian live ($18 -> $29.99) opened a 2x
+  // gap against golf-towel-personalized ($15) and revealed they share ONE photo.
+  // They are genuinely different products — Frogger has a real ASIN, the
+  // personalised towel is still a search URL — but the personalised towel is
+  // rendering a picture of a Frogger. Both appear on
+  // /gifts-for-golfer-who-never-keeps-anything/, so that page shows the same
+  // image twice at two prices. Needs its own product photo; allowed here so the
+  // defect stays visible rather than blocking the build.
+  'frogger-amphibian-towel|golf-towel-personalized',
 ]);
 
 const problems: string[] = [];

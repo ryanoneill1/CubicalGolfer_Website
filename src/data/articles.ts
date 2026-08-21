@@ -2345,7 +2345,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof', bestFor: 'Best Overall', price: '~$32/2pk', feature1: 'Synthetic', feature2: 'All-weather', winner: true },
         { rating: 4.7, affiliateKey: 'titleist-players-flex',    name: 'Titleist Players Flex', bestFor: 'Best Premium', price: '~$22', feature1: 'Leather', feature2: 'Dry/Warm', winner: false },
-        { rating: 4.6, affiliateKey: 'footjoy-raingrip',          name: 'FootJoy RainGrip', bestFor: 'Best Wet', price: '~$32/2pk', feature1: 'Synthetic', feature2: 'Rain', winner: false },
+        { rating: 4.6, affiliateKey: 'footjoy-raingrip',          name: 'FootJoy RainGrip', bestFor: 'Best Wet', price: '~$28/pair', feature1: 'Synthetic', feature2: 'Rain', winner: false },
         { rating: 4.3, affiliateKey: 'callaway-dawn-patrol',      name: 'Callaway Dawn Patrol', bestFor: 'Best Budget', price: '~$14', feature1: 'Synthetic', feature2: 'All-weather', winner: false },
       ],
     },
@@ -5685,8 +5685,8 @@ export const ARTICLES: Article[] = [
         { name: 'FootJoy WeatherSof', price: '~$18', bestFor: 'Best Glove', feature1: 'Glove', feature2: '4.7/5', rating: 4.7, affiliateKey: 'footjoy-weathersof-glove' },
         { name: 'Srixon Soft Feel', price: '~$27/dz', bestFor: 'Best Budget Ball', feature1: 'Ball', feature2: '4.6/5', rating: 4.2, affiliateKey: 'srixon-soft-feel' },
         { name: 'Alignment Sticks', price: '~$12', bestFor: 'Best Range Tool', feature1: 'Training', feature2: '4.9/5', rating: 4.8, affiliateKey: 'alignment-sticks' },
-        { name: 'FootJoy RainGrip', price: '~$16/pr', bestFor: 'Best Rain Gear', feature1: 'Glove', feature2: '4.5/5', rating: 4.6, affiliateKey: 'footjoy-raingrip' },
-        { name: 'Frogger Towel', price: '~$18', bestFor: 'Best Towel', feature1: 'Accessory', feature2: '4.7/5', rating: 4.7, affiliateKey: 'frogger-amphibian-towel' },
+        { name: 'FootJoy RainGrip', price: '~$28/pair', bestFor: 'Best Rain Gear', feature1: 'Glove', feature2: '4.5/5', rating: 4.6, affiliateKey: 'footjoy-raingrip' },
+        { name: 'Frogger Towel', price: '~$30', bestFor: 'Best Towel', feature1: 'Accessory', feature2: '4.7/5', rating: 4.7, affiliateKey: 'frogger-amphibian-towel' },
         { name: 'Impact Tape', price: '~$12', bestFor: 'Best Diagnostic', feature1: 'Training', feature2: '4.4/5', rating: 4.6, affiliateKey: 'impact-tape' },
         { name: 'Skechers Go Golf', price: '~$108', bestFor: 'Best Budget Shoe', feature1: 'Shoe', feature2: '4.3/5', rating: 4.4, affiliateKey: 'skechers-go-golf-elite-5' },
       ],
@@ -7731,7 +7731,7 @@ export const ARTICLES: Article[] = [
         pros: ['25,000mm waterproof — survived 4-hour sideways rain', 'Full swing mobility — no restriction on any shot', 'Taped seams prevent shoulder leaks', 'Longer back hem stays tucked during swing'],
         cons: ['$299 for full suit is a real investment', 'Not as breathable as lighter jackets in July heat', 'Only available online — no retail try-on'],
       },
-      { h2: 'Best Rain Glove: FootJoy RainGrip', badge: 'BEST RAIN GLOVE', body: "Regular leather golf gloves become useless wet rags in rain. The FootJoy RainGrip is specifically designed to grip better when wet — the synthetic material actually gets tackier with moisture. I wear them as a pair (both hands) in rain rounds, and my grip is more secure in a downpour than my normal glove is on a dry day. At about $13 per glove (~$26 for the 2-pack) they are the cheapest insurance against losing a club in the rain. They last 15-20 wet rounds before the grip surface wears.", price: '~$18', affiliateKey: 'footjoy-raingrip', rating: 4.5,
+      { h2: 'Best Rain Glove: FootJoy RainGrip', badge: 'BEST RAIN GLOVE', body: "Regular leather golf gloves become useless wet rags in rain. The FootJoy RainGrip is specifically designed to grip better when wet — the synthetic material actually gets tackier with moisture. I wear them as a pair (both hands) in rain rounds, and my grip is more secure in a downpour than my normal glove is on a dry day. At about $13 per glove (~$26 for the 2-pack) they are the cheapest insurance against losing a club in the rain. They last 15-20 wet rounds before the grip surface wears.", price: '~$28/pair', affiliateKey: 'footjoy-raingrip', rating: 4.5,
         pros: ['Grips better wet than dry — by design', 'Under $20 per glove', 'Lasts 15-20 wet rounds', 'Available in both left and right hand'],
         cons: ['Thicker feel than regular gloves — some golfers dislike', 'Not ideal for dry conditions', 'Sizing runs slightly large'],
       },
@@ -7741,7 +7741,7 @@ export const ARTICLES: Article[] = [
       headers: ['Product', 'Category', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'zero-restriction-rain-suit', name: 'Zero Restriction Rain Suit', bestFor: 'Best Overall', price: '~$299', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
-        { rating: 4.5, affiliateKey: 'footjoy-raingrip', name: 'FootJoy RainGrip Glove', bestFor: 'Best Glove', price: '~$18', feature1: '4.5/5 ★', winner: false },
+        { rating: 4.5, affiliateKey: 'footjoy-raingrip', name: 'FootJoy RainGrip Glove', bestFor: 'Best Glove', price: '~$28/pair', feature1: '4.5/5 ★', winner: false },
       ],
     },
     faq: [
@@ -10779,7 +10779,7 @@ export const ARTICLES: Article[] = [
         pros: ['$100 — best value tested', 'Fully waterproof in moderate rain', 'Stretch fabric — minimal swing restriction', 'Waterproof zippered pockets', 'Adjustable hood'],
         cons: ['Runs warm in high humidity', 'Not breathable enough for summer rain', 'Seam sealing may degrade after 50+ washes'],
       },
-      { h2: 'Best Premium: Galvin Green Gore-Tex', badge: 'PREMIUM', body: "Gore-Tex is the gold standard for waterproofing and the Galvin Green proves why. In the heaviest rain I played in — a 30-minute downpour that soaked through my Under Armour on the sleeves — the Galvin Green stayed bone dry inside. The Paclite membrane is the thinnest Gore-Tex variant, which means it has the least swing restriction of any fully waterproof jacket. At $300 it is expensive, but if you play through rain regularly, it is a legitimate investment that lasts 5+ years.", price: '~$300', rating: 4.8, affiliateKey: 'galvin-green-rain-jacket',
+      { h2: 'Best Premium: Galvin Green Gore-Tex', badge: 'PREMIUM', body: "Gore-Tex is the gold standard for waterproofing and the Galvin Green proves why. In the heaviest rain I played in — a 30-minute downpour that soaked through my Under Armour on the sleeves — the Galvin Green stayed bone dry inside. The Paclite membrane is the thinnest Gore-Tex variant, which means it has the least swing restriction of any fully waterproof jacket. At $300 it is expensive, but if you play through rain regularly, it is a legitimate investment that lasts 5+ years.", price: '~$253', rating: 4.8, affiliateKey: 'galvin-green-rain-jacket',
         pros: ['Gore-Tex — 100% waterproof guaranteed', 'Paclite membrane — lightest waterproof tested', 'Excellent breathability', 'Zero swing restriction', '5+ year durability'],
         cons: ['$300 — 3x the Under Armour', 'Limited color options', 'Looks more technical than stylish'],
       },
@@ -12387,7 +12387,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Ai Smoke Max (Under 85 mph)', bestFor: 'Seniors, slow swingers', price: '~$399', feature1: '12-15°', feature2: 'Max height' },
         { rating: 4.3, affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max (85-100 mph)', bestFor: 'Most amateurs', price: '~$150', feature1: '10.5-12°', feature2: 'Optimal', badge: 'MOST GOLFERS', winner: true },
-        { rating: 4.2, affiliateKey: 'titleist-gt2-driver', name: 'Titleist GT2 Driver (Over 100 mph)', bestFor: 'Fast swingers', price: '~$150', feature1: '9-10.5°', feature2: 'Lower spin' },
+        { rating: 4.2, affiliateKey: 'titleist-gt2-driver', name: 'Titleist GT2 Driver (Over 100 mph)', bestFor: 'Fast swingers', price: '~$599', feature1: '9-10.5°', feature2: 'Lower spin' },
       ],
     },
     sections: [
@@ -13434,7 +13434,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Rain Jacket', 'Best For', 'Price', 'Waterproofing', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'galvin-green-rain-jacket', name: 'Galvin Green Gore-Tex', bestFor: 'Best Overall', price: '~$350', feature1: 'Gore-Tex', feature2: '', winner: true, rating: 4.8 },
+        { badge: 'STRONG PICK', affiliateKey: 'galvin-green-rain-jacket', name: 'Galvin Green Gore-Tex', bestFor: 'Best Overall', price: '~$253', feature1: 'Gore-Tex', feature2: '', winner: true, rating: 4.8 },
         { rating: 4.3, affiliateKey: 'under-armour-storm-rain-jacket', name: 'UA Storm', bestFor: 'Best Value', price: '~$60', feature1: 'UA Storm', feature2: '', winner: false },
         { rating: 4.5, affiliateKey: 'footjoy-hydrolite-rain-jacket', name: 'FJ HydroLite', bestFor: 'Best Mid-Range', price: '~$130', feature1: 'DryJoys', feature2: '', winner: false },
       ],
@@ -13611,7 +13611,7 @@ export const ARTICLES: Article[] = [
     toc: ['Frogger Amphibian', 'Club Glove Microfiber', 'FAQ'],
     whoFor: ['Every golfer — a towel is essential equipment'], whoSkip: ['Nobody — you need a towel'],
     comparisonTable: { headers: ['Towel', 'Best For', 'Price', 'Material', 'Our Rating'], rows: [
-      { badge: 'STRONG PICK', affiliateKey: 'frogger-amphibian-towel', name: 'Frogger Amphibian', bestFor: 'Best Overall', price: '~$25', feature1: 'Dual-texture', feature2: '', winner: true, rating: 4.7 },
+      { badge: 'STRONG PICK', affiliateKey: 'frogger-amphibian-towel', name: 'Frogger Amphibian', bestFor: 'Best Overall', price: '~$30', feature1: 'Dual-texture', feature2: '', winner: true, rating: 4.7 },
       { rating: 4.4, affiliateKey: 'club-glove-microfiber-towel', name: 'Club Glove Microfiber', bestFor: 'Best Value', price: '~$18', feature1: 'Microfiber', feature2: '', winner: false },
     ]},
     sections: [

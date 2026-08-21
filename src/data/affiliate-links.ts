@@ -822,13 +822,13 @@ export const AFFILIATE: Record<string, {
 
   // FootJoy RainGrip (mentioned in accessories-50 page)
   'footjoy-raingrip': {
-    url: 'https://www.amazon.com/s?k=footjoy-raingrip&crid=4PUE9LENMOAS&sprefix=footjoy-raingrip%2Caps%2C233&linkCode=ll2&tag=cubicalgolfer-20&linkId=1c6f48c25964b34ff3eb79cb8ee4d19c&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0DCVZZZKM?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520RainGrip%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$16/pair',
+    price: '~$28/pair',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-raingrip.webp',
@@ -1017,13 +1017,13 @@ export const AFFILIATE: Record<string, {
 
   // Frogger Amphibian Golf Towel
   'frogger-amphibian-towel': {
-    url: 'https://www.amazon.com/s?k=frogger-amphibian-towel&crid=3SFSGTFNJJF9M&sprefix=%2Caps%2C197&linkCode=ll2&tag=cubicalgolfer-20&linkId=8488e6f4a289cea80766f82c606e384b&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B002KWC996?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Ff%2Fgolf-towels',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$18',
+    price: '~$30',
     priceNote: 'Consumable — buy in multi-packs for best per-unit price.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/frogger-amphibian-towel.webp',
@@ -1057,7 +1057,7 @@ export const AFFILIATE: Record<string, {
 
   // Impact tape / face stickers
   'impact-tape': {
-    url: 'https://www.amazon.com/s?k=impact-tape&crid=FC5WDTNPA24&sprefix=homecourse-retractable-screen%2Caps%2C242&linkCode=ll2&tag=cubicalgolfer-20&linkId=31fc58c7ee566e4c670a5dec48c20f2e&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0DJP8VZT8?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DImpact%2520Tape%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3565,12 +3565,12 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/new-balance-breeze-v2.webp', imgAlt: 'New Balance Breeze V2 golf shoes',
   },
   'galvin-green-rain-jacket': {
-    url: 'https://www.amazon.com/s?k=galvin-green-rain-jacket&crid=SSGWWMACM75S&sprefix=galvin-green-rain-jacket%2Caps%2C233&linkCode=ll2&tag=cubicalgolfer-20&linkId=2da2d652dc6e698e2548c81fd2838ea6&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0CHS9LJG9?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGalvin%2520Green%2520Rain%2520Jacket%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$300',
+    retailer: 'Amazon', price: '~$253',
     priceNote: 'Golf apparel drops 40-60% during end-of-season sales.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/galvin-green-rain-jacket.webp', imgAlt: 'Galvin Green Gore-Tex golf rain jacket',
     benefits: [
@@ -3711,7 +3711,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/garmin-s70.webp', imgAlt: 'Garmin Approach S70 GPS golf watch',
   },
   'titleist-gt2-driver': {
-    url: 'https://www.amazon.com/s?k=titleist+gt2+driver&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0DHWNVBK8?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520GT2%2520Driver%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
