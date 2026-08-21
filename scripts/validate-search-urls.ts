@@ -11,7 +11,7 @@
 
 import { AFFILIATE } from '../src/data/affiliate-links';
 
-const THRESHOLD = 157;
+const THRESHOLD = 151;
 
 const search = Object.entries(AFFILIATE as any)
   .filter(([, v]) => /\/s\?/.test(String((v as any).url)))
