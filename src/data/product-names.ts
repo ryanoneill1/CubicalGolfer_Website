@@ -76,7 +76,6 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'golf-mouse-pad': "Golf Mouse Pad",
   'srixon-q-star-tour': "Srixon Q-Star Tour",
   'callaway-chrome-soft': "Callaway Chrome Soft",
-  'callaway-chrome-tour': "Callaway Chrome Tour",
   'titleist-tour-speed': "Titleist Tour Speed",
   'taylormade-tour-response': "TaylorMade Tour Response",
   'bridgestone-e12-contact': "Bridgestone E12 Contact",
