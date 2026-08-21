@@ -9901,7 +9901,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best for Beginners: Pinemeadow PGX',
         badge: 'BEGINNER PICK',
-        price: '~$40 at Amazon',
+        price: '~$67',
         rating: 3.8, affiliateKey: 'pinemeadow-pgx',
         body: 'The Pinemeadow PGX is the best putter under $50 and the right choice for golfers who are just starting and do not know what they want in a putter yet. It is a large mallet design with high MOI, a simple alignment line, and a face insert that provides softer-than-expected feel for the price. You will eventually outgrow this putter — the feel, finish, and alignment are all a tier below the Cleveland and Odyssey options. But for a golfer who needs a functional putter to learn the basics, the PGX performs well enough that your misses will be caused by your stroke, not your equipment. At $40, it costs less than a dozen golf balls. If you are buying your first set of clubs or replacing a hand-me-down putter that does not inspire confidence, the PGX is the risk-free starting point.',
         pros: [
@@ -9919,7 +9919,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Value Blade: Wilson Staff Infinite',
         badge: 'VALUE BLADE',
-        price: '~$99 at Amazon',
+        price: '~$140',
         rating: 4.1, affiliateKey: 'wilson-staff-infinite',
         body: 'The Wilson Staff Infinite blade is a counterbalanced putter with weight in the grip end that smooths out your stroke tempo. Counterbalancing is a premium technology that Odyssey charges $250+ for — Wilson includes it at $99. The effect is subtle but measurable: in our testing, golfers with jerky putting strokes showed 15% less tempo variation with the Infinite versus a standard-weighted putter. The face is double milling on 8802 stainless steel, which provides clean feel with good feedback. It is firmer than the Cleveland Huntington Beach but provides more information about strike quality. For golfers who want a blade putter on a tight budget, the Infinite offers a unique feature set (counterbalancing) that no other sub-$100 putter provides.',
         pros: [
@@ -9940,18 +9940,18 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Best For', 'Type', 'Price', 'Face Tech'],
       rows: [
-        { name: 'TaylorMade Spider GT', affiliateKey: 'taylormade-spider-gt', bestFor: 'Premium step-up', price: '~$299', feature1: 'Mallet', feature2: 'Over budget', winner: false, rating: 4.5 },
+        { name: 'TaylorMade Spider GT', affiliateKey: 'taylormade-spider-gt', bestFor: 'Premium step-up', price: '~$200', feature1: 'Mallet', feature2: 'Over budget', winner: false, rating: 4.5 },
         { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$129', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'Odyssey DFX', bestFor: 'Best Mallet', price: '~$129', feature1: 'Mallet', feature2: 'DFX Insert', winner: false, rating: 4.2, affiliateKey: 'odyssey-dfx' },
-        { name: 'Wilson Staff Infinite', bestFor: 'Value Blade', price: '~$99', feature1: 'Blade', feature2: 'Double Milled', winner: false, rating: 4.1, affiliateKey: 'wilson-staff-infinite' },
-        { name: 'Pinemeadow PGX', bestFor: 'Beginners', price: '~$40', feature1: 'Mallet', feature2: 'Insert', winner: false, rating: 3.8, affiliateKey: 'pinemeadow-pgx' },
+        { name: 'Wilson Staff Infinite', bestFor: 'Value Blade', price: '~$140', feature1: 'Blade', feature2: 'Double Milled', winner: false, rating: 4.1, affiliateKey: 'wilson-staff-infinite' },
+        { name: 'Pinemeadow PGX', bestFor: 'Beginners', price: '~$67', feature1: 'Mallet', feature2: 'Insert', winner: false, rating: 3.8, affiliateKey: 'pinemeadow-pgx' },
       ],
     },
     faq: [
       { q: 'Is a $100 putter good enough?', a: 'Yes — modern budget putters ($80-150) use face technology that normalizes ball speed, which is the most important feature. The difference between a $100 and $350 putter is 1-2 putts per round in our testing. Practice is a better investment than equipment at this level.' },
       { q: 'Should beginners buy expensive putters?', a: 'No. Beginners should buy a budget mallet putter ($40-130), learn the fundamentals, and upgrade once they know what type of putter suits their stroke. A $40 Pinemeadow teaches you just as much as a $400 Scotty Cameron.' },
       { q: 'Do cheap putters lose their performance over time?', a: 'The face insert will wear faster than premium putters, but performance remains consistent for 2-3 seasons of regular use. The finish may show wear sooner, but cosmetic aging does not affect how the putter performs.' },
-      { q: 'What is the best putter under $100?', a: 'The Wilson Staff Infinite at $99 is the best putter under $100. It includes counterbalancing technology — usually a $250+ feature — that smooths your stroke tempo. For pure forgiveness, the Pinemeadow PGX at $40 offers high-MOI mallet design at a fraction of the price.' },
+      { q: 'What is the best putter under $100?', a: 'The Pinemeadow PGX at around $67 is the pick that genuinely stays under $100 — a high-MOI mallet that forgives off-centre strikes for a fraction of what a name-brand mallet costs. The Wilson Staff Infinite is the better putter if you can stretch: it carries counterbalancing technology usually reserved for far pricier models, but it now sells for about $140 rather than the $99 it launched at.' },
       { q: 'Cleveland Huntington Beach vs Odyssey DFX — which is better?', a: 'Cleveland Huntington Beach wins in our testing. Speed Optimized Face Technology provides better distance control on mishits, the feel is softer and more refined, and it comes in both blade and mallet options. The DFX is a solid alternative if you prefer Odyssey alignment features.' },
       { q: 'How much of a difference does a putter fitting make under $150?', a: 'Putter length and lie angle matter more than brand at this price point. A properly fitted $100 putter will outperform a poorly fitted $300 putter. Most budget putters come in 34-35 inch standard length — if you are under 5\'8\" or over 6\'2\", prioritize getting the right length over brand name.' },
       { q: 'Is it worth stretching to $200 for a better putter?', a: 'At $200 you get the Odyssey White Hot OG or Cleveland HB Soft Milled — both meaningful upgrades in feel and insert technology. If putting is your weakest area and you play 20+ rounds per year, the $50-70 stretch from our $130 pick to a $200 putter is worth it. Otherwise, spend the difference on lessons.' },
@@ -11984,7 +11984,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { rating: 4.5, affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Best new (stretch)', price: '~$599', feature1: 'High', feature2: 'Often on sale', badge: 'BEST VALUE', winner: true },
         { rating: 4.5, affiliateKey: 'cobra-aerojet-max-irons', name: 'Cobra Aerojet (prev gen)', bestFor: 'Distance', price: '~$449 used', feature1: 'High', feature2: 'Long' },
-        { rating: 4.6, affiliateKey: 'callaway-big-bertha-b21-irons', name: 'Big Bertha B21 (prev gen)', bestFor: 'Max forgiveness', price: '~$399 used', feature1: 'Maximum', feature2: 'Large head' },
+        { rating: 4.6, affiliateKey: 'callaway-big-bertha-b21-irons', name: 'Big Bertha B21 (prev gen)', bestFor: 'Max forgiveness', price: '~$799', feature1: 'Maximum', feature2: 'Large head' },
       ],
     },
     sections: [
@@ -14280,7 +14280,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best High-MOI: TaylorMade Spider GT',
         badge: 'HIGHEST MOI',
-        price: '~$299',
+        price: '~$200',
         affiliateKey: 'taylormade-spider-gt',
         rating: 4.5,
         body: 'The TaylorMade Spider GT has the highest MOI of any conventional putter — over 6,000 g·cm². For yips sufferers, high MOI matters because the involuntary flinch moves the face offline, and high MOI resists that movement. The Spider GT does not eliminate the yips like the LAB Golf does (the face still requires some hand management), but it minimizes the damage when the yips strike. In our testing, the Spider GT performed best on putts of 3-6 feet — the range where yips are most problematic. The heavy head (380g) creates a pendulum that is harder for a small hand spasm to disrupt. The Pure Roll insert promotes immediate forward spin, which reduces the sensitivity to impact quality on short putts. For golfers whose yips are mild — occasional flinch rather than complete stroke breakdown — the Spider GT at a lower price point than the LAB Golf is a practical solution.',
@@ -14357,10 +14357,10 @@ export const ARTICLES: Article[] = [
       headers: ['Putter', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { name: 'LAB Golf Mezz.1 Max', bestFor: 'Best Overall', price: '~$449', feature1: '4.8/5 ★', feature2: '', winner: true, affiliateKey: 'lab-golf-mezz1-max' },
-        { name: 'TaylorMade Spider GT', bestFor: 'Highest MOI', price: '~$299', feature1: '4.5/5 ★', feature2: '', winner: false, affiliateKey: 'taylormade-spider-gt' },
+        { name: 'TaylorMade Spider GT', bestFor: 'Highest MOI', price: '~$200', feature1: '4.5/5 ★', feature2: '', winner: false, affiliateKey: 'taylormade-spider-gt' },
         { name: 'Odyssey Stroke Lab', bestFor: 'Best Tempo', price: '~$199', feature1: '4.4/5 ★', feature2: '', winner: false, affiliateKey: 'odyssey-stroke-lab' },
         { name: 'Odyssey Two Ball Eleven', bestFor: 'Armlock', price: '~$249', feature1: '4.3/5 ★', feature2: '', winner: false, affiliateKey: 'odyssey-two-ball-eleven' },
-        { name: 'Cleveland + Oversized Grip', bestFor: 'Budget', price: '<$150', feature1: '4.0/5 ★', feature2: '', winner: false, affiliateKey: 'cleveland-huntington-beach' },
+        { name: 'Cleveland + Oversized Grip', bestFor: 'Budget', price: '~$134', feature1: '4.0/5 ★', feature2: '', winner: false, affiliateKey: 'cleveland-huntington-beach' },
       ],
     },
     faq: [
