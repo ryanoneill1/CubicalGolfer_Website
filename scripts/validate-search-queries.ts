@@ -31,10 +31,10 @@ const STOP = new Set(['golf','the','and','for','set','pack','one','dozen','balls
 
 // Intentional mismatches, each with a reason.
 const ALLOWED: Record<string, string> = {
-  'the-grint':   'Phone app, not an Amazon product. Dormant entry — used on no page.',
-  '18birdies':   'Phone app, not an Amazon product. Dormant entry — used on no page.',
-  'golfshot':    'Phone app, not an Amazon product. Dormant entry — used on no page.',
-  'swing-ai':    'Phone app, not an Amazon product. Dormant entry — used on no page.',
+  'the-grint':   'Phone app, not an Amazon product. LIVE on /best-golf-apps/ (4,746 impressions) with a "Check Price at Amazon" CTA pointing at a generic accessory search. Awaiting a decision on how apps should be presented — see SPRINT-49.',
+  '18birdies':   'Phone app, not an Amazon product. LIVE on /best-golf-apps/ (4,746 impressions) with a "Check Price at Amazon" CTA pointing at a generic accessory search. Awaiting a decision on how apps should be presented — see SPRINT-49.',
+  'golfshot':    'Phone app, not an Amazon product. LIVE on /best-golf-apps/ (4,746 impressions) with a "Check Price at Amazon" CTA pointing at a generic accessory search. Awaiting a decision on how apps should be presented — see SPRINT-49.',
+  'swing-ai':    'Phone app, not an Amazon product. Genuinely unused — no page references it.',
 };
 
 const L: any = AFFILIATE;
