@@ -9,6 +9,18 @@
  *
  * For any article whose slug encodes a price ceiling (…under-<N>…), assert that
  * every product it links carries a price at or below that ceiling.
+ *
+ * Sprint 57 — the comparison TABLE is now a hard promise, prose is not.
+ * Warning-only was too weak: /best-budget-putters-under-150/ (7,053 impressions)
+ * listed a $200 putter as a table row, and /best-golf-driver-under-300/ listed a
+ * $619 driver. A reader scanning the table reads every row as a pick, so a row
+ * above the ceiling breaks the title at the moment of purchase intent. Prose may
+ * still discuss an upgrade — that is honest editorial — so a section-only
+ * over-ceiling product stays a warning.
+ *
+ * Worth recording: the previous wording was gamed rather than satisfied. A
+ * heading read "Cleveland Launcher XL2 — ~$599 (over the $500 budget)", which
+ * dodges the 'under $N' regex while still pitching an over-budget product.
  */
 import { ARTICLES } from '../src/data/articles';
 import { AFFILIATE } from '../src/data/affiliate-links';
@@ -27,9 +39,10 @@ for (const article of ARTICLES as any[]) {
   if (!m) continue;
   const ceiling = parseInt(m[1], 10);
   // Per-dozen / per-month pricing is not comparable to a unit ceiling.
-  const keys = new Set<string>();
+  const tableKeys = new Set<string>();
+  for (const r of article.comparisonTable?.rows ?? []) if (r.affiliateKey) tableKeys.add(r.affiliateKey);
+  const keys = new Set<string>(tableKeys);
   for (const s of article.sections ?? []) if (s.affiliateKey) keys.add(s.affiliateKey);
-  for (const r of article.comparisonTable?.rows ?? []) if (r.affiliateKey) keys.add(r.affiliateKey);
 
   for (const key of keys) {
     const entry = (AFFILIATE as any)[key];
@@ -44,8 +57,11 @@ for (const article of ARTICLES as any[]) {
     const hm = heading.match(/under \$([\d,]+)/i);
     if (hm && price > parseFloat(hm[1].replace(/,/g, ''))) {
       violations.push(`${article.slug} → "${heading}" links ${key} at ${entry.price}`);
+    } else if (tableKeys.has(key)) {
+      // A comparison-table row IS the page's promise. No disclosure saves it.
+      violations.push(`${article.slug} (ceiling $${ceiling}) → TABLE ROW ${key} at ${entry.price}`);
     } else {
-      warnings.push(`${article.slug} (ceiling $${ceiling}) → ${key} at ${entry.price}`);
+      warnings.push(`${article.slug} (ceiling $${ceiling}) → ${key} at ${entry.price} (prose only — disclosed upgrade)`);
     }
   }
 }
@@ -77,11 +93,11 @@ for (const article of ARTICLES as any[]) {
 if (violations.length) {
   console.error(`\n❌ ${violations.length} product(s) exceed their page's stated price ceiling:`);
   for (const v of violations) console.error('   ' + v);
-  console.error('\nEither swap the product, or retitle the page so the promise is true.\n');
+  console.error('\nEither swap the product, retitle the page, or — for a genuine upgrade pick —\nmove it out of the comparison table and discuss it in prose instead.\n');
   process.exit(1);
 }
 if (warnings.length) {
   console.log(`⚠️  Price ceilings: ${warnings.length} page-level over-ceiling pick(s) — disclosed premium picks are allowed, but review these:`);
   for (const w of warnings) console.log('   ' + w);
 }
-console.log('✅ Price ceilings: no section heading promises "under $N" while linking a product above $N.');
+console.log('✅ Price ceilings: no table row and no heading promises "under $N" above its own ceiling.');

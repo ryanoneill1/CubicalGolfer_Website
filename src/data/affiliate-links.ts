@@ -309,7 +309,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$299',
+    price: '~$279',
     priceNote: 'MSRP $299.99. Drops $30-50 during holiday sales.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/garmin-approach-s42.webp',

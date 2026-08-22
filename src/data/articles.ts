@@ -5117,9 +5117,9 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title:        'Best Golf GPS Watch Under $200 (2026) — 4 Tested',
+    title:        'Best Golf GPS Watch Under $200 (2026) — Tested',
     titleDisplay: '⌚ Best Golf GPS Watch Under $200 — Tested Picks',
-    description:  'The 4 best golf GPS watches under $200 in 2026. Accurate yardages, no subscription, simple to use. Tested on real courses — not a spec sheet roundup.',
+    description:  'The best golf GPS watches under $200 in 2026. Accurate yardages, no subscription, simple to use. Tested on real courses — not a spec sheet roundup.',
     excerpt:      'You do not need to spend $400 on a GPS watch. These 4 models under $200 give you accurate front-middle-back yardages, hazard distances, and automatic hole advance.',
     bottomLine:   'The <strong>Garmin Approach S12</strong> at $199 is the best GPS golf watch under $200 — reliable Garmin accuracy, 40,000 preloaded courses, simple interface, and 30-hour battery. The Bushnell Ion Elite at $199 wins on display size and is the best pick for senior golfers.',
     whoFor: [
@@ -5147,7 +5147,6 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Garmin Approach S12', bestFor: 'Best Overall', price: '~$199', feature1: '30 hours', feature2: '42,000', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-s12' },
         { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Display', price: '~$199', feature1: '16 hours', feature2: '36,000', winner: false, rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
-        { name: 'Garmin Approach S42', bestFor: 'Best Features', price: '~$199', feature1: '10 hours GPS', feature2: '42,000', winner: false, rating: 4.1, affiliateKey: 'garmin-approach-s42' },
       ],
     },
     sections: [
@@ -5690,7 +5689,6 @@ export const ARTICLES: Article[] = [
         { name: 'FootJoy RainGrip', price: '~$28/pair', bestFor: 'Best Rain Gear', feature1: 'Glove', feature2: '4.5/5', rating: 4.6, affiliateKey: 'footjoy-raingrip' },
         { name: 'Frogger Towel', price: '~$30', bestFor: 'Best Towel', feature1: 'Accessory', feature2: '4.7/5', rating: 4.7, affiliateKey: 'frogger-amphibian-towel' },
         { name: 'Impact Tape', price: '~$12', bestFor: 'Best Diagnostic', feature1: 'Training', feature2: '4.4/5', rating: 4.6, affiliateKey: 'impact-tape' },
-        { name: 'Skechers Go Golf', price: '~$108', bestFor: 'Best Budget Shoe', feature1: 'Shoe', feature2: '4.3/5', rating: 4.4, affiliateKey: 'skechers-go-golf-elite-5' },
       ],
     },
     sections: [
@@ -8045,7 +8043,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Impressive Gifts Under $100', body: "A premium golf towel set ($30-$40), a quality golf book like Harvey Penick\'s Little Red Book ($15), and a sleeve of personalized Pro V1s ($25) combine to make a $60-$80 gift basket that looks like you spent $150. Alternatively, a single high-quality item: an Arccos Caddie sensor set ($99 on sale) gives the data-loving golfer automatic shot tracking.", badge: 'BEST VALUE', rating: 4.3, affiliateKey: 'arccos-caddie-sensors' },
       { h2: 'Premium Gifts Under $250', badge: 'BEST OVERALL', body: "The Garmin Approach S42 GPS watch ($299) is the sweet spot. It provides instant front/center/back yardages on 42,000 courses worldwide with zero subscription fees, and it works as a regular fitness watch the other 6 days of the week. For the golfer who does not have a GPS device, this is a game-changer they will wear daily.", price: '~$299', affiliateKey: 'garmin-approach-s42', rating: 4.6,
         pros: ['No subscription — free lifetime course updates', 'Works as a daily fitness watch', 'Instant yardages without pulling out a phone'],
-        cons: ['$299 is a real investment', 'Does not have slope adjustment (that is the S62)'],
+        cons: ['$279 is a real investment', 'Does not have slope adjustment (that is the S62)'],
       },
       { h2: 'Splurge Picks Under $500', body: "Rapsodo MLM2PRO launch monitor ($699 often $499 on holiday sales) — the indoor practice tool that lets him play golf in the living room all winter. Bushnell Tour V7 Shift rangefinder ($399) — the best laser rangefinder on the market. SkyTrak+ ($2,995) — the ultimate home simulator experience. These are the gifts that golfers dream about but will not buy for themselves.", badge: 'PREMIUM PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
     
@@ -9365,7 +9363,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Best Golf Drivers Under $300 — Tested in 2026',
     titleDisplay: 'Best Golf Drivers Under $300',
-    bottomLine: 'The <strong>Cobra DS-Adapt MAX-K</strong> ($279) is the best driver under $300 — it delivers 90% of the forgiveness of $500+ drivers at nearly half the price. For golfers under $200, the Cleveland Launcher XL2 remains the value king.',
+    bottomLine: 'The <strong>Cobra DS-Adapt MAX-K</strong> (~$299) is the best driver under $300 — it delivers 90% of the forgiveness of $500+ drivers at nearly half the price. For golfers under $200, the Cleveland Launcher XL2 remains the value king.',
     description: '5 golf drivers under $300 tested across a full season. The best mid-range drivers for weekend golfers who want forgiveness without the premium price tag.',
     excerpt: 'Best drivers under $300 — premium forgiveness without the premium price tag.',
     intro: "You do not need to spend $500 on a driver. The gap between a $279 driver and a $499 driver is smaller than manufacturers want you to believe. We tested 5 drivers under $300 to find the best combination of forgiveness, distance, and value for weekend golfers. For the full range including premium picks, see our <a href=\"/best-golf-drivers-forgiveness/\">complete forgiving drivers guide</a>.",
@@ -9475,7 +9473,7 @@ export const ARTICLES: Article[] = [
         badge: 'SLEEPER PICK',
         price: '~$279 at Amazon',
         rating: 4.4, affiliateKey: 'taylormade-stealth-2-hd',
-        body: 'The TaylorMade Stealth 2 HD is a previous-generation premium driver now available under $300. The carbon face — TaylorMade\'s signature innovation — is 40% lighter than titanium, allowing more weight to be redistributed for higher MOI. In our testing, the Stealth 2 HD delivered the longest average carry in this group at 239 yards at 92 mph, beating the Cobra by 2 yards. The "HD" designation means High Draw — heel weighting promotes right-to-left ball flight for slicers. TaylorMade\'s 60x Carbon Twist Face technology corrects off-center hits by twisting the face at impact, which sounds complicated but works remarkably well in practice. We measured a 3 mph ball speed drop on toe hits versus 5-6 mph for most competitors. The main concern is durability — early Stealth models had reports of face cracking, though TaylorMade addressed this in the Stealth 2 generation. We had zero issues over 15 rounds. The Stealth 2 HD at $279 is genuinely difficult to distinguish from the current Qi35 at $599 in blind testing.',
+        body: 'The TaylorMade Stealth 2 HD is a previous-generation premium driver at about $349 — over this budget, which is why it sits here rather than among the picks. The carbon face — TaylorMade\'s signature innovation — is 40% lighter than titanium, allowing more weight to be redistributed for higher MOI. In our testing, the Stealth 2 HD delivered the longest average carry in this group at 239 yards at 92 mph, beating the Cobra by 2 yards. The "HD" designation means High Draw — heel weighting promotes right-to-left ball flight for slicers. TaylorMade\'s 60x Carbon Twist Face technology corrects off-center hits by twisting the face at impact, which sounds complicated but works remarkably well in practice. We measured a 3 mph ball speed drop on toe hits versus 5-6 mph for most competitors. The main concern is durability — early Stealth models had reports of face cracking, though TaylorMade addressed this in the Stealth 2 generation. We had zero issues over 15 rounds. The Stealth 2 HD at $279 is genuinely difficult to distinguish from the current Qi35 at $599 in blind testing.',
         pros: [
           'Longest driver under $300 in our testing — 239 yards carry at 92 mph',
           'Carbon face saves weight for higher MOI and forgiveness',
@@ -9494,10 +9492,8 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Cobra DARKSPEED X', affiliateKey: 'cobra-darkspeed-x', bestFor: 'Best Overall Under $300', price: '~$299', feature1: 'Low spin', feature2: '4.7/5', winner: true, badge: 'BEST OVERALL', rating: 4.7 },
         { name: 'Srixon Z 785', affiliateKey: 'srixon-z-785', bestFor: 'Best Low-Spin Value', price: '~$299', feature1: 'Tour profile', feature2: '4.6/5', winner: false, rating: 4.6 },
-        { name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Overall', price: '~$399', feature1: '4.6/5 ★', feature2: '', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k' },
+        { name: 'Cobra DS-Adapt MAX-K', bestFor: 'Max Forgiveness', price: '~$299', feature1: '4.6/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k' },
         { name: 'Cleveland Launcher XL2', bestFor: 'Budget / Seniors', price: '~$299', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver' },
-        { name: 'Ping G440 SFT', bestFor: 'Slicers', price: '~$619', feature1: '4.5/5 ★', feature2: '', winner: false, rating: 4.5, affiliateKey: 'ping-g430-sft' },
-        { name: 'TaylorMade Stealth 2 HD', bestFor: 'Max Distance', price: '~$349', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.4, affiliateKey: 'taylormade-stealth-2-hd' },
         { name: 'Callaway Rogue ST Max', bestFor: 'Value Pick', price: '~$299', feature1: '4.3/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-rogue-st-max' },
       ],
     },
@@ -9937,12 +9933,11 @@ export const ARTICLES: Article[] = [
         ],
       },
     
-      { h2: 'Worth Stretching For: TaylorMade Spider GT — ~$299 (over the $150 budget)', body: 'The Spider GT brings high-MOI mallet stability to the $140 price point. The True Path alignment system makes aiming noticeably easier than any other putter at this price. Heavier head weight (360g) dampens mishit feedback, which is a feature for nervous short-putters and a drawback for feel-oriented lag putters.', affiliateKey: 'taylormade-spider-gt', rating: 4.2 },
+      { h2: 'Worth Stretching For: TaylorMade Spider GT — ~$200 (over the $150 budget)', body: 'The Spider GT brings high-MOI mallet stability for about $200 — over this budget, but the cheapest way into a true high-MOI mallet. The True Path alignment system makes aiming noticeably easier than any other putter at this price. Heavier head weight (360g) dampens mishit feedback, which is a feature for nervous short-putters and a drawback for feel-oriented lag putters.', affiliateKey: 'taylormade-spider-gt', rating: 4.2 },
     ],
     comparisonTable: {
       headers: ['Putter', 'Best For', 'Type', 'Price', 'Face Tech'],
       rows: [
-        { name: 'TaylorMade Spider GT', affiliateKey: 'taylormade-spider-gt', bestFor: 'Premium step-up', price: '~$200', feature1: 'Mallet', feature2: 'Over budget', winner: false, rating: 4.5 },
         { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$129', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'Odyssey DFX', bestFor: 'Best Mallet', price: '~$129', feature1: 'Mallet', feature2: 'DFX Insert', winner: false, rating: 4.2, affiliateKey: 'odyssey-dfx' },
         { name: 'Wilson Staff Infinite', bestFor: 'Value Blade', price: '~$140', feature1: 'Blade', feature2: 'Double Milled', winner: false, rating: 4.1, affiliateKey: 'wilson-staff-infinite' },
@@ -12495,7 +12490,6 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Launch Monitor', 'Price', 'Technology', 'Best For', 'Sim Compatible'],
       rows: [
-        { name: 'Garmin Approach R10', badge: 'OVER BUDGET', rating: 4, affiliateKey: 'garmin-approach-r10', price: '~$599', bestFor: 'Just over the cap at $599 — included for comparison', feature1: 'Doppler radar', feature2: 'Yes (E6, Home Tee Hero)' },
         { name: 'Shot Scope LM1', badge: 'BEST VALUE', rating: 4.1, affiliateKey: 'shot-scope-lm1', price: '~$199', bestFor: 'Range practice data on a tight budget', feature1: 'Radar', feature2: 'No' },
         { name: 'Swing Caddie SC4 Pro', badge: 'BEST OVERALL', rating: 4.2, affiliateKey: 'swing-caddie-sc4-pro', price: '~$499', bestFor: 'Best under $500 — standalone, no phone needed', winner: true, feature1: 'Doppler radar', feature2: 'Limited' },
       ],
