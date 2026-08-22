@@ -46,6 +46,11 @@ const STOP = new Set(['golf','the','and','for','set','pack','one','dozen','balls
 /** Entries where the key is legitimately more specific than the caption, plus
  *  two genuinely unresolved cases that must NOT be guessed at. */
 const ALT_ALLOWED: Record<string, string> = {
+  // Wilson dropped the "Plus" suffix: the ball sold today is simply the Duo
+  // Soft (verified on B0DQ9R1YQF, 2026-08-22). The alt names the product a
+  // reader will actually see on Amazon; the key is a stale slug, and renaming
+  // keys is a separate job. Truthful alt beats a matching slug.
+  'wilson-duo-soft-plus': 'Wilson renamed Duo Soft Plus -> Duo Soft',
   'magnetic-ball-marker-desk': 'Key adds desk context the photo caption does not need.',
   'grip-trainer-steering-wheel': 'Key describes the shape; the alt uses the product name.',
   'taylormade-sim2-max': 'UNRESOLVED: key says sim2, alt says "SIM Max", links to /dp/B08QSKHMQG. Needs live verification before either side changes.',
