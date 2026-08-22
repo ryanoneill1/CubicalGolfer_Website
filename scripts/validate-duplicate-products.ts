@@ -42,6 +42,15 @@ const PENDING_IMAGE_PAIR = new Set<string>([
   // image twice at two prices. Needs its own product photo; allowed here so the
   // defect stays visible rather than blocking the build.
   'frogger-amphibian-towel|golf-towel-personalized',
+  // Sprint 56: the three genuine sub-$500 iron sets added for
+  // /best-irons-under-500/ have no product photography yet, so they share
+  // placeholder.webp with optoma-zw350st, which has been awaiting a shot since
+  // Sprint 32. This is the placeholder doing its job, not a duplicate record —
+  // but it is listed rather than exempted wholesale so it stays visible. Note
+  // the signature is the full sorted key list: photograph any ONE of these and
+  // the remaining set forms a new signature and fails the build again, which is
+  // the intended prompt to finish the job.
+  'cobra-air-x-2-irons|cobra-air-x-irons|optoma-zw350st|tour-edge-hot-launch-c522-irons',
 ]);
 
 const problems: string[] = [];

@@ -16,6 +16,15 @@
  *   the Cobra DS-Adapt MAX-K's, which really is $299 — it had been copied onto
  *   a Ping costing more than twice as much.
  *
+ * RULE 3 — the same check, for a benefit that OPENS with a bare price.
+ *   Rule 2 only fires when a preposition precedes the figure (under/below/at/
+ *   for/just $N). That pattern was written around the one example to hand, and
+ *   it cannot see the commonest shape of all: "$999 — cheapest premium iron set
+ *   in our test" on an entry priced $599. Four entries were drifting in exactly
+ *   that form, undetected, including one carrying three different prices across
+ *   the site. Units are compared only when they match, so "$8/grip" is measured
+ *   against "~$12/grip" but never against "~$40/dz".
+ *
  * PRECISION, measured rather than assumed:
  *
  *   a) Keys cannot carry punctuation, so "skytrak-plus" vs "SkyTrak+" and
@@ -81,6 +90,20 @@ for (const key of Object.keys(L)) {
         : Math.abs(price - claimed) / price > 0.12;
       if (contradicts) {
         priceBad.push(`  ${key}  (price ${e.price})\n      benefit claims "${m[0]}": "${text.slice(0, 70)}"`);
+      }
+    }
+
+    // RULE 3 — benefit opens with a bare price, e.g. "$999 — cheapest ...".
+    const lead = text.match(/^\s*\$\s*([0-9][0-9,]*(?:\.[0-9]{2})?)\s*(\/[a-z]+)?/i);
+    if (lead) {
+      const unitOf = (t: string) => (t.match(/\/(dz|dozen|mo|month|yr|year|grip|club|set|pair)/i)?.[1] ?? '').toLowerCase();
+      const pUnit = unitOf(String(e.price ?? ''));
+      const bUnit = (lead[2] ?? '').replace('/', '').toLowerCase();
+      if (pUnit === bUnit) {
+        const claimed = parseFloat(lead[1].replace(/,/g, ''));
+        if (claimed > 0 && Math.abs(price - claimed) / price > 0.12) {
+          priceBad.push(`  ${key}  (price ${e.price})\n      benefit opens "$${lead[1]}": "${text.slice(0, 70)}"`);
+        }
       }
     }
   }

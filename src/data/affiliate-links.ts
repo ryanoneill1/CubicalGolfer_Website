@@ -424,7 +424,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$299',
     priceNote: 'Current-generation head at a previous-generation price.',
-    label: 'Check Price at Amazon \u2192',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/cobra-ds-adapt-max-k.webp',
     imgAlt: 'Cobra DS-Adapt MAX-K Driver',
     benefits: [
@@ -692,7 +692,62 @@ export const AFFILIATE: Record<string, {
     benefits: [
       'No weaknesses — good at everything without excelling at one thing',
       'Best fitting system in golf — more combinations than any brand',
-      '$999 — cheapest premium iron set in our test',
+      'Among the cheapest full-size iron sets we tested',
+    ],
+  },
+
+  // ── Genuine sub-$500 iron sets (verified live 2026-08-22) ──────────────────
+  // Added because /best-irons-under-500/ had no pick that met its own title.
+  // Images are placeholders: no product photo has been sourced for these yet.
+  'tour-edge-hot-launch-c522-irons': {
+    url: 'https://www.amazon.com/dp/B07NTJ8G7Z?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '$349.99',
+    priceNote: 'Verified in stock at $349.99 on 2026-08-22. Iron prices move; check before buying.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/placeholder.webp',
+    imgAlt: 'Tour Edge Hot Launch C522 Irons',
+    benefits: [
+      'The cheapest complete 4-PW set on this page',
+      'KBS Max 80 steel shafts, not the unbranded steel usual at this price',
+      'Comfortably under the $500 line rather than scraping it',
+    ],
+  },
+  'cobra-air-x-irons': {
+    url: 'https://www.amazon.com/dp/B0C59YXLGP?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '$419.99',
+    priceNote: 'Verified in stock at $419.99 on 2026-08-22. Iron prices move; check before buying.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/placeholder.webp',
+    imgAlt: 'Cobra AIR-X Iron Set',
+    benefits: [
+      'A full 4-PW set from a major brand under the $500 line',
+      'AIR-X is the lightweight Cobra build, aimed at slower swing speeds',
+      'Offset head helps golfers who leave the face open',
+    ],
+  },
+  'cobra-air-x-2-irons': {
+    url: 'https://www.amazon.com/dp/B0CH1SRVMT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '$498.78',
+    priceNote: 'Sits about a dollar under the $500 line and stock was thin on 2026-08-22. Check the price before you count on it.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/placeholder.webp',
+    imgAlt: 'Cobra Air-X 2 Iron Set',
+    benefits: [
+      'The newest AIR-X generation still priced under $500',
+      'Lightweight build for moderate swing speeds',
+      'Low stock, so the price is the least stable of the three',
     ],
   },
 
@@ -2457,7 +2512,7 @@ export const AFFILIATE: Record<string, {
     benefits: [
       'Softest grip feel available — ideal for arthritis or joint pain',
       'Polymer material absorbs vibration on mis-hits',
-      '$8/grip — affordable comfort upgrade',
+      'Affordable comfort upgrade',
     ],
   },
   'superstroke-s-tech': {
@@ -3207,7 +3262,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Garmin Approach S12 GPS golf watch',
     benefits: [
       'Simple focused feature set -- exactly what a high handicapper needs',
-      '$149 -- lowest price with all core GPS features',
+      'Lowest price with all core GPS features',
       'No subscription required',
     ],
   },
@@ -3225,7 +3280,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '~$18',
     priceNote: 'Stable — this one rarely moves.',
-    label: 'Check Price at Amazon \u2192',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/sklz-golf-grip-trainer.webp',
     imgAlt: 'SKLZ Golf Grip Trainer',
     benefits: [
@@ -3575,7 +3630,7 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Golf apparel drops 40-60% during end-of-season sales.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/galvin-green-rain-jacket.webp', imgAlt: 'Galvin Green Gore-Tex golf rain jacket',
     benefits: [
-      '$100 — best value tested',
+      'Best value of the jackets tested',
       'Fully waterproof in moderate rain',
       'Stretch fabric — minimal swing restriction',
     ],
@@ -3659,7 +3714,7 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    label: 'Check Price at Amazon \u2192',
+    label: 'Check Price at Amazon →',
     retailer: 'Amazon',
     price: '~$219',
     imgSrc: '/images/products/nikon-coolshot-50i.webp',
@@ -3840,7 +3895,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$399',
+    price: '~$649',
     priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/taylormade-sim2-max-irons.webp', imgAlt: 'TaylorMade SIM2 Max irons',
