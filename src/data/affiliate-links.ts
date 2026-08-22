@@ -39,7 +39,14 @@ export const AFFILIATE: Record<string, {
   // Populated for every entry from its current URL host. The build-time guard in
   // scripts/check-affiliate-links.ts blocks any non-Amazon program whose tracking
   // ID has not yet been pasted into PROGRAMS.
-  program?: 'amazon' | 'carlsplace' | 'shopindoorgolf' | 'golfgalaxy' | '2ndswing' | 'bushnell' | 'playbetter' | 'vice';
+  // 'direct' means THIS ENTRY EARNS NOTHING and links straight to the maker.
+  // Added Sprint 55 for phone apps: The Grint, 18Birdies and Golfshot are free
+  // apps with no Amazon product, and they were rendering "Check Price at Amazon"
+  // buttons pointing at generic accessory searches on /best-golf-apps/ (4,746
+  // impressions). A reader clicking "Check Price" for a free app landed on a
+  // search for golf GPS accessories. No affiliate link is better than a wrong
+  // one, so these route to the official site and earn zero.
+  program?: 'amazon' | 'carlsplace' | 'shopindoorgolf' | 'golfgalaxy' | '2ndswing' | 'bushnell' | 'playbetter' | 'vice' | 'direct';
   commissionPct?: number;
   cookieDays?: number;
 }> = {
@@ -2741,15 +2748,13 @@ export const AFFILIATE: Record<string, {
   },
   // ── Apps & Software ─────────────────────────────────────────────────────────
   'the-grint': {
-    url: 'https://www.amazon.com/s?k=golf+GPS+app+accessory&linkCode=ll2&tag=cubicalgolfer-20&linkId=aacb1132da2ac52145a30d7800309bec&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DThe%2520Grint%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon',
-    price: 'Free / $9.99/mo Premium',
-    priceNote: 'Click to see current price — prices change frequently.',
-    label: 'Check Price at Amazon →',
+    url: 'https://www.thegrint.com/',
+    program: 'direct',
+    commissionPct: 0,
+    cookieDays: 0,
+    retailer: 'TheGrint',
+    price: 'Free · $9.99/mo Premium',
+    label: 'Get the App →',
     imgSrc: '/images/products/the-grint.webp',
     imgAlt: 'The Grint golf GPS and handicap tracking app',
         benefits: [
@@ -2759,15 +2764,13 @@ export const AFFILIATE: Record<string, {
     ],
   },
   '18birdies': {
-    url: 'https://www.amazon.com/s?k=golf+GPS+rangefinder+accessory&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520GPS%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon',
-    price: 'Free / $11.99/mo Premium',
-    priceNote: 'Click to see current price — prices change frequently.',
-    label: 'Check Price at Amazon →',
+    url: 'https://18birdies.com/',
+    program: 'direct',
+    commissionPct: 0,
+    cookieDays: 0,
+    retailer: '18Birdies',
+    price: 'Free · $11.99/mo Premium',
+    label: 'Get the App →',
     imgSrc: '/images/products/18birdies.webp',
     imgAlt: '18Birdies golf GPS and rangefinder app',
         benefits: [
@@ -2777,15 +2780,13 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'golfshot': {
-    url: 'https://www.amazon.com/s?k=golf+GPS+watch+accessories&tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolfshot%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    retailer: 'Amazon',
-    price: 'Free / $39.99/yr Pro',
-    priceNote: 'Click to see current price — prices change frequently.',
-    label: 'Check Price at Amazon →',
+    url: 'https://golfshot.com/',
+    program: 'direct',
+    commissionPct: 0,
+    cookieDays: 0,
+    retailer: 'Golfshot',
+    price: 'Free · $39.99/yr Pro',
+    label: 'Get the App →',
     imgSrc: '/images/products/golfshot.webp',
     imgAlt: 'Golfshot golf GPS app',
     benefits: [

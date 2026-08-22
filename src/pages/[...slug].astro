@@ -456,6 +456,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
         url={topAff.url}
         retailer={topAff.retailer}
         badge={article.stickyLabel || (topRow.winner ? 'BEST PICK' : topRow.bestFor)}
+        unmonetised={(topAff as any).program === 'direct'}
       />
     );
   })()}
@@ -551,6 +552,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
       const ctaBadge = ctaRow?.badge ?? 'Our Top Pick';
       return (
         <ProductCTA
+          unmonetised={(ctaAff as any)?.program === 'direct'}
           productName={ctaName}
           amazonUrl={ctaAff.url}
           amazonPrice={ctaAff.price}
@@ -608,6 +610,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
                 imgAlt={aff.imgAlt ?? row.name}
                 benefits={aff.benefits}
                 priceNote={aff.priceNote || ''}
+                unmonetised={(aff as any).program === 'direct'}
               />
             );
           })}
@@ -700,7 +703,8 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
                 <tr class={row.winner ? 'cmp-winner' : ''}>
                   <td>
                     {rowAff ? (
-                      <a href={rowAff.url} target="_blank" rel="nofollow noopener sponsored"
+                      <a href={rowAff.url} target="_blank"
+                        rel={(rowAff as any).program === 'direct' ? "nofollow noopener" : "nofollow noopener sponsored"}
                         class="cmp-product-link">{row.name}</a>
                     ) : row.name}
                     {row.winner && <span class="badge-best">BEST PICK</span>}
@@ -709,8 +713,10 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
                   <td class="cmp-td-buy">
                     {rowAff ? (
                       <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
-                        rel="nofollow noopener sponsored"
-                        aria-label={`Check price for ${row.name} on ${rowAff.retailer}`}>
+                        rel={(rowAff as any).program === 'direct' ? "nofollow noopener" : "nofollow noopener sponsored"}
+                        aria-label={(rowAff as any).program === 'direct'
+                          ? `Get ${row.name} from ${rowAff.retailer}`
+                          : `Check price for ${row.name} on ${rowAff.retailer}`}>
                         {(row.affiliateKey && getAffiliateLink(row.affiliateKey)?.price) || row.price} →
                       </a>
                     ) : (
@@ -925,6 +931,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
           )}
           {aff && !(section.recommendedGear?.length > 0) && (
             <AffiliateCTA
+              unmonetised={(aff as any)?.program === 'direct'}
               url={aff.url} price={aff.price} name={section.h2}
               retailer={aff.retailer} label={aff.label}
               golfGalaxyUrl={aff.golfGalaxyUrl || ''}

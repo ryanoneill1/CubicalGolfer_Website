@@ -217,7 +217,7 @@ export function comparisonProductsSchema(products: ComparisonProduct[], reviewDa
       description: p.description,
       image: p.image ? `${DOMAIN}${p.image}` : OG_IMAGE,
       ...((brandFor(p.name) ?? p.brand) ? { brand: { '@type': 'Brand', name: brandFor(p.name) ?? p.brand } } : {}),
-      ...(numericPrice ? { offers: {
+      ...(numericPrice && (p as any).program !== 'direct' ? { offers: {
         '@type': 'Offer',
         ...(isSearchUrl(p.url) ? {} : { url: p.url }),
         priceCurrency: 'USD',
@@ -314,7 +314,7 @@ export function productSchema(opts: {
     description:   opts.description,
     image:         opts.image ?? `https://www.cubicalgolfer.com/images/og-image.jpg`,
     ...((brandFor(opts.name) ?? opts.brand) ? { brand: { '@type': 'Brand', name: brandFor(opts.name) ?? opts.brand } } : {}),
-    ...(opts.price ? { offers: {
+    ...(opts.price && (opts as any).program !== 'direct' ? { offers: {
       '@type':      'Offer',
       ...(isSearchUrl(opts.url) ? {} : { url: opts.url }),
       priceCurrency:'USD',
@@ -479,7 +479,12 @@ export function reviewSchema(article: Article): object | null {
       description: reviewBody.slice(0, 200),
       ...(brand ? { brand: { '@type': 'Brand', name: brand } } : {}),
       image: image,
-      ...(aff ? {
+      // An unmonetised entry (program: 'direct') is a free phone app, not a
+      // product for sale. Emitting an Offer for it would declare a price and
+      // InStock availability for something that has neither — the app tiers
+      // read "Free / $9.99/mo", and the extractor happily pulled 9.99 out of
+      // that and called it the price.
+      ...(aff && aff.program !== 'direct' ? {
         ...(priceNum ? { offers: {
           '@type': 'Offer',
           ...(isSearchUrl(aff.url) ? {} : { url: aff.url }),
@@ -607,6 +612,11 @@ export function buyingGuideProductSchema(
   // and preserves manufacturer casing. Undefined for generic accessories.
   const brandName = brandFor(productName) ?? brandFor(affiliateKey) ?? '';
 
+  // Derived here rather than passed in, so no caller has to change: an entry
+  // whose program is 'direct' earns nothing and has no SKU (the three phone
+  // apps). Its "Free / $9.99/mo" price string must not become an Offer.
+  const unmonetised = !!(affiliateKey && (AFFILIATE as any)[affiliateKey]?.program === 'direct');
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -644,7 +654,11 @@ export function buyingGuideProductSchema(
     // needs; `url` is optional. So always emit the offer when we know a price,
     // and include `url` only when it resolves to a real product page — that
     // keeps the Amazon ToS guard (never present a search page as a PDP offer).
-    ...(numericPrice ? { offers: {
+    // ...but an UNMONETISED entry (program: 'direct') is a free phone app with
+    // no SKU. "Free / $9.99/mo Premium" made numericPrice 9.99, so this block
+    // was declaring a $9.99 Offer with InStock availability for something that
+    // is free and not stocked anywhere.
+    ...(numericPrice && !unmonetised ? { offers: {
       '@type': 'Offer',
       ...(isSearchUrl(affiliateUrl) ? {} : { url: affiliateUrl }),
       priceCurrency: 'USD',

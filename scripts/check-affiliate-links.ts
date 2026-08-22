@@ -32,7 +32,10 @@ for (const [key, aff] of Object.entries(AFFILIATE) as [string, any][]) {
     problems.push(`${key}: unknown program '${program}' — add it to PROGRAMS in src/data/affiliate-programs.ts.`);
     continue;
   }
-  if (program !== 'amazon' && PROGRAMS[program].trackingParam.trim() === '') {
+  // 'direct' is unmonetised on purpose (see PROGRAMS.direct). Amazon carries its
+  // tag inline in the url rather than in trackingParam. Everything else with an
+  // empty trackingParam is an account that is not wired up yet, and must block.
+  if (program !== 'amazon' && program !== 'direct' && PROGRAMS[program].trackingParam.trim() === '') {
     problems.push(
       `${key}: program '${program}' has no trackingParam yet — this link would ship untracked and unpaid. ` +
       `Paste the affiliate ID into PROGRAMS.${program}.trackingParam in src/data/affiliate-programs.ts once the account is approved.`,

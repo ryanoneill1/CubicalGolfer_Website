@@ -23,7 +23,8 @@ export type ProgramKey =
   | '2ndswing'
   | 'bushnell'
   | 'playbetter'
-  | 'vice';
+  | 'vice'
+  | 'direct';
 
 export interface AffiliateProgram {
   name: string;          // Display name shown on buttons, e.g. "Carl's Place"
@@ -36,6 +37,23 @@ export interface AffiliateProgram {
 }
 
 export const PROGRAMS: Record<ProgramKey, AffiliateProgram> = {
+  // ── NOT AN AFFILIATE PROGRAM ───────────────────────────────────────────────
+  // 'direct' is the deliberate absence of monetisation. It exists for products
+  // that have no retail SKU to sell — currently the three phone apps on
+  // /best-golf-apps/, which were shipping "Check Price at Amazon" buttons that
+  // led to generic accessory searches. An empty trackingParam here is CORRECT,
+  // not a pending approval, so check-affiliate-links.ts exempts this one key
+  // from the untracked-link guard. Use it only when there is genuinely nothing
+  // to earn — never as a shortcut around wiring up a real program.
+  direct: {
+    name: 'Official site',
+    commissionPct: 0,
+    cookieDays: 0,
+    baseUrl: '',
+    trackingParam: '',
+    signupUrl: '',
+    network: 'none — unmonetised by design',
+  },
   // ── LIVE — accounts approved, tracking active ──────────────────────────────
   amazon: {
     name: 'Amazon',

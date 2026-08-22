@@ -6,6 +6,8 @@
  */
 
 interface Props {
+  /** program: 'direct' — unmonetised, so no rel=sponsored and no "Check price". */
+  unmonetised?: boolean;
   name: string;
   price: string;
   url: string;
@@ -13,7 +15,7 @@ interface Props {
   badge?: string;
 }
 
-const { name, price, url, retailer, badge = 'BEST PICK' } = Astro.props;
+const { name, price, url, retailer, badge = 'BEST PICK', unmonetised = false } = Astro.props;
 
 if (!url) return;
 const stickyOutbound = url.includes('amazon.com') ? 'amazon' : url.includes('bushnell') ? 'bushnell' : url.includes('playbetter') ? 'playbetter' : url.includes('golfgalaxy') || url.includes('click-101736949') ? 'golfgalaxy' : 'other';
@@ -31,9 +33,9 @@ const stickyOutbound = url.includes('amazon.com') ? 'amazon' : url.includes('bus
         href={url}
         class="sb__btn"
         target="_blank"
-        rel="nofollow noopener sponsored"
+        rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
         data-outbound={stickyOutbound}
-        aria-label={`Check price for ${name} at ${retailer}`}
+        aria-label={unmonetised ? `Get ${name} from ${retailer}` : `Check price for ${name} at ${retailer}`}
       >
         Check Price ↗
       </a>

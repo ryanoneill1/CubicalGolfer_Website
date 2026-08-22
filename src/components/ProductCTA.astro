@@ -9,6 +9,8 @@
  */
 
 interface Props {
+  /** program: 'direct' — earns nothing, so no rel=sponsored and no "Check price" wording. */
+  unmonetised?: boolean;
   productName: string;
   amazonUrl: string;
   amazonPrice: string;
@@ -32,6 +34,7 @@ const {
   imageUrl,
   why,
   bestFor,
+  unmonetised = false,
 } = Astro.props;
 
 const fullStars = rating ? Math.floor(rating) : 0;
@@ -63,7 +66,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
         href={amazonUrl}
         class="qp__cta"
         target="_blank"
-        rel="nofollow noopener sponsored"
+        rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
         aria-label={`Check price for ${productName}`}
       >
         {amazonPrice && <span class="qp__cta-price">{amazonPrice}</span>}
@@ -74,7 +77,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
           href={altUrl}
           class="qp__alt"
           target="_blank"
-          rel="nofollow noopener sponsored"
+          rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
         >
           See at {altLabel} →
         </a>

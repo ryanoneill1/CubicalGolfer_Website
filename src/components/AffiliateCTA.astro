@@ -5,6 +5,8 @@
  */
 
 interface Props {
+  /** program: 'direct' — earns nothing, so no rel=sponsored and no "Check price" wording. */
+  unmonetised?: boolean;
   url: string;
   price: string;
   name: string;
@@ -32,6 +34,7 @@ const {
   isWinner = false,
   golfGalaxyUrl = '',
   primaryRetailer,
+  unmonetised = false,
 } = Astro.props;
 
 // When primaryRetailer is 'direct' and a partner URL exists, swap the buttons:
@@ -63,8 +66,8 @@ const dateLabel = dateChecked
     class="aff-cta__btn"
     data-outbound={primaryUrl.includes("amazon.com") ? "amazon" : primaryUrl.includes("bushnell") ? "bushnell" : primaryUrl.includes("playbetter") ? "playbetter" : primaryUrl.includes("golfgalaxy") || primaryUrl.includes("click-101736949") ? "golfgalaxy" : "other"}
     target="_blank"
-    rel="nofollow noopener sponsored"
-    aria-label={`Check price for ${name} at ${primaryRetailerName}`}
+    rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
+    aria-label={unmonetised ? `Get ${name} from ${primaryRetailerName}` : `Check price for ${name} at ${primaryRetailerName}`}
     onclick={`window.plausible&&window.plausible('Affiliate Click',{props:{product:'${name.replace(/'/g,"\\'")}',retailer:'${primaryRetailerName}'}});`}
   >
     <span class="aff-cta__btn-text">{btnText}</span>
@@ -80,8 +83,8 @@ const dateLabel = dateChecked
       class="aff-cta__btn aff-cta__btn--gg"
       data-outbound={secondaryUrl.includes("amazon.com") ? "amazon" : secondaryUrl.includes("bushnell") ? "bushnell" : secondaryUrl.includes("playbetter") ? "playbetter" : secondaryUrl.includes("golfgalaxy") || secondaryUrl.includes("click-101736949") ? "golfgalaxy" : "other"}
       target="_blank"
-      rel="nofollow noopener sponsored"
-      aria-label={`Check price for ${name} at ${secondaryRetailer}`}
+      rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
+      aria-label={unmonetised ? `Get ${name} from ${secondaryRetailer}` : `Check price for ${name} at ${secondaryRetailer}`}
       onclick={`window.plausible&&window.plausible('Affiliate Click',{props:{product:'${name.replace(/'/g,"\\'")}',retailer:'${secondaryRetailer}'}});`}
     >
       <span class="aff-cta__btn-text">Check Price at {secondaryRetailer} →</span>
