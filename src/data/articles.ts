@@ -7293,7 +7293,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Training Aid', 'Price', 'Skill Trained', 'Space Needed', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'sklz-accelerator-putting-mat', name: 'SKLZ Accelerator Pro', bestFor: 'Best Overall', price: '~$55', feature1: 'Putting', feature2: '9 ft carpet', winner: true },
-      { name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$35', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
+      { name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$45', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
       { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
       { name: 'Alignment Sticks (4-pack)', affiliateKey: 'alignment-sticks', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
       { badge: 'STRONG PICK', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$109', feature1: 'Tempo', feature2: '10 ft', winner: false },
@@ -8286,9 +8286,9 @@ export const ARTICLES: Article[] = [
         pros: ['Closest to real green feel indoors', 'Adjustable break with foam wedges', 'Available up to 4x18 ft for serious setups'],
         cons: ['$169 is a real investment for a mat', 'Requires a dedicated room — too big for a cubicle', 'No ball return — manual ball retrieval'],
       },
-      { h2: 'Best Training Mat: Wellputt', badge: 'BEST FOR DRILLS', body: "The Wellputt ($99) is the training aid disguised as a putting mat. Printed distance markers, gate drills, and alignment zones turn every session into deliberate practice rather than mindless rolling. The surface is tour-spec stimp speed. It is used by several PGA Tour players (you can find their names on the Wellputt website). At $99 it sits between the budget options and the BirdieBall — a solid middle ground for golfers who want structured practice.", price: '~$99', affiliateKey: 'wellputt-mat', rating: 4.5,
+      { h2: 'Best Training Mat: Wellputt', badge: 'BEST FOR DRILLS', body: "The Wellputt ($99) is the training aid disguised as a putting mat. Printed distance markers, gate drills, and alignment zones turn every session into deliberate practice rather than mindless rolling. The surface is tour-spec stimp speed. It is used by several PGA Tour players (you can find their names on the Wellputt website). At $99 it sits between the budget options and the BirdieBall — a solid middle ground for golfers who want structured practice.", price: '~$89', affiliateKey: 'wellputt-mat', rating: 4.5,
         pros: ['Printed drills turn practice into training', 'Tour-spec surface speed', 'Great size (13 ft) for distance control work'],
-        cons: ['$99 for what is essentially a mat with markings', 'No ball return', 'Printed guides fade after 12+ months of heavy use'],
+        cons: ['$89 for what is essentially a mat with markings', 'No ball return', 'Printed guides fade after 12+ months of heavy use'],
       },
       { h2: 'How to Actually Practice on a Putting Mat (10-Minute Daily Routine)', body: "The mat is useless if you just roll balls aimlessly. Here is my 10-minute daily routine: (1) Gate drill — set two tees one putter-head-width apart, 3 feet from the hole, roll 10 balls through the gate (2 minutes). (2) Distance control — roll to a coin at 5, 7, and 9 feet, trying to stop within 6 inches (3 minutes). (3) Pressure putting — must make 5 in a row from 4 feet before stopping, restart count on any miss (5 minutes). This routine takes 10 minutes and is the reason my 3-putt rate dropped 13 percentage points in 6 months." },
     ],
@@ -8298,7 +8298,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'putt-a-bout-putting-green', name: 'Putt-A-Bout Par 1', bestFor: 'Best Overall', price: '~$45', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
         { rating: 4.5, affiliateKey: 'sklz-accelerator-putting-mat', name: 'SKLZ Accelerator', bestFor: 'Best Ball Return', price: '~$40', feature1: '4.5/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'birdieball-putting-green', name: 'BirdieBall', bestFor: 'Best Home Setup', price: '~$169', feature1: '4.7/5 ★', winner: false },
-        { rating: 4.5, affiliateKey: 'wellputt-mat', name: 'Wellputt', bestFor: 'Best for Drills', price: '~$99', feature1: '4.5/5 ★', winner: false },
+        { rating: 4.5, affiliateKey: 'wellputt-mat', name: 'Wellputt', bestFor: 'Best for Drills', price: '~$89', feature1: '4.5/5 ★', winner: false },
       ],
     },
     faq: [
@@ -13612,7 +13612,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Every golfer — a towel is essential equipment'], whoSkip: ['Nobody — you need a towel'],
     comparisonTable: { headers: ['Towel', 'Best For', 'Price', 'Material', 'Our Rating'], rows: [
       { badge: 'STRONG PICK', affiliateKey: 'frogger-amphibian-towel', name: 'Frogger Amphibian', bestFor: 'Best Overall', price: '~$30', feature1: 'Dual-texture', feature2: '', winner: true, rating: 4.7 },
-      { rating: 4.4, affiliateKey: 'club-glove-microfiber-towel', name: 'Club Glove Microfiber', bestFor: 'Best Value', price: '~$18', feature1: 'Microfiber', feature2: '', winner: false },
+      { rating: 4.4, affiliateKey: 'club-glove-microfiber-towel', name: 'Club Glove Microfiber', bestFor: 'Best Value', price: '~$22', feature1: 'Microfiber', feature2: '', winner: false },
     ]},
     sections: [
       { h2: 'Best Overall: Frogger Amphibian', badge: 'TOP PICK', affiliateKey: 'frogger-amphibian-towel', rating: 4.7, body: 'The Frogger Amphibian has been on my bag for 3 seasons. The wet side still scrubs groove dirt effectively after hundreds of uses, and the carabiner clip is as tight as day one. I have washed it 30-plus times (cold water, air dry) and it still absorbs like new. The dual-texture design is genuinely useful — I use the scrub side to clean grooves between every approach shot and the waffle side to dry my grips before teeing off.\n\nThe Frogger Amphibian has a wet side (scrubbing texture for cleaning grooves) and a dry side (waffle weave for drying grips). The carabiner clip is the strongest we tested — it survives a full season without loosening. At $25, a minor investment that lasts 2-3 seasons.', price: '~$25',
@@ -13652,7 +13652,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Golfers who play through rain', 'Anyone who has had an umbrella invert on the course'],
     whoSkip: ['Fair-weather golfers who cancel for rain'],
     comparisonTable: { headers: ['Umbrella', 'Best For', 'Price', 'Wind Rating', 'Our Rating'], rows: [
-      { badge: 'STRONG PICK', affiliateKey: 'gustbuster-umbrella', name: 'GustBuster Pro', bestFor: 'Best Wind Resistance', price: '~$35', feature1: '55+ mph', feature2: '', winner: true, rating: 4.7 },
+      { badge: 'STRONG PICK', affiliateKey: 'gustbuster-umbrella', name: 'GustBuster Pro', bestFor: 'Best Wind Resistance', price: '~$85', feature1: '55+ mph', feature2: '', winner: true, rating: 4.7 },
       { rating: 4.4, affiliateKey: 'procella-golf-umbrella', name: 'Procella 68"', bestFor: 'Best Coverage', price: '~$30', feature1: '46+ mph', feature2: '', winner: false },
     ]},
     sections: [

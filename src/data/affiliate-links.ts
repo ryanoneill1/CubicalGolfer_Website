@@ -1092,13 +1092,13 @@ export const AFFILIATE: Record<string, {
 
   // Gustbuster Pro Series umbrella
   'gustbuster-umbrella': {
-    url: 'https://www.amazon.com/s?k=gustbuster-umbrella&crid=1YF0RT6YG4I3Y&sprefix=gustbuster-umbrella%2Caps%2C267&linkCode=ll2&tag=cubicalgolfer-20&linkId=874d2e1ec20de614bde4a3c3f7c5f5c0&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0009GGIY2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGustBuster%2520Umbrella%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$45',
+    price: '~$85',
     priceNote: 'Consumable — buy in multi-packs for best per-unit price.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/gustbuster-umbrella.webp',
@@ -1872,7 +1872,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── New: 7 buying guide articles (putting, LH, slice aids, nets, shoes, slow swing, speed trainers) ──
   'putt-a-bout-putting-green': {
-    url: 'https://www.amazon.com/s?k=putt-a-bout-putting-green&crid=2XNFAKWHTP8WW&sprefix=pinnacle-rush%2Caps%2C245&linkCode=ll2&tag=cubicalgolfer-20&linkId=3f762aebea5a636fe4b3b8a3c8ab5b8a&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B00BNFE764?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPutt-A-Bout%2520Putting%2520Green%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -1913,13 +1913,13 @@ export const AFFILIATE: Record<string, {
     benefits: ['True-roll surface mimics real green speeds', 'Adjustable break with foam wedges', 'Available in sizes from 4x12 to 4x18 ft'],
   },
   'wellputt-mat': {
-    url: 'https://www.amazon.com/s?k=wellputt-mat&crid=KQX20DQG6IPJ&sprefix=wellputt-mat%2Caps%2C258&linkCode=ll2&tag=cubicalgolfer-20&linkId=bab584186cfda3a0727e9344a211941b&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0789WHQY8?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWellputt%2520Mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$99',
+    price: '~$89',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/wellputt-mat.webp',
@@ -4241,11 +4241,11 @@ export const AFFILIATE: Record<string, {
   },
   // ═══ ACCESSORIES — Towel, Umbrella, Bags, Carts ═══
   'club-glove-microfiber-towel': {
-    url: `https://www.amazon.com/s?k=club+glove+microfiber+golf+towel&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B0D6SJTCV2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$20', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$22', label: `See Today's Price →`,
     imgSrc: '/images/products/club-glove-microfiber-towel.webp', imgAlt: 'Club Glove microfiber golf towel',
     benefits: [
       'Dual-texture design: wet side cleans, dry side dries',
