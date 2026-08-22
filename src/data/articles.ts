@@ -1463,7 +1463,7 @@ export const ARTICLES: Article[] = [
         h2: 'Latest Release: Callaway Chrome Tour',
         rating: 4.7, affiliateKey: 'callaway-chrome-tour-2026',
         body: "The Chrome Tour is the ball that made us do a double take on the launch monitor. Callaway redesigned the mantle layer — what they call the Tour Fast Mantle — and the result is genuinely more ball speed without sacrificing feel. This is not marketing spin. We measured it.\n\nAt 94 mph swing speed, the Chrome Tour carried 229-232 yards — 3-4 yards longer than the Pro V1 on average. That gap held up across multiple sessions. The ball launches slightly lower with less spin off the driver, which produces a more penetrating flight. In a 15 mph headwind, the Chrome Tour held up notably better than the Pro V1.\n\nThe feel is different from the Pro V1 — not worse, just different. Off the putter, the Chrome Tour has a slightly firmer click. Some of our testers preferred it. Off wedges, the spin is close to Pro V1 levels but not quite identical. On 60-yard pitch shots, the Chrome Tour checked and released about 6 inches further than the Pro V1. Over 18 holes that difference is negligible, but if you are obsessive about short-game control, the Pro V1 still has the edge.\n\nDurability matched the Pro V1 — the urethane cover is robust and we saw no performance drop through 18 holes. At $58/dozen it costs $3 more than the Pro V1 per box, which adds up if you buy 8-10 dozen per year.\n\nCompared to the Pro V1: 3-4 yards longer off the tee with slightly less greenside spin. If distance is your priority and you want tour-level performance, the Chrome Tour is the pick. If feel and short-game control matter more, stay with the Pro V1.\n\nPerfect for: golfers with 90+ mph swing speed who prioritize distance without giving up tour-ball feel.\n\nLook elsewhere if: you want the absolute softest feel around the greens — the Pro V1 wins that battle.",
-        price: '~$58 for 12',
+        price: '$57.99/dz',
         pros: [
           '3-4 yards longer than Pro V1 at 94 mph — verified on launch monitor',
           'Penetrating ball flight holds up well in wind',
@@ -1628,7 +1628,7 @@ export const ARTICLES: Article[] = [
       headers: ['Golf Ball', 'Best For', 'Price/Dz', 'Compression', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '87', feature2: '', winner: true, rating: 4.9},
-        { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '~$58', feature1: '~90', feature2: '', winner: false, rating: 4.7 },
+        { affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour', bestFor: 'Best 2026 Release', price: '$57.99/dz', feature1: '~90', feature2: '', winner: false, rating: 4.7 },
         { rating: 4.5, affiliateKey: 'srixon-q-star-tour', name: 'Srixon Q-Star Tour', bestFor: 'Best Under 95mph', price: '~$35', feature1: '72', feature2: '', winner: false},
         { rating: 4.3, name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best Under 85mph', price: '~$25', feature1: '38', feature2: '', winner: false},
         { badge: 'STRONG PICK', affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value Tour', price: '~$33', feature1: '80', feature2: '', winner: false, rating: 4.6},
@@ -6618,7 +6618,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['Golf Ball', 'Price', 'Carry (94mph)', 'Spin', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.9, affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'Best Overall', price: '~$55', feature1: '4.9/5 ★', feature2: 'Best', winner: true },
-      { rating: 4.7, affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour', bestFor: 'Most Distance', price: '~$58', feature1: '4.7/5 ★', feature2: 'Very Good', winner: false },
+      { rating: 4.7, affiliateKey: 'callaway-chrome-tour-2026', name: 'Callaway Chrome Tour', bestFor: 'Most Distance', price: '$57.99/dz', feature1: '4.7/5 ★', feature2: 'Very Good', winner: false },
       { rating: 4.4, affiliateKey: 'vice-pro', name: 'Vice Pro', bestFor: 'Best Value', price: '~$33', feature1: '4.5/5 ★', feature2: 'Good', winner: false },
     ] },
     faq: [

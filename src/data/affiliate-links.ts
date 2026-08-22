@@ -503,13 +503,13 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Chrome Tour 2026 — search (very new Jan 2026, single ASIN not yet stable)
   'callaway-chrome-tour-2026': {
-    url: 'https://www.amazon.com/s?k=Callaway+Chrome+Tour+Golf+Balls+One+Dozen&linkCode=ll2&tag=cubicalgolfer-20&linkId=5ca2d959a8efc39ebff64533f50ab93a&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0FX3CZ31B?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Tour%25202026%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$58/dozen',
+    price: '$57.99/dz',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-chrome-tour-2026.webp',
@@ -3744,14 +3744,14 @@ export const AFFILIATE: Record<string, {
 
   // ═══ MISSING PRICE FIXES — June 2026 ═══
   'garmin-approach-s70': {
-    url: 'https://www.amazon.com/s?k=garmin+approach+s70&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0CBW67NLW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+S70*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$550',
-    priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
+    price: '$654.99',
+    priceNote: 'Verified at $654.99 on 2026-08-22. Amazon mostly sells the S70 in bundles at $705-714; this is the plain watch.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/garmin-s70.webp', imgAlt: 'Garmin Approach S70 GPS golf watch',
   },
