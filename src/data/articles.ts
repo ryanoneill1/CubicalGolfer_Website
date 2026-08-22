@@ -13187,7 +13187,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'nike-dri-fit-victory-polo', name: 'Nike Dri-FIT Victory', bestFor: 'Best Overall', price: '~$45', feature1: 'Polyester Dri-FIT', feature2: '', winner: true, rating: 4.6 },
         { rating: 4.5, affiliateKey: 'footjoy-prodry-polo', name: 'FootJoy ProDry', bestFor: 'Best Premium', price: '~$60', feature1: 'ProDry Lisle', feature2: '', winner: false },
-        { rating: 4.4, affiliateKey: 'adidas-ultimate365-polo', name: 'adidas Ultimate365', bestFor: 'Best Stretch', price: '~$55', feature1: 'Recycled polyester', feature2: '', winner: false },
+        { rating: 4.4, affiliateKey: 'adidas-ultimate365-polo', name: 'adidas Ultimate365', bestFor: 'Best Stretch', price: '~$49', feature1: 'Recycled polyester', feature2: '', winner: false },
         { rating: 4.3, affiliateKey: 'puma-cloudspun-polo', name: 'Puma Cloudspun', bestFor: 'Best Value', price: '~$50', feature1: 'Cloudspun blend', feature2: '', winner: false },
       ],
     },
@@ -13239,7 +13239,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Pants', 'Best For', 'Price', 'Stretch', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'adidas-ultimate365-pants', name: 'adidas Ultimate365', bestFor: 'Best Overall', price: '~$65', feature1: '4-way stretch', feature2: '', winner: true, rating: 4.5 },
+        { badge: 'STRONG PICK', affiliateKey: 'adidas-ultimate365-pants', name: 'adidas Ultimate365', bestFor: 'Best Overall', price: '~$54', feature1: '4-way stretch', feature2: '', winner: true, rating: 4.5 },
         { rating: 4.4, affiliateKey: 'nike-dri-fit-golf-pants', name: 'Nike Dri-FIT', bestFor: 'Best Slim Fit', price: '~$70', feature1: 'Dri-FIT stretch', feature2: '', winner: false },
         { rating: 4.3, affiliateKey: 'puma-jackpot-golf-pants', name: 'Puma Jackpot', bestFor: 'Best Value', price: '~$55', feature1: '4-way stretch', feature2: '', winner: false },
       ],
@@ -13336,7 +13336,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Hat', 'Best For', 'Price', 'UPF', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'titleist-tour-performance-hat', name: 'Titleist Tour Performance', bestFor: 'Best Overall', price: '~$30', feature1: 'UPF 50+', feature2: '', winner: true, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'titleist-tour-performance-hat', name: 'Titleist Tour Performance', bestFor: 'Best Overall', price: '~$35', feature1: 'UPF 50+', feature2: '', winner: true, rating: 4.7 },
         { rating: 4.4, affiliateKey: 'callaway-cg-logo-hat', name: 'Callaway CG Logo', bestFor: 'Best Value', price: '~$25', feature1: 'UPF 30+', feature2: '', winner: false },
         { rating: 4.5, affiliateKey: 'nike-legacy91-golf-hat', name: 'Nike Legacy91', bestFor: 'Best Fit System', price: '~$28', feature1: 'UPF 40+', feature2: '', winner: false },
       ],
@@ -13792,7 +13792,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Golfers who ride more than walk', 'Anyone who wants maximum storage and organization'],
     whoSkip: ['Walking golfers (see stand bags)', 'Minimalists who want a lightweight bag'],
     comparisonTable: { headers: ['Bag', 'Best For', 'Price', 'Dividers', 'Our Rating'], rows: [
-      { badge: 'STRONG PICK', affiliateKey: 'callaway-org-14-cart-bag', name: 'Callaway Org 14', bestFor: 'Best Overall', price: '~$230', feature1: '14-way', feature2: '', winner: true, rating: 4.6 },
+      { badge: 'STRONG PICK', affiliateKey: 'callaway-org-14-cart-bag', name: 'Callaway Org 14', bestFor: 'Best Overall', price: '~$265', feature1: '14-way', feature2: '', winner: true, rating: 4.6 },
       { rating: 4.5, affiliateKey: 'titleist-players-4', name: 'Titleist Players 4', bestFor: 'Best Premium', price: '~$270', feature1: '14-way', feature2: '', winner: false },
     ]},
     sections: [
@@ -13833,7 +13833,7 @@ export const ARTICLES: Article[] = [
     whoSkip: ['Riders who want maximum storage (see cart bags)'],
     comparisonTable: { headers: ['Bag', 'Best For', 'Price', 'Weight', 'Our Rating'], rows: [
       { badge: 'STRONG PICK', affiliateKey: 'ping-hoofer-14-stand-bag', name: 'Ping Hoofer 14', bestFor: 'Best Overall', price: '~$270', feature1: '4.5 lbs', feature2: '', winner: true, rating: 4.7 },
-      { rating: 4.4, affiliateKey: 'ogio-fuse-stand-bag', name: 'OGIO Fuse', bestFor: 'Best Value', price: '~$200', feature1: '4.8 lbs', feature2: '', winner: false },
+      { rating: 4.4, affiliateKey: 'ogio-fuse-stand-bag', name: 'OGIO Fuse', bestFor: 'Best Value', price: '~$170', feature1: '4.8 lbs', feature2: '', winner: false },
     ]},
     sections: [
       { h2: 'Best Overall: Ping Hoofer 14', badge: 'TOP PICK', affiliateKey: 'ping-hoofer-14-stand-bag', rating: 4.7, body: 'The Hoofer 14 is the reason I switched from riding to walking. The dual-strap system distributes weight so evenly that by hole 12, I stopped noticing I was carrying anything. The legs deploy instantly and reliably on every surface — fairway, rough, concrete cart path, and wet ground. After 40-plus walking rounds, the straps show wear but the functionality is unchanged. This is the bag I recommend to every golfer who asks about walking.\n\nThe Hoofer is the most popular stand bag for a reason — the dual-strap system distributes weight evenly, the legs deploy reliably on every surface, and the 14-way top keeps clubs separated without snagging.', price: '~$270',

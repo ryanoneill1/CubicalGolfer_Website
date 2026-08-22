@@ -4024,11 +4024,11 @@ export const AFFILIATE: Record<string, {
   },
   // ═══ APPAREL — Shirts ═══
   'nike-dri-fit-victory-polo': {
-    url: `https://www.amazon.com/s?k=nike-dri-fit-victory-golf-polo&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B07RYBFRM1?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$45', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$47', priceNote: 'Sold as one listing across many colours and sizes; the exact price varies by the combination you pick.', label: `See Today's Price →`,
     imgSrc: '/images/products/nike-dri-fit-victory-polo.webp', imgAlt: 'Nike Dri-FIT Victory golf polo shirt',
     benefits: [
       'Dri-FIT fabric genuinely wicks through 18 holes in humidity',
@@ -4050,11 +4050,11 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'adidas-ultimate365-polo': {
-    url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+polo&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B0C7KKFPDH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$50', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$49', priceNote: 'Sold as one listing across many colours and sizes; the exact price varies by the combination you pick.', label: `See Today's Price →`,
     imgSrc: '/images/products/adidas-ultimate365-polo.webp', imgAlt: 'Adidas Ultimate365 golf polo shirt',
         benefits: [
       'The most stretch of any polo we tested — you feel the fabric give across the shoulders at the top of the backswing',
@@ -4072,11 +4072,11 @@ export const AFFILIATE: Record<string, {
   },
   // ═══ APPAREL — Pants ═══
   'adidas-ultimate365-pants': {
-    url: `https://www.amazon.com/s?k=adidas+ultimate365+golf+pants&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B0FDSMQ9V9?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$65', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$54', priceNote: 'Sold as one listing across many colours and sizes; the exact price varies by the combination you pick.', label: `See Today's Price →`,
     imgSrc: '/images/products/adidas-ultimate365-pants.webp', imgAlt: 'Adidas Ultimate365 golf pants',
         benefits: [
       '4-way stretch lets you squat for a putt read with no pull at the knees',
@@ -4152,11 +4152,11 @@ export const AFFILIATE: Record<string, {
   },
   // ═══ APPAREL — Hats ═══
   'titleist-tour-performance-hat': {
-    url: `https://www.amazon.com/s?k=titleist+tour+performance+hat&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B0DSGMZT8R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$30', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$35', label: `See Today's Price →`,
     imgSrc: '/images/products/titleist-tour-performance-hat.webp', imgAlt: 'Titleist Tour Performance golf hat',
         benefits: [
       'Sweatband never saturated to dripping across 28 rounds, including 90°F days',
@@ -4283,11 +4283,11 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/club-car-onward.webp', imgAlt: 'Club Car Onward electric golf cart',
       },
   'callaway-org-14-cart-bag': {
-    url: `https://www.amazon.com/s?k=callaway+org+14+cart+bag&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B0D9R3B5HT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$260', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$265', label: `See Today's Price →`,
     imgSrc: '/images/products/callaway-org-14-cart-bag.webp', imgAlt: 'Callaway Org 14 cart bag',
     benefits: [
       '11 pockets with excellent organization',
@@ -4309,11 +4309,11 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'ogio-fuse-stand-bag': {
-    url: `https://www.amazon.com/s?k=ogio+fuse+stand+bag&tag=cubicalgolfer-20`,
+    url: `https://www.amazon.com/dp/B0D9R3RZST?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$220', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$170', label: `See Today's Price →`,
     imgSrc: '/images/products/ogio-fuse-stand-bag.webp', imgAlt: 'Ogio Fuse stand bag',
     benefits: [
       '14-way top prevents club tangling',
