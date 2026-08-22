@@ -50,7 +50,7 @@ const PENDING_IMAGE_PAIR = new Set<string>([
   // the signature is the full sorted key list: photograph any ONE of these and
   // the remaining set forms a new signature and fails the build again, which is
   // the intended prompt to finish the job.
-  'cobra-air-x-2-irons|cobra-air-x-irons|optoma-zw350st|tour-edge-hot-launch-c522-irons',
+  'cobra-air-x-2-irons|cobra-air-x-irons|optoma-zw350st|tour-edge-hot-launch-c522-irons|voice-caddie-sc200plus',
 ]);
 
 const problems: string[] = [];

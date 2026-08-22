@@ -106,7 +106,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 30,
     retailer: 'Golf Galaxy',
     price: '~$293',
-    priceNote: 'Golf Galaxy shows this one as "See Price In Cart" — the price appears at checkout.',
+    priceNote: 'DISCONTINUED. Amazon carries no ES-B1 — only the ES16 Tour at $5,895.',
     label: 'Check Price at Golf Galaxy \u2192',
     imgSrc: '/images/products/Ernest Sports ES_B1_LM.webp',
     imgAlt: 'Ernest Sports ES B1 portable launch monitor',
@@ -127,7 +127,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Flightscope*+Mevo*&ghref=2301%3A1333883',
     retailer: 'Golf Galaxy',
     price: '~$349',
-    priceNote: 'Marked down from $499. Currently store-pickup only at Golf Galaxy — shipping shows unavailable.',
+    priceNote: 'DISCONTINUED. Amazon lists the original Mevo with NO PRICE on every listing; only the Mevo Gen2 at $1,299 is stocked.',
     label: 'Check Price at Golf Galaxy →',
     benefits: [
         'Pocket-sized — the most portable unit in this guide',
@@ -3295,6 +3295,23 @@ export const AFFILIATE: Record<string, {
   },
 
   // ── Month 1 New Products ──────────────────────────────────────────────
+  'voice-caddie-sc200plus': {
+    url: 'https://www.amazon.com/dp/B07R8JV36B?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '$209.99',
+    priceNote: 'Verified in stock at $209.99 on 2026-08-22.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/placeholder.webp',
+    imgAlt: 'Voice Caddie SC200Plus launch monitor',
+    benefits: [
+      'Doppler radar in a genuinely sub-$500 unit',
+      'Voice output and an LCD readout, so no phone is required to use it',
+      'Same maker as the Swing Caddie SC4 Pro, at under half the price',
+    ],
+  },
   'shot-scope-lm1': {
     url: 'https://www.amazon.com/Shot-Scope-Portable-Launch-Monitor/dp/B0GP22ZYY5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Shot*+Scope*+LM1*&ghref=2301%3A1333883',
