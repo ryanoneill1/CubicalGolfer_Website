@@ -3989,14 +3989,14 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-paradym-hybrid': {
-    url: 'https://www.amazon.com/s?k=callaway+paradym+hybrid&tag=cubicalgolfer-20',
+    url: 'https://www.amazon.com/dp/B0FVB4WKLJ?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Paradym%2520Hybrid%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    imgSrc: '/images/products/callaway-paradym-hybrid.webp', imgAlt: 'Callaway Paradym Hybrid product image',
-    price: '~$270',
+    imgSrc: '/images/products/callaway-paradym-hybrid.webp', imgAlt: 'Callaway Paradym Ai Smoke High Launch Hybrid',
+    price: '~$220',
     priceNote: 'Previous-gen — prices drop 30-40% when new models release.',
     label: 'See Today\'s Price →',
     benefits: [

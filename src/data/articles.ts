@@ -12178,7 +12178,7 @@ export const ARTICLES: Article[] = [
       { q: 'Can I use a hybrid off the tee?', a: 'Yes — hybrids are excellent tee clubs on tight par-4s and long par-3s. A 3-hybrid off a tee will carry 190-210 yards for most golfers with a tight dispersion. On a hole where driver brings trouble into play (water, OB, narrow fairway), the hybrid off the tee is a smart play that keeps the ball in the fairway while still reaching the hole in regulation.' },
       { q: 'Do low handicappers use hybrids?', a: 'Yes — tour data shows roughly 60% of PGA Tour pros carry at least one hybrid, typically replacing the 2-iron or 3-iron. The stigma that hybrids are beginner clubs is outdated. Even elite ball-strikers benefit from the higher launch and softer landing angle that hybrids produce versus long irons.' },
     ],
-    sources: [{ label: 'Callaway — Paradym Hybrid Technology', url: 'https://www.callawaygolf.com/' }],
+    sources: [{ label: 'Callaway — Paradym Ai Smoke Technology', url: 'https://www.callawaygolf.com/' }],
     related: [
       { slug: '/hybrid-vs-long-iron/', label: 'Hybrid vs Long Iron' },
       { slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' },
