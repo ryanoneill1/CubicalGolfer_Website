@@ -84,7 +84,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/courses/chicago-il/',              label: 'Best Golf Courses in Chicago' },
     { slug: '/gear-quiz/',                       label: 'Golf Gear Quiz — Find Your Fit' },
     { slug: '/office-to-golf-course-playbook/',  label: 'Cubicle-to-Course Playbook' },
-    { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gift Guide' },
   ],
 };
 
@@ -766,21 +766,21 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     { slug: '/best-golf-push-carts-2026/', label: 'Walking Carts That Make Great Gifts' },
   
-    { slug: '/fathers-day-golf-gifts-2026/', label: "Father's Day Golf Gift Guide 2026" },
+    { slug: '/best-golf-gifts-for-him/', label: "Father's Day Golf Gift Guide 2026" },
     { slug: '/how-to-get-your-kid-into-golf/', label: 'How to Get Your Kid Into Golf' },
   ],
   'junior-golf-clubs-guide': [
     { slug: '/how-to-get-your-kid-into-golf/', label: 'How to Get Your Kid Into Golf' },
-    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Golfers' },
     { slug: '/golf-for-beginners/', label: 'Golf for Beginners Guide' },
   ],
   'golf-gifts-under-50': [
-    { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Golfers' },
     { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gift Guide' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
   ],
   'christmas-golf-gifts': [
-    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Golfers' },
     { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
     { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
     { slug: '/best-golf-gifts-for-couples/', label: 'Golf Gifts for Couples' },
@@ -788,7 +788,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Cart — Top Gift for Walkers' },
   ],
   'mothers-day-golf-gifts': [
-    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Golfers' },
     { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
         { slug: '/best-golf-shoes-bad-knees/', label: 'Best Golf Shoes Bad Knees' },
         { slug: '/best-spikeless-golf-shoes-walking-18/', label: 'Best Spikeless Golf Shoes Walking 18' },
@@ -804,10 +804,10 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'get-kid-into-golf': [
     { slug: '/best-junior-golf-clubs/', label: 'Best Junior Golf Clubs 2026' },
     { slug: '/golf-for-beginners/', label: 'Golf for Beginners Guide' },
-    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Golfers' },
   ],
   'couples-golf-gifts': [
-    { slug: '/best-golf-gifts-for-dad/', label: 'Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Golfers' },
     { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
     { slug: '/best-golf-gps-watches/', label: 'Best GPS Watches 2026' },
   ],
@@ -947,7 +947,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/when-to-replace-golf-grips/', label: 'When to Replace Golf Grips' },
   ],
   'gift-detective-guide': [
-    { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Golfers' },
     { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
     { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gift Guide' },
     { slug: '/best-golf-gifts-for-couples/', label: 'Gifts for Couples' },
@@ -1065,7 +1065,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'when-to-replace-grips': [
     { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
     { slug: '/best-golf-putters-2026/', label: 'Putters for Shaky Hands' },
-    { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
+    { slug: '/best-golf-gifts-for-him/', label: 'Golf Gift Guide' },
     { slug: '/best-golf-gear-under-100/', label: 'Best Gear Under $100' },
   
     { slug: '/best-golf-grips-sweaty-hands/', label: 'Best Grips for Sweaty Hands' },

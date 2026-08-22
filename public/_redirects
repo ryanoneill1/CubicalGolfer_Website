@@ -117,3 +117,10 @@
 
 # Drivers page retitled Aug 2026 — no driver in the registry is under $200.
 /best-golf-drivers-under-200/  /best-golf-drivers-under-400/  301
+
+# Sprint 61 — gift-cluster consolidation. Eight near-identical gift pages were
+# splitting authority eight ways and all ranked 22-62. These three folded into
+# the strongest (1,919 impressions); every product they carried now lives there.
+/best-golf-gifts-for-dad/  /best-golf-gifts-for-him/  301
+/fathers-day-golf-gifts-2026/  /best-golf-gifts-for-him/  301
+/gifts-for-golfer-who-never-keeps-anything/  /best-golf-gifts-for-him/  301

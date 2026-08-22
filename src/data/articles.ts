@@ -2207,14 +2207,21 @@ export const ARTICLES: Article[] = [
         body: "Sometimes you know only two facts: he golfs, and the occasion is next week. Work the matrix. If you know his ball brand, buy a dozen of exactly that — never a different brand at the same price, which reads as a substitution. If you know his glove size, a two-pack of premium leather gloves is the most-used gift in golf. If you know neither, a nice towel, a quality divot tool, and a sleeve of premium balls assembled into a small kit costs under $60 and lands with every golfer alive.\n\nGift cards deserve a rehabilitation here: to a golfer, a pro-shop or major-retailer card is not impersonal, it is ammunition for the purchase he has been rationalizing for months. Pair a $100 card with one small physical item to unwrap and you have covered both the emotional moment and the practical value. The only true miss in the matrix is buying category-confident and detail-wrong — the right glove in the wrong size is a worse outcome than the card." },
       { h2: 'Last-Minute Gifts That Still Land',
         body: "Left it late? Three saves that do not look like it. First, digital: a range membership, a lesson package from his local pro, or covering his season handicap service — printable tonight, useful all year. Second, the same-day pickup play: balls and gloves are stocked at every golf shop and big-box sporting store, and a dozen premium balls never reads as last-minute.\n\nThird, the promise done right: print a simple voucher for a specific experience — a round at the course he keeps mentioning, a fitting session, a lesson series. Specific beats generic: a booked tee time is a gift; a vague IOU is homework. For more ideas by price, our <a href=\"/best-golf-gifts-under-50/\">under-$50 guide</a> and <a href=\"/best-christmas-golf-gifts/\">seasonal picks</a> round out the list." },
+      { h2: 'Best Under $25: Personalized Golf Balls', badge: 'BEST BUDGET', body: "If $55 is too much, personalized golf balls are the move. You can get a dozen Callaway Supersofts ($25) or Srixon Soft Feels ($22) with his initials, a funny message, or a custom logo printed on them. He will use them, smile every time he tees one up, and they are easy to identify when playing in a group. Order at least 2 weeks before Father\'s Day — customization takes 5-7 business days.", price: '~$30', affiliateKey: 'personalized-golf-balls', rating: 4.6,
+        pros: ['Personal touch makes it memorable', 'He will actually use them every round', 'Under $30 for a dozen'],
+        cons: ['5-7 day lead time for customization', 'Choose a ball he can actually play — not just the cheapest option'],
+      },
+      { h2: 'Best Under $15: Microfiber Golf Towel', badge: 'BEST VALUE', body: "Every golfer needs a good towel and most are using a ratty one from 3 years ago. A fresh microfiber waffle-weave towel with a carabiner clip costs $12-$18 and gets used literally every hole. Get it embroidered with his initials for $5 more. This is the definition of a gift he will not buy himself but will use constantly.", price: '~$15', affiliateKey: 'golf-towel-personalized', rating: 4.5,
+        pros: ['Under $15 and used every single round', 'Personalization adds a thoughtful touch', 'Replaces the ratty towel he refuses to throw away'],
+        cons: ['Not exciting to unwrap', 'He will not post about it on social media'],
+      },
     ],
     faq: [
       { q: 'What is the best golf gift for a beginner?', a: "A glove 2-pack (~$32), alignment sticks (~$12), and a dozen Srixon Soft Feel balls (~$27). Total under $75 and immediately useful for every range session and round." },
       { q: 'What is the best golf gift under $50?', a: "A dozen Titleist Pro V1 balls (~$55) is the most appreciated golf gift near $50. Strictly under $50: a putting mirror ($40) is the best training aid gift." },
     ],
     related: [
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
-      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Father\'s Day Golf Gifts' },
       { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
       { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gifts' },
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
@@ -7767,99 +7774,6 @@ export const ARTICLES: Article[] = [
   // GIFT GUIDES + YOUTH GOLF — 7 seasonal/evergreen articles
   // ══════════════════════════════════════════════════════════════════════════
 
-  {
-    id: 'golf-gifts-dad-under-100',
-    slug: '/best-golf-gifts-for-dad/',
-    thumb: 'green',
-    ogImage: 'https://www.cubicalgolfer.com/images/og/best-golf-gifts-for-dad.jpg',
-    thumbnail: '/images/thumbnails/gifts-for-dad-thumb.webp',
-    words: '3,200',
-    category: 'gear-reviews',
-    pageType: 'buying-guide',
-    quickAnswerProduct: 'titleist-pro-v1',
-    tag: 'GIFT GUIDE',
-    emoji: '🎁',
-    datePublished: '2026-04-24',
-    dateModified: '2026-07-23',
-    title: 'Best Golf Gifts for Dad 2026 — 5 Picks Under $100',
-    titleDisplay: 'Best Golf Gifts for Dad 2026 — 5 Picks Under $100',
-    bottomLine: 'Skip the novelty golf mug. The <strong>Titleist Pro V1 dozen</strong> ($55) is the single best golf gift for any dad — he will use every single ball and appreciate that you knew to buy the good ones. For dads who already have Pro V1s, the <strong>Precision Pro NX9 rangefinder</strong> ($199) is the upgrade that saves the most strokes per dollar.',
-    description: 'Best golf gifts for dad in 2026 — gear picks from $15 to $99 that a weekend golfer would actually want. Father\'s Day, birthday, and Christmas covered.',
-    excerpt: '5 golf gifts for dad under $100 — no novelty mugs, just gear he will actually use every round.',
-    intro: 'Every Father\'s Day gift guide recommends $600 drivers and $2,000 launch monitors. That is not helpful. Most of us need gifts under $100 that a golf-loving dad will actually use — not display on a shelf. Here are 5 picks from a weekend golfer who has received (and returned) his share of golf-themed socks. If your golfer is especially picky, see our <a href="/gifts-for-golfer-who-never-keeps-anything/">gift detective guide</a> for a zero-return-rate strategy.',
-    testingNotes: 'All products independently purchased and used over multiple rounds. Gift selections based on 3 years of testing gear for Cubical Golfer.',
-    updateLog: [
-      { date: 'Apr 24, 2026', note: 'Published for Father\'s Day 2026 — 5 picks under $100.' },
-    ],
-    toc: [
-      'Best overall gift: Titleist Pro V1 dozen',
-      'Best under $25: personalized golf balls',
-      'Best under $50: groove brush + towel combo',
-      'Best tech gift: putting mirror',
-      'Best splurge (just over $100): rangefinder',
-      'Comparison table',
-      'Gifts to avoid',
-      'FAQ',
-    ],
-    sections: [
-      { h2: 'The Only Rule for Golf Gifts', body: "If he would not buy it for himself, it is a bad gift. Golf dads do not need novelty ball markers shaped like beer bottles. They do not need golf-themed neckties. They need consumables they burn through (balls, gloves, tees), accessories that improve their game (rangefinders, training aids), or upgrades to worn-out gear (towels, bags). Every pick below passes the test: would a 10-handicap weekend golfer actually put this in his bag?\n\nTiming tip: gear discounts cluster hardest around <a href=\"/prime-day-golf-deals/\">Prime Day</a> and Black Friday — our deal trackers watch both so you can wait smart." },
-      { h2: 'Best Overall Gift: Titleist Pro V1 (1 Dozen)', badge: 'BEST OVERALL', body: "No golfer has ever been disappointed to receive a box of Pro V1s. They are the most played ball on the PGA Tour, they perform beautifully, and they cost enough ($55/dozen) that most weekend golfers will not buy them for themselves. This is the safe, universally loved golf gift. Even if your dad plays a different ball, he will happily game these. Pro tip: do NOT buy personalized Pro V1s unless you know his preferred number — golfers are superstitious about ball numbers.", price: '~$55', affiliateKey: 'titleist-pro-v1', rating: 4.9,
-        pros: ['Universally loved — no golfer returns Pro V1s', 'Premium feel and performance', 'Shows you know quality golf gear'],
-        cons: ['$55/dozen is at the top of the budget range', 'If dad loses 4+ balls per round, they vanish fast'],
-      },
-      { h2: 'Best Under $25: Personalized Golf Balls', badge: 'BEST BUDGET', body: "If $55 is too much, personalized golf balls are the move. You can get a dozen Callaway Supersofts ($25) or Srixon Soft Feels ($22) with his initials, a funny message, or a custom logo printed on them. He will use them, smile every time he tees one up, and they are easy to identify when playing in a group. Order at least 2 weeks before Father\'s Day — customization takes 5-7 business days.", price: '~$30', affiliateKey: 'personalized-golf-balls', rating: 4.6,
-        pros: ['Personal touch makes it memorable', 'He will actually use them every round', 'Under $30 for a dozen'],
-        cons: ['5-7 day lead time for customization', 'Choose a ball he can actually play — not just the cheapest option'],
-      },
-      { h2: 'Best Under $15: Microfiber Golf Towel', badge: 'BEST VALUE', body: "Every golfer needs a good towel and most are using a ratty one from 3 years ago. A fresh microfiber waffle-weave towel with a carabiner clip costs $12-$18 and gets used literally every hole. Get it embroidered with his initials for $5 more. This is the definition of a gift he will not buy himself but will use constantly.", price: '~$15', affiliateKey: 'golf-towel-personalized', rating: 4.5,
-        pros: ['Under $15 and used every single round', 'Personalization adds a thoughtful touch', 'Replaces the ratty towel he refuses to throw away'],
-        cons: ['Not exciting to unwrap', 'He will not post about it on social media'],
-      },
-      { h2: 'Best Tech Gift: Putting Mirror', badge: 'BEST TRAINING AID', body: "The putting mirror is the single most effective training aid under $30. It forces proper eye position over the ball, corrects alignment, and gives instant feedback on every stroke. Your dad will set it up in the living room and putt for 15 minutes every night — and his putting will measurably improve within 2 weeks. I have used one for 6 months and my 3-putt rate dropped from 31% to 18%.", price: '~$40', affiliateKey: 'putting-mirror', rating: 4.5,
-        pros: ['Measurably improves putting within 2 weeks', 'Works indoors — no trip to the course needed', 'Under $30 for genuine skill improvement'],
-        cons: ['Not as exciting as a new club', 'Takes discipline to use consistently'],
-      },
-      { h2: 'Best Splurge: Precision Pro NX9 Rangefinder', badge: 'BEST UPGRADE', body: "At $169 this technically exceeds the $100 budget, but if you are splitting a gift with siblings or want to splurge, the NX9 is the most strokes-saved-per-dollar upgrade any weekend golfer can make. It is fast, accurate to within 1 yard, has a lifetime warranty, and costs half of the Bushnell Tour V7 Shift. If your dad does not already have a rangefinder, this is a life-changing gift. If he does, get him balls instead.", price: '~$199', affiliateKey: 'precision-pro-nx9-hd', rating: 4.7,
-        pros: ['Biggest single improvement per dollar spent', 'Lifetime warranty — Precision Pro replaces it free', 'Fast and accurate to 1 yard'],
-        cons: ['$199 exceeds strict $100 budget', 'If dad already has a rangefinder, skip this'],
-      },
-      { h2: 'Gifts to Avoid (Please)', body: "Do not buy: golf-themed socks, ties, or mugs (he will smile and never use them). Do not buy: a putter (putting is deeply personal — he needs to pick his own). Do not buy: a driver (even more personal, and the wrong shaft flex makes it useless). Do not buy: golf lessons unless he has specifically asked for them (some dads take offense). Do not buy: anything with the phrase \'19th hole\' on it. The safest gifts are consumables (balls, gloves, tees) and accessories (towels, brushes, alignment sticks). You cannot get these wrong." },
-    ],
-    comparisonTable: {
-      headers: ['Gift', 'Best For', 'Price', 'Our Rating'],
-      rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1 (dozen)', bestFor: 'Best Overall', price: '~$55', feature1: '4.9/5 ★', winner: true, rating: 4.9 },
-        { rating: 4.6, affiliateKey: 'personalized-golf-balls', name: 'Personalized Golf Balls', bestFor: 'Best Under $30', price: '~$30', feature1: '4.6/5 ★', winner: false },
-        { rating: 4.5, affiliateKey: 'golf-towel-personalized', name: 'Microfiber Golf Towel', bestFor: 'Best Under $15', price: '~$15', feature1: '4.5/5 ★', winner: false },
-        { rating: 4.5, affiliateKey: 'putting-mirror', name: 'Putting Mirror', bestFor: 'Best Training Aid', price: '~$40', feature1: '4.5/5 ★', winner: false },
-        { badge: 'STRONG PICK', affiliateKey: 'precision-pro-nx9-hd', name: 'Precision Pro NX9', bestFor: 'Best Splurge', price: '~$199', feature1: '4.6/5 ★', winner: false, rating: 4.7 },
-      ],
-    },
-    faq: [
-      { q: 'What is the best golf gift under $50?', a: 'A dozen premium golf balls (Titleist Pro V1 at $55, or Callaway Chrome Soft at $47) or personalized golf balls ($25-$35). These are gifts every golfer uses and appreciates.' },
-      { q: 'Should I buy my dad golf clubs as a gift?', a: 'No — unless he has specifically told you the exact model, shaft flex, and grip size he wants. Golf clubs are deeply personal and the wrong specs make them unusable. Stick to balls, accessories, and training aids.' },
-      { q: 'What golf gift do dads actually want?', a: 'Ask any golfer: a dozen Pro V1s. After that: a quality rangefinder, fresh gloves, or a round at a nice course. Avoid novelty items — they end up in a drawer.' },
-    ],
-    whoFor: [
-      'Anyone shopping for a golf-loving dad, husband, or father-in-law',
-      'Buyers who want gifts that get used every round, not displayed on a shelf',
-      'Budget-conscious shoppers looking for quality under $100',
-    ],
-    whoSkip: [
-      'Dads who do not play golf (obviously)',
-      'Dads who only play once a year — a $20 sleeve of balls is plenty',
-    ],
-    related: [
-      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
-      { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Him' },
-      { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
-      { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
-      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-      { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
-      { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
-    
-      { slug: '/best-golf-push-carts-2026/', label: 'Best Golf Push Cart — Great Gift for Walking Dads' },],
-  },
 
   {
     id: 'junior-golf-clubs-guide',
@@ -7928,7 +7842,7 @@ export const ARTICLES: Article[] = [
     whoFor: [
       'Weekend golfer parents who want to play with their kids',
       'First-time buyers who do not know junior club sizing',
-      'Grandparents looking for a meaningful gift (see our <a href="/gifts-for-golfer-who-never-keeps-anything/">gift detective guide</a> for picky golfers)',
+      'Grandparents looking for a meaningful gift (see our <a href="/best-golf-gifts-for-him/">golf gift guide</a> for picky golfers)',
     ],
     whoSkip: [
       'Parents of kids under 4 — wait a year, they are not ready',
@@ -7936,7 +7850,7 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/golf-for-beginners/', label: 'Golf for Beginners — Complete Guide' },
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     ],
   },
@@ -8000,9 +7914,9 @@ export const ARTICLES: Article[] = [
       { q: 'Are golf balls a good gift?', a: 'Yes — golf balls are the best consumable golf gift. A dozen premium balls ($45-$55) or two dozen value balls ($22-$30) are always appreciated and always used.' },
     ],
     related: [
-      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Father\'s Day Golf Gifts' },
       { slug: '/best-golf-gifts-for-mom/', label: 'Golf Gifts for Mom' },
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
     ],
@@ -8060,8 +7974,8 @@ export const ARTICLES: Article[] = [
       { q: 'When should I order golf Christmas gifts?', a: 'Order by December 10 for standard shipping. Personalized items (custom golf balls, embroidered towels) need 2-3 weeks lead time — order by November 25.' },
     ],
     related: [
-      { slug: '/fathers-day-golf-gifts-2026/', label: 'Father\'s Day Golf Gifts' },
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Father\'s Day Golf Gifts' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     ],
@@ -8125,7 +8039,7 @@ export const ARTICLES: Article[] = [
       { q: 'Are women golf clubs different from men?', a: 'Yes — women\'s clubs are lighter, shorter, and have more flexible shafts. Do not buy men\'s clubs for a woman golfer. But do not buy her clubs at all unless she has asked for a specific model.' },
     ],
     related: [
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
       { slug: '/best-golf-shoes-for-walking/', label: 'Best Golf Shoes for Walking' },
     ],
@@ -8171,7 +8085,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-junior-golf-clubs/', label: 'Best Junior Golf Clubs 2026' },
       { slug: '/golf-for-beginners/', label: 'Golf for Beginners Guide' },
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Dad' },
     ],
   },
 
@@ -8221,7 +8135,7 @@ export const ARTICLES: Article[] = [
       { q: 'What is the best couples golf format?', a: 'Best ball (scramble) for fun, alternate shot for a challenge, or just play your own balls from appropriate tees. Most couples find scramble the most enjoyable because both players contribute to every hole.' },
     ],
     related: [
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Best Golf Gifts for Dad 2026' },
       { slug: '/best-golf-gifts-for-mom/', label: 'Best Golf Gifts for Mom 2026' },
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
     ],
@@ -8868,86 +8782,7 @@ export const ARTICLES: Article[] = [
   // ══════════════════════════════════════════════════════════════════════════
   // PAGE 3 of 7: Gifts for the Golfer Who Never Keeps Anything
   // ══════════════════════════════════════════════════════════════════════════
-  {
-    id: 'gift-detective-guide',
-    slug: '/gifts-for-golfer-who-never-keeps-anything/',
-    thumb: 'olive',
-    ogImage: 'https://www.cubicalgolfer.com/images/og/gifts-for-golfer-who-never-keeps-anything.jpg',
-    thumbnail: '/images/thumbnails/gifts-never-keeps-thumb.webp',
-    words: '2,900',
-    category: 'golf-accessories',
-    pageType: 'buying-guide',
-    quickAnswerProduct: 'titleist-pro-v1',
-    tag: 'GIFT GUIDE',
-    emoji: '🕵️',
-    datePublished: '2026-04-26',
-    dateModified: '2026-07-18',
-    title: 'Gifts for a Golfer Who Has Everything (2026 Guide)',
-    titleDisplay: 'Gifts for the Golfer Who Never Keeps Anything You Buy Him',
-    bottomLine: 'Stop guessing. Open his golf bag when he is not looking, find out exactly what brand of balls and gloves he uses, and buy him 2 dozen of his exact ball and a 6-pack of his exact glove. He will use every single one. Total cost: $230. Return rate: zero. Our top pick: the <strong>Titleist Pro V1</strong> (~$55/dozen).',
-    description: 'Golf gift ideas for the husband or dad who returns everything. The 4-step detective method — spy on his bag, match his brands, buy consumables he.',
-    excerpt: 'Golf gifts for the guy who has everything and returns the rest — the detective method that actually works.',
-    intro: 'He has 14 clubs, 3 rangefinders, a closet full of golf polos, and opinions about everything. Last Christmas you bought him a putting mat and it is still in the box. Father\&#39;s Day you tried golf-themed socks. He wore them once. You are not bad at gift-giving — you are just guessing. Stop guessing. Start investigating. This guide turns you into a golf gift detective in 4 steps.',
-    testingNotes: 'Gift strategy developed from 3 years of reader feedback on golf gift guides. Return-rate data based on Amazon return statistics and reader surveys.',
-    updateLog: [
-      { date: 'Apr 26, 2026', note: 'Published — the detective method for golf gifts that stick.' },
-    ],
-    toc: [
-      'TL;DR — the 4-step detective method',
-      'Step 1: Open his golf bag',
-      'Step 2: Check his closet for the brand he actually wears',
-      'Step 3: Experiences beat stuff',
-      'Step 4: Consumable safe bets',
-      'The danger zone — gifts that always get returned',
-      'FAQ',
-    ],
-    sections: [
-      { h2: 'TL;DR — The 4-Step Detective Method', body: 'Step 1: Open his golf bag. Find the exact brand and model of his balls, gloves, and tees. Buy more of those — not what you think is better. Step 2: Check his polo drawer. Count which brand appears most. Buy the same brand in a new color. Step 3: Give an experience — a custom club fitting ($150-350), a playing lesson ($100-250), or a round at a course he keeps mentioning. Step 4: When in doubt, buy consumables — balls, gloves, tees, towels. He cannot refuse what runs out. Follow these steps and your return rate drops to zero.' },
 
-      { h2: 'Step 1: Open His Golf Bag (Without Him Noticing)', body: 'Wait until he is in the shower, at work, or watching football. Open the golf bag. You have 90 seconds. Here is what to look for.\n\n<strong>Golf Balls.</strong> Find the box or loose balls in the side pocket. Look for the brand name printed on the ball: Titleist Pro V1, TaylorMade TP5, Callaway Chrome Soft, Bridgestone Tour B, Srixon Z-Star. Buy him exactly 2 dozen of that exact model. Not a different model from the same brand — the exact one. A Pro V1 golfer does not want Pro V1x. A TP5 golfer does not want TP5x. If his balls are generic range balls or a mix of found balls, buy him 2 dozen Titleist Pro V1 ($110 for 2 dozen) — they are the safe premium choice that every golfer appreciates. See our <a href="/best-golf-gifts-for-dad/">Father\'s Day gift guide</a> for more on why Pro V1s are the universal safe bet.\n\n<strong>Golf Glove.</strong> Check the glove hanging on the bag or in the pocket. Note the brand (FootJoy, Titleist, Callaway, TaylorMade) and the size printed inside (S, M, ML, L, XL). Buy a 3-pack or 6-pack in his exact brand and size. Gloves wear out every 15-20 rounds. He needs fresh ones and will not buy them himself. A 6-pack of FootJoy WeatherSof in his size ($72) lasts him a full season.\n\n<strong>Tees.</strong> Yes, picky golfers care about tees. Check the pocket — if they are all the same brand (Pride, Zero Friction, Martini), buy a case of that brand ($12-15). If they are a random mix of wooden tees, he does not care about tees and you can skip this.\n\n<strong>Rangefinder or GPS.</strong> Look at the rangefinder in his bag. If it is more than 4-5 years old, a new one is a major upgrade. If there is no rangefinder at all, that is a strong gift signal. Check our <a href="/best-golf-gifts-under-50/">gifts under $50 guide</a> for budget accessories, or our <a href="/best-christmas-golf-gifts/">Christmas golf gift guide</a> for bigger-ticket items.\n\n<strong>Wedge Grooves.</strong> Pull out a wedge (the short clubs with the most loft — usually 52, 56, or 60 stamped on them). Run your fingernail across the face grooves. If they feel smooth and shiny instead of sharp and rough, his wedges are worn out and he needs new ones. This is a more advanced gift — see our <a href="/when-to-replace-wedges-grooves/">guide to when wedge grooves are done</a> for how to tell. If he does need new wedges, our <a href="/how-to-buy-wedges-4-degree-rule/">wedge buying guide</a> covers the 4-degree gapping rule.\n\n<strong>Grip Condition.</strong> Feel the grips on any club. If they are shiny, slick, or hardened, he needs a regrip. A full regrip costs $80-120 at a pro shop and is a thoughtful gift he will never buy for himself. See our <a href="/when-to-replace-golf-grips/">grip replacement guide</a> for the signs.' },
-
-      { h2: 'Step 2: Check His Closet for the Brand He Actually Wears', body: 'Open his polo drawer or the section of his closet where golf shirts hang. Count the brands. Whichever brand appears 3+ times is his brand. He has already decided — your job is to buy the same brand in a new color or pattern he does not own yet.\n\nHere are the most common golf polo brands and what they signal about his taste and budget:\n\n<strong>Travis Mathew</strong> ($85-110) — He cares about style and comfort. Trendy patterns, soft fabrics. Buy a new seasonal pattern he does not have.\n\n<strong>Peter Millar</strong> ($100-150) — He likes premium quality and classic style. Conservative colors, excellent fabrics. Buy a Crown Sport polo in a color he is missing.\n\n<strong>FootJoy</strong> ($65-85) — He is a traditionalist who values performance. Buy an FJ Lisle polo in a fresh color.\n\n<strong>G/FORE</strong> ($120-150) — He likes standing out. Bold colors, high-end fabrics. Match his boldness — do not buy something safe.\n\n<strong>Adidas / Nike</strong> ($45-75) — He is practical and value-conscious. Buy a 2-pack of polos in his size for the price of one Peter Millar.\n\nThe cardinal rule: buy the brand he already wears in a color he does not own. Do NOT try to broaden his style. The Travis Mathew guy does not secretly want a Peter Millar. The FootJoy guy does not want G/FORE. Trust the closet.' },
-
-      { h2: 'Step 3: Experiences Beat Stuff (The Secret Weapon)', body: 'The golfer who has everything does not need more stuff. He needs experiences. These are the gifts with a zero percent return rate.\n\n<strong>Custom Club Fitting at Club Champion (~$150-350).</strong> A 60-90 minute session where a fitter analyzes his swing on a launch monitor and recommends the exact shaft, clubhead, and spec combination for his game. Even if he does not buy new clubs afterward, the data alone is worth it. He will talk about his fitting numbers for months. Book at clubchampion.com — gift cards available.\n\n<strong>On-Course Playing Lesson (~$100-250).</strong> Not a range lesson — a playing lesson where a PGA pro walks 9 holes with him and coaches strategy, course management, and short game in real conditions. This is the lesson format that actually lowers scores. Find instructors at pga.com/coach.\n\n<strong>A Round at His Bucket-List Course.</strong> He has mentioned it. Maybe it is Whistling Straits, Bandon Dunes, Pinehurst No. 2, or that nice municipal course 2 hours away. Book it. Surprise him. The tee time plus the drive is the gift — not a product in a box.\n\n<strong>Topgolf Bay Rental (~$60-150).</strong> Book a bay for him and 3 buddies on a Saturday afternoon. Include a food and drink tab. This is less about golf and more about giving him permission to have a fun afternoon with friends. Golfers over 35 rarely organize these outings for themselves.\n\n<strong>Indoor Sim Hour (~$40-80).</strong> A 1-hour session at a local 5 Iron Golf, X-Golf, or similar indoor sim facility. He gets to play Pebble Beach in January without leaving the Midwest. Pair it with a beer and you have a perfect 2-hour gift experience.\n\nIf you are looking for couple-friendly options, see our <a href="/best-golf-gifts-for-couples/">gifts for golf couples guide</a>.' },
-
-      { h2: 'Step 4: Consumable Safe Bets (He Cannot Refuse What Runs Out)', body: 'When all else fails, buy things he uses up. These are impossible to return because he will burn through them.\n\n<strong>2 Dozen of His Exact Golf Balls (~$110).</strong> This is the number one safe golf gift. He uses them every round. They disappear into ponds and woods. He always needs more. Buy his exact model — not a different one. If you do not know his model, 2 dozen Titleist Pro V1 ($110) is the universal safe pick.\n\n<strong>6-Pack of His Exact Gloves (~$72-120).</strong> Gloves wear out. He replaces them every 15-20 rounds but probably stretches them to 30 because he is cheap about consumables. A 6-pack of fresh gloves in his brand and size is a full season of grip confidence.\n\n<strong>Premium Golf Towel (~$25-35).</strong> His current towel has been in his bag since 2019. A fresh microfiber waffle-weave towel with a carabiner clip replaces the ratty one he refuses to throw away. Personalized with his initials for $5 more.\n\n<strong>A Case of His Tees (~$15).</strong> If he uses a specific brand (you checked in Step 1), a $15 case lasts a full season.\n\n<strong>Custom Ball Markers (~$15).</strong> Pre-printed or engraved ball markers with his initials or a meaningful symbol. He pulls them out every hole and thinks of you. $15 and impossible to return.' },
-
-      { h2: 'The Danger Zone — Gifts That Always Get Returned', body: 'Do not buy these. I do not care how good the Amazon reviews are. These are the gifts that end up in the closet, the regift pile, or the return line.\n\n<strong>Novelty mugs and tumblers.</strong> "Best Dad By Par." "I\'d Rather Be Golfing." "Hole in One Dad." He will smile, say thank you, and never use it. The mug goes behind the other mugs. The tumbler goes in the cabinet.\n\n<strong>Apparel from a brand he does not already wear.</strong> You found a great deal on a G/FORE polo for the FootJoy guy. He will try it on, decide it does not fit his style, and return it. Trust the closet.\n\n<strong>"Beginner" training aids when he is a 10-handicap.</strong> Buying a swing trainer for a golfer who has been playing for 15 years is like buying a typing tutor for a software engineer. He has opinions about his swing and they do not include your Amazon suggestion.\n\n<strong>Generic putting mats from Amazon.</strong> The $20 ones curl at the edges, roll too fast, and end up under the bed within a month. If you are going to buy a putting mat, spend $45+ on a quality one — see our <a href="/best-golf-gifts-under-50/">gifts under $50 guide</a> for options that actually get used.\n\n<strong>Anything described as "funny" in the listing.</strong> Golf-themed socks, golf-shaped ice cube trays, "Golfaholic" t-shirts. These are gifts for people who do not play golf to give to people who do. Real golfers do not find them funny. They find them evidence that you do not understand their hobby.' },
-    
-      { h2: 'Gift-Ready Versions of the Essentials', body: '<p>Safe-bet gifts from the categories above — tested picks that fit any bag.</p>', recommendedGear: [ { key: 'titleist-pro-v1', role: 'Golf balls', name: 'Titleist Pro V1' }, { key: 'footjoy-weathersof-glove', role: 'Golf glove', name: 'FootJoy WeatherSof' }, { key: 'frogger-amphibian-towel', role: 'Towel upgrade', name: 'Frogger Amphibian Towel' }, { key: 'bushnell-tour-v7-shift', role: 'Rangefinder', name: 'Bushnell Tour V7 Shift' }, { key: 'magnetic-ball-markers', role: 'Ball marker set', name: 'Magnetic Ball Markers' } ] },
-    ],
-    comparisonTable: {
-      headers: ['Gift', 'Category', 'Price', 'Return Risk'],
-      rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'titleist-pro-v1', name: 'His Exact Balls (2 dozen)', bestFor: 'Consumable', price: '~$110', feature1: 'Zero', winner: true, rating: 4.9 },
-        { rating: 4.7, affiliateKey: 'footjoy-weathersof-glove', name: 'His Exact Gloves (6-pack)', bestFor: 'Consumable', price: '~$72', feature1: 'Zero', winner: false },
-        { rating: 4.5, affiliateKey: 'golf-towel-personalized', name: 'Personalized Towel', bestFor: 'Accessory', price: '~$25', feature1: 'Low', winner: false },
-        { rating: 4.6, affiliateKey: 'personalized-golf-balls', name: 'Custom Ball Markers', bestFor: 'Personal Touch', price: '~$15', feature1: 'Zero', winner: false },
-      ],
-    },
-    faq: [
-      { q: 'What is the safest golf gift for someone who returns everything?', a: '2 dozen of his exact golf ball model. He uses them every round and always needs more. Find his ball brand by checking his bag (look in the side pocket). If you cannot check, Titleist Pro V1 ($55/dozen) is the universal safe bet.' },
-      { q: 'How do I find out what golf glove size he wears?', a: 'Check the glove in his golf bag — the size is printed inside (S, M, ML, L, XL). If you cannot find it, measure from the base of his palm to the tip of his middle finger: under 7 inches = S, 7-7.5 = M, 7.5-8 = ML, 8-8.5 = L, over 8.5 = XL.' },
-      { q: 'Is a golf lesson a good gift?', a: 'Yes — specifically an on-course playing lesson ($100-250) where a PGA pro walks 9 holes with him. This format is more effective than a range lesson and feels like a premium experience, not homework.' },
-      { q: 'What golf gifts should I avoid?', a: 'Avoid novelty items (mugs, socks, "funny" golf accessories), apparel from brands he does not already wear, beginner training aids for experienced golfers, and cheap putting mats from Amazon. These have the highest return rates.' },
-      { q: 'How much should I spend on a golf gift?', a: 'Consumables: $15-110 (tees, balls, gloves, towels). Experiences: $40-350 (sim hour, playing lesson, club fitting). The price does not matter as much as the accuracy — a $15 case of his exact tees beats a $200 gadget he did not ask for.' },
-    ],
-    whoFor: [
-      'Wives, partners, and daughters buying for a picky male golfer',
-      'Anyone who has had golf gifts returned or collecting dust',
-      'Gift buyers who want a zero-return-rate strategy',
-    ],
-    whoSkip: [
-      'Golfers buying for themselves — you already know what you want',
-      'Buying for a brand-new golfer — they need everything, start with our beginner guide',
-    ],
-    related: [
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad 2026' },
-      { slug: '/best-golf-gifts-under-50/', label: 'Best Golf Gifts Under $50' },
-      { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gift Guide' },
-      { slug: '/best-golf-gifts-for-couples/', label: 'Gifts for Golf Couples' },
-    ],
-  },
 
 
 
@@ -9258,7 +9093,7 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'The 3-4 Stroke Penalty You Are Paying Right Now', body: 'Golf Pride — the company that makes grips for more Tour pros than any other — conducted a study comparing shots hit with new grips versus two-year-old worn grips. The result: worn grips cost the average golfer 3-4 strokes per round. Why? Three reasons.\n\n<strong>Grip pressure increases unconsciously.</strong> When grips are slick, your hands compensate by squeezing harder. You do not decide to grip tighter — your body does it automatically to prevent the club from slipping. Tighter grip pressure restricts wrist hinge, reduces clubhead speed, and creates tension that throws off your tempo.\n\n<strong>Micro-slips happen at impact.</strong> On full swings, the club generates significant force at impact. Worn grips allow the club to shift a fraction of a millimeter in your hands at the worst possible moment. You do not feel it as a slip — you feel it as a push, a pull, or an inconsistent ball flight.\n\n<strong>Confidence erodes.</strong> You start steering shots because you do not trust your hold. You avoid full swings in wet conditions. You change your natural grip to compensate. All of this adds strokes without you realizing the grip is the root cause.\n\nThe fix costs $60-90 for a full set of 13 grips. That is $5-7 per stroke saved. There is no cheaper improvement in golf.' },
 
-      { h2: 'The 4 Signs Your Grips Are Done', body: '<strong>1. Shiny patches in the high-contact zones.</strong> Look at where your thumbs and palms sit on the grip. If those areas are shiny, smooth, and visibly different from the rest of the grip surface, the rubber has worn down. Fresh grips have a uniform matte texture across the entire surface.\n\n<strong>2. Slick feel even after washing.</strong> Wash your grips with warm water and dish soap (you should be doing this every 5-10 rounds). If they still feel slick after washing and drying, the surface texture is gone and no amount of cleaning will restore it.\n\n<strong>3. Visible cracks, splits, or hardening.</strong> Rubber degrades over time even if you do not play much. UV exposure, heat, and humidity cause grips to harden and crack. If you see cracks in the surface or the grip feels rigid instead of tacky, it is done regardless of round count.\n\n<strong>4. You have started gripping tighter without realizing.</strong> This is the sneaky one. If you notice grip marks in your glove that are deeper than they used to be, or your forearms are sore after a round, or you feel tension in your hands at setup — your body is compensating for slick grips. This is the sign that costs you strokes.\n\nIf someone is buying you a gift and checks your grips, shiny and slick means a regrip is the perfect present — see our <a href="/gifts-for-golfer-who-never-keeps-anything/">gift detective guide</a> for the full bag-spying strategy.' },
+      { h2: 'The 4 Signs Your Grips Are Done', body: '<strong>1. Shiny patches in the high-contact zones.</strong> Look at where your thumbs and palms sit on the grip. If those areas are shiny, smooth, and visibly different from the rest of the grip surface, the rubber has worn down. Fresh grips have a uniform matte texture across the entire surface.\n\n<strong>2. Slick feel even after washing.</strong> Wash your grips with warm water and dish soap (you should be doing this every 5-10 rounds). If they still feel slick after washing and drying, the surface texture is gone and no amount of cleaning will restore it.\n\n<strong>3. Visible cracks, splits, or hardening.</strong> Rubber degrades over time even if you do not play much. UV exposure, heat, and humidity cause grips to harden and crack. If you see cracks in the surface or the grip feels rigid instead of tacky, it is done regardless of round count.\n\n<strong>4. You have started gripping tighter without realizing.</strong> This is the sneaky one. If you notice grip marks in your glove that are deeper than they used to be, or your forearms are sore after a round, or you feel tension in your hands at setup — your body is compensating for slick grips. This is the sign that costs you strokes.\n\nIf someone is buying you a gift and checks your grips, shiny and slick means a regrip is the perfect present — see our <a href="/best-golf-gifts-for-him/">golf gift guide</a> for the full bag-spying strategy.' },
 
       { h2: 'The Replacement Timeline', body: '<strong>Tour pros:</strong> Every 6 weeks. They regrip constantly because they can feel even small changes in surface texture. This is extreme and unnecessary for recreational golfers.\n\n<strong>Heavy practice (range 3+ times/week):</strong> Every 6-8 months. Range mats accelerate grip wear because the abrasive mat surface transfers grit to your glove and then to your grips.\n\n<strong>Weekend golfer (30-40 rounds/year):</strong> Every 12 months or 40 rounds, whichever comes first. This is the most common schedule and the one Golf Pride recommends.\n\n<strong>Casual golfer (under 20 rounds/year):</strong> Every 18-24 months. At this volume, environmental degradation (UV, heat, humidity) wears your grips more than actual use.\n\n<strong>Putter grip:</strong> Every 3-5 years for most golfers. Putter grips see less impact force and less friction. Replace when the feel changes or the grip shows visible wear in your thumb zones. For putting-specific grip upgrades — especially for shaky hands — see our <a href="/best-golf-putters-2026/">putter guide for older golfers</a>.\n\nThis mirrors the maintenance schedule from our <a href="/when-to-replace-wedges-grooves/">wedge replacement guide</a>. Between grips (annually) and wedges (every 75-100 rounds), most weekend golfers should budget for one equipment maintenance expense per season.' },
 
@@ -9324,7 +9159,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/when-to-replace-wedges-grooves/', label: 'When to Replace Your Wedges' },
       { slug: '/best-golf-putters-2026/', label: 'Putters for Shaky Hands' },
-      { slug: '/gifts-for-golfer-who-never-keeps-anything/', label: 'Gift Detective Guide' },
+      { slug: '/best-golf-gifts-for-him/', label: 'Gift Detective Guide' },
       { slug: '/best-golf-gear-under-100/', label: 'Best Golf Gear Under $100' },
     ],
   },
@@ -10076,61 +9911,6 @@ export const ARTICLES: Article[] = [
   // MONTH 1 — QUICK WINS (June 2026)
   // ════════════════════════════════════════════════════════════════════════
 
-  {
-    id: 'fathers-day-golf-gifts-2026',
-    slug: '/fathers-day-golf-gifts-2026/',
-    ogImage: 'https://www.cubicalgolfer.com/images/og/fathers-day-golf-gifts-2026.jpg',
-    thumbnail: '/images/thumbnails/fathers-day-golf-gifts-thumb.webp',
-    category: 'golf-accessories',
-    pageType: 'buying-guide',
-    quickAnswerProduct: 'bushnell-tour-v7-shift',
-    tag: 'GIFT GUIDE',
-    emoji: '🎁',
-    thumb: 'gold',
-    words: '2,500',
-    datePublished: '2026-05-11',
-    dateModified: '2026-07-23',
-    title: 'Father\'s Day Golf Gifts 2026 — Under $100 Picks',
-    titleDisplay: "Best Father's Day Golf Gifts 2026",
-    description: "Father's Day golf gifts for 2026 — real gear from $15 to $99 that a golfer actually uses. Tested picks for dad, not novelty items that collect dust.",
-    excerpt: 'Best Father\'s Day golf gifts ranked by price — under $25, $50, $100, $250, and splurge picks. All independently tested.',
-    bottomLine: 'The <strong>Bushnell Tour V7 Shift</strong> ($399) is the gift every golfer wants but won\'t buy themselves. For tighter budgets, the <strong>Precision Pro NX9</strong> ($199) delivers 90% of the performance at half the price.',
-    testingNotes: 'Every product in this guide is something I personally own, have gifted, or have received as a gift. Recommendations based on 2+ years of actual use.',
-    toc: ['Best Gifts Under $25', 'Best Gifts Under $50', 'Best Gifts Under $100', 'Best Gifts Under $250', 'Splurge Picks Over $250'],
-    intro: "Skip the novelty golf socks. These are the gifts a golfer will actually use — tested and ranked by a 10-handicap weekend player who has received (and returned) his share of well-meaning but useless golf gifts.",
-    sections: [
-      { h2: 'Best Gifts Under $25', body: "Budget gifts that do not feel cheap. These are the accessories I actually keep in my bag and replace when they wear out. I keep a pack of magnetic ball markers ($8), a Sharpie clip for marking my ball ($4), and a microfiber golf towel ($12) in my bag at all times. They cost almost nothing but I use them every single round. A divot repair tool with a magnetic marker is another no-brainer at $10 — I have bought three as gifts and every recipient still carries theirs.", badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'magnetic-ball-markers' },
-      { h2: 'Best Gifts Under $50', body: "The sweet spot for Father's Day golf gifts. Every item in this range delivers genuine value — no filler picks. The FootJoy WeatherSof ($18) is the best glove under $50 and it is not close. I go through four per season and have tried every alternative. The fit is consistent, the grip stays tacky through 15+ rounds, and the breathability keeps your hand dry on humid Chicago summer mornings. Pair it with a sleeve of Kirkland Signature balls ($13) and you have a $31 gift that any golfer will appreciate.", badge: 'BEST VALUE', rating: 4.7, affiliateKey: 'footjoy-weathersof-glove' },
-      { h2: 'Best Gifts Under $100', body: "Step up to gear that makes a real difference on the course. A putting mirror at $40 or alignment sticks at $12 might not look exciting in a gift box, but they improve scores more than any $100 gadget. The putting mirror at $30 is the single best training aid I own — I use it three times a week and it fixed my alignment issues within a month. Alignment sticks at $12 are the most versatile tool in golf — I use them for every practice session. And a good golf towel with a magnetic attachment ($15-25) is the kind of upgrade most golfers never buy themselves.", badge: 'BEST VALUE', rating: 4.6, affiliateKey: 'putting-mirror' },
-      { h2: 'Best Gifts Under $250', body: "Premium territory. At this price you can get a GPS watch, a quality rangefinder, or a launch monitor that genuinely changes how he practices. The Precision Pro NX9 at $199 is the rangefinder I recommend to everyone who asks. It does everything the $399 Bushnell does — pin lock, slope adjustment, magnetic mount — for half the price. For the tech-obsessed dad, the Shot Scope LM1 at $199 is a launch monitor with zero subscription fees that fits in a pocket. Both of these changed how I practice and play.", badge: 'BEST VALUE', rating: 4.4, affiliateKey: 'precision-pro-nx9-hd' },
-      { h2: 'Splurge Picks Over $250', body: "If budget is not a concern, these are the gifts that make a golfer's year. The Bushnell Tour V7 Shift at $399 is the rangefinder every weekend golfer wants but will not buy for themselves. I received a Bushnell V7 as a gift two years ago and it immediately became the most-used piece of equipment in my bag — more than any club. Knowing my exact yardage to the pin eliminated the guessing that was costing me 3-4 strokes per round on approach shots. If someone gave me this as a gift today, I would be thrilled. It is the definition of a gift golfers want but will not buy themselves.", badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v7-shift' },
-    ],
-    comparisonTable: {
-      headers: ['Gift', 'Best For', 'Price', 'Category'],
-      rows: [
-        { name: 'Bushnell Tour V7 Shift', bestFor: 'Best Overall', price: '~$399', feature1: 'Rangefinder', feature2: '', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'bushnell-tour-v7-shift' },
-        { name: 'Precision Pro NX9', bestFor: 'Best Value', price: '~$199', feature1: 'Rangefinder', feature2: '', winner: false, rating: 4.4, affiliateKey: 'precision-pro-nx9-hd' },
-        { name: 'Putting Mirror', bestFor: 'Best Under $50', price: '~$30', feature1: 'Training', feature2: '', winner: false, rating: 4.6, affiliateKey: 'putting-mirror' },
-        { name: 'FootJoy WeatherSof', bestFor: 'Best Under $25', price: '~$18', feature1: 'Glove', feature2: '', winner: false, rating: 4.7, affiliateKey: 'footjoy-weathersof-glove' },
-      ],
-    },
-    faq: [
-      { q: "What is the best golf gift for Father's Day 2026?", a: "The Bushnell Tour V7 Shift ($399) is the most universally appreciated golf gift — it locks onto pins instantly and no golfer would ever buy it for themselves. For tighter budgets, the Precision Pro NX9 ($199) delivers 90% of the performance." },
-      { q: "What golf gift should I get for a beginner?", a: "A quality glove ($18), a dozen Callaway Supersoft balls ($22), and a putting mirror ($40). Total under $85 and covers everything a new golfer needs to practice." },
-      { q: "Are golf rangefinders good Father's Day gifts?", a: "Yes — rangefinders are the #1 most appreciated golf gift because most golfers want one but consider them too expensive to buy for themselves. The Precision Pro NX9 at $199 is the best value option." },
-      { q: "What golf gift should I avoid?", a: "Avoid novelty items (funny headcovers, joke balls, gag gifts). Golfers appreciate functional gear they will actually use. A $12 pack of alignment sticks improves his game more than a $40 novelty item." },
-    ],
-    related: [
-      { slug: '/best-golf-gifts-for-dad/', label: 'Best Golf Gifts for Dad' },
-      { slug: '/best-golf-gifts-for-him/', label: 'Golf Gifts for Him' },
-      { slug: '/best-golf-gifts-under-50/', label: 'Golf Gifts Under $50' },
-      { slug: '/best-christmas-golf-gifts/', label: 'Christmas Golf Gifts' },
-      { slug: '/best-golf-rangefinders-2026/', label: 'Best Rangefinders 2026' },
-      { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
-      { slug: '/best-golf-training-aids/', label: 'Best Training Aids' },
-      { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
-    ],
-  },
 
   {
     id: 'launch-monitors-no-subscription',
