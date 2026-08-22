@@ -36,7 +36,7 @@
  *                callaway-supersoft, vice-pro
  *
  * PUTTERS:       odyssey-white-hot-og, scotty-cameron-phantom,
- *                cleveland-hb-soft-milled, taylormade-spider-tour
+ *                cleveland-hb-soft-2, taylormade-spider-tour
  *
  * BAGS:          sun-mountain-25-plus, titleist-players-4,
  *                callaway-fairway-14, callaway-chev-dry
@@ -82,7 +82,7 @@ export const ALL_PRODUCT_IDS: readonly string[] = [
   'titleist-pro-v1', 'titleist-pro-v1x', 'taylormade-tp5', 'callaway-chrome-tour-2026',
   'srixon-soft-feel', 'callaway-supersoft', 'vice-pro',
   // Putters
-  'odyssey-white-hot-og', 'scotty-cameron-phantom', 'cleveland-hb-soft-milled', 'taylormade-spider-tour',
+  'odyssey-white-hot-og', 'scotty-cameron-phantom', 'cleveland-hb-soft-2', 'taylormade-spider-tour',
   // Bags
   'sun-mountain-25-plus', 'titleist-players-4', 'callaway-fairway-14', 'callaway-chev-dry',
   // Gloves
