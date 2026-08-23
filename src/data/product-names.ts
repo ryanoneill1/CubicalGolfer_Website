@@ -2,7 +2,6 @@
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
   'bushnell-tour-v7-shift': "Bushnell Tour V7 Shift",
-  'bushnell-tour-v7-shift': "Bushnell Tour V7 Shift",
   'precision-pro-nx9-hd': "Precision Pro NX9",
   'blue-tees-series-3-max': "Blue Tees Series 3 Max",
   'garmin-approach-z82': "Garmin Approach Z82",
@@ -248,7 +247,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'footjoy-hydrolite-rain-jacket': "FootJoy Hydrolite Rain Jacket",
   'club-glove-microfiber-towel': "Club Glove Microfiber Towel",
   'procella-golf-umbrella': "Procella Golf Umbrella",
-  'ezgo-freedom-rxv': "E-Z-GO Freedom RXV",
+  'ezgo-rxv-2': "E-Z-GO RXV 2",
   'club-car-onward': "Club Car Onward",
   'callaway-org-14-cart-bag': "Callaway Org 14 Cart Bag",
   'ping-hoofer-14-stand-bag': "Ping Hoofer 14 Stand Bag",

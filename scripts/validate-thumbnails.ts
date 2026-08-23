@@ -58,8 +58,8 @@ const SILHOUETTE_FILES = new Set<string>([
   'taylormade-sim2-max.webp',          // repointed → taylormade-sim-max.webp
   'cleveland-launcher-xl2-driver.webp',// repointed → cleveland-launcher-xl2.webp
   'titleist-gt2-driver.webp',          // repointed → Titleist-GT2-driver.webp
-  'club-car-onward.webp',              // still in use — awaiting a real photo
-  'ezgo-freedom-rxv.webp',             // repointed → E-Z-GO-Freedom-RXV.webp
+  'club-car-onward.webp',              // superseded by club-car-onward-cart.webp (the real photo)
+  'ezgo-freedom-rxv.webp',             // unused; E-Z-GO-Freedom-RXV.webp was a Club Car, now club-car-onward-cart.webp
   'cobra-ds-adapt-max-k.webp',         // still in use — awaiting a real photo
 ]);
 const AWAITING_PHOTO = new Set<string>([

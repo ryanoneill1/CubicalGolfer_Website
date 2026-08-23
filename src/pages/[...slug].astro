@@ -510,9 +510,11 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
           <div class="quick-answer-header">{article.pageType === 'review' && article.rating ? `⚡ Our Verdict — ★ ${article.rating}/5` : '⚡ Quick Answer'}</div>
           <p class="quick-answer-text" set:html={article.bottomLine} />
           <a href={qaAff.url} class="quick-answer-cta" target="_blank"
-            rel="nofollow noopener sponsored"
+            rel={(qaAff as any).program === 'direct' ? "nofollow noopener" : "nofollow noopener sponsored"}
             aria-label={`Check price for our #1 pick`}>
-            Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price ↗
+            {(qaAff as any).program === 'direct'
+              ? <>Our #1 Pick: {qaAff.price} — {qaAff.label}</>
+              : <>Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price ↗</>}
           </a>
           <p class="quick-answer-more">{productCount === 0 ? 'Read the full guide below.' : productCount === 1 ? 'Read the full review below.' : `Read the full guide below for all ${productCount} products tested.`}</p>
         </div>

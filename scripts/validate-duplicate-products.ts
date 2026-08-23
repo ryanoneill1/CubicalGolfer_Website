@@ -42,6 +42,10 @@ const PENDING_IMAGE_PAIR = new Set<string>([
   // image twice at two prices. Needs its own product photo; allowed here so the
   // defect stays visible rather than blocking the build.
   'frogger-amphibian-towel|golf-towel-personalized',
+  // Sprint 66 update: ezgo-rxv-2 joined this group. Its old photo,
+  // E-Z-GO-Freedom-RXV.webp, was a picture of a CLUB CAR — the badge on the nose
+  // said so. That photo now correctly serves club-car-onward, and the E-Z-GO is
+  // on the placeholder until a real shot exists.
   // Sprint 56: the three genuine sub-$500 iron sets added for
   // /best-irons-under-500/ have no product photography yet, so they share
   // placeholder.webp with optoma-zw350st, which has been awaiting a shot since
@@ -50,7 +54,7 @@ const PENDING_IMAGE_PAIR = new Set<string>([
   // the signature is the full sorted key list: photograph any ONE of these and
   // the remaining set forms a new signature and fails the build again, which is
   // the intended prompt to finish the job.
-  'cobra-air-x-2-irons|cobra-air-x-irons|optoma-zw350st|tour-edge-hot-launch-c522-irons|voice-caddie-sc200plus',
+  'cobra-air-x-2-irons|cobra-air-x-irons|ezgo-rxv-2|optoma-zw350st|tour-edge-hot-launch-c522-irons|voice-caddie-sc200plus',
 ]);
 
 const problems: string[] = [];

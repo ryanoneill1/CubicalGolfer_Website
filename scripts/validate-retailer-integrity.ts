@@ -7,7 +7,7 @@ import { readFileSync } from 'fs';
 const t = readFileSync('src/data/affiliate-links.ts', 'utf-8');
 const dom = (u: string) =>
   /amazon/.test(u) ? 'Amazon' : /playbetter/.test(u) ? 'PlayBetter' :
-  /pxf\.io/.test(u) ? 'Bushnell' : /(tkqlhce|anrdoezrs|jdoqocy|dpbolvw|kqzyfj|golfgalaxy)/.test(u) ? 'Golf Galaxy' : null;
+  /pxf\.io/.test(u) ? 'Bushnell' : /ezgo\./.test(u) ? 'E-Z-GO' : /clubcar\./.test(u) ? 'Club Car' : /(tkqlhce|anrdoezrs|jdoqocy|dpbolvw|kqzyfj|golfgalaxy)/.test(u) ? 'Golf Galaxy' : null;
 const errs: string[] = [];
 const entryRe = /^  '([a-z0-9-]+)': \{([\s\S]*?)^  \},/gm;
 let m: RegExpExecArray | null, n = 0;
@@ -20,7 +20,7 @@ while ((m = entryRe.exec(t))) {
   const gg = (body.match(/golfGalaxyUrl: ['`]([^'`]+)['`]/) || [])[1] || '';
   const d = dom(url);
   if (d && retailer && retailer !== d) errs.push(`${key}: retailer '${retailer}' but url is ${d}`);
-  const labRet = ['Bushnell', 'PlayBetter', 'Golf Galaxy', 'Amazon'].find(r => label.includes(r));
+  const labRet = ['Bushnell', 'PlayBetter', 'Golf Galaxy', 'Amazon', 'E-Z-GO', 'Club Car'].find(r => label.includes(r));
   if (d && labRet && labRet !== d) errs.push(`${key}: label names ${labRet} but url is ${d}`);
   if (/amazon\.com/.test(url) && !url.includes('tag=cubicalgolfer-20')) errs.push(`${key}: amazon url missing tag`);
   if (/playbetter/.test(url) && !/ghref=2301(%3A|:)1333883/.test(url)) errs.push(`${key}: playbetter url missing ghref`);

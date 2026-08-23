@@ -100,14 +100,14 @@ const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'a
     )}
 
     <div class="product-card__price">{price}</div>
-    <p class="product-card__price-note">💡 {priceNote || 'Prices change — click to see current price'}</p>
+    <p class="product-card__price-note">💡 {priceNote || (unmonetised ? `Sold direct by ${retailer}` : 'Prices change — click to see current price')}</p>
   </div>
 
   <!-- CTA 3: Primary button -->
   <a href={url} class:list={["product-card__cta", { "product-card__cta--winner": winner }]}
      target="_blank" rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
      aria-label={unmonetised ? `Get ${name} from ${retailer}` : `Check price for ${name} at ${retailer}`}>
-    <span class="product-card__cta-text">Check Price at {retailer} ↗</span>
+    <span class="product-card__cta-text">{unmonetised ? label : `Check Price at ${retailer} ↗`}</span>
     <span class="product-card__cta-badge">Prices checked today</span>
   </a>
 

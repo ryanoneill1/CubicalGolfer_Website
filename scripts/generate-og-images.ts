@@ -187,7 +187,7 @@ const { AFFILIATE } = await import('../src/data/affiliate-links.ts');
 
 // Card art must not be mistaken for product photography on a social card.
 const CARD_ART = new Set(['taylormade-sim2-max.webp','cleveland-launcher-xl2-driver.webp',
-  'titleist-gt2-driver.webp','club-car-onward.webp','ezgo-freedom-rxv.webp','cobra-ds-adapt-max-k.webp']);
+  'titleist-gt2-driver.webp','club-car-onward-cart.webp','placeholder.webp','cobra-ds-adapt-max-k.webp']);
 
 let articleCards = 0, withArt = 0;
 for (const a of ARTICLES as any[]) {

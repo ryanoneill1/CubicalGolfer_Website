@@ -50,9 +50,18 @@ const primaryRetailerName = shouldSwap
     : 'Retailer')
   : retailer;
 
-const btnText = `${price} at ${primaryRetailerName} — Check Today's Price →`;
+// An unmonetised entry links to the maker, not a storefront with a live price,
+// so it uses its own label ("Find a Dealer →") instead of promising a price check.
+const btnText = unmonetised
+  ? `${price} — ${label}`
+  : `${price} at ${primaryRetailerName} — Check Today's Price →`;
 // FIX: Urgency-focused meta line — "Prices checked today" converts better than a static date
-const dateLabel = dateChecked
+// 'Free shipping' is an Amazon promise. Entries that link straight to the maker
+// (program: 'direct' → unmonetised) are free apps or dealer-sold vehicles, where
+// neither shipping nor a live price is ours to promise.
+const dateLabel = unmonetised
+  ? `Sold direct by ${primaryRetailerName}`
+  : dateChecked
   ? `Free shipping · Prices checked today`
   : `Free shipping · Prices may vary`;
 ---
