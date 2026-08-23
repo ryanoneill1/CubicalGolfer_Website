@@ -213,7 +213,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'bushnell-phantom-2': "Bushnell Phantom 3 Slope",
   'garmin-approach-s70': "Garmin Approach S70",
   'titleist-gt2-driver': "Titleist GT2 Driver",
-  'taylormade-sim2-max': "TaylorMade SIM2 Max",
+  'taylormade-sim2-max': "TaylorMade SIM2 Max Driver",
   'cleveland-launcher-xl': "Cleveland Launcher XL",
   'taylormade-stealth-hd-irons': "TaylorMade Stealth HD Irons",
   'srixon-zx5-mk-ii': "Srixon ZX5 MK II",

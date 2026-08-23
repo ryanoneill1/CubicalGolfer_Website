@@ -2414,8 +2414,13 @@ export const ARTICLES: Article[] = [
     intro: "You don\'t need to spend $599 on a driver. The best drivers under $400 in 2026 are previous-season premium models that have dropped in price, not cheap no-name clubs. We tested 6 budget drivers; these 3 beat everything else under $200.",
     toc: ['Why budget drivers are actually good now', 'Best previous-generation value: TaylorMade SIM Max', 'Best forgiveness upgrade: Callaway Big Bertha', 'Best new budget: Cleveland Launcher XL', 'What to avoid', 'FAQ'],
     sections: [
+      { h2: 'Best Overall 2026: Cobra DS-Adapt MAX-K', badge: 'TOP PICK', affiliateKey: 'cobra-ds-adapt-max-k', rating: 4.3, price: '~$299',
+        body: "At $299 the DS-Adapt MAX-K is the only current-generation driver that fits comfortably under this page's $400 ceiling, and it is the one to buy if you want a head released this cycle rather than a discounted leftover.\n\nThe MAX-K is Cobra's draw-biased, high-MOI head — built for the same miss the rest of this page is aimed at. DS-Adapt refers to the adjustable hosel, which lets you change loft and face angle without buying a different shaft.\n\nThe honest comparison with the older heads below: a 2021 driver at $349 and a 2026 driver at $299 are close enough in performance that neither will transform your game, but only one of them is still supported, still stocked in every flex, and still gaining aftermarket shaft options. If the prices were reversed the argument would be different.",
+        pros: ['The only current-generation head under $400 here', 'Draw-biased high-MOI shape suits the typical mishit', 'Adjustable loft and face angle via the DS-Adapt hosel', 'Cheaper than the previous-generation drivers it replaces'],
+        cons: ['Not the longest head Cobra makes — the LS is lower spin', 'Stock shaft options are narrower than premium models'],
+      },
       { h2: 'Why Budget Drivers Are Actually Great Now', body: "Tour-level technology from 2-3 years ago is available for under $400 today. The TaylorMade SIM Max was the best driver on the market in 2021 — it now sells for under $120. The performance gap between a $200 driver and a $600 driver is genuinely small for weekend golfers. Curious how premium compares? Our <a href=\"/compare/callaway-paradym-vs-taylormade-qi35/\">Qi35 vs Ai Smoke comparison</a> shows the gap is smaller than you think." },
-      { h2: 'Best Previous-Generation Value: TaylorMade SIM Max', affiliateKey: 'taylormade-sim2-max', body: "Speed Injected Twist Face for faster ball speed. 460cc head with draw-biased weighting. The Inertia Generator at the back creates low-spin, high-launch for maximum carry. You're getting 2021 technology for 2026 budget pricing.",
+      { h2: 'Previous-Generation Value: TaylorMade SIM2 Max Driver', affiliateKey: 'taylormade-sim2-max', body: "Speed Injected Twist Face for faster ball speed. 460cc head with draw-biased weighting. The Inertia Generator at the back creates low-spin, high-launch for maximum carry. You're getting 2021 technology for 2026 budget pricing.",
         pros: ['Speed Injected Twist Face delivers consistent ball speed on mis-hits', 'Inertia Generator shifts weight low and back for forgiveness', 'Premium TaylorMade construction at a fraction of current retail'],
         cons: ['Previous generation — technology 2-3 years behind current models', 'Limited adjustability compared to current loft-sleeve drivers'], price: '~$129-149'},
       { h2: 'Best Forgiveness Upgrade: Callaway Big Bertha B21', badge: 'BEST VALUE', rating: 4.6, affiliateKey: 'callaway-big-bertha', body: "Specifically designed to fight slices. The offset hosel and draw-biased weighting help high-handicappers hit more fairways. Flash Face SS21 cup face for ball speed. If your miss is a slice, this is your driver.",
@@ -2434,9 +2439,10 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Driver', 'Best For', 'Price', 'Loft Options', 'Head Size'],
       rows: [
-        { name: 'TaylorMade SIM Max (prev gen)', affiliateKey: 'taylormade-sim2-max', bestFor: 'Best Overall', price: '~$129', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
+        { badge: 'TOP PICK', rating: 4.3, affiliateKey: 'cobra-ds-adapt-max-k', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Overall 2026', price: '~$299', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: true },
+        { name: 'TaylorMade SIM2 Max Driver', affiliateKey: 'taylormade-sim2-max', bestFor: 'Previous-Gen Value', price: '~$349', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
         { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-big-bertha',           name: 'Callaway Big Bertha B21',     bestFor: 'Anti-Slice',   price: '~$349', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
-        { rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver',         name: 'Cleveland Launcher XL',       bestFor: 'Budget New',   price: '~$159', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
+        { rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver',         name: 'Cleveland Launcher XL2',      bestFor: 'Budget New',   price: '~$299', feature1: '9°, 10.5°, 12°', feature2: '460cc', winner: false },
       ],
     },
     faq: [
@@ -6875,7 +6881,7 @@ export const ARTICLES: Article[] = [
     ],
     title: 'Arccos vs Garmin 2026 — Shot Tracking Compared',
     titleDisplay: 'Arccos Caddie vs Garmin S62 Shot Tracking',
-    bottomLine: '<strong>Arccos Caddie</strong> is the better tracking system with more accurate automatic detection and superior strokes-gained analysis. <strong>Garmin S62</strong> is the better overall golf device with Virtual Caddie, course maps, and no subscription. If tracking data is your priority, Arccos wins. If you want one device that does everything, Garmin wins.',
+    bottomLine: '<strong>Arccos Caddie</strong> is the better tracking system with more accurate automatic detection and superior strokes-gained analysis. <strong>Garmin Approach S44</strong> is the better overall golf device — course maps, on-wrist distances and no subscription, for $40 more than Arccos costs in year one alone. If tracking data is your priority, Arccos wins. If you want one device that does everything, Garmin wins.',
     description: 'Arccos Caddie vs Garmin S62 for shot tracking — detection accuracy, strokes-gained data, club suggestions, subscription cost, and which one earns the money.',
     excerpt: 'Arccos sensors vs Garmin S62 built-in tracking — which system gives you better data to improve your golf game?',
     ogImage: 'https://www.cubicalgolfer.com/images/og/arccos-vs-garmin-shot-tracking.jpg',
@@ -6893,7 +6899,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['System', 'Price', 'Tracking', 'Subscription', 'Rating'], rows: [
       { rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Tracking', price: '~$249 + $99/yr', feature1: '94% auto', feature2: '$99/yr', winner: false },
-      { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin S62', bestFor: 'Best Overall', price: '~$499', feature1: '70% auto', feature2: 'None', winner: true },
+      { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s44', name: 'Garmin Approach S44', bestFor: 'Best Overall', price: '~$289', feature1: '70% auto', feature2: 'None', winner: true },
       { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$249', feature1: '90% auto', feature2: 'None', winner: false },
     ] },
     faq: [
@@ -11751,7 +11757,7 @@ export const ARTICLES: Article[] = [
     description: 'Best irons under $500 in 2026 — game improvement iron sets tested for forgiveness, distance, and feel. Real picks for budget-conscious golfers on course.',
     excerpt: 'You do not need to spend $900 on irons. These under-$500 sets deliver 90% of the performance at half the price.',
     bottomLine: 'The <strong>Tour Edge Hot Launch C522</strong> ($349.99) is the best iron set that is genuinely under $500 — a complete 4-PW set on KBS Max 80 steel shafts. If you swing slower and want a lighter build, the <strong>Cobra AIR-X Irons</strong> ($419.99) are the pick. Both were verified in stock and under budget on 22 August 2026.',
-    intro: `The best irons under $500 in 2026 are the <strong>Tour Edge Hot Launch C522</strong> ($349.99) and the <strong>Cobra AIR-X Irons</strong> ($419.99) — complete 4-PW sets from established brands, both verified in stock below the $500 line.\n\nHere is what most under-$500 iron guides will not tell you: genuinely new, brand-name iron sets under $500 are rare. Ping, Titleist and the current Callaway and TaylorMade lines all start north of $700 and run past $1,200. Previous-generation sets are cheaper, but not as cheap as the internet claims — Wilson Launch Pad 2 sets run $542 to $659, TaylorMade SIM2 Max sets run $599 to $750, and the Callaway Rogue ST Max that everyone quotes at $449 is listed with no price and no stock. The three sets below actually clear the bar without dropping to unbranded clubs, and every price here was read off a live listing rather than a press release.`,
+    intro: `The best irons under $500 in 2026 are the <strong>Tour Edge Hot Launch C522</strong> ($349.99) and the <strong>Cobra AIR-X Irons</strong> ($419.99) — complete 4-PW sets from established brands, both verified in stock below the $500 line.\n\nHere is what most under-$500 iron guides will not tell you: genuinely new, brand-name iron sets under $500 are rare. Ping, Titleist and the current Callaway and TaylorMade lines all start north of $700 and run past $1,200. Previous-generation sets are cheaper, but not as cheap as the internet claims — Wilson Launch Pad 2 sets run $542 to $659, TaylorMade SIM2 Max iron sets run $599 to $750, and the Callaway Rogue ST Max that everyone quotes at $449 is listed with no price and no stock. The three sets below actually clear the bar without dropping to unbranded clubs, and every price here was read off a live listing rather than a press release.`,
     toc: ['Top Picks Under $500', 'New vs Previous-Gen', 'Where to Buy', 'When to Upgrade'],
     updateLog: [{ date: '2026-05-17', note: 'Initial publication' }],
     whoFor: ['Budget-conscious golfers', 'High handicappers buying their first quality set', 'Golfers upgrading from a box set'],
