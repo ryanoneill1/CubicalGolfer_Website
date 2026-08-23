@@ -22,7 +22,7 @@ const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
 const meta = {
   title: 'Golf Ball Compression Chart 2026 — 34 Balls + PDF',
-  description: 'Compression ratings for 34 golf balls — Pro V1, Supersoft, Noodle — matched to your swing speed. Grab the free printable PDF chart to take to the shop.',
+  description: 'Compression ratings for 34 golf balls — Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed. Free printable PDF.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
@@ -242,12 +242,21 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         <li><a href="#under-85">Best Balls Under 85 mph</a></li>
         <li><a href="#85-100">Best Balls 85-100 mph</a></li>
         <li><a href="#over-100">Best Balls Over 100 mph</a></li>
-        <li><a href="#by-brand">Compression Chart by Brand</a></li>
+        <li><a href="#by-brand">Compression Chart by Brand</a>
+          <ul style="margin:6px 0 0 18px;padding:0;list-style:disc;font-size:15px;">
+            <li><a href="#titleist">Titleist</a></li>
+            <li><a href="#callaway">Callaway</a></li>
+            <li><a href="#taylormade">TaylorMade</a></li>
+            <li><a href="#srixon">Srixon</a></li>
+            <li><a href="#bridgestone">Bridgestone</a></li>
+            <li><a href="#vice">Vice</a></li>
+          </ul>
+        </li>
         <li><a href="#faq">FAQ</a></li>
       </ol>
     </nav>
 
-    <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps every major golf ball's compression rating to your swing speed — so you can find the right ball in 10 seconds instead of wasting money on balls designed for someone else's swing.</p>
+    <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps the compression rating of all 34 balls — every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, Wilson, Kirkland, Maxfli and Pinnacle model we track — to your swing speed, so you can find the right ball in 10 seconds instead of wasting money on balls built for someone else's swing.</p>
 
     <!-- ═══ INTERACTIVE BALL FINDER ═══ -->
     <section class="ball-finder" id="ball-finder">

@@ -108,8 +108,16 @@ function currentPages(): Record<string, { hash: string; seed?: string }> {
     const slug = f.endsWith('/index.astro')
       ? (f.replace(/^src\/pages/, '').replace(/index\.astro$/, '') || '/')
       : f.replace(/^src\/pages/, '').replace(/\.astro$/, '') + '/';
-    if (out[slug]) continue;                             // a record already owns it
-    out[slug] = { hash: sha(fs.readFileSync(f, 'utf-8')) };
+    const fileHash = sha(fs.readFileSync(f, 'utf-8'));
+    // A page can have BOTH a record and its own .astro file — the compression
+    // chart is one, and it is the biggest page on the site at 60k impressions.
+    // Hashing only the record made every edit to its .astro invisible: the file
+    // changed, the manifest reported "0 changed", and the sitemap would have kept
+    // telling Google a rewritten page was untouched. Combine both sources so a
+    // change to either one counts.
+    out[slug] = out[slug]
+      ? { hash: sha(out[slug].hash + fileHash), seed: out[slug].seed }
+      : { hash: fileHash };
   }
   return out;
 }
