@@ -92,7 +92,11 @@ const TYPE_BADGE: Record<string, string> = {
         <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;align-items:center">
           <span class="badge-pill">{TYPE_BADGE[course.type] ?? course.type}</span>
           <span class="badge-pill">{course.holes} holes</span>
-          <span class="badge-pill" style="background:var(--gold);color:#1a1a1a">{course.price}</span>
+          {/* A private club already says "Private" in its type badge — repeating
+              it in the gold price pill renders the same words twice. */}
+          {course.type !== 'private' && (
+            <span class="badge-pill" style="background:var(--gold);color:#1a1a1a">{course.price}</span>
+          )}
           {course.rating && <span class="badge-pill">Rating: {course.rating}</span>}
         </div>
         <p>{course.notes}</p>
