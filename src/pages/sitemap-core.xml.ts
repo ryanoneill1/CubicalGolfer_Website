@@ -5,7 +5,7 @@
 
 import type { APIRoute } from 'astro';
 import { ARTICLES } from '../data/articles';
-import { buildSitemapXml } from '../lib/sitemap-utils';
+import { buildSitemapXml, lastmodFor } from '../lib/sitemap-utils';
 
 function freshestInCategory(cat: string): string {
   const dates = (ARTICLES as any[])
@@ -36,7 +36,11 @@ function freshestOverall(): string {
 }
 
 export const GET: APIRoute = async () => {
-  const entries = [
+  // Sprint 71: the manifest is the source of truth for lastmod. The derivations
+  // below (freshestOverall / freshestInCategory / fromRecord) remain as the
+  // fallback, so a page missing from the manifest degrades to the old behaviour
+  // rather than emitting a wrong date.
+  const raw = [
     { loc: '/',                         changefreq: 'weekly',  priority: '1.0',  lastmod: freshestOverall() },
     { loc: '/best-golf-gear-2026/',     changefreq: 'weekly',  priority: '0.95', lastmod: freshestOverall() },
     { loc: '/about/',                   changefreq: 'monthly', priority: '0.7',  lastmod: '2026-03-15' },
@@ -72,6 +76,8 @@ export const GET: APIRoute = async () => {
     { loc: '/brands/titleist/',          changefreq: 'monthly', priority: '0.70', lastmod: freshestInCategory('gear-reviews') },
     { loc: '/courses/',                  changefreq: 'monthly', priority: '0.60', lastmod: '2026-05-17' },
   ];
+
+  const entries = raw.map(e => ({ ...e, lastmod: lastmodFor(e.loc, e.lastmod) }));
 
   return new Response(buildSitemapXml(entries), {
     status: 200,

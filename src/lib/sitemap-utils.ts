@@ -48,3 +48,26 @@ export const REDIRECTED_AWAY = new Set<string>([
   //   stronger URL (294 clicks vs 88). Keeping both would split the query.
   '/compare/taylormade-qi35-vs-callaway-ai-smoke/',
 ]);
+
+/**
+ * lastmod from src/data/lastmod-manifest.json — a per-page date backed by a hash
+ * of that page's own content, so it only moves when the page genuinely changes.
+ *
+ * Added Sprint 71. Before this, 100 pages (39% of the sitemap) all claimed to
+ * have changed on 2026-07-21, because dateModified was bulk-stamped. Google only
+ * honours lastmod from sites that keep it accurate; an unreliable one is ignored
+ * and it falls back to refreshing broadly — which is what your Crawl Stats showed:
+ * 86.9% refresh against 13.1% discovery, while 23 URLs sat un-fetched for three
+ * months.
+ *
+ * Falls back to the record's own date if a page is somehow missing from the
+ * manifest, so a stale manifest degrades to the old behaviour rather than
+ * emitting a wrong date. scripts/update-lastmod.ts --check fails the build if the
+ * manifest drifts, so that fallback should never be reached in practice.
+ */
+import manifest from '../data/lastmod-manifest.json';
+
+export function lastmodFor(slug: string, fallback?: string): string {
+  const e = (manifest as Record<string, { lastmod: string }>)[slug];
+  return e?.lastmod ?? fallback ?? '2026-04-14';
+}
