@@ -13,6 +13,7 @@
  */
 import fs from 'fs';
 import path from 'path';
+import { REDIRECTED_AWAY } from '../src/lib/sitemap-utils';
 
 let errors = 0;
 
@@ -90,8 +91,18 @@ if (fs.existsSync(distPath)) {
 }
 
 // ── 4. a redirect must never shadow a live page ────────────────────────────
+// ...unless the shadowing is deliberate. Sprint 68: two URLs are intentionally
+// redirected into a stronger page while their records stay in articles.ts /
+// comparisons.ts, so the consolidation stays reversible and no content is lost.
+// Those two are listed in REDIRECTED_AWAY and excluded from the sitemap; every
+// OTHER built-page-behind-a-redirect is still a hard failure.
+//
+// Worth noting this check existed before Sprint 68 and never fired, because the
+// two redirects lived in the Cloudflare dashboard rather than public/_redirects
+// — invisible to the build. It caught them the moment they were written down.
+// The live half of this is covered by `npm run check-urls`.
 for (const [from] of redirects) {
-  if (live.has(from)) {
+  if (live.has(from) && !REDIRECTED_AWAY.has(from)) {
     console.error(`✗ ${from} is a built page but is also redirected away — the page is unreachable.`);
     errors++;
   }
@@ -123,6 +134,37 @@ const dead = new Map<string, number>();
 for (const [u, n] of dead) {
   console.error(`✗ dead internal link (404, no redirect): ${u} — linked from ${n} page(s)`);
   errors++;
+}
+
+
+// ── 3. a redirect SOURCE must never appear in the sitemap ──────────────────
+// Added Sprint 68. GSC reported 48 URLs under "Page with redirect" with a
+// validation that FAILED. Four of them were pages the sitemap actively asks
+// Google to index while the edge redirects them away — the site contradicting
+// itself. Those four redirects live in Cloudflare, outside this repo, so this
+// check cannot see them; what it CAN do is guarantee the half we control never
+// drifts: nothing we redirect on purpose may also be advertised in the sitemap.
+// The live half is covered by `npm run check-urls`.
+{
+  const smDir = 'dist';
+  const sm = fs.existsSync(smDir)
+    ? fs.readdirSync(smDir).filter(f => /^sitemap.*\.xml$/.test(f))
+        .map(f => fs.readFileSync(path.join(smDir, f), 'utf-8')).join('\n')
+    : '';
+  if (sm) {
+    const srcs = fs.readFileSync('public/_redirects', 'utf-8').split('\n')
+      .map(l => l.trim()).filter(l => l && !l.startsWith('#'))
+      .map(l => l.split(/\s+/)[0]).filter(Boolean);
+    const clash = srcs.filter(src => sm.includes(`cubicalgolfer.com${src}<`));
+    if (clash.length) {
+      console.error(`\n\u274c ${clash.length} URL(s) are BOTH redirected and listed in the sitemap:`);
+      clash.forEach(c => console.error('   ' + c));
+      console.error('   A redirected URL must not be advertised for indexing. Remove it from the sitemap.');
+      errors += clash.length;
+    } else {
+      console.log(`\u2705 Redirect/sitemap agreement: none of ${srcs.length} redirect sources is in the sitemap.`);
+    }
+  }
 }
 
 if (errors > 0) { console.error(`\n❌ validate-redirects: ${errors} problem(s).`); process.exit(1); }

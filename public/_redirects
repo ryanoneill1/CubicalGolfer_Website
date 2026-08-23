@@ -124,3 +124,9 @@
 /best-golf-gifts-for-dad/  /best-golf-gifts-for-him/  301
 /fathers-day-golf-gifts-2026/  /best-golf-gifts-for-him/  301
 /gifts-for-golfer-who-never-keeps-anything/  /best-golf-gifts-for-him/  301
+
+# Sprint 68 — mirrors two Cloudflare dashboard rules that were live but undocumented.
+# Both URLs were in the sitemap AND redirected, which failed a GSC validation.
+# Recording them here means validate-redirects.ts now enforces their exclusion.
+/best-blade-putters-2026/  /best-golf-putters-2026/  301
+/compare/taylormade-qi35-vs-callaway-ai-smoke/  /compare/callaway-paradym-vs-taylormade-qi35/  301

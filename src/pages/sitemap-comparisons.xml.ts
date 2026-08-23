@@ -3,12 +3,14 @@
 
 import type { APIRoute } from 'astro';
 import { COMPARISONS } from '../data/comparisons';
-import { buildSitemapXml } from '../lib/sitemap-utils';
+import { buildSitemapXml, REDIRECTED_AWAY } from '../lib/sitemap-utils';
 
 const FALLBACK = '2026-04-14';
 
 export const GET: APIRoute = async () => {
-  const entries = COMPARISONS.map(c => ({
+  const entries = COMPARISONS
+    .filter(c => !REDIRECTED_AWAY.has(`/compare/${c.slug}/`))
+    .map(c => ({
     loc:        `/compare/${c.slug}/`,
     lastmod:    c.dateModified ?? FALLBACK,
     changefreq: 'weekly',

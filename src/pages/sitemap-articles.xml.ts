@@ -3,7 +3,7 @@
 
 import type { APIRoute } from 'astro';
 import { ARTICLES } from '../data/articles';
-import { buildSitemapXml } from '../lib/sitemap-utils';
+import { buildSitemapXml, REDIRECTED_AWAY } from '../lib/sitemap-utils';
 import { existsSync } from 'node:fs';
 
 // REC-05: each URL lives in exactly one sitemap.
@@ -27,7 +27,7 @@ const freqByType: Record<string, string> = {
 };
 
 export const GET: APIRoute = async () => {
-  const entries = ARTICLES.filter((a: any) => !ownedElsewhere(a.slug)).map(a => ({
+  const entries = ARTICLES.filter((a: any) => !ownedElsewhere(a.slug) && !REDIRECTED_AWAY.has(a.slug)).map(a => ({
     loc:        a.slug,
     lastmod:    a.dateModified ?? a.datePublished ?? FALLBACK,
     changefreq: freqByType[a.pageType] ?? 'monthly',
