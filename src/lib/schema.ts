@@ -250,7 +250,7 @@ export function cityPageSchema(city: GolfCity): object {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `Best Golf Courses in ${city.city}, ${city.state} (2026 Guide)`,
-    description: `The best public & semi-private golf courses in ${city.city}, ${city.stateFullName} in 2026.`,
+    description: `The best golf courses you can actually book in ${city.city}, ${city.stateFullName} in 2026 — green fees, ratings and booking tips.`,
     dateModified: city.dateModified,
     author: AUTHOR,
     publisher: PUBLISHER,

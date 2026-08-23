@@ -122,7 +122,7 @@ export function staticMeta(opts: {
 // ── City / golf courses page ─────────────────────────────────────────────────
 export function cityMeta(city: GolfCity): PageMeta {
   const title       = `Best Golf Courses in ${city.city}, ${city.state} (2026 Guide)`;
-  const description = `The best public, semi-private, and resort golf courses in ${city.city}, ${city.state}. Reviewed and ranked for weekend golfers in 2026.`;
+  const description = `The best golf courses you can actually play in ${city.city}, ${city.state} — public, municipal and resort tee times, with green fees, ratings and booking tips for 2026.`;
   const canonical   = `${DOMAIN}/courses/${city.slug}/`;
   return {
     title,
@@ -144,7 +144,7 @@ export function cityMeta(city: GolfCity): PageMeta {
 export function coursesMeta(): PageMeta {
   return {
     title:       'Best Golf Courses by City — Weekend Golfer Picks 2026',
-    description: 'The best public and semi-private golf courses in major US cities, reviewed and ranked for weekend golfers.',
+    description: 'The best golf courses you can actually book in major US cities — public, municipal and resort tee times reviewed and ranked for weekend golfers.',
     canonical:   `${DOMAIN}/courses/`,
     ogImage:     OG_IMG,
     ogType:      'website',
