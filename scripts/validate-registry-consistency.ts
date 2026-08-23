@@ -129,3 +129,43 @@ if (altBad.length || priceBad.length) {
   }
   process.exit(1);
 }
+
+// ── priceNote must not name a rival brand ──────────────────────────────────
+// Sprint 69. A malformed entry terminator (`      },` instead of `  },`) left in
+// by an earlier bulk edit made every later boundary search overshoot, and the
+// E-Z-GO's price note was written into the CLUB CAR entry — where it shipped,
+// telling readers of a $10,099 Club Car to visit an E-Z-GO dealer. priceNote
+// renders on the page under the price, so this is customer-facing copy, not
+// internal bookkeeping.
+//
+// The check is deliberately narrow: it only fires when a note names a brand that
+// appears nowhere in the entry's own key or imgAlt. Sub-brands are aliased so a
+// Scotty Cameron note may name Titleist without crying wolf — a checker with a
+// false positive rate gets switched off.
+const BRAND_ALIAS: Record<string, string> = {
+  'scotty cameron': 'titleist', 'odyssey': 'callaway', 'ezgo': 'e-z-go',
+};
+const BRANDS = ['E-Z-GO','Club Car','Odyssey','Scotty Cameron','TaylorMade','Callaway',
+  'Bag Boy','MGI','KVV','Alphard','Oakley','Cleveland','Titleist','Ping','Cobra','Garmin',
+  'Bushnell','Optoma','Wilson','FootJoy','Srixon','Mizuno','Clicgear','CaddyTek'];
+const flat = (x: string) => x.toLowerCase().replace(/[^a-z0-9]/g, '');
+const noteBad: string[] = [];
+for (const [key, v] of Object.entries(AFFILIATE) as [string, any][]) {
+  const note = v.priceNote || ''; if (!note) continue;
+  const own = flat(key + ' ' + (v.imgAlt || ''));
+  const ownAliases = Object.entries(BRAND_ALIAS)
+    .filter(([sub]) => own.includes(flat(sub))).map(([, parent]) => flat(parent));
+  for (const b of BRANDS) {
+    if (!note.includes(b)) continue;
+    const fb = flat(b);
+    if (own.includes(fb) || ownAliases.includes(fb)) continue;
+    noteBad.push(`   ${key}: priceNote names "${b}" but the product is not — "${note.slice(0, 70)}..."`);
+  }
+}
+if (noteBad.length) {
+  console.error(`\nFAIL: ${noteBad.length} priceNote(s) name a brand the product is not.`);
+  console.error('priceNote renders on the page. A note about another product is wrong copy, not a typo.\n');
+  noteBad.forEach(b => console.error(b));
+  process.exit(1);
+}
+console.log(`validate-registry-consistency: priceNotes name no rival brands.`);
