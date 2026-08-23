@@ -2504,7 +2504,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Putting Aid: Putting Mirror', badge: 'BEST PUTTING', rating: 4.6, body: "A putting mirror shows your eye position, face alignment, and stroke path simultaneously. 20 minutes a week on your carpet with a putting mirror eliminates more 3-putts than any amount of unfocused practice. The difference between a $12 putting mirror and a $300 putting lesson is essentially zero for alignment work.",
         pros: ['Shows exact eye position relative to ball at address — eliminates the most common setup error', 'Gate drill confirms square face alignment at impact', 'Lightweight — fits in any bag pocket for use before every round'],
         cons: ['Effective only on flat practice surfaces — not useful for break or slope practice', 'Requires consistent lighting to see the reflection alignment clearly'], price: '~$25' },
-      { h2: 'Best Swing Tempo: Orange Whip', rating: 4.5, affiliateKey: 'orange-whip-trainer', body: "At $109 it\'s the most expensive item on this list, but the Orange Whip is the only tempo trainer proven to translate to the course. The flexible shaft and weighted ball force correct sequencing. 10 minutes of swinging before a round is better than a bucket of balls. Skip if budget is tight — alignment sticks are more versatile.", price: '~$109' },
+      { h2: 'Best Swing Tempo: Orange Whip', rating: 4.5, affiliateKey: 'orange-whip-trainer', body: "At $109 it\'s the most expensive item on this list, but the Orange Whip is the only tempo trainer proven to translate to the course. The flexible shaft and weighted ball force correct sequencing. 10 minutes of swinging before a round is better than a bucket of balls. Skip if budget is tight — alignment sticks are more versatile.", price: '~$120' },
       { h2: 'Training Aids That Are Mostly Gimmicks', body: "Avoid: swing speed radar devices under $50 (inaccurate), weighted donuts on shafts (can hurt swing), overswing correctors (creates new problems), putting guides that force a straight stroke (most good putters have an arc), and any device promising to add 40+ yards." },
   
       { h2: 'Aids by Problem Area', body: '<p>Targeting a specific weakness? Our <a href="/best-training-aids-fix-slice/">slice-fixing training aids</a> focus on the most common miss. For hand and wrist issues, the <a href="/best-golf-grip-trainers/">best grip trainers</a> build the right pressure patterns. Pair any aid with our <a href="/golf-practice-drills-at-home/">15-minute home drill routine</a> for a complete practice plan. And if speed is the goal, try a <a href="/best-swing-speed-trainer-over-40/">speed trainer designed for over-40 golfers</a>.</p>' },
@@ -2520,7 +2520,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'alignment-sticks',   name: 'Alignment Sticks 2-Pack',  bestFor: 'Best Overall',  price: '~$12', feature1: 'Full swing', feature2: 'Range', winner: true },
         { rating: 4.7, affiliateKey: 'impact-tape',         name: 'Golf Impact Tape',         bestFor: 'Best Feedback', price: '~$12', feature1: 'Ball striking', feature2: 'Range', winner: false },
         { rating: 4.4, affiliateKey: 'putting-mirror',      name: 'Putting Mirror',           bestFor: 'Best Putting',  price: '~$40', feature1: 'Putting', feature2: 'Home/Green', winner: false },
-        { rating: 4.7, affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup',      bestFor: 'Best Home',     price: '~$35', feature1: 'Putting', feature2: 'Home', winner: false },
+        { rating: 4.7, affiliateKey: 'eyeline-putting-cup', name: 'Eyeline Putting Cup',      bestFor: 'Best Home',     price: '~$15', feature1: 'Putting', feature2: 'Home', winner: false },
       ],
     },
     faq: [
@@ -4734,7 +4734,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Garmin Approach R10', affiliateKey: 'garmin-approach-r10', bestFor: 'Best budget launch data', price: '~$599', feature1: 'Full launch data', feature2: 'Yes — core of setup', winner: true, badge: 'STRONG PICK'},
         { name: 'Rukket 10x7 HAACK Net', affiliateKey: 'rukket-haack-net', bestFor: 'Best Value Net', price: '~$130', feature1: '10x7 ft, 7-layer', feature2: 'Yes', winner: false},
-        { name: 'Country Club Elite Mat', affiliateKey: 'country-club-elite-mat', bestFor: 'Best Mat', price: '~$379', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
+        { name: 'Country Club Elite Mat', affiliateKey: 'country-club-elite-mat', bestFor: 'Best Mat', price: '~$599', feature1: 'Real Feel turf', feature2: 'Strongly recommended', winner: false},
       ],
     },
     sections: [
@@ -5614,7 +5614,7 @@ export const ARTICLES: Article[] = [
       headers: ['Feature', 'Winner', 'Trackman 4', 'GCQuad', 'Verdict'],
       rows: [
         { name: 'Trackman 4', bestFor: 'Outdoor Tracking', price: '~$21,995', feature1: 'Dual Doppler Radar + OERT', feature2: 'Full ball flight tracking', winner: false, badge: 'STRONG PICK', rating: 4.9, affiliateKey: 'trackman-4' },
-        { name: 'Foresight GCQuad', bestFor: 'Indoor Accuracy', price: '~$14,500', feature1: 'Quadroscopic 4-Camera', feature2: '2x more consistent spin', winner: true, rating: 4.8, affiliateKey: 'foresight-gcquad' },
+        { name: 'Foresight GCQuad', bestFor: 'Indoor Accuracy', price: '~$15,999', feature1: 'Quadroscopic 4-Camera', feature2: '2x more consistent spin', winner: true, rating: 4.8, affiliateKey: 'foresight-gcquad' },
         { name: 'Bushnell Launch Pro', bestFor: 'Best Value Premium', price: '~$2,499', feature1: 'Foresight GC3 Hardware', feature2: '83% less than GCQuad', rating: 4.5, affiliateKey: 'bushnell-launch-pro' },
       ],
     },
@@ -7305,7 +7305,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Most Versatile Training Tool: Alignment Sticks', rating: 4.8, affiliateKey: 'alignment-sticks',
         body: "A $15 set of alignment sticks is the single most versatile training aid in golf. Use them for: target alignment (the most common amateur setup error), ball position check, swing plane visualization, putting gate drill (two sticks creating a narrow corridor for your putter path), and chipping landing zone markers. Every practice session should start with alignment sticks on the ground. No other tool covers as many fundamentals for $15.", price: '~$15' },
       { h2: 'Best for Tempo: Orange Whip Trainer', rating: 4.5, affiliateKey: 'orange-whip-trainer',
-        body: "The Orange Whip is a weighted, flexible swing trainer that builds consistent tempo and timing. The counterweight at the end forces a smooth transition — if you rush, the whip kicks back. Ten swings per day builds the muscle memory for an unhurried swing that most weekend golfers lack. The flexibility also provides a dynamic warm-up before rounds — significantly better than static stretching for golf performance.", price: '~$109' },
+        body: "The Orange Whip is a weighted, flexible swing trainer that builds consistent tempo and timing. The counterweight at the end forces a smooth transition — if you rush, the whip kicks back. Ten swings per day builds the muscle memory for an unhurried swing that most weekend golfers lack. The flexibility also provides a dynamic warm-up before rounds — significantly better than static stretching for golf performance.", price: '~$120' },
       { h2: 'The 15-Minute Daily Home Practice Routine', body: "5 minutes — putting: SKLZ Accelerator Pro. 50 putts from 3, 5, and 7 feet. Focus on starting line, not making putts. 5 minutes — alignment: set two sticks parallel to target. Hit 10 half-swings focusing on square contact. No ball needed — use the Smart Ball for connection feel. 5 minutes — tempo: 10 full-speed Orange Whip swings. Focus on smooth transition at the top. Finish with 5 putts to end on a positive note. Fifteen minutes per day, five days per week. You will see improvement within two weeks." },
     ],
     comparisonTable: { headers: ['Training Aid', 'Price', 'Skill Trained', 'Space Needed', 'Rating'], rows: [
@@ -7313,7 +7313,7 @@ export const ARTICLES: Article[] = [
       { name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$45', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
       { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
       { name: 'Alignment Sticks (4-pack)', affiliateKey: 'alignment-sticks', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
-      { badge: 'STRONG PICK', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$109', feature1: 'Tempo', feature2: '10 ft', winner: false },
+      { badge: 'STRONG PICK', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$120', feature1: 'Tempo', feature2: '10 ft', winner: false },
     ] },
     faq: [
       { q: 'What are the most important areas to practice at home?', a: 'Putting and alignment produce the fastest score improvements for most golfers. A putting mat and alignment sticks ($70 total) cover both. Add tempo work if you struggle with rushing your swing.' },
@@ -8634,7 +8634,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-07-19',
     title: 'Best Swing Speed Trainers for the Over-Forty Golfer',
     titleDisplay: 'Best Swing Speed Trainers for Golfers Over 40',
-    bottomLine: 'The <strong>SuperSpeed Golf Training System</strong> ($199) is the proven overspeed system — used by 700+ Tour pros, adds 5-8% swing speed in 6 weeks with 15 minutes 3x per week. For tech-driven training, <strong>The Stack</strong> ($299) adds AI-guided progression.',
+    bottomLine: 'The <strong>SuperSpeed Golf Training System</strong> ($140) is the proven overspeed system — used by 700+ Tour pros, adds 5-8% swing speed in 6 weeks with 15 minutes 3x per week. For tech-driven training, <strong>The Stack</strong> ($299) adds AI-guided progression.',
     description: 'Best swing speed trainers for golfers over 40 — SuperSpeed, The Stack, Rypstick, Orange Whip compared. Add 5-8% speed in 6 weeks, 15 min 3x/week.',
     excerpt: 'Best swing speed trainers — add 5-8% speed in 6 weeks with 15 minutes 3x per week.',
     intro: 'Distance drops with age. The average golfer loses 1-1.5 mph of driver speed per decade after 40. But here is the thing: overspeed training can reverse 5-10 years of speed loss in 6 weeks. This is not wishful thinking — it is neuromuscular science backed by thousands of amateur and professional results. Here are the 5 best speed training systems, ranked by effectiveness, convenience, and value.',
@@ -8655,9 +8655,9 @@ export const ARTICLES: Article[] = [
     ],
     sections: [
       { h2: 'Why Swing Speed Drops With Age (and Why It Is Reversible)', body: "Swing speed drops because of two things: muscle fiber loss (sarcopenia) and neuromuscular detraining. Your brain forgets how to fire fast-twitch muscles if you do not use them. Overspeed training — swinging a lighter-than-normal object as fast as possible — retrains your nervous system to recruit fast-twitch fibers. This is the same principle behind sprinting drills in track: you do not get faster by jogging more. You get faster by practicing moving fast. Research shows golfers over 50 can gain 5-8% swing speed (4-7 mph) in 6-8 weeks of overspeed training.\n\nThe decade-by-decade numbers live in our <a href=\"/average-swing-speed-by-age/\">average swing speed by age</a> breakdown — worth knowing your baseline before training." },
-      { h2: 'Best Overall: SuperSpeed Golf Training System', badge: 'BEST OVERALL', body: "SuperSpeed ($199) is the original overspeed system and still the most proven. Three weighted clubs (light, medium, heavy) that you swing as fast as possible in a specific sequence. The protocol takes 15 minutes, 3x per week. Over 700 Tour pros use it. Independent studies show an average 5-8% speed gain in trained golfers. I gained 4 mph of driver speed (98 to 102 mph) in 6 weeks — that translates to roughly 12 yards of carry distance.", price: '~$199', affiliateKey: 'superspeed-golf-set', rating: 4.7,
+      { h2: 'Best Overall: SuperSpeed Golf Training System', badge: 'BEST OVERALL', body: "SuperSpeed ($140) is the original overspeed system and still the most proven. Three weighted clubs (light, medium, heavy) that you swing as fast as possible in a specific sequence. The protocol takes 15 minutes, 3x per week. Over 700 Tour pros use it. Independent studies show an average 5-8% speed gain in trained golfers. I gained 4 mph of driver speed (98 to 102 mph) in 6 weeks — that translates to roughly 12 yards of carry distance.", price: '~$140', affiliateKey: 'superspeed-golf-set', rating: 4.7,
         pros: ['Most research-backed speed system available', '700+ Tour pros use it — proven results', '15 minutes 3x/week — realistic schedule', '5-8% average speed gain in 6 weeks'],
-        cons: ['$199 for 3 weighted sticks', 'Requires outdoor space for full swings', 'No built-in speed measurement — need a separate device'],
+        cons: ['$140 for 3 weighted sticks', 'Requires outdoor space for full swings', 'No built-in speed measurement — need a separate device'],
       },
       { h2: 'Best Tech-Driven: The Stack', badge: 'BEST TECHNOLOGY', body: "The Stack ($299) is the tech-forward alternative to SuperSpeed. It uses interchangeable weights and an AI-powered app that adjusts your protocol based on your actual speed data from each session. The app tells you exactly which weight to use, how many swings, and tracks your progress over time. If you are the type of golfer who wants data-driven training (and you probably are if you read Cubical Golfer), The Stack is the most sophisticated system.", price: '~$299', affiliateKey: 'the-stack-system', rating: 4.6,
         pros: ['AI app adjusts protocol to your progress', 'Interchangeable weights for precise loading', 'Built-in speed tracking via app'],
@@ -8667,19 +8667,19 @@ export const ARTICLES: Article[] = [
         pros: ['Single adjustable club — more portable than 3-club sets', '$180 — cheapest dedicated speed system', 'Click-in weight system for progressive overload'],
         cons: ['Less research backing than SuperSpeed', 'No structured protocol app', 'Fewer weight options than The Stack'],
       },
-      { h2: 'Best Warm-Up Tool: Orange Whip', badge: 'BEST WARM-UP', body: "The Orange Whip ($109) is not a speed trainer — it is a tempo and flexibility tool that doubles as a pre-round warm-up. The weighted orange ball on a flexible shaft builds rotational flexibility and teaches smooth tempo. It will not add 5 mph to your swing speed the way SuperSpeed will, but it will keep your body moving properly and prevent the stiff, jerky swings that come from jumping on the first tee cold. I use mine for 5 minutes before every round.", price: '~$109', affiliateKey: 'orange-whip-trainer', rating: 4.5,
+      { h2: 'Best Warm-Up Tool: Orange Whip', badge: 'BEST WARM-UP', body: "The Orange Whip ($109) is not a speed trainer — it is a tempo and flexibility tool that doubles as a pre-round warm-up. The weighted orange ball on a flexible shaft builds rotational flexibility and teaches smooth tempo. It will not add 5 mph to your swing speed the way SuperSpeed will, but it will keep your body moving properly and prevent the stiff, jerky swings that come from jumping on the first tee cold. I use mine for 5 minutes before every round.", price: '~$120', affiliateKey: 'orange-whip-trainer', rating: 4.5,
         pros: ['Best pre-round warm-up tool available', 'Builds rotational flexibility over time', 'Portable — fits in your golf bag'],
-        cons: ['Not a speed trainer — will not add significant mph', '$109 for a warm-up tool', 'Flexible shaft can feel odd at first'],
+        cons: ['Not a speed trainer — will not add significant mph', '$120 for a warm-up tool', 'Flexible shaft can feel odd at first'],
       },
       { h2: '6-Week Protocol the Weekend Golfer Can Actually Stick To', body: "Week 1-2: SuperSpeed (or your chosen system) protocol — 3 sessions per week, 15 minutes each. Do not swing all-out yet. Focus on form at 80% effort. Week 3-4: Increase to 90% effort. Add 2 driver swings at the end of each session to feel the speed transfer. Week 5-6: Full speed, all-out. Test your driver speed with a launch monitor at the end of week 6. Expected result: 4-7 mph gain for golfers who have never done overspeed training. That is 12-20 yards of carry distance. Schedule tip: Monday, Wednesday, Friday — 15 minutes before your morning routine. Do not combine with a full practice session — speed training is neurological, not muscular. You need to be fresh." },
     ],
     comparisonTable: {
       headers: ['Trainer', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'superspeed-golf-set', name: 'SuperSpeed Golf', bestFor: 'Best Overall', price: '~$199', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'superspeed-golf-set', name: 'SuperSpeed Golf', bestFor: 'Best Overall', price: '~$140', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
         { rating: 4.6, affiliateKey: 'the-stack-system', name: 'The Stack', bestFor: 'Best Tech', price: '~$299', feature1: '4.6/5 ★', winner: false },
         { rating: 4.5, affiliateKey: 'rypstick-trainer', name: 'Rypstick', bestFor: 'Best Value', price: '~$180', feature1: '4.5/5 ★', winner: false },
-        { rating: 4.5, affiliateKey: 'orange-whip-trainer', name: 'Orange Whip', bestFor: 'Best Warm-Up', price: '~$109', feature1: '4.5/5 ★', winner: false },
+        { rating: 4.5, affiliateKey: 'orange-whip-trainer', name: 'Orange Whip', bestFor: 'Best Warm-Up', price: '~$120', feature1: '4.5/5 ★', winner: false },
       ],
     },
     faq: [
@@ -10236,9 +10236,9 @@ export const ARTICLES: Article[] = [
         pros: ['Dual-turf (fairway + rough)', 'Thick rubber base — good joint protection', '$189 — best value tested', 'Works with all tee heights', 'Durable after 2 months of daily use'],
         cons: ['Not as realistic as Fiberbuilt', 'Slides on smooth concrete (add a rug)', 'Single piece — no replaceable insert'],
       },
-      { h2: 'Best Budget: Country Club Elite', body: "The thickest budget mat available at $379 for the 5x5 size. The 1.5-inch rubber base provides genuine shock absorption that cheaper mats lack. The nylon turf is denser than most in this range, though it still does not match the Fiberbuilt for realistic feel. Solid choice for garage setups where you want full-swing capability without breaking the bank on a Fiberbuilt.", price: '~$379', badge: 'BEST VALUE', rating: 4.5, affiliateKey: 'country-club-elite-mat',
+      { h2: 'Best Budget: Country Club Elite', body: "The thickest budget mat available at $379 for the 5x5 size. The 1.5-inch rubber base provides genuine shock absorption that cheaper mats lack. The nylon turf is denser than most in this range, though it still does not match the Fiberbuilt for realistic feel. Solid choice for garage setups where you want full-swing capability without breaking the bank on a Fiberbuilt.", price: '~$599', badge: 'BEST VALUE', rating: 4.5, affiliateKey: 'country-club-elite-mat',
         pros: ['1.5-inch thick base — excellent joint protection', '5x5 ft size — room for stance adjustments', 'Dense nylon turf', 'Good for driver through wedge'],
-        cons: ['$379 — mid-range price', 'Turf not as realistic as Fiberbuilt', 'Heavy — 45 lbs', 'Not portable'],
+        cons: ['$599 — a serious investment', 'Turf not as realistic as Fiberbuilt', 'Heavy — 45 lbs', 'Not portable'],
       },
       { h2: 'Mat Thickness and Joint Protection', body: "This is the most important factor most buyers ignore. Thin mats (under 0.75 inches of rubber base) transmit impact force directly into your wrists, elbows, and shoulders. After 100+ shots on a thin mat, you will feel it the next morning. Minimum 1 inch of rubber base for irons. 1.5+ inches for daily practice. The Fiberbuilt solves this differently — the floating surface absorbs impact instead of the base thickness." },
     
@@ -10250,7 +10250,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Fiberbuilt Studio Mat', bestFor: 'Best Overall', price: '~$449', feature1: 'Floating', feature2: 'Most realistic', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'fiberbuilt-studio-mat' },
         { name: 'Spornia SPG Mat', bestFor: 'Best Value', price: '~$159', feature1: '1 inch', feature2: 'Good', winner: false, rating: 4.6, affiliateKey: 'spornia-spg-net' },
-        { name: 'Country Club Elite', bestFor: 'Best Budget', price: '~$379', feature1: '1.5 inch', feature2: 'Good', winner: false, rating: 4.5, affiliateKey: 'country-club-elite-mat' },
+        { name: 'Country Club Elite', bestFor: 'Best Budget', price: '~$599', feature1: '1.5 inch', feature2: 'Good', winner: false, rating: 4.5, affiliateKey: 'country-club-elite-mat' },
       ],
     },
     faq: [
@@ -10494,7 +10494,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Sun Mountain 2.5+', bestFor: 'Lightest', feature1: '2.5 lbs', price: '~$230', feature2: '4-way top', winner: true, badge: 'LIGHTEST', rating: 4.6, affiliateKey: 'sun-mountain-25-plus' },
         { name: 'Ping Hoofer Lite', bestFor: 'Strap Comfort', feature1: '3.2 lbs', price: '~$265', feature2: 'SensorCool strap', winner: false, badge: 'MOST COMFORTABLE', rating: 4.6, affiliateKey: 'ping-hoofer-lite' },
-        { name: 'Titleist Players 4', bestFor: 'Storage', feature1: '3.5 lbs', price: '~$250', feature2: 'Cooler + 4 pockets', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'titleist-players-4' },
+        { name: 'Titleist Players 4', bestFor: 'Storage', feature1: '3.5 lbs', price: '~$279', feature2: 'Cooler + 4 pockets', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'titleist-players-4' },
       ],
     },
     ogImage: 'https://www.cubicalgolfer.com/images/og/best-golf-bags-walking-2026.jpg',
@@ -10519,7 +10519,7 @@ export const ARTICLES: Article[] = [
         pros: ['Best strap system in the industry', 'SensorCool back pad — less sweat', 'Auto-adjusting weight distribution', '5-way top organizer', 'Excellent build quality'],
         cons: ['3.2 lbs — not the lightest', '$265 — $35 more than Sun Mountain', 'Slightly wider profile on push carts'],
       },
-      { h2: 'Best Storage: Titleist Players 4', body: "If you need more pocket space without jumping to a cart bag, the Players 4 has the best storage of any lightweight stand bag. Full-size apparel pocket, insulated cooler pocket that fits 2 cans, velour-lined valuables pocket, and a rangefinder-specific pocket. At 3.5 lbs it is the heaviest of the three but still manageable for 18 walking holes.", price: '~$250', badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'titleist-players-4',
+      { h2: 'Best Storage: Titleist Players 4', body: "If you need more pocket space without jumping to a cart bag, the Players 4 has the best storage of any lightweight stand bag. Full-size apparel pocket, insulated cooler pocket that fits 2 cans, velour-lined valuables pocket, and a rangefinder-specific pocket. At 3.5 lbs it is the heaviest of the three but still manageable for 18 walking holes.", price: '~$279', badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'titleist-players-4',
         pros: ['Best storage capacity tested', 'Dedicated rangefinder pocket', 'Insulated cooler fits 2 cans', '4-way top with full dividers', 'Premium materials and stitching'],
         cons: ['3.5 lbs — heaviest of the three', 'Wider than ultra-light options', 'Stand legs slightly less stable on slopes'],
       },
@@ -12057,7 +12057,7 @@ export const ARTICLES: Article[] = [
       headers: ['Flex', 'Best For', 'Price', 'Driver Speed'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'callaway-strata', name: 'Ladies — Callaway Strata Set', bestFor: 'Slow swings', price: 'from ~$455', feature1: 'Under 60 mph', feature2: 'Most flexible' },
-        { rating: 4.7, affiliateKey: 'superspeed-golf-set', name: 'Senior — SuperSpeed Training', bestFor: 'Moderate swings', price: '~$150', feature1: '60-75 mph', feature2: 'Flexible' },
+        { rating: 4.7, affiliateKey: 'superspeed-golf-set', name: 'Senior — SuperSpeed Training', bestFor: 'Moderate swings', price: '~$140', feature1: '60-75 mph', feature2: 'Flexible' },
         { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'Regular — TaylorMade Qi Irons', bestFor: 'Most golfers', price: '~$150', feature1: '75-90 mph', feature2: 'Standard', badge: 'MOST COMMON', winner: true },
         { rating: 4.5, affiliateKey: 'titleist-t300', name: 'Stiff — Titleist T300 Irons', bestFor: 'Faster swings', price: '~$150', feature1: '90-105 mph', feature2: 'Firm' },
         { rating: 4.6, affiliateKey: 'titleist-t100', name: 'X-Stiff — Titleist T100 Irons', bestFor: 'Tour speed', price: '~$150', feature1: 'Over 105 mph', feature2: 'Very firm' },
@@ -13579,7 +13579,7 @@ export const ARTICLES: Article[] = [
     whoSkip: ['Walking golfers (see stand bags)', 'Minimalists who want a lightweight bag'],
     comparisonTable: { headers: ['Bag', 'Best For', 'Price', 'Dividers', 'Our Rating'], rows: [
       { badge: 'STRONG PICK', affiliateKey: 'callaway-org-14-cart-bag', name: 'Callaway Org 14', bestFor: 'Best Overall', price: '~$265', feature1: '14-way', feature2: '', winner: true, rating: 4.6 },
-      { rating: 4.5, affiliateKey: 'titleist-players-4', name: 'Titleist Players 4', bestFor: 'Best Premium', price: '~$270', feature1: '14-way', feature2: '', winner: false },
+      { rating: 4.5, affiliateKey: 'titleist-players-4', name: 'Titleist Players 4', bestFor: 'Best Premium', price: '~$279', feature1: '14-way', feature2: '', winner: false },
     ]},
     sections: [
       { h2: 'Best Overall: Callaway Org 14', badge: 'TOP PICK', affiliateKey: 'callaway-org-14-cart-bag', rating: 4.6, body: 'I used the Callaway Org 14 for a full season riding at South Shore. The 14-way top is the standout feature — every club has its own slot, which means no more wrestling tangled clubs on the 1st tee. The pocket layout is excellent: the cooler pocket held two water bottles for 18 holes, the rangefinder pocket was perfectly sized for my Bushnell, and the valuables pocket kept my phone and wallet dry in a rain round.\n\nThe Org 14 has the best pocket layout of any cart bag we tested — 11 pockets including a cooler pocket, valuables pocket, and rangefinder pocket. The 14-way top keeps every club separated.', price: '~$230',
@@ -13973,14 +13973,14 @@ export const ARTICLES: Article[] = [
         h2: 'Why Swing Speed Declines with Age',
         body: `<p>Speed loss is not inevitable — it is largely about declining flexibility and reduced fast-twitch muscle fiber recruitment. Understanding the cause helps you target the right fix.</p>
 <p><strong>Flexibility (biggest factor):</strong> The average office worker loses 8–10 degrees of shoulder turn per decade after 30. Less turn means a shorter backswing, which means less time to accelerate the club. A <a href="/office-to-golf-course-playbook/">10-minute pre-round stretching routine</a> can recover 3–5 mph immediately and 5–8 mph over a season of consistent flexibility work.</p>
-<p><strong>Fast-twitch muscle loss:</strong> After 40, the body preferentially loses fast-twitch muscle fibers — the ones responsible for explosive speed. Overspeed training (swinging lightweight clubs faster than normal) retrains the neuromuscular system to recruit these fibers. The <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf system</a> ($199) produces typical gains of 5–8 mph over 6–8 weeks.</p>
+<p><strong>Fast-twitch muscle loss:</strong> After 40, the body preferentially loses fast-twitch muscle fibers — the ones responsible for explosive speed. Overspeed training (swinging lightweight clubs faster than normal) retrains the neuromuscular system to recruit these fibers. The <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf system</a> ($140) produces typical gains of 5–8 mph over 6–8 weeks.</p>
 <p><strong>Equipment mismatch (cheapest fix):</strong> Most golfers over 50 are playing shafts that are too heavy and too stiff for their current speed. Dropping from a 65g stiff shaft to a 50g regular shaft can add 2–3 mph with zero swing changes. Similarly, switching from a low-compression tour ball to a <a href="/best-golf-balls-slow-swing-speed/">speed-matched ball</a> adds 5–8 yards for free.</p>`
       },
       {
         h2: 'How to Maintain Speed After 40',
         body: `<p>The golfers who keep their speed into their 60s share three habits, and none of them involve buying a new driver:</p>
 <p><strong>1. Stretch daily, not just before golf.</strong> Hip flexor stretches, thoracic spine mobility, and shoulder rotation drills — 10 minutes a day keeps your turn full. This is the single highest-ROI activity for aging golfers.</p>
-<p><strong>2. Overspeed train 3x per week.</strong> Products like <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf</a> ($199) and The Stack System ($299) use progressively lighter clubs to train your nervous system to fire faster. Typical results: 5–8 mph gain in 6 weeks, maintained with 2x/week sessions. See our <a href="/best-swing-speed-trainer-over-40/">full speed trainer review</a>.</p>
+<p><strong>2. Overspeed train 3x per week.</strong> Products like <a href="/best-swing-speed-trainer-over-40/">SuperSpeed Golf</a> ($140) and The Stack System ($299) use progressively lighter clubs to train your nervous system to fire faster. Typical results: 5–8 mph gain in 6 weeks, maintained with 2x/week sessions. See our <a href="/best-swing-speed-trainer-over-40/">full speed trainer review</a>.</p>
 <p><strong>3. Optimize equipment every 5 years.</strong> Shaft technology, ball technology, and driver head design all evolve on 3–5 year cycles. A driver from 2018 with the wrong shaft for your current speed is leaving 10–15 yards on the table compared to a <a href="/best-golf-drivers-forgiveness/">current-gen forgiving driver</a> fitted to your actual numbers.</p>`
       , affiliateKey: 'superspeed-golf-set', price: '~$199', rating: 4.4, badge: 'SPEED TRAINING'},
       {
