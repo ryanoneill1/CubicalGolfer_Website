@@ -3038,7 +3038,7 @@ export const AFFILIATE: Record<string, {
     price: '~$40/dz',
     priceNote: 'Wilson does not list a single Staff Model ball SKU on Amazon, so this goes to the Wilson Staff Model search where the current variants sit side by side. Price varies by variant.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/wilson-staff-model.webp',
+    imgSrc: '/images/products/Wilson_Staff_Model_Golf_Ball.webp',
     imgAlt: 'Wilson Staff Model golf balls',
   },
   'srixon-z-star': {
