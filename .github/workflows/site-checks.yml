@@ -1,0 +1,127 @@
+# Weekly site checks — runs the two on-demand checkers for you.
+#
+# WHY THIS EXISTS
+# Two scripts were built to catch things the build cannot see:
+#   check-urls      — fetches every sitemap URL and reports any that redirect,
+#                     404, or canonical elsewhere. This is what found four pages
+#                     that were in the sitemap AND redirected at the edge, which
+#                     had been failing a Search Console validation since June.
+#   check-listings  — re-fetches every Amazon product link and compares the live
+#                     buy-box price against the registry. Hand-checking found a
+#                     55% price error on a 2,803-impression page; this is the
+#                     script that stops that being how errors get found.
+#
+# Both need network access and take minutes, so they are not part of the build.
+# They were written as `npm run` commands, which assumed a local Node install.
+# That assumption was wrong, so they run here instead and commit their reports
+# into the repo where they can just be read on github.com.
+#
+# WHERE THE REPORTS APPEAR
+#   scripts/output/live-url-report.md       ← read this one first
+#   scripts/output/live-listing-report.md
+#
+# HOW TO RUN IT BY HAND
+#   GitHub → Actions tab → "Weekly site checks" → "Run workflow" button.
+#
+# TWO DESIGN NOTES
+#
+# 1. `[skip ci]` in the commit message. Committing the reports pushes to main,
+#    which would normally trigger deploy.yml and rebuild the site for no reason.
+#    GitHub honours [skip ci] and skips the workflow run, breaking that loop.
+#
+# 2. `continue-on-error`. Both checkers exit non-zero when they FIND something —
+#    that is their job, not a failure. Without this the workflow would go red
+#    every time it worked correctly, and a red badge that means "working" is a
+#    badge that gets ignored.
+
+name: Weekly site checks
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'      # Mondays 07:00 UTC
+  workflow_dispatch:          # and the "Run workflow" button, any time
+
+concurrency:
+  group: site-checks
+  cancel-in-progress: false
+
+permissions:
+  contents: write             # needed to commit the reports back
+
+jobs:
+  checks:
+    name: Check live URLs and listings
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      # check-urls reads dist/sitemap*.xml, so the site has to be built first.
+      - name: Build
+        run: npm run build
+
+      - name: Check live URLs
+        id: urls
+        continue-on-error: true
+        run: npm run check-urls
+
+      # Amazon blocks datacentre IPs far more aggressively than home connections,
+      # so expect a chunk of this to come back "could not check". That is handled:
+      # BLOCKED is never counted as a problem and never fails the run. Over a few
+      # weekly runs the coverage fills in. DELAY_MS is raised to be gentler.
+      - name: Check live listings
+        id: listings
+        continue-on-error: true
+        env:
+          DELAY_MS: '3000'
+        run: npm run check-listings
+
+      - name: Commit reports
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f scripts/output/ || true
+          if git diff --staged --quiet; then
+            echo "No change in either report — nothing to commit."
+          else
+            git commit -m "Weekly site checks: refresh reports [skip ci]"
+            git push
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "## Weekly site checks"
+            echo ""
+            echo "| Check | Result |"
+            echo "|---|---|"
+            echo "| Live URLs | ${{ steps.urls.outcome }} — non-zero means it found something |"
+            echo "| Live listings | ${{ steps.listings.outcome }} |"
+            echo ""
+            echo "Reports are committed to \`scripts/output/\` in the repo."
+            echo ""
+            if [ -f scripts/output/live-url-report.md ]; then
+              echo "### Live URL report"
+              echo ""
+              cat scripts/output/live-url-report.md
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload reports as artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-check-reports
+          path: scripts/output/
+          if-no-files-found: ignore
+          retention-days: 90
