@@ -3,6 +3,7 @@
 export const PRODUCT_DISPLAY: Record<string, string> = {
   'kvv-electric-golf-cart': "KVV Electric Golf Cart",
   'alphard-cybercart': "Alphard Cybercart",
+  'garmin-approach-s44': "Garmin Approach S44",
   'bushnell-tour-v7-shift': "Bushnell Tour V7 Shift",
   'precision-pro-nx9-hd': "Precision Pro NX9",
   'blue-tees-series-3-max': "Blue Tees Series 3 Max",

@@ -5,7 +5,7 @@
 /office-hacks/  /improve-your-golf-game/  301
 /best-golf-rangefinder-under-200/  /best-golf-rangefinders-under-200/  301
 /best-golf-rangefinder-beginners.html  /best-golf-rangefinder-beginners/  301
-/best-gps-golf-watch-high-handicappers.html  /best-gps-golf-watch-high-handicappers/  301
+/best-gps-golf-watch-high-handicappers.html  /best-golf-gps-watches/  301
 /best-golf-apps-handicap-tracking.html  /best-golf-apps/  301
 /skytrak-vs-mevo-plus.html  /skytrak-vs-mevo-plus/  301
 /best-golf-simulator-small-spaces.html  /best-golf-simulator-small-spaces/  301
@@ -138,3 +138,10 @@
 # because Google could not choose between them. Consolidated into the stronger of
 # the two; its unique shaft-flex guidance moved across first.
 /best-driver-for-high-handicapper/  /best-golf-drivers-forgiveness/  301
+
+# Sprint 74 — /best-gps-golf-watch-high-handicappers/ had 248 impressions at
+# position 36.8 and 3 clicks, and all three of its products were a strict subset
+# of the six on /best-golf-gps-watches/. A GPS watch does not behave differently
+# by handicap, so there was no angle to differentiate — only a second URL
+# competing for the same intent. Record kept in articles.ts; reversible.
+/best-gps-golf-watch-high-handicappers/  /best-golf-gps-watches/  301

@@ -51,6 +51,9 @@ export const REDIRECTED_AWAY = new Set<string>([
   //   both stranded on page 2-3 at 24.8 and 14.3. The record stays in articles.ts,
   //   so removing these two lines reverses the consolidation.
   '/best-driver-for-high-handicapper/',
+  // → /best-golf-gps-watches/ (Sprint 74). 248 impressions at position 36.8,
+  //   three products all present on the parent page.
+  '/best-gps-golf-watch-high-handicappers/',
 ]);
 
 /**

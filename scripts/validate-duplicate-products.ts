@@ -46,6 +46,8 @@ const PENDING_IMAGE_PAIR = new Set<string>([
   // E-Z-GO-Freedom-RXV.webp, was a picture of a CLUB CAR — the badge on the nose
   // said so. That photo now correctly serves club-car-onward, and the E-Z-GO is
   // on the placeholder until a real shot exists.
+  // Sprint 74: garmin-approach-s44 joined — the current-generation GPS watch
+  // added to /best-golf-gps-watches/, awaiting a product photo.
   // Sprint 67: kvv-electric-golf-cart and alphard-cybercart joined — two electric
   // caddies added to /best-electric-golf-push-cart/ with no product photography yet.
   // Sprint 56: the three genuine sub-$500 iron sets added for
@@ -56,7 +58,7 @@ const PENDING_IMAGE_PAIR = new Set<string>([
   // the signature is the full sorted key list: photograph any ONE of these and
   // the remaining set forms a new signature and fails the build again, which is
   // the intended prompt to finish the job.
-  'alphard-cybercart|cobra-air-x-2-irons|cobra-air-x-irons|ezgo-rxv-2|kvv-electric-golf-cart|optoma-zw350st|tour-edge-hot-launch-c522-irons|voice-caddie-sc200plus',
+  'alphard-cybercart|cobra-air-x-2-irons|cobra-air-x-irons|ezgo-rxv-2|garmin-approach-s44|kvv-electric-golf-cart|optoma-zw350st|tour-edge-hot-launch-c522-irons|voice-caddie-sc200plus',
 ]);
 
 const problems: string[] = [];

@@ -302,6 +302,21 @@ export const AFFILIATE: Record<string, {
   },
 
   // Garmin Approach S42 — search (multiple colourway variants)
+  'garmin-approach-s44': {
+    url: 'https://www.amazon.com/dp/B0DRZ1WN36?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon', commissionPct: 3, cookieDays: 1,
+    retailer: 'Amazon',
+    price: '~$289',
+    priceNote: 'Verified 2026-08-23: $289.00, 4.3 stars across 521 reviews. Stock runs thin on individual colours — check the colour selector if the buy box shows only one left.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/placeholder.webp',
+    imgAlt: 'Garmin Approach S44 golf GPS smartwatch',
+    benefits: [
+      'Current-generation replacement for the S42, with a 1.2in AMOLED display',
+      '43,000+ preloaded courses with front, middle and back distances',
+      'Pairs with Approach CT1 club trackers for automatic shot tracking',
+    ],
+  },
   'garmin-approach-s42': {
     url: 'https://www.amazon.com/Garmin-Smartwatch-Lightweight-Touchscreen-010-02572-10/dp/B08X167FJG?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fgarmin-approach-s42-golf-gps-smartwatch-21gmnupprchs42blcgps%2F21gmnupprchs42blcgps%3FenteredSearchTerm%3DGarmin%2520Approach%2520S42',
