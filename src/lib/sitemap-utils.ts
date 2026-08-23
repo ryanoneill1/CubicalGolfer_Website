@@ -47,6 +47,10 @@ export const REDIRECTED_AWAY = new Set<string>([
   // → /compare/callaway-paradym-vs-taylormade-qi35/ — the same head-to-head at a
   //   stronger URL (294 clicks vs 88). Keeping both would split the query.
   '/compare/taylormade-qi35-vs-callaway-ai-smoke/',
+  // → /best-golf-drivers-forgiveness/ (Sprint 73). Same intent, same four products,
+  //   both stranded on page 2-3 at 24.8 and 14.3. The record stays in articles.ts,
+  //   so removing these two lines reverses the consolidation.
+  '/best-driver-for-high-handicapper/',
 ]);
 
 /**

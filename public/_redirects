@@ -130,3 +130,11 @@
 # Recording them here means validate-redirects.ts now enforces their exclusion.
 /best-blade-putters-2026/  /best-golf-putters-2026/  301
 /compare/taylormade-qi35-vs-callaway-ai-smoke/  /compare/callaway-paradym-vs-taylormade-qi35/  301
+
+# Sprint 73 — /best-driver-for-high-handicapper/ and /best-golf-drivers-forgiveness/
+# were the same page in different words: all four of the former's products appear
+# on the latter, and its own description opened "Most forgiving drivers for high
+# handicappers", which is the latter's title. Both sat on page 2-3 (24.8 and 14.3)
+# because Google could not choose between them. Consolidated into the stronger of
+# the two; its unique shaft-flex guidance moved across first.
+/best-driver-for-high-handicapper/  /best-golf-drivers-forgiveness/  301
