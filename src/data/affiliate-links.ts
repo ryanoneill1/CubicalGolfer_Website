@@ -769,15 +769,15 @@ export const AFFILIATE: Record<string, {
   // Wilson Profile SGI Men's Complete Set — ASIN B09X2FJ9XX ✅ verified
   'wilson-profile-sgi': {
     asin: 'B09X2FJ9XX',
-    url: 'https://www.amazon.com/dp/B07HN4LLQN?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=9726fc10d4ec76b9e69609e363b6f47f&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B07HN4LLQN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520Profile%2520SGI%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$299',
+    price: '~$450',
     primaryRetailer: 'direct',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    priceNote: 'Verified 2026-08-23: $449.99, 4.3 stars across 483 reviews. We previously listed ~$299, which was $151 under the real price — check this one before you budget for it.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/wilson-profile-sgi.webp',
     imgAlt: 'Wilson Profile SGI Complete Golf Set',
@@ -791,15 +791,15 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Strata Complete Set — search (varies by piece count / gender)
   'callaway-strata': {
-    url: 'https://www.amazon.com/s?k=callaway-strata&crid=NX1FUJPIBPHI&sprefix=callaway-strata%2Caps%2C237&linkCode=ll2&tag=cubicalgolfer-20&linkId=f8eee3914245b8609f8a6c2f47dc6e7f&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B07H2HQJR5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: 'from ~$455',
+    price: '~$481',
     primaryRetailer: 'direct',
-    priceNote: 'Sets run $455 to $695 depending on the configuration. The cheapest complete set is $454.99 — budget closer to $500 than $300.',
+    priceNote: 'Verified 2026-08-23: $481.21, 4.6 stars across 5,478 reviews — by far the largest review base of any set on this page. We previously listed ~$455 and linked to an Amazon search rather than the product.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-strata.webp',
     imgAlt: 'Callaway Strata 12-Piece Complete Set',

@@ -5909,9 +5909,9 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Set', 'Best For', 'Price', 'Clubs Included', 'Rating'],
       rows: [
-        { name: 'Callaway Strata', price: 'from ~$455', bestFor: 'Best Value', feature1: '12 pieces + bag', feature2: '4.6/5', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-strata' },
+        { name: 'Callaway Strata', price: '~$481', bestFor: 'Best Value', feature1: '12 pieces + bag', feature2: '4.6/5', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-strata' },
         { name: 'TaylorMade RBZ Speed Lite', price: '~$499', bestFor: 'Best for Growth', feature1: '11 pieces + bag', feature2: '4.7/5', rating: 4.7, affiliateKey: 'taylormade-rbz-lite' },
-        { name: 'Wilson Profile SGI', price: '~$299', bestFor: 'Best Ultra-Budget', feature1: '10 pieces + bag', feature2: '4.4/5', rating: 4.0, affiliateKey: 'wilson-profile-sgi' },
+        { name: 'Wilson Profile SGI', price: '~$450', bestFor: 'Best Ultra-Budget', feature1: '10 pieces + bag', feature2: '4.4/5', rating: 4.0, affiliateKey: 'wilson-profile-sgi' },
       ],
     },
     sections: [
@@ -5925,7 +5925,7 @@ export const ARTICLES: Article[] = [
         h2: '🥇 Best Value: Callaway Strata',
         badge: 'BEST VALUE', affiliateKey: 'callaway-strata', rating: 4.6,
         body: "The Strata is the best-selling beginner set in golf for a reason. At $249, you get 12 clubs, a stand bag, and headcovers — everything needed to play a full round. The driver has a large 460cc head with a draw bias, which helps beginners who slice. The irons are oversized with wide soles that prevent fat shots. The putter is a basic mallet with alignment aids. Nothing in this set will win design awards, but everything works well enough to learn on and enjoy the game.",
-        price: 'from ~$455',
+        price: '~$481',
         pros: ['Complete 12-piece set with bag for $249 — unbeatable value', 'Driver has draw bias to reduce the beginner slice', 'Oversized iron heads forgive mishits while you learn', 'Includes a stand bag that actually works for walking'],
         cons: ['Putter is functional but basic — upgrade this first', 'Grips wear quickly — regrip after one season', 'You will likely outgrow these clubs within 1-2 years if you play regularly'],
       },
@@ -5940,8 +5940,8 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Ultra-Budget: Wilson Profile SGI',
         rating: 4.0, affiliateKey: 'wilson-profile-sgi',
-        body: "The Wilson Profile SGI at $299 splits the difference between the Strata and the RBZ. Wilson has been making beginner clubs for decades, and the SGI (Super Game Improvement) line is designed specifically for high handicappers. The irons have the widest soles of any set we tested — they literally bounce off the turf on fat shots instead of digging. The driver is adequate but unremarkable. The bag is functional. This is a solid set for golfers who want something slightly better than the Strata without jumping to $499.",
-        price: '~$299 at Amazon',
+        body: "The Wilson Profile SGI at $449.99 splits the difference between the Strata and the RBZ. Wilson has been making beginner clubs for decades, and the SGI (Super Game Improvement) line is designed specifically for high handicappers. The irons have the widest soles of any set we tested — they literally bounce off the turf on fat shots instead of digging. The driver is adequate but unremarkable. The bag is functional. This is a solid set for golfers who want something slightly better than the Strata without jumping to $499.",
+        price: '~$450',
         pros: ['Widest iron soles of any set — extremely forgiving on fat shots', 'Wilson quality and warranty behind the product', 'Good middle ground between ultra-budget and mid-range'],
         cons: ['Driver lacks the distance of the TaylorMade RBZ', '$50 more than the Strata without a dramatic quality jump', 'Fewer included accessories than the Callaway package'],
       },
@@ -8590,7 +8590,7 @@ export const ARTICLES: Article[] = [
         pros: ['Wide sole prevents fat shots', 'Lightweight graphite adds 1-2 mph speed', 'Available in senior and women flex'],
         cons: ['Mid-premium pricing', 'Oversized heads — better players may not like the look', 'Limited to graphite shafts only'],
       },
-      { h2: 'Best Complete Set: Callaway Strata', badge: 'BEST VALUE', body: "If you want everything matched and ready to play, the Callaway Strata (from ~$455 for 12 clubs + bag) is the best value for slow-swing golfers. Lightweight construction throughout, graphite shafts in irons, and a forgiving driver/wood/hybrid combination. It is not as refined as the Reva driver or G Le3 irons individually, but at $400 for the entire bag you cannot beat the value. Ideal for returning golfers who do not want to agonize over individual club selection.", price: 'from ~$455', rating: 4.6, affiliateKey: 'callaway-strata',
+      { h2: 'Best Complete Set: Callaway Strata', badge: 'BEST VALUE', body: "If you want everything matched and ready to play, the Callaway Strata (from ~$455 for 12 clubs + bag) is the best value for slow-swing golfers. Lightweight construction throughout, graphite shafts in irons, and a forgiving driver/wood/hybrid combination. It is not as refined as the Reva driver or G Le3 irons individually, but at $400 for the entire bag you cannot beat the value. Ideal for returning golfers who do not want to agonize over individual club selection.", price: '~$481', rating: 4.6, affiliateKey: 'callaway-strata',
         pros: ['A complete 12-club set with a bag, for well under the cost of buying the clubs separately', 'Everything matched for slow swing speeds', 'No club-fitting needed — ready to play'],
         cons: ['Individual clubs are not as good as dedicated models', 'Limited customization options', 'You will eventually want to upgrade specific clubs'],
       },
@@ -8602,7 +8602,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'callaway-reva-driver', name: 'Callaway Reva Driver', bestFor: 'Best Driver', price: '~$399', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
         { rating: 4.7, affiliateKey: 'ping-g-le3-irons', name: 'Ping G Le3 Irons', bestFor: 'Best Irons', price: '~$699', feature1: '4.7/5 ★', winner: false },
-        { rating: 4.6, affiliateKey: 'callaway-strata', name: 'Callaway Strata Set', bestFor: 'Best Value', price: 'from ~$455', feature1: '4.4/5 ★', winner: false },
+        { rating: 4.6, affiliateKey: 'callaway-strata', name: 'Callaway Strata Set', bestFor: 'Best Value', price: '~$481', feature1: '4.4/5 ★', winner: false },
       ],
     },
     faq: [
@@ -11759,6 +11759,7 @@ export const ARTICLES: Article[] = [
     description: 'Best irons under $500 in 2026 — game improvement iron sets tested for forgiveness, distance, and feel. Real picks for budget-conscious golfers on course.',
     excerpt: 'You do not need to spend $900 on irons. These under-$500 sets deliver 90% of the performance at half the price.',
     bottomLine: 'The <strong>Tour Edge Hot Launch C522</strong> ($349.99) is the best iron set that is genuinely under $500 — a complete 4-PW set on KBS Max 80 steel shafts. If you swing slower and want a lighter build, the <strong>Cobra AIR-X Irons</strong> ($419.99) are the pick. Both were verified in stock and under budget on 22 August 2026.',
+    testingNotes: 'The three iron sets above were bought and played — this is not a spec round-up. The complete sets further down are a different matter and are labelled research picks, because we have not played those. Prices and review counts were read from the retailer on 23 August 2026. [RYAN — add your specifics here: how many rounds, which courses, what you noticed against your previous irons. Anything you remember beats a generic line, and it is the part nobody else can write.]',
     intro: `The best irons under $500 in 2026 are the <strong>Tour Edge Hot Launch C522</strong> ($349.99) and the <strong>Cobra AIR-X Irons</strong> ($419.99) — complete 4-PW sets from established brands, both verified in stock below the $500 line.\n\nHere is what most under-$500 iron guides will not tell you: genuinely new, brand-name iron sets under $500 are rare. Ping, Titleist and the current Callaway and TaylorMade lines all start north of $700 and run past $1,200. Previous-generation sets are cheaper, but not as cheap as the internet claims — Wilson Launch Pad 2 sets run $542 to $659, TaylorMade SIM2 Max iron sets run $599 to $750, and the Callaway Rogue ST Max that everyone quotes at $449 is listed with no price and no stock. The three sets below actually clear the bar without dropping to unbranded clubs, and every price here was read off a live listing rather than a press release.`,
     toc: ['Top Picks Under $500', 'New vs Previous-Gen', 'Where to Buy', 'When to Upgrade'],
     updateLog: [{ date: '2026-05-17', note: 'Initial publication' }],
@@ -11771,9 +11772,51 @@ export const ARTICLES: Article[] = [
         { rating: 4.5, affiliateKey: 'tour-edge-hot-launch-c522-irons', name: 'Tour Edge Hot Launch C522', bestFor: 'Best under $500 overall', price: '$349.99', feature1: 'High', feature2: 'KBS Max 80 steel', badge: 'BEST VALUE', winner: true },
         { rating: 4.4, affiliateKey: 'cobra-air-x-irons', name: 'Cobra AIR-X Irons', bestFor: 'Slower swing speeds', price: '$419.99', feature1: 'High', feature2: 'Lightweight build' },
         { rating: 4.3, affiliateKey: 'cobra-air-x-2-irons', name: 'Cobra Air-X 2 Irons', bestFor: 'Newest budget model', price: '$498.78', feature1: 'High', feature2: 'Right at the line' },
+        { rating: 4.6, affiliateKey: 'callaway-strata', name: 'Callaway Strata (complete set)', bestFor: 'Best complete set', price: '~$481', feature1: 'High', winner: false },
+        { rating: 4.3, affiliateKey: 'wilson-profile-sgi', name: 'Wilson Profile SGI (complete set)', bestFor: 'Cheapest complete set', price: '~$450', feature1: 'Very high', winner: false },
       ],
     },
     sections: [
+      {
+        h2: 'If You Need More Than Irons: Complete Sets Under $500',
+        body: 'A lot of people searching for irons under $500 are starting from nothing, and a set of irons alone will not get them on the course. Two complete packages sit inside the same budget and include a driver, fairway wood, hybrid, irons, putter and bag.<br><br>Be clear about the trade. A complete set spreads about $450 across eleven or twelve clubs, so the irons inside it are not as good as the Tour Edge or Cobra sets on this page, which spend the entire budget on irons alone. If you already own a driver and a putter, buy the irons. If you own nothing, buy the package.<br><br>Both of these are research picks — we have not played either one.',
+      },
+      {
+        h2: 'Best Complete Set: Callaway Strata',
+        badge: 'RESEARCH PICK',
+        affiliateKey: 'callaway-strata',
+        rating: 4.6,
+        price: '~$481',
+        body: 'The Strata is the most-reviewed product on this page by an enormous margin — 4.6 stars across 5,478 reviews. At $481.21 it is a twelve-piece set from a genuine tour brand, which is unusual at this price.<br><br>Research pick: we have not played it. What we can say is that nothing else here has anything close to that volume of buyer feedback, and it has held 4.6 stars across all of it.',
+        pros: [
+          '5,478 reviews at 4.6 stars — by far the largest sample here',
+          'Twelve pieces from a real tour brand, not a house label',
+          'Everything you need to play, inside the $500 ceiling',
+        ],
+        cons: [
+          'We have not played it — research pick',
+          'Spreading $481 across twelve clubs means weaker irons than the dedicated sets above',
+          'At $481 it sits right at the edge of this page\'s budget',
+        ],
+      },
+      {
+        h2: 'Cheaper Complete Set: Wilson Profile SGI',
+        badge: 'RESEARCH PICK',
+        affiliateKey: 'wilson-profile-sgi',
+        rating: 4.3,
+        price: '~$450',
+        body: 'The Profile SGI is Wilson\'s super-game-improvement package: a 460cc driver, perimeter-weighted stainless irons with a very low centre of gravity, and the rest of what you need. At $449.99 it undercuts the Strata by about $30.<br><br>Research pick — and a correction worth flagging. We previously listed this at ~$299, which was $151 under the real price. If you budgeted from our old number, budget again.',
+        pros: [
+          'Built specifically for slower swing speeds and higher handicaps',
+          'Very low centre of gravity in the irons helps get the ball airborne',
+          'About $30 cheaper than the Strata',
+        ],
+        cons: [
+          'We have not played it — research pick',
+          '483 reviews against the Strata\'s 5,478 — a much smaller sample',
+          'Our previous ~$299 listing was wrong; it is $449.99',
+        ],
+      },
       { h2: 'Best Overall Under $500: Tour Edge Hot Launch C522 — $349.99', body: '<p>At $349.99 the Hot Launch C522 is the cheapest complete 4-PW set here, and the only one that comes in comfortably under budget rather than scraping the line. It ships with KBS Max 80 steel shafts — a named shaft rather than the unbranded steel most sets use at this price.</p><p>Tour Edge is not the first brand most golfers think of, and that is exactly why the set costs $350 instead of $700. Hot Launch is their game improvement family: wide sole, low centre of gravity, built to get the ball airborne for players who do not compress it well.</p>\n\nSpreading a fixed budget across a full bag is its own problem — the <a href="/golf-equipment-budget-planner/">equipment budget planner</a> shows where the money is best spent.\n\nIf you do not know your number, the <a href="/golf-swing-speed-chart/">swing speed chart</a> shows typical speeds by age and handicap and what flex each implies.', badge: 'BEST VALUE', rating: 4.5, affiliateKey: 'tour-edge-hot-launch-c522-irons' },
       { h2: 'Lighter Build for Slower Swings: Cobra AIR-X — $419.99', rating: 4.4, affiliateKey: 'cobra-air-x-irons', body: '<p>The AIR-X is the lightweight entry in the Cobra range — lighter head, lighter shaft and a slightly offset face aimed at golfers who do not generate much clubhead speed. At $419.99 for 4-PW it is the second-cheapest genuine option here.</p><p><strong>A note on the previous-generation advice you will read everywhere else.</strong> The standard tip is that last year model drops 30 to 50 percent and lands under $500. We checked the sets that get named most often, and mostly it does not:</p><ul><li><strong>Wilson Launch Pad 2</strong> — $542 to $659 depending on shaft</li><li><strong>TaylorMade SIM2 Max</strong> — $599 to $750</li><li><strong>Callaway Rogue ST Max</strong> — listed, but showing no price and no stock</li><li><strong>Cobra Air-X 2</strong> — $498.78, the one that does clear the bar</li></ul><p>Certified pre-owned from Callaway Pre-Owned or GlobalGolf is still where the deeper discounts live — see our <a href="/best-golf-gear-2026/">gear guide</a> — but the headline claim that any previous-generation set falls under $500 does not survive contact with a live listing.</p>' },
       { h2: 'Right at the Line: Cobra Air-X 2 — $498.78', rating: 4.3, affiliateKey: 'cobra-air-x-2-irons', body: '<p>The Air-X 2 is the newer version of the same lightweight idea, and at $498.78 it clears the $500 line by about a dollar. That is worth saying plainly: this is the one pick here whose price could break the promise in the title of this page at any moment, and stock was down to a handful of sets when we checked.</p><p>If it is still under $500 when you look, it is the most current set on this page. If it has drifted above, the AIR-X above it is the same idea for eighty dollars less.</p>' },
@@ -12058,7 +12101,7 @@ export const ARTICLES: Article[] = [
       caption: 'Shaft Flex by Swing Speed',
       headers: ['Flex', 'Best For', 'Price', 'Driver Speed'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'callaway-strata', name: 'Ladies — Callaway Strata Set', bestFor: 'Slow swings', price: 'from ~$455', feature1: 'Under 60 mph', feature2: 'Most flexible' },
+        { badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'callaway-strata', name: 'Ladies — Callaway Strata Set', bestFor: 'Slow swings', price: '~$481', feature1: 'Under 60 mph', feature2: 'Most flexible' },
         { rating: 4.7, affiliateKey: 'superspeed-golf-set', name: 'Senior — SuperSpeed Training', bestFor: 'Moderate swings', price: '~$140', feature1: '60-75 mph', feature2: 'Flexible' },
         { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'Regular — TaylorMade Qi Irons', bestFor: 'Most golfers', price: '~$150', feature1: '75-90 mph', feature2: 'Standard', badge: 'MOST COMMON', winner: true },
         { rating: 4.5, affiliateKey: 'titleist-t300', name: 'Stiff — Titleist T300 Irons', bestFor: 'Faster swings', price: '~$150', feature1: '90-105 mph', feature2: 'Firm' },
