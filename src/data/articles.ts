@@ -7386,7 +7386,7 @@ export const ARTICLES: Article[] = [
         pros: ['Fiberglass grass protects joints — no wrist pain after 60 sessions', 'Compact 2x3 ft slides under a bed', 'Real turf feel — club slides through naturally'],
         cons: ['$449 is expensive for a mat', 'No built-in ball tray', 'Fiberglass strands shed slightly over first month'],
       },
-      { h2: 'Optional Upgrade: Projector + Impact Screen', body: "If you want a full visual simulator experience, add a BenQ short-throw projector ($1,799) and a DIY impact screen enclosure ($299). This pushes total cost to $3,450 but gives you E6 Connect course play projected on your wall. I did NOT include this in my core setup because it is not necessary for practice — the Rapsodo app on a tablet gives you all the data you need. But if you want to play Pebble Beach in your living room on a Saturday morning, this is how you do it.", badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'benq-short-throw-projector' },
+      { h2: 'Optional Upgrade: Projector + Impact Screen', body: "If you want a full visual simulator experience, add a BenQ TH671ST short-throw projector ($949) and a DIY impact screen enclosure ($299). This pushes total cost to $3,450 but gives you E6 Connect course play projected on your wall. I did NOT include this in my core setup because it is not necessary for practice — the Rapsodo app on a tablet gives you all the data you need. But if you want to play Pebble Beach in your living room on a Saturday morning, this is how you do it.", badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'benq-short-throw-projector' },
       { h2: 'Results After 60 Indoor Sessions', body: "Hard data from my winter: handicap dropped from 14.2 to 11.4 (2.8 strokes). Driver dispersion tightened from 45-yard spread to 28-yard spread. 7-iron carry increased from 152 to 158 yards. Most importantly, I maintained my game through a Chicago winter without touching real grass for 4 months. Previous winters I would come back in April shooting 6-8 strokes worse than my fall numbers. This year I played my first spring round at 2 over my fall average." },
     ],
     comparisonTable: {
@@ -7395,7 +7395,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$699', feature1: '4.5/5 ★', feature2: 'Launch Monitor', winner: true, rating: 4.7 },
         { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best value net', price: '~$189', feature1: '4.6/5 ★', feature2: 'Practice Net', winner: false },
         { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Fiberbuilt Studio Mat', bestFor: 'Joint-friendly turf', price: '~$449', feature1: '4.5/5 ★', feature2: 'Hitting Mat', winner: false },
-        { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TK850 Short-Throw', bestFor: 'Big-screen upgrade', price: '~$1,799', feature1: '4.4/5 ★', feature2: 'Projector (Optional)', winner: false },
+        { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TH671ST Short-Throw', bestFor: 'Big-screen upgrade', price: '~$949', feature1: '4.4/5 ★', feature2: 'Projector (Optional)', winner: false },
         { affiliateKey: 'diy-impact-screen-enclosure', name: 'DIY Impact Screen Kit', bestFor: 'Ball containment', price: '~$299', feature1: '4.3/5 ★', feature2: 'Enclosure (Optional)', winner: false, rating: 4.3 },
       ],
     },
