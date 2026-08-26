@@ -92,6 +92,16 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
 // Fixes orphaned pages by giving them specific inbound paths
 const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = {
 
+  // Added Sprint 80 — feed the new GPS-speaker page from related commercial pages
+  'accessories-50': [
+    { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
+  ],
+
+  // Added Sprint 80 — feed the new GPS-speaker page from related commercial pages
+  'golf-gifts': [
+    { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
+  ],
+
   // ── Rangefinder cluster: every rangefinder page links to the others ──────────
   'rangefinders': [
     { slug: '/bushnell-tour-v7-shift-review/',  label: 'Bushnell Tour V7 Shift Review (40 Rounds)' },
@@ -135,6 +145,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/is-a-rangefinder-worth-it/',          label: 'Is a Rangefinder Worth It?' },
   ],
   'rangefinder-vs-gps': [
+    { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
     { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
         { slug: '/what-is-slope-on-a-rangefinder/', label: 'What Is Slope On A Rangefinder' },
@@ -161,6 +172,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
 
   // ── GPS Watch cluster ─────────────────────────────────────────────────────────
   'gps-watches': [
+    { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
     { slug: '/garmin-approach-s62-review/',          label: 'Garmin S62 Review — 30 Rounds Later' },
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
     { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
@@ -1142,6 +1154,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   ],
 
   'golf-apps': [
+    { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
     { slug: '/compare/garmin-s70-vs-apple-watch-golf/', label: 'S70 vs Apple Watch — Full Comparison' },
     { slug: '/compare/garmin-s70-vs-apple-watch-golf/', label: 'Garmin S70 vs Apple Watch for Golf' },
   ],
