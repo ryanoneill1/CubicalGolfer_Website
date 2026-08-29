@@ -698,7 +698,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 14,
     retailer: 'Golf Galaxy',
     price: 'from ~$599',
-    priceNote: 'Iron sets rarely go on deep sale new. Check certified pre-owned for 30% off.',
+    priceNote: 'Discontinued as of 2026-08-26: Golf Galaxy returns no results and the D9 no longer appears on Amazon\'s first page. We played this set and the review stands, but it is secondhand-only now. Wilson\'s current equivalent is the Dynapower at $599.98.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/wilson-d9-irons.webp',
     imgAlt: 'Wilson D9 Golf Irons',
@@ -4529,6 +4529,23 @@ export const AFFILIATE: Record<string, {
       'The loudest option here, and priced accordingly',
     ],
   },
+
+  // ── Sprint 85: replaces the discontinued Wilson D9 ────────────────────────
+  'wilson-dynapower-irons': {
+    url: 'https://www.amazon.com/dp/B0BT26B16M?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon', commissionPct: 3, cookieDays: 1,
+    retailer: 'Amazon',
+    price: '~$600',
+    priceNote: 'Verified 2026-08-26: $599.98, 4.6 stars across 21 reviews. This replaces the Wilson D9 on our iron pages — the D9 is discontinued and no longer stocked new at Amazon or Golf Galaxy. The review count is small because the set is recent, not because buyers dislike it.',
+    label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/wilson-dynapower-irons.webp', imgAlt: 'Wilson Dynapower men\'s game-improvement iron set',
+    benefits: [
+      'Wilson\'s current men\'s game-improvement set, replacing the discontinued D9',
+      'Variable face thickness through the long irons to hold ball speed on off-centre strikes',
+      'Priced under comparable sets from the bigger brands',
+    ],
+  },
+
 };
 
 // ── Helper ────────────────────────────────────────────────────────────────────
