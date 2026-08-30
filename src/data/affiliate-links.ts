@@ -309,7 +309,7 @@ export const AFFILIATE: Record<string, {
     price: '~$289',
     priceNote: 'Verified 2026-08-23: $289.00, 4.3 stars across 521 reviews. Stock runs thin on individual colours — check the colour selector if the buy box shows only one left.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/garmin-approach-s44.webp',
     imgAlt: 'Garmin Approach S44 golf GPS smartwatch',
     benefits: [
       'Current-generation replacement for the S42, with a 1.2in AMOLED display',
@@ -721,7 +721,7 @@ export const AFFILIATE: Record<string, {
     price: '$349.99',
     priceNote: 'Verified in stock at $349.99 on 2026-08-22. Iron prices move; check before buying.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/tour-edge-hot-launch-c522-irons.webp',
     imgAlt: 'Tour Edge Hot Launch C522 Irons',
     benefits: [
       'The cheapest complete 4-PW set on this page',
@@ -738,7 +738,7 @@ export const AFFILIATE: Record<string, {
     price: '$419.99',
     priceNote: 'Verified in stock at $419.99 on 2026-08-22. Iron prices move; check before buying.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/cobra-air-x-irons.webp',
     imgAlt: 'Cobra AIR-X Iron Set',
     benefits: [
       'A full 4-PW set from a major brand under the $500 line',
@@ -3306,7 +3306,7 @@ export const AFFILIATE: Record<string, {
     price: '$209.99',
     priceNote: 'Verified in stock at $209.99 on 2026-08-22.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/voice-caddie-sc200plus.webp',
     imgAlt: 'Voice Caddie SC200Plus launch monitor',
     benefits: [
       'Doppler radar in a genuinely sub-$500 unit',
@@ -3339,7 +3339,7 @@ export const AFFILIATE: Record<string, {
     price: '~$906',
     priceNote: 'The only remote-control caddy here under $1,000. Rated 18+ holes per charge rather than the 36 the pricier carts claim.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/kvv-electric-golf-cart.webp',
     imgAlt: 'KVV electric golf push cart with remote control',
     benefits: [
       'Remote control at under $1,000 — the cheapest way into hands-free walking',
@@ -3354,7 +3354,7 @@ export const AFFILIATE: Record<string, {
     price: '~$1,379',
     priceNote: 'The highest-rated electric caddy we list at 4.4 stars, though on only 40 reviews.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/alphard-cybercart.webp',
     imgAlt: 'Alphard Cybercart electric golf cart with remote control',
     benefits: [
       'Highest customer rating of the four at 4.4 stars',
@@ -3548,7 +3548,7 @@ export const AFFILIATE: Record<string, {
     price: '~$909',
     priceNote: 'MSRP is $999; street runs about $909. Simulator gear drops 10-20% during Black Friday.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp',
+    imgSrc: '/images/products/optoma-zw350st.webp',
     imgAlt: 'Optoma ZW350ST short throw laser golf simulator projector',
     benefits: ['Laser light source rated 30,000 hours — no lamp to buy, ever', '3,600 lumens stays visible with garage lights on', '0.521:1 throw fills a 120-inch screen from under 5 feet'],
   },
@@ -4350,7 +4350,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     retailer: 'E-Z-GO', price: 'from $9,274',
     priceNote: 'Sold through E-Z-GO dealers, not online retailers — the link opens their dealer locator. The RXV 2 replaced the Freedom RXV; $9,274 is the starting price before options.', label: 'Find a Dealer →',
-    imgSrc: '/images/products/placeholder.webp', imgAlt: 'E-Z-GO RXV 2 electric golf cart — photo coming soon',
+    imgSrc: '/images/products/ezgo-rxv-2.webp', imgAlt: 'E-Z-GO RXV 2 electric golf cart — photo coming soon',
   },
   'club-car-onward': {
     url: 'https://www.clubcar.com/en-us',

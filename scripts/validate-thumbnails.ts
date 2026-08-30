@@ -69,19 +69,13 @@ const SILHOUETTE_FILES = new Set<string>([
   'cobra-ds-adapt-max-k.webp',         // still in use — awaiting a real photo
 ]);
 const AWAITING_PHOTO = new Set<string>([
-  // ── On placeholder.webp as of 2026-08-26. Ordered by the traffic of the page
-  //    they appear on, so the most-seen gaps get photographed first.
-  'garmin-approach-s44',              // /best-golf-gps-watches/ — 11,227 impressions
-  'tour-edge-hot-launch-c522-irons',  // /best-irons-under-500/ — 4,050 impr, position 8.8
-  'cobra-air-x-irons',                // /best-irons-under-500/
-  'cobra-air-x-2-irons',              // /best-irons-under-500/
-  'optoma-zw350st',                   // /best-golf-simulator-projectors/ — 3,516 impr
-  'kvv-electric-golf-cart',           // /best-electric-golf-push-cart/ — 2,803 impr
-  'alphard-cybercart',                // /best-electric-golf-push-cart/
-  'voice-caddie-sc200plus',           // /best-launch-monitors-under-500/ — 1,241 impr
-  'ezgo-rxv-2',                       // /best-electric-golf-cart/ — 344 impr
-  'club-car-onward',        // 1 page
-  'cobra-ds-adapt-max-k',   // 6 pages — replaced the discontinued Aerojet Max 9 Aug 2026
+  // ── Still on placeholder.webp as of 2026-08-27 ──────────────────────────
+  'cobra-air-x-2-irons',  // /best-irons-under-500/ — needs its OWN photo: the
+                          // uploaded AIR-X shot is badged "AIR-X ULTRALITE",
+                          // which is the previous generation, not the AIR-X 2.
+  // ── Hand-made silhouette cards, pre-existing ────────────────────────────
+  'club-car-onward',
+  'cobra-ds-adapt-max-k',
 ]);
 for (const [key, v] of Object.entries(AFFILIATE as any)) {
   const img = (v as any).imgSrc as string | undefined;
