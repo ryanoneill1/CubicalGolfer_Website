@@ -69,10 +69,10 @@ const SILHOUETTE_FILES = new Set<string>([
   'cobra-ds-adapt-max-k.webp',         // still in use — awaiting a real photo
 ]);
 const AWAITING_PHOTO = new Set<string>([
-  // ── Still on placeholder.webp as of 2026-08-27 ──────────────────────────
-  'cobra-air-x-2-irons',  // /best-irons-under-500/ — needs its OWN photo: the
-                          // uploaded AIR-X shot is badged "AIR-X ULTRALITE",
-                          // which is the previous generation, not the AIR-X 2.
+  // ── Still on placeholder.webp as of 2026-08-30 ──────────────────────────
+  'cobra-ds-adapt-x-driver',  // replaced the discontinued Cobra Air-X driver on
+                              // /best-golf-driver-slow-swing-speed/. Needs a
+                              // real shot: 600x600 webp, cobra-ds-adapt-x-driver.webp
   // ── Hand-made silhouette cards, pre-existing ────────────────────────────
   'club-car-onward',
   'cobra-ds-adapt-max-k',

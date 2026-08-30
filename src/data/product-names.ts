@@ -133,7 +133,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'superstroke-zenergy-tour': "SuperStroke S-Tech",
   'callaway-big-bertha': "Callaway Big Bertha",
   'cleveland-huntington-beach': "Cleveland Huntington Beach",
-  'cobra-air-x': "Cobra Air X",
+  'cobra-ds-adapt-x-driver': "Cobra DS-Adapt X Driver",
   'evnroll-er2': "Evnroll ER2",
   'net-return-pro': "Net Return Pro",
   'odyssey-stroke-lab': "Odyssey Stroke Lab",
