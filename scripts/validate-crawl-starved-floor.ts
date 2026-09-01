@@ -92,8 +92,8 @@ if (!starved.length) {
 } else {
   // CI restores a build-output cache, so dist/ can EXIST while holding no pages.
   // Checking existsSync alone reported 0 inbound for all 21 pages and failed the
-  // production build. Require a real built site before drawing any conclusion:
-  // no pages means we learned nothing, which is not the same as a problem.
+  // production build on 2026-09-01. Require a real built site before drawing any
+  // conclusion: no pages means we learned nothing, which is not a problem.
   const pages: string[] = [];
   if (fs.existsSync(DIST)) {
     (function walk(d: string) {
@@ -104,7 +104,7 @@ if (!starved.length) {
       }
     })(DIST);
   }
-  const MIN_PAGES = 200; // the site builds 270+; anything less is a partial/stale cache
+  const MIN_PAGES = 200; // the site builds 270+; less means a partial/stale cache
   if (pages.length < MIN_PAGES) {
     console.log(
       `✅ Crawl-starved floor: ${starved.length} page(s) declared, related headroom OK ` +
