@@ -89,17 +89,29 @@ const starved = [...block.matchAll(/slug: '([^']+)'/g)].map(m => m[1]);
 if (!starved.length) {
   console.error('\n❌ Could not parse CRAWL_STARVED from src/lib/linking.ts.\n');
   failed = true;
-} else if (!fs.existsSync(DIST)) {
-  console.log(`✅ Crawl-starved floor: ${starved.length} page(s) declared, related headroom OK (inbound check skipped — no dist/ yet).`);
 } else {
+  // CI restores a build-output cache, so dist/ can EXIST while holding no pages.
+  // Checking existsSync alone reported 0 inbound for all 21 pages and failed the
+  // production build. Require a real built site before drawing any conclusion:
+  // no pages means we learned nothing, which is not the same as a problem.
   const pages: string[] = [];
-  (function walk(d: string) {
-    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
-      const p = path.join(d, e.name);
-      if (e.isDirectory()) walk(p);
-      else if (e.name === 'index.html') pages.push(p);
-    }
-  })(DIST);
+  if (fs.existsSync(DIST)) {
+    (function walk(d: string) {
+      for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+        const p = path.join(d, e.name);
+        if (e.isDirectory()) walk(p);
+        else if (e.name === 'index.html') pages.push(p);
+      }
+    })(DIST);
+  }
+  const MIN_PAGES = 200; // the site builds 270+; anything less is a partial/stale cache
+  if (pages.length < MIN_PAGES) {
+    console.log(
+      `✅ Crawl-starved floor: ${starved.length} page(s) declared, related headroom OK ` +
+      `(inbound check skipped — dist/ has ${pages.length} page(s), need ${MIN_PAGES}).`
+    );
+    process.exit(failed ? 1 : 0);
+  }
 
   const html = pages.map(p => ({
     slug: '/' + path.relative(DIST, p).replace(/index\.html$/, '').replace(/\\/g, '/'),
