@@ -120,15 +120,15 @@ export const AFFILIATE: Record<string, {
   // B3: the base Mevo — distinct from the ~$2,199 Mevo+. The "Most Portable" slot
   // on /best-budget-launch-monitor/ was headed "Mevo" but linked the Mevo+.
   'flightscope-mevo': {
-    url: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fflightscope-mevo-launch-monitor-24gjuumvlnchmntrxtch%2F24gjuumvlnchmntrxtch%3FenteredSearchTerm%3Dmevo',
-    program: 'golfgalaxy',
+    url: 'https://www.amazon.com/dp/B07L52KP31?linkId=97d6d30c4e5b1141ef6356aa48fab218&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Flightscope*+Mevo*&ghref=2301%3A1333883',
-    retailer: 'Golf Galaxy',
-    price: '~$349',
-    priceNote: 'DISCONTINUED. Amazon lists the original Mevo with NO PRICE on every listing; only the Mevo Gen2 at $1,299 is stocked.',
-    label: 'Check Price at Golf Galaxy →',
+    retailer: 'Amazon',
+    price: 'See price in cart',
+    priceNote: 'NOT discontinued. Verified 2026-09-01 on the live page: In Stock, Add to Cart present, 4.2 stars across 1,093 reviews. Amazon shows "Price: See price in cart" because FlightScope enforces a minimum advertised price, so no figure is displayed until checkout. An earlier check here recorded this as discontinued purely because no price rendered, which was wrong.',
+    label: 'See Price at Amazon →',
     benefits: [
         'Pocket-sized — the most portable unit in this guide',
         'Ball speed, carry, launch angle and spin from a phone app',
@@ -497,14 +497,14 @@ export const AFFILIATE: Record<string, {
     heroVerdictLine: '★ Still the gold standard — the ball every other brand is trying to beat in 2026.',
     heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
     asin: 'B0BR2YF8T6',
-    url: 'https://www.amazon.com/dp/B0DPN7QZ9R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0DPN6VNK1?linkId=a1b9f83335c538286346ca2aeddba41c&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Pro%2520V1%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$58/dozen',
-    priceNote: 'Verified 2026-09-01 by strict buybox check: $57.97, 1,497 reviews, in stock. The previous ASIN reports currently unavailable.',
+    priceNote: 'Verified 2026-09-01 on the live page: $57.99, in stock, 622 reviews, 6K+ bought in the past month. Owner-supplied listing, chosen over an equally live alternative because this one carries four times the sales velocity.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-pro-v1.webp',
     imgAlt: 'Titleist Pro V1 Golf Balls 2026',
@@ -574,13 +574,13 @@ export const AFFILIATE: Record<string, {
 
   // Vice Pro — sold direct-to-consumer; not on Amazon as brand-sold
   'vice-pro': {
-    url: 'https://www.amazon.com/dp/B0CKJMSPMG?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B089W9G9ZW?linkId=6672ead0a166fdcbf5a1fb75bcb90607&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
     price: '~$39/dozen',
-    priceNote: 'Verified 2026-09-01 by strict buybox check: $38.99, 4,882 reviews, in stock, 700+ bought in the past month. The previous ASIN reports currently unavailable.',
+    priceNote: 'Verified 2026-09-01 on the live page: $38.97, in stock, 4,888 reviews, 900+ bought in the past month. Owner-supplied listing.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/vice-pro.webp',
     imgAlt: 'Vice Pro Golf Balls',
@@ -692,13 +692,13 @@ export const AFFILIATE: Record<string, {
 
   // Wilson D9 Irons — search (shaft variants)
   'wilson-d9-irons': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dwilson%2520d9%2520irons%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'golfgalaxy',
+    url: 'https://www.amazon.com/dp/B09YP7XWK8?linkId=91f2e0310092a657cea545fbfadf82e9&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
     commissionPct: 8,
     cookieDays: 14,
-    retailer: 'Golf Galaxy',
-    price: 'from ~$599',
-    priceNote: 'Discontinued as of 2026-08-26: Golf Galaxy returns no results and the D9 no longer appears on Amazon\'s first page. We played this set and the review stands, but it is secondhand-only now. Wilson\'s current equivalent is the Dynapower at $599.98.',
+    retailer: 'Amazon',
+    price: '~$900',
+    priceNote: 'Verified 2026-09-01 on the live page: $899.99, in stock but only 1 unit left, 2 reviews. IMPORTANT: this is the D9 Forged in LEFT HAND, STIFF flex, which is a different and dearer club from the standard D9 our review covers at around $599-699. It is linked only from copy that states those three caveats. Do not promote it as the reviewed set.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/wilson-d9-irons.webp',
     imgAlt: 'Wilson D9 Golf Irons',
