@@ -2600,7 +2600,7 @@ export const AFFILIATE: Record<string, {
     price: '~$270',
     priceNote: 'Verified 2026-08-27: $269.95, 4.0 stars across 14 reviews. A second listing for the same driver sits at $299.00 with 6 reviews — same club, so take the cheaper one. This replaces the Cobra Air-X driver, which no longer appears on Amazon\'s first page.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/placeholder.webp', imgAlt: 'Cobra DS-Adapt X driver',
+    imgSrc: '/images/products/cobra-ds-adapt-x-driver.webp', imgAlt: 'Cobra DS-Adapt X driver',
     benefits: [
       'The standard DS-Adapt head — neutral face angle, where the MAX-K is draw-biased',
       'PWR-BRIDGE internal weighting sits lower for a higher launch',

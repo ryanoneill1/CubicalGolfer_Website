@@ -1367,6 +1367,8 @@ export const ARTICLES: Article[] = [
       { slug: '/office-to-golf-course-playbook/', label: 'Golf Fitness for Office Workers' },
       { slug: '/best-golf-courses-weekend-drive/', label: 'Best Golf Courses Within a Weekend Drive' },
       { slug: '/how-to-break-90/', label: 'How to Break 90 This Season' },
+    
+      { slug: '/best-golf-grips-sweaty-hands/', label: 'Sweat-Proof Golf Grips' },
     ],
   },
   {
@@ -1632,9 +1634,17 @@ export const ARTICLES: Article[] = [
         sectionImageAlt: 'Budget vs premium golf balls side by side for golfers shooting 95-plus',
       },
   
+      { h2: 'Choose Your Ball by What You Actually Need', body: `Nine balls ranked by handicap is the right answer if you are starting from scratch. If you already know your constraint — a slow swing, a tight budget, a specific speed — these guides go deeper on one thing each than a general ranking can.\n\n<ul>\n<li><strong><a href="/best-golf-balls-slow-swing-speed/">Slow swing speed (under 85 mph)</a></strong> — low-compression balls that still get airborne. Start here if you are losing carry rather than accuracy.</li>\n<li><strong><a href="/best-golf-balls-90-mph-swing-speed/">90–95 mph swing speed</a></strong> — the mid-compression band, where the widest choice sits and where most weekend golfers actually live.</li>\n<li><strong><a href="/best-golf-balls-for-seniors/">Seniors and over 60</a></strong> — the same low-compression logic, but with feel and short-game control weighted higher than raw distance.</li>\n<li><strong><a href="/best-golf-balls-for-distance/">Maximum distance</a></strong> — what actually adds yards, and why a firmer ball usually is not it.</li>\n<li><strong><a href="/best-golf-balls-under-30/">Under $30 a dozen</a></strong> — the value field, including which cheap balls give up greenside spin and which do not.</li>\n<li><strong><a href="/golf-ball-compression-chart/">Compression chart by brand and swing speed</a></strong> — all 34 balls with compression, cover material and price, if you would rather read the numbers yourself.</li>\n</ul>\n\nOne thing worth saying plainly: the single biggest jump in performance is not compression, it is cover material. A urethane cover checks on a pitch; an ionomer cover does not, however soft it feels. The cheapest urethane ball on our chart is $28.` },
       { h2: 'Keep reading', body: 'Ball selection matters more when the rest of your equipment is dialed in. If you are still choosing a driver, see our <a href=\'/best-golf-drivers-forgiveness/\'>forgiving drivers guide</a> — the right driver-ball pairing affects launch conditions. Curious how different balls compare on compression? Our <a href=\'/golf-ball-compression-chart/\'>compression chart</a> ranks every major ball side by side. Golfers on a budget should also check <a href=\'/best-golf-accessories-under-50/\'>accessories under $50</a> for balls that punch above their price.\n\nFor a shortlist matched to your swing speed and feel preference, run the <a href="/golf-ball-finder/">golf ball finder</a>.' },
     ],
     faq: [
+      { q: 'What are the best golf balls in 2026?', a: "For most golfers, the Srixon Q-Star Tour at ~$35 a dozen. It has a urethane cover for greenside spin at 72 compression, which suits the 85-100 mph range most weekend golfers swing at. The Titleist Pro V1 is the better ball in absolute terms at ~$58, but it needs 90 mph or more to compress properly." },
+      { q: 'Is the Titleist Pro V1 worth the money?', a: "Above about 90 mph, yes — it is the most complete ball on the market and its 87 compression is matched to that speed. Below 90 mph you are paying $58 a dozen for performance you cannot access. At 80 mph the Callaway Supersoft at $25 will go further." },
+      { q: 'What is the difference between a $25 and a $55 golf ball?', a: "Almost entirely the cover. Cheap balls use ionomer, which is durable and fast but will not check on a pitch. Premium balls use urethane, which grips the grooves and stops on the green. Compression matters too, but cover material is the difference you will actually see." },
+      { q: 'Are Kirkland Signature golf balls any good?', a: "At 75 compression with a urethane cover they are genuinely competitive with balls costing twice as much, which is why they get talked about. Availability is the catch — they sell out regularly. See our Pro V1 vs Kirkland comparison for the head-to-head." },
+      { q: 'Do more expensive golf balls go further?', a: "No — often the opposite. Premium balls are built for spin control and feel, not raw distance, and they are firmer. If distance is your only goal, a low-compression distance ball matched to your swing speed will usually carry further than a tour ball you cannot compress." },
+      { q: 'Should I play the same ball every round?', a: "Yes, once you have chosen one. Distance control on wedges and putting speed both depend on knowing how your ball behaves, and switching between a soft ionomer ball and a firm urethane one changes both. Consistency is worth more than any single ball's specification." },
+      { q: 'What golf ball is best for a 100 mph swing speed?', a: "At 100 mph you can compress anything on the market, so the choice becomes about spin and feel rather than fit. The TaylorMade TP5 (85 compression), Titleist Pro V1x (97) and Srixon Z-Star XV (102) are all designed for that range." },
       { q: 'What golf ball should a high handicapper use?', a: "Golfers shooting over 100 should use a low-compression two-piece ball: Callaway Supersoft (~$25/dozen) or Srixon Soft Feel (~$27/dozen). Premium tour balls require swing speeds over 85mph to compress properly. Playing one below your speed actually costs you distance." },
       { q: 'Does the golf ball you use really make a difference?', a: "Yes, but only above a certain skill level. For golfers shooting over 100, fundamentals matter far more than ball choice. For the 85-95 range, matching compression to swing speed can gain 5-8 yards per iron shot and improve putting feel." },
       { q: 'What is the new Callaway Chrome Tour 2026?', a: "Callaway released the 2026 Chrome Tour in January 2026 with a new Tour Fast Mantle — a stiffer middle layer that generates more ball speed without firming up the feel. It replaces the Chrome Soft X as Callaway's primary tour offering. Price: ~$58/dozen." },
@@ -1667,6 +1677,9 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers 2026' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
+    
+      { slug: '/best-golf-balls-for-seniors/', label: 'Best Golf Balls for Seniors' },
+      { slug: '/best-golf-balls-for-distance/', label: 'Best Golf Balls for Distance' },
     ],
   },
   {
@@ -1746,6 +1759,9 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-accessories-under-50/', label: 'Best Golf Accessories Under $50' },
       { slug: '/25-golf-accessories-every-golfer-should-own/', label: '25 Golf Accessories Every Golfer Should Own' },
       { slug: '/office-to-golf-course-playbook/', label: 'Golf Fitness for Office Workers' },
+    
+      { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
+      { slug: '/best-golf-balls-under-30/', label: 'Best Golf Balls Under $30' },
     ],
   },
 
@@ -1863,6 +1879,8 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
           { slug: '/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/', label: 'LAB DF3 vs Odyssey 2-Ball' },
           { slug: '/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/', label: 'Stroke Lab vs Phantom' },
+    
+      { slug: '/best-golf-balls-for-seniors/', label: 'Best Golf Balls for Seniors' },
     ],
   },
 
@@ -2170,6 +2188,10 @@ export const ARTICLES: Article[] = [
       { slug: '/how-to-break-90/', label: 'How to Break 90' },
   
       { slug: '/golf-ball-complete-guide/', label: 'Golf Ball Complete Guide' },
+    
+      { slug: '/best-golf-balls-for-seniors/', label: 'Best Golf Balls for Seniors' },
+    
+      { slug: '/best-golf-balls-90-mph-swing-speed/', label: 'Best Balls for 90 MPH Swing Speed' },
     ],
   },
 
@@ -2837,6 +2859,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
+    
+      { slug: '/best-golf-balls-under-30/', label: 'Best Golf Balls Under $30' },
     ],
   },
 
@@ -3115,6 +3139,8 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-ball-finder/', label: 'Golf Ball Finder Tool' },
       { slug: '/golf-swing-speed-chart/', label: 'Average Swing Speed by Age' },
       { slug: '/best-golf-balls-slow-swing-speed/', label: 'Best Balls for Slow Swing Speed' },
+    
+      { slug: '/best-golf-balls-for-seniors/', label: 'Best Golf Balls for Seniors' },
     ],
   },
 
@@ -3442,6 +3468,8 @@ export const ARTICLES: Article[] = [
       { slug: '/golf-ball-compression-chart/', label: 'Full Compression Chart' },
       { slug: '/best-golf-balls-for-beginners/', label: 'Best Balls for Beginners' },
       { slug: '/golf-ball-finder/', label: 'Golf Ball Finder Tool' },
+    
+      { slug: '/best-golf-balls-for-distance/', label: 'Best Golf Balls for Distance' },
     ],
   },
 
@@ -5053,7 +5081,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Why Compression Matters More After 60', body: 'Swing speed drops 1 to 1.5 mph per year after 50. A golfer swinging 100 mph at 50 swings about 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely deforms — you lose 10 to 15 yards versus a 40-compression Supersoft. Rough guide: subtract your age from 130 for ideal compression. A 65-year-old should play around 65 compression. A 75-year-old around 55.' },
     
       { h2: 'The Best Ball for Each Senior Speed Range', body: '65 to 75 mph driver speed: Callaway Supersoft (38 compression) or TaylorMade Noodle (34) — maximum softness for maximum compression at slow speeds. 75 to 85 mph: Srixon Soft Feel (60) or Titleist TruFeel (est. 45) — slightly firmer for better greenside control while still compressing fully. 85 to 90 mph: Vice Pro Soft (65) or Bridgestone e12 Contact (50) — the transition zone where some seniors can play mid-compression balls. If you do not know your speed, start with the Callaway Supersoft — it works for every senior swing speed and costs only $22 per dozen.' },
-      { h2: 'Why Compression Matters More as You Age', body: 'Swing speed drops about 1 to 1.5 mph per year after age 50. A golfer who swung 100 mph at 50 might swing 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely compresses — you lose 10 to 15 yards versus a 40-compression Supersoft that fully compresses at that speed. The general rule: subtract your age from 130 to get your approximate ideal compression. A 65-year-old should play around 65 compression, a 75-year-old around 55 compression. This is not exact science, but it gets you in the right range.' },
+      { h2: 'Matching Ball Compression to a Slower Swing', body: 'Swing speed drops about 1 to 1.5 mph per year after age 50. A golfer who swung 100 mph at 50 might swing 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely compresses — you lose 10 to 15 yards versus a 40-compression Supersoft that fully compresses at that speed. The general rule: subtract your age from 130 to get your approximate ideal compression. A 65-year-old should play around 65 compression, a 75-year-old around 55 compression. This is not exact science, but it gets you in the right range.' },
       { h2: 'Do Seniors Need a Different Ball for Putting?', body: 'No. Compression affects full shots but has almost zero effect on putting speed or feel. A 38-compression Supersoft and a 100-compression Pro V1 roll identically on the green because putting impact forces are too low to compress either ball. Choose your ball based on driver and iron performance, not putting preference. If you prefer a softer feel on chips and pitches, a low-compression ball does feel noticeably different around the greens — but this is a bonus, not the primary selection criterion.' },
     ],
     faq: [
