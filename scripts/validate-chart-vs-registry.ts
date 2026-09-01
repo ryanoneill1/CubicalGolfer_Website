@@ -27,12 +27,16 @@
 import fs from 'fs';
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
 
-const SRC = 'src/pages/golf-ball-compression-chart/index.astro';
+// The ball data used to live inline in the .astro page. It now lives in
+// src/data/balls.ts, because the PDF generator kept a fourth hardcoded copy and
+// drifted from the corrected prices. Reading the shared module means this guard
+// checks whatever the page and the PDF actually render.
+const SRC = 'src/data/balls.ts';
 const src = fs.readFileSync(SRC, 'utf8');
-const block = src.match(/const balls = \[([\s\S]*?)\n\];/);
+const block = src.match(/export const balls = \[([\s\S]*?)\n\];/);
 
 if (!block) {
-  console.error('\n❌ Could not find the `const balls = [...]` array in ' + SRC + '.\n');
+  console.error('\n❌ Could not find the exported `balls` array in ' + SRC + '.\n');
   process.exit(1);
 }
 
