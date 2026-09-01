@@ -1594,14 +1594,14 @@ export const AFFILIATE: Record<string, {
 
   // ── Golf Balls for 90 MPH Swing Speed ────────────────────────────────────────
   'srixon-q-star-tour': {
-    url: 'https://www.amazon.com/Srixon-Q-Star-Tour-Golf-Balls/dp/B0CRZ9M7VT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0CS2H3LNH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Q-Star%2520Tour%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$35/dz',
-    priceNote: 'Great value at this price point. Rarely drops lower.',
+    price: '~$28/dz',
+    priceNote: 'Verified 2026-08-31: $27.99, 4.8 stars across 638 reviews, in stock. This links to the Q-Star Tour Divide, the same ball in the two-tone cover. The plain white listing went "currently unavailable, we do not know when or if this item will be back in stock" with zero reviews, so it was replaced rather than left pointing at a dead page.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/srixon-q-star-tour.webp',
     imgAlt: 'Srixon Q-Star Tour Golf Balls',
