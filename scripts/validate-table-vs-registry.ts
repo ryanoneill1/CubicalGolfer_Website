@@ -31,7 +31,7 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 
-const THRESHOLD = 68;
+const THRESHOLD = 66;
 const SEVERE_CEILING = 4;
 
 const money = (s: string) => Number(s.replace(/,/g, ''));

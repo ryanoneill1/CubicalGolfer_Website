@@ -1723,7 +1723,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'For most golfers playing in normal conditions, the <strong>FootJoy WeatherSof</strong> is the right answer — consistent, washable, and available in the right size. See our full glove guide →',
     description: "FootJoy WeatherSof, Titleist Players Flex & Callaway Dawn Patrol compared. Which hot-weather golf glove stays grippy longest when you\'re sweating.",
     excerpt: 'Stay-dry, breathable gloves that keep your grip locked in when the temperature climbs.',
-    intro: "The best golf glove for hot weather is the <strong>FootJoy WeatherSof</strong> at ~$22 — mesh back panels vent heat, the microfiber palm stays tacky when wet, and it lasts 15 to 20 rounds in summer conditions. For maximum airflow, the <strong>Titleist Players Flex</strong> ($22) uses a perforated cabretta leather construction that breathes better than any glove we tested.\n\nA sweaty glove is a slipping glove. In hot weather, standard Cabretta leather saturates within 6 holes. These hot-weather picks stay breathable and grippy — tested across multiple summer rounds in 90°+ heat.",
+    intro: "The best golf glove for hot weather is the <strong>FootJoy WeatherSof</strong> at ~$22 — mesh back panels vent heat, the microfiber palm stays tacky when wet, and it lasts 15 to 20 rounds in summer conditions. For maximum airflow, the <strong>Titleist Players Flex</strong> ($28) uses a perforated cabretta leather construction that breathes better than any glove we tested.\n\nA sweaty glove is a slipping glove. In hot weather, standard Cabretta leather saturates within 6 holes. These hot-weather picks stay breathable and grippy — tested across multiple summer rounds in 90°+ heat.",
     toc: ['What makes a great hot-weather glove', 'Best overall: FootJoy WeatherSof', 'Best ventilation: Titleist Players Flex', 'Best value: Callaway Dawn Patrol'],
     sections: [
       { h2: 'What Makes a Great Hot-Weather Golf Glove', body: "Perforated or mesh panels on the back for air circulation, moisture-wicking materials on the palm, and a snug fit that doesn\'t bunch when wet." },
@@ -1736,7 +1736,7 @@ export const ARTICLES: Article[] = [
         body: "Perforations cover nearly the entire back — most breathable glove tested. Pure Cabretta palm for excellent feel.",
         rating: 4.5,
         pros: ['Pure Cabretta leather with strategic perforation for maximum breathability', 'Soft, tour-level feel at impact — preferred by better ball strikers', 'Snug fit that holds shape through the round'],
-        cons: ['Less grip in wet conditions than synthetic or hybrid gloves', 'Wears faster than FootJoy WeatherSof in humid climates'], price: '~$22' },
+        cons: ['Less grip in wet conditions than synthetic or hybrid gloves', 'Wears faster than FootJoy WeatherSof in humid climates'], price: '~$28' },
       { h2: 'Best Value: Callaway Dawn Patrol', rating: 4.3, affiliateKey: 'callaway-dawn-patrol',
         body: "Three for $35. Solidly made, breathable, grips well when warm.", price: '~$12 each / 3 for $35' },
       { h2: 'How to Keep Golf Gloves Fresh in Summer', body: 'Rotate two gloves every 4 to 5 holes — clip the resting glove to your bag so it air-dries while you play. After the round, never stuff a wet glove in your bag pocket. Lay it flat or hang it from a clip. Machine washing destroys the leather and synthetic fibers, but a damp cloth wipe-down between rounds extends glove life by 30 percent. In extreme heat, carry a small microfiber towel to dry your hands before re-gloving. Some golfers apply a light coat of grip powder to their palms, but this can clog the glove pores over time.\n\nFor a shortlist matched to your swing speed and feel preference, run the <a href="/golf-ball-finder/">golf ball finder</a>.' },
@@ -1765,8 +1765,8 @@ export const ARTICLES: Article[] = [
       headers: ['Glove', 'Best For', 'Price', 'Material', 'Breathability'],
       rows: [
       { name: 'FootJoy WeatherSof', bestFor: 'Best Overall', price: '~$22', feature1: 'Synthetic/mesh', feature2: 'High', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'footjoy-weathersof-glove' },
-      { name: 'Titleist Players Flex', bestFor: 'Best Ventilation', price: '~$22', feature1: 'Cabretta/perforated', feature2: 'Very High', winner: false, rating: 4.5, affiliateKey: 'titleist-players-flex' },
-      { name: 'Callaway Dawn Patrol', affiliateKey: 'callaway-dawn-patrol', bestFor: 'Best Value', price: '~$12', feature1: 'Synthetic', feature2: 'Medium', winner: false},
+      { name: 'Titleist Players Flex', bestFor: 'Best Ventilation', price: '~$28', feature1: 'Cabretta/perforated', feature2: 'Very High', winner: false, rating: 4.5, affiliateKey: 'titleist-players-flex' },
+      { name: 'Callaway Dawn Patrol', affiliateKey: 'callaway-dawn-patrol', bestFor: 'Best Value', price: '~$10', feature1: 'Synthetic', feature2: 'Medium', winner: false},
       ],
     },
     related: [
@@ -2400,7 +2400,7 @@ export const ARTICLES: Article[] = [
         cons: ['Slightly less feel than pure leather in completely dry conditions', 'Synthetic palm area wears faster than all-leather alternatives'], price: '~$32 (2-pack)' },
       { h2: 'Best Premium: Titleist Players Flex', badge: 'BEST PREMIUM', rating: 4.7, affiliateKey: 'titleist-players-flex', body: "Pure Cabretta leather for tour-level feel. The Players Flex has perforations across the back and fingers — the most breathable leather glove tested. Moulds to your hand after 3-4 rounds. If you want the best possible feel and don\'t mind paying more, this is the pick.",
         pros: ['Pure Cabretta leather for tour-level feel and maximum feedback at impact', 'Strategic perforations throughout for breathability in warm weather', 'Snug tour fit holds its shape through the entire round'],
-        cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$22' },
+        cons: ['Less grip than WeatherSof in wet or humid conditions', 'Requires more careful maintenance — not machine washable'], price: '~$28' },
       { h2: 'Best Wet Weather: FootJoy RainGrip', badge: 'BEST WET WEATHER', rating: 4.6, affiliateKey: 'footjoy-raingrip', body: "Designed specifically for wet conditions — grips better when wet than most dry gloves grip when dry. FiberSof construction with microfiber palm. If you play in the Southeast or Pacific Northwest where rain is common, a pair of RainGrip gloves is essential.",
         pros: ['Specifically engineered to grip better when wet — unlike most gloves', 'Works with a wet club grip — no need to dry the grip between shots', 'Two-glove pack provides full hand coverage in sustained rain'],
         cons: ['Bulkier feel than standard gloves in dry conditions', 'Less breathable in hot weather — designed for wet, not heat'], price: '~$32 (2-pack)' },
@@ -2413,9 +2413,9 @@ export const ARTICLES: Article[] = [
       headers: ['Glove', 'Material', 'Price', 'Weather', 'Best For'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'footjoy-weathersof-glove', name: 'FootJoy WeatherSof', bestFor: 'Best Overall', price: '~$32/2pk', feature1: 'Synthetic', feature2: 'All-weather', winner: true },
-        { rating: 4.7, affiliateKey: 'titleist-players-flex',    name: 'Titleist Players Flex', bestFor: 'Best Premium', price: '~$22', feature1: 'Leather', feature2: 'Dry/Warm', winner: false },
+        { rating: 4.7, affiliateKey: 'titleist-players-flex',    name: 'Titleist Players Flex', bestFor: 'Best Premium', price: '~$28', feature1: 'Leather', feature2: 'Dry/Warm', winner: false },
         { rating: 4.6, affiliateKey: 'footjoy-raingrip',          name: 'FootJoy RainGrip', bestFor: 'Best Wet', price: '~$28/pair', feature1: 'Synthetic', feature2: 'Rain', winner: false },
-        { rating: 4.3, affiliateKey: 'callaway-dawn-patrol',      name: 'Callaway Dawn Patrol', bestFor: 'Best Budget', price: '~$14', feature1: 'Synthetic', feature2: 'All-weather', winner: false },
+        { rating: 4.3, affiliateKey: 'callaway-dawn-patrol',      name: 'Callaway Dawn Patrol', bestFor: 'Best Budget', price: '~$10', feature1: 'Synthetic', feature2: 'All-weather', winner: false },
       ],
     },
     faq: [
@@ -4206,7 +4206,7 @@ export const ARTICLES: Article[] = [
         affiliateKey: 'tour-striker-smart-ball',
         badge: 'BEST FEEDBACK',
         body: 'The Smart Ball is an inflatable ball that fits between your forearms and teaches connection — keeping your arms unified through the swing. While not a grip trainer per se, poor grip is often connected to poor arm connection. At $29, it is the most versatile training aid for fixing multiple setup flaws simultaneously. Used by teaching pros for warm-up drills.',
-        price: '~$29',
+        price: '~$47',
         pros: [
           'Teaches arm connection alongside grip',
           'Works for chipping and full swing practice',
@@ -4241,7 +4241,7 @@ export const ARTICLES: Article[] = [
       headers: ['Training Aid', 'Best For', 'Price', 'What It Fixes', 'Where Used'],
       rows: [
       { name: 'SKLZ Golf Grip Trainer', affiliateKey: 'sklz-golf-grip-trainer', bestFor: 'Best Overall', price: '~$18', feature1: 'Grip position', feature2: 'Home or range', winner: true },
-      { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Best Connection', price: '~$29', feature1: 'Connection + grip', feature2: 'Home or range', winner: false, badge: 'STRONG PICK'},
+      { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Best Connection', price: '~$47', feature1: 'Connection + grip', feature2: 'Home or range', winner: false, badge: 'STRONG PICK'},
       ],
     },
     related: [
@@ -7439,7 +7439,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best for Distance Control: Putt-A-Bout Par 3 Putting Green', rating: 4.6, affiliateKey: 'putt-a-bout-putting-green',
         body: "The Putt-A-Bout is a 3-hole putting green that lets you practice breaking putts and distance control on a larger surface. Three holes at different distances (3, 5, and 7 feet) with subtle breaks. Better for golfers who already have a repeatable stroke and want to improve speed calibration and green reading. At $35, it is the cheapest training aid on this list.", price: '~$35' },
       { h2: 'Best for Arm Connection: Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball',
-        body: "The Smart Ball is an inflatable ball you hold between your forearms during the swing. If your arms disconnect from your body — the number one amateur swing fault — the ball drops. It forces proper connection through impact. We used it for 10-minute daily sessions over two weeks and noticed measurably better contact consistency. The feedback is immediate and unambiguous: the ball stays or it drops.", price: '~$30' },
+        body: "The Smart Ball is an inflatable ball you hold between your forearms during the swing. If your arms disconnect from your body — the number one amateur swing fault — the ball drops. It forces proper connection through impact. We used it for 10-minute daily sessions over two weeks and noticed measurably better contact consistency. The feedback is immediate and unambiguous: the ball stays or it drops.", price: '~$47' },
       { h2: 'Most Versatile Training Tool: Alignment Sticks', rating: 4.8, affiliateKey: 'alignment-sticks',
         body: "A $15 set of alignment sticks is the single most versatile training aid in golf. Use them for: target alignment (the most common amateur setup error), ball position check, swing plane visualization, putting gate drill (two sticks creating a narrow corridor for your putter path), and chipping landing zone markers. Every practice session should start with alignment sticks on the ground. No other tool covers as many fundamentals for $15.", price: '~$15' },
       { h2: 'Best for Tempo: Orange Whip Trainer', rating: 4.5, affiliateKey: 'orange-whip-trainer',
@@ -7449,7 +7449,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Training Aid', 'Price', 'Skill Trained', 'Space Needed', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'sklz-accelerator-putting-mat', name: 'SKLZ Accelerator Pro', bestFor: 'Best Overall', price: '~$55', feature1: 'Putting', feature2: '9 ft carpet', winner: true },
       { name: 'Putt-A-Bout Par 3', affiliateKey: 'putt-a-bout-putting-green', bestFor: 'Distance Control', price: '~$45', feature1: 'Putting', feature2: '4 ft carpet', winner: false },
-      { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$30', feature1: 'Full swing', feature2: '6 ft', winner: false },
+      { name: 'Tour Striker Smart Ball', affiliateKey: 'tour-striker-smart-ball', bestFor: 'Connection', price: '~$47', feature1: 'Full swing', feature2: '6 ft', winner: false },
       { name: 'Alignment Sticks (4-pack)', affiliateKey: 'alignment-sticks', bestFor: 'Most Versatile', price: '~$15', feature1: 'All', feature2: '6 ft', winner: false },
       { badge: 'STRONG PICK', name: 'Orange Whip Trainer', affiliateKey: 'orange-whip-trainer', bestFor: 'Tempo', price: '~$120', feature1: 'Tempo', feature2: '10 ft', winner: false },
     ] },
@@ -9849,7 +9849,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Also Worth a Look: Odyssey DFX — ~$170 (over the $150 budget)',
         badge: 'BEST MALLET',
-        price: '~$129 at Amazon',
+        price: '~$170 at Amazon',
         rating: 4.2, affiliateKey: 'odyssey-dfx',
         body: 'The DFX comes in both mallet and blade head shapes — the mallet at ~$129 and the blade closer to $99, so check which head you are ordering. The Odyssey DFX is a mallet putter that brings Odyssey design and alignment expertise to the sub-$150 market. While it uses a different insert than the premium White Hot OG, the DFX face provides a softer feel than most budget competitors. The high-MOI mallet head resists twisting on mishits, making it the most forgiving budget putter for golfers who struggle with contact consistency. The alignment system uses a simple but effective sight line on the flange. Odyssey\'s alignment engineering is the best in the business, and even their budget models benefit from decades of research into visual aim aids. From 6 feet, the DFX converted 56% in our testing — within 2% of the much more expensive Cleveland mallet. For golfers who want a mallet putter without the $200+ price tag, the DFX delivers the fundamentals: high MOI, decent feel, and good alignment.',
         pros: [
@@ -10288,7 +10288,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Grip', 'Best For', 'Texture', 'Price', 'Key Trait'],
       rows: [
-        { name: 'Golf Pride Z-Grip Cord', bestFor: 'Heavy Sweat', feature1: 'Full cord', price: '~$6/grip', feature2: 'Tackier when wet', winner: true, badge: 'BEST FOR SWEAT', rating: 4.5, affiliateKey: 'golf-pride-z-grip' },
+        { name: 'Golf Pride Z-Grip Cord', bestFor: 'Heavy Sweat', feature1: 'Full cord', price: '~$13', feature2: 'Tackier when wet', winner: true, badge: 'BEST FOR SWEAT', rating: 4.5, affiliateKey: 'golf-pride-z-grip' },
         { name: 'Golf Pride MCC Plus4', bestFor: 'Comfort + Grip', feature1: 'Half cord', price: '~$13/grip', feature2: 'Reduced lower taper', winner: false, badge: 'MOST POPULAR', rating: 4.8, affiliateKey: 'golf-pride-mcc-plus4' },
         { name: 'Lamkin Sonar', bestFor: 'Budget', feature1: 'Tacky rubber', price: '~$6/grip', feature2: 'Genesis material', winner: false, affiliateKey: 'lamkin-sonar' },
         { name: 'SuperStroke Zenergy Tour', bestFor: 'Oversize', feature1: 'Midsize tack', price: '$34.99/grip', feature2: 'Lower grip pressure', winner: false, affiliateKey: 'superstroke-zenergy-tour' },
@@ -10309,7 +10309,7 @@ export const ARTICLES: Article[] = [
     description: "Best golf grips for sweaty hands tested in heat and humidity. Cord, half-cord, and tackified options ranked — Golf Pride MCC and Lamkin Crossline compared.",
     titleDisplay: 'Best Golf Grips for Sweaty Hands',
     excerpt: 'Best golf grips for sweaty hands and humid conditions. Cord, half-cord, and tackified options tested through a Chicago summer.',
-    bottomLine: 'The <strong>Golf Pride Z-Grip Cord</strong> ($6/grip) is the best for heavy sweating — gets tackier when wet. The <strong>MCC Plus4</strong> ($12.99/grip) is the best all-around if you want cord security with rubber comfort.',
+    bottomLine: 'The <strong>Golf Pride Z-Grip Cord</strong> ($13/grip) is the best for heavy sweating — gets tackier when wet. The <strong>MCC Plus4</strong> ($12.99/grip) is the best all-around if you want cord security with rubber comfort.',
     sources: [
       { label: 'Golf Pride MCC Plus4 — Official Product Page', url: 'https://www.golfpride.com/grips/mcc-plus4/' },
     ],
@@ -10320,9 +10320,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['Golfers whose grips get slippery by the 5th hole in summer', 'Players in hot and humid climates', 'Anyone who has tried multiple gloves without solving the grip problem'],
     whoSkip: ['Golfers who play exclusively in cool, dry conditions', 'Anyone satisfied with their current grip performance', 'Players who prefer smooth rubber grips for feel over traction'],
     toc: ['Best Overall: Golf Pride Z-Grip Cord', 'Best Comfort + Grip: MCC Plus4', 'Best Budget: Lamkin Sonar', 'Best Oversize: SuperStroke Zenergy Tour', 'Tips Beyond Grips'],
-    intro: "The best golf grip for sweaty hands is the <strong>Golf Pride Z-Grip Cord</strong> at $6 per grip. Full cord construction gets tackier when wet and maintained grip security through 15 rounds in 85°F+ heat with 70 percent humidity. For golfers who want cord security with more comfort, the <strong>Golf Pride MCC Plus4</strong> ($12.99/grip) combines cord in the top hand with rubber in the lower hand.\n\nIf your grips get slippery by the 5th hole in summer, the problem is not your hands — it is your grips. After testing eight grips through a Chicago summer, here are the ones that actually hold when your hands do not.",
+    intro: "The best golf grip for sweaty hands is the <strong>Golf Pride Z-Grip Cord</strong> at $13 per grip. Full cord construction gets tackier when wet and maintained grip security through 15 rounds in 85°F+ heat with 70 percent humidity. For golfers who want cord security with more comfort, the <strong>Golf Pride MCC Plus4</strong> ($12.99/grip) combines cord in the top hand with rubber in the lower hand.\n\nIf your grips get slippery by the 5th hole in summer, the problem is not your hands — it is your grips. After testing eight grips through a Chicago summer, here are the ones that actually hold when your hands do not.",
     sections: [
-      { h2: 'Best Overall: Golf Pride Z-Grip Cord', badge: 'BEST FOR SWEAT', body: "Full cord grips are the gold standard for sweaty hands. The Z-Grip Cord has an aggressive texture that bites into your fingers and gets tackier when wet. The trade-off is comfort — cord grips feel rough on bare hands. If sweat is your primary problem, this is the solution. I played 15 rounds in July and August with the Z-Grip Cord on my irons. On days above 85°F with humidity over 70%, these grips were the only ones that did not slip during my downswing. The cord texture actually improves with moisture — the opposite of rubber grips that get slick. The trade-off: my hands were sore after the first few rounds until calluses developed. Worth it for the confidence of knowing the club is not going anywhere.", price: '~$6 per grip', rating: 4.5, affiliateKey: 'golf-pride-z-grip',
+      { h2: 'Best Overall: Golf Pride Z-Grip Cord', badge: 'BEST FOR SWEAT', body: "Full cord grips are the gold standard for sweaty hands. The Z-Grip Cord has an aggressive texture that bites into your fingers and gets tackier when wet. The trade-off is comfort — cord grips feel rough on bare hands. If sweat is your primary problem, this is the solution. I played 15 rounds in July and August with the Z-Grip Cord on my irons. On days above 85°F with humidity over 70%, these grips were the only ones that did not slip during my downswing. The cord texture actually improves with moisture — the opposite of rubber grips that get slick. The trade-off: my hands were sore after the first few rounds until calluses developed. Worth it for the confidence of knowing the club is not going anywhere.", price: '~$13 per grip', rating: 4.5, affiliateKey: 'golf-pride-z-grip',
         pros: ['Best grip in wet conditions', 'Gets tackier when wet', 'Durable — lasts 60+ rounds', 'Full cord texture'],
         cons: ['Rough on bare hands', 'Not comfortable for all-day range sessions', 'Firmer feel than rubber grips'],
       },
@@ -12288,7 +12288,7 @@ export const ARTICLES: Article[] = [
     description: 'Best golf grips for 2026 — cord, rubber, hybrid, and oversize options compared and ranked for feel, durability, and performance in wet conditions.',
     excerpt: 'Your grips are the only contact point with the club. Worn grips cost distance and accuracy. Here are the best options for every preference.',
     bottomLine: 'The <strong>Golf Pride MCC Plus4</strong> is the best all-around grip. Cord upper half for rain, rubber lower half for feel, midsize lower hand for reduced tension.',
-    intro: `The best golf grip for 2026 is the <strong>Golf Pride MCC Plus4</strong> at $12.99 per grip — its cord upper hand provides traction in any weather while the larger lower hand reduces grip pressure and forearm tension. For sweaty-hand golfers, the <strong>Golf Pride Z-Grip Cord</strong> ($6) gets tackier when wet. Regripping a full set costs $80 to $110 and delivers more feel improvement than any club upgrade under $500.\n\nGrips are the most overlooked equipment upgrade in golf. Worn, slippery grips cause tension in your hands, which costs distance and accuracy. Fresh grips cost $5-$12 each and take 20 minutes to install. Regrip every 40 rounds or once per year.`,
+    intro: `The best golf grip for 2026 is the <strong>Golf Pride MCC Plus4</strong> at $12.99 per grip — its cord upper hand provides traction in any weather while the larger lower hand reduces grip pressure and forearm tension. For sweaty-hand golfers, the <strong>Golf Pride Z-Grip Cord</strong> ($13) gets tackier when wet. Regripping a full set costs $80 to $110 and delivers more feel improvement than any club upgrade under $500.\n\nGrips are the most overlooked equipment upgrade in golf. Worn, slippery grips cause tension in your hands, which costs distance and accuracy. Fresh grips cost $5-$12 each and take 20 minutes to install. Regrip every 40 rounds or once per year.`,
     toc: ['Our Top Picks', 'Grip Types Explained', 'Sizing Guide', 'When to Regrip'],
     updateLog: [{ date: '2026-05-17', note: 'Initial publication' }],
     whoFor: ['Golfers with worn grips', 'Anyone regripping for the season', 'Players in hot or rainy climates'],
