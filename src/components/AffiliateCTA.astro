@@ -18,6 +18,7 @@ interface Props {
   dateChecked?: string;
   isWinner?: boolean;
   golfGalaxyUrl?: string;
+  golfGalaxyLabel?: string;
   primaryRetailer?: 'direct' | 'amazon';
 }
 
@@ -33,13 +34,18 @@ const {
   dateChecked = '',
   isWinner = false,
   golfGalaxyUrl = '',
+  golfGalaxyLabel = '',
   primaryRetailer,
   unmonetised = false,
 } = Astro.props;
 
 // When primaryRetailer is 'direct' and a partner URL exists, swap the buttons:
 // the partner link becomes the big primary button, Amazon becomes secondary.
-const shouldSwap = primaryRetailer === 'direct' && golfGalaxyUrl && !url.includes('playbetter.com') && !url.includes('bushnell.pxf.io') && url.includes('amazon.com');
+// golfGalaxyLabel marks a secondary link that is a DIFFERENT product (e.g. a newer
+// generation the partner stocks instead). Swapping it into the primary slot would
+// sell the wrong item, so an explicitly-labelled alternate is never promoted.
+const isAltProduct = Boolean(golfGalaxyLabel);
+const shouldSwap = !isAltProduct && primaryRetailer === 'direct' && golfGalaxyUrl && !url.includes('playbetter.com') && !url.includes('bushnell.pxf.io') && url.includes('amazon.com');
 const primaryUrl = shouldSwap ? golfGalaxyUrl : url;
 const secondaryUrl = shouldSwap ? url : golfGalaxyUrl;
 
@@ -96,7 +102,7 @@ const dateLabel = unmonetised
       aria-label={unmonetised ? `Get ${name} from ${secondaryRetailer}` : `Check price for ${name} at ${secondaryRetailer}`}
       onclick={`window.plausible&&window.plausible('Affiliate Click',{props:{product:'${name.replace(/'/g,"\\'")}',retailer:'${secondaryRetailer}'}});`}
     >
-      <span class="aff-cta__btn-text">Check Price at {secondaryRetailer} →</span>
+      <span class="aff-cta__btn-text">{(golfGalaxyLabel && secondaryUrl === golfGalaxyUrl) ? golfGalaxyLabel : `Check Price at ${secondaryRetailer} →`}</span>
     </a>
     );
   })()}

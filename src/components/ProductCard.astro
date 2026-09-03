@@ -25,6 +25,7 @@ interface Props {
   verdict?: string;
   whoFor?: string;
   golfGalaxyUrl?: string;
+  golfGalaxyLabel?: string;
   priceNote?: string;
   /** True when this entry earns nothing (program: 'direct'). Suppresses the
    *  rel="sponsored" token and the "Check price" wording, both of which are
@@ -37,7 +38,7 @@ const {
   label = 'Check Today\'s Price',
   imgSrc, imgAlt, badge, benefits, description,
   emoji = '🏌️', winner = false,
-  verdict, whoFor, golfGalaxyUrl = '', priceNote = '', unmonetised = false,
+  verdict, whoFor, golfGalaxyUrl = '', golfGalaxyLabel = '', priceNote = '', unmonetised = false,
 } = Astro.props;
 
 // VALIDATION: skip render if required affiliate fields missing
@@ -120,7 +121,7 @@ const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'a
     <a href={golfGalaxyUrl} class="product-card__cta product-card__cta--gg"
        target="_blank" rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"} data-outbound={ggOutboundTag}
        aria-label={`Check price for ${name} at ${secRetailer}`}>
-      <span class="product-card__cta-text">Check Price at {secRetailer} ↗</span>
+      <span class="product-card__cta-text">{golfGalaxyLabel || `Check Price at ${secRetailer} ↗`}</span>
     </a>
     );
   })()}

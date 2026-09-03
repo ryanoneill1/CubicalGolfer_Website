@@ -65,7 +65,7 @@ function retailerOf(url: string): string {
                target="_blank" rel="nofollow noopener sponsored"
                data-outbound={retailerOf(c.aff.golfGalaxyUrl)}
                class="rec-gear-btn rec-gear-btn--secondary">
-              {'Also at ' + retailerName(c.aff.golfGalaxyUrl) + ' →'}
+              {c.aff.golfGalaxyLabel || ('Also at ' + retailerName(c.aff.golfGalaxyUrl) + ' →')}
             </a>
           )}
         </div>

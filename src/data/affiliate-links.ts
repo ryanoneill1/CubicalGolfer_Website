@@ -30,6 +30,7 @@ export const AFFILIATE: Record<string, {
   imgSrc?: string;
   imgAlt?: string;
   golfGalaxyUrl?: string;
+  golfGalaxyLabel?: string;
   benefits?: string[];
   priceNote?: string;
   primaryRetailer?: 'direct' | 'amazon';
@@ -117,7 +118,7 @@ export const AFFILIATE: Record<string, {
       ],
   },
 
-  // B3: the base Mevo — distinct from the ~$2,199 Mevo+. The "Most Portable" slot
+  // B3: the base Mevo — distinct from the ~$1,839 Mevo+. The "Most Portable" slot
   // on /best-budget-launch-monitor/ was headed "Mevo" but linked the Mevo+.
   'flightscope-mevo': {
     url: 'https://www.amazon.com/dp/B07L52KP31?linkId=97d6d30c4e5b1141ef6356aa48fab218&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
@@ -1012,14 +1013,14 @@ export const AFFILIATE: Record<string, {
 
   // SkyTrak+ Launch Monitor — search (primarily sold direct / specialty retail)
   'skytrak-plus': {
-    url: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=SkyTrak%2B*&ghref=2301%3A1333883',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
+    url: 'https://www.playbetter.com/products/skytrak-plus-golf-launch-monitor-simulator?ghref=2301%3A1333883',
+    program: 'playbetter',
+    commissionPct: 5,
+    cookieDays: 30,
     retailer: 'PlayBetter',
-    price: '~$2,995',
+    price: '~$1,195',
     primaryRetailer: 'direct',
-    priceNote: 'Lists at $2,995. PlayBetter periodically runs $500-$1,000 bundle discounts.',
+    priceNote: 'Verified $1,195 at PlayBetter on 3 September 2026 — $1,300 off a $2,495 list, with a 1-year Foresight Course Play package included. PlayBetter advertised the promo as 30 days, so this figure needs re-checking after early October 2026.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/skytrak-plus.webp',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
@@ -3216,15 +3217,18 @@ export const AFFILIATE: Record<string, {
   },
 
   'flightscope-mevo-plus': {
-    url: 'https://www.amazon.com/s?k=flightscope-mevo-plus&crid=A65BPBNU3OAW&sprefix=flightscope-mevo-plus%2Caps%2C290&linkCode=ll2&tag=cubicalgolfer-20&linkId=7ae5bed91be7c8c676c52d523aeb1935&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0D8JWPNCZ?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Flightscope*+Mevo%2B*&ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.playbetter.com/products/flightscope-mevo-gen2-golf-launch-monitor?ghref=2301%3A1333883',
+    // Deliberately a DIFFERENT product: PlayBetter no longer stocks the Mevo+.
+    // Labelled explicitly so the button cannot read as 'same product, other shop'.
+    golfGalaxyLabel: 'Newer Mevo Gen2 at PlayBetter ($1,299) →',
     retailer: 'Amazon',
-    price: '~$2,199',
+    price: '~$1,839',
     primaryRetailer: 'direct',
-    priceNote: 'Rarely discounted — buy when ready. Check for bundle deals.',
+    priceNote: 'Verified $1,839 on Amazon (ASIN B0D8JWPNCZ) on 3 September 2026, down from the $2,199 previously listed here. PlayBetter has dropped the Mevo+; its current FlightScope monitor is the newer Mevo Gen2 at $1,299.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/flightscope-mevo-plus.webp',
     imgAlt: 'Flightscope Mevo+ launch monitor',
