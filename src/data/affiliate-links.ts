@@ -1380,15 +1380,15 @@ export const AFFILIATE: Record<string, {
   // ── LAUNCH MONITORS ───────────────────────────────────────────────────────
 
   'garmin-approach-r10': {
-    asin: 'B096B5JR5D',
-    url: 'https://www.amazon.com/Garmin-Approach-R10-Portable-Launch/dp/B096B5JR5D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B095QX1FSR',
+    url: 'https://www.amazon.com/dp/B095QX1FSR?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+R10*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$599',
-    priceNote: 'MSRP $599. Drops to $499-$549 during Prime Day and Black Friday.',
+    price: '~$490',
+    priceNote: 'ASIN B096B5JR5D went dead (Amazon Page Not Found) while still linked from 26 articles and the gear quiz; repointed to B095QX1FSR and verified $489.50, In Stock, 1,152 reviews on 3 September 2026. Was listed here at $599. MSRP $599. Drops to $499-$549 during Prime Day and Black Friday.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/garmin-approach-r10.webp',
     imgAlt: 'Garmin Approach R10 Portable Golf Launch Monitor',

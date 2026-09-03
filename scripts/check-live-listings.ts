@@ -147,9 +147,24 @@ async function check(key: string, url: string, registryPrice: string): Promise<R
   fs.mkdirSync('scripts/output', { recursive: true });
   fs.mkdirSync('scripts/data', { recursive: true });
 
+  // COVERAGE FIRST. The 2026-08-31 report led with '**DEAD** 0' and buried
+  // 'could not check 128 of 140'. That reads as an all-clear when Amazon had
+  // blocked 91% of requests — and a genuinely dead ASIN (garmin-approach-r10,
+  // linked from 26 articles) sat in that unchecked 128 for weeks. The headline
+  // now states what fraction was actually verified, so a low-coverage run
+  // cannot be mistaken for a clean one.
+  const checked  = targets.length - unknown.length;
+  const coverage = targets.length ? Math.round((checked / targets.length) * 100) : 0;
+  const verdict  = coverage < 50
+    ? '⚠️ **LOW COVERAGE — this run proves very little.** Amazon blocked most requests; treat a clean result as unknown, not safe.'
+    : coverage < 85
+      ? '⚠️ Partial coverage — the unchecked products below are genuinely unknown, not confirmed good.'
+      : '✅ Good coverage.';
   const lines: string[] = [
     '# Live listing check — ' + new Date().toISOString().slice(0, 10), '',
-    targets.length + ' product listings checked. Drift threshold ' + DRIFT_PCT + '%.', '',
+    '**Coverage: ' + checked + ' of ' + targets.length + ' listings actually verified (' + coverage + '%).**', '',
+    verdict, '',
+    'Drift threshold ' + DRIFT_PCT + '%.', '',
     '| Status | Count | Meaning |', '|---|---|---|',
     '| **DEAD** | ' + by('DEAD').length + ' | Amazon says the page is gone — the buy button goes nowhere |',
     '| **NO_PRICE** | ' + by('NO_PRICE').length + ' | Listing exists but nothing is purchasable |',
@@ -166,7 +181,9 @@ async function check(key: string, url: string, registryPrice: string): Promise<R
       lines.push('| `' + r.key + '` | **' + r.status + '** | ' + r.registryPrice + ' | ' + (r.livePrice || '—') + ' | ' + (r.drift || '—') + ' | ' + r.note + ' |');
     lines.push('');
   } else {
-    lines.push('## Nothing needs attention', '', 'Every listing that could be checked is live, priced and within tolerance.', '');
+    lines.push('## Nothing needs attention', '',
+      'Every listing that could be checked is live, priced and within tolerance — ' +
+      'but that is only ' + checked + ' of ' + targets.length + '. The rest were never reached.', '');
   }
 
   if (unknown.length) {
