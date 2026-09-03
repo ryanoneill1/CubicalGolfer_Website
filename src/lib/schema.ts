@@ -382,7 +382,11 @@ export function collectionPageSchema(opts: {
 }
 
 // ── Dataset schema (data/reference pages whose payload is a table of values) ──
-export function datasetSchema(opts: { name: string; description: string; url: string; dateModified?: string; keywords?: string[] }): object {
+// `pdf` declares a DataDownload. It is what tells Google a downloadable file
+// exists for this dataset, which is how the compression chart surfaces for
+// "...chart pdf" queries — the site's highest-CTR query class at 17.8%,
+// against a 1.5% site average, because an AI Overview cannot hand over a file.
+export function datasetSchema(opts: { name: string; description: string; url: string; dateModified?: string; keywords?: string[]; pdf?: string }): object {
   return {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
@@ -393,6 +397,7 @@ export function datasetSchema(opts: { name: string; description: string; url: st
     license: `${DOMAIN}/terms/`,
     dateModified: opts.dateModified,
     keywords: opts.keywords,
+    ...(opts.pdf ? { distribution: { '@type': 'DataDownload', encodingFormat: 'application/pdf', contentUrl: `${DOMAIN}${opts.pdf}` } } : {}),
   };
 }
 

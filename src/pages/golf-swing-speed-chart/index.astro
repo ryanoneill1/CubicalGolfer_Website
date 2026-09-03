@@ -1,4 +1,5 @@
 ---
+import { SWING_SPEEDS as speeds } from '../../data/swing-speeds';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { breadcrumbSchema, faqSchema , datasetSchema } from '../../lib/schema';
@@ -27,21 +28,8 @@ const faq = [
 ];
 
 const schemas = [
-  datasetSchema({ name: 'Golf Swing Speed Chart — Averages by Age & Handicap', description: 'Average driver swing speeds by age group, gender, and handicap band.', url: '/golf-swing-speed-chart/', dateModified: '2026-07-09', keywords: ['swing speed', 'driver speed by age'] }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+  datasetSchema({ name: 'Golf Swing Speed Chart — Averages by Age & Handicap', description: 'Average driver swing speeds by age group, gender, and handicap band.', url: '/golf-swing-speed-chart/', dateModified: '2026-07-09', keywords: ['swing speed', 'driver speed by age'], pdf: '/downloads/golf-swing-speed-chart.pdf' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
-const speeds = [
-  { club: 'Driver', tour: 114, scratch: 104, mid: 93, high: 83, senior: 75 },
-  { club: '3-Wood', tour: 107, scratch: 97, mid: 87, high: 78, senior: 70 },
-  { club: '5-Wood', tour: 103, scratch: 93, mid: 83, high: 75, senior: 67 },
-  { club: '4-Hybrid', tour: 100, scratch: 90, mid: 80, high: 72, senior: 65 },
-  { club: '5-Iron', tour: 98, scratch: 88, mid: 78, high: 70, senior: 63 },
-  { club: '6-Iron', tour: 94, scratch: 85, mid: 75, high: 68, senior: 61 },
-  { club: '7-Iron', tour: 90, scratch: 82, mid: 72, high: 65, senior: 58 },
-  { club: '8-Iron', tour: 87, scratch: 79, mid: 69, high: 62, senior: 56 },
-  { club: '9-Iron', tour: 83, scratch: 75, mid: 65, high: 58, senior: 53 },
-  { club: 'PW', tour: 79, scratch: 72, mid: 62, high: 55, senior: 50 },
-  { club: 'SW', tour: 74, scratch: 68, mid: 58, high: 52, senior: 47 },
-];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 ---
 
@@ -59,6 +47,15 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       <EarlyDisclosure />
       <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Average swing speeds in mph by club type and skill level. Data compiled from Trackman averages and our own launch monitor testing across 500+ golfer sessions.</p>
     </header>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#FAF8F2;border:1px solid #E5E0D5;border-radius:10px;padding:16px 18px;margin:22px 0;">
+      <div>
+        <p style="margin:0;font-weight:700;font-size:16px;color:#1a1a1a;">Download the Golf Swing Speed Chart (PDF)</p>
+        <p style="margin:4px 0 0;font-size:16px;color:#333;">Printable clubhead speeds by club and skill level — tour pro through senior. Same numbers as the table above.</p>
+      </div>
+      <a href="/downloads/golf-swing-speed-chart.pdf" download style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;">Download Chart (PDF) &#8594;</a>
+    </div>
+
 
     <section>
       <div class="comparison-table-wrapper">

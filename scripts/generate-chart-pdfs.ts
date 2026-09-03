@@ -20,6 +20,8 @@
 import PDFDocument from 'pdfkit';
 import { createWriteStream, mkdirSync } from 'fs';
 import { ARTICLES } from '../src/data/articles.ts';
+import { CLUBS, TIERS } from '../src/data/club-distances.ts';
+import { SWING_SPEEDS } from '../src/data/swing-speeds.ts';
 
 const GREEN = '#1E3A28';
 const GOLD  = '#C8A84B';
@@ -27,7 +29,12 @@ const CREAM = '#FAF8F2';
 const SITE  = 'www.cubicalgolfer.com';
 const MARGIN = 45;
 
-interface Spec { slug: string; out: string; title: string; subject: string; }
+interface Table { heading: string; rows: string[][] }
+// Most charts keep their tables in ARTICLES section bodies and are scraped.
+// The distance and swing-speed charts compute theirs in the .astro from data
+// modules, so they supply a builder instead. Either way the numbers come from
+// the same source the page renders — never a second hardcoded copy.
+interface Spec { slug: string; out: string; title: string; subject: string; build?: () => Table[] }
 
 const CHARTS: Spec[] = [
   { slug: '/golf-wind-adjustment-chart/',      out: 'golf-wind-adjustment-chart.pdf',
@@ -36,6 +43,30 @@ const CHARTS: Spec[] = [
     title: 'Golf Distance by Temperature Chart', subject: 'How air temperature changes carry distance' },
   { slug: '/golf-green-speed-chart/',          out: 'golf-green-speed-chart.pdf',
     title: 'Golf Green Speed Chart',           subject: 'Stimpmeter readings and what they mean' },
+  { slug: '/golf-club-distance-chart/',       out: 'golf-club-distance-chart.pdf',
+    title: 'Golf Club Distance Chart',        subject: 'Carry and total distance for every club, by driver swing speed',
+    build: () => {
+      const dc90 = Math.round(90 * 2.44 - 6); // must match the page exactly
+      return [
+        { heading: 'Carry and Total at 90 mph Driver Speed',
+          rows: [['Club', 'Carry (yds)', 'Total (yds)'],
+            ...CLUBS.map(([name, ratio, roll]) => {
+              const carry = Math.round(dc90 * ratio);
+              return [name, String(carry), String(carry + roll)];
+            })] },
+        { heading: 'Carry Distance by Driver Swing Speed',
+          rows: [['Club', ...TIERS.map(t => `${t} mph`)],
+            ...CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW'))
+              .map(([name, ratio]) => [name, ...TIERS.map(t => String(Math.round((t * 2.44 - 6) * ratio)))])] },
+      ];
+    } },
+  { slug: '/golf-swing-speed-chart/',         out: 'golf-swing-speed-chart.pdf',
+    title: 'Golf Swing Speed Chart',          subject: 'Average clubhead speed by club and skill level',
+    build: () => [
+      { heading: 'Average Swing Speed by Club and Skill Level (mph)',
+        rows: [['Club', 'Tour Pro', 'Scratch (0-5)', 'Mid (10-18)', 'High (19-28)', 'Senior (60+)'],
+          ...SWING_SPEEDS.map(r => [r.club, String(r.tour), String(r.scratch), String(r.mid), String(r.high), String(r.senior)])] },
+    ] },
 ];
 
 /** Pull <table> blocks out of an article's section bodies, as rows of cells. */
@@ -61,11 +92,15 @@ let built = 0;
 mkdirSync('public/downloads', { recursive: true });
 
 for (const spec of CHARTS) {
-  const article = (ARTICLES as any[]).find(a => a.slug === spec.slug);
-  if (!article) { console.error(`  skipped ${spec.slug} — no such article`); continue; }
-
-  const tables = tablesFrom(article);
-  if (!tables.length) { console.error(`  skipped ${spec.slug} — no tables found in its sections`); continue; }
+  let tables: Table[];
+  if (spec.build) {
+    tables = spec.build();
+  } else {
+    const article = (ARTICLES as any[]).find(a => a.slug === spec.slug);
+    if (!article) { console.error(`  skipped ${spec.slug} — no such article`); continue; }
+    tables = tablesFrom(article);
+  }
+  if (!tables.length) { console.error(`  skipped ${spec.slug} — no tables produced`); continue; }
 
   const doc = new PDFDocument({
     size: 'letter', bufferPages: true,

@@ -1,4 +1,5 @@
 ---
+import { CLUBS, TIERS } from '../../data/club-distances';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
@@ -29,12 +30,6 @@ const faqs = [
 ];
 
 // Server-rendered defaults (90 mph) so the table is crawlable without JS.
-const CLUBS: [string, number, number, string][] = [
-  ['Driver',1.00,20,'wood'],['3-Wood',0.86,14,'wood'],['5-Wood',0.80,12,'wood'],
-  ['4-Hybrid',0.76,8,'hybrid'],['5-Iron',0.72,6,'iron'],['6-Iron',0.68,5,'iron'],
-  ['7-Iron',0.64,4,'iron'],['8-Iron',0.59,3,'iron'],['9-Iron',0.54,3,'iron'],
-  ['PW',0.49,2,'wedge'],['GW (50\u00b0)',0.44,2,'wedge'],['SW (56\u00b0)',0.36,1,'wedge'],['LW (60\u00b0)',0.30,1,'wedge'],
-];
 const dc90 = Math.round(90 * 2.44 - 6);
 const rows90 = CLUBS.map(([name, ratio, roll, type]) => {
   const carry = Math.round(dc90 * ratio); const total = carry + roll;
@@ -42,13 +37,12 @@ const rows90 = CLUBS.map(([name, ratio, roll, type]) => {
   const color = type==='wood' ? 'var(--green,#1E3A28)' : type==='hybrid' ? 'var(--gold,#C9A84C)' : type==='iron' ? '#4a7c5f' : '#8B7355';
   return { name, carry, total, pct, color };
 });
-const TIERS = [75, 85, 95, 105, 115];
 const refRows = CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW')).map(([name, ratio]) => ({
   name, vals: TIERS.map(t => Math.round((t * 2.44 - 6) * ratio)),
 }));
 
 const schemas = [
-  datasetSchema({ name: 'Golf Club Distance Chart — Carry by Swing Speed', description: 'Carry and total distances for all 13 clubs across five driver swing-speed bands (75–115 mph), derived from launch-monitor testing.', url: '/golf-club-distance-chart/', dateModified: '2026-07-09', keywords: ['golf club distances', 'carry distance', 'swing speed'] }),
+  datasetSchema({ name: 'Golf Club Distance Chart — Carry by Swing Speed', description: 'Carry and total distances for all 13 clubs across five driver swing-speed bands (75–115 mph), derived from launch-monitor testing.', url: '/golf-club-distance-chart/', dateModified: '2026-07-09', keywords: ['golf club distances', 'carry distance', 'swing speed'], pdf: '/downloads/golf-club-distance-chart.pdf' }),
   articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
@@ -73,6 +67,15 @@ const schemas = [
         <div><p class="author-box__name">Ryan O.</p><p class="author-box__bio">10-handicap · Distances verified with launch monitor data</p></div>
       </div>
     </header>
+
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#FAF8F2;border:1px solid #E5E0D5;border-radius:10px;padding:16px 18px;margin:22px 0;">
+      <div>
+        <p style="margin:0;font-weight:700;font-size:16px;color:#1a1a1a;">Download the Golf Club Distance Chart (PDF)</p>
+        <p style="margin:4px 0 0;font-size:16px;color:#333;">Printable carry and total distances for all 13 clubs, plus the full swing-speed table. Take it to the range.</p>
+      </div>
+      <a href="/downloads/golf-club-distance-chart.pdf" download style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;">Download Chart (PDF) &#8594;</a>
+    </div>
+
 
     <div class="trust-card">
       <p class="trust-card__heading">How We Calculate</p>
