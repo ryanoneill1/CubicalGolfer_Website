@@ -56,13 +56,14 @@ const MIN_INBOUND = 7;
 let failed = false;
 
 // ── 1. related-array headroom ──────────────────────────────────────────────
-// One documented exemption. /best-golf-gps-watches/ carries 12 related links,
-// which is above MERGE_LIMIT entirely — it surfaces no anchors and no starved
-// page at all. That is a real defect and it should be trimmed to 7. It is NOT
-// trimmed yet because the page is mid-experiment (position 24.9, reporting late
-// September) and changing its outbound links would muddy the read. Remove this
-// entry and fix the page once the experiment reports. Do not add to this list.
-const EXEMPT = new Set<string>(['/best-golf-gps-watches/']);
+// No exemptions. /best-golf-gps-watches/ held the only one: it carried 12
+// related links, above MERGE_LIMIT entirely, so it surfaced no anchors and no
+// crawl-starved page at all. It was left alone pending an experiment that was
+// due to report in late September. Sprint 101 read the result early — the page
+// moved 24.9 -> 24.6 over roughly two months, i.e. the experiment reported and
+// the answer was no — trimmed it to 7, and retired this exemption.
+// Ratchet: this set only ever shrinks. Do not add to it.
+const EXEMPT = new Set<string>([]);
 
 const greedy = (ARTICLES as any[])
   .map(a => ({ slug: a.slug, n: (a.related ?? []).length }))

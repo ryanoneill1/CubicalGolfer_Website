@@ -235,7 +235,7 @@ export const ARTICLES: Article[] = [
     words: '4,200',
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
-    title: 'Best Golf GPS Watch 2026 — 5 Models Compared',
+    title: 'Best Golf GPS Watch 2026 — 7 Models Compared',
     titleDisplay: 'Best Golf GPS Watches for Everyday Players',
     bottomLine: 'The <strong>Garmin Approach S44</strong> is the GPS golf watch to buy in 2026 — Garmin\'s current mid-range model at ~\$289, with an AMOLED screen and 43,000+ courses. The older <strong>S62</strong> is the one we wore for 15 rounds and it is still excellent, but at ~\$499 you are paying a premium for a 2020 design. For budget buyers, the <strong>Bushnell Ion Elite</strong> at ~\$199 does front/middle/back with zero fuss.',
     description: 'Best golf GPS watch for 2026 — the current Garmin Approach S44 and S70, plus Bushnell and Shot Scope, compared for yardage accuracy and battery life.',
@@ -246,8 +246,7 @@ export const ARTICLES: Article[] = [
     intro: "The best golf GPS watch in 2026 is the <strong>Garmin Approach S42</strong> at $299 — front, middle, and back yardages on 42,000 courses with shot tracking and 15-hour battery life. The <strong>Garmin S62</strong> ($450) adds virtual caddie recommendations and wind speed data.\n\nA GPS watch sits on your wrist and tells you front, middle, and back of every green — plus hazards, layup distances, and dog-leg carry — without touching your phone. We tested 6 models across a full season; the 4 below earned a spot.",
     testingNotes: 'All 5 GPS watches independently purchased and tested across a full season. Battery life, GPS accuracy, and course mapping evaluated across 4 different courses.',
     toc: ['GPS watch vs. rangefinder', 'Best overall: Garmin Approach S62', 'Best mid-range: Garmin Approach S42', 'Best auto-tracking: Shot Scope V5', 'Best budget: Bushnell Ion Elite', 'Comparison table', 'FAQ'],
-    sections: [
-      {
+    sections: [{
         h2: 'GPS Watch vs. Rangefinder — Which Do You Need?',
         callout: { text: 'Between rounds, keep your game sharp without leaving the house.', link: '/golf-practice-drills-at-home/', label: '15-minute home practice drills' },
         body: "A rangefinder wins for exact pin distance. A GPS watch wins for hands-free pre-shot planning. Many serious weekend golfers use both. If you can only have one, get the rangefinder for accuracy.",
@@ -260,6 +259,7 @@ export const ARTICLES: Article[] = [
         pros: ['Current-generation model, unlike most watches on comparison lists', 'AMOLED screen stays readable in direct sunlight', '43,000+ courses with front/middle/back and hazard distances', '$210 cheaper than the S62'],
         cons: ['We have not tested it over a full season ourselves', 'Club tracking needs CT1 sensors bought separately', 'Individual colours go out of stock — check the selector'],
       },
+      { h2: 'Best Premium: Garmin Approach S70', body: 'The S70 is the top-tier Garmin golf watch with an AMOLED touchscreen, virtual caddie AI, and PlaysLike distance that adjusts for wind, elevation, and temperature. The 47mm model fits like a premium watch you wear daily. Battery lasts 20+ hours in GPS golf mode. It is overkill for casual golfers, but for the player who wants every data point on their wrist, nothing else compares.', affiliateKey: 'garmin-approach-s70', rating: 4.9 },
       {
         h2: 'Most Tested: Garmin Approach S62', affiliateKey: 'garmin-approach-s62',
         badge: 'BEST OVERALL', rating: 4.8,
@@ -330,17 +330,11 @@ export const ARTICLES: Article[] = [
           'Not a smartwatch — no fitness or notifications',
         ],
       },
-  
-      { h2: 'Keep reading', body: 'For pin-precise yardage on approach shots, a <a href=\'/best-golf-rangefinders-2026/\'>laser rangefinder</a> complements a GPS watch well — the watch gives you the big picture, the rangefinder gives you the exact number. If you are using your watch data to practice smarter, our <a href=\'/best-golf-training-aids/\'>training aids guide</a> covers the tools that turn data into lower scores. Weekend golfers working toward a specific milestone should also check out <a href=\'/how-to-break-90/\'>how to break 90</a>.\n\nSpreading a fixed budget across a full bag is its own problem — the <a href="/golf-equipment-budget-planner/">equipment budget planner</a> shows where the money is best spent.' },
-  
-      { h2: 'Keep exploring', body: 'Once you have picked a forgiving driver, make sure the rest of your bag matches. Our <a href=\'/best-golf-irons-2026/\'>best irons guide</a> covers game-improvement irons that complement forgiving drivers. If your miss is a consistent slice, read <a href=\'/how-to-fix-your-slice/\'>how to fix your slice</a> — the right driver helps but a swing fix is permanent. Golfers on a tighter budget should also see our <a href=\'/best-golf-drivers-under-400/\'>drivers under $200</a> roundup.' },
-    
+      { h2: 'Best Simple GPS Watch: Garmin Approach S12', body: 'The S12 strips away the touchscreen and smartwatch features to deliver one thing well: accurate yardages on 42,000 courses for under $200. Front, middle, and back distances update automatically as you walk. Battery lasts 30+ hours. No shot tracking, no virtual caddie, no phone notifications — just yardages. For the golfer who wants distance information without distractions, the S12 is the most reliable budget option.', affiliateKey: 'garmin-approach-s12', rating: 4.3 },
       { h2: 'How Much Does Slope Actually Change the Distance?', body: 'On a flat course, slope mode changes nothing. On a course with moderate elevation (50 to 80 feet of total change), slope adjusts distances by 3 to 8 yards on typical approach shots. On mountain courses with extreme elevation (200+ feet), slope adjustments can reach 15 to 20 yards on a single shot. The biggest impact is on par-3 tee shots and uphill approach shots where most golfers consistently come up short. A 7-yard slope adjustment on an uphill 160-yard par 3 is the difference between hitting the green and burying the ball in the front bunker.' },
       { h2: 'Is Slope Legal in Tournament Play?', body: 'No — USGA Rule 4.3 prohibits slope-adjusted distances during official competition. However, every modern rangefinder with slope has a tournament mode that disables it with a switch or button. The Bushnell Tour V7 Shift physically moves the faceplate to show a visual indicator that slope is off, which is required at some events. For casual weekend rounds, most golfers leave slope on permanently. Only disable it if you play in club championships, member-guest tournaments, or USGA-sanctioned events.' },
-    
-      { h2: 'Best Premium: Garmin Approach S70', body: 'The S70 is the top-tier Garmin golf watch with an AMOLED touchscreen, virtual caddie AI, and PlaysLike distance that adjusts for wind, elevation, and temperature. The 47mm model fits like a premium watch you wear daily. Battery lasts 20+ hours in GPS golf mode. It is overkill for casual golfers, but for the player who wants every data point on their wrist, nothing else compares.', affiliateKey: 'garmin-approach-s70', rating: 4.9 },
-      { h2: 'Best Simple GPS Watch: Garmin Approach S12', body: 'The S12 strips away the touchscreen and smartwatch features to deliver one thing well: accurate yardages on 42,000 courses for under $200. Front, middle, and back distances update automatically as you walk. Battery lasts 30+ hours. No shot tracking, no virtual caddie, no phone notifications — just yardages. For the golfer who wants distance information without distractions, the S12 is the most reliable budget option.', affiliateKey: 'garmin-approach-s12', rating: 4.3 },
-    ],
+      { h2: 'Keep reading', body: 'For pin-precise yardage on approach shots, a <a href=\'/best-golf-rangefinders-2026/\'>laser rangefinder</a> complements a GPS watch well — the watch gives you the big picture, the rangefinder gives you the exact number. If you are using your watch data to practice smarter, our <a href=\'/best-golf-training-aids/\'>training aids guide</a> covers the tools that turn data into lower scores. Weekend golfers working toward a specific milestone should also check out <a href=\'/how-to-break-90/\'>how to break 90</a>.\n\nSpreading a fixed budget across a full bag is its own problem — the <a href="/golf-equipment-budget-planner/">equipment budget planner</a> shows where the money is best spent.' },
+      { h2: 'Keep exploring', body: 'A watch gives you the number; deciding what to do with it is the other half. If you are still choosing between wrist and laser, our <a href=\'/golf-rangefinder-vs-gps-watch/\'>rangefinder vs GPS watch</a> comparison covers which one actually wins in each situation. Golfers who want those yardages logged and turned into stats should look at the <a href=\'/best-golf-apps/\'>best golf apps for stat tracking</a>. And if your budget is tighter than the watches above, our <a href=\'/best-golf-gps-watch-under-200/\'>GPS watches under $200</a> roundup covers exactly what you give up below that price.' }],
     comparisonTable: {
       headers: ['GPS Watch', 'Best For', 'Price', 'Our Rating'],
       rows: [
@@ -367,13 +361,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gps-watch-under-300/', label: 'Best GPS watch under $300' },
       { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS watch under $200' },
       { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS watch for high handicappers' },
-      { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
-      { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
-      { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
-      { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
-      { slug: '/best-golf-apps/', label: 'Best Golf Apps for Stat Tracking' },
-      { slug: '/best-golf-swing-analyzers/', label: 'Best Golf Swing Analyzers' },
-      { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42' },
+            { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
+          { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42' },
       { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
       { slug: '/compare/garmin-s12-vs-bushnell-ion-elite/', label: 'Garmin S12 vs Ion Elite' },
     ],
