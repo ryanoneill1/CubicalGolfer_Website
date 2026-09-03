@@ -1,0 +1,134 @@
+---
+// Per-brand golf ball compression chart.
+//
+// Sprint 100. GSC showed 48 brand-qualified queries ("callaway golf ball
+// compression chart", 629 impressions; "titleist ...", 551; "taylormade ...",
+// 407) stuck at position 5.6-6.5 earning ~2.5% CTR, because they were served by
+// a *section* inside the all-brands chart rather than a page. The site's own
+// qualified variants ("... chart 2026", "... chart pdf") already rank 2.9-3.3
+// and take 9.5-10.8% CTR on the same content, which is the evidence that
+// exact-match title/URL is the lever here.
+//
+// These pages deliberately do NOT target the unqualified head term
+// "golf ball compression chart" — that stays with the all-brands chart, which
+// is the site's biggest earner. Every ball and every line of brand commentary
+// comes from balls.ts / ball-brands.ts, so nothing here can drift.
+import { balls as BALLS } from '../data/balls.ts';
+import { BRAND_DETAIL } from '../data/ball-brands';
+import { AFFILIATE, getAffiliateLink } from '../data/affiliate-links';
+
+interface Props { brand: string; siblings: { brand: string; slug: string }[]; }
+const { brand, siblings } = Astro.props;
+
+const TAG = 'cubicalgolfer-20';
+const ballUrl = (ball: any): string | null => {
+  const aff = ball?.affKey ? (AFFILIATE as any)[ball.affKey] : null;
+  if (aff?.url) return aff.url;
+  if (ball?.discontinued) return null;
+  return ball?.search ? `https://www.amazon.com/s?k=${ball.search}&tag=${TAG}` : null;
+};
+const ballThumb = (ball: any): string | undefined => {
+  const e: any = ball?.affKey ? getAffiliateLink(ball.affKey) : undefined;
+  return e && e.imgSrc ? e.imgSrc : undefined;
+};
+
+const brandBalls = BALLS.filter((b: any) => b.brand === brand)
+                        .sort((a: any, b: any) => a.compression - b.compression);
+const soft = brandBalls[0];
+const firm = brandBalls[brandBalls.length - 1];
+const loPrice = Math.min(...brandBalls.map((b: any) => b.price));
+const hiPrice = Math.max(...brandBalls.map((b: any) => b.price));
+const priceRange = loPrice === hiPrice ? `~$${loPrice}` : `$${loPrice}–$${hiPrice}`;
+const urethane = brandBalls.filter((b: any) => b.cover === 'Urethane');
+const detail = (BRAND_DETAIL as any)[brand];
+
+// Speed bands, populated only from this brand's actual balls.
+const bands = [
+  { label: 'Under 85 mph', test: (b: any) => b.minMph < 85 },
+  { label: '85–100 mph',   test: (b: any) => b.minMph <= 100 && b.maxMph >= 85 },
+  { label: 'Over 100 mph', test: (b: any) => b.maxMph > 100 },
+].map(band => ({ ...band, list: brandBalls.filter(band.test) })).filter(b => b.list.length);
+---
+
+<p style="font-size:16px;line-height:1.8;">
+  Every <strong>{brand}</strong> golf ball we track, with its compression rating, cover material and
+  the swing speed it is built for. {brandBalls.length} {brandBalls.length === 1 ? 'ball' : 'balls'} from
+  {soft.compression} compression ({soft.name}) up to {firm.compression} ({firm.name}), priced {priceRange} a dozen.
+  Compression is the number that decides whether you actually compress the ball at your speed — get it
+  wrong and you leave yards on the tee.
+</p>
+
+<p class="early-disclosure" style="font-size:14px;color:var(--muted);margin:0 0 18px;">
+  ⚖️ <em>Affiliate links — we earn a commission at no extra cost to you. It never changes which ball we rank first.</em>
+</p>
+
+<section>
+  <h2 id="chart">{brand} Golf Ball Compression Chart (2026)</h2>
+  <div style="overflow-x:auto;">
+    <table class="cmp-table" style="width:100%;">
+      <caption class="sr-only">{brand} golf ball compression chart 2026</caption>
+      <thead><tr>
+        <th scope="col">Ball</th><th scope="col">Compression</th><th scope="col">Cover</th>
+        <th scope="col">Price/dz</th><th scope="col">Swing Speed</th><th scope="col">Buy</th>
+      </tr></thead>
+      <tbody>
+        {brandBalls.map((b: any) => (
+          <tr>
+            <td>{ballThumb(b) && <img src={ballThumb(b)} alt={b.name} width="34" height="34" loading="lazy" style="vertical-align:middle;margin-right:8px;border-radius:4px;" />}{b.name}</td>
+            <td>{b.compression}</td>
+            <td>{b.cover}</td>
+            <td>~${b.price}</td>
+            <td>{b.minMph}–{b.maxMph} mph</td>
+            <td>{ballUrl(b)
+              ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound="amazon" style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a>
+              : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p style="font-size:15px;color:var(--muted);margin-top:10px;">
+    Prices are per dozen and checked against live listings. {urethane.length > 0
+      ? `${urethane.length} of these ${brandBalls.length} carry a urethane cover, which is what produces greenside spin — an ionomer ball will not check on a pitch however soft it feels.`
+      : `None of these carry a urethane cover, so none will check on a pitch the way a tour ball does.`}
+  </p>
+</section>
+
+{detail && (
+  <section>
+    <h2 id="which-one">Which {brand} Ball Should You Play?</h2>
+    <p set:html={detail.lead}></p>
+    <p set:html={`<strong>Which one to play.</strong> ${detail.pick}`}></p>
+    <p set:html={`<strong>Worth knowing.</strong> ${detail.watch}`}></p>
+  </section>
+)}
+
+<section>
+  <h2 id="by-speed">{brand} Balls by Swing Speed</h2>
+  <p>The same {brandBalls.length} balls, grouped by the driver swing speed each is built for.</p>
+  <div style="overflow-x:auto;">
+    <table class="cmp-table" style="width:100%;">
+      <caption class="sr-only">{brand} golf balls by swing speed</caption>
+      <thead><tr><th scope="col">Swing Speed</th><th scope="col">{brand} Balls</th></tr></thead>
+      <tbody>
+        {bands.map(band => (
+          <tr>
+            <td><strong>{band.label}</strong></td>
+            <td>{band.list.map((b: any) => `${b.name} (${b.compression})`).join(', ')}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <h2 id="other-brands">Compression Charts for Other Brands</h2>
+  <p>Cross-shopping? These use the same tested data and the same table.</p>
+  <ul>
+    {siblings.map(s => (
+      <li><a href={s.slug}>{s.brand} Golf Ball Compression Chart</a></li>
+    ))}
+    <li><a href="/golf-ball-compression-chart/"><strong>All 34 balls in one chart</strong></a> — every brand ranked together, with a free printable PDF.</li>
+  </ul>
+</section>

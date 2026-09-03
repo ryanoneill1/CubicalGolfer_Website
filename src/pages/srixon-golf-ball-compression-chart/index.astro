@@ -1,0 +1,65 @@
+---
+// Srixon golf ball compression chart — Sprint 100.
+// Targets the brand-qualified query cluster only. The unqualified head term
+// stays with the all-brands chart (the site's biggest earner); rationale and
+// the GSC evidence are documented in BrandCompressionChart.astro.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+
+const meta = {
+  title: "Srixon Golf Ball Compression Chart 2026 \u2014 All 4",
+  description: "Compression, cover and price for all 4 Srixon golf balls, from the Soft Feel (60) to the Z-Star XV (102), matched to your swing speed.",
+  canonical: 'https://www.cubicalgolfer.com/srixon-golf-ball-compression-chart/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
+  ogType: 'article' as const,
+  robots: 'index, follow',
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },
+    { label: "Srixon Compression", href: "/srixon-golf-ball-compression-chart/" },
+  ],
+};
+
+const faq = [
+  { q: "What is the compression of Srixon golf balls?", a: "Srixon golf balls on this chart run from 60 compression (Srixon Soft Feel) up to 102 (Srixon Z-Star XV). Lower compression suits slower swing speeds; a firmer ball needs more clubhead speed before it compresses properly." },
+  { q: "Which Srixon golf ball is the softest?", a: "The Srixon Soft Feel at 60 compression is the softest Srixon ball on this chart, at about $25 a dozen. It is rated for 75-95 mph driver speed." },
+  { q: "Which Srixon ball suits my swing speed?", a: "Match compression to driver speed. Under 85 mph suits the softer end of the Srixon range; 85-100 mph the middle; over 100 mph the firmest. The table above lists the rated speed range for every Srixon ball." },
+  { q: "How many Srixon golf balls are on this chart?", a: "4. This page covers the Srixon balls we track and test. For every brand side by side, see the full compression chart of all 34 balls." },
+];
+
+const siblings = [{"brand": "Callaway", "slug": "/callaway-golf-ball-compression-chart/"}, {"brand": "Titleist", "slug": "/titleist-golf-ball-compression-chart/"}, {"brand": "TaylorMade", "slug": "/taylormade-golf-ball-compression-chart/"}, {"brand": "Bridgestone", "slug": "/bridgestone-golf-ball-compression-chart/"}];
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="improve">
+  <article class="art-content" style="max-width:900px;margin:0 auto;padding:0 var(--page-px) 60px;">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">&#8250;</span>
+      <a href="/golf-ball-compression-chart/">Compression Chart</a>
+      <span aria-hidden="true">&#8250;</span>
+      <span>Srixon</span>
+    </nav>
+
+    <h1>Srixon Golf Ball Compression Chart</h1>
+
+    <BrandCompressionChart brand="Srixon" siblings={siblings} />
+
+    <section style="background:#f8f7f4;border-radius:8px;padding:18px;margin:26px 0;">
+      <p style="margin:0 0 8px;font-weight:700;">Want every brand in one table?</p>
+      <p style="margin:0 0 12px;">The full chart covers all 34 balls we track across ten brands, with a sortable table and a free printable PDF.</p>
+      <a href="/golf-ball-compression-chart/" style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;">Open the full compression chart &#8594;</a>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently Asked Questions</h2>
+      {faq.map(f => (
+        <div style="margin-bottom:16px;">
+          <h3 style="margin-bottom:6px;">{f.q}</h3>
+          <p style="margin:0;">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
