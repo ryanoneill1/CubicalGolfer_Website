@@ -16,6 +16,15 @@ export function getStaticPaths() {
 const { brand } = Astro.props;
 const prefix = brand.slug + '-';
 
+// Sprint 108: the brand hubs never linked to their own ball compression chart,
+// so the only page on the site pointing at /{brand}-golf-ball-compression-chart/
+// was the all-brands chart itself. These pages went live 2026-09-03; a hub link
+// is both the most natural link on the site and the fastest route to discovery.
+const BALL_CHART_BRANDS = new Set(['callaway', 'titleist', 'taylormade', 'srixon', 'bridgestone']);
+const ballChart = BALL_CHART_BRANDS.has(brand.slug)
+  ? `/${brand.slug}-golf-ball-compression-chart/`
+  : null;
+
 // ── Derived data ──
 const productKeys = Object.keys(AFFILIATE as any).filter(k => k.startsWith(prefix));
 // Round-2 B5: two articles can share a quickAnswerProduct (e.g. the Launch Pro
@@ -96,6 +105,12 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       {brand.intro.map((p: string) => <p style="max-width:76ch;margin-bottom:14px;">{p}</p>)}
       {brand.bagNote && (
         <p class="review-glance" style="max-width:76ch;"><strong>From our bag:</strong> {brand.bagNote}</p>
+      )}
+      {ballChart && (
+        <p style="max-width:76ch;margin-bottom:14px;">
+          Playing a {brand.name} ball? Our <a href={ballChart} style="color:var(--green);font-weight:600;">{brand.name} golf ball compression chart</a>{' '}
+          lists every {brand.name} ball we track with its compression rating, cover material and the swing speed it is built for.
+        </p>
       )}
     </section>
 

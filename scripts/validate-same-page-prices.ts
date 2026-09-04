@@ -42,7 +42,16 @@ function priceOf(raw: unknown): number | null {
   return m ? parseFloat(m[1].replace(/,/g, '')) : null;
 }
 
-const THRESHOLD_COUNT = 27;   // ratchet: only ever goes down
+// A row that advertises several components ("R10 + Rukket Net + Mat", "Launch
+// Pro Setup") is a build total, not a unit price, so it SHOULD differ from the
+// section that prices the monitor alone. The header comment above already
+// listed "simulator packages show a build budget, not the launch monitor" as a
+// known false positive; it was excluded site-wide but never same-page, which
+// is why Sprint 108's honest bundle totals tripped this check the moment they
+// became correct. Narrow on purpose: the row must name a combination itself.
+const BUNDLE_ROW = /\s\+\s|\bSetup\b|\bPackage\b|\bBundle\b/i;
+
+const THRESHOLD_COUNT = 25;   // ratchet: only ever goes down
 
 const problems: string[] = [];
 for (const a of ARTICLES as any[]) {
@@ -53,7 +62,11 @@ for (const a of ARTICLES as any[]) {
     seen.get(k)!.push({ v, raw: String(raw), where });
   };
   for (const s of a.sections ?? []) if (s.affiliateKey) add(s.affiliateKey, s.price, 'section');
-  for (const r of a.comparisonTable?.rows ?? []) if (r.affiliateKey) add(r.affiliateKey, r.price, 'table row');
+  for (const r of a.comparisonTable?.rows ?? []) {
+    if (!r.affiliateKey) continue;
+    if (BUNDLE_ROW.test(String(r.name ?? ''))) continue;   // build total, not a unit price
+    add(r.affiliateKey, r.price, 'table row');
+  }
 
   for (const [key, hits] of seen) {
     if (new Set(hits.map(h => h.v)).size < 2) continue;

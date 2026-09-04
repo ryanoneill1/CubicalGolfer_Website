@@ -31,7 +31,7 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 
-const THRESHOLD = 66;
+const THRESHOLD = 62;
 const SEVERE_CEILING = 4;
 
 const money = (s: string) => Number(s.replace(/,/g, ''));
@@ -74,7 +74,7 @@ const SECONDHAND = /\b(used|refurb\w*|open box|prev(?:ious)?[- ]gen\w*|closeout|
 const all: any[] = [...(ARTICLES as any), ...(COMPARISONS as any)];
 const drift: string[] = [];
 const severe: string[] = [];
-const excluded = { dimension: 0, multipack: 0, period: 0, inRange: 0, secondhand: 0 };
+const excluded = { dimension: 0, multipack: 0, period: 0, inRange: 0, secondhand: 0, bundle: 0 };
 
 for (const a of all) {
   const table = a.comparisonTable;
@@ -95,12 +95,19 @@ for (const a of all) {
     const name = String(r.name ?? '');
     const priceStr = String(r.price);
     const line = `${a.slug} → "${name}" [${r.affiliateKey}] row ${priceStr} vs registry $${reg.toLocaleString()}`;
+
+    // A row named for a combination ("R10 + Spornia Net", "Value Package") prices
+    // a build, not the linked unit, so it is not drift at all — it was only ever
+    // exempted from the SEVERE list while still inflating the drift count. Sprint
+    // 108 gave these rows honest totals built from verified components, which made
+    // them diverge from the registry by design and pushed the ceiling over.
+    if (BUNDLE.test(name) || BUNDLE.test(priceStr)) { excluded.bundle++; continue; }
+
     drift.push(line);
 
     if (MULTIPACK.test(name) || MULTIPACK.test(priceStr)) { excluded.multipack++; continue; }
     if (PERIOD.test(priceStr)) { excluded.period++; continue; }
     if (SECONDHAND.test(name) || SECONDHAND.test(priceStr)) { excluded.secondhand++; continue; }
-    if (BUNDLE.test(name) || BUNDLE.test(priceStr)) continue;
 
     // A stated range is honest if the registry price sits inside it.
     const [lo, hi] = range(priceStr);
@@ -124,7 +131,7 @@ if (severe.length) {
 
 console.log(
   `✅ Table/registry prices: ${drift.length} drift rows (ceiling ${THRESHOLD}). Correctly excluded: ` +
-  `${excluded.dimension} dimension, ${excluded.multipack} multi-pack, ${excluded.period} per-period, ` +
+  `${excluded.dimension} dimension, ${excluded.bundle} bundle, ${excluded.multipack} multi-pack, ${excluded.period} per-period, ` +
   `${excluded.secondhand} used/prev-gen, ${excluded.inRange} in-range.`
 );
 
