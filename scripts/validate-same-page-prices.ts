@@ -42,7 +42,7 @@ function priceOf(raw: unknown): number | null {
   return m ? parseFloat(m[1].replace(/,/g, '')) : null;
 }
 
-const THRESHOLD_COUNT = 31;   // ratchet: only ever goes down
+const THRESHOLD_COUNT = 27;   // ratchet: only ever goes down
 
 const problems: string[] = [];
 for (const a of ARTICLES as any[]) {
