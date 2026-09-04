@@ -15,6 +15,7 @@
     "audit:indexing": "tsx scripts/audit-indexing.ts",
     "notify:indexnow": "tsx scripts/notify-indexnow.ts",
     "lastmod": "tsx scripts/update-lastmod.ts",
+    "sweep": "tsx scripts/sweep-priority.ts",
     "check-listings": "tsx scripts/check-live-listings.ts",
     "check-urls": "tsx scripts/check-live-urls.ts"
   },

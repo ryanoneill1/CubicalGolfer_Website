@@ -31,6 +31,14 @@ export const AFFILIATE: Record<string, {
   imgAlt?: string;
   golfGalaxyUrl?: string;
   golfGalaxyLabel?: string;
+  // ISO date this entry's price and link were last confirmed against the LIVE
+  // retailer page by eye. Verification dates used to live as prose inside
+  // priceNote, which meant nothing could compute staleness — so every sweep
+  // re-derived its own priorities by hand and the same products got checked
+  // twice while others went unchecked for months. A dead Garmin R10 ASIN sat
+  // on 26 pages because of exactly that gap. scripts/sweep-priority.ts reads
+  // this to rank what to check next.
+  verifiedOn?: string;
   benefits?: string[];
   priceNote?: string;
   primaryRetailer?: 'direct' | 'amazon';
@@ -122,6 +130,7 @@ export const AFFILIATE: Record<string, {
   // on /best-budget-launch-monitor/ was headed "Mevo" but linked the Mevo+.
   'flightscope-mevo': {
     url: 'https://www.amazon.com/dp/B07L52KP31?linkId=97d6d30c4e5b1141ef6356aa48fab218&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -213,6 +222,7 @@ export const AFFILIATE: Record<string, {
   // Blue Tees Series 3 Max — search (ASIN varies by colour variant)
   'blue-tees-series-3-max': {
     url: 'https://www.amazon.com/dp/B09DLJ37TW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Blue*+Tees*+Series*+3*+Max*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -305,6 +315,7 @@ export const AFFILIATE: Record<string, {
   // Garmin Approach S42 — search (multiple colourway variants)
   'garmin-approach-s44': {
     url: 'https://www.amazon.com/dp/B0DRZ1WN36?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$289',
@@ -406,6 +417,7 @@ export const AFFILIATE: Record<string, {
   // TaylorMade Qi35 Max (2025) — search (shaft/loft variants)
   'taylormade-qi35-max': {
     url: 'https://www.amazon.com/dp/B0DNRMSBWX?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 5,
     cookieDays: 30,
@@ -499,6 +511,7 @@ export const AFFILIATE: Record<string, {
     heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
     asin: 'B0BR2YF8T6',
     url: 'https://www.amazon.com/dp/B0DPN6VNK1?linkId=a1b9f83335c538286346ca2aeddba41c&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -555,6 +568,7 @@ export const AFFILIATE: Record<string, {
   // Srixon Soft Feel — search (dozen size variants)
   'srixon-soft-feel': {
     url: 'https://www.amazon.com/dp/B0DSJN58C2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -576,6 +590,7 @@ export const AFFILIATE: Record<string, {
   // Vice Pro — sold direct-to-consumer; not on Amazon as brand-sold
   'vice-pro': {
     url: 'https://www.amazon.com/dp/B089W9G9ZW?linkId=6672ead0a166fdcbf5a1fb75bcb90607&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -595,6 +610,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Supersoft (mentioned in FAQ of balls page)
   'callaway-supersoft': {
     url: 'https://www.amazon.com/dp/B0DHT5XZR1?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -694,6 +710,7 @@ export const AFFILIATE: Record<string, {
   // Wilson D9 Irons — search (shaft variants)
   'wilson-d9-irons': {
     url: 'https://www.amazon.com/dp/B09YP7XWK8?linkId=91f2e0310092a657cea545fbfadf82e9&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 8,
     cookieDays: 14,
@@ -715,6 +732,7 @@ export const AFFILIATE: Record<string, {
   // Images are placeholders: no product photo has been sourced for these yet.
   'tour-edge-hot-launch-c522-irons': {
     url: 'https://www.amazon.com/dp/B07NTJ8G7Z?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -732,6 +750,7 @@ export const AFFILIATE: Record<string, {
   },
   'cobra-air-x-irons': {
     url: 'https://www.amazon.com/dp/B0C59YXLGP?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -749,6 +768,7 @@ export const AFFILIATE: Record<string, {
   },
   'cobra-air-x-2-irons': {
     url: 'https://www.amazon.com/dp/B0CH1SRVMT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -771,6 +791,7 @@ export const AFFILIATE: Record<string, {
   'wilson-profile-sgi': {
     asin: 'B09X2FJ9XX',
     url: 'https://www.amazon.com/dp/B07HN4LLQN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -793,6 +814,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Strata Complete Set — search (varies by piece count / gender)
   'callaway-strata': {
     url: 'https://www.amazon.com/dp/B07H2HQJR5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -837,6 +859,7 @@ export const AFFILIATE: Record<string, {
   // FootJoy WeatherSof — ASIN B072LZV5Z6 ✅ verified (sold by FJ directly)
   'footjoy-weathersof-glove': {
     url: 'https://www.amazon.com/FootJoy-Mens-WeatherSof-Glove-White/dp/B09HCM416D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -858,6 +881,7 @@ export const AFFILIATE: Record<string, {
   // FIXED: Previously this incorrectly pointed to FootJoy WeatherSof (B072LZV5Z6).
   'titleist-players-flex': {
     url: 'https://www.amazon.com/dp/B07WMYL727?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Players%2520Flex%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -878,6 +902,7 @@ export const AFFILIATE: Record<string, {
   // Callaway Dawn Patrol Glove — search (size variants)
   'callaway-dawn-patrol': {
     url: 'https://www.amazon.com/dp/B0CJGMTP8D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Dawn%2520Patrol%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -1014,6 +1039,7 @@ export const AFFILIATE: Record<string, {
   // SkyTrak+ Launch Monitor — search (primarily sold direct / specialty retail)
   'skytrak-plus': {
     url: 'https://www.playbetter.com/products/skytrak-plus-golf-launch-monitor-simulator?ghref=2301%3A1333883',
+    verifiedOn: '2026-09-03',
     program: 'playbetter',
     commissionPct: 5,
     cookieDays: 30,
@@ -1152,6 +1178,7 @@ export const AFFILIATE: Record<string, {
   // Eyeline Golf Edge Putting Cup
   'eyeline-putting-cup': {
     url: 'https://www.amazon.com/dp/B0017T92ZW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DEyeline%2520Putting%2520Cup%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -1220,6 +1247,7 @@ export const AFFILIATE: Record<string, {
   },
   'cleveland-hb-soft-2': {
     url: 'https://www.amazon.com/dp/B0CP9SPLK7?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1267,6 +1295,7 @@ export const AFFILIATE: Record<string, {
   },
   'titleist-players-4': {
     url: 'https://www.amazon.com/dp/B0BX6XNNS8?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1285,6 +1314,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-fairway-14': {
     url: 'https://www.amazon.com/dp/B0CJ5XX57R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1382,6 +1412,7 @@ export const AFFILIATE: Record<string, {
   'garmin-approach-r10': {
     asin: 'B095QX1FSR',
     url: 'https://www.amazon.com/dp/B095QX1FSR?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+R10*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -1422,6 +1453,7 @@ export const AFFILIATE: Record<string, {
 
   'flightscope-mevo-gen2': {
     url: 'https://www.amazon.com/FlightScope-Mevo-Gen2-Parameters-Simulation/dp/B0G1ZRXTJ4?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=FlightScope*+Mevo*+Gen2*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -1460,6 +1492,7 @@ export const AFFILIATE: Record<string, {
 
   'foresight-gcquad': {
     url: 'https://www.amazon.com/dp/B0GKQNGSTX?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Foresight*+GCQuad*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -1596,6 +1629,7 @@ export const AFFILIATE: Record<string, {
   // ── Golf Balls for 90 MPH Swing Speed ────────────────────────────────────────
   'srixon-q-star-tour': {
     url: 'https://www.amazon.com/dp/B0GP65HH3Z?linkCode=ll2&tag=cubicalgolfer-20&linkId=d14ce0198cd01d5a4175723b1b54cff3&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1614,6 +1648,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-chrome-soft': {
     url: 'https://www.amazon.com/dp/B0CJK2X7GK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1725,6 +1760,7 @@ export const AFFILIATE: Record<string, {
   },
   'benq-short-throw-projector': {
     url: 'https://www.amazon.com/dp/B076MHKTFH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -1777,6 +1813,7 @@ export const AFFILIATE: Record<string, {
   },
   'square-golf-launch-monitor': {
     url: 'https://www.playbetter.com/products/square-golf-simulator-launch-monitor?ghref=2301%3A1333883',
+    verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.amazon.com/s?k=square+golf+launch+monitor&tag=cubicalgolfer-20',
     program: 'playbetter',
     commissionPct: 5,
@@ -2026,6 +2063,7 @@ export const AFFILIATE: Record<string, {
   },
   'superspeed-golf-set': {
     url: 'https://www.amazon.com/dp/B073SZXD2Q?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSuperSpeed%2520Golf%2520Set%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -2068,6 +2106,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-reva-driver': {
     url: 'https://www.amazon.com/s?k=callaway-reva-driver&crid=2EXRQ37CMNGO4&sprefix=callaway-reva-driver%2Caps%2C260&linkCode=ll2&tag=cubicalgolfer-20&linkId=daac30540553e88cd0d623d76195f6c6&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2522,6 +2561,7 @@ export const AFFILIATE: Record<string, {
   },
   'superstroke-zenergy-tour': {
     url: 'https://www.amazon.com/dp/B0BXPZ3Z79?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2596,6 +2636,7 @@ export const AFFILIATE: Record<string, {
   },
   'cobra-ds-adapt-x-driver': {
     url: 'https://www.amazon.com/dp/B0DC7Y2JHW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-27',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$270',
@@ -2624,6 +2665,7 @@ export const AFFILIATE: Record<string, {
   },
   'net-return-pro': {
     url: 'https://www.amazon.com/s?k=net-return-pro&crid=HTVYLIYCCS63&sprefix=net-return-pro%2Caps%2C238&linkCode=ll2&tag=cubicalgolfer-20&linkId=82cda57a6b250ee4c4d055a3a8d00d6f&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DNet%2520Return%2520Pro%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -2682,6 +2724,7 @@ export const AFFILIATE: Record<string, {
   },
   'orange-whip-trainer': {
     url: 'https://www.amazon.com/dp/B07HXTFD8D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -2773,6 +2816,7 @@ export const AFFILIATE: Record<string, {
   },
   'tour-striker-smart-ball': {
     url: 'https://www.amazon.com/dp/B00II5RSR2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTour%2520Striker%2520Smart%2520Ball%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3008,6 +3052,7 @@ export const AFFILIATE: Record<string, {
   'kirkland-signature': {
     asin: 'B0C54GXFQ8',
     url: 'https://www.amazon.com/Kirkland-Signature-Balls-3-Piece-Urethane/dp/B0C54GXFQ8?crid=3Q1JXH1PLNWPQ&dib_tag=se&keywords=Kirkland+Signature&qid=1785875018&sprefix=kirkland+signature%2Caps%2C202&sr=8-1&linkCode=ll2&tag=cubicalgolfer-20&linkId=0f56da124556c580ae93e0ca6d4d0169&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3020,6 +3065,7 @@ export const AFFILIATE: Record<string, {
   },
   'titleist-avx': {
     url: 'https://www.amazon.com/dp/B0FY3Q2DLN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3072,6 +3118,7 @@ export const AFFILIATE: Record<string, {
   },
   'vice-pro-plus': {
     url: 'https://www.amazon.com/dp/B089W8NLZC?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3140,6 +3187,7 @@ export const AFFILIATE: Record<string, {
   },
   'wilson-chaos': {
     url: 'https://www.amazon.com/dp/B0CQN3F2HW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWilson%2520Chaos%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3153,6 +3201,7 @@ export const AFFILIATE: Record<string, {
   },
   'pinnacle-rush': {
     url: 'https://www.amazon.com/dp/B09V4FRPN6/?tag=cubicalgolfer-20',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPinnacle%2520Rush%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3168,6 +3217,7 @@ export const AFFILIATE: Record<string, {
   // ── Budget Putters ──────────────────────────────────────────────────────────
   'odyssey-dfx': {
     url: 'https://www.amazon.com/dp/B0DHSXRFVN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520DFX%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3218,6 +3268,7 @@ export const AFFILIATE: Record<string, {
 
   'flightscope-mevo-plus': {
     url: 'https://www.amazon.com/dp/B0D8JWPNCZ?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3303,6 +3354,7 @@ export const AFFILIATE: Record<string, {
   // ── Month 1 New Products ──────────────────────────────────────────────
   'voice-caddie-sc200plus': {
     url: 'https://www.amazon.com/dp/B07R8JV36B?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -3320,6 +3372,7 @@ export const AFFILIATE: Record<string, {
   },
   'shot-scope-lm1': {
     url: 'https://www.amazon.com/Shot-Scope-Portable-Launch-Monitor/dp/B0GP22ZYY5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Shot*+Scope*+LM1*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -3435,6 +3488,7 @@ export const AFFILIATE: Record<string, {
   },
   'golf-pride-z-grip': {
     url: 'https://www.amazon.com/dp/B006X6QBZS?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520Pride%2520Z%2520Grip%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3509,6 +3563,7 @@ export const AFFILIATE: Record<string, {
   },
   'country-club-elite-mat': {
     url: 'https://www.amazon.com/dp/B0048GP25U?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCountry%2520Club%2520Elite%2520Mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3734,6 +3789,7 @@ export const AFFILIATE: Record<string, {
   // ── NEW PRODUCTS (May 2026) ────────────────────────────────────────────
   'nikon-coolshot-50i': {
     url: 'https://www.amazon.com/dp/B0DVMJYQ4X?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fnikon-coolshot-50i-gii-rangefinder-25nknuclsht50grngrng%2F25nknuclsht50grngrng%3FenteredSearchTerm%3DNikon%2520Coolshot%252050i',
     program: 'amazon',
     commissionPct: 3,
@@ -3747,6 +3803,7 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-300-pro': {
     url: 'https://www.amazon.com/dp/B01KP195PY?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-01',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520300%2520Pro%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -3781,6 +3838,7 @@ export const AFFILIATE: Record<string, {
   // ═══ MISSING PRICE FIXES — June 2026 ═══
   'garmin-approach-s70': {
     url: 'https://www.amazon.com/dp/B0CBW67NLW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+S70*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -3945,6 +4003,7 @@ export const AFFILIATE: Record<string, {
   'apple-watch-ultra-golf': {
     imgSrc: '/images/products/AppleWatch.webp', imgAlt: 'Apple Watch Ultra with golf GPS app',
     url: 'https://www.amazon.com/dp/B0CTD9KQTB?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Apple*+Watch*+Ultra*+Golf*&ghref=2301%3A1333883',
     program: 'amazon',
     commissionPct: 3,
@@ -3962,6 +4021,7 @@ export const AFFILIATE: Record<string, {
 
   'spornia-spg-7': {
     url: 'https://www.amazon.com/dp/B079P7WZPH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSpornia%2520SPG%25207%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
@@ -4296,6 +4356,7 @@ export const AFFILIATE: Record<string, {
   // ═══ ACCESSORIES — Rain Gear ═══
   'under-armour-forefront-rain-jacket': {
     url: 'https://www.amazon.com/dp/B078BSYZBH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-22',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
@@ -4420,6 +4481,7 @@ export const AFFILIATE: Record<string, {
   'bushnell-pro-x3': {
     asin: 'B0D6GVX8JZ',
     url: 'https://www.amazon.com/dp/B0D6GVX8JZ?tag=cubicalgolfer-20',
+    verifiedOn: '2026-08-23',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fbushnell-pro-x3-laser-rangefinder-22busuprx3lsrrngfrng%2F22busuprx3lsrrngfrng',
     program: 'amazon',
     commissionPct: 3,
@@ -4435,6 +4497,7 @@ export const AFFILIATE: Record<string, {
   // ── Golf GPS speakers & cart speakers (Sprint 80, verified 2026-08-23) ────
   'bushnell-wingman-mini': {
     url: 'https://www.amazon.com/dp/B0C6CTMVJS?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$90',
@@ -4449,6 +4512,7 @@ export const AFFILIATE: Record<string, {
   },
   'bushnell-wingman-2': {
     url: 'https://www.amazon.com/dp/B0CZ7M97D5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$140',
@@ -4463,6 +4527,7 @@ export const AFFILIATE: Record<string, {
   },
   'bushnell-wingman-view': {
     url: 'https://www.amazon.com/dp/B0C4TP5FN2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$200',
@@ -4477,6 +4542,7 @@ export const AFFILIATE: Record<string, {
   },
   'blue-tees-player-pro': {
     url: 'https://www.amazon.com/dp/B0GS38DYWC?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fblue-tees-player-pro-speaker-26bluagolfplyrprspyfq%2F26bluagolfplyrprspyfq',
@@ -4492,6 +4558,7 @@ export const AFFILIATE: Record<string, {
   },
   'golfbuddy-voice-2s-plus': {
     url: 'https://www.amazon.com/dp/B08BTB2H2Y?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$85',
@@ -4506,6 +4573,7 @@ export const AFFILIATE: Record<string, {
   },
   'turtlebox-ranger': {
     url: 'https://www.amazon.com/dp/B0F2JHSGCJ?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fturtlebox-ranger-portable-speaker-25turucasutrtlbxrnlli%2F25turucasutrtlbxrnlli%3Fcolor%3DGray',
@@ -4521,6 +4589,7 @@ export const AFFILIATE: Record<string, {
   },
   'turtlebox-original-gen3': {
     url: 'https://www.amazon.com/dp/B0F22HTHMJ?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-23',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fturtlebox-original-gen-3-speaker-25turucasutrtlbxgnwcu%2F25turucasutrtlbxgnwcu%3Fcolor%3DTan',
@@ -4538,6 +4607,7 @@ export const AFFILIATE: Record<string, {
   // ── Sprint 85: replaces the discontinued Wilson D9 ────────────────────────
   'wilson-dynapower-irons': {
     url: 'https://www.amazon.com/dp/B0BT26B16M?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-08-26',
     program: 'amazon', commissionPct: 3, cookieDays: 1,
     retailer: 'Amazon',
     price: '~$600',
