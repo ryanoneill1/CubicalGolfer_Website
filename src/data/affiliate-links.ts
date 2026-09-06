@@ -2410,7 +2410,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DVokey%2520SM10%2520Wedge%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$179',
+    price: '~$160', verifiedOn: '2026-09-05',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/vokey-sm10-52.webp',
@@ -2428,7 +2428,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcleveland-rtx-6-zipcore-wedge-22clemrtx6blckstnwdg%2F22clemrtx6blckstnwdg%3FenteredSearchTerm%3DCleveland%2520RTX-6%252052%C2%B0',
     retailer: 'Amazon',
-    price: '~$169',
+    price: '~$130', verifiedOn: '2026-09-05',
     priceNote: 'Wedge prices hold steady. Buy when ready — grooves wear out before prices drop.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/cleveland-rtx6-52.webp',
@@ -2436,7 +2436,7 @@ export const AFFILIATE: Record<string, {
     benefits: [
       'ZipCore technology moves CG closer to face for better feel',
       'UltiZip grooves for spin on full and partial shots',
-      '$169 — $10 cheaper than Vokey with comparable performance',
+      '$130 — $30 cheaper than Vokey with comparable performance',
     ],
   },
   'callaway-jaws-raw-52': {

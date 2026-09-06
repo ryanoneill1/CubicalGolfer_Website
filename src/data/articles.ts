@@ -8978,12 +8978,12 @@ export const ARTICLES: Article[] = [
 
       { h2: 'Best Specialty 52-Degree Picks', rating: 4.8, affiliateKey: 'vokey-sm10-52', body: 'If you decide to swap, here are the best options at three price points.' },
 
-      { h2: 'Titleist Vokey SM10 52°', badge: 'BEST OVERALL', body: 'The SM10 ($179) is the most played wedge on the PGA Tour for a reason — Spin Milled grooves generate maximum spin on every shot, and 6 grind options let you match the sole to your turf conditions and swing type. The F grind (full sole, mid bounce) is the best all-purpose choice for weekend golfers.', price: '~$179', affiliateKey: 'vokey-sm10-52', rating: 4.8,
+      { h2: 'Titleist Vokey SM10 52°', badge: 'BEST OVERALL', body: 'The SM10 ($160) is the most played wedge on the PGA Tour for a reason — Spin Milled grooves generate maximum spin on every shot, and 6 grind options let you match the sole to your turf conditions and swing type. The F grind (full sole, mid bounce) is the best all-purpose choice for weekend golfers.', price: '~$160', affiliateKey: 'vokey-sm10-52', rating: 4.8,
         pros: ['Most played wedge on Tour', 'Spin Milled grooves — maximum spin', '6 grind options for any condition'],
-        cons: ['$179 is premium pricing', 'Requires knowing your bounce preference', 'Chrome finish shows wear quickly'],
+        cons: ['$160 is premium pricing', 'Requires knowing your bounce preference', 'Chrome finish shows wear quickly'],
       },
 
-      { h2: 'Cleveland RTX 6 ZipCore 52°', badge: 'BEST VALUE', body: 'The RTX 6 ($169) matches Vokey spin performance at $10 less. ZipCore technology moves the center of gravity closer to the face for better feel on partial shots. UltiZip grooves are heat-treated for durability — they maintain spin longer than most competitors. The V-MG grind (versatile mid-grind) is the best all-purpose choice.', price: '~$169', affiliateKey: 'cleveland-rtx6-52', rating: 4.7,
+      { h2: 'Cleveland RTX 6 ZipCore 52°', badge: 'BEST VALUE', body: 'The RTX 6 ($130) matches Vokey spin performance at $10 less. ZipCore technology moves the center of gravity closer to the face for better feel on partial shots. UltiZip grooves are heat-treated for durability — they maintain spin longer than most competitors. The V-MG grind (versatile mid-grind) is the best all-purpose choice.', price: '~$130', affiliateKey: 'cleveland-rtx6-52', rating: 4.7,
         pros: ['$10 cheaper than Vokey with comparable spin', 'ZipCore for better feel', 'Heat-treated grooves last longer'],
         cons: ['Fewer grind options than Vokey', 'Slightly less Tour presence', 'Satin finish shows use quickly'],
       },
@@ -8996,8 +8996,8 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Wedge', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10 52°', bestFor: 'Best Overall', price: '~$179', feature1: '4.8/5 ★', winner: true, rating: 4.8 },
-        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6 52°', bestFor: 'Best Value', price: '~$169', feature1: '4.7/5 ★', winner: false },
+        { badge: 'STRONG PICK', affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10 52°', bestFor: 'Best Overall', price: '~$160', feature1: '4.8/5 ★', winner: true, rating: 4.8 },
+        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6 52°', bestFor: 'Best Value', price: '~$130', feature1: '4.7/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'callaway-jaws-raw-52', name: 'Callaway JAWS RAW 52°', bestFor: 'Best Spin', price: '~$169', feature1: '4.7/5 ★', winner: false },
         { rating: 4.4, affiliateKey: 'maxfli-milled-52', name: 'Maxfli Milled 52°', bestFor: 'Best Budget', price: '~$80', feature1: '4.4/5 ★', winner: false },
       ],
@@ -9085,8 +9085,8 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Wedge', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'vokey-sm10-52', name: 'Titleist Vokey SM10', bestFor: 'Best Overall', price: '~$179', feature1: '4.8/5 ★', winner: true, rating: 4.7 },
-        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6', bestFor: 'Best Value', price: '~$169', feature1: '4.7/5 ★', winner: false },
+        { badge: 'STRONG PICK', affiliateKey: 'vokey-sm10-52', name: 'Titleist Vokey SM10', bestFor: 'Best Overall', price: '~$160', feature1: '4.8/5 ★', winner: true, rating: 4.7 },
+        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6', bestFor: 'Best Value', price: '~$130', feature1: '4.7/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'mizuno-t24-52', name: 'Mizuno T24', bestFor: 'Best Feel', price: '~$180', feature1: '4.7/5 ★', winner: false },
         { rating: 4.4, affiliateKey: 'maxfli-milled-52', name: 'Maxfli Milled', bestFor: 'Best Budget', price: '~$80', feature1: '4.4/5 ★', winner: false },
       ],
@@ -9158,12 +9158,12 @@ export const ARTICLES: Article[] = [
         cons: ['One bounce option', 'Grooves wear faster than premium models', 'No custom grind options'],
       },
 
-      { h2: 'Mid: Cleveland RTX 6 ZipCore ($169)', badge: 'BEST MID-RANGE', body: 'ZipCore for feel, UltiZip heat-treated grooves for durability, and 3 bounce options for turf matching. The RTX 6 is the sweet spot between price and performance for most weekend golfers.', price: '~$169', affiliateKey: 'cleveland-rtx6-52', rating: 4.7,
+      { h2: 'Mid: Cleveland RTX 6 ZipCore ($130)', badge: 'BEST MID-RANGE', body: 'ZipCore for feel, UltiZip heat-treated grooves for durability, and 3 bounce options for turf matching. The RTX 6 is the sweet spot between price and performance for most weekend golfers.', price: '~$130', affiliateKey: 'cleveland-rtx6-52', rating: 4.7,
         pros: ['Heat-treated grooves last longer', '3 bounce options', 'Best feel in the mid-range'],
-        cons: ['$169 adds up across 3-4 wedges', 'Satin finish wears quickly', 'Fewer grind options than Vokey'],
+        cons: ['$130 adds up across 3-4 wedges', 'Satin finish wears quickly', 'Fewer grind options than Vokey'],
       },
 
-      { h2: 'Premium: Titleist Vokey SM10 ($179)', badge: 'BEST PREMIUM', body: 'The Tour standard. Spin Milled grooves, 6 grind options, and the confidence of knowing 50% of Tour pros play this wedge. Buy this if you prioritize maximum spin and want the most customizable option available.', price: '~$179', affiliateKey: 'vokey-sm10-52', rating: 4.8,
+      { h2: 'Premium: Titleist Vokey SM10 ($160)', badge: 'BEST PREMIUM', body: 'The Tour standard. Spin Milled grooves, 6 grind options, and the confidence of knowing 50% of Tour pros play this wedge. Buy this if you prioritize maximum spin and want the most customizable option available.', price: '~$160', affiliateKey: 'vokey-sm10-52', rating: 4.8,
         pros: ['Most played wedge on Tour', '6 grind options for any condition', 'Maximum Spin Milled grooves'],
         cons: ['$179 per wedge — $540+ for a 3-wedge set', 'Chrome finish shows wear quickly', 'Arguably overkill for 15+ handicaps'],
       },
@@ -9174,8 +9174,8 @@ export const ARTICLES: Article[] = [
       headers: ['Wedge', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'maxfli-milled-52', name: 'Maxfli Milled', bestFor: 'Best Budget', price: '~$80', feature1: '4.4/5 ★', winner: false, rating: 4.4 },
-        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6', bestFor: 'Best Mid-Range', price: '~$169', feature1: '4.7/5 ★', winner: true },
-        { rating: 4.8, affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10', bestFor: 'Best Premium', price: '~$179', feature1: '4.8/5 ★', winner: false },
+        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6', bestFor: 'Best Mid-Range', price: '~$130', feature1: '4.7/5 ★', winner: true },
+        { rating: 4.8, affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10', bestFor: 'Best Premium', price: '~$160', feature1: '4.8/5 ★', winner: false },
       ],
     },
     faq: [
@@ -12003,8 +12003,8 @@ export const ARTICLES: Article[] = [
       caption: 'Wedge Bounce Guide',
       headers: ['Wedge', 'Best For', 'Price', 'Bounce'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'vokey-sm10-52', name: 'Titleist Vokey SM10', bestFor: 'Firm turf, tight lies', price: '~$179', feature1: '4-6° (Low)', feature2: 'Shallow swings' },
-        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX-6 ZipCore', bestFor: 'Most golfers', price: '~$169', feature1: '8-12° (Mid)', feature2: 'Versatile', badge: 'RECOMMENDED', winner: true },
+        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'vokey-sm10-52', name: 'Titleist Vokey SM10', bestFor: 'Firm turf, tight lies', price: '~$160', feature1: '4-6° (Low)', feature2: 'Shallow swings' },
+        { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX-6 ZipCore', bestFor: 'Most golfers', price: '~$130', feature1: '8-12° (Mid)', feature2: 'Versatile', badge: 'RECOMMENDED', winner: true },
         { rating: 4.6, affiliateKey: 'callaway-jaws-full-toe', name: 'Callaway Jaws Full Toe', bestFor: 'Soft turf, bunkers', price: '~$180', feature1: '12-16° (High)', feature2: 'Steep swings' },
       ],
     },
