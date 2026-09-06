@@ -4431,7 +4431,7 @@ export const ARTICLES: Article[] = [
       'Only want putting and chipping -- a putting mat is simpler and cheaper',
     ],
     comparisonTable: {
-      headers: ['Setup', 'Min Depth', 'Price (Total)', 'Ball Data', 'Visual'],
+      headers: ['Setup', 'Min Depth', 'Monitor Price', 'Ball Data', 'Visual'],
       rows: [
       { name: 'Garmin R10 + Rukket Net + Mat', affiliateKey: 'garmin-approach-r10', bestFor: 'Best Small Space', price: '~$1,289', feature1: '8 feet', feature2: 'Data only', winner: true, badge: 'STRONG PICK'},
       { name: 'Rapsodo MLM2PRO + Net + Mat', bestFor: 'Best With Video', price: '~$1,398', feature1: '8 feet', feature2: 'Video overlay', winner: false, rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
@@ -13518,7 +13518,7 @@ export const ARTICLES: Article[] = [
     whoFor: ['Golfers who want to practice at home year-round', 'Anyone considering a simulator but unsure of the investment', 'Golfers who want to play famous courses from their garage'],
     whoSkip: ['Golfers with less than 8 feet of ceiling height (see our low-ceiling guide)', 'Anyone who prefers the driving range experience and outdoor practice'],
     comparisonTable: {
-      headers: ['Setup', 'Best For', 'Total Cost', 'Monitor', 'Our Rating'],
+      headers: ['Setup', 'Best For', 'Monitor Price', 'Monitor', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'garmin-approach-r10', name: 'R10 Budget Setup', bestFor: 'Best Value', price: '~$1,186', feature1: 'Garmin R10', feature2: '', winner: false, rating: 4.2 },
         { rating: 4.5, affiliateKey: 'skytrak-plus', name: 'SkyTrak+ Setup', bestFor: 'Best Overall', price: '$3,500-4,500', feature1: 'SkyTrak+', feature2: '', winner: true },
@@ -13822,22 +13822,22 @@ export const ARTICLES: Article[] = [
     id: 'bf-golf-deals', slug: '/black-friday-golf-deals/', category: 'golf-lifestyle', pageType: 'listicle',
     quickAnswerProduct: 'garmin-approach-r10',
     tag: 'DEALS', emoji: '🏷️', thumb: 'olive',
-    words: '2,000', datePublished: '2026-06-06', dateModified: '2026-06-06',
+    words: '2,000', datePublished: '2026-06-06', dateModified: '2026-09-05',
     title: 'Black Friday Golf Deals — Best Discounts by Category',
     titleDisplay: 'Black Friday Golf Deals Worth Your Money',
     description: 'The best Black Friday golf deals by category. Launch monitors, rangefinders, balls, drivers, shoes, and apparel — updated live when deals drop.',
     excerpt: 'Black Friday golf deals updated live — launch monitors, rangefinders, clubs, and apparel.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/black-friday-golf-deals.jpg',
     thumbnail: '/images/thumbnails/black-friday-deals-thumb.webp',
-    bottomLine: 'The best Black Friday golf deals are on launch monitors (30-40% off), last-year drivers (40-50% off), and golf balls (buy 3 get 1 free). This page is updated annually — bookmark it and check back in early November.',
-    intro: 'This page is updated annually with the best Black Friday golf deals. Bookmark it and check back in early November when deals start dropping. We only list deals we would actually buy ourselves — no filler.\n\n<strong>Last updated: June 2026</strong> — deals from Black Friday 2025 below. The 2026 update goes live in early November.\n\nFor our year-round recommendations by category, see the links below.',
+    bottomLine: 'The verified prices below are the baseline a real Black Friday discount has to beat: Garmin R10 $490, Rapsodo MLM2PRO $599, SkyTrak+ $1,195, Bushnell Launch Pro $2,999. Write them down now, because the "was" price shown in late November is often the one you should ignore.',
+    intro: 'This page is updated annually with the best Black Friday golf deals. Bookmark it and check back in early November when deals start dropping. We only list deals we would actually buy ourselves — no filler.\n\n<strong>Prices verified September 2026.</strong> We are not going to guess at discount percentages months in advance — nobody knows them, and the guesses you read elsewhere are invented. What we can give you is the current, checked price of the gear we actually recommend, so that when the sale lands you can tell a real cut from a marked-up "was" price.\n\nFor our year-round recommendations by category, see the links below.',
     toc: ['Launch Monitors', 'Rangefinders', 'Golf Balls', 'Drivers', 'Shoes and Apparel'],
     sections: [
-      { h2: 'Launch monitor deals', body: 'Launch monitors see the biggest Black Friday discounts — 25-40% off. The <a href="/garmin-approach-r10-review/">Garmin R10</a> (currently $490) and the <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a> (currently $599) are usually among the deepest launch-monitor cuts. See our <a href="/best-golf-launch-monitors-2026/">full launch monitor rankings</a> to decide which to buy before the deals start.' , affiliateKey: 'garmin-approach-r10', price: '~$490', rating: 4.4, badge: 'WATCH THIS ONE'},
-      { h2: 'Rangefinder deals', body: 'The <a href="/best-golf-rangefinders-2026/">Bushnell Tour V7</a> typically drops $50-80 on Black Friday. The <a href="/precision-pro-nx9-review/">Precision Pro NX9</a> often runs buy-one-get-accessories bundles. Check our <a href="/best-golf-rangefinders-2026/">rangefinder rankings</a> to shortlist before the sale.' , affiliateKey: 'precision-pro-nx9-hd', price: '~$199', rating: 4.5, badge: 'BEST VALUE'},
-      { h2: 'Golf ball deals', body: 'Titleist, Callaway, and TaylorMade run buy-3-get-1-free deals on premium balls. The <a href="/vice-golf-balls/">Vice</a> bulk pricing (5+ dozen) is already competitive but they add 10-15% off for Black Friday. Stock up — golf balls do not expire. See our <a href="/best-golf-balls-2026/">ball rankings</a>.' , affiliateKey: 'kirkland-signature', price: '~$28/2dz', rating: 4.3, badge: 'BEST PRICE'},
-      { h2: 'Driver deals', body: 'Previous-generation drivers see the biggest markdowns: 40-50% off. A 2025 model driver is 95% as good as the 2026 model at half the price. See our <a href="/best-golf-drivers-forgiveness/">forgiving drivers</a> and <a href="/best-golf-drivers-under-400/">drivers under $200</a> guides.' , affiliateKey: 'ping-g430-max-driver', price: '~$449', rating: 4.7, badge: 'PREV-GEN PICK'},
-      { h2: 'Shoes and apparel deals', body: 'Golf apparel sees 30-50% Black Friday discounts across <a href="/best-golf-shirts/">shirts</a>, <a href="/best-golf-shoes/">shoes</a>, <a href="/best-golf-rain-jacket/">rain jackets</a>, and accessories. Stock up on <a href="/best-golf-gloves-for-men/">gloves</a> — they wear out and the savings compound.' , affiliateKey: 'footjoy-flex-xp', price: '~$120', rating: 4.4, badge: 'DEEPEST CUTS'},
+      { h2: 'Launch monitor deals', body: 'Launch monitors are the category worth watching most closely, simply because the dollar amounts are largest — a 20% cut on a <a href="/garmin-approach-r10-review/">Garmin R10</a> is worth more than half off a glove. Verified today: the R10 at $490 and the <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO</a> at $599. See our <a href="/best-golf-launch-monitors-2026/">full launch monitor rankings</a> to decide which to buy before the deals start.' , affiliateKey: 'garmin-approach-r10', price: '~$490', rating: 4.4, badge: 'WATCH THIS ONE'},
+      { h2: 'Rangefinder deals', body: 'Verified today: the <a href="/best-golf-rangefinders-2026/">Bushnell Tour V7 Shift</a> at $399 and the <a href="/precision-pro-nx9-review/">Precision Pro NX9 HD</a> at $199. Rangefinders discount less predictably than launch monitors, so the current price matters more than any forecast. Check our <a href="/best-golf-rangefinders-2026/">rangefinder rankings</a> to shortlist before the sale.' , affiliateKey: 'precision-pro-nx9-hd', price: '~$199', rating: 4.5, badge: 'BEST VALUE'},
+      { h2: 'Golf ball deals', body: 'Titleist, Callaway, and TaylorMade run buy-3-get-1-free deals on premium balls. The <a href="/vice-golf-balls/">Vice</a> bulk pricing (5+ dozen) is already competitive before any sale, which is worth knowing before you wait for one. Stock up — golf balls do not expire. See our <a href="/best-golf-balls-2026/">ball rankings</a>.' , affiliateKey: 'kirkland-signature', price: '~$28/2dz', rating: 4.3, badge: 'BEST PRICE'},
+      { h2: 'Driver deals', body: 'The reliable pattern with drivers is not Black Friday itself but the January model refresh: when the new line lands, the previous generation is discounted to clear. If you can wait until January, you often do better than in November. See our <a href="/best-golf-drivers-forgiveness/">forgiving drivers</a> and <a href="/best-golf-drivers-under-400/">drivers under $400</a> guides.' , affiliateKey: 'ping-g430-max-driver', price: '~$449', rating: 4.7, badge: 'PREV-GEN PICK'},
+      { h2: 'Shoes and apparel deals', body: 'Apparel is the category where end-of-season clearance and Black Friday overlap, so it is usually worth waiting on <a href="/best-golf-shirts/">shirts</a>, <a href="/best-golf-shoes/">shoes</a>, <a href="/best-golf-rain-jacket/">rain jackets</a>, and accessories. Stock up on <a href="/best-golf-gloves-for-men/">gloves</a> — they wear out and the savings compound.' , affiliateKey: 'footjoy-flex-xp', price: '~$120', rating: 4.4, badge: 'DEEPEST CUTS'},
       { h2: 'Keep reading', body: 'For year-round deals: <a href="/prime-day-golf-deals/">Prime Day golf deals</a>. For gift shopping: <a href="/best-golf-gifts-for-him/">gifts for him</a>, <a href="/best-golf-gifts-under-50/">gifts under $50</a>.' },
     ],
     faq: [
