@@ -658,15 +658,17 @@ export const AFFILIATE: Record<string, {
   // Titleist T350 — replaces the T300, which is unbuyable (Amazon "Currently unavailable",
   // zero results at Golf Galaxy). T350 verified live 2026-09-06 at Golf Galaxy: $1,099.99
   // (list $1,399.99), ships, left-hand available. Price supplied by Ryan; Golf Galaxy hides it
-  // behind MAP ("See Price In Cart"). imgSrc intentionally omitted - the repo only holds a T300
-  // photo and labelling it T350 would repeat the G430/G440 mismatch.
+  // behind MAP ("See Price In Cart"). Search URL rather than a product page: iron sets vary by
+  // hand, flex and shaft, so pinning one variant would sell the wrong config (Sprints 97/103/112).
   'titleist-t350': {
-    url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-t350-irons-23ttlmt35023stl5pirn%2F23ttlmt35023stl5pirn',
+    url: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtitleist%2520t350%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
     verifiedOn: '2026-09-06',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
     retailer: 'Golf Galaxy',
+    imgSrc: '/images/products/Titleist_T350_Irons.webp',
+    imgAlt: 'Titleist T350 irons',
     price: '~$1,099',
     priceNote: 'Currently $1,099.99, down from $1,399.99. Titleist uses MAP pricing, so the figure only shows in the cart at some retailers.',
     label: 'See Today\'s Price \u2192',
@@ -2762,7 +2764,7 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Golf Galaxy →',
-    imgSrc: '/images/products/Ping _G440_SFT_Driver.webp',
+    imgSrc: '/images/products/Ping_G440_SFT_Driver.webp',
     imgAlt: 'Ping G440 SFT driver',
     benefits: [
       'Carries within a few yards of drivers costing considerably more',
