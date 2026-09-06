@@ -142,7 +142,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'orange-whip-trainer': "Orange Whip Trainer",
   'ping-g430-sft': "Ping G440 SFT",
   'ping-sigma-2': "Ping Sigma 2",
-  'rukket-haack-net': "Rukket Haack Net",
+  'gosports-hitting-net': "GoSports Golf Practice Net",
   'scotty-cameron-phantom-x': "Scotty Cameron Phantom X",
   'taylormade-spider-gt': "TaylorMade Spider GT",
   'tour-striker-smart-ball': "Tour Striker Smart Ball",

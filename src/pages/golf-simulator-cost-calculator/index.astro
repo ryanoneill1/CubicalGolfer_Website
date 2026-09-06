@@ -20,7 +20,7 @@ const meta = {
 
 const faqs = [
   { q: 'How much does a golf simulator cost?', a: 'A basic net-and-monitor setup costs $650-$900. A mid-range projector simulator costs $1,500-$3,000. A full premium setup runs $4,000-$6,000; high-end dedicated rooms can reach $10,000+.' },
-  { q: 'What is the cheapest golf simulator setup?', a: 'A Garmin R10 ($490) + Rukket Haack net ($130) + basic mat ($50) = $679 total. You get ball data on every shot without a projector.' },
+  { q: 'What is the cheapest golf simulator setup?', a: 'A Garmin R10 ($490) + GoSports net ($76) + basic mat ($50) = $616 total. You get ball data on every shot without a projector.' },
   { q: 'Is a home golf simulator worth it?', a: 'If you practice 2+ times per month and spend $20/session at a range, a $700 setup pays for itself in 8-15 months. See our simulator vs driving range cost analysis.' },
   { q: 'What do I need for a golf simulator?', a: 'Minimum: launch monitor + hitting net + mat. For virtual golf: add projector + impact screen + simulator software. Our calculator builds a complete parts list at your budget.' },
 ];
@@ -38,7 +38,7 @@ const mlm = getAffiliateLink('rapsodo-mlm2pro');
 const sky = getAffiliateLink('skytrak-plus');
 const lp = getAffiliateLink('bushnell-launch-pro');
 const lm1 = getAffiliateLink('shot-scope-lm1');
-const rukket = getAffiliateLink('rukket-haack-net');
+const gosports = getAffiliateLink('gosports-hitting-net');
 const spornia = getAffiliateLink('spornia-spg-7');
 const netReturn = getAffiliateLink('net-return-pro');
 const carls = getAffiliateLink('carls-place-impact-screen');
@@ -64,7 +64,7 @@ const ev = {
   r10:        gR10?.url,                          // amazon  3% search   EV $16  (only option)
   mlm:        mlm?.url,                           // amazon  3% product  EV $63  <- best in tier
   launchPro:  lp?.url,                            // bushnell 5% product EV $125 <- beats Amazon search EV $67
-  rukket:     rukket?.golfGalaxyUrl || rukket?.url,        // golfgalaxy 8% product EV $10 > amazon search EV $4
+  gosports:   gosports?.url,                               // amazon product page (no Golf Galaxy listing for this net)
   sporniaMat: sporniaMat?.golfGalaxyUrl || sporniaMat?.url,// golfgalaxy 8% product EV $13 > amazon search EV $4
   netReturn:  netReturn?.golfGalaxyUrl || netReturn?.url,  // golfgalaxy 8% product EV $28 > amazon search EV $9
   fiberbuilt: fiberbuilt?.url,                    // amazon  3% product  EV $40 > golfgalaxy EV $36
@@ -76,7 +76,7 @@ const ev = {
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-tech">
-  <StickyBar productName="Start Building → Pick Your Budget Below" productUrl={gR10?.url || '#'} price="From $679" />
+  <StickyBar productName="Start Building → Pick Your Budget Below" productUrl={gR10?.url || '#'} price="From $616" />
 
   <article class="art-content">
     <header class="art-hero">
@@ -180,8 +180,8 @@ const tiers = {
   basic: {
     title: '💰 Basic Setup — Data Practice, No Projector',
     parts: [
-      { component: 'Launch Monitor', name: 'Garmin Approach R10',        price: 599, url: ev.r10,        note: 'Radar — works under any ceiling height' },
-      { component: 'Hitting Net',    name: 'Rukket Haack Net',           price: 130, url: ev.rukket,     note: 'Folds flat, 10x7ft hitting area' },
+      { component: 'Launch Monitor', name: 'Garmin Approach R10',        price: 490, url: ev.r10,        note: 'Radar — works under any ceiling height' },
+      { component: 'Hitting Net',    name: 'GoSports 10x7 Net',          price: 76,  url: ev.gosports,   note: 'Ball return, 10x7 or 7x7 ft' },
       { component: 'Hitting Mat',    name: 'Spornia Hitting Mat',        price: 159, url: ev.sporniaMat, note: 'Forgiving surface, protects wrists' },
       { component: 'Display',        name: 'Your phone or tablet',       price: 0,   url: '',            note: 'Garmin Golf app — no projector needed at this tier' },
     ],

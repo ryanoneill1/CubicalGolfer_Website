@@ -36,7 +36,7 @@ export const KNOWN_BRANDS: string[] = [
   'Sun Mountain', 'Ogio', 'OGIO', 'Bag Boy', 'Clicgear', 'CaddyTek', 'KVV', 'MGI',
   'SKLZ', 'EyeLine', 'Eyeline Golf', 'BirdieBall', 'Orange Whip', 'Lag Shot',
   'Tour Striker', 'TheraBand', 'Rypstick', 'The Stack', 'PuttOut', 'Wellputt',
-  'Fiberbuilt', 'Rukket', 'Spornia', 'Net Return', 'Carl\'s Place', 'HomeCourse',
+  'Fiberbuilt', 'GoSports', 'Spornia', 'Net Return', 'Carl\'s Place', 'HomeCourse',
   'Country Club Elite', 'BenQ', 'Optoma', 'US Kids Golf', 'Frogger', 'GustBuster',
   'Club Car', 'E-Z-GO', 'EZGO', 'The Grint', '18Birdies', 'Golfshot',
 ];

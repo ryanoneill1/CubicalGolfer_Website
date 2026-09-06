@@ -676,7 +676,15 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
         let pi = 0;
         return allInnerHeaders.map((h: string) => {
           const hl = h.toLowerCase();
-          if (/price|cost|\/dz|\/dozen/.test(hl)) return (row.affiliateKey && getAffiliateLink(row.affiliateKey)?.price) || row.price || '';
+          if (/price|cost|\/dz|\/dozen/.test(hl)) {
+            const regPrice = (row.affiliateKey && getAffiliateLink(row.affiliateKey)?.price) || '';
+            // A composite row (bundle / setup / package) states a build total the registry cannot
+            // know, so its own price wins. For a single product the registry is the verified,
+            // sweep-stamped source of truth and must beat the row's stale copy. Same BUNDLE test
+            // as scripts/validate-same-page-prices.ts so guard and renderer cannot disagree.
+            const isBundle = /\s\+\s|\bSetup\b|\bPackage\b|\bBundle\b/i.test(String(row.name || ''));
+            return (isBundle ? (row.price || regPrice) : (regPrice || row.price)) || '';
+          }
           if (/^best\s*(for|swing)/i.test(h)) return row.bestFor || '';
           if (/rating|score/i.test(hl)) return row.rating ? `${row.rating}/5 ★` : isF1Rating ? f1 : isF2Rating ? f2 : pool[pi++] || '';
           return pool[pi++] || '';

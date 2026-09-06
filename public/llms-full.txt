@@ -11,6 +11,14 @@ URL: https://www.cubicalgolfer.com/
 URL: https://www.cubicalgolfer.com/brands/
 Summary: Garmin, Bushnell, Callaway, TaylorMade, and Titleist gear we have bought and tested — brand-by-brand reviews, ratings, and honest comparisons.
 
+## Bridgestone Golf Ball Compression Chart
+URL: https://www.cubicalgolfer.com/bridgestone-golf-ball-compression-chart/
+Summary: Compression, cover and price for all 4 Bridgestone golf balls, from the e12 Contact (50) to the Tour B X (100), matched to your swing speed.
+
+## Callaway Golf Ball Compression Chart
+URL: https://www.cubicalgolfer.com/callaway-golf-ball-compression-chart/
+Summary: Compression, cover and price for all 4 Callaway golf balls, from the Supersoft (38) to the Chrome Tour (90), matched to your swing speed.
+
 ## Golf Club Distance Calculator — Build Your Personal Distance Chart
 URL: https://www.cubicalgolfer.com/club-distance-calculator/
 Summary: Enter your driver distance for a personalized club distance chart. Based on real amateur data, not tour averages.
@@ -42,7 +50,7 @@ Summary: Complete golf ball guide for 2026. Compression, cover types, swing spee
 
 ## Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed
 URL: https://www.cubicalgolfer.com/golf-ball-compression-chart/
-Summary: Compression ratings for 34 golf balls — Pro V1, Supersoft, Noodle — matched to your swing speed. Grab the free printable PDF chart to take to the shop.
+Summary: Compression ratings for 34 golf balls — Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed. Free printable PDF.
 
 ## Golf Ball Finder — Match Your Swing Speed to the Right Ball
 URL: https://www.cubicalgolfer.com/golf-ball-finder/
@@ -88,6 +96,18 @@ Summary: Every golf launch monitor compared for price, accuracy, subscriptions, 
 ## Launch Monitor Room Size Checker — Will It Fit Your Space?
 URL: https://www.cubicalgolfer.com/launch-monitor-room-checker/
 Summary: Enter ceiling height and room depth to find which launch monitors fit. Garage, basement, and apartment setups covered with product recommendations.
+
+## Srixon Golf Ball Compression Chart
+URL: https://www.cubicalgolfer.com/srixon-golf-ball-compression-chart/
+Summary: Compression, cover and price for all 4 Srixon golf balls, from the Soft Feel (60) to the Z-Star XV (102), matched to your swing speed.
+
+## TaylorMade Golf Ball Compression Chart
+URL: https://www.cubicalgolfer.com/taylormade-golf-ball-compression-chart/
+Summary: Compression, cover and price for all 5 TaylorMade golf balls, from the Noodle (34) to the TP5x (97), matched to your swing speed.
+
+## Titleist Golf Ball Compression Chart
+URL: https://www.cubicalgolfer.com/titleist-golf-ball-compression-chart/
+Summary: Compression, cover and price for all 7 Titleist golf balls, from the TruFeel (45) to the Pro V1x (97), matched to your swing speed.
 
 ## Golf Tools & Calculators
 URL: https://www.cubicalgolfer.com/tools/
@@ -189,10 +209,6 @@ Summary: The most forgiving drivers of 2026 that help weekend golfers find more 
 URL: https://www.cubicalgolfer.com/best-golf-drivers-under-400/
 Summary: Premium driver performance at budget prices — the best drivers under $400 tested over 20+ rounds.
 
-## Best Golf Gifts for Dad 2026 — 5 Picks Under $100
-URL: https://www.cubicalgolfer.com/best-golf-gifts-for-dad/
-Summary: 5 golf gifts for dad under $100 — no novelty mugs, just gear he will actually use every round.
-
 ## Best Golf Gear for Mom — Equipment She Will Actually Use
 URL: https://www.cubicalgolfer.com/best-golf-gifts-for-mom/
 Summary: Best golf gifts for mom — gear she actually wants, not golf-themed candles.
@@ -200,6 +216,10 @@ Summary: Best golf gifts for mom — gear she actually wants, not golf-themed ca
 ## Best Golf Gifts Under $50 That Actually Get Used
 URL: https://www.cubicalgolfer.com/best-golf-gifts-under-50/
 Summary: 4 golf gifts under $50 that golfers actually use — no novelty junk, just gear for every round.
+
+## Best Golf GPS Speakers for 2026
+URL: https://www.cubicalgolfer.com/best-golf-gps-speakers-2026/
+Summary: A GPS speaker calls your yardage out loud so nobody has to reach for a phone. We compared the Bushnell Wingman line, the Blue Tees Player Pro, and two Turtleboxes for golfers who only want sound.
 
 ## Best Golf GPS Watch Under $300 — Premium Features, Lower Price
 URL: https://www.cubicalgolfer.com/best-golf-gps-watch-under-300/
@@ -373,9 +393,9 @@ Summary: Mallet or blade putter? The answer depends on your stroke, your misses,
 URL: https://www.cubicalgolfer.com/mevo-plus-review/
 Summary: Doppler radar, indoor/outdoor flexibility, E6 Connect simulator — the Mevo+ tries to do everything.
 
-## MLM2PRO vs SkyTrak+ — $700 vs $3,000, Is It Worth 4x More?
+## MLM2PRO vs SkyTrak+ — $700 vs $1,200, Is It Worth 2x?
 URL: https://www.cubicalgolfer.com/mlm2pro-vs-skytrak-plus/
-Summary: The MLM2PRO costs $700. The SkyTrak+ costs $3,000. Is the premium monitor really 4x better?
+Summary: The MLM2PRO costs $700. The SkyTrak+ costs about $1,200. Is the premium monitor really worth nearly double?
 
 ## Precision Pro NX9 Review — 25 Rounds Later
 URL: https://www.cubicalgolfer.com/precision-pro-nx9-review/
@@ -524,14 +544,6 @@ Summary: Training aids that produce real improvement between rounds — no gimmi
 ## Best Golf Umbrellas That Survive Midwest Wind
 URL: https://www.cubicalgolfer.com/best-golf-umbrella/
 Summary: Golf umbrellas tested in 30-mph gusts — which ones survive and which ones invert.
-
-## Best Father's Day Golf Gifts 2026
-URL: https://www.cubicalgolfer.com/fathers-day-golf-gifts-2026/
-Summary: Best Father's Day golf gifts ranked by price — under $25, $50, $100, $250, and splurge picks. All independently tested.
-
-## Gifts for the Golfer Who Never Keeps Anything You Buy Him
-URL: https://www.cubicalgolfer.com/gifts-for-golfer-who-never-keeps-anything/
-Summary: Golf gifts for the guy who has everything and returns the rest — the detective method that actually works.
 
 ## Best Golf Courses Within a Weekend Drive
 URL: https://www.cubicalgolfer.com/best-golf-courses-weekend-drive/
@@ -687,7 +699,7 @@ Summary: MLM2PRO vs Garmin R50 vs Square Golf — 30+ rounds of real data. No su
 
 ## Shot Scope LM1 vs Garmin R10 — Which Budget Monitor Wins?
 URL: https://www.cubicalgolfer.com/shot-scope-lm1-vs-garmin-r10/
-Summary: Shot Scope LM1 ($199) vs Garmin R10 ($599) — accuracy, features, subscription costs, and 3-year total cost compared.
+Summary: Shot Scope LM1 ($199) vs Garmin R10 ($490) — accuracy, features, subscription costs, and 3-year total cost compared.
 
 ## SkyTrak+ vs Mevo+: The Honest Comparison
 URL: https://www.cubicalgolfer.com/skytrak-vs-mevo-plus/
@@ -859,11 +871,11 @@ Summary: Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscriptio
 
 ## Blue Tees Series 3 Max vs Bushnell Tour V7 Shift
 URL: https://www.cubicalgolfer.com/compare/blue-tees-vs-bushnell-tour-v7/
-Summary: Blue Tees vs Bushnell rangefinder: we tested both over 30+ rounds. Accuracy is identical — the real differences are optics, vibration feedback, and.
+Summary: Blue Tees vs Bushnell rangefinder, tested over 30+ rounds. Accuracy is identical — the differences that matter are optics, vibration feedback and price.
 
 ## Bushnell Launch Pro vs Garmin R10 — Worth 4x?
 URL: https://www.cubicalgolfer.com/compare/bushnell-launch-pro-vs-garmin-r10/
-Summary: Bushnell Launch Pro ($2,499) vs Garmin R10 ($599) — accuracy, features, and whether the premium price is justified for a weekend golfer.
+Summary: Bushnell Launch Pro ($2,999) vs Garmin R10 ($490) — accuracy, features, and whether the premium price is justified for a weekend golfer.
 
 ## Bushnell Pro X3 vs Tour V7 — Which to Buy?
 URL: https://www.cubicalgolfer.com/compare/bushnell-pro-x3-vs-tour-v7/
@@ -871,7 +883,7 @@ Summary: Bushnell Pro X3 vs Tour V7 Shift comparison. Accuracy, slope, optics, a
 
 ## Bushnell Tour V7 Shift vs Callaway 300 Pro
 URL: https://www.cubicalgolfer.com/compare/bushnell-tour-v7-vs-callaway-300-pro/
-Summary: Bushnell Tour V7 Shift ($399) vs Callaway 300 Pro ($149) — we tested both over 10 rounds. The V7 is faster and more polished, but the 300 Pro delivers.
+Summary: Bushnell Tour V7 Shift ($399) vs Callaway 300 Pro ($197) — we tested both over 10 rounds. The V7 is faster and more polished, but the 300 Pro delivers.
 
 ## Bushnell Tour V7 vs Precision Pro NX9
 URL: https://www.cubicalgolfer.com/compare/bushnell-tour-v7-vs-precision-pro-nx9/
@@ -907,7 +919,7 @@ Summary: I tested the FlightScope Mevo Plus against the Bushnell Launch Pro over
 
 ## Garmin S62 vs S42: Which GPS Watch to Buy?
 URL: https://www.cubicalgolfer.com/compare/garmin-approach-s62-vs-s42/
-Summary: Garmin S62 vs S42: both are excellent GPS golf watches, but the S62 costs $200 more. We break down the exact differences and who should pay for the.
+Summary: Garmin S62 vs S42: both are excellent GPS golf watches, but the S62 costs $200 more. The exact feature differences, and which golfer should pay the premium.
 
 ## Garmin Approach S62 vs S70 — Worth the Upgrade?
 URL: https://www.cubicalgolfer.com/compare/garmin-approach-s62-vs-s70/
@@ -935,7 +947,7 @@ Summary: Garmin Approach R10 vs Rapsodo MLM2PRO compared on accuracy, indoor/out
 
 ## Garmin R50 vs Rapsodo MLM2PRO — $4,999 vs $699
 URL: https://www.cubicalgolfer.com/compare/garmin-r50-vs-rapsodo-mlm2pro/
-Summary: Garmin Approach R50 ($4,999) vs Rapsodo MLM2PRO ($699) — premium all-in-one accuracy vs value, radar vs camera, and which launch monitor a weekend golfer should buy.
+Summary: Garmin Approach R50 ($4,999) vs Rapsodo MLM2PRO ($599) — radar vs camera, premium accuracy vs value, and which a weekend golfer should actually buy.
 
 ## Garmin Approach S12 vs Bushnell Ion Elite GPS Watch
 URL: https://www.cubicalgolfer.com/compare/garmin-s12-vs-bushnell-ion-elite/
@@ -967,11 +979,11 @@ Summary: I tested the Rapsodo MLM2PRO against the Bushnell Launch Pro over dozen
 
 ## Rapsodo MLM2PRO vs FlightScope Mevo+: Which Should You Buy?
 URL: https://www.cubicalgolfer.com/compare/rapsodo-mlm2pro-vs-flightscope-mevo-plus/
-Summary: I spent six months with the Rapsodo MLM2PRO and the FlightScope Mevo+ — a $699 pocket unit against a $2,199 do-everything radar. Here's which launch monitor fits the weekend golfer.
+Summary: Six months with the Rapsodo MLM2PRO ($599) and the FlightScope Mevo+ ($1,839) — a pocket unit against a do-everything radar. Which fits a weekend golfer?
 
 ## SkyTrak+ vs FlightScope Mevo Gen 2
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-flightscope-mevo-gen2/
-Summary: SkyTrak+ ($2,995) vs FlightScope Mevo Gen 2 ($1,299) — two premium launch monitors tested head-to-head over 500+ shots. Which delivers better data for.
+Summary: SkyTrak+ ($1,195) vs FlightScope Mevo Gen 2 ($1,299) — tested head-to-head over 500+ shots. Now within $104 of each other, which is the better home sim?
 
 ## SkyTrak+ vs Garmin R10 — Camera vs Radar Launch Monitor
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-garmin-r10/
@@ -979,11 +991,11 @@ Summary: SkyTrak+ vs Garmin Approach R10 — accuracy, simulator quality, portab
 
 ## SkyTrak+ vs Mevo+ — Indoor Launch Monitor Compared
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-mevo-plus/
-Summary: SkyTrak+ ($2,995) vs Flightscope Mevo+ ($2,499) tested indoors and outdoors. Accuracy, software, subscription costs, and which is better for a home.
+Summary: SkyTrak+ ($1,195) vs Flightscope Mevo+ ($1,839) tested indoors and outdoors. Accuracy, software, subscription costs, and which is better for a home.
 
 ## Square Golf vs Garmin R10: Budget Monitor Face-Off
 URL: https://www.cubicalgolfer.com/compare/square-golf-vs-garmin-r10/
-Summary: I put the Square Golf Launch Monitor against the Garmin Approach R10 over a full spring of range and backyard sessions to see which budget unit earns your money
+Summary: Square Golf Launch Monitor vs Garmin Approach R10, tested over a spring of range and backyard sessions. Which budget unit actually earns your money?
 
 ## TaylorMade Qi35 Max vs Callaway Ai Smoke Max
 URL: https://www.cubicalgolfer.com/compare/taylormade-qi35-vs-callaway-ai-smoke/
@@ -999,7 +1011,7 @@ Summary: I played the TaylorMade TP5 and Callaway Chrome Soft over a full season
 
 ## Pro V1 vs Kirkland Golf Ball — Worth the $41 Difference?
 URL: https://www.cubicalgolfer.com/compare/titleist-pro-v1-vs-kirkland-signature/
-Summary: Titleist Pro V1 ($55/dz) vs Kirkland Signature (~$14/dz) tested over 150 shots. Is the most popular premium ball really worth almost four times the price of Costco?
+Summary: Titleist Pro V1 ($55 a dozen) vs Kirkland Signature (about $14 a dozen), tested over 150 shots. Is the premium ball really worth four times the price?
 
 ## atlanta-ga
 URL: https://www.cubicalgolfer.com/courses/atlanta-ga/
@@ -1019,7 +1031,7 @@ Summary: Houston has more golf courses than any US city outside Phoenix, and the
 
 ## los-angeles-ca
 URL: https://www.cubicalgolfer.com/courses/los-angeles-ca/
-Summary: Los Angeles golf is defined by two constraints: access and traffic. The best courses are either private (Riviera, Bel-Air, LACC) or so heavily subscribed that booking a tee time requires the timing and persistence of a concert-ticket scalper. The LA County municipal courses — Rancho Park, Wilson, Harding — offer resident rates under $50 but the online booking windows fill within seconds of opening. For visiting golfers, the play is either a premium round at a resort or semi-private course, or a trip south to San Diego where Torrey Pines delivers a US Open experience at public pricing. The playing calendar is Los Angeles greatest golf advantage: year-round play with minimal interruption. The Mediterranean climate delivers 300+ days of sunshine, mild temperatures in the 60s and 70s through winter, and warm 80-degree summers without the humidity that makes Southern and Midwestern golf miserable in July. The only weather disruption is June Gloom — a marine layer that keeps coastal courses cloudy and cool through early summer mornings — which is actually pleasant for golf even if the sky looks grey. LA golf terrain varies dramatically by location. Coastal courses (Los Verdes, Torrey Pines) play along oceanside bluffs with sea breezes and stunning Pacific views. Inland valley courses (Industry Hills, Oak Quarry) play through hilly terrain with canyon features and desert-adjacent landscaping. The San Fernando Valley and Pasadena corridors offer parkland-style courses through residential neighborhoods. Each microclimate plays differently — coastal courses run 5-10 degrees cooler than inland layouts and the wind patterns are completely different. The public golf standout is Torrey Pines in San Diego, technically outside LA but close enough for a day trip and worth the 90-minute drive. The South Course hosted the 2008 and 2021 US Opens and plays along the Pacific bluffs with views that rank among the most beautiful in American golf. Non-resident rates are premium but still a fraction of what comparable resort courses charge in Arizona or Hawaii. Within LA proper, Rancho Park Golf Course near Century City is the sentimental favorite — a former LA Open host that now serves as a busy city course with a fascinating history and solid bones despite its compact layout. Los Verdes on the Palos Verdes Peninsula delivers Pacific Ocean panoramas at municipal pricing that feels like a pricing error given the scenery. Booking strategy: LA municipal courses use online reservation systems that open 7 days in advance — set an alarm and be ready to book the instant the window opens, because peak tee times sell out in under a minute. For Torrey Pines, San Diego residents get priority booking 8 days out while non-residents book 7 days out. Weekday mornings are easier to book everywhere, and the pace of play drops from 5+ hours on weekends to a manageable 4-4.5 on weekdays. Gear considerations for LA golf: the coastal courses run cooler than inland layouts by 5-10 degrees, so layer up for morning rounds even in summer — the marine layer burns off by noon but the first few holes can be chilly in a windbreaker. The elevation changes at courses like Riviera and the Palos Verdes Peninsula layouts affect club selection more than the flat distances suggest — bring a rangefinder with slope mode. If you are driving to Torrey Pines from LA, budget 90 minutes for the trip south and plan a full day — the drive, the round, and a stop for fish tacos in La Jolla make it a complete golf day trip that ranks among the best experiences available to visiting golfers in Southern California. Golf-traveling beyond SoCal? Our New York and Phoenix guides follow the same play-it-tomorrow format.
+Summary: Los Angeles golf is defined by two constraints: access and traffic. The best courses are either private (Riviera, Bel-Air, LACC) or so heavily subscribed that booking a tee time requires the timing and persistence of a concert-ticket scalper. The LA County municipal courses — Rancho Park, Wilson, Harding — offer resident rates under $50 but the online booking windows fill within seconds of opening. For visiting golfers, the play is either a premium resort round or a trip south to San Diego, where Torrey Pines delivers a US Open experience at public pricing. The playing calendar is Los Angeles greatest golf advantage: year-round play with minimal interruption. The Mediterranean climate delivers 300+ days of sunshine, mild temperatures in the 60s and 70s through winter, and warm 80-degree summers without the humidity that makes Southern and Midwestern golf miserable in July. The only weather disruption is June Gloom — a marine layer that keeps coastal courses cloudy and cool through early summer mornings — which is actually pleasant for golf even if the sky looks grey. LA golf terrain varies dramatically by location. Coastal courses (Los Verdes, Torrey Pines) play along oceanside bluffs with sea breezes and stunning Pacific views. Inland valley courses (Industry Hills, Oak Quarry) play through hilly terrain with canyon features and desert-adjacent landscaping. The San Fernando Valley and Pasadena corridors offer parkland-style courses through residential neighborhoods. Each microclimate plays differently — coastal courses run 5-10 degrees cooler than inland layouts and the wind patterns are completely different. The public golf standout is Torrey Pines in San Diego, technically outside LA but close enough for a day trip and worth the 90-minute drive. The South Course hosted the 2008 and 2021 US Opens and plays along the Pacific bluffs with views that rank among the most beautiful in American golf. Non-resident rates are premium but still a fraction of what comparable resort courses charge in Arizona or Hawaii. Within LA proper, Rancho Park Golf Course near Century City is the sentimental favorite — a former LA Open host that now serves as a busy city course with a fascinating history and solid bones despite its compact layout. Los Verdes on the Palos Verdes Peninsula delivers Pacific Ocean panoramas at municipal pricing that feels like a pricing error given the scenery. Booking strategy: LA municipal courses use online reservation systems that open 7 days in advance — set an alarm and be ready to book the instant the window opens, because peak tee times sell out in under a minute. For Torrey Pines, San Diego residents get priority booking 8 days out while non-residents book 7 days out. Weekday mornings are easier to book everywhere, and the pace of play drops from 5+ hours on weekends to a manageable 4-4.5 on weekdays. Gear considerations for LA golf: the coastal courses run cooler than inland layouts by 5-10 degrees, so layer up for morning rounds even in summer — the marine layer burns off by noon but the first few holes can be chilly in a windbreaker. The elevation changes at courses like Riviera and the Palos Verdes Peninsula layouts affect club selection more than the flat distances suggest — bring a rangefinder with slope mode. If you are driving to Torrey Pines from LA, budget 90 minutes for the trip south and plan a full day — the drive, the round, and a stop for fish tacos in La Jolla make it a complete golf day trip that ranks among the best experiences available to visiting golfers in Southern California. Golf-traveling beyond SoCal? Our New York and Phoenix guides follow the same play-it-tomorrow format.
 
 ## miami-fl
 URL: https://www.cubicalgolfer.com/courses/miami-fl/
