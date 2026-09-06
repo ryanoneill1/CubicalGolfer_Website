@@ -403,7 +403,7 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Paradym%2520AI%2520Smoke%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$399',
+    price: '~$399', verifiedOn: '2026-09-05',
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'See Today\'s Price →',
