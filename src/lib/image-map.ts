@@ -27,7 +27,7 @@
  * DRIVERS:       callaway-paradym-ai-smoke-max, taylormade-qi35-max,
  *                cobra-aerojet-max, ping-g430-max-driver
  *
- * IRONS:         callaway-paradym-ai-smoke-max-irons, titleist-t300,
+ * IRONS:         callaway-paradym-ai-smoke-max-irons,
  *                titleist-t100, ping-g430-irons, wilson-d9-irons,
  *                wilson-profile-sgi, callaway-strata, taylormade-rbz-lite
  *
@@ -76,7 +76,7 @@ export const ALL_PRODUCT_IDS: readonly string[] = [
   // Drivers
   'callaway-paradym-ai-smoke-max', 'taylormade-qi35-max', 'cobra-aerojet-max', 'ping-g430-max-driver',
   // Irons
-  'callaway-paradym-ai-smoke-max-irons', 'titleist-t300', 'titleist-t100',
+  'callaway-paradym-ai-smoke-max-irons', 'titleist-t100',
   'ping-g430-irons', 'wilson-d9-irons', 'wilson-profile-sgi', 'callaway-strata', 'taylormade-rbz-lite',
   // Golf Balls
   'titleist-pro-v1', 'titleist-pro-v1x', 'taylormade-tp5', 'callaway-chrome-tour-2026',

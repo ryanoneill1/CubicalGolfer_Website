@@ -655,24 +655,25 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
-  // Titleist T300 Irons — search (shaft variants)
-  'titleist-t300': {
-    url: 'https://www.amazon.com/s?k=titleist+t300+irons&tag=cubicalgolfer-20',
-    program: 'amazon',
-    commissionPct: 3,
-    cookieDays: 1,
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520T300%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon',
-    price: 'from ~$999',
-    priceNote: 'Click to see current price — prices change frequently.',
-    label: 'See Today\'s Price →',
-    imgSrc: '/images/products/titleist-t300.webp',
-    imgAlt: 'Titleist T300 Golf Irons',
-  
+  // Titleist T350 — replaces the T300, which is unbuyable (Amazon "Currently unavailable",
+  // zero results at Golf Galaxy). T350 verified live 2026-09-06 at Golf Galaxy: $1,099.99
+  // (list $1,399.99), ships, left-hand available. Price supplied by Ryan; Golf Galaxy hides it
+  // behind MAP ("See Price In Cart"). imgSrc intentionally omitted - the repo only holds a T300
+  // photo and labelling it T350 would repeat the G430/G440 mismatch.
+  'titleist-t350': {
+    url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-t350-irons-23ttlmt35023stl5pirn%2F23ttlmt35023stl5pirn',
+    verifiedOn: '2026-09-06',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 14,
+    retailer: 'Golf Galaxy',
+    price: '~$1,099',
+    priceNote: 'Currently $1,099.99, down from $1,399.99. Titleist uses MAP pricing, so the figure only shows in the cart at some retailers.',
+    label: 'See Today\'s Price \u2192',
     benefits: [
-      'Max Impact 2.0 tech for distance without sacrificing feel',
-      'Denser tungsten weighting for a higher launch angle',
-      'Clean blade-like appearance with game-improvement tech',
+      'Game-improvement T-Series profile with a thinner topline than most in the class',
+      'Sold as a 5-9, PW, 48W set with True Temper AMT Red steel as a stock shaft option',
+      'Left-hand configurations available without an upcharge or wait',
     ],
   },
 
@@ -2750,7 +2751,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/orange-whip-trainer.webp',
     imgAlt: 'Orange Whip golf swing trainer',
   },
-  'ping-g430-sft': {
+  'ping-g440-sft': {
     url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-g440-sft-driver-24pngmg440sftdrltdrv%2F24pngmg440sftdrltdrv%3FProduct%3DProductSuggest',
     program: 'golfgalaxy',
     commissionPct: 8,
@@ -2761,8 +2762,8 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'direct',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Golf Galaxy →',
-    imgSrc: '/images/products/ping-g430-sft.webp',
-    imgAlt: 'Ping G430 SFT Driver',
+    imgSrc: '/images/products/Ping _G440_SFT_Driver.webp',
+    imgAlt: 'Ping G440 SFT driver',
     benefits: [
       'Carries within a few yards of drivers costing considerably more',
       'High launch with low spin suits 85-100 mph swing speeds perfectly',
@@ -2797,6 +2798,8 @@ export const AFFILIATE: Record<string, {
       'Built-in ball return feeds shots back instead of leaving you to collect them',
       'Reinforced nylon net on a lightweight frame that breaks down for storage',
     ],
+    imgSrc: '/images/products/GoSports_net.webp',
+    imgAlt: 'GoSports golf practice hitting net set up indoors',
     price: '~$76',
     priceNote: 'Budget nets move on deal cycles. $76 is in line with the recent range.',
     label: 'Check Price at Amazon →',
