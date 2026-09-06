@@ -3589,7 +3589,7 @@ export const AFFILIATE: Record<string, {
     program: 'playbetter',
     commissionPct: 5,
     cookieDays: 30,
-    retailer: 'PlayBetter', price: '~$199',
+    retailer: 'PlayBetter', price: '~$216', verifiedOn: '2026-09-05',
     priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at PlayBetter →',
     imgSrc: '/images/products/diy-impact-screen-enclosure.webp', imgAlt: 'Carls Place golf simulator impact screen',
     benefits: [
@@ -3610,7 +3610,7 @@ export const AFFILIATE: Record<string, {
   'optoma-zw350st': {
     url: 'https://www.amazon.com/Optoma-ZW350ST-Technology-Short-Throw-Projector/dp/B0D9HW1XVY?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon', commissionPct: 3, cookieDays: 1, retailer: 'Amazon',
-    price: '~$909',
+    price: '~$823', verifiedOn: '2026-09-05',
     priceNote: 'MSRP is $999; street runs about $909. Simulator gear drops 10-20% during Black Friday.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/optoma-zw350st.webp',

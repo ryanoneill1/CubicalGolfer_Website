@@ -418,17 +418,60 @@ const NAV_ITEMS = [
         window.gtag('config', GA4_ID, { send_page_view: true });
       }
 
-      // ── Affiliate Click tracking (data-outbound) ──
-      // Delegated listener: any anchor with data-outbound fires events.
-      // Uses sendBeacon pattern so navigation is never delayed.
+      // ── Affiliate Click tracking ──
+      // Delegated listener. Sprint 110: this used to require a data-outbound
+      // attribute, which only 46.8% of affiliate links actually carried — so
+      // GA4 logged 224 clicks against Amazon's 546 and page-level attribution
+      // was impossible. Matching on the destination host instead covers every
+      // affiliate link, including ones added later that forget the attribute.
+      var AFFILIATE_HOSTS = {
+        'amazon.com': 'amazon',
+        'playbetter.com': 'playbetter',
+        'bushnell.pxf.io': 'bushnell',
+        // CJ redirector domains — all Golf Galaxy / Dick's for this site
+        'jdoqocy.com': 'golfgalaxy',
+        'tkqlhce.com': 'golfgalaxy',
+        'anrdoezrs.net': 'golfgalaxy',
+        'kqzyfj.com': 'golfgalaxy',
+        'dpbolvw.net': 'golfgalaxy'
+      };
+
+      // Generic button text ("Check price →") tells us nothing about which
+      // product was clicked, so fall back to the table row or the section
+      // heading the link sits under.
+      function productLabel(link) {
+        var aria = link.getAttribute('aria-label');
+        if (aria) return aria.replace('Check price for ', '').replace("Check today's price for ", '').trim();
+        var txt = (link.textContent || '').trim();
+        if (txt && !/^(check|view|buy|shop|see|get)\b/i.test(txt) && txt.length > 3) return txt;
+        var row = link.closest('tr');
+        if (row && row.cells && row.cells.length) {
+          var first = (row.cells[0].textContent || '').trim();
+          if (first) return first;
+        }
+        var sec = link.closest('section, article, div');
+        while (sec) {
+          var h = sec.querySelector('h2, h3');
+          if (h && h.textContent.trim()) return h.textContent.trim();
+          sec = sec.parentElement ? sec.parentElement.closest('section, article, div') : null;
+        }
+        return txt || 'unknown';
+      }
+
       document.addEventListener('click', function(e) {
-        var link = e.target.closest('a[data-outbound]');
+        var link = e.target.closest('a[href]');
         if (!link) return;
 
-        var retailer = link.getAttribute('data-outbound') || 'other';
+        var host = '';
+        try { host = new URL(link.href, window.location.origin).hostname.replace(/^www\./, ''); }
+        catch (err) { return; }
+
+        var retailer = link.getAttribute('data-outbound') || AFFILIATE_HOSTS[host];
+        if (!retailer) return;   // not an affiliate link — ignore
+
         var linkUrl = link.href || '';
         var pagePath = window.location.pathname;
-        var product = (link.getAttribute('aria-label') || link.textContent || '').substring(0, 80).replace('Check price for ', '').replace('Check today\'s price for ', '').trim();
+        var product = productLabel(link).substring(0, 80);
 
         // Plausible event (existing integration)
         if (typeof window.plausible === 'function') {
