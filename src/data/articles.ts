@@ -282,7 +282,7 @@ export const ARTICLES: Article[] = [
         h2: 'Best Mid-Range: Garmin Approach S42',
         rating: 4.5, affiliateKey: 'garmin-approach-s42',
         body: "The S42 is the watch we recommend most often because it hits the sweet spot between features and price. At $249, it delivers the core Garmin GPS experience — the same 42,000-course database, Green View, and hazard mapping — in a smaller, lighter package.\n\nWe wore the S42 for 10 rounds and compared it side-by-side with the S62. The course maps are there but displayed on a smaller, non-touch screen that you navigate with buttons. Green View works the same way — you can see the green shape and move the pin placement through the Garmin Golf app on your phone. Front, middle, and back yardages are accurate and update quickly as you move.\n\nWhat is missing versus the S62: Virtual Caddie, wind data, and the full-color touchscreen. You also lose automatic club tracking — the S42 requires manual input through the phone app. For most weekend golfers, none of these are dealbreakers. Front/middle/back with green contours covers 90% of what you need on the course.\n\nThe design is sleeker and more discreet than the S62. It looks like a normal fitness watch, not a chunky golf computer. Battery life is 15 hours in GPS mode, which covers 3 full rounds comfortably.\n\nWhat we liked most: the price-to-feature ratio. You get Garmin GPS accuracy and the same course database as the S62 for $150 less. The smaller size makes it comfortable as a daily wear watch. Setup through the Garmin Golf app takes about 5 minutes.\n\nWhat we did not like: no touchscreen — button navigation is slower. No Virtual Caddie means you are on your own for club selection. And the display is not as crisp as the S62 in direct sunlight.\n\nCompared to the S62: if you want club suggestions and the best screen, pay the extra $150 for the S62. If you want reliable yardages on a good-looking watch at a fair price, the S42 is the smarter buy for most golfers.\n\nBuy this if: you want Garmin GPS quality at a mid-range price and do not need Virtual Caddie or auto-tracking.\n\nSkip this if: you want the full feature set — spend the extra $150 on the S62, or save $100 and get the Bushnell for basics.",
-        price: '~$249 at Amazon',
+        price: '~$299',
         pros: [
           'Same 42,000-course database as the S62 at $150 less',
           'Sleek design works as a daily smartwatch',
@@ -299,7 +299,7 @@ export const ARTICLES: Article[] = [
         h2: 'Best Auto-Shot Tracking: Shot Scope V5', affiliateKey: 'shot-scope-v5',
         badge: 'BEST AUTO-TRACKING', rating: 4.6,
         body: "The Shot Scope V5 does something no other watch in our test does: it automatically tracks every shot you hit — club, distance, direction, and location — without touching your phone or pressing any buttons. You screw small sensor tags into the grip end of each club. The watch detects which club you pulled and records the shot when you swing. After the round, you get a complete strokes-gained analysis showing exactly where you lose and gain shots.\n\nWe played 8 rounds with the V5 and the data transformed our practice. We discovered we were losing 3.2 strokes per round on approach shots from 125-150 yards — a specific weakness we never would have identified without the data. Our 7-iron distance was 12 yards shorter than we assumed, which explained a lot of short-side misses.\n\nThe GPS functionality is solid but a step behind Garmin. The V5 has 36,000 courses preloaded with front/middle/back yardages and basic green shapes. No color screen — the display is monochrome. No Virtual Caddie. The watch is a GPS with shot tracking, not a smartwatch with golf features.\n\nThe big advantage over Arccos (the other main shot-tracking system) is price. The V5 costs $249 one time with no subscription. Arccos costs ~$249 for sensors plus $99 per year ongoing. After year one, Shot Scope is dramatically cheaper.\n\nWhat we liked most: the automatic shot tracking is seamless after initial setup. The strokes-gained data is genuinely actionable. And the no-subscription model saves $99/year versus Arccos.\n\nWhat we did not like: the GPS maps are basic compared to Garmin. The monochrome display is hard to read in low light. And the sensor tags add a small amount of weight to the grip end — some golfers notice it.\n\nCompared to the Garmin S62: the S62 has better GPS and maps. The V5 has better shot tracking. If you already know your distances and want performance data, get the V5. If you want course information and club suggestions, get the S62.\n\nBuy this if: you want to know exactly where you lose strokes and are willing to install sensor tags in your grips.\n\nSkip this if: you just want yardages — the Bushnell or Garmin S42 do that without the sensor setup.",
-        price: '~$249 at Shot Scope',
+        price: '~$210',
         pros: [
           'Automatic shot tracking — no button pressing, no phone needed',
           'Strokes-gained analysis reveals exactly where you lose shots',
@@ -340,7 +340,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'TOP PICK', rating: 4.6, affiliateKey: 'garmin-approach-s44',    name: 'Garmin Approach S44', bestFor: 'Best Overall 2026', price: '~$289', feature1: '4.3/5 ★', feature2: '521 reviews', winner: true },
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Most Tested',       price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: false },
-        { rating: 4.6, affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$249', feature1: '4.5/5 ★', feature2: '', winner: false },
+        { rating: 4.6, affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$210', feature1: '4.5/5 ★', feature2: '', winner: false },
         { rating: 4.2, affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget',        price: '~$199', feature1: 'No',        feature2: '16 hrs', winner: false },
         { rating: 4.5, affiliateKey: 'garmin-approach-s42',    name: 'Garmin Approach S42', bestFor: 'Best Mid-Range',     price: '~$299', feature1: 'Via phone', feature2: '15 hrs', winner: false },
       ],
@@ -556,7 +556,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-07-21',
     title: 'Best Golf Irons 2026 — 9 Picks, 5 Tested',
     titleDisplay: 'Best Golf Irons — Tested for Mid and High Handicappers',
-    bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T350 balances feel and forgiveness better than anything else at this price. See our full iron guide → Our top pick: the <strong>Callaway Paradym Ai Smoke Irons</strong> (from ~$899).',
+    bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T350 balances feel and forgiveness better than anything else at this price. See our full iron guide → Our top pick: the <strong>Callaway Paradym Ai Smoke Irons</strong> (from ~$772).',
     description: 'Best golf irons for 2026 — 5 game-improvement sets tested. Ping G430, Callaway Paradym, and TaylorMade Qi compared for forgiveness and distance.',
     excerpt: 'The best game-improvement, mid-handicap, and players irons of 2026 — tested and ranked for every skill level.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/best-golf-irons-2026.jpg',
@@ -572,7 +572,7 @@ export const ARTICLES: Article[] = [
         h2: 'Best for High Handicappers: Callaway Paradym Ai Smoke Max Irons',
         
         body: "We played the Paradym Ai Smoke Max irons for 12 rounds and the effect on our consistency was dramatic. Shots that used to come up 15 yards short on heel strikes were suddenly reaching the green. The AI-designed face is not marketing fluff — it measurably widens the effective sweet spot.\n\nAt our 88 mph 7-iron swing speed, the Ai Smoke Max carried 158 yards on center strikes. On deliberate toe hits, carry dropped to 148 yards — just a 10-yard penalty. On our old cavity backs, the same toe strike lost 18 yards. That 8-yard improvement across 14 iron shots per round translates to 2-3 fewer chunked approaches and more looks at par.\n\nThe wide sole cuts through rough without snagging. The deep cavity back gets the ball airborne even from tight lies — we hit several shots from hardpan that launched like they were on a tee. The offset is visible at address, which helps golfers who fight a slice, but it does look like a game-improvement iron. If aesthetics matter to you, the T300 has a cleaner profile.\n\nFeel is solid but muted. You know when you hit it well, but the feedback on mishits is dampened — by design. These irons are built to minimize the consequence of bad contact, not to tell you about it. At $1,199 for a set, they are premium-priced but competitive with the Titleist and Ping alternatives.\n\nWhat we liked most: the widest sweet spot of any iron we tested. Shots from the rough launch easily. Consistent gapping through the set.\n\nWhat we did not like: muted feel on pure strikes — better players will miss the feedback. The offset look at address is not for everyone. And $1,199 is steep when the Wilson Dynapower delivers comparable forgiveness for $599.98.\n\nCompared to the Titleist T350: the Callaway is more forgiving on severe mishits. The T300 offers better feel and a cleaner look. High handicappers (20+) should choose the Callaway. Mid-handicappers (10-20) will prefer the T300.\n\nBuy this if: your handicap is 18+ and you need the maximum forgiveness available in a 2026 iron set.\n\nSkip this if: you are a 10-handicap or better — you will find these irons too chunky and lacking in feedback.\n\nFor more options at this level, see our full irons for high handicappers guide.",
-        price: '~$1,199 set',
+        price: 'from ~$772',
         pros: ['Widest effective sweet spot in our test — only 10 yards lost on toe hits', 'Deep cavity back launches from rough and tight lies easily', 'Consistent distance gapping through the set', 'AI-designed face genuinely widens the forgiveness window'],
         cons: ['Muted feel on pure strikes — better players miss the feedback', 'Visible offset at address — looks like a game-improvement iron', 'Premium pricing for max-forgiveness irons'],
         badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
@@ -655,7 +655,7 @@ export const ARTICLES: Article[] = [
       headers: ['Iron Model', 'Best For', 'Price (Set)', 'Our Rating'],
       rows: [
         { rating: 4.6, affiliateKey: 'wilson-dynapower-irons', name: 'Wilson Dynapower', bestFor: 'Best value (current)', price: '~$600', feature1: 'High', winner: false },
-        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'High Handicappers', price: '~$1,199', feature1: '4.7/5 ★', feature2: '', winner: true },
+        { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'High Handicappers', price: 'from ~$772', feature1: '4.7/5 ★', feature2: '', winner: true },
         {  rating: 4.4,affiliateKey: 'cobra-aerojet-max-irons', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Distance', price: '~$699', feature1: '', feature2: '', winner: false },
         {  rating: 4.5,affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Budget forgiveness', price: 'from ~$599', feature1: '', feature2: '', winner: false },
         {  rating: 4.4,affiliateKey: 'taylormade-qi-irons', name: 'TaylorMade Qi', bestFor: 'Modern feel', price: 'from ~$899', feature1: '', feature2: '', winner: false },
@@ -5433,7 +5433,7 @@ export const ARTICLES: Article[] = [
       headers: ['Irons', 'Best For', 'Price', 'Forgiveness', 'Senior Shaft'],
       rows: [
         { rating: 4.6, affiliateKey: 'wilson-dynapower-irons', name: 'Wilson Dynapower', bestFor: 'Best value (current)', price: '~$600', feature1: 'High', winner: false },
-        { name: 'Callaway Paradym Ai Smoke Max', bestFor: 'Best Overall', price: '~$1,199', feature1: 'Maximum', feature2: 'Available', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons' },
+        { name: 'Callaway Paradym Ai Smoke Max', bestFor: 'Best Overall', price: 'from ~$772', feature1: 'Maximum', feature2: 'Available', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons' },
         { name: 'Titleist T350 Irons', bestFor: 'Best Feel', price: '~$1,099', feature1: 'High', feature2: 'Available', winner: false, rating: 4.5, affiliateKey: 'titleist-t350' },
       ],
     },
@@ -5443,7 +5443,7 @@ export const ARTICLES: Article[] = [
         badge: 'BEST OVERALL', affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
         rating: 4.7,
         body: 'The AI Flash Face SS24 technology generates maximum ball speed across the entire face — not just the sweet spot. For senior golfers who no longer consistently hit the center of the face, this is the most important feature available in 2026. The wide sole prevents digging on turf contact, and lightweight graphite shafts are available in a Senior flex that optimizes launch for sub-90 mph swing speeds.\n\nIf you do not know your number, the <a href="/golf-swing-speed-chart/">swing speed chart</a> shows typical speeds by age and handicap and what flex each implies.',
-        price: '~$1,199 (7-iron set)',
+        price: 'from ~$772',
         pros: ['AI face maximizes ball speed on every mishit, not just center strikes', 'Wide sole prevents digging — critical for senior ball strikers', 'Available in Senior graphite shaft', 'Highest launch of any iron in our testing'],
         cons: ['A significant investment at full retail', 'The chunky look bothers players used to thinner toplines', 'Maximum game-improvement — no feel feedback on perfect strikes'],
       },
@@ -6513,7 +6513,7 @@ export const ARTICLES: Article[] = [
       headers: ['Watch', 'Price', 'Best For', 'Tracking', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best Overall', price: '~$499', feature1: '4.7/5 ★', feature2: 'Manual tag', winner: true },
-        { rating: 4.3, affiliateKey: 'shot-scope-v5',       name: 'Shot Scope V5',      bestFor: 'Best Tracking', price: '~$249', feature1: '4.6/5 ★', feature2: 'Auto (tags)', winner: false },
+        { rating: 4.3, affiliateKey: 'shot-scope-v5',       name: 'Shot Scope V5',      bestFor: 'Best Tracking', price: '~$210', feature1: '4.6/5 ★', feature2: 'Auto (tags)', winner: false },
         { rating: 4.6, affiliateKey: 'garmin-approach-s42',  name: 'Garmin Approach S42', bestFor: 'Best Mid-Range', price: '~$299', feature1: '4.5/5 ★', feature2: 'Via phone', winner: false },
         { rating: 4.2, affiliateKey: 'bushnell-ion-elite',   name: 'Bushnell Ion Elite',  bestFor: 'Best Budget', price: '~$199', feature1: '4.3/5 ★', feature2: 'None', winner: false },
       ],
@@ -6832,7 +6832,7 @@ export const ARTICLES: Article[] = [
     ],
     comparisonTable: { headers: ['System', 'Price', 'AI Caddie', 'Subscription', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best AI', price: '~$175 + $99/yr', feature1: '4.6/5 ★', feature2: 'Yes', winner: true },
-      { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$249', feature1: '4.5/5 ★', feature2: 'None', winner: false },
+      { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$210', feature1: '4.5/5 ★', feature2: 'None', winner: false },
       { rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin S62', bestFor: 'Best Watch', price: '~$499', feature1: '4.7/5 ★', feature2: 'None', winner: false },
     ] },
     faq: [
@@ -7027,7 +7027,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['System', 'Price', 'Tracking', 'Subscription', 'Rating'], rows: [
       { rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Tracking', price: '~$175 + $99/yr', feature1: '94% auto', feature2: '$99/yr', winner: false },
       { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s44', name: 'Garmin Approach S44', bestFor: 'Best Overall', price: '~$289', feature1: '70% auto', feature2: 'None', winner: true },
-      { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$249', feature1: '90% auto', feature2: 'None', winner: false },
+      { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope V5', bestFor: 'Best Value', price: '~$210', feature1: '90% auto', feature2: 'None', winner: false },
     ] },
     faq: [
       { q: 'Which is more accurate for shot tracking?', a: 'Arccos at 94% vs Garmin at 70% automatic accuracy. Arccos uses physical club sensors; Garmin guesses from GPS distance.' },
@@ -8095,7 +8095,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Impressive Gifts Under $100', body: "A premium golf towel set ($30-$40), a quality golf book like Harvey Penick\'s Little Red Book ($15), and a sleeve of personalized Pro V1s ($25) combine to make a $60-$80 gift basket that looks like you spent $150. Alternatively, a single high-quality item: an Arccos Caddie sensor set ($99 on sale) gives the data-loving golfer automatic shot tracking.", badge: 'BEST VALUE', rating: 4.3, affiliateKey: 'arccos-caddie-sensors' },
       { h2: 'Premium Gifts Under $250', badge: 'BEST OVERALL', body: "The Garmin Approach S42 GPS watch ($299) is the sweet spot. It provides instant front/center/back yardages on 42,000 courses worldwide with zero subscription fees, and it works as a regular fitness watch the other 6 days of the week. For the golfer who does not have a GPS device, this is a game-changer they will wear daily.", price: '~$299', affiliateKey: 'garmin-approach-s42', rating: 4.6,
         pros: ['No subscription — free lifetime course updates', 'Works as a daily fitness watch', 'Instant yardages without pulling out a phone'],
-        cons: ['$279 is a real investment', 'Does not have slope adjustment (that is the S62)'],
+        cons: ['$299 is a real investment', 'Does not have slope adjustment (that is the S62)'],
       },
       { h2: 'Splurge Picks Under $500', body: "Rapsodo MLM2PRO launch monitor ($599 often $499 on holiday sales) — the indoor practice tool that lets him play golf in the living room all winter. Bushnell Tour V7 Shift rangefinder ($399) — the best laser rangefinder on the market. SkyTrak+ ($1,195) — the ultimate home simulator experience. These are the gifts that golfers dream about but will not buy for themselves.", badge: 'PREMIUM PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
     
@@ -8687,7 +8687,7 @@ export const ARTICLES: Article[] = [
     dateModified: '2026-07-02',
     title: 'Best Golf Clubs for Seniors — Slow Swing Speed',
     titleDisplay: 'Best Golf Clubs for Slow Swing Speed — Seniors & Returning Golfers',
-    bottomLine: 'The <strong>Callaway Reva driver</strong> ($519) and <strong>Ping G Le3 irons</strong> ($699) are the best combination for sub-85 mph swing speeds. Ultralight designs with maximum launch and forgiveness — the right clubs add 15-20 yards without changing your swing.',
+    bottomLine: 'The <strong>Callaway Reva driver</strong> ($519) and <strong>Ping G Le3 irons</strong> ($850) are the best combination for sub-85 mph swing speeds. Ultralight designs with maximum launch and forgiveness — the right clubs add 15-20 yards without changing your swing.',
     description: 'Best golf clubs for seniors with slow swing speed — drivers, irons, and hybrids for under-85-mph swingers. Tested picks that add real distance in 2026.',
     excerpt: 'Best clubs for slow swing speed — add 15-20 yards without swinging harder.',
     intro: 'If your driver swing speed is under 85 mph, most golf clubs are not designed for you. They are too heavy, too stiff, and launch too low. The right clubs — ultralight shafts, high-launch heads, senior or A-flex — can add 15-20 yards to your drives without changing your swing one bit. This is not about being old. It is about physics: lighter club + correct flex = more speed = more distance.',
@@ -8711,7 +8711,7 @@ export const ARTICLES: Article[] = [
         pros: ['Ultralight — swing faster without effort', 'High launch optimized for 65-85 mph speeds', '12-18 yards of carry distance gain vs standard drivers'],
         cons: ['$519 for a driver that only suits one speed range', 'Not suitable for golfers over 85 mph', 'Limited shaft options'],
       },
-      { h2: 'Best Irons: Ping G Le3', badge: 'BEST IRONS', body: "The Ping G Le3 irons ($699/set) have wider soles, higher launch, and lightweight graphite shafts tuned for moderate swing speeds. The wide sole prevents the fat shots that plague slow-swing golfers (less speed = less ability to dig through turf). The graphite shafts are 15-20g lighter than steel, which translates to 1-2 mph more clubhead speed per club. Available in women\'s and senior flex configurations.", price: '~$699', affiliateKey: 'ping-g-le3-irons', rating: 4.7,
+      { h2: 'Best Irons: Ping G Le3', badge: 'BEST IRONS', body: "The Ping G Le3 irons ($850/set) have wider soles, higher launch, and lightweight graphite shafts tuned for moderate swing speeds. The wide sole prevents the fat shots that plague slow-swing golfers (less speed = less ability to dig through turf). The graphite shafts are 15-20g lighter than steel, which translates to 1-2 mph more clubhead speed per club. Available in women\'s and senior flex configurations.", price: '~$850', affiliateKey: 'ping-g-le3-irons', rating: 4.7,
         pros: ['Wide sole prevents fat shots', 'Lightweight graphite adds 1-2 mph speed', 'Available in senior and women flex'],
         cons: ['Mid-premium pricing', 'Oversized heads — better players may not like the look', 'Limited to graphite shafts only'],
       },
@@ -8726,7 +8726,7 @@ export const ARTICLES: Article[] = [
       headers: ['Club', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'callaway-reva-driver', name: 'Callaway Reva Driver', bestFor: 'Best Driver', price: '~$519', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
-        { rating: 4.7, affiliateKey: 'ping-g-le3-irons', name: 'Ping G Le3 Irons', bestFor: 'Best Irons', price: '~$699', feature1: '4.7/5 ★', winner: false },
+        { rating: 4.7, affiliateKey: 'ping-g-le3-irons', name: 'Ping G Le3 Irons', bestFor: 'Best Irons', price: '~$850', feature1: '4.7/5 ★', winner: false },
         { rating: 4.6, affiliateKey: 'callaway-strata', name: 'Callaway Strata Set', bestFor: 'Best Value', price: '~$481', feature1: '4.4/5 ★', winner: false },
       ],
     },
@@ -12398,7 +12398,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Garmin Approach S42', badge: 'BEST OVERALL', rating: 4.6, affiliateKey: 'garmin-approach-s42', price: '~$299', bestFor: 'Most golfers — best balance of features and value', feature1: '42,000+', feature2: '3 rounds' },
         { name: 'Garmin Approach S12', badge: 'BEST VALUE', rating: 4, affiliateKey: 'garmin-approach-s12', price: '~$199', bestFor: 'Budget-conscious golfers who want reliable distances', feature1: '42,000+', feature2: '5 rounds' },
-        { name: 'Shot Scope V5', badge: 'BEST DATA', rating: 4.3, affiliateKey: 'shot-scope-v5', price: '~$249', bestFor: 'Data-driven golfers who want shot tracking analytics', feature1: '36,000+', feature2: '2 rounds' },
+        { name: 'Shot Scope V5', badge: 'BEST DATA', rating: 4.3, affiliateKey: 'shot-scope-v5', price: '~$210', bestFor: 'Data-driven golfers who want shot tracking analytics', feature1: '36,000+', feature2: '2 rounds' },
         { name: 'Bushnell Ion Elite', badge: 'SIMPLEST', rating: 4.2, affiliateKey: 'bushnell-ion-elite', price: '~$199', bestFor: 'Golfers who want clear distances without complexity', feature1: '38,000+', feature2: '4 rounds' },
       ],
     },
