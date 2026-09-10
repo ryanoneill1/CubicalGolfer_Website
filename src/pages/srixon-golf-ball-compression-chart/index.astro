@@ -7,13 +7,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 
+import { ROBOTS_INDEX } from '../../lib/seo';
 const meta = {
   title: "Srixon Golf Ball Compression Chart 2026 \u2014 All 4",
   description: "Compression, cover and price for all 4 Srixon golf balls, from the Soft Feel (60) to the Z-Star XV (102), matched to your swing speed.",
   canonical: 'https://www.cubicalgolfer.com/srixon-golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },

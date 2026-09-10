@@ -13,6 +13,27 @@ const DOMAIN           = 'https://www.cubicalgolfer.com';
 // Add your GSC verification code here (found in GSC → Settings → Ownership → HTML tag).
 // The BaseLayout renders this as: <meta name="google-site-verification" content={VERIFICATION_TAG} />
 export const VERIFICATION_TAG = '';   // ← paste your GSC code here if needed
+
+/**
+ * Robots directives — one source of truth.
+ *
+ * WHY THE EXTRA DIRECTIVES
+ * "index, follow" alone lets Google truncate the snippet and show only a small
+ * (or no) image thumbnail. `max-image-preview:large` permits the large image
+ * thumbnail that dominates a mobile result, and `max-snippet:-1` removes the
+ * snippet length cap. Both are Google-documented, low-risk, and act directly on
+ * click-through rate rather than on ranking.
+ *
+ * This site had them on 8 hub pages (/tools, /brands/*, /compare) and NOT on the
+ * other 254 — including every article and comparison page, which are the ones
+ * that actually earn. That inconsistency is what this constant removes.
+ *
+ * `max-video-preview:-1` is included for completeness; the site has no video
+ * today, so it is a no-op that costs nothing and avoids a future gap.
+ */
+export const ROBOTS_INDEX   = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
+export const ROBOTS_NOINDEX = 'noindex, follow';
+
 const OG_IMG  = `${DOMAIN}/images/og-image.jpg`;
 const SITE    = 'Cubical Golfer';
 const MAX_TITLE = 60;
@@ -53,7 +74,7 @@ export function homeMeta(): PageMeta {
     canonical:   `${DOMAIN}/`,
     ogImage:     OG_IMG,
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      ROBOTS_INDEX,
     breadcrumbs: [{ label: 'Home', href: '/' }],
   };
 }
@@ -67,7 +88,7 @@ export function articleMeta(article: Article): PageMeta {
     canonical,
     ogImage:       normalizeOgImage(article.ogImage) || categoryOgImage(article.category),
     ogType:        'article',
-    robots:        'index, follow',
+    robots:        ROBOTS_INDEX,
     datePublished: article.datePublished,
     dateModified:  article.dateModified,
     breadcrumbs: [
@@ -87,7 +108,7 @@ export function comparisonMeta(c: Comparison): PageMeta {
     canonical,
     ogImage:       categoryOgImage('gear-reviews'),
     ogType:        'article',
-    robots:        'index, follow',
+    robots:        ROBOTS_INDEX,
     datePublished: c.datePublished,
     dateModified:  c.dateModified,
     breadcrumbs: [
@@ -111,7 +132,7 @@ export function staticMeta(opts: {
     canonical:   `${DOMAIN}${opts.slug}`,
     ogImage:     OG_IMG,
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      ROBOTS_INDEX,
     breadcrumbs: [
       { label: 'Home', href: '/' },
       { label: opts.breadcrumb ?? opts.title, href: opts.slug },
@@ -130,7 +151,7 @@ export function cityMeta(city: GolfCity): PageMeta {
     canonical,
     ogImage:      OG_IMG,
     ogType:       'article',
-    robots:       'noindex, follow',
+    robots:       ROBOTS_NOINDEX,
     dateModified: city.dateModified,
     breadcrumbs: [
       { label: 'Home',                       href: '/' },
@@ -148,7 +169,7 @@ export function coursesMeta(): PageMeta {
     canonical:   `${DOMAIN}/courses/`,
     ogImage:     OG_IMG,
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      ROBOTS_INDEX,
     breadcrumbs: [
       { label: 'Home',                href: '/' },
       { label: 'Golf Courses by City', href: '/courses/' },
@@ -178,7 +199,7 @@ export function categoryMeta(category: string): PageMeta {
     canonical:   `${DOMAIN}/${cfg.slug}/`,
     ogImage:     categoryOgImage(category),
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      ROBOTS_INDEX,
     breadcrumbs: [
       { label: 'Home',    href: '/' },
       { label: cfg.label, href: `/${cfg.slug}/` },
@@ -219,7 +240,7 @@ export function howWeTestMeta(): PageMeta {
     canonical:   `${DOMAIN}/how-we-test/`,
     ogImage:     OG_IMG,
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      ROBOTS_INDEX,
     breadcrumbs: [
       { label: 'Home',        href: '/' },
       { label: 'How We Test', href: '/how-we-test/' },
@@ -235,7 +256,7 @@ export function aboutMeta(): PageMeta {
     canonical:   `${DOMAIN}/about/`,
     ogImage:     OG_IMG,
     ogType:      'website',
-    robots:      'index, follow',
+    robots:      ROBOTS_INDEX,
     breadcrumbs: [
       { label: 'Home',  href: '/' },
       { label: 'About', href: '/about/' },

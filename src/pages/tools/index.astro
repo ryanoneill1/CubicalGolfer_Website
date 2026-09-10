@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 import { getAffiliateLink } from '../../data/affiliate-links';
 
@@ -9,7 +10,7 @@ const meta = {
   canonical:   'https://www.cubicalgolfer.com/tools/',
   ogImage:     'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType:      'website' as const,
-  robots:      'index,follow,max-snippet:-1,max-image-preview:large',
+  robots:      ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Tools', href: '/tools/' },

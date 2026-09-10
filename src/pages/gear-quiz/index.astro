@@ -1,6 +1,7 @@
 ---
 // src/pages/gear-quiz/index.astro — Interactive gear recommendation quiz
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 import { breadcrumbSchema , webApplicationSchema, faqSchema } from '../../lib/schema';
 
 const meta = {
@@ -9,7 +10,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/gear-quiz/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/gear-quiz.jpg',
   ogType: 'website' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Gear Quiz', href: '/gear-quiz/' },

@@ -9,7 +9,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/launch-monitor-room-checker/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/launch-monitor-room-checker.jpg',
   ogType: 'website' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Tools', href: '/tools/' },
@@ -71,6 +71,7 @@ const monitors = [
   },
 ];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">

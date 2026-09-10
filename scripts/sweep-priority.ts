@@ -16,7 +16,30 @@
  *
  * This ranks the queue instead of guessing at it:
  *
- *     score = commission earned per sale  x  pages  x  staleness multiplier
+ *     score = commission per sale  x  DEMAND  x  pages  x  staleness
+ *
+ * ── The 2026-09-07 correction ──────────────────────────────────────────────
+ * The formula above used to omit DEMAND, and that was wrong in a way that
+ * quietly wasted several sprints. Ranking on commission-per-sale assumes an
+ * expensive product is a valuable product to check. Amazon Associates says
+ * otherwise. Thirty days to 2026-09-06:
+ *
+ *     earnings $94.57 · 530 clicks · 58 items ordered · revenue $3,388.74
+ *     average item ordered ............ $58.43
+ *     blended commission .............. 2.79%
+ *     average commission per item ..... $1.63
+ *     best converter .................. Callaway Supersoft golf balls,
+ *                                       20 clicks -> 6 orders = 30%
+ *
+ * Nobody is buying the $25,995 TrackMan this queue kept ranking first. The
+ * things that sell are consumables around the $58 mark. Meanwhile 89 products
+ * under $100 had never been verified, against 60% coverage above $500 — the
+ * queue had systematically pointed away from the only band that earns.
+ *
+ * DEMAND below is a judgement, not a measurement: one month of data is enough
+ * to know the shape is wrong but not enough to fit a curve. It is anchored on
+ * the $58.43 average order and should be replaced the moment per-product
+ * conversion data exists for more than one product.
  *
  * Commission rather than sticker price, because the queue exists to protect
  * revenue. Ranking on price alone floated two golf carts to positions 4 and 6 —
@@ -47,6 +70,21 @@ function staleness(d: number | null): number {
   return 2.5;
 }
 
+/**
+ * Probability-of-purchase weight by price band, anchored on a measured $58.43
+ * average order value. A product at or below that is what people actually buy;
+ * everything above it is increasingly aspirational traffic that converts near
+ * zero. Deliberately coarse — see the header note on why this is not a curve.
+ */
+function demand(price: number): number {
+  if (price <= 0) return 0.4;      // unpriced — unknown, worth a look
+  if (price <= 60) return 1.0;     // at or below the measured average order
+  if (price <= 150) return 0.6;
+  if (price <= 400) return 0.25;
+  if (price <= 1000) return 0.10;
+  return 0.04;                     // no item this expensive reached reportable volume
+}
+
 const pages: Record<string, Set<string>> = {};
 for (const a of ARTICLES as any[]) {
   const body = JSON.stringify(a);
@@ -67,8 +105,9 @@ const rows = Object.entries(AFFILIATE as any)
     const pct = Number(e.commissionPct ?? 3);
     const program = String(e.program ?? '');
     const perSale = price * pct / 100;
-    return { key, price, np, d, pct, perSale, program, retailer: e.retailer ?? '?',
-             score: Math.round(perSale * Math.max(np, 1) * staleness(d)) };
+    const dem = demand(price);
+    return { key, price, np, d, pct, perSale, program, dem, retailer: e.retailer ?? '?',
+             score: Math.round(perSale * dem * Math.max(np, 1) * staleness(d) * 10) };
   })
   // program 'direct' means the link goes to the maker's own site — a dealer
   // locator for the golf carts, a download page for the free apps. Those carry a
@@ -80,7 +119,10 @@ const rows = Object.entries(AFFILIATE as any)
 const fmtAge = (d: number | null) => (d === null ? 'never' : d + 'd ago');
 const lines = [
   '# Sweep priority — ' + TODAY.toISOString().slice(0, 10), '',
-  'What to hand-check next. score = commission per sale x pages x staleness.',
+  'What to hand-check next. score = commission per sale x demand x pages x staleness.',
+  '',
+  'DEMAND is weighted to the measured $58.43 average order value (Amazon Associates,',
+  '30 days to 2026-09-06). Expensive products rank lower because they do not sell.',
   'CI verifies ~9% of listings because Amazon blocks datacentre IPs; this is the queue for the browser.', '',
   '| # | Product | Price | $/sale | Pages | Last verified | Retailer | Score |',
   '|---|---|---:|---:|---:|---|---|---:|',
@@ -93,10 +135,10 @@ fs.mkdirSync('scripts/output', { recursive: true });
 fs.writeFileSync('scripts/output/sweep-priority.md', lines.join('\n') + '\n');
 
 console.log('Top 12 to check next:\n');
-console.log('  score  $/sale   price  pages  last verified  key');
+console.log('  score  $/sale   price  dmd  pages  last verified  key');
 for (const r of rows.slice(0, 12))
   console.log('  ' + String(r.score).padStart(6) + String('$' + r.perSale.toFixed(0)).padStart(8) +
-              String('$' + r.price).padStart(8) + String(r.np).padStart(7) + '  ' +
+              String('$' + r.price).padStart(8) + r.dem.toFixed(2).padStart(6) + String(r.np).padStart(7) + '  ' +
               fmtAge(r.d).padStart(12) + '  ' + r.key);
 console.log('\n' + rows.filter(r => r.d === null).length + ' of ' + rows.length +
             ' products over $40 have never been verified.');

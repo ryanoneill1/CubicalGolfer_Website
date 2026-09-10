@@ -1,6 +1,7 @@
 ---
 // src/pages/brands/index.astro — Brand hub index (review-2 item #41)
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 import { BRANDS } from '../../data/brands';
 import { ARTICLES } from '../../data/articles';
 import { COMPARISONS } from '../../data/comparisons';
@@ -31,7 +32,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/brands/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
-  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Brands', href: '/brands/' },

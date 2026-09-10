@@ -11,7 +11,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/golf-simulator-complete-guide/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'article' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Golf Tech', href: '/golf-tech/' },
@@ -42,6 +42,7 @@ const schemas = [
 
 const quickProduct = getAffiliateLink('garmin-approach-r10');
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-tech">

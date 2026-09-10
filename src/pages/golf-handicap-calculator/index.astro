@@ -8,7 +8,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/golf-handicap-calculator/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-handicap-calculator.jpg',
   ogType: 'website' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Tools', href: '/tools/' },
@@ -25,6 +25,7 @@ const faq = [
 const schemas = [
   webApplicationSchema({ name: 'Golf Handicap Calculator', description: 'Calculate your USGA handicap index from your recent scores, course ratings, and slopes.', url: '/golf-handicap-calculator/' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">

@@ -4,13 +4,14 @@ import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema , webApplicationSchema } from '../../lib/schema';
 
+import { ROBOTS_INDEX } from '../../lib/seo';
 const meta = {
   title: 'Golf Simulator Cost Calculator — Build Your Setup',
   description: 'Interactive golf simulator cost calculator. Pick your budget, room size, and monitor — get a complete parts list with prices and buy links.',
   canonical: 'https://www.cubicalgolfer.com/golf-simulator-cost-calculator/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-simulator-cost-calculator.jpg',
   ogType: 'article' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Golf Tech', href: '/golf-tech/' },

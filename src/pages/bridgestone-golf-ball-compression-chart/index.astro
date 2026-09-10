@@ -4,6 +4,7 @@
 // stays with the all-brands chart (the site's biggest earner); rationale and
 // the GSC evidence are documented in BrandCompressionChart.astro.
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
 
@@ -13,7 +14,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/bridgestone-golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },

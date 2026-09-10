@@ -1842,7 +1842,7 @@ export const ARTICLES: Article[] = [
       headers: ['Putter', 'Style', 'Price', 'Insert', 'Best For'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'odyssey-white-hot-og',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$199', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
-        {  rating: 4.4,affiliateKey: 'cleveland-huntington-beach', name: 'Cleveland Huntington Beach', bestFor: 'Blade value', price: '~$129', feature1: '', feature2: '', winner: false },
+        {  rating: 4.4,affiliateKey: 'cleveland-huntington-beach', name: 'Cleveland Huntington Beach', bestFor: 'Blade value', price: '~$131', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'odyssey-two-ball-eleven', name: 'Odyssey 2-Ball Eleven', bestFor: 'Max forgiveness', price: '~$300', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'odyssey-tri-hot-5k', name: 'Odyssey Tri-Hot 5K', bestFor: 'Older golfers', price: '~$210', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'lab-golf-df3', name: 'L.A.B. Golf DF3', bestFor: 'The yips', price: '~$449', feature1: '', feature2: '', winner: false },
@@ -8629,8 +8629,8 @@ export const ARTICLES: Article[] = [
     ],
     sections: [
       { h2: 'Why Spikeless Beats Spiked for Walking Golfers', body: "Spiked shoes grip better in extreme wet conditions — no question. But for the weekend golfer who walks 18 holes: spikeless shoes are lighter (less fatigue over 5 miles), more comfortable on cart paths and concrete (no cleat-click), more versatile (drive to course, play, drive home — no shoe change), and have enough traction for 95% of conditions. The only time I miss spikes: walking down a steep, rain-soaked slope to a tee box. For everything else, spikeless is better for walkers." },
-      { h2: 'Best Overall: Skechers Go Golf Elite 5', badge: 'BEST OVERALL', body: "The Skechers Go Golf Elite 5 ($110) is the most comfortable golf shoe I have ever walked 18 holes in. The Ultra Go midsole cushioning feels like walking on foam. The Arch Fit insole supports your arch without being intrusive. The H2GO waterproof shield kept my feet dry through morning dew and light rain across a full season. At $110 it is half the price of ECCO and feels just as good on your feet.", price: '~$110', affiliateKey: 'skechers-go-golf-elite-5', rating: 4.7,
-        pros: ['Most comfortable walking shoe tested — Ultra Go cushioning', 'H2GO waterproof through dew and light rain', '$110 — half the price of premium competitors', 'Arch Fit insole for all-day support'],
+      { h2: 'Best Overall: Skechers Go Golf Elite 5', badge: 'BEST OVERALL', body: "The Skechers Go Golf Elite 5 ($110) is the most comfortable golf shoe I have ever walked 18 holes in. The Ultra Go midsole cushioning feels like walking on foam. The Arch Fit insole supports your arch without being intrusive. The H2GO waterproof shield kept my feet dry through morning dew and light rain across a full season. At $110 it is half the price of ECCO and feels just as good on your feet.", price: '~$136', affiliateKey: 'skechers-go-golf-elite-5', rating: 4.7,
+        pros: ['Most comfortable walking shoe tested — Ultra Go cushioning', 'H2GO waterproof through dew and light rain', '$136 list, and an Amazon coupon has been bringing it near $90 — well under the $200+ premium spikeless models', 'Arch Fit insole for all-day support'],
         cons: ['Traction in heavy rain is adequate, not excellent', 'Styling is conservative — not a head-turner', 'Durability shows wear after 60+ rounds on outsole'],
       },
       { h2: 'Best Premium: ECCO Biom C4', badge: 'BEST PREMIUM', body: "The ECCO Biom C4 ($249) is the shoe you buy once and wear for 3+ seasons. GORE-TEX waterproofing means fully dry feet in any condition — not just dew, but sustained rain. The premium leather upper ages beautifully. The BIOM Natural Motion outsole mimics barefoot movement for the most natural walking feel of any golf shoe. At $200 it is an investment, but the per-round cost is lower than cheaper shoes that wear out in one season.", price: '~$249', affiliateKey: 'ecco-biom-c4', rating: 4.8,
@@ -8650,7 +8650,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Shoe', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'skechers-go-golf-elite-5', name: 'Skechers Go Golf Elite 5', bestFor: 'Best Overall', price: '~$110', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
+        { badge: 'STRONG PICK', affiliateKey: 'skechers-go-golf-elite-5', name: 'Skechers Go Golf Elite 5', bestFor: 'Best Overall', price: '~$136', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
         { rating: 4.8, affiliateKey: 'ecco-biom-c4', name: 'ECCO Biom C4', bestFor: 'Best Premium', price: '~$249', feature1: '4.8/5 ★', winner: false },
         { rating: 4.5, affiliateKey: 'nike-air-max-90-golf', name: 'Nike Air Max 90 G', bestFor: 'Best Style', price: '~$150', feature1: '4.5/5 ★', winner: false },
         { rating: 4.6, affiliateKey: 'footjoy-flex-xp', name: 'FootJoy Flex XP', bestFor: 'Best Value', price: '~$120', feature1: '4.6/5 ★', winner: false },
@@ -9820,7 +9820,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Best Overall: Cleveland Huntington Beach Soft',
         badge: 'BEST OVERALL',
-        price: '~$129',
+        price: '~$131',
         rating: 4.4, affiliateKey: 'cleveland-huntington-beach',
         body: 'The Cleveland Huntington Beach Soft is the best putter under $150 in any category. Cleveland\'s Speed Optimized Face Technology varies milling depth across the face to normalize ball speed — the same principle that Odyssey, TaylorMade, and Scotty Cameron use in their $300+ putters. The practical effect: a putt struck off-center rolls nearly the same distance as a center hit. This is the single most important technology in a putter, and Cleveland puts it in a sub-$130 package. Available in both blade and mallet configurations, the Huntington Beach Soft suits every stroke type. The diamond CNC milling creates a soft, pleasant feel that is genuinely competitive with putters twice the price. It is not White Hot soft and not Cameron-buttery, but it is miles ahead of the hard, clicky feel of cheap putters. Cleveland\'s build quality is reliable — this putter will last years of regular use without performance degradation.',
         pros: [
@@ -9895,7 +9895,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Best For', 'Type', 'Price', 'Face Tech'],
       rows: [
-        { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$129', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
+        { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$131', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'Wilson Staff Infinite', bestFor: 'Value Blade', price: '~$140', feature1: 'Blade', feature2: 'Double Milled', winner: false, rating: 4.1, affiliateKey: 'wilson-staff-infinite' },
         { name: 'Pinemeadow PGX', bestFor: 'Beginners', price: '~$67', feature1: 'Mallet', feature2: 'Insert', winner: false, rating: 3.8, affiliateKey: 'pinemeadow-pgx' },
       ],
@@ -10735,7 +10735,7 @@ export const ARTICLES: Article[] = [
     intro: "Bad knees do not mean you have to ride a cart. The right shoes absorb the impact that causes post-round knee pain. After testing three pairs across a full season of walking rounds with mild knee arthritis, here are the ones that made 18 holes comfortable again.",
     sections: [
       { h2: 'Best Overall: Skechers GO GOLF Arch Fit', badge: 'BEST CUSHION', body: "The Arch Fit insole is podiatrist-designed and it shows. The arch support is noticeably higher than any other golf shoe I have tried — it actually supports your foot instead of collapsing under your weight. The Ultra Go cushioning in the midsole absorbs impact on every step. After 18 holes of walking, my knees felt better than they did after 9 holes in my old shoes. The spikeless outsole grips well on dry and moderately wet surfaces. At $110 it costs $40-80 less than comparable shoes from FootJoy and ECCO.", price: '~$110', rating: 4.4, affiliateKey: 'skechers-go-golf-elite-5',
-        pros: ['Podiatrist-designed arch support', 'Ultra Go cushioning — best impact absorption', '$110 — excellent value', 'Lightweight (10.5 oz)', 'Good traction on dry and wet grass'],
+        pros: ['Podiatrist-designed arch support', 'Ultra Go cushioning — best impact absorption', '$136 list, often nearer $90 with the Amazon coupon — strong value for a waterproof Arch Fit shoe', 'Lightweight (10.5 oz)', 'Good traction on dry and wet grass'],
         cons: ['Spikeless — less grip on steep slopes', 'Style is more athletic than traditional', 'Arch support may feel aggressive if you have flat feet', 'Not waterproof — just water resistant'],
       },
       { h2: 'Best Budget: New Balance Breeze V2', body: "At $85 the Breeze V2 is the most affordable shoe that provides genuine knee relief. The CUSH+ midsole is softer than most budget golf shoes and the wide toe box reduces lateral pressure. Not as supportive as the Skechers but a significant upgrade from flat-soled golf shoes. Great starter option before investing in a premium pair.", price: '~$85', badge: 'BEST VALUE', rating: 4.3, affiliateKey: 'new-balance-breeze-v2',
@@ -14407,7 +14407,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Value: Cleveland Huntington Beach Soft',
         badge: 'BUDGET PICK',
-        price: '~$129',
+        price: '~$131',
         affiliateKey: 'cleveland-huntington-beach',
         rating: 4.3,
         body: 'The Cleveland Huntington Beach Soft blade is the best blade putter under $130 and the easiest recommendation for golfers trying a blade for the first time. Cleveland\'s Speed Optimized Face Technology varies milling depth across the face to normalize ball speed, which partially compensates for the blade\'s inherently lower forgiveness compared to mallets. The diamond CNC milling creates a soft but not mushy feel — it sits between the firm Evnroll and the buttery Scotty Cameron on the feel spectrum. In our testing from 6 feet, the Huntington Beach blade converted 56% of putts — lower than the Scotty Cameron (61%) but impressive for a putter that costs a quarter of the price. The head shape is a classic Anser-style blade with moderate toe hang, suiting the majority of golfers with a slight arc stroke. Build quality is solid — the milling is clean, the finish is durable, and the stock grip is adequate.',
@@ -14467,7 +14467,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Scotty Cameron Phantom X', bestFor: 'Best Overall', price: '~$500', feature1: '4.7/5 ★', feature2: '', winner: true, affiliateKey: 'scotty-cameron-phantom-x' },
         { name: 'Evnroll ER2', bestFor: 'Best Feel', price: '~$349', feature1: '4.6/5 ★', feature2: '', winner: false, affiliateKey: 'evnroll-er2' },
-        { name: 'Cleveland Huntington Beach', bestFor: 'Budget Pick', price: '<$130', feature1: '4.3/5 ★', feature2: '', winner: false, affiliateKey: 'cleveland-huntington-beach' },
+        { name: 'Cleveland Huntington Beach', bestFor: 'Budget Pick', price: '~$131', feature1: '4.3/5 ★', feature2: '', winner: false, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'Ping Sigma 2 Anser', bestFor: 'Classic Design', price: '~$179', feature1: '4.4/5 ★', feature2: '', winner: false, affiliateKey: 'ping-sigma-2' },
         { name: 'Odyssey Stroke Lab', bestFor: 'Modern Pick', price: '~$199', feature1: '4.5/5 ★', feature2: '', winner: false, affiliateKey: 'odyssey-stroke-lab' },
       ],

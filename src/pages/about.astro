@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../lib/seo';
 import { breadcrumbSchema } from '../lib/schema';
 import { ARTICLES } from '../data/articles';
 
@@ -9,7 +10,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/about/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
-  robots: 'index,follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about/' },

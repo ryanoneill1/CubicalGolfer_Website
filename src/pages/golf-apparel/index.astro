@@ -13,7 +13,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/golf-apparel/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Golf Apparel', href: '/golf-apparel/' },
@@ -29,6 +29,7 @@ const hubFaq = [
 
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(hubFaq), collectionPageSchema({ title: meta.title, description: meta.description, url: meta.canonical, articles })];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="golf-apparel">

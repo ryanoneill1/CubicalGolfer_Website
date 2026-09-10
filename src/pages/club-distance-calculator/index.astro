@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { breadcrumbSchema, faqSchema , webApplicationSchema } from '../../lib/schema';
@@ -10,7 +11,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/club-distance-calculator/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/club-distance-calculator.jpg',
   ogType: 'website' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Tools', href: '/tools/' },

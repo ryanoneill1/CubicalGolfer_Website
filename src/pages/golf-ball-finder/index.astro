@@ -9,7 +9,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/golf-ball-finder/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-finder.jpg',
   ogType: 'website' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Tools', href: '/tools/' },
@@ -56,6 +56,7 @@ const balls = [
   { name: 'TaylorMade TP5x', brand: 'TaylorMade', compression: 97, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 100, maxMph: 130, bestFor: 'Max distance for fast swings', affiliateKey: 'taylormade-tp5x' },
 ];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">

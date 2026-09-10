@@ -31,7 +31,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Improve Your Game', href: '/improve-your-golf-game/' },
@@ -142,6 +142,7 @@ const schemas = [
   faqSchema(faqs),
 ];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 <BaseLayout meta={meta} schemas={schemas}>
 

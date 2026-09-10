@@ -666,8 +666,8 @@ export const AFFILIATE: Record<string, {
   // behind MAP ("See Price In Cart"). Search URL rather than a product page: iron sets vary by
   // hand, flex and shaft, so pinning one variant would sell the wrong config (Sprints 97/103/112).
   'titleist-t350': {
-    url: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtitleist%2520t350%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
-    verifiedOn: '2026-09-06',
+    url: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-t350-irons-23ttlmt35023stl5pirn%2F23ttlmt35023stl5pirn',
+    verifiedOn: '2026-09-07',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
@@ -686,13 +686,13 @@ export const AFFILIATE: Record<string, {
 
   // Titleist T100 Irons — search (shaft variants)
   'titleist-t100': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dtitleist%2520t100%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-2025-t100-irons-25titmgolft10025styaa%2F25titmgolft10025styaa',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
     retailer: 'Golf Galaxy',
     price: 'from ~$1,499',
-    verifiedOn: '2026-09-06',
+    verifiedOn: '2026-09-07',
     priceNote: 'Click to see current price — prices change frequently.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-t100.webp',
@@ -1295,13 +1295,13 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BAGS ─────────────────────────────────────────────────────────────
   'sun-mountain-25-plus': {
-    url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dsun%2520mountain%25202.5%2520plus%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.kqzyfj.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fsun-mountain-2024-2-5-stand-bag-23smou202425stndbbag%2F23smou202425stndbbag',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
-    retailer: 'Golf Galaxy', price: '~$249',
+    retailer: 'Golf Galaxy', price: '~$200',
     primaryRetailer: 'direct',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.', label: 'See Today\'s Price →',
+    priceNote: '$199.99 on sale from a $249.99 list. Sun Mountain bags discount through the back half of the season.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/sun-mountain-25-bag.webp',
     imgAlt: 'Sun Mountain 2.5+ Carry Golf Bag',
   
@@ -2142,7 +2142,7 @@ export const AFFILIATE: Record<string, {
     benefits: ['Ultralight design for sub-85 mph swing speeds', 'High launch with low spin for maximum carry', 'Available in left-hand'],
   },
   'ping-g-le3-irons': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dping%2520g%2520le%25203%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.jdoqocy.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-womens-g-le3-irons-23pngwgl3g6pwwswlirn%2F23pngwgl3g6pwwswlirn',
     program: 'golfgalaxy',
     commissionPct: 8,
     cookieDays: 14,
@@ -2163,8 +2163,9 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fskechers-mens-go-golf-elite-vortex-golf-shoes-25skemgglfltvrtxcgsh%2F25skemgglfltvrtxcgsh%3FenteredSearchTerm%3DSkechers%2520Go%2520Golf%2520Elite%25205',
     retailer: 'Amazon',
-    price: '~$108',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    verifiedOn: '2026-09-07',
+    price: '~$136',
+    priceNote: '$135.67 list across colourways ($134.58-$140). An Amazon coupon has been bringing it to about $90 — check the listing for the current offer.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/skechers-go-golf-elite-5.webp',
     imgAlt: 'Skechers Go Golf Elite 5 Spikeless Shoes',
@@ -2646,8 +2647,9 @@ export const AFFILIATE: Record<string, {
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Huntington%2520Beach%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$134',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    verifiedOn: '2026-09-07',
+    price: '~$131',
+    priceNote: 'Amazon\'s Choice at $131.35, but ships from Amazon Japan — delivery is slower and the spec may differ from the US model.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/cleveland-huntington-beach.webp',
     imgAlt: 'Cleveland Huntington Beach Soft putter',
@@ -3974,6 +3976,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
+    verifiedOn: '2026-09-07',
     price: '~$299',
     priceNote: 'Previous-year models drop 30-40% when new models release each January.',
     label: 'Check Price at Amazon →',

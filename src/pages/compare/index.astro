@@ -2,6 +2,7 @@
 // src/pages/compare/index.astro
 // EDITOR NOTE: Replace any text inside [BRACKETS] with real info before publishing.
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 import { COMPARISONS } from '../../data/comparisons';
 import fs from 'node:fs';
 // Thumbnails generated at build time by scripts/generate-compare-thumbnails.ts
@@ -23,7 +24,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/compare/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'website' as const,
-  robots: 'index,follow,max-snippet:-1,max-image-preview:large',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Comparisons', href: '/compare/' },

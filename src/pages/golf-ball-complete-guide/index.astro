@@ -10,7 +10,7 @@ const meta = {
   canonical: 'https://www.cubicalgolfer.com/golf-ball-complete-guide/',
   ogImage: 'https://www.cubicalgolfer.com/images/og-image.jpg',
   ogType: 'article' as const,
-  robots: 'index, follow',
+  robots: ROBOTS_INDEX,
   breadcrumbs: [
     { label: 'Home', href: '/' },
     { label: 'Gear Reviews', href: '/gear-reviews/' },
@@ -41,6 +41,7 @@ const schemas = [
 
 const quickProduct = getAffiliateLink('callaway-supersoft');
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="gear-reviews">
