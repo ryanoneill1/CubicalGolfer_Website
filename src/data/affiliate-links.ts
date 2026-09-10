@@ -1155,13 +1155,14 @@ export const AFFILIATE: Record<string, {
 
   // Putting mirror
   'putting-mirror': {
-    url: 'https://www.amazon.com/Eyeline-Golf-Putting-Alignment-Mirror/dp/B0BNXXC9GD?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0030F4JHM?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPutting%2520Mirror%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$40',
+    verifiedOn: '2026-09-10',
+    price: '~$38',
     priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
     label: 'See Options on Amazon →',
     imgSrc: '/images/products/putting-mirror.webp',
@@ -1230,13 +1231,15 @@ export const AFFILIATE: Record<string, {
   },
   // ── PUTTERS ───────────────────────────────────────────────────────────────
   'odyssey-white-hot-og': {
-    url: 'https://www.amazon.com/dp/B0BP92GG7Z?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Odyssey+White+Hot+OG&crid=3TGMI16L8I0LH&sprefix=odyssey+white+hot+og%2Caps%2C239&linkCode=ll2&tag=cubicalgolfer-20&linkId=73469fdc4301706d071e948e5bbcef16&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dodyssey%2520white%2520hot%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon', price: '~$199',
-    priceNote: 'Putter prices are stable. Used/like-new saves 25% with no performance loss.', label: 'See Today\'s Price →',
+    golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DOdyssey%2520White%2520Hot%2520OG%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
+    retailer: 'Amazon', golfGalaxyLabel: 'Also at Golf Galaxy →',
+    verifiedOn: '2026-09-10',
+    price: '~$290',
+    priceNote: 'Line spans about $150 for the women\'s model to $300 for the standard men\'s builds. The link is a search rather than one SKU because head shape, length and hand all change the price.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/odyssey-white-hot-og.webp',
     imgAlt: 'Odyssey White Hot OG Putter',
   
@@ -1380,13 +1383,14 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF SHOES ────────────────────────────────────────────────────────────
   'footjoy-flex-xp': {
-    url: 'https://www.amazon.com/FootJoy-Flex-XP-Black/dp/B0BV2WBRVP?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B09Y2JGXPV?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520Flex%2520XP%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48%26selectedStore%3D1521',
-    retailer: 'Amazon', price: '~$120',
-    priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.', label: 'See Today\'s Price →',
+    retailer: 'Amazon', verifiedOn: '2026-09-10',
+    price: '~$70',
+    priceNote: 'Previous-season colourway at $69.95. FootJoy\'s current-season Flex XP is not listed on Amazon; this is the same shoe from the prior release.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-flex-xp.webp',
     imgAlt: 'FootJoy Flex XP Golf Shoes',
   
@@ -1413,7 +1417,8 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ffootjoy-mens-2022-tour-alpha-golf-shoesprevious-season-style-21fjymtrlph22whtbgsh%2F21fjymtrlph22whtbgsh%3FenteredSearchTerm%3DFootJoy%2520Tour%2520Alpha',
-    retailer: 'Amazon', price: '~$130',
+    retailer: 'Amazon', verifiedOn: '2026-09-10',
+    price: '~$130',
     primaryRetailer: 'direct',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-tour-alpha.webp',
