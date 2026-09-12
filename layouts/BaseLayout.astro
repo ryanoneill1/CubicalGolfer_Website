@@ -8,6 +8,10 @@
 //   - Removed render-blocking font request, replaced with display=swap preload
 
 import type { PageMeta } from '../data/types';
+import { ViewTransitions } from 'astro:transitions';
+import EmailCapture from '../components/EmailCapture.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+import SiteSearch from '../components/SiteSearch.astro';
 import { VERIFICATION_TAG } from '../lib/seo';
 import '../styles/global.css';
 
@@ -15,19 +19,20 @@ interface Props {
   meta:    PageMeta;
   schemas: object[];
   activeNav?: string;
+  preloadImage?: string; // LCP image URL — adds <link rel="preload"> in <head>
 }
 
-const { meta, schemas, activeNav = 'home' } = Astro.props;
+const { meta, schemas, activeNav = 'home', preloadImage } = Astro.props;
 
 const NAV_ITEMS = [
-  { label: 'Home',             href: '/',                        key: 'home'          },
-  { label: 'Golf Gear Reviews', href: '/gear-reviews/',           key: 'gear-reviews'  },
-  { label: 'Golf Tech',         href: '/golf-tech/',              key: 'golf-tech'     },
-  { label: 'Golf Accessories',  href: '/golf-accessories/',       key: 'golf-accessories' },
-  { label: 'Improve Your Game', href: '/improve-your-golf-game/', key: 'improve-game'  },
-  { label: 'Golf Lifestyle',    href: '/golf-lifestyle/',         key: 'golf-lifestyle'},
-  { label: 'Golf Courses',      href: '/courses/',                key: 'courses'       },
-  { label: 'About',             href: '/about/',                  key: 'about'         },
+  { label: 'Home',              href: '/',                            key: 'home'          },
+  { label: 'Gear Reviews',      href: '/gear-reviews/',               key: 'gear-reviews'  },
+  { label: 'Golf Tech',         href: '/golf-tech/',                  key: 'golf-tech'     },
+  { label: 'Compare',           href: '/compare/',                    key: 'compare'       },
+  { label: 'Improve',           href: '/improve-your-golf-game/',     key: 'improve-game'  },
+  { label: 'Golf Apparel',      href: '/golf-apparel/',               key: 'golf-apparel'  },
+  { label: 'Tools',             href: '/tools/',                      key: 'tools'        },
+  { label: 'Gear Quiz',         href: '/gear-quiz/',                  key: 'quiz', cta: true },
 ];
 ---
 
@@ -36,15 +41,16 @@ const NAV_ITEMS = [
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#1E3A28" />
 
   <!-- Primary SEO -->
   <title>{meta.title}</title>
   <meta name="description" content={meta.description} />
   <meta name="robots" content={meta.robots} />
-  <meta name="author" content="Cubical Golfer" />
+  <meta name="fo-verify" content="3d7887f1-9713-48df-a0e1-f71e58629594" />
+  <meta name="author" content="Ryan O." />
   <link rel="canonical" href={meta.canonical} />
-  <meta name="google-site-verification" content={VERIFICATION_TAG} />
+  <link rel="help" type="text/plain" href="/llms.txt" title="LLM content index" />
+  {VERIFICATION_TAG && <meta name="google-site-verification" content={VERIFICATION_TAG} />}
   <meta name="impact-site-verification" content="e92bb06a-0153-4dad-ac66-74301699e7b6" />
 
   <!-- Favicons — replaces default globe icon in browser tabs and Google search -->
@@ -63,7 +69,7 @@ const NAV_ITEMS = [
   <meta property="og:description" content={meta.description} />
   <meta property="og:url"         content={meta.canonical} />
   <meta property="og:site_name"   content="Cubical Golfer" />
-  <meta property="og:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
+  <meta property="og:image"       content={meta.ogImage} />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:type"   content="image/jpeg" />
@@ -72,9 +78,11 @@ const NAV_ITEMS = [
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:site"        content="@CubicalGolfer" />
+  <meta name="p:domain_verify"     content="ac1e06862e5e2cd3174f40abc780a371" />
   <meta name="twitter:title"       content={meta.title} />
   <meta name="twitter:description" content={meta.description} />
-  <meta name="twitter:image"       content="https://www.cubicalgolfer.com/images/og-image.jpg" />
+  <meta name="twitter:image"       content={meta.ogImage} />
   <meta name="twitter:image:alt"   content="Cubical Golfer — Golf Gear Reviews & Tips" />
 
   <!-- Article dates -->
@@ -82,36 +90,37 @@ const NAV_ITEMS = [
   {meta.dateModified  && <meta property="article:modified_time"  content={meta.dateModified}  />}
 
   <!-- JSON-LD schemas — injected here ONLY (prevents duplicate field errors) -->
-  {schemas.map(schema => (
+  {schemas.filter(Boolean).map(schema => (
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
   ))}
 
-  <!-- 
-    Font loading strategy:
-    1. preconnect for DNS early resolution
-    2. Preload the CSS itself with low-priority async load (display=swap)
-    3. <noscript> fallback
-    This eliminates render-blocking font impact on LCP.
+  <!-- Self-hosted fonts — no third-party DNS/round-trip needed -->
+  <link rel="preload" href="/fonts/dm-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="/fonts/dm-serif-display-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  {preloadImage && (
+    <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />
+  )}
+
+  <!-- Preconnect to external domains for faster affiliate/image loads -->
+  <link rel="preconnect" href="https://plausible.io" crossorigin>
+  <link rel="dns-prefetch" href="https://plausible.io">
+  <link rel="preconnect" href="https://www.amazon.com">
+  <link rel="dns-prefetch" href="https://www.amazon.com">
+
+  <!-- View Transitions — smooth page-to-page animations -->
+  <ViewTransitions />
+
+  <!-- Plausible Analytics — privacy-friendly, no cookies, GDPR compliant -->
+  <script defer data-domain="cubicalgolfer.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+
+  <!--
+    Amazon OneLink — International Link Localization
+    Redirects US Amazon links to the visitor's local Amazon store (CA, UK, DE, etc.)
+    Requires: Amazon Associates OneLink enabled + international store accounts linked.
+    TODO: Replace ONELINK_ID with your actual OneLink ID from Amazon Associates Central.
+    Docs: https://affiliate-program.amazon.com/help/node/topic/G5RSZUGJLSQJYFRS
   -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
-  />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
-    media="print"
-    onload="this.media='all'"
-  />
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=DM+Sans:wght@400;500;600;700&display=swap"
-    />
-  </noscript>
+  <!-- <script defer src="https://amazon-affiliate.eu/universal-tag/script/ONELINK_ID"></script> -->
 </head>
 
 <body>
@@ -119,14 +128,6 @@ const NAV_ITEMS = [
 
   <!-- ── NAVIGATION ── -->
   <nav class="site-nav" role="navigation" aria-label="Main navigation">
-    <a class="nav-brand" href="/" aria-label="Cubical Golfer — Home">
-      <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="nav-logo-img" width="48" height="48" />
-      <div>
-        <span class="site-name">Cubical Golfer</span>
-        <span class="site-tag">Escape the cubicle. Find the fairway.</span>
-      </div>
-    </a>
-
     <button
       class="nav-toggle"
       id="nav-toggle"
@@ -137,15 +138,18 @@ const NAV_ITEMS = [
       <span></span><span></span><span></span>
     </button>
 
-    <div class="nav-links" id="nav-links" role="menubar">
+    <div class="nav-links" id="nav-links">
       {NAV_ITEMS.map(item => (
         <a
           href={item.href}
-          class={activeNav === item.key ? 'active' : ''}
-          role="menuitem"
+          class:list={[
+            activeNav === item.key ? 'active' : '',
+            (item as any).cta ? 'nav-cta' : '',
+          ]}
         >{item.label}</a>
       ))}
     </div>
+    <SiteSearch />
   </nav>
 
   <!-- ── MAIN CONTENT ── -->
@@ -153,110 +157,363 @@ const NAV_ITEMS = [
     <slot />
   </main>
 
-  <!-- ═══════════════════════════════════════════════════════════════
-       PART 2 — EMAIL CAPTURE STRIP (inline, above footer)
-       Lead magnet: "Weekend Golfer's Gear Cheat Sheet"
-       — a free PDF of the top-ranked pick in every category.
-       Replace ACTION_URL below with your ConvertKit or Mailchimp
-       form action URL. No backend required.
-       ═══════════════════════════════════════════════════════════════ -->
-  <section class="email-strip" aria-label="Newsletter signup">
-    <div class="email-strip__inner">
-      <div class="email-strip__copy">
-        <p class="email-strip__eyebrow">FREE DOWNLOAD</p>
-        <h2 class="email-strip__heading">Get the Weekend Golfer's Gear Cheat Sheet</h2>
-        <p class="email-strip__sub">
-          One-page PDF: the single best pick in every category — rangefinder, GPS watch,
-          ball, glove, putter — based on 40+ rounds of testing. No fluff. Just the answer.
-        </p>
-      </div>
-      <form
-        class="email-strip__form"
-        id="email-capture-form"
-        action="https://app.convertkit.com/forms/CONVERTKIT_FORM_ID/subscriptions"
-        method="post"
-        data-sv-form="CONVERTKIT_FORM_ID"
-        novalidate
-      >
-        <!-- Replace action URL ↑ with your ConvertKit / Mailchimp endpoint -->
-        <div class="email-strip__field">
-          <label for="strip-email" class="sr-only">Your email address</label>
-          <input
-            type="email"
-            id="strip-email"
-            name="email_address"
-            placeholder="your@email.com"
-            required
-            autocomplete="email"
-            class="email-strip__input"
-          />
-          <button type="submit" class="email-strip__btn">
-            Send Me the PDF →
-          </button>
-        </div>
-        <p class="email-strip__disclaimer">
-          No spam. Unsubscribe any time. We email ~twice a month with gear updates.
-        </p>
-        <!-- Thank-you state — shown via JS on submit -->
-        <div class="email-strip__thanks" id="strip-thanks" hidden>
-          ✅ &nbsp;Check your inbox — the cheat sheet is on its way!
-        </div>
-      </form>
-    </div>
+  <!-- ── EMAIL CAPTURE ── -->
+  <section class="email-strip" id="free-guide" aria-label="Newsletter signup">
+    <EmailCapture heading="Download the Compression Cheat Sheet + Weekly Gear Deals" variant="footer" />
   </section>
 
   <!-- ── FOOTER ── -->
   <footer>
     <div class="footer-grid">
-
-      <!-- PART 1 — Company email in footer-brand column -->
       <div class="footer-brand">
-        <img src="/images/cubicalgolfer-logo.jpg" alt="Cubical Golfer" class="footer-logo-img" width="56" height="56" />
+        <img src="/images/cubicalgolfer-logo.webp" alt="Cubical Golfer" class="footer-logo-img" width="56" height="56" />
         <p>Gear, tech, and tips for everyday golfers who squeeze rounds in on weekends and refuse to stop getting better.</p>
-        <!-- ── Contact email (Part 1) ── -->
-        <a href="mailto:hello@cubicalgolfer.com" class="footer-email" aria-label="Email us at hello@cubicalgolfer.com">
-          ✉️ hello@cubicalgolfer.com
-        </a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Gear Reviews</h4>
-        <a href="/gear-reviews/">Golf Gear Reviews</a>
-        <a href="/best-golf-rangefinders-2026/">Best Rangefinders 2026</a>
-        <a href="/best-golf-gps-watches/">Best GPS Watches</a>
-        <a href="/best-golf-putters-2026/">Best Golf Putters 2026</a>
-        <a href="/best-golf-bags-2026/">Best Golf Bags 2026</a>
-        <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers</a>
-        <a href="/best-golf-irons-2026/">Best Golf Irons 2026</a>
-        <a href="/best-golf-balls-2026/">Best Golf Balls 2026</a>
-        <a href="/golf-ball-compression-chart/">Ball Compression Chart</a>
-        <a href="/titleist-pro-v1-vs-pro-v1x/">Pro V1 vs Pro V1x</a>
-      </div>
-      <div class="footer-col">
-        <h4>Improve</h4>
-        <a href="/improve-your-golf-game/">Improvement Hub</a>
-        <a href="/how-to-fix-your-slice/">Fix Your Slice</a>
-        <a href="/how-to-break-90/">Break 90 Roadmap</a>
-        <a href="/how-to-improve-putting/">Improve Your Putting</a>
-        <a href="/golf-tips-for-beginners/">Tips for Beginners</a>
-        <a href="/average-golf-handicap/">Average Handicap Guide</a>
-        <a href="/best-golf-training-aids/">Best Training Aids</a>
-        <a href="/best-golf-grip-trainers/">Best Grip Trainers</a>
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">About &amp; Trust</summary>
+          <div class="footer-accordion__body">
+            <a href="/how-we-test/">How We Test</a>
+            <a href="/about/">About / Editorial Policy</a>
+            <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+            <p class="footer-independence">Independently owned — we never accept payment for rankings or reviews.</p>
+            <a href="/contact/">Contact Us</a>
+            <a href="/compare/">Compare Products</a>
+            <a href="/brands/">Brands We Test</a>
+            <a href="/courses/">Golf Courses by City</a>
+          </div>
+        </details>
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">Legal</summary>
+          <div class="footer-accordion__body">
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms/">Terms of Service</a>
+            <a href="/cookie-policy/">Cookie Policy</a>
+            <a href="/sitemap.xml">Sitemap</a>
+          </div>
+        </details>
       </div>
       <div class="footer-col">
-        <h4>Accessories &amp; Gifts</h4>
-        <a href="/best-golf-gifts-for-him/">Best Golf Gifts for Him</a>
-        <a href="/best-golf-shoes-for-walking/">Best Golf Shoes for Walking</a>
-        <a href="/best-golf-gloves-hot-weather/">Best Golf Gloves</a>
-        <a href="/best-golf-accessories-under-50/">Accessories Under $50</a>
-        <a href="/25-golf-accessories-every-golfer-should-own/">25 Must-Have Accessories</a>
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">Equipment Reviews</summary>
+          <div class="footer-accordion__body">
+            <a href="/gear-reviews/">All Gear Reviews</a>
+            <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers</a>
+            <a href="/best-golf-irons-2026/">Best Game Improvement Irons</a>
+            <a href="/best-golf-putters-2026/">Best Putters 2026</a>
+            <a href="/best-golf-rangefinders-2026/">Best Rangefinders 2026</a>
+            <a href="/best-golf-gps-watches/">Best GPS Watches</a>
+            <a href="/best-golf-balls-2026/">Best Golf Balls 2026</a>
+            <a href="/golf-ball-complete-guide/">Golf Ball Complete Guide</a>
+            <a href="/golf-ball-compression-chart/">Ball Compression Chart</a>
+            <a href="/average-golf-handicap/">Average Golf Handicap by Age</a>
+            <a href="/best-golf-bags-2026/">Best Golf Bags 2026</a>
+            <a href="/best-hybrid-clubs-2026/">Best Hybrids 2026</a>
+            <a href="/best-golf-grips-2026/">Best Grips 2026</a>
+            <a href="/best-wedges-for-beginners/">Best Wedges for Beginners</a>
+          </div>
+        </details>
+      </div>
+      <div class="footer-col">
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">Golf Tech &amp; Simulators</summary>
+          <div class="footer-accordion__body">
+            <a href="/golf-tech/">Golf Tech Hub</a>
+            <a href="/golf-apparel/">Golf Apparel</a>
+            <a href="/best-golf-launch-monitors-2026/">Best Launch Monitors 2026</a>
+            <a href="/best-launch-monitors-no-subscription/">Launch Monitors, No Subscription</a>
+            <a href="/launch-monitor-subscription-cost-comparison/">Subscription Cost Comparison</a>
+            <a href="/best-launch-monitor-low-ceiling/">Best for Low Ceilings</a>
+            <a href="/trackman-alternatives-2026/">Trackman Alternatives</a>
+            <a href="/golf-launch-monitor-accuracy-test/">Monitor Accuracy Test</a>
+            <a href="/best-golf-simulator-for-beginners/">Simulator for Beginners</a>
+            <a href="/how-much-does-golf-simulator-cost/">Simulator Cost Breakdown</a>
+            <a href="/best-golf-simulator-under-5000/">Simulator Under $5,000</a>
+            <a href="/best-golf-simulator-software-2026/">Simulator Software Compared</a>
+            <a href="/golf-simulator-room-dimensions-guide/">Room Dimensions Guide</a>
+            <a href="/portable-golf-simulator-setup/">Portable Simulator Setup</a>
+          </div>
+        </details>
+      </div>
+      <div class="footer-col">
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">Improve Your Game</summary>
+          <div class="footer-accordion__body">
+            <a href="/improve-your-golf-game/">Improvement Hub</a>
+            <a href="/how-to-fix-your-slice/">Fix Your Slice</a>
+            <a href="/how-to-break-90/">Break 90 Roadmap</a>
+            <a href="/how-to-stop-3-putting/">Improve Your Putting</a>
+            <a href="/golf-tips-for-beginners/">Tips for Beginners</a>
+            <a href="/how-to-improve-with-launch-monitor/">Improve with a Monitor</a>
+            <a href="/shaft-flex-guide/">Shaft Flex Guide</a>
+            <a href="/driver-loft-guide/">Driver Loft Guide</a>
+            <a href="/iron-fitting-guide-beginners/">Iron Fitting Guide</a>
+            <a href="/wedge-bounce-guide/">Wedge Bounce Explained</a>
+            <a href="/golf-practice-drills-at-home/">15-Min Home Drills</a>
+            <a href="/desk-exercises-fix-golf-slice/">Desk Exercises for Golf</a>
+          </div>
+        </details>
+      </div>
+      <div class="footer-col">
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">Gift Guides</summary>
+          <div class="footer-accordion__body">
+            <a href="/best-golf-gifts-for-him/">Golf Gifts for Golfers</a>
+            <a href="/best-golf-gifts-for-mom/">Golf Gifts for Mom</a>
+            <a href="/best-golf-gifts-under-50/">Best Gifts Under $50</a>
+            <a href="/best-christmas-golf-gifts/">Christmas Golf Gifts</a>
+            <a href="/best-golf-gifts-for-couples/">Gifts for Couples</a>
+          </div>
+        </details>
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">Tools &amp; Compare</summary>
+          <div class="footer-accordion__body">
+            <a href="/golf-simulator-cost-calculator/">Simulator Cost Calculator</a>
+            <a href="/golf-club-distance-chart/">Club Distance Chart</a>
+            <a href="/golf-equipment-budget-planner/">Equipment Budget Planner</a>
+            <a href="/compare/">Compare Products</a>
+            <a href="/brands/">Brands We Test</a>
+            <a href="/gear-quiz/">Gear Quiz</a>
+          </div>
+        </details>
+      </div>
+      <div class="footer-col">
+        <details class="footer-accordion" open>
+          <summary style="font-weight:700;font-size:16px;color:var(--gold)">More</summary>
+          <div class="footer-accordion__body">
+            <a href="/golf-practice-drills-at-home/">Practice Drills at Home</a>
+            <a href="/best-junior-golf-clubs/">Junior Golf Clubs</a>
+            <a href="/how-to-get-your-kid-into-golf/">Get Your Kid Into Golf</a>
+            <a href="/best-golf-gear-under-100/">Best Gear Under $100</a>
+            <a href="/best-golf-hitting-net-apartment-garage/">Golf Hitting Nets</a>
+            <a href="/best-golf-apps-for-apple-watch/">Apple Watch Golf Apps</a>
+            <a href="/golf-simulator-vs-driving-range/">Simulator vs Range</a>
+            <a href="/best-irons-under-500/">Best Irons Under $500</a>
+          </div>
+        </details>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Cubical Golfer · <a href="/about/" style="color:rgba(255,255,255,.5);text-decoration:underline;">Editorial Policy</a></p>
+      <p>© 2026 Cubical Golfer · <a href="/about/" style="color:rgba(255,255,255,.7);text-decoration:underline;">Editorial Policy</a></p>
       <p class="footer-disc">
         ⚖️ Affiliate disclosure: we earn commissions from qualifying purchases at no extra cost to you.
-        All products independently purchased &amp; tested. Last updated March 2026.
+        All products independently purchased &amp; tested. Last updated April 2026.
       </p>
     </div>
   </footer>
+
+  <!-- Collapse footer accordions on mobile (they start open for desktop) -->
+  <script is:inline>
+    (function() {
+      if (window.innerWidth < 721) {
+        document.querySelectorAll('.footer-accordion').forEach(function(d) {
+          d.removeAttribute('open');
+        });
+      }
+    })();
+  </script>
+
+  <script is:inline>
+    (function () {
+      var toggle = document.getElementById('nav-toggle');
+      var links  = document.getElementById('nav-links');
+      if (!toggle || !links) return;
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', function (e) {
+        if (!toggle.contains(e.target) && !links.contains(e.target)) {
+          links.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    // Email capture — Kit.com (ConvertKit) V3 API
+    // Email capture — form-based with native validation + honeypot
+    (function () {
+      var suffixes = ['', '-inline'];
+      suffixes.forEach(function (sfx) {
+        var form = document.getElementById('email-form' + sfx);
+        var disclaimer = document.getElementById('email-disclaimer' + sfx);
+        var thanks = document.getElementById('strip-thanks' + sfx);
+        if (!form || !thanks) return;
+
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var input = form.querySelector('input[type="email"]');
+          var btn = form.querySelector('button[type="submit"]');
+          var honeypot = form.querySelector('input[name="website"]');
+
+          // Honeypot check — bots fill hidden fields, humans don't
+          if (honeypot && honeypot.value) return;
+
+          // Native validation (type="email" + required)
+          if (!input.checkValidity()) {
+            input.reportValidity();
+            return;
+          }
+
+          var email = input.value.trim();
+          btn.textContent = 'Sending\u2026';
+          btn.disabled = true;
+
+          fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
+          })
+          .then(function (res) {
+            if (!res.ok) throw new Error(res.status);
+            return res.json();
+          })
+          .then(function (data) {
+            if (data && data.subscription) {
+              form.setAttribute('hidden', '');
+              if (disclaimer) disclaimer.setAttribute('hidden', '');
+              thanks.removeAttribute('hidden');
+            } else {
+              throw new Error('no subscription');
+            }
+          })
+          .catch(function () {
+            btn.textContent = 'Send Me the PDF \u2192';
+            btn.disabled = false;
+            input.style.borderColor = '#d63b2f';
+          });
+        });
+      });
+    })();
+  </script>
+
+  <CookieBanner />
+
+  <!-- Cloudflare Web Analytics — privacy-respecting, no cookies, GDPR-friendly -->
+  {import.meta.env.PUBLIC_ANALYTICS_TOKEN && (
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_ANALYTICS_TOKEN}"}`}></script>
+  )}
+
+  <!-- Affiliate click + email conversion tracking -->
+  <script is:inline>
+    (function() {
+      // ──────────────────────────────────────────────────────────────────────
+      // GA4 SETUP — paste your Measurement ID below to enable GA4 events.
+      // Create a free GA4 property at https://analytics.google.com →
+      // Admin → Create Property → Web stream → copy the G-XXXXXXXXXX ID.
+      // When empty, GA4 tracking no-ops safely (Plausible still fires).
+      // ──────────────────────────────────────────────────────────────────────
+      var GA4_ID = 'G-NE17WLK7G1';
+
+      // Load gtag if GA4 is configured
+      if (GA4_ID) {
+        var gs = document.createElement('script');
+        gs.async = true;
+        gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA4_ID;
+        document.head.appendChild(gs);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function() { window.dataLayer.push(arguments); };
+        window.gtag('js', new Date());
+        window.gtag('config', GA4_ID, { send_page_view: true });
+      }
+
+      // ── Affiliate Click tracking ──
+      // Delegated listener. Sprint 110: this used to require a data-outbound
+      // attribute, which only 46.8% of affiliate links actually carried — so
+      // GA4 logged 224 clicks against Amazon's 546 and page-level attribution
+      // was impossible. Matching on the destination host instead covers every
+      // affiliate link, including ones added later that forget the attribute.
+      var AFFILIATE_HOSTS = {
+        'amazon.com': 'amazon',
+        'playbetter.com': 'playbetter',
+        'bushnell.pxf.io': 'bushnell',
+        // CJ redirector domains — all Golf Galaxy / Dick's for this site
+        'jdoqocy.com': 'golfgalaxy',
+        'tkqlhce.com': 'golfgalaxy',
+        'anrdoezrs.net': 'golfgalaxy',
+        'kqzyfj.com': 'golfgalaxy',
+        'dpbolvw.net': 'golfgalaxy'
+      };
+
+      // Generic button text ("Check price →") tells us nothing about which
+      // product was clicked, so fall back to the table row or the section
+      // heading the link sits under.
+      function productLabel(link) {
+        var aria = link.getAttribute('aria-label');
+        if (aria) return aria.replace('Check price for ', '').replace("Check today's price for ", '').trim();
+        var txt = (link.textContent || '').trim();
+        if (txt && !/^(check|view|buy|shop|see|get)\b/i.test(txt) && txt.length > 3) return txt;
+        var row = link.closest('tr');
+        if (row && row.cells && row.cells.length) {
+          var first = (row.cells[0].textContent || '').trim();
+          if (first) return first;
+        }
+        var sec = link.closest('section, article, div');
+        while (sec) {
+          var h = sec.querySelector('h2, h3');
+          if (h && h.textContent.trim()) return h.textContent.trim();
+          sec = sec.parentElement ? sec.parentElement.closest('section, article, div') : null;
+        }
+        return txt || 'unknown';
+      }
+
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href]');
+        if (!link) return;
+
+        var host = '';
+        try { host = new URL(link.href, window.location.origin).hostname.replace(/^www\./, ''); }
+        catch (err) { return; }
+
+        var retailer = link.getAttribute('data-outbound') || AFFILIATE_HOSTS[host];
+        if (!retailer) return;   // not an affiliate link — ignore
+
+        var linkUrl = link.href || '';
+        var pagePath = window.location.pathname;
+        var product = productLabel(link).substring(0, 80);
+
+        // Plausible event (existing integration)
+        if (typeof window.plausible === 'function') {
+          window.plausible('Affiliate Click', { props: { product: product, retailer: retailer, page: pagePath } });
+        }
+
+        // GA4 event (no-ops when GA4_ID is empty)
+        if (GA4_ID && typeof window.gtag === 'function') {
+          window.gtag('event', 'affiliate_click', {
+            retailer: retailer,
+            page_path: pagePath,
+            link_url: linkUrl.substring(0, 200),
+            product: product,
+            send_to: GA4_ID,
+            transport_type: 'beacon'
+          });
+        }
+      });
+
+      // ── Email Signup tracking ──
+      // Watches for ConvertKit's "thanks" element appearing after form submit.
+      // In Plausible dashboard: Settings → Goals → Add Goal → "Email Signup"
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(m) {
+          if (m.target.classList && m.target.classList.contains('email-strip__thanks')) {
+            var placement = 'footer-strip';
+            var el = m.target.closest('[data-placement]');
+            if (el) placement = el.getAttribute('data-placement');
+
+            if (typeof window.plausible === 'function') {
+              window.plausible('Email Signup', { props: { placement: placement } });
+            }
+          }
+        });
+      });
+      var strip = document.querySelector('.email-strip');
+      if (strip) observer.observe(strip, { childList: true, subtree: true });
+
+      // Also watch exit-intent popup
+      var exitPopup = document.querySelector('.exit-intent');
+      if (exitPopup) observer.observe(exitPopup, { childList: true, subtree: true });
+    })();
+  </script>
+</body>
+</html>
