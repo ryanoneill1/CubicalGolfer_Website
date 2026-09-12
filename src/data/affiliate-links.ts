@@ -245,6 +245,7 @@ export const AFFILIATE: Record<string, {
 
   // Garmin Approach Z82 — ASIN B085T56B2X ✅ verified (official Garmin listing)
   'garmin-approach-z82': {
+    verifiedOn: '2026-09-12',
     asin: 'B085T56B2X',
     url: 'https://www.amazon.com/dp/B085T56B2X?&linkCode=ll2&tag=cubicalgolfer-20&linkId=fdcfca3305996c6d7b9833f63aae27b5&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+Z82*&ghref=2301%3A1333883',
@@ -252,7 +253,7 @@ export const AFFILIATE: Record<string, {
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$499',
+    price: '~$578',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/garmin-approach-z82.webp',
@@ -1213,6 +1214,7 @@ export const AFFILIATE: Record<string, {
 
   // Gustbuster Pro Series umbrella
   'gustbuster-umbrella': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0009GGIY2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGustBuster%2520Umbrella%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
@@ -1285,6 +1287,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'taylormade-spider-tour': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0D366DLTW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
@@ -2023,6 +2026,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── New: 7 buying guide articles (putting, LH, slice aids, nets, shoes, slow swing, speed trainers) ──
   'putt-a-bout-putting-green': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B00BNFE764?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPutt-A-Bout%2520Putting%2520Green%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
@@ -2758,6 +2762,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Odyssey Tri-Hot 5K putter',
   },
   'odyssey-two-ball-eleven': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0B1LTHZ12?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
@@ -2839,6 +2844,7 @@ export const AFFILIATE: Record<string, {
     label: 'Check Price at Amazon →',
   },
   'scotty-cameron-phantom-x': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0D8T6ZDWS?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     commissionPct: 3,
@@ -3492,13 +3498,14 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'bag-boy-nitron': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0FM2W8M21?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBag%2520Boy%2520Nitron%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$320',
+    price: '~$310',
     priceNote: 'Spring prices are highest. Best deals in late fall and winter.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bag-boy-nitron.webp',
@@ -3757,12 +3764,13 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/new-balance-breeze-v2.webp', imgAlt: 'New Balance Breeze V2 golf shoes',
   },
   'galvin-green-rain-jacket': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0CHS9LJG9?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGalvin%2520Green%2520Rain%2520Jacket%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$253',
+    retailer: 'Amazon', price: '~$233',
     priceNote: 'Golf apparel drops 40-60% during end-of-season sales.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/galvin-green-rain-jacket.webp', imgAlt: 'Galvin Green Gore-Tex golf rain jacket',
     benefits: [
@@ -3926,6 +3934,7 @@ export const AFFILIATE: Record<string, {
 
   // ═══ FORGIVING IRONS + BUDGET PICKS — June 2026 ═══
   'taylormade-sim2-max': {
+    verifiedOn: '2026-09-12',
     asin: 'B08QSKHMQG',
     url: 'https://www.amazon.com/TaylorMade-Driver-Graphite-Degree-Ventus/dp/B08QSKHMQG?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e3c2025b714f5401fe1503827bb320bf&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520SIM2%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
@@ -4190,6 +4199,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'callaway-paradym-hybrid': {
+    verifiedOn: '2026-09-12',
     url: 'https://www.amazon.com/dp/B0FVB4WKLJ?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Paradym%2520Hybrid%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
@@ -4488,6 +4498,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/club-car-onward-cart.webp', imgAlt: 'Club Car Onward electric golf cart, lifted, white with black canopy',
   },
   'callaway-org-14-cart-bag': {
+    verifiedOn: '2026-09-12',
     url: `https://www.amazon.com/dp/B0D9R3B5HT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
     commissionPct: 3,
