@@ -31,8 +31,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Wrangler 3.90.0 (Nov 2024) predates _redirects support for Workers
+      # Static Assets, which shipped 2025-04-08. Under 3.90.0 the file was
+      # stripped from the upload and never applied, so all 116 rules in
+      # public/_redirects returned 404 at the edge. Verified live 2026-09-12:
+      # /office-hacks/, /best-golf-apps-2026/, /best-mallet-putters-2026/ and
+      # /best-golf-gifts-for-dad/ all 404'd. Do not pin back below 4.x.
       - name: Deploy
-        run: npx wrangler@3.90.0 deploy
+        run: npx wrangler@4.128.0 deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -45,3 +51,23 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_API_TOKEN }}" \
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}' || true
+
+      # Proves the redirect layer is actually running. Warns only for now —
+      # ratchet to a hard failure once a deploy shows all three green, the same
+      # pattern the build validators use.
+      - name: Verify redirects are live
+        if: success()
+        run: |
+          sleep 15
+          fail=0
+          for u in /office-hacks/ /best-golf-apps-2026/ /privacy/; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://www.cubicalgolfer.com$u")
+            if [ "$code" = "301" ]; then
+              echo "ok   $u -> $code"
+            else
+              echo "WARN $u -> $code (expected 301; _redirects may not be applied)"
+              fail=1
+            fi
+          done
+          [ "$fail" = "0" ] && echo "All redirect probes passed." || echo "::warning::Redirect layer is not applying public/_redirects."
+          exit 0
