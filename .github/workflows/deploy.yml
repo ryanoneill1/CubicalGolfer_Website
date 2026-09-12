@@ -31,12 +31,12 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Wrangler 3.90.0 (Nov 2024) predates _redirects support for Workers
+      # Wrangler 3.90.0 (Nov 2024) predated _redirects support for Workers
       # Static Assets, which shipped 2025-04-08. Under 3.90.0 the file was
       # stripped from the upload and never applied, so all 116 rules in
-      # public/_redirects returned 404 at the edge. Verified live 2026-09-12:
-      # /office-hacks/, /best-golf-apps-2026/, /best-mallet-putters-2026/ and
-      # /best-golf-gifts-for-dad/ all 404'd. Do not pin back below 4.x.
+      # public/_redirects returned 404 at the edge for months.
+      # Fixed 2026-09-12 by moving to 4.x and CONFIRMED live: 7 of 7 probed
+      # URLs now 301 correctly. DO NOT pin back below 4.x.
       - name: Deploy
         run: npx wrangler@4.128.0 deploy
         env:
@@ -52,22 +52,37 @@ jobs:
             -H "Content-Type: application/json" \
             --data '{"purge_everything":true}' || true
 
-      # Proves the redirect layer is actually running. Warns only for now —
-      # ratchet to a hard failure once a deploy shows all three green, the same
-      # pattern the build validators use.
+      # RATCHETED 2026-09-12 from warn-only to hard failure, after a deploy
+      # proved all of these return 301. The redirect layer sat silently dead
+      # for months because nothing asserted it; this is that assertion.
+      # Each entry is "<source> <expected-destination-path>".
       - name: Verify redirects are live
         if: success()
         run: |
-          sleep 15
+          sleep 20
           fail=0
-          for u in /office-hacks/ /best-golf-apps-2026/ /privacy/; do
-            code=$(curl -s -o /dev/null -w '%{http_code}' "https://www.cubicalgolfer.com$u")
-            if [ "$code" = "301" ]; then
-              echo "ok   $u -> $code"
+          while read -r src want; do
+            [ -z "$src" ] && continue
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://www.cubicalgolfer.com$src")
+            dest=$(curl -s -o /dev/null -w '%{redirect_url}' "https://www.cubicalgolfer.com$src")
+            if [ "$code" = "301" ] && [ "${dest%$want}" != "$dest" ]; then
+              echo "ok    $src -> $want"
             else
-              echo "WARN $u -> $code (expected 301; _redirects may not be applied)"
+              echo "FAIL  $src -> got $code ${dest:-<none>} (expected 301 to $want)"
               fail=1
             fi
-          done
-          [ "$fail" = "0" ] && echo "All redirect probes passed." || echo "::warning::Redirect layer is not applying public/_redirects."
-          exit 0
+          done <<'PROBES'
+          /office-hacks/ /improve-your-golf-game/
+          /privacy/ /privacy-policy/
+          /best-golf-apps-2026/ /best-golf-apps/
+          /best-golf-swing-analyzers-iphone/ /best-golf-swing-analyzers/
+          /arccos-caddie-review-2026/ /arccos-caddie-review/
+          /golf-mental-game-tips/ /how-to-break-90/
+          /indoor-golf/ /best-indoor-putting-green-office-home/
+          /best-blade-putters-2026/ /best-golf-putters-2026/
+          PROBES
+          if [ "$fail" != "0" ]; then
+            echo "::error::public/_redirects is not being applied. Check the wrangler version in this file."
+            exit 1
+          fi
+          echo "All redirect probes passed."
