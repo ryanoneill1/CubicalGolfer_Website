@@ -1738,6 +1738,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-10',
     price: '$27.50/dz',
     priceNote: 'Sold as a 2-dozen box at $54.99, which works out at $27.50 a dozen \u2014 the same way the Kirkland is priced on this site.',
+    imgSrc: '/images/products/bridgestone-e12-straight.webp',
     imgAlt: 'Bridgestone e12 Straight Golf Balls',
     benefits: [
       'Straight-flight construction aimed at reducing side spin off the tee',
@@ -2186,7 +2187,6 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fskechers-mens-go-golf-elite-vortex-golf-shoes-25skemgglfltvrtxcgsh%2F25skemgglfltvrtxcgsh%3FenteredSearchTerm%3DSkechers%2520Go%2520Golf%2520Elite%25205',
     retailer: 'Amazon',
     verifiedOn: '2026-09-07',
     price: '~$136',
@@ -2195,6 +2195,28 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/skechers-go-golf-elite-5.webp',
     imgAlt: 'Skechers Go Golf Elite 5 Spikeless Shoes',
     benefits: ['Ultra Go cushioning for 18 holes of walking', 'H2GO waterproof shield', 'Arch Fit insole for all-day comfort'],
+  },
+  'skechers-elite-vortex': {
+    // Split out of skechers-go-golf-elite-5 in Sprint R2f. One entry was spanning two
+    // different shoes: the Amazon link sold the Elite 5, the Golf Galaxy link sold the
+    // Elite Vortex, and three pages displayed it under three different names.
+    url: 'https://www.amazon.com/dp/B0D7JVBYZZ?tag=cubicalgolfer-20',
+    verifiedOn: '2026-09-12',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fskechers-mens-go-golf-elite-vortex-golf-shoes-25skemgglfltvrtxcgsh%2F25skemgglfltvrtxcgsh%3FenteredSearchTerm%3DSkechers%2520Go%2520Golf%2520Elite%25205',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '~$104',
+    priceNote: 'Golf shoes drop 30-50% when the next colourway lands.',
+    label: 'Check Price at Amazon \u2192',
+    imgSrc: '/images/products/skechers-elite-vortex.webp',
+    imgAlt: 'Skechers Elite Vortex Rival spikeless golf shoe',
+    benefits: [
+      'Spikeless outsole works on the course and in the clubhouse',
+      'Lighter and about $30 cheaper than the Elite 5',
+      'Arch Fit insole carried over from the Skechers walking range',
+    ],
   },
   'ecco-biom-c4': {
     url: 'https://www.amazon.com/dp/B0DT1JB6WS?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
