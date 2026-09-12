@@ -10,7 +10,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'garmin-approach-z82': "Garmin Approach Z82",
   'bushnell-pro-xe': "Bushnell Pro XE",
   'bushnell-pro-x3': "Bushnell Pro X3",
-  'callaway-rogue-st-max': "Callaway Rogue ST Max",
+  'tour-edge-hot-launch-max-driver': "Tour Edge Hot Launch Max Driver",
   'garmin-approach-s62': "Garmin Approach S62",
   'garmin-approach-s42': "Garmin Approach S42",
   'shot-scope-v5': "Shot Scope V5",

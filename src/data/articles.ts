@@ -511,7 +511,7 @@ export const ARTICLES: Article[] = [
         { rating: 4.7, affiliateKey: 'ping-g430-max-driver',            name: 'Ping G430 Max', bestFor: 'Most Forgiving', price: 'from ~$419', feature1: '4.6/5 ★', feature2: '', winner: false },
         { rating: 4.6, affiliateKey: 'ping-g440-sft',                   name: 'Ping G440 SFT', bestFor: 'Premium Slice Fix', price: '~$449', feature1: '4.6/5 ★', feature2: '', winner: false },
         { badge: 'STRONG PICK', rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver',          name: 'Cleveland Launcher XL2', bestFor: 'Best Budget', price: '~$299', feature1: '4.3/5 ★', feature2: '', winner: false },
-        { rating: 4.4, affiliateKey: 'callaway-rogue-st-max', name: 'Callaway Rogue ST Max', bestFor: 'Best previous-gen value', price: '~$299', feature1: 'High', feature2: 'Still sold new' },
+        { rating: 4.4, affiliateKey: 'tour-edge-hot-launch-max-driver', name: 'Tour Edge Hot Launch Max', bestFor: 'Best forgiveness under $300', price: '~$300', feature1: 'High', feature2: '12\u00b0 stock loft' },
       ],
     },
     faq: [
@@ -9370,21 +9370,20 @@ export const ARTICLES: Article[] = [
         cons: ['Older release — stock and shaft options are thinning', 'Low-spin profile suits an aggressive tempo, not a sweeper'],
       },
       {
-        h2: '🥉 Best Forgiveness Under $300: Callaway Rogue ST Max',
+        h2: '🥉 Best Forgiveness Under $300: Tour Edge Hot Launch Max',
         badge: 'ALSO GREAT',
-        price: '~$299 at Amazon',
-        rating: 4.6, affiliateKey: 'callaway-rogue-st-max',
-        body: 'The Callaway Rogue ST Max frequently drops below $250 on sale, making it the best value in golf when you catch it at the right price. The Jailbreak AI Speed Frame connects the sole to the crown, stiffening the body so more energy transfers to the ball at impact. At 92 mph, we measured 235 yards of carry — respectable for a driver that costs less than a dozen Pro V1s at full retail. The Rogue ST Max has a higher spin profile than the Cobra or TaylorMade options in this group, which helps golfers with slower swing speeds (under 90 mph) get the ball airborne. Faster swingers may find it launches too high. Adjustability includes an OptiFit hosel with standard and draw settings. The main limitation is the older Jailbreak technology — it works well but has been superseded by the Paradym Ai design. For golfers who care about performance per dollar and are willing to buy a 2-generation-old driver, the Rogue ST Max is hard to beat.',
+        price: '~$300 at Amazon',
+        affiliateKey: 'tour-edge-hot-launch-max-driver',
+        body: 'Tour Edge is the brand most weekend golfers have never tried, and the Hot Launch Max is the reason that is a shame. The Max designation is Tour Edge\u2019s forgiveness line \u2014 the company builds it for players who want the ball in the air and in play rather than shot-shaping control.<br><br>The configuration worth knowing about is the <strong>12-degree head with the regular-flex Aldila Ascent shaft</strong>. Twelve degrees is the highest stock loft you will find in this price band, and loft is the single most effective way to get a slower swing airborne. If you are under 90 mph and fighting a low, weak ball flight, more loft does more for you than any face technology at any price.<br><br>It sits at $299.95, which keeps this slot genuinely under $300 \u2014 and unlike the Callaway Rogue ST Max that previously held this spot, it is available right-handed in regular flex today rather than only as a left-handed or extra-stiff leftover.<br><br><strong>Being straight with you:</strong> we have not tested this driver on the course. The case for it here is specification and availability, not our own launch monitor numbers. If you want a driver in this group we have actually hit, the Cleveland Launcher XL2 above is the one.',
         pros: [
-          'Frequently available under $250 — best value when on sale',
-          'Higher spin profile helps slower swing speeds get airborne',
-          'Jailbreak AI Speed Frame proven over millions of rounds',
-          'OptiFit hosel with draw setting',
+          '12-degree stock loft \u2014 the highest in this price band, and loft is what gets slow swings airborne',
+          'Genuinely under $300 at $299.95, right-handed regular flex in stock',
+          'Tour Edge\u2019s Max line is built for forgiveness rather than workability',
         ],
         cons: [
-          'Two generations behind current Callaway tech',
-          'Higher spin hurts distance for faster swingers (95+ mph)',
-          'Stock shaft is heavier than competitors — may slow down seniors',
+          'We have not tested this one \u2014 the case is spec and availability, not measured performance',
+          '12 degrees is too much loft for anyone swinging above roughly 95 mph',
+          'Tour Edge has thinner resale and fitting support than the major brands',
         ],
       },
       {
@@ -9450,7 +9449,7 @@ export const ARTICLES: Article[] = [
         { name: 'Srixon Z 785', affiliateKey: 'srixon-z-785', bestFor: 'Best Low-Spin Value', price: '~$299', feature1: 'Tour profile', feature2: '4.6/5', winner: false, rating: 4.6 },
         { name: 'Cobra DS-Adapt MAX-K', bestFor: 'Max Forgiveness', price: '~$299', feature1: '4.6/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k' },
         { name: 'Cleveland Launcher XL2', bestFor: 'Budget / Seniors', price: '~$299', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver' },
-        { name: 'Callaway Rogue ST Max', bestFor: 'Value Pick', price: '~$299', feature1: '4.3/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-rogue-st-max' },
+        { name: 'Tour Edge Hot Launch Max', bestFor: 'Value Pick', price: '~$300', feature1: '12° stock loft', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'tour-edge-hot-launch-max-driver' },
       ],
     },
     faq: [
@@ -11670,9 +11669,9 @@ export const ARTICLES: Article[] = [
       ],
     },
     sections: [
-      { h2: 'Package 1: Best Overall ($4,802)', body: '<ul><li>SkyTrak+ launch monitor — $1,195</li><li>Carl\'s Place impact screen (10x8) — $216</li><li>Optoma ZW350ST short-throw projector — $823</li><li>Fiberbuilt Studio Mat — $499</li><li>GSPro software — $250/year</li></ul><p><strong>Total: $2,983 first year.</strong> This is the setup we recommend. The SkyTrak+ delivers photometric accuracy (±1.5 yards), the screen and projector create immersive virtual golf, and GSPro gives you 200,000+ courses. The Fiberbuilt mat protects your wrists and feels like real turf.</p>', badge: 'TOP PICK', rating: 4.7, affiliateKey: 'skytrak-plus' },
-      { h2: 'Package 2: Best Accuracy ($4,306)', body: '<ul><li>Bushnell Launch Pro — $2,999</li><li>Carl\'s Place impact screen — $216</li><li>Optoma ZW350ST projector — $823</li><li>Fiberbuilt Studio Mat — $499</li><li>GSPro software — $250/year</li></ul><p><strong>Total: $4,787 first year.</strong> The Launch Pro uses Foresight technology for the best accuracy under $5K (±1.2 yards). Zero subscription for the monitor itself — you only pay for GSPro. If data accuracy is your priority over the SkyTrak\'s simulator ecosystem, this saves $496.</p>', badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'bushnell-launch-pro' },
-      { h2: 'Package 3: Best Value ($1,886)', body: '<ul><li>Rapsodo MLM2PRO — $599</li><li>Carl\'s Place impact screen — $216</li><li>Optoma ZW350ST projector — $823</li><li>StrikeDown Dual Turf mat — $79</li><li>E6 Connect (included with MLM2PRO) + GSPro — $250/year</li></ul><p><strong>Total: $1,717 in hardware</strong> ($2,036 for the first year with GSPro). Under $2,000 for a full projector simulator. The accuracy is not SkyTrak-level but it is more than enough for practice and virtual golf. See our <a href="/mlm2pro-vs-skytrak-plus/">MLM2PRO vs SkyTrak+ comparison</a>.</p>', badge: 'BEST VALUE', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
+      { h2: 'Package 1: Best Overall ($2,983)', body: '<ul><li>SkyTrak+ launch monitor — $1,195</li><li>Carl\'s Place impact screen (10x8) — $216</li><li>Optoma ZW350ST short-throw projector — $823</li><li>Fiberbuilt Studio Mat — $499</li><li>GSPro software — $250/year</li></ul><p><strong>Total: $2,983 first year.</strong> This is the setup we recommend. The SkyTrak+ delivers photometric accuracy (±1.5 yards), the screen and projector create immersive virtual golf, and GSPro gives you 200,000+ courses. The Fiberbuilt mat protects your wrists and feels like real turf.</p>', badge: 'TOP PICK', rating: 4.7, affiliateKey: 'skytrak-plus' },
+      { h2: 'Package 2: Best Accuracy ($4,787)', body: '<ul><li>Bushnell Launch Pro — $2,999</li><li>Carl\'s Place impact screen — $216</li><li>Optoma ZW350ST projector — $823</li><li>Fiberbuilt Studio Mat — $499</li><li>GSPro software — $250/year</li></ul><p><strong>Total: $4,787 first year.</strong> The Launch Pro uses Foresight technology for the best accuracy under $5K (±1.2 yards). Zero subscription for the monitor itself — you only pay for GSPro. If data accuracy is your priority over the SkyTrak\'s simulator ecosystem, this saves $496.</p>', badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'bushnell-launch-pro' },
+      { h2: 'Package 3: Best Value ($1,967)', body: '<ul><li>Rapsodo MLM2PRO — $599</li><li>Carl\'s Place impact screen — $216</li><li>Optoma ZW350ST projector — $823</li><li>StrikeDown Dual Turf mat — $79</li><li>E6 Connect (included with MLM2PRO) + GSPro — $250/year</li></ul><p><strong>Total: $1,717 in hardware, $1,967 for the first year including software</strong> ($2,036 for the first year with GSPro). Under $2,000 for a full projector simulator. The accuracy is not SkyTrak-level but it is more than enough for practice and virtual golf. See our <a href="/mlm2pro-vs-skytrak-plus/">MLM2PRO vs SkyTrak+ comparison</a>.</p>', badge: 'BEST VALUE', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
       { h2: 'What NOT to Cheap Out On', body: '<p><strong>The mat.</strong> A $50 range mat on concrete will hurt your wrists and damage clubs. The Fiberbuilt Studio ($499) is worth every dollar. Minimum: the StrikeDown ($79) with a rubber base layer underneath.</p><p><strong>The screen.</strong> A bedsheet or cheap screen will tear after a few driver hits. The Carl\'s Place screen ($216) is specifically designed for golf ball impact — it absorbs the hit without bouncing the ball back.</p><p><strong>Where you CAN save:</strong> Projector (the Optoma at $549 is 90% as good as the BenQ at $599). Software (GSPro at $250/yr beats E6 at $300/yr on course count). Frame/enclosure (DIY with PVC pipe and fittings for under $50).</p>' },
     
       { h2: 'The $4,257 Sweet Spot Build', body: 'Bushnell Launch Pro ($2,999) plus Carl\'s Place impact screen ($400) plus an Optoma ZW350ST projector ($823) plus a Fiberbuilt Studio Mat ($499) equals $4,257. Tour-level accuracy, 10-foot projected image, realistic turf feel. The Launch Pro requires no subscription for basic use. Add FSX Play ($300 per year) for full simulated courses. This is the build most golf forums recommend because it maximizes accuracy per dollar.' },

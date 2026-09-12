@@ -4545,19 +4545,26 @@ export const AFFILIATE: Record<string, {
       '14-way top prevents club tangling',
     ],
   },
-  'callaway-rogue-st-max': {
-    asin: 'B09KNV2CDV',
-    url: 'https://www.amazon.com/dp/B09KNV2CDV?tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Rogue%2520ST%2520Max%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+  'tour-edge-hot-launch-max-driver': {
+    // Replaced callaway-rogue-st-max in Sprint R2g. The Rogue ST Max has no right-handed
+    // regular-flex listing under $300 left on Amazon — only a left-handed one and an LS
+    // (low-spin, XStiff) at $350. Verified 2026-09-12: B0GR1FGV4J, Hand Orientation Right,
+    // 12 degrees, Aldila Ascent Regular, $299.95, in stock.
+    url: 'https://www.amazon.com/dp/B0GR1FGV4J?tag=cubicalgolfer-20',
+    verifiedOn: '2026-09-12',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$299',
-    priceNote: 'Previous-gen flagship — deep discounts since the Paradym release.',
-    label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/callaway-rogue-st-max.webp',
-    imgAlt: 'Callaway Rogue ST Max Driver',
+    price: '~$300',
+    priceNote: 'Driver prices drop 30-40% when the next model lands each January.',
+    label: 'Check Price at Amazon \u2192',
+    imgAlt: 'Tour Edge Hot Launch Max driver',
+    benefits: [
+      '12-degree loft is the highest-launch spec in its price band',
+      'Tour Edge\u2019s Max line is built for forgiveness rather than workability',
+      'Regular-flex Aldila Ascent shaft as the stock option',
+    ],
   },
   'bushnell-pro-x3': {
     asin: 'B0D6GVX8JZ',
