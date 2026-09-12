@@ -43,7 +43,7 @@ const gosports = getAffiliateLink('gosports-hitting-net');
 const spornia = getAffiliateLink('spornia-spg-7');
 const netReturn = getAffiliateLink('net-return-pro');
 const carls = getAffiliateLink('carls-place-impact-screen');
-const fiberbuilt = getAffiliateLink('fiberbuilt-flight-deck');
+const fiberbuilt = getAffiliateLink('fiberbuilt-studio-mat');
 const benq = getAffiliateLink('optoma-zw350st');
 const optoma = getAffiliateLink('optoma-gt2000hdr');
 const homecourse = getAffiliateLink('homecourse-retractable-screen');
@@ -68,7 +68,7 @@ const ev = {
   gosports:   gosports?.url,                               // amazon product page (no Golf Galaxy listing for this net)
   sporniaMat: sporniaMat?.golfGalaxyUrl || sporniaMat?.url,// golfgalaxy 8% product EV $13 > amazon search EV $4
   netReturn:  netReturn?.golfGalaxyUrl || netReturn?.url,  // golfgalaxy 8% product EV $28 > amazon search EV $9
-  fiberbuilt: fiberbuilt?.url,                    // amazon  3% product  EV $40 > golfgalaxy EV $36
+  fiberbuilt: fiberbuilt?.url,                    // playbetter 5% product
   benq:       benq?.url,                          // amazon  3% search   EV $22  (only option)
   optoma:     optoma?.url,                        // amazon  3% search   EV $30  (only option)
   carls:      carls?.url,                         // playbetter 5%       EV $3   (only option)
@@ -136,7 +136,7 @@ const ev = {
       <p>A golf simulator is not one product — it is five or six components that work together. Understanding where the money goes helps you make smarter choices at every budget level.</p>
       <p><strong>The launch monitor is always the biggest cost</strong> (40-65% of total). It captures your ball data — speed, spin, launch angle, carry distance — and sends it to your screen or phone. Budget monitors like the Garmin R10 ($490) use radar and work in any ceiling height. Premium monitors like the SkyTrak+ ($1,195) use photometric cameras for higher accuracy but need 9+ feet of ceiling clearance.</p>
       <p><strong>The projector and screen matter more than you think.</strong> A short-throw projector ($500-$700) is necessary for garages under 15 feet deep because standard projectors need too much distance. The impact screen doubles as your projector surface AND catches golf balls. Budget $199-$400 for a quality screen that will not tear.</p>
-      <p><strong>The hitting mat protects your body.</strong> Hitting off concrete or thin carpet damages wrists and elbows over time. The Fiberbuilt Flight Deck ($449) mimics real turf interaction and lasts 5+ years. Budget mats ($50-$100) work but wear out faster and feel less realistic.</p>
+      <p><strong>The hitting mat protects your body.</strong> Hitting off concrete or thin carpet damages wrists and elbows over time. The Fiberbuilt Grass Series Practice Station ($499) mimics real turf interaction and lasts 5+ years. Budget mats ($50-$100) work but wear out faster and feel less realistic.</p>
       <p><strong>Software is the recurring cost most people forget.</strong> GSPro ($250/year) offers 200,000+ community courses and is the best value. E6 Connect ($150-$300/year) has fewer courses but a more polished interface. TGC 2019 ($900 one-time) has the best graphics with no recurring fee.</p>
       <p><strong>The hidden costs:</strong> acoustic foam ($50-$100 if neighbors or family complain about noise), a rubber stall mat for the floor ($40), enclosure frame if you want a clean look ($200-$400), and HDMI cables and mounts ($30-$50). Budget an extra $150-$300 beyond the main components.</p>
       <p>Use the calculator above to see exact prices at your budget tier. For a more detailed analysis of long-term ownership costs including software subscriptions, see our <a href="/how-much-does-golf-simulator-cost/">complete simulator cost breakdown</a>.</p>
@@ -194,7 +194,7 @@ const tiers = {
       { component: 'Launch Monitor', name: 'Rapsodo MLM2PRO',            price: 699, url: ev.mlm,        note: 'Camera + radar, dual-band, includes club data' },
       { component: 'Impact Screen',  name: "Carl's Place 10x8 Screen",   price: 199, url: ev.carls,      note: 'Doubles as the projection surface' },
       { component: 'Projector',      name: 'Optoma ZW350ST',             price: 909, url: ev.benq,       note: 'Short-throw laser, 3,600 lumens, WXGA' },
-      { component: 'Hitting Mat',    name: 'Fiberbuilt Flight Deck',     price: 449, url: ev.fiberbuilt, note: 'Hit down without wrist shock' },
+      { component: 'Hitting Mat',    name: 'Fiberbuilt Practice Station',     price: 499, url: ev.fiberbuilt, note: 'Hit down without wrist shock' },
       { component: 'Software',       name: 'GSPro (1 year)',             price: 250, url: '',            note: 'No affiliate program — buy direct from gsprogolf.com' },
       { component: 'Computer',       name: 'Windows PC, GTX 1660+',      price: 0,   url: '',            note: 'GSPro needs a Windows machine. Use one you own if you can.' },
     ],
@@ -206,7 +206,7 @@ const tiers = {
       { component: 'Launch Monitor', name: 'Bushnell Launch Pro',        price: 2499, url: ev.launchPro,  note: 'Photometric, tour-level accuracy, ±1yd' },
       { component: 'Impact Screen',  name: 'HomeCourse Retractable',     price: 599,  url: ev.homecourse, note: 'Retracts into the ceiling when not in use' },
       { component: 'Projector',      name: 'Optoma GT2000HDR',           price: 1199, url: ev.optoma,     note: 'Short-throw laser, 3,500 lumens' },
-      { component: 'Hitting Mat',    name: 'Fiberbuilt Flight Deck',     price: 449,  url: ev.fiberbuilt, note: 'The mat you will not want to replace' },
+      { component: 'Hitting Mat',    name: 'Fiberbuilt Practice Station',     price: 499,  url: ev.fiberbuilt, note: 'The mat you will not want to replace' },
       { component: 'Software',       name: 'GSPro (1 year)',             price: 250,  url: '',            note: 'No affiliate program — buy direct' },
       { component: 'Computer',       name: 'Windows PC, RTX 3060+',      price: 0,    url: '',            note: 'Premium software settings need real GPU headroom' },
     ],

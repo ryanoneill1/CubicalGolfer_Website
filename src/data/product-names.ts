@@ -188,7 +188,6 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'wellputt-mat-10ft': "Wellputt Mat 10ft",
   'putt-out-trainer': "PuttOUT Trainer",
   'spornia-spg-hitting-mat': "Spornia SPG Hitting Mat",
-  'fiberbuilt-flight-deck': "Fiberbuilt Flight Deck",
   'country-club-elite-mat': "Country Club Elite Mat",
   'carls-place-impact-screen': "Carl's Place Impact Screen",
   'homecourse-retractable-screen': "HomeCourse Retractable Screen",
