@@ -351,7 +351,7 @@ Summary: Two budget launch monitors with very different approaches. The Garmin R
 
 ## We Tested 8 Launch Monitors for Accuracy — Here Is the Data
 URL: https://www.cubicalgolfer.com/golf-launch-monitor-accuracy-test/
-Summary: We hit 200+ shots with each of 8 launch monitors cross-referenced against the other launch monitors in this test and against Arccos and Shot Scope on-course data. Here is which ones are accurate and which ones miss.
+Summary: We hit 200+ shots with each of 6 launch monitors cross-referenced against the other launch monitors in this test and against Arccos and Shot Scope on-course data. Here is which ones are accurate and which ones miss.
 
 ## Rangefinder vs GPS Watch: Which Is Actually Better?
 URL: https://www.cubicalgolfer.com/golf-rangefinder-vs-gps-watch/
