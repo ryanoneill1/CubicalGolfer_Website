@@ -90,6 +90,31 @@ for (const article of ARTICLES as any[]) {
   }
 }
 
+// Sprint R2i — the gap that let "Best Launch Monitor Under $500" sit on
+// /best-golf-simulator-under-1000/ linking a $699 product. Both loops above are
+// entered only for articles whose SLUG encodes a ceiling, and the first one
+// `continue`s as soon as price <= the slug ceiling — so a section heading that
+// makes its own, stricter "under $N" promise was never checked on a page whose
+// slug says a different number (or says nothing at all). A promise is a promise
+// wherever it is written, so check every section heading against its own number.
+for (const article of ARTICLES as any[]) {
+  for (const section of article.sections ?? []) {
+    const key = section.affiliateKey;
+    if (!key) continue;
+    const entry = (AFFILIATE as any)[key];
+    if (!entry) continue;
+    if (/\/(dz|dozen|mo|month|yr|year)/i.test(entry.price ?? '')) continue;
+    const price = toNumber(entry.price);
+    if (price === null) continue;
+    const m = String(section.h2 ?? '').match(/under \$([\d,]+)(?!\s*[Kk])\b/i);
+    if (!m) continue;
+    const cap = parseFloat(m[1].replace(/,/g, ''));
+    if (price <= cap) continue;
+    const line = `${article.slug} → HEADING "${section.h2}" links ${key} at ${entry.price}`;
+    if (!violations.includes(line)) violations.push(line);
+  }
+}
+
 if (violations.length) {
   console.error(`\n❌ ${violations.length} product(s) exceed their page's stated price ceiling:`);
   for (const v of violations) console.error('   ' + v);
