@@ -439,8 +439,17 @@ const NAV_ITEMS = [
       // product was clicked, so fall back to the table row or the section
       // heading the link sits under.
       function productLabel(link) {
+        // Canonical name set at render time. Preferred over any scraped text:
+        // scraping produced 'Best Overall: Cleveland CBX4' and
+        // 'Best Overall: Cleveland CBX4 at Amazon' as two values for one product.
+        var canonical = link.getAttribute('data-aff-name');
+        if (canonical) return canonical.trim();
         var aria = link.getAttribute('aria-label');
-        if (aria) return aria.replace('Check price for ', '').replace("Check today's price for ", '').trim();
+        if (aria) return aria
+          .replace('Check price for ', '')
+          .replace("Check today's price for ", '')
+          .replace(/ (?:at|from|on) [A-Z][A-Za-z ]*$/, '')
+          .trim();
         var txt = (link.textContent || '').trim();
         if (txt && !/^(check|view|buy|shop|see|get)\b/i.test(txt) && txt.length > 3) return txt;
         var row = link.closest('tr');

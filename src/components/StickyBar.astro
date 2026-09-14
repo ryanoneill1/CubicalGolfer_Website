@@ -35,6 +35,7 @@ const stickyOutbound = url.includes('amazon.com') ? 'amazon' : url.includes('bus
         target="_blank"
         rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
         data-outbound={stickyOutbound}
+        data-aff-name={name}
         aria-label={unmonetised ? `Get ${name} from ${retailer}` : `Check price for ${name} at ${retailer}`}
       >
         Check Price ↗
