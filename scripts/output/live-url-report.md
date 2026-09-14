@@ -1,10 +1,10 @@
-# Live URL check — 2026-09-07
+# Live URL check — 2026-09-14
 
-258 sitemap URLs checked against https://www.cubicalgolfer.com.
+259 sitemap URLs checked against https://www.cubicalgolfer.com.
 
 | Status | Count |
 |---|---|
-| OK | 258 |
+| OK | 259 |
 | REDIRECT | 0 |
 | CANONICAL | 0 |
 | GONE | 0 |
