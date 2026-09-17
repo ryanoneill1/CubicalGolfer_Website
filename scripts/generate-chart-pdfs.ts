@@ -22,6 +22,18 @@ import { createWriteStream, mkdirSync } from 'fs';
 import { ARTICLES } from '../src/data/articles.ts';
 import { CLUBS, TIERS } from '../src/data/club-distances.ts';
 import { SWING_SPEEDS } from '../src/data/swing-speeds.ts';
+/* These PDFs travel on their own — /downloads/golf-green-speed-chart.pdf already
+ * shows up in Google's AI-features report independently of its page. The footer
+ * carried only "www.cubicalgolfer.com", which is not a route back to anything.
+ * Give each one the full page path and the date that page actually changed. */
+import LASTMOD from '../src/data/lastmod-manifest.json' with { type: 'json' };
+
+function updatedFor(slug: string): string {
+  const iso = (LASTMOD as Record<string, { lastmod: string }>)[slug]?.lastmod;
+  if (!iso) throw new Error(`lastmod manifest has no entry for ${slug} — refusing to stamp a guessed date on its PDF.`);
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+}
 
 const GREEN = '#1E3A28';
 const GOLD  = '#C8A84B';
@@ -148,7 +160,7 @@ for (const spec of CHARTS) {
     doc.switchToPage(range.start + i);
     doc.page.margins.bottom = 0;
     doc.font('Helvetica').fontSize(8).fillColor('#777777')
-       .text(`${SITE}  ·  ${spec.title}  ·  page ${i + 1} of ${range.count}`,
+       .text(`${SITE}${spec.slug}  ·  Updated ${updatedFor(spec.slug)}  ·  page ${i + 1} of ${range.count}`,
              MARGIN, doc.page.height - 40, { width: doc.page.width - MARGIN * 2, align: 'center' });
   }
 

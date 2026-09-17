@@ -20,6 +20,24 @@ import { dirname } from 'path';
  * ------------------------------------------------------------------------- */
 import { balls as SHARED } from '../src/data/balls.ts';
 
+/* ── "Updated" date ────────────────────────────────────────────────────────
+ * This used to read "Updated July 2026", hardcoded. That is the same mistake
+ * the ball prices above made: a second copy of a value that lives elsewhere.
+ * It was written in July, the page has changed since, and every build shipped
+ * a PDF claiming July — on the asset with the best CTR on the site.
+ * The lastmod manifest is the site's single source of truth for "when did this
+ * page last change" and is checked on every build, so take it from there.
+ * ------------------------------------------------------------------------- */
+import LASTMOD from '../src/data/lastmod-manifest.json' with { type: 'json' };
+
+const PAGE_PATH = '/golf-ball-compression-chart/';
+const UPDATED = (() => {
+  const iso = (LASTMOD as Record<string, { lastmod: string }>)[PAGE_PATH]?.lastmod;
+  if (!iso) throw new Error(`lastmod manifest has no entry for ${PAGE_PATH} — refusing to stamp a guessed date on the PDF.`);
+  const [y, m, d] = iso.split('-').map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+})();
+
 const balls = SHARED
   .slice()
   .sort((a, b) => a.compression - b.compression)
@@ -95,7 +113,7 @@ function footer(pageNum, pageTotal) {
   doc.save()
      .font('Helvetica').fontSize(7).fillColor('#999999')
      .text(
-       `${SITE_URL}  |  Page ${pageNum} of ${pageTotal}  |  Updated July 2026  |  Do not include affiliate links when sharing this PDF.`,
+       `${SITE_URL}${PAGE_PATH}  |  Page ${pageNum} of ${pageTotal}  |  Updated ${UPDATED}  |  Do not include affiliate links when sharing this PDF.`,
        MARGIN, doc.page.height - 40,
        { width: doc.page.width - MARGIN * 2, align: 'center' }
      )
