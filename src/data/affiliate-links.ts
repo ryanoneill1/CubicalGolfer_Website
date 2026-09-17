@@ -2838,18 +2838,24 @@ export const AFFILIATE: Record<string, {
       'Lightweight stock shaft adds 1-2 mph vs heavier competitors',
     ],
   },
-  'ping-sigma-2': {
-    url: 'https://www.amazon.com/dp/B08C4Q9ZJF/?tag=cubicalgolfer-20',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DPing%2520Sigma%25202%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+  // TaylorMade TP Soto #1 — replaces the Ping Sigma 2, whose Amazon listing is gone (the only
+  // Sigma 2 results left on Amazon are headcovers). Verified 2026-09-17 on the product page:
+  // ASIN B0CS4J28XK, title "TaylorMade Golf TP Black Putter SOTO #1 RIGHTHANDED 35 INCHES",
+  // $199.99, In Stock, sold and shipped by Amazon.com, Hand Orientation: Right, 4.7 stars / 40
+  // ratings. The 34-inch variant (B0CS4CPSV3) is the same price on the same listing. No product
+  // photo in the repo yet, so imgSrc is intentionally omitted.
+  'taylormade-tp-soto': {
+    url: 'https://www.amazon.com/dp/B0CS4J28XK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0CS4J28XK',
+    verifiedOn: '2026-09-17',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
-    price: '~$179',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    price: '~$200',
+    priceNote: '$199.99 at Amazon (checked 17 September 2026), sold and shipped by Amazon. The 34-inch and 35-inch lengths are the same price on the same listing.',
     label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/ping-sigma-2.webp',
-    imgAlt: 'Ping Sigma 2 Anser blade putter',
+    imgAlt: 'TaylorMade TP Soto blade putter',
   },
   // GoSports 10x7 / 7x7 hitting net — ASIN B079JDQKV4, verified live 2026-09-06 at $76.48,
   // In Stock, 4.6★ / 5,203 reviews. Replaces the Rukket HAACK, which has no Amazon listing at all
@@ -2890,15 +2896,16 @@ export const AFFILIATE: Record<string, {
   },
   'taylormade-spider-gt': {
     url: 'https://www.amazon.com/dp/B09LZCVD4V?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B09LZCVD4V',
+    verifiedOn: '2026-09-17',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTaylorMade%2520Spider%2520GT%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    verifiedOn: '2026-09-17',
     price: '~$200',
     primaryRetailer: 'direct',
-    priceNote: '$199.99 at Amazon, in stock (checked 17 September 2026). Right-hand, 35 inch, Short Slant. The listing we used before this one went permanently unavailable, so the link now points at the Rollback model.',
+    priceNote: '$199.99 at Amazon (checked 17 September 2026). This listing is the Rollback Silver/Black short slant, right-handed, 35 inches.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/taylormade-spider-gt.webp',
     imgAlt: 'TaylorMade Spider GT mallet putter',

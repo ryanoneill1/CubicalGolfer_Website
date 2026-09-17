@@ -141,7 +141,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'odyssey-two-ball-eleven': "Odyssey 2-Ball Eleven",
   'orange-whip-trainer': "Orange Whip Trainer",
   'ping-g440-sft': "Ping G440 SFT",
-  'ping-sigma-2': "Ping Sigma 2",
+  'taylormade-tp-soto': "TaylorMade TP Soto",
   'gosports-hitting-net': "GoSports Golf Practice Net",
   'scotty-cameron-phantom-x': "Scotty Cameron Phantom X",
   'taylormade-spider-gt': "TaylorMade Spider GT",

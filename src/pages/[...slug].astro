@@ -504,6 +504,12 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
     {article.quickAnswerProduct && article.bottomLine && (() => {
       const qaAff = getAffiliateLink(article.quickAnswerProduct);
       const productCount = article.comparisonTable?.rows?.length ?? article.sections?.filter((s: any) => s.affiliateKey)?.length ?? 0;
+      // A page carrying a testedStatus:'research' pick has NOT tested everything it lists.
+      // Say "compared" on those pages only; the rest keep the stronger, and true, "tested".
+      // Two conventions exist in the data for an untested pick: testedStatus:'research'
+      // and a literal badge of 'RESEARCH PICK'. Catch both, or the claim stays false.
+      const anyResearch = !!article.sections?.some((s: any) =>
+        s.testedStatus === 'research' || /RESEARCH PICK/i.test(String(s.badge ?? '')));
       if (!qaAff?.url) return null;
       return (
         <div class="quick-answer-box">
@@ -516,7 +522,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
               ? <>Our #1 Pick: {qaAff.price} — {qaAff.label}</>
               : <>Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price ↗</>}
           </a>
-          <p class="quick-answer-more">{productCount === 0 ? 'Read the full guide below.' : productCount === 1 ? 'Read the full review below.' : `Read the full guide below for all ${productCount} products tested.`}</p>
+          <p class="quick-answer-more">{productCount === 0 ? 'Read the full guide below.' : productCount === 1 ? 'Read the full review below.' : `Read the full guide below for all ${productCount} products ${anyResearch ? 'compared' : 'tested'}.`}</p>
         </div>
       );
     })()}
