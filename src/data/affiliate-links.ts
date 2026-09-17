@@ -2134,12 +2134,13 @@ export const AFFILIATE: Record<string, {
   'the-stack-system': {
     url: 'https://www.amazon.com/s?k=the-stack-system&crid=5PGR8SLS1ZLK&sprefix=taylormade-tp5x%2Caps%2C266&linkCode=ll2&tag=cubicalgolfer-20&linkId=bc6549a618ea0847e1fc73845f2e51e7&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DThe%2520Stack%2520System%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    verifiedOn: '2026-09-17',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
     retailer: 'Amazon',
     price: '~$299',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    priceNote: '$299.00 at Amazon (checked 17 September 2026). The radar bundle is a separate, pricier listing.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/the-stack-system.webp',
     imgAlt: 'The Stack Swing Speed Training System',
@@ -4446,10 +4447,12 @@ export const AFFILIATE: Record<string, {
   // ═══ ACCESSORIES — Sunglasses ═══
   'maui-jim-banyans-golf': {
     url: `https://www.amazon.com/dp/B002FU6UKW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
+    verifiedOn: '2026-09-17',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$249', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$249',
+    priceNote: '$249.00 at Amazon (checked 17 September 2026), consistent across the Banyans frame colours.', label: `See Today's Price →`,
     imgSrc: '/images/products/maui-jim-banyans-golf.webp', imgAlt: 'Maui Jim Banyans golf sunglasses',
         benefits: [
       'HCL Bronze lens gives the most natural colour reproduction we tested — true-to-life with added contrast',
@@ -4555,10 +4558,12 @@ export const AFFILIATE: Record<string, {
   },
   'ping-hoofer-14-stand-bag': {
     url: `https://www.amazon.com/s?k=ping+hoofer+14+stand+bag&tag=cubicalgolfer-20`,
+    verifiedOn: '2026-09-17',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$280', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '~$295',
+    priceNote: '$294.99 at Amazon (checked 17 September 2026) for the 14-way Hoofer stand bag.', label: `See Today's Price →`,
     imgSrc: '/images/products/ping-hoofer-14-stand-bag.webp', imgAlt: 'Ping Hoofer 14 stand bag',
     benefits: [
       'Most comfortable dual-strap system on the market',
