@@ -13,23 +13,26 @@
  * Two failures had actually happened by September 2026:
  *
  *   1. The compression PDF footer read "Updated July 2026" — hardcoded. The
- *      page's data had changed since (Sprint S1 moved the TP5 price on 17 Sep)
- *      and every build still stamped July. Exactly the drift that this same
- *      file's ball prices suffered before they were moved to a shared import.
+ *      page's data had changed since and every build still stamped July. The
+ *      same drift this file's ball prices suffered before Sprint 94 moved them
+ *      to a shared import.
  *
- *   2. Five of the seven PDFs carried only the bare string
- *      "www.cubicalgolfer.com" — no page path. A reader holding the file had
- *      no way to find the page, and no link to give it.
+ *   2. Five of seven PDFs carried only "www.cubicalgolfer.com" with no page
+ *      path, so a reader holding the file had no way back and no link to give.
  *
- * ── What it checks ─────────────────────────────────────────────────────────
- *   A. Every generated PDF contains the site domain.
- *   B. Every generated PDF contains a full page path, not just the domain.
- *   C. Every date printed in a PDF matches that page's lastmod-manifest entry
- *      — so a date can never again be a second, drifting copy.
- *   D. Neither PDF generator contains a hardcoded "<Month> <Year>" literal.
+ * ── Why it checks the GENERATORS, not the PDFs ─────────────────────────────
+ * The first cut of this validator shelled out to `pdftotext` and, when that was
+ * missing, fell back to reading the PDF's raw bytes. On Cloudflare's builder
+ * poppler-utils is not installed, the fallback read compressed streams, found
+ * no domain string in them, and failed the deploy on all seven files — every
+ * one of which was in fact correct. It had been written and tested on a machine
+ * where poppler had been installed by hand, so it passed locally and only broke
+ * in production.
  *
- * Check D is the important one: A–C would pass again the day someone types a
- * month name back into a template literal, right up until the month rolls over.
+ * The lesson is baked into the design now: THE HARD GATE IS SOURCE-LEVEL and
+ * runs identically everywhere. Reading the PDFs is a bonus that only happens
+ * when a real text extractor is present and demonstrably working — and it can
+ * never fail the build on its own absence.
  */
 import fs from 'fs';
 import path from 'path';
@@ -37,15 +40,40 @@ import { execFileSync } from 'child_process';
 
 const DOWNLOADS = 'public/downloads';
 const SITE = 'www.cubicalgolfer.com';
-const GENERATORS = [
-  'scripts/generate-compression-pdf.ts',
-  'scripts/generate-chart-pdfs.ts',
-];
 
 type Manifest = Record<string, { lastmod: string }>;
 const LASTMOD: Manifest = JSON.parse(
   fs.readFileSync('src/data/lastmod-manifest.json', 'utf8'),
 );
+
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+const monthRe = new RegExp(`\\b(${MONTHS.join('|')})\\s+20\\d\\d\\b`);
+
+/**
+ * Each generator, and the shape its footer must have. `mustReference` are
+ * substrings that have to appear in the file: the manifest import proves the
+ * date is derived rather than typed, and the path token proves the footer
+ * carries a page path rather than a bare domain.
+ */
+const GENERATORS = [
+  {
+    file: 'scripts/generate-compression-pdf.ts',
+    mustReference: [
+      { token: 'lastmod-manifest.json', why: 'the Updated date must be read from the manifest, not typed' },
+      { token: '${SITE_URL}${PAGE_PATH}', why: 'the footer must carry the full page path, not just the domain' },
+    ],
+  },
+  {
+    file: 'scripts/generate-chart-pdfs.ts',
+    mustReference: [
+      { token: 'lastmod-manifest.json', why: 'the Updated date must be read from the manifest, not typed' },
+      { token: '${SITE}${spec.slug}', why: 'the footer must carry the full page path, not just the domain' },
+    ],
+  },
+];
 
 /** Which page each PDF belongs to. A PDF with no mapping is reported, not skipped. */
 const PDF_TO_PAGE: Record<string, string> = {
@@ -61,9 +89,9 @@ const PDF_TO_PAGE: Record<string, string> = {
 /**
  * compression-cheat-sheet.pdf is a STATIC file: no script in this repo builds
  * it, nothing on the site links to it, and it carries its own hardcoded ball
- * data stamped "Updated May 2026". It is therefore exempt from the date check
- * below — not because it is fine, but because it cannot be fixed by changing a
- * generator, and deleting a published file is Ryan's call, not this script's.
+ * data stamped "Updated May 2026". It is exempt from the date check — not
+ * because it is fine, but because no generator change can fix it and deleting
+ * a published file is Ryan's call, not this script's.
  *
  * It is still REPORTED on every build so it cannot be forgotten. Remove this
  * entry the moment it is deleted, regenerated from src/data/balls.ts, or
@@ -71,10 +99,9 @@ const PDF_TO_PAGE: Record<string, string> = {
  */
 const STATIC_UNMAINTAINED = new Set(['compression-cheat-sheet.pdf']);
 
-const MONTHS = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December',
-];
+const problems: string[] = [];
+const warnings: string[] = [];
+const notes: string[] = [];
 
 function isoToLong(iso: string): string {
   const [y, m, d] = iso.split('-').map(Number);
@@ -83,78 +110,95 @@ function isoToLong(iso: string): string {
   });
 }
 
-/** Extract text with pdftotext if present, else a crude stream-free fallback. */
-function pdfText(file: string): string {
-  try {
-    return execFileSync('pdftotext', ['-q', file, '-'], {
-      encoding: 'utf8', maxBuffer: 20 * 1024 * 1024,
-    });
-  } catch {
-    // pdftotext missing: fall back to the raw bytes. Text drawn by pdfkit is
-    // compressed, so this will under-report — treat a miss here as inconclusive
-    // rather than as a failure, and rely on check D.
-    return fs.readFileSync(file, 'latin1');
+/* ════════════════════════════════════════════════════════════════════════════
+   PART 1 — SOURCE CHECKS. Mandatory. Identical on every machine.
+   ════════════════════════════════════════════════════════════════════════════ */
+for (const gen of GENERATORS) {
+  if (!fs.existsSync(gen.file)) {
+    problems.push(`generator missing: ${gen.file}`);
+    continue;
   }
-}
+  const src = fs.readFileSync(gen.file, 'utf8');
 
-const problems: string[] = [];
-const warnings: string[] = [];
-const notes: string[] = [];
-let checked = 0;
-let textExtractable = 0;
-
-/* ── D. No hardcoded month-year literal in either generator ── */
-const monthRe = new RegExp(`\\b(${MONTHS.join('|')})\\s+20\\d\\d\\b`);
-for (const g of GENERATORS) {
-  if (!fs.existsSync(g)) { problems.push(`generator missing: ${g}`); continue; }
-  const src = fs.readFileSync(g, 'utf8');
+  // (a) no hardcoded month-year anywhere in executable code
   src.split('\n').forEach((line, i) => {
-    // Comments are allowed to discuss dates; code is not allowed to print them.
+    // Comments may discuss dates; code may not print them.
     const code = line.replace(/\/\/.*$/, '').replace(/^\s*\*.*$/, '');
     const m = code.match(monthRe);
     if (m) {
       problems.push(
-        `${g}:${i + 1} hardcodes "${m[0]}". Read the date from ` +
+        `${gen.file}:${i + 1} hardcodes "${m[0]}". Read the date from ` +
         `src/data/lastmod-manifest.json instead — a literal here goes stale silently.`,
       );
     }
   });
+
+  // (b) the footer is built from the manifest and includes a page path
+  for (const { token, why } of gen.mustReference) {
+    if (!src.includes(token)) {
+      problems.push(`${gen.file} no longer contains \`${token}\` — ${why}.`);
+    }
+  }
 }
 
-/* ── A/B/C. Every PDF carries domain, path, and a date that matches lastmod ── */
+/* ════════════════════════════════════════════════════════════════════════════
+   PART 2 — PDF TEXT CHECKS. Best-effort. Never fail on the extractor's absence.
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/** Returns extracted text, or null when no working extractor is available. */
+function extract(file: string): string | null {
+  try {
+    const out = execFileSync('pdftotext', ['-q', file, '-'], {
+      encoding: 'utf8', maxBuffer: 20 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'],
+    });
+    // A working extractor returns prose. Anything without a run of letters is
+    // not text — treat it as "no extractor" rather than as a finding. Reading
+    // raw PDF bytes is what broke the deploy; there is no byte fallback now.
+    return /[A-Za-z]{4,}\s+[A-Za-z]{4,}/.test(out) ? out : null;
+  } catch {
+    return null;
+  }
+}
+
+let pdfCount = 0;
+let textChecked = 0;
+
 if (!fs.existsSync(DOWNLOADS)) {
   problems.push(`${DOWNLOADS} does not exist — PDFs were not generated.`);
 } else {
-  for (const file of fs.readdirSync(DOWNLOADS).filter(f => f.endsWith('.pdf')).sort()) {
-    checked++;
-    const full = path.join(DOWNLOADS, file);
-    const page = PDF_TO_PAGE[file];
+  const files = fs.readdirSync(DOWNLOADS).filter(f => f.endsWith('.pdf')).sort();
 
+  // Probe once. If nothing on this machine can read a PDF, skip Part 2 wholesale.
+  const probe = files.length ? extract(path.join(DOWNLOADS, files[0])) : null;
+  const canExtract = probe !== null;
+  if (!canExtract && files.length) {
+    notes.push(
+      'no PDF text extractor on this machine (install poppler-utils for the ' +
+      'extra checks) — the source checks above are the gate and they all ran',
+    );
+  }
+
+  for (const file of files) {
+    pdfCount++;
+    const page = PDF_TO_PAGE[file];
     if (!page) {
       problems.push(`${file} has no entry in PDF_TO_PAGE — add one so its attribution is checked.`);
       continue;
     }
+    if (!canExtract) continue;
 
-    const text = pdfText(full);
-
-    // Distinguish "could not read the file" from "read it, attribution missing".
-    // An earlier cut of this validator collapsed the two and reported a file
-    // with perfectly good text as unreadable — a soft note where the answer
-    // should have been hard. That is how a validator lies to you.
-    if (text.trim().length < 40) {
-      notes.push(`${file}: no extractable text (install poppler-utils for a full check)`);
+    const text = extract(path.join(DOWNLOADS, file));
+    if (text === null) {
+      notes.push(`${file}: no extractable text`);
       continue;
     }
-    textExtractable++;
+    textChecked++;
 
-    // A. the domain, in either the www or bare form
     const BARE = SITE.replace(/^www\./, '');
     if (!text.includes(BARE)) {
       problems.push(`${file} has readable text but never names ${BARE}. It travels with no attribution at all.`);
       continue;
     }
-
-    // B. full path, not just the bare domain
     if (!text.includes(`${SITE}${page}`) && !text.includes(`${BARE}${page}`)) {
       problems.push(
         `${file} names the domain but never the full path "${BARE}${page}". ` +
@@ -162,8 +206,6 @@ if (!fs.existsSync(DOWNLOADS)) {
       );
     }
 
-    // C. any printed date must be this page's lastmod
-    const expected = isoToLong(LASTMOD[page]?.lastmod ?? '');
     const printed = text.match(monthRe);
     if (printed && STATIC_UNMAINTAINED.has(file)) {
       warnings.push(
@@ -172,12 +214,12 @@ if (!fs.existsSync(DOWNLOADS)) {
         `hardcoded ball data. Awaiting a decision: delete, regenerate, or keep.`,
       );
     } else if (printed) {
-      const wanted = expected.match(monthRe)?.[0];
+      const wanted = isoToLong(LASTMOD[page]?.lastmod ?? '').match(monthRe)?.[0];
       if (!wanted) {
         problems.push(`${file}: lastmod manifest has no date for ${page}.`);
       } else if (printed[0] !== wanted) {
         problems.push(
-          `${file} prints "${printed[0]}" but ${page} last changed ${expected}. ` +
+          `${file} prints "${printed[0]}" but ${page} last changed ${isoToLong(LASTMOD[page].lastmod)}. ` +
           `The PDF is stamped with a date the page no longer has.`,
         );
       }
@@ -185,10 +227,12 @@ if (!fs.existsSync(DOWNLOADS)) {
   }
 }
 
+/* ── Report ── */
 if (problems.length === 0) {
   console.log(
-    `✅ PDF attribution: ${checked} PDF(s) — every one carries its full page URL, ` +
-    `and no generator hardcodes a date (${textExtractable} text-extractable).`,
+    `✅ PDF attribution: ${GENERATORS.length} generator(s) derive their date from the ` +
+    `lastmod manifest and carry a full page path; ${pdfCount} PDF(s) present` +
+    (textChecked ? `, ${textChecked} verified by text` : ''),
   );
   for (const w of warnings) console.log(`   ⚠️  ${w}`);
   for (const n of notes) console.log(`   note: ${n}`);
