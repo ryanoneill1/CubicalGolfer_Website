@@ -1842,7 +1842,7 @@ export const ARTICLES: Article[] = [
       headers: ['Putter', 'Style', 'Price', 'Insert', 'Best For'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'odyssey-white-hot-og',      name: 'Odyssey White Hot OG',     bestFor: 'Best Overall', price: '~$290', feature1: 'White Hot', feature2: 'Any stroke',      winner: true },
-        {  rating: 4.4,affiliateKey: 'cleveland-huntington-beach', name: 'Cleveland Huntington Beach', bestFor: 'Blade value', price: '~$131', feature1: '', feature2: '', winner: false },
+        {  rating: 4.4,affiliateKey: 'cleveland-huntington-beach', name: 'Cleveland Huntington Beach', bestFor: 'Blade value', price: '~$124', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'odyssey-two-ball-eleven', name: 'Odyssey 2-Ball Eleven', bestFor: 'Max forgiveness', price: '~$300', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'odyssey-tri-hot-5k', name: 'Odyssey Tri-Hot 5K', bestFor: 'Older golfers', price: '~$200', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'lab-golf-df3', name: 'L.A.B. Golf DF3', bestFor: 'The yips', price: '~$449', feature1: '', feature2: '', winner: false },
@@ -9819,7 +9819,7 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Best Overall: Cleveland Huntington Beach Soft',
         badge: 'BEST OVERALL',
-        price: '~$131',
+        price: '~$124',
         rating: 4.4, affiliateKey: 'cleveland-huntington-beach',
         body: 'The Cleveland Huntington Beach Soft is the best putter under $150 in any category. Cleveland\'s Speed Optimized Face Technology varies milling depth across the face to normalize ball speed — the same principle that Odyssey, TaylorMade, and Scotty Cameron use in their $300+ putters. The practical effect: a putt struck off-center rolls nearly the same distance as a center hit. This is the single most important technology in a putter, and Cleveland puts it in a sub-$130 package. Available in both blade and mallet configurations, the Huntington Beach Soft suits every stroke type. The diamond CNC milling creates a soft, pleasant feel that is genuinely competitive with putters twice the price. It is not White Hot soft and not Cameron-buttery, but it is miles ahead of the hard, clicky feel of cheap putters. Cleveland\'s build quality is reliable — this putter will last years of regular use without performance degradation.',
         pros: [
@@ -9894,7 +9894,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Best For', 'Type', 'Price', 'Face Tech'],
       rows: [
-        { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$131', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
+        { name: 'Cleveland Huntington Beach', bestFor: 'Best Overall', price: '~$124', feature1: 'Blade & Mallet', feature2: 'Speed Optimized', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'Wilson Staff Infinite', bestFor: 'Value Blade', price: '~$140', feature1: 'Blade', feature2: 'Double Milled', winner: false, rating: 4.1, affiliateKey: 'wilson-staff-infinite' },
         { name: 'Pinemeadow PGX', bestFor: 'Beginners', price: '~$67', feature1: 'Mallet', feature2: 'Insert', winner: false, rating: 3.8, affiliateKey: 'pinemeadow-pgx' },
       ],
@@ -14406,7 +14406,7 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Value: Cleveland Huntington Beach Soft',
         badge: 'BUDGET PICK',
-        price: '~$131',
+        price: '~$124',
         affiliateKey: 'cleveland-huntington-beach',
         rating: 4.3,
         body: 'The Cleveland Huntington Beach Soft blade is the best blade putter under $130 and the easiest recommendation for golfers trying a blade for the first time. Cleveland\'s Speed Optimized Face Technology varies milling depth across the face to normalize ball speed, which partially compensates for the blade\'s inherently lower forgiveness compared to mallets. The diamond CNC milling creates a soft but not mushy feel — it sits between the firm Evnroll and the buttery Scotty Cameron on the feel spectrum. In our testing from 6 feet, the Huntington Beach blade converted 56% of putts — lower than the Scotty Cameron (61%) but impressive for a putter that costs a quarter of the price. The head shape is a classic Anser-style blade with moderate toe hang, suiting the majority of golfers with a slight arc stroke. Build quality is solid — the milling is clean, the finish is durable, and the stock grip is adequate.',
@@ -14466,7 +14466,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Scotty Cameron Phantom X', bestFor: 'Best Overall', price: '~$500', feature1: '4.7/5 ★', feature2: '', winner: true, affiliateKey: 'scotty-cameron-phantom-x' },
         { name: 'Evnroll ER2', bestFor: 'Best Feel', price: '~$349', feature1: '4.6/5 ★', feature2: '', winner: false, affiliateKey: 'evnroll-er2' },
-        { name: 'Cleveland Huntington Beach', bestFor: 'Budget Pick', price: '~$131', feature1: '4.3/5 ★', feature2: '', winner: false, affiliateKey: 'cleveland-huntington-beach' },
+        { name: 'Cleveland Huntington Beach', bestFor: 'Budget Pick', price: '~$124', feature1: '4.3/5 ★', feature2: '', winner: false, affiliateKey: 'cleveland-huntington-beach' },
         { name: 'TaylorMade TP Soto', bestFor: 'Classic Design', price: '~$200', feature1: '', feature2: '', winner: false, affiliateKey: 'taylormade-tp-soto' },
         { name: 'Odyssey Stroke Lab', bestFor: 'Modern Pick', price: '~$199', feature1: '4.5/5 ★', feature2: '', winner: false, affiliateKey: 'odyssey-stroke-lab' },
       ],
