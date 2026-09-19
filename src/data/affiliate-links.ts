@@ -3859,13 +3859,15 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/callaway-strata.webp', imgAlt: 'Callaway Strata senior golf club set',
   },
   'cleveland-launcher-xl-senior': {
-    url: 'https://www.amazon.com/s?k=Cleveland+Launcher+XL+Senior+Flex+Irons&linkCode=ll2&tag=cubicalgolfer-20&linkId=3b3e126df2448bd1026ec4b7f2a62a15&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B099FK4V3D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B099FK4V3D',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCleveland%2520Launcher%2520XL%2520Senior%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    verifiedOn: '2026-09-19',
     program: 'amazon',
     commissionPct: 3,
     cookieDays: 1,
-    retailer: 'Amazon', price: '~$799',
-    priceNote: 'Previous-year models drop 30-40% when new models release each January.', label: 'Check Price at Amazon →',
+    retailer: 'Amazon', price: '~$644',
+    priceNote: '$644.18 at Amazon (checked 19 September 2026), sold and shipped by Amazon. Verified on the product page as Golf Club Flex: Senior, Hand Orientation: Right, graphite shaft — the 5-iron through dual-wedge set.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/cleveland_launcher_xl.webp', imgAlt: 'Cleveland Launcher XL senior golf set',
   },
   'golf-pride-cp2-wrap-jumbo': {
