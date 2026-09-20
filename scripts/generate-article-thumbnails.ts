@@ -26,6 +26,54 @@ const GREEN = '#1E3A28', GOLD = '#C9A227';
 const W = 800, H = 520;
 const PLATE = 250, PLATE_X = W - PLATE - 60, PLATE_Y = (H - PLATE) / 2 + 10, IMG_PAD = 22;
 
+/**
+ * Reference pages (wind / temperature / green speed) have no product to
+ * photograph, so build() returned 'nokey' and the hub fell back to a bare emoji.
+ *
+ * They do not need a stock photo — they need the answer the page gives. Each
+ * entry below is a headline figure lifted from that page's own first data table,
+ * laid out in the same house style as the hand-made cards: short title top-left,
+ * subtitle under it, one plate on the right.
+ *
+ * A first attempt plotted the full series as a line chart. It was dropped: every
+ * one of these series is arithmetic, so all three cards rendered as the same 45°
+ * diagonal and said nothing. A single number is honest, legible at 400x260, and
+ * actually differs between pages.
+ *
+ * If the source table changes, change the figure here too.
+ */
+const CHART_ART: Record<string, { title: string; sub: string; stat: string; unit: string; caption: string }> = {
+  '/golf-green-speed-chart/': {
+    title: 'Green Speed Chart', sub: 'What Stimp Does to Your Putt',
+    // 20 ft putt rolls 16 ft at stimp 8 and 26 ft at stimp 13
+    stat: '10', unit: 'ft', caption: 'SPREAD ON A 20 FT PUTT',
+  },
+  '/golf-distance-temperature-chart/': {
+    title: 'Distance by Temperature', sub: 'What Cold Air Costs You',
+    // driver carries 241 at 30°F, 253 at 90°F
+    stat: '12', unit: 'yds', caption: 'DRIVER, 30°F TO 90°F',
+  },
+  '/golf-wind-adjustment-chart/': {
+    title: 'Golf Wind Chart', sub: 'What to Add and Subtract',
+    // 7-iron into a 25 mph headwind needs 175 to carry 150
+    stat: '+25', unit: 'yds', caption: '7-IRON, 25 MPH HEADWIND',
+  },
+};
+
+/** The stat plate: one figure, its unit, and what it measures. */
+function statPlate(c: { stat: string; unit: string; caption: string }): string {
+  const w = PLATE;
+  return `
+    <text x="${w / 2}" y="108" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+          font-size="64" font-weight="bold" fill="${GREEN}">${esc(c.stat)}</text>
+    <text x="${w / 2}" y="140" text-anchor="middle" font-family="Helvetica, Arial, sans-serif"
+          font-size="20" fill="${GREEN}" opacity="0.75">${esc(c.unit)}</text>
+    <line x1="52" y1="163" x2="${w - 52}" y2="163" stroke="${GOLD}" stroke-width="2"/>
+    ${wrap(c.caption, 22).slice(0, 2).map((l, i) => `<text x="${w / 2}" y="${188 + i * 18}" text-anchor="middle"
+          font-family="Helvetica, Arial, sans-serif" font-size="12" letter-spacing="1"
+          fill="#6A645A">${esc(l)}</text>`).join('')}`;
+}
+
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /** Wrap a title into at most 3 lines that fit the left column. */
@@ -54,17 +102,24 @@ async function build(a: any): Promise<'made' | 'skip' | 'nokey'> {
     || (a.sections ?? []).find((s: any) => s.affiliateKey)?.affiliateKey
     || (a.comparisonTable?.rows ?? []).find((r: any) => r.affiliateKey)?.affiliateKey;
   const prod: any = key ? (AFFILIATE as any)[key] : null;
-  if (!prod?.imgSrc) return 'nokey';
-  const imgPath = path.join(PUBLIC, prod.imgSrc);
-  if (!fs.existsSync(imgPath)) return 'nokey';
+  const chart = CHART_ART[a.slug];
+  if (!prod?.imgSrc && !chart) return 'nokey';
 
-  const img = await sharp(imgPath)
-    .resize({ width: PLATE - IMG_PAD * 2, height: PLATE - IMG_PAD * 2, fit: 'inside' })
-    .toBuffer();
-  const meta = await sharp(img).metadata();
+  let img: Buffer | null = null, meta: any = null;
+  if (!chart) {
+    const imgPath = path.join(PUBLIC, prod.imgSrc);
+    if (!fs.existsSync(imgPath)) return 'nokey';
+    img = await sharp(imgPath)
+      .resize({ width: PLATE - IMG_PAD * 2, height: PLATE - IMG_PAD * 2, fit: 'inside' })
+      .toBuffer();
+    meta = await sharp(img).metadata();
+  }
 
-  const lines = wrap(a.titleDisplay || a.title);
-  const startY = H / 2 - (lines.length - 1) * 26 - 6;
+  // Chart pages use the hand-made card layout: short title top-left, subtitle
+  // under it. Product cards keep the original vertically-centred treatment so
+  // the 186 already generated stay reproducible.
+  const lines = chart ? wrap(chart.title, 20) : wrap(a.titleDisplay || a.title);
+  const startY = chart ? 150 : H / 2 - (lines.length - 1) * 26 - 6;
   const svg = `
   <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
     <rect width="${W}" height="${H}" fill="${GREEN}"/>
@@ -75,18 +130,21 @@ async function build(a: any): Promise<'made' | 'skip' | 'nokey'> {
           font-size="44" font-weight="bold" fill="#ffffff">${esc(l)}</text>`).join('')}
     <text x="52" y="${H - 44}" font-family="Helvetica, Arial, sans-serif" font-size="19"
           fill="${GOLD}">cubicalgolfer.com</text>
+    ${chart ? `<text x="52" y="${startY + lines.length * 52 - 8}" font-family="Helvetica, Arial, sans-serif"
+          font-size="21" fill="#ffffff" opacity="0.72">${esc(chart.sub)}</text>` : ''}
     <rect x="${PLATE_X}" y="${PLATE_Y}" width="${PLATE}" height="${PLATE}" rx="14" fill="#F2F1EC" stroke="#D8D5CC" stroke-width="2"/>
+    ${chart ? `<g transform="translate(${PLATE_X},${PLATE_Y})">${statPlate(chart)}</g>` : ''}
   </svg>`;
 
   // Two passes on purpose: sharp applies resize BEFORE composite in a single
   // pipeline, which would shrink the canvas to 400px and drop the product image
   // placed at x=512. Composite at full 2x size, then downsample separately.
-  const card = await sharp(Buffer.from(svg))
-    .composite([{ input: img,
-      left: Math.round(PLATE_X + (PLATE - (meta.width ?? 0)) / 2),
-      top: Math.round(PLATE_Y + (PLATE - (meta.height ?? 0)) / 2) }])
-    .png()
-    .toBuffer();
+  const base = sharp(Buffer.from(svg));
+  const card = await (img
+    ? base.composite([{ input: img,
+        left: Math.round(PLATE_X + (PLATE - (meta.width ?? 0)) / 2),
+        top: Math.round(PLATE_Y + (PLATE - (meta.height ?? 0)) / 2) }])
+    : base).png().toBuffer();
   await sharp(card).resize(400, 260).webp({ quality: 82 }).toFile(out);
   return 'made';
 }

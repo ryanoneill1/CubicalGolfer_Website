@@ -14584,6 +14584,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-distance-temperature-chart',
     slug: '/golf-distance-temperature-chart/',
+    thumbnail: '/images/thumbnails/golf-distance-temperature-chart-thumb.webp',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-distance-temperature-chart.jpg',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -14644,6 +14645,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-wind-adjustment-chart',
     slug: '/golf-wind-adjustment-chart/',
+    thumbnail: '/images/thumbnails/golf-wind-adjustment-chart-thumb.webp',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-wind-adjustment-chart.jpg',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -14708,6 +14710,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-green-speed-chart',
     slug: '/golf-green-speed-chart/',
+    thumbnail: '/images/thumbnails/golf-green-speed-chart-thumb.webp',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-green-speed-chart.jpg',
     category: 'improve-game',
     pageType: 'tutorial',
