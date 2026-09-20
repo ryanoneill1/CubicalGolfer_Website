@@ -42,7 +42,9 @@ const PLATE = 250, PLATE_X = W - PLATE - 60, PLATE_Y = (H - PLATE) / 2 + 10, IMG
  *
  * If the source table changes, change the figure here too.
  */
-const CHART_ART: Record<string, { title: string; sub: string; stat: string; unit: string; caption: string }> = {
+type ChartArt = { title: string; sub: string; stat: string; unit: string; caption: string };
+
+const CHART_ART: Record<string, ChartArt> = {
   '/golf-green-speed-chart/': {
     title: 'Green Speed Chart', sub: 'What Stimp Does to Your Putt',
     // 20 ft putt rolls 16 ft at stimp 8 and 26 ft at stimp 13
@@ -74,6 +76,48 @@ function statPlate(c: { stat: string; unit: string; caption: string }): string {
           fill="#6A645A">${esc(l)}</text>`).join('')}`;
 }
 
+/**
+ * Sixteen articles carry a hand-made `thumbnail` from before the product-plate
+ * treatment existed. Those cards render as a green panel with an *empty* plate —
+ * a title and a blank rectangle — because build() returns 'skip' the moment an
+ * article declares `thumbnail`, so they were never rebuilt with art.
+ *
+ * Each entry re-points one of them at art chosen for that page's topic while
+ * keeping its existing filename, so every `thumbnail` reference in articles.ts
+ * keeps resolving and no path anywhere changes.
+ *
+ *   key    the product to photograph. Chosen deliberately, NOT the quick-answer
+ *          default: /office-to-golf-course-playbook/ should show a putting mat,
+ *          not the shoes its CTA happens to sell.
+ *   chart  the stat plate instead, for the two pages that have no product at
+ *          all. Both figures are the page's own, from its bottomLine.
+ *   title  a short form, only where the real title overflows three lines and
+ *          would be cut mid-sentence (or leads with an emoji, which does not
+ *          render in an SVG <text> run).
+ */
+const FLAT_CARDS: Record<string, { file: string; key?: string; title?: string; chart?: ChartArt }> = {
+  '/black-friday-golf-deals/':           { file: 'black-friday-deals-thumb.webp',     key: 'garmin-approach-r10' },
+  '/prime-day-golf-deals/':              { file: 'prime-day-deals-thumb.webp',        key: 'garmin-approach-s12' },
+  '/best-electric-golf-cart/':           { file: 'electric-golf-cart-thumb.webp',     key: 'ezgo-rxv-2' },
+  '/best-golf-courses-weekend-drive/':   { file: 'courses-thumb.webp',                key: 'bushnell-tour-v7-shift' },
+  '/golf-course-etiquette/':             { file: 'golf-etiquette-thumb.webp',         key: 'blue-tees-series-3-max' },
+  '/golf-for-beginners/':                { file: 'golf-for-beginners-hub-thumb.webp', key: 'callaway-strata-ultimate-16', title: 'Golf for Beginners' },
+  '/golf-tips-for-beginners/':           { file: 'tips-beginners-thumb.webp',         key: 'callaway-strata' },
+  '/average-golf-handicap/':             { file: 'handicap-thumb.webp',               key: 'arccos-caddie-sensors', title: 'Average Golf Handicap' },
+  '/how-far-average-golfer-hit-7-iron/': { file: 'how-far-7-iron-thumb.webp',         key: 'arccos-caddie-sensors' },
+  '/why-do-i-hit-irons-fat/':            { file: 'hit-irons-fat-thumb.webp',          key: 'fiberbuilt-studio-mat', title: 'Why You Hit Irons Fat' },
+  '/how-to-chip-in-golf/':               { file: 'how-to-chip-thumb.webp',            key: 'cleveland-rtx6-52', title: 'How to Chip in Golf' },
+  '/how-to-stop-topping-the-ball/':      { file: 'stop-topping-thumb.webp',           key: 'alignment-sticks' },
+  '/how-to-sneak-in-more-golf-rounds/':  { file: 'sneak-rounds-thumb.webp',           key: 'bag-boy-nitron' },
+  '/office-to-golf-course-playbook/':    { file: 'office-golf-playbook-thumb.webp',   key: 'sklz-accelerator-putting-mat', title: 'Cubicle-to-Course Playbook' },
+  // No product on either page. Figures taken from each page's own bottomLine:
+  // "The USGA and R&A limit you to 14 clubs" / "your best 8 of your last 20 scores".
+  '/how-many-clubs-in-a-golf-bag/': { file: 'clubs-in-bag-thumb.webp',
+    chart: { title: 'How Many Clubs?', sub: 'The 14-Club Rule', stat: '14', unit: 'max', caption: 'CLUBS ALLOWED IN YOUR BAG' } },
+  '/golf-handicap-explained/': { file: 'handicap-explained-thumb.webp',
+    chart: { title: 'Handicap Explained', sub: 'How the Number Works', stat: '8', unit: 'of 20', caption: 'SCORES THAT SET YOUR INDEX' } },
+};
+
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 /** Wrap a title into at most 3 lines that fit the left column. */
@@ -91,18 +135,22 @@ async function build(a: any): Promise<'made' | 'skip' | 'nokey'> {
   // Only articles that declare no thumbnail. Anything with a `thumbnail` field
   // already has art (often under a different filename), and generating a second
   // file would just litter public/ with images nothing references.
-  if (a.thumbnail) return 'skip';
+  const fix = FLAT_CARDS[a.slug];
+  if (!fix && a.thumbnail) return 'skip';
   // Flatten nested slugs (/compare/x/ → compare-x) so no sub-directory is needed.
   const slug = a.slug.replace(/^\/|\/$/g, '').replace(/\//g, '-');
-  const out = path.join(OUT_DIR, `${slug}-thumb.webp`);
+  const out = path.join(OUT_DIR, fix?.file ?? `${slug}-thumb.webp`);
   if (fs.existsSync(out)) return 'skip';
 
-  // Lead product = the article's own quick-answer pick, else its first keyed section.
-  const key = a.quickAnswerProduct
-    || (a.sections ?? []).find((s: any) => s.affiliateKey)?.affiliateKey
-    || (a.comparisonTable?.rows ?? []).find((r: any) => r.affiliateKey)?.affiliateKey;
+  // Lead product = an explicit FLAT_CARDS choice, else the article's own
+  // quick-answer pick, else its first keyed section.
+  const key = fix
+    ? fix.key
+    : (a.quickAnswerProduct
+      || (a.sections ?? []).find((s: any) => s.affiliateKey)?.affiliateKey
+      || (a.comparisonTable?.rows ?? []).find((r: any) => r.affiliateKey)?.affiliateKey);
   const prod: any = key ? (AFFILIATE as any)[key] : null;
-  const chart = CHART_ART[a.slug];
+  const chart = fix?.chart ?? CHART_ART[a.slug];
   if (!prod?.imgSrc && !chart) return 'nokey';
 
   let img: Buffer | null = null, meta: any = null;
@@ -118,7 +166,7 @@ async function build(a: any): Promise<'made' | 'skip' | 'nokey'> {
   // Chart pages use the hand-made card layout: short title top-left, subtitle
   // under it. Product cards keep the original vertically-centred treatment so
   // the 186 already generated stay reproducible.
-  const lines = chart ? wrap(chart.title, 20) : wrap(a.titleDisplay || a.title);
+  const lines = chart ? wrap(chart.title, 20) : wrap(fix?.title || a.titleDisplay || a.title);
   const startY = chart ? 150 : H / 2 - (lines.length - 1) * 26 - 6;
   const svg = `
   <svg width="${W}" height="${H}" xmlns="http://www.w3.org/2000/svg">
