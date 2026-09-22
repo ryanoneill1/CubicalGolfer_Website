@@ -450,6 +450,74 @@ export const AFFILIATE: Record<string, {
   // search lands on a women's used demo fairway wood.
   // Image is card art, registered in AWAITING_PHOTO in validate-thumbnails.ts.
   // Using the DARKSPEED X photo would be a different club under the same name.
+  'taylormade-qi4d-driver': {
+    url: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftaylormade-qi4d-driver-25taymgolfq4ddvrrxzpe%2F25taymgolfq4ddvrrxzpe',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$649.99',
+    verifiedOn: '2026-09-21',
+    priceNote: 'Won MyGolfSpy Most Wanted 2026. Stock confirmed at Golf Galaxy on 21 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Most Wanted 2026 winner, the first TaylorMade driver win in several generations',
+        'Two-year product cycle, so this head stays current longer than an annual release',
+        'Succeeds the Qi35, which remains on sale at a lower price',
+      ],
+  },
+
+  'ping-g440-max-driver-2026': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-g440-max-driver-24pngmg440mxdrltcdrv%2F24pngmg440mxdrltcdrv',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$449.00',
+    verifiedOn: '2026-09-21',
+    priceNote: 'PING is not sold on Amazon at any price, so Golf Galaxy is the only route.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Direct successor to the G430 Max, the highest-MOI head PING builds',
+        'Carbon fly wrap crown moves mass low and back for forgiveness',
+        'Not listed on Amazon, because PING restricts marketplace selling',
+      ],
+  },
+
+  'callaway-quantum-max-driver': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcallaway-quantum-max-driver-25calmgolfqntmmxdvnbi%2F25calmgolfqntmmxdvnbi',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$649.99',
+    verifiedOn: '2026-09-21',
+    priceNote: 'Replaces the Paradym Ai Smoke Max at the top of the Callaway line.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Runner-up in MyGolfSpy Most Wanted 2026 and their Best for Distance pick',
+        'Also took Best for Forgiveness at high swing speeds in the same test',
+        'Succeeds the Paradym Ai Smoke Max, which stays available for less',
+      ],
+  },
+
+  'cobra-optm-max-k-driver': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcobra-optm-max-k-driver-25cobmgolfptmmxkdvgrk%2F25cobmgolfptmmxkdvgrk',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$599.00',
+    verifiedOn: '2026-09-21',
+    priceNote: 'The 2026 successor to the DS-Adapt MAX-K.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'MyGolfSpy Best for Accuracy at high swing speeds, 2026',
+        'FutureFit33 hosel carried over, with 33 independent loft and lie settings',
+        'Succeeds the DS-Adapt MAX-K, which stays as the sub-300 value option',
+      ],
+  },
+
   'cobra-ds-adapt-max-k': {
     asin: 'B0DC88GLHK',
     url: 'https://www.amazon.com/dp/B0DC88GLHK?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
