@@ -1,6 +1,16 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'taylormade-qi4d-driver': "TaylorMade Qi4D Driver",
+  'ping-g440-max-driver-2026': "PING G440 MAX Driver",
+  'callaway-quantum-max-driver': "Callaway Quantum Max Driver",
+  'cobra-optm-max-k-driver': "Cobra OPTM MAX-K Driver",
+  'titleist-vokey-sm11': "Titleist Vokey SM11",
+  'callaway-quantum-max-irons': "Callaway Quantum Max Irons",
+  'evnroll-z1cs': "Evnroll ZERO Z1cs",
+  'bushnell-wingman-hd': "Bushnell Wingman HD",
+  'garmin-approach-z30': "Garmin Approach Z30",
+  'spornia-spg-8-xl': "Spornia SPG-8 XL",
   'kvv-electric-golf-cart': "KVV Electric Golf Cart",
   'alphard-cybercart': "Alphard Cybercart",
   'garmin-approach-s44': "Garmin Approach S44",

@@ -127,6 +127,13 @@ export const ARTICLES: Article[] = [
     
       },
       {
+        h2: 'New for 2026: Garmin Approach Z30',
+        badge: 'STAFF PICK 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'garmin-approach-z30',
+        body: 'The Z30 was MyGolfSpy\'s staff pick in 2026 rangefinder testing. It ranges to 400 yards and pushes the distance straight to a compatible Garmin watch, which is the trick the Z82 above also does.\n\nWe have not tested it, so no rating from us.\n\nAt $449.99 it undercuts the Z82. Worth knowing the two are not the same class of device — the Z82 folds in full GPS course mapping, the Z30 is a laser first.',
+      },
+      {
         h2: 'Best Premium: Bushnell Pro XE',
         rating: 4.7, affiliateKey: 'bushnell-pro-xe',
         body: "The Pro XE is the rangefinder Bushnell makes for golfers who want every possible variable accounted for. While the Tour V7 Shift factors in slope, the Pro XE adds temperature and altitude to the equation — what Bushnell calls Elements. On a hot August afternoon at elevation, those factors can mean a 5-8 yard difference on a 175-yard approach.\n\nWe tested the Pro XE over 8 rounds, including a 95-degree day in July and a windy 52-degree morning in early April. On the hot day, the Pro XE read 168 yards to a pin that the V7 called 172. The actual carry with a 7-iron confirmed the Pro XE was closer — the ball landed pin high. In cool morning air, the Pro XE consistently showed 2-3 yards more than the V7 on the same targets, correctly accounting for reduced ball flight in denser air. Is a 3-yard difference worth $170? For most weekend golfers, honestly, no. For competitive players or golfers who play in extreme temperatures or at altitude, absolutely.\n\nThe PinSeeker with JOLT is the same excellent system from the V7 — instant pin lock, vibration confirmation, zero complaints. The magnetic cart mount is even stronger on the Pro XE, and the housing feels built like a tank. This is a rangefinder you buy once and hand down to your kids. The rubberized armor has survived multiple cart path drops in our testing without a mark.\n\nThe display is arguably the best in our entire test lineup. Bright, sharp, easy to read in every condition. The slope toggle works identically to the V7 — physical switch, tournament legal when off.\n\nWhat we liked most: the Elements technology genuinely produces more accurate numbers in extreme conditions. The build quality is the best of any rangefinder we have ever held. And the optics are the sharpest in the Bushnell lineup — the viewfinder clarity is noticeably better than the V7.\n\nWhat we did not like: the price. At $499, it costs $170 more than the V7 Shift and delivers maybe 5% more capability. The extra accuracy from Elements only matters when temperature is above 90 or below 50, or when you are playing at 3,000+ feet of elevation. For a Saturday round at your local course in moderate weather, the V7 gives you the same results. It is also a touch heavier than the V7, though the difference is minimal.\n\nCompared to the V7 Shift: the Pro XE is the better rangefinder on paper. But the V7 is the better value for 90% of golfers. Buy the Pro XE if you play in extreme conditions regularly, compete seriously, or just want the absolute best and price is not the priority.\n\nBuy this if: you play competitively, in extreme temperatures, or at altitude and want every yard accounted for.\n\nSkip this if: you play casual rounds in moderate weather — the V7 Shift gives you 95% of this performance for $170 less.",
@@ -570,7 +577,7 @@ export const ARTICLES: Article[] = [
     words: '2,200',
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
-    title: 'Best Golf Irons 2026 — 9 Picks, 5 Tested',
+    title: 'Best Golf Irons 2026 — 10 Picks, 5 Tested',
     titleDisplay: 'Best Golf Irons — Tested for Mid and High Handicappers',
     bottomLine: 'For high handicappers, the widest forgiveness window wins every time. For mid-handicappers, the Titleist T350 balances feel and forgiveness better than anything else at this price. See our full iron guide → Our top pick: the <strong>Callaway Paradym Ai Smoke Irons</strong> (from ~$772).',
     description: 'Best golf irons for 2026 — 5 game-improvement sets tested. Ping G430, Callaway Paradym, and TaylorMade Qi compared for forgiveness and distance.',
@@ -592,6 +599,13 @@ export const ARTICLES: Article[] = [
         pros: ['Widest effective sweet spot in our test — only 10 yards lost on toe hits', 'Deep cavity back launches from rough and tight lies easily', 'Consistent distance gapping through the set', 'AI-designed face genuinely widens the forgiveness window'],
         cons: ['Muted feel on pure strikes — better players miss the feedback', 'Visible offset at address — looks like a game-improvement iron', 'Premium pricing for max-forgiveness irons'],
         badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons',
+      },
+      {
+        h2: 'New for 2026: Callaway Quantum Max Irons',
+        badge: 'NEW FOR 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-quantum-max-irons',
+        body: 'Callaway\'s Quantum Max irons replace the Paradym Ai Smoke Max set above. They finished runner-up in MyGolfSpy\'s 2026 super game-improvement iron test.\n\nWe have not hit them. The set above is the one we tested and rated.\n\nWorth flagging on price: this is $1,099.99 for the full set at Golf Galaxy. Amazon lists a Quantum Max iron far cheaper, but that is a single iron, not a set — an easy trap when comparing.',
       },
       {
         h2: 'Best for Mid-Handicappers: Titleist T350', affiliateKey: 'titleist-t350',
@@ -672,6 +686,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { rating: 4.6, affiliateKey: 'wilson-dynapower-irons', name: 'Wilson Dynapower', bestFor: 'Best value (current)', price: '~$600', feature1: 'High', winner: false },
         { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'callaway-paradym-ai-smoke-max-irons', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'High Handicappers', price: 'from ~$772', feature1: '4.7/5 ★', feature2: '', winner: true },
+        { badge: 'NEW 2026', affiliateKey: 'callaway-quantum-max-irons', name: 'Callaway Quantum Max Irons', bestFor: 'Newest Model', price: '$1,099.99', feature1: 'Not yet tested', feature2: '', winner: false },
         {  rating: 4.4,affiliateKey: 'cobra-aerojet-max-irons', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Distance', price: '~$699', feature1: '', feature2: '', winner: false },
         {  rating: 4.5,affiliateKey: 'cleveland-launcher-xl2-irons', name: 'Cleveland Launcher XL2', bestFor: 'Budget forgiveness', price: 'from ~$599', feature1: '', feature2: '', winner: false },
         {  rating: 4.4,affiliateKey: 'taylormade-qi-irons', name: 'TaylorMade Qi', bestFor: 'Modern feel', price: 'from ~$899', feature1: '', feature2: '', winner: false },
@@ -8589,6 +8604,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Safety and Neighbor Etiquette', body: "Indoor net safety rules: (1) Always use a proper hitting mat — do not hit off bare carpet or you will damage the floor and your wrists. (2) Aim for the center of the net — edge hits can deflect sideways. (3) Do not practice flop shots or high lob wedges into a net — the trajectory is too steep and can bounce back. (4) Noise: ball-into-net impact is about as loud as clapping hands firmly. Mat-club contact is quieter than dropping a book. I practice in a Chicago apartment with thin walls and have had zero noise complaints in 60+ sessions. Avoid practicing before 8 AM or after 9 PM." },
   
       { h2: 'Best Garage Setup: Space and Noise', affiliateKey: 'spornia-spg-7', body: '<p>A garage net setup needs at least 10 feet of depth, 9 feet of width, and 8.5 feet of ceiling height for a full driver swing. Noise is the biggest complaint — a quality impact screen absorbs 80% of impact noise compared to a basic net. Add a thick rubber mat under your hitting mat to absorb vibration through the floor. If you share a wall with living space, hang moving blankets behind the net as a sound barrier.</p>\n\nNot sure your space works? The <a href="/launch-monitor-room-checker/">launch monitor room checker</a> tells you which units fit your ceiling height and room depth.' },
+      {
+        h2: 'New for 2026: Spornia SPG-8 XL',
+        badge: 'LARGER SIZE — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'spornia-spg-8-xl',
+        body: 'The SPG-8 XL is the bigger version of the SPG-7 above — an 8ft by 8ft hitting area rather than the smaller frame, with the same automatic ball return.\n\nWe have not used this one.\n\nThis is a size decision more than an upgrade. If your garage or basement can take the footprint, the larger target is more forgiving of a stray strike. If space is the constraint, the SPG-7 above is smaller and cheaper, and it is the one we set up.',
+      },
     ],
     comparisonTable: {
       headers: ['Net', 'Best For', 'Price', 'Our Rating'],
@@ -9191,6 +9213,13 @@ export const ARTICLES: Article[] = [
         pros: ['Most played wedge on Tour', '6 grind options for any condition', 'Maximum Spin Milled grooves'],
         cons: ['$179 per wedge — $540+ for a 3-wedge set', 'Chrome finish shows wear quickly', 'Arguably overkill for 15+ handicaps'],
       },
+      {
+        h2: 'New for 2026: Titleist Vokey SM11',
+        badge: 'NEW FOR 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'titleist-vokey-sm11',
+        body: 'If your grooves are gone and you are replacing rather than regripping, the SM11 is the current Vokey. It finished third overall in MyGolfSpy\'s 2026 wedge test and took their Best for Spin award — which is the thing a worn wedge has stopped doing.\n\nWe have not put it in the bag, so it carries no rating here. The SM10 above is the one we tested, and it is still sold.\n\nAt $199.99 it is the newer grind range on a club you will keep for several seasons. If you would rather have the model we measured, stay with the pick above.',
+      },
 
       { h2: 'Maintenance Schedule for Your Bag', body: 'While you are thinking about wedge replacement, check these other maintenance items that weekend golfers neglect:\n\n<strong>Grips:</strong> Replace every 40-60 rounds or once a year, whichever comes first. Worn grips cause grip pressure issues that affect your entire swing. See our <a href="/when-to-replace-golf-grips/">complete grip replacement guide</a> for the signs and best options.\n\n<strong>Wedges:</strong> Replace every 75-100 rounds (the guide you just read).\n\n<strong>Golf balls:</strong> Replace after any visible scuff or cut. A scuffed ball loses 5-10 yards of distance and spins inconsistently.\n\n<strong>Gloves:</strong> Replace every 15-20 rounds. A worn glove causes grip slippage.' },
     ],
@@ -9200,6 +9229,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'maxfli-milled-52', name: 'Maxfli Milled', bestFor: 'Best Budget', price: '~$80', feature1: '4.4/5 ★', winner: false, rating: 4.4 },
         { rating: 4.7, affiliateKey: 'cleveland-rtx6-52', name: 'Cleveland RTX 6', bestFor: 'Best Mid-Range', price: '~$130', feature1: '4.7/5 ★', winner: true },
         { rating: 4.8, affiliateKey: 'vokey-sm10-52', name: 'Vokey SM10', bestFor: 'Best Premium', price: '~$160', feature1: '4.8/5 ★', winner: false },
+        { badge: 'NEW 2026', affiliateKey: 'titleist-vokey-sm11', name: 'Titleist Vokey SM11', bestFor: 'Newest Model', price: '$199.99', feature1: 'Not yet tested', feature2: '', winner: false },
       ],
     },
     faq: [
@@ -14428,6 +14458,13 @@ export const ARTICLES: Article[] = [
         ],
       },
       {
+        h2: 'New for 2026: Evnroll ZERO Z1cs',
+        badge: 'ZERO-TORQUE — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'evnroll-z1cs',
+        body: 'Zero-torque putters were enough of a category in 2026 that MyGolfSpy ran a separate test for them, and Evnroll\'s entry is the Z1cs. It keeps the sweet-spot face milling the ER series is known for.\n\nWe have not rolled it, so no rating.\n\nOne practical note: Amazon had this in single-digit stock when we checked, so our link goes to Golf Galaxy instead, where it is $449.00.',
+      },
+      {
         h2: 'Best Value: Cleveland Huntington Beach Soft',
         badge: 'BUDGET PICK',
         price: '~$124',
@@ -14878,6 +14915,13 @@ export const ARTICLES: Article[] = [
           '$60 more than the Wingman 2 for a screen that duplicates the audio',
           'Bigger and heavier than the Wingman 2',
         ],
+      },
+      {
+        h2: 'New for 2026: Bushnell Wingman HD',
+        badge: 'RUNNER-UP 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'bushnell-wingman-hd',
+        body: 'The Wingman HD is Bushnell\'s 2026 flagship and finished runner-up in MyGolfSpy\'s speaker test. It adds a 3.5 inch colour touchscreen to the GPS-plus-speaker formula.\n\nWe have not tested it. The Wingman View above is what we used.\n\nIt is $249.99 at Golf Galaxy. Amazon also lists it cheaper, but the listing we found was Amazon Resale — open-box stock — so we are pointing at the new one.',
       },
       {
         h2: 'Cheapest GPS Speaker: Bushnell Wingman Mini',

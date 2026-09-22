@@ -118,6 +118,15 @@ const BRAND_MAP: [string, string][] = [
   ['ping sigma 2',                  'ping-sigma-2'],
   ['cleveland huntington beach',    'cleveland-huntington-beach'],
   ['lazrus zero',                   'lazrus-zero-torque'],
+  ['spornia spg-8',                 'spornia-spg-8-xl'],
+  ['vokey sm11',                    'titleist-vokey-sm11'],
+  ['quantum max irons',             'callaway-quantum-max-irons'],
+  ['evnroll zero z1cs',             'evnroll-z1cs'],
+  ['wingman hd',                    'bushnell-wingman-hd'],
+  ['approach z30',                  'garmin-approach-z30'],
+  ['qi4d',                          'taylormade-qi4d-driver'],
+  ['g440 max driver',               'ping-g440-max-driver-2026'],
+  ['quantum max driver',            'callaway-quantum-max-driver'],
   ['theraband',                     'theraband-flexbar'],
 ];
 
@@ -146,8 +155,13 @@ for (const article of ARTICLES) {
     if (SKIP_SUBSTRINGS.some(p => h2.includes(p))) continue;
 
     checked++;
-    for (const [brand, expectedKey] of BRAND_MAP) {
-      if (h2.includes(brand)) {
+    // A family can have several SKUs ('spornia spg' now matches 4 products), so a short
+    // phrase can no longer identify one key. Match the LONGEST phrase present in the h2 and
+    // judge against that alone — checking every match would fail the specific SKUs.
+    const matches = BRAND_MAP.filter(([brand]) => h2.includes(brand))
+      .sort((a, b) => b[0].length - a[0].length);
+    for (const [brand, expectedKey] of matches.slice(0, 1)) {
+      {
         if (section.affiliateKey !== expectedKey) {
           console.error(
             `MISMATCH in ${(article as any).slug}\n` +
