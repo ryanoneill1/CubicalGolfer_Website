@@ -5,7 +5,10 @@
 import { ARTICLES } from '../src/data/articles.ts';
 
 // (?<![$\d]) — dollar amounts like "from $25" are prices, not count promises
-const NUMBER_PATTERN = /(?<![$\d])(\d{1,2})\s+(best|tested|top|picks?|products?|reviewed|ranked)\b/i;
+// 'compared' added Sep 2026: pages that carry research picks say "N Compared" rather than
+// "N Ranked", because an untested pick is listed but deliberately not ranked. Widening the
+// vocabulary keeps those titles inside the same count check instead of silently escaping it.
+const NUMBER_PATTERN = /(?<![$\d])(\d{1,2})\s+(best|tested|top|picks?|products?|reviewed|ranked|compared)\b/i;
 
 interface Issue {
   slug: string;
