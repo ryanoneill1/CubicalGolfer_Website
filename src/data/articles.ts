@@ -381,7 +381,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-23',
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
-    title: 'Most Forgiving Drivers 2026 — 7 Ranked, 5 Tested',
+    title: 'Most Forgiving Drivers 2026 — 8 Ranked, 5 Tested',
     titleDisplay: 'Most Forgiving Drivers for Weekend Golfers',
     bottomLine: 'The <strong>Callaway Paradym Ai Smoke Max</strong> is the most forgiving driver for weekend golfers who miss the center more than they hit it. For budget buyers, the <strong>Cobra DS-Adapt MAX-K</strong> at ~$299 delivers 90% of the forgiveness at 65% of the price.',
     description: 'Most forgiving drivers 2026, tested for mishit protection — the best driver for a high handicapper, plus what shaft flex you actually need.',
@@ -410,6 +410,13 @@ export const ARTICLES: Article[] = [
           '$399 is a significant investment for a weekend golfer',
           'Stock shaft is adequate but not exceptional — benefits from upgrade',
         ],
+      },
+      {
+        h2: 'New for 2026: Callaway Quantum Max',
+        badge: 'NEW FOR 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-quantum-max-driver',
+        body: 'Callaway replaced the Paradym Ai Smoke Max with the Quantum Max for 2026. In MyGolfSpy\'s Most Wanted testing it finished second overall, took their Best for Distance award, and won Best for Forgiveness in the high-swing-speed bracket. On published data it is the more forgiving of the two heads.\n\nWe have not hit it. The ranking above comes from roughly 200 balls over four range sessions and six rounds with the Paradym; the Quantum Max has not been through that, so we are not going to slot it into a ranking against clubs we actually measured. What we can tell you is that it is the current model, it is in stock, and the independent numbers are strong.\n\nThe real question is price. The Quantum Max is $649.99. The Paradym Ai Smoke Max it replaces is still on sale for meaningfully less and is the club we can vouch for from our own bag. Want the newest head and the best published forgiveness figures? Take this one. Want the one we tested? Stay with the pick above.',
       },
       {
         h2: 'Best Distance: TaylorMade Qi35 Max',
@@ -506,6 +513,7 @@ export const ARTICLES: Article[] = [
       headers: ['Driver', 'Best For', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max',  name: 'Callaway Paradym Ai Smoke Max', bestFor: 'Best Overall', price: '~$399', feature1: '4.8/5 ★', feature2: '', winner: true },
+        { badge: 'NEW 2026', affiliateKey: 'callaway-quantum-max-driver', name: 'Callaway Quantum Max', bestFor: 'Newest Model', price: '$649.99', feature1: 'Not yet tested', feature2: '', winner: false },
         { rating: 4.3, affiliateKey: 'taylormade-qi35-max',             name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '$449.98', feature1: '4.6/5 ★', feature2: '', winner: false },
         { rating: 4.4, affiliateKey: 'cobra-ds-adapt-max-k',               name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Value', price: '~$299', feature1: '4.5/5 ★', feature2: '', winner: false },
         { rating: 4.7, affiliateKey: 'ping-g430-max-driver',            name: 'Ping G430 Max', bestFor: 'Most Forgiving', price: 'from ~$419', feature1: '4.6/5 ★', feature2: '', winner: false },
