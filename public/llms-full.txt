@@ -901,6 +901,10 @@ Summary: We put the Callaway Chrome Soft against Costco's Kirkland Signature ove
 URL: https://www.cubicalgolfer.com/compare/callaway-paradym-vs-taylormade-qi35/
 Summary: Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed, forgiveness, and mis-hit data compared. See which driver wins for weekend golfers.
 
+## Callaway Quantum Max vs Paradym Ai Smoke Max
+URL: https://www.cubicalgolfer.com/compare/callaway-quantum-max-vs-paradym-ai-smoke/
+Summary: Quantum Max vs Paradym Ai Smoke Max — the 2026 successor against the driver we tested. Tri-Force face, loft range and the price gap, compared honestly.
+
 ## Cleveland Launcher XL2 vs Cobra DS-Adapt MAX-K
 URL: https://www.cubicalgolfer.com/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/
 Summary: Cleveland Launcher XL2 vs Cobra DS-Adapt MAX-K — lightweight forgiveness vs mid-range power. Which driver is best for seniors and slow swing speeds?
@@ -1004,6 +1008,10 @@ Summary: Qi35 Max vs Ai Smoke Max — tested over 8 rounds. Which forgiving driv
 ## TaylorMade Qi35 vs Titleist GT2 — Which Premium Driver Wins?
 URL: https://www.cubicalgolfer.com/compare/taylormade-qi35-vs-titleist-gt2/
 Summary: TaylorMade Qi35 Max vs Titleist GT2 driver comparison. Forgiveness, distance, feel, and which premium driver is better for weekend golfers.
+
+## TaylorMade Qi4D vs Qi35 Max
+URL: https://www.cubicalgolfer.com/compare/taylormade-qi4d-vs-qi35/
+Summary: TaylorMade Qi4D vs Qi35 Max — the 2026 Most Wanted winner against the driver we tested, and the $200 between them. Specs, awards, honest verdict.
 
 ## TP5 vs Chrome Soft: Tour Ball Pick for Weekend Golfers
 URL: https://www.cubicalgolfer.com/compare/taylormade-tp5-vs-callaway-chrome-soft/

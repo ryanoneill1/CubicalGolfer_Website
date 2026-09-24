@@ -460,6 +460,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-21',
     priceNote: 'Won MyGolfSpy Most Wanted 2026. Stock confirmed at Golf Galaxy on 21 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/taylormade-qi4d-driver.webp',
+    imgAlt: 'TaylorMade Qi4D Driver',
     benefits: [
         'Most Wanted 2026 winner, the first TaylorMade driver win in several generations',
         'Two-year product cycle, so this head stays current longer than an annual release',
@@ -477,6 +479,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-21',
     priceNote: 'PING is not sold on Amazon at any price, so Golf Galaxy is the only route.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-g440-max-driver-2026.webp',
+    imgAlt: 'PING G440 MAX Driver',
     benefits: [
         'Direct successor to the G430 Max, the highest-MOI head PING builds',
         'Carbon fly wrap crown moves mass low and back for forgiveness',
@@ -494,6 +498,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-21',
     priceNote: 'Replaces the Paradym Ai Smoke Max at the top of the Callaway line.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-quantum-max-driver.webp',
+    imgAlt: 'Callaway Quantum Max Driver',
     benefits: [
         'Runner-up in MyGolfSpy Most Wanted 2026 and their Best for Distance pick',
         'Also took Best for Forgiveness at high swing speeds in the same test',
@@ -511,6 +517,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-21',
     priceNote: 'The 2026 successor to the DS-Adapt MAX-K.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/cobra-optm-max-k-driver.webp',
+    imgAlt: 'Cobra OPTM MAX-K Driver',
     benefits: [
         'MyGolfSpy Best for Accuracy at high swing speeds, 2026',
         'FutureFit33 hosel carried over, with 33 independent loft and lie settings',
@@ -528,6 +536,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-22',
     priceNote: 'Third in MyGolfSpy 2026 wedge testing and their Best for Spin pick.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/titleist-vokey-sm11.webp',
+    imgAlt: 'Titleist Vokey SM11 Wedge',
     benefits: [
         'Third overall in MyGolfSpy 2026 wedge testing, and their Best for Spin pick',
         'Succeeds the SM10, which is still sold at a lower price',
@@ -545,6 +555,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-22',
     priceNote: 'Replaces the Paradym Ai Smoke Max irons at the top of the Callaway line.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-quantum-max-irons.webp',
+    imgAlt: 'Callaway Quantum Max Irons',
     benefits: [
         'Runner-up in MyGolfSpy 2026 super game-improvement iron testing',
         'Succeeds the Paradym Ai Smoke Max irons, still available for less',
@@ -562,6 +574,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-22',
     priceNote: 'Evnroll zero-torque head; Amazon stock was thin so this routes to Golf Galaxy.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/evnroll-z1cs.webp',
+    imgAlt: 'Evnroll ZERO Z1cs Putter',
     benefits: [
         'Zero-torque design, the category MyGolfSpy added a separate 2026 test for',
         'Evnroll sweet-spot face milling carried over from the ER series',
@@ -579,6 +593,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-22',
     priceNote: 'Runner-up in MyGolfSpy 2026 speaker testing. Amazon listing was open-box.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/bushnell-wingman-hd.webp',
+    imgAlt: 'Bushnell Wingman HD GPS Speaker',
     benefits: [
         'Runner-up in MyGolfSpy 2026 golf speaker testing',
         '3.5 inch colour touchscreen with full GPS distances built in',
@@ -597,6 +613,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-22',
     priceNote: 'Garmin staff pick in MyGolfSpy 2026 rangefinder testing.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/garmin-approach-z30.webp',
+    imgAlt: 'Garmin Approach Z30 Rangefinder',
     benefits: [
         'Staff Pick in MyGolfSpy 2026 rangefinder testing',
         'Ranges to 400 yards with an easy-to-read OLED display',
@@ -615,6 +633,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-22',
     priceNote: 'The larger 8x8 successor to the SPG-7, which stays as the cheaper option.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/spornia-spg-8-xl.webp',
+    imgAlt: 'Spornia SPG-8 XL Hitting Net',
     benefits: [
         '8ft x 8ft hitting area, bigger than the SPG-7 it succeeds',
         'Automatic ball return, so you are not walking to collect every shot',
@@ -632,6 +652,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-23',
     priceNote: 'Verified in stock and new at Golf Galaxy on 23 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/foresight-gc3.webp',
+    imgAlt: 'Foresight GC3 Launch Monitor',
     benefits: [
         'Three high-speed cameras measure ball data directly rather than inferring it',
         'Works indoors and outdoors, which most camera units do not',
@@ -649,6 +671,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-23',
     priceNote: 'The 2026 Phantom. Verified in stock at Golf Galaxy on 23 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/scotty-cameron-phantom-9-2r.webp',
+    imgAlt: 'Scotty Cameron Phantom 9.2R Putter',
     benefits: [
         'The 2026 Phantom, succeeding the model we tested',
         'Available in 33, 34 and 35 inch lengths',
@@ -666,6 +690,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-23',
     priceNote: 'Succeeds the V5. Verified in stock at Golf Galaxy on 23 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/shot-scope-g6.webp',
+    imgAlt: 'Shot Scope G6 GPS Watch',
     benefits: [
         '38,000+ preloaded courses with full hole maps on a colour screen',
         'Ships with two strap sets, black and grey',

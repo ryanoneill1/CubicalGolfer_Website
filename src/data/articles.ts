@@ -565,6 +565,8 @@ export const ARTICLES: Article[] = [
     ],
     sources: [{ label: 'Callaway Golf — Paradym Ai Smoke Technology', url: 'https://www.callawaygolf.com/golf-clubs/drivers/' }, { label: 'TrackMan — Average Driver Distances by Handicap', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
     relatedComparisons: [
+      { label: 'TaylorMade Qi4D vs Qi35 Max', url: '/compare/taylormade-qi4d-vs-qi35/', description: 'The 2026 Most Wanted winner against the one we tested' },
+      { label: 'Callaway Quantum Max vs Paradym Ai Smoke Max', url: '/compare/callaway-quantum-max-vs-paradym-ai-smoke/', description: 'The 2026 successor against the one we tested' },
       { label: 'Callaway Paradym vs TaylorMade Qi35', url: '/compare/callaway-paradym-vs-taylormade-qi35/', description: 'The two most popular forgiving drivers head-to-head' },
       { label: 'Cobra DS-Adapt MAX-K vs Ping G430 Max', url: '/compare/cobra-aerojet-max-vs-ping-g430-max/', description: 'Previous-gen bargains — which discount driver wins?' },
       { label: 'Cleveland XL2 vs Cobra DS-Adapt MAX-K', url: '/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/', description: 'Senior-friendly vs all-around forgiving' },
@@ -6704,6 +6706,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-04-22',
     dateModified: '2026-07-21',
     relatedComparisons: [
+      { label: 'Callaway Quantum Max vs Paradym Ai Smoke Max', url: '/compare/callaway-quantum-max-vs-paradym-ai-smoke/', description: 'The 2026 successor against the one we tested' },
       { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
       { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
       { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra DS-Adapt MAX-K vs Ping G430 Max Driver' },
@@ -7209,6 +7212,9 @@ export const ARTICLES: Article[] = [
     whoFor: ['Shoot 88-95 and want to build or upgrade a complete bag', 'Ready to invest $1,500-$2,000 in equipment that will last 3-5 years', 'Want forgiveness-focused picks at every position'],
     whoSkip: ['Already have clubs less than 3 years old — lessons will help more', 'Shoot over 100 — buy a complete beginner set for $300 instead', 'Budget under $1,000 — see our beginner set guide'],
     sources: [{ label: 'Arccos — Strokes Gained by Handicap Level', url: 'https://www.arccosgolf.com/blogs/community' }, { label: 'TrackMan — Amateur Averages by Handicap', url: 'https://blog.trackmangolf.com/trackman-average-tour-pro/' }],
+    relatedComparisons: [
+      { label: 'Callaway Quantum Max vs Paradym Ai Smoke Max', url: '/compare/callaway-quantum-max-vs-paradym-ai-smoke/', description: 'The 2026 successor against the one we tested' },
+    ],
     related: [{ slug: '/best-golf-irons-2026/', label: 'Best Irons 2026' }, { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' }, { slug: '/best-golf-putters-2026/', label: 'Best Putters 2026' }, { slug: '/how-to-break-90/', label: 'How to Break 90' }],
   },
 
@@ -9568,6 +9574,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-04-26',
     dateModified: '2026-07-23',
     relatedComparisons: [
+      { label: 'Callaway Quantum Max vs Paradym Ai Smoke Max', url: '/compare/callaway-quantum-max-vs-paradym-ai-smoke/', description: 'The 2026 successor against the one we tested' },
       { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
       { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
       { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra DS-Adapt MAX-K vs Ping G430 Max Driver' },
@@ -9722,6 +9729,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-04-26',
     dateModified: '2026-07-03',
     relatedComparisons: [
+      { label: 'TaylorMade Qi4D vs Qi35 Max', url: '/compare/taylormade-qi4d-vs-qi35/', description: 'The 2026 Most Wanted winner against the one we tested' },
       { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
       { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
       { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra DS-Adapt MAX-K vs Ping G430 Max Driver' },
@@ -12445,6 +12453,10 @@ export const ARTICLES: Article[] = [
       { q: 'Why do I hit my driver so low?', a: 'Most likely: too little loft, too stiff a shaft, or ball position too far back. Try adding 1-2° of loft first — it is the easiest fix.' },
     ],
     sources: [{ label: 'USGA — Rules and Equipment', url: 'https://www.usga.org/' }],
+    relatedComparisons: [
+      { label: 'TaylorMade Qi4D vs Qi35 Max', url: '/compare/taylormade-qi4d-vs-qi35/', description: 'The 2026 Most Wanted winner against the one we tested' },
+      { label: 'Callaway Quantum Max vs Paradym Ai Smoke Max', url: '/compare/callaway-quantum-max-vs-paradym-ai-smoke/', description: 'The 2026 successor against the one we tested' },
+    ],
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Most Forgiving Drivers' },
       { slug: '/shaft-flex-guide/', label: 'Shaft Flex Guide' },
@@ -12645,6 +12657,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-06-05',
     dateModified: '2026-07-19',
     relatedComparisons: [
+      { label: 'TaylorMade Qi4D vs Qi35 Max', url: '/compare/taylormade-qi4d-vs-qi35/', description: 'The 2026 Most Wanted winner against the one we tested' },
       { slug: '/compare/callaway-ai-smoke-max-vs-ping-g430-max/', label: 'Callaway Ai Smoke Max vs Ping G430 Max' },
       { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 Max vs Paradym Ai Smoke' },
       { slug: '/compare/cobra-aerojet-max-vs-ping-g430-max/', label: 'Cobra DS-Adapt MAX-K vs Ping G430 Max Driver' },
