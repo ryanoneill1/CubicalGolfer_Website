@@ -1,6 +1,15 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'taylormade-r7-quad-mini-driver': "TaylorMade R7 Quad Mini Driver",
+  'callaway-quantum-mini-spinner': "Callaway Quantum Mini Spinner",
+  'callaway-apex-26-utility-iron': "Callaway Apex 26 Utility Iron",
+  'mizuno-pro-fli-hi-utility-iron': "Mizuno Pro Fli-Hi Utility Iron",
+  'taylormade-qi4d-max-lite-rescue': "TaylorMade Qi4D MAX Lite Rescue",
+  'tour-edge-exotics-e725-driver': "Tour Edge Exotics E725 Driver",
+  'titleist-gt1-driver': "Titleist GT1 Driver",
+  'mizuno-jpx-one-select-driver': "Mizuno JPX-ONE SELECT Driver",
+  'pxg-lightning-max-10k-driver': "PXG Lightning Max 10K Driver",
   'titleist-t150-black-vapor-irons': "Titleist T150 Black Vapor Irons",
   'ping-i540-irons': "PING i540 Irons",
   'ping-g740-irons': "PING G740 Irons",

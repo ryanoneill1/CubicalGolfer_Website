@@ -395,7 +395,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-23',
     quickAnswerProduct: 'callaway-paradym-ai-smoke-max',
-    title: 'Most Forgiving Drivers 2026 — 10 Compared, 5 Tested',
+    title: 'Most Forgiving Drivers 2026 — 12 Compared, 5 Tested',
     titleDisplay: 'Most Forgiving Drivers for Weekend Golfers',
     bottomLine: 'The <strong>Callaway Paradym Ai Smoke Max</strong> is the most forgiving driver for weekend golfers who miss the center more than they hit it. For budget buyers, the <strong>Cobra DS-Adapt MAX-K</strong> at ~$299 delivers 90% of the forgiveness at 65% of the price.',
     description: 'Most forgiving drivers 2026, tested for mishit protection — the best driver for a high handicapper, plus what shaft flex you actually need.',
@@ -533,6 +533,20 @@ export const ARTICLES: Article[] = [
         affiliateKey: 'ping-g440-sft',
         body: 'SFT stands for Straight Flight Technology, and that is the whole pitch: this is the G430 with its mass pushed toward the heel specifically to close the face for golfers whose miss lives right of the fairway. Where the G430 Max is neutral forgiveness, the SFT is corrective forgiveness — Ping quotes meaningful yards of right-miss correction versus the Max for the same swing.\n\nResearch pick: our verdict draws on Ping documentation and owner reports rather than our protocol sessions. The reports converge on one honest trade — genuine slice reduction, at the cost of the workability better players want. That trade is exactly right for this list.\n\nWho it fits: the golfer who has stopped pretending the slice is temporary and wants the club to do the correcting.\n\nOur rating: 4.5/5 — cross-referenced from our <a href=\"/best-golf-driver-under-300/\">published comparison data</a>, where this exact score already appears.',
       },
+      {
+        h2: 'High-MOI Option: PXG Lightning Max 10K',
+        badge: 'HIGH MOI — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'pxg-lightning-max-10k-driver',
+        body: 'The 10K in the name refers to a moment-of-inertia target, which is the number that actually describes forgiveness — the higher it is, the less a mis-hit twists the face.\n\nWe have not tested it. PXG sells direct at a higher price, so the Amazon listing is usually the cheaper route to the same club.\n\nOne caveat worth reading before you click: PXG pays a lower commission than the Golf Galaxy links elsewhere on this page, which is exactly why we are telling you rather than quietly burying it.',
+      },
+      {
+        h2: 'Discounted Now: Mizuno JPX-ONE SELECT',
+        badge: 'REDUCED — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'mizuno-jpx-one-select-driver',
+        body: 'Currently $449.99, down from $599.99. Mizuno’s reputation is built on irons, and their drivers are consistently cheaper than equivalent heads from the bigger driver brands — which is either an opportunity or a warning depending on how you read it.\n\nWe have not hit it. Available in 9.0 and 10.5 degree lofts.',
+      },
       { h2: 'Keep reading', body: 'If your phone app leaves you wanting more precision, a <a href=\'/best-golf-gps-watches/\'>GPS watch</a> puts the data on your wrist without draining your phone. Golfers who want shot-by-shot data should also look at <a href=\'/best-golf-swing-analyzers/\'>swing analyzers</a> that pair with apps to track every club in the bag. And for the data-driven golfer working on their game, our <a href=\'/how-to-break-90/\'>break 90 guide</a> turns those numbers into a scoring plan.' },
   
       { h2: 'Keep exploring', body: 'Swing data is most valuable when paired with a plan. If you are working toward <a href=\'/how-to-break-90/\'>breaking 90</a>, our roadmap tells you exactly which data points matter at your level. For more advanced ball-flight data, a <a href=\'/best-golf-launch-monitors-2026/\'>launch monitor</a> gives you spin, carry, and launch angle that clip-on sensors cannot measure.' },
@@ -548,6 +562,8 @@ export const ARTICLES: Article[] = [
         { badge: 'NEW 2026', affiliateKey: 'cobra-optm-max-k-driver', name: 'Cobra OPTM MAX-K', bestFor: 'Newest Model', price: '$599.00', feature1: 'Not yet tested', feature2: '', winner: false },
         { rating: 4.7, affiliateKey: 'ping-g430-max-driver',            name: 'Ping G430 Max', bestFor: 'Most Forgiving', price: 'from ~$419', feature1: '4.6/5 ★', feature2: '', winner: false },
         { rating: 4.6, affiliateKey: 'ping-g440-sft',                   name: 'Ping G440 SFT', bestFor: 'Premium Slice Fix', price: '~$449', feature1: '4.6/5 ★', feature2: '', winner: false },
+        { badge: 'HIGH MOI', affiliateKey: 'pxg-lightning-max-10k-driver', name: 'PXG Lightning Max 10K', bestFor: 'High MOI', price: '$449.00', feature1: 'Not yet tested', feature2: '', winner: false },
+        { badge: 'REDUCED', affiliateKey: 'mizuno-jpx-one-select-driver', name: 'Mizuno JPX-ONE SELECT', bestFor: 'Discounted now', price: '$449.99', feature1: 'Not yet tested', feature2: '', winner: false },
         { badge: 'STRONG PICK', rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver',          name: 'Cleveland Launcher XL2', bestFor: 'Best Budget', price: '~$299', feature1: '4.3/5 ★', feature2: '', winner: false },
         { rating: 4.4, affiliateKey: 'tour-edge-hot-launch-max-driver', name: 'Tour Edge Hot Launch Max', bestFor: 'Best forgiveness under $300', price: '~$300', feature1: 'High', feature2: '12\u00b0 stock loft' },
       ],
@@ -2530,6 +2546,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Best New Budget: Cleveland Launcher XL', badge: 'BEST NEW', rating: 4.5, affiliateKey: 'cleveland-launcher-xl', body: "Cleveland's most affordable driver. Rebound Frame technology for fast faces. HiBore Crown lowers the center of gravity for higher launch. More forgiving than most comparably priced drivers. Comes with a headcover.",
         pros: ['MainFrame variable face thickness for consistent distance on all contact points', 'One of the most forgiving modern drivers available under $400', 'Lightweight design helps generate clubhead speed more easily'],
         cons: ['Less brand recognition and resale value than Callaway or TaylorMade', 'Limited fitting options compared to major OEM brands'], price: '~$149-179' },
+      {
+        h2: 'New for 2026: Tour Edge Exotics E725',
+        badge: 'NEW FOR 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'tour-edge-exotics-e725-driver',
+        body: 'At $399.99 this clears the page’s price ceiling by a dollar, which is the only reason it qualifies — and it is worth saying that plainly.\n\nWe have not tested it. Tour Edge has spent years pricing below the major brands for comparable builds, and the Exotics line is their premium tier rather than their budget one.\n\nVerified in stock at Golf Galaxy on 24 September 2026.',
+      },
       { h2: 'What to Avoid in Budget Drivers', body: "Avoid: unknown brands on Amazon with no reviews, drivers from golf brands you\'ve never heard of, anything claiming '360+ yards' at unrealistic prices, and last-decade club heads (pre-2018). The sweet spot for budget drivers is previous-season premium models from TaylorMade, Callaway, Cobra, or Cleveland." },
   
       { h2: 'Expanding Your Options', body: '<p>If you need a full set (not just a driver), see our <a href="/best-beginner-golf-set-under-500/">best beginner club sets</a>. For the overall forgiveness ranking regardless of price, our <a href="/best-golf-drivers-forgiveness/">most forgiving drivers</a> list is the reference. And if budget allows another $100, our <a href="/best-golf-driver-under-300/">under $300 picks</a> are a meaningful step up in feel and adjustability.</p>' },
@@ -7327,6 +7350,13 @@ export const ARTICLES: Article[] = [
       { h2: 'Best for Slicers: Callaway Paradym Ai Smoke Max D', body: "If your primary miss is a slice, the Max D version of the Paradym adds internal draw weighting that actively fights the face from opening. Combined with the AI face, it can turn a 30-yard slice into a 10-yard fade.\n\nFix your grip and swing path first — those are free. But if you have worked on mechanics and still slice, the Max D is the best equipment solution available. Same $499 price as the standard Max.\n\nNote: if you already draw the ball, do NOT buy the Max D. The extra draw bias will produce hooks.", badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-paradym-ai-smoke-max' },
     
       { h2: 'Best for Very Slow Swingers: Callaway Big Bertha', body: 'The Big Bertha launches higher than any driver in this group — critical for golfers under 80 mph who struggle to get the ball airborne with standard drivers. The built-in draw bias helps close the face for slicers. At $350 it is also $50-$150 cheaper than the competition. The trade-off: less adjustability than the G430 Max or Qi35 Max, so you are locked into the stock configuration.', affiliateKey: 'callaway-big-bertha', rating: 4.2 },
+      {
+        h2: 'The Titleist Option: GT1',
+        badge: 'GAME-IMPROVEMENT — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'titleist-gt1-driver',
+        body: 'Titleist is not the first brand most high handicappers consider, and the GT1 is the reason they should. It is the most forgiving head in the GT line — a lighter build aimed at moderate swing speeds, not the tour head the name suggests.\n\nWe have not hit it, so no rating from us.\n\nAt $449.99 it costs more than everything above it on this page. The honest question is whether the badge is worth the difference over the Ping G430 Max, which we did test.',
+      },
     ],
     comparisonTable: { headers: ['Driver', 'Price', 'Forgiveness', 'Best For', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Ai Smoke Max', bestFor: 'Best Overall', price: '~$399', feature1: '4.8/5 ★', feature2: 'Best mishit protection', winner: true },
@@ -9777,6 +9807,20 @@ export const ARTICLES: Article[] = [
           { key: 'callaway-paradym-ai-smoke-max', role: 'Best driver for forgiveness', name: 'Callaway Paradym Ai Smoke Max' },
           { key: 'taylormade-qi35-max', role: 'Best 3-wood', name: 'TaylorMade Qi35 Max' },
         ] },
+      {
+        h2: 'The Third Option: A Mini Driver',
+        badge: 'MINI DRIVER — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'taylormade-r7-quad-mini-driver',
+        body: 'This page frames the tee shot as a choice between two clubs. There is a third: a mini driver, which is a smaller head on a shorter shaft than a driver, and a larger head on a longer shaft than a 3-wood.\n\nWe have not hit the R7 Quad, so it carries no rating here. What it is for is the golfer who loses the driver right but does not get enough out of a 3-wood — more forgiveness than a fairway wood, more control than a full-size driver.\n\nAt $479.99 it is not a cheap way to solve that problem. If your 3-wood is working, keep it.',
+      },
+      {
+        h2: 'The Cheaper Mini Driver: Callaway Quantum Mini',
+        badge: 'MINI DRIVER — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-quantum-mini-spinner',
+        body: 'Callaway’s take on the same club, and $100 less than the TaylorMade above.\n\nUntested by us. Same caveat applies: a mini driver only makes sense if you already know the driver is the club costing you shots off the tee. If you are not sure, that is what a launch monitor session is for, and it costs a great deal less than $379.99.',
+      },
     ],
     faq: [
       { q: 'How much distance do you lose with a 3-wood vs driver?', a: 'The average weekend golfer loses 20-30 yards of carry with a 3-wood compared to driver. However, 3-wood dispersion (left-right miss) is typically 30-40% tighter, which means more fairways hit and shorter approach shots.' },
@@ -12278,6 +12322,27 @@ export const ARTICLES: Article[] = [
     sections: [
       { h2: 'The Data: 100 Shots Each', body: '<table class="cmp-table"><thead><tr><th>Metric</th><th>3-Hybrid</th><th>3-Iron</th><th>Winner</th></tr></thead><tbody><tr><td>Average Carry</td><td>185 yd</td><td>175 yd</td><td>Hybrid (+10)</td></tr><tr><td>Mishit Carry</td><td>172 yd</td><td>155 yd</td><td>Hybrid (+17)</td></tr><tr><td>Launch Angle</td><td>18°</td><td>14°</td><td>Hybrid (higher)</td></tr><tr><td>Spin Rate</td><td>4,200 rpm</td><td>3,800 rpm</td><td>Hybrid (stops faster)</td></tr><tr><td>Dispersion</td><td>±18 yd</td><td>±28 yd</td><td>Hybrid (tighter)</td></tr><tr><td>Workability</td><td>Limited</td><td>Full</td><td>Iron</td></tr></tbody></table><p>The hybrid wins in every measurable category except workability (ability to shape shots). The mishit difference is the most important number: a poorly struck hybrid carries 17 yards farther than a poorly struck iron.</p>' },
       { h2: 'When Hybrids Win', body: '<p>Hybrids are better when: you are above 5 handicap, you do not intentionally shape shots with long irons, you play from the rough frequently, or you are a senior with moderate swing speed. For these golfers, carrying a hybrid instead of a long iron adds 8-12 yards AND reduces dispersion.</p>', badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'callaway-paradym-hybrid' },
+      {
+        h2: 'The Middle Ground: A Driving Iron',
+        badge: 'DRIVING IRON — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-apex-26-utility-iron',
+        body: 'There is a club between the two this page compares: a utility or driving iron. It looks like a long iron, but the head is hollow, so it launches more like a hybrid while keeping the lower, more penetrating flight an iron gives you.\n\nWe have not hit the Apex 26. It is worth knowing it is sold as a single club at $319.99, not a set — which is why that number looks small next to the iron sets elsewhere on this site.\n\nThe case for one: you dislike how a hybrid turns over, and you play somewhere windy.',
+      },
+      {
+        h2: 'The Forgiving Driving Iron: Mizuno Pro Fli-Hi',
+        badge: 'DRIVING IRON — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'mizuno-pro-fli-hi-utility-iron',
+        body: 'The same idea as the Apex above, at $269.99 and with a little more help getting the ball airborne. Mizuno’s hollow-body construction is aimed squarely at golfers who want a driving iron but cannot reliably launch a true long iron.\n\nUntested here. Also a single club, not a set.',
+      },
+      {
+        h2: 'If the Hybrid Wins: TaylorMade Qi4D MAX Lite Rescue',
+        badge: 'RESCUE — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'taylormade-qi4d-max-lite-rescue',
+        body: 'If you read the case above and decided the hybrid is still your club, this is the current lightweight option — TaylorMade calls its hybrids rescues. It comes in 4H through 7H with regular and senior flex.\n\nWe have not hit it. The lighter build is aimed at slower swing speeds, which is the same golfer the hybrid usually suits in the first place.',
+      },
       { h2: 'When Long Irons Win', body: '<p>Long irons are better when: you are a low handicapper who shapes shots on demand, you play firm links courses where lower trajectory is an advantage, or you have a fast enough swing to launch long irons high (95+ mph 7-iron speed). Even then, many tour pros carry at least one hybrid.</p>' },
       { h2: 'Our Verdict', body: '<p>If you are reading, replace your 3-iron and 4-iron with hybrids. The <a href="/best-hybrid-clubs-2026/">Callaway Paradym ($250)</a> or <a href="/best-hybrid-clubs-2026/">TaylorMade Stealth ($180 prev gen)</a> are our top picks. Use our <a href="/golf-club-distance-chart/">distance chart</a> to check your current gapping after the switch.</p>' },
     
