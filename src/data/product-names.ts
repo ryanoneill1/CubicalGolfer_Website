@@ -1,6 +1,18 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'vessel-player-v-6w-stand-bag': "Vessel Player V 6W Stand Bag",
+  'sun-mountain-clubglider-meridian': "Sun Mountain ClubGlider Meridian",
+  'club-glove-club-traveler': "Club Glove Club Traveler",
+  'ping-2026-pioneer-cart-bag': "PING 2026 Pioneer Cart Bag",
+  'mizuno-mcraft-osaka-p-putter': "Mizuno M.CRAFT Osaka P Putter",
+  'cobra-ultralight-pro-stand-bag': "Cobra Ultralight Pro Stand Bag",
+  'bag-boy-chiller-pro-cart-bag': "Bag Boy Chiller Pro Cart Bag",
+  'ping-scottsdale-custom-putter': "PING Scottsdale Custom Putter",
+  'ping-2026-moonlander-stand-bag': "PING 2026 Moonlander Stand Bag",
+  'bettinardi-bb-series-custom-putter': "Bettinardi BB Series Custom Putter",
+  'odyssey-s2s-ai-dual-putter': "Odyssey S2S Ai-Dual Putter",
+  'izzo-high-roller-travel-cover': "IZZO High Roller Travel Cover",
   'titleist-gt3-driver': "Titleist GT3 Driver",
   'titleist-gts3-driver': "Titleist GTS3 Driver",
   'callaway-quantum-triple-diamond': "Callaway Quantum Triple Diamond",
