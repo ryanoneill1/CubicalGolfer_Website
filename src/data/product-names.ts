@@ -1,6 +1,9 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'foresight-gc3': "Foresight GC3",
+  'scotty-cameron-phantom-9-2r': "Scotty Cameron Phantom 9.2R",
+  'shot-scope-g6': "Shot Scope G6",
   'taylormade-qi4d-driver': "TaylorMade Qi4D Driver",
   'ping-g440-max-driver-2026': "PING G440 MAX Driver",
   'callaway-quantum-max-driver': "Callaway Quantum Max Driver",

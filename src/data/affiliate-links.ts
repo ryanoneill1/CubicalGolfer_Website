@@ -622,6 +622,57 @@ export const AFFILIATE: Record<string, {
       ],
   },
 
+  'foresight-gc3': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fforesight-gc3-launch-monitor-26forugolfgf3ovt49vve%2F26forugolfgf3ovt49vve',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$6,999.00',
+    verifiedOn: '2026-09-23',
+    priceNote: 'Verified in stock and new at Golf Galaxy on 23 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Three high-speed cameras measure ball data directly rather than inferring it',
+        'Works indoors and outdoors, which most camera units do not',
+        'Verified in stock and new at Golf Galaxy — the Amazon listing was open-box',
+      ],
+  },
+
+  'scotty-cameron-phantom-9-2r': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fscotty-cameron-2026-phantom-9-2r-putter-26scoagolf26phntm9wle%2F26scoagolf26phntm9wle',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$549.99',
+    verifiedOn: '2026-09-23',
+    priceNote: 'The 2026 Phantom. Verified in stock at Golf Galaxy on 23 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'The 2026 Phantom, succeeding the model we tested',
+        'Available in 33, 34 and 35 inch lengths',
+        'Rated 5.0 by Golf Galaxy buyers, though from a small number of reviews',
+      ],
+  },
+
+  'shot-scope-g6': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fshot-scope-g6-gps-watch-25shougolfg6gpswtcceb%2F25shougolfg6gpswtcceb',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$179.99',
+    verifiedOn: '2026-09-23',
+    priceNote: 'Succeeds the V5. Verified in stock at Golf Galaxy on 23 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        '38,000+ preloaded courses with full hole maps on a colour screen',
+        'Ships with two strap sets, black and grey',
+        'No subscription for the core distance features, same as the V5',
+      ],
+  },
+
   'cobra-ds-adapt-max-k': {
     asin: 'B0DC88GLHK',
     url: 'https://www.amazon.com/dp/B0DC88GLHK?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
