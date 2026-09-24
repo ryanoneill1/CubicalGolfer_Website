@@ -863,6 +863,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/taylormade-r7-quad-mini-driver.webp',
+    imgAlt: 'TaylorMade R7 Quad Mini Driver',
     benefits: [
         'A mini driver — smaller head than a driver, longer shaft than a 3-wood',
         'Built for the tee shot where a driver is too much club',
@@ -880,6 +882,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-quantum-mini-spinner.webp',
+    imgAlt: 'Callaway Quantum Mini Spinner',
     benefits: [
         'Callaway’s mini driver, and the cheaper of the two on this page',
         'Sits between a driver and a 3-wood in both size and shaft length',
@@ -897,6 +901,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Sold as a single club, not a set. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-apex-26-utility-iron.webp',
+    imgAlt: 'Callaway Apex 26 Utility Iron',
     benefits: [
         'A driving iron — the long-iron alternative for players who dislike hybrids',
         'Sold as a single club, so it is not a set price',
@@ -914,6 +920,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Sold as a single club, not a set. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/mizuno-pro-fli-hi-utility-iron.webp',
+    imgAlt: 'Mizuno Pro Fli-Hi Utility Iron',
     benefits: [
         'Mizuno’s utility iron — hollow-body, easier to launch than a true long iron',
         'Single club, which is why the price looks low next to a set',
@@ -931,6 +939,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'A rescue/hybrid, not a driver. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/taylormade-qi4d-max-lite-rescue.webp',
+    imgAlt: 'TaylorMade Qi4D MAX Lite Rescue',
     benefits: [
         'A rescue club — TaylorMade’s name for a hybrid',
         'Available in 4H through 7H, regular and senior flex',
@@ -948,6 +958,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/tour-edge-exotics-e725-driver.webp',
+    imgAlt: 'Tour Edge Exotics E725 Driver',
     benefits: [
         'Clears the $400 mark by a dollar, and it is in stock',
         'Tour Edge prices below the majors for comparable builds',
@@ -965,6 +977,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/titleist-gt1-driver.webp',
+    imgAlt: 'Titleist GT1 Driver',
     benefits: [
         'The most forgiving head in Titleist’s GT line',
         'Lighter build aimed at moderate swing speeds',
@@ -982,6 +996,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Reduced from $599.99. Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/mizuno-jpx-one-select-driver.webp',
+    imgAlt: 'Mizuno JPX-ONE SELECT Driver',
     benefits: [
         'Currently reduced from $599.99',
         'Available in 9.0 and 10.5 degree lofts',
@@ -1000,6 +1016,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock on Amazon on 24 Sep 2026.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/pxg-lightning-max-10k-driver.webp',
+    imgAlt: 'PXG Lightning Max 10K Driver',
     benefits: [
         'PXG’s high-MOI head — the 10K refers to the moment of inertia target',
         'Sells direct from PXG at a higher price',
@@ -1017,6 +1035,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Price varies by shaft, $449.99 to $649.99. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/titleist-gt3-driver.webp',
+    imgAlt: 'Titleist GT3 Driver',
     benefits: [
         'Adjustable hosel and a moveable weight track for dialling in spin',
         'Priced from $449.99 depending on shaft',
@@ -1034,6 +1054,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Price varies by shaft, $699.99 to $899.99. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/titleist-gts3-driver.webp',
+    imgAlt: 'Titleist GTS3 Driver',
     benefits: [
         'Titleist’s 2026 adjustable head, succeeding the GT3',
         'Priced from $699.99 depending on shaft — the most expensive driver we list',
@@ -1051,6 +1073,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Callaway’s low-spin tour head. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-quantum-triple-diamond.webp',
+    imgAlt: 'Callaway Quantum Triple Diamond Driver',
     benefits: [
         'Triple Diamond is Callaway’s tour designation — the lowest-spin head they build',
         'Compact shape at address, minimal draw bias',
@@ -1068,6 +1092,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'The more forgiving of the two Triple Diamond heads. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-quantum-triple-diamond-max.webp',
+    imgAlt: 'Callaway Quantum Triple Diamond Max Driver',
     benefits: [
         'The larger Triple Diamond head — still low spin, slightly more forgiving',
         'The sensible one of the pair if you swing fast but miss centre',
@@ -1085,6 +1111,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/vessel-player-v-6w-stand-bag.webp',
+    imgAlt: 'Vessel Player V 6W Stand Bag',
     benefits: [
         'Six-way top with full-length dividers',
         'Vessel builds to a higher finish standard than most bag brands, and charges for it',
@@ -1102,6 +1130,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/sun-mountain-clubglider-meridian.webp',
+    imgAlt: 'Sun Mountain ClubGlider Meridian Travel Bag',
     benefits: [
         'Retractable legs and wheels — it rolls upright rather than being dragged',
         'Built for flying with clubs, not for carrying on the course',
@@ -1119,6 +1149,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'This is the Club Traveler, not the Tour Traveler. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/club-glove-club-traveler.webp',
+    imgAlt: 'Club Glove Club Traveler Travel Cover',
     benefits: [
         'Soft travel cover — lighter and cheaper than a hard case',
         'Club Glove is the bag you see on tour vans for a reason',
@@ -1136,6 +1168,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-2026-pioneer-cart-bag.webp',
+    imgAlt: 'PING 2026 Pioneer Cart Bag',
     benefits: [
         'Fifteen-way top, so every club has its own slot',
         'Cart-strap pass-through so the pockets stay reachable when strapped down',
@@ -1153,6 +1187,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/mizuno-mcraft-osaka-p-putter.webp',
+    imgAlt: 'Mizuno M.CRAFT Osaka P Putter',
     benefits: [
         'Milled from a single billet, which is where the feel comes from',
         'The Osaka P is the compact mallet shape in the M.CRAFT line',
@@ -1170,6 +1206,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/cobra-ultralight-pro-stand-bag.webp',
+    imgAlt: 'Cobra Ultralight Pro Stand Bag',
     benefits: [
         'Built around weight — the name is the design brief',
         'Five-way top, which is the usual trade for a light carry bag',
@@ -1187,6 +1225,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/bag-boy-chiller-pro-cart-bag.webp',
+    imgAlt: 'Bag Boy Chiller Pro Cart Bag',
     benefits: [
         'Insulated cooler pocket, which is the reason to pick this one',
         'Cart-specific design with a strap pass-through',
@@ -1204,6 +1244,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'A made-to-order page — you choose head shape and length. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-scottsdale-custom-putter.webp',
+    imgAlt: 'PING Scottsdale Custom Putter',
     benefits: [
         'Made to order: you pick the head shape and the length',
         'The Scottsdale line covers both blade and mallet heads',
@@ -1221,6 +1263,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-2026-moonlander-stand-bag.webp',
+    imgAlt: 'PING 2026 Moonlander Stand Bag',
     benefits: [
         'Wide, padded strap system aimed at carrying eighteen holes',
         'PING’s walking bag rather than their cart bag',
@@ -1238,6 +1282,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'A made-to-order page — you choose the BB model and length. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/bettinardi-bb-series-custom-putter.webp',
+    imgAlt: 'Bettinardi BB Series Custom Putter',
     benefits: [
         'Made to order: you choose which BB head and what length',
         'Bettinardi mills in Illinois and the finish is the selling point',
@@ -1256,6 +1302,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock on Amazon on 24 Sep 2026.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/odyssey-s2s-ai-dual-putter.webp',
+    imgAlt: 'Odyssey S2S Ai-Dual Putter',
     benefits: [
         'Ai-designed dual-material insert aimed at consistent roll',
         'The S2S line is Odyssey’s stability-focused family',
@@ -1274,6 +1322,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock at $222.18 on 24 Sep 2026 — lower than the $224.63 we had.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/izzo-high-roller-travel-cover.webp',
+    imgAlt: 'IZZO High Roller Travel Cover',
     benefits: [
         'Wheeled hard-ish cover at a soft-cover price',
         'The cheapest way to fly with clubs that we list',
@@ -3694,6 +3744,8 @@ export const AFFILIATE: Record<string, {
     price: '~$200',
     priceNote: '$199.99 at Amazon (checked 17 September 2026), sold and shipped by Amazon. The 34-inch and 35-inch lengths are the same price on the same listing.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/taylormade-tp-soto.webp',
+    imgAlt: 'TaylorMade TP Soto Putter',
     imgAlt: 'TaylorMade TP Soto blade putter',
   },
   // GoSports 10x7 / 7x7 hitting net — ASIN B079JDQKV4, verified live 2026-09-06 at $76.48,
@@ -5437,6 +5489,8 @@ export const AFFILIATE: Record<string, {
     price: '~$300',
     priceNote: 'Driver prices drop 30-40% when the next model lands each January.',
     label: 'Check Price at Amazon \u2192',
+    imgSrc: '/images/products/tour-edge-hot-launch-max-driver.webp',
+    imgAlt: 'Tour Edge Hot Launch Max Driver',
     imgAlt: 'Tour Edge Hot Launch Max driver',
     benefits: [
       '12-degree loft is the highest-launch spec in its price band',
