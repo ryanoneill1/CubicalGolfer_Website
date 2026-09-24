@@ -27,6 +27,10 @@ const BRAND_MAP: [string, string][] = [
   ['garmin approach s62',             'garmin-approach-s62'],
   ['garmin approach s42',             'garmin-approach-s42'],
   ['shot scope v5',                   'shot-scope-v5'],
+  ['titleist gt3',                   'titleist-gt3-driver'],
+  ['titleist gts3',                  'titleist-gts3-driver'],
+  ['triple diamond max',             'callaway-quantum-triple-diamond-max'],
+  ['triple diamond',                 'callaway-quantum-triple-diamond'],
 
   ['r7 quad',                        'taylormade-r7-quad-mini-driver'],
   ['quantum mini',                   'callaway-quantum-mini-spinner'],

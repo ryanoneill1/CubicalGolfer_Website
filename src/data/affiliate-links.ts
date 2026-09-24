@@ -709,6 +709,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/titleist-t150-black-vapor-irons.webp',
+    imgAlt: 'Titleist T150 Black Vapor Irons',
     benefits: [
         'Tour-level forged players iron in a black vapor finish',
         'Thinner topline and less offset than a game-improvement set',
@@ -726,6 +728,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified at Golf Galaxy on 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-i540-irons.webp',
+    imgAlt: 'PING i540 Irons',
     benefits: [
         'PING’s players-distance iron — forged feel with more ball speed than the i-series blades',
         'Compact head that still carries meaningful forgiveness',
@@ -743,6 +747,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Price varies by shaft, $1,299.00 to $1,399.00. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-g740-irons.webp',
+    imgAlt: 'PING G740 Irons',
     benefits: [
         'PING’s premium game-improvement set — forgiveness at a players-iron price',
         'Priced from $1,299.00 depending on shaft',
@@ -760,6 +766,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Price varies by shaft, $1,505.00 to $1,720.00. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/mizuno-pro-m15-irons.webp',
+    imgAlt: 'Mizuno Pro M-15 Irons',
     benefits: [
         'Mizuno grain-flow forged — the feel benchmark most iron reviews measure against',
         'Priced from $1,505.00 depending on shaft',
@@ -777,6 +785,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Price varies by shaft, $1,099.99 to $1,199.99. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-quantum-max-os-irons.webp',
+    imgAlt: 'Callaway Quantum Max OS Irons',
     benefits: [
         'Oversize head — the most forgiving set on this page by some margin',
         'Priced from $1,099.99 depending on shaft',
@@ -794,6 +804,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Price varies by shaft, $999.99 to $1,299.99. Verified 24 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/wilson-dynapwr-forged-irons.webp',
+    imgAlt: 'Wilson DYNAPWR Forged Irons',
     benefits: [
         'The cheapest way onto this page — forged construction from $999.99',
         'Ships 5-9, PW, GW — a seven-club set',
@@ -812,6 +824,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock on Amazon on 24 Sep 2026.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/pxg-0311xp-gen8-irons.webp',
+    imgAlt: 'PXG 0311XP GEN8 Irons',
     benefits: [
         'Seven-club set, 5-PW plus GW, in a game-improvement shape',
         'PXG sells direct at full price — this listing undercuts that',
@@ -830,6 +844,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-24',
     priceNote: 'Verified in stock on Amazon on 24 Sep 2026. 2025 model.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/tour-edge-exotics-cb-forged-irons.webp',
+    imgAlt: 'Tour Edge Exotics CB Forged Irons',
     benefits: [
         'Forged players iron from a brand that prices below the majors',
         '4-PW set with Dynamic Gold MID 115 steel',
@@ -988,6 +1004,74 @@ export const AFFILIATE: Record<string, {
         'PXG’s high-MOI head — the 10K refers to the moment of inertia target',
         'Sells direct from PXG at a higher price',
         '10.5 degree, regular flex, right hand as listed',
+      ],
+  },
+
+  'titleist-gt3-driver': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-gt3-driver-24ttlmgt3tns1kblkdrv%2F24ttlmgt3tns1kblkdrv',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$449.99',
+    verifiedOn: '2026-09-24',
+    priceNote: 'Price varies by shaft, $449.99 to $649.99. Verified 24 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Adjustable hosel and a moveable weight track for dialling in spin',
+        'Priced from $449.99 depending on shaft',
+        'Lower spin than the GT1 — built for faster swings, not forgiveness',
+      ],
+  },
+
+  'titleist-gts3-driver': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-gts3-driver-26titmgolfegizeopsztk%2F26titmgolfegizeopsztk',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$699.99',
+    verifiedOn: '2026-09-24',
+    priceNote: 'Price varies by shaft, $699.99 to $899.99. Verified 24 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Titleist’s 2026 adjustable head, succeeding the GT3',
+        'Priced from $699.99 depending on shaft — the most expensive driver we list',
+        'A players head: low spin, low forgiveness',
+      ],
+  },
+
+  'callaway-quantum-triple-diamond': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcallaway-quantum-triple-diamond-driver-25calmgolfqntmtddvsom%2F25calmgolfqntmtddvsom',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$699.99',
+    verifiedOn: '2026-09-24',
+    priceNote: 'Callaway’s low-spin tour head. Verified 24 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'Triple Diamond is Callaway’s tour designation — the lowest-spin head they build',
+        'Compact shape at address, minimal draw bias',
+        'Built for players who deliver speed and already control the face',
+      ],
+  },
+
+  'callaway-quantum-triple-diamond-max': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fcallaway-quantum-triple-diamond-max-driver-25calmgolfqntmtdmxjhs%2F25calmgolfqntmtdmxjhs',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$699.99',
+    verifiedOn: '2026-09-24',
+    priceNote: 'The more forgiving of the two Triple Diamond heads. Verified 24 Sep 2026.',
+    label: 'Check Price at Golf Galaxy →',
+    benefits: [
+        'The larger Triple Diamond head — still low spin, slightly more forgiving',
+        'The sensible one of the pair if you swing fast but miss centre',
+        'Same price as the standard Triple Diamond',
       ],
   },
 

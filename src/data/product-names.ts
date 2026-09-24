@@ -1,6 +1,10 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'titleist-gt3-driver': "Titleist GT3 Driver",
+  'titleist-gts3-driver': "Titleist GTS3 Driver",
+  'callaway-quantum-triple-diamond': "Callaway Quantum Triple Diamond",
+  'callaway-quantum-triple-diamond-max': "Callaway Quantum Triple Diamond Max",
   'taylormade-r7-quad-mini-driver': "TaylorMade R7 Quad Mini Driver",
   'callaway-quantum-mini-spinner': "Callaway Quantum Mini Spinner",
   'callaway-apex-26-utility-iron': "Callaway Apex 26 Utility Iron",

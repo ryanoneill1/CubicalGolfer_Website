@@ -9897,6 +9897,20 @@ export const ARTICLES: Article[] = [
           { key: 'cleveland-launcher-xl2-driver', role: 'Best for slow swingers', name: 'Cleveland Launcher XL2' },
           { key: 'cobra-ds-adapt-max-k', role: 'Best value', name: 'Cobra DS-Adapt MAX-K' },
         ] },
+      {
+        h2: 'If Your Fitting Says You Spin It Too Much',
+        badge: 'LOW SPIN — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-quantum-triple-diamond-max',
+        body: 'One outcome of the self-fitting steps above is finding that you generate plenty of speed but launch the ball too high with too much spin — a ball flight that climbs and falls short. The fix is a lower-spin head, and Callaway\u2019s Triple Diamond line is theirs.\n\nThe Max version is the larger, more forgiving of the two, which makes it the sensible choice for a golfer who swings fast but does not find the centre every time.\n\nWe have not tested it. At $699.99 this is a lot of money to spend on a self-diagnosis — if your fitting pointed here, that is the point at which paying for a real one pays for itself.',
+      },
+      {
+        h2: 'The Smaller Triple Diamond',
+        badge: 'TOUR HEAD — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-quantum-triple-diamond',
+        body: 'The standard Triple Diamond is the compact version: lower spin still, less forgiving, and aimed at a golfer who already controls the face.\n\nUntested here, and the same price as the Max above at $699.99.\n\nWe are including it for completeness rather than recommending it. If you are fitting yourself at home rather than paying a professional, you are almost certainly not the golfer this head was designed for.',
+      },
     ],
     faq: [
       { q: 'How do I know my driver swing speed without a launch monitor?', a: 'Use your 7-iron carry distance as a proxy: 120 yards carry = ~80 mph driver speed, 140 yards = ~90 mph, 160 yards = ~100 mph, 180 yards = ~110 mph. Alternatively, most golf stores will measure you for free — you do not need to buy anything.' },
@@ -12515,6 +12529,20 @@ export const ARTICLES: Article[] = [
       { h2: 'Swing Speed to Optimal Loft', body: '<table class="cmp-table"><thead><tr><th>Driver Speed</th><th>Optimal Loft</th><th>Why</th></tr></thead><tbody><tr><td>Under 75 mph</td><td>14-15°</td><td>Need maximum launch to carry the ball</td></tr><tr><td>75-85 mph</td><td>12-13°</td><td>Higher launch maximizes carry distance</td></tr><tr><td>85-95 mph</td><td>10.5-12°</td><td>Sweet spot for most amateur men</td></tr><tr><td>95-105 mph</td><td>9.5-10.5°</td><td>Enough speed to optimize with lower loft</td></tr><tr><td>Over 105 mph</td><td>8.5-9.5°</td><td>High speed creates sufficient launch naturally</td></tr></tbody></table><p>Notice: the average male amateur swings 93 mph. The optimal loft is 10.5-12° — yet most play 9.5°. This is leaving 10-20 yards on the table.</p>' },
       { h2: 'Why More Loft Helps Most Golfers', body: '<p>Three reasons more loft helps amateurs:</p><ol><li><strong>Higher launch = more carry.</strong> A ball that launches at 14° carries farther than one at 10° at the same speed, because it stays in the air longer.</li><li><strong>Less side spin.</strong> Higher loft reduces the gear effect that turns mishits into hooks and slices. Your misses become straighter.</li><li><strong>More forgiveness.</strong> Higher-lofted drivers typically have more face area and a larger sweet spot.</li></ol><p>The biggest gains come from golfers under 90 mph who switch from 9.5° to 12°. We have seen 15-25 yard increases in carry distance just from this one change.</p><p>Our recommended drivers by speed: the <strong>Callaway Paradym Ai Smoke Max</strong> (10.5-12°) for under 85 mph — its draw bias and high MOI add launch naturally. The <strong>TaylorMade Qi35 Max</strong> (9-12° adjustable) for 85-100 mph — the expanded sweet spot forgives off-center hits. The <strong>Titleist GT2</strong> (8.5-10.5°) for 100+ mph — lower spin with speed-optimized aerodynamics.</p>' },
       { h2: 'How to Test Your Ideal Loft', body: '<p>Use a <a href="/best-golf-launch-monitors-2026/">launch monitor</a> to test different lofts. Hit 10 balls at each setting and compare average carry distance. Key metrics to watch:</p><ul><li><strong>Launch angle:</strong> optimal is 12-15° for most amateurs</li><li><strong>Spin rate:</strong> optimal is 2,200-2,800 rpm for most amateurs</li><li><strong>Carry distance:</strong> the number that matters</li></ul><p>If your launch angle is below 12° and your spin is below 2,000 rpm, you need more loft. See our <a href="/golf-club-distance-chart/">distance chart</a> to check if you are maximizing your driver distance.</p>', badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'garmin-approach-r10' },
+      {
+        h2: 'Adjustable and Low-Spin: Titleist GT3',
+        badge: 'ADJUSTABLE — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'titleist-gt3-driver',
+        body: 'Everything above is about picking a loft. An adjustable head lets you change your mind, which is worth something if you are not certain — and the GT3 is one of the more adjustable drivers on the market, with a hosel and a moveable weight track.\n\nWe have not tested it, so it carries no rating here.\n\nRead the spin part carefully before you buy. The GT3 is a lower-spin head than most drivers on this site, which means it wants MORE loft, not less. A golfer who buys a low-spin head in 9 degrees because it sounds like a player\u2019s setup usually ends up hitting it shorter, not longer. From $449.99 depending on shaft.',
+      },
+      {
+        h2: 'The 2026 Version: Titleist GTS3',
+        badge: 'NEW FOR 2026 — NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'titleist-gts3-driver',
+        body: 'The GTS3 succeeds the GT3 for 2026 and is the most expensive driver listed anywhere on this site — from $699.99, up to $899.99 depending on shaft.\n\nUntested by us.\n\nThe same loft warning applies, more so. This is a players head with low spin and low forgiveness. If you are reading a loft guide because you are not sure what loft you need, this is almost certainly not the driver for you, and saying otherwise would be doing you a disservice.',
+      },
       { h2: 'Adjustable Drivers', body: '<p>Most modern drivers have adjustable loft (±1.5-2°). If you own an driver, try adding 1° of loft and hitting 20 balls. Measure the average carry. Many golfers gain 5-10 yards from this free adjustment.</p><p>If you are buying a new driver, start with 10.5° and use the adjustable hosel to fine-tune. You can always reduce loft later — but starting too low costs distance. See our <a href="/best-golf-drivers-forgiveness/">most forgiving drivers guide</a> for options with wide adjustability ranges.</p>' },
     ],
     faq: [
