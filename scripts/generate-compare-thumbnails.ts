@@ -42,20 +42,58 @@ function shortName(key: string): string {
   return name.length > 24 ? name.slice(0, 23).trimEnd() + '…' : name;
 }
 
+/**
+ * Resolve a product's illustration, or null when there isn't one yet.
+ * A brand-new product reaches the registry before anyone has photographed it,
+ * and returning null here (rather than bailing on the whole card) is what lets
+ * its comparison page ship on day one. The plate falls back to the product name
+ * in text; the next build after a photo lands swaps the picture in with no edit.
+ */
+function imagePathFor(entry: any): string | null {
+  if (!entry?.imgSrc) return null;
+  const p = path.join(PRODUCTS_DIR, entry.imgSrc);
+  return fs.existsSync(p) ? p : null;
+}
+
+/** Word-wrap a product name onto the plate when it stands in for a photo. */
+function wrapName(key: string, maxChars = 14): string[] {
+  const words = productName(key).split(/\s+/);
+  const lines: string[] = [];
+  let cur = '';
+  for (const w of words) {
+    if (cur && (cur + ' ' + w).length > maxChars) { lines.push(cur); cur = w; }
+    else cur = cur ? cur + ' ' + w : w;
+  }
+  if (cur) lines.push(cur);
+  return lines.slice(0, 4);
+}
+
+function placeholderPlate(key: string, plateX: number): string {
+  const lines = wrapName(key);
+  const size = 26;
+  const startY = PLATE_Y + PLATE / 2 - ((lines.length - 1) * size * 1.25) / 2 + 9;
+  return lines.map((ln, i) => `
+    <text x="${plateX + PLATE / 2}" y="${startY + i * size * 1.25}" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif" font-size="${size}"
+          fill="${GREEN}">${esc(ln)}</text>`).join('');
+}
+
 async function makeThumb(slug: string, keyA: string, keyB: string): Promise<boolean> {
   const a: any = (AFFILIATE as any)[keyA];
   const b: any = (AFFILIATE as any)[keyB];
-  if (!a?.imgSrc || !b?.imgSrc) return false;
-  const imgAPath = path.join(PRODUCTS_DIR, a.imgSrc);
-  const imgBPath = path.join(PRODUCTS_DIR, b.imgSrc);
-  if (!fs.existsSync(imgAPath) || !fs.existsSync(imgBPath)) return false;
+  if (!a || !b) return false;
+  const imgAPath = imagePathFor(a);
+  const imgBPath = imagePathFor(b);
 
   const fit = { width: PLATE - IMG_PAD * 2, height: PLATE - IMG_PAD * 2, fit: 'inside' as const };
   const [imgA, imgB] = await Promise.all([
-    sharp(imgAPath).resize(fit).toBuffer(),
-    sharp(imgBPath).resize(fit).toBuffer(),
+    imgAPath ? sharp(imgAPath).resize(fit).toBuffer() : Promise.resolve(null),
+    imgBPath ? sharp(imgBPath).resize(fit).toBuffer() : Promise.resolve(null),
   ]);
-  const [mA, mB] = await Promise.all([sharp(imgA).metadata(), sharp(imgB).metadata()]);
+  const [mA, mB] = await Promise.all([
+    imgA ? sharp(imgA).metadata() : Promise.resolve({ width: 0, height: 0 } as any),
+    imgB ? sharp(imgB).metadata() : Promise.resolve({ width: 0, height: 0 } as any),
+  ]);
 
   // Background + plates + VS badge + names, all as one SVG layer
   const svg = `
@@ -67,16 +105,18 @@ async function makeThumb(slug: string, keyA: string, keyB: string): Promise<bool
     <text x="${W / 2}" y="${PLATE_Y + PLATE / 2 + 10}" text-anchor="middle"
           font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="bold"
           fill="${GREEN}">VS</text>
-    <text x="${PLATE_AX + PLATE / 2}" y="${PLATE_Y + PLATE + 42}" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#ffffff">${esc(shortName(keyA))}</text>
-    <text x="${PLATE_BX + PLATE / 2}" y="${PLATE_Y + PLATE + 42}" text-anchor="middle"
-          font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#ffffff">${esc(shortName(keyB))}</text>
+    ${imgA ? '' : placeholderPlate(keyA, PLATE_AX)}
+    ${imgB ? '' : placeholderPlate(keyB, PLATE_BX)}
+    ${imgA ? `<text x="${PLATE_AX + PLATE / 2}" y="${PLATE_Y + PLATE + 42}" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#ffffff">${esc(shortName(keyA))}</text>` : ''}
+    ${imgB ? `<text x="${PLATE_BX + PLATE / 2}" y="${PLATE_Y + PLATE + 42}" text-anchor="middle"
+          font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#ffffff">${esc(shortName(keyB))}</text>` : ''}
   </svg>`;
 
   await sharp(Buffer.from(svg))
     .composite([
-      { input: imgA, left: Math.round(PLATE_AX + (PLATE - (mA.width ?? 0)) / 2), top: Math.round(PLATE_Y + (PLATE - (mA.height ?? 0)) / 2) },
-      { input: imgB, left: Math.round(PLATE_BX + (PLATE - (mB.width ?? 0)) / 2), top: Math.round(PLATE_Y + (PLATE - (mB.height ?? 0)) / 2) },
+      ...(imgA ? [{ input: imgA, left: Math.round(PLATE_AX + (PLATE - (mA.width ?? 0)) / 2), top: Math.round(PLATE_Y + (PLATE - (mA.height ?? 0)) / 2) }] : []),
+      ...(imgB ? [{ input: imgB, left: Math.round(PLATE_BX + (PLATE - (mB.width ?? 0)) / 2), top: Math.round(PLATE_Y + (PLATE - (mB.height ?? 0)) / 2) }] : []),
     ])
     .webp({ quality: 78 })
     .toFile(path.join(OUT_DIR, `compare-${slug}.webp`));
@@ -93,7 +133,15 @@ async function main() {
     if (done) ok++; else skipped.push(c.slug);
   }
   console.log(`✅ Compare thumbnails generated: ${ok}/${(COMPARISONS as any[]).length}`);
-  if (skipped.length) console.log('  skipped (missing product image):', skipped.join(', '));
+  if (skipped.length) console.log('  skipped (product key not in registry):', skipped.join(', '));
+  const textOnly = (COMPARISONS as any[]).filter(c => {
+    const a: any = (AFFILIATE as any)[c.productA], b: any = (AFFILIATE as any)[c.productB];
+    return (a && b) && (!imagePathFor(a) || !imagePathFor(b));
+  }).map(c => c.slug);
+  if (textOnly.length) {
+    console.log(`  ⚠️  ${textOnly.length} card(s) drawn with a text plate — product photo still needed:`);
+    for (const s of textOnly) console.log('       ', s);
+  }
   // Fail the build only if nothing generated — partial success is acceptable
   // because the template keeps an emoji fallback for missing files.
   if (ok === 0) process.exit(1);
