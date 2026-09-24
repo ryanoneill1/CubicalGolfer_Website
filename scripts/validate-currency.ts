@@ -50,6 +50,12 @@ const ALLOWED = new Set<string>([
   // says so in the heading. The current pick leads; the old head is the
   // runner-up and is labelled as such.
   '/best-golf-drivers-under-400/|taylormade-sim2-max',
+  // Deliberate, and the point of the page: /best-premium-irons-2026/ compares the
+  // $1,000+ tier against the most expensive set we have ACTUALLY TESTED. The G430
+  // leads because it is the only rated set on the page; the G740 that supersedes it
+  // is one of eight untested research picks below. Promoting the G740 here would mean
+  // leading a page with a club nobody has hit, which is the thing this site does not do.
+  '/best-premium-irons-2026/|ping-g430-irons',
 ]);
 
 const num = (p?: string): number | null => {

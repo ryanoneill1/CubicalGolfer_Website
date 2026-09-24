@@ -1,6 +1,14 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'titleist-t150-black-vapor-irons': "Titleist T150 Black Vapor Irons",
+  'ping-i540-irons': "PING i540 Irons",
+  'ping-g740-irons': "PING G740 Irons",
+  'mizuno-pro-m15-irons': "Mizuno Pro M-15 Irons",
+  'callaway-quantum-max-os-irons': "Callaway Quantum Max OS Irons",
+  'wilson-dynapwr-forged-irons': "Wilson DYNAPWR Forged Irons",
+  'pxg-0311xp-gen8-irons': "PXG 0311XP GEN8 Irons",
+  'tour-edge-exotics-cb-forged-irons': "Tour Edge Exotics CB Forged Irons",
   'foresight-gc3': "Foresight GC3",
   'scotty-cameron-phantom-9-2r': "Scotty Cameron Phantom 9.2R",
   'shot-scope-g6': "Shot Scope G6",
