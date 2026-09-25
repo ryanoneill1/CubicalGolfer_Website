@@ -31,7 +31,7 @@ export const ARTICLES: Article[] = [
     ogImage: 'https://www.cubicalgolfer.com/images/og/best-golf-rangefinders-2026.jpg',
     thumbnail: '/images/thumbnails/rangefinders-thumb.webp',
     updateLog: [{ date: 'Apr 17, 2026', note: 'Added Bushnell Tour V7 Shift mention; updated V7 Shift pricing to $399.' }, { date: 'Mar 8, 2026', note: 'Added Blue Tees Series 3 Max+ as budget alternative; removed discontinued Nikon Coolshot Pro II.' }, { date: 'Jan 12, 2026', note: 'Full 2026 update — retested all 5 models, refreshed pricing and Amazon links.' }],
-    intro: "If you\'re still pacing off yardages or relying on sprinkler heads, you\'re leaving strokes on the course. A quality rangefinder is the single best $150–$300 investment a weekend golfer can make. We tested 5 of the top-rated rangefinders across a full season across four different courses to find the best for every budget.",
+    intro: "If you\'re still pacing off yardages or relying on sprinkler heads, you\'re leaving strokes on the course. A quality rangefinder is the single best $150–$300 investment a weekend golfer can make. We tested 5 of the top-rated rangefinders over 40 rounds across four different courses \u2014 12 rounds with the Bushnell Tour V7 Shift, 8 each with the Precision Pro NX9 and Bushnell Pro XE, and 6 each with the Blue Tees Series 3 Max and Garmin Approach Z82.",
     toc: [
       'What to look for in a golf rangefinder',
       'Best overall: Bushnell Tour V7 Shift',
@@ -10355,7 +10355,7 @@ export const ARTICLES: Article[] = [
     thumbnail: '/images/thumbnails/launch-monitor-no-sub-thumb.webp',
     category: 'golf-tech',
     pageType: 'buying-guide',
-    quickAnswerProduct: 'shot-scope-lm1',
+    quickAnswerProduct: 'flightscope-mevo-gen2',
     tag: 'BUYING GUIDE',
     emoji: '📊',
     thumb: 'green',
