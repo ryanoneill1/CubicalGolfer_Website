@@ -27,6 +27,8 @@ const BRAND_MAP: [string, string][] = [
   ['garmin approach s62',             'garmin-approach-s62'],
   ['garmin approach s42',             'garmin-approach-s42'],
   ['shot scope v5',                   'shot-scope-v5'],
+  ['bombas performance quarter',    'bombas-performance-quarter-socks'],
+  ['bombas',                        'bombas-performance-quarter-socks'],
   ['u.s. kids golf ul7 42',          'us-kids-ul7-42-complete-set'],
   ['us kids golf ul7',              'us-kids-ul7-42-complete-set'],
   ['ul7 42',                        'us-kids-ul7-42-complete-set'],

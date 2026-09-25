@@ -2459,6 +2459,13 @@ export const ARTICLES: Article[] = [
         affiliateKey: 'feetures-elite-golf-max-cushion-socks',
         body: 'A note that belongs on a walking page more than a shoe page. Feetures make their golf socks anatomically left-and-right specific, which almost no other golf sock does, with maximum cushion under the ball of the foot — the part that takes the load over five miles.\n\nWe have not worn them.\n\n$54.15 looks steep for socks until you notice it is a multi-pack. If your feet ache after 18 and your shoes are fine, this is the cheaper thing to change first.',
       },
+      {
+        h2: 'The Other Sock Worth Knowing About',
+        badge: 'NOT YET TESTED',
+        testedStatus: 'research',
+        affiliateKey: 'bombas-performance-quarter-socks',
+        body: 'Bombas sell theirs as a three-pack at $57.00, which is about $19 a pair \u2014 dearer than most golf socks and roughly level with the Feetures above once you account for the multi-pack.\n\nWe have not walked a round in them.\n\nQuarter height, so they sit above the shoe collar without climbing the calf, and the footbed is cushioned for walking rather than riding. If you already wear Bombas off the course you know whether the fit suits you, and that is worth more than anything we could tell you about a sock.',
+      },
     ],
     comparisonTable: {
       headers: ['Shoe', 'Style', 'Price', 'Weight', 'Waterproof'],
