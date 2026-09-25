@@ -466,6 +466,23 @@ const NAV_ITEMS = [
         return txt || 'unknown';
       }
 
+      // Which CTA earned the click. Sprint A1: the audit could tell us WHICH
+      // page and WHICH product, but not whether the quick-answer button or an
+      // in-section button did the work — so there was no way to judge CTA
+      // placement. Explicit data-cta-location wins; otherwise infer from the
+      // surrounding markup.
+      function ctaLocation(link) {
+        var explicit = link.getAttribute('data-cta-location');
+        if (explicit) return explicit;
+        if (link.closest('.quick-answer-box')) return 'quick-answer';
+        if (link.closest('tr')) return 'table-row';
+        if (link.closest('.product-card')) return 'product-card';
+        if (link.closest('.sticky-bar, [class*="sticky"]')) return 'sticky-bar';
+        if (link.closest('.gear-grid, [class*="recommended"]')) return 'gear-grid';
+        if (link.closest('section, article')) return 'section';
+        return 'other';
+      }
+
       document.addEventListener('click', function(e) {
         var link = e.target.closest('a[href]');
         if (!link) return;
@@ -483,7 +500,7 @@ const NAV_ITEMS = [
 
         // Plausible event (existing integration)
         if (typeof window.plausible === 'function') {
-          window.plausible('Affiliate Click', { props: { product: product, retailer: retailer, page: pagePath } });
+          window.plausible('Affiliate Click', { props: { product: product, retailer: retailer, page: pagePath, cta_location: ctaLocation(link) } });
         }
 
         // GA4 event (no-ops when GA4_ID is empty)
@@ -493,6 +510,8 @@ const NAV_ITEMS = [
             page_path: pagePath,
             link_url: linkUrl.substring(0, 200),
             product: product,
+            cta_location: ctaLocation(link),
+            page_title: document.title.substring(0, 100),
             send_to: GA4_ID,
             transport_type: 'beacon'
           });

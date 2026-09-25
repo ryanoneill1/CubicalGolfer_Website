@@ -54,7 +54,7 @@ import { PRODUCT_DISPLAY } from '../src/data/product-names';
    false positives (three price shapes it could not read). The two that remain
    need a link changed, which is Ryan's call. 25 Sep: 2 -> 1, Qi35 Max given a
    section on /driver-loft-guide/ and named in its bottomLine. */
-const CEILING = 1;
+const CEILING = 0;
 /** A gap this large means the reader is quoted a materially different price. */
 const SEVERE_RATIO = 2.0;
 

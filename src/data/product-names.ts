@@ -1,6 +1,10 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'sklz-golf-grip-trainer': "SKLZ Golf Grip Trainer",
+  'skechers-elite-vortex': "Skechers Elite Vortex",
+  'tour-edge-hot-launch-c522-irons': "Tour Edge Hot Launch C522 Irons",
+  'bushnell-wingman-2': "Bushnell Wingman 2",
   'payntr-reserve-classic-tour-shoes': "PAYNTR Reserve Classic Tour Golf Shoes",
   'mgi-e-boost-cart': "MGI E-Boost Electric Assist Cart",
   'arccos-air-sensors': "Arccos Air Sensors",

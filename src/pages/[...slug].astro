@@ -25,6 +25,7 @@ import { articleMeta } from '../lib/seo';
 import { articleSchema, faqSchema, breadcrumbSchema, howToSchema, buyingGuideProductSchema, reviewSchema, roundupItemListSchema } from '../lib/schema';
 import { getMergedRelated, brandHubsFor } from '../lib/linking';
 import { getAffiliateLink } from '../data/affiliate-links';
+import { PRODUCT_DISPLAY } from '../data/product-names';
 import type { Article } from '../data/types';
 
 export async function getStaticPaths() {
@@ -517,7 +518,9 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
           <p class="quick-answer-text" set:html={article.bottomLine} />
           <a href={qaAff.url} class="quick-answer-cta" target="_blank"
             rel={(qaAff as any).program === 'direct' ? "nofollow noopener" : "nofollow noopener sponsored"}
-            aria-label={`Check price for our #1 pick`}>
+            data-aff-name={PRODUCT_DISPLAY[article.quickAnswerProduct] ?? article.quickAnswerProduct}
+            data-cta-location="quick-answer"
+            aria-label={`Check price for ${PRODUCT_DISPLAY[article.quickAnswerProduct] ?? 'our #1 pick'}`}>
             {(qaAff as any).program === 'direct'
               ? <>Our #1 Pick: {qaAff.price} — {qaAff.label}</>
               : <>Our #1 Pick: {qaAff.price} at {qaAff.retailer} — Check Today's Price ↗</>}
