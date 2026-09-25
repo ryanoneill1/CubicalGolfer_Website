@@ -1341,6 +1341,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/motocaddy-m7-gps-remote-caddy.webp',
     imgAlt: 'Motocaddy 2026 M7 GPS Remote electric golf caddy',
     benefits: [
         'Remote-controlled electric caddy with a 3.5" GPS touchscreen built in',
@@ -1377,6 +1378,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/footjoy-pro-sl-shoes.webp',
     imgAlt: 'FootJoy Pro/SL spikeless golf shoes in white',
     benefits: [
         'The spikeless shoe most often seen inside the ropes on tour',
@@ -1395,6 +1397,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified at Golf Galaxy on 25 Sep 2026, down from a $179.99 list price.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/nike-victory-pro-4-shoes.webp',
     imgAlt: 'Nike Victory Pro 4 spiked golf shoes',
     benefits: [
         'Cleated outsole for grip on wet turf and sidehill lies',
@@ -1413,6 +1416,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/under-armour-drive-pro-clone-shoes.webp',
     imgAlt: 'Under Armour Drive Pro Clone spiked golf shoes',
     benefits: [
         'Cleated model in Under Armour’s 2026 Drive Pro line',
@@ -1431,6 +1435,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/skechers-blade-tour-si-shoes.webp',
     imgAlt: 'Skechers Blade Tour SI spiked golf shoes',
     benefits: [
         'Skechers’ spiked tour model, above the GO GOLF line in their range',
@@ -1449,6 +1454,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/under-armour-drive-pro-clone-sl-shoes.webp',
     imgAlt: 'Under Armour Drive Pro Clone SL spikeless golf shoes',
     benefits: [
         'The spikeless version of the Drive Pro Clone, $20 less than the cleated one',
@@ -1467,6 +1473,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/maxfli-xcw-wedge.webp',
     imgAlt: 'Maxfli XCW wedge',
     benefits: [
         'Roughly half the price of a Vokey SM10 or a Cleveland RTX6',
@@ -1485,6 +1492,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/skechers-pure-si-shoes.webp',
     imgAlt: 'Skechers Pure SI cushioned golf shoes',
     benefits: [
         'Built on Skechers’ cushioned walking platform rather than a golf last',
@@ -1503,6 +1511,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/reebok-nano-golf-shoes.webp',
     imgAlt: 'Reebok Nano golf shoes',
     benefits: [
         'The Nano training shoe adapted for golf — flat, firm, wide in the toe',
@@ -1521,6 +1530,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified at Golf Galaxy on 25 Sep 2026. Listed at $119.99, not $109.99.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/adidas-adipower-26-shoes.webp',
     imgAlt: 'adidas Adipower 26 spiked golf shoes in black',
     benefits: [
         'The cheapest cleated shoe from a major brand on this page',
@@ -1539,6 +1549,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock at Golf Galaxy on 25 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/callaway-tour-authentic-td-glove.webp',
     imgAlt: 'Callaway Tour Authentic Triple Diamond golf glove',
     benefits: [
         'Premium cabretta leather — the tour-issue spec, not the retail one',
@@ -1557,6 +1568,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified at Golf Galaxy on 25 Sep 2026. Listed at $32.00, not $30.00.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/ping-tour-glove.webp',
     imgAlt: 'PING Tour cabretta leather golf glove',
     benefits: [
         'Cabretta leather below the tour-issue gloves we list',
@@ -1575,6 +1587,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified at Golf Galaxy on 25 Sep 2026. Listed at $14.99, not $12.00.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/stance-athletic-tab-socks.webp',
     imgAlt: 'Stance athletic tab golf socks',
     benefits: [
         'Tab at the heel keeps the shoe collar off your Achilles',
@@ -1594,6 +1607,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Big Max USA.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/big-max-blade-ip-2-cart.webp',
     imgAlt: 'Big Max Blade IP 2 three-wheel golf push cart, folded',
     benefits: [
         'Folds flatter than almost any other three-wheel cart',
@@ -1613,6 +1627,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Abacus Sportswear US.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/abacus-bounce-waterproof-hoodie.webp',
     imgAlt: 'Abacus Bounce waterproof golf hoodie',
     benefits: [
         'A genuinely waterproof shell cut as a hoodie, not a rain jacket',
@@ -1632,6 +1647,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Mileseey Direct.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/mileseey-genesonic-pro-speaker.webp',
     imgAlt: 'MILESEEY GeneSonic Pro golf GPS speaker',
     benefits: [
         'GPS yardages spoken aloud plus a Bluetooth speaker in one unit',
@@ -1651,6 +1667,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Pinned Golf.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/pinned-sound-stick-pro-speaker.webp',
     imgAlt: 'Pinned Sound Stick PRO golf GPS speaker',
     benefits: [
         'IPX7 waterproof — survives being left out in a downpour',
@@ -1689,6 +1706,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Motocaddy. Ships in 4-5 days.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/motocaddy-qb2-push-cart.webp',
     imgAlt: 'Motocaddy QB2 folding golf push cart',
     benefits: [
         'Motocaddy’s manual cart — the same brand as their electric caddies',
@@ -1708,6 +1726,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026. Multi-pack price.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/feetures-elite-golf-max-cushion-socks.webp',
     imgAlt: 'Feetures Elite Golf Max Cushion tab ankle socks',
     benefits: [
         'Anatomically left-and-right specific, which most golf socks are not',
@@ -1727,6 +1746,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Divot Board.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/divot-board-mini.webp',
     imgAlt: 'Divot Board Mini swing path and impact trainer',
     benefits: [
         'Shows your true swing path and low point in the surface itself',
@@ -1746,6 +1766,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by PXG.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/pxg-players-glove.webp',
     imgAlt: 'PXG Players cabretta leather golf glove',
     benefits: [
         'Full cabretta leather for about the price of a good synthetic',
