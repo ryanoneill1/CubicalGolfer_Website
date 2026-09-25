@@ -215,7 +215,7 @@ export const COMPARISONS: Comparison[] = [
     productA: 'garmin-approach-s62',
     productB: 'garmin-approach-s42',
     winner: 'garmin-approach-s62',
-    winnerReason: 'The S62 wins for golfers who want automatic shot tracking, green view mapping, and club recommendations. The S42 is the right choice if you just want GPS yardages without the extras.',
+    winnerReason: 'Both give you GPS yardages on your wrist; the question is whether you want the watch doing more than that. The S62 wins for golfers who want automatic shot tracking, green view mapping, and club recommendations. The S42 is the right choice if you just want yardages without the extras.',
     intro: 'The Garmin Approach S62 and S42 are the two most popular GPS golf watches in the Garmin lineup. The S62 is the premium model at ~$499. The S42 is the mid-range option at ~$349. Both give you front/middle/back yardages, hazard distances, and 42,000 preloaded courses. The question is whether the S62 extras — automatic shot detection, green contour mapping, and scoring — are worth the $150 premium for your game.',
         sections: [
       { h2: 'S62 vs S42 at a Glance', body: '<p>The two watches give identical distances. What separates them is what you see, and what the watch does with the data.</p><table class="cmp-table"><thead><tr><th>Feature</th><th>Approach S62</th><th>Approach S42</th></tr></thead><tbody><tr><td><strong>Price</strong></td><td>$499</td><td>$299</td></tr><tr><td><strong>Display</strong></td><td>1.3 in colour</td><td>1.2 in colour</td></tr><tr><td><strong>Full course map</strong></td><td>Yes, with hazard overlays</td><td>No</td></tr><tr><td><strong>Green view</strong></td><td>Yes</td><td>Yes</td></tr><tr><td><strong>Front / middle / back</strong></td><td>Yes</td><td>Yes</td></tr><tr><td><strong>Virtual Caddie</strong></td><td>Yes</td><td>No</td></tr><tr><td><strong>Garmin Pay</strong></td><td>Yes</td><td>No</td></tr></tbody></table><p>The course map is the one that matters. On an unfamiliar course it changes how you play the hole; on your home course you already know the layout.</p>' },
@@ -280,7 +280,7 @@ export const COMPARISONS: Comparison[] = [
     productA:      'garmin-approach-s12',
     productB:      'bushnell-ion-elite',
     winner:        'garmin-approach-s12',
-    winnerReason:  'The Garmin Approach S12 wins for most golfers due to its 30-hour battery life and 42,000 preloaded courses. The Bushnell Ion Elite wins for senior golfers who need the larger, higher-contrast display and slope-adjusted yardages.',
+    winnerReason:  'Both are simple, no-subscription GPS watches, so this comes down to battery life against screen readability. The Garmin Approach S12 wins for most golfers on its 30-hour battery and 42,000 preloaded courses. The Bushnell Ion Elite wins for senior golfers who need the larger, higher-contrast display and slope-adjusted yardages.',
     intro:         'These are the two best GPS golf watches under $200 in. Both provide accurate front/middle/back yardages and automatic hole advance. The differences are in the details.',
         sections: [
       { h2: 'Display and Interface', body: '<p>The S12 has a monochrome LCD with button navigation. The Ion Elite has a color LCD with simpler touch interaction. In sunlight, the Ion Elite is easier to read with larger, higher-contrast numbers. The S12 is more capable but takes 3-4 rounds to learn. The Ion Elite auto-detects your course and shows distances immediately with zero setup.</p>' },
@@ -346,7 +346,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    'cleveland-launcher-xl2-driver',
     productB:    'cobra-ds-adapt-max-k',
     winner:      'cleveland-launcher-xl2-driver',
-    winnerReason: 'The Cleveland Launcher XL2 wins for seniors and golfers under 85 mph — lighter weight, higher launch, and $80 less than the Cobra. The Cobra wins for golfers 85-95 mph who want more distance potential without going premium.',
+    winnerReason: 'This one is decided by your swing speed rather than by which driver is better. Under 85 mph the Cleveland Launcher XL2 wins \u2014 lighter weight, higher launch, and $80 less than the Cobra. Between 85 and 95 mph the Cobra wins for golfers who want more distance potential without going premium.',
     intro:       'Two budget-friendly forgiving drivers, two different approaches. The Cleveland goes all-in on lightweight and high launch. The Cobra balances forgiveness with more distance technology. After testing both at 80-90 mph swing speeds, here is the honest verdict.',
         sections: [
       { h2: 'Who These Drivers Are For', body: '<p>The Cleveland XL2 is designed for seniors and golfers under 95 MPH swing speed with a lightweight shaft and high-launch offset design. The Cobra DS-Adapt MAX-K suits a wider range of speeds (80-110 MPH). Under 90 MPH, the Cleveland is purpose-built for you. Between 90-105, both work but the Cobra is more versatile. Above 105, the Cobra is the clear choice.</p>' },
@@ -446,7 +446,7 @@ export const COMPARISONS: Comparison[] = [
     productA: 'bushnell-tour-v7-shift',
     productB: 'callaway-300-pro',
     winner: 'bushnell-tour-v7-shift',
-    winnerReason: 'The V7 wins on pin acquisition speed, build quality, and slope accuracy. But the Callaway 300 Pro is the better VALUE — nearly identical accuracy at $180 less. Budget-conscious golfers should buy the 300 Pro without hesitation.',
+    winnerReason: 'These two are far closer on accuracy than the $180 between them suggests, which makes this a question about how much the extras are worth. The V7 wins on pin acquisition speed, build quality, and slope accuracy. But the Callaway 300 Pro is the better value \u2014 nearly identical accuracy for much less, and budget-conscious golfers should buy it without hesitation.',
     weekendGolfer: 'This comparison comes down to budget vs speed. The Bushnell Tour V7 Shift is the best rangefinder we have tested — fastest pin lock, sharpest optics, most reliable slope readings. But the Callaway 300 Pro at $197 delivers accuracy within 1 yard of the V7 on 95% of shots. For a weekend golfer playing 15-25 rounds per year, the $180 price difference buys you faster acquisition and premium build quality, not meaningfully better accuracy. If you can afford $399 and want the best, get the V7. If you want proven accuracy without the premium, the 300 Pro is the smartest buy in rangefinders right now.',
     intro: 'The Bushnell Tour V7 Shift ($399) is the rangefinder that tour caddies carry. The Callaway 300 Pro ($197) is the rangefinder that budget-savvy weekend golfers swear by. We tested both over 10 rounds at three courses in Illinois to answer the only question that matters: is the Bushnell worth $180 more?',
     sections: [
@@ -521,7 +521,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    'titleist-pro-v1',
     productB:    'callaway-chrome-soft',
     winner:      'titleist-pro-v1',
-    winnerReason: 'The Pro V1 wins for most golfers on consistency and greenside control. The Chrome Soft is softer and cheaper, making it the better value pick for golfers who prioritize feel over spin precision.',
+    winnerReason: 'Both are premium urethane balls, so this comes down to what you want more of: greenside spin precision, or soft feel at a lower price. The Pro V1 wins for most golfers on consistency and greenside control. The Chrome Soft is softer and cheaper, making it the better value pick for golfers who prioritize feel over spin precision.',
     intro:       'The two best-selling premium golf balls in the world, tested head to head over more than 200 shots on a launch monitor and more than 6 rounds on the course. Both are 3-piece urethane balls designed for swing speeds of 88-115 mph. The Pro V1 costs $55/dozen, the Chrome Soft $40/dozen. Here is whether the $15 difference matters — and for whom.',
     weekendGolfer: 'For the 10-18 handicap golfer, the Chrome Soft is the smarter buy. The $15/dozen savings adds up to $60-75 per year, and the performance difference only shows up on shots you rarely hit perfectly anyway. The Pro V1 edge is real but small — tighter spin consistency on wedge shots, slightly more predictable ball flight in wind. If you shoot 85-95, the Chrome Soft gives you 90% of the Pro V1 experience at 73% of the price.',
     sections: [
@@ -562,7 +562,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    'titleist-pro-v1',
     productB:    'kirkland-signature',
     winner:      'kirkland-signature',
-    winnerReason: 'The Kirkland Signature wins on value. It delivers 85-90% of the Pro V1 performance at roughly a quarter of the price. For golfers above a 10 handicap, the savings outweigh the small performance gap.',
+    winnerReason: 'One of these costs about four times the other, and the honest question is not which ball is better \u2014 it is whether the gap shows up in your scores. For most golfers above a 10 handicap it does not: the Kirkland Signature delivers 85-90% of the Pro V1 performance at roughly a quarter of the price, and the savings outweigh the small performance gap.',
     intro:       'The internet golf debate that never ends: can a Costco golf ball that runs about $14 a dozen (sold as a $28 two-dozen box) really compete with the $55 Titleist Pro V1? We hit more than 150 shots on a launch monitor and played more than 4 rounds alternating balls to find out. Both are 3-piece urethane construction. Both target 85-110 mph swing speeds. The price difference is about $41 per dozen — well over $200 per season for most golfers. Here is what the data shows.',
     weekendGolfer: 'If you shoot between 82 and 95, the Kirkland is the obvious choice. You will not detect the 400 rpm wedge spin difference on the course because your wedge contact point varies more than the ball performance does. The roughly $41/dozen savings buys you several extra rounds of golf per year. Save the Pro V1 for when your handicap drops below 8 and spin precision starts mattering on every approach shot.',
     sections: [
@@ -609,7 +609,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    'skytrak-plus',
     productB:    'flightscope-mevo-plus',
     winner:      'skytrak-plus',
-    winnerReason: 'The SkyTrak+ wins for dedicated indoor setups. Its photometric camera system produces more accurate spin data in small spaces. The Mevo+ wins for golfers who want indoor AND outdoor use — its Doppler radar works in both environments.',
+    winnerReason: 'These use fundamentally different technology, and that decides the comparison: a photometric camera against Doppler radar. The SkyTrak+ wins for dedicated indoor setups, where its camera system produces more accurate spin data in small spaces. The Mevo+ wins for golfers who want indoor AND outdoor use \u2014 radar works in both environments.',
     intro:       'Two of the most popular launch monitors for home golf simulators, tested over more than 500 shots indoors and outdoors. The SkyTrak+ ($1,195) uses photometric camera technology. The Mevo+ ($1,839) uses Doppler radar. Different technology means different strengths — and with the SkyTrak+ now the cheaper of the two by $644, the right choice depends entirely on how and where you plan to use it rather than on budget.',
     weekendGolfer: 'If you are building a permanent garage simulator that stays indoors, buy the SkyTrak+. Its indoor accuracy is measurably better, and the e6 Connect software integration is smoother. If you want to practice at the range AND use a simulator at home, buy the Mevo+ — it is the only monitor in this comparison that works well outdoors without any setup changes.',
     sections: [
@@ -655,7 +655,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    'garmin-approach-s62',
     productB:    'garmin-approach-s70',
     winner:      'garmin-approach-s62',
-    winnerReason: 'The S62 wins on value. At $150 less than the S70, it delivers 90% of the same features with GPS accuracy within 1 yard. The S70 is the better watch, but the S62 is the better buy for most golfers.',
+    winnerReason: 'These two watches share most of their golf features \u2014 the gap is a newer screen, better mapping, and $150. Whether that is worth paying depends on how much you use the map. For most golfers it is not: the S62 delivers 90% of the same features with GPS accuracy within 1 yard. The S70 is the better watch, but the S62 is the better buy.',
     intro:       'Garmin released the Approach S70 as the successor to the best-selling S62. Both are premium golf GPS watches with full-color touchscreens, 42,000+ course maps, and smart notifications. The S70 adds a larger AMOLED display, improved PlaysLike distance, and a faster processor. We wore both for more than 15 rounds each to find out if the upgrade justifies $150 more — or if the S62 at $399 is the smarter buy.',
     weekendGolfer: 'For the golfer who plays 15-30 rounds a year and uses the GPS primarily for front/middle/back distances, save the $150 and buy the S62. The GPS accuracy is identical. The courseview maps are the same 42,000+ courses. The S70 improvements — larger screen, brighter display, slightly faster processor — are nice-to-have, not need-to-have.',
     sections: [
@@ -732,7 +732,7 @@ export const COMPARISONS: Comparison[] = [
     productA:      'bushnell-launch-pro',
     productB:      'garmin-approach-r10',
     winner:        'garmin-approach-r10',
-    winnerReason:  'For the vast majority of weekend golfers, the Garmin R10 provides enough accuracy for meaningful practice at roughly a quarter of the price. The Launch Pro is the better monitor — but not 4x better.',
+    winnerReason:  'One of these costs about four times the other, which frames the whole comparison: the Launch Pro is the better monitor, but the real question is whether it is four times better. For the vast majority of weekend golfers it is not \u2014 the Garmin R10 provides enough accuracy for meaningful practice at roughly a quarter of the price.',
     intro: "This is not a fair fight on accuracy. The Bushnell Launch Pro (powered by Foresight GC3 technology) is a professional-grade launch monitor used by club fitters worldwide. The Garmin R10 is a consumer device designed for practice. The real question is whether the accuracy difference justifies a $1,900+ price premium for a golfer who plays twice a week.",
     weekendGolfer: "If you are a weekend golfer who wants data for practice — not professional fitting — the R10 does the job at $490. If you are building a permanent home simulator and want fitting-level accuracy, the Launch Pro is the investment. The gap between them is real but the R10 covers 90% of what recreational golfers need.",
     sections: [
@@ -815,7 +815,7 @@ export const COMPARISONS: Comparison[] = [
     productA:      'garmin-approach-r10',
     productB:      'flightscope-mevo-gen2',
     winner:        'garmin-approach-r10',
-    winnerReason:  'The R10 delivers more data points (club data, simulator compatibility, Garmin integration) at a similar price. The original Mevo is simpler but more limited. The R10 is the better investment.',
+    winnerReason:  'These land at a similar price, so the decision is about how much data you actually want back from a practice session. The R10 delivers more of it \u2014 club data, simulator compatibility, Garmin integration. The original Mevo is simpler but more limited. The R10 is the better investment.',
     intro: "Two Doppler-radar launch monitors at the entry level of the market. The Garmin R10 has become the best-selling budget monitor; the FlightScope Mevo was one of the first affordable monitors and still has a following. Which one should you buy in?",
     weekendGolfer: "The R10 is the better buy for most weekend golfers — more features, better app, simulator compatibility. The Mevo is worth considering only if you find it significantly discounted or want the absolute simplest setup with no app dependency.",
     sections: [
@@ -871,7 +871,7 @@ export const COMPARISONS: Comparison[] = [
     productA:      'bushnell-pro-xe',
     productB:      'bushnell-tour-v7-shift',
     winner:        'bushnell-tour-v7-shift',
-    winnerReason:  'The Tour V7 Shift delivers 95% of the Pro X3 accuracy at 60% of the price. The Pro X3 adds a color display, better magnification, and temperature/altitude compensation — nice features but not worth $200+ for most recreational golfers.',
+    winnerReason:  'About $200 separates these, and the accuracy gap is far smaller than the price gap. The Tour V7 Shift delivers 95% of the Pro X3 accuracy at 60% of the price. The Pro X3 adds a color display, better magnification, and temperature/altitude compensation \u2014 nice features, but not worth the premium for most recreational golfers.',
     intro: "Both rangefinders are made by Bushnell — the gold standard in golf rangefinders. The Pro X3 ($450-500) is their flagship. The Tour V7 Shift ($280-330) is the mid-range bestseller. The question is whether the $150-200 premium buys you meaningful improvement or just bragging rights.",
     weekendGolfer: "The Tour V7 Shift is the right rangefinder for 90% of weekend golfers. The Pro X3 is worth considering if you play in extreme weather (the temperature compensation matters) or if you play tournament golf frequently (the slope switch is easier to verify).",
     sections: [
@@ -1087,7 +1087,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    "ping-g430-irons",
     productB:    "taylormade-stealth-hd-irons",
     winner:      "taylormade-stealth-hd-irons",
-    winnerReason: "The TaylorMade Stealth HD wins for weekend golfers because it delivers most of the forgiveness of the Ping G430 for roughly $450 less, and its draw bias quietly straightens out the slice that wrecks most of our scorecards.",
+    winnerReason: "About $450 separates these two sets, so the question is what that money buys you in forgiveness \u2014 and whether either one helps the miss you actually have. The TaylorMade Stealth HD wins for weekend golfers because it delivers most of the forgiveness of the Ping G430 for far less, and its draw bias quietly straightens out the slice that wrecks most of our scorecards.",
     intro:       "I've been going back and forth between the Ping G430 Irons and the TaylorMade Stealth HD Irons for a couple of months now, and the two of them make an interesting pairing. Both are firmly in the forgiveness camp, but they come at the problem from different price points and different philosophies. I put each set through roughly 20 rounds plus a stack of range sessions, hitting the same shots, chasing the same mishits, and paying attention to what actually held up when I played tired on a Saturday morning.",
     weekendGolfer: "For a weekend golfer, the thing that matters here isn't tour-level shot control, it's how the set behaves when you catch it thin, or off the toe, or a groove low on a wet fairway. The Ping G430 Irons give you refined feel and remarkably consistent gapping, so your 7-iron goes the same distance most of the time and your yardages stay honest. The TaylorMade Stealth HD Irons lean harder into pure help: high launch, a low center of gravity, and a built-in draw bias that fights the slice most of us fight. If you play 15 to 30 rounds a year and want the ball in the air and pointed left of your usual banana, the practical value question comes down to how much you're willing to pay for that last slice of polish.",
     specs: [
@@ -1128,7 +1128,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    "callaway-chrome-soft",
     productB:    "kirkland-signature",
     winner:      "kirkland-signature",
-    winnerReason: "For the weekend golfer, the Kirkland Signature wins on pure value: it gives you most of the Chrome Soft's urethane-cover performance at roughly a third of the price, so a shot into the water costs you about $1.20 instead of a wince.",
+    winnerReason: "Both of these are urethane-cover balls, which is the whole reason the comparison is interesting \u2014 you are not weighing a tour ball against a rock, you are weighing about three dollars a ball. For the weekend golfer the Kirkland Signature wins on pure value: it gives you most of the Chrome Soft urethane-cover performance at roughly a third of the price, so a shot into the water costs you about $1.20 instead of a wince.",
     intro:       "This is the classic premium-versus-value showdown: the Callaway Chrome Soft at around $40 a dozen against Costco's Kirkland Signature, which comes in a two-dozen box for about $22, or roughly $14 a dozen. Both use a urethane cover, so this isn't a soft two-piece rock against a tour ball — it's two urethane balls at wildly different prices. I played each over a stretch of weekend rounds around Chicago, mixing in short-game and putting-green sessions, to figure out whether the extra money actually shows up where a 10-handicap can feel it.",
     weekendGolfer: "For a golfer who plays 15-30 rounds a year, what matters most here is simple: how the ball feels off the putter and wedges, whether it holds a green on a decent strike, and how much it hurts to lose one. Both the Chrome Soft and the Kirkland Signature clear the bar on feel and greenside spin — the urethane cover on each grabs the grooves far better than a bargain two-piece ball. Where the gap narrows to almost nothing is on the full-swing shots most of us hit slightly off-center anyway. You're not compressing the cover perfectly on every strike, so the theoretical edge of the pricier ball gets swallowed by your own miss. The real weekend question isn't which is technically better; it's whether you'll actually notice, and how you feel reaching into the bag after a duck-hook into the trees.",
     specs: [
@@ -1209,7 +1209,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    "callaway-paradym-ai-smoke-max",
     productB:    "ping-g430-max-driver",
     winner:      "ping-g430-max-driver",
-    winnerReason: "The Ping G430 Max Driver wins for weekend golfers: it holds slightly straighter on toe and heel misses, gives you more real adjustability, and costs about $50 less than the Callaway Paradym Ai Smoke Max.",
+    winnerReason: "Two of the most forgiving drivers in golf, separated by about $50 and how they behave on the misses that actually cost you strokes. The Ping G430 Max wins for weekend golfers: it holds slightly straighter on toe and heel misses, gives you more real adjustability, and costs less than the Callaway Paradym Ai Smoke Max.",
     intro:       "Both of these are elite game-improvement drivers, and honestly you won't hit a bad shot because you picked the wrong one. I put the Callaway Paradym Ai Smoke Max and the Ping G430 Max Driver head-to-head over several range sessions and a handful of rounds, hitting each on the same days off the same tees so the comparison stayed fair. I focused on the stuff a 15-30 round-a-year golfer actually feels: mishits, dispersion, and how easy each is to set up. Here's how the duel shook out.",
     weekendGolfer: "If you play 15-30 rounds a year, forgiveness is the thing that saves your scorecard, not clubhead speed. What matters here is how far offline your bad drives go, because your good ones already find the fairway. Both the Callaway Paradym Ai Smoke Max and the Ping G430 Max Driver are 460cc, adjustable, and built to make a slightly heeled or toed strike still playable. For a weekend golfer the deciding factors are usually small: which one keeps a mishit closer to the short grass, which one is easier to tweak without a launch monitor, and which one leaves more money in your pocket for green fees. Feel and looks matter too, since you'll swing the one you trust, but tight dispersion on off-center hits is what quietly lowers your handicap.",
     specs: [
@@ -1250,7 +1250,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    "square-golf-launch-monitor",
     productB:    "garmin-approach-r10",
     winner:      "garmin-approach-r10",
-    winnerReason: "The Garmin Approach R10 takes it for most weekend golfers on proven outdoor accuracy and a far more mature app ecosystem, even though the Square Golf is the better value and can edge it in a cramped indoor space.",
+    winnerReason: "This one splits on where you will use it. The Square Golf is the better value and can edge the R10 in a cramped indoor space, but for most weekend golfers the Garmin Approach R10 takes it on proven outdoor accuracy and a far more mature app ecosystem.",
     intro:       "Budget launch monitors have gotten genuinely good, and these two are the ones I get asked about most. I ran the Square Golf Launch Monitor (~$699, through PlayBetter) head-to-head against the Garmin Approach R10 (~$490) across most of a spring, splitting time between my local range and a net in the garage. This isn't a lab teardown, it's what actually held up round after round for a golfer who plays maybe 20 times a year.",
     weekendGolfer: "For a weekend golfer, the thing that matters most isn't the last decimal of spin, it's whether the numbers are consistent enough to trust and whether you'll actually keep using the thing. Both of these clear the bar for practice feedback. The Garmin Approach R10 leans on Doppler radar, which wants a little room to breathe but pays you back with dependable outdoor carry numbers and a huge app ecosystem, including simulated courses. The Square Golf uses a camera-based, photometric-style approach that shines in a tight indoor bay and doesn't lock core data behind a subscription. If you mostly hit into a net in a small space, that indoor strength and the lower price genuinely matter. If you practice outdoors at a range, the R10's radar is the safer bet.",
     specs: [
@@ -1291,7 +1291,7 @@ export const COMPARISONS: Comparison[] = [
     productA:    "cleveland-rtx6-52",
     productB:    "callaway-jaws-raw-52",
     winner:      "cleveland-rtx6-52",
-    winnerReason: "The Cleveland RTX 6 52 wins for weekend golfers because it is more forgiving off a range of lies and offers grind options that suit real amateur swings, while still spinning nearly as hard as the tour-flavored Callaway Jaws Raw 52.",
+    winnerReason: "Both spin hard off a clean lie; the difference shows up on the lies amateurs actually face. The Cleveland RTX 6 52 wins for weekend golfers because it is more forgiving off a range of lies and offers grind options that suit real amateur swings, while still spinning nearly as hard as the tour-flavored Callaway Jaws Raw 52.",
     intro:       "Two great 52-degree gap wedges, both sitting right around $169, aimed at very different players. The Cleveland RTX 6 52 is the longtime value pick for amateurs, while the Callaway Jaws Raw 52 leans tour, with an aggressive raw face built to chew up spin. I put both in the bag over a stretch of weekend rounds and range sessions, hitting full shots, half wedges and greenside chips off tight lies, fluffy rough and hardpan to see which one actually helps a 10-handicap.",
     weekendGolfer: "For a weekend golfer, a wedge lives or dies on two things: how much it forgives a slightly-off strike, and how predictable it is around the green. Most of us are not flushing every 90-yard shot, so a head that stays stable on a thin or heel strike matters more than squeezing out the last few hundred rpm of spin. Grind also matters more than people admit. If you play a range of courses with different turf and sand, a versatile sole that lets you open the face without digging saves strokes. Both the Cleveland RTX 6 52 and Callaway Jaws Raw 52 spin plenty for amateur swing speeds, so the real question is which one is easier to hit well when you are not at your best, which is most of the time for players in the 12-30 handicap range.",
     specs: [
