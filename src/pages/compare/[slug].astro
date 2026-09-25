@@ -328,12 +328,17 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       const loserName = c.winner === c.productA ? nameB : nameA;
       const loserAff = c.winner === c.productA ? affB : affA;
       return loserAff ? (
-        <div style="text-align:center;margin:0 0 32px;">
-          <p style="font-size:13px;color:var(--muted);margin:0 0 8px;">Prefer the {loserName}? Still an excellent driver.</p>
-          <a href={loserAff.url} style="color:var(--green);font-weight:700;font-size:14px;" target="_blank" rel="nofollow noopener sponsored">
-            Check {loserName} price at {loserAff.retailer} →
+        <div class="runner-up-cta">
+          <p class="runner-up-cta__lead">Prefer the {loserName}? Here is where to buy it.</p>
+          <a href={loserAff.url} class="runner-up-cta__btn" target="_blank"
+            rel={(loserAff as any).program === 'direct' ? "nofollow noopener" : "nofollow noopener sponsored"}
+            data-aff-name={loserName}
+            data-cta-location="runner-up"
+            aria-label={`Check price for ${loserName} at ${loserAff.retailer}`}>
+            <span class="runner-up-cta__price">{loserAff.price}</span>
+            <span class="runner-up-cta__label">Check {loserName} at {loserAff.retailer} →</span>
           </a>
-          <span style="display:block;font-size:11px;color:var(--muted);margin-top:4px;">Prices checked today</span>
+          <span class="runner-up-cta__note">Runner-up in this comparison · Prices checked today</span>
         </div>
       ) : null;
     })()}

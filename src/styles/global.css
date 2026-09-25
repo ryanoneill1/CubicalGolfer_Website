@@ -1936,3 +1936,23 @@ main section > p, main section ul, main section ol {
 .hero .byline-tagline,
 .cat-hero .byline-tagline,
 .art-hero .byline-tagline { color: rgba(255,255,255,.72); }
+
+/* ── Runner-up CTA on /compare/ pages ────────────────────────────────────────
+   Every comparison has two products; only the winner used to be buyable in any
+   meaningful way — the runner-up was 13px grey text. A "vs" searcher has not
+   decided yet, which is the whole reason they are searching, so the second
+   product gets a real button. The old copy also hardcoded "Still an excellent
+   driver." on all 41 pages, including the golf-ball, putter, GPS-watch and
+   launch-monitor comparisons. Category nouns do not belong in shared copy. */
+.runner-up-cta { text-align: center; margin: 0 0 32px; }
+.runner-up-cta__lead { font-size: 15px; color: var(--text, #1a1a1a); margin: 0 0 10px; font-weight: 600; }
+.runner-up-cta__btn {
+  display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  justify-content: center; padding: 12px 22px; border-radius: 8px;
+  border: 2px solid var(--green, #1E3A28); background: #fff;
+  color: var(--green, #1E3A28); text-decoration: none; font-weight: 700;
+}
+.runner-up-cta__btn:hover { background: var(--green, #1E3A28); color: #fff; }
+.runner-up-cta__price { font-size: 18px; font-weight: 800; }
+.runner-up-cta__label { font-size: 15px; }
+.runner-up-cta__note { display: block; font-size: 12px; color: var(--muted, #888); margin-top: 8px; }
