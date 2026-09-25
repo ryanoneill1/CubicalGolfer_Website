@@ -1,0 +1,213 @@
+// src/data/types.ts
+// ─────────────────────────────────────────────────────────────────────────────
+// Central TypeScript data model for CubicalGolfer.com
+// Version 2.0 — April 2026 — Full consistency system
+// ─────────────────────────────────────────────────────────────────────────────
+
+export type Category =
+  | 'gear-reviews'
+  | 'golf-tech'
+  | 'golf-accessories'
+  | 'improve-game'
+  | 'golf-lifestyle'
+  | 'indoor-golf';
+
+export type PageType =
+  | 'buying-guide'
+  | 'comparison'
+  | 'tutorial'
+  | 'review'
+  | 'listicle'
+  | 'lifestyle'
+  | 'local';
+
+export interface FAQItem {
+  q: string;
+  a: string;
+}
+
+export interface ComparisonRow {
+  name:        string;
+  bestFor:     string;
+  price:       string;
+  feature1:    string;
+  feature2:    string;
+  winner:      boolean;
+  affiliateKey?: string;
+  badge?:       string;     // e.g. "TOP PICK", "BEST VALUE"
+  rating?:      number;     // 1–5 stars
+}
+
+export interface ComparisonTable {
+  headers: string[];
+  rows:    ComparisonRow[];
+}
+
+export interface Section {
+  h2:           string;
+  badge?:       string;
+  body:         string;
+  price?:       string;
+  pros?:        string[];   // 3–5 bullet points on strengths
+  cons?:        string[];   // 2–3 bullet points on weaknesses
+  items?:       Array<{ name: string; desc: string; affiliateKey?: string }>;
+  rating?:      number;     // 1–5 stars
+  affiliateKey?: string;    // Direct affiliate key override for this section
+  callout?:      string;    // Callout text (e.g. "Editor's Note")
+  sectionImage?: string;    // Section illustration image path
+  sectionImageAlt?: string; // Alt text for section image
+}
+
+export interface RelatedLink {
+  slug:  string;
+  label: string;
+}
+
+// ── Core article type ─────────────────────────────────────────────────────────
+export interface Article {
+  id:            string;      // unique ID
+  slug:          string;      // URL path e.g. "/best-golf-rangefinders-2026/"
+  category:      Category;
+  pageType:      PageType;
+  quickAnswerProduct?: string;  // affiliateKey for #1 pick — renders Quick Answer box on buying guides
+  tag:           string;      // "BUYING GUIDE" | "TUTORIAL" | "COMPARISON" etc.
+  emoji:         string;
+  thumb:         'green' | 'brown' | 'navy' | 'purple' | 'teal' | 'olive';
+  words:         string;
+  datePublished: string;      // ISO: "2026-01-15"
+  dateModified?: string;      // ISO: "2026-03-24" — optional: omitted when the
+                              // article has no genuine update (schema + sitemap
+                              // fall back to datePublished)
+  title:         string;      // <title> tag (≤60 chars)
+  titleDisplay:  string;      // H1 (can be longer)
+  description:   string;      // meta description (150–160 chars)
+  excerpt:       string;      // card excerpt
+  thumbnail?:    string;      // card thumbnail image path (falls back to emoji)
+  // ── Content fields ──────────────────────────────────────────────────────────
+  bottomLine?:   string;      // 2–3 sentence verdict (required for buying-guide)
+  intro:         string;      // opening paragraph
+  toc:           string[];    // table of contents items
+  sections:      Section[];
+  comparisonTable?: ComparisonTable;
+  whoFor?:       string[];    // "Who should buy" bullets (required for buying-guide)
+  whoSkip?:      string[];    // "Who should skip" bullets (required for buying-guide)
+  testingNotes?: string;      // Testing methodology summary
+  updateLog?:    Array<{ date: string; note: string }>;  // Visible changelog
+  sources?:      Array<{ label: string; url: string }>;  // External citation links
+  faq?:          FAQItem[];
+  rating?:       number;        // 1–5 (one decimal) — Review schema rating for pageType 'review'
+  related:       RelatedLink[];
+  relatedComparisons?: Array<{ label: string; url: string; description?: string }>;
+  stickyLabel?:  string;      // Label for sticky bar CTA
+  quickPickRating?: number;   // Rating for the quick-pick product
+  quickPickWhy?: string;      // Why this is the top pick (displayed in quick-pick card)
+  quickPickBestFor?: string;  // "Best for" label on quick-pick card
+  authorByline?: {            // Per-article byline overrides
+    roundsTested?: number;
+    lastTested?: string;
+    courseTested?: string;
+  };
+  recommendedGear?: {         // Multi-product recommendation cards
+    key: string;              // AFFILIATE record key
+    role: string;             // e.g. "Best 3-wood"
+    name: string;             // display name as written in the article
+  }[];
+  cgScore?: {                 // Cubical Golfer Score card data
+    overall?: number;
+    rounds?: number;
+    categories?: Array<{ label: string; score: number }>;
+  };
+  // ── Auto-injected by linking.ts ─────────────────────────────────────────────
+  internalLinks?: RelatedLink[];
+}
+
+// ── Product type ──────────────────────────────────────────────────────────────
+export interface Product {
+  id:        string;
+  name:      string;
+  brand:     string;
+  category:  string;
+  price:     string;
+  priceNum:  number;
+  image?:    string;
+  affiliate: string;
+  rating:    number;
+  bestFor:   string;
+  pros:      string[];
+  cons:      string[];
+  specs:     Record<string, string>;
+}
+
+// ── Comparison type ───────────────────────────────────────────────────────────
+export interface Comparison {
+  slug:          string;
+  title:         string;
+  description:   string;
+  productA:      string;
+  productB:      string;
+  winner:        string;
+  winnerReason:  string;
+  // Whether BOTH products in this comparison were bought and played by us.
+  // The page's trust block asserts 'both products purchased', '15+ real rounds'
+  // and 'launch monitor verified'. Those are strong, checkable claims and they
+  // are the site's whole positioning, so they render only when this is true.
+  // Omit or set false for a comparison built from published specs, manufacturer
+  // data and owner reports — the page then says exactly that instead.
+  tested?:       boolean;
+  intro:         string;
+  verdict:       string;
+  faq:           FAQItem[];
+  datePublished: string;
+  dateModified:  string;
+  toc?:          string[];                        // FIX: Jump-to table of contents
+  specs?:        Array<{ label: string; a: string; b: string; winner?: 'a' | 'b' | 'tie' }>;  // FIX: Side-by-side specs table
+  weekendGolfer?: string;                         // FIX: "What Actually Matters for Weekend Golfers" section
+  related?:      Array<{ slug: string; label: string }>;  // Phase 5: Related guides for cross-linking
+}
+
+// ── Local page type ───────────────────────────────────────────────────────────
+export interface GolfCity {
+  slug:          string;
+  city:          string;
+  state:         string;
+  stateFullName: string;
+  population:    number;
+  courses: Array<{
+    name:    string;
+    type:    'public' | 'semi-private' | 'resort';
+    price:   string;
+    holes:   number;
+    rating?: string;
+    notes:   string;
+  }>;
+  intro:         string;
+  nearbyAirport: string;
+  bestSeason:    string;
+  dateModified:  string;
+}
+
+// ── SEO page metadata ─────────────────────────────────────────────────────────
+export interface PageMeta {
+  title:         string;
+  description:   string;
+  canonical:     string;
+  ogImage:       string;
+  ogType:        'website' | 'article';
+  robots:        string;
+  datePublished?: string;
+  dateModified?:  string;
+  breadcrumbs:   Array<{ label: string; href: string }>;
+}
+
+// ── Affiliate link type ───────────────────────────────────────────────────────
+export interface AffiliateLink {
+  label:    string;
+  url:      string;
+  price?:   string;
+  retailer: string;
+  imgSrc?:  string;
+  imgAlt?:  string;
+  golfGalaxyUrl?: string; // Alternative retailer link
+  benefits?: string[];
+  primaryRetailer?: 'direct' | 'amazon'; // Which button renders first
+}

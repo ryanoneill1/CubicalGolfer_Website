@@ -1,0 +1,412 @@
+---
+// src/pages/compare/[slug].astro — Consistency System v2.0 — April 2026
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StickyBar from '../../components/StickyBar.astro';
+import { COMPARISONS } from '../../data/comparisons';
+import { comparisonMeta } from '../../lib/seo';
+import { comparisonSchema, faqSchema, breadcrumbSchema, comparisonProductsSchema } from '../../lib/schema';
+import type { ComparisonProduct } from '../../lib/schema';
+import { getAffiliateLink, AFFILIATE } from '../../data/affiliate-links';
+import { productName, PRODUCT_DISPLAY } from '../../data/product-names';
+import { getProductImage } from '../../lib/image-map';
+import { AUTHOR_PROFILE } from '../../data/author';
+import type { Comparison } from '../../data/types';
+
+export async function getStaticPaths() {
+  return COMPARISONS.map(c => ({
+    params: { slug: c.slug },
+    props: { comparison: c },
+  }));
+}
+
+interface Props { comparison: Comparison }
+const { comparison: c } = Astro.props;
+
+const meta = comparisonMeta(c);
+const schemas: object[] = [comparisonSchema(c), breadcrumbSchema(meta.breadcrumbs)];
+if (c.faq && c.faq.length > 0) schemas.push(faqSchema(c.faq));
+
+// ── Fail-loud product resolution ────────────────────────────────────────────
+// Comparison product keys are canonical AFFILIATE-registry ids. getStaticPaths
+// runs at build time, so an unresolved key THROWS AND BREAKS THE BUILD instead
+// of silently dropping a monetized card or leaking a lowercase key as the name.
+function resolveProduct(key: string, role: string, slug: string) {
+  const aff = AFFILIATE[key];
+  if (!aff) {
+    throw new Error(
+      `[compare/${slug}] ${role} key "${key}" is missing from the AFFILIATE registry ` +
+      `(src/data/affiliate-links.ts). Fix the key in comparisons.ts or add the product — ` +
+      `unresolved keys used to silently drop the product card.`,
+    );
+  }
+  if (!PRODUCT_DISPLAY[key]) {
+    throw new Error(
+      `[compare/${slug}] ${role} key "${key}" has no PRODUCT_DISPLAY name ` +
+      `(src/data/product-names.ts) — would render a lowercase name leak. Add it.`,
+    );
+  }
+  return {
+    ...aff,
+    imgSrc: aff.imgSrc || getProductImage(key),
+    imgAlt: aff.imgAlt || productName(key),
+    name: productName(key),
+  };
+}
+
+if (c.winner !== c.productA && c.winner !== c.productB) {
+  throw new Error(
+    `[compare/${c.slug}] winner "${c.winner}" is neither productA (${c.productA}) ` +
+    `nor productB (${c.productB}).`,
+  );
+}
+
+const affA       = resolveProduct(c.productA, 'productA', c.slug);
+const affB       = resolveProduct(c.productB, 'productB', c.slug);
+const nameA      = affA.name;
+const nameB      = affB.name;
+const winnerAff  = c.winner === c.productA ? affA : affB;
+const winnerName = winnerAff.name;
+
+// ── Product schema for SERP rich results ────────────────────────────────────
+const compProducts: ComparisonProduct[] = [affA, affB].map((p) => ({
+  name: p.name,
+  brand: p.name.split(' ')[0],
+  description: c.description,
+  image: p.imgSrc,
+  url: p.url,
+  price: p.price ?? '',
+  retailer: p.retailer ?? 'Amazon',
+}));
+schemas.push(...comparisonProductsSchema(compProducts, c.dateModified || c.datePublished));
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+---
+
+<BaseLayout {meta} {schemas} activeNav="home">
+  <EarlyDisclosure />
+
+  {/* FIX: Sticky "Buy Winner" bar — shows after 400px scroll, same as article pages */}
+  {winnerAff && (
+    <StickyBar
+      name={winnerName}
+      price={winnerAff.price}
+      url={winnerAff.url}
+      retailer={winnerAff.retailer}
+      badge="🏆 WINNER"
+    />
+  )}
+
+  {/* ── HERO ── */}
+  <header class="compare-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="bc-sep">›</span>
+      <a href="/compare/">Comparisons</a><span class="bc-sep">›</span>
+      <span aria-current="page">{c.title}</span>
+    </nav>
+    <span class="art-tag-lg tag-cmp">COMPARISON</span>
+    <h1>{c.title}</h1>
+    <div class="author-box">
+      <a href="/about/" style="flex-shrink:0" aria-label="About Ryan O. — Cubical Golfer">
+        <img src="/images/ryan-author-photo.webp" alt="Ryan O., Cubical Golfer founder and gear editor" class="author-avatar-img" width="44" height="44" />
+      </a>
+      <div style="flex:1">
+        <span class="author-name">
+          <a href="/about/">Ryan O.</a>
+          <span class="byline-tagline" style="font-size:11px;font-weight:400;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
+        </span>
+        <span class="author-meta">
+          📅 Updated: {c.dateModified} &nbsp;·&nbsp;
+          ⛳ <a href="/how-we-test/">How we test →</a>
+        </span>
+      </div>
+      <span class="verified-badge">Independently tested</span>
+    </div>
+  </header>
+
+  {/* ── FRESHNESS BANNER ── */}
+  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+    <span style="font-size:15px;">✅</span>
+    <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — {c.tested !== false
+      ? 'Both products independently purchased and tested across a full season.'
+      : 'Built from published specifications, manufacturer data and owner reports — we have not played both of these head to head.'} <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+  </div>
+
+  {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
+  <div class="trust-card">
+    <p class="trust-card__heading">{c.tested !== false ? 'Why Trust This Comparison' : 'How This Comparison Was Built'}</p>
+    <ul class="trust-card__list">
+      {c.tested !== false ? (
+        <>
+          <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
+          <li><strong>{AUTHOR_PROFILE.testingRounds} real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
+          <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+        </>
+      ) : (
+        <>
+          <li><strong>Not a head-to-head test</strong> — we have not played these two against each other, and we are not going to pretend otherwise</li>
+          <li><strong>Published specs and manufacturer data</strong> — compared line by line, with the numbers shown so you can check them</li>
+          <li><strong>Prices verified on the retailer</strong> — checked on the date shown, not copied from a press release</li>
+        </>
+      )}
+      <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
+    </ul>
+    <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
+  </div>
+
+  <div class="compare-body">
+
+    {/* ── JUMP-TO TABLE OF CONTENTS ── */}
+    {c.toc && c.toc.length > 0 ? (
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-label">Jump to:</p>
+        <ol class="toc-list">
+          {c.toc.map((item: string) => (
+            <li><a href={`#${item.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>{item}</a></li>
+          ))}
+        </ol>
+      </nav>
+    ) : (
+      <nav class="toc" aria-label="Table of contents">
+        <p class="toc-label">In this comparison:</p>
+        <ol class="toc-list">
+          {c.specs && c.specs.length > 0 && <li><a href="#quick-specs-comparison">Quick Specs</a></li>}
+          <li><a href="#who-this-comparison-is-for">Who This Is For</a></li>
+          {c.sections && c.sections.map((s: any) => (
+            <li><a href={`#${s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}`}>{s.h2}</a></li>
+          ))}
+          <li><a href="#winner-and-full-verdict">{nameA} vs {nameB} — Verdict</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </nav>
+    )}
+
+    {/* ── WHO THIS IS FOR ── */}
+    <div class="bottom-line-box" role="note" aria-label="Who this comparison is for">
+      <p class="bottom-line-label">Who This Comparison Is For</p>
+      <p>{c.intro}</p>
+    </div>
+
+    {/* ── SPECS COMPARISON TABLE ── */}
+    {c.specs && c.specs.length > 0 && (
+      <div id="quick-specs-comparison" class="cmp-wrap" style="margin-top:24px">
+        <h2>Quick Specs Comparison</h2>
+        <div class="comparison-table-wrapper">
+        <table class="cmp-table" role="table">
+          <caption class="sr-only">Side-by-side specs: {nameA} vs {nameB}</caption>
+          <thead>
+            <tr>
+              <th scope="col">Spec</th>
+              <th scope="col">{nameA}</th>
+              <th scope="col">{nameB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.specs.map((spec: any) => (
+              <tr>
+                <td style="font-weight:600">{spec.label}</td>
+                <td class={spec.winner === 'a' ? 'cmp-winner-cell' : ''}>{spec.a} {spec.winner === 'a' ? '✅' : ''}</td>
+                <td class={spec.winner === 'b' ? 'cmp-winner-cell' : ''}>{spec.b} {spec.winner === 'b' ? '✅' : ''}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        </div>
+      </div>
+    )}
+
+    {/* ── BUY BOTH — above fold ── */}
+    {(affA || affB) && (
+      <div class="compare-buy-row">
+        {affA && (
+          <div class="compare-buy-card">
+            {affA.imgSrc && (
+              <img src={affA.imgSrc} alt={affA.imgAlt || nameA} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius:8px;object-fit:contain;" loading="lazy" />
+            )}
+            <span class="compare-buy-label">{nameA}</span>
+            <span class="compare-buy-price">{affA.price}</span>
+            <a href={affA.url} class="btn-buy-affiliate" target="_blank"
+              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameA}`}>
+              <span class="btn-buy-cta">Check Today's Price →</span>
+              <span class="btn-buy-badge">at {affA.retailer} · Free shipping</span>
+            </a>
+            {(affA as any).golfGalaxyUrl && (
+              <a href={(affA as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
+                rel="nofollow noopener sponsored"
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                <span class="btn-buy-cta">Check Price at {(affA as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (affA as any).golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
+              </a>
+            )}
+            <span class="compare-buy-urgency">Prices checked today</span>
+          </div>
+        )}
+        {affB && (
+          <div class="compare-buy-card">
+            {affB.imgSrc && (
+              <img src={affB.imgSrc} alt={affB.imgAlt || nameB} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius:8px;object-fit:contain;" loading="lazy" />
+            )}
+            <span class="compare-buy-label">{nameB}</span>
+            <span class="compare-buy-price">{affB.price}</span>
+            <a href={affB.url} class="btn-buy-affiliate" target="_blank"
+              rel="nofollow noopener sponsored" aria-label={`Check price for ${nameB}`}>
+              <span class="btn-buy-cta">Check Today's Price →</span>
+              <span class="btn-buy-badge">at {affB.retailer} · Free shipping</span>
+            </a>
+            {(affB as any).golfGalaxyUrl && (
+              <a href={(affB as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg" target="_blank"
+                rel="nofollow noopener sponsored"
+                style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+                <span class="btn-buy-cta">Check Price at {(affB as any).golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (affB as any).golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
+              </a>
+            )}
+            <span class="compare-buy-urgency">Prices checked today</span>
+          </div>
+        )}
+      </div>
+    )}
+
+    {/* ── QUICK WINNER ── */}
+    <div class="verdict-box">
+      <p style="font-weight:700;font-size:18px;margin:0 0 12px;">🏆 Winner: {winnerName}</p>
+      <p>{c.winnerReason}</p>
+      {winnerAff && (
+        <a href={winnerAff.url} class="btn-buy-affiliate" style="margin-top:16px"
+          target="_blank" rel="nofollow noopener sponsored">
+          <span class="btn-buy-price">{winnerAff.price}</span>
+          <span class="btn-buy-cta">Buy the winner →</span>
+          <span class="btn-buy-badge">at {winnerAff.retailer}</span>
+        </a>
+      )}
+      {(winnerAff as any)?.golfGalaxyUrl && (
+        <a href={(winnerAff as any).golfGalaxyUrl} class="btn-buy-affiliate btn-buy-gg"
+          target="_blank" rel="nofollow noopener sponsored"
+          style="background:#fff;color:#1E3A28;border:2px solid #1E3A28;margin-top:8px;font-size:13px;">
+          <span class="btn-buy-cta">Check Price at {(winnerAff as any)?.golfGalaxyUrl?.includes('amazon') ? 'Amazon' : (winnerAff as any)?.golfGalaxyUrl?.includes('playbetter') ? 'PlayBetter' : 'Golf Galaxy'} →</span>
+        </a>
+      )}
+    </div>
+
+    {/* ── TESTING NOTES ── */}
+    <div class="testing-note" role="note">
+      Both products were independently purchased and tested across real rounds.
+      No manufacturer loans, no sponsored content.
+      <a href="/how-we-test/">See our full testing methodology</a>
+    </div>
+
+    {/* ── WHAT ACTUALLY MATTERS FOR WEEKEND GOLFERS ── */}
+    {c.weekendGolfer && (
+      <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;">
+        <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters for Weekend Golfers</h2>
+        <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
+      </div>
+    )}
+
+    {/* ── EDITORIAL SECTIONS — deep analysis, who-should-buy, price-value ── */}
+    {c.sections && c.sections.length > 0 && (
+      <div class="compare-editorial">
+        {c.sections.map((s: any) => (
+          <section style="margin:28px 0;">
+            <h2 id={s.h2.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')} style="font-size:20px;color:var(--green);margin:0 0 12px;">{s.h2}</h2>
+            <div style="font-size:15px;line-height:1.7;color:var(--body);" set:html={s.body} />
+          </section>
+        ))}
+      </div>
+    )}
+
+    {/* ── FULL COMPARISON ── */}
+    <h2 id="winner-and-full-verdict">Winner &amp; Full Verdict: {nameA} vs {nameB}</h2>
+    <p>{c.verdict}</p>
+
+    {/* ── POST-VERDICT CTA — enhanced with urgency ── */}
+    {winnerAff && (
+      <div class="post-verdict-cta" style="background:var(--green);border-radius:12px;padding:28px;margin:32px 0;text-align:center;">
+        <p style="color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
+        <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;">🏆 {winnerName}</p>
+        <p style="color:rgba(255,255,255,.8);font-size:14px;margin:0 0 16px;">
+          {winnerAff.price} at {winnerAff.retailer} · Free shipping · Prices checked today
+        </p>
+        <a href={winnerAff.url} class="post-verdict-btn" target="_blank"
+          rel="nofollow noopener sponsored"
+          aria-label={`Buy ${winnerName} at ${winnerAff.retailer}`}
+          style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:800;padding:16px 40px;border-radius:10px;text-decoration:none;transition:transform .15s,background .15s;">
+          Check Today's Price →
+        </a>
+        <p style="color:rgba(255,255,255,.5);font-size:11px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>
+      </div>
+    )}
+
+    {/* ── ALSO CONSIDER — loser CTA ── */}
+    {(() => {
+      const loserKey = c.winner === c.productA ? c.productB : c.productA;
+      const loserName = c.winner === c.productA ? nameB : nameA;
+      const loserAff = c.winner === c.productA ? affB : affA;
+      return loserAff ? (
+        <div class="runner-up-cta">
+          <p class="runner-up-cta__lead">Prefer the {loserName}? Here is where to buy it.</p>
+          <a href={loserAff.url} class="runner-up-cta__btn" target="_blank"
+            rel={(loserAff as any).program === 'direct' ? "nofollow noopener" : "nofollow noopener sponsored"}
+            data-aff-name={loserName}
+            data-cta-location="runner-up"
+            aria-label={`Check price for ${loserName} at ${loserAff.retailer}`}>
+            <span class="runner-up-cta__price">{loserAff.price}</span>
+            <span class="runner-up-cta__label">Check {loserName} at {loserAff.retailer} →</span>
+          </a>
+          <span class="runner-up-cta__note">Runner-up in this comparison · Prices checked today</span>
+        </div>
+      ) : null;
+    })()}
+
+    {/* ── FAQ ── */}
+    {c.faq && c.faq.length > 0 && (
+      <div class="art-faq">
+        <h2 id="faq">Frequently Asked Questions</h2>
+        {c.faq.map(({ q, a }) => (
+          <details class="faq-item">
+            <summary>{q}</summary>
+            <div class="faq-answer">{a}</div>
+          </details>
+        ))}
+      </div>
+    )}
+
+    {/* ── DISCLOSURE ── */}
+    <div class="disclosure-box" role="note">
+      Affiliate disclosure: some links on this page earn a small commission at no extra
+      cost to you. Products were independently purchased.
+      <a href="/about/" class="disclosure-link">Learn more about how we work</a>
+    </div>
+
+    {/* ── UPDATE STAMP ── */}
+    <div class="update-stamp">Last updated: {c.dateModified}</div>
+
+    {/* ── RELATED GUIDES — dynamic per-comparison + fallback ── */}
+    <div class="rel-cluster" style="margin-top:40px">
+      <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
+      <div class="rel-links">
+        {c.related && c.related.length > 0
+          ? c.related.map((link: any) => <a href={link.slug}>{link.label}</a>)
+          : <>
+              <a href="/compare/">All Golf Product Comparisons →</a>
+              <a href="/gear-reviews/">All Gear Reviews →</a>
+              <a href="/best-golf-rangefinders-2026/">Best Golf Rangefinders 2026</a>
+              <a href="/best-golf-gps-watches/">Best GPS Watches 2026</a>
+              <a href="/best-golf-drivers-forgiveness/">Best Forgiving Drivers 2026</a>
+            </>
+        }
+      </div>
+    </div>
+
+    <div class="rel-cluster" style="background:var(--green);border:none;margin-top:24px;">
+      <p style="color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;">🏢 More for Cubicle Golfers</p>
+      <p style="color:rgba(255,255,255,.7);font-size:14px;margin-bottom:16px;line-height:1.6;">
+        You work 9-to-5. Golf is your weekend reset. These guides are built for your schedule.
+      </p>
+      <div class="rel-links">
+        <a href="/office-to-golf-course-playbook/" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">Office-to-Course Playbook</a>
+        <a href="/golf-practice-drills-at-home/" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">7 Practice Drills You Can Do at Home in 15 Minutes</a>
+        <a href="/best-golf-gear-under-100/" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:#fff;">Best Golf Gear Under $100 for Weekend Golfers</a>
+      </div>
+    </div>
+
+  </div>
+
+</BaseLayout>

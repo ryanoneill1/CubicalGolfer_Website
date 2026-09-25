@@ -1,0 +1,132 @@
+---
+import { AUTHOR_PROFILE } from '../data/author';
+/**
+ * EmailCapture.astro
+ * Reusable email capture with proper <form>, native validation, and honeypot.
+ */
+
+interface Props {
+  heading?: string;
+  variant?: 'footer' | 'inline';
+  idSuffix?: string;
+}
+
+const {
+  heading = "Download the Golf Ball Compression Cheat Sheet",
+  variant = 'footer',
+  idSuffix = '',
+} = Astro.props;
+
+const formId = `email-form${idSuffix}`;
+const inputId = `strip-email${idSuffix}`;
+const thanksId = `strip-thanks${idSuffix}`;
+const disclaimerId = `email-disclaimer${idSuffix}`;
+const isInline = variant === 'inline';
+---
+
+<div class={isInline ? 'email-inline' : 'email-strip__inner'}>
+  <div class={isInline ? 'email-inline__copy' : 'email-strip__copy'}>
+    {!isInline && <p class="email-strip__eyebrow">FREE DOWNLOAD</p>}
+    <p class={isInline ? 'email-inline__heading' : 'email-strip__heading'}>{heading}</p>
+    <p class={isInline ? 'email-inline__sub' : 'email-strip__sub'}>
+      One-page PDF: the single best pick in every category — rangefinder, GPS watch,
+      ball, glove, putter — based on {AUTHOR_PROFILE.testingRounds} rounds of on-course testing. Print it, take it to the store, and stop second-guessing.
+    </p>
+  </div>
+  <div>
+    <form id={formId} class={isInline ? 'email-inline__field' : 'email-strip__field'} data-placement={isInline ? 'mid-article' : 'footer'}>
+      <label for={inputId} class="sr-only">Your email address</label>
+      <input
+        type="email"
+        id={inputId}
+        name="email"
+        placeholder="your@email.com"
+        required
+        autocomplete="email"
+        class={isInline ? 'email-inline__input' : 'email-strip__input'}
+      />
+      <!-- Honeypot — hidden from humans, bots fill it and get rejected -->
+      <input type="text" name="website" aria-hidden="true" autocomplete="off" tabindex="-1"
+             style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
+      <button type="submit" class={isInline ? 'email-inline__btn' : 'email-strip__btn'}>
+        Send Me the PDF →
+      </button>
+    </form>
+    <p class={isInline ? 'email-inline__disclaimer' : 'email-strip__disclaimer'} id={disclaimerId}>
+      No spam. Unsubscribe any time. We email ~twice a month with gear updates.
+    </p>
+    <div class={isInline ? 'email-inline__thanks' : 'email-strip__thanks'} id={thanksId} hidden>
+      ✅ &nbsp;Check your inbox — the cheat sheet is on its way!
+    </div>
+  </div>
+</div>
+
+<style>
+/* ── Inline mid-article email capture card ──────────────────────────────── */
+.email-inline {
+  background: var(--cream-dark, #EDE9DF);
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: 12px;
+  padding: 28px 24px;
+  margin: 32px 0;
+}
+.email-inline__heading {
+  font-family: var(--font-head, 'DM Serif Display', serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--green, #1E3A28);
+  margin: 0 0 6px;
+}
+.email-inline__sub {
+  font-size: 16px;
+  color: var(--muted, #556B5C);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+.email-inline__field {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.email-inline__input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: 1px solid var(--border, #D8D3C8);
+  border-radius: 8px;
+  font-size: 16px;
+  background: #fff;
+}
+.email-inline__input:focus {
+  outline: 2px solid var(--green, #1E3A28);
+  border-color: var(--green, #1E3A28);
+}
+.email-inline__btn {
+  background: var(--green, #1E3A28);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s;
+}
+.email-inline__btn:hover { background: var(--green-light, #2A5038); }
+.email-inline__disclaimer {
+  font-size: 16px;
+  color: var(--muted, #556B5C);
+  margin: 8px 0 0;
+}
+.email-inline__thanks {
+  padding: 14px 18px;
+  background: var(--green, #1E3A28);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+</style>
