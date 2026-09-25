@@ -1689,6 +1689,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Alphard Golf Inc.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/alphard-cybercart-push-plus.webp',
     imgAlt: 'Alphard Cybercart Push+ manual three-wheel push cart (not the electric Cybercart)',
     benefits: [
         'The manual push version of the Cybercart, not the electric remote model',
@@ -1806,6 +1807,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified at Golf Galaxy on 25 Sep 2026. Price is for the three-pack.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/bombas-performance-quarter-socks.webp',
     imgAlt: 'Bombas performance quarter golf socks, three pack',
     benefits: [
         'Sold as a three-pack, which is the only way the price makes sense',
@@ -1824,6 +1826,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified at Golf Galaxy on 25 Sep 2026. Shipping was unavailable that day — check the live page.',
     label: 'Check Price at Golf Galaxy →',
+    imgSrc: '/images/products/payntr-reserve-classic-tour-shoes.webp',
     imgAlt: 'PAYNTR Reserve Classic Tour golf shoes',
     benefits: [
         'A tour-spec shoe from a brand most golfers have never tried',
@@ -1843,6 +1846,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified on Amazon on 25 Sep 2026.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/mgi-e-boost-cart.webp',
     imgAlt: 'MGI E-Boost electric assist push cart',
     benefits: [
         'Electric assist rather than full remote control — you still steer it',
@@ -1862,6 +1866,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified on Amazon on 25 Sep 2026. Includes a 12-month membership.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/arccos-air-sensors.webp',
     imgAlt: 'Arccos Air shot tracking sensors with membership',
     benefits: [
         'Includes twelve months of membership in the purchase price',
@@ -1881,6 +1886,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified on Amazon on 25 Sep 2026.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/sun-mountain-speed-cart-x.webp',
     imgAlt: 'Sun Mountain Speed Cart X three-wheel push cart',
     benefits: [
         'Sun Mountain have been building push carts longer than most rivals',
@@ -1900,6 +1906,7 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-09-25',
     priceNote: 'Verified on Amazon on 25 Sep 2026.',
     label: 'Check Price at Amazon →',
+    imgSrc: '/images/products/travismathew-nuage-mega-shoes.webp',
     imgAlt: 'TravisMathew Nuage Mega golf shoes',
     benefits: [
         'TravisMathew build for the clubhouse as much as the course',

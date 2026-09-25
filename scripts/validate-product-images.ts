@@ -29,7 +29,9 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 /** Ratchet. Only ever edit this downward, as photos arrive. */
-const CEILING = 8;
+/* 25 Sep 2026: 8 -> 1. Ryan supplied seven photos. The one left is
+   flightscope-mevo, which is blocked on a price rather than an image. */
+const CEILING = 1;
 const PUBLIC = join(process.cwd(), 'public');
 
 interface Gap { slug: string; key: string; reason: string }
