@@ -152,15 +152,16 @@ export const AFFILIATE: Record<string, {
   // violation. They are genuinely two different sets, so both now exist with
   // their own honest price rather than one record averaging the truth.
   'callaway-strata-ultimate-16': {
-    url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%2520Ultimate%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fstrata-mens-2019-ultimate-16-piece-complete-set-19cwymstrtltmt191se%2F19cwymstrtltmt191se',
     program: 'golfgalaxy',
     commissionPct: 5,
     cookieDays: 30,
     golfGalaxyUrl: 'https://www.amazon.com/s?k=callaway+strata+ultimate+16+piece&tag=cubicalgolfer-20',
     retailer: 'Golf Galaxy',
-    price: '~$699',
+    price: '$699.99',
+    verifiedOn: '2026-09-25',
     primaryRetailer: 'direct',
-    priceNote: 'The full 16-piece set — driver, woods, hybrid, irons, wedge, putter and bag.',
+    priceNote: 'Verified at Golf Galaxy on 25 Sep 2026. This is the 2019 model, still sold new at full price.',
     label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/callaway-strata-set.webp',
     imgAlt: 'Callaway Strata Ultimate 16-Piece Complete Set',

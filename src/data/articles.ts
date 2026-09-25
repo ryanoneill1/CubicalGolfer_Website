@@ -5475,7 +5475,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'golf-for-beginners-hub',
     slug: '/golf-for-beginners/',
-    quickAnswerProduct: 'callaway-strata-ultimate-16',
+    quickAnswerProduct: 'callaway-strata',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-for-beginners.jpg',
     thumbnail: '/images/thumbnails/golf-for-beginners-hub-thumb.webp',
     category: 'improve-game',
@@ -5491,7 +5491,7 @@ export const ARTICLES: Article[] = [
     ],
     title:        'Golf for Beginners — Complete Guide (Start Here)',
     titleDisplay: '🏌️‍♂️ Golf for Beginners — Complete Guide',
-    bottomLine: 'New to golf? Start with a complete beginner set (\$249-\$499), learn grip and stance from one lesson, play executive courses to build confidence, and focus on chipping and putting before worrying about driver distance. Our top pick: the <strong>Callaway Strata Complete Set</strong> (Check price).',
+    bottomLine: 'New to golf? Start with a complete beginner set (\$249-\$499), learn grip and stance from one lesson, play executive courses to build confidence, and focus on chipping and putting before worrying about driver distance. Our top pick: the <strong>Callaway Strata Complete Set</strong> (~$481) \u2014 inside the range above, unlike the 16-piece Ultimate at $699.99.',
     description:  'The only beginner golf guide you need in 2026. What clubs to buy, how to grip the club, how to stop slicing, what to practice, and how to track.',
     excerpt:      'Everything a complete beginner needs to start playing golf in 2026. Gear, fundamentals, practice routines, and realistic expectations — in one place.',
     intro: 'Most beginner golf guides waste your time with generic advice. This one does not. Here is exactly what you need to know to go from first swing to first round in 2026 — without spending money on things you do not need yet.',
@@ -5509,6 +5509,13 @@ export const ARTICLES: Article[] = [
         h2: 'Step 1: Get the Right Starter Clubs',
         body: 'Do not buy a full set of 14 clubs as a beginner. You will use 5-7 of them. The minimum starting set: driver, 5-wood or hybrid, 7-iron, 9-iron, pitching wedge, and putter. The Wilson Profile SGI complete set ($299, bag included) is the best starter set in 2026 — forgiving cavity backs, proper shaft flex, no wasted money on clubs you cannot hit yet.',
         items: [{ name: 'Wilson Profile SGI Complete Set', desc: 'Best beginner set 2026 — 14 clubs, bag included, maximum forgiveness', badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'wilson-profile-sgi' }],
+      },
+      {
+        h2: 'The Complete Set We Point Beginners At',
+        badge: 'BEST VALUE',
+        testedStatus: 'research',
+        affiliateKey: 'callaway-strata',
+        body: 'The Callaway Strata complete set runs about $481 and covers everything: driver, fairway wood, hybrid, irons, wedge, putter and a bag.\n\nWe have not played a full season with one, so it carries no rating here.\n\nThe reason it is the pick over the fancier option is arithmetic. Callaway also sell a Strata Ultimate 16-piece at $699.99, and the listing at Golf Galaxy is still the 2019 model \u2014 you would be paying $219 more for a six-year-old set and four extra clubs a beginner will not use. Put the $219 into lessons instead. One hour with a professional will do more for your scores than any club in either box.',
       },
       {
         h2: 'Step 2: Learn the Grip — The Only Fundamental That Matters First',
