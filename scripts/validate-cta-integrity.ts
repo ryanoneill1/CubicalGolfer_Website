@@ -52,8 +52,9 @@ import { PRODUCT_DISPLAY } from '../src/data/product-names';
 /** Ratchet. Only ever edit this downward, after a real fix. */
 /* 25 Sep 2026: 12 -> 2. Ten of the twelve were fixed or were this script's own
    false positives (three price shapes it could not read). The two that remain
-   need a link changed, which is Ryan's call, not this script's. */
-const CEILING = 2;
+   need a link changed, which is Ryan's call. 25 Sep: 2 -> 1, Qi35 Max given a
+   section on /driver-loft-guide/ and named in its bottomLine. */
+const CEILING = 1;
 /** A gap this large means the reader is quoted a materially different price. */
 const SEVERE_RATIO = 2.0;
 
