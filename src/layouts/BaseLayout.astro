@@ -13,6 +13,21 @@ import EmailCapture from '../components/EmailCapture.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import SiteSearch from '../components/SiteSearch.astro';
 import { VERIFICATION_TAG } from '../lib/seo';
+import lastmodManifest from '../data/lastmod-manifest.json';
+
+// Newest page-modified date across the site, e.g. "September 2026". This was
+// hardcoded to "April 2026" and shipped five months stale on all 279 pages —
+// on a site whose whole differentiation is testing recency.
+const SITE_LAST_UPDATED = (() => {
+  const dates = Object.values(lastmodManifest as Record<string, any>)
+    .map(v => (typeof v === 'string' ? v : v?.lastmod))
+    .filter((d): d is string => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}/.test(d))
+    .sort();
+  const newest = dates[dates.length - 1];
+  if (!newest) return 'recently';
+  return new Date(newest + 'T12:00:00Z').toLocaleDateString('en-US',
+    { month: 'long', year: 'numeric', timeZone: 'UTC' });
+})();
 import '../styles/global.css';
 
 interface Props {
@@ -294,7 +309,7 @@ const NAV_ITEMS = [
       <p>© 2026 Cubical Golfer · <a href="/about/" style="color:rgba(255,255,255,.7);text-decoration:underline;">Editorial Policy</a></p>
       <p class="footer-disc">
         ⚖️ Affiliate disclosure: we earn commissions from qualifying purchases at no extra cost to you.
-        All products independently purchased &amp; tested. Last updated April 2026.
+        All products independently purchased &amp; tested. Last updated {SITE_LAST_UPDATED}.
       </p>
     </div>
   </footer>

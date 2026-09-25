@@ -1,4 +1,5 @@
 ---
+import { AUTHOR_PROFILE } from '../data/author';
 // src/pages/index.astro — Homepage
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
@@ -97,7 +98,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
       <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
       <h1>Stop Guessing. Start Playing Better Golf.</h1>
       <EarlyDisclosure />
-      <p class="hero-sub">Every product independently purchased and tested over 20+ real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
+      <p class="hero-sub">Every product independently purchased and tested over {AUTHOR_PROFILE.testingRounds} real rounds each by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>
         <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
@@ -353,7 +354,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
           <summary>What is the best golf rangefinder for a weekend golfer in 2026?</summary>
           <div class="faq-answer">
             The <strong>Bushnell Tour V7 Shift (~$399)</strong> is the best overall golf rangefinder
-            for most weekend golfers in 2026. We tested 5 leading models over 20+ real rounds each. It locks onto
+            for most weekend golfers in 2026. We tested 5 leading models on course before ranking them. It locks onto
             pins instantly, has slope toggle for tournament play, and reads to 1,300 yards with ±1 yard accuracy.
             For budget golfers, the <strong>Precision Pro NX9 (~$219)</strong> delivers excellent performance
             at roughly half the price with a lifetime warranty.<br /><br />
