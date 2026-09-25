@@ -1775,6 +1775,24 @@ export const AFFILIATE: Record<string, {
       ],
   },
 
+  'us-kids-ul7-42-complete-set': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fu-skids-golf-ul7-42-4-club-carry-set-42-45-in-24an3yl7424clbblcset%2F24an3yl7424clbblcset',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 30,
+    retailer: 'Golf Galaxy',
+    price: '$249.99',
+    verifiedOn: '2026-09-25',
+    priceNote: 'Verified at Golf Galaxy on 25 Sep 2026, shipping in 1-2 days.',
+    label: 'Check Price at Golf Galaxy →',
+    imgAlt: 'U.S. Kids Golf UL7 42 six-piece junior set with stand bag',
+    benefits: [
+        'Six clubs and a stand bag for a child 42 to 45 inches tall',
+        'Built light enough for a small child to actually swing, not cut-down adult clubs',
+        'U.S. Kids size their sets by height rather than age, which is the part that matters',
+      ],
+  },
+
   'cobra-ds-adapt-max-k': {
     asin: 'B0DC88GLHK',
     url: 'https://www.amazon.com/dp/B0DC88GLHK?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',

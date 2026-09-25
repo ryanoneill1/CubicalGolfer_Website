@@ -1,6 +1,7 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'us-kids-ul7-42-complete-set': "U.S. Kids Golf UL7 42 Complete Set",
   'motocaddy-m7-gps-remote-caddy': "Motocaddy M7 GPS Remote Electric Caddy",
   'motocaddy-m7-remote-caddy': "Motocaddy M7 Remote Electric Caddy",
   'footjoy-pro-sl-shoes': "FootJoy Pro/SL Spikeless Golf Shoes",
