@@ -542,7 +542,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
           <ul class="review-glance__list">
             {article.rating ? <li><strong>Our rating:</strong> ★ {article.rating}/5</li> : null}
             {gAff?.price ? <li><strong>Price:</strong> {gAff.price}{gAff.retailer ? ` at ${gAff.retailer}` : ''}</li> : null}
-            <li><strong>How we test:</strong> <a href="/how-we-test/">10+ rounds per product on real courses</a></li>
+            <li><strong>How we test:</strong> <a href="/how-we-test/">{AUTHOR_PROFILE.testingRounds} rounds on real courses</a></li>
             {['garmin','bushnell','callaway','taylormade','titleist'].includes(article.quickAnswerProduct.split('-')[0]) ? <li><strong>More from this brand:</strong> <a href={`/brands/${article.quickAnswerProduct.split('-')[0]}/`}>Every {article.quickAnswerProduct.split('-')[0].charAt(0).toUpperCase() + article.quickAnswerProduct.split('-')[0].slice(1)} product we've tested →</a></li> : null}
             {alts.length > 0 ? <li><strong>Compare it:</strong> {alts.map((c: any, i: number) => <span>{i > 0 ? ' · ' : ''}<a href={`/compare/${c.slug}/`}>{c.title}</a></span>)}</li> : null}
           </ul>
@@ -1017,7 +1017,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
         <p style="font-weight:700;font-size:16px;margin:0 0 10px;color:var(--green);">🔒 Why Trust This Guide</p>
         <ul style="margin:0;padding:0 0 0 18px;font-size:16px;line-height:1.7;color:var(--muted);">
           <li><strong>Independently purchased</strong> — every product bought with our own money, never loaned by manufacturers</li>
-          <li><strong>{AUTHOR_PROFILE.testingRounds} real rounds</strong> per product tested on Chicago-area courses in all conditions</li>
+          <li><strong>{AUTHOR_PROFILE.testingRounds} real rounds</strong> on Chicago-area courses in all conditions</li>
           <li><strong>{AUTHOR_PROFILE.handicapLabel} weekend golfer</strong> — we test like you play, not like a tour pro</li>
           <li><strong>No sponsored content</strong> — affiliate commissions don't influence rankings. <a href="/how-we-test/" style="color:var(--green);">Full methodology →</a></li>
         </ul>

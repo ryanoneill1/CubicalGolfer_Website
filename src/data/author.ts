@@ -27,8 +27,11 @@ export const AUTHOR_PROFILE = {
   city:           'Chicago, IL',
   roundsPerYear:  '25–40',
   playingSince:   2010,
-  testingMin:     15,           // minimum rounds per product review
-  testingRounds:  '15+',        // CANONICAL per-product rounds claim — used everywhere
+  testingMin:     15,           // minimum rounds behind a guide
+  testingRounds:  '15+',        // CANONICAL rounds claim — used everywhere. NOT per product:
+                                // individual products get 6–12 rounds each (see
+                                // /best-golf-rangefinders-2026/, 12/8/8/6/6 = 40). Never
+                                // append 'per product' or 'each' to this value.
 
   // ────────────────────────────────────────────────────────
   // WHAT'S IN THE BAG — fill these with YOUR real clubs and
@@ -53,7 +56,7 @@ export const AUTHOR_PROFILE = {
     ball:        'Srixon Q-Star Tour',
     rangefinder: 'Bushnell Tour V7 Shift',
   },
-  testingLabel:   '15+ real rounds per product',
+  testingLabel:   '15+ real rounds',
   siteTestTotal:  '15+',        // deprecated alias — kept equal to testingRounds to prevent drift
   gearPolicy:     'No freebies, no manufacturer loans.',
   bio:            'Playing since 2010. Tests every piece of gear on his own dime across 25–40 rounds a year at Harborside Golf Course in Chicago, IL. No freebies, no manufacturer loans.',
