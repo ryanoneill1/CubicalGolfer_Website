@@ -8,6 +8,26 @@
 //   ALLOW_SEARCH_URLS=195 npx tsx scripts/validate-affiliate-urls.ts
 // Decrease the number as you convert them. At 0, all must be direct ASIN links.
 
+/**
+ * LINK-REMOVAL RULE (set 25 Sep 2026, after Ryan reversed a batch of my removals)
+ *
+ * Never delete an affiliate link because a product is out of stock, backordered,
+ * or unavailable to ship. Three reasons:
+ *
+ *   1. Stock flips daily. Nothing in this repo re-checks it, so a removal made on
+ *      one day's reading is permanent by accident — the link never comes back when
+ *      the product does.
+ *   2. A Golf Galaxy click sets an 8% / 30-day cookie that pays on ANYTHING the
+ *      reader buys in that window. Even a search-results link earns. Deleting it
+ *      earns nothing, forever, to avoid a page that may be back tomorrow.
+ *   3. Stock is a sweep concern — verifiedOn plus scripts/sweep-priority.ts — not
+ *      a delete decision.
+ *
+ * Convert a search URL to a product page ONLY when it is the same product. If the
+ * search returns something else, leave the search URL alone: it still earns.
+ * If availability matters to the reader, say so in the copy. Do not silently
+ * remove the way to buy.
+ */
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
 
 // 2026-08 audit remediation: raised 210 → 211. ASIN B0F6TWQZMS (FootJoy WeatherSof
