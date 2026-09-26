@@ -5664,6 +5664,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
       { slug: '/best-golf-balls-for-seniors/', label: 'Best Golf Balls for Seniors' },
+      { slug: '/compare/cobra-air-x-vs-air-x-2-irons/', label: 'Cobra Air X vs Air X 2' },
+      { slug: '/compare/titleist-t350-vs-ping-g430-irons/', label: 'Titleist T350 vs Ping G430' },
     ],
   },
 
@@ -12334,6 +12336,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-premium-irons-2026/', label: 'Premium Irons — Is $1,000+ Worth It?' },
       { slug: '/best-golf-irons-2026/', label: 'Best Golf Irons 2026' },
       { slug: '/iron-fitting-guide-beginners/', label: 'Iron Fitting Guide' },
+      { slug: '/compare/cobra-air-x-vs-air-x-2-irons/', label: 'Cobra Air X vs Air X 2' },
+      { slug: '/compare/titleist-t350-vs-ping-g430-irons/', label: 'Titleist T350 vs Ping G430' },
     ],
   },
 

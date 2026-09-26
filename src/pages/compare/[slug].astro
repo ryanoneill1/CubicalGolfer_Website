@@ -66,6 +66,58 @@ const affB       = resolveProduct(c.productB, 'productB', c.slug);
 const nameA      = affA.name;
 const nameB      = affB.name;
 const winnerAff  = c.winner === c.productA ? affA : affB;
+
+// ── SIBLING COMPARISONS ──────────────────────────────────────────────────────
+// Google's index report showed /compare/titleist-t350-vs-ping-g430-irons/ as
+// "Discovered - currently not indexed": found, never crawled. Every comparison
+// built after the hub pages was arriving with 1-3 inbound links, almost all of
+// them from /compare/ itself, and Googlebot spends 89% of its budget on refresh
+// versus 11% discovery — so a page nobody links to does not get fetched.
+//
+// Rather than hand-placing links in article `related` arrays (which are capped
+// at 7 and already full on most hub pages), each comparison now links to its
+// siblings: the other comparisons that share one of its two products. That
+// makes the mesh self-maintaining, so the next comparison added is linked from
+// every page it shares a product with on the day it ships.
+//
+// Shared-product matching alone is not enough: a comparison of two products
+// that appear in no other comparison (the Cobra Air X pair, the ball pairs)
+// still lands with one inbound link, and those are precisely the new pages that
+// need discovering. So fall back to category — inferred from the product keys,
+// which already encode it — and only then to the newest comparisons.
+const categoryOf = (key: string): string => {
+  const k = key.toLowerCase();
+  if (/iron/.test(k))                              return 'irons';
+  if (/driver|qi35|paradym|g430-max|air-x/.test(k))return 'drivers';
+  if (/putter|odyssey|scotty|lab-golf/.test(k))    return 'putters';
+  if (/wedge|rtx|jaws|vokey/.test(k))              return 'wedges';
+  if (/ball|pro-v1|tp5|chrome|supersoft|duo-soft|e12|kirkland|tour-soft|tour-response/.test(k)) return 'balls';
+  if (/rangefinder|bushnell|nx9|blue-tees|z30|z82|300-pro/.test(k)) return 'rangefinders';
+  if (/watch|approach-s\d|ion-elite|shot-scope-v\d/.test(k))       return 'watches';
+  if (/mevo|skytrak|mlm2pro|launch|r10|r50|square-golf|gc3|lm1/.test(k)) return 'launch-monitors';
+  if (/arccos|shot-scope/.test(k))                 return 'tracking';
+  return 'other';
+};
+const myCats = new Set([categoryOf(c.productA), categoryOf(c.productB)].filter(x => x !== 'other'));
+
+const sharesProduct = (o: any) =>
+  o.productA === c.productA || o.productA === c.productB ||
+  o.productB === c.productA || o.productB === c.productB;
+const sharesCategory = (o: any) =>
+  myCats.has(categoryOf(o.productA)) || myCats.has(categoryOf(o.productB));
+
+// Within each bucket, newest first. The block is capped at 6, so the ordering
+// decides who actually receives the link — and the pages that need discovering
+// are by definition the ones published most recently. Ordering by date rather
+// than by array position is what turns this from a nice-to-have cross-link into
+// a working discovery path for a page shipped today.
+const byNewest = (a: any, b: any) =>
+  String(b.datePublished ?? '').localeCompare(String(a.datePublished ?? ''));
+const pool = (COMPARISONS as any[]).filter(o => o.slug !== c.slug);
+const siblings = [
+  ...pool.filter(sharesProduct).sort(byNewest),
+  ...pool.filter(o => !sharesProduct(o) && sharesCategory(o)).sort(byNewest),
+].slice(0, 6);
 const winnerName = winnerAff.name;
 
 // ── Product schema for SERP rich results ────────────────────────────────────
@@ -379,6 +431,17 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
     <div class="update-stamp">Last updated: {c.dateModified}</div>
 
     {/* ── RELATED GUIDES — dynamic per-comparison + fallback ── */}
+    {siblings.length > 0 && (
+      <div class="rel-cluster" style="margin-top:40px">
+        <h4>More comparisons with these products</h4>
+        <div class="rel-links">
+          {siblings.map((o: any) => (
+            <a href={`/compare/${o.slug}/`}>{o.title}</a>
+          ))}
+        </div>
+      </div>
+    )}
+
     <div class="rel-cluster" style="margin-top:40px">
       <p style="font-weight:700;font-size:15px;margin:0 0 12px;">Related Guides</p>
       <div class="rel-links">
