@@ -1,6 +1,9 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'cobra-air-x-irons': "Cobra Air X Irons",
+  'cobra-air-x-2-irons': "Cobra Air X 2 Irons",
+  'bridgestone-e12-straight': "Bridgestone e12 Straight",
   'sklz-golf-grip-trainer': "SKLZ Golf Grip Trainer",
   'skechers-elite-vortex': "Skechers Elite Vortex",
   'tour-edge-hot-launch-c522-irons': "Tour Edge Hot Launch C522 Irons",

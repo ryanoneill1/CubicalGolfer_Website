@@ -147,6 +147,13 @@ export interface Comparison {
   productB:      string;
   winner:        string;
   winnerReason:  string;
+  // Whether BOTH products in this comparison were bought and played by us.
+  // The page's trust block asserts 'both products purchased', '15+ real rounds'
+  // and 'launch monitor verified'. Those are strong, checkable claims and they
+  // are the site's whole positioning, so they render only when this is true.
+  // Omit or set false for a comparison built from published specs, manufacturer
+  // data and owner reports — the page then says exactly that instead.
+  tested?:       boolean;
   intro:         string;
   verdict:       string;
   faq:           FAQItem[];

@@ -126,16 +126,28 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
   {/* ── FRESHNESS BANNER ── */}
   <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
     <span style="font-size:15px;">✅</span>
-    <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — Both products independently purchased and tested across a full season. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+    <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — {c.tested !== false
+      ? 'Both products independently purchased and tested across a full season.'
+      : 'Built from published specifications, manufacturer data and owner reports — we have not played both of these head to head.'} <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
   </div>
 
   {/* ── WHY TRUST THIS COMPARISON — E-E-A-T trust section ── */}
   <div class="trust-card">
-    <p class="trust-card__heading">Why Trust This Comparison</p>
+    <p class="trust-card__heading">{c.tested !== false ? 'Why Trust This Comparison' : 'How This Comparison Was Built'}</p>
     <ul class="trust-card__list">
-      <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
-      <li><strong>{AUTHOR_PROFILE.testingRounds} real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
-      <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+      {c.tested !== false ? (
+        <>
+          <li><strong>Both products purchased</strong> — bought with our own money, no manufacturer loans or freebies</li>
+          <li><strong>{AUTHOR_PROFILE.testingRounds} real rounds</strong> — tested on actual courses across multiple conditions, not a fitting bay</li>
+          <li><strong>Launch monitor verified</strong> — ball speed, spin, and carry data from a calibrated Rapsodo MLM2PRO</li>
+        </>
+      ) : (
+        <>
+          <li><strong>Not a head-to-head test</strong> — we have not played these two against each other, and we are not going to pretend otherwise</li>
+          <li><strong>Published specs and manufacturer data</strong> — compared line by line, with the numbers shown so you can check them</li>
+          <li><strong>Prices verified on the retailer</strong> — checked on the date shown, not copied from a press release</li>
+        </>
+      )}
       <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — written for weekend golfers who hit the center 40% of the time</li>
     </ul>
     <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
