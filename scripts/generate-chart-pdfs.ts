@@ -49,6 +49,13 @@ interface Table { heading: string; rows: string[][] }
 interface Spec { slug: string; out: string; title: string; subject: string; build?: () => Table[] }
 
 const CHARTS: Spec[] = [
+  /* /how-to-buy-wedges-4-degree-rule/ was crawled and left unindexed: four
+   * near-identical wedge pages, all prose, so Google kept the other three.
+   * It now carries a lookup table its siblings do not have, and this gives
+   * that table the printable the siblings also do not have. Scraped from the
+   * page, so the PDF cannot drift from what the article renders. */
+  { slug: '/how-to-buy-wedges-4-degree-rule/', out: 'golf-wedge-setup-chart.pdf',
+    title: 'Golf Wedge Setup Chart',          subject: 'Your wedge lofts, worked out from your pitching wedge' },
   { slug: '/golf-wind-adjustment-chart/',      out: 'golf-wind-adjustment-chart.pdf',
     title: 'Golf Wind Adjustment Chart',       subject: 'How far to add, subtract and aim off in wind' },
   { slug: '/golf-distance-temperature-chart/', out: 'golf-distance-temperature-chart.pdf',

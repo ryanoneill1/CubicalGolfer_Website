@@ -505,7 +505,7 @@ Summary: Golf hats tested for fit, sun protection, and sweat management on hot r
 URL: https://www.cubicalgolfer.com/best-golf-pants/
 Summary: Golf pants that stretch, breathe, and survive a walking round without looking wrinkled.
 
-## Best Golf Push Cart 2026 — 4 Models Tested across a full season of walking rounds
+## Best Golf Push Cart 2026 — 7 Compared, 4 Tested on Course
 URL: https://www.cubicalgolfer.com/best-golf-push-carts-2026/
 Summary: Best golf push carts tested and ranked. KVV, Bag Boy Nitron, Clicgear, CaddyTek compared for weight, stability, and value.
 
@@ -665,7 +665,7 @@ Summary: Wearable and clip-on analyzers that give you data-driven feedback witho
 URL: https://www.cubicalgolfer.com/best-impact-screens-golf-simulator/
 Summary: Best golf simulator impact screens tested for image quality, durability, and noise. Budget to premium picks.
 
-## Best Launch Monitors Without Subscription Fees
+## Best Launch Monitors Without Subscription Fees (2026)
 URL: https://www.cubicalgolfer.com/best-launch-monitors-no-subscription/
 Summary: Every launch monitor that works without monthly fees. Shot Scope LM1, Mevo Gen2, SC4 Pro compared with 3-year cost analysis.
 
@@ -877,6 +877,10 @@ Summary: Arccos Caddie vs Shot Scope V5 — automatic shot tracking, subscriptio
 URL: https://www.cubicalgolfer.com/compare/blue-tees-vs-bushnell-tour-v7/
 Summary: Blue Tees vs Bushnell rangefinder, tested over 30+ rounds. Accuracy is identical — the differences that matter are optics, vibration feedback and price.
 
+## Bridgestone e12 Contact vs e12 Straight — Which One?
+URL: https://www.cubicalgolfer.com/compare/bridgestone-e12-contact-vs-e12-straight/
+Summary: Bridgestone e12 Contact vs e12 Straight. Same family, two problems: one built for contact and feel, the other to cut sidespin. Which fits your miss?
+
 ## Bushnell Launch Pro vs Garmin R10 — Worth 4x?
 URL: https://www.cubicalgolfer.com/compare/bushnell-launch-pro-vs-garmin-r10/
 Summary: Bushnell Launch Pro ($2,999) vs Garmin R10 ($490) — accuracy, features, and whether the premium price is justified for a weekend golfer.
@@ -909,6 +913,10 @@ Summary: Qi35 Max vs Paradym Ai Smoke Max tested over 20+ rounds — ball speed,
 URL: https://www.cubicalgolfer.com/compare/callaway-quantum-max-vs-paradym-ai-smoke/
 Summary: Quantum Max vs Paradym Ai Smoke Max — the 2026 successor against the driver we tested. Tri-Force face, loft range and the price gap, compared honestly.
 
+## Callaway Supersoft vs Wilson Duo Soft — Soft Ball Showdown
+URL: https://www.cubicalgolfer.com/compare/callaway-supersoft-vs-wilson-duo-soft/
+Summary: Callaway Supersoft vs Wilson Duo Soft compared on price, feel and who each suits. Two of the best-selling soft golf balls, within a few dollars of each other.
+
 ## Cleveland Launcher XL2 vs Cobra DS-Adapt MAX-K
 URL: https://www.cubicalgolfer.com/compare/cleveland-launcher-xl2-vs-cobra-aerojet-max/
 Summary: Cleveland Launcher XL2 vs Cobra DS-Adapt MAX-K — lightweight forgiveness vs mid-range power. Which driver is best for seniors and slow swing speeds?
@@ -920,6 +928,10 @@ Summary: Cleveland RTX 6 vs Callaway Jaws Raw at 52 degrees, both around $169. W
 ## Cobra DS-Adapt MAX-K vs Ping G430 Max Driver
 URL: https://www.cubicalgolfer.com/compare/cobra-aerojet-max-vs-ping-g430-max/
 Summary: Cobra DS-Adapt MAX-K vs Ping G430 Max — forgiveness, distance, and value compared. Which mid-range driver is best for weekend golfers?
+
+## Cobra Air X vs Air X 2 Irons — Is the Update Worth $79?
+URL: https://www.cubicalgolfer.com/compare/cobra-air-x-vs-air-x-2-irons/
+Summary: Cobra Air X vs Air X 2 irons compared on weight, offset, set composition and price. Which lightweight game-improvement set makes sense at $419 against $498?
 
 ## Mevo+ vs Bushnell Launch Pro — Mid-Range Showdown
 URL: https://www.cubicalgolfer.com/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/
@@ -936,6 +948,10 @@ Summary: Garmin S62 vs S70 compared after 15 rounds each. New touchscreen, bette
 ## Garmin S62 vs Shot Scope V5: Best GPS Watch
 URL: https://www.cubicalgolfer.com/compare/garmin-approach-s62-vs-shot-scope-v5/
 Summary: Garmin Approach S62 vs Shot Scope V5 — GPS accuracy, battery life, shot tracking, and value compared. Which GPS golf watch should you buy in?
+
+## Garmin Approach Z30 vs Z82 — Which Laser Should You Buy?
+URL: https://www.cubicalgolfer.com/compare/garmin-approach-z30-vs-z82/
+Summary: Garmin Approach Z30 vs Z82 compared on price, GPS integration and what each rangefinder gives you. The Z30 is $128 less — here is what that costs.
 
 ## Garmin R10 vs SkyTrak+ Home Sim: $2K vs $5K Builds
 URL: https://www.cubicalgolfer.com/compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/
@@ -1028,6 +1044,10 @@ Summary: Titleist Pro V1 ($55 a dozen) vs Kirkland Signature (about $14 a dozen)
 ## Titleist T350 vs Ping G430 Irons
 URL: https://www.cubicalgolfer.com/compare/titleist-t350-vs-ping-g430-irons/
 Summary: Titleist T350 vs Ping G430 irons compared — forgiveness, look at address, set composition, and a $150 price gap. Which game-improvement set should you play?
+
+## Titleist Tour Soft vs TaylorMade Tour Response
+URL: https://www.cubicalgolfer.com/compare/titleist-tour-soft-vs-taylormade-tour-response/
+Summary: Titleist Tour Soft vs TaylorMade Tour Response on price, cover and who each suits. Two mid-priced balls, one urethane cover — here is what that changes.
 
 ## atlanta-ga
 URL: https://www.cubicalgolfer.com/courses/atlanta-ga/
