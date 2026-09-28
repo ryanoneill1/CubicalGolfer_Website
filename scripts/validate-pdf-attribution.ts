@@ -85,6 +85,7 @@ const PDF_TO_PAGE: Record<string, string> = {
   'golf-club-distance-chart.pdf': '/golf-club-distance-chart/',
   'golf-swing-speed-chart.pdf': '/golf-swing-speed-chart/',
   'golf-wedge-setup-chart.pdf': '/how-to-buy-wedges-4-degree-rule/',
+  'golf-bag-checklist.pdf': '/25-golf-accessories-every-golfer-should-own/',
 };
 
 /**

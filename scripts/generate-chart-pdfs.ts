@@ -49,6 +49,13 @@ interface Table { heading: string; rows: string[][] }
 interface Spec { slug: string; out: string; title: string; subject: string; build?: () => Table[] }
 
 const CHARTS: Spec[] = [
+  /* /25-golf-accessories-every-golfer-should-own/ — also crawled-and-not-indexed,
+   * beside four sibling 'best accessories' lists it shares a third of its
+   * vocabulary with. It is not a best-of list, it is a completeness list, and
+   * none of the siblings is a checklist. This prints the one thing a reader
+   * actually wants on paper while standing over an open bag. */
+  { slug: '/25-golf-accessories-every-golfer-should-own/', out: 'golf-bag-checklist.pdf',
+    title: 'Golf Bag Checklist',                          subject: '25 things worth carrying, by priority' },
   /* /how-to-buy-wedges-4-degree-rule/ was crawled and left unindexed: four
    * near-identical wedge pages, all prose, so Google kept the other three.
    * It now carries a lookup table its siblings do not have, and this gives
