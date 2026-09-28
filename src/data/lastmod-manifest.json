@@ -257,7 +257,7 @@
   },
   "/best-golf-launch-monitors-2026/": {
     "hash": "4351f2e443a1008a",
-    "lastmod": "2026-09-24"
+    "lastmod": "2026-09-28"
   },
   "/best-golf-pants/": {
     "hash": "171497b6db8eaffb",
@@ -531,6 +531,10 @@
     "hash": "5e67f17d7e09d5e2",
     "lastmod": "2026-09-25"
   },
+  "/compare/bushnell-tour-v7-shift-vs-garmin-approach-z30/": {
+    "hash": "0ed3ac53aaaa784f",
+    "lastmod": "2026-09-28"
+  },
   "/compare/bushnell-tour-v7-vs-callaway-300-pro/": {
     "hash": "18ae0ca8ac13619e",
     "lastmod": "2026-09-25"
@@ -611,6 +615,14 @@
     "hash": "c6b62479e117e6af",
     "lastmod": "2026-09-04"
   },
+  "/compare/garmin-r50-vs-bushnell-launch-pro/": {
+    "hash": "d1b95a86cae95da2",
+    "lastmod": "2026-09-28"
+  },
+  "/compare/garmin-r50-vs-foresight-gc3/": {
+    "hash": "0e3943235162fd5b",
+    "lastmod": "2026-09-28"
+  },
   "/compare/garmin-r50-vs-rapsodo-mlm2pro/": {
     "hash": "5990c2280274f28c",
     "lastmod": "2026-09-04"
@@ -647,6 +659,10 @@
     "hash": "71bdffaaea869d66",
     "lastmod": "2026-09-04"
   },
+  "/compare/shot-scope-v5-vs-garmin-approach-s70/": {
+    "hash": "e01589ca0b3d8fb5",
+    "lastmod": "2026-09-28"
+  },
   "/compare/skytrak-plus-vs-flightscope-mevo-gen2/": {
     "hash": "f9839acc894200ab",
     "lastmod": "2026-09-03"
@@ -662,6 +678,14 @@
   "/compare/square-golf-vs-garmin-r10/": {
     "hash": "a067a333abc8b3d7",
     "lastmod": "2026-09-25"
+  },
+  "/compare/swing-caddie-sc4-pro-vs-garmin-r10/": {
+    "hash": "fe38ae2466fb57da",
+    "lastmod": "2026-09-28"
+  },
+  "/compare/swing-caddie-sc4-pro-vs-rapsodo-mlm2pro/": {
+    "hash": "cc01d077373bf8fb",
+    "lastmod": "2026-09-28"
   },
   "/compare/taylormade-qi35-vs-callaway-ai-smoke/": {
     "hash": "b2f2844258c85659",

@@ -889,6 +889,10 @@ Summary: Bushnell Launch Pro ($2,999) vs Garmin R10 ($490) — accuracy, feature
 URL: https://www.cubicalgolfer.com/compare/bushnell-pro-x3-vs-tour-v7/
 Summary: Bushnell Pro X3 vs Tour V7 Shift comparison. Accuracy, slope, optics, and whether the premium Pro X3 is worth the upgrade for a weekend golfer.
 
+## Bushnell Tour V7 Shift vs Garmin Approach Z30
+URL: https://www.cubicalgolfer.com/compare/bushnell-tour-v7-shift-vs-garmin-approach-z30/
+Summary: Bushnell Tour V7 Shift vs Garmin Approach Z30 compared on lock speed, display and watch integration. About $50 apart.
+
 ## Bushnell Tour V7 Shift vs Callaway 300 Pro
 URL: https://www.cubicalgolfer.com/compare/bushnell-tour-v7-vs-callaway-300-pro/
 Summary: Bushnell Tour V7 Shift ($399) vs Callaway 300 Pro ($197) — we tested both over 10 rounds. The V7 is faster and more polished, but the 300 Pro delivers.
@@ -969,6 +973,14 @@ Summary: I tested the Garmin Approach R10 against the pricey R50 to see whether 
 URL: https://www.cubicalgolfer.com/compare/garmin-r10-vs-rapsodo-mlm2pro/
 Summary: Garmin Approach R10 vs Rapsodo MLM2PRO compared on accuracy, indoor/outdoor performance, app quality, and value. Tested by a weekend golfer.
 
+## Garmin R50 vs Bushnell Launch Pro — Worth $2,000 More?
+URL: https://www.cubicalgolfer.com/compare/garmin-r50-vs-bushnell-launch-pro/
+Summary: Garmin Approach R50 vs Bushnell Launch Pro compared. A $2,000 gap between an all-in-one unit and a measurement-first one. Which suits your room?
+
+## Garmin R50 vs Foresight GC3 — Radar or Cameras?
+URL: https://www.cubicalgolfer.com/compare/garmin-r50-vs-foresight-gc3/
+Summary: Garmin Approach R50 vs Foresight GC3. About $2,000 apart, and the real difference is measuring ball data directly versus inferring it.
+
 ## Garmin R50 vs Rapsodo MLM2PRO — $4,999 vs $699
 URL: https://www.cubicalgolfer.com/compare/garmin-r50-vs-rapsodo-mlm2pro/
 Summary: Garmin Approach R50 ($4,999) vs Rapsodo MLM2PRO ($599) — radar vs camera, premium accuracy vs value, and which a weekend golfer should actually buy.
@@ -1005,6 +1017,10 @@ Summary: I tested the Rapsodo MLM2PRO against the Bushnell Launch Pro over dozen
 URL: https://www.cubicalgolfer.com/compare/rapsodo-mlm2pro-vs-flightscope-mevo-plus/
 Summary: Six months with the Rapsodo MLM2PRO ($599) and the FlightScope Mevo+ ($1,839) — a pocket unit against a do-everything radar. Which fits a weekend golfer?
 
+## Shot Scope V5 vs Garmin Approach S70 — $445 Apart
+URL: https://www.cubicalgolfer.com/compare/shot-scope-v5-vs-garmin-approach-s70/
+Summary: Shot Scope V5 vs Garmin Approach S70 compared. One tracks every shot for $210, the other is a premium golf watch at $655. Which do you need?
+
 ## SkyTrak+ vs FlightScope Mevo Gen 2
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-flightscope-mevo-gen2/
 Summary: SkyTrak+ ($1,195) vs FlightScope Mevo Gen 2 ($1,299) — tested head-to-head over 500+ shots. Now within $104 of each other, which is the better home sim?
@@ -1020,6 +1036,14 @@ Summary: SkyTrak+ ($1,195) vs Flightscope Mevo+ ($1,839) tested indoors and outd
 ## Square Golf vs Garmin R10: Budget Monitor Face-Off
 URL: https://www.cubicalgolfer.com/compare/square-golf-vs-garmin-r10/
 Summary: Square Golf Launch Monitor vs Garmin Approach R10, tested over a spring of range and backyard sessions. Which budget unit actually earns your money?
+
+## Swing Caddie SC4 Pro vs Garmin R10 — Which to Buy?
+URL: https://www.cubicalgolfer.com/compare/swing-caddie-sc4-pro-vs-garmin-r10/
+Summary: Swing Caddie SC4 Pro vs Garmin Approach R10 compared on price, simulator support and how each one works. $109 apart, two different jobs.
+
+## Swing Caddie SC4 Pro vs Rapsodo MLM2PRO
+URL: https://www.cubicalgolfer.com/compare/swing-caddie-sc4-pro-vs-rapsodo-mlm2pro/
+Summary: Swing Caddie SC4 Pro vs Rapsodo MLM2PRO — same $599 price, two different ideas of what a launch monitor session should look like.
 
 ## TaylorMade Qi35 Max vs Callaway Ai Smoke Max
 URL: https://www.cubicalgolfer.com/compare/taylormade-qi35-vs-callaway-ai-smoke/
