@@ -1,25 +1,33 @@
-Sprint 124b — AI Overview citation + a guard on the Source column
+Sprint 125 — Monetise the growth cluster (intent-matched CTAs)
 
-EXTRACT AT THE REPOSITORY ROOT. Paths must land at src/..., scripts/... and
-package.json at the top level. If you end up with src/src/, it went one level
-too deep.
+EXTRACT AT THE REPOSITORY ROOT. Paths must land at src/... — not inside an
+existing src/. If you get src/src/, it went one level too deep.
+
+WHY
+/golf-club-distance-chart/ is the fastest-growing page on the site (42 -> 118
+clicks in 28 days, impressions 5,512 -> 11,599) and carried only 4 affiliate
+destinations. Both it and /club-distance-calculator/ had a "found a gap bigger
+than 25 yards?" block whose copy is entirely about HYBRIDS - and then offered
+Kirkland Signature GOLF BALLS as one of two buttons. Same mismatch class as
+Sprint 17 and Sprint 210.
 
 WHAT CHANGED
-  3 new FAQ entries on the compression chart, placed first. They answer the
-  questions no competitor on that SERP answers:
-     - Why do golf ball compression charts disagree with each other?
-     - Does Titleist publish golf ball compression ratings?  (no, it does not)
-     - Which numbers are measured and which are manufacturer-published?
-  The page's `faqs` array feeds both the visible list and the FAQPage JSON-LD,
-  so all three are now in structured data (21 questions total).
+  Kirkland Signature golf balls -> Callaway Paradym Hybrid (~$220, verified
+    2026-09-12, real product page not a search URL) on BOTH pages.
+  Both gapping buttons now carry data-outbound / data-aff-name /
+    data-cta-location, so they are measurable like every other CTA.
+  New "Measuring the session" block on the distance chart, placed after
+    "Run Your Own Gapping Session" - that section already told readers to use
+    a launch monitor or an open range with markers, and offered nothing to buy.
+    Shot Scope LM1 (~$199) + Precision Pro NX9 HD (~$199), both verified.
 
-  NEW scripts/validate-compression-sources.ts, wired into `npm run validate`:
-     - blocks crediting Titleist or Costco/Kirkland with a "(published)"
-       figure, since neither publishes one - a fabricated citation is worse
-       than no Source column
-     - rejects source strings outside the known vocabulary, so a typo cannot
-       invent an authority
-     - ratchets the sourced-row count at 17; it cannot go backwards
+RESULT (verified in built HTML)
+  distance chart : 4 -> 5 unique destinations, all intent-matched
+  calculator     : golf balls replaced with a second hybrid
+  click tracking : 16 -> 22 named outbound links
 
-4 files: 3 modifications + 1 new file (the validator).
-No deletions. No ball data changed, so the PDF is unchanged and not included.
+STILL OPEN: ping-g430-hybrid points at an Amazon SEARCH url, not a product
+page. It is verified and works, but search URLs convert worse. Converting it
+needs a live ASIN check - flagged, not guessed.
+
+3 files, all modifications. No deletions, no new files.
