@@ -639,6 +639,14 @@
     "hash": "af023a4a936468ef",
     "lastmod": "2026-08-23"
   },
+  "/compare/lab-golf-mezz1-max-vs-lab-golf-df3/": {
+    "hash": "c39d4bda9b372a8c",
+    "lastmod": "2026-09-29"
+  },
+  "/compare/mizuno-pro-m15-vs-ping-i540-irons/": {
+    "hash": "80661bec859a84d8",
+    "lastmod": "2026-09-29"
+  },
   "/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/": {
     "hash": "6f78ec5bf6a55e27",
     "lastmod": "2026-04-20"
@@ -646,6 +654,10 @@
   "/compare/ping-g430-irons-vs-taylormade-stealth-hd/": {
     "hash": "e09e2b62587b6013",
     "lastmod": "2026-09-25"
+  },
+  "/compare/ping-i540-vs-ping-g740-irons/": {
+    "hash": "57931846e2cf3b1e",
+    "lastmod": "2026-09-29"
   },
   "/compare/pro-v1-vs-tp5/": {
     "hash": "4641d37bd39836bf",
@@ -658,6 +670,10 @@
   "/compare/rapsodo-mlm2pro-vs-flightscope-mevo-plus/": {
     "hash": "71bdffaaea869d66",
     "lastmod": "2026-09-04"
+  },
+  "/compare/scotty-cameron-phantom-vs-taylormade-spider-tour/": {
+    "hash": "d80a52cf08249937",
+    "lastmod": "2026-09-29"
   },
   "/compare/shot-scope-v5-vs-garmin-approach-s70/": {
     "hash": "e01589ca0b3d8fb5",
@@ -718,6 +734,10 @@
   "/compare/titleist-tour-soft-vs-taylormade-tour-response/": {
     "hash": "ffbb94a9bc2877e3",
     "lastmod": "2026-09-25"
+  },
+  "/compare/titleist-vokey-sm11-vs-callaway-jaws-raw/": {
+    "hash": "053d9d06b0c8af36",
+    "lastmod": "2026-09-29"
   },
   "/contact/": {
     "hash": "52b6afdc84152786",
@@ -820,7 +840,7 @@
     "lastmod": "2026-09-29"
   },
   "/golf-ball-compression-chart/": {
-    "hash": "9c03c517dd3b956b",
+    "hash": "e52436d5a04807ff",
     "lastmod": "2026-09-29"
   },
   "/golf-ball-finder/": {

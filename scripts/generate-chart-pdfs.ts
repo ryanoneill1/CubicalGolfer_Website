@@ -22,6 +22,7 @@ import { createWriteStream, mkdirSync } from 'fs';
 import { ARTICLES } from '../src/data/articles.ts';
 import { CLUBS, TIERS } from '../src/data/club-distances.ts';
 import { SWING_SPEEDS } from '../src/data/swing-speeds.ts';
+import { balls as BALLS } from '../src/data/balls.ts';
 /* These PDFs travel on their own — /downloads/golf-green-speed-chart.pdf already
  * shows up in Google's AI-features report independently of its page. The footer
  * carried only "www.cubicalgolfer.com", which is not a route back to anything.
@@ -93,6 +94,38 @@ const CHARTS: Spec[] = [
         rows: [['Club', 'Tour Pro', 'Scratch (0-5)', 'Mid (10-18)', 'High (19-28)', 'Senior (60+)'],
           ...SWING_SPEEDS.map(r => [r.club, String(r.tour), String(r.scratch), String(r.mid), String(r.high), String(r.senior)])] },
     ] },
+  /* The one-page bag card. The full 34-ball chart already has its own PDF
+   * (generate-compression-pdf.ts); this is deliberately the short version —
+   * the band you belong in and the three or four balls in it, nothing else.
+   * It used to be a static file nobody could reach: no page linked it, it was
+   * in no sitemap, and its text layer was empty. It is now built from
+   * src/data/balls.ts like everything else, so it cannot drift from the chart. */
+  { slug: '/golf-ball-compression-chart/',    out: 'compression-cheat-sheet.pdf',
+    title: 'Golf Ball Compression Cheat Sheet', subject: 'Your swing speed, your compression band, and the balls in it',
+    build: () => {
+      const BANDS: Array<[string, string, number, number]> = [
+        ['Under 85 mph',  'Low (34-65)',    0,  65],
+        ['85-100 mph',    'Mid (66-90)',   66,  90],
+        ['Over 100 mph',  'High (91-102)', 91, 200],
+      ];
+      const live = (BALLS as any[]).filter(b => !b.discontinued);
+      return [
+        { heading: 'Find Your Band',
+          rows: [['Driver swing speed', 'Compression band', 'Balls on our chart'],
+            ...BANDS.map(([speed, band, lo, hi]) => [
+              speed, band,
+              live.filter(b => b.compression >= lo && b.compression <= hi)
+                  .sort((a, b) => a.compression - b.compression)
+                  .map(b => `${b.name} (${b.compression})`)
+                  .join(', ') || '\u2014',
+            ])] },
+        { heading: 'Where the Numbers Come From',
+          rows: [['Ball', 'Compression', 'Source'],
+            ...live.filter(b => b.source)
+                   .sort((a, b) => a.compression - b.compression)
+                   .map(b => [b.name, String(b.compression), b.source])] },
+      ];
+    } },
 ];
 
 /** Pull <table> blocks out of an article's section bodies, as rows of cells. */

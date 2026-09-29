@@ -997,6 +997,14 @@ Summary: Garmin Approach S70 vs Apple Watch Ultra 2 with golf apps. Which is bet
 URL: https://www.cubicalgolfer.com/compare/lab-golf-df3-vs-odyssey-two-ball-eleven/
 Summary: LAB Golf DF3 vs Odyssey Two Ball Eleven — Lie Angle Balanced vs high MOI alignment mallet. Which putter is best for inconsistent putters?
 
+## LAB Golf Mezz.1 Max vs DF3 — Which LAB Putter?
+URL: https://www.cubicalgolfer.com/compare/lab-golf-mezz1-max-vs-lab-golf-df3/
+Summary: LAB Golf Mezz.1 Max vs DF3. Both lie-angle balanced, about $70 apart, and the choice comes down to head size and material.
+
+## Mizuno Pro M-15 vs Ping i540 Irons
+URL: https://www.cubicalgolfer.com/compare/mizuno-pro-m15-vs-ping-i540-irons/
+Summary: Mizuno Pro M-15 vs Ping i540, two 2026 players distance irons within a few dollars of each other. Launch, forgiveness and who each one suits.
+
 ## Odyssey Stroke Lab vs Scotty Cameron Phantom X
 URL: https://www.cubicalgolfer.com/compare/odyssey-stroke-lab-vs-scotty-cameron-phantom/
 Summary: Odyssey Stroke Lab vs Scotty Cameron Phantom X — feel, performance, and value compared. Which mid-range putter should you buy?
@@ -1004,6 +1012,10 @@ Summary: Odyssey Stroke Lab vs Scotty Cameron Phantom X — feel, performance, a
 ## Ping G430 vs TaylorMade Stealth HD Irons — Forgiveness Battle
 URL: https://www.cubicalgolfer.com/compare/ping-g430-irons-vs-taylormade-stealth-hd/
 Summary: We tested the Ping G430 and TaylorMade Stealth HD irons over 20-plus rounds to see which forgiving set actually earns its price for weekend golfers
+
+## Ping i540 vs G740 — Which New Ping Iron Fits You?
+URL: https://www.cubicalgolfer.com/compare/ping-i540-vs-ping-g740-irons/
+Summary: Ping i540 vs G740, the two 2026 Ping irons. One is a players distance iron, the other is built to make the game easier. Which suits your strike.
 
 ## Pro V1 vs TP5 — Premium Golf Ball Comparison
 URL: https://www.cubicalgolfer.com/compare/pro-v1-vs-tp5/
@@ -1016,6 +1028,10 @@ Summary: I tested the Rapsodo MLM2PRO against the Bushnell Launch Pro over dozen
 ## Rapsodo MLM2PRO vs FlightScope Mevo+: Which Should You Buy?
 URL: https://www.cubicalgolfer.com/compare/rapsodo-mlm2pro-vs-flightscope-mevo-plus/
 Summary: Six months with the Rapsodo MLM2PRO ($599) and the FlightScope Mevo+ ($1,839) — a pocket unit against a do-everything radar. Which fits a weekend golfer?
+
+## Scotty Cameron Phantom vs TaylorMade Spider Tour
+URL: https://www.cubicalgolfer.com/compare/scotty-cameron-phantom-vs-taylormade-spider-tour/
+Summary: Scotty Cameron Phantom vs TaylorMade Spider Tour. About $200 apart, both high-MOI mallets, and they suit different putting strokes.
 
 ## Shot Scope V5 vs Garmin Approach S70 — $445 Apart
 URL: https://www.cubicalgolfer.com/compare/shot-scope-v5-vs-garmin-approach-s70/
@@ -1072,6 +1088,10 @@ Summary: Titleist T350 vs Ping G430 irons compared — forgiveness, look at addr
 ## Titleist Tour Soft vs TaylorMade Tour Response
 URL: https://www.cubicalgolfer.com/compare/titleist-tour-soft-vs-taylormade-tour-response/
 Summary: Titleist Tour Soft vs TaylorMade Tour Response on price, cover and who each suits. Two mid-priced balls, one urethane cover — here is what that changes.
+
+## Titleist Vokey SM11 vs Callaway Jaws Raw
+URL: https://www.cubicalgolfer.com/compare/titleist-vokey-sm11-vs-callaway-jaws-raw/
+Summary: Titleist Vokey SM11 vs Callaway Jaws Raw wedges. About $70 apart, two very different groove philosophies, and which one holds spin longer.
 
 ## atlanta-ga
 URL: https://www.cubicalgolfer.com/courses/atlanta-ga/
