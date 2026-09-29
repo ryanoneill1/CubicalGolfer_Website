@@ -107,7 +107,7 @@ Summary: Compression, cover and price for all 5 TaylorMade golf balls, from the 
 
 ## Titleist Golf Ball Compression Chart
 URL: https://www.cubicalgolfer.com/titleist-golf-ball-compression-chart/
-Summary: Compression, cover and price for all 7 Titleist golf balls, from the TruFeel (45) to the Pro V1x (97), matched to your swing speed.
+Summary: Compression, cover and price for all 7 Titleist golf balls, from the TruFeel (70) to the Pro V1x (97), matched to your swing speed.
 
 ## Golf Tools & Calculators
 URL: https://www.cubicalgolfer.com/tools/

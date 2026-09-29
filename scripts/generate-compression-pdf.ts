@@ -168,7 +168,7 @@ doc.save()
 doc.font('Helvetica-Bold').fontSize(9).fillColor(GREEN)
    .text('Quick Reference', MARGIN + 12, tableY + 8);
 doc.font('Helvetica').fontSize(8).fillColor('#333333')
-   .text('Under 85 mph  →  Compression 30–65 (Supersoft, Soft Feel, TruFeel)', MARGIN + 12, tableY + 22)
+   .text('Under 85 mph  →  Compression 30–65 (Noodle, Supersoft, Soft Feel)', MARGIN + 12, tableY + 22)
    .text('85–100 mph    →  Compression 65–90 (Chrome Soft, Q-Star Tour, Pro V1)', MARGIN + 12, tableY + 34)
    .text('Over 100 mph  →  Compression 90–102 (Pro V1x, TP5x, Z-Star XV)', MARGIN + 12, tableY + 46);
 doc.restore();
