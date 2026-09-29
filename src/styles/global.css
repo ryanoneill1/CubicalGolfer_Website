@@ -369,6 +369,12 @@ nav.site-nav {
 .cmp-table tr:last-child td { border-bottom: none; }
 .cmp-table tr:nth-child(even) td { background: #fafaf8; }
 .cmp-table td:first-child { font-weight: 700; color: var(--text); }
+/* Sprint 128: the compression chart's Source column pushed the Buy button off
+ * the right edge on a 1200px viewport — the money column, invisible on load.
+ * Source now sits under the compression value, and these keep the remaining
+ * columns from collapsing: the ball cell takes the slack, the rest hold. */
+#compression-table td:first-child, #compression-table th:first-child { width: 38%; min-width: 260px; }
+#compression-table td:last-child,  #compression-table th:last-child  { white-space: nowrap; text-align: right; }
 .cmp-winner td { background: #f0f7f2 !important; }
 .cmp-winner td:first-child { color: var(--green); }
 .badge-best {
