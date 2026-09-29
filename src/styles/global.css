@@ -374,6 +374,39 @@ nav.site-nav {
 .cmp-table tr:last-child td { border-bottom: none; }
 .cmp-table tr:nth-child(even) td { background: #fafaf8; }
 .cmp-table td:first-child { font-weight: 700; color: var(--text); }
+
+/* ── COMPRESSION CHART COLUMN LAYOUT (Sprint 130) ───────────────────────────
+ * Three attempts at this, so the reasoning is written down.
+ *
+ * 124a added a 7th column and pushed the Buy button off the right edge.
+ * 128 folded that column away but only rearranged things inside a container
+ *     that was already too small — and its CSS was then lost when 129 shipped
+ *     a global.css built from a checkout that predated it. This block restores
+ *     and supersedes it.
+ * 129 widened --content-w 1200 -> 1400px, which is the real fix for the page
+ *     feeling narrow. Measured live: table 1064px -> 1294px on a 1411px view.
+ *
+ * What was still wrong after 129: the table auto-sized its columns, so the
+ * ball name and its note were crushed into a narrow first column while the
+ * four short numeric columns bunched together on the right. table-layout:fixed
+ * with explicit widths stops the browser negotiating and gives the name column
+ * the space it actually needs. Percentages, so it still adapts to the viewport.
+ * Verified in the browser at 1411px before shipping. */
+#compression-table { table-layout: fixed; width: 100%; }
+#compression-table th:nth-child(1), #compression-table td:nth-child(1) { width: 34%; }
+#compression-table th:nth-child(2), #compression-table td:nth-child(2) { width: 16%; }
+#compression-table th:nth-child(3), #compression-table td:nth-child(3) { width: 10%; }
+#compression-table th:nth-child(4), #compression-table td:nth-child(4) { width: 10%; }
+#compression-table th:nth-child(5), #compression-table td:nth-child(5) { width: 14%; }
+#compression-table th:nth-child(6), #compression-table td:nth-child(6) { width: 16%; }
+/* every header reads left-aligned; 128 right-aligned the last one, which is
+ * what made the header row look misaligned against the cells below it. */
+#compression-table th, #compression-table td { text-align: left; }
+@media (max-width: 900px) {
+  /* below this the fixed widths fight the content — let it size naturally and
+   * scroll, which is what the overflow-x wrapper is there for. */
+  #compression-table { table-layout: auto; min-width: 780px; }
+}
 .cmp-winner td { background: #f0f7f2 !important; }
 .cmp-winner td:first-child { color: var(--green); }
 .badge-best {
