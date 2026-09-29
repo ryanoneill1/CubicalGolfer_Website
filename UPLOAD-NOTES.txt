@@ -1,78 +1,57 @@
-Sprint 131 — Maxfli Tour S added, Q-Star Tour corrected, two bugs found on the way
+Sprint 132 — Three high-value links moved off Amazon search onto verified
+Golf Galaxy product pages
 
-EXTRACT AT THE REPOSITORY ROOT. 23 files, all text. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
 
-INCLUDES SPRINT 130's global.css
-If you already pushed 130, this file is byte-identical and changes nothing. If
-you have not, it rides along here. I am shipping it deliberately because the
-129 zip reverted 128 by leaving a file out, and I am not repeating that.
+── FIRST, A LIMIT I HIT ──────────────────────────────────────────────────────
+I set out to work the 67 remaining Amazon search URLs ($16,059 of sticker
+value). Amazon is not fetchable from here — it returns an empty page — and I
+am not going to route around that with a script or bypass their bot checks.
+So I cannot verify an Amazon ASIN myself. You would have to check those, or I
+work the retailers I CAN verify.
 
-── WHAT YOU ASKED FOR ────────────────────────────────────────────────────────
+Golf Galaxy I can verify. So that is what this sprint does.
 
-1. Maxfli Tour S added as the 35th ball, filling the 79-84 gap
-   Compression 85, urethane, $39.99, Golf Galaxy.
-   Charted at 85 with source "Maxfli (published)". Maxfli is DICK'S house
-   brand, so the spec sheet on their own product page IS the manufacturer
-   figure. MyGolfSpy Ball Lab measured 82 on the 2023 model and gave it a
-   Quality Award, scoring it above that year's Pro V1 — different model year,
-   different gauge, so that sits in the ball's note rather than in the number.
-   That distinction is the whole point of the Source column.
+── WHAT SHIPPED ──────────────────────────────────────────────────────────────
+Three products whose PRIMARY link was an Amazon search URL, but where we
+already held a Golf Galaxy PRODUCT page on file. I opened each page, confirmed
+it is live, in stock, and priced as our registry says, then promoted Golf
+Galaxy to primary and retired the Amazon search link.
 
-   It is the only ball we chart between 78 and 87, and the cheapest genuine
-   urethane ball on the chart. Link verified live 29 Sep: a real Golf Galaxy
-   PRODUCT page, not a search URL, at 8% / 14-day vs Amazon's 3% / 1-day.
-   $3.20 a sale instead of $1.20.
+  Ping G430 Irons      $949.00   Top Seller, 4.8 / 60 reviews
+  TaylorMade Qi Irons  $899.99   was $999.99, Top Seller, 4.9 / 1,019 reviews
+  Cleveland RTX 6      $129.99   was $169.99, Top Seller, 4.8 / 165 reviews
 
-   NOT in the article comparison table, deliberately. That table needs a
-   product photo, validate-product-images has a ceiling of 1, and adding it
-   without one would trip the build. Send me a Tour S photo and it goes in.
+Every registry price was already correct. Nothing needed resyncing downstream.
 
-2. Q-Star Tour 72 -> 74
-   Srixon reworked the FastLayer core for 2026 and publishes 74. Corrected in
-   25 places across 6 files — the chart record, four comparison tables, the
-   ball-finder, the brand hub, and every prose mention. Also picked up a
-   source it never had ("Srixon (published)"), so the sourcing ratchet moves
-   17 -> 19.
+Why this is worth doing: Golf Galaxy pays 8% on a 14-day cookie, Amazon 3% on
+a 1-day cookie. Per sale on these three, $178 instead of $67. And a product
+page converts where a search page makes the reader hunt.
 
-3. Pinnacle Rush untouched, as agreed. Still reference-only: no buy button,
-   excluded from the PDF, skipped by the registry validator.
+── TWO THINGS THE BUILD CAUGHT ───────────────────────────────────────────────
+A. /gear-quiz/ hardcoded the old Ping Amazon search URL three times.
+   validate-affiliate-urls failed the build on it — which is exactly the job
+   it was written for in Sprint 3. Repointed to the registry URL.
 
-"34 balls" -> "35 balls" in 30 places across 12 files.
+B. The same quiz priced the G430 irons at ~$899. They are $949, and our
+   registry has said $949 all along. A $50 understatement in three places,
+   on a page whose whole purpose is sending people to buy. Corrected.
 
-── TWO THINGS I FOUND WHILE IN THERE ─────────────────────────────────────────
+   Also: the quiz used ONE hardcoded button label, "Check Price at Amazon",
+   for every result. With one result now going to Golf Galaxy that label was
+   wrong, so it is now the site's neutral "See Today's Price".
 
-A. The embed was shipping our OLD, WRONG numbers to other people's sites.
-   public/embeds/compression-chart.html is the copy-paste block we offer for
-   backlinks. It was hand-written and never updated, so it still had Titleist
-   TruFeel at 45 (correct: 70) and Vice Drive at 55 (correct: 95) — the
-   PRE-124a figures. Anyone who embedded it was republishing our worst data
-   under our name, linking back to a page that disagreed.
-
-   It is now generated from balls.ts by scripts/generate-embed-chart.ts, wired
-   into the build. It cannot drift again, because it is no longer a separate
-   copy of the data. "Best For" is now the swing-speed window from the data
-   instead of free text, for the same reason.
-
-B. Every Golf Galaxy click on the compression chart was being logged to
-   Plausible as an Amazon click.
-   data-outbound="amazon" was hardcoded on all 62 outbound links, on the main
-   chart and the five brand charts. Three balls there go to Golf Galaxy
-   (Soft Response, Maxfli Tour X, and now Tour S). AffiliateCTA derives this
-   correctly; these two files never did.
-
-   The chart is ~35% of site clicks, so this has been quietly inflating the
-   Amazon EPC the whole model rests on. Now derived from the destination URL.
-   Built HTML confirms 58 amazon / 4 golfgalaxy where it was 62 / 0.
-
-   Worth knowing: your $0.1625 Amazon EPC is measured slightly high. I can't
-   say how much until a week of clean data comes in.
+── NUMBERS ───────────────────────────────────────────────────────────────────
+Amazon search URLs: 79 -> 76.
+I am not going to pretend that is fast. The honest constraint is that the
+remaining ones need either an Amazon ASIN you verify, or a Golf Galaxy
+product page I find and check one at a time.
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
-npm run validate: PASS. npm run build: PASS, 298 pages, no broken links.
-Built HTML checked directly: 35 rows, Tour S renders with a working buy
-button, source cell reads "85 / Maxfli (published)", and the three Golf Galaxy
-links now carry data-outbound="golfgalaxy".
+npm run validate: PASS.  npm run build: PASS.
+Built HTML checked: 81 Golf Galaxy product links across the site for these
+three, ZERO of the old Amazon search URLs left anywhere in dist/.
 
-── OPEN ──────────────────────────────────────────────────────────────────────
-A Maxfli Tour S product photo. That is the only thing keeping it out of the
-comparison table.
+── NEEDS YOUR DECISION (see chat) ────────────────────────────────────────────
+Srixon ZX5 Mk II — our single highest-value product at $1,115 — looks
+superseded. I have not touched it, per your rule.
