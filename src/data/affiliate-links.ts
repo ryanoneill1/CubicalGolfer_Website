@@ -4747,6 +4747,18 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Srixon Z-Star XV golf balls',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Z-Star%2520XV%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
+  'maxfli-tour-s': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fmaxfli-tour-s-golf-balls-24maxumxfltrswhtdgbl%2F24maxumxfltrswhtdgbl',
+    verifiedOn: '2026-09-29',
+    program: 'golfgalaxy',
+    commissionPct: 8,
+    cookieDays: 14,
+    retailer: 'Golf Galaxy',
+    price: '~$40/dz',
+    priceNote: '$39.99 a dozen, 4.7 stars across 137 reviews (checked 29 September 2026). Maxfli Tour balls are routinely sold in four-dozen bulk deals well under the single-dozen price.',
+    label: 'See Today\'s Price \u2192',
+    imgAlt: 'Maxfli Tour S golf balls',
+  },
   'maxfli-tour-x': {
     url: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dmaxfli%2520tour%2520x%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'golfgalaxy',

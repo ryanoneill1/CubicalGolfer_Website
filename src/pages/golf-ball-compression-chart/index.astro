@@ -51,7 +51,7 @@ const balls = BALLS;
 function ballUrl(ball: typeof balls[0]): string | null {
   // Prefer the registry: it is the maintained, validated source and six sprints of
   // ASIN verification live there. This page kept its own ball table, so that work
-  // never reached the site's biggest page — 25 of 34 balls still linked to search.
+  // never reached the site's biggest page — 25 of 35 balls still linked to search.
   // Amazon no longer prices these. A "Check price" link to a search that returns
   // nothing earns zero and costs trust, so the row keeps its compression data
   // and loses the button.
@@ -92,7 +92,7 @@ const faqs = [
   { q: 'What is the cheapest urethane golf ball?', a: 'The Kirkland Signature, which works out near $22 a dozen because it is sold in two-dozen boxes at $43.99. Among the traditional manufacturers the cheapest urethane is the Wilson Staff Model at $35, then the Titleist Tour Speed at $35. The Srixon Q-Star Tour is $40 and the Vice Pro Soft $35. Urethane is what produces greenside spin, so either is the cheapest route to a ball that checks on a pitch.' },
   { q: 'Which TaylorMade ball should I play at 90 mph?', a: 'The Tour Response at 77 compression, $38. It is rated 88–105 mph, it is urethane-covered, and it is $12 cheaper than the TP5. The TP5 and TP5x are rated 95–115 and 100–130 mph respectively, so both are firmer than a 90 mph swing needs.' },
   { q: 'Which Bridgestone golf ball has the lowest compression?', a: 'The e12 Contact at 50 compression, $30 a dozen, rated 70–90 mph. It is also the only ionomer-covered ball Bridgestone has on this chart — the Tour B RX at 68 is already urethane, which is unusually low for a urethane ball.' },
-  { q: 'What is the firmest golf ball?', a: 'The Srixon Z-Star XV at 102 compression is the firmest of the 34 balls on this chart, followed by the Bridgestone Tour B X and Maxfli Tour X at 100. All three are rated for swing speeds above 100 mph and will feel harsh below that.' },
+  { q: 'What is the firmest golf ball?', a: 'The Srixon Z-Star XV at 102 compression is the firmest of the 35 balls on this chart, followed by the Bridgestone Tour B X and Maxfli Tour X at 100. All three are rated for swing speeds above 100 mph and will feel harsh below that.' },
   { q: 'What is the difference between the Titleist Tour Soft and Velocity?', a: 'They are both 65 compression, which makes them look identical on a chart, but they are built for different jobs. Tour Soft is rated 80–95 mph and designed for feel. Velocity is rated 85–110 mph and designed for distance. Compression alone will not tell you which one suits you.' },
   { q: 'Does temperature affect golf ball compression?', a: 'Yes. Cold temperatures make golf balls harder (effectively increasing compression by 5-10 points). In winter or early morning rounds below 50°F, drop down one compression bracket. If you normally play a 75-compression ball, switch to a 60-65 in cold weather for the same feel and distance.' },
 ];
@@ -146,6 +146,20 @@ const schemas = [
 ];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { ROBOTS_INDEX } from '../../lib/seo';
+
+// Sprint 131: this was hardcoded data-outbound="amazon" on every row, so the
+// three Golf Galaxy balls on the chart (Soft Response, Maxfli Tour X, Maxfli
+// Tour S) reported their clicks to Plausible as Amazon clicks. The chart is
+// ~35% of site clicks, so that quietly inflated the Amazon EPC the whole
+// affiliate model is built on. Derive it from the destination instead.
+function outboundFor(url: string | null | undefined): string {
+  if (!url) return 'other';
+  if (url.includes('amazon.com')) return 'amazon';
+  if (url.includes('golfgalaxy.com') || url.includes('dickssportinggoods.com')) return 'golfgalaxy';
+  if (url.includes('playbetter')) return 'playbetter';
+  if (url.includes('bushnell')) return 'bushnell';
+  return 'other';
+}
 ---
 <BaseLayout meta={meta} schemas={schemas}>
 
@@ -202,13 +216,13 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       <div class="quick-answer-header">⚡ Quick Answer</div>
       <p class="quick-answer-text">Under 85 mph swing speed: play compression 35-65. Between 85-100 mph: play 65-90. Over 100 mph: play 90+. Use the interactive calculator below to get a personalized recommendation in 10 seconds.</p>
       <a href={getAffiliateLink('callaway-supersoft').url} class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored" data-cta-location="quick-answer" data-aff-name="Callaway Supersoft">Our #1 Pick: Callaway Supersoft {getAffiliateLink('callaway-supersoft').price} — Check Price →</a>
-      <p class="quick-answer-more">Read the full guide below for all 34 balls tested.</p>
+      <p class="quick-answer-more">Read the full guide below for all 35 balls tested.</p>
     </div>
 
     <!-- FRESHNESS BANNER -->
     <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
       <span style="font-size:16px;">✅</span>
-      <span><strong>Updated {article.dateModified}</strong> — All 34 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+      <span><strong>Updated {article.dateModified}</strong> — All 35 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
 
     <!-- PDF DOWNLOAD -->
@@ -246,7 +260,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       </ol>
     </nav>
 
-    <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps the compression rating of all 34 balls — every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, Wilson, Kirkland, Maxfli and Pinnacle model we track — to your swing speed, so you can find the right ball in 10 seconds instead of wasting money on balls built for someone else's swing.</p>
+    <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps the compression rating of all 35 balls — every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, Wilson, Kirkland, Maxfli and Pinnacle model we track — to your swing speed, so you can find the right ball in 10 seconds instead of wasting money on balls built for someone else's swing.</p>
 
     <!-- ═══ INTERACTIVE BALL FINDER ═══ -->
     <section class="ball-finder" id="ball-finder">
@@ -319,7 +333,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
                 <td>{ball.cover}</td>
                 <td>~${ball.price}</td>
                 <td>{ball.minMph}–{ball.maxMph} mph</td>
-                <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound="amazon" data-aff-name={ball.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
+                <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(ball))} data-aff-name={ball.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
               </tr>
             ))}
           </tbody>
@@ -388,7 +402,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
 
     <!-- ═══ TRUST LINE ═══ -->
     <p style="font-size:16px;color:var(--muted);margin:0 0 24px;padding:10px 16px;background:rgba(30,58,40,.04);border-radius:8px;line-height:1.5;">
-      <strong style="color:var(--green);">How we built this chart:</strong> All 34 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
+      <strong style="color:var(--green);">How we built this chart:</strong> All 35 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
     </p>
 
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
@@ -432,7 +446,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     <section>
       <h2 id="85-100">Best Golf Balls for Swing Speed 85–100 mph</h2>
       <p>This is where most weekend golfers land — and where the most options exist. Compression 65-90 is your range. The key decision: ionomer cover (cheaper, less spin) or urethane cover (more spin around greens, premium price).</p>
-      <p>Our top picks: <strong>Kirkland Signature</strong> (~$22/dz, urethane, 92 compression) for value, <strong>Srixon Q-Star Tour</strong> ($40/dz, urethane, 72) for the best balance, and <strong>Callaway Chrome Soft</strong> ($40/dz, urethane, 75) for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
+      <p>Our top picks: <strong>Kirkland Signature</strong> (~$22/dz, urethane, 92 compression) for value, <strong>Srixon Q-Star Tour</strong> ($40/dz, urethane, 74) for the best balance, and <strong>Callaway Chrome Soft</strong> ($40/dz, urethane, 75) for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
     </section>
 
     <section>
@@ -469,7 +483,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
                   {brandBalls.map(b => (
                     <tr>
                       <td>{b.name}</td><td>{b.compression}</td><td>{b.cover}</td><td>~${b.price}</td><td>{b.minMph}–{b.maxMph} mph</td>
-                      <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound="amazon" data-aff-name={b.name} style="color:var(--green);font-weight:600;">Check price →</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
+                      <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} style="color:var(--green);font-weight:600;">Check price →</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -643,16 +657,17 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       <p><strong>Titleist (7 balls):</strong> TruFeel (70), Tour Soft (65), Velocity (65), AVX (77), Tour Speed (78), Pro V1 (87), Pro V1x (97). The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
       <p><strong>Callaway (4 balls):</strong> Supersoft (38), Warbird (68), Chrome Soft (75), Chrome Tour (90). The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
       <p><strong>TaylorMade (5 balls):</strong> Noodle (34), Soft Response (50), Tour Response (77), TP5 (85), TP5x (97). The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
-      <p><strong>Srixon (4 balls):</strong> Soft Feel (60), Q-Star Tour (72), Z-Star (88), Z-Star XV (102). The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers.</p>
+      <p><strong>Srixon (4 balls):</strong> Soft Feel (60), Q-Star Tour (74), Z-Star (88), Z-Star XV (102). The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers. Srixon raised the published figure from 72 to 74 with the 2026 reworked FastLayer core.</p>
       <p><strong>Bridgestone (4 balls):</strong> e12 Contact (50), Tour B RX (68), Tour B XS (90), Tour B X (100). The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
+      <p><strong>Maxfli (2 balls):</strong> Tour S (85), Tour X (100). DICK'S Sporting Goods' own brand, made by Foremost in Taiwan. The Tour S is the cheapest genuine urethane ball on this chart at $39.99, and it is the only ball we chart between 78 and 87.</p>
     </section>
 
     <section>
-      <h2 id="low-to-high">All 34 Balls Ranked Low to High Compression</h2>
+      <h2 id="low-to-high">All 35 Balls Ranked Low to High Compression</h2>
       <p>The complete ranking from softest to firmest. Use this as a quick reference — the interactive filter above gives personalized recommendations, but this list shows the full spectrum at a glance.</p>
       <p><strong>Ultra-soft (34-50):</strong> TaylorMade Noodle (34), Callaway Supersoft (38), Wilson DUO Soft+ (40), TaylorMade Soft Response (50), Bridgestone e12 Contact (50). Best for swing speeds under 85 mph.</p>
-      <p><strong>Soft-mid (55-72):</strong> Srixon Soft Feel (60), Vice Pro Soft (65), Titleist Tour Soft (65), Titleist Velocity (65), Callaway Warbird (68), Bridgestone Tour B RX (68), Titleist TruFeel (70), Wilson Chaos (70), Pinnacle Rush (72), Srixon Q-Star Tour (72). The sweet spot for most weekend golfers (85-100 mph).</p>
-      <p><strong>Mid-firm (75-87):</strong> Callaway Chrome Soft (75), Titleist AVX (77), TaylorMade Tour Response (77), Titleist Tour Speed (78), TaylorMade TP5 (85), Titleist Pro V1 (87), Wilson Staff Model (87). Tour-level balls for 90-110 mph swingers.</p>
+      <p><strong>Soft-mid (55-74):</strong> Srixon Soft Feel (60), Vice Pro Soft (65), Titleist Tour Soft (65), Titleist Velocity (65), Callaway Warbird (68), Bridgestone Tour B RX (68), Titleist TruFeel (70), Wilson Chaos (70), Pinnacle Rush (72), Srixon Q-Star Tour (74). The sweet spot for most weekend golfers (85-100 mph).</p>
+      <p><strong>Mid-firm (75-87):</strong> Callaway Chrome Soft (75), Titleist AVX (77), TaylorMade Tour Response (77), Titleist Tour Speed (78), Maxfli Tour S (85), TaylorMade TP5 (85), Titleist Pro V1 (87), Wilson Staff Model (87). Tour-level balls for 90-110 mph swingers.</p>
       <p><strong>Firm-high (88-102):</strong> Srixon Z-Star (88), Callaway Chrome Tour (90), Bridgestone Tour B XS (90), Vice Pro (90), Kirkland Signature (92), Vice Drive (95), Titleist Pro V1x (97), TaylorMade TP5x (97), Bridgestone Tour B X (100), Maxfli Tour X (100), Vice Pro Plus (100), Srixon Z-Star XV (102). Mostly tour balls for swing speeds above 100 mph, though the Vice Drive is a firm ionomer distance ball rather than a scoring ball.</p>
     </section>
 

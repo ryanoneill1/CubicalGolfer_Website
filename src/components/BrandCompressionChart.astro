@@ -48,6 +48,20 @@ const bands = [
   { label: '85–100 mph',   test: (b: any) => b.minMph <= 100 && b.maxMph >= 85 },
   { label: 'Over 100 mph', test: (b: any) => b.maxMph > 100 },
 ].map(band => ({ ...band, list: brandBalls.filter(band.test) })).filter(b => b.list.length);
+
+// Sprint 131: same fix as the main chart — this was hardcoded data-outbound="amazon" on every row, so the
+// three Golf Galaxy balls on the chart (Soft Response, Maxfli Tour X, Maxfli
+// Tour S) reported their clicks to Plausible as Amazon clicks. The chart is
+// ~35% of site clicks, so that quietly inflated the Amazon EPC the whole
+// affiliate model is built on. Derive it from the destination instead.
+function outboundFor(url: string | null | undefined): string {
+  if (!url) return 'other';
+  if (url.includes('amazon.com')) return 'amazon';
+  if (url.includes('golfgalaxy.com') || url.includes('dickssportinggoods.com')) return 'golfgalaxy';
+  if (url.includes('playbetter')) return 'playbetter';
+  if (url.includes('bushnell')) return 'bushnell';
+  return 'other';
+}
 ---
 
 <p style="font-size:16px;line-height:1.8;">
@@ -80,7 +94,7 @@ const bands = [
             <td>~${b.price}</td>
             <td>{b.minMph}–{b.maxMph} mph</td>
             <td>{ballUrl(b)
-              ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound="amazon" data-aff-name={b.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a>
+              ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a>
               : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
           </tr>
         ))}
@@ -129,6 +143,6 @@ const bands = [
     {siblings.map(s => (
       <li><a href={s.slug}>{s.brand} Golf Ball Compression Chart</a></li>
     ))}
-    <li><a href="/golf-ball-compression-chart/"><strong>All 34 balls in one chart</strong></a> — every brand ranked together, with a free printable PDF.</li>
+    <li><a href="/golf-ball-compression-chart/"><strong>All 35 balls in one chart</strong></a> — every brand ranked together, with a free printable PDF.</li>
   </ul>
 </section>

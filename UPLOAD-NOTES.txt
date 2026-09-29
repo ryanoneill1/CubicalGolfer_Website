@@ -1,39 +1,78 @@
-Sprint 130 — Compression chart column layout (and a revert I caused)
+Sprint 131 — Maxfli Tour S added, Q-Star Tour corrected, two bugs found on the way
 
-EXTRACT AT THE REPOSITORY ROOT. 1 file: src/styles/global.css
-(plus the lastmod manifest).
+EXTRACT AT THE REPOSITORY ROOT. 23 files, all text. No deletions.
 
-FIRST, SOMETHING I BROKE
-Sprint 129's zip silently REVERTED Sprint 128's global.css changes. I ran
-`git reset --hard origin/main` before building 129, which discarded my local
-128 CSS, then shipped a global.css without it. Sprint 128's .astro change
-survived (the Source column is folded into Compression, which is why the page
-looks right in that respect) but its column-width CSS was lost. This sprint
-restores and supersedes it. Nothing else was affected - 129's two variables
-are on origin and correct.
+INCLUDES SPRINT 130's global.css
+If you already pushed 130, this file is byte-identical and changes nothing. If
+you have not, it rides along here. I am shipping it deliberately because the
+129 zip reverted 128 by leaving a file out, and I am not repeating that.
 
-WHAT I MEASURED on the live page at a 1411px viewport
-  before 129 ... container 1200px, table 1064px, 211px of viewport unused
-  after 129 .... container 1400px, table 1294px, gaps 51px / 66px
+── WHAT YOU ASKED FOR ────────────────────────────────────────────────────────
 
-129 is on origin now, so the width fix is already deploying. Your screenshot
-was taken before it went live, which is why nothing had changed.
+1. Maxfli Tour S added as the 35th ball, filling the 79-84 gap
+   Compression 85, urethane, $39.99, Golf Galaxy.
+   Charted at 85 with source "Maxfli (published)". Maxfli is DICK'S house
+   brand, so the spec sheet on their own product page IS the manufacturer
+   figure. MyGolfSpy Ball Lab measured 82 on the 2023 model and gave it a
+   Quality Award, scoring it above that year's Pro V1 — different model year,
+   different gauge, so that sits in the ball's note rather than in the number.
+   That distinction is the whole point of the Source column.
 
-WHAT THIS SPRINT ADDS
-The remaining problem after 129 is that the table auto-sized its columns: the
-ball name and its note were crushed into a narrow first column while the four
-short numeric columns bunched up on the right - exactly what you described.
+   It is the only ball we chart between 78 and 87, and the cheapest genuine
+   urethane ball on the chart. Link verified live 29 Sep: a real Golf Galaxy
+   PRODUCT page, not a search URL, at 8% / 14-day vs Amazon's 3% / 1-day.
+   $3.20 a sale instead of $1.20.
 
-  table-layout: fixed with explicit percentage widths
-    Golf Ball 34% | Compression 16% | Cover 10% | Price 10% | Speed 14% | Buy 16%
-  All headers left-aligned. Sprint 128 right-aligned the last one, which is
-  what made the header row look misaligned against the cells beneath it.
-  Below 900px the table reverts to auto layout with a min-width and scrolls,
-  which is what the overflow-x wrapper exists for.
+   NOT in the article comparison table, deliberately. That table needs a
+   product photo, validate-product-images has a ceiling of 1, and adding it
+   without one would trip the build. Send me a Tour S photo and it goes in.
 
-I simulated this exact CSS in a browser on the live page and looked at the
-result before writing it into the file: ball names sit on one line, notes wrap
-to 2-4 lines instead of eight, and the six columns distribute evenly.
+2. Q-Star Tour 72 -> 74
+   Srixon reworked the FastLayer core for 2026 and publishes 74. Corrected in
+   25 places across 6 files — the chart record, four comparison tables, the
+   ball-finder, the brand hub, and every prose mention. Also picked up a
+   source it never had ("Srixon (published)"), so the sourcing ratchet moves
+   17 -> 19.
 
-If it still reads narrow once deployed, --content-w is one variable and can go
-to 1520px. Say the word rather than living with it.
+3. Pinnacle Rush untouched, as agreed. Still reference-only: no buy button,
+   excluded from the PDF, skipped by the registry validator.
+
+"34 balls" -> "35 balls" in 30 places across 12 files.
+
+── TWO THINGS I FOUND WHILE IN THERE ─────────────────────────────────────────
+
+A. The embed was shipping our OLD, WRONG numbers to other people's sites.
+   public/embeds/compression-chart.html is the copy-paste block we offer for
+   backlinks. It was hand-written and never updated, so it still had Titleist
+   TruFeel at 45 (correct: 70) and Vice Drive at 55 (correct: 95) — the
+   PRE-124a figures. Anyone who embedded it was republishing our worst data
+   under our name, linking back to a page that disagreed.
+
+   It is now generated from balls.ts by scripts/generate-embed-chart.ts, wired
+   into the build. It cannot drift again, because it is no longer a separate
+   copy of the data. "Best For" is now the swing-speed window from the data
+   instead of free text, for the same reason.
+
+B. Every Golf Galaxy click on the compression chart was being logged to
+   Plausible as an Amazon click.
+   data-outbound="amazon" was hardcoded on all 62 outbound links, on the main
+   chart and the five brand charts. Three balls there go to Golf Galaxy
+   (Soft Response, Maxfli Tour X, and now Tour S). AffiliateCTA derives this
+   correctly; these two files never did.
+
+   The chart is ~35% of site clicks, so this has been quietly inflating the
+   Amazon EPC the whole model rests on. Now derived from the destination URL.
+   Built HTML confirms 58 amazon / 4 golfgalaxy where it was 62 / 0.
+
+   Worth knowing: your $0.1625 Amazon EPC is measured slightly high. I can't
+   say how much until a week of clean data comes in.
+
+── VERIFIED ──────────────────────────────────────────────────────────────────
+npm run validate: PASS. npm run build: PASS, 298 pages, no broken links.
+Built HTML checked directly: 35 rows, Tour S renders with a working buy
+button, source cell reads "85 / Maxfli (published)", and the three Golf Galaxy
+links now carry data-outbound="golfgalaxy".
+
+── OPEN ──────────────────────────────────────────────────────────────────────
+A Maxfli Tour S product photo. That is the only thing keeping it out of the
+comparison table.

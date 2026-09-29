@@ -39,11 +39,16 @@ const NEVER_PUBLISHES = new Set(['Titleist', 'Kirkland']);
 const KNOWN = new Set([
   'Callaway (published)', 'TaylorMade (published)', 'Srixon (published)',
   'Bridgestone (published)', 'Wilson (published)', 'Vice Golf (published)',
+  'Maxfli (published)',
   'MyGolfSpy 2026 (measured)', 'MyGolfSpy Ball Lab (measured)',
 ]);
 
-// RATCHET: measured floor as of Sprint 124a, not an aspiration. Only goes UP.
-const MIN_SOURCED = 17;
+// RATCHET: measured floor. Only goes UP.
+// 124a: 17. 131: 19 — Q-Star Tour sourced to Srixon's published 74, and the
+// new Maxfli Tour S sourced to Maxfli's published 85 (spec sheet on the
+// DICK'S/Golf Galaxy product page for Web ID 24MAXUMXFLTRSWHTDGBL; Maxfli is
+// their house brand, so that page is the manufacturer spec).
+const MIN_SOURCED = 19;
 
 const rows = balls as Array<Record<string, any>>;
 const bad: string[] = [];

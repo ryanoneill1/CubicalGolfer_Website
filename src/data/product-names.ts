@@ -254,6 +254,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'srixon-z-star-xv': "Srixon Z-Star XV",
   'maxfli-tour-x': "Maxfli Tour X",
   'wilson-chaos': "Wilson Chaos",
+  'maxfli-tour-s': "Maxfli Tour S",
   'pinnacle-rush': "Pinnacle Rush",
   'odyssey-dfx': "Odyssey DFX",
   'pinemeadow-pgx': "Pinemeadow PGX",
