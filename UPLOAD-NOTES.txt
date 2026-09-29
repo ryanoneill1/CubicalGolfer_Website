@@ -1,28 +1,36 @@
-Sprint 128 — Fix the compression chart table overflow (my bug from 124a)
+Sprint 129 — Widen the page container (you were right, I was fixing the wrong layer)
 
 EXTRACT AT THE REPOSITORY ROOT.
 
-THE BUG
-Sprint 124a added a 7th column ("Source") to the compression chart table.
-That pushed the BUY column off the right edge - the money column on the page
-that carries 35% of the site's clicks was invisible without horizontal
-scrolling. I added the column without checking the rendered width. My error.
+WHAT I MEASURED on the live page, at a 1411px viewport:
+  .art-content ....... 1200px  (its max-width cap)
+  compression table .. 1064px  (after --page-px eats 136px)
+  unused viewport .... 211px   <- screen sitting empty either side
 
-THE FIX
-  - Source column removed. The source now sits UNDER the compression number
-    in the same cell, small and muted. Same information, same checkability,
-    one less column. Back to 6 columns.
-  - Per-ball note text reduced from 16px to 14px. It was set at full body
-    size, which is why rows ran eight lines deep and squeezed everything else.
-  - global.css: the ball column now takes the slack (38%, min 260px) and the
-    Buy cell is pinned nowrap/right so it cannot be compressed again.
+That is the actual problem. Sprint 128 shuffled columns around inside a box
+that was already too small. The table was never the constraint; the container
+was.
 
-VERIFIED in built HTML: 6 columns, 34 rows, Buy cell renders "Check price ->"
-in full, all 17 sourced rows still show their source, sorting untouched (it
-reads data-* attributes on the row, not column indices).
+WHAT CHANGED  (one file, two CSS variables)
+  --content-w  1200px -> 1400px
+  --page-px    clamp(1.5rem, 5vw, 4rem) -> clamp(1.25rem, 4vw, 3rem)
 
-3 files, all modifications. No deletions.
+  Usable width: 1064px -> 1304px  (+240px, +23%)
 
-Worth a look on your phone once deployed - the table still scrolls
-horizontally on narrow screens by design, but the Buy column should now be
-reachable much sooner.
+WHY THIS IS SAFE
+  Body text is capped SEPARATELY at --prose-w (760px), so paragraphs keep the
+  same comfortable line length. Widening --content-w gives room to tables,
+  images and full-width blocks only - it does not stretch reading lines.
+  --content-w is one variable used in 7 rules in global.css and 0 components,
+  so this is a single point of change.
+  The nav is full-width with its own padding, so nothing goes out of
+  alignment. The @media (max-width:1200px) rule only governs the hero grid.
+
+AFFECTS EVERY article, comparison and city page - deliberately. You said the
+whole site felt narrow, and it was.
+
+1 file changed (plus the lastmod manifest). No deletions.
+
+PLEASE EYEBALL after deploy, on desktop and phone. I have measured the numbers
+but I have not seen the rendered result - which is exactly the gap that let
+Sprint 124a ship a table with the Buy button off-screen.

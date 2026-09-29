@@ -69,8 +69,13 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
   --r3:         16px;
   --nav-h:      64px;
   --prose-w:     760px;   /* max width for body text — ~84 chars/line at 17px, upper edge of comfortable */
-  --content-w:  1200px;  /* article / compare / city body container */
-  --page-px: clamp(1.5rem, 5vw, 4rem); /* horizontal page padding */
+  --content-w:  1400px;  /* article / compare / city body container.
+                            Sprint 129: was 1200px, which after --page-px left only ~1072px
+                            of usable width. The 34-row compression chart — 6 columns, a
+                            thumbnail and a per-ball note — was wrapping every cell to fit.
+                            Body text is capped separately at --prose-w, so widening this
+                            gives tables and media room WITHOUT stretching reading lines. */
+  --page-px: clamp(1.25rem, 4vw, 3rem); /* horizontal page padding; trimmed in Sprint 129 to hand the table back another 32px a side */
 }
 
 body {
@@ -369,12 +374,6 @@ nav.site-nav {
 .cmp-table tr:last-child td { border-bottom: none; }
 .cmp-table tr:nth-child(even) td { background: #fafaf8; }
 .cmp-table td:first-child { font-weight: 700; color: var(--text); }
-/* Sprint 128: the compression chart's Source column pushed the Buy button off
- * the right edge on a 1200px viewport — the money column, invisible on load.
- * Source now sits under the compression value, and these keep the remaining
- * columns from collapsing: the ball cell takes the slack, the rest hold. */
-#compression-table td:first-child, #compression-table th:first-child { width: 38%; min-width: 260px; }
-#compression-table td:last-child,  #compression-table th:last-child  { white-space: nowrap; text-align: right; }
 .cmp-winner td { background: #f0f7f2 !important; }
 .cmp-winner td:first-child { color: var(--green); }
 .badge-best {
