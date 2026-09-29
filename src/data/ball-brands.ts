@@ -38,6 +38,6 @@ export const BRAND_DETAIL: Record<string, { lead: string; pick: string; watch: s
   Vice: {
     lead: "Vice sells direct to consumers rather than through pro shops, and the pricing on this chart reflects that. Its two ionomer balls undercut most of this chart, and its urethane models sit well below the traditional tour-ball prices.",
     pick: "Vice Pro Soft at 65 compression and $35 is the softest urethane ball on this chart \u2014 ten compression points below Callaway's Chrome Soft at $45 and twenty-two below a Pro V1 at $58. At 80\u201395 mph that combination of a soft core and a spin cover is unusual; most balls this soft use ionomer. Vice Pro at 80 and $33 covers 90\u2013110 mph; Pro Plus at 90 and $35 is the 100\u2013120 mph option.",
-    watch: "Vice Drive at $17 is the cheapest ball of any kind on this chart. At 55 compression with an ionomer cover it is a distance-and-durability ball, not a scoring ball. The step up to Pro Soft costs $18 and buys a urethane cover, which is what lets a ball check on a pitch. For the full budget field see our <a href='/best-golf-balls-under-30/'>best golf balls under $30</a>.",
+    watch: "Vice Drive at $17 is the cheapest ball of any kind on this chart. Vice publishes it at 95 compression, so despite the name it is a firm distance-and-durability ball, not a soft one and not a scoring ball. The step up to Pro Soft costs $18 and buys a urethane cover, which is what lets a ball check on a pitch. For the full budget field see our <a href='/best-golf-balls-under-30/'>best golf balls under $30</a>.",
   },
 };

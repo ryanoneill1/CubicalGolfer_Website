@@ -1,0 +1,20 @@
+Sprint 124a — Compression source audit: 4 corrections + Source column
+
+EXTRACT AT THE REPOSITORY ROOT. Paths must land at src/... and public/...
+NOT inside an existing src/. If you get src/src/, it went one level too deep.
+
+WHAT CHANGED
+  Vice Drive      55 -> 95   (Vice Golf's own published figure)
+  Vice Pro        80 -> 90   (Vice Golf's own published figure)
+  Vice Pro Plus   90 -> 100  (Vice Golf's own published figure)
+  Kirkland Sig.   75 -> 92   (MyGolfSpy Ball Lab; Costco publishes nothing)
+  Callaway Warbird           NOT changed - Callaway lists 68, our number
+
+  New `source` field on 17 of 34 balls, rendered as a Source column, plus a
+  lead paragraph explaining that manufacturer and gauge figures use different
+  scales. No other chart on the SERP declares this.
+
+9 files, all modifications. No deletions, no new files.
+
+NOTE: your repo root has a README-UPLOAD.txt committed from an earlier zip of
+mine. It is not part of the site - safe to delete whenever you like.
