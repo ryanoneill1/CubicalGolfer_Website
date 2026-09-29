@@ -1237,7 +1237,26 @@ function starvedFor(article: Article): Array<{ slug: string; label: string }> {
   return pick.slug === article.slug ? [] : [pick];
 }
 
-export function getMergedRelated(article: Article, limit = 10): RelatedLink[] {
+/**
+ * Total related links a page renders. `article.related` is pushed FIRST and
+ * competes for these slots with the auto-injected links below it, so the
+ * budget has to leave room for them — see RESERVED_SLOTS.
+ *
+ * Sprint 122: the renderer used to pass a hardcoded 6 while
+ * validate-crawl-starved-floor.ts budgeted against 10. The three "reserved"
+ * slots did not exist, and 32 pages — including every "best X" hub — rendered
+ * zero auto-injected links. Both sides now import these constants. Do not
+ * re-introduce a numeric literal at either call site.
+ */
+export const MERGE_LIMIT = 10;
+
+/** Slots kept below `related`: one crawl-starved page plus two topical anchors. */
+export const RESERVED_SLOTS = 3;
+
+/** Most explicit `related` entries an article may declare. */
+export const MAX_EXPLICIT_RELATED = MERGE_LIMIT - RESERVED_SLOTS; // 7
+
+export function getMergedRelated(article: Article, limit = MERGE_LIMIT): RelatedLink[] {
   const seen = new Set<string>([article.slug]);
   const result: RelatedLink[] = [];
 

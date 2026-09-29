@@ -37,13 +37,29 @@ import fs from 'fs';
 import path from 'path';
 import { ARTICLES } from '../src/data/articles.ts';
 
-// getMergedRelated's limit. A literal because linking.ts does not export it;
-// if it changes there, change it here too.
-const MERGE_LIMIT = 10;
-// Slots reserved below `related`: one starved page plus at least two anchors,
-// so topical clustering is not reduced to nothing.
-const RESERVED = 3;
-const MAX_RELATED = MERGE_LIMIT - RESERVED; // 7
+// Imported, not duplicated. These used to be literals here that silently
+// disagreed with the renderer's hardcoded limit of 6 (Sprint 122).
+import { MERGE_LIMIT, RESERVED_SLOTS, MAX_EXPLICIT_RELATED } from '../src/lib/linking.ts';
+const RESERVED = RESERVED_SLOTS;
+const MAX_RELATED = MAX_EXPLICIT_RELATED;
+
+// Sprint 122 guard. The renderer must NOT pass its own limit — that is exactly
+// how the 6-vs-10 drift happened. If someone re-adds one, fail the build here
+// rather than let it silently truncate related links again.
+{
+  const rendererPath = path.join(process.cwd(), 'src/pages/[...slug].astro');
+  const renderer = fs.readFileSync(rendererPath, 'utf8');
+  const bad = renderer.match(/getMergedRelated\(\s*article\s*,\s*\d+\s*\)/);
+  if (bad) {
+    console.error(
+      `\n❌ src/pages/[...slug].astro passes a hardcoded limit: ${bad[0]}\n` +
+      `   getMergedRelated's budget lives in src/lib/linking.ts (MERGE_LIMIT).\n` +
+      `   Call getMergedRelated(article) and change MERGE_LIMIT instead, or this\n` +
+      `   validator's ceiling of ${MAX_RELATED} will not match what renders.\n`
+    );
+    process.exit(1);
+  }
+}
 
 // RATCHET: this is the measured floor as of Sprint 91, not an aspiration.
 // /how-golf-launch-monitors-work/ and /average-swing-speed-by-age/ both sit at

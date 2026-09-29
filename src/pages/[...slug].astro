@@ -41,7 +41,7 @@ interface Props { article: Article }
 const { article } = Astro.props;
 
 const meta    = articleMeta(article);
-const related = getMergedRelated(article, 6);
+const related = getMergedRelated(article);
 // Brand hubs this page actually features — see brandHubsFor() for why.
 const brandHubs = brandHubsFor(article);
 const wordCount = parseInt((article.words ?? '0').replace(/,/g, ''), 10);

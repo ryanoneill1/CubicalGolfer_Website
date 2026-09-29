@@ -5893,6 +5893,7 @@ export const ARTICLES: Article[] = [
       { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+ Comparison' },
   
       { slug: '/launch-monitor-buying-guide/', label: 'Launch Monitor Buying Guide' },
+      { slug: '/compare/garmin-r50-vs-foresight-gc3/', label: 'Garmin R50 vs Foresight GC3' },
     ],
   },
 
