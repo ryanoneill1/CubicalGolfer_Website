@@ -1,20 +1,25 @@
-Sprint 124a — Compression source audit: 4 corrections + Source column
+Sprint 124b — AI Overview citation + a guard on the Source column
 
-EXTRACT AT THE REPOSITORY ROOT. Paths must land at src/... and public/...
-NOT inside an existing src/. If you get src/src/, it went one level too deep.
+EXTRACT AT THE REPOSITORY ROOT. Paths must land at src/..., scripts/... and
+package.json at the top level. If you end up with src/src/, it went one level
+too deep.
 
 WHAT CHANGED
-  Vice Drive      55 -> 95   (Vice Golf's own published figure)
-  Vice Pro        80 -> 90   (Vice Golf's own published figure)
-  Vice Pro Plus   90 -> 100  (Vice Golf's own published figure)
-  Kirkland Sig.   75 -> 92   (MyGolfSpy Ball Lab; Costco publishes nothing)
-  Callaway Warbird           NOT changed - Callaway lists 68, our number
+  3 new FAQ entries on the compression chart, placed first. They answer the
+  questions no competitor on that SERP answers:
+     - Why do golf ball compression charts disagree with each other?
+     - Does Titleist publish golf ball compression ratings?  (no, it does not)
+     - Which numbers are measured and which are manufacturer-published?
+  The page's `faqs` array feeds both the visible list and the FAQPage JSON-LD,
+  so all three are now in structured data (21 questions total).
 
-  New `source` field on 17 of 34 balls, rendered as a Source column, plus a
-  lead paragraph explaining that manufacturer and gauge figures use different
-  scales. No other chart on the SERP declares this.
+  NEW scripts/validate-compression-sources.ts, wired into `npm run validate`:
+     - blocks crediting Titleist or Costco/Kirkland with a "(published)"
+       figure, since neither publishes one - a fabricated citation is worse
+       than no Source column
+     - rejects source strings outside the known vocabulary, so a typo cannot
+       invent an authority
+     - ratchets the sourced-row count at 17; it cannot go backwards
 
-9 files, all modifications. No deletions, no new files.
-
-NOTE: your repo root has a README-UPLOAD.txt committed from an earlier zip of
-mine. It is not part of the site - safe to delete whenever you like.
+4 files: 3 modifications + 1 new file (the validator).
+No deletions. No ball data changed, so the PDF is unchanged and not included.
