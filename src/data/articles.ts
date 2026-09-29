@@ -50,8 +50,6 @@ export const ARTICLES: Article[] = [
         h2: 'What to Look For in a Golf Rangefinder',
         callout: { text: 'Stuck at your desk wishing you were on the course? Practice your pre-shot routine at home instead.', link: '/golf-practice-drills-at-home/', label: 'See 7 drills you can do in 15 minutes' },
         body: "Before dropping cash on a rangefinder, understand what actually matters on the course. Magnification (6x is the sweet spot), slope compensation, scan mode, and battery life are the big four. Pin-seeking technology — which locks onto the flag rather than background trees — is a must-have. Jolt or vibration confirmation tells you you\'ve actually hit the pin, not a tree 30 yards behind it.\n\nFor a detailed breakdown, see our <a href=\"/compare/bushnell-tour-v7-vs-precision-pro-nx9/\">head-to-head Bushnell vs NX9 comparison</a>.",
-        sectionImage: '/images/products/rangefinder-testing-course.webp',
-        sectionImageAlt: 'Weekend golfer testing a laser rangefinder on a par-3 to get the exact pin distance',
       },
       {
         h2: '🥇 Best Overall: Bushnell Tour V7 Shift',
@@ -257,8 +255,6 @@ export const ARTICLES: Article[] = [
         h2: 'GPS Watch vs. Rangefinder — Which Do You Need?',
         callout: { text: 'Between rounds, keep your game sharp without leaving the house.', link: '/golf-practice-drills-at-home/', label: '15-minute home practice drills' },
         body: "A rangefinder wins for exact pin distance. A GPS watch wins for hands-free pre-shot planning. Many serious weekend golfers use both. If you can only have one, get the rangefinder for accuracy.",
-        sectionImage: '/images/products/gps-watch-wrist-course.webp',
-        sectionImageAlt: 'GPS golf watch on a weekend golfer\'s wrist showing yardage to the green mid-round',
       },
       {
         h2: 'Best Overall 2026: Garmin Approach S44', badge: 'TOP PICK', affiliateKey: 'garmin-approach-s44', rating: 4.6, price: '~$289',
@@ -6131,14 +6127,10 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Why 15 Minutes at Home Beats 1 Hour at the Range',
         body: "Most golfers go to the range and hit driver for 45 minutes. That is the least productive practice you can do. It does not simulate on-course conditions, it fatigues your muscles, and it reinforces bad habits at high speed. Fifteen minutes of focused putting and short-game work at home — with a specific drill and a specific goal — builds more skill than an hour of mindless range balls. The data backs this up: 65% of all strokes happen inside 100 yards. Practice where the strokes are.",
-        sectionImage: '/images/products/living-room-practice.webp',
-        sectionImageAlt: 'Living room 15-minute golf practice setup — putter, ball, and carpet',
       },
       {
         h2: 'Drill 1: Gate Putting Drill (3 minutes)',
         body: "Set two tees or coins 1 inch wider than your putter head, about 3 feet from a target (a table leg, a cup, a book). Stroke putts through the gate. If you hit a tee, your path is off. This drill trains a straight-back-straight-through stroke on short putts — the putts that actually matter for scoring. Three minutes, 20 putts, 3 times per week. Within a month, your 3-5 foot make percentage will noticeably improve.",
-        sectionImage: '/images/products/gate-drill-setup.webp',
-        sectionImageAlt: 'Gate putting drill setup with two tees and a target cup — the simplest drill that fixes short putts',
         badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'eyeline-putting-cup',
       },
       {
@@ -6168,8 +6160,6 @@ export const ARTICLES: Article[] = [
       {
         h2: 'The 15-Minute Practice Schedule',
         body: "Monday: Gate drill (3 min) + Mirror check (2 min) + Clock putting (3 min) + Grip pressure (2 min) + Routine practice (1 min) = 11 minutes. Wednesday: One-handed chips (2 min) + Slow-motion swings (2 min) + Gate drill (3 min) + Clock putting (3 min) = 10 minutes. Friday: Full rotation of all 7 drills = 15 minutes. That is 36 minutes per week of focused practice — and it will do more for your scores than 3 hours of beating balls at the range.",
-        sectionImage: '/images/products/home-putting-drill.webp',
-        sectionImageAlt: 'Home putting practice setup with a mirror and target cup',
       },
   
       { h2: 'Before-Work 15-Minute Routine', body: '<p><strong>Minutes 1-5: Putting on carpet.</strong> Set a coin 6 feet away. Putt 20 balls at it — goal: 12 out of 20 within one ball-length. <strong>Minutes 6-10: Chipping to a pillow.</strong> Place a couch pillow 8-10 feet away. Chip foam balls targeting the pillow — builds distance control. <strong>Minutes 11-15: Mirror work.</strong> Slow-motion backswings checking shoulder turn, club position at the top, and wrist hinge.</p>\n\nSpreading a fixed budget across a full bag is its own problem — the <a href="/golf-equipment-budget-planner/">equipment budget planner</a> shows where the money is best spent.' },

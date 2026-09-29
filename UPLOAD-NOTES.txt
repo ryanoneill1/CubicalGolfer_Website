@@ -1,57 +1,82 @@
-Sprint 132 — Three high-value links moved off Amazon search onto verified
-Golf Galaxy product pages
+Sprint 133 — "Placeholder, replace with real photo" was live on three pages
 
-EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 4 files. No deletions in the zip (see the
+manual delete list at the bottom).
 
-── FIRST, A LIMIT I HIT ──────────────────────────────────────────────────────
-I set out to work the 67 remaining Amazon search URLs ($16,059 of sticker
-value). Amazon is not fetchable from here — it returns an empty page — and I
-am not going to route around that with a script or bypass their bot checks.
-So I cannot verify an Amazon ASIN myself. You would have to check those, or I
-work the retailers I CAN verify.
+── WHAT YOU FOUND, AND HOW FAR IT WENT ───────────────────────────────────────
+You spotted one on /best-golf-rangefinders-2026/. It was worse than one.
 
-Golf Galaxy I can verify. So that is what this sprint does.
+TWELVE of these generated cards exist in public/images/products/. They are a
+flat green field with a title and the line "Placeholder - replace with real
+photo" printed on them. FIVE were live:
 
-── WHAT SHIPPED ──────────────────────────────────────────────────────────────
-Three products whose PRIMARY link was an Amazon search URL, but where we
-already held a Golf Galaxy PRODUCT page on file. I opened each page, confirmed
-it is live, in stock, and priced as our registry says, then promoted Golf
-Galaxy to primary and retired the Amazon search link.
+  /best-golf-rangefinders-2026/     Rangefinder Testing on Course
+  /best-golf-gps-watches/           GPS Watch on Course
+  /golf-practice-drills-at-home/    Living Room Practice Area
+  /golf-practice-drills-at-home/    Gate Drill Setup
+  /golf-practice-drills-at-home/    Home Putting Drill Setup
 
-  Ping G430 Irons      $949.00   Top Seller, 4.8 / 60 reviews
-  TaylorMade Qi Irons  $899.99   was $999.99, Top Seller, 4.9 / 1,019 reviews
-  Cleveland RTX 6      $129.99   was $169.99, Top Seller, 4.8 / 165 reviews
+The practice-drills page was showing three of them at once.
 
-Every registry price was already correct. Nothing needed resyncing downstream.
+All five sectionImage/sectionImageAlt pairs are removed. The sections keep
+their headings and copy - only the image is gone. Built HTML confirms zero
+references remain anywhere in dist/.
 
-Why this is worth doing: Golf Galaxy pays 8% on a 14-day cookie, Amazon 3% on
-a 1-day cookie. Per sale on these three, $178 instead of $67. And a product
-page converts where a search page makes the reader hunt.
+── WHY NOTHING CAUGHT IT ─────────────────────────────────────────────────────
+Every image check on this site asks "does the file exist?" - and it did. The
+file was the problem, not its absence. That whole class was invisible.
 
-── TWO THINGS THE BUILD CAUGHT ───────────────────────────────────────────────
-A. /gear-quiz/ hardcoded the old Ping Amazon search URL three times.
-   validate-affiliate-urls failed the build on it — which is exactly the job
-   it was written for in Sprint 3. Repointed to the registry URL.
+── THE NEW GUARD ─────────────────────────────────────────────────────────────
+scripts/validate-placeholder-images.ts, wired into npm run validate.
 
-B. The same quiz priced the G430 irons at ~$899. They are $949, and our
-   registry has said $949 all along. A $50 understatement in three places,
-   on a page whose whole purpose is sending people to buy. Corrected.
+It measures what share of an image is a single flat colour:
 
-   Also: the quiz used ONE hardcoded button label, "Check Price at Amazon",
-   for every result. With one result now going to Golf Galaxy that label was
-   wrong, so it is now the site's neutral "See Today's Price".
+    placeholder cards   84-88% one colour
+    real photography     8-19% one colour
 
-── NUMBERS ───────────────────────────────────────────────────────────────────
-Amazon search URLs: 79 -> 76.
-I am not going to pretend that is fast. The honest constraint is that the
-remaining ones need either an Amazon ASIN you verify, or a Golf Galaxy
-product page I find and check one at a time.
+The 70% threshold sits in the middle of a gap that wide, so there is nothing
+to tune. It only counts a flat DARK GREEN field, which is what stops it firing
+on real product shots taken on black or white seamless - my first version did
+exactly that and flagged the TaylorMade SIM Max driver photo, so the rule is
+tighter now.
+
+It checks the 333 images a reader can actually see (sectionImage, plus the
+photo of any product placed on a page). Unused placeholders sitting in public/
+are listed as a note, not a failure - dead weight is not a bug.
+
+I tested it by putting the rangefinder placeholder back on its page. It failed
+the build and named the page. Then I removed it again and it passed.
+
+── DELETE THESE BY HAND (a zip cannot express deletions) ─────────────────────
+All 12 are now unreferenced. Nothing breaks if they go:
+
+  public/images/products/gate-drill-setup.webp
+  public/images/products/gps-watch-comparison-display.webp
+  public/images/products/gps-watch-wrist-course.webp
+  public/images/products/home-putting-drill.webp
+  public/images/products/iron-testing-course.webp
+  public/images/products/living-room-practice.webp
+  public/images/products/morning-practice-setup.webp
+  public/images/products/putting-gate-drill-morning.webp
+  public/images/products/putting-mirror-setup.webp
+  public/images/products/rangefinder-testing-course.webp
+  public/images/products/starter-clubs-address.webp
+  public/images/products/towel-chipping-drill.webp
+
+Leaving them costs nothing but 90KB - the validator will keep listing them
+until they are gone. Your call.
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
 npm run validate: PASS.  npm run build: PASS.
-Built HTML checked: 81 Golf Galaxy product links across the site for these
-three, ZERO of the old Amazon search URLs left anywhere in dist/.
+All three affected pages still build at full size with every heading intact
+(15, 15 and 14 h2s).
 
-── NEEDS YOUR DECISION (see chat) ────────────────────────────────────────────
-Srixon ZX5 Mk II — our single highest-value product at $1,115 — looks
-superseded. I have not touched it, per your rule.
+── SEPARATE FINDING, NOT FIXED ───────────────────────────────────────────────
+While hashing every image I found pairs of DIFFERENT products sharing one
+photo file. Two are wrong rather than merely lazy:
+
+  club-car-onward-cart.webp  ==  E-Z-GO-Freedom-RXV.webp   (two different carts)
+  optoma-gt2000hdr.webp      ==  optoma-gt1090hdr.webp     (two different projectors)
+
+Others look like genuine variants (winn-dri-tac vs oversize). I have not
+touched any of them - say the word and I will audit the set properly.
