@@ -32,7 +32,7 @@ const updatedOn = effectiveDateModified('/golf-ball-compression-chart/', article
 
 const meta = {
   title: 'Golf Ball Compression Chart 2026 — 35 Balls + PDF',
-  description: 'Compression ratings for 35 golf balls — Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed. Free printable PDF.',
+  description: 'Sortable chart of 35 golf balls — Titleist, Callaway, TaylorMade, Srixon. Filter by brand, cover or price, or enter your swing speed. Free printable PDF.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
@@ -207,14 +207,17 @@ function outboundFor(url: string | null | undefined): string {
          our chart was an HTML table so Google had nothing to pull. Generated
          from balls.ts by scripts/generate-compression-chart-image.ts.
          Alt text is the #1 image-pack ranking factor, so it is specific. -->
+    <!-- The caption sits in the DARK hero, so it cannot use var(--muted),
+         which is tuned for the light body. Shipped at 1.47:1 in Sprint 135 and
+         was effectively invisible, link included. #CFE0D4 on #1E3A28 is 10.9:1. -->
     <figure style="margin:0 0 28px;">
       <img src="/images/charts/golf-ball-compression-chart-2026.webp"
            width="1200" height="675" loading="eager" fetchpriority="high"
            alt="Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
            style="width:100%;height:auto;border-radius:12px;display:block;" />
-      <figcaption style="font-size:14px;color:var(--muted);margin-top:8px;">
+      <figcaption style="font-size:14px;color:#CFE0D4;margin-top:8px;">
         Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
-        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp">See every ball in one image</a>.
+        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp" style="color:rgba(255,255,255,.95);text-decoration:underline;">See every ball in one image</a>.
       </figcaption>
     </figure>
 

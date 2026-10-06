@@ -1,78 +1,92 @@
-Sprint 135 — The chart image, built to win the Google image pack
+Sprint 136 — A contrast bug I shipped yesterday, and a smaller sprint than planned
 
-EXTRACT AT THE REPOSITORY ROOT. 6 files (2 are the new images). No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions.
 
-── THE PROBLEM ───────────────────────────────────────────────────────────────
-On "golf ball compression chart 2026" — 37% of all site traffic — the SERP
-opens with an IMAGE PACK above every organic result. The three images are from
-Agape Golf, MyGolfSpy and Cedarwood Golf. We were absent, because our chart is
-an HTML table and Google had no picture to pull off the page.
+── FIRST: I BROKE SOMETHING IN SPRINT 135 ────────────────────────────────────
+The figcaption I added under the new chart image used color:var(--muted).
+That token is #3D5243, tuned for the light body. The figure sits in the DARK
+green hero (#1E3A28).
 
-── WHAT THE RESEARCH SAID THE SLOT NEEDS ─────────────────────────────────────
-  alt text      the #1 ranking factor, weighted harder in 2026, must be specific
-  filename      a direct signal since Google Lens 2023
-  dimensions    carousel prefers 16:9, 1200px minimum
-  weight        under 100KB
-  context       caption and nearby headings teach Google what it shows
-  authority     the module draws from pages already ranking — we sit at ~6, so
-                we qualify
+Measured on the live page in the browser: 1.47:1. WCAG AA needs 4.5:1.
 
-── TWO IMAGES, NOT ONE ───────────────────────────────────────────────────────
-A readable 35-row table is portrait; the carousel wants 16:9. One file cannot
-be both without becoming 8px type, which is worse than nothing — people click
-it, cannot read it, and bounce.
+The caption was invisible. So was its link to the full-chart image — so the
+"See every ball in one image" link could not be found or clicked, on the page
+that is 37% of your traffic.
 
-  golf-ball-compression-chart-2026.webp       1200x675, 16:9, 63KB
-      Four compression bands, six balls each, readable at thumbnail size.
-      This is the carousel candidate.
-  golf-ball-compression-chart-2026-full.webp  1200x1710, 132KB
-      Every ball, all five columns. Linked from the caption.
+  caption  #3D5243 -> #CFE0D4            1.47 -> 9.03
+  link     invisible -> rgba(255,255,255,.95)  -> 12.42
 
-Both generated from balls.ts by scripts/generate-compression-chart-image.ts,
-wired into the build. The Sprint 131 lesson: the hand-written embed shipped
-TruFeel at 45 for months after we corrected it to 70. Generated art cannot do
-that. The generator also steps WebP quality down until the 16:9 file is under
-100KB and fails the run if it cannot get there — the budget is enforced, not
-hoped for.
+The link uses white-with-underline rather than gold because that is the house
+convention for text on the dark hero (.hero-card li, .cat-hero p), and because
+var(--gold-text) is #80641A — dark gold on dark green would have been no better
+than what I shipped.
 
-── FOUR THINGS I GOT WRONG AND FIXED BY LOOKING ──────────────────────────────
-I rendered every version and looked at it rather than trusting the code.
+── I TRIED TO BUILD A GUARD AND THREW IT AWAY ────────────────────────────────
+validate-contrast has two guards and both missed this, because both only fire
+when a rule sets BOTH a colour and a background. An inline colour with NO
+background is the more dangerous case, not the safer one — you cannot see what
+it lands on.
 
-  1. Long ball names collided with their own compression numbers. I had
-     truncated by character count, and character count is not width. Now
-     measured and fitted.
-  2. A third of the 16:9 canvas was empty. Six rows per band instead of five.
-  3. Pinnacle Rush appeared in the hero. It is discontinued — it keeps its row
-     in the TABLE as reference data, but a picture built to win a click should
-     not lead with a ball you cannot buy. Discontinued balls are now filtered
-     from the images only.
-  4. THE FULL CHART RENDERED WITH ZERO ROWS. I built the row markup and never
-     interpolated it into the SVG. The header and footer drew fine, so the file
-     looked plausible at the right dimensions and byte size. Only opening it
-     showed an empty green rectangle. Then the price and speed columns ran into
-     each other and needed the geometry moving.
+So I wrote a third guard for exactly that. It produced 408 failures.
 
-── ON THE PAGE ───────────────────────────────────────────────────────────────
-The 16:9 sits immediately under the H1, eager-loaded with fetchpriority=high,
-with a real caption linking to the full version. Alt text names the bands, the
-speed ranges and the ball count — specific, because that is the ranking factor.
+Before shipping it I checked whether they were real, by measuring resolved
+contrast on the live /tools/ page in a browser: of 40 inline-coloured elements,
+2 actually fail. My guard flagged roughly 400.
 
-ImageObject schema declares which picture IS the chart, with dimensions,
-caption and licence.
+The reason is simple and not fixable with a regex: whether text is "on dark"
+depends on resolved CSS, and only a browser knows that. Static analysis of
+.astro files cannot.
 
-A note on honesty: Google states plainly that NO special markup is required for
-AI Overviews and that sites should not overinvest in schema for AI. I am not
-claiming this wins the citation. It is for Google Images, where the evidence is
-concrete.
+So the guard is NOT in this zip. A checker that cries wolf gets switched off,
+and that is worse than no checker. This bug class stays caught by looking at
+the rendered page, which is what caught it.
+
+── WHAT I DID NOT DO, AND WHY ────────────────────────────────────────────────
+The plan said Sprint 136 = "tool framing", on the basis that the AI Overview
+recommends Golf Insider BY NAME for having an "Interactive Tool".
+
+I opened the page before changing anything. It already:
+  · carries the eyebrow "INTERACTIVE CHART"
+  · has an H1 reading "Match Any Ball to Your Swing Speed"
+  · has a swing-speed slider, a "don't know?" helper with iron-distance
+    buttons, brand filter, cover filter, max-price slider, and sortable columns
+
+It is already a more capable tool than the competitor being recommended. The
+framing work I planned was mostly already done, so I am not going to invoice
+you for rewriting it.
+
+That left the TITLE, and I am not touching it. It reads "Golf Ball Compression
+Chart 2026 — 35 Balls + PDF", ranks around position 6, and carries 37% of site
+traffic. "35 Balls" and "PDF" are two concrete CTR hooks. Swapping either for
+"Interactive Tool" is an unmeasured gamble on the single page the business
+depends on. If you want to test it, it should be a deliberate experiment with
+a 14-day read, not a side effect of a sprint.
+
+What I did change is the META DESCRIPTION, which affects CTR but not ranking:
+
+  before  Compression ratings for 35 golf balls — Titleist, Callaway,
+          TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed.
+          Free printable PDF.
+  after   Sortable chart of 35 golf balls — Titleist, Callaway, TaylorMade,
+          Srixon. Filter by brand, cover or price, or enter your swing speed.
+          Free printable PDF.
+
+153 characters. Keeps four brand names (brand queries are 740+ impressions),
+adds the three things the AI Overview rewards a competitor for having.
+
+── ALSO FOUND, NOT FIXED ─────────────────────────────────────────────────────
+Two pre-existing contrast failures on /tools/, both on the translucent gold
+card rather than the hero:
+  "⭐ FEATURED PICK" badge      2.45:1
+  launch monitor description   3.70:1
+Neither is mine and neither is urgent. Say the word.
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
 npm run validate: PASS.  npm run build: PASS.
-Built HTML carries the img, the figcaption and one top-level ImageObject (the
-only other image node is the og card nested inside Article — no duplication).
-Both files land in dist/images/charts/.
+Built HTML carries the new caption colour and the new description. Title
+unchanged, deliberately.
 
 ── NEXT ──────────────────────────────────────────────────────────────────────
-Sprint 136, tool framing. The AI Overview recommends Golf Insider BY NAME for
-having an "Interactive Tool". Our table already sorts and filters and nothing
-on the page says so. That is a title, heading and intro change — higher risk
-than this one, so it ships alone and gets 14 days before anything else moves.
+The chart is now defended: counts correct, dates agreed, image shipped,
+caption readable. The data says the next real growth is comparison pages —
+5-12% CTR against 0.8-1.5% for everything else. I'd start batch 5.
