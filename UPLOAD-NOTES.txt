@@ -1,77 +1,78 @@
-Sprint 134 — Correct what is live-wrong on the compression chart
+Sprint 135 — The chart image, built to win the Google image pack
 
-EXTRACT AT THE REPOSITORY ROOT. 5 files. No deletions.
-First sprint of the plan in compression-chart-sprint-plan.md.
+EXTRACT AT THE REPOSITORY ROOT. 6 files (2 are the new images). No deletions.
 
-── MY MISS, FIRST ────────────────────────────────────────────────────────────
-Sprint 131 took the chart from 34 balls to 35. I swept the prose and shipped.
-SIX claims survived because my replace only matched lowercase "34 balls":
+── THE PROBLEM ───────────────────────────────────────────────────────────────
+On "golf ball compression chart 2026" — 37% of all site traffic — the SERP
+opens with an IMAGE PACK above every organic result. The three images are from
+Agape Golf, MyGolfSpy and Cedarwood Golf. We were absent, because our chart is
+an HTML table and Google had no picture to pull off the page.
 
-  index.astro:29   title        "— 34 Balls + PDF"   <- what Google prints
-  index.astro:30   description  "Compression ratings for 34 golf balls"
-  index.astro:105  ItemList     "34 golf balls ranked by..."
-  index.astro:120  Dataset      "34 golf balls ranked by..."
-  articles.ts:3313 link label   "Full Compression Chart — 34 Balls"
-  articles.ts:2122 article body "compression ratings for 34 golf balls in 2026"
+── WHAT THE RESEARCH SAID THE SLOT NEEDS ─────────────────────────────────────
+  alt text      the #1 ranking factor, weighted harder in 2026, must be specific
+  filename      a direct signal since Google Lens 2023
+  dimensions    carousel prefers 16:9, 1200px minimum
+  weight        under 100KB
+  context       caption and nearby headings teach Google what it shows
+  authority     the module draws from pages already ranking — we sit at ~6, so
+                we qualify
 
-That title has been advertising a stale number on your highest-value query for
-a week, and you found it on a search page, not the build. All six corrected.
+── TWO IMAGES, NOT ONE ───────────────────────────────────────────────────────
+A readable 35-row table is portrait; the carousel wants 16:9. One file cannot
+be both without becoming 8px type, which is worse than nothing — people click
+it, cannot read it, and bounce.
 
-The trap: the same page legitimately says "from lowest (34) to highest (102)".
-That 34 is the Noodle's COMPRESSION VALUE. A blind find-and-replace corrupts it.
-Every edit was made per-string and both values are verified intact.
+  golf-ball-compression-chart-2026.webp       1200x675, 16:9, 63KB
+      Four compression bands, six balls each, readable at thumbnail size.
+      This is the carousel candidate.
+  golf-ball-compression-chart-2026-full.webp  1200x1710, 132KB
+      Every ball, all five columns. Linked from the caption.
 
-── A BIGGER ONE I FOUND WHILE IN THERE ───────────────────────────────────────
-This page was telling Google two different last-modified dates:
+Both generated from balls.ts by scripts/generate-compression-chart-image.ts,
+wired into the build. The Sprint 131 lesson: the hand-written embed shipped
+TruFeel at 45 for months after we corrected it to 70. Generated art cannot do
+that. The generator also steps WebP quality down until the 16:9 file is under
+100KB and fails the run if it cannot get there — the budget is enforced, not
+hoped for.
 
-  sitemap lastmod        2026-09-29   (computed from a content hash)
-  on-page schema         2026-07-23   (hand-held in articles.ts)
+── FOUR THINGS I GOT WRONG AND FIXED BY LOOKING ──────────────────────────────
+I rendered every version and looked at it rather than trusting the code.
 
-It is not just this page. I measured it properly with a real parse, not a
-regex: 149 of 190 articles show an on-page date OLDER than their own sitemap
-entry. Some by five months. /best-putters-yips/ prints "Updated 2026-04-20 —
-prices and availability checked monthly" when we actually touched it 1 Sept.
-That reads as a false claim to a reader, and it was only ever a stale stamp.
+  1. Long ball names collided with their own compression numbers. I had
+     truncated by character count, and character count is not width. Now
+     measured and fitted.
+  2. A third of the 16:9 canvas was empty. Six rows per band instead of five.
+  3. Pinnacle Rush appeared in the hero. It is discontinued — it keeps its row
+     in the TABLE as reference data, but a picture built to win a click should
+     not lead with a ball you cannot buy. Discontinued balls are now filtered
+     from the images only.
+  4. THE FULL CHART RENDERED WITH ZERO ROWS. I built the row markup and never
+     interpolated it into the SVG. The header and footer drew fine, so the file
+     looked plausible at the right dimensions and byte size. Only opening it
+     showed an empty green rectangle. Then the price and speed columns ran into
+     each other and needed the geometry moving.
 
-src/lib/freshness.ts takes the LATER of the two dates. Applied to the
-compression chart ONLY in this sprint. Both schema blocks and the visible stamp
-now agree.
+── ON THE PAGE ───────────────────────────────────────────────────────────────
+The 16:9 sits immediately under the H1, eager-loaded with fetchpriority=high,
+with a real caption linking to the full version. Alt text names the bands, the
+speed ranges and the ball count — specific, because that is the ranking factor.
 
-I have deliberately NOT rolled it out to the other 148. It changes a visible
-date on 149 pages and that deserves its own sprint and its own measurement
-window. Say the word and it is a small change — the helper already exists.
+ImageObject schema declares which picture IS the chart, with dimensions,
+caption and licence.
 
-── THE GUARD ─────────────────────────────────────────────────────────────────
-scripts/validate-stated-counts.ts, wired into npm run validate.
-
-I got this wrong twice before it was right, and the file documents both:
-
-  v1  any "<N> balls" on a line mentioning balls
-      61 hits, 61 FALSE: "lost 10 balls a round", "a 200-ball bucket"
-  v2  required "compression chart" on the same line
-      2 hits, both still FALSE: a two-dozen box "of 24 balls" in a priceNote,
-      and "the 5 balls on this page" from a different page
-  v3  stops reading prose. A count is only a CLAIM in a DECLARATION — title,
-      description, label, intro, schema name. Body copy can say anything.
-
-v3: 6 claims checked, all correct. I then put "34 Balls" back in the title and
-it failed the build naming the file and line, then passed again once removed.
-
-A checker that cries wolf gets switched off, which is worse than no checker.
-That is why this took three goes rather than one.
-
-── ONE CORRECTION TO WHAT I TOLD YOU ─────────────────────────────────────────
-I said the og social card had "34 Balls" baked into the image. It does not —
-I rendered it and looked. The card pulls the TITLE TAG, so fixing the title
-fixed the card. No image work needed.
+A note on honesty: Google states plainly that NO special markup is required for
+AI Overviews and that sites should not overinvest in schema for AI. I am not
+claiming this wins the citation. It is for Google Images, where the evidence is
+concrete.
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
 npm run validate: PASS.  npm run build: PASS.
-Built HTML: title reads "35 Balls + PDF", zero "34 Balls" anywhere, both
-dateModified values agree, and the two compression VALUES (34 and 102) intact.
+Built HTML carries the img, the figcaption and one top-level ImageObject (the
+only other image node is the og card nested inside Article — no duplication).
+Both files land in dist/images/charts/.
 
 ── NEXT ──────────────────────────────────────────────────────────────────────
-Sprint 135, the chart image for the Google image pack. Research is in the plan
-doc: alt text is the #1 factor, filename is a direct signal, 16:9 at 1200px
-minimum, under 100KB. Two images — a 16:9 summary for the carousel and a tall
-full version — both generated from balls.ts so they cannot drift.
+Sprint 136, tool framing. The AI Overview recommends Golf Insider BY NAME for
+having an "Interactive Tool". Our table already sorts and filters and nothing
+on the page says so. That is a title, heading and intro change — higher risk
+than this one, so it ships alone and gets 14 days before anything else moves.

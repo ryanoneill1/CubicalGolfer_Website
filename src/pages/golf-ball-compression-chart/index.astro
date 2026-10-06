@@ -117,6 +117,24 @@ const itemListSchema = {
   })),
 };
 
+
+// Sprint 135: declare the chart image so it is unambiguous which picture on the
+// page IS the chart. Google needs no special markup for AI Overviews and we are
+// not pretending otherwise — this is for Google Images.
+const chartImageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.cubicalgolfer.com/images/charts/golf-ball-compression-chart-2026.webp',
+  url: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
+  width: 1200,
+  height: 675,
+  name: 'Golf Ball Compression Chart 2026',
+  caption: 'Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball',
+  creditText: 'CubicalGolfer.com',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  acquireLicensePage: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
+};
+
 // Dataset schema for Google Dataset Search
 const datasetSchema = {
   '@context': 'https://schema.org',
@@ -146,6 +164,7 @@ const schemas = [
   itemListSchema,
   datasetSchema,
   articleSchema({ ...article, dateModified: updatedOn }),
+  chartImageSchema,
   breadcrumbSchema(meta.breadcrumbs),
   faqSchema(faqs),
 ];
@@ -182,6 +201,23 @@ function outboundFor(url: string | null | undefined): string {
 
     <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
     <h1>Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed</h1>
+
+    <!-- Sprint 135: the image-pack candidate. Three competitors sit above every
+         organic result on "golf ball compression chart 2026" with a picture;
+         our chart was an HTML table so Google had nothing to pull. Generated
+         from balls.ts by scripts/generate-compression-chart-image.ts.
+         Alt text is the #1 image-pack ranking factor, so it is specific. -->
+    <figure style="margin:0 0 28px;">
+      <img src="/images/charts/golf-ball-compression-chart-2026.webp"
+           width="1200" height="675" loading="eager" fetchpriority="high"
+           alt="Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
+           style="width:100%;height:auto;border-radius:12px;display:block;" />
+      <figcaption style="font-size:14px;color:var(--muted);margin-top:8px;">
+        Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
+        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp">See every ball in one image</a>.
+      </figcaption>
+    </figure>
+
       <EarlyDisclosure />
 
     <div class="author-box">
