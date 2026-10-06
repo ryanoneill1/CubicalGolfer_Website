@@ -50,7 +50,7 @@ Summary: Complete golf ball guide for 2026. Compression, cover types, swing spee
 
 ## Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed
 URL: https://www.cubicalgolfer.com/golf-ball-compression-chart/
-Summary: Compression ratings for 34 golf balls — Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed. Free printable PDF.
+Summary: Sortable chart of 35 golf balls — Titleist, Callaway, TaylorMade, Srixon. Filter by brand, cover or price, or enter your swing speed. Free printable PDF.
 
 ## Golf Ball Finder — Match Your Swing Speed to the Right Ball
 URL: https://www.cubicalgolfer.com/golf-ball-finder/

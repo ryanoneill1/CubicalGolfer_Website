@@ -202,24 +202,6 @@ function outboundFor(url: string | null | undefined): string {
     <span class="art-tag-lg tag-guide">INTERACTIVE CHART</span>
     <h1>Golf Ball Compression Chart 2026 — Match Any Ball to Your Swing Speed</h1>
 
-    <!-- Sprint 135: the image-pack candidate. Three competitors sit above every
-         organic result on "golf ball compression chart 2026" with a picture;
-         our chart was an HTML table so Google had nothing to pull. Generated
-         from balls.ts by scripts/generate-compression-chart-image.ts.
-         Alt text is the #1 image-pack ranking factor, so it is specific. -->
-    <!-- The caption sits in the DARK hero, so it cannot use var(--muted),
-         which is tuned for the light body. Shipped at 1.47:1 in Sprint 135 and
-         was effectively invisible, link included. #CFE0D4 on #1E3A28 is 10.9:1. -->
-    <figure style="margin:0 0 28px;">
-      <img src="/images/charts/golf-ball-compression-chart-2026.webp"
-           width="1200" height="675" loading="eager" fetchpriority="high"
-           alt="Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
-           style="width:100%;height:auto;border-radius:12px;display:block;" />
-      <figcaption style="font-size:14px;color:#CFE0D4;margin-top:8px;">
-        Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
-        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp" style="color:rgba(255,255,255,.95);text-decoration:underline;">See every ball in one image</a>.
-      </figcaption>
-    </figure>
 
       <EarlyDisclosure />
 
@@ -303,6 +285,29 @@ function outboundFor(url: string | null | undefined): string {
         <li><a href="#faq">FAQ</a></li>
       </ol>
     </nav>
+
+    <!-- Sprint 135: the image-pack candidate. Three competitors sit above every
+         organic result on "golf ball compression chart 2026" with a picture;
+         our chart was an HTML table so Google had nothing to pull. Generated
+         from balls.ts by scripts/generate-compression-chart-image.ts.
+         Alt text is the #1 image-pack ranking factor, so it is specific. -->
+    <!-- Sprint 137: moved out of the hero to sit under the table of contents.
+         In the hero it was the first thing on the page — a STATIC picture
+         standing in front of the actual interactive tool, and rendered at the
+         full container width its type was enormous. Capped at 880px so it
+         reads at a sensible size, and now on the light body so the caption
+         uses ordinary body colours again. -->
+    <figure style="margin:0 auto 32px;max-width:880px;">
+      <img src="/images/charts/golf-ball-compression-chart-2026.webp"
+           width="1200" height="675" loading="eager" fetchpriority="high"
+           alt="Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
+           style="width:100%;height:auto;border-radius:12px;display:block;" />
+      <figcaption style="font-size:14px;color:var(--muted);margin-top:8px;">
+        Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
+        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp" >See every ball in one image</a>.
+      </figcaption>
+    </figure>
+
 
     <p style="font-size:16px;line-height:1.8;">Stop guessing which golf ball to play. This chart maps the compression rating of all 35 balls — every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, Wilson, Kirkland, Maxfli and Pinnacle model we track — to your swing speed, so you can find the right ball in 10 seconds instead of wasting money on balls built for someone else's swing.</p>
 
@@ -698,21 +703,91 @@ function outboundFor(url: string | null | undefined): string {
 
       <h2 id="brand-summary">Compression Chart by Brand — Quick Summary</h2>
       <p>Here is every ball on our chart grouped by manufacturer. This helps if you already play a brand and want to find the right compression within their lineup.</p>
-      <p><strong>Titleist (7 balls):</strong> TruFeel (70), Tour Soft (65), Velocity (65), AVX (77), Tour Speed (78), Pro V1 (87), Pro V1x (97). The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
-      <p><strong>Callaway (4 balls):</strong> Supersoft (38), Warbird (68), Chrome Soft (75), Chrome Tour (90). The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
-      <p><strong>TaylorMade (5 balls):</strong> Noodle (34), Soft Response (50), Tour Response (77), TP5 (85), TP5x (97). The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
-      <p><strong>Srixon (4 balls):</strong> Soft Feel (60), Q-Star Tour (74), Z-Star (88), Z-Star XV (102). The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers. Srixon raised the published figure from 72 to 74 with the 2026 reworked FastLayer core.</p>
-      <p><strong>Bridgestone (4 balls):</strong> e12 Contact (50), Tour B RX (68), Tour B XS (90), Tour B X (100). The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
-      <p><strong>Maxfli (2 balls):</strong> Tour S (85), Tour X (100). DICK'S Sporting Goods' own brand, made by Foremost in Taiwan. The Tour S is the cheapest genuine urethane ball on this chart at $39.99, and it is the only ball we chart between 78 and 87.</p>
+      <!-- Sprint 137: six dense paragraphs of comma-separated balls were a wall
+           of text at the bottom of the page. Same facts, same editorial notes,
+           laid out as scannable cards with the balls as chips. -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:12px 0 4px;">
+        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;background:#fff;">
+          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Titleist <span style="font-weight:400;color:var(--muted);font-size:15px;">· 7 balls</span></p>
+          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TruFeel (70)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour Soft (65)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Velocity (65)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">AVX (77)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour Speed (78)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Pro V1 (87)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Pro V1x (97)</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;background:#fff;">
+          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Callaway <span style="font-weight:400;color:var(--muted);font-size:15px;">· 4 balls</span></p>
+          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Supersoft (38)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Warbird (68)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Chrome Soft (75)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Chrome Tour (90)</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;background:#fff;">
+          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">TaylorMade <span style="font-weight:400;color:var(--muted);font-size:15px;">· 5 balls</span></p>
+          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Noodle (34)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Soft Response (50)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour Response (77)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TP5 (85)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TP5x (97)</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;background:#fff;">
+          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Srixon <span style="font-weight:400;color:var(--muted);font-size:15px;">· 4 balls</span></p>
+          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Soft Feel (60)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Q-Star Tour (74)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Z-Star (88)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Z-Star XV (102)</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers. Srixon raised the published figure from 72 to 74 with the 2026 reworked FastLayer core.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;background:#fff;">
+          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Bridgestone <span style="font-weight:400;color:var(--muted);font-size:15px;">· 4 balls</span></p>
+          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">e12 Contact (50)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour B RX (68)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour B XS (90)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour B X (100)</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
+        </div>
+        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius:10px;padding:14px 16px;background:#fff;">
+          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Maxfli <span style="font-weight:400;color:var(--muted);font-size:15px;">· 2 balls</span></p>
+          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour S (85)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour X (100)</span></div>
+          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">DICK'S Sporting Goods' own brand, made by Foremost in Taiwan. The Tour S is the cheapest genuine urethane ball on this chart at $39.99, and it is the only ball we chart between 78 and 87.</p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2 id="low-to-high">All 35 Balls Ranked Low to High Compression</h2>
       <p>The complete ranking from softest to firmest. Use this as a quick reference — the interactive filter above gives personalized recommendations, but this list shows the full spectrum at a glance.</p>
-      <p><strong>Ultra-soft (34-50):</strong> TaylorMade Noodle (34), Callaway Supersoft (38), Wilson DUO Soft+ (40), TaylorMade Soft Response (50), Bridgestone e12 Contact (50). Best for swing speeds under 85 mph.</p>
-      <p><strong>Soft-mid (55-74):</strong> Srixon Soft Feel (60), Vice Pro Soft (65), Titleist Tour Soft (65), Titleist Velocity (65), Callaway Warbird (68), Bridgestone Tour B RX (68), Titleist TruFeel (70), Wilson Chaos (70), Pinnacle Rush (72), Srixon Q-Star Tour (74). The sweet spot for most weekend golfers (85-100 mph).</p>
-      <p><strong>Mid-firm (75-87):</strong> Callaway Chrome Soft (75), Titleist AVX (77), TaylorMade Tour Response (77), Titleist Tour Speed (78), Maxfli Tour S (85), TaylorMade TP5 (85), Titleist Pro V1 (87), Wilson Staff Model (87). Tour-level balls for 90-110 mph swingers.</p>
-      <p><strong>Firm-high (88-102):</strong> Srixon Z-Star (88), Callaway Chrome Tour (90), Bridgestone Tour B XS (90), Vice Pro (90), Kirkland Signature (92), Vice Drive (95), Titleist Pro V1x (97), TaylorMade TP5x (97), Bridgestone Tour B X (100), Maxfli Tour X (100), Vice Pro Plus (100), Srixon Z-Star XV (102). Mostly tour balls for swing speeds above 100 mph, though the Vice Drive is a firm ionomer distance ball rather than a scoring ball.</p>
+      <!-- Sprint 137: four paragraphs of comma-separated balls, bottom of page.
+           Now banded blocks in the same four bands the chart image and the
+           FAQs use, so the page tells one consistent story. No facts changed. -->
+      <div style="display:grid;gap:14px;margin:12px 0 4px;">
+        <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+          <div style="background:#4F7A5B;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
+            <span style="font-weight:700;font-size:17px;">Ultra-soft</span>
+            <span style="font-size:20px;font-weight:700;">34-50</span>
+          </div>
+          <div style="padding:14px 16px;">
+            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade Noodle (34)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Supersoft (38)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Wilson DUO Soft+ (40)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade Soft Response (50)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone e12 Contact (50)</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">Best for swing speeds under 85 mph.</p>
+          </div>
+        </div>
+        <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+          <div style="background:#2A5038;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
+            <span style="font-weight:700;font-size:17px;">Soft-mid</span>
+            <span style="font-size:20px;font-weight:700;">55-74</span>
+          </div>
+          <div style="padding:14px 16px;">
+            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Soft Feel (60)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Pro Soft (65)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Tour Soft (65)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Velocity (65)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Warbird (68)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone Tour B RX (68)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist TruFeel (70)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Wilson Chaos (70)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Pinnacle Rush (72)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Q-Star Tour (74)</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The sweet spot for most weekend golfers (85-100 mph).</p>
+          </div>
+        </div>
+        <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+          <div style="background:#1E3A28;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
+            <span style="font-weight:700;font-size:17px;">Mid-firm</span>
+            <span style="font-size:20px;font-weight:700;">75-87</span>
+          </div>
+          <div style="padding:14px 16px;">
+            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Chrome Soft (75)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist AVX (77)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade Tour Response (77)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Tour Speed (78)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Maxfli Tour S (85)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade TP5 (85)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Pro V1 (87)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Wilson Staff Model (87)</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">Tour-level balls for 90-110 mph swingers.</p>
+          </div>
+        </div>
+        <div style="border-radius:10px;overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+          <div style="background:#143024;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
+            <span style="font-weight:700;font-size:17px;">Firm-high</span>
+            <span style="font-size:20px;font-weight:700;">88-102</span>
+          </div>
+          <div style="padding:14px 16px;">
+            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Z-Star (88)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Chrome Tour (90)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone Tour B XS (90)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Pro (90)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Kirkland Signature (92)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Drive (95)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Pro V1x (97)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade TP5x (97)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone Tour B X (100)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Maxfli Tour X (100)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Pro Plus (100)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Z-Star XV (102)</span></div>
+            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">Mostly tour balls for swing speeds above 100 mph, though the Vice Drive is a firm ionomer distance ball rather than a scoring ball.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section>

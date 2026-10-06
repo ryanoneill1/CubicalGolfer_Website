@@ -114,10 +114,18 @@ const CHARTS: Spec[] = [
           rows: [['Driver swing speed', 'Compression band', 'Balls on our chart'],
             ...BANDS.map(([speed, band, lo, hi]) => [
               speed, band,
-              live.filter(b => b.compression >= lo && b.compression <= hi)
-                  .sort((a, b) => a.compression - b.compression)
-                  .map(b => `${b.name} (${b.compression})`)
-                  .join(', ') || '\u2014',
+              // A cheat sheet is a glance, not an index. Listing all 17 balls
+              // in the mid band pushed this onto a second page and duplicated
+              // the full table below it. Show the count and a few examples.
+              (() => {
+                const inBand = live
+                  .filter(b => b.compression >= lo && b.compression <= hi)
+                  .sort((a, b) => a.compression - b.compression);
+                if (!inBand.length) return '\u2014';
+                const shown = inBand.slice(0, 4).map(b => `${b.name} (${b.compression})`).join(', ');
+                const rest = inBand.length - 4;
+                return `${inBand.length} balls \u2014 ${shown}${rest > 0 ? `, +${rest} more below` : ''}`;
+              })(),
             ])] },
         { heading: 'Where the Numbers Come From',
           rows: [['Ball', 'Compression', 'Source'],
@@ -184,19 +192,42 @@ for (const spec of CHARTS) {
     const usable = doc.page.width - MARGIN * 2;
     const w = usable / cols;
 
+    // Sprint 137: rows used to advance by a FIXED 16pt no matter what was in
+    // them. The compression cheat sheet has a cell listing every ball in a
+    // band — 300+ characters — which wrapped to six lines and then had the next
+    // row drawn straight over the top of it. The published PDF was unreadable
+    // and stayed that way until Ryan opened it.
+    //
+    // Measure every cell, take the tallest, advance by that. Costs nothing on
+    // the short tables and makes long cells impossible to overlap.
     rows.forEach((cells, ri) => {
-      if (doc.y > doc.page.height - 90) doc.addPage();
+      const isHead = ri === 0;
+      doc.font(isHead ? 'Helvetica-Bold' : 'Helvetica').fontSize(8.5);
+
+      const CELL_PAD = 4;
+      const textW = w - CELL_PAD * 2;
+      const tallest = Math.max(
+        ...cells.map(c => doc.heightOfString(String(c ?? ''), { width: textW })),
+        10,
+      );
+      const rowH = Math.ceil(tallest) + 7;
+
+      // Break BEFORE drawing if this row cannot fit, using its real height.
+      if (doc.y + rowH > doc.page.height - 70) doc.addPage();
       const y = doc.y;
-      if (ri === 0) {
-        doc.save().rect(MARGIN, y - 2, usable, 17).fill(GREEN);
+
+      if (isHead) {
+        doc.save().rect(MARGIN, y - 2, usable, rowH).fill(GREEN);
         doc.font('Helvetica-Bold').fontSize(8.5).fillColor('#FFFFFF');
       } else {
-        if (ri % 2 === 0) doc.save().rect(MARGIN, y - 2, usable, 16).fill(CREAM).restore();
+        if (ri % 2 === 0) doc.save().rect(MARGIN, y - 2, usable, rowH).fill(CREAM).restore();
         doc.font('Helvetica').fontSize(8.5).fillColor('#333333');
       }
-      cells.forEach((c, i) => doc.text(c, MARGIN + i * w + 4, y, { width: w - 8, lineBreak: false }));
-      if (ri === 0) doc.restore();
-      doc.y = y + (ri === 0 ? 17 : 16);
+      // lineBreak must stay ON — wrapping is what the measured height assumes.
+      cells.forEach((c, i) =>
+        doc.text(String(c ?? ''), MARGIN + i * w + CELL_PAD, y, { width: textW }));
+      if (isHead) doc.restore();
+      doc.y = y + rowH;
     });
     doc.moveDown(1.1);
   }
