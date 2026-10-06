@@ -20,14 +20,19 @@ const ballThumb = (ball: any): string | undefined => {
   return e && e.imgSrc ? e.imgSrc : undefined;
 };
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
+import { effectiveDateModified } from '../../lib/freshness';
 import { ARTICLES } from '../../data/articles';
 import EmbedBox from '../../components/EmbedBox.astro';
 
 const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 
+// Sprint 134: schema said 2026-07-23 while the sitemap said 2026-09-29.
+// One date, derived, so the two can never disagree again.
+const updatedOn = effectiveDateModified('/golf-ball-compression-chart/', article.dateModified) ?? article.datePublished;
+
 const meta = {
-  title: 'Golf Ball Compression Chart 2026 — 34 Balls + PDF',
-  description: 'Compression ratings for 34 golf balls — Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed. Free printable PDF.',
+  title: 'Golf Ball Compression Chart 2026 — 35 Balls + PDF',
+  description: 'Compression ratings for 35 golf balls — Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice — matched to your swing speed. Free printable PDF.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
@@ -102,7 +107,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Golf Ball Compression Chart 2026',
-  description: '34 golf balls ranked by compression rating from lowest (34) to highest (102)',
+  description: '35 golf balls ranked by compression rating from lowest (34) to highest (102)',
   numberOfItems: balls.length,
   itemListElement: balls.map((ball, i) => ({
     '@type': 'ListItem',
@@ -117,7 +122,7 @@ const datasetSchema = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   name: 'Golf Ball Compression Chart 2026',
-  description: '34 golf balls ranked by compression rating (34–102) with cover material, price per dozen, and recommended swing speed range.',
+  description: '35 golf balls ranked by compression rating (34–102) with cover material, price per dozen, and recommended swing speed range.',
   url: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   creator: {
     '@type': 'Organization',
@@ -125,7 +130,7 @@ const datasetSchema = {
     url: 'https://www.cubicalgolfer.com',
   },
   license: 'https://creativecommons.org/licenses/by/4.0/',
-  dateModified: article.dateModified || '2026-06-30',
+  dateModified: updatedOn,
   distribution: {
     '@type': 'DataDownload',
     encodingFormat: 'application/pdf',
@@ -140,7 +145,7 @@ const datasetSchema = {
 const schemas = [
   itemListSchema,
   datasetSchema,
-  articleSchema(article),
+  articleSchema({ ...article, dateModified: updatedOn }),
   breadcrumbSchema(meta.breadcrumbs),
   faqSchema(faqs),
 ];
@@ -190,7 +195,7 @@ function outboundFor(url: string | null | undefined): string {
         </span>
         <span class="author-meta">
           📖 16 min read &nbsp;·&nbsp;
-          📅 Updated: {article.dateModified} &nbsp;·&nbsp;
+          📅 Updated: {updatedOn} &nbsp;·&nbsp;
           ⛳ <a href="/how-we-test/">How we test →</a>
         </span>
       </div>
@@ -204,7 +209,7 @@ function outboundFor(url: string | null | undefined): string {
       <li><strong>Every ball purchased</strong> — bought with our own money, no manufacturer samples</li>
       <li><strong>Compression data verified</strong> — cross-referenced with manufacturer specs and independent testing</li>
       <li><strong>{AUTHOR_PROFILE.handicapLabel} perspective</strong> — recommendations for weekend golfers, not tour pros</li>
-      <li><strong>Updated {article.dateModified}</strong> — prices and availability checked monthly</li>
+      <li><strong>Updated {updatedOn}</strong> — prices and availability checked monthly</li>
     </ul>
     <a href="/how-we-test/" class="trust-card__link">See full testing methodology →</a>
   </div>
@@ -222,7 +227,7 @@ function outboundFor(url: string | null | undefined): string {
     <!-- FRESHNESS BANNER -->
     <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
       <span style="font-size:16px;">✅</span>
-      <span><strong>Updated {article.dateModified}</strong> — All 35 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+      <span><strong>Updated {updatedOn}</strong> — All 35 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
 
     <!-- PDF DOWNLOAD -->

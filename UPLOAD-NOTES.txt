@@ -1,82 +1,77 @@
-Sprint 133 — "Placeholder, replace with real photo" was live on three pages
+Sprint 134 — Correct what is live-wrong on the compression chart
 
-EXTRACT AT THE REPOSITORY ROOT. 4 files. No deletions in the zip (see the
-manual delete list at the bottom).
+EXTRACT AT THE REPOSITORY ROOT. 5 files. No deletions.
+First sprint of the plan in compression-chart-sprint-plan.md.
 
-── WHAT YOU FOUND, AND HOW FAR IT WENT ───────────────────────────────────────
-You spotted one on /best-golf-rangefinders-2026/. It was worse than one.
+── MY MISS, FIRST ────────────────────────────────────────────────────────────
+Sprint 131 took the chart from 34 balls to 35. I swept the prose and shipped.
+SIX claims survived because my replace only matched lowercase "34 balls":
 
-TWELVE of these generated cards exist in public/images/products/. They are a
-flat green field with a title and the line "Placeholder - replace with real
-photo" printed on them. FIVE were live:
+  index.astro:29   title        "— 34 Balls + PDF"   <- what Google prints
+  index.astro:30   description  "Compression ratings for 34 golf balls"
+  index.astro:105  ItemList     "34 golf balls ranked by..."
+  index.astro:120  Dataset      "34 golf balls ranked by..."
+  articles.ts:3313 link label   "Full Compression Chart — 34 Balls"
+  articles.ts:2122 article body "compression ratings for 34 golf balls in 2026"
 
-  /best-golf-rangefinders-2026/     Rangefinder Testing on Course
-  /best-golf-gps-watches/           GPS Watch on Course
-  /golf-practice-drills-at-home/    Living Room Practice Area
-  /golf-practice-drills-at-home/    Gate Drill Setup
-  /golf-practice-drills-at-home/    Home Putting Drill Setup
+That title has been advertising a stale number on your highest-value query for
+a week, and you found it on a search page, not the build. All six corrected.
 
-The practice-drills page was showing three of them at once.
+The trap: the same page legitimately says "from lowest (34) to highest (102)".
+That 34 is the Noodle's COMPRESSION VALUE. A blind find-and-replace corrupts it.
+Every edit was made per-string and both values are verified intact.
 
-All five sectionImage/sectionImageAlt pairs are removed. The sections keep
-their headings and copy - only the image is gone. Built HTML confirms zero
-references remain anywhere in dist/.
+── A BIGGER ONE I FOUND WHILE IN THERE ───────────────────────────────────────
+This page was telling Google two different last-modified dates:
 
-── WHY NOTHING CAUGHT IT ─────────────────────────────────────────────────────
-Every image check on this site asks "does the file exist?" - and it did. The
-file was the problem, not its absence. That whole class was invisible.
+  sitemap lastmod        2026-09-29   (computed from a content hash)
+  on-page schema         2026-07-23   (hand-held in articles.ts)
 
-── THE NEW GUARD ─────────────────────────────────────────────────────────────
-scripts/validate-placeholder-images.ts, wired into npm run validate.
+It is not just this page. I measured it properly with a real parse, not a
+regex: 149 of 190 articles show an on-page date OLDER than their own sitemap
+entry. Some by five months. /best-putters-yips/ prints "Updated 2026-04-20 —
+prices and availability checked monthly" when we actually touched it 1 Sept.
+That reads as a false claim to a reader, and it was only ever a stale stamp.
 
-It measures what share of an image is a single flat colour:
+src/lib/freshness.ts takes the LATER of the two dates. Applied to the
+compression chart ONLY in this sprint. Both schema blocks and the visible stamp
+now agree.
 
-    placeholder cards   84-88% one colour
-    real photography     8-19% one colour
+I have deliberately NOT rolled it out to the other 148. It changes a visible
+date on 149 pages and that deserves its own sprint and its own measurement
+window. Say the word and it is a small change — the helper already exists.
 
-The 70% threshold sits in the middle of a gap that wide, so there is nothing
-to tune. It only counts a flat DARK GREEN field, which is what stops it firing
-on real product shots taken on black or white seamless - my first version did
-exactly that and flagged the TaylorMade SIM Max driver photo, so the rule is
-tighter now.
+── THE GUARD ─────────────────────────────────────────────────────────────────
+scripts/validate-stated-counts.ts, wired into npm run validate.
 
-It checks the 333 images a reader can actually see (sectionImage, plus the
-photo of any product placed on a page). Unused placeholders sitting in public/
-are listed as a note, not a failure - dead weight is not a bug.
+I got this wrong twice before it was right, and the file documents both:
 
-I tested it by putting the rangefinder placeholder back on its page. It failed
-the build and named the page. Then I removed it again and it passed.
+  v1  any "<N> balls" on a line mentioning balls
+      61 hits, 61 FALSE: "lost 10 balls a round", "a 200-ball bucket"
+  v2  required "compression chart" on the same line
+      2 hits, both still FALSE: a two-dozen box "of 24 balls" in a priceNote,
+      and "the 5 balls on this page" from a different page
+  v3  stops reading prose. A count is only a CLAIM in a DECLARATION — title,
+      description, label, intro, schema name. Body copy can say anything.
 
-── DELETE THESE BY HAND (a zip cannot express deletions) ─────────────────────
-All 12 are now unreferenced. Nothing breaks if they go:
+v3: 6 claims checked, all correct. I then put "34 Balls" back in the title and
+it failed the build naming the file and line, then passed again once removed.
 
-  public/images/products/gate-drill-setup.webp
-  public/images/products/gps-watch-comparison-display.webp
-  public/images/products/gps-watch-wrist-course.webp
-  public/images/products/home-putting-drill.webp
-  public/images/products/iron-testing-course.webp
-  public/images/products/living-room-practice.webp
-  public/images/products/morning-practice-setup.webp
-  public/images/products/putting-gate-drill-morning.webp
-  public/images/products/putting-mirror-setup.webp
-  public/images/products/rangefinder-testing-course.webp
-  public/images/products/starter-clubs-address.webp
-  public/images/products/towel-chipping-drill.webp
+A checker that cries wolf gets switched off, which is worse than no checker.
+That is why this took three goes rather than one.
 
-Leaving them costs nothing but 90KB - the validator will keep listing them
-until they are gone. Your call.
+── ONE CORRECTION TO WHAT I TOLD YOU ─────────────────────────────────────────
+I said the og social card had "34 Balls" baked into the image. It does not —
+I rendered it and looked. The card pulls the TITLE TAG, so fixing the title
+fixed the card. No image work needed.
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
 npm run validate: PASS.  npm run build: PASS.
-All three affected pages still build at full size with every heading intact
-(15, 15 and 14 h2s).
+Built HTML: title reads "35 Balls + PDF", zero "34 Balls" anywhere, both
+dateModified values agree, and the two compression VALUES (34 and 102) intact.
 
-── SEPARATE FINDING, NOT FIXED ───────────────────────────────────────────────
-While hashing every image I found pairs of DIFFERENT products sharing one
-photo file. Two are wrong rather than merely lazy:
-
-  club-car-onward-cart.webp  ==  E-Z-GO-Freedom-RXV.webp   (two different carts)
-  optoma-gt2000hdr.webp      ==  optoma-gt1090hdr.webp     (two different projectors)
-
-Others look like genuine variants (winn-dri-tac vs oversize). I have not
-touched any of them - say the word and I will audit the set properly.
+── NEXT ──────────────────────────────────────────────────────────────────────
+Sprint 135, the chart image for the Google image pack. Research is in the plan
+doc: alt text is the #1 factor, filename is a direct signal, 16:9 at 1200px
+minimum, under 100KB. Two images — a 16:9 summary for the carousel and a tall
+full version — both generated from balls.ts so they cannot drift.

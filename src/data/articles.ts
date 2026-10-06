@@ -2119,7 +2119,7 @@ export const ARTICLES: Article[] = [
     bottomLine: 'Compression is the single most overlooked factor in golf ball selection. Under 85 mph swing speed: play compression 50-65. Between 85-100 mph: play 70-90. Over 100 mph: play 90+. The chart below lists every major ball with its compression, price, and the swing speed it performs best at. Our top pick: the <strong>Callaway Supersoft</strong> (~$25/dozen).',
     description: 'Golf ball compression chart 2026 — every major ball with compression rating, cover type, and matched swing speed. Printable PDF format available.',
     excerpt: 'Every golf ball ranked by compression — find the right ball for your swing speed in 30 seconds.',
-    intro: "The right golf ball compression for your swing speed: <strong>under 85 mph use low compression (30-60)</strong>, <strong>85-100 mph use mid compression (65-85)</strong>, and <strong>over 100 mph use high compression (90+)</strong>. Compression is a number from 30 to 120 measuring how much the ball deforms at impact — lower means softer. Most amateurs play a ball that is too firm for their swing speed, leaving 5 to 15 yards on the table. The chart below lists compression ratings for 34 golf balls in 2026, organized by swing speed range. Match your compression to your speed and you gain distance without changing your swing. For full reviews, see our <a href=\"/best-golf-balls-2026/\">best golf balls 2026 guide</a>.",
+    intro: "The right golf ball compression for your swing speed: <strong>under 85 mph use low compression (30-60)</strong>, <strong>85-100 mph use mid compression (65-85)</strong>, and <strong>over 100 mph use high compression (90+)</strong>. Compression is a number from 30 to 120 measuring how much the ball deforms at impact — lower means softer. Most amateurs play a ball that is too firm for their swing speed, leaving 5 to 15 yards on the table. The chart below lists compression ratings for 35 golf balls in 2026, organized by swing speed range. Match your compression to your speed and you gain distance without changing your swing. For full reviews, see our <a href=\"/best-golf-balls-2026/\">best golf balls 2026 guide</a>.",
     toc: ['What is golf ball compression', 'How to find your swing speed', 'Full compression chart', 'Best balls under 85 mph', 'Best balls 85-100 mph', 'Best balls over 100 mph', 'Compression by brand', 'FAQ'],
     sections: [
       {
@@ -3310,7 +3310,7 @@ export const ARTICLES: Article[] = [
       { q: 'Does compression affect putting?', a: 'Less than the cover does. Feel off the putter face comes mostly from cover material and hardness, which is why a soft-cover 72-compression ball can feel softer than a firm-cover 40-compression one.' },
     ],
     related: [
-      { slug: '/golf-ball-compression-chart/', label: 'Full Compression Chart — 34 Balls' },
+      { slug: '/golf-ball-compression-chart/', label: 'Full Compression Chart — 35 Balls' },
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-finder/', label: 'Golf Ball Finder Tool' },
       { slug: '/golf-swing-speed-chart/', label: 'Average Swing Speed by Age' },
