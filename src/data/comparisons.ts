@@ -1271,7 +1271,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: "2026-06-25",
     dateModified:  "2026-06-25",
     related: [
-      { slug: "/best-budget-launch-monitor/", label: "Best Budget Launch Monitors" },
+      { slug: "/best-golf-launch-monitors-2026/", label: "Best Budget Launch Monitors" },
       { slug: "/garmin-approach-r10-review/", label: "Garmin R10 Review" },
     ],
   },
@@ -1350,7 +1350,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: "2026-06-25",
     dateModified:  "2026-06-25",
     related: [
-      { slug: "/best-golf-simulator-for-beginners/", label: "Simulator for Beginners" },
+      { slug: "/best-golf-launch-monitors-2026/", label: "Simulator for Beginners" },
       { slug: "/how-much-does-golf-simulator-cost/", label: "Simulator Cost Breakdown" },
       { slug: "/skytrak-plus-review/", label: "SkyTrak+ Review" },
       { slug: "/garmin-approach-r10-review/", label: "Garmin R10 Review" },
@@ -2100,6 +2100,6 @@ export const COMPARISONS: Comparison[] = [
     faq: [{"q": "Do both nets return the ball automatically?", "a": "Yes. Both the Spornia SPG and the Net Return Pro roll the ball back toward you after impact, which is the feature that makes home practice sustainable. On that specific capability they are equivalent."}, {"q": "Is the Net Return Pro worth almost three times the price?", "a": "For daily or shared use, yes — the heavier steel frame and larger target are built for it. For a few evenings a week, no. The Spornia does the same job, and the $498 saved covers most of a Garmin R10 or Square Golf launch monitor."}, {"q": "Can you hit driver into the Spornia?", "a": "Yes. It is rated for swing speeds over 120 mph, which covers every amateur and most of the field at your club. The caveat applies to both nets: the rating assumes you hit the net, not the frame."}, {"q": "How much space do you need?", "a": "Enough swing room plus a real margin either side of the net. The Net Return Pro's larger target — 7x7 up to 8x7.5 ft, with a Large 9 at $995 — is more forgiving of a mis-hit, which is the practical argument for the bigger net in a tight garage."}, {"q": "Do you need a mat as well?", "a": "Yes, with either. Hitting off concrete will hurt your wrists and ruin your clubs. Budget a few hundred dollars for a mat on top of whichever net you choose."}],
     datePublished: "2026-10-07",
     dateModified: "2026-10-07",
-    related: [{"slug": "/best-golf-hitting-net-apartment-garage/", "label": "Best Hitting Nets for an Apartment or Garage"}, {"slug": "/best-golf-hitting-mats-home/", "label": "Best Golf Hitting Mats for Home"}, {"slug": "/best-golf-simulator-under-1000/", "label": "Best Golf Simulator Setups Under $1,000"}],
+    related: [{"slug": "/best-golf-hitting-net-apartment-garage/", "label": "Best Hitting Nets for an Apartment or Garage"}, {"slug": "/best-golf-hitting-mats-home/", "label": "Best Golf Hitting Mats for Home"}, {"slug": "/best-golf-launch-monitors-2026/", "label": "Best Golf Simulator Setups Under $1,000"}],
   },
 ];

@@ -128,7 +128,7 @@ export const AFFILIATE: Record<string, {
   },
 
   // B3: the base Mevo — distinct from the ~$1,839 Mevo+. The "Most Portable" slot
-  // on /best-budget-launch-monitor/ was headed "Mevo" but linked the Mevo+.
+  // on /best-golf-launch-monitors-2026/ was headed "Mevo" but linked the Mevo+.
   'flightscope-mevo': {
     url: 'https://www.amazon.com/dp/B07L52KP31?linkId=97d6d30c4e5b1141ef6356aa48fab218&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     verifiedOn: '2026-09-01',

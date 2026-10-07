@@ -33,7 +33,7 @@ const CATEGORY_ANCHORS: Record<string, Array<{ slug: string; label: string }>> =
     { slug: '/best-golf-gps-watches/',                             label: 'Best Golf GPS Watches 2026' },
     { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/',      label: 'MLM2PRO vs R50 vs Square Golf' },
     { slug: '/best-golf-apps/',                                    label: 'Best Golf Apps' },
-    { slug: '/best-budget-launch-monitor/',                        label: 'Best Budget Launch Monitor' },
+    { slug: '/best-golf-launch-monitors-2026/',                        label: 'Best Budget Launch Monitor' },
     { slug: '/best-golf-hitting-net-apartment-garage/',            label: 'Best Golf Hitting Nets' },
     { slug: '/best-golf-launch-monitors-2026/',                    label: 'Best Golf Launch Monitors 2026' },
     { slug: '/garmin-approach-r50-review/',                        label: 'Garmin R50 Review' },
@@ -407,7 +407,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'how-to-practice-at-home': [
     { slug: '/best-golf-training-aids/',            label: 'Best Golf Training Aids 2026' },
     { slug: '/best-golf-hitting-net-apartment-garage/',         label: 'Best Indoor Golf Net Setup' },
-    { slug: '/best-golf-simulator-small-spaces/',   label: 'Best Golf Simulators for Small Spaces' },
+    { slug: '/best-golf-launch-monitors-2026/',   label: 'Best Golf Simulators for Small Spaces' },
   ],
 
   // ── Seniors cluster ───────────────────────────────────────────────────────────
@@ -516,7 +516,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/golf-simulator-cost-calculator/', label: 'Golf Simulator Cost Calculator' },
   ],
   'skytrak-vs-mevo': [
-    { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Simulators for Small Spaces' },
+    { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Simulators for Small Spaces' },
     { slug: '/best-ai-golf-training-tools/',         label: 'Best AI Golf Training Tools' },
     { slug: '/how-to-build-garage-golf-simulator/',  label: 'Build a Garage Simulator' },
   ],
@@ -535,7 +535,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'launch-monitors': [
     { slug: '/rapsodo-mlm2pro-review/',              label: 'Rapsodo MLM2PRO Review — 6 Months' },
     { slug: '/trackman-vs-foresight-gcquad/',         label: 'Trackman 4 vs Foresight GCQuad' },
-    { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Golf Simulators for Small Spaces' },
+    { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Simulators for Small Spaces' },
     { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
         { slug: '/best-golf-swing-analyzer-iphone/', label: 'Best Golf Swing Analyzer Iphone' },
             { slug: '/golf-club-distance-chart/', label: 'Golf Club Distance Chart' },
@@ -610,7 +610,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/skytrak-plus-review/', label: 'SkyTrak+ Review' },
     { slug: '/mevo-plus-review/', label: 'Mevo+ Review' },
     { slug: '/best-golf-launch-monitors-2026/',      label: 'Best Golf Launch Monitors 2026' },
-    { slug: '/best-golf-simulator-small-spaces/',    label: 'Best Golf Simulators for Small Spaces' },
+    { slug: '/best-golf-launch-monitors-2026/',    label: 'Best Golf Simulators for Small Spaces' },
     { slug: '/skytrak-vs-mevo-plus/',                label: 'SkyTrak+ vs Mevo+ Comparison' },
   ],
   'gear-under-100': [
@@ -839,7 +839,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'apartment-golf-simulator': [
     { slug: '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/', label: 'MLM2PRO vs R50 vs Square Golf' },
     { slug: '/best-budget-launch-monitor-apartment/', label: 'Best Budget Launch Monitor Under $700' },
-    { slug: '/best-golf-simulator-under-1000/', label: 'Best Simulator Under $1,000' },
+    { slug: '/best-golf-launch-monitors-2026/', label: 'Best Simulator Under $1,000' },
     { slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/', label: 'How I Dropped 5 Strokes With Data' },
     { slug: '/desk-exercises-fix-golf-slice/', label: 'Desk Exercises That Fix Your Slice' },
     { slug: '/best-training-aids-fix-slice/', label: 'Training Aids to Fix Your Slice' },
@@ -1264,6 +1264,7 @@ export function getMergedRelated(article: Article, limit = MERGE_LIMIT): Related
   const push = (links: Array<{ slug: string; label: string }>) => {
     for (const link of links) {
       if (seen.has(link.slug)) continue;
+      if (REDIRECTED_AWAY.has(link.slug)) continue;   // Sprint 141 — never link into a 301
       if (result.length >= limit) break;
       seen.add(link.slug);
       result.push({ slug: link.slug, label: link.label });
@@ -1318,5 +1319,5 @@ export function getFeaturedArticles(limit = 6): Article[] {
 }
 
 export function getAllArticles(): Article[] {
-  return [...ARTICLES].sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
+  return ARTICLES.filter(a => !REDIRECTED_AWAY.has(a.slug)).sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
 }

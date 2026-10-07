@@ -63,6 +63,16 @@ export const REDIRECTED_AWAY = new Set<string>([
   '/compare/skytrak-plus-vs-mevo-plus/',          // → /skytrak-vs-mevo-plus/
   '/compare/square-golf-vs-garmin-r10/',          // → /garmin-r10-vs-square-golf/
   '/compare/garmin-r50-vs-rapsodo-mlm2pro/',      // → /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/
+  // ── Sprint 141 — launch-monitor / simulator consolidation ───────────────
+  // Six pages at position 18.7-32.2 earning 5 clicks between them, every
+  // product already on the hub. Records remain in articles.ts; removing these
+  // lines and the matching _redirects rules reverses it.
+  '/best-budget-launch-monitor/',                // pos 31.2, 2 clicks/90d — 6 of its 7 products already on the hub
+  '/best-golf-simulators/',                      // pos 32.2, 1 click — all 3 products already on the hub
+  '/best-golf-simulator-under-5000/',            // pos 23.0, 0 clicks — all 3 products already on the hub
+  '/best-golf-simulator-for-beginners/',         // pos 22.2, 1 click — all 3 products already on the hub
+  '/best-golf-simulator-small-spaces/',          // pos 24.1, 1 click — both products already on the hub
+  '/best-golf-simulator-under-1000/',            // pos 18.7, 0 clicks — monitors on the hub; net and mat live on their own pages
 ]);
 
 /**

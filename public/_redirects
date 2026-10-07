@@ -8,7 +8,7 @@
 /best-gps-golf-watch-high-handicappers.html  /best-golf-gps-watches/  301
 /best-golf-apps-handicap-tracking.html  /best-golf-apps/  301
 /skytrak-vs-mevo-plus.html  /skytrak-vs-mevo-plus/  301
-/best-golf-simulator-small-spaces.html  /best-golf-simulator-small-spaces/  301
+/best-golf-simulator-small-spaces.html  /best-golf-launch-monitors-2026/  301
 /how-to-build-garage-golf-simulator.html  /how-to-build-garage-golf-simulator/  301
 /how-to-use-golf-rangefinder.html  /how-to-use-golf-rangefinder/  301
 /bushnell-vs-garmin-rangefinder.html  /bushnell-vs-garmin-rangefinder/  301
@@ -16,7 +16,7 @@
 /best-indoor-golf-net-setup.html  /best-golf-hitting-net-apartment-garage/  301
 /best-golf-balls-slow-swing-speed.html  /best-golf-balls-slow-swing-speed/  301
 /best-golf-balls-weekend-golfers.html  /best-golf-balls-2026/  301
-/best-budget-launch-monitor.html  /best-budget-launch-monitor/  301
+/best-budget-launch-monitor.html  /best-golf-launch-monitors-2026/  301
 /best-golf-swing-analyzer-iphone.html  /best-golf-swing-analyzer-iphone/  301
 /best-golf-training-aids-home-practice.html  /best-golf-training-aids-home-practice/  301
 /golf-ball-compression-database/  /golf-ball-compression-chart/  301
@@ -154,3 +154,23 @@
 /compare/skytrak-plus-vs-mevo-plus/  /skytrak-vs-mevo-plus/  301
 /compare/square-golf-vs-garmin-r10/  /garmin-r10-vs-square-golf/  301
 /compare/garmin-r50-vs-rapsodo-mlm2pro/  /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/  301
+
+# ── Sprint 141 — launch-monitor / simulator consolidation ────────────────────
+# 58 of our pages competed for launch-monitor and simulator queries: 14,353
+# impressions over 90 days producing 97 clicks (0.68%). The six below sat at
+# position 18.7-32.2 and earned 5 clicks between them, while every product they
+# carried was already on the hub. Internal links did not explain the spread —
+# six pages in the cluster shared identical sitewide link counts and ranked
+# anywhere from 3.2 to 37.4 — so dilution, not link equity, was the problem.
+# The two pages that actually work are left untouched:
+#   /best-launch-monitors-no-subscription/  pos 7.7, 62 clicks
+#   /trackman-alternatives-2026/            pos 3.2
+# FlightScope Mevo lived only on /best-budget-launch-monitor/ and was moved to
+# the hub first, so no product is lost. Records stay in articles.ts, so deleting
+# these six lines and the REDIRECTED_AWAY entries reverses the whole thing.
+/best-budget-launch-monitor/  /best-golf-launch-monitors-2026/  301
+/best-golf-simulators/  /best-golf-launch-monitors-2026/  301
+/best-golf-simulator-under-5000/  /best-golf-launch-monitors-2026/  301
+/best-golf-simulator-for-beginners/  /best-golf-launch-monitors-2026/  301
+/best-golf-simulator-small-spaces/  /best-golf-launch-monitors-2026/  301
+/best-golf-simulator-under-1000/  /best-golf-launch-monitors-2026/  301

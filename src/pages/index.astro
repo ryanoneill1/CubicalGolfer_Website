@@ -8,6 +8,7 @@ import { homeMeta }         from '../lib/seo';
 import { websiteSchema, organizationSchema, homeFaqSchema, featuredArticlesSchema, breadcrumbSchema } from '../lib/schema';
 import { getFeaturedArticles, getCategoryArticles } from '../lib/linking';
 import { ARTICLES } from '../data/articles';
+import { REDIRECTED_AWAY } from '../lib/sitemap-utils';
 import { COMPARISONS } from '../data/comparisons';
 import { getAffiliateLink } from '../data/affiliate-links';
 
@@ -26,7 +27,7 @@ const meta     = homeMeta();
 
 // Homepage article feed: prioritize high-value pages, not just recent updates
 const moneyCategories = ['rangefinder','launch-monitor','golf-tech','improve-game','golf-balls','drivers','irons','putters','gps-watch'];
-const allSorted = [...ARTICLES].sort((a, b) => ((b as any).dateModified ?? (b as any).datePublished).localeCompare((a as any).dateModified ?? (a as any).datePublished));
+const allSorted = ARTICLES.filter(a => !REDIRECTED_AWAY.has(a.slug)).sort((a, b) => ((b as any).dateModified ?? (b as any).datePublished).localeCompare((a as any).dateModified ?? (a as any).datePublished));
 // First: high-value buying guides and reviews from money categories
 const moneyPages = allSorted.filter((a: any) =>
   ['buying-guide','review'].includes(a.pageType) &&
