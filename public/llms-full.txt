@@ -937,6 +937,10 @@ Summary: Cobra DS-Adapt MAX-K vs Ping G430 Max — forgiveness, distance, and va
 URL: https://www.cubicalgolfer.com/compare/cobra-air-x-vs-air-x-2-irons/
 Summary: Cobra Air X vs Air X 2 irons compared on weight, offset, set composition and price. Which lightweight game-improvement set makes sense at $419 against $498?
 
+## Country Club Elite vs Fiberbuilt Studio Mat
+URL: https://www.cubicalgolfer.com/compare/country-club-elite-vs-fiberbuilt-studio-mat/
+Summary: Country Club Elite at $599 vs Fiberbuilt Studio at $499. Nylon turf vs fibreglass bristles — which home hitting mat suits your joints and space.
+
 ## Mevo+ vs Bushnell Launch Pro — Mid-Range Showdown
 URL: https://www.cubicalgolfer.com/compare/flightscope-mevo-plus-vs-bushnell-launch-pro/
 Summary: I tested the FlightScope Mevo Plus against the Bushnell Launch Pro over dozens of rounds to see which mid-range launch monitor earns a weekend golfer's money
@@ -1048,6 +1052,10 @@ Summary: SkyTrak+ vs Garmin Approach R10 — accuracy, simulator quality, portab
 ## SkyTrak+ vs Mevo+ — Indoor Launch Monitor Compared
 URL: https://www.cubicalgolfer.com/compare/skytrak-plus-vs-mevo-plus/
 Summary: SkyTrak+ ($1,195) vs Flightscope Mevo+ ($1,839) tested indoors and outdoors. Accuracy, software, subscription costs, and which is better for a home.
+
+## Spornia SPG vs Net Return Pro Golf Net
+URL: https://www.cubicalgolfer.com/compare/spornia-spg-vs-net-return-pro/
+Summary: Spornia SPG at $297 vs Net Return Pro at $795. Both return the ball to your feet — the $498 gap buys frame, size and lifespan, not accuracy.
 
 ## Square Golf vs Garmin R10: Budget Monitor Face-Off
 URL: https://www.cubicalgolfer.com/compare/square-golf-vs-garmin-r10/

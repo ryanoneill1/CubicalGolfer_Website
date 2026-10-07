@@ -4216,7 +4216,7 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Evnroll ER2 blade putter',
   },
   'net-return-pro': {
-    url: 'https://www.amazon.com/s?k=net-return-pro&crid=HTVYLIYCCS63&sprefix=net-return-pro%2Caps%2C238&linkCode=ll2&tag=cubicalgolfer-20&linkId=82cda57a6b250ee4c4d055a3a8d00d6f&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/s?k=Net+Return+Pro+Series+golf+net&sprefix=net+return+pro%2Caps%2C238&linkCode=ll2&tag=cubicalgolfer-20&linkId=82cda57a6b250ee4c4d055a3a8d00d6f&language=en_US&ref_=as_li_ss_tl',
     verifiedOn: '2026-09-03',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DNet%2520Return%2520Pro%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
