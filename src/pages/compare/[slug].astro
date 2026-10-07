@@ -12,6 +12,7 @@ import { productName, PRODUCT_DISPLAY } from '../../data/product-names';
 import { getProductImage } from '../../lib/image-map';
 import { AUTHOR_PROFILE } from '../../data/author';
 import type { Comparison } from '../../data/types';
+import { compareHref } from '../../lib/sitemap-utils';
 
 export async function getStaticPaths() {
   return COMPARISONS.map(c => ({
@@ -436,7 +437,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         <h4>More comparisons with these products</h4>
         <div class="rel-links">
           {siblings.map((o: any) => (
-            <a href={`/compare/${o.slug}/`}>{o.title}</a>
+            <a href={compareHref(o.slug)}>{o.title}</a>
           ))}
         </div>
       </div>

@@ -10,6 +10,7 @@ import { COMPARISONS } from '../../data/comparisons';
 import { AFFILIATE, getAffiliateLink } from '../../data/affiliate-links';
 import { productName } from '../../data/product-names';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { compareHref, REDIRECTED_AWAY } from '../../lib/sitemap-utils';
 
 export function getStaticPaths() {
   return BRANDS.map(b => ({ params: { brand: b.slug }, props: { brand: b } }));
@@ -43,6 +44,7 @@ const comparisons = (COMPARISONS as any[])
 const appearances: { title: string; slug: string; product: string; badge: string }[] = [];
 for (const a of ARTICLES as any[]) {
   if (a.pageType === 'review') continue;
+  if (REDIRECTED_AWAY.has(a.slug)) continue;   // Sprint 140 — page 301s; don't link into it
   for (const r of (a.comparisonTable?.rows || [])) {
     if (r.affiliateKey?.startsWith(prefix)) {
       appearances.push({ title: a.titleDisplay || a.title, slug: a.slug, product: r.name || productName(r.affiliateKey), badge: r.bestFor || r.badge || '', key: r.affiliateKey });
@@ -143,7 +145,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         <h2>{brand.name} Head-to-Head Comparisons</h2>
         <ul style="max-width:76ch;">
           {comparisons.map((c: any) => (
-            <li style="margin:6px 0;"><a href={`/compare/${c.slug}/`}>{c.title}</a></li>
+            <li style="margin:6px 0;"><a href={compareHref(c.slug)}>{c.title}</a></li>
           ))}
         </ul>
       </section>

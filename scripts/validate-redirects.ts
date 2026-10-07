@@ -167,5 +167,45 @@ for (const [u, n] of dead) {
   }
 }
 
+// ── 4. internal links that point INTO a redirect ───────────────────────────
+// A link to a URL we redirect still works for a reader, but it spends a hop and
+// hands Google a stale target. Sprint 140 found 38 of them across the built
+// site: four consolidations stayed in ARTICLES/COMPARISONS (deliberately, so
+// they remain reversible) and every listing, brand page, related block and
+// prev/next nav kept linking the old URL. Ceiling is 0 — use compareHref() for
+// comparisons, and filter REDIRECTED_AWAY out of any article listing.
+{
+  const srcs = new Set(
+    fs.readFileSync('public/_redirects', 'utf-8').split('\n')
+      .map(l => l.trim()).filter(l => l && !l.startsWith('#'))
+      .map(l => l.split(/\s+/)[0]).filter(s => s && !s.includes(':'))
+  );
+  const offenders: string[] = [];
+  const walk = (d: string) => {
+    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+      const fp = path.join(d, e.name);
+      if (e.isDirectory()) { walk(fp); continue; }
+      if (!e.name.endsWith('.html')) continue;
+      const own = '/' + path.relative('dist', path.dirname(fp)).split(path.sep).join('/') + '/';
+      const html = fs.readFileSync(fp, 'utf-8');
+      for (const src of srcs) {
+        if (src === own) continue;               // the redirected page's own build output
+        if (html.includes(`href="${src}"`)) offenders.push(`${own} -> ${src}`);
+      }
+    }
+  };
+  if (fs.existsSync('dist')) walk('dist');
+  if (offenders.length) {
+    console.error(`\n\u274c ${offenders.length} internal link(s) point at a URL we redirect (ceiling 0):`);
+    offenders.slice(0, 25).forEach(o => console.error('   ' + o));
+    if (offenders.length > 25) console.error(`   ...and ${offenders.length - 25} more`);
+    console.error('   Link the final destination instead: compareHref() for comparisons,');
+    console.error('   or filter REDIRECTED_AWAY out of the listing.');
+    errors += offenders.length;
+  } else {
+    console.log('\u2705 Internal links into redirects: 0 (ceiling 0).');
+  }
+}
+
 if (errors > 0) { console.error(`\n❌ validate-redirects: ${errors} problem(s).`); process.exit(1); }
 console.log(`✅ Redirects: ${redirects.size} rules deployed, ${live.size} pages live, 0 dead internal links, 0 chains.`);

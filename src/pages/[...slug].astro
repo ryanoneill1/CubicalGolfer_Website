@@ -2,6 +2,7 @@
 // src/pages/[...slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout    from '../layouts/BaseLayout.astro';
+import { compareHref, REDIRECTED_AWAY } from '../lib/sitemap-utils';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
 import RecommendedGearGrid from '../components/RecommendedGearGrid.astro';
@@ -86,6 +87,7 @@ const sameCategory = ARTICLES.filter(
 
 // ── Prev / Next navigation within same category ──────────────────────────
 const categoryArticles = ARTICLES
+  .filter(a => !REDIRECTED_AWAY.has(a.slug))   // Sprint 140 — these 301; don't send prev/next into a redirect
   .filter(a => a.category === article.category)
   .sort((a, b) => a.datePublished.localeCompare(b.datePublished));
 const currentIdx = categoryArticles.findIndex(a => a.id === article.id);
@@ -544,7 +546,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
             {gAff?.price ? <li><strong>Price:</strong> {gAff.price}{gAff.retailer ? ` at ${gAff.retailer}` : ''}</li> : null}
             <li><strong>How we test:</strong> <a href="/how-we-test/">{AUTHOR_PROFILE.testingRounds} rounds on real courses</a></li>
             {['garmin','bushnell','callaway','taylormade','titleist'].includes(article.quickAnswerProduct.split('-')[0]) ? <li><strong>More from this brand:</strong> <a href={`/brands/${article.quickAnswerProduct.split('-')[0]}/`}>Every {article.quickAnswerProduct.split('-')[0].charAt(0).toUpperCase() + article.quickAnswerProduct.split('-')[0].slice(1)} product we've tested →</a></li> : null}
-            {alts.length > 0 ? <li><strong>Compare it:</strong> {alts.map((c: any, i: number) => <span>{i > 0 ? ' · ' : ''}<a href={`/compare/${c.slug}/`}>{c.title}</a></span>)}</li> : null}
+            {alts.length > 0 ? <li><strong>Compare it:</strong> {alts.map((c: any, i: number) => <span>{i > 0 ? ' · ' : ''}<a href={compareHref(c.slug)}>{c.title}</a></span>)}</li> : null}
           </ul>
         </div>
       );

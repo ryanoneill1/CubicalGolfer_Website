@@ -54,7 +54,39 @@ export const REDIRECTED_AWAY = new Set<string>([
   // → /best-golf-gps-watches/ (Sprint 74). 248 impressions at position 36.8,
   //   three products all present on the parent page.
   '/best-gps-golf-watch-high-handicappers/',
+  // ── Sprint 140 ──────────────────────────────────────────────────────────
+  // Three Cloudflare *dashboard* redirect rules, live but undocumented, send
+  // these to longer standalone articles. They stayed in the sitemap, so GSC
+  // reported "Page with redirect" and they could never be indexed. The targets
+  // are 20-45% longer, carry the canonical, and are already indexed.
+  // Records remain in comparisons.ts, so removing these lines reverses it.
+  '/compare/skytrak-plus-vs-mevo-plus/',          // → /skytrak-vs-mevo-plus/
+  '/compare/square-golf-vs-garmin-r10/',          // → /garmin-r10-vs-square-golf/
+  '/compare/garmin-r50-vs-rapsodo-mlm2pro/',      // → /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/
 ]);
+
+/**
+ * Where a redirected-away URL actually lands.
+ *
+ * REDIRECTED_AWAY keeps these out of the sitemap, but the link generators
+ * (brand pages, /compare/ index, related-comparison blocks, breadcrumbs) build
+ * `/compare/${slug}/` straight from the record and so kept emitting internal
+ * links into a 301. Sprint 140 found 23 built pages doing exactly that.
+ *
+ * compareHref() is the single place that knows the difference. Any site that
+ * renders a link to a comparison should use it rather than interpolating.
+ */
+export const REDIRECT_TARGETS: Record<string, string> = {
+  '/compare/skytrak-plus-vs-mevo-plus/':   '/skytrak-vs-mevo-plus/',
+  '/compare/square-golf-vs-garmin-r10/':   '/garmin-r10-vs-square-golf/',
+  '/compare/garmin-r50-vs-rapsodo-mlm2pro/': '/rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/',
+  '/compare/taylormade-qi35-vs-callaway-ai-smoke/': '/compare/callaway-paradym-vs-taylormade-qi35/',
+};
+
+export function compareHref(slug: string): string {
+  const path = `/compare/${slug}/`;
+  return REDIRECT_TARGETS[path] ?? path;
+}
 
 /**
  * lastmod from src/data/lastmod-manifest.json — a per-page date backed by a hash

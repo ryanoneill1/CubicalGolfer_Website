@@ -6,6 +6,7 @@
 
 import type { Article, Comparison, GolfCity, PageMeta } from '../data/types';
 import { ARTICLES } from '../data/articles';
+import { compareHref } from './sitemap-utils';
 
 const DOMAIN           = 'https://www.cubicalgolfer.com';
 
@@ -114,7 +115,7 @@ export function comparisonMeta(c: Comparison): PageMeta {
     breadcrumbs: [
       { label: 'Home',        href: '/' },
       { label: 'Comparisons', href: '/compare/' },
-      { label: c.title,       href: `/compare/${c.slug}/` },
+      { label: c.title,       href: compareHref(c.slug) },
     ],
   };
 }

@@ -8,6 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import type { Article, RelatedLink } from '../data/types';
+import { REDIRECTED_AWAY } from './sitemap-utils';
 import { ARTICLES } from '../data/articles';
 
 // ── Category anchors: always injected into every article in that category ─────
@@ -175,7 +176,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/best-golf-gps-speakers-2026/', label: 'Best Golf GPS Speakers 2026' },
     { slug: '/garmin-approach-s62-review/',          label: 'Garmin S62 Review — 30 Rounds Later' },
     { slug: '/best-golf-gps-watch-under-200/',      label: 'Best GPS Watch Under $200' },
-    { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+    { slug: '/best-golf-gps-watches/', label: 'Best GPS Watch for High Handicappers' },
     { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
     { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5' },
     { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42 GPS Watch' },
@@ -200,7 +201,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
   'best-golf-gps-watch-under-200': [
     { slug: '/best-golf-gps-watches/',              label: 'Best Golf GPS Watches 2026' },
     { slug: '/golf-rangefinder-vs-gps-watch/',      label: 'Rangefinder vs GPS Watch' },
-    { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+    { slug: '/best-golf-gps-watches/', label: 'Best GPS Watch for High Handicappers' },
   
     { slug: '/compare/garmin-s70-vs-apple-watch-golf/', label: 'Garmin S70 vs Apple Watch for Golf' },
   ],
@@ -469,7 +470,7 @@ const ARTICLE_ANCHORS: Record<string, Array<{ slug: string; label: string }>> = 
     { slug: '/how-to-fix-your-slice/',               label: 'How to Fix Your Slice' },
     { slug: '/best-beginner-golf-set-under-500/', label: 'Best Beginner Golf Set Under $500' },
   
-    { slug: '/best-driver-for-high-handicapper/', label: 'Best Driver for High Handicappers' },
+    { slug: '/best-golf-drivers-forgiveness/', label: 'Best Driver for High Handicappers' },
     { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Qi35 vs Ai Smoke Driver Test' },
     { slug: '/compare/taylormade-qi35-vs-titleist-gt2/', label: 'Qi35 vs Titleist GT2 Comparison' },
     { slug: '/driver-vs-3-wood-off-tee/', label: 'Driver vs 3-Wood Off the Tee' },
@@ -1210,7 +1211,7 @@ const CRAWL_STARVED: Array<{ slug: string; label: string }> = [
   { slug: '/golf-wind-adjustment-chart/',                 label: 'Golf Wind Adjustment Chart' },
   { slug: '/golf-distance-temperature-chart/',            label: 'Golf Distance by Temperature' },
   { slug: '/how-golf-launch-monitors-work/',              label: 'How Golf Launch Monitors Work' },
-  { slug: '/compare/square-golf-vs-garmin-r10/',          label: 'Square Golf vs Garmin R10' },
+  { slug: '/garmin-r10-vs-square-golf/',                  label: 'Garmin R10 vs Square Golf' },
   { slug: '/compare/garmin-r10-vs-garmin-r50/',           label: 'Garmin R10 vs R50' },
   { slug: '/compare/garmin-s70-vs-apple-watch-golf/',     label: 'Garmin S70 vs Apple Watch' },
   { slug: '/average-swing-speed-by-age/',                 label: 'Average Swing Speed by Age' },
@@ -1301,13 +1302,17 @@ export function getAllSlugs(): Set<string> {
 const sortDate = (a: Article) => a.dateModified ?? a.datePublished;
 
 export function getCategoryArticles(category: string): Article[] {
+  // REDIRECTED_AWAY records stay in articles.ts so a consolidation stays
+  // reversible, but the page 301s. Listing them here put internal links into a
+  // redirect on the category pages and in the prev/next nav (Sprint 140).
   return ARTICLES
+    .filter(a => !REDIRECTED_AWAY.has(a.slug))
     .filter(a => a.category === category)
     .sort((a, b) => sortDate(b).localeCompare(sortDate(a)));
 }
 
 export function getFeaturedArticles(limit = 6): Article[] {
-  return [...ARTICLES]
+  return ARTICLES.filter(a => !REDIRECTED_AWAY.has(a.slug))
     .sort((a, b) => sortDate(b).localeCompare(sortDate(a)))
     .slice(0, limit);
 }

@@ -45,6 +45,7 @@ const compareFaq = [
 ];
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(compareFaq)];
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { compareHref } from '../../lib/sitemap-utils';
 ---
 <BaseLayout {meta} {schemas} activeNav="compare">
   <header class="cat-hero">
@@ -121,7 +122,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         const hasGen = generatedThumbs.has(`compare-${c.slug}.webp`);
         const thumb = c.thumbnail ?? (hasGen ? genThumb : null);
         return (
-        <a href={`/compare/${c.slug}/`} class="article-card">
+        <a href={compareHref(c.slug)} class="article-card">
           <div class="art-thumb">
             <span class="art-badge tag-cmp">COMPARISON</span>
             {thumb

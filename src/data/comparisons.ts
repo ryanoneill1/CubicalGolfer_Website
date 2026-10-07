@@ -365,9 +365,7 @@ export const COMPARISONS: Comparison[] = [
     dateModified:  '2026-04-14',
     related: [
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers' },
-      { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' },
-      { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Slow Swing Speed' },
-    ],
+      { slug: '/best-golf-driver-slow-swing-speed/', label: 'Best Drivers for Seniors' }],
   },
 
 
@@ -403,9 +401,7 @@ export const COMPARISONS: Comparison[] = [
     dateModified:  '2026-04-20',
     related: [
       { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Blade Putters' },
-      { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade' },
-    ],
+      { slug: '/mallet-vs-blade-putter/', label: 'Mallet vs Blade' }],
   },
   {
     slug:        'lab-golf-df3-vs-odyssey-two-ball-eleven',
@@ -433,10 +429,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: '2026-02-15',
     dateModified:  '2026-04-20',
     related: [
-      { slug: '/best-golf-putters-2026/', label: 'Best Putters' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Mallet Putters' },
-      { slug: '/best-golf-putters-2026/', label: 'Best Putters for Yips' },
-    ],
+      { slug: '/best-golf-putters-2026/', label: 'Best Putters' }],
   },
       // ── Bushnell V7 vs Callaway 300 Pro ────────────────────────────────────
   {
@@ -805,7 +798,7 @@ export const COMPARISONS: Comparison[] = [
     related: [
       { slug: '/garmin-approach-r10-review/', label: 'Garmin R10 Review' },
       { slug: '/best-golf-launch-monitors-2026/', label: 'Best Launch Monitors' },
-      { slug: '/compare/skytrak-plus-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
+      { slug: '/skytrak-vs-mevo-plus/', label: 'SkyTrak+ vs Mevo+' },
     ],
   },
   {
@@ -1117,9 +1110,7 @@ export const COMPARISONS: Comparison[] = [
     datePublished: "2026-06-25",
     dateModified:  "2026-06-25",
     related: [
-      { slug: "/best-golf-irons-2026/", label: "Best Golf Irons" },
-      { slug: "/best-golf-irons-2026/", label: "Most Forgiving Irons" },
-    ],
+      { slug: "/best-golf-irons-2026/", label: "Best Golf Irons" }],
   },
   {
     slug:        "callaway-chrome-soft-vs-kirkland-signature",
@@ -1498,7 +1489,7 @@ export const COMPARISONS: Comparison[] = [
     ],
     datePublished: '2026-09-22',
     dateModified:  '2026-09-22',
-    related: ['/best-golf-drivers-forgiveness/', '/best-driver-for-high-handicapper/', '/compare/callaway-paradym-vs-taylormade-qi35/', '/best-golf-driver-under-400/', '/how-we-test/'],
+    related: ['/best-golf-drivers-forgiveness/', '/compare/callaway-paradym-vs-taylormade-qi35/', '/best-golf-driver-under-400/', '/how-we-test/'],
   },
 
   {
@@ -2022,7 +2013,7 @@ export const COMPARISONS: Comparison[] = [
     faq: [{"q": "Is the Scotty Cameron Phantom worth the extra money over a Spider?", "a": "It depends what you want from it. The Phantom costs around $200 more and buys milled feel, finish and much stronger resale value, not extra forgiveness — both are high-MOI mallets. If you keep putters a long time, the Spider is better value. If you trade often, the Phantom's resale closes the gap."}, {"q": "Which is more forgiving, the Phantom or the Spider Tour?", "a": "Both are high-MOI mallets designed to resist twisting on off-centre strikes, and neither has a decisive forgiveness advantage. The more useful difference is alignment, where most golfers find the Spider easier to aim."}, {"q": "What is the difference in feel between them?", "a": "The Phantom uses a Dual Milled face with vibration damping, giving a firmer, more reportive strike. The Spider Tour uses a thicker Pure Roll insert, which feels softer and is designed to start the ball rolling with topspin sooner."}, {"q": "How much do they cost?", "a": "The Scotty Cameron Phantom 9 is about $549.99 and the TaylorMade Spider Tour about $350, a gap of roughly $200. Prices move, so check the current listing before buying."}, {"q": "Do tour players use both?", "a": "Yes. Both models appear in bags at the top level, which is part of why the comparison comes up so often. Tour usage tells you both designs work; it does not tell you which one suits your stroke."}],
     datePublished: "2026-09-29",
     dateModified: "2026-09-29",
-    related: [{"slug": "/best-golf-putters-2026/", "label": "Best Golf Putters 2026"}, {"slug": "/best-blade-putters-2026/", "label": "Best Blade Putters"}, {"slug": "/how-to-choose-putter-length/", "label": "How to Choose Putter Length"}],
+    related: [{"slug": "/best-golf-putters-2026/", "label": "Best Golf Putters 2026"}, {"slug": "/how-to-choose-putter-length/", "label": "How to Choose Putter Length"}],
   },
   {
     slug: "lab-golf-mezz1-max-vs-lab-golf-df3",

@@ -76,11 +76,11 @@
 /skytrak-plus-vs-flightscope-mevo-gen2/  /compare/skytrak-plus-vs-flightscope-mevo-gen2/  301
 /titleist-pro-v1-vs-callaway-chrome-soft/  /compare/titleist-pro-v1-vs-callaway-chrome-soft/  301
 /titleist-pro-v1-vs-kirkland-signature/  /compare/titleist-pro-v1-vs-kirkland-signature/  301
-/skytrak-plus-vs-mevo-plus/  /compare/skytrak-plus-vs-mevo-plus/  301
+/skytrak-plus-vs-mevo-plus/  /skytrak-vs-mevo-plus/  301
 /garmin-approach-s62-vs-s70/  /compare/garmin-approach-s62-vs-s70/  301
 /garmin-r10-vs-rapsodo-mlm2pro/  /compare/garmin-r10-vs-rapsodo-mlm2pro/  301
 /bushnell-launch-pro-vs-garmin-r10/  /compare/bushnell-launch-pro-vs-garmin-r10/  301
-/garmin-r50-vs-rapsodo-mlm2pro/  /compare/garmin-r50-vs-rapsodo-mlm2pro/  301
+/garmin-r50-vs-rapsodo-mlm2pro/  /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/  301
 /skytrak-plus-vs-garmin-r10/  /compare/skytrak-plus-vs-garmin-r10/  301
 /garmin-r10-vs-flightscope-mevo/  /compare/garmin-r10-vs-flightscope-mevo/  301
 /taylormade-qi35-vs-titleist-gt2/  /compare/taylormade-qi35-vs-titleist-gt2/  301
@@ -94,7 +94,7 @@
 /callaway-chrome-soft-vs-kirkland-signature/  /compare/callaway-chrome-soft-vs-kirkland-signature/  301
 /taylormade-tp5-vs-callaway-chrome-soft/  /compare/taylormade-tp5-vs-callaway-chrome-soft/  301
 /callaway-ai-smoke-max-vs-ping-g430-max/  /compare/callaway-ai-smoke-max-vs-ping-g430-max/  301
-/square-golf-vs-garmin-r10/  /compare/square-golf-vs-garmin-r10/  301
+/square-golf-vs-garmin-r10/  /garmin-r10-vs-square-golf/  301
 /cleveland-rtx6-vs-callaway-jaws-raw/  /compare/cleveland-rtx6-vs-callaway-jaws-raw/  301
 /garmin-r10-home-sim-vs-skytrak-plus-home-sim/  /compare/garmin-r10-home-sim-vs-skytrak-plus-home-sim/  301
 /compare/cleveland-cbx4-vs-callaway-jaws-full-toe/  /compare/cleveland-rtx6-vs-callaway-jaws-raw/  301
@@ -145,3 +145,12 @@
 # by handicap, so there was no angle to differentiate — only a second URL
 # competing for the same intent. Record kept in articles.ts; reversible.
 /best-gps-golf-watch-high-handicappers/  /best-golf-gps-watches/  301
+
+# ── Sprint 140 — mirrors three Cloudflare dashboard rules that were live but
+# undocumented, so validate-redirects.ts could not see them. All three /compare/
+# URLs were in the sitemap AND redirected, the same failure Sprint 68 recorded.
+# The three rules above were repointed at the final destination at the same time,
+# collapsing a 2-hop chain (bare -> /compare/ -> article) down to one hop.
+/compare/skytrak-plus-vs-mevo-plus/  /skytrak-vs-mevo-plus/  301
+/compare/square-golf-vs-garmin-r10/  /garmin-r10-vs-square-golf/  301
+/compare/garmin-r50-vs-rapsodo-mlm2pro/  /rapsodo-mlm2pro-vs-garmin-r50-vs-square-golf/  301

@@ -370,7 +370,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-gps-watch-under-300/', label: 'Best GPS watch under $300' },
       { slug: '/best-golf-gps-watch-under-200/', label: 'Best GPS watch under $200' },
-      { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS watch for high handicappers' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS watch for high handicappers' },
             { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
           { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42' },
       { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
@@ -5098,7 +5098,7 @@ export const ARTICLES: Article[] = [
     related: [
       { slug: '/best-golf-rangefinders-2026/', label: 'Best Golf Rangefinders 2026' },
       { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
-      { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
+      { slug: '/best-golf-gps-watches/', label: 'Best GPS Watch for High Handicappers' },
       { slug: '/is-a-rangefinder-worth-it/', label: 'Is a Rangefinder Worth It?' },
     ],
   },
@@ -5475,14 +5475,12 @@ export const ARTICLES: Article[] = [
     ],
     related: [
       { slug: '/best-golf-gps-watches/', label: 'Best Golf GPS Watches 2026' },
-      { slug: '/best-gps-golf-watch-high-handicappers/', label: 'Best GPS Watch for High Handicappers' },
       { slug: '/golf-rangefinder-vs-gps-watch/', label: 'Rangefinder vs GPS Watch' },
       { slug: '/best-golf-rangefinders-under-200/', label: 'Best Rangefinders Under $200' },
   
       { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42 Compared' },
   
-      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' },
-    ],
+      { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'S62 vs Shot Scope V5' }],
   },
 
   {
@@ -9701,10 +9699,8 @@ export const ARTICLES: Article[] = [
       { slug: '/best-golf-gear-2026/', label: 'Best Golf Gear 2026 — Full Winners List' },
       { slug: '/best-golf-drivers-forgiveness/', label: 'Best Forgiving Drivers (All Prices)' },
       { slug: '/best-golf-drivers-under-400/', label: 'Best Drivers Under $200' },
-      { slug: '/best-driver-for-high-handicapper/', label: 'Best Drivers for High Handicappers' },
   
-      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Paradym vs Qi35 Comparison' },
-    ],
+      { slug: '/compare/callaway-paradym-vs-taylormade-qi35/', label: 'Paradym vs Qi35 Comparison' }],
   },
 
   {
