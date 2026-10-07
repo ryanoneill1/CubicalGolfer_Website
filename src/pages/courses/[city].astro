@@ -3,6 +3,7 @@
 // Programmatic local SEO page for each golf city.
 
 import BaseLayout  from '../../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../../lib/freshness';
 import { CITIES }  from '../../data/cities';
 import { cityMeta } from '../../lib/seo';
 import { cityPageSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
@@ -16,7 +17,18 @@ export async function getStaticPaths() {
 }
 
 interface Props { city: GolfCity }
-const { city } = Astro.props;
+const { city: __authoredCity } = Astro.props;
+
+// Sprint 142 — every city page carried a hardcoded 2026-03-28 while its own
+// sitemap entry said 2026-08-23. Correcting the record itself (rather than just
+// the visible stamp) keeps the meta tag and the JSON-LD in step with it.
+const city = {
+  ...__authoredCity,
+  dateModified:
+    effectiveDateModified(`/courses/${__authoredCity.slug}/`, __authoredCity.dateModified)
+    ?? __authoredCity.dateModified,
+};
+const cityUpdated = city.dateModified;
 
 const meta     = cityMeta(city);
 const schemas  = [
@@ -54,7 +66,7 @@ const TYPE_BADGE: Record<string, string> = {
           <span style="font-size:16px;font-weight:500;color:var(--muted);margin-left:6px">17-hdcp · sets auto-reply, heads to the course</span>
         </span>
         <span class="author-meta">
-          📅 Updated: {city.dateModified} &nbsp;·&nbsp;
+          📅 Updated: {cityUpdated} &nbsp;·&nbsp;
           ⛳ <a href="/how-we-test/" style="color:inherit">How we test →</a>
         </span>
       </div>

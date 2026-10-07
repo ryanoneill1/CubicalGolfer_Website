@@ -2,6 +2,7 @@
 // src/pages/compare/[slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../../lib/freshness';
 import StickyBar from '../../components/StickyBar.astro';
 import { COMPARISONS } from '../../data/comparisons';
 import { comparisonMeta } from '../../lib/seo';
@@ -22,7 +23,18 @@ export async function getStaticPaths() {
 }
 
 interface Props { comparison: Comparison }
-const { comparison: c } = Astro.props;
+const { comparison: __authoredC } = Astro.props;
+
+// Sprint 142 — see the note in [...slug].astro. Comparison pages were the
+// worst offenders: /compare/callaway-paradym-vs-taylormade-qi35/ printed
+// "Updated 2026-03-28" while its sitemap entry said 2026-09-24, 180 days apart.
+const c = {
+  ...__authoredC,
+  dateModified:
+    effectiveDateModified(`/compare/${__authoredC.slug}/`, __authoredC.dateModified)
+    ?? __authoredC.dateModified
+    ?? __authoredC.datePublished,
+};
 
 const meta = comparisonMeta(c);
 const schemas: object[] = [comparisonSchema(c), breadcrumbSchema(meta.breadcrumbs)];

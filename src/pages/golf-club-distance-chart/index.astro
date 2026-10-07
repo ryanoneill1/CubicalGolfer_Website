@@ -1,5 +1,6 @@
 ---
 import { CLUBS, TIERS } from '../../data/club-distances';
+import { effectiveDateModified } from '../../lib/freshness';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
@@ -43,8 +44,8 @@ const refRows = CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW')
 }));
 
 const schemas = [
-  datasetSchema({ name: 'Golf Club Distance Chart — Carry by Swing Speed', description: 'Carry and total distances for all 13 clubs across five driver swing-speed bands (75–115 mph), derived from launch-monitor testing.', url: '/golf-club-distance-chart/', dateModified: '2026-07-09', keywords: ['golf club distances', 'carry distance', 'swing speed'], pdf: '/downloads/golf-club-distance-chart.pdf' }),
-  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
+  datasetSchema({ name: 'Golf Club Distance Chart — Carry by Swing Speed', description: 'Carry and total distances for all 13 clubs across five driver swing-speed bands (75–115 mph), derived from launch-monitor testing.', url: '/golf-club-distance-chart/', dateModified: effectiveDateModified('/golf-club-distance-chart/', '2026-07-09'), keywords: ['golf club distances', 'carry distance', 'swing speed'], pdf: '/downloads/golf-club-distance-chart.pdf' }),
+  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: effectiveDateModified('/golf-club-distance-chart/', '2026-05-17'), url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
 ];

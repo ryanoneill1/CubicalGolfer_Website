@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../../lib/freshness';
 import StickyBar from '../../components/StickyBar.astro';
 import TableOfContents from '../../components/TableOfContents.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
@@ -33,7 +34,7 @@ const schemas = [
     headline: meta.title,
     description: meta.description,
     datePublished: '2026-05-17',
-    dateModified: '2026-05-17',
+    dateModified: effectiveDateModified('/golf-simulator-complete-guide/', '2026-05-17'),
     url: meta.canonical,
   }),
   faqSchema(faqs),

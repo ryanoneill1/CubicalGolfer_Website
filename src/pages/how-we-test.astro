@@ -5,6 +5,7 @@
 // If a fact is uncertain, write a measured version ("more than 8 rounds") rather
 // than inventing a number.
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../lib/freshness';
 import { AUTHOR_PROFILE } from '../data/author';
 import { breadcrumbSchema } from '../lib/schema';
 import { ROBOTS_INDEX } from '../lib/seo';
@@ -41,7 +42,7 @@ const howWeTestSchema = {
   description: 'Our complete methodology for testing and recommending golf gear: rangefinders, GPS watches, golf balls, drivers, training aids, and more.',
   url: `${DOMAIN}/how-we-test/`,
   datePublished: '2025-01-15',
-  dateModified: '2026-07-03',
+  dateModified: effectiveDateModified('/how-we-test/', '2026-07-03'),
   author: {
     '@type': 'Person',
     name: 'Ryan O.',

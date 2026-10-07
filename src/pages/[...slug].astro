@@ -2,6 +2,7 @@
 // src/pages/[...slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout    from '../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../lib/freshness';
 import { compareHref, REDIRECTED_AWAY } from '../lib/sitemap-utils';
 import ProductCard   from '../components/ProductCard.astro';
 import AffiliateCTA  from '../components/AffiliateCTA.astro';
@@ -39,7 +40,22 @@ export async function getStaticPaths() {
 }
 
 interface Props { article: Article }
-const { article } = Astro.props;
+const { article: __authored } = Astro.props;
+
+// Sprint 142 — one honest "last updated" date per page.
+// 187 of 249 records carried an on-page date OLDER than their own sitemap
+// entry, 34 of them by 90+ days, while printing "prices reviewed regularly"
+// beside it. effectiveDateModified takes the later of the author's stamp and
+// the content-hash lastmod, so the visible date, the Article schema and
+// article:modified_time can no longer contradict the sitemap. No record was
+// ever AHEAD of its manifest entry, so this can only move a date forward.
+const article = {
+  ...__authored,
+  dateModified:
+    effectiveDateModified(__authored.slug, __authored.dateModified)
+    ?? __authored.dateModified
+    ?? __authored.datePublished,
+};
 
 const meta    = articleMeta(article);
 const related = getMergedRelated(article);

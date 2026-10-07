@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../../lib/freshness';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
@@ -32,7 +33,7 @@ const schemas = [
     headline: meta.title,
     description: meta.description,
     datePublished: '2026-05-17',
-    dateModified: '2026-05-17',
+    dateModified: effectiveDateModified('/golf-ball-complete-guide/', '2026-05-17'),
     url: meta.canonical,
   }),
   faqSchema(faqs),

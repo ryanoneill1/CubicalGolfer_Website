@@ -1,5 +1,6 @@
 ---
 import { SWING_SPEEDS as speeds } from '../../data/swing-speeds';
+import { effectiveDateModified } from '../../lib/freshness';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { breadcrumbSchema, faqSchema , datasetSchema } from '../../lib/schema';
@@ -28,7 +29,7 @@ const faq = [
 ];
 
 const schemas = [
-  datasetSchema({ name: 'Golf Swing Speed Chart — Averages by Age & Handicap', description: 'Average driver swing speeds by age group, gender, and handicap band.', url: '/golf-swing-speed-chart/', dateModified: '2026-07-09', keywords: ['swing speed', 'driver speed by age'], pdf: '/downloads/golf-swing-speed-chart.pdf' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+  datasetSchema({ name: 'Golf Swing Speed Chart — Averages by Age & Handicap', description: 'Average driver swing speeds by age group, gender, and handicap band.', url: '/golf-swing-speed-chart/', dateModified: effectiveDateModified('/golf-swing-speed-chart/', '2026-07-09'), keywords: ['swing speed', 'driver speed by age'], pdf: '/downloads/golf-swing-speed-chart.pdf' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { ROBOTS_INDEX } from '../../lib/seo';

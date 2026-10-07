@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../../lib/freshness';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema , webApplicationSchema } from '../../lib/schema';
 
@@ -27,7 +28,7 @@ const faqs = [
 
 const schemas = [
   webApplicationSchema({ name: 'Golf Equipment Budget Planner', description: 'Allocate any golf budget across clubs, balls, and tech with tested recommendations.', url: '/golf-equipment-budget-planner/' }),
-  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
+  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: effectiveDateModified('/golf-equipment-budget-planner/', '2026-05-17'), url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
 ];

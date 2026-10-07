@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { effectiveDateModified } from '../../lib/freshness';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema , webApplicationSchema } from '../../lib/schema';
@@ -28,7 +29,7 @@ const faqs = [
 
 const schemas = [
   webApplicationSchema({ name: 'Golf Simulator Cost Calculator', description: 'Price out a complete home golf simulator build for your space and budget.', url: '/golf-simulator-cost-calculator/' }),
-  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: '2026-05-17', url: meta.canonical }),
+  articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: effectiveDateModified('/golf-simulator-cost-calculator/', '2026-05-17'), url: meta.canonical }),
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
 ];
