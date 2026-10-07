@@ -63,6 +63,54 @@ if (!hasMeasure) {
   problems.push('No ch-based max-width on article prose — line length is unconstrained (measured 114 chars before this was added).');
 }
 
+// ── table alignment ────────────────────────────────────────────────────────
+// A column must align as a unit: every cell in it, plus its header, the same
+// way. Mixed alignment inside one column is the defect right-alignment exists
+// to prevent — it stops the digits lining up by place value, which is the whole
+// point. Checks the built HTML rather than the CSS, because alignment is decided
+// per table at build time (src/lib/table-align.ts).
+{
+  const walk = (d: string): string[] =>
+    fs.readdirSync(d, { withFileTypes: true }).flatMap(e => {
+      const p = path.join(d, e.name);
+      return e.isDirectory() ? walk(p) : e.name.endsWith('.html') ? [p] : [];
+    });
+  const ragged: string[] = [];
+  let tables = 0;
+  for (const file of walk('dist')) {
+    const html = fs.readFileSync(file, 'utf-8');
+    if (!html.includes('class="cmp-table"')) continue;
+    const slug = '/' + path.relative('dist', path.dirname(file)).split(path.sep).join('/') + '/';
+    for (const tbl of html.match(/<table class="cmp-table"[\s\S]*?<\/table>/g) || []) {
+      tables++;
+      const headAttrs = [...tbl.matchAll(/<th\b([^>]*)>/g)].map(m => m[1]);
+      const bodyRows = [...tbl.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/g)].slice(1);
+      const colNumeric: (boolean | null)[] = headAttrs.map(a => a.includes('cmp-num'));
+      for (const match of bodyRows) {
+        const row = match[1];
+        const cells = [...row.matchAll(/<td\b([^>]*)>/g)].map(m => m[1]);
+        cells.forEach((a, i) => {
+          const isNum = a.includes('cmp-num');
+          // column 0 is the product name, last is the Buy button — both always left
+          if (i === 0 || i >= colNumeric.length - 1) return;
+          if (colNumeric[i] !== undefined && colNumeric[i] !== isNum) {
+            ragged.push(`${slug} column ${i}: header ${colNumeric[i] ? 'right' : 'left'}, a cell ${isNum ? 'right' : 'left'}`);
+          }
+        });
+      }
+    }
+  }
+  const uniq = [...new Set(ragged)];
+  if (uniq.length) {
+    problems.push(
+      `${uniq.length} table column(s) align inconsistently between header and cells:\n` +
+      uniq.slice(0, 8).map(r => '       ' + r).join('\n')
+    );
+  } else {
+    console.log(`\u2705 Table alignment: ${tables} comparison table(s) — every column aligns as a unit.`);
+  }
+}
+
 if (problems.length) {
   console.error(`\n❌ validate-typography: ${problems.length} problem(s).`);
   problems.forEach(p => console.error('   - ' + p));

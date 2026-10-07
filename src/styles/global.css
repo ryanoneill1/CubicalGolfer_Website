@@ -2068,3 +2068,15 @@ main section > p, main section ul, main section ol {
     max-width: 100%;
   }
 }
+
+
+/* ── Sprint 145 — numeric columns in the article comparison tables ───────────
+ * Right-aligned numerals let a reader compare magnitude down a column, because
+ * the digits line up by place value. Tabular figures make that work in a
+ * proportional font, where a "1" is otherwise narrower than a "9" and columns
+ * of digits wobble. The header moves with its column so the two never disagree.
+ * Which columns qualify is decided at build time — see src/lib/table-align.ts. */
+.cmp-table { font-variant-numeric: tabular-nums; }
+.cmp-table th.cmp-num,
+.cmp-table td.cmp-num { text-align: right; }
+.cmp-table th.cmp-num .cmp-sort-btn { justify-content: flex-end; width: 100%; }

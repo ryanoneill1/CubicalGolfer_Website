@@ -2,6 +2,7 @@
 // src/pages/[...slug].astro — Consistency System v2.0 — April 2026
 
 import BaseLayout    from '../layouts/BaseLayout.astro';
+import { numericColumns } from '../lib/table-align';
 import { effectiveDateModified } from '../lib/freshness';
 import { compareHref, REDIRECTED_AWAY } from '../lib/sitemap-utils';
 import ProductCard   from '../components/ProductCard.astro';
@@ -720,6 +721,11 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
       const cellMatrix = tableRows.map(cellFor);
       const keepIdx = allInnerHeaders.map((_: string, i: number) => cellMatrix.some((r: string[]) => (r[i] || '').trim() !== ''));
       const innerHeaders = allInnerHeaders.filter((_: string, i: number) => keepIdx[i]);
+      // Sprint 145 — decide alignment per column from the cells actually being
+      // rendered. See src/lib/table-align.ts for why this is per-column and why
+      // it reads the matrix rather than the data fields.
+      const keptMatrix = cellMatrix.map((r: string[]) => r.filter((_: string, i: number) => keepIdx[i]));
+      const innerNumeric = numericColumns(keptMatrix);
 
       return (
       <div class="cmp-wrap">
@@ -728,7 +734,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
           <caption class="sr-only">Comparison table: {article.titleDisplay}</caption>
           <thead>
             <tr>
-              {[headers[0], ...innerHeaders].map((h: string) => <th scope="col"><button type="button" class="cmp-sort-btn" aria-sort="none" aria-label={`Sort by ${h}`}>{h}</button></th>)}
+              {[headers[0], ...innerHeaders].map((h: string, hi: number) => <th scope="col" class={hi > 0 && innerNumeric[hi - 1] ? 'cmp-num' : undefined}><button type="button" class="cmp-sort-btn" aria-sort="none" aria-label={`Sort by ${h}`}>{h}</button></th>)}
               <th scope="col" class="cmp-th-buy">Buy</th>
             </tr>
           </thead>
@@ -746,7 +752,7 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
                     ) : row.name}
                     {row.winner && <span class="badge-best">BEST PICK</span>}
                   </td>
-                  {innerCells.map((cell: string) => <td>{cell}</td>)}
+                  {innerCells.map((cell: string, ci: number) => <td class={innerNumeric[ci] ? 'cmp-num' : undefined}>{cell}</td>)}
                   <td class="cmp-td-buy">
                     {rowAff ? (
                       <a href={rowAff.url} class="cmp-buy-btn" target="_blank"
