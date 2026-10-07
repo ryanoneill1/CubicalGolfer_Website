@@ -295,6 +295,14 @@ nav.site-nav {
 .art-content > :first-child h2:first-of-type,
 .art-content > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
+/* A heading inside a box that already has its own border and tint does not need
+ * a separator too — that put a 2px rule and a 44px gap inside a bordered cream
+ * panel on 155 pages. The box IS the separation. */
+.art-content :is(.who-box, .quick-answer-box, .trust-card, .freshness-banner, .callout, .update-log) h2,
+.compare-body :is(.who-box, .quick-answer-box, .trust-card, .freshness-banner, .callout, .update-log) h2 {
+  border-top: none; margin-top: 0; padding-top: 0;
+}
+
 /* Sprint 144 — measure. The content column is 927px, which put running text at
  * 114 characters per line against a 50-75 ideal and an 80-character WCAG
  * ceiling. Capping the prose alone keeps tables, images and cards full-width,
@@ -306,12 +314,9 @@ nav.site-nav {
  * characters and 54ch measured 72. Both sit inside the 50-75 ideal band and
  * under the 80-character WCAG ceiling; 54 leaves less dead space on a wide
  * monitor. Uncapped, this column renders about 123 characters at 1024px. */
-.art-content > * > p,
-.art-content > * > ul,
-.art-content > * > ol,
-.art-content > p,
-.art-content > ul,
-.art-content > ol { max-width: 54ch; }
+.art-content p,
+.art-content li { max-width: 54ch; }
+.art-content td p, .art-content th p, .art-content figcaption p { max-width: none; }
 
 /* Sprint 144 — comparison pages use .compare-body, not .art-content, and had no
  * h2 rule of any kind: measured 11 headings on /compare/titleist-pro-v1-vs-
@@ -327,12 +332,9 @@ nav.site-nav {
 .compare-body > :first-child h2:first-of-type,
 .compare-body > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
-.compare-body > * > p,
-.compare-body > * > ul,
-.compare-body > * > ol,
-.compare-body > p,
-.compare-body > ul,
-.compare-body > ol { max-width: 54ch; }
+.compare-body p,
+.compare-body li { max-width: 54ch; }
+.compare-body td p, .compare-body th p, .compare-body figcaption p { max-width: none; }
 .art-content h3 { font-size: 19px; font-weight: 700; color: var(--text); margin: 32px 0 12px; }
 .art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
