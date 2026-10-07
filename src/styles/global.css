@@ -392,20 +392,20 @@ nav.site-nav {
  * with explicit widths stops the browser negotiating and gives the name column
  * the space it actually needs. Percentages, so it still adapts to the viewport.
  * Verified in the browser at 1411px before shipping. */
-#compression-table { table-layout: fixed; width: 100%; }
-#compression-table th:nth-child(1), #compression-table td:nth-child(1) { width: 34%; }
-#compression-table th:nth-child(2), #compression-table td:nth-child(2) { width: 16%; }
-#compression-table th:nth-child(3), #compression-table td:nth-child(3) { width: 10%; }
-#compression-table th:nth-child(4), #compression-table td:nth-child(4) { width: 10%; }
-#compression-table th:nth-child(5), #compression-table td:nth-child(5) { width: 14%; }
-#compression-table th:nth-child(6), #compression-table td:nth-child(6) { width: 16%; }
+table#compression-data { table-layout: fixed; width: 100%; }
+table#compression-data th:nth-child(1), table#compression-data td:nth-child(1) { width: 34%; }
+table#compression-data th:nth-child(2), table#compression-data td:nth-child(2) { width: 16%; }
+table#compression-data th:nth-child(3), table#compression-data td:nth-child(3) { width: 10%; }
+table#compression-data th:nth-child(4), table#compression-data td:nth-child(4) { width: 10%; }
+table#compression-data th:nth-child(5), table#compression-data td:nth-child(5) { width: 14%; }
+table#compression-data th:nth-child(6), table#compression-data td:nth-child(6) { width: 16%; }
 /* every header reads left-aligned; 128 right-aligned the last one, which is
  * what made the header row look misaligned against the cells below it. */
-#compression-table th, #compression-table td { text-align: left; }
+table#compression-data th, table#compression-data td { text-align: left; }
 @media (max-width: 900px) {
   /* below this the fixed widths fight the content — let it size naturally and
    * scroll, which is what the overflow-x wrapper is there for. */
-  #compression-table { table-layout: auto; min-width: 780px; }
+  table#compression-data { table-layout: auto; min-width: 780px; }
 }
 .cmp-winner td { background: #f0f7f2 !important; }
 .cmp-winner td:first-child { color: var(--green); }
@@ -1994,3 +1994,27 @@ main section > p, main section ul, main section ol {
 .runner-up-cta__price { font-size: 18px; font-weight: 800; }
 .runner-up-cta__label { font-size: 15px; }
 .runner-up-cta__note { display: block; font-size: 12px; color: var(--muted, #888); margin-top: 8px; }
+
+
+/* ── Sprint 143 — horizontal overflow on phones ──────────────────────────────
+ * Mobile is 58% of this site's clicks (4,186 of 7,156 over 90 days), and 11 of
+ * 12 table-bearing pages sampled scrolled sideways at 375px — up to 464px of
+ * overflow, which is the whole page being more than twice the screen width.
+ *
+ * Wide tables are the cause. Where a table already sits in an overflow-x
+ * wrapper it behaves; 44 pages had at least one that did not. Rather than edit
+ * those pages one by one, let the table itself become the scroll container
+ * below the breakpoint. `display:block` on a <table> makes it a block box that
+ * can scroll while the rows still lay out as a table inside an anonymous box.
+ *
+ * Verified before shipping: applied to six failing pages in a 375px viewport,
+ * every one went from 219-464px of overflow to 0.
+ */
+@media (max-width: 760px) {
+  .art-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+}

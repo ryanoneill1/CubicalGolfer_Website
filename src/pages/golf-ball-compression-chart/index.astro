@@ -363,7 +363,7 @@ function outboundFor(url: string | null | undefined): string {
         <strong>Where these numbers come from.</strong> There is no industry-standard compression test, so two honest sources can disagree by 20 points or more on the same ball. Manufacturers publish figures from their own rigs; independent labs publish gauge readings from theirs. Titleist and Costco publish nothing at all. This chart uses the manufacturer’s published figure wherever one exists, and an independent measurement where none does — the <strong>Source</strong> column says which, ball by ball, so you can tell a published spec from a measured reading. Numbers from different scales should not be compared directly.
       </p>
       <div style="overflow-x:auto;">
-        <table id="compression-table" class="cmp-table" style="width:100%;"><caption class="sr-only">Complete Golf Ball Compression Chart (2026 Data)</caption>
+        <table id="compression-data" class="cmp-table" style="width:100%;"><caption class="sr-only">Complete Golf Ball Compression Chart (2026 Data)</caption>
           <thead>
             <tr>
               <th scope="col" data-sort="name" style="cursor:pointer;">Golf Ball ↕</th>
@@ -712,7 +712,7 @@ function outboundFor(url: string | null | undefined): string {
   const cf = document.getElementById('cover-filter') as HTMLSelectElement;
   const pf = document.getElementById('price-filter') as HTMLInputElement;
   const pd = document.getElementById('price-display')!;
-  const tb = document.querySelector('#compression-table tbody')!;
+  const tb = document.querySelector('#compression-data tbody')!;
 
   function update() {
     const speed = parseInt(ss.value, 10);
@@ -778,7 +778,7 @@ function outboundFor(url: string | null | undefined): string {
     if (brandFilter) {
       brandFilter.addEventListener('change', function() {
         var brand = this.value.toLowerCase();
-        document.querySelectorAll('#compression-table tbody tr').forEach(function(row) {
+        document.querySelectorAll('#compression-data tbody tr').forEach(function(row) {
           var name = (row.getAttribute('data-name') || '').toLowerCase();
           if (!brand || name.includes(brand.toLowerCase())) {
             row.style.display = '';
