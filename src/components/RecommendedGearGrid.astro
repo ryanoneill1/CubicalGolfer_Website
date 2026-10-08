@@ -93,7 +93,12 @@ function retailerOf(url: string): string {
 }
 .rec-gear-role {
   font-size: 16px; font-weight: 700; letter-spacing: .08em;
-  text-transform: uppercase; color: var(--gold, #9a7b2e);
+  /* --gold (#C8A84B) is a SURFACE colour and measures 2.29:1 as text on this
+     card's white background. --gold-text (#80641A) is the token that exists
+     for gold-coloured text on light: 5.59:1. The two are not interchangeable,
+     and the fallback here (#9a7b2e) was already closer to the right answer
+     than the variable that overrode it. */
+  text-transform: uppercase; color: var(--gold-text, #80641A);
 }
 .rec-gear-main { display: flex; align-items: center; gap: 12px; }
 .rec-gear-img {

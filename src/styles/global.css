@@ -61,6 +61,16 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
   --body:       #2D3F32;
   --muted:      #3D5243;
   --white:      #ffffff;
+  /* Sprint 153 — semantic roles for colours that were hard-coded across the
+     stylesheet and 40+ template sites. Naming them by job rather than by hue
+     is what stops the next change reintroducing a near-duplicate. */
+  --on-gold:    #1a1a1a;  /* text ON a gold surface. White fails: 2.92:1 on the
+                             rendered badge gold, vs 5.95:1 for this.          */
+  --pos:        #2a6b3c;  /* pros / confirmed                                   */
+  --neg:        #9b2222;  /* cons / warning                                     */
+  --on-dark:    rgba(255,255,255,.6);  /* secondary text on the green surfaces.
+                             .4 rendered 3.35-3.63:1 and failed AA; .6 clears
+                             5.56:1 on --green and 6.30:1 on --text.            */
   --border:     #D8D3C8;
   --s1:         0 2px 8px rgba(0,0,0,.06);
   --s2:         0 8px 24px rgba(0,0,0,.10);
@@ -136,7 +146,7 @@ a { text-decoration: none; color: inherit; }
    of dark CTA/badge surfaces so no scoped/inline rule can regress them,
    and give text selection a branded, always-readable style. */
 .product-card__badge { background: var(--green) !important; color: #fff !important; }
-.product-card--winner .product-card__badge { background: var(--gold) !important; color: #1a1a1a !important; }
+.product-card--winner .product-card__badge { background: var(--gold) !important; color: var(--on-gold) !important; }
 .product-card__cta .product-card__cta-text,
 .product-card__cta .product-card__cta-badge { color: inherit !important; }
 .product-card__cta--gg, .product-card__cta--gg .product-card__cta-text { color: var(--green) !important; }
@@ -177,7 +187,7 @@ nav.site-nav {
 }
 .nav-links a:hover { background: var(--cream); color: var(--green); }
 .nav-links a.active { background: var(--green); color: #fff; }
-.nav-links a.nav-cta { background: var(--gold); color: #1a1a1a; font-weight: 700; }
+.nav-links a.nav-cta { background: var(--gold); color: var(--on-gold); font-weight: 700; }
 .nav-links a.nav-cta:hover { background: var(--gold-dark); }
 .nav-toggle {
   display: none; background: none; border: none; cursor: pointer;
@@ -227,7 +237,7 @@ nav.site-nav {
 .breadcrumb--onlight a { color: var(--green); }
 .breadcrumb--onlight a:hover { color: var(--green-dark, #14261B); }
 .breadcrumb--onlight .bc-sep { color: var(--muted); }
-.bc-sep { color: rgba(255,255,255,.3); }
+.bc-sep { color: var(--on-dark); }
 
 /* ── ARTICLE PAGE ── */
 .art-hero { background: var(--green); padding: 56px clamp(1.5rem,5vw,4rem) 48px; }
@@ -554,6 +564,16 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 }
 .art-cta h3 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
 .art-cta p  { color: rgba(255,255,255,.75); font-size: 16px; margin-bottom: 22px; }
+/* Sprint 153 — the link inside this band had no colour of its own, so it fell
+   through to the site-wide `a { color: var(--green) }`. The band's background
+   is ALSO var(--green). Measured 1.00:1: the call to action was the same
+   colour as the thing behind it, on every article page. */
+.art-cta a:not(.btn-gold):not(.aff-cta__btn):not(.cmp-buy-btn):not(.quick-answer-cta) { color: var(--gold); }
+/* …but NOT the buttons. .btn-gold already has a gold BACKGROUND with green text
+   (5.42:1). My first cut of this rule repainted its text gold too, so the
+   button read gold-on-gold at 1.00:1 — I fixed an invisible link by creating an
+   invisible button. Same mistake as the badge: a colour rule that does not ask
+   what surface it is landing on. */
 
 /* Related articles section */
 .related-section { padding: 56px clamp(1.5rem,5vw,4rem); background: var(--cream-dark); }
@@ -589,8 +609,15 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .art-thumb.olive  { background: #4A5A28; }
 .art-badge {
   position: absolute; top: 12px; right: 12px; left: auto; padding: 5px 10px; z-index: 2; /* right side: thumbnail titles are baked into the image top-left */
-  border-radius: 4px; font-size: 16px; font-weight: 700; letter-spacing: .08em; color: #fff;
+  border-radius: 4px; font-size: 16px; font-weight: 700; letter-spacing: .08em;
+  /* The badge has two surfaces and therefore cannot have one text colour.
+     .tag-cmp is dark green (#3A4A2E) and needs white: 9.55:1.
+     .tag-buy is gold (#B8922A) and needs dark: white on it is 2.92:1.
+     My first cut of this sprint set dark text on BOTH and broke .tag-cmp down
+     to 1.82:1 — fixing one surface by breaking the other. */
+  color: #fff;
 }
+.art-badge.tag-buy { color: var(--on-gold); }   /* 5.95:1 on #B8922A */
 .art-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
 .art-body h3 { font-size: 16px; font-weight: 700; line-height: 1.45; margin-bottom: 8px; color: var(--text); }
 .art-body p  { font-size: 16px; color: var(--muted); line-height: 1.6; margin-bottom: 16px; flex: 1; }
@@ -685,7 +712,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 
 /* ── TRUST SECTION ── */
 .trust-section { background: var(--green); padding: 72px clamp(1.5rem,5vw,4rem); }
-.trust-section .section-eyebrow { color: rgba(255,255,255,.55); }
+.trust-section .section-eyebrow { color: var(--on-dark); }
 .trust-section .section-header h2 { color: #fff; }
 .trust-section .section-header p  { color: rgba(255,255,255,.75); font-size: 16px; }
 .trust-stats { display: flex; gap: 16px; margin: 36px 0 40px; flex-wrap: wrap; }
@@ -742,7 +769,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 /* ── FOOTER ── */
 footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.8fr; gap: 32px; margin-bottom: 48px; }
-.footer-brand h4 { font-size: 16px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.45); text-transform: uppercase; margin-bottom: 12px; }
+.footer-brand h4 { font-size: 16px; font-weight: 700; letter-spacing: .12em; color: var(--on-dark); text-transform: uppercase; margin-bottom: 12px; }
 .footer-brand a { display: block; font-size: 16px; color: rgba(255,255,255,.65); margin-bottom: 8px; transition: color .2s; text-decoration: none; }
 .footer-brand a:hover { color: #fff; }
 .footer-logo {
@@ -755,8 +782,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   object-fit: cover; margin-bottom: 14px;
   box-shadow: 0 2px 10px rgba(0,0,0,.3);
 }
-.footer-brand p { font-size: 16px; color: rgba(255,255,255,.55); line-height: 1.75; max-width: 220px; }
-.footer-col h4  { font-size: 16px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.45); text-transform: uppercase; margin-bottom: 16px; }
+.footer-brand p { font-size: 16px; color: var(--on-dark); line-height: 1.75; max-width: 220px; }
+.footer-col h4  { font-size: 16px; font-weight: 700; letter-spacing: .12em; color: var(--on-dark); text-transform: uppercase; margin-bottom: 16px; }
 .footer-col a   { display: block; font-size: 16px; color: rgba(255,255,255,.65); margin-bottom: 10px; transition: color .2s; }
 .footer-col a:hover { color: #fff; }
 
@@ -769,7 +796,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 .footer-accordion summary::-webkit-details-marker { display: none; }
 .footer-accordion summary::after {
-  content: '+'; font-size: 18px; font-weight: 400; color: rgba(255,255,255,.35);
+  content: '+'; font-size: 18px; font-weight: 400; color: var(--on-dark);
   transition: transform .2s;
 }
 .footer-accordion[open] summary::after { content: '−'; }
@@ -789,8 +816,8 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   border-top: 1px solid rgba(255,255,255,.1); padding-top: 24px;
   display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
 }
-.footer-bottom p { font-size: 16px; color: rgba(255,255,255,.4); }
-.footer-disc { font-size: 16px; color: rgba(255,255,255,.28); max-width: 500px; line-height: 1.5; }
+.footer-bottom p { font-size: 16px; color: var(--on-dark); }
+.footer-disc { font-size: 16px; color: var(--on-dark); max-width: 500px; line-height: 1.5; }
 
 /* ── 404 ── */
 .not-found { text-align: center; padding: 120px clamp(1.5rem,5vw,4rem); }
@@ -1132,7 +1159,10 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   flex-wrap: wrap;
 }
 .stars {
-  color: #f5a623;
+  /* Was #f5a623 — 2.03:1 on white, 1.80:1 on cream. These characters carry the
+     rating, so they are content, not decoration. --gold-text is the existing
+     accessible gold: 5.59:1 and 4.96:1. */
+  color: var(--gold-text);
   font-size: 18px;
   letter-spacing: 1px;
   line-height: 1;
@@ -1255,19 +1285,19 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   font-size: 16px; font-weight: 700; letter-spacing: .1em;
   text-transform: uppercase; margin-bottom: 10px; display: block;
 }
-.pros-list-label { color: #2a6b3c; }
-.cons-list-label { color: #9b2222; }
+.pros-list-label { color: var(--pos); }
+.cons-list-label { color: var(--neg); }
 .pros-list li, .cons-list li {
   display: flex; gap: 8px; align-items: flex-start;
   color: var(--body); margin-bottom: 8px;
 }
 .pros-list li:last-child, .cons-list li:last-child { margin-bottom: 0; }
 .pros-list li::before {
-  content: '✓'; color: #2a6b3c; font-weight: 700;
+  content: '✓'; color: var(--pos); font-weight: 700;
   flex-shrink: 0; margin-top: 1px;
 }
 .cons-list li::before {
-  content: '✗'; color: #9b2222; font-weight: 700;
+  content: '✗'; color: var(--neg); font-weight: 700;
   flex-shrink: 0; margin-top: 1px;
 }
 @media (max-width: 600px) {
@@ -1474,13 +1504,13 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── BREADCRUMB (shared, works in all hero types) ── */
 .breadcrumb {
-  font-size: 16px; color: rgba(255,255,255,.55);
+  font-size: 16px; color: var(--on-dark);
   margin-bottom: 16px;
   display: flex; gap: 6px; align-items: center; flex-wrap: wrap;
 }
 .breadcrumb a { color: rgba(255,255,255,.65); transition: color .2s; }
 .breadcrumb a:hover { color: #fff; }
-.bc-sep { color: rgba(255,255,255,.35); }
+.bc-sep { color: var(--on-dark); }
 
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -1724,7 +1754,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .email-strip__disclaimer {
   margin: 10px 0 0;
   font-size: 16px;
-  color: rgba(255,255,255,.4);
+  color: var(--on-dark);
   line-height: 1.5;
 }
 .email-strip__thanks {
@@ -1895,7 +1925,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .hero-divider { height: 1px; background: rgba(255,255,255,0.07); max-width: 180px; margin: 0 auto 16px; }
 .hero-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 18px; }
 .hero-stat-num { font-size: 20px; font-weight: 700; color: var(--gold); }
-.hero-stat-label { font-size: 16px; color: rgba(255,255,255,0.4); letter-spacing: 0.03em; }
+.hero-stat-label { font-size: 16px; color: var(--on-dark); letter-spacing: 0.03em; }
 .hero-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
 .hero-pill {
   display: inline-flex; align-items: center; gap: 5px;
@@ -2066,6 +2096,16 @@ main section > p, main section ul, main section ol {
 .hero .byline-tagline,
 .cat-hero .byline-tagline,
 .art-hero .byline-tagline { color: rgba(255,255,255,.72); }
+/* Sprint 153 — …but .author-box is a LIGHT card (rgb(240,247,242)) nested
+   inside the dark hero, and the byline lives inside it. The rule above was
+   written when the byline sat directly on the green, so it has been painting
+   white text on a near-white card ever since the card was introduced:
+   measured 1.06:1 on every article page — effectively invisible, and the
+   grey-looking tagline visible in every screenshot. Restore the muted colour
+   wherever the byline is on the card (7.76:1). */
+.hero .author-box .byline-tagline,
+.cat-hero .author-box .byline-tagline,
+.art-hero .author-box .byline-tagline { color: var(--muted); }
 
 /* ── Runner-up CTA on /compare/ pages ────────────────────────────────────────
    Every comparison has two products; only the winner used to be buyable in any
