@@ -26,7 +26,14 @@ import path from 'path';
  * moves; bumping the visible date with it would tell readers the terms changed
  * when they did not. Here the sitemap is the wrong one, not the page.
  */
-const LEGAL_EXEMPT = new Set(['/privacy-policy/', '/terms/', '/affiliate-disclosure/']);
+const LEGAL_EXEMPT = new Set([
+  '/privacy-policy/', '/terms/', '/affiliate-disclosure/',
+  // Sprint 149 — cookie-policy belongs here for exactly the same reason and was
+  // missed when this list was written. Touching its markup bumped the content
+  // hash, which moved its lastmod, which tripped this check: proof the rule is
+  // doing its job, and that the list was incomplete.
+  '/cookie-policy/',
+]);
 
 const manifest = JSON.parse(fs.readFileSync('src/data/lastmod-manifest.json', 'utf-8'));
 const lastmodOf = (slug: string): string | undefined => {

@@ -394,7 +394,7 @@ nav.site-nav {
   background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--s1);
 }
 .cmp-table th {
-  background: var(--green); color: #fff; padding: 0;
+  background: var(--green); color: #fff; padding: 13px 16px;
   text-align: left; font-size: 16px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
   position: relative; white-space: nowrap;
 }
@@ -412,6 +412,11 @@ nav.site-nav {
 .cmp-sort-btn.sort-desc::after { content: '▼'; opacity: .9; }
 .cmp-sort-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 .cmp-table th.cmp-th-buy { cursor: default; padding: 13px 16px; }
+/* Sprint 149 — a <th> that wraps a sort button hands its padding to the button so
+ * the whole cell stays clickable; a plain <th> keeps its own. Previously plain
+ * headers had none at all, which only became visible once a column was
+ * right-aligned and its text touched the header beside it. */
+.cmp-table th:has(.cmp-sort-btn) { padding: 0; }
 .cmp-table th.cmp-th-buy:hover { background: var(--green); }
 .cmp-table td {
   padding: 13px 16px; border-bottom: 1px solid var(--border);
@@ -2123,7 +2128,8 @@ main section > p, main section ul, main section ol {
   .art-content figure,
   .art-content div[style*="overflow-x"],
   .compare-body div[style*="overflow-x"] {
-    width: min(var(--content-w), calc(100vw - 48px));
+    width: max-content;
+    max-width: min(var(--content-w), calc(100vw - 48px));
     margin-left: 50%;
     transform: translateX(-50%);
   }
