@@ -41,9 +41,29 @@ const css = cssFiles.map(f => fs.readFileSync(f, 'utf-8')).join('\n');
 
 const problems: string[] = [];
 
-const hasSeparator = /\.art-content\s+h2\s*\{[^}]*border-top:\s*2px/.test(css);
-if (!hasSeparator) {
-  problems.push('No 2px border-top on .art-content h2 — section headings have lost their separator.');
+// Sprint 152 — the separator must exist EXACTLY ONCE, on the full-width
+// section wrapper. Previously this asserted it was on the h2. That was right
+// while headings spanned the shell, and became wrong the moment Sprint 151
+// narrowed and centred them: the heading's border shrank to the reading
+// measure while .art-section's stayed full width, so the page drew two rules
+// of different widths above every section. The defect was not a missing
+// border — it was a second one. So check for one, and only one.
+const sepOnSection = /\.art-section\s*\{[^}]*border-top:\s*2px/.test(css);
+const sepOnHeading = /\.art-content\s+h2\s*\{[^}]*border-top:\s*2px/.test(css);
+if (!sepOnSection) {
+  problems.push(
+    'No 2px border-top on .art-section — sections have lost their separator. ' +
+    'It belongs on the section wrapper, which spans the full shell, not on the ' +
+    'heading, which is capped at the reading measure.'
+  );
+}
+if (sepOnHeading) {
+  problems.push(
+    'A 2px border-top is set on BOTH .art-section and .art-content h2. Since ' +
+    'headings are capped at --prose-w and centred, that draws two separator ' +
+    'lines at two different widths above every section — measured 718px on the ' +
+    'heading against 1294px on the wrapper. Keep it on .art-section only.'
+  );
 }
 
 // the bug: an unscoped :first-of-type exception cancels the rule on every h2,

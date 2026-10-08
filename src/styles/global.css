@@ -299,10 +299,17 @@ nav.site-nav {
   margin: 0 auto;
   padding: 56px var(--page-px);
 }
+/* Sprint 152 — the separator moved OFF the heading.
+ * It used to live here AND on .art-section. That was invisible while both were
+ * the same width, but Sprint 151 narrowed headings to the reading measure and
+ * centred them, so this border shrank to 718px and shifted 288px inward while
+ * .art-section's stayed at 1294px. Two rules, two widths, both drawn — which is
+ * the "line that only goes over the word" with a gap to its left.
+ * .art-section spans the full shell, so the separator belongs there. */
 .art-content h2 {
   font-size: clamp(20px,2.5vw,26px); font-weight: 700;
-  color: var(--text); margin: 44px 0 16px;
-  padding-top: 8px; border-top: 2px solid var(--cream-dark);
+  color: var(--text); margin: 44px auto 16px;
+  padding-top: 8px;
 }
 /* Sprint 144 — this exception used to read `.art-content h2:first-of-type`.
  * :first-of-type is scoped to an element's PARENT, and every h2 on this site is
@@ -2251,10 +2258,12 @@ main section > p, main section ul, main section ol {
  * border intact and lets its contents fill it naturally. */
 .art-content :is(.quick-answer-box, .intro-box, .testing-note, .disclosure-box,
                  .callout, .who-box, .trust-card, .update-log, .art-faq,
-                 .update-stamp, .price-note, .freshness-banner),
+                 .price-note, .freshness-banner, .toc-card, .toc,
+                 .trust-block, .gear-helps),
 .compare-body :is(.quick-answer-box, .intro-box, .testing-note, .disclosure-box,
                  .callout, .who-box, .trust-card, .update-log, .art-faq,
-                 .update-stamp, .price-note, .freshness-banner) {
+                 .price-note, .freshness-banner, .toc-card, .toc,
+                 .trust-block, .gear-helps) {
   max-width: var(--prose-w);
   margin-left: auto;
   margin-right: auto;
@@ -2262,10 +2271,14 @@ main section > p, main section ul, main section ol {
 
 /* Data earns the shell. Stated explicitly so it survives the `max-width: none`
  * and `--prose-w` rules written for these elements in earlier sprints. */
+/* Sprint 152 — .toc-card and .toc moved OUT of this list. A table of contents
+ * is a list of links, not a data grid; leaving it here made it 1294px while the
+ * quick-answer box directly beneath it was 718px, which is the mismatch at the
+ * top of every article. It now sits with the prose-measure group below. */
 .art-content :is(.comparison-table-wrapper, .rec-gear-grid, .rec-product-box,
-                 .toc-card, .toc, figure, table),
+                 figure, table),
 .compare-body :is(.comparison-table-wrapper, .rec-gear-grid, .rec-product-box,
-                 .toc-card, .toc, figure, table) {
+                 figure, table) {
   max-width: 100%;
 }
 
@@ -2282,4 +2295,53 @@ main section > p, main section ul, main section ol {
     margin-left: 0;
     transform: none;
   }
+}
+
+
+/* ── Sprint 152 — retire the Sprint 148 breakout for figures ────────────────
+ * Sprint 148 pushed figures out of a narrow container with
+ * `margin-left:50%; transform:translateX(-50%)`. Since Sprint 151 the container
+ * IS the wide shell, so that transform now drags figures 233px off the left
+ * edge instead of centring them (measured on /golf-ball-compression-chart/:
+ * left offset -233px). Figures fill the shell like any other data element. */
+@media (min-width: 900px) {
+  .art-content figure,
+  .compare-body figure {
+    width: auto;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+  }
+}
+
+/* The .toc-card carries an Astro component-scoped `margin:16px 0 20px`
+ * (specificity 0,2,0 — a tie with the global rule, but it loads later). This
+ * is the one genuine component-vs-global conflict on the site; stated at a
+ * higher specificity so the layout system wins without !important. */
+.art-content .toc-card.toc-card,
+.compare-body .toc-card.toc-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ── Sprint 152 — the update stamp ──────────────────────────────────────────
+ * This is a `display:inline-flex` pill, and auto margins do not centre an
+ * inline-level box — which is why it stayed hard against the left edge at
+ * L=0 while every block around it centred. It also should NOT be centred: a
+ * 257px badge floating in the middle of a 1294px shell reads as debris.
+ *
+ * It belongs on the prose column's LEFT edge, sharing that edge with the text
+ * it annotates. Offsetting by half the leftover shell puts it exactly there,
+ * and max() collapses the offset to zero once the measure fills the shell on
+ * narrower screens. */
+.art-content > .update-stamp,
+.compare-body > .update-stamp {
+  margin-left: max(0px, calc((100% - var(--prose-w)) / 2));
+  /* The class is used for two different things: a short "Last updated" pill,
+     and a multi-line block of update text. The cap is a no-op on the pill
+     (inline-flex shrink-to-fit keeps it ~257px) and is what stops the text
+     variant running to 983px, past the measure and nearly to the shell edge. */
+  max-width: var(--prose-w);
 }

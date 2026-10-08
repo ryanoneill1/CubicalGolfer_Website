@@ -189,7 +189,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
   </header>
 
   {/* ── FRESHNESS BANNER ── */}
-  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+  <div class="freshness-banner" style="margin:0 auto 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
     <span style="font-size:15px;">✅</span>
     <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — {c.tested !== false
       ? 'Both products independently purchased and tested across a full season.'
