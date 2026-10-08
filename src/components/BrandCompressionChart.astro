@@ -82,17 +82,17 @@ function outboundFor(url: string | null | undefined): string {
     <table class="cmp-table" style="width:100%;">
       <caption class="sr-only">{brand} golf ball compression chart 2026</caption>
       <thead><tr>
-        <th scope="col">Ball</th><th scope="col">Compression</th><th scope="col">Cover</th>
-        <th scope="col">Price/dz</th><th scope="col">Swing Speed</th><th scope="col">Buy</th>
+        <th scope="col">Ball</th><th class="cmp-num" scope="col">Compression</th><th scope="col">Cover</th>
+        <th class="cmp-num" scope="col">Price/dz</th><th class="cmp-num" scope="col">Swing Speed</th><th scope="col">Buy</th>
       </tr></thead>
       <tbody>
         {brandBalls.map((b: any) => (
           <tr>
             <td>{ballThumb(b) && <img src={ballThumb(b)} alt={b.name} width="34" height="34" loading="lazy" style="vertical-align:middle;margin-right:8px;border-radius:4px;" />}{b.name}</td>
-            <td>{b.compression}</td>
+            <td class="cmp-num">{b.compression}</td>
             <td>{b.cover}</td>
-            <td>~${b.price}</td>
-            <td>{b.minMph}–{b.maxMph} mph</td>
+            <td class="cmp-num">~${b.price}</td>
+            <td class="cmp-num">{b.minMph}–{b.maxMph} mph</td>
             <td>{ballUrl(b)
               ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a>
               : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>

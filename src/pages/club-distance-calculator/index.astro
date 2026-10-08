@@ -85,16 +85,16 @@ const clubs = [
           <thead>
             <tr>
               <th style="text-align:left;">Club</th>
-              <th>Carry (yards)</th>
-              <th>Ratio</th>
+              <th class="cmp-num">Carry (yards)</th>
+              <th class="cmp-num">Ratio</th>
             </tr>
           </thead>
           <tbody>
             {clubs.map(c => (
               <tr>
                 <td style="font-weight:600;">{c.name}</td>
-                <td class="dc-dist" data-ratio={c.ratio} style="text-align:center;font-size:18px;font-weight:700;color:var(--green);">{Math.round(210 * c.ratio)}</td>
-                <td style="text-align:center;color:var(--muted);font-size:16px;">{Math.round(c.ratio * 100)}%</td>
+                <td class="dc-dist cmp-num" data-ratio={c.ratio} style="font-size:18px;font-weight:700;color:var(--green);">{Math.round(210 * c.ratio)}</td>
+                <td class="cmp-num" style="color:var(--muted);font-size:16px;">{Math.round(c.ratio * 100)}%</td>
               </tr>
             ))}
           </tbody>

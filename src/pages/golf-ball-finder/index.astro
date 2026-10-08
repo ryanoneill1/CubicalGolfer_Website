@@ -130,11 +130,11 @@ import { ROBOTS_INDEX } from '../../lib/seo';
           <thead>
             <tr>
               <th>Golf Ball</th>
-              <th>Compression</th>
+              <th class="cmp-num">Compression</th>
               <th>Feel</th>
               <th>Cover</th>
-              <th>Price/dz</th>
-              <th>Speed Range</th>
+              <th class="cmp-num">Price/dz</th>
+              <th class="cmp-num">Speed Range</th>
               <th>Best For</th>
               <th>Buy</th>
             </tr>
@@ -143,11 +143,11 @@ import { ROBOTS_INDEX } from '../../lib/seo';
             {balls.map(b => (
               <tr data-comp={b.compression} data-cover={b.cover} data-feel={b.feel} data-price={b.price} data-min={b.minMph} data-max={b.maxMph}>
                 <td style="font-weight:600;">{b.name}</td>
-                <td>{b.compression}</td>
+                <td class="cmp-num">{b.compression}</td>
                 <td>{b.feel}</td>
                 <td>{b.cover}</td>
-                <td>~${b.price}</td>
-                <td>{b.minMph}-{b.maxMph} mph</td>
+                <td class="cmp-num">~${b.price}</td>
+                <td class="cmp-num">{b.minMph}-{b.maxMph} mph</td>
                 <td style="font-size:16px;color:var(--muted);">{b.bestFor}</td>
                 <td style="white-space:nowrap;">
                   {(b as any).affiliateKey && BALL_URLS[(b as any).affiliateKey] ? (

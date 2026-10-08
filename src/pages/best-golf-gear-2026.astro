@@ -84,7 +84,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
           <tr>
             <th scope="col">Category</th>
             <th scope="col">Our Pick</th>
-            <th scope="col">Price</th>
+            <th class="cmp-num" scope="col">Price</th>
             <th scope="col" class="cmp-th-buy">Guide</th>
           </tr>
         </thead>
@@ -94,7 +94,7 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
               <tr>
                 <td>{w.emoji} {w.category}</td>
                 <td><strong>{w.name}</strong></td>
-                <td>{w.price}</td>
+                <td class="cmp-num">{w.price}</td>
                 <td class="cmp-td-buy">
                   <a href={w.guideSlug} class="cmp-buy-btn">Read guide →</a>
                 </td>

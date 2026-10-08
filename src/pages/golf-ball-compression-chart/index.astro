@@ -369,8 +369,8 @@ function outboundFor(url: string | null | undefined): string {
               <th scope="col" data-sort="name" style="cursor:pointer;">Golf Ball ↕</th>
               <th scope="col" data-sort="compression" style="cursor:pointer;">Compression ↕</th>
               <th scope="col" data-sort="cover" style="cursor:pointer;">Cover ↕</th>
-              <th scope="col" data-sort="price" style="cursor:pointer;">Price/dz ↕</th>
-              <th scope="col">Best Speed</th>
+              <th class="cmp-num" scope="col" data-sort="price" style="cursor:pointer;">Price/dz ↕</th>
+              <th class="cmp-num" scope="col">Best Speed</th>
               <th scope="col">Buy</th>
             </tr>
           </thead>
@@ -380,8 +380,8 @@ function outboundFor(url: string | null | undefined): string {
                 <td><div style="display:flex;gap:9px;align-items:flex-start;">{ballThumb(ball) && <img src={ballThumb(ball)} alt={`${ball.name} golf ball — ${ball.compression} compression`} width="38" height="38" loading="lazy" style="object-fit:contain;flex:none;border-radius:4px;" />}<div style="min-width:0;"><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:16px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:14px;color:var(--muted);line-height:1.4;margin-top:4px;">{ball.notes}</div>}</div></div></td>
                 <td style="white-space:nowrap;">{ball.compression}{(ball as any).source && <div style="font-size:13px;font-weight:400;color:var(--muted);line-height:1.25;margin-top:2px;">{(ball as any).source}</div>}</td>
                 <td>{ball.cover}</td>
-                <td>~${ball.price}</td>
-                <td>{ball.minMph}–{ball.maxMph} mph</td>
+                <td class="cmp-num">~${ball.price}</td>
+                <td class="cmp-num">{ball.minMph}–{ball.maxMph} mph</td>
                 <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(ball))} data-aff-name={ball.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
               </tr>
             ))}
@@ -470,13 +470,13 @@ function outboundFor(url: string | null | undefined): string {
       <p>If you don't have a launch monitor, your 7-iron carry distance is a reliable proxy. Use the "I don't know my speed" button in the calculator above, or reference this table:</p>
       <div style="overflow-x:auto;">
         <table class="cmp-table" style="max-width:500px;"><caption class="sr-only">How to Find Your Swing Speed</caption>
-          <thead><tr><th scope="col">7-Iron Carry</th><th scope="col">≈ Driver Speed</th><th scope="col">Compression Range</th></tr></thead>
+          <thead><tr><th class="cmp-num" scope="col">7-Iron Carry</th><th class="cmp-num" scope="col">≈ Driver Speed</th><th class="cmp-num" scope="col">Compression Range</th></tr></thead>
           <tbody>
-            <tr><td>~110 yards</td><td>~72 mph</td><td>35–55</td></tr>
-            <tr><td>~130 yards</td><td>~82 mph</td><td>50–70</td></tr>
-            <tr><td>~150 yards</td><td>~92 mph</td><td>65–85</td></tr>
-            <tr><td>~170 yards</td><td>~102 mph</td><td>80–95</td></tr>
-            <tr><td>~190 yards</td><td>~110+ mph</td><td>90–102</td></tr>
+            <tr><td class="cmp-num">~110 yards</td><td class="cmp-num">~72 mph</td><td class="cmp-num">35–55</td></tr>
+            <tr><td class="cmp-num">~130 yards</td><td class="cmp-num">~82 mph</td><td class="cmp-num">50–70</td></tr>
+            <tr><td class="cmp-num">~150 yards</td><td class="cmp-num">~92 mph</td><td class="cmp-num">65–85</td></tr>
+            <tr><td class="cmp-num">~170 yards</td><td class="cmp-num">~102 mph</td><td class="cmp-num">80–95</td></tr>
+            <tr><td class="cmp-num">~190 yards</td><td class="cmp-num">~110+ mph</td><td class="cmp-num">90–102</td></tr>
           </tbody>
         </table>
       </div>
@@ -527,11 +527,11 @@ function outboundFor(url: string | null | undefined): string {
             <p style="margin:0 0 10px;color:var(--muted);">{blurb}</p>
             <div style="overflow-x:auto;">
               <table class="cmp-table" style="width:100%;"><caption class="sr-only">{brand} Golf Ball Compression Chart</caption>
-                <thead><tr><th scope="col">Ball</th><th scope="col">Compression</th><th scope="col">Cover</th><th scope="col">Price/dz</th><th scope="col">Speed Range</th><th scope="col">Buy</th></tr></thead>
+                <thead><tr><th scope="col">Ball</th><th class="cmp-num" scope="col">Compression</th><th scope="col">Cover</th><th class="cmp-num" scope="col">Price/dz</th><th class="cmp-num" scope="col">Speed Range</th><th scope="col">Buy</th></tr></thead>
                 <tbody>
                   {brandBalls.map(b => (
                     <tr>
-                      <td>{b.name}</td><td>{b.compression}</td><td>{b.cover}</td><td>~${b.price}</td><td>{b.minMph}–{b.maxMph} mph</td>
+                      <td>{b.name}</td><td class="cmp-num">{b.compression}</td><td>{b.cover}</td><td class="cmp-num">~${b.price}</td><td class="cmp-num">{b.minMph}–{b.maxMph} mph</td>
                       <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} style="color:var(--green);font-weight:600;">Check price →</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
                     </tr>
                   ))}

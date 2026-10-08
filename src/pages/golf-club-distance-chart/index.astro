@@ -106,13 +106,13 @@ const schemas = [
       <p style="color:var(--muted,#888);font-size:16px;margin-bottom:24px;">Average male amateur: 93 mph · Average female: 72 mph · PGA Tour avg: 114 mph</p>
 
       <table class="cmp-table" id="dist-table"><caption class="sr-only">Your Driver Swing Speed</caption>
-        <thead><tr><th scope="col">Club</th><th scope="col">Carry (yds)</th><th scope="col">Total (yds)</th><th scope="col" style="width:30%;">Bar</th></tr></thead>
+        <thead><tr><th scope="col">Club</th><th class="cmp-num" scope="col">Carry (yds)</th><th class="cmp-num" scope="col">Total (yds)</th><th scope="col" style="width:30%;">Bar</th></tr></thead>
         <tbody id="dist-body">
           {rows90.map(r => (
             <tr>
               <td style="font-weight:600;white-space:nowrap;">{r.name}</td>
-              <td style="text-align:center;font-weight:600;">{r.carry}</td>
-              <td style="text-align:center;">{r.total}</td>
+              <td class="cmp-num" style="font-weight:600;">{r.carry}</td>
+              <td class="cmp-num" style="">{r.total}</td>
               <td><div style={`height:16px;border-radius:4px;background:${r.color};width:${r.pct}%;min-width:8px;`}></div></td>
             </tr>
           ))}
@@ -147,14 +147,14 @@ const schemas = [
       <p>The most accurate method: use a <a href="/best-golf-launch-monitors-2026/">launch monitor</a>. Budget options like the <a href="/best-launch-monitors-no-subscription/">Shot Scope LM1 ($199)</a> display your speed on a built-in screen. Most golf stores also offer free swing speed checks.</p>
       <p><strong>Quick estimate from driver carry:</strong></p>
       <table class="cmp-table"><caption class="sr-only">Dont Know Your Swing Speed</caption>
-        <thead><tr><th scope="col">Driver Carry</th><th scope="col">Estimated Speed</th></tr></thead>
+        <thead><tr><th scope="col">Driver Carry</th><th class="cmp-num" scope="col">Estimated Speed</th></tr></thead>
         <tbody>
-          <tr><td>160 yards</td><td>~75 mph</td></tr>
-          <tr><td>180 yards</td><td>~83 mph</td></tr>
-          <tr><td>200 yards</td><td>~90 mph</td></tr>
-          <tr><td>220 yards</td><td>~97 mph</td></tr>
-          <tr><td>240 yards</td><td>~105 mph</td></tr>
-          <tr><td>260 yards</td><td>~112 mph</td></tr>
+          <tr><td>160 yards</td><td class="cmp-num">~75 mph</td></tr>
+          <tr><td>180 yards</td><td class="cmp-num">~83 mph</td></tr>
+          <tr><td>200 yards</td><td class="cmp-num">~90 mph</td></tr>
+          <tr><td>220 yards</td><td class="cmp-num">~97 mph</td></tr>
+          <tr><td>240 yards</td><td class="cmp-num">~105 mph</td></tr>
+          <tr><td>260 yards</td><td class="cmp-num">~112 mph</td></tr>
         </tbody>
       </table>
     </section>
@@ -178,12 +178,12 @@ const schemas = [
       <p>Prefer a fixed reference? Carry distances (yards) for five driver swing-speed bands — from senior and slower swings at 75 mph to fast swings at 115 mph. Find your column using the estimator above, then read down for every club.</p>
       <div style="overflow-x:auto;">
         <table class="cmp-table" style="width:100%;"><caption class="sr-only">Golf Club Distance Chart by Swing Speed</caption>
-          <thead><tr><th scope="col">Club</th>{TIERS.map(t => <th scope="col" style="text-align:center;">{t} mph</th>)}</tr></thead>
+          <thead><tr><th scope="col">Club</th>{TIERS.map(t => <th class="cmp-num" scope="col" style="">{t} mph</th>)}</tr></thead>
           <tbody>
             {refRows.map(r => (
               <tr>
                 <td style="font-weight:600;white-space:nowrap;">{r.name}</td>
-                {r.vals.map(v => <td style="text-align:center;">{v}</td>)}
+                {r.vals.map(v => <td class="cmp-num" style="">{v}</td>)}
               </tr>
             ))}
           </tbody>
