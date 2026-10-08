@@ -127,13 +127,34 @@ if (!w || !f) {
       `and the type must scale together or the measure drifts mid-range.`
     );
   }
-  // The padding must be added OUTSIDE the measure. border-box is global, so a
-  // bare `max-width: var(--prose-w)` silently eats ~100px of text.
-  if (!/\.art-content[^{]*\{[^}]*max-width:\s*calc\(\s*var\(--prose-w\)\s*\+/.test(css)) {
+  // Sprint 151 — the measure must sit on the PROSE, not on the container.
+  // Capping the container is what pinned the TOC card, the quick-answer box,
+  // the update log, the comparison table and the product grid all to 718px on
+  // a 1411px window. Two things have to hold, and neither is visible by
+  // reading the stylesheet casually:
+  //   1. the prose selector carries --prose-w
+  //   2. that selector excludes descendants of boxes, or the same bug recurs
+  //      one level down inside every callout and card
+  const proseRule = /:is\(p,\s*ul,\s*ol,\s*h2,\s*h3,\s*h4\)[^{]*\{[^}]*max-width:\s*var\(--prose-w\)/;
+  if (!proseRule.test(css)) {
     problems.push(
-      'The .art-content column does not add --page-px back outside --prose-w. ' +
-      'box-sizing is border-box globally, so the horizontal padding sits inside ' +
-      'max-width and the real text box comes out ~100px narrower than declared.'
+      'No rule applies --prose-w to running prose (p/ul/ol/h2/h3/h4). The ' +
+      'reading measure has to sit on the text, not on the container — capping ' +
+      'the container pinned tables, cards and callouts to the prose width too.'
+    );
+  }
+  if (!/:not\(:is\([^)]*quick-answer-box/.test(css)) {
+    problems.push(
+      'The prose measure rule does not exclude descendants of boxes/cards. ' +
+      'Without that exclusion it reaches inside every callout and re-narrows ' +
+      'the paragraphs in them, which is the same defect one level down.'
+    );
+  }
+  // The container must NOT be capped at the measure any more.
+  if (/\.art-content[^{]*\{[^}]*max-width:\s*calc\(\s*var\(--prose-w\)/.test(css)) {
+    problems.push(
+      'The .art-content container is still capped at the reading measure. ' +
+      'Tables, grids and cards inherit that cap and lose the width they need.'
     );
   }
 }

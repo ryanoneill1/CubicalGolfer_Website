@@ -2138,15 +2138,30 @@ main section > p, main section ul, main section ol {
  * no consistent edge for the eye to return to on each line, and justified text
  * opens rivers of white space; both are measurably worse to read than ragged
  * right. Only the column moves — never the alignment of the words in it. */
-/* Sprint 150 supersedes the 700px below — see the note at the end of this file.
- * 700px was wrong twice over: box-sizing is border-box globally, so the ~51px of
- * padding each side sat INSIDE the 700px and left only 598px of actual text —
- * which at the inherited 16px prose size rendered 81 characters per line, over
- * the WCAG ceiling, in a column that still looked like a ribbon. The width has
- * to be stated as measure + padding, and the type has to grow with it. */
+/* ── Sprint 151 — two widths, not one ───────────────────────────────────────
+ * Sprints 148 and 150 capped the CONTAINER at the reading measure. That is the
+ * wrong element. The 50-80 character rule governs RUNNING PROSE; it has no
+ * business touching a data table, a comparison grid, a table of contents or a
+ * callout box. Because the cap sat on the container, every one of those
+ * inherited it — measured on /average-golf-handicap/ at a 1411px window, the
+ * TOC card, the quick-answer box, the update log, the comparison table and the
+ * product grid were ALL pinned to 718px with ~300px of empty page each side.
+ *
+ * So: the shell is fluid and goes wide, and only the prose is measured.
+ *
+ *   shell   = var(--content-w), 1400px — but max-width means it FILLS the
+ *             window at every size below that, so it is fluid on a phone, on a
+ *             half-width desktop window and on a laptop alike, and only stops
+ *             growing on a very large monitor. A table that keeps widening past
+ *             ~1400px stops being scannable: the eye loses the row on the way
+ *             across, which is the same failure as an over-long line of text.
+ *   measure = var(--prose-w), the fluid 634-846px clamp from Sprint 150.
+ *
+ * Both are centred on the same axis, so the page reads as one column of
+ * content with data escaping wider — not as three competing left edges. */
 .art-content,
 .compare-body,
-.local-body { max-width: calc(var(--prose-w) + 2 * var(--page-px)); }
+.local-body { max-width: var(--content-w); }
 
 /* Tables and figures earn the extra width. Desktop only: below this breakpoint
  * the column already fills the screen, and breaking out would make tables
@@ -2187,3 +2202,84 @@ main section > p, main section ul, main section ol {
 
 /* Boxed inserts stay a step down from body copy, as they were. */
 .intro-box p { font-size: 16px; }
+
+
+/* ── Sprint 151 — the reading measure, applied to prose only ─────────────────
+ * Running text is capped and centred. Everything else — boxes, cards, tables,
+ * grids, figures, the TOC — is left alone and fills the shell.
+ *
+ * The :not(... *) clause is the important half. Without it this rule reaches
+ * INSIDE every callout and card and re-narrows the paragraphs in them, which
+ * reintroduces the bug one level down: a paragraph inside a 1298px box should
+ * fill that box, because the box is already providing the measure.
+ *
+ * Headings are measured with the prose so the two share a left edge. The
+ * section separator is NOT on the heading — it lives on .art-section, which
+ * spans the full shell, so the rule above each section still runs the whole
+ * width and sections stay clearly delineated (Sprint 144's fix, preserved). */
+.art-content :is(p, ul, ol, h2, h3, h4):not(:is(
+  .quick-answer-box, .intro-box, .toc, .toc-card, .update-log, .testing-note,
+  .disclosure-box, .who-box, .trust-card, .callout, .rec-product-box,
+  .rec-gear-grid, .comparison-table-wrapper, .art-faq, .freshness-banner,
+  .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table,
+  table, figure, aside, details
+) *),
+.compare-body :is(p, ul, ol, h2, h3, h4):not(:is(
+  .quick-answer-box, .intro-box, .toc, .toc-card, .update-log, .testing-note,
+  .disclosure-box, .who-box, .trust-card, .callout, .rec-product-box,
+  .rec-gear-grid, .comparison-table-wrapper, .art-faq, .freshness-banner,
+  .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table,
+  table, figure, aside, details
+) *) {
+  max-width: var(--prose-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Sprint 151b — which boxes earn the extra width ─────────────────────────
+ * Measured after 151a: letting EVERY box fill the shell pushed the paragraph
+ * inside the quick-answer box to 1230px — about 115 characters per line. The
+ * box grew and its prose grew with it, so the readability bug moved inside the
+ * box instead of being fixed.
+ *
+ * The split is not box vs. not-box. It is DATA vs. PROSE:
+ *   - A table, a spec grid, a product grid and a figure exist to put values
+ *     side by side. Width is the whole point of them.
+ *   - A callout, a quick-answer, an intro or a disclosure is prose wearing a
+ *     coloured background. It obeys the reading measure like any paragraph.
+ * Capping the box (rather than the text inside it) keeps the box's padding and
+ * border intact and lets its contents fill it naturally. */
+.art-content :is(.quick-answer-box, .intro-box, .testing-note, .disclosure-box,
+                 .callout, .who-box, .trust-card, .update-log, .art-faq,
+                 .update-stamp, .price-note, .freshness-banner),
+.compare-body :is(.quick-answer-box, .intro-box, .testing-note, .disclosure-box,
+                 .callout, .who-box, .trust-card, .update-log, .art-faq,
+                 .update-stamp, .price-note, .freshness-banner) {
+  max-width: var(--prose-w);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Data earns the shell. Stated explicitly so it survives the `max-width: none`
+ * and `--prose-w` rules written for these elements in earlier sprints. */
+.art-content :is(.comparison-table-wrapper, .rec-gear-grid, .rec-product-box,
+                 .toc-card, .toc, figure, table),
+.compare-body :is(.comparison-table-wrapper, .rec-gear-grid, .rec-product-box,
+                 .toc-card, .toc, figure, table) {
+  max-width: 100%;
+}
+
+/* The Sprint 148/150 breakout is now redundant for tables — they already fill
+ * the shell — and actively harmful, because translateX(-50%) on an element that
+ * is already full width pushes it off-centre. Neutralised here rather than
+ * deleted above, so the Sprint 148 reasoning stays readable in context. */
+@media (min-width: 900px) {
+  .art-content div[style*="overflow-x"],
+  .compare-body div[style*="overflow-x"],
+  .local-body div[style*="overflow-x"] {
+    width: auto;
+    max-width: 100%;
+    margin-left: 0;
+    transform: none;
+  }
+}
