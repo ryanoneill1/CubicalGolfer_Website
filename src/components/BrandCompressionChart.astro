@@ -64,7 +64,7 @@ function outboundFor(url: string | null | undefined): string {
 }
 ---
 
-<p style="font-size:16px;line-height:1.8;">
+<p class="chart-intro">
   Every <strong>{brand}</strong> golf ball we track, with its compression rating, cover material and
   the swing speed it is built for. {brandBalls.length} {brandBalls.length === 1 ? 'ball' : 'balls'} from
   {soft.compression} compression ({soft.name}) up to {firm.compression} ({firm.name}), priced {priceRange} a dozen.
@@ -101,7 +101,7 @@ function outboundFor(url: string | null | undefined): string {
       </tbody>
     </table>
   </div>
-  <p style="font-size:15px;color:var(--muted);margin-top:10px;">
+  <p class="chart-note">
     Prices are per dozen and checked against live listings. {urethane.length > 0
       ? `${urethane.length} of these ${brandBalls.length} carry a urethane cover, which is what produces greenside spin — an ionomer ball will not check on a pitch however soft it feels.`
       : `None of these carry a urethane cover, so none will check on a pitch the way a tour ball does.`}

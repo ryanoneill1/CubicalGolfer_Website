@@ -97,6 +97,15 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
      not preference. 75 characters at 18px is 634px; 75 characters at 24px is
      846px. Holding the type at 16px and widening the column to 846px would put
      the page at 112 characters per line, which is the slab this started from. */
+  /* Sprint 154 — held at the Sprint 150 width, deliberately.
+     I widened this to a predicted 78 characters and then measured the rendered
+     result: 81. The 0.47em average-character constant is itself content-
+     dependent (this page is dense with numbers and product names), so a
+     PREDICTED 78 can ship as an 81, over the WCAG 1.4.8 ceiling of 80.
+     Measured at this width instead: median 76, worst 78.
+     For reference, MyGolfSpy at the same 1411px window runs 948px at 16px =
+     132 characters. The thing that made our page look wrong was never the
+     width — it was the prose starting 288px right of the heading. */
   --prose-w:     clamp(634px, 488.1px + 16.27vw, 846px);
   --prose-size:  clamp(18px, 13.85px + 0.4615vw, 24px);
   --content-w:  1400px;  /* article / compare / city body container.
@@ -1214,8 +1223,13 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   font-size: 16px; font-weight: 800; letter-spacing: .1em;
   text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
 }
+/* Sprint 154 — the quick-answer box is the first thing most readers read, and
+   at 16px inside a column sized for 20px type it rendered 96 characters per
+   line: the longest lines on the page, in the most-read block. It is body
+   prose, so it takes the body size. The small-print measure below exists for
+   text that genuinely should stay small. */
 .quick-answer-text {
-  font-size: 16px; line-height: 1.7; margin: 0 0 18px;
+  font-size: var(--prose-size); line-height: 1.7; margin: 0 0 18px;
 }
 .quick-answer-text strong {
   font-size: 18px; font-weight: 800; color: #fff;
@@ -2247,8 +2261,11 @@ main section > p, main section ul, main section ol {
 .article-card p,
 .article-card li { font-size: 17px; }
 
-/* Boxed inserts stay a step down from body copy, as they were. */
-.intro-box p { font-size: 16px; }
+/* Sprint 154 — the intro box carries full sentences the reader actually reads,
+   so it is body prose, not small print. Holding it at 16px inside a column
+   sized for 20px type rendered 90-96 characters per line — the widest lines on
+   the site, inside the box most likely to be read first. It inherits the body
+   size now. (This reverses my own Sprint 150 decision, which caused it.) */
 
 
 /* ── Sprint 151 — the reading measure, applied to prose only ─────────────────
@@ -2279,7 +2296,14 @@ main section > p, main section ul, main section ol {
   table, figure, aside, details
 ) *) {
   max-width: var(--prose-w);
-  margin-left: auto;
+  /* Sprint 154 — left-anchored, not centred. Centring put the prose 288px to
+     the right of the h1 and the table, which both start at the shell edge:
+     measured on /srixon-golf-ball-compression-chart/ as h1 at x=51 with the
+     paragraph under it at x=339. Three parts of one column starting in three
+     places is what reads as "the text is in the wrong place". MyGolfSpy — the
+     reference — puts heading, prose and table on a single left edge; only the
+     RIGHT edge of the prose is short. */
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -2305,7 +2329,7 @@ main section > p, main section ul, main section ol {
                  .price-note, .freshness-banner, .toc-card, .toc,
                  .trust-block, .gear-helps) {
   max-width: var(--prose-w);
-  margin-left: auto;
+  margin-left: 0;      /* Sprint 154 — share the shell's left edge */
   margin-right: auto;
 }
 
@@ -2378,10 +2402,84 @@ main section > p, main section ul, main section ol {
  * narrower screens. */
 .art-content > .update-stamp,
 .compare-body > .update-stamp {
-  margin-left: max(0px, calc((100% - var(--prose-w)) / 2));
+  /* Sprint 154 — the measure is left-anchored now, so the stamp simply starts
+     at the shell edge like everything else; the half-shell offset that used to
+     put it on the centred column's left edge would now push it out of line. */
+  margin-left: 0;
   /* The class is used for two different things: a short "Last updated" pill,
      and a multi-line block of update text. The cap is a no-op on the pill
      (inline-flex shrink-to-fit keeps it ~257px) and is what stops the text
      variant running to 983px, past the measure and nearly to the shell edge. */
   max-width: var(--prose-w);
 }
+
+
+/* ── Sprint 154 — two measures, because there are two type sizes ────────────
+ * A column sized for 20px body type renders 95-104 characters when 15-16px
+ * text is poured into it. The measure is a function of the FONT, not of the
+ * page — so small print needs its own, narrower one.
+ *
+ *   --prose-w     78 chars at the fluid 18-24px body size
+ *   --prose-w-sm  78 chars at 16px  →  78 × 0.47 × 16 = 586px
+ *
+ * Measured offenders before this: the brand-chart intro at 96 chars, its table
+ * note at 103, and the compression chart's own note at 104. */
+.chart-intro {
+  font-size: var(--prose-size);
+  line-height: 1.8;
+  max-width: var(--prose-w);
+  margin-left: 0;
+  margin-right: auto;
+}
+.chart-note,
+.art-content .early-disclosure,
+.compare-body .early-disclosure,
+.art-content .price-note,
+.compare-body .price-note {
+  max-width: 565px;
+  margin-left: 0;
+  margin-right: auto;
+}
+.chart-note {
+  font-size: 16px;
+  color: var(--muted);
+  margin-top: 10px;
+}
+
+
+/* ── Sprint 154 — the measure follows the TYPE SIZE, not the container ──────
+ * There are 3,773 inline `font-size` declarations on prose across 213 article
+ * pages — legacy from when the body size was a flat 16px, left behind when
+ * Sprint 150 made it fluid. Editing every one is a large, risky change for
+ * little gain; what actually matters is that none of them renders past the
+ * line-length ceiling.
+ *
+ * So: any prose carrying a small inline size gets the small measure.
+ *   78 characters at 16px = 78 × 0.4525 × 16 = 565px → 586px with slack
+ * Short labels inside cards are unaffected (the cap never binds on them); the
+ * ones this catches are the long notes that measured 82-104 characters.
+ *
+ * Matching on the style attribute is deliberate and narrow. The alternative is
+ * !important on the font-size, which would fight every legitimate override
+ * forever. This only constrains WIDTH, and only where the type is small. */
+/* One flat cap does not work, because the measure scales with the type:
+   586px is 78 characters at 16px but 86 at 15px and 92 at 14px. Per size:
+     78 × 0.4525em →  16px: 565px    15px: 529px    14px: 494px            */
+.art-content p[style*="font-size:16px"],
+.art-content p[style*="font-size: 16px"],
+.compare-body p[style*="font-size: 16px"],
+.art-content li[style*="font-size:16px"],
+.compare-body p[style*="font-size:16px"],
+.compare-body li[style*="font-size:16px"] { max-width: 565px; }
+
+.art-content p[style*="font-size:15px"],
+.art-content p[style*="font-size: 15px"],
+.compare-body p[style*="font-size: 15px"],
+.art-content li[style*="font-size:15px"],
+.compare-body p[style*="font-size:15px"] { max-width: 529px; }
+
+.art-content p[style*="font-size:14px"],
+.art-content p[style*="font-size: 14px"],
+.compare-body p[style*="font-size: 14px"],
+.art-content li[style*="font-size:14px"],
+.compare-body p[style*="font-size:14px"] { max-width: 494px; }
