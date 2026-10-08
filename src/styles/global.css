@@ -443,15 +443,29 @@ nav.site-nav {
  * the space it actually needs. Percentages, so it still adapts to the viewport.
  * Verified in the browser at 1411px before shipping. */
 table#compression-data { table-layout: fixed; width: 100%; }
+/* Sprint 147 — seven columns: Source was split out of the Compression cell so a
+ * reader can scan the figures as a column of numbers and read the provenance as
+ * a field beside it, rather than as a caption stacked under each value. */
+/* The old Compression column was 16% wide because it carried the source stacked
+ * under the figure. Split out, the number needs 8% — so Source is funded from
+ * that, NOT from the ball-name column. Measured: taking 4% off the name column
+ * pushed median row height from 133px to 153px, because the notes wrapped more.
+ * Holding the name at 34% keeps it at 133px, identical to before the split. */
 table#compression-data th:nth-child(1), table#compression-data td:nth-child(1) { width: 34%; }
-table#compression-data th:nth-child(2), table#compression-data td:nth-child(2) { width: 16%; }
-table#compression-data th:nth-child(3), table#compression-data td:nth-child(3) { width: 10%; }
-table#compression-data th:nth-child(4), table#compression-data td:nth-child(4) { width: 10%; }
-table#compression-data th:nth-child(5), table#compression-data td:nth-child(5) { width: 14%; }
-table#compression-data th:nth-child(6), table#compression-data td:nth-child(6) { width: 16%; }
+table#compression-data th:nth-child(2), table#compression-data td:nth-child(2) { width:  8%; }
+table#compression-data th:nth-child(3), table#compression-data td:nth-child(3) { width: 14%; }
+table#compression-data th:nth-child(4), table#compression-data td:nth-child(4) { width:  9%; }
+table#compression-data th:nth-child(5), table#compression-data td:nth-child(5) { width:  9%; }
+table#compression-data th:nth-child(6), table#compression-data td:nth-child(6) { width: 12%; }
+table#compression-data th:nth-child(7), table#compression-data td:nth-child(7) { width: 14%; }
 /* every header reads left-aligned; 128 right-aligned the last one, which is
  * what made the header row look misaligned against the cells below it. */
-table#compression-data th, table#compression-data td { text-align: left; }
+/* Sprint 147 — this rule is ID-scoped, so it outranked `.cmp-table td.cmp-num`
+ * (an id beats any number of classes) and silently cancelled the right-alignment
+ * added in Sprint 146 on the site's highest-traffic page. Verified on the live
+ * page: the cells carried the class and still computed text-align:left.
+ * Excluding .cmp-num lets the numeric columns win without weakening the default. */
+table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num) { text-align: left; }
 @media (max-width: 900px) {
   /* below this the fixed widths fight the content — let it size naturally and
    * scroll, which is what the overflow-x wrapper is there for. */
