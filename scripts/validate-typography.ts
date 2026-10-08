@@ -57,10 +57,20 @@ if (unscopedCancel) {
   );
 }
 
-const hasMeasure = /\.art-content[^{]*\b(p|ul|ol)\s*(,[^{]*)?\{[^}]*max-width:\s*\d+(\.\d+)?ch/.test(css)
-  || /max-width:\s*\d+(\.\d+)?ch/.test(css);
-if (!hasMeasure) {
-  problems.push('No ch-based max-width on article prose — line length is unconstrained (measured 114 chars before this was added).');
+// Sprint 148 — the measure is now guaranteed by the WIDTH OF THE COLUMN, not by
+// a ch cap inside a wide one. Capping text inside a 1400px container left 758px
+// of empty page beside every paragraph. This asserts the column itself is
+// constrained; 700px renders 73 characters at the current body size.
+//
+// The previous version of this check looked for any `max-width: <n>ch` anywhere
+// in the bundle, which passed on unrelated 76ch/68ch rules after the prose cap
+// had been removed — a false pass. Matching the container is unambiguous.
+const colMatch = css.match(/\.art-content[^{]*\{[^}]*max-width:\s*(\d+)px/);
+const colWidth = colMatch ? parseInt(colMatch[1], 10) : null;
+if (colWidth === null) {
+  problems.push('No px max-width on .art-content — the text column is unconstrained (measured 114 characters per line before this was added).');
+} else if (colWidth > 820) {
+  problems.push(`.art-content is ${colWidth}px wide. Above ~820px the line length passes the 80-character WCAG ceiling; 700px renders 73.`);
 }
 
 // ── table alignment ────────────────────────────────────────────────────────

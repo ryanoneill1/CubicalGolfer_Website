@@ -314,9 +314,7 @@ nav.site-nav {
  * characters and 54ch measured 72. Both sit inside the 50-75 ideal band and
  * under the 80-character WCAG ceiling; 54 leaves less dead space on a wide
  * monitor. Uncapped, this column renders about 123 characters at 1024px. */
-.art-content p,
-.art-content li { max-width: 54ch; }
-.art-content td p, .art-content th p, .art-content figcaption p { max-width: none; }
+
 
 /* Sprint 144 — comparison pages use .compare-body, not .art-content, and had no
  * h2 rule of any kind: measured 11 headings on /compare/titleist-pro-v1-vs-
@@ -332,9 +330,7 @@ nav.site-nav {
 .compare-body > :first-child h2:first-of-type,
 .compare-body > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
-.compare-body p,
-.compare-body li { max-width: 54ch; }
-.compare-body td p, .compare-body th p, .compare-body figcaption p { max-width: none; }
+
 .art-content h3 { font-size: 19px; font-weight: 700; color: var(--text); margin: 32px 0 12px; }
 .art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
@@ -2094,3 +2090,41 @@ main section > p, main section ul, main section ol {
 .cmp-table th.cmp-num,
 .cmp-table td.cmp-num { text-align: right; }
 .cmp-table th.cmp-num .cmp-sort-btn { justify-content: flex-end; width: 100%; }
+
+
+/* ── Sprint 148 — the text column, and the empty half of the page ────────────
+ * Sprint 144 capped prose at 54ch but left the container at --content-w
+ * (1400px). Measured on the live page at a 1440px viewport: the paragraph was
+ * 591px and there were 758px of empty page to the right of it — more blank
+ * space than text. Three different widths competed on one page: prose 591,
+ * table of contents 760, table 1298. That reads as broken rather than as a
+ * deliberate narrow measure.
+ *
+ * The fix is to narrow the COLUMN rather than cap the text inside a wide one,
+ * and let the few things that genuinely earn more room break out of it. This is
+ * the standard editorial arrangement: one left edge shared by headings, text
+ * and tables, with data escaping wider when it needs to.
+ *
+ * 700px was calibrated on the live page, not guessed — it renders 73 characters
+ * per line, inside the 50-75 ideal band and under the 80-character WCAG ceiling.
+ * (660px gives 68, 760px gives 81.)
+ *
+ * Body text stays left-aligned with a ragged right edge. Centred body copy has
+ * no consistent edge for the eye to return to on each line, and justified text
+ * opens rivers of white space; both are measurably worse to read than ragged
+ * right. Only the column moves — never the alignment of the words in it. */
+.art-content,
+.compare-body { max-width: 700px; }
+
+/* Tables and figures earn the extra width. Desktop only: below this breakpoint
+ * the column already fills the screen, and breaking out would make tables
+ * narrower, not wider. */
+@media (min-width: 900px) {
+  .art-content figure,
+  .art-content div[style*="overflow-x"],
+  .compare-body div[style*="overflow-x"] {
+    width: min(var(--content-w), calc(100vw - 48px));
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
