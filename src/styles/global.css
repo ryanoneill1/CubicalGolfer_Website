@@ -68,7 +68,27 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
   --r2:         12px;
   --r3:         16px;
   --nav-h:      64px;
-  --prose-w:     760px;   /* max width for body text — ~84 chars/line at 17px, upper edge of comfortable */
+  /* Sprint 150 — the text column is fluid, not fixed.
+     Both clamps share one viewport range (900px → 2200px) so the type size and
+     the column width move in lockstep and the line length stays put.
+
+     The constant that matters is the AVERAGE rendered character width, which in
+     DM Sans is 0.47em. It is NOT the `ch` unit (0.684em, the width of "0") —
+     using ch as a stand-in under-reports the line length by about 30% and is
+     what made the first cut of this sprint land on exactly 80 characters while
+     a validator reported 55. Measured in-browser at four viewport widths:
+       658px / (0.47 × 17.50px) = 80.0      790px / (0.47 × 21.00px) = 80.0
+
+     Retuned to ~75 characters, the top of the comfortable band, with headroom
+     under the 80-character WCAG 1.4.8 ceiling:
+       634px / (0.47 × 18px) = 74.9         846px / (0.47 × 24px) = 74.9
+
+     The column can only get wider if the type gets bigger — that is arithmetic,
+     not preference. 75 characters at 18px is 634px; 75 characters at 24px is
+     846px. Holding the type at 16px and widening the column to 846px would put
+     the page at 112 characters per line, which is the slab this started from. */
+  --prose-w:     clamp(634px, 488.1px + 16.27vw, 846px);
+  --prose-size:  clamp(18px, 13.85px + 0.4615vw, 24px);
   --content-w:  1400px;  /* article / compare / city body container.
                             Sprint 129: was 1200px, which after --page-px left only ~1072px
                             of usable width. The 34-row compression chart — 6 columns, a
@@ -2118,8 +2138,15 @@ main section > p, main section ul, main section ol {
  * no consistent edge for the eye to return to on each line, and justified text
  * opens rivers of white space; both are measurably worse to read than ragged
  * right. Only the column moves — never the alignment of the words in it. */
+/* Sprint 150 supersedes the 700px below — see the note at the end of this file.
+ * 700px was wrong twice over: box-sizing is border-box globally, so the ~51px of
+ * padding each side sat INSIDE the 700px and left only 598px of actual text —
+ * which at the inherited 16px prose size rendered 81 characters per line, over
+ * the WCAG ceiling, in a column that still looked like a ribbon. The width has
+ * to be stated as measure + padding, and the type has to grow with it. */
 .art-content,
-.compare-body { max-width: 700px; }
+.compare-body,
+.local-body { max-width: calc(var(--prose-w) + 2 * var(--page-px)); }
 
 /* Tables and figures earn the extra width. Desktop only: below this breakpoint
  * the column already fills the screen, and breaking out would make tables
@@ -2127,10 +2154,36 @@ main section > p, main section ul, main section ol {
 @media (min-width: 900px) {
   .art-content figure,
   .art-content div[style*="overflow-x"],
-  .compare-body div[style*="overflow-x"] {
+  .compare-body div[style*="overflow-x"],
+  .local-body div[style*="overflow-x"] {
     width: max-content;
     max-width: min(var(--content-w), calc(100vw - 48px));
     margin-left: 50%;
     transform: translateX(-50%);
   }
 }
+
+
+/* ── Sprint 150 — fluid prose size ───────────────────────────────────────────
+ * The column above is fluid; the type has to be fluid with it or the character
+ * count drifts. Article prose was pinned at 16.5px (p) and 16px (li) while the
+ * root was 17px, which is why the text read as small AND the lines read as long
+ * at the same time: 598px of text at 16px is 81 characters.
+ *
+ * Only `p` and `li` move. Headings already have their own clamps, and tables,
+ * cards, badges and buttons keep their fixed sizes deliberately — setting the
+ * size on the container instead would have cascaded into all of them. */
+.art-content p,
+.art-content li,
+.compare-body p,
+.compare-body li,
+.local-body p,
+.local-body li { font-size: var(--prose-size); }
+
+/* Cards are a separate, denser context and keep their own size — this rule has
+ * to come after the one above or it would inherit the fluid size. */
+.article-card p,
+.article-card li { font-size: 17px; }
+
+/* Boxed inserts stay a step down from body copy, as they were. */
+.intro-box p { font-size: 16px; }

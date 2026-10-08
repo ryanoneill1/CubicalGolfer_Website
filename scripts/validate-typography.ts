@@ -57,20 +57,85 @@ if (unscopedCancel) {
   );
 }
 
-// Sprint 148 — the measure is now guaranteed by the WIDTH OF THE COLUMN, not by
-// a ch cap inside a wide one. Capping text inside a 1400px container left 758px
-// of empty page beside every paragraph. This asserts the column itself is
-// constrained; 700px renders 73 characters at the current body size.
+// Sprint 150 — the column is FLUID, so checking a single px value no longer
+// describes it. What has to hold is the thing the px value was only ever a
+// proxy for: the rendered line length, at both ends of the fluid range.
 //
-// The previous version of this check looked for any `max-width: <n>ch` anywhere
-// in the bundle, which passed on unrelated 76ch/68ch rules after the prose cap
-// had been removed — a false pass. Matching the container is unambiguous.
-const colMatch = css.match(/\.art-content[^{]*\{[^}]*max-width:\s*(\d+)px/);
-const colWidth = colMatch ? parseInt(colMatch[1], 10) : null;
-if (colWidth === null) {
-  problems.push('No px max-width on .art-content — the text column is unconstrained (measured 114 characters per line before this was added).');
-} else if (colWidth > 820) {
-  problems.push(`.art-content is ${colWidth}px wide. Above ~820px the line length passes the 80-character WCAG ceiling; 700px renders 73.`);
+// Two prior versions of this check both gave false passes:
+//   - v1 looked for any `max-width: <n>ch` in the bundle and matched unrelated
+//     76ch/68ch rules after the prose cap had been deleted.
+//   - v2 (Sprint 148) matched `max-width: <n>px` on .art-content and reported
+//     700px as "73 characters". It was 81. box-sizing is border-box globally,
+//     so ~51px of padding a side sat inside the 700px and the real text box was
+//     598px — the validator was measuring the border box and calling it text.
+//
+// So this version reads the two custom properties that define the ramp and
+// computes the character count itself, at the minimum AND the maximum, using
+// the measured glyph ratio for DM Sans. Both ends must land in the band.
+const AVG_CHAR_EM = 0.47;  // AVERAGE rendered character width in DM Sans,
+                           // measured in-browser at 1024/1280/1512/1920px.
+                           // Deliberately NOT the `ch` unit (0.684em, the
+                           // width of "0"): ch under-reports real line length
+                           // by ~30%, which produced a false pass reporting
+                           // 55 characters for a column that rendered 80.
+const MIN_CHARS = 50;      // below this the eye re-sweeps too often
+const MAX_CHARS = 78;      // ratchet: WCAG 1.4.8 caps at 80, we ship 75
+
+const clampEnds = (name: string): [number, number] | null => {
+  // --name: clamp(<min>px, <a>px + <b>vw, <max>px)
+  const m = css.match(
+    new RegExp('--' + name + ':\\s*clamp\\(\\s*([\\d.]+)px[^,]*,[^,]*,\\s*([\\d.]+)px\\s*\\)')
+  );
+  return m ? [parseFloat(m[1]), parseFloat(m[2])] : null;
+};
+
+const w = clampEnds('prose-w');
+const f = clampEnds('prose-size');
+
+if (!w || !f) {
+  problems.push(
+    'Could not find fluid --prose-w and --prose-size clamp() pairs. The text ' +
+    'column must be defined as a clamp() of px bounds so its line length is ' +
+    'checkable at both ends (measured 114 characters per line before any cap ' +
+    'existed, and 81 under the fixed 700px that replaced it).'
+  );
+} else {
+  // The narrow end of the column pairs with the small end of the type, and the
+  // wide end with the large end, because both clamps share one viewport range.
+  const ends: [string, number, number][] = [
+    ['narrow', w[0], f[0]],
+    ['wide',   w[1], f[1]],
+  ];
+  for (const [label, width, size] of ends) {
+    const chars = Math.round(width / (AVG_CHAR_EM * size));
+    if (chars < MIN_CHARS || chars > MAX_CHARS) {
+      problems.push(
+        `At the ${label} end of the fluid range the prose column is ${width}px ` +
+        `at ${size}px type, which renders ~${chars} characters per line ` +
+        `(outside the ${MIN_CHARS}-${MAX_CHARS} band).`
+      );
+    }
+  }
+  // The two clamps must actually track each other, or the character count
+  // drifts across the range even though both ends pass.
+  const narrowCh = w[0] / (AVG_CHAR_EM * f[0]);
+  const wideCh   = w[1] / (AVG_CHAR_EM * f[1]);
+  if (Math.abs(narrowCh - wideCh) > 3) {
+    problems.push(
+      `--prose-w and --prose-size are not in lockstep: ${narrowCh.toFixed(1)}ch ` +
+      `at the narrow end vs ${wideCh.toFixed(1)}ch at the wide end. The column ` +
+      `and the type must scale together or the measure drifts mid-range.`
+    );
+  }
+  // The padding must be added OUTSIDE the measure. border-box is global, so a
+  // bare `max-width: var(--prose-w)` silently eats ~100px of text.
+  if (!/\.art-content[^{]*\{[^}]*max-width:\s*calc\(\s*var\(--prose-w\)\s*\+/.test(css)) {
+    problems.push(
+      'The .art-content column does not add --page-px back outside --prose-w. ' +
+      'box-sizing is border-box globally, so the horizontal padding sits inside ' +
+      'max-width and the real text box comes out ~100px narrower than declared.'
+    );
+  }
 }
 
 // ── table alignment ────────────────────────────────────────────────────────
