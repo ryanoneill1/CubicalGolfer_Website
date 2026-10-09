@@ -2060,7 +2060,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Golf Bags We Do Not Recommend', body: "Three bag types that waste money or create problems on the course.\n\n<strong>Hybrid carry-cart bags.</strong> Several brands sell bags that claim to work as both carry bags and cart bags. In practice they are too heavy to carry comfortably (6+ lbs) and too narrow to sit properly in a cart. Pick one use case and optimize for it.\n\n<strong>Sunday bags for full rounds.</strong> Ultra-lightweight 2-lb bags are great for 9-hole loops with 7 clubs. For a full 18 with 14 clubs, they lack the padding, dividers, and pockets to keep you comfortable. The Sun Mountain 2.5+ at 2.8 lbs gives you a full-feature experience at nearly the same weight.\n\n<strong>Bags without waterproofing in wet climates.</strong> Non-waterproof bags absorb 3-5 lbs of water in rain or heavy dew. That extra weight compounds over 18 holes and the moisture damages leather goods, electronics, and grips stored inside. If you play anywhere with regular rain or morning dew, waterproof is not optional." },
     ],
     comparisonTable: {
-      headers: ['Golf Bag', 'Type', 'Price', 'Weight', 'Best For'],
+      headers: ['Golf Bag', 'Weight', 'Price', 'Ideal For', 'Category'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'sun-mountain-25-plus', name: 'Sun Mountain 2.5+',          bestFor: 'Best Carry',  price: '~$249', feature1: '2.8 lbs', feature2: 'Walkers',     winner: true },
         { rating: 4.6, affiliateKey: 'titleist-players-4',   name: 'Titleist Players 4 StaDry', bestFor: 'Best Stand',  price: '~$279', feature1: '4.6 lbs', feature2: 'All-rounder', winner: false },
@@ -2474,7 +2474,7 @@ export const ARTICLES: Article[] = [
       },
     ],
     comparisonTable: {
-      headers: ['Shoe', 'Style', 'Price', 'Weight', 'Waterproof'],
+      headers: ['Shoe', 'Style', 'Price', 'Waterproof', 'Category'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'footjoy-flex-xp',   name: 'FootJoy Flex XP',        bestFor: 'Best Overall', price: '~$70', feature1: 'Spikeless', feature2: 'Yes',      winner: true },
         { rating: 4.7, affiliateKey: 'ecco-biom-c4',       name: 'ECCO Biom C4',           bestFor: 'Best Premium', price: '~$249', feature1: 'Spikeless', feature2: 'GORE-TEX', winner: false },
