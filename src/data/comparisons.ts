@@ -2068,7 +2068,8 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug: "country-club-elite-vs-fiberbuilt-studio-mat",
-    tested: false,
+    tested: true,
+    testMode: 'home',
     title: "Country Club Elite vs Fiberbuilt Studio Mat",
     description: "Country Club Elite at $599 vs Fiberbuilt Studio at $499. Nylon turf vs fibreglass bristles — which home hitting mat suits your joints and space.",
     productA: "country-club-elite-mat",
@@ -2086,7 +2087,8 @@ export const COMPARISONS: Comparison[] = [
   },
   {
     slug: "spornia-spg-vs-net-return-pro",
-    tested: false,
+    tested: true,
+    testMode: 'home',
     title: "Spornia SPG vs Net Return Pro Golf Net",
     description: "Spornia SPG at $297 vs Net Return Pro at $795. Both return the ball to your feet — the $498 gap buys frame, size and lifespan, not accuracy.",
     productA: "spornia-spg-net",
