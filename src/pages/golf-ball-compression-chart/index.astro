@@ -384,7 +384,7 @@ function outboundFor(url: string | null | undefined): string {
                 <td>{ball.cover}</td>
                 <td class="cmp-num">~${ball.price}</td>
                 <td class="cmp-num">{ball.minMph}–{ball.maxMph} mph</td>
-                <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(ball))} data-aff-name={ball.name} style="color:var(--green);font-weight:600;white-space:nowrap;">Check price →</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
+                <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(ball))} data-aff-name={ball.name} class={ball.badge ? 'cmp-buy-btn cmp-buy-btn--pick' : 'cmp-buy-btn'}>Check price</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
               </tr>
             ))}
           </tbody>
@@ -534,7 +534,7 @@ function outboundFor(url: string | null | undefined): string {
                   {brandBalls.map(b => (
                     <tr>
                       <td>{b.name}</td><td class="cmp-num">{b.compression}</td><td>{b.cover}</td><td class="cmp-num">~${b.price}</td><td class="cmp-num">{b.minMph}–{b.maxMph} mph</td>
-                      <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} style="color:var(--green);font-weight:600;">Check price →</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
+                      <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} class={b.badge ? 'cmp-buy-btn cmp-buy-btn--pick' : 'cmp-buy-btn'}>Check price</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
                     </tr>
                   ))}
                 </tbody>

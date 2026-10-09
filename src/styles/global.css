@@ -2629,3 +2629,38 @@ main section > p, main section ul, main section ol {
      the ball NAME needs, so step it down there. */
   .ball-thumb { width: 44px; height: 44px; }
 }
+
+
+/* ── Sprint 160 — the compression chart's Buy column ────────────────────────
+ * This page is 37% of every click the site gets (2,631 of 7,190 in the last
+ * 90 days). It was converting through 36 text links reading "Check price →"
+ * at 16px, and exactly ONE real button on the whole page. For comparison,
+ * /best-irons-under-500/ — 149 clicks — carries thirty buttons.
+ *
+ * Measured before shipping: promoting the links to .cmp-buy-btn costs ZERO
+ * extra row height at every width tested (1411, 768, 375), because the notes
+ * column already drives rows to 92-347px. Table width, page overflow and the
+ * mobile horizontal scroll are all unchanged. The Buy column grows 14px on
+ * mobile, inside a table that already scrolls.
+ *
+ * .cmp-buy-btn is the existing comparison-page button, reused rather than
+ * reinvented — one button style on the site, not two.
+ *
+ * The gold variant marks the badged pick in each table, which is the same
+ * signal .cmp-winner gives on comparison pages. It is deliberately the only
+ * second emphasis in the Buy column: the audit's rule was that one gold badge
+ * earns attention and a second emphasis system cancels it out. */
+.cmp-buy-btn--pick {
+  background: var(--gold);
+  color: var(--on-gold);
+  font-weight: 800;
+}
+.cmp-buy-btn--pick:hover { background: var(--gold-dark); }
+
+/* The table's Buy column is narrow; keep the button from wrapping its label
+   and let it fill the cell so the tap target is the full column width. */
+#compression-data .cmp-buy-btn,
+.brand-chart .cmp-buy-btn {
+  white-space: nowrap;
+  text-align: center;
+}
