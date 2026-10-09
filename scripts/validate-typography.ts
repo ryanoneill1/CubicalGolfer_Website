@@ -193,6 +193,54 @@ if (!w || !f) {
   }
 }
 
+// ── heading hierarchy ──────────────────────────────────────────────────────
+// Sprint 157 — headings must stay LARGER than the body, at every width.
+// This failed silently for seven sprints: Sprint 150 made body prose fluid
+// (18→24px) and left the headings at their fixed sizes, so at a 1411px window
+// body rendered 20.4px against an h3 of 19px — the heading was smaller than
+// the paragraph beneath it, and h2 at 26px was only 1.08× the body at wide
+// viewports. Nothing caught it because every rule was individually valid.
+//
+// Expressing the headings as multiples of --prose-size is what makes the
+// hierarchy structural rather than coincidental. This asserts that shape,
+// rather than specific pixel values that would need editing every time the
+// body size moves.
+{
+  const mult = (name: string): number | null => {
+    const m = css.match(
+      new RegExp('--' + name + ':\\s*calc\\(\\s*var\\(--prose-size\\)\\s*\\*\\s*([\\d.]+)')
+    );
+    return m ? parseFloat(m[1]) : null;
+  };
+  const h3 = mult('h3-size');
+  const h2 = mult('h2-size');
+  if (h3 === null || h2 === null) {
+    problems.push(
+      'Heading sizes are not derived from --prose-size. Fixed heading sizes ' +
+      'invert the hierarchy whenever the fluid body size changes — measured ' +
+      'h3 at 19px against body at 20.4px before this was fixed.'
+    );
+  } else {
+    if (h3 <= 1.1) {
+      problems.push(`--h3-size is ${h3}x the body size; below ~1.1x it does not read as a heading.`);
+    }
+    if (h2 <= h3) {
+      problems.push(`--h2-size (${h2}x) is not larger than --h3-size (${h3}x) — the two levels are indistinguishable.`);
+    }
+  }
+  // a fixed px font-size on the prose headings reintroduces the drift
+  for (const h of ['h2', 'h3']) {
+    const re = new RegExp(`\\.art-content ${h}[^{]*\\{[^}]*font-size:\\s*(\\d+)px`);
+    const m = css.match(re);
+    if (m) {
+      problems.push(
+        `.art-content ${h} sets a fixed font-size of ${m[1]}px. It must use ` +
+        `var(--${h}-size) so it tracks the fluid body size.`
+      );
+    }
+  }
+}
+
 // ── table alignment ────────────────────────────────────────────────────────
 // A column must align as a unit: every cell in it, plus its header, the same
 // way. Mixed alignment inside one column is the defect right-alignment exists

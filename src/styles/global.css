@@ -108,6 +108,16 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
      width — it was the prose starting 288px right of the heading. */
   --prose-w:     clamp(634px, 488.1px + 16.27vw, 846px);
   --prose-size:  clamp(18px, 13.85px + 0.4615vw, 24px);
+  /* Sprint 157 — headings DERIVE from the body size instead of being fixed.
+     Sprint 150 made body prose fluid (18→24px) and left the headings where
+     they were, so the scale quietly inverted. Measured at a 1411px window:
+     body 20.4px, h3 19px — the heading was SMALLER than the paragraph under
+     it. At 2200px it is worse: body 24px against an h2 of 26px, a ratio of
+     1.08 where the eye needs roughly 1.5 to read it as a level.
+     Expressing them as multiples means the hierarchy holds at every width and
+     cannot drift the next time the body size moves. */
+  --h3-size:     calc(var(--prose-size) * 1.25);
+  --h2-size:     calc(var(--prose-size) * 1.55);
   --content-w:  1400px;  /* article / compare / city body container.
                             Sprint 129: was 1200px, which after --page-px left only ~1072px
                             of usable width. The 34-row compression chart — 6 columns, a
@@ -339,8 +349,8 @@ nav.site-nav {
    with no separator. */
 .cat-page-body > h2,
 .cat-page-body section > h2 {
-  font-size: clamp(20px,2.5vw,26px); font-weight: 700;
-  color: var(--text); margin: 44px auto 16px;
+  font-size: var(--h2-size); font-weight: 700;
+  color: var(--text); margin: 48px auto 16px;
   padding-top: 8px;
   border-top: 2px solid var(--cream-dark);
 }
@@ -389,7 +399,8 @@ nav.site-nav {
  * site — with no visual hierarchy between sections at all. Same treatment as
  * the article body so the two read consistently. */
 .compare-body h2 {
-  margin: 44px 0 16px;
+  font-size: var(--h2-size); font-weight: 700;
+  margin: 48px 0 16px;
   padding-top: 8px;
   border-top: 2px solid var(--cream-dark);
 }
@@ -397,7 +408,17 @@ nav.site-nav {
 .compare-body > h2:first-child { border-top: none; margin-top: 0; padding-top: 0; }
 
 
-.art-content h3 { font-size: 19px; font-weight: 700; color: var(--text); margin: 32px 0 12px; }
+/* Sprint 157 — these are the brand blocks on the compression chart
+   ("Kirkland Golf Ball Compression Chart" and the five others), and each one
+   heads a real unit: an intro, a table and a verdict. At 19px with 32px above
+   it read as a bold paragraph rather than a heading. The 48px top margin is
+   three times the 16px paragraph gap, which is the ratio that makes a boundary
+   legible — gap BETWEEN units must beat the gap WITHIN them. */
+.art-content h3,
+.compare-body h3 {
+  font-size: var(--h3-size); font-weight: 700; color: var(--text);
+  margin: 48px 0 12px;
+}
 .art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 10px; }
