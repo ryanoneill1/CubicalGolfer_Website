@@ -61,14 +61,24 @@ for (const file of walk(DIST)) {
       const style = m[1];
       const page = file.replace(`${DIST}/`, '/').replace('/index.html', '/');
 
+      // Sprint 155 — this check is INVERTED from its Sprint 152 form, and the
+      // reason is worth recording. In Sprint 152 the layout centred its boxes,
+      // so an inline `margin:16px 0 24px` (horizontal 0) defeated the centring
+      // and this guard flagged it. Sprint 154 moved the site to a single left
+      // edge, which made `margin-left:0` the CORRECT value — and `auto` the
+      // defect, because an inline `auto` re-centres the box against a
+      // left-anchored system. Measured on /best-junior-golf-clubs/: four boxes
+      // centred at 814px and eight left-anchored at 814px, on one page.
+      // The constant here is not the value, it is that inline styles must not
+      // decide horizontal alignment. CSS owns it; inline must stay out.
       const mar = style.match(/(?:^|;)\s*margin\s*:\s*([^;]+)/);
       if (mar) {
         const parts = mar[1].trim().split(/\s+/);
-        const horizontalZero =
-          (parts.length === 2 && parts[1] === '0') ||
-          (parts.length === 3 && parts[1] === '0') ||
-          (parts.length === 4 && parts[1] === '0' && parts[3] === '0');
-        if (horizontalZero) {
+        const horizontalAuto =
+          (parts.length === 2 && parts[1] === 'auto') ||
+          (parts.length === 3 && parts[1] === 'auto') ||
+          (parts.length === 4 && (parts[1] === 'auto' || parts[3] === 'auto'));
+        if (horizontalAuto) {
           offenders.set(`${cls}:margin`, { page, snippet: `margin:${mar[1].trim()}` });
         }
       }
@@ -81,12 +91,44 @@ for (const file of walk(DIST)) {
   }
 }
 
+// ── Sprint 155 — the CSS side of the same trap ─────────────────────────────
+// The inline check above catches templates. The stylesheet can centre a box
+// just as easily, and did: a Sprint 152 rule `.toc-card.toc-card { margin-left:
+// auto }` survived Sprint 154's move to a single left edge, so the table of
+// contents sat 242px right of every box beneath it. Measured on
+// /best-junior-golf-clubs/: four boxes centred and eight left-anchored, all at
+// the same 814px width, on one page.
+{
+  const BOXES = [
+    'toc-card', 'quick-answer-box', 'intro-box', 'who-box', 'trust-card',
+    'trust-block', 'freshness-banner', 'update-log', 'testing-note',
+    'disclosure-box', 'art-faq', 'pros-cons-grid',
+  ];
+  const cssDir = 'dist/_astro';
+  const css = fs.existsSync(cssDir)
+    ? fs.readdirSync(cssDir).filter(f => f.endsWith('.css'))
+        .map(f => fs.readFileSync(path.join(cssDir, f), 'utf8')).join('\n')
+    : '';
+  for (const box of BOXES) {
+    // a rule naming this box that sets margin-left:auto (i.e. centres it)
+    const re = new RegExp(`\\.${box}[^{}]*\\{[^}]*margin-left:\\s*auto`, 'g');
+    if (re.test(css)) {
+      problems.push(
+        `A stylesheet rule centres .${box} with margin-left:auto. Top-level ` +
+        `blocks share one left edge; centring one of them puts it out of line ` +
+        `with every other box on the page.`
+      );
+    }
+  }
+}
+
 for (const [key, v] of offenders) {
   const cls = key.split(':')[0];
   problems.push(
     `.${cls} carries an inline \`${v.snippet}\` (e.g. ${v.page}). An inline ` +
     `style beats every stylesheet rule, so the layout system cannot position ` +
-    `this element. Use \`auto\` for the horizontal margin instead of 0.`
+    `this element. Leave the horizontal margin at 0 and let the stylesheet ` +
+    `place the box.`
   );
 }
 

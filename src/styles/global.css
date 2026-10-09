@@ -2383,9 +2383,12 @@ main section > p, main section ul, main section ol {
  * (specificity 0,2,0 — a tie with the global rule, but it loads later). This
  * is the one genuine component-vs-global conflict on the site; stated at a
  * higher specificity so the layout system wins without !important. */
+/* Sprint 155 — left, not centre. This rule was written in Sprint 152 when the
+   layout centred everything; Sprint 154 moved to a single left edge and this
+   was missed, so the table of contents sat 242px right of every box under it. */
 .art-content .toc-card.toc-card,
 .compare-body .toc-card.toc-card {
-  margin-left: auto;
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -2406,6 +2409,22 @@ main section > p, main section ul, main section ol {
      at the shell edge like everything else; the half-shell offset that used to
      put it on the centred column's left edge would now push it out of line. */
   margin-left: 0;
+  /* Sprint 155 — this element is display:inline-flex, and inline-level boxes do
+     NOT collapse their vertical margins with the blocks around them. Every
+     other gap on the page collapses to a single value (40px between related
+     clusters, 56px before the closing CTA); here the stamp's own 20px was
+     ADDED to the CTA's 56px for a 76px gap that matches nothing else and is
+     not on the 8px scale. Zeroing it lets the neighbour's margin stand alone. */
+  margin-top: 0;
+  margin-bottom: 0;
+  /* …and it has to be BLOCK-level to be positioned by its margin at all. As
+     display:inline-flex it sits in an anonymous line box and is placed by the
+     parent's text-align, which is why one variant of this element rendered at
+     x=261 while margin-left computed to 0px. `flex` makes it block-level;
+     `fit-content` keeps the short "Last updated" pill shrink-wrapped rather
+     than stretching it to the full measure. */
+  display: flex;
+  width: fit-content;
   /* The class is used for two different things: a short "Last updated" pill,
      and a multi-line block of update text. The cap is a no-op on the pill
      (inline-flex shrink-to-fit keeps it ~257px) and is what stops the text
@@ -2483,3 +2502,45 @@ main section > p, main section ul, main section ol {
 .compare-body p[style*="font-size: 14px"],
 .art-content li[style*="font-size:14px"],
 .compare-body p[style*="font-size:14px"] { max-width: 494px; }
+
+
+/* ── Sprint 155 — a box built from COLUMNS is data, and takes the shell ─────
+ * Sprint 151b split boxes into "data fills the shell" and "prose keeps the
+ * measure", and I put every bordered box in the prose group. That was too
+ * crude. Several of these boxes are two-column grids:
+ *
+ *   .who-box          BUY IF YOU… / SKIP IF YOU…      grid-template: 1fr 1fr
+ *   .pros-cons-grid   PROS / CONS                     grid-template: 1fr 1fr
+ *   .toc-card         the section list                grid, 2 columns
+ *
+ * Capping a two-column grid at the reading measure gives each column roughly
+ * 390px. Measured consequence on /best-junior-golf-clubs/ at a 2000px window:
+ * the grid sat at 814px inside a 1298px shell, so "Grandparents looking for a
+ * golf gift guide" wrapped to five lines with a link broken across three of
+ * them — while 484px of the shell sat empty beside it. That is the "boxes that
+ * could be stretched out" and the needless scrolling.
+ *
+ * The measure governs a LINE OF PROSE. It has no claim on a grid, any more
+ * than it has on a table. */
+/* The full list, by what the box CONTAINS rather than what it looks like:
+ *   grids    .who-box .pros-cons-grid          two columns
+ *   lists    .trust-card .trust-block          short bullets, not sentences
+ *   nav      .toc-card                         a list of links
+ *   accordion .art-faq .update-log             rows that open and close
+ *   banner   .freshness-banner                 one line across the page
+ * None of these is a paragraph, so none of them is governed by the measure.
+ *
+ * What STAYS at the measure: .quick-answer-box, .intro-box, .testing-note,
+ * .disclosure-box — these are running prose, and prose has a maximum readable
+ * line length. There will always be space to the right of those, and that is
+ * the measure doing its job, not a bug. */
+.art-content > :is(.who-box, .pros-cons-grid, .toc-card, .trust-card,
+                   .trust-block, .art-faq, .update-log, .freshness-banner),
+.compare-body > :is(.who-box, .pros-cons-grid, .toc-card, .trust-card,
+                   .trust-block, .art-faq, .update-log, .freshness-banner),
+.art-content .art-section > :is(.who-box, .pros-cons-grid),
+.compare-body .compare-section > :is(.who-box, .pros-cons-grid) {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
