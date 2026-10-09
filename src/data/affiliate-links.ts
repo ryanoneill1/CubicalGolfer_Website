@@ -4744,6 +4744,19 @@ export const AFFILIATE: Record<string, {
     imgAlt: 'Srixon Z-Star XV golf balls',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSrixon%2520Z-Star%2520XV%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
   },
+  'amazon-basics-core-soft': {
+    url: 'https://www.amazon.com/Amazon-Basics-Standard-Enhanced-Alignment/dp/B0F1D114ZF?&linkCode=ll2&tag=cubicalgolfer-20&linkId=9ac11269b30d68a06c9f7f363e954661&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-10-09',
+    program: 'amazon',
+    commissionPct: 3,
+    cookieDays: 1,
+    retailer: 'Amazon',
+    price: '~$18/dz',
+    priceNote: '$17.59 a dozen, and $25.17 for a 25-ball pack — the cheapest ball on this chart by some distance (checked 9 October 2026). Sold as "Standard, Enhanced Alignment"; the $17.59 dozen price matches what independent reviews quote for the Core Soft, which is how this row is matched to MyGolfSpy\'s measurement.',
+    label: 'Check Price at Amazon \u2192',
+    imgSrc: '/images/products/amazon_basic_golf_ball.webp',
+    imgAlt: 'Amazon Basics Core Soft golf balls',
+  },
   'maxfli-tour-s': {
     url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fmaxfli-tour-s-golf-balls-24maxumxfltrswhtdgbl%2F24maxumxfltrswhtdgbl',
     verifiedOn: '2026-09-29',
@@ -4754,6 +4767,7 @@ export const AFFILIATE: Record<string, {
     price: '~$40/dz',
     priceNote: '$39.99 a dozen, 4.7 stars across 137 reviews (checked 29 September 2026). Maxfli Tour balls are routinely sold in four-dozen bulk deals well under the single-dozen price.',
     label: 'See Today\'s Price \u2192',
+    imgSrc: '/images/products/Maxfli_Tour_S_golfball.webp',
     imgAlt: 'Maxfli Tour S golf balls',
   },
   'maxfli-tour-x': {

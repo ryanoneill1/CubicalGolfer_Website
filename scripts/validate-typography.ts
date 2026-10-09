@@ -49,7 +49,9 @@ const problems: string[] = [];
 // of different widths above every section. The defect was not a missing
 // border — it was a second one. So check for one, and only one.
 const sepOnSection = /\.art-section\s*\{[^}]*border-top:\s*2px/.test(css);
-const sepOnHeading = /\.art-content\s+h2\s*\{[^}]*border-top:\s*2px/.test(css);
+// `.art-content h2` may sit in a selector list with the bespoke containers,
+// so match the rule block it belongs to rather than requiring it to stand alone.
+const sepOnHeading = /\.art-content\s+h2\s*[,{][^{}]*\{[^}]*border-top:\s*2px/.test(css);
 if (!sepOnSection) {
   problems.push(
     'No 2px border-top on .art-section — sections have lost their separator. ' +
@@ -57,12 +59,24 @@ if (!sepOnSection) {
     'heading, which is capped at the reading measure.'
   );
 }
-if (sepOnHeading) {
+// Sprint 156 — BOTH must carry it now, because not every page wraps its
+// headings in .art-section: the compression chart has 15 h2s and one wrapper,
+// so moving the separator to the wrapper alone silently stripped it from 14 of
+// them, and from every heading on the brand chart pages and /tools/. The
+// heading draws the line; the wrapper cancels it where it draws its own. What
+// has to hold is ONE line per boundary — never none, never two.
+if (!sepOnHeading) {
   problems.push(
-    'A 2px border-top is set on BOTH .art-section and .art-content h2. Since ' +
-    'headings are capped at --prose-w and centred, that draws two separator ' +
-    'lines at two different widths above every section — measured 718px on the ' +
-    'heading against 1294px on the wrapper. Keep it on .art-section only.'
+    'No 2px border-top on .art-content h2. Pages that do not wrap headings in ' +
+    '.art-section (the compression chart, the brand charts, /tools/) then have ' +
+    'no section separator at all — measured 14 of 15 headings bare on ' +
+    '/golf-ball-compression-chart/.'
+  );
+}
+if (!/\.art-content\s+\.art-section\s+h2[^{]*\{[^}]*border-top:\s*none/.test(css)) {
+  problems.push(
+    'The .art-section wrapper does not cancel the heading separator, so pages ' +
+    'using the wrapper draw TWO lines per boundary.'
   );
 }
 

@@ -31,8 +31,8 @@ const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 const updatedOn = effectiveDateModified('/golf-ball-compression-chart/', article.dateModified) ?? article.datePublished;
 
 const meta = {
-  title: 'Golf Ball Compression Chart 2026 — 35 Balls + PDF',
-  description: 'Sortable chart of 35 golf balls — Titleist, Callaway, TaylorMade, Srixon. Filter by brand, cover or price, or enter your swing speed. Free printable PDF.',
+  title: 'Golf Ball Compression Chart 2026 — 36 Balls + PDF',
+  description: 'Sortable chart of 36 golf balls — Titleist, Callaway, TaylorMade, Srixon. Filter by brand, cover or price, or enter your swing speed. Free printable PDF.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
@@ -97,7 +97,7 @@ const faqs = [
   { q: 'What is the cheapest urethane golf ball?', a: 'The Kirkland Signature, which works out near $22 a dozen because it is sold in two-dozen boxes at $43.99. Among the traditional manufacturers the cheapest urethane is the Wilson Staff Model at $35, then the Titleist Tour Speed at $35. The Srixon Q-Star Tour is $40 and the Vice Pro Soft $35. Urethane is what produces greenside spin, so either is the cheapest route to a ball that checks on a pitch.' },
   { q: 'Which TaylorMade ball should I play at 90 mph?', a: 'The Tour Response at 77 compression, $38. It is rated 88–105 mph, it is urethane-covered, and it is $12 cheaper than the TP5. The TP5 and TP5x are rated 95–115 and 100–130 mph respectively, so both are firmer than a 90 mph swing needs.' },
   { q: 'Which Bridgestone golf ball has the lowest compression?', a: 'The e12 Contact at 50 compression, $30 a dozen, rated 70–90 mph. It is also the only ionomer-covered ball Bridgestone has on this chart — the Tour B RX at 68 is already urethane, which is unusually low for a urethane ball.' },
-  { q: 'What is the firmest golf ball?', a: 'The Srixon Z-Star XV at 102 compression is the firmest of the 35 balls on this chart, followed by the Bridgestone Tour B X and Maxfli Tour X at 100. All three are rated for swing speeds above 100 mph and will feel harsh below that.' },
+  { q: 'What is the firmest golf ball?', a: 'The Srixon Z-Star XV at 102 compression is the firmest of the 36 balls on this chart, followed by the Bridgestone Tour B X and Maxfli Tour X at 100. All three are rated for swing speeds above 100 mph and will feel harsh below that.' },
   { q: 'What is the difference between the Titleist Tour Soft and Velocity?', a: 'They are both 65 compression, which makes them look identical on a chart, but they are built for different jobs. Tour Soft is rated 80–95 mph and designed for feel. Velocity is rated 85–110 mph and designed for distance. Compression alone will not tell you which one suits you.' },
   { q: 'Does temperature affect golf ball compression?', a: 'Yes. Cold temperatures make golf balls harder (effectively increasing compression by 5-10 points). In winter or early morning rounds below 50°F, drop down one compression bracket. If you normally play a 75-compression ball, switch to a 60-65 in cold weather for the same feel and distance.' },
 ];
@@ -107,7 +107,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Golf Ball Compression Chart 2026',
-  description: '35 golf balls ranked by compression rating from lowest (34) to highest (102)',
+  description: '36 golf balls ranked by compression rating from lowest (34) to highest (102)',
   numberOfItems: balls.length,
   itemListElement: balls.map((ball, i) => ({
     '@type': 'ListItem',
@@ -129,7 +129,7 @@ const chartImageSchema = {
   width: 1200,
   height: 675,
   name: 'Golf Ball Compression Chart 2026',
-  caption: 'Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball',
+  caption: 'Golf ball compression chart 2026: 36 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball',
   creditText: 'CubicalGolfer.com',
   license: 'https://creativecommons.org/licenses/by/4.0/',
   acquireLicensePage: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
@@ -140,7 +140,7 @@ const datasetSchema = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   name: 'Golf Ball Compression Chart 2026',
-  description: '35 golf balls ranked by compression rating (34–102) with cover material, price per dozen, and recommended swing speed range.',
+  description: '36 golf balls ranked by compression rating (34–102) with cover material, price per dozen, and recommended swing speed range.',
   url: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   creator: {
     '@type': 'Organization',
@@ -242,13 +242,13 @@ function outboundFor(url: string | null | undefined): string {
       <div class="quick-answer-header">⚡ Quick Answer</div>
       <p class="quick-answer-text">Under 85 mph swing speed: play compression 35-65. Between 85-100 mph: play 65-90. Over 100 mph: play 90+. Use the interactive calculator below to get a personalized recommendation in 10 seconds.</p>
       <a href={getAffiliateLink('callaway-supersoft').url} class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored" data-cta-location="quick-answer" data-aff-name="Callaway Supersoft">Our #1 Pick: Callaway Supersoft {getAffiliateLink('callaway-supersoft').price} — Check Price →</a>
-      <p class="quick-answer-more">Read the full guide below for all 35 balls tested.</p>
+      <p class="quick-answer-more">Read the full guide below for all 36 balls tested.</p>
     </div>
 
     <!-- FRESHNESS BANNER -->
     <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
       <span style="font-size:16px;">✅</span>
-      <span><strong>Updated {updatedOn}</strong> — All 35 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+      <span><strong>Updated {updatedOn}</strong> — All 36 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
 
     <!-- PDF DOWNLOAD -->
@@ -300,7 +300,7 @@ function outboundFor(url: string | null | undefined): string {
     <figure style="margin:0 0 32px;max-width:880px;">
       <img src="/images/charts/golf-ball-compression-chart-2026.webp"
            width="1200" height="675" loading="eager" fetchpriority="high"
-           alt="Golf ball compression chart 2026: 35 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
+           alt="Golf ball compression chart 2026: 36 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
            style="width:100%;height:auto;border-radius:12px;display:block;" />
       <figcaption style="font-size:14px;color:var(--muted);margin-top:8px;">
         Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
@@ -309,7 +309,7 @@ function outboundFor(url: string | null | undefined): string {
     </figure>
 
 
-    <p class="chart-intro">Stop guessing which golf ball to play. This chart maps the compression rating of all 35 balls — every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, Wilson, Kirkland, Maxfli and Pinnacle model we track — to your swing speed, so you can find the right ball in 10 seconds instead of wasting money on balls built for someone else's swing.</p>
+    <p class="chart-intro">Stop guessing which golf ball to play. This chart maps the compression rating of all 36 balls — every Titleist, Callaway, TaylorMade, Srixon, Bridgestone, Vice, Wilson, Kirkland, Maxfli and Pinnacle model we track — to your swing speed, so you can find the right ball in 10 seconds instead of wasting money on balls built for someone else's swing.</p>
 
     <!-- ═══ INTERACTIVE BALL FINDER ═══ -->
     <section class="ball-finder" id="ball-finder">
@@ -359,7 +359,7 @@ function outboundFor(url: string | null | undefined): string {
         </select></label>
         <label>Max price: <input type="range" id="price-filter" min="15" max="60" value="60" style="vertical-align:middle;" /> <span id="price-display">$60</span></label>
       </div>
-      <p style="font-size:14px;line-height:1.55;background:#f7f9f7;border-left:3px solid var(--green);padding:11px 14px;border-radius:0 6px 6px 0;margin:0 0 14px;">
+      <p class="provenance-note">
         <strong>Where these numbers come from.</strong> There is no industry-standard compression test, so two honest sources can disagree by 20 points or more on the same ball. Manufacturers publish figures from their own rigs; independent labs publish gauge readings from theirs. Titleist and Costco publish nothing at all. This chart uses the manufacturer’s published figure wherever one exists, and an independent measurement where none does — the <strong>Source</strong> column says which, ball by ball, so you can tell a published spec from a measured reading. Numbers from different scales should not be compared directly.
       </p>
       <div style="overflow-x:auto;">
@@ -378,7 +378,7 @@ function outboundFor(url: string | null | undefined): string {
           <tbody>
             {balls.map(ball => (
               <tr data-compression={ball.compression} data-cover={ball.cover} data-price={ball.price} data-min-mph={ball.minMph} data-max-mph={ball.maxMph} data-name={ball.name}>
-                <td><div style="display:flex;gap:9px;align-items:flex-start;">{ballThumb(ball) && <img src={ballThumb(ball)} alt={`${ball.name} golf ball — ${ball.compression} compression`} width="38" height="38" loading="lazy" style="object-fit:contain;flex:none;border-radius:4px;" />}<div style="min-width:0;"><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:16px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:14px;color:var(--muted);line-height:1.4;margin-top:4px;">{ball.notes}</div>}</div></div></td>
+                <td><div style="display:flex;gap:9px;align-items:flex-start;">{ballThumb(ball) && <img src={ballThumb(ball)} alt={`${ball.name} golf ball — ${ball.compression} compression`} width="64" height="64" loading="lazy" class="ball-thumb" />}<div style="min-width:0;"><div>{ball.name}{ball.badge && <span class="badge" style="background:var(--gold);color:#1a1a1a;font-size:16px;padding:2px 6px;border-radius:3px;margin-left:6px;">{ball.badge}</span>}</div>{ball.notes && <div style="font-size:14px;color:var(--muted);line-height:1.4;margin-top:4px;">{ball.notes}</div>}</div></div></td>
                 <td class="cmp-num" style="white-space:nowrap;font-weight:600;">{ball.compression}</td>
                 <td style="font-size:14px;color:var(--muted);line-height:1.3;">{(ball as any).source || '—'}</td>
                 <td>{ball.cover}</td>
@@ -453,7 +453,7 @@ function outboundFor(url: string | null | undefined): string {
 
     <!-- ═══ TRUST LINE ═══ -->
     <p style="font-size:16px;color:var(--muted);margin:0 0 24px;padding:10px 16px;background:rgba(30,58,40,.04);border-radius:8px;line-height:1.5;">
-      <strong style="color:var(--green);">How we built this chart:</strong> All 35 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
+      <strong style="color:var(--green);">How we built this chart:</strong> All 36 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
     </p>
 
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
@@ -615,7 +615,7 @@ function outboundFor(url: string | null | undefined): string {
     </section>
 
     <section>
-      <h2 id="low-to-high">All 35 Balls Ranked Low to High Compression</h2>
+      <h2 id="low-to-high">All 36 Balls Ranked Low to High Compression</h2>
       <p>The complete ranking from softest to firmest. Use this as a quick reference — the interactive filter above gives personalized recommendations, but this list shows the full spectrum at a glance.</p>
       <!-- Sprint 137: four paragraphs of comma-separated balls, bottom of page.
            Now banded blocks in the same four bands the chart image and the

@@ -318,17 +318,37 @@ nav.site-nav {
   margin: 0 auto;
   padding: 56px var(--page-px);
 }
-/* Sprint 152 — the separator moved OFF the heading.
- * It used to live here AND on .art-section. That was invisible while both were
- * the same width, but Sprint 151 narrowed headings to the reading measure and
- * centred them, so this border shrank to 718px and shifted 288px inward while
- * .art-section's stayed at 1294px. Two rules, two widths, both drawn — which is
- * the "line that only goes over the word" with a gap to its left.
- * .art-section spans the full shell, so the separator belongs there. */
-.art-content h2 {
+/* Sprint 152 moved the separator OFF the heading and onto .art-section,
+ * because both were drawing one and Sprint 151 had narrowed the heading's to
+ * 718px against the wrapper's 1294px — the "line that only goes over the word".
+ *
+ * Sprint 156 — that assumed every h2 sits in an .art-section. Measured, it does
+ * not: /golf-ball-compression-chart/ has 15 headings and ONE .art-section, so
+ * 14 of them lost their separator entirely. Same on the five brand chart pages
+ * (5 of 5) and /tools/ (4 of 4). Those are bespoke pages that never adopted the
+ * wrapper, and the compression chart alone is 21% of the site's impressions.
+ *
+ * So the heading carries the separator again — and .art-section cancels it
+ * where the wrapper already draws one. Exactly one line per boundary, whichever
+ * structure the page uses. Sprint 151's narrowing is no longer a problem
+ * because Sprint 154 left-anchored the heading: the line starts where the
+ * section starts. */
+.art-content h2,
+/* …and the bespoke page containers, which never adopted .art-content either:
+   /tools/ and the category pages use .cat-page-body, measured 4 of 4 headings
+   with no separator. */
+.cat-page-body > h2,
+.cat-page-body section > h2 {
   font-size: clamp(20px,2.5vw,26px); font-weight: 700;
   color: var(--text); margin: 44px auto 16px;
   padding-top: 8px;
+  border-top: 2px solid var(--cream-dark);
+}
+/* …and NOT twice, where .art-section already provides it. */
+.art-content .art-section h2,
+.compare-body .compare-section h2 {
+  border-top: none;
+  padding-top: 0;
 }
 /* Sprint 144 — this exception used to read `.art-content h2:first-of-type`.
  * :first-of-type is scoped to an element's PARENT, and every h2 on this site is
@@ -2534,13 +2554,57 @@ main section > p, main section ul, main section ol {
  * .disclosure-box — these are running prose, and prose has a maximum readable
  * line length. There will always be space to the right of those, and that is
  * the measure doing its job, not a bug. */
-.art-content > :is(.who-box, .pros-cons-grid, .toc-card, .trust-card,
+.art-content > :is(.who-box, .pros-cons-grid, .toc-card, .toc, .trust-card,
                    .trust-block, .art-faq, .update-log, .freshness-banner),
-.compare-body > :is(.who-box, .pros-cons-grid, .toc-card, .trust-card,
+.compare-body > :is(.who-box, .pros-cons-grid, .toc-card, .toc, .trust-card,
                    .trust-block, .art-faq, .update-log, .freshness-banner),
 .art-content .art-section > :is(.who-box, .pros-cons-grid),
 .compare-body .compare-section > :is(.who-box, .pros-cons-grid) {
   max-width: 100%;
   margin-left: 0;
   margin-right: 0;
+}
+
+
+/* ── Sprint 156 — a panel that explains the data is not small print ─────────
+ * The provenance note above the compression table carried font-size:14px, so
+ * Sprint 154's per-size measure capped it at 494px: 78 characters, correct for
+ * a caption, absurd for a panel. Measured at a 2000px window it rendered 494px
+ * wide and 217px tall inside a 1298px shell — ten short lines with 800px of
+ * empty page beside them.
+ *
+ * It is also the most load-bearing paragraph on the page: it explains the
+ * Source column, which is the one thing this chart has that rival charts do
+ * not. Small print was the wrong call. Body size, normal measure. */
+.provenance-note {
+  font-size: var(--prose-size);
+  line-height: 1.55;
+  background: #f7f9f7;
+  border-left: 3px solid var(--green);
+  padding: 14px 18px;
+  border-radius: 0 6px 6px 0;
+  margin: 0 0 16px;
+  max-width: var(--prose-w);
+}
+
+
+/* ── Sprint 156 — one size for every ball thumbnail ─────────────────────────
+ * The chart emitted width="38" height="38" inline. Two problems: 38px is small
+ * against rows that run 75-130px tall because of the notes column, and because
+ * the size lived in the markup it could drift per page. One class, one size.
+ * 64px is on the 8px scale and fills the shortest row without stretching the
+ * tallest. object-fit:contain keeps every ball circular whatever the source
+ * image's aspect ratio, so they read as a set rather than as separate crops. */
+.ball-thumb {
+  width: 64px;
+  height: 64px;
+  flex: none;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+}
+@media (max-width: 760px) {
+  /* The table scrolls horizontally on mobile; a 64px thumbnail eats the width
+     the ball NAME needs, so step it down there. */
+  .ball-thumb { width: 44px; height: 44px; }
 }
