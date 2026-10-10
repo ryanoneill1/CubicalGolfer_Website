@@ -34,6 +34,21 @@ const slowBudget = [ball('TaylorMade Noodle'), slowAlt, slowPick]
 // Round the heading's cap up to the next $5 so it reads like a price tier
 // rather than the exact figure of whichever ball happens to be dearest.
 const budgetCap = Math.ceil(slowBudget[slowBudget.length - 1].price / 5) * 5;
+
+// Sprint 169: the swing-speed recommendation paragraphs quoted their own
+// figures. Four were wrong against the table on the same page — Chrome Soft
+// at $40 (really $45), Pro V1 at $55 ($58), TP5 at $50 ($58), and Vice Pro at
+// "$33/dz, 80 compression" when balls.ts has it at $39 and 90. The Vice Pro
+// error is the same one Sprint 165 found in the brand commentary, which is the
+// tell: a figure typed beside a product name drifts the moment balls.ts moves.
+// pill() renders "name ($price/dz, cover, compression)" from the record.
+const pill = (name: string, opts: { cover?: boolean; label?: string } = {}) => {
+  const b = ball(name);
+  const bits = [`$${b.price}/dz`];
+  if (opts.cover) bits.push(String(b.cover).toLowerCase());
+  bits.push(opts.label ? `${b.compression} ${opts.label}` : String(b.compression));
+  return `<strong>${b.name}</strong> (${bits.join(', ')})`;
+};
 // Thumbnail lookup. This used to slugify the ball's NAME and hope it matched a
 // registry key — so 'Callaway Chrome Tour' looked for `callaway-chrome-tour`
 // while the entry is `callaway-chrome-tour-2026`, and the row silently rendered
@@ -522,13 +537,13 @@ function outboundFor(url: string | null | undefined): string {
     <section>
       <h2 id="85-100">Best Golf Balls for Swing Speed 85–100 mph</h2>
       <p>This is where most weekend golfers land — and where the most options exist. Compression 65-90 is your range. The key decision: ionomer cover (cheaper, less spin) or urethane cover (more spin around greens, premium price).</p>
-      <p>Our top picks: <strong>Kirkland Signature</strong> (~$22/dz, urethane, 92 compression) for value, <strong>Srixon Q-Star Tour</strong> ($40/dz, urethane, 74) for the best balance, and <strong>Callaway Chrome Soft</strong> ($40/dz, urethane, 75) for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
+      <p>Our top picks: <Fragment set:html={pill('Kirkland Signature', { cover: true, label: 'compression' })} /> for value, <Fragment set:html={pill('Srixon Q-Star Tour', { cover: true })} /> for the best balance, and <Fragment set:html={pill('Callaway Chrome Soft', { cover: true })} /> for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
     </section>
 
     <section>
       <h2 id="over-100">Best Golf Balls for Swing Speed Over 100 mph</h2>
       <p>Above 100 mph, you can compress any ball on the market. The choice becomes about spin, feel, and control rather than distance. Compression 85-102 is your range.</p>
-      <p>The <strong>Titleist Pro V1</strong> ($55/dz, 87 compression) remains the gold standard — consistent flight, excellent greenside spin, and the ball every tour player trusts. The <strong>TaylorMade TP5</strong> ($50/dz, 85) and <strong>Srixon Z-Star</strong> ($40/dz, 88) are the best alternatives. Budget pick: <strong>Vice Pro</strong> ($33/dz, 80 compression, urethane cover).</p>
+      <p>The <Fragment set:html={pill('Titleist Pro V1', { label: 'compression' })} /> remains the gold standard — consistent flight, excellent greenside spin, and the ball every tour player trusts. The <Fragment set:html={pill('TaylorMade TP5')} /> and <Fragment set:html={pill('Srixon Z-Star')} /> are the best alternatives. Budget pick: <Fragment set:html={pill('Vice Pro', { cover: true, label: 'compression' })} />.</p>
     </section>
 
     <!-- ═══ BRAND SUB-TABLES ═══ -->

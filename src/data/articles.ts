@@ -1220,7 +1220,7 @@ export const ARTICLES: Article[] = [
         body: "Clips to any putter grip. Measures stroke tempo, face rotation, impact ratio, and backswing lengths. Compares your numbers to tour average.",
         rating: 4.4,
         pros: ['Clips to any putter grip — measures tempo, rotation, and impact quality', 'Gives specific drill recommendations based on your diagnosed stroke fault', 'Compact and portable — fits in any bag'],
-        cons: ['Putting and short game only — no full swing tracking', 'App subscription required to access advanced analytics and history'], price: '~$99' },
+        cons: ['Putting and short game only — no full swing tracking', 'App subscription required to access advanced analytics and history'], price: '~$150' },
       { h2: 'Best Home Simulator: SkyTrak+', affiliateKey: 'skytrak-plus',
         body: "Captures ball speed, launch angle, spin rate, and spin axis for all 14 clubs. The unit alone costs $1,195 plus net, mat, and projector.",
         rating: 4.7,
@@ -1254,7 +1254,7 @@ export const ARTICLES: Article[] = [
       rows: [
       { name: 'Rapsodo MLM2PRO', bestFor: 'Best All-Around', price: '~$599', feature1: 'Full launch data', feature2: 'Home and range', winner: true, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'rapsodo-mlm2pro' },
       { name: 'SkyTrak+', bestFor: 'Best Home Simulator', price: '~$1,195', feature1: 'Full launch data', feature2: 'Indoor only', winner: false, rating: 4.7, affiliateKey: 'skytrak-plus' },
-      { name: 'Blast Motion Sensor', bestFor: 'Best Putting Tool', price: '~$99', feature1: 'Stroke data only', feature2: 'Home practice', winner: false, rating: 4.4, affiliateKey: 'blast-motion-sensor' },
+      { name: 'Blast Motion Sensor', bestFor: 'Best Putting Tool', price: '~$150', feature1: 'Stroke data only', feature2: 'Home practice', winner: false, rating: 4.4, affiliateKey: 'blast-motion-sensor' },
       ],
     },
     related: [
@@ -1944,7 +1944,7 @@ export const ARTICLES: Article[] = [
         {  rating: 4.4,affiliateKey: 'cleveland-huntington-beach', name: 'Cleveland Huntington Beach', bestFor: 'Blade value', price: '~$124', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'odyssey-two-ball-eleven', name: 'Odyssey 2-Ball Eleven', bestFor: 'Max forgiveness', price: '~$300', feature1: '', feature2: '', winner: false },
         { affiliateKey: 'odyssey-tri-hot-5k', name: 'Odyssey Tri-Hot 5K', bestFor: 'Older golfers', price: '~$200', feature1: '', feature2: '', winner: false },
-        { affiliateKey: 'lab-golf-df3', name: 'L.A.B. Golf DF3', bestFor: 'The yips', price: '~$449', feature1: '', feature2: '', winner: false },
+        { affiliateKey: 'lab-golf-df3', name: 'L.A.B. Golf DF3', bestFor: 'The yips', price: '~$400', feature1: '', feature2: '', winner: false },
         { rating: 4.7, affiliateKey: 'scotty-cameron-phantom-x',    name: 'Scotty Cameron Phantom',   bestFor: 'Best Premium', price: '~$500', feature1: 'Milled',    feature2: 'Arc stroke',     winner: false },
         { rating: 4.4, affiliateKey: 'cleveland-hb-soft-2',  name: 'Cleveland HB Soft 2', bestFor: 'Best Budget',  price: '$142.60', feature1: 'Milled',    feature2: 'Any stroke',     winner: false },
         { rating: 4.5, affiliateKey: 'taylormade-spider-tour',    name: 'TaylorMade Spider Tour',   bestFor: 'Best Mallet',  price: '~$350', feature1: 'Pure Roll', feature2: 'Straight stroke', winner: false },
@@ -2185,7 +2185,7 @@ export const ARTICLES: Article[] = [
         { name: 'Wilson DUO Soft+', bestFor: 'Seniors', price: '$24.97/dz', feature1: '35', feature2: 'Ionomer', winner: false , rating: 4.1, affiliateKey: 'wilson-duo-soft-plus'},
         { name: 'Titleist TruFeel', bestFor: 'Soft feel', price: '~$25', feature1: '70', feature2: 'Ionomer', winner: false , rating: 4.1, affiliateKey: 'titleist-trufeel'},
         { name: 'TaylorMade Soft Response', bestFor: 'Under 85 mph', price: '~$25', feature1: '50', feature2: 'Ionomer', winner: false , badge: 'STRONG PICK', rating: 4.0, affiliateKey: 'taylormade-soft-response'},
-        { name: 'Bridgestone e12 Contact', bestFor: 'Budget distance', price: '~$28', feature1: '50', feature2: 'Ionomer', winner: false, rating: 4.2, affiliateKey: 'bridgestone-e12-contact' },
+        { name: 'Bridgestone e12 Contact', bestFor: 'Budget distance', price: '~$30', feature1: '50', feature2: 'Ionomer', winner: false, rating: 4.2, affiliateKey: 'bridgestone-e12-contact' },
         { name: 'Vice Drive', bestFor: 'Value', price: '~$20/dz', feature1: '95', feature2: 'Ionomer', winner: false , rating: 4.0, affiliateKey: 'vice-drive'},
         { name: 'Srixon Soft Feel', bestFor: 'Best value', price: '~$25', feature1: '60', feature2: 'Ionomer', winner: true, rating: 4.2, affiliateKey: 'srixon-soft-feel' },
         { name: 'Vice Pro Soft', bestFor: '80-90 mph', price: '~$35/dz', feature1: '65', feature2: 'Urethane', winner: false , badge: 'STRONG PICK', rating: 4.3, affiliateKey: 'vice-pro-soft'},
@@ -2199,7 +2199,7 @@ export const ARTICLES: Article[] = [
         { name: 'Callaway Chrome Soft', bestFor: '88-100 mph', price: '$44.99/dz', feature1: '75', feature2: 'Urethane', winner: false, rating: 4.7, affiliateKey: 'callaway-chrome-soft' },
         { name: 'Kirkland Signature', bestFor: 'Value tour ball', price: '~$22', feature1: '92', feature2: 'Urethane', winner: false , rating: 4.3, affiliateKey: 'kirkland-signature'},
         { name: 'Titleist AVX', bestFor: 'Low spin/launch', price: '~$45', feature1: '77', feature2: 'Urethane', winner: false , rating: 4.5, affiliateKey: 'titleist-avx'},
-        { name: 'TaylorMade Tour Response', bestFor: '88-100 mph', price: '~$35', feature1: '77', feature2: 'Urethane', winner: false, rating: 4.5, affiliateKey: 'taylormade-tour-response' },
+        { name: 'TaylorMade Tour Response', bestFor: '88-100 mph', price: '~$38', feature1: '77', feature2: 'Urethane', winner: false, rating: 4.5, affiliateKey: 'taylormade-tour-response' },
         { name: 'Titleist Tour Speed', bestFor: '90-100 mph', price: '~$35', feature1: '78', feature2: 'Urethane', winner: false, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'titleist-tour-speed' },
         { name: 'Vice Pro', bestFor: '90-105 mph', price: '~$39', feature1: '90', feature2: 'Urethane', winner: false, rating: 4.5, affiliateKey: 'vice-pro' },
         { name: 'TaylorMade TP5', bestFor: '95-110 mph', price: '$57.97/dz', feature1: '85', feature2: 'Urethane', winner: false, rating: 4.5, affiliateKey: 'taylormade-tp5' },
@@ -2209,7 +2209,7 @@ export const ARTICLES: Article[] = [
         { name: 'Callaway Chrome Tour', bestFor: '95-115 mph', price: '$44.99/dz', feature1: '90', feature2: 'Urethane', winner: false, rating: 4.7, affiliateKey: 'callaway-chrome-soft' },
         { name: 'Bridgestone Tour B XS', bestFor: '95-110 mph', price: '~$55/dz', feature1: '90', feature2: 'Urethane', winner: false , rating: 4.5, affiliateKey: 'bridgestone-tour-b-xs'},
         { name: 'Vice Pro Plus', bestFor: '100+ mph', price: '~$35', feature1: '100', feature2: 'Urethane', winner: false , badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'vice-pro-plus'},
-        { name: 'Titleist Pro V1x', bestFor: '100+ mph', price: '~$55', feature1: '97', feature2: 'Urethane', winner: false, rating: 4.7, affiliateKey: 'titleist-pro-v1x' },
+        { name: 'Titleist Pro V1x', bestFor: '100+ mph', price: '~$58', feature1: '97', feature2: 'Urethane', winner: false, rating: 4.7, affiliateKey: 'titleist-pro-v1x' },
         { name: 'TaylorMade TP5x', bestFor: '100+ mph', price: '$44.75/dz', feature1: '97', feature2: 'Urethane', winner: false , rating: 4.5, affiliateKey: 'taylormade-tp5x'},
         { name: 'Bridgestone Tour B X', bestFor: '100+ mph', price: '$54.99/dz', feature1: '100', feature2: 'Urethane', winner: false , rating: 4.4, affiliateKey: 'bridgestone-tour-b-x'},
         { name: 'Srixon Z-Star XV', bestFor: '105+ mph', price: '~$54/dz', feature1: '102', feature2: 'Urethane', winner: false , badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'srixon-z-star-xv'},
@@ -2299,7 +2299,7 @@ export const ARTICLES: Article[] = [
       headers: ['Ball', 'Compression', 'Price', 'Flight', 'Feel'],
       rows: [
         { badge: 'STRONG PICK', rating: 4.9, affiliateKey: 'titleist-pro-v1',  name: 'Titleist Pro V1',  bestFor: '90-105mph', price: '~$58', feature1: 'Mid-High', feature2: 'Soft', winner: true },
-        { rating: 4.7, affiliateKey: 'titleist-pro-v1x', name: 'Titleist Pro V1x', bestFor: '95-110mph', price: '~$55', feature1: 'High',     feature2: 'Firm', winner: false },
+        { rating: 4.7, affiliateKey: 'titleist-pro-v1x', name: 'Titleist Pro V1x', bestFor: '95-110mph', price: '~$58', feature1: 'High',     feature2: 'Firm', winner: false },
       ],
     },
     faq: [
@@ -3398,7 +3398,7 @@ export const ARTICLES: Article[] = [
         { name: 'Srixon Soft Feel', affiliateKey: 'srixon-soft-feel', bestFor: 'Best overall', price: '~$25', feature1: '60', feature2: 'Ionomer', winner: true, badge: 'BEST OVERALL', rating: 4.6 },
         { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Slow swings', price: '~$27', feature1: '38', feature2: 'Ionomer', winner: false, rating: 4.6 },
         { name: 'Kirkland Signature', affiliateKey: 'kirkland-signature', bestFor: 'Value per ball', price: '~$28/2dz', feature1: '92', feature2: 'Urethane', winner: false, rating: 4.4 },
-        { name: 'Bridgestone e12 Contact', affiliateKey: 'bridgestone-e12-contact', bestFor: 'Straight flight', price: '~$28/dz', feature1: '50', feature2: 'Ionomer', winner: false, rating: 4.4 },
+        { name: 'Bridgestone e12 Contact', affiliateKey: 'bridgestone-e12-contact', bestFor: 'Straight flight', price: '~$30/dz', feature1: '50', feature2: 'Ionomer', winner: false, rating: 4.4 },
         { name: 'TaylorMade Noodle', affiliateKey: 'taylormade-noodle', bestFor: 'Cheapest worth playing', price: '~$20/dz', feature1: '34', feature2: 'Ionomer', winner: false, rating: 4.3 },
       ],
     },
@@ -3508,7 +3508,7 @@ export const ARTICLES: Article[] = [
       headers: ['Ball', 'Compression', 'Best For', 'Price'],
       rows: [
         { name: 'Callaway Supersoft', affiliateKey: 'callaway-supersoft', bestFor: 'Best overall', price: '~$27', feature1: '38', winner: true, badge: 'BEST OVERALL', rating: 4.6 },
-        { name: 'Bridgestone e12 Contact', affiliateKey: 'bridgestone-e12-contact', bestFor: 'Slicers', price: '~$28/dz', feature1: '50', winner: false, rating: 4.4 },
+        { name: 'Bridgestone e12 Contact', affiliateKey: 'bridgestone-e12-contact', bestFor: 'Slicers', price: '~$30/dz', feature1: '50', winner: false, rating: 4.4 },
         { name: 'Kirkland Signature', affiliateKey: 'kirkland-signature', bestFor: 'Bulk value', price: '~$28/2dz', feature1: '92', winner: false, rating: 4.4 },
         { name: 'TaylorMade Noodle', affiliateKey: 'taylormade-noodle', bestFor: 'Slowest swings', price: '~$20/dz', feature1: '34', winner: false, rating: 4.3 },
         { name: 'Vice Drive', affiliateKey: 'vice-drive', bestFor: 'Cheapest', price: '~$20/dz', feature1: '40', winner: false, rating: 4.2 },
@@ -3619,7 +3619,7 @@ export const ARTICLES: Article[] = [
         { name: 'Srixon Q-Star Tour', affiliateKey: 'srixon-q-star-tour', bestFor: 'Best overall', price: '~$40', feature1: '74', feature2: 'Urethane', winner: true, badge: 'BEST OVERALL', rating: 4.7 },
         { name: 'Callaway Chrome Soft', affiliateKey: 'callaway-chrome-soft', bestFor: 'Closest to tour', price: '$44.99/dz', feature1: '75', feature2: 'Urethane', winner: false, rating: 4.6 },
         { name: 'Vice Pro', affiliateKey: 'vice-pro', bestFor: 'Best value', price: '~$39', feature1: '90', feature2: 'Urethane', winner: false, rating: 4.5 },
-        { name: 'TaylorMade Tour Response', affiliateKey: 'taylormade-tour-response', bestFor: 'Softest feel', price: '~$35/dz', feature1: '77', feature2: 'Urethane', winner: false, rating: 4.5 },
+        { name: 'TaylorMade Tour Response', affiliateKey: 'taylormade-tour-response', bestFor: 'Softest feel', price: '~$38/dz', feature1: '77', feature2: 'Urethane', winner: false, rating: 4.5 },
         { name: 'Titleist Tour Soft', affiliateKey: 'titleist-tour-soft', bestFor: 'Titleist on a budget', price: '~$40/dz', feature1: '65', feature2: 'Ionomer', winner: false, rating: 4.4 },
       ],
     },
@@ -4209,7 +4209,7 @@ export const ARTICLES: Article[] = [
       headers: ['Simulator', 'Best For', 'Price', 'Technology', 'Outdoor Use'],
       rows: [
         { name: 'SkyTrak+', bestFor: 'Dedicated home setup', price: '~$1,195', feature1: 'Photometric', feature2: 'Indoor only', winner: true, badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'skytrak-plus' },
-        { name: 'Flightscope Mevo+', affiliateKey: 'flightscope-mevo-plus', bestFor: 'Portable & outdoor', price: '~$2,499', feature1: 'Doppler Radar', feature2: 'Indoor + outdoor', winner: false, rating: 4.1},
+        { name: 'Flightscope Mevo+', affiliateKey: 'flightscope-mevo-plus', bestFor: 'Portable & outdoor', price: '~$1,839', feature1: 'Doppler Radar', feature2: 'Indoor + outdoor', winner: false, rating: 4.1},
       ],
     },
   },
@@ -4514,7 +4514,7 @@ export const ARTICLES: Article[] = [
       headers: ['GPS Watch', 'Best For', 'Price', 'Subscription', 'Battery'],
       rows: [
         { name: 'Bushnell Ion Elite', bestFor: 'Best overall for high hdcp', price: '~$199', feature1: 'None', feature2: '16 hrs', winner: true, badge: 'STRONG PICK', rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
-        { name: 'Garmin Approach S12', bestFor: 'Budget Garmin option', price: '~$169', feature1: 'None', feature2: '30 hrs', winner: false, rating: 4.6, affiliateKey: 'garmin-approach-s42' },
+        { name: 'Garmin Approach S12', bestFor: 'Budget Garmin option', price: '~$299', feature1: 'None', feature2: '30 hrs', winner: false, rating: 4.6, affiliateKey: 'garmin-approach-s42' },
       ],
     },
   },
@@ -6876,7 +6876,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Driver', 'Price', 'Forgiveness', 'Distance', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Paradym Ai Smoke Max', bestFor: 'Most Forgiving', price: '~$399', feature1: '4.8/5 ★', feature2: 'Best', winner: true },
       { rating: 4.3, affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max', bestFor: 'Most Distance', price: '$449.98', feature1: '4.6/5 ★', feature2: 'Longest', winner: false },
-      { rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Value', price: '~$399', feature1: '4.5/5 ★', feature2: 'Good', winner: false },
+      { rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Value', price: '~$299', feature1: '4.5/5 ★', feature2: 'Good', winner: false },
     ] },
     faq: [
       { q: 'Is the Paradym Ai Smoke Max the most forgiving driver?', a: 'In our testing, yes — 5% ball speed loss on toe hits vs 10-12% for competitors. The AI face produces measurably better ball speed retention on mishits.' },
@@ -7445,7 +7445,7 @@ export const ARTICLES: Article[] = [
         affiliateKey: 'ping-g440-max-driver-2026',
         body: 'The G440 MAX is the direct successor to the G430 Max above — same brief, PING\'s highest-MOI head, with a carbon fly wrap crown that moves mass low and back. At $449.00 it sits a little above the G430 Max, which is still being sold.\n\nWe have not tested it, so it does not get a rating here. The G430 Max ranking above is ours, from our own bag.\n\nOne thing worth knowing if you go looking: PING does not sell through Amazon at any price. Golf Galaxy is the route for this head, which is where our link goes.',
       },
-      { h2: 'Best Value: Cobra DS-Adapt MAX-K ($399)', badge: 'BEST VALUE', body: "The DS-Adapt MAX-K delivers 85% of the Callaway forgiveness for $100 less. The Adaptive Weighting System chases MOI the way Callaway's approach. At 94 mph, average carry was 223 yards — 5 yards shorter than the Callaway but the stock shaft is arguably better matched.\n\nThe value proposition is hard to beat: premium-level forgiveness at a sub-$400 price. The savings versus the Callaway can fund 2-3 lessons — which will lower your handicap faster than any equipment upgrade.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$399', affiliateKey: 'cobra-ds-adapt-max-k' , rating: 4.5, },
+      { h2: 'Best Value: Cobra DS-Adapt MAX-K ($399)', badge: 'BEST VALUE', body: "The DS-Adapt MAX-K delivers 85% of the Callaway forgiveness for $100 less. The Adaptive Weighting System chases MOI the way Callaway's approach. At 94 mph, average carry was 223 yards — 5 yards shorter than the Callaway but the stock shaft is arguably better matched.\n\nThe value proposition is hard to beat: premium-level forgiveness at a sub-$400 price. The savings versus the Callaway can fund 2-3 lessons — which will lower your handicap faster than any equipment upgrade.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$299', affiliateKey: 'cobra-ds-adapt-max-k' , rating: 4.5, },
       { h2: 'Best Budget: Cleveland Launcher XL2 ($299)', badge: 'BUDGET PICK', body: "The Launcher XL2 is the least expensive driver in our test and has no business performing this well at $349. The oversized 460cc head with deep center of gravity launches the ball high — ideal for slower swing speeds.\n\nAt 82 mph, our slower-swinging tester hit the XL2 almost as far as the Callaway because the higher launch carried the ball further. For high handicappers with swing speeds under 90 mph, the XL2 may actually produce longer drives than premium drivers that launch lower.\n\nNo adjustability (fixed hosel) and plain aesthetics. But for under $350, it delivers genuine forgiveness and distance.\n\nFull review in our Best Forgiving Drivers guide.", price: '~$299', affiliateKey: 'cleveland-launcher-xl2-driver' , rating: 4.3, },
       { h2: 'Best for Slicers: Callaway Paradym Ai Smoke Max D', body: "If your primary miss is a slice, the Max D version of the Paradym adds internal draw weighting that actively fights the face from opening. Combined with the AI face, it can turn a 30-yard slice into a 10-yard fade.\n\nFix your grip and swing path first — those are free. But if you have worked on mechanics and still slice, the Max D is the best equipment solution available. Same $499 price as the standard Max.\n\nNote: if you already draw the ball, do NOT buy the Max D. The extra draw bias will produce hooks.", badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-paradym-ai-smoke-max' },
     
@@ -7462,7 +7462,7 @@ export const ARTICLES: Article[] = [
       { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'callaway-paradym-ai-smoke-max', name: 'Callaway Ai Smoke Max', bestFor: 'Best Overall', price: '~$399', feature1: '4.8/5 ★', feature2: 'Best mishit protection', winner: true },
       { rating: 4.6, affiliateKey: 'ping-g430-max-driver', name: 'Ping G430 Max', bestFor: 'Highest MOI', price: 'from ~$419', feature1: '4.6/5 ★', feature2: 'Most consistent', winner: false },
         { badge: 'NEW 2026', affiliateKey: 'ping-g440-max-driver-2026', name: 'PING G440 MAX', bestFor: 'Newest Model', price: '$449.00', feature1: 'Not yet tested', feature2: '', winner: false },
-      { rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Value', price: '~$399', feature1: '4.5/5 ★', feature2: '85% of Callaway', winner: false },
+      { rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k', name: 'Cobra DS-Adapt MAX-K', bestFor: 'Best Value', price: '~$299', feature1: '4.5/5 ★', feature2: '85% of Callaway', winner: false },
       { rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver', name: 'Cleveland Launcher XL2', bestFor: 'Best Budget', price: '~$299', feature1: '4.3/5 ★', feature2: 'High launch', winner: false },
     ] },
     faq: [
@@ -7529,7 +7529,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Monitor', 'Price', 'Technology', 'Simulator', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.4, affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Best Budget', price: '~$490', feature1: 'Doppler', feature2: 'E6 (incl)', winner: true },
       { rating: 4.5, affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Most Data', price: '~$599', feature1: 'Camera', feature2: 'E6 (incl)', winner: false },
-      { name: 'FlightScope Mevo', affiliateKey: 'flightscope-mevo-gen2', bestFor: 'Most Portable', price: '~$499', feature1: 'Doppler', feature2: 'No', winner: false },
+      { name: 'FlightScope Mevo', affiliateKey: 'flightscope-mevo-gen2', bestFor: 'Most Portable', price: '~$1,299', feature1: 'Doppler', feature2: 'No', winner: false },
       { affiliateKey: '', name: 'Ernest Sports ES14', bestFor: 'Cheapest', price: '~$199', feature1: 'Doppler', feature2: 'No', winner: false },
     ] },
     faq: [
@@ -7583,7 +7583,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Overall: Arccos Caddie Smart Sensors', badge: 'BEST OVERALL', body: "Arccos screws sensors into the grip end of each club and automatically tracks every shot via your iPhone GPS and Bluetooth. After 5 rounds of learning your game, the AI Caddie suggests clubs based on your actual distances, wind, and elevation. In our testing, AI suggestions were right 64% of the time versus 52% for gut instinct. The strokes-gained reports reveal exactly where you lose shots. The $99/year subscription is the downside — but the data genuinely lowers scores.", price: '~$175 + $99/yr', affiliateKey: 'arccos-caddie-sensors' , rating: 4.7, },
       { h2: 'Best for Garmin Users: Garmin CT10 Club Sensors', affiliateKey: 'garmin-ct10', body: "The CT10 sensors work exclusively with Garmin GPS watches and sync through the Garmin Golf app on iPhone. They auto-detect which club you hit and record shot distances. If you already own a Garmin S62 or S42, the CT10 adds automatic club tracking without a separate subscription. Data syncs to the iPhone app post-round. Limited value without a Garmin watch.", price: '~$266 (14-sensor set)' },
       { h2: 'Best Value GPS + Tracking: Shot Scope H4', body: "The H4 is a GPS handheld with automatic shot tracking via club tags — no phone needed during the round. Data syncs to the Shot Scope iPhone app post-round for full strokes-gained analysis. No subscription ever. At $149, it is the cheapest auto-tracking system available. GPS accuracy is solid but maps are less detailed than Garmin.", price: '~$149' },
-      { h2: 'Best for Swing Data: Blast Motion Golf Swing Analyzer', rating: 4.4, affiliateKey: 'blast-motion-sensor', body: "The Blast Motion sensor clips to the butt of the club and measures swing speed, tempo, backswing time and rotation. It connects to the iPhone app over Bluetooth and reports detailed swing metrics after every shot. Best for golfers who want to understand swing mechanics rather than shot results — this tells you about your swing, not your scores.", price: '~$99' },
+      { h2: 'Best for Swing Data: Blast Motion Golf Swing Analyzer', rating: 4.4, affiliateKey: 'blast-motion-sensor', body: "The Blast Motion sensor clips to the butt of the club and measures swing speed, tempo, backswing time and rotation. It connects to the iPhone app over Bluetooth and reports detailed swing metrics after every shot. Best for golfers who want to understand swing mechanics rather than shot results — this tells you about your swing, not your scores.", price: '~$150' },
       { h2: 'iPhone-Specific Features to Look For', body: "V1 Golf App compatibility — V1 Golf is the gold standard for iOS swing video analysis, used by PGA Tour instructors. Some analyzers integrate directly with V1 for combined data and video review. Also look for Apple Watch support (Arccos and Golfshot work on Apple Watch), widget support for quick glance at round data, and Siri Shortcuts for hands-free operation during rounds." },
     
       { h2: 'Sensor-Based vs Video-Based Analyzers', body: 'Sensor-based analyzers (Arccos Caddie, Garmin CT10) attach to your club grips and detect shots automatically. They excel at tracking distances, shot patterns, and course strategy but tell you nothing about swing mechanics. Video-based analyzers (OnForm, Swing AI) record your swing in slow motion and overlay angles, positions, and comparisons to model swings. They excel at diagnosing mechanical problems but require you to manually record each swing. The ideal combination: Arccos sensors for on-course data and a video app for practice range sessions.\n\nTorn between the two big shot-tracking ecosystems? Our <a href="/compare/arccos-vs-shot-scope/">Arccos vs Shot Scope head-to-head</a> settles it by data style.\n\nSee the full build cost for your budget in the <a href="/golf-simulator-cost-calculator/">simulator cost calculator</a>.' },
@@ -7592,7 +7592,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: { headers: ['Analyzer', 'Price', 'Auto-Tracking', 'Subscription', 'Rating'], rows: [
       { badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'arccos-caddie-sensors', name: 'Arccos Caddie', bestFor: 'Best Overall', price: '~$175 + $99/yr', feature1: 'Yes (sensors)', feature2: '$99/yr', winner: true },
       { name: 'Garmin CT10', affiliateKey: 'garmin-ct10', bestFor: 'Garmin Users', price: '~$266', feature1: 'Yes (sensors)', feature2: 'None', winner: false },
-      { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope H4', bestFor: 'Best Value', price: '~$149', feature1: 'Yes (tags)', feature2: 'None', winner: false },
+      { rating: 4.3, affiliateKey: 'shot-scope-v5', name: 'Shot Scope H4', bestFor: 'Best Value', price: '~$210', feature1: 'Yes (tags)', feature2: 'None', winner: false },
       { affiliateKey: '', name: 'Zepp Golf 2', bestFor: 'Swing Metrics', price: '~$149', feature1: 'No', feature2: 'None', winner: false },
     ] },
     faq: [
@@ -7710,7 +7710,7 @@ export const ARTICLES: Article[] = [
         pros: ['Doppler + camera combo for indoor/outdoor accuracy', 'Shot tracer video on every swing', 'E6 Connect compatible for simulator courses', 'Half the price of SkyTrak+ with 90% of the data'],
         cons: ['Requires phone/tablet for display', 'E6 Connect subscription is $300/year extra', 'Slight learning curve on initial indoor calibration'],
       },
-      { h2: 'Best Portable Net: Spornia SPG-7', badge: 'BEST VALUE', body: "The Spornia SPG-7 is the only net I have found that truly works in an apartment. It sets up in under 2 minutes, catches full driver swings without bouncing balls back at you (the auto-return chute drops them gently at your feet), and — critically — folds completely flat for storage. I keep mine behind the couch. The steel frame is sturdy enough that after 60 sessions of full swings, there is zero sag or wear. At $189 it is half the price of a Net Return Pro and takes up a quarter of the space.", price: '~$189', affiliateKey: 'spornia-spg-net', rating: 4.6,
+      { h2: 'Best Portable Net: Spornia SPG-7', badge: 'BEST VALUE', body: "The Spornia SPG-7 is the only net I have found that truly works in an apartment. It sets up in under 2 minutes, catches full driver swings without bouncing balls back at you (the auto-return chute drops them gently at your feet), and — critically — folds completely flat for storage. I keep mine behind the couch. The steel frame is sturdy enough that after 60 sessions of full swings, there is zero sag or wear. At $297 it is well under half the price of a Net Return Pro and takes up a quarter of the space.", price: '~$297', affiliateKey: 'spornia-spg-net', rating: 4.6,
         pros: ['Auto-return ball chute — no chasing', 'Folds flat in 90 seconds for apartment storage', 'Steel frame handles 120+ mph swings'],
         cons: ['Not as quiet as foam-backed nets', 'Ball return can jam if you hit the frame edge', 'No side barriers — shanks go sideways'],
       },
@@ -7725,7 +7725,7 @@ export const ARTICLES: Article[] = [
       headers: ['Product', 'Component', 'Price', 'Our Rating'],
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Best indoor accuracy', price: '~$599', feature1: '4.5/5 ★', feature2: 'Launch Monitor', winner: true, rating: 4.7 },
-        { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best value net', price: '~$189', feature1: '4.6/5 ★', feature2: 'Practice Net', winner: false },
+        { rating: 4.6, affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best value net', price: '~$297', feature1: '4.6/5 ★', feature2: 'Practice Net', winner: false },
         { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Fiberbuilt Studio Mat', bestFor: 'Joint-friendly turf', price: '~$499', feature1: '4.5/5 ★', feature2: 'Hitting Mat', winner: false },
         { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TH671ST Short-Throw', bestFor: 'Big-screen upgrade', price: '~$949', feature1: '4.4/5 ★', feature2: 'Projector (Optional)', winner: false },
         { affiliateKey: 'diy-impact-screen-enclosure', name: 'DIY Impact Screen Kit', bestFor: 'Ball containment', price: '~$299', feature1: '4.3/5 ★', feature2: 'Enclosure (Optional)', winner: false, rating: 4.3 },
@@ -8179,7 +8179,7 @@ export const ARTICLES: Article[] = [
         { badge: 'STRONG PICK', affiliateKey: 'callaway-xj-junior-set', name: 'Callaway XJ Junior', bestFor: 'Best Overall', price: '~$350', feature1: '4.7/5 ★', winner: true, rating: 4.7 },
         { rating: 4.8, affiliateKey: 'us-kids-tour-series', name: 'US Kids Tour Series', bestFor: 'Serious Juniors', price: '~$350', feature1: '4.8/5 ★', winner: false },
         { rating: 4.5, affiliateKey: 'taylormade-team-tm-junior', name: 'TaylorMade Team TM', bestFor: 'Best Value', price: '~$400', feature1: '4.5/5 ★', winner: false },
-        { rating: 4.0, affiliateKey: 'wilson-profile-sgi', name: 'Wilson Profile SGI', bestFor: 'Budget Starter', price: '~$150', feature1: '4.3/5 ★', winner: false },
+        { rating: 4.0, affiliateKey: 'wilson-profile-sgi', name: 'Wilson Profile SGI', bestFor: 'Budget Starter', price: '~$450', feature1: '4.3/5 ★', winner: false },
       ],
     },
     faq: [
@@ -8761,7 +8761,7 @@ export const ARTICLES: Article[] = [
     ],
     sections: [
       { h2: 'What Ceiling and Space You Actually Need', body: "For full driver swings you need 9 feet of ceiling height and 8 feet of depth from ball to net. Most apartments meet this. For irons-only practice, 8 feet of ceiling and 6 feet of depth is enough. Garages give you 10-12 feet of depth and usually 8-9 feet of ceiling — perfect for full bag practice. Backyards have unlimited space but you need a weather-resistant net. Measure your space before buying — the most common mistake is buying a net that is too tall for your ceiling." },
-      { h2: 'Best Overall: Spornia SPG-7', badge: 'BEST OVERALL', body: "The Spornia SPG-7 ($297) has the best auto-return ball system of any net I have tested. You hit into the net, the ball rolls down a chute back to your feet. No bending, no chasing, no interruption to your practice flow. The steel frame handles full driver swings at 120+ mph without flexing. It sets up in 2 minutes and folds completely flat for storage behind a couch or against a garage wall. After 60 sessions, zero sag and zero wear on the netting.", price: '~$189', affiliateKey: 'spornia-spg-net', rating: 4.6,
+      { h2: 'Best Overall: Spornia SPG-7', badge: 'BEST OVERALL', body: "The Spornia SPG-7 ($297) has the best auto-return ball system of any net I have tested. You hit into the net, the ball rolls down a chute back to your feet. No bending, no chasing, no interruption to your practice flow. The steel frame handles full driver swings at 120+ mph without flexing. It sets up in 2 minutes and folds completely flat for storage behind a couch or against a garage wall. After 60 sessions, zero sag and zero wear on the netting.", price: '~$297', affiliateKey: 'spornia-spg-net', rating: 4.6,
         pros: ['Auto-return ball system — no chasing', 'Folds flat in 90 seconds', 'Steel frame handles 120+ mph'],
         cons: ['$297 is mid-range pricing', 'Ball return can jam on extreme shanks', 'No side barriers — errant shots go sideways'],
       },
@@ -8788,7 +8788,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Net', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { badge: 'STRONG PICK', affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best Overall', price: '~$189', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
+        { badge: 'STRONG PICK', affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best Overall', price: '~$297', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
         { rating: 4.6, affiliateKey: 'gosports-hitting-net', name: 'GoSports 10x7 / 7x7', bestFor: 'Best Budget', price: '~$76', feature1: '4.6/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'net-return-pro', name: 'Net Return Pro', bestFor: 'Best Garage', price: '~$795', feature1: '4.7/5 ★', winner: false },
       ],
@@ -9784,9 +9784,9 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Draw Bias: Cobra DS-Adapt MAX-K',
         badge: 'BEST FOR SLICERS',
-        price: '~$279 at Amazon',
+        price: '~$299 at Amazon',
         rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k',
-        body: 'The Cobra DS-Adapt MAX-K in its draw setting provides the strongest slice correction under $400. At 85 mph swing speed, slower swingers generate less spin — which means a slice produces less sidespin curve but also less backspin to keep the ball in the air. The DS-Adapt MAX-K compensates with a higher launch angle (13.8° in our testing at 85 mph) and a draw bias that shifts the center of gravity toward the heel. The result is a ball that starts straighter and curves less right. In our testing, a golfer with a 25-yard slice at 92 mph saw it reduced to an 8-yard fade at 85 mph with the DS-Adapt MAX-K. The Adaptive Weighting System places weight low and back, which also raises launch angle — critical for maximizing distance at slower speeds. The Ultralite 50 stock shaft weighs 50g, keeping total weight under 290g. At $279, it sits perfectly between the budget Cleveland and the premium Callaway, offering most of the performance of the latter at 55% of the price.',
+        body: 'The Cobra DS-Adapt MAX-K in its draw setting provides the strongest slice correction under $400. At 85 mph swing speed, slower swingers generate less spin — which means a slice produces less sidespin curve but also less backspin to keep the ball in the air. The DS-Adapt MAX-K compensates with a higher launch angle (13.8° in our testing at 85 mph) and a draw bias that shifts the center of gravity toward the heel. The result is a ball that starts straighter and curves less right. In our testing, a golfer with a 25-yard slice at 92 mph saw it reduced to an 8-yard fade at 85 mph with the DS-Adapt MAX-K. The Adaptive Weighting System places weight low and back, which also raises launch angle — critical for maximizing distance at slower speeds. The Ultralite 50 stock shaft weighs 50g, keeping total weight under 290g. At $299, it sits perfectly between the budget Cleveland and the premium Callaway, offering most of the performance of the latter at 55% of the price.',
         pros: [
           'Strongest draw bias under $400 — reduces a 25-yard slice to an 8-yard fade',
           'High launch angle (13.8° at 85 mph) maximizes carry at slow speeds',
@@ -9844,7 +9844,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { name: 'Callaway Paradym Ai Smoke Max', bestFor: 'Best Overall', price: '~$399', feature1: '4.7/5 ★', feature2: '', winner: true, badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'callaway-paradym-ai-smoke-max' },
         { name: 'Cleveland Launcher XL2', bestFor: 'Lightest', price: '~$299', feature1: '4.5/5 ★', feature2: '', winner: false, rating: 4.3, affiliateKey: 'cleveland-launcher-xl2-driver' },
-        { name: 'Cobra DS-Adapt MAX-K', bestFor: 'Slicers', price: '~$279', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k' },
+        { name: 'Cobra DS-Adapt MAX-K', bestFor: 'Slicers', price: '~$299', feature1: '4.4/5 ★', feature2: '', winner: false, rating: 4.5, affiliateKey: 'cobra-ds-adapt-max-k' },
         { name: 'Cobra DS-Adapt X', bestFor: 'Neutral face (no slice)', price: '~$270', feature1: '4.0/5 ★', feature2: '', winner: false, rating: 4.0, affiliateKey: 'cobra-ds-adapt-x-driver' },
         { name: 'Ping G440 SFT', bestFor: 'Premium Pick', price: '~$449', feature1: '4.5/5 ★', feature2: '', winner: false, badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'ping-g440-sft' },
       ],
@@ -10680,7 +10680,7 @@ export const ARTICLES: Article[] = [
         pros: ['Most realistic turf feel tested', 'Floating surface protects joints', 'Replaceable hitting strip ($59)', 'Heavy base — no sliding on garage floor', 'Works with tees'],
         cons: ['$499 — premium price', 'Heavy (25 lbs) — not portable', 'Hitting area smaller than full mats'],
       },
-      { h2: 'Best Value: Spornia SPG Mat', badge: 'BEST VALUE', body: "At $159 the Spornia hits the sweet spot between cheap Amazon mats and premium options. The dual-turf design gives you a fairway surface and a rough surface side by side. Thick rubber base absorbs impact well enough for daily practice without wrist pain. I practiced on this mat 4-5 times per week for two months and it held up with minimal wear.", price: '~$159', rating: 4.6, affiliateKey: 'spornia-spg-net',
+      { h2: 'Best Value: Spornia SPG Mat', badge: 'BEST VALUE', body: "At $297 the Spornia hits the sweet spot between cheap Amazon mats and premium options. The dual-turf design gives you a fairway surface and a rough surface side by side. Thick rubber base absorbs impact well enough for daily practice without wrist pain. I practiced on this mat 4-5 times per week for two months and it held up with minimal wear.", price: '~$297', rating: 4.6, affiliateKey: 'spornia-spg-net',
         pros: ['Dual-turf (fairway + rough)', 'Thick rubber base — good joint protection', '$297 — best value tested', 'Works with all tee heights', 'Durable after 2 months of daily use'],
         cons: ['Not as realistic as Fiberbuilt', 'Slides on smooth concrete (add a rug)', 'Single piece — no replaceable insert'],
       },
@@ -10697,7 +10697,7 @@ export const ARTICLES: Article[] = [
       headers: ['Mat', 'Best For', 'Price', 'Thickness', 'Feel'],
       rows: [
         { name: 'Fiberbuilt Studio Mat', bestFor: 'Best Overall', price: '~$499', feature1: 'Floating', feature2: 'Most realistic', winner: true, badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'fiberbuilt-studio-mat' },
-        { name: 'Spornia SPG Mat', bestFor: 'Best Value', price: '~$159', feature1: '1 inch', feature2: 'Good', winner: false, rating: 4.6, affiliateKey: 'spornia-spg-net' },
+        { name: 'Spornia SPG Mat', bestFor: 'Best Value', price: '~$297', feature1: '1 inch', feature2: 'Good', winner: false, rating: 4.6, affiliateKey: 'spornia-spg-net' },
         { name: 'Country Club Elite', bestFor: 'Best Budget', price: '~$599', feature1: '1.5 inch', feature2: 'Good', winner: false, rating: 4.5, affiliateKey: 'country-club-elite-mat' },
       ],
     },
@@ -12189,8 +12189,8 @@ export const ARTICLES: Article[] = [
       caption: 'Iron Fitting: What Gets Adjusted',
       headers: ['Variable', 'Best For', 'Price', 'Impact'],
       rows: [
-        { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'ping-g430-irons', name: 'Ping G430 (Shaft Flex)', bestFor: 'Distance + accuracy', price: '~$200', feature1: '5-10 yards', feature2: 'Biggest impact' },
-        { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'TM Qi Irons (Club Length)', bestFor: 'Strike consistency', price: '~$200', feature1: 'Center contact', feature2: 'Height-based' },
+        { badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'ping-g430-irons', name: 'Ping G430 (Shaft Flex)', bestFor: 'Distance + accuracy', price: 'from ~$949', feature1: '5-10 yards', feature2: 'Biggest impact' },
+        { rating: 4.4, affiliateKey: 'taylormade-qi-irons', name: 'TM Qi Irons (Club Length)', bestFor: 'Strike consistency', price: 'from ~$899', feature1: 'Center contact', feature2: 'Height-based' },
         { rating: 4.6, name: 'Mizuno JPX923 (Lie Angle)', bestFor: 'Direction control', price: '~$200', feature1: 'Left/right fix', feature2: '±2° typical' },
         { rating: 4.8, affiliateKey: 'golf-pride-mcc-plus4', name: 'Golf Pride MCC Plus4', bestFor: 'Comfort + control', price: '~$13/grip', feature1: 'Feel', feature2: 'Hand size' },
       ],
@@ -12469,7 +12469,7 @@ export const ARTICLES: Article[] = [
       caption: 'Best Hybrid Clubs — 2026',
       headers: ['Hybrid', 'Best For', 'Price', 'Launch'],
       rows: [
-        { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: 'Callaway Paradym', bestFor: 'Best overall', price: '~$250', feature1: 'High', feature2: 'Long + forgiving', badge: 'BEST OVERALL', winner: true },
+        { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: 'Callaway Paradym', bestFor: 'Best overall', price: '~$220', feature1: 'High', feature2: 'Long + forgiving', badge: 'BEST OVERALL', winner: true },
         { rating: 4.6, affiliateKey: 'ping-g430-hybrid', name: 'Ping G430', bestFor: 'Max forgiveness', price: '~$398', feature1: 'Highest', feature2: 'Most consistent' },
         { rating: 4.4, name: 'TaylorMade Stealth', bestFor: 'Best value', price: '~$180', feature1: 'High', feature2: 'Prev gen deal', badge: 'BEST VALUE' },
         { rating: 4.3, name: 'Cobra Aerojet', bestFor: 'Distance', price: '~$200', feature1: 'High', feature2: 'Longest in test' },
@@ -12533,8 +12533,8 @@ export const ARTICLES: Article[] = [
       caption: 'Hybrid vs 3-Iron — Test Results',
       headers: ['Metric', 'Best For', 'Price', '3-Hybrid Result'],
       rows: [
-        { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: '3-Hybrid', bestFor: 'Most golfers', price: '~$250', feature1: '185 yd carry', feature2: '18° launch', badge: 'RECOMMENDED', winner: true },
-        { rating: 4.6, affiliateKey: 'ping-g430-irons', name: '3-Iron', bestFor: 'Low handicappers', price: '~$200', feature1: '175 yd carry', feature2: '14° launch' },
+        { rating: 4.5, affiliateKey: 'callaway-paradym-hybrid', name: '3-Hybrid', bestFor: 'Most golfers', price: '~$220', feature1: '185 yd carry', feature2: '18° launch', badge: 'RECOMMENDED', winner: true },
+        { rating: 4.6, affiliateKey: 'ping-g430-irons', name: '3-Iron', bestFor: 'Low handicappers', price: 'from ~$949', feature1: '175 yd carry', feature2: '14° launch' },
       ],
     },
     sections: [
@@ -13794,7 +13794,7 @@ export const ARTICLES: Article[] = [
       rows: [
         { badge: 'STRONG PICK', affiliateKey: 'galvin-green-rain-jacket', name: 'Galvin Green Gore-Tex', bestFor: 'Best Overall', price: '~$233', feature1: 'Gore-Tex', feature2: '', winner: true, rating: 4.8 },
         { rating: 4.3, affiliateKey: 'under-armour-forefront-rain-jacket', name: 'UA Forefront', bestFor: 'Best Value', price: '$59.97', feature1: 'UA Forefront', feature2: '', winner: false },
-        { rating: 4.5, affiliateKey: 'footjoy-hydrolite-rain-jacket', name: 'FJ HydroLite', bestFor: 'Best Mid-Range', price: '~$130', feature1: 'DryJoys', feature2: '', winner: false },
+        { rating: 4.5, affiliateKey: 'footjoy-hydrolite-rain-jacket', name: 'FJ HydroLite', bestFor: 'Best Mid-Range', price: '~$195', feature1: 'DryJoys', feature2: '', winner: false },
       ],
     },
     sections: [
@@ -13805,7 +13805,7 @@ export const ARTICLES: Article[] = [
       { h2: 'Best Value: Under Armour Forefront', badge: 'BEST VALUE', affiliateKey: 'under-armour-forefront-rain-jacket', rating: 4.3, body: 'The UA Forefront handled a 2-hour moderate rain without issue. Around the 2.5-hour mark on a heavier rain day, I felt dampness at the shoulders — not soaking, but noticeable. Swing restriction was minimal on full swings but I could feel the fabric catch slightly on my follow-through. For the golfer who plays in rain 5-10 times per year, the Storm at ~$60 is more than adequate.\n\nAt ~$60, the UA Forefront jacket is the best rain jacket for golfers who play in rain 5-10 times per year. It handles moderate rain for 2-3 hours before moisture starts to seep through. Swing freedom is good but not as unrestricted as the Galvin Green.', price: '$59.97',
         pros: ['At $59.97, outstanding value for occasional rain rounds', 'UA Forefront water-resistant coating handles moderate rain', 'Stretch fabric allows adequate swing motion'],
         cons: ['Water-resistant, not fully waterproof — wets through in sustained heavy rain', 'Less breathable than Gore-Tex — some internal moisture during walking rounds'] },
-      { h2: 'Best Mid-Range: FootJoy HydroLite', badge: 'STRONG PICK', affiliateKey: 'footjoy-hydrolite-rain-jacket', rating: 4.5, body: 'The HydroLite split the difference between the Gore-Tex and the Storm. It stayed waterproof through a full 18-hole round in moderate rain — no moisture penetration at all. Breathability was good but not Gore-Tex good — I noticed slight clamminess on the inside during walking rounds in warmer rain (70°F+). Swing freedom was close to the Galvin Green, with golf-specific articulated sleeves. At $130, it hits the value sweet spot for golfers who play in rain regularly.\n\nThe HydroLite bridges the gap between budget and premium — genuine waterproofing (not just water-resistant), decent breathability, and golf-specific cut with swing-friendly construction. At $130, it is the sweet spot for golfers who play in rain regularly but cannot justify $350 for Galvin Green.', price: '~$130',
+      { h2: 'Best Mid-Range: FootJoy HydroLite', badge: 'STRONG PICK', affiliateKey: 'footjoy-hydrolite-rain-jacket', rating: 4.5, body: 'The HydroLite split the difference between the Gore-Tex and the Storm. It stayed waterproof through a full 18-hole round in moderate rain — no moisture penetration at all. Breathability was good but not Gore-Tex good — I noticed slight clamminess on the inside during walking rounds in warmer rain (70°F+). Swing freedom was close to the Galvin Green, with golf-specific articulated sleeves. At $195, it hits the value sweet spot for golfers who play in rain regularly.\n\nThe HydroLite bridges the gap between budget and premium — genuine waterproofing (not just water-resistant), decent breathability, and golf-specific cut with swing-friendly construction. At $195, it is the sweet spot for golfers who play in rain regularly but cannot justify $350 for Galvin Green.', price: '~$195',
         pros: ['Fully waterproof — handles sustained rain for a full round', 'Golf-specific cut with swing-friendly sleeves', 'Better breathability than budget jackets'],
         cons: ['Breathability below Galvin Green Gore-Tex', 'Fabric is slightly noisier than the premium option'] },
       { h2: 'Keep reading', body: 'Full rain gear coverage: <a href="/best-golf-rain-gear-2026/">rain gear guide</a> (jackets, pants, gloves, umbrellas) and <a href="/best-rain-gear-midwest-golfers/">Midwest rain gear picks</a>. For cold and wet conditions, pair with <a href="/best-golf-gloves-for-men/">winter gloves</a> and <a href="/best-golf-shoes-for-walking/">waterproof walking shoes</a>.' },
@@ -14236,11 +14236,11 @@ export const ARTICLES: Article[] = [
     whoFor: ['Walking golfers who carry their own bag', 'Golfers who want a versatile bag that works on carts too'],
     whoSkip: ['Riders who want maximum storage (see cart bags)'],
     comparisonTable: { headers: ['Bag', 'Best For', 'Price', 'Weight', 'Our Rating'], rows: [
-      { badge: 'STRONG PICK', affiliateKey: 'ping-hoofer-14-stand-bag', name: 'Ping Hoofer 14', bestFor: 'Best Overall', price: '~$270', feature1: '4.5 lbs', feature2: '', winner: true, rating: 4.7 },
+      { badge: 'STRONG PICK', affiliateKey: 'ping-hoofer-14-stand-bag', name: 'Ping Hoofer 14', bestFor: 'Best Overall', price: '~$295', feature1: '4.5 lbs', feature2: '', winner: true, rating: 4.7 },
       { rating: 4.4, affiliateKey: 'ogio-fuse-stand-bag', name: 'OGIO Fuse', bestFor: 'Best Value', price: '~$170', feature1: '4.8 lbs', feature2: '', winner: false },
     ]},
     sections: [
-      { h2: 'Best Overall: Ping Hoofer 14', badge: 'TOP PICK', affiliateKey: 'ping-hoofer-14-stand-bag', rating: 4.7, body: 'The Hoofer 14 is the reason I switched from riding to walking. The dual-strap system distributes weight so evenly that by hole 12, I stopped noticing I was carrying anything. The legs deploy instantly and reliably on every surface — fairway, rough, concrete cart path, and wet ground. After 40-plus walking rounds, the straps show wear but the functionality is unchanged. This is the bag I recommend to every golfer who asks about walking.\n\nThe Hoofer is the most popular stand bag for a reason — the dual-strap system distributes weight evenly, the legs deploy reliably on every surface, and the 14-way top keeps clubs separated without snagging.', price: '~$270',
+      { h2: 'Best Overall: Ping Hoofer 14', badge: 'TOP PICK', affiliateKey: 'ping-hoofer-14-stand-bag', rating: 4.7, body: 'The Hoofer 14 is the reason I switched from riding to walking. The dual-strap system distributes weight so evenly that by hole 12, I stopped noticing I was carrying anything. The legs deploy instantly and reliably on every surface — fairway, rough, concrete cart path, and wet ground. After 40-plus walking rounds, the straps show wear but the functionality is unchanged. This is the bag I recommend to every golfer who asks about walking.\n\nThe Hoofer is the most popular stand bag for a reason — the dual-strap system distributes weight evenly, the legs deploy reliably on every surface, and the 14-way top keeps clubs separated without snagging.', price: '~$295',
         pros: ['Most comfortable dual-strap system on the market', 'Reliable legs that deploy on any surface', '14-way top prevents club tangling'],
         cons: ['At $270, premium pricing', 'Fewer pockets than dedicated cart bags'] },
       { h2: 'Best Value: OGIO Fuse', badge: 'BEST VALUE', affiliateKey: 'ogio-fuse-stand-bag', rating: 4.4, body: 'The OGIO Fuse carried comfortably for 18 holes and the legs deployed reliably in my testing. The straps are slightly thinner than the Hoofer, which I noticed on the back nine of hotter rounds. At $170, the $100 savings vs the Hoofer is meaningful — I would recommend the Fuse to any golfer trying walking for the first time, with an upgrade to the Hoofer once they know they will stick with it.\n\nThe Fuse delivers 90% of the Hoofer performance at $100 less. The straps are comfortable, the legs work well, and the storage is adequate. At $170, strong value.', price: '~$170',
@@ -14678,10 +14678,10 @@ export const ARTICLES: Article[] = [
       {
         h2: '🥇 Best Overall: LAB Golf Mezz.1 Max',
         badge: 'BEST FOR YIPS',
-        price: '~$449 at LAB Golf',
+        price: '~$470 at Golf Galaxy',
         affiliateKey: 'lab-golf-mezz1-max',
         rating: 4.8,
-        body: 'The LAB Golf Mezz.1 Max is the most effective anti-yips putter available. The Lie Angle Balanced technology means the putter face stays square throughout the entire stroke without any hand manipulation required. For yips sufferers, this is transformative: the hand movement that triggers the spasm simply is not needed. The face stays where you set it at address. In our testing with three golfers who experience yips symptoms, the Mezz.1 Max reduced visible flinch-induced face angle variation from ±4 degrees to ±1.2 degrees. Two of the three golfers described it as the first putter they could take to the course without anxiety. The Max version adds maximum weight at the perimeter for the highest MOI in the LAB lineup, further resisting any twisting from involuntary hand movement. The press-fit face insert provides soft feel without being mushy. At $449, the Mezz.1 Max is the most expensive putter in this guide. But for golfers whose yips have made putting miserable, it is the single best equipment investment in golf. LAB putters also hold their resale value exceptionally well — if it does not work for you, selling for $350+ on the secondary market is straightforward.',
+        body: 'The LAB Golf Mezz.1 Max is the most effective anti-yips putter available. The Lie Angle Balanced technology means the putter face stays square throughout the entire stroke without any hand manipulation required. For yips sufferers, this is transformative: the hand movement that triggers the spasm simply is not needed. The face stays where you set it at address. In our testing with three golfers who experience yips symptoms, the Mezz.1 Max reduced visible flinch-induced face angle variation from ±4 degrees to ±1.2 degrees. Two of the three golfers described it as the first putter they could take to the course without anxiety. The Max version adds maximum weight at the perimeter for the highest MOI in the LAB lineup, further resisting any twisting from involuntary hand movement. The press-fit face insert provides soft feel without being mushy. At $470, the Mezz.1 Max is the most expensive putter in this guide. But for golfers whose yips have made putting miserable, it is the single best equipment investment in golf. LAB putters also hold their resale value exceptionally well — if it does not work for you, selling for $350+ on the secondary market is straightforward.',
         pros: [
           'Lie Angle Balanced design eliminates the hand action that triggers yips',
           'Reduced flinch-induced face variation from ±4° to ±1.2° in testing',
@@ -14774,7 +14774,7 @@ export const ARTICLES: Article[] = [
     comparisonTable: {
       headers: ['Putter', 'Best For', 'Price', 'Our Rating'],
       rows: [
-        { name: 'LAB Golf Mezz.1 Max', bestFor: 'Best Overall', price: '~$449', feature1: '4.8/5 ★', feature2: '', winner: true, affiliateKey: 'lab-golf-mezz1-max' },
+        { name: 'LAB Golf Mezz.1 Max', bestFor: 'Best Overall', price: '~$470', feature1: '4.8/5 ★', feature2: '', winner: true, affiliateKey: 'lab-golf-mezz1-max' },
         { name: 'TaylorMade Spider GT', bestFor: 'Highest MOI', price: '~$200', feature1: '4.5/5 ★', feature2: '', winner: false, affiliateKey: 'taylormade-spider-gt' },
         { name: 'Odyssey Stroke Lab', bestFor: 'Best Tempo', price: '~$199', feature1: '4.4/5 ★', feature2: '', winner: false, affiliateKey: 'odyssey-stroke-lab' },
         { name: 'Odyssey Two Ball Eleven', bestFor: 'Armlock', price: '~$300', feature1: '4.3/5 ★', feature2: '', winner: false, affiliateKey: 'odyssey-two-ball-eleven' },

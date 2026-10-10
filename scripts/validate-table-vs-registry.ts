@@ -31,7 +31,7 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 
-const THRESHOLD = 47;   // ratchet: 49 -> 47 (Sprint 166)
+const THRESHOLD = 20;   // ratchet: 49 -> 47 (Sprint 166) -> 20 (Sprint 169)
 const SEVERE_CEILING = 4;
 
 const money = (s: string) => Number(s.replace(/,/g, ''));
@@ -71,10 +71,21 @@ const BUNDLE = /setup|package|bundle|\+/i;
  */
 const SECONDHAND = /\b(used|refurb\w*|open box|prev(?:ious)?[- ]gen\w*|closeout|last year)\b/i;
 
+/**
+ * Cents are not drift. A row reading "~$30" against a registry price of
+ * "$29.97/dz" is the same price written two ways, and the tilde says as much.
+ * Sprint 169 reconciled 35 rows to verified registry prices and five of them
+ * landed here: ~$30 vs $29.97, ~$400 vs $399.99, ~$470 vs $469.99, ~$38 vs
+ * $37.50. Reporting those as defects would leave the ceiling permanently
+ * above zero with nothing left to fix, which is how a ratchet stops meaning
+ * anything. One dollar, absolute: tight enough that a real gap still shows.
+ */
+const ROUNDING = 1;
+
 const all: any[] = [...(ARTICLES as any), ...(COMPARISONS as any)];
 const drift: string[] = [];
 const severe: string[] = [];
-const excluded = { dimension: 0, multipack: 0, period: 0, inRange: 0, secondhand: 0, bundle: 0 };
+const excluded = { dimension: 0, multipack: 0, period: 0, inRange: 0, secondhand: 0, bundle: 0, rounding: 0 };
 
 for (const a of all) {
   const table = a.comparisonTable;
@@ -91,6 +102,12 @@ for (const a of all) {
     const reg = num((AFFILIATE as any)[r.affiliateKey]?.price);
     const row = num(r.price);
     if (!reg || !row || row === reg) continue;
+    if (Math.abs(row - reg) <= ROUNDING) {
+      excluded.rounding++;
+      // SHOW=1 lists what the tolerance absorbed, so it can never quietly grow.
+      if (process.env.SHOW) console.error(`   rounding: ${a.slug} [${r.affiliateKey}] ${r.price} vs $${reg}`);
+      continue;
+    }
 
     const name = String(r.name ?? '');
     const priceStr = String(r.price);
@@ -132,7 +149,7 @@ if (severe.length) {
 console.log(
   `✅ Table/registry prices: ${drift.length} drift rows (ceiling ${THRESHOLD}). Correctly excluded: ` +
   `${excluded.dimension} dimension, ${excluded.bundle} bundle, ${excluded.multipack} multi-pack, ${excluded.period} per-period, ` +
-  `${excluded.secondhand} used/prev-gen, ${excluded.inRange} in-range.`
+  `${excluded.secondhand} used/prev-gen, ${excluded.inRange} in-range, ${excluded.rounding} rounding.`
 );
 
 if (drift.length > THRESHOLD) {
