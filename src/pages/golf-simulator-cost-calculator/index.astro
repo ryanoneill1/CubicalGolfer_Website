@@ -118,7 +118,9 @@ const ev = {
           <tfoot><tr><td colspan="2" style="font-weight:700;text-align:right;">Total Cost</td><td id="total-cost" style="font-weight:700;color:var(--green);font-size:18px;"></td><td></td></tr></tfoot>
         </table>
 
-        <div id="notes-area" style="margin:20px 0;padding:16px;background:var(--bg-alt,#f8f7f4);border-radius:8px;"></div>
+        <div id="lm-cta" style="display:none;margin:20px auto 0;padding:16px 20px;background:var(--cream-dark);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;max-width:var(--prose-w);"></div>
+
+        <div id="notes-area" style="margin:20px auto;padding:16px;background:var(--bg-alt,#f8f7f4);border-radius:8px;max-width:var(--prose-w);"></div>
 
         <h3 style="margin-top:24px;">Related Guides</h3>
         <ul>
@@ -187,7 +189,7 @@ const tiers = {
       { component: 'Hitting Mat',    name: 'Spornia Hitting Mat',        price: 159, url: ev.sporniaMat, note: 'Forgiving surface, protects wrists' },
       { component: 'Display',        name: 'Your phone or tablet',       price: 0,   url: '',            note: 'Garmin Golf app — no projector needed at this tier' },
     ],
-    notes: '<strong>Total: ~$888.</strong> You get real ball data — speed, carry, spin, launch angle — on every shot, viewed on your phone. No virtual course play. This is where most home setups should start: it proves whether you will actually use a simulator before you spend four figures. <a href="/best-golf-launch-monitors-2026/">See the full under-$1,000 guide</a>.',
+    notes: '<strong>Total: {TOTAL}.</strong> You get real ball data — speed, carry, spin, launch angle — on every shot, viewed on your phone. No virtual course play. This is where most home setups should start: it proves whether you will actually use a simulator before you spend four figures. <a href="/best-golf-launch-monitors-2026/">See the full under-$1,000 guide</a>.',
   },
   mid: {
     title: '⚡ Mid-Range Setup — Full Virtual Golf',
@@ -199,7 +201,7 @@ const tiers = {
       { component: 'Software',       name: 'GSPro (1 year)',             price: 250, url: '',            note: 'No affiliate program — buy direct from gsprogolf.com' },
       { component: 'Computer',       name: 'Windows PC, GTX 1660+',      price: 0,   url: '',            note: 'GSPro needs a Windows machine. Use one you own if you can.' },
     ],
-    notes: '<strong>Total: ~$2,396 plus a PC.</strong> Full virtual golf — play Pebble Beach from the garage. The MLM2PRO is the value pick here: it is the only monitor in this range with a direct product link and real club data. <a href="/best-golf-launch-monitors-2026/">See the beginner setup guide</a>.',
+    notes: '<strong>Total: {TOTAL} plus a PC.</strong> Full virtual golf — play Pebble Beach from the garage. The MLM2PRO is the value pick here: it is the only monitor in this range with a direct product link and real club data. <a href="/best-golf-launch-monitors-2026/">See the beginner setup guide</a>.',
   },
   premium: {
     title: '🏆 Premium Setup — Golf-Lounge Quality',
@@ -211,7 +213,7 @@ const tiers = {
       { component: 'Software',       name: 'GSPro (1 year)',             price: 250,  url: '',            note: 'No affiliate program — buy direct' },
       { component: 'Computer',       name: 'Windows PC, RTX 3060+',      price: 0,    url: '',            note: 'Premium software settings need real GPU headroom' },
     ],
-    notes: '<strong>Total: ~$4,896 plus a PC.</strong> Tour-level ball and club data with an immersive screen. We route the Launch Pro to Bushnell rather than Amazon: Amazon does not reliably stock it, and Bushnell is a direct product link with a 30-day cookie. <a href="/bushnell-launch-pro-review/">Read the Launch Pro review</a>.',
+    notes: '<strong>Total: {TOTAL} plus a PC.</strong> Tour-level ball and club data with an immersive screen. We route the Launch Pro to Bushnell rather than Amazon: Amazon does not reliably stock it, and Bushnell is a direct product link with a 30-day cookie. <a href="/bushnell-launch-pro-review/">Read the Launch Pro review</a>.',
   },
 };
 
@@ -226,7 +228,11 @@ function selectTier(tier) {
 
   data.parts.forEach(p => {
     total += p.price;
-    const link = p.url ? `<a href="${p.url}" target="_blank" rel="nofollow noopener sponsored" style="color:var(--green);font-weight:600;text-decoration:none;">Buy →</a>` : '<span style="color:var(--muted);">Various</span>';
+    // Sprint 162 — a real button, not a green text link. Same change Sprint 160
+    // made on the compression chart, and for the same reason: this table is the
+    // moment the reader has decided what to build, and the thing that converts
+    // that decision was styled as body text.
+    const link = p.url ? `<a href="${p.url}" target="_blank" rel="nofollow noopener sponsored" class="cmp-buy-btn" data-outbound="calculator" data-aff-name="${p.name}">Check price</a>` : '<span style="color:var(--muted);">Various</span>';
     tbody.innerHTML += `<tr>
       <td style="font-weight:600;">${p.component}</td>
       <td>${p.name}<br><small style="color:var(--muted);">${p.note}</small></td>
@@ -235,9 +241,30 @@ function selectTier(tier) {
     </tr>`;
   });
 
+  // The launch monitor is the decision. It is the most expensive line, the one
+  // people research for weeks, and the only part whose choice changes what the
+  // rest of the build has to be. Surface it once, under the total, instead of
+  // leaving it as one row among six.
+  const lm = data.parts.find(p => p.component === 'Launch Monitor' && p.url);
+  const lmEl = document.getElementById('lm-cta');
+  if (lm) {
+    lmEl.innerHTML = `<p style="margin:0 0 10px;font-weight:700;">The decision in this build is the launch monitor — ${lm.name} at $${lm.price.toLocaleString()}.</p>`
+      + `<a href="${lm.url}" target="_blank" rel="nofollow noopener sponsored" class="cmp-buy-btn cmp-buy-btn--pick" data-outbound="calculator-primary" data-aff-name="${lm.name}">Check price on the ${lm.name}</a>`;
+    lmEl.style.display = 'block';
+  } else {
+    lmEl.style.display = 'none';
+  }
+
   document.getElementById('total-cost').textContent = `$${total.toLocaleString()}`;
   document.getElementById('result-title').textContent = data.title;
-  document.getElementById('notes-area').innerHTML = data.notes;
+  // Sprint 162 — the tier notes used to hard-code their own total, and all
+  // three had drifted from the sum of their own parts: basic read "~$888"
+  // against a computed $725, mid "~$2,396" against $2,556, premium "~$4,896"
+  // against $5,046. The reader saw one number in the table and a different one
+  // in the paragraph directly beneath it. Substituting the computed figure
+  // means the two cannot disagree again.
+  document.getElementById('notes-area').innerHTML =
+    data.notes.replace('{TOTAL}', `~$${total.toLocaleString()}`);
   document.getElementById('result-area').style.display = 'block';
   document.getElementById('result-area').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
