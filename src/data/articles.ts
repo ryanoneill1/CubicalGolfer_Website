@@ -15085,6 +15085,9 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'What This Chart Does Not Cover',
+        recommendedGear: [
+          { key: 'bushnell-pro-xe', role: 'Temperature-compensated yardage, measured not estimated', name: 'Bushnell Pro XE' },
+        ],
         body: '<p>Temperature is one of four things moving your carry number, and it is rarely the biggest.</p><p><strong>Wind</strong> dwarfs it. A 10 mph headwind costs a mid-iron more than a 30-degree temperature drop.</p><p><strong>Altitude</strong> works the other way and is roughly 1.1 to 1.2 percent per 1,000 feet of elevation. A Denver round plays about 6 percent longer than the same round at sea level, which more than cancels a cold morning.</p><p><strong>Ball choice</strong> matters at the margins. Lower-compression balls hold up slightly better in the cold, which is the one time a soft ball has a genuine performance argument rather than a feel argument. Our <a href="/golf-ball-compression-chart/">compression chart</a> lists every ball we have measured.</p><p>Use the chart for club selection, not for rebuilding your yardage book. One club at the extremes, nothing at all between 65 and 80.</p>',
       },
     ],
@@ -15150,6 +15153,9 @@ export const ARTICLES: Article[] = [
       },
       {
         h2: 'What This Rule Does Not Cover',
+        recommendedGear: [
+          { key: 'bushnell-pro-xe', role: 'Does this adjustment for you, on the shot', name: 'Bushnell Pro XE' },
+        ],
         body: '<p>The chart is calibrated for mid and long irons, which is where most approach shots live. Three things shift it.</p><p><strong>Flight time.</strong> Wind acts on the ball for as long as it is in the air. A 50-yard pitch is barely affected by a wind that moves a 4-iron 20 yards. If you hit the ball noticeably low or high, scale accordingly.</p><p><strong>Your trajectory.</strong> A high ball flight is punished harder into the wind and helped more downwind than these figures suggest. The knockdown column in the crosswind table exists for the same reason.</p><p><strong>Everything else, which stacks.</strong> Wind combines with elevation and temperature rather than replacing them. Our <a href="/what-is-slope-on-a-rangefinder/">slope chart</a> covers uphill and downhill shots, and the <a href="/golf-distance-temperature-chart/">temperature chart</a> covers cold. A cold, uphill shot into the wind is all three at once.</p>',
       },
     ],
