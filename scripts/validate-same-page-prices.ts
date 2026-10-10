@@ -51,7 +51,7 @@ function priceOf(raw: unknown): number | null {
 // became correct. Narrow on purpose: the row must name a combination itself.
 const BUNDLE_ROW = /\s\+\s|\bSetup\b|\bPackage\b|\bBundle\b/i;
 
-const THRESHOLD_COUNT = 22;   // ratchet: only ever goes down (23 -> 22, Sprint 165)
+const THRESHOLD_COUNT = 1;   // ratchet: only ever goes down (23 -> 22 -> 1, Sprints 165-166)
 
 const problems: string[] = [];
 for (const a of ARTICLES as any[]) {
