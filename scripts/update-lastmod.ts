@@ -97,6 +97,19 @@ function currentPages(): Record<string, { hash: string; seed?: string }> {
     out[`/brands/${b.slug}/`] = { hash: recordHash(b), seed: b.dateModified };
   }
 
+  // Pages whose visible content comes from a data file rather than their own
+  // source. Matched by slug prefix or suffix so the five /{brand}-golf-ball-
+  // compression-chart/ pages are covered without naming each one.
+  const DATA_DEPS = [
+    {
+      hash: sha(
+        fs.readFileSync('src/data/balls.ts', 'utf-8') +
+        fs.readFileSync('src/data/ball-brands.ts', 'utf-8')
+      ),
+      pages: ['-golf-ball-compression-chart/', '/golf-ball-compression-chart/', '/golf-ball-finder/'],
+    },
+  ];
+
   // Bespoke pages: hash the .astro source. A page with no record of its own is
   // its own source of truth.
   const walk = (dir: string): string[] =>
@@ -108,7 +121,20 @@ function currentPages(): Record<string, { hash: string; seed?: string }> {
     const slug = f.endsWith('/index.astro')
       ? (f.replace(/^src\/pages/, '').replace(/index\.astro$/, '') || '/')
       : f.replace(/^src\/pages/, '').replace(/\.astro$/, '') + '/';
-    const fileHash = sha(fs.readFileSync(f, 'utf-8'));
+    let fileHash = sha(fs.readFileSync(f, 'utf-8'));
+    // Data dependencies count as the page's own content. The compression chart
+    // and the five brand charts render balls.ts and ball-brands.ts directly:
+    // a price change rewrites visible prose and table rows on those pages
+    // without touching their .astro files. Sprint 165 rewrote every brand
+    // write-up and /golf-ball-compression-chart/ — the site's biggest page —
+    // reported "unchanged", which would have told Google a rewritten page was
+    // untouched. This is NOT the layout exclusion above: the layout is chrome,
+    // balls.ts is the content.
+    for (const dep of DATA_DEPS) {
+      if (dep.pages.some(px => slug.startsWith(px) || slug.endsWith(px))) {
+        fileHash = sha(fileHash + dep.hash);
+      }
+    }
     // A page can have BOTH a record and its own .astro file — the compression
     // chart is one, and it is the biggest page on the site at 60k impressions.
     // Hashing only the record made every edit to its .astro invisible: the file

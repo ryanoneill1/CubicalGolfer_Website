@@ -7,6 +7,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ROBOTS_INDEX } from '../../lib/seo';
 import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { brandFaqFacts, FULL_CHART_BLURB } from '../../data/ball-brands';
+
+// Sprint 165: these three answers and the full-chart blurb are derived from
+// balls.ts instead of typed. Typed by hand they undercounted the chart by a ball
+// and a brand, and on Titleist they named the 70-compression TruFeel as its
+// softest ball while the table two screens above showed two balls at 65.
+const facts = brandFaqFacts('Bridgestone');
 
 const meta = {
   title: "Bridgestone Golf Ball Compression Chart 2026 \u2014 All 4",
@@ -23,10 +30,10 @@ const meta = {
 };
 
 const faq = [
-  { q: "What is the compression of Bridgestone golf balls?", a: "Bridgestone golf balls on this chart run from 50 compression (Bridgestone e12 Contact) up to 100 (Bridgestone Tour B X). Lower compression suits slower swing speeds; a firmer ball needs more clubhead speed before it compresses properly." },
-  { q: "Which Bridgestone golf ball is the softest?", a: "The Bridgestone e12 Contact at 50 compression is the softest Bridgestone ball on this chart, at about $30 a dozen. It is rated for 70-90 mph driver speed." },
+  { q: "What is the compression of Bridgestone golf balls?", a: facts.range },
+  { q: "Which Bridgestone golf ball is the softest?", a: facts.softest },
   { q: "Which Bridgestone ball suits my swing speed?", a: "Match compression to driver speed. Under 85 mph suits the softer end of the Bridgestone range; 85-100 mph the middle; over 100 mph the firmest. The table above lists the rated speed range for every Bridgestone ball." },
-  { q: "How many Bridgestone golf balls are on this chart?", a: "4. This page covers the Bridgestone balls we track and test. For every brand side by side, see the full compression chart of all 35 balls." },
+  { q: "How many Bridgestone golf balls are on this chart?", a: facts.howMany },
 ];
 
 const siblings = [{"brand": "Callaway", "slug": "/callaway-golf-ball-compression-chart/"}, {"brand": "Titleist", "slug": "/titleist-golf-ball-compression-chart/"}, {"brand": "TaylorMade", "slug": "/taylormade-golf-ball-compression-chart/"}, {"brand": "Srixon", "slug": "/srixon-golf-ball-compression-chart/"}];
@@ -49,7 +56,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
     <section style="background:#f8f7f4;border-radius:8px;padding:18px;margin:26px 0;">
       <p style="margin:0 0 8px;font-weight:700;">Want every brand in one table?</p>
-      <p style="margin:0 0 12px;">The full chart covers all 35 balls we track across ten brands, with a sortable table and a free printable PDF.</p>
+      <p style="margin:0 0 12px;">{FULL_CHART_BLURB}</p>
       <a href="/golf-ball-compression-chart/" style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;text-decoration:none;">Open the full compression chart &#8594;</a>
     </section>
 

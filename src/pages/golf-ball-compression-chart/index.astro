@@ -9,6 +9,31 @@ import { AFFILIATE } from '../../data/affiliate-links';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import StickyBar from '../../components/StickyBar.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
+
+// Sprint 165: the figures in the under-85 mph section are derived from
+// balls.ts. Typed by hand they had drifted on every one: the Supersoft was
+// listed at $25 (really $27), the DUO Soft+ at $22 (really $25, so not
+// "under $25" at all), the Noodle at $20 (really $19).
+//
+// One of them was not a price typo. The Vice Drive was named "the cheapest
+// quality ball for slow swingers" inside a section headed "Under 85 mph",
+// while its own row on this same page says it needs 95 mph or more to
+// compress and that slower swingers should take the Noodle or the Supersoft
+// instead. The page was recommending a ball against its own data, so the
+// Drive comes out of the slow-swinger list. It keeps its row, its link and
+// its budget-pick badge everywhere else on the site; nothing is removed.
+//
+// WHICH balls get named here stays an editorial choice and is unchanged
+// otherwise — the three below are the ones balls.ts itself nominates for
+// slow swingers. Only the numbers are computed.
+const ball = (name: string) => (BALLS as any[]).find(b => b.name === name)!;
+const slowPick = ball('Callaway Supersoft');
+const slowAlt  = ball('Wilson DUO Soft+');
+const slowBudget = [ball('TaylorMade Noodle'), slowAlt, slowPick]
+  .sort((a, b) => a.price - b.price);
+// Round the heading's cap up to the next $5 so it reads like a price tier
+// rather than the exact figure of whichever ball happens to be dearest.
+const budgetCap = Math.ceil(slowBudget[slowBudget.length - 1].price / 5) * 5;
 // Thumbnail lookup. This used to slugify the ball's NAME and hope it matched a
 // registry key — so 'Callaway Chrome Tour' looked for `callaway-chrome-tour`
 // while the entry is `callaway-chrome-tour-2026`, and the row silently rendered
@@ -489,9 +514,9 @@ function outboundFor(url: string | null | undefined): string {
       <h2 id="under-85">Best Golf Balls for Swing Speed Under 85 mph</h2>
       <p>If your driver speed is under 85 mph, you need compression between 35-65. Higher-compression balls will feel like hitting a rock and fly shorter. These are the balls that actually compress at your speed:</p>
       <h3>Best for Seniors (Under 75 mph)</h3>
-      <p>The <strong>Callaway Supersoft</strong> (38 compression, $25/dz) is the best ball for swing speeds under 75 mph. It compresses fully even at very slow speeds, maximizing distance. The <strong>Wilson DUO Soft+</strong> (40, $22/dz) is the budget alternative. See our full <a href="/best-golf-balls-for-seniors/">best balls for seniors guide</a>.</p>
-      <h3>Best Budget Options Under $25/dozen</h3>
-      <p>The <strong>Vice Drive</strong> at $17/dozen is the cheapest quality ball for slow swingers. The <strong>TaylorMade Noodle</strong> ($20/dz) and <strong>Wilson DUO Soft+</strong> ($22/dz) round out the under-$25 options. All three have ionomer covers — durable and consistent.</p>
+      <p>The <strong>{slowPick.name}</strong> ({slowPick.compression} compression, ${slowPick.price}/dz) is the best ball for swing speeds under 75 mph. It compresses fully even at very slow speeds, maximizing distance. The <strong>{slowAlt.name}</strong> ({slowAlt.compression}, ${slowAlt.price}/dz) is the budget alternative. See our full <a href="/best-golf-balls-for-seniors/">best balls for seniors guide</a>.</p>
+      <h3>Best Budget Options Under ${budgetCap}/dozen</h3>
+      <p>The <strong>{slowBudget[0].name}</strong> at ${slowBudget[0].price}/dozen is the cheapest of these, and it is rated up to {slowBudget[0].maxMph} mph — which is the point: the chart has cheaper balls, but they need more clubhead speed than you have. The <strong>{slowBudget[1].name}</strong> (${slowBudget[1].price}/dz) and <strong>{slowBudget[2].name}</strong> (${slowBudget[2].price}/dz) round out the set. All three have ionomer covers — durable, consistent, and no greenside spin to speak of.</p>
     </section>
 
     <section>
