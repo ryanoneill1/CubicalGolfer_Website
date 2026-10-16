@@ -107,7 +107,7 @@ Summary: Compression, cover and price for all 5 TaylorMade golf balls, from the 
 
 ## Titleist Golf Ball Compression Chart
 URL: https://www.cubicalgolfer.com/titleist-golf-ball-compression-chart/
-Summary: Compression, cover and price for all 7 Titleist golf balls, from the TruFeel (70) to the Pro V1x (97), matched to your swing speed.
+Summary: Compression, cover and price for all 7 Titleist golf balls, from the Tour Soft (65) to the Pro V1x (97), matched to your swing speed.
 
 ## Golf Tools & Calculators
 URL: https://www.cubicalgolfer.com/tools/
@@ -708,6 +708,10 @@ Summary: Shot Scope LM1 ($199) vs Garmin R10 ($490) — accuracy, features, subs
 ## SkyTrak+ vs Mevo+: The Honest Comparison
 URL: https://www.cubicalgolfer.com/skytrak-vs-mevo-plus/
 Summary: Both are the leading home golf simulators under $3,000. Here is which one is right for your setup and budget.
+
+## Square Golf Omni vs Garmin R10 — Is the Step Up Worth It?
+URL: https://www.cubicalgolfer.com/square-golf-omni-vs-garmin-r10/
+Summary: Square Golf Omni ($1,599) vs Garmin R10 ($490) — four-camera accuracy against Trackman, subscription costs, and the outdoor caveat two of three testers found.
 
 ## Trackman 4 vs Foresight GCQuad: The Definitive Comparison
 URL: https://www.cubicalgolfer.com/trackman-vs-foresight-gcquad/

@@ -2,15 +2,19 @@
 /**
  * AffiliateDisclosure.astro — Compact disclosure box for top of review pages.
  * Appears below AuthorByline, above QuickPick.
- * Static content, no props.
+ * `tested={false}` for pages built from third-party testing rather than ours —
+ * the default sentence is a first-hand claim and must not run on those.
  */
+interface Props { tested?: boolean }
+const { tested } = Astro.props;
 ---
 
 <div class="afd" role="note" aria-label="Affiliate disclosure">
   <p class="afd__text">
     ℹ️ <strong>Disclosure:</strong> We earn a small commission (typically 3-4%)
-    if you buy through our links. This never influences our rankings — every
-    product was <a href="/how-we-test/">independently purchased and tested</a>.
+    if you buy through our links. This never influences our rankings — {tested === false
+      ? <>the measurements on this page come from the <a href="/how-we-test/">outlets we credit</a>, not from us.</>
+      : <>every product was <a href="/how-we-test/">independently purchased and tested</a>.</>}
   </p>
 </div>
 

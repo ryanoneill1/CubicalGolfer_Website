@@ -3005,6 +3005,22 @@ export const AFFILIATE: Record<string, {
       'E6 Connect and Home Tee Hero simulator compatible',
     ],
   },
+  'square-golf-omni': {
+    url: 'https://www.playbetter.com/products/square-golf-omni-indoor-outdoor-launch-monitor?ghref=2301%3A1333883',
+    verifiedOn: '2026-10-16',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '~$1,599',
+    primaryRetailer: 'direct',
+    priceNote: '$1,599.99 at PlayBetter, checked 16 October 2026. This is a preorder rather than a stock item: a fully refundable $50 deposit reserves a unit, shipping is expected in late fall 2026, and orders ship in the order they were received. Square sells direct for the same money, but PlayBetter handles returns and warranty claims, which is the reason to buy there.',
+    label: 'Check Availability at PlayBetter \u2192',
+    imgAlt: 'Square Golf Omni launch monitor',
+    benefits: [
+      'Four high-speed infrared cameras, indoors or outdoors',
+      'No subscription \u2014 1,000 course credits included',
+      'Connects to GSPro with no licence fee from Square',
+    ],
+  },
   'square-golf-launch-monitor': {
     url: 'https://www.playbetter.com/products/square-golf-simulator-launch-monitor?ghref=2301%3A1333883',
     verifiedOn: '2026-09-03',

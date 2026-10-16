@@ -21,6 +21,11 @@ interface Props {
   imageUrl?: string;
   why?: string;
   bestFor?: string;
+  /** Registry retailer name. The button used to say "Amazon" unconditionally,
+   *  which mislabelled 31 pages that link to Bushnell, PlayBetter or CJ. */
+  retailer?: string;
+  /** false when the page is built from third-party testing rather than ours. */
+  tested?: boolean;
 }
 
 const {
@@ -34,8 +39,13 @@ const {
   imageUrl,
   why,
   bestFor,
+  retailer,
+  tested,
   unmonetised = false,
 } = Astro.props;
+
+/** Name the retailer the link actually goes to, or stay neutral. */
+const ctaText = retailer ? `Check Price at ${retailer} \u2192` : `Check Price \u2192`;
 
 const fullStars = rating ? Math.floor(rating) : 0;
 const halfStar = rating ? (rating % 1 >= 0.5) : false;
@@ -70,7 +80,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
         aria-label={`Check price for ${productName}`}
       >
         {amazonPrice && <span class="qp__cta-price">{amazonPrice}</span>}
-        <span class="qp__cta-text">Check Price on Amazon →</span>
+        <span class="qp__cta-text">{ctaText}</span>
       </a>
       {altUrl && altLabel && (
         <a
@@ -85,7 +95,9 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
     </div>
   </div>
   <p class="qp__disclosure">
-    🛒 Independently purchased · Commission earned if you buy · Never influences our ranking
+    {tested === false
+      ? '🛒 Not our own testing · Commission earned if you buy · Never influences our ranking'
+      : '🛒 Independently purchased · Commission earned if you buy · Never influences our ranking'}
   </p>
 </aside>
 

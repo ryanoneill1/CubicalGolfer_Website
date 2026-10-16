@@ -92,6 +92,14 @@ export interface Article {
   whoFor?:       string[];    // "Who should buy" bullets (required for buying-guide)
   whoSkip?:      string[];    // "Who should skip" bullets (required for buying-guide)
   testingNotes?: string;      // Testing methodology summary
+  // Whether the products on this page were bought and used by us.
+  // The page header asserts 'Independently tested' and the trust block asserts
+  // 'Every product purchased' and '15+ real rounds'. Those are strong, checkable
+  // claims and they are the site's whole positioning, so they render only when
+  // this is not false. Set false for a page built from published specs and
+  // third-party testing — the page then says exactly that instead, and names
+  // the outlets in `sources`. Mirrors Comparison.tested.
+  tested?:       boolean;
   updateLog?:    Array<{ date: string; note: string }>;  // Visible changelog
   sources?:      Array<{ label: string; url: string }>;  // External citation links
   faq?:          FAQItem[];
