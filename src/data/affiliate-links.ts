@@ -219,6 +219,23 @@ export const AFFILIATE: Record<string, {
   },
 
   // Blue Tees Series 3 Max — search (ASIN varies by colour variant)
+  'blue-tees-rainmaker': {
+    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fblue-tees-golf-rainmaker-launch-monitor-26bluugolfnym2oda8g3ma%2F26bluugolfnym2oda8g3ma',
+    verifiedOn: '2026-10-16',
+    program: 'golfgalaxy',
+    retailer: 'Golf Galaxy',
+    price: '~$599',
+    primaryRetailer: 'direct',
+    priceNote: 'Blue Tees lists the Rainmaker at $599.99 on its own site, and Plugged In Golf quotes the same figure, checked 16 October 2026. Golf Galaxy stocks it (SKU 28822778) but showed no price when we looked, so treat $599.99 as the list price rather than a confirmed Golf Galaxy one. Ignore the $899.99 that appears in an older Blue Tees catalog \u2014 that figure is stale.',
+    label: 'Check Price at Golf Galaxy \u2192',
+    imgAlt: 'Blue Tees Rainmaker portable launch monitor',
+    benefits: [
+      'Phased array Doppler radar, indoors or outdoors',
+      'Carrying case and magnetic remote in the box',
+      'Stores 1,000 shots off-app and syncs them later',
+    ],
+  },
+
   'blue-tees-series-3-max': {
     url: 'https://www.amazon.com/dp/B09DLJ37TW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     verifiedOn: '2026-08-23',
