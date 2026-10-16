@@ -1,6 +1,27 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  // Sprint 173 — the 17 registry keys that had no canonical display name.
+  // Without one, AffiliateCTA fell back to the section heading, so clicks on
+  // these products were logged as 'Our Verdict', 'Accuracy Comparison' and the
+  // like, which cannot be ranked in a dashboard.
+  'srixon-z-785': "Srixon Z 785 Driver",
+  'cobra-darkspeed-x': "Cobra DARKSPEED X Driver",
+  'ernest-sports-es-b1': "Ernest Sports ES B1 Launch Monitor",
+  'flightscope-mevo': "FlightScope Mevo Launch Monitor",
+  'callaway-strata-ultimate-16': "Callaway Strata Ultimate 16-Piece Complete Set",
+  'blue-tees-rainmaker': "Blue Tees Rainmaker Launch Monitor",
+  'square-golf-omni': "Square Golf Omni Launch Monitor",
+  'amazon-basics-core-soft': "Amazon Basics Core Soft Golf Balls",
+  'voice-caddie-sc200plus': "Voice Caddie SC200Plus Launch Monitor",
+  'nikon-coolshot-50i': "Nikon Coolshot 50i GII Rangefinder",
+  'bushnell-wingman-mini': "Bushnell Wingman Mini GPS Speaker",
+  'bushnell-wingman-view': "Bushnell Wingman View GPS Speaker",
+  'blue-tees-player-pro': "Blue Tees Player Pro GPS Speaker",
+  'golfbuddy-voice-2s-plus': "GolfBuddy Voice 2S+ Talking GPS",
+  'turtlebox-ranger': "Turtlebox Ranger Bluetooth Speaker",
+  'turtlebox-original-gen3': "Turtlebox Original Gen 3 Bluetooth Speaker",
+  'wilson-dynapower-irons': "Wilson Dynapower Irons",
   'cobra-air-x-irons': "Cobra Air X Irons",
   'cobra-air-x-2-irons': "Cobra Air X 2 Irons",
   'bridgestone-e12-straight': "Bridgestone e12 Straight",

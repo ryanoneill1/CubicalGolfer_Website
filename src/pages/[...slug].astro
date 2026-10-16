@@ -111,6 +111,24 @@ const currentIdx = categoryArticles.findIndex(a => a.id === article.id);
 const prevArticle = currentIdx > 0 ? categoryArticles[currentIdx - 1] : null;
 const nextArticle = currentIdx < categoryArticles.length - 1 ? categoryArticles[currentIdx + 1] : null;
 
+/**
+ * Attribution name for a product section.
+ *
+ * AffiliateCTA uses `name` only for aria-label and data-aff-name — never for
+ * visible copy. It used to be handed section.h2, so Plausible logged affiliate
+ * clicks as 'Our Verdict', 'Accuracy Comparison' and 'What the Tester
+ * Measured': 692 of 2,304 tracked clicks carried something that was not a
+ * product name, across 133 pages, and no product could be ranked.
+ *
+ * PRODUCT_DISPLAY is the canonical name. The fallback only tidies a heading
+ * (medal emoji, 'Best Overall:' prefix) for the handful of keys that have no
+ * entry yet — validate-click-tracking keeps that number going down.
+ */
+const MEDAL_RE = /^[\u{1F947}\u{1F948}\u{1F949}\u{1F3C6}]\s*/u;
+const BEST_PREFIX_RE = /^Best [^:]{0,40}:\s*/i;
+const affName = (key: string, h2: string): string =>
+  PRODUCT_DISPLAY[key] ?? (h2 ?? '').replace(MEDAL_RE, '').replace(BEST_PREFIX_RE, '');
+
 const isBuyingGuide = article.pageType === 'buying-guide' || article.pageType === 'comparison' || article.pageType === 'review';
 const REVIEW_SLUGS: Record<string, string> = {};
 for (const _a of ARTICLES as any[]) {
@@ -468,12 +486,12 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
   {/* Sticky bar for buying guides */}
   {isBuyingGuide && (() => {
     const topRow = article.comparisonTable?.rows?.find((r: any) => r.affiliateKey)
-      ?? (() => { const fs = article.sections?.find((x: any) => x.affiliateKey); return fs ? { affiliateKey: fs.affiliateKey, name: fs.h2.replace(/^(🥇|🥈|🥉|🏆)\s*/,'').replace(/^(Best Overall:|Best Budget:|Best Premium:|Best Value:)\s*/i,'') } : null; })();
+      ?? (() => { const fs = article.sections?.find((x: any) => x.affiliateKey); return fs ? { affiliateKey: fs.affiliateKey, name: affName(fs.affiliateKey, fs.h2) } : null; })();
     const topAff = topRow ? getAffiliateLink(topRow.affiliateKey) : null;
     if (!topAff) return null;
     return (
       <StickyBar
-        name={topRow.name}
+        name={affName(topRow.affiliateKey, topRow.name)}
         price={topAff.price ?? ''}
         url={topAff.url}
         retailer={topAff.retailer}
@@ -992,10 +1010,17 @@ const computedWords = ((__wcWalk(article) + ' ' + __wcRegistry).replace(/<[^>]+>
           {section.recommendedGear?.length > 0 && (
             <RecommendedGearGrid items={section.recommendedGear} dateChecked={article.dateModified} />
           )}
+          {/* `name` on AffiliateCTA is the ATTRIBUTION name, not display copy:
+              the component uses it only for aria-label and data-aff-name. It
+              used to receive section.h2, so Plausible logged clicks as 'Our
+              Verdict' and 'Accuracy Comparison' rather than as products.
+              PRODUCT_DISPLAY is canonical; the fallback strips medal emoji and
+              'Best X:' prefixes. */}
           {aff && !(section.recommendedGear?.length > 0) && (
             <AffiliateCTA
               unmonetised={(aff as any)?.program === 'direct'}
-              url={aff.url} price={aff.price} name={section.h2}
+              url={aff.url} price={aff.price}
+              name={affName(section.affiliateKey, section.h2)}
               retailer={aff.retailer} label={aff.label}
               golfGalaxyUrl={aff.golfGalaxyUrl || ''}
               golfGalaxyLabel={aff.golfGalaxyLabel || ''}

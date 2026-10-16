@@ -22,9 +22,21 @@
  *   2. Any element carrying `data-outbound` must also carry `data-aff-name`,
  *      so the product name is the canonical one set at render time rather than
  *      scraped from whatever text happens to sit near the link.
+ *
+ * Rule 3 added Sprint 173. Rule 2 only checked that the attribute EXISTS; the
+ * value was still wrong. AffiliateCTA and the sticky bar were handed
+ * `section.h2`, so 692 of 2,304 tracked clicks across 133 pages logged as
+ * 'Our Verdict', 'Accuracy Comparison' or 'What the Tester Measured'. The root
+ * cause is a selling section whose affiliateKey has no PRODUCT_DISPLAY entry,
+ * because that is exactly when the renderer falls back to the heading. So:
+ *
+ *   3. Every affiliateKey used by an article section must have a canonical
+ *      display name — fixing the cause rather than the symptom.
  */
 import { readFileSync, readdirSync, statSync } from 'fs';
 import { join } from 'path';
+import { ARTICLES } from '../src/data/articles';
+import { PRODUCT_DISPLAY } from '../src/data/product-names';
 
 const files: string[] = [];
 (function walk(dir: string) {
@@ -37,6 +49,20 @@ const files: string[] = [];
 
 const violations: string[] = [];
 let taggedLinks = 0;
+
+// ── Rule 3 — every selling section resolves to a real product name ────────
+const NAME_CEILING = 0;
+const unnamed: Array<{ slug: string; key: string; h2: string }> = [];
+let sellingSections = 0;
+for (const article of ARTICLES as any[]) {
+  for (const section of article.sections ?? []) {
+    if (!section?.affiliateKey) continue;
+    sellingSections++;
+    if (!PRODUCT_DISPLAY[section.affiliateKey]) {
+      unnamed.push({ slug: article.slug, key: section.affiliateKey, h2: section.h2 ?? '' });
+    }
+  }
+}
 
 for (const f of files) {
   const src = readFileSync(f, 'utf8');
@@ -75,6 +101,17 @@ if (violations.length) {
   process.exit(1);
 }
 
+if (unnamed.length > NAME_CEILING) {
+  console.error(`\n❌ ${unnamed.length} selling section(s) have no canonical product name ` +
+    `(ceiling ${NAME_CEILING}); their clicks get attributed to the section heading:\n`);
+  for (const u of unnamed.slice(0, 25)) {
+    console.error(`   ${u.slug}\n      ${u.key} → would log as "${u.h2}"`);
+  }
+  console.error('\n   Add the product to PRODUCT_DISPLAY in src/data/product-names.ts.\n');
+  process.exit(1);
+}
+
 console.log(
-  `✅ Click tracking: one 'Affiliate Click' emitter, ${taggedLinks} outbound link(s) carry a canonical product name.`,
+  `✅ Click tracking: one 'Affiliate Click' emitter, ${taggedLinks} outbound link(s) carry a canonical ` +
+  `product name, ${sellingSections} selling section(s) all resolve to a named product (ceiling ${NAME_CEILING}).`,
 );

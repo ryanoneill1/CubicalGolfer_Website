@@ -220,14 +220,20 @@ export const AFFILIATE: Record<string, {
 
   // Blue Tees Series 3 Max — search (ASIN varies by colour variant)
   'blue-tees-rainmaker': {
-    url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fblue-tees-golf-rainmaker-launch-monitor-26bluugolfnym2oda8g3ma%2F26bluugolfnym2oda8g3ma',
+    // Golf Galaxy pays 8% to PlayBetter's 5%, but its listing is In-Store
+    // Purchase Only, so an online click there cannot convert. PlayBetter is
+    // the primary for that reason; the Golf Galaxy link stays as the secondary
+    // for anyone who wants to see one in a shop first.
+    url: 'https://www.playbetter.com/products/blue-tees-golf-rainmaker-golf-launch-monitor?ghref=2301%3A1333883',
+    golfGalaxyUrl: 'https://www.dpbolvw.net/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fblue-tees-rainmaker-portable-launch-monitor-26bluagolflsvcq6yxo9o%2F26bluagolflsvcq6yxo9o',
     verifiedOn: '2026-10-16',
-    program: 'golfgalaxy',
-    retailer: 'Golf Galaxy',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
     price: '~$599',
     primaryRetailer: 'direct',
-    priceNote: 'Blue Tees lists the Rainmaker at $599.99 on its own site, and Plugged In Golf quotes the same figure, checked 16 October 2026. Golf Galaxy stocks it (SKU 28822778) but showed no price when we looked, so treat $599.99 as the list price rather than a confirmed Golf Galaxy one. Ignore the $899.99 that appears in an older Blue Tees catalog \u2014 that figure is stale.',
-    label: 'Check Price at Golf Galaxy \u2192',
+    priceNote: '$599.99 at PlayBetter and on Blue Tees\u2019 own site, checked 16 October 2026, and PlayBetter ships it. Golf Galaxy lists the same $599.99 and rates it 4.4 stars across 7 reviews, but marks it In-Store Purchase Only \u2014 so buy online at PlayBetter, or check a local Golf Galaxy if you want to handle one first. Ignore the $899.99 in an older Blue Tees catalog; that figure is stale.',
+    label: 'Check Price at PlayBetter \u2192',
+    imgSrc: '/images/products/blue-tees-rainmaker.webp',
     imgAlt: 'Blue Tees Rainmaker portable launch monitor',
     benefits: [
       'Phased array Doppler radar, indoors or outdoors',
@@ -3023,7 +3029,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'square-golf-omni': {
-    url: 'https://www.playbetter.com/products/square-golf-omni-indoor-outdoor-launch-monitor?ghref=2301%3A1333883',
+    url: 'https://www.playbetter.com/products/square-golf-omni-indoor-outdoor-launch-monitor?ghref=2301%3A1333883&utm_source=affiliate&utm_medium=Ryan+ONeill',
     verifiedOn: '2026-10-16',
     program: 'playbetter',
     retailer: 'PlayBetter',
@@ -3031,6 +3037,7 @@ export const AFFILIATE: Record<string, {
     primaryRetailer: 'direct',
     priceNote: '$1,599.99 at PlayBetter, checked 16 October 2026. This is a preorder rather than a stock item: a fully refundable $50 deposit reserves a unit, shipping is expected in late fall 2026, and orders ship in the order they were received. Square sells direct for the same money, but PlayBetter handles returns and warranty claims, which is the reason to buy there.',
     label: 'Check Availability at PlayBetter \u2192',
+    imgSrc: '/images/products/square-golf-omni.webp',
     imgAlt: 'Square Golf Omni launch monitor',
     benefits: [
       'Four high-speed infrared cameras, indoors or outdoors',
