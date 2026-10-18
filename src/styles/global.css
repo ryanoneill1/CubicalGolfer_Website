@@ -449,7 +449,7 @@ nav.site-nav {
 .art-content p  { font-size: var(--prose-size); line-height: var(--prose-lh); color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 12px; }
-.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta) {
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }
@@ -645,7 +645,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
    through to the site-wide `a { color: var(--green) }`. The band's background
    is ALSO var(--green). Measured 1.00:1: the call to action was the same
    colour as the thing behind it, on every article page. */
-.art-cta a:not(.btn-gold):not(.aff-cta__btn):not(.cmp-buy-btn):not(.quick-answer-cta) { color: var(--gold); }
+.art-cta a:not(.btn-gold):not(.aff-cta__btn):not(.cmp-buy-btn):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt) { color: var(--gold); }
 /* …but NOT the buttons. .btn-gold already has a gold BACKGROUND with green text
    (5.42:1). My first cut of this rule repainted its text gold too, so the
    button read gold-on-gold at 1.00:1 — I fixed an invisible link by creating an
@@ -907,7 +907,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .compare-hero h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .compare-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
-.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta) {
+.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }
@@ -2233,6 +2233,44 @@ main section > p, main section ul, main section ol {
   }
 }
 
+
+/* ── Sprint 176 — ONE button geometry ───────────────────────────────────────
+ * Measured on /best-golf-rangefinders-2026/ before this: 36 CTAs, 8 distinct
+ * heights (21/48/49/53/57/58/81/192px), 9 visual treatments, and 10 links
+ * rendering with an underline — including the Quick Pick button itself and the
+ * underline that sat beneath every product-card IMAGE.
+ *
+ * Buttons now share one radius (--r1) and a 48px minimum box. 48px is above
+ * WCAG 2.5.8's 24px AA minimum and at Apple's 44pt / Material's 48dp guidance,
+ * so the same rule serves touch targets and visual consistency.
+ *
+ * Not changed here: .product-card__name-link and .product-card__img-link stay
+ * text links at their natural height — they are the card's title and photo,
+ * not buttons, and WCAG exempts inline text links. They only lose the
+ * underline, which the card's own affordance already replaces. */
+.aff-cta__btn,
+.qp__cta,
+.sb__btn,
+.cmp-buy-btn,
+.quick-answer-cta,
+.product-card__cta,
+.aff-cta__alt {
+  border-radius: var(--r1);
+  text-decoration: none;
+}
+.aff-cta__btn,
+.qp__cta,
+.quick-answer-cta,
+.product-card__cta,
+.aff-cta__alt {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* The in-table buy button stays compact: a 48px box in a table row would set
+   the row height for every row. It keeps the shared radius and no underline. */
+.cmp-buy-btn { min-height: 32px; display: inline-flex; align-items: center; justify-content: center; }
 
 /* ── Sprint 145 — numeric columns in the article comparison tables ───────────
  * Right-aligned numerals let a reader compare magnitude down a column, because

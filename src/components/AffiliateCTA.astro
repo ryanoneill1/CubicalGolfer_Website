@@ -108,11 +108,17 @@ import Icon from './Icon.astro';
     );
   })()}
   <p class="aff-cta__meta">{dateLabel}</p>
-  {disclosure && (
-    <p class="aff-cta__disclosure">
-      <Icon name="scales" /> <em>Affiliate link — we earn a small commission at no extra cost to you.</em>
-    </p>
-  )}
+  {/* Sprint 176 — the per-CTA disclosure line is gone.
+      It rendered under EVERY affiliate button: 656 instances across 214 pages,
+      14 of them on /best-golf-irons-2026/ alone. Measured sitewide, the four
+      trust promises were repeated 4,446 / 1,974 / 1,919 / 905 times in 411
+      different wordings. Stanford's web-credibility guideline #9 is "use
+      restraint with promotional content"; a disclosure read fourteen times is
+      read zero times. The page-level disclosures (early-disclosure, afd__text,
+      disclosure-box, qp__disclosure and the footer line) all remain, so every
+      page still discloses above its first affiliate link and in the footer.
+      The `disclosure` prop is kept so callers do not need changing and the
+      line can be restored in one place. */}
 </div>
 
 <style>
