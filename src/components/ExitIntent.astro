@@ -31,9 +31,9 @@ import { CHART_BALL_COUNT } from '../data/ball-brands';
   .exit-intent.visible { display: flex; }
   .exit-intent__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); }
   .exit-intent__inner {
-    position: relative; background: #fff; border-radius: 16px;
+    position: relative; background: #fff; border-radius: var(--r3);
     padding: 40px 36px; max-width: 440px; width: 90%; text-align: center;
-    box-shadow: 0 16px 48px rgba(0,0,0,.25); animation: exitSlideUp .3s ease;
+    box-shadow: var(--s2); animation: exitSlideUp .3s ease;
   }
   @keyframes exitSlideUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -56,21 +56,21 @@ import { CHART_BALL_COUNT } from '../data/ball-brands';
   .exit-intent__sub {
     font-size: 16px; color: var(--muted); line-height: 1.6; margin: 0 0 20px;
   }
-  .exit-intent__field { display: flex; gap: 0; border-radius: 8px; overflow: hidden; }
+  .exit-intent__field { display: flex; gap: 0; border-radius: var(--r2); overflow: hidden; }
   .exit-intent__input {
     flex: 1; padding: 12px 14px; border: 2px solid var(--border); border-right: none;
-    border-radius: 8px 0 0 8px; font-size: 16px; font-family: inherit;
+    border-radius: var(--r2) 0 0 var(--r2); font-size: 16px; font-family: inherit;
   }
   .exit-intent__input:focus { outline: none; border-color: var(--gold); }
   .exit-intent__btn {
     padding: 12px 20px; background: var(--green); color: #fff;
-    border: none; border-radius: 0 8px 8px 0; font-size: 16px;
+    border: none; border-radius: 0 var(--r2) var(--r2) 0; font-size: 16px;
     font-weight: 700; font-family: inherit; cursor: pointer; white-space: nowrap;
   }
   .exit-intent__btn:hover { background: var(--green-mid); }
   .exit-intent__disclaimer { font-size: 16px; color: var(--muted); margin: 10px 0 0; }
   .exit-intent__thanks {
-    padding: 14px 18px; background: var(--green); border-radius: 8px;
+    padding: 14px 18px; background: var(--green); border-radius: var(--r2);
     color: #fff; font-size: 16px; font-weight: 600; margin: 8px 0 0;
   }
   .exit-intent__skip {
@@ -81,9 +81,9 @@ import { CHART_BALL_COUNT } from '../data/ball-brands';
   .exit-intent__skip:hover { color: var(--text); }
   @media (max-width: 480px) {
     .exit-intent__inner { padding: 32px 24px; }
-    .exit-intent__field { flex-direction: column; border-radius: 8px; overflow: visible; }
-    .exit-intent__input { border-right: 2px solid var(--border); border-radius: 8px; }
-    .exit-intent__btn { border-radius: 8px; margin-top: 8px; }
+    .exit-intent__field { flex-direction: column; border-radius: var(--r2); overflow: visible; }
+    .exit-intent__input { border-right: 2px solid var(--border); border-radius: var(--r2); }
+    .exit-intent__btn { border-radius: var(--r2); margin-top: 8px; }
   }
 </style>
 

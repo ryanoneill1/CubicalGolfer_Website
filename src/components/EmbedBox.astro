@@ -19,7 +19,7 @@ const {
   height = 600,
 } = Astro.props;
 
-const iframeCode = `<iframe src="${embedUrl}" width="100%" height="${height}" style="border:none;border-radius:12px;max-width:720px" title="${title}"></iframe>
+const iframeCode = `<iframe src="${embedUrl}" width="100%" height="${height}" style="border:none;border-radius: var(--r2);max-width:720px" title="${title}"></iframe>
 <p style="font-size:16px;margin-top:4px">Source: <a href="${sourceUrl}">${sourceName}</a></p>`;
 const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
 ---
@@ -51,7 +51,7 @@ const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
 .embed-box {
   background: var(--cream-dark, #EDE9DF);
   border: 2px solid var(--gold, #C8A84B);
-  border-radius: 12px;
+  border-radius: var(--r2);
   padding: 24px;
   margin: 32px 0;
 }
@@ -82,7 +82,7 @@ const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
 .embed-box__tab {
   background: none;
   border: 1px solid var(--border, #D8D3C8);
-  border-radius: 6px;
+  border-radius: var(--r1);
   padding: 6px 14px;
   font-size: 16px;
   font-weight: 600;
@@ -100,7 +100,7 @@ const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
   font-size: 16px;
   padding: 12px;
   border: 1px solid var(--border, #D8D3C8);
-  border-radius: 8px;
+  border-radius: var(--r2);
   background: #fff;
   resize: none;
   box-sizing: border-box;
@@ -110,7 +110,7 @@ const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
   background: var(--green, #1E3A28);
   color: #fff;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--r1);
   padding: 8px 16px;
   font-size: 16px;
   font-weight: 600;

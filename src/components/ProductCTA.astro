@@ -105,9 +105,9 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
 .qp {
   margin: 20px 0 28px;
   border-left: 4px solid var(--green-mid, #264D33);
-  border-radius: var(--r2, 12px);
+  border-radius: var(--r2);
   background: linear-gradient(135deg, #f0f7f2 0%, var(--cream, #F4F1EA) 100%);
-  box-shadow: var(--s1, 0 2px 8px rgba(0,0,0,.06));
+  box-shadow: var(--s1);
   overflow: hidden;
 }
 
@@ -124,7 +124,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
   flex-shrink: 0;
   width: 80px;
   height: 80px;
-  border-radius: var(--r1, 6px);
+  border-radius: var(--r1);
   overflow: hidden;
   background: var(--white, #fff);
   border: 1px solid var(--border, #D8D3C8);
@@ -150,7 +150,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: var(--r3);
   margin-bottom: 8px;
 }
 
@@ -207,7 +207,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
   background: var(--green, #1E3A28);
   color: #fff;
   padding: 12px 20px;
-  border-radius: var(--r1, 6px);
+  border-radius: var(--r1);
   text-decoration: none;
   font-weight: 700;
   transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
@@ -216,7 +216,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
 .qp__cta:hover {
   background: #1a5c35;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  box-shadow: var(--s1);
 }
 .qp__cta-price { font-size: 20px; font-weight: 800; }
 .qp__cta-text  { font-size: 16px; font-weight: 700; }
@@ -230,7 +230,7 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
   text-decoration: none;
   padding: 8px 16px;
   border: 2px solid var(--green, #1E3A28);
-  border-radius: var(--r1, 6px);
+  border-radius: var(--r1);
   transition: background 0.15s;
 }
 .qp__alt:hover { background: rgba(30, 58, 40, 0.06); }

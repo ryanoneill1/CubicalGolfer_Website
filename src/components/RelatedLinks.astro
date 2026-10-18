@@ -46,7 +46,7 @@ if (!links || links.length === 0) return;
   padding: 24px;
   background: rgba(30, 58, 40, 0.04);
   border: 1px solid var(--border, #D8D3C8);
-  border-radius: var(--r2, 12px);
+  border-radius: var(--r2);
 }
 
 .related-links-section__heading {
@@ -69,14 +69,14 @@ if (!links || links.length === 0) return;
   padding: 16px;
   background: var(--white, #fff);
   border: 1px solid var(--border, #D8D3C8);
-  border-radius: var(--r1, 6px);
+  border-radius: var(--r1);
   text-decoration: none;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
 .related-links-section__card:hover {
   border-color: var(--green, #1E3A28);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: var(--s1);
 }
 
 .related-links-section__label {

@@ -144,19 +144,19 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
   <section style="padding:32px clamp(1.5rem,5vw,4rem) 0;max-width:1200px;margin:0 auto;">
     <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-text);margin:0 0 12px;text-align:center;">NOT SURE WHERE TO START?</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
-      <a href="/gear-quiz/" style="display:block;padding:16px;background:var(--green);border-radius:10px;text-decoration:none;text-align:center;">
+      <a href="/gear-quiz/" style="display:block;padding:16px;background:var(--green);border-radius: var(--r2);text-decoration:none;text-align:center;">
         <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">🎯 By Your Game</p>
         <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">4 questions → personalized picks</p>
       </a>
-      <a href="/best-golf-gear-under-100/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
+      <a href="/best-golf-gear-under-100/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius: var(--r2);text-decoration:none;text-align:center;">
         <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">💰 By Budget</p>
         <p style="font-size:16px;color:var(--muted);margin:0;">Best gear under $100</p>
       </a>
-      <a href="/best-golf-gear-2026/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
+      <a href="/best-golf-gear-2026/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius: var(--r2);text-decoration:none;text-align:center;">
         <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">🏆 By Category</p>
         <p style="font-size:16px;color:var(--muted);margin:0;">#1 pick in every category</p>
       </a>
-      <a href="/compare/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius:10px;text-decoration:none;text-align:center;">
+      <a href="/compare/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius: var(--r2);text-decoration:none;text-align:center;">
         <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">⚖️ Compare Two</p>
         <p style="font-size:16px;color:var(--muted);margin:0;">{COMPARISONS.length + ARTICLES.filter(a => /(?:^|\/)[a-z0-9-]+-vs-[a-z0-9-]+\/?$/.test(a.slug)).length} head-to-head tests</p>
       </a>
@@ -167,18 +167,18 @@ import EarlyDisclosure from '../components/EarlyDisclosure.astro';
   {(() => {
     const aff = getAffiliateLink('callaway-paradym-ai-smoke-max');
     return (
-      <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+      <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius: var(--r2);display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
           <div style="flex:1;min-width:200px;">
             <span style="font-size:16px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
             <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Callaway Paradym Ai Smoke Max Driver — ~$399</p>
             <p style="font-size:16px;margin:0;color:var(--muted);">Most forgiving driver we tested in 2026 — its AI face keeps mishits fast, so your miss still flies</p>
           </div>
           {aff?.url && (
-            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
+            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius: var(--r1);font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
           )}
           <a href="/compare/callaway-paradym-vs-taylormade-qi35/" class="featured-review-link">See Our Full Test →</a>
           {aff?.priceNote && (
-            <p style="font-size:16px;color:var(--green);background:rgba(30,58,40,.06);padding:6px 10px;border-radius:6px;margin:4px 0 0;width:100%;font-weight:500;">💡 {aff.priceNote}</p>
+            <p style="font-size:16px;color:var(--green);background:rgba(30,58,40,.06);padding:6px 10px;border-radius: var(--r1);margin:4px 0 0;width:100%;font-weight:500;">💡 {aff.priceNote}</p>
           )}
         </div>
     );

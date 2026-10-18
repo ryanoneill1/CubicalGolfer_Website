@@ -59,10 +59,10 @@ if (!items || items.length < 3) return;
 .toc-card {
   background: var(--white, #fff);
   border: 1.5px solid var(--border, #D8D3C8);
-  border-radius: var(--r2, 12px);
+  border-radius: var(--r2);
   margin: 20px 0 28px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: var(--s1);
 }
 
 .toc-header {
@@ -114,7 +114,7 @@ if (!items || items.length < 3) return;
   font-weight: 500;
   color: var(--body, #2D3F32);
   text-decoration: none;
-  border-radius: var(--r1, 6px);
+  border-radius: var(--r1);
   transition: background 0.15s, color 0.15s;
   line-height: 1.35;
 }

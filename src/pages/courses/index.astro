@@ -30,7 +30,7 @@ const schemas  = [breadcrumbSchema(meta.breadcrumbs)];
         <a href={`/courses/${city.slug}/`} class="article-card" aria-label={`Golf courses in ${city.city}, ${city.state}`}>
           <div class="art-thumb teal">
             <span class="art-badge tag-rev">COURSE GUIDE</span>
-            <img src={`/images/courses/${city.slug}-thumb.webp`} alt={`Golf courses in ${city.city}, ${city.state}`} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius:8px 8px 0 0;" />
+            <img src={`/images/courses/${city.slug}-thumb.webp`} alt={`Golf courses in ${city.city}, ${city.state}`} loading="lazy" width="400" height="260" style="width:100%;height:100%;object-fit:cover;border-radius: var(--r2) var(--r2) 0 0;" />
           </div>
           <div class="art-body">
             <p style="font-weight:700;font-size:16px;">Best Golf Courses in {city.city}, {city.state}</p>
@@ -44,7 +44,7 @@ const schemas  = [breadcrumbSchema(meta.breadcrumbs)];
       ))}
     </div>
 
-    <div style="margin-top:48px;background:var(--cream-dark);border-radius:12px;padding:28px">
+    <div style="margin-top:48px;background:var(--cream-dark);border-radius: var(--r2);padding:28px">
       <h2 style="margin-top:0">Gear Up Before Your Round</h2>
       <p>Whatever city you're playing in, the right gear makes the difference. Our tested picks for weekend golfers:</p>
       <div class="rel-links" style="margin-top:16px">

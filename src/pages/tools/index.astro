@@ -81,7 +81,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
     </div>
   </header>
 
-    <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius:10px;display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
+    <div class="hub-featured" style="margin:0 auto 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius: var(--r2);display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
     <div style="flex:1;min-width:200px;">
       <span style="font-size:16px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
       <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Garmin Approach R10 — ~$490</p>
@@ -90,7 +90,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
     {(() => {
       const aff = getAffiliateLink('garmin-approach-r10');
       return aff?.url ? (
-        <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius:6px;font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
+        <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius: var(--r1);font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
       ) : null;
     })()}
   </div>
@@ -179,7 +179,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
           </p>
           <h2 style="font-size:20px;color:var(--green);margin:0 0 16px;">Tools FAQ</h2>
           {toolsFaq.map(f => (
-            <details style="margin:0 0 10px;border:1px solid var(--border);border-radius:8px;padding:0;">
+            <details style="margin:0 0 10px;border:1px solid var(--border);border-radius: var(--r2);padding:0;">
               <summary style="padding:12px 16px;font-weight:700;font-size:16px;cursor:pointer;color:var(--green);">{f.q}</summary>
               <p style="padding:0 16px 12px;font-size:16px;line-height:1.7;color:var(--body);margin:0;">{f.a}</p>
             </details>

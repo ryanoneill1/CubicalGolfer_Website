@@ -150,7 +150,7 @@ const CATEGORIES = [
       <p class="hwt-intro" style="font-size:18px;line-height:1.6;color:var(--body);margin:0;">Every product reviewed on this site is independently purchased with our own money, then tested over multiple rounds at real courses before being ranked. This page is the full methodology — the standards every review on the site is held to.</p>
     </header>
     <!-- ─── WHO IS DOING THE TESTING ─── -->
-    <section style="margin:0 0 36px;padding:24px;background:rgba(30,58,40,0.04);border:1px solid var(--border);border-radius:12px;">
+    <section style="margin:0 0 36px;padding:24px;background:rgba(30,58,40,0.04);border:1px solid var(--border);border-radius: var(--r2);">
       <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Who is doing the testing</h2>
       <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start;">
         <!-- Author photo placeholder — if you do not have one, delete this entire <div> and remove the grid columns -->
@@ -219,7 +219,7 @@ const CATEGORIES = [
         Each product category has different things that matter. Below is the full criteria list we score against for each category, along with the minimum rounds before a product can be ranked.
       </p>
       {CATEGORIES.map(c => (
-        <div style="margin:0 0 28px;padding:20px 24px;border:1px solid var(--border);border-radius:10px;background:#fff;">
+        <div style="margin:0 0 28px;padding:20px 24px;border:1px solid var(--border);border-radius: var(--r2);background:#fff;">
           <h3 style="font-size:18px;color:var(--green);margin:0 0 4px;">{c.icon} {c.name}</h3>
           <p style="font-size:16px;color:var(--muted);margin:0 0 14px;">Minimum testing window: <strong>{c.rounds} rounds</strong></p>
           <ul style="font-size:16px;line-height:1.7;color:var(--body);margin:0;padding-left:20px;">
@@ -246,7 +246,7 @@ const CATEGORIES = [
       </ul>
     </section>
     <!-- ─── CONFLICT OF INTEREST / DISCLOSURE ─── -->
-    <section style="margin:0 0 36px;padding:24px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.3);border-radius:12px;">
+    <section style="margin:0 0 36px;padding:24px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.3);border-radius: var(--r2);">
       <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Conflict of interest disclosure</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
         Full transparency about how this site makes money and how that affects (or does not affect) our reviews:

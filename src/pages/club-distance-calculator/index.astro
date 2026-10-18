@@ -64,15 +64,15 @@ const clubs = [
     <p style="font-size:16px;color:var(--muted);margin:0 0 20px;">For the full reference chart, see our <a href="/golf-club-distance-chart/">Golf Club Distance Chart</a>. For swing speed data, see the <a href="/golf-swing-speed-chart/">Swing Speed Chart</a>.</p>
 
     <!-- INPUT -->
-    <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius:12px;margin:0 0 28px;">
+    <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius: var(--r2);margin:0 0 28px;">
       <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;">Enter your driver carry distance</h2>
       <p style="font-size:16px;color:var(--muted);margin:0 0 12px;">Carry distance = where the ball lands, not total distance with rollout. If you don't know your exact carry, estimate: most male golfers carry the driver 180-230 yards; most female golfers 130-180 yards.</p>
       <div style="display:flex;gap:12px;align-items:end;flex-wrap:wrap;">
         <div>
           <label for="dc-driver" style="font-weight:600;font-size:16px;display:block;margin:0 0 6px;">Driver carry (yards)</label>
-          <input type="number" id="dc-driver" min="100" max="320" value="210" style="width:140px;padding:12px;border:2px solid var(--green);border-radius:8px;font-size:20px;text-align:center;" />
+          <input type="number" id="dc-driver" min="100" max="320" value="210" style="width:140px;padding:12px;border:2px solid var(--green);border-radius: var(--r2);font-size:20px;text-align:center;" />
         </div>
-        <button id="dc-calc" type="button" style="padding:12px 24px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:16px;height:48px;">Calculate →</button>
+        <button id="dc-calc" type="button" style="padding:12px 24px;background:var(--green);color:#fff;border:none;border-radius: var(--r2);font-weight:700;cursor:pointer;font-size:16px;height:48px;">Calculate →</button>
       </div>
     </section>
 
@@ -102,14 +102,14 @@ const clubs = [
 
       <!-- Contextual recommendation tied to the gap this tool exposes.
            Not a generic sidebar: the gapping problem IS this tool's output. -->
-      <div style="margin:20px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-left:3px solid var(--green);border-radius:10px;">
+      <div style="margin:20px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-left:3px solid var(--green);border-radius: var(--r2);">
         <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎯 Found a gap bigger than 25 yards?</p>
         <p style="font-size:16px;line-height:1.6;margin:0 0 10px;">
           Look at the jump between your longest iron and your shortest fairway wood. If it is more than
           25 yards, that is a club you are missing, and it is the most common gap in a weekend bag. A
           hybrid fills it more reliably than a 3- or 4-iron for most swing speeds.
         </p>
-        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
+        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
         <p style="font-size:15px;color:var(--muted);margin:10px 0 0;">
           More on gapping: <a href="/best-hybrid-clubs-2026/">best hybrids</a> ·
           <a href="/golf-club-distance-chart/">full distance chart</a> ·
@@ -127,7 +127,7 @@ const clubs = [
     </section>
 
     <!-- RELATED -->
-    <section style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+    <section style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius: var(--r2);">
       <h2 style="font-size:16px;color:var(--green);margin:0 0 10px;">Related guides</h2>
       <ul style="font-size:16px;line-height:1.8;margin:0;padding:0 0 0 18px;">
         <li><a href="/golf-club-distance-chart/">Golf Club Distance Chart</a> — full reference by swing speed</li>
@@ -139,9 +139,9 @@ const clubs = [
     </section>
 
     <!-- EMBED -->
-    <div style="margin:0 0 28px;padding:16px;background:rgba(30,58,40,.03);border-radius:8px;">
+    <div style="margin:0 0 28px;padding:16px;background:rgba(30,58,40,.03);border-radius: var(--r2);">
       <p style="font-size:16px;font-weight:600;color:var(--green);margin:0 0 8px;">Share or embed this tool</p>
-      <input type="text" readonly value='<iframe src="https://www.cubicalgolfer.com/club-distance-calculator/" width="100%" height="700" frameborder="0"></iframe>' style="width:100%;padding:8px;font-size:16px;border:1px solid var(--border);border-radius:6px;color:var(--muted);" onclick="this.select();" />
+      <input type="text" readonly value='<iframe src="https://www.cubicalgolfer.com/club-distance-calculator/" width="100%" height="700" frameborder="0"></iframe>' style="width:100%;padding:8px;font-size:16px;border:1px solid var(--border);border-radius: var(--r1);color:var(--muted);" onclick="this.select();" />
     </div>
 
     <!-- FAQ -->

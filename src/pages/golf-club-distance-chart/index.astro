@@ -78,12 +78,12 @@ const schemas = [
     </div>
 
 
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#FAF8F2;border:1px solid #E5E0D5;border-radius:10px;padding:16px 18px;margin:22px 0;">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#FAF8F2;border:1px solid #E5E0D5;border-radius: var(--r2);padding:16px 18px;margin:22px 0;">
       <div>
         <p style="margin:0;font-weight:700;font-size:16px;color:#1a1a1a;">Download the Golf Club Distance Chart (PDF)</p>
         <p style="margin:4px 0 0;font-size:16px;color:#333;">Printable carry and total distances for all 13 clubs, plus the full swing-speed table. Take it to the range.</p>
       </div>
-      <a href="/downloads/golf-club-distance-chart.pdf" download style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;">Download Chart (PDF) &#8594;</a>
+      <a href="/downloads/golf-club-distance-chart.pdf" download style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius: var(--r2);font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;">Download Chart (PDF) &#8594;</a>
     </div>
 
 
@@ -92,14 +92,14 @@ const schemas = [
       <p>Distances are based on average amateur data from launch monitor studies, scaled proportionally to your driver swing speed. Your actual distances may vary ±10% based on strike quality, conditions, and equipment.</p>
     </div>
 
-    <p style="background:var(--cream,#F4F1EA);border-left:3px solid var(--green,#1E3A28);border-radius:6px;padding:12px 16px;font-size:16px;margin:0 0 16px;">Know your driver <strong>distance</strong> but not your swing speed? Our <a href="/club-distance-calculator/">golf club distance calculator</a> builds the same personalized chart from your driver carry instead.</p>
+    <p style="background:var(--cream,#F4F1EA);border-left:3px solid var(--green,#1E3A28);border-radius: var(--r1);padding:12px 16px;font-size:16px;margin:0 0 16px;">Know your driver <strong>distance</strong> but not your swing speed? Our <a href="/club-distance-calculator/">golf club distance calculator</a> builds the same personalized chart from your driver carry instead.</p>
 
     <section id="calculator">
       <h2>Your Driver Swing Speed</h2>
       <div style="display:flex;align-items:center;gap:16px;margin:16px 0 8px;">
         <input type="range" id="speed-slider" min="60" max="120" value="90" step="1" style="flex:1;height:8px;accent-color:var(--green,#1E3A28);" />
         <div style="display:flex;align-items:baseline;gap:4px;">
-          <input type="number" id="speed-input" value="90" min="60" max="120" style="width:56px;font-size:20px;font-weight:700;text-align:center;border:2px solid var(--border,#e0ddd5);border-radius:6px;padding:4px;" />
+          <input type="number" id="speed-input" value="90" min="60" max="120" style="width:56px;font-size:20px;font-weight:700;text-align:center;border:2px solid var(--border,#e0ddd5);border-radius: var(--r1);padding:4px;" />
           <span style="font-size:16px;color:var(--muted,#888);">mph</span>
         </div>
       </div>
@@ -113,7 +113,7 @@ const schemas = [
               <td style="font-weight:600;white-space:nowrap;">{r.name}</td>
               <td class="cmp-num" style="font-weight:600;">{r.carry}</td>
               <td class="cmp-num" style="">{r.total}</td>
-              <td><div style={`height:16px;border-radius:4px;background:${r.color};width:${r.pct}%;min-width:8px;`}></div></td>
+              <td><div style={`height:16px;border-radius: var(--r1);background:${r.color};width:${r.pct}%;min-width:8px;`}></div></td>
             </tr>
           ))}
         </tbody>
@@ -121,14 +121,14 @@ const schemas = [
 
       <!-- Contextual recommendation tied to the gap this tool exposes.
            Not a generic sidebar: the gapping problem IS this tool's output. -->
-      <div style="margin:20px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-left:3px solid var(--green);border-radius:10px;">
+      <div style="margin:20px 0;padding:16px 20px;background:rgba(30,58,40,.04);border-left:3px solid var(--green);border-radius: var(--r2);">
         <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin:0 0 8px;">🎯 Found a gap bigger than 25 yards?</p>
         <p style="font-size:16px;line-height:1.6;margin:0 0 10px;">
           Look at the jump between your longest iron and your shortest fairway wood. If it is more than
           25 yards, that is a club you are missing, and it is the most common gap in a weekend bag. A
           hybrid fills it more reliably than a 3- or 4-iron for most swing speeds.
         </p>
-        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
+        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
         <p style="font-size:15px;color:var(--muted);margin:10px 0 0;">
           More on gapping: <a href="/best-hybrid-clubs-2026/">best hybrids</a> ·
           <a href="/golf-club-distance-chart/">full distance chart</a> ·
@@ -136,7 +136,7 @@ const schemas = [
         </p>
       </div>
 
-      <div id="gap-alert" style="display:none;margin:20px 0;padding:16px;border-left:4px solid var(--gold,#C9A84C);background:var(--bg-alt,#f8f7f4);border-radius:0 8px 8px 0;">
+      <div id="gap-alert" style="display:none;margin:20px 0;padding:16px;border-left:4px solid var(--gold,#C9A84C);background:var(--bg-alt,#f8f7f4);border-radius: 0 var(--r2) var(--r2) 0;">
         <p style="font-weight:700;margin:0 0 8px;">⚠️ Bag Gaps Detected</p>
         <div id="gap-list"></div>
       </div>
@@ -213,9 +213,9 @@ const schemas = [
       <p>A launch monitor makes this trivial — even a budget unit measures carry within a few yards outdoors — but an open range with known markers and honest median-keeping gets you 90% there. Write the numbers on a card, tape it inside your bag, and re-run the session each spring. Distances drift with speed, fitness, and ball changes more than most golfers expect.</p>
     </section>
 
-      <div style="margin:0 0 20px;padding:14px 18px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;">
+      <div style="margin:0 0 20px;padding:14px 18px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius: 0 var(--r2) var(--r2) 0;">
         <p style="margin:0 0 10px;font-size:16px;line-height:1.6;"><strong>Measuring the session.</strong> Both routes above need a number you trust. A budget launch monitor gives you carry indoors or out; a rangefinder gives you the distance to the marker you just hit to, which is all the open-range method needs. Either beats guessing, and both are about $199.</p>
-        <p style="margin:0;"><a href={getAffiliateLink('shot-scope-lm1').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Shot Scope LM1" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} →</a> <a href={getAffiliateLink('precision-pro-nx9-hd').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Precision Pro NX9 HD" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius:7px;text-decoration:none;font-size:15px;white-space:nowrap;">Precision Pro NX9 HD {getAffiliateLink('precision-pro-nx9-hd').price} →</a></p>
+        <p style="margin:0;"><a href={getAffiliateLink('shot-scope-lm1').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Shot Scope LM1" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} →</a> <a href={getAffiliateLink('precision-pro-nx9-hd').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Precision Pro NX9 HD" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Precision Pro NX9 HD {getAffiliateLink('precision-pro-nx9-hd').price} →</a></p>
       </div>
 
     <section>
@@ -304,7 +304,7 @@ function update() {
       <td style="font-weight:600;white-space:nowrap;">${name}</td>
       <td style="text-align:center;font-weight:600;">${carry}</td>
       <td style="text-align:center;">${total}</td>
-      <td><div style="height:16px;border-radius:4px;background:${color};width:${pct}%;min-width:8px;transition:width .3s;"></div></td>
+      <td><div style="height:16px;border-radius: var(--r1);background:${color};width:${pct}%;min-width:8px;transition:width .3s;"></div></td>
     </tr>`;
   });
 

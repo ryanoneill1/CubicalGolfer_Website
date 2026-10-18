@@ -88,7 +88,7 @@ function outboundFor(url: string | null | undefined): string {
       <tbody>
         {brandBalls.map((b: any) => (
           <tr>
-            <td>{ballThumb(b) && <img src={ballThumb(b)} alt={b.name} width="34" height="34" loading="lazy" style="vertical-align:middle;margin-right:8px;border-radius:4px;" />}{b.name}</td>
+            <td>{ballThumb(b) && <img src={ballThumb(b)} alt={b.name} width="34" height="34" loading="lazy" style="vertical-align:middle;margin-right:8px;border-radius: var(--r1);" />}{b.name}</td>
             <td class="cmp-num">{b.compression}</td>
             <td>{b.cover}</td>
             <td class="cmp-num">~${b.price}</td>

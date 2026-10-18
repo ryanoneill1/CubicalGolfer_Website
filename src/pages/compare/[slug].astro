@@ -189,7 +189,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
   </header>
 
   {/* ── FRESHNESS BANNER ── */}
-  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+  <div class="freshness-banner" style="margin:0 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius: 0 var(--r2) var(--r2) 0;font-size:13px;color:var(--muted);display:flex;align-items:center;gap:8px;">
     <span style="font-size:15px;">✅</span>
     <span><strong>Updated {c.dateModified || c.datePublished || '2026'}</strong> — {c.tested === false
       ? 'Built from published specifications, manufacturer data and owner reports — we have not played both of these head to head.'
@@ -298,7 +298,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         {affA && (
           <div class="compare-buy-card">
             {affA.imgSrc && (
-              <img src={affA.imgSrc} alt={affA.imgAlt || nameA} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius:8px;object-fit:contain;" loading="lazy" />
+              <img src={affA.imgSrc} alt={affA.imgAlt || nameA} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius: var(--r2);object-fit:contain;" loading="lazy" />
             )}
             <span class="compare-buy-label">{nameA}</span>
             <span class="compare-buy-price">{affA.price}</span>
@@ -320,7 +320,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         {affB && (
           <div class="compare-buy-card">
             {affB.imgSrc && (
-              <img src={affB.imgSrc} alt={affB.imgAlt || nameB} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius:8px;object-fit:contain;" loading="lazy" />
+              <img src={affB.imgSrc} alt={affB.imgAlt || nameB} width="120" height="120" style="display:block;margin:0 auto 12px;border-radius: var(--r2);object-fit:contain;" loading="lazy" />
             )}
             <span class="compare-buy-label">{nameB}</span>
             <span class="compare-buy-price">{affB.price}</span>
@@ -374,7 +374,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 
     {/* ── WHAT ACTUALLY MATTERS FOR WEEKEND GOLFERS ── */}
     {c.weekendGolfer && (
-      <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius:12px;padding:24px;margin:24px 0;">
+      <div id="what-matters-for-weekend-golfers" class="weekend-golfer-box" style="background:var(--cream-dark);border:1px solid var(--border);border-radius: var(--r2);padding:24px;margin:24px 0;">
         <h2 style="font-size:20px;margin:0 0 12px;color:var(--green)">What Actually Matters for Weekend Golfers</h2>
         <p style="font-size:15px;line-height:1.7;color:var(--body);margin:0">{c.weekendGolfer}</p>
       </div>
@@ -398,7 +398,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 
     {/* ── POST-VERDICT CTA — enhanced with urgency ── */}
     {winnerAff && (
-      <div class="post-verdict-cta" style="background:var(--green);border-radius:12px;padding:28px;margin:32px 0;text-align:center;">
+      <div class="post-verdict-cta" style="background:var(--green);border-radius: var(--r2);padding:28px;margin:32px 0;text-align:center;">
         <p style="color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
         <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;">🏆 {winnerName}</p>
         <p style="color:rgba(255,255,255,.8);font-size:14px;margin:0 0 16px;">
@@ -407,7 +407,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
         <a href={winnerAff.url} class="post-verdict-btn" target="_blank"
           rel="nofollow noopener sponsored"
           aria-label={`Buy ${winnerName} at ${winnerAff.retailer}`}
-          style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:800;padding:16px 40px;border-radius:10px;text-decoration:none;transition:transform .15s,background .15s;">
+          style="display:inline-block;background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:800;padding:16px 40px;border-radius: var(--r2);text-decoration:none;transition:transform .15s,background .15s;">
           Check Today's Price →
         </a>
         <p style="color:rgba(255,255,255,.5);font-size:11px;margin:8px 0 0;">Affiliate link — we earn a small commission at no extra cost to you</p>

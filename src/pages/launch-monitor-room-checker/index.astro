@@ -90,7 +90,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     </header>
 
     <!-- TRUST NOTE -->
-    <div style="margin:0 0 20px;padding:10px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius:0 8px 8px 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
+    <div style="margin:0 0 20px;padding:10px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius: 0 var(--r2) var(--r2) 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
       <span style="font-size:16px;">✅</span>
       <span><strong>Room thresholds tested in real spaces</strong> — we set up each monitor in rooms from 7ft basements to 10ft garages and measured the actual minimum clearances needed for full swings. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
     </div>
@@ -98,20 +98,20 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     <p style="font-size:16px;color:var(--muted);margin:0 0 20px;">Based on our testing of 6 monitors in spaces from 7-foot basements to 10-foot garages. See <a href="/best-golf-launch-monitors-2026/">best launch monitors</a> for full reviews and <a href="/best-launch-monitor-low-ceiling/">low-ceiling recommendations</a> for detailed guidance.</p>
 
     <!-- INPUT -->
-    <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius:12px;margin:0 0 28px;">
+    <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius: var(--r2);margin:0 0 28px;">
       <h2 style="font-size:18px;color:var(--green);margin:0 0 16px;">Enter your room dimensions</h2>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
         <div>
           <label for="rm-ceiling" style="font-weight:600;font-size:16px;display:block;margin:0 0 6px;">Ceiling height (feet)</label>
-          <input type="number" id="rm-ceiling" min="6" max="15" step="0.5" value="8.5" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:16px;" />
+          <input type="number" id="rm-ceiling" min="6" max="15" step="0.5" value="8.5" style="width:100%;padding:10px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;" />
         </div>
         <div>
           <label for="rm-depth" style="font-weight:600;font-size:16px;display:block;margin:0 0 6px;">Room depth/length (feet)</label>
-          <input type="number" id="rm-depth" min="6" max="40" step="1" value="16" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:16px;" />
+          <input type="number" id="rm-depth" min="6" max="40" step="1" value="16" style="width:100%;padding:10px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;" />
         </div>
         <div>
           <label for="rm-height" style="font-weight:600;font-size:16px;display:block;margin:0 0 6px;">Your height</label>
-          <select id="rm-height" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;font-size:16px;">
+          <select id="rm-height" style="width:100%;padding:10px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;">
             <option value="0">Any height</option>
             <option value="68">5'8" or under</option>
             <option value="72">5'9" - 6'0"</option>
@@ -120,7 +120,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
           </select>
         </div>
       </div>
-      <button id="rm-check" type="button" style="margin:16px 0 0;padding:12px 24px;background:var(--green);color:#fff;border:none;border-radius:8px;font-weight:700;cursor:pointer;font-size:16px;">Check My Room →</button>
+      <button id="rm-check" type="button" style="margin:16px 0 0;padding:12px 24px;background:var(--green);color:#fff;border:none;border-radius: var(--r2);font-weight:700;cursor:pointer;font-size:16px;">Check My Room →</button>
     </section>
 
     <!-- RESULTS -->
@@ -132,10 +132,10 @@ import { ROBOTS_INDEX } from '../../lib/seo';
           return (
             <div class="rm-card" data-ceiling={m.minCeiling} data-depth={m.minDepth} data-behind={m.behindBall} data-idx={idx}
               data-tier={m.type === 'Photometric' ? 3 : m.type === 'Dual Doppler' ? 2 : m.type === 'Camera + Doppler' ? 1 : 0}
-                 style="padding:20px;border:2px solid var(--border);border-radius:12px;background:#fff;transition:opacity .2s,border-color .2s;">
+                 style="padding:20px;border:2px solid var(--border);border-radius: var(--r2);background:#fff;transition:opacity .2s,border-color .2s;">
               <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
                 <div style="flex:1;min-width:220px;">
-                  <span class="rm-fit-badge" style="display:none;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:4px;margin:0 0 8px;"></span>
+                  <span class="rm-fit-badge" style="display:none;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius: var(--r1);margin:0 0 8px;"></span>
                   <p style="font-weight:700;font-size:17px;margin:0 0 4px;color:var(--green);">{m.name}</p>
                   <p style="font-size:16px;color:var(--muted);margin:0 0 8px;">{m.type} · {aff.price} · Min ceiling: {m.minCeiling}ft · Min depth: {m.minDepth}ft</p>
                   <p class="rm-why" style="font-size:16px;margin:0 0 6px;color:var(--body);"><strong>Why it fits:</strong> {m.whyFits}</p>
@@ -144,7 +144,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
                 </div>
                 <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;">
                   <a href={aff.url} class="rm-buy-btn" target="_blank" rel="nofollow noopener sponsored"
-                     style="background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;text-align:center;">
+                     style="background:var(--gold);color:#1a1a1a;padding:10px 18px;border-radius: var(--r2);font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;text-align:center;">
                     {aff.price} — Check Price →
                   </a>
                   <a href={m.reviewSlug} style="color:var(--green);font-weight:600;font-size:16px;text-decoration:none;text-align:center;">
@@ -158,7 +158,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       </div>
 
       <!-- NO FIT FALLBACK -->
-      <div id="rm-no-fit" style="display:none;margin:20px 0;padding:20px;background:rgba(200,168,75,.06);border:1px solid rgba(200,168,75,.2);border-radius:12px;">
+      <div id="rm-no-fit" style="display:none;margin:20px 0;padding:20px;background:rgba(200,168,75,.06);border:1px solid rgba(200,168,75,.2);border-radius: var(--r2);">
         <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 8px;">🤔 No perfect fit? Here are your best compromises:</p>
         <p style="font-size:16px;color:var(--body);margin:0 0 12px;">If your room is too small for any monitor at full swing, you still have options:</p>
         <div style="font-size:16px;line-height:1.7;">
@@ -176,16 +176,16 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     </section>
 
     <!-- COMPLETE SETUP CTA -->
-    <div style="margin:0 0 28px;padding:20px 24px;background:var(--green);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+    <div style="margin:0 0 28px;padding:20px 24px;background:var(--green);border-radius: var(--r2);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
       <div>
         <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 4px;">Ready to build your setup?</p>
         <p style="font-size:16px;color:#fff;margin:0;">See complete simulator builds at every budget — from $1,500 apartments to $5,000 garages.</p>
       </div>
-      <a href="/how-much-does-golf-simulator-cost/" style="background:var(--gold);color:#1a1a1a;padding:12px 24px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;">See Build Costs →</a>
+      <a href="/how-much-does-golf-simulator-cost/" style="background:var(--gold);color:#1a1a1a;padding:12px 24px;border-radius: var(--r2);font-weight:700;font-size:16px;text-decoration:none;white-space:nowrap;">See Build Costs →</a>
     </div>
 
     <!-- RELATED -->
-    <section style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius:10px;">
+    <section style="margin:0 0 24px;padding:20px 24px;background:#fff;border:1px solid var(--border);border-radius: var(--r2);">
       <h2 style="font-size:16px;color:var(--green);margin:0 0 10px;">Related guides</h2>
       <ul style="font-size:16px;line-height:1.8;margin:0;padding:0 0 0 18px;">
         <li><a href="/best-golf-launch-monitors-2026/">Best Launch Monitors</a> — full reviews and rankings</li>
@@ -197,9 +197,9 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     </section>
 
     <!-- EMBED -->
-    <div style="margin:0 0 28px;padding:16px;background:rgba(30,58,40,.03);border-radius:8px;">
+    <div style="margin:0 0 28px;padding:16px;background:rgba(30,58,40,.03);border-radius: var(--r2);">
       <p style="font-size:16px;font-weight:600;color:var(--green);margin:0 0 8px;">Share or embed this tool</p>
-      <input type="text" readonly value='<iframe src="https://www.cubicalgolfer.com/launch-monitor-room-checker/" width="100%" height="700" frameborder="0"></iframe>' style="width:100%;padding:8px;font-size:16px;border:1px solid var(--border);border-radius:6px;color:var(--muted);" onclick="this.select();" />
+      <input type="text" readonly value='<iframe src="https://www.cubicalgolfer.com/launch-monitor-room-checker/" width="100%" height="700" frameborder="0"></iframe>' style="width:100%;padding:8px;font-size:16px;border:1px solid var(--border);border-radius: var(--r1);color:var(--muted);" onclick="this.select();" />
     </div>
 
     <!-- FAQ -->

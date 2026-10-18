@@ -31,26 +31,26 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
     <p>Have a question about a gear review? Spotted an error? Want to suggest a product for testing? I read and respond to every message.</p>
 
     <!-- ── Contact Form ── -->
-    <div style="background:var(--cream-dark);border-radius:12px;padding:32px;margin:32px 0;">
+    <div style="background:var(--cream-dark);border-radius: var(--r2);padding:32px;margin:32px 0;">
       <h2 style="margin-top:0;">Send a Message</h2>
 
       <form id="contact-form" style="display:flex;flex-direction:column;gap:16px;">
         <div>
           <label for="contact-name" style="display:block;font-size:16px;font-weight:600;margin-bottom:4px;">Name</label>
           <input type="text" id="contact-name" name="name" required autocomplete="name"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;box-sizing:border-box;" />
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;font-family:inherit;box-sizing:border-box;" />
         </div>
 
         <div>
           <label for="contact-email" style="display:block;font-size:16px;font-weight:600;margin-bottom:4px;">Email</label>
           <input type="email" id="contact-email" name="email" required autocomplete="email"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;box-sizing:border-box;" />
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;font-family:inherit;box-sizing:border-box;" />
         </div>
 
         <div>
           <label for="contact-topic" style="display:block;font-size:16px;font-weight:600;margin-bottom:4px;">Topic</label>
           <select id="contact-topic" name="topic" required
-            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;background:#fff;box-sizing:border-box;">
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;font-family:inherit;background:#fff;box-sizing:border-box;">
             <option value="">Select a topic…</option>
             <option value="gear-question">Gear question / recommendation</option>
             <option value="correction">Correction or error report</option>
@@ -63,7 +63,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
         <div>
           <label for="contact-message" style="display:block;font-size:16px;font-weight:600;margin-bottom:4px;">Message</label>
           <textarea id="contact-message" name="message" required rows="5"
-            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:8px;font-size:16px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
+            style="width:100%;padding:10px 14px;border:1px solid var(--border);border-radius: var(--r2);font-size:16px;font-family:inherit;resize:vertical;box-sizing:border-box;"></textarea>
         </div>
 
         <!-- Honeypot — hidden from humans, bots fill it and get rejected -->
@@ -71,7 +71,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
           style="position:absolute;left:-9999px;opacity:0;height:0;width:0;" />
 
         <button type="submit" id="contact-submit"
-          style="background:var(--green);color:#fff;font-size:16px;font-weight:700;padding:12px 24px;border:none;border-radius:8px;cursor:pointer;align-self:flex-start;">
+          style="background:var(--green);color:#fff;font-size:16px;font-weight:700;padding:12px 24px;border:none;border-radius: var(--r2);cursor:pointer;align-self:flex-start;">
           Send Message
         </button>
       </form>
@@ -81,7 +81,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
     </div>
 
     <!-- ── Email fallback ── -->
-    <div style="background:rgba(30,58,40,.04);border-radius:12px;padding:24px;margin:24px 0;">
+    <div style="background:rgba(30,58,40,.04);border-radius: var(--r2);padding:24px;margin:24px 0;">
       <p style="margin:0 0 4px;font-size:16px;font-weight:600;">Prefer email?</p>
       <p style="font-size:18px;margin-bottom:0;"><a href="mailto:hello@cubicalgolfer.com" style="color:var(--green);font-weight:600;">hello@cubicalgolfer.com</a></p>
       <p style="font-size:16px;color:var(--muted);">Typical response time: within 48 hours</p>
@@ -149,7 +149,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
       .then(function(data) {
         if (data.success) {
           form.style.display = 'none';
-          feedback.innerHTML = '<div style="background:var(--green);color:#fff;padding:20px;border-radius:8px;font-weight:600;">\u2705 Message sent! I\u2019ll respond within 48 hours.</div>';
+          feedback.innerHTML = '<div style="background:var(--green);color:#fff;padding:20px;border-radius: var(--r2);font-weight:600;">\u2705 Message sent! I\u2019ll respond within 48 hours.</div>';
         } else {
           throw new Error(data.message || 'Failed');
         }
@@ -157,7 +157,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs)];
       .catch(function() {
         btn.textContent = 'Send Message';
         btn.disabled = false;
-        feedback.innerHTML = '<div style="background:#FEE2E2;color:#991B1B;padding:16px;border-radius:8px;font-size:16px;">Something went wrong. Please email <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a> directly.</div>';
+        feedback.innerHTML = '<div style="background:#FEE2E2;color:#991B1B;padding:16px;border-radius: var(--r2);font-size:16px;">Something went wrong. Please email <a href="mailto:hello@cubicalgolfer.com">hello@cubicalgolfer.com</a> directly.</div>';
       });
     });
   })();

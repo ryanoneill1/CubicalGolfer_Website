@@ -66,9 +66,9 @@ function barColor(score: number): string {
 .cgs {
   margin: 20px 0 28px;
   border: 1px solid var(--border, #D8D3C8);
-  border-radius: var(--r2, 12px);
+  border-radius: var(--r2);
   background: var(--white, #fff);
-  box-shadow: var(--s1, 0 2px 8px rgba(0,0,0,.06));
+  box-shadow: var(--s1);
   overflow: hidden;
 }
 
@@ -116,7 +116,7 @@ function barColor(score: number): string {
   font-weight: 800;
   letter-spacing: 0.06em;
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: var(--r3);
 }
 .vd--rec  { background: rgba(30,58,40,0.1); color: var(--green, #1E3A28); }
 .vd--val  { background: rgba(200,168,75,0.15); color: #8B6E14; }
@@ -151,13 +151,13 @@ function barColor(score: number): string {
   grid-row: 1;
   height: 8px;
   background: var(--cream-dark, #EAE6DD);
-  border-radius: 4px;
+  border-radius: var(--r1);
   overflow: hidden;
 }
 
 .cgs__bar-fill {
   height: 100%;
-  border-radius: 4px;
+  border-radius: var(--r1);
   transition: width 0.6s ease;
 }
 .bar--high { background: var(--green, #1E3A28); }

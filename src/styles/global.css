@@ -72,10 +72,15 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
                              .4 rendered 3.35-3.63:1 and failed AA; .6 clears
                              5.56:1 on --green and 6.30:1 on --text.            */
   --border:     #D8D3C8;
+  /* Sprint 174 — the whole radius/elevation vocabulary. Measured before this:
+     26 distinct border-radius values and 17 box-shadows in the built output,
+     against a competitor range of 2-5 and 1-2. Token values were chosen as
+     the three already most used (6px/10px/16px) so collapsing onto them
+     moves most boxes by 0-2px instead of restyling the site. */
   --s1:         0 2px 8px rgba(0,0,0,.06);
   --s2:         0 8px 24px rgba(0,0,0,.10);
   --r1:         6px;
-  --r2:         12px;
+  --r2:         10px;   /* was 12px; 10px is the most-used raw value */
   --r3:         16px;
   --nav-h:      64px;
   /* Sprint 150 — the text column is fluid, not fixed.
@@ -107,7 +112,24 @@ html { scroll-behavior: smooth; font-size: 17px; border: 0; } /* 16→17px: edit
      132 characters. The thing that made our page look wrong was never the
      width — it was the prose starting 288px right of the heading. */
   --prose-w:     clamp(634px, 488.1px + 16.27vw, 846px);
+  /* ── Sprint 174 — ONE body-copy definition ──────────────────────
+   * Body copy had six definitions: .section-body inherited a flat 17px from
+   * <html>, .art-content p was 16.5px/1.8, .intro-box p 16px/1.75,
+   * .quick-answer-box p 16px/1.7, .email-inline__copy 16px/1.6, and this
+   * token. Measured on one live article page: three sizes and five
+   * line-height ratios across body paragraphs. That spread is what reads as
+   * 'the site changes between pages'.
+   *
+   * The token itself is UNCHANGED and stays fluid. I first tried pinning it
+   * to a flat 18px; validate-typography rejected that, correctly — --prose-w
+   * reaches 846px, and 846px of 18px type is 103 characters per line, past
+   * WCAG 1.4.8's ceiling of 80. The fluid size is what holds the measure in
+   * band as the column widens: both ends of the clamp land near 78 CPL.
+   *
+   * So the fix is not a new value — it is making every body context use the
+   * value that already exists, plus one shared line-height. */
   --prose-size:  clamp(18px, 13.85px + 0.4615vw, 24px);
+  --prose-lh:    1.7;
   /* Sprint 157 — headings DERIVE from the body size instead of being fixed.
      Sprint 150 made body prose fluid (18→24px) and left the headings where
      they were, so the scale quietly inverted. Measured at a 1411px window:
@@ -183,12 +205,12 @@ input, select, textarea { font-size: 16px; } /* ≥16px prevents iOS Safari auto
 
 /* Skip link */
 .skip { position: absolute; top: -9999px; left: -9999px; background: var(--green);
-  color: #fff; padding: 8px 16px; border-radius: 0 0 6px 0; font-size: 16px;
+  color: #fff; padding: 8px 16px; border-radius: 0 0 var(--r1) 0; font-size: 16px;
   font-weight: 600; z-index: 9999; }
 .skip:focus { top: 0; left: 0; }
-*:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: 4px; }
+*:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; border-radius: var(--r1); }
 a:focus-visible, button:focus-visible, summary:focus-visible, select:focus-visible {
-  outline: 2px solid var(--green); outline-offset: 2px; border-radius: 4px;
+  outline: 2px solid var(--green); outline-offset: 2px; border-radius: var(--r1);
 }
 
 /* ── NAV ── */
@@ -201,7 +223,7 @@ nav.site-nav {
 }
 .nav-links { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
 .nav-links a {
-  padding: 8px 16px; border-radius: 20px; font-size: 16px; font-weight: 500;
+  padding: 8px 16px; border-radius: var(--r3); font-size: 16px; font-weight: 500;
   color: var(--text); transition: background .2s, color .2s; white-space: nowrap;
 }
 .nav-links a:hover { background: var(--cream); color: var(--green); }
@@ -210,12 +232,12 @@ nav.site-nav {
 .nav-links a.nav-cta:hover { background: var(--gold-dark); }
 .nav-toggle {
   display: none; background: none; border: none; cursor: pointer;
-  padding: 8px; border-radius: 8px; color: var(--text);
+  padding: 8px; border-radius: var(--r2); color: var(--text);
   flex-direction: column; gap: 5px; align-items: center; justify-content: center;
 }
 .nav-toggle span {
   display: block; width: 22px; height: 2px;
-  background: currentColor; border-radius: 2px; transition: transform .3s, opacity .3s;
+  background: currentColor; border-radius: var(--r1); transition: transform .3s, opacity .3s;
 }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
@@ -269,7 +291,7 @@ nav.site-nav {
 .art-excerpt { color: rgba(255,255,255,.85); font-size: 17px; line-height: 1.6; max-width: 680px; }
 .art-freshness { color: rgba(255,255,255,.6); font-size: 16px; margin-top: 12px; }
 .art-tag-lg {
-  display: inline-block; padding: 4px 12px; border-radius: 4px;
+  display: inline-block; padding: 4px 12px; border-radius: var(--r1);
   font-size: 16px; font-weight: 700; letter-spacing: .08em; color: #fff; margin-bottom: 16px;
 }
 .tag-buy  { background: #B8922A; }
@@ -283,7 +305,7 @@ nav.site-nav {
 .author-box {
   display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
   margin: 12px 0 24px; padding: 12px 20px;
-  background: #f0f7f2; border-radius: 8px;
+  background: #f0f7f2; border-radius: var(--r2);
   border-bottom: 2px solid #B8DFC5;
   font-size: 16px; color: #556B5C;
 }
@@ -305,7 +327,7 @@ nav.site-nav {
   margin-left: auto; background: #1E3A28;
   color: #E8F0EB;
   font-size: 16px; font-weight: 600; padding: 4px 12px;
-  border-radius: 20px; white-space: nowrap;
+  border-radius: var(--r3); white-space: nowrap;
 }
 
 /* Article content area */
@@ -419,7 +441,12 @@ nav.site-nav {
   font-size: var(--h3-size); font-weight: 700; color: var(--text);
   margin: 48px 0 12px;
 }
-.art-content p  { font-size: 16.5px; line-height: 1.8; color: var(--body); margin-bottom: 20px; }
+/* The article body renders into .section-body as raw text, so it inherited
+   17px from <html>. Give it the same token as every other body context. */
+.art-content .section-body,
+.compare-body .section-body,
+.local-body .section-body { font-size: var(--prose-size); line-height: var(--prose-lh); }
+.art-content p  { font-size: var(--prose-size); line-height: var(--prose-lh); color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 12px; }
 .art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta) {
@@ -451,18 +478,18 @@ nav.site-nav {
 }
 .intro-box {
   background: var(--cream-dark); border-left: 4px solid var(--gold);
-  padding: 24px 28px; border-radius: 0 8px 8px 0; margin-bottom: 36px;
+  padding: 24px 28px; border-radius: 0 var(--r2) var(--r2) 0; margin-bottom: 36px;
 }
-.intro-box p { margin-bottom: 0; font-size: 16px; line-height: 1.75; }
+.intro-box p { margin-bottom: 0; font-size: var(--prose-size); line-height: var(--prose-lh); }
 .badge-pill {
   display: inline-block; background: var(--gold); color: var(--text);
   font-size: 16px; font-weight: 700; padding: 3px 12px;
-  border-radius: 4px; margin-bottom: 12px; letter-spacing: .05em;
+  border-radius: var(--r1); margin-bottom: 12px; letter-spacing: .05em;
 }
 .price-note {
   font-weight: 700; color: var(--green);
   background: var(--cream-dark); display: inline-block;
-  padding: 8px 16px; border-radius: 6px; margin: 8px 0 16px; font-size: 16px;
+  padding: 8px 16px; border-radius: var(--r1); margin: 8px 0 16px; font-size: 16px;
 }
 
 /* TOC */
@@ -478,7 +505,7 @@ nav.site-nav {
 .cmp-wrap { overflow-x: auto; margin: 32px 0; }
 .cmp-table {
   width: 100%; border-collapse: collapse; font-size: 16px;
-  background: #fff; border-radius: 12px; overflow: hidden; box-shadow: var(--s1);
+  background: #fff; border-radius: var(--r2); overflow: hidden; box-shadow: var(--s1);
 }
 .cmp-table th {
   background: var(--green); color: #fff; padding: 12px 16px;
@@ -563,7 +590,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .cmp-winner td:first-child { color: var(--green); }
 .badge-best {
   display: inline-block; background: var(--gold); color: var(--text);
-  font-size: 16px; font-weight: 700; padding: 2px 8px; border-radius: 4px;
+  font-size: 16px; font-weight: 700; padding: 2px 8px; border-radius: var(--r1);
   letter-spacing: .05em; margin-left: 8px; vertical-align: middle;
 }
 
@@ -571,7 +598,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .art-faq { margin: 40px 0; }
 .art-faq h3 { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 20px; }
 .faq-item {
-  border: 1px solid var(--border); border-radius: 10px;
+  border: 1px solid var(--border); border-radius: var(--r2);
   overflow: hidden; margin-bottom: 12px;
 }
 .faq-item summary {
@@ -593,7 +620,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .faq-answer a { color: var(--green); font-weight: 600; text-decoration: underline; }
 
 /* Related cluster */
-.rel-cluster { background: var(--cream-dark); border-radius: 12px; padding: 24px; margin: 36px 0; }
+.rel-cluster { background: var(--cream-dark); border-radius: var(--r2); padding: 24px; margin: 36px 0; }
 .rel-cluster h4 {
   font-size: 16px; font-weight: 700; text-transform: uppercase;
   letter-spacing: .1em; color: var(--muted); margin-bottom: 16px;
@@ -601,7 +628,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .rel-links { display: flex; flex-direction: column; gap: 8px; }
 .rel-links a {
   display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 600;
-  color: var(--green); padding: 8px 12px; border-radius: 8px;
+  color: var(--green); padding: 8px 12px; border-radius: var(--r2);
   background: #fff; border: 1px solid var(--border); transition: box-shadow .2s;
 }
 .rel-links a:hover { box-shadow: var(--s1); }
@@ -642,14 +669,14 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
   height: 160px; position: relative;
   display: flex; align-items: center; justify-content: center; font-size: 52px;
   background: var(--green); /* matches generated-thumbnail canvas for a seamless letterbox */
-  border-radius: 12px 12px 0 0;
+  border-radius: var(--r2) var(--r2) 0 0;
   overflow: hidden;
 }
 .art-thumb__img {
   width: 100%; height: 100%;
   object-fit: contain;
   position: absolute; top: 0; left: 0;
-  border-radius: 12px 12px 0 0;
+  border-radius: var(--r2) var(--r2) 0 0;
 }
 .art-thumb.green  { background: #2A5038; }
 .art-thumb.brown  { background: #6B4423; }
@@ -659,7 +686,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .art-thumb.olive  { background: #4A5A28; }
 .art-badge {
   position: absolute; top: 12px; right: 12px; left: auto; padding: 4px 12px; z-index: 2; /* right side: thumbnail titles are baked into the image top-left */
-  border-radius: 4px; font-size: 16px; font-weight: 700; letter-spacing: .08em;
+  border-radius: var(--r1); font-size: 16px; font-weight: 700; letter-spacing: .08em;
   /* The badge has two surfaces and therefore cannot have one text colour.
      .tag-cmp is dark green (#3A4A2E) and needs white: 9.55:1.
      .tag-buy is gold (#B8922A) and needs dark: white on it is 2.92:1.
@@ -727,11 +754,11 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 }
 .hero-illustration-img {
   width: 760px; max-width: 100%; height: auto;
-  border-radius: 14px; object-fit: cover;
+  border-radius: var(--r2); object-fit: cover;
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  border: 1px solid rgba(255,255,255,.3); border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.3); border-radius: var(--r3);
   padding: 8px 16px; font-size: 16px; font-weight: 700; letter-spacing: .1em;
   color: rgba(255,255,255,.85); margin-bottom: 24px;
 }
@@ -774,7 +801,7 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .trust-lbl { font-size: 16px; font-weight: 700; letter-spacing: .12em; color: rgba(255,255,255,.72); text-transform: uppercase; margin-top: 4px; }
 .partner-tags { display: flex; gap: 10px; flex-wrap: wrap; }
 .partner-tag {
-  padding: 8px 16px; border-radius: 20px;
+  padding: 8px 16px; border-radius: var(--r3);
   border: 1px solid rgba(255,255,255,.28);
   font-size: 16px; color: rgba(255,255,255,.85); font-weight: 500;
 }
@@ -823,14 +850,14 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .footer-brand a { display: block; font-size: 16px; color: rgba(255,255,255,.65); margin-bottom: 8px; transition: color .2s; text-decoration: none; }
 .footer-brand a:hover { color: #fff; }
 .footer-logo {
-  width: 38px; height: 38px; border-radius: 8px; background: var(--green);
+  width: 38px; height: 38px; border-radius: var(--r2); background: var(--green);
   color: #fff; font-weight: 700; font-size: 16px;
   display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
 }
 .footer-logo-img {
-  width: 56px; height: 56px; border-radius: 12px;
+  width: 56px; height: 56px; border-radius: var(--r2);
   object-fit: cover; margin-bottom: 16px;
-  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+  box-shadow: var(--s1);
 }
 .footer-brand p { font-size: 16px; color: var(--on-dark); line-height: 1.75; max-width: 220px; }
 .footer-col h4  { font-size: 16px; font-weight: 700; letter-spacing: .12em; color: var(--on-dark); text-transform: uppercase; margin-bottom: 16px; }
@@ -886,7 +913,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 .compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):hover { text-decoration-color: var(--green); }
 .verdict-box {
-  background: #f0f7f2; border: 2px solid var(--green); border-radius: 12px;
+  background: #f0f7f2; border: 2px solid var(--green); border-radius: var(--r2);
   padding: 28px; margin: 36px 0;
 }
 .verdict-box h3 { font-size: 18px; font-weight: 700; color: var(--green); margin-bottom: 12px; }
@@ -898,7 +925,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .local-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .local-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
 .course-card {
-  background: #fff; border: 1px solid var(--border); border-radius: 12px;
+  background: #fff; border: 1px solid var(--border); border-radius: var(--r2);
   padding: 24px; margin-bottom: 20px;
 }
 .course-card h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
@@ -968,7 +995,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .btn-buy-cta { font-size: 16px; font-weight: 700; flex: 1; }
 .btn-buy-badge {
   font-size: 16px; font-weight: 600; color: rgba(0,0,0,.55);
-  background: rgba(0,0,0,.08); padding: 3px 12px; border-radius: 20px;
+  background: rgba(0,0,0,.08); padding: 3px 12px; border-radius: var(--r3);
   white-space: nowrap;
 }
 
@@ -986,7 +1013,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 }
 .verdict-pick {
   background: #fff; border: 1px solid var(--border);
-  border-radius: 8px; padding: 12px 16px;
+  border-radius: var(--r2); padding: 12px 16px;
   display: flex; flex-direction: column; gap: 4px;
 }
 .verdict-pick--winner { border-color: var(--gold); background: #fffbf0; }
@@ -1110,7 +1137,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   font-size: 16px;
   font-weight: 700;
   padding: 8px 16px;
-  border-radius: 6px;
+  border-radius: var(--r1);
   text-decoration: none;
   white-space: nowrap;
   transition: background .15s;
@@ -1147,7 +1174,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   background: rgba(201,168,76,.08);
   border-left: 3px solid var(--gold);
   padding: 8px 16px;
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 var(--r1) var(--r1) 0;
   margin: 16px 0;
   line-height: 1.5;
 }
@@ -1160,7 +1187,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   max-height: 260px;
   object-fit: contain;
   object-position: center;   /* explicitly centre image content inside the element */
-  border-radius: 8px;
+  border-radius: var(--r2);
   display: block;
   margin: 0 auto;            /* belt-and-suspenders centering */
   background: #fff;
@@ -1190,7 +1217,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   background: rgba(255,255,255,.12);
   border: 1px solid rgba(255,255,255,.25);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: var(--r3);
   text-decoration: none;
   transition: background .15s, color .15s;
   white-space: nowrap;
@@ -1270,17 +1297,17 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
    prose, so it takes the body size. The small-print measure below exists for
    text that genuinely should stay small. */
 .quick-answer-text {
-  font-size: var(--prose-size); line-height: 1.7; margin: 0 0 20px;
+  font-size: var(--prose-size); line-height: var(--prose-lh); margin: 0 0 20px;
 }
 .quick-answer-text strong {
   font-size: 18px; font-weight: 800; color: #fff;
   display: inline; border-bottom: 2px solid var(--gold); padding-bottom: 1px;
 }
-.art-content .quick-answer-box p { color: #ffffffdd; font-size: 16px; line-height: 1.7; }
+.art-content .quick-answer-box p { color: #ffffffdd; font-size: var(--prose-size); line-height: var(--prose-lh); }
 .art-content .quick-answer-box strong { color: #fff; font-size: 18px; font-weight: 800; border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
 .quick-answer-cta {
   display: inline-block; background: var(--gold); color: var(--green);
-  padding: 16px 28px; border-radius: 8px; font-size: 16px; font-weight: 800;
+  padding: 16px 28px; border-radius: var(--r2); font-size: 16px; font-weight: 800;
   text-decoration: none; transition: background .15s, transform .15s;
   letter-spacing: 0.01em;
 }
@@ -1459,7 +1486,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   color: var(--muted);
   background: var(--cream-dark);
   padding: 4px 12px;
-  border-radius: 20px;
+  border-radius: var(--r3);
   border: 1px solid var(--border);
   margin: 20px 0;
 }
@@ -1514,7 +1541,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 16px; font-weight: 700; color: var(--green);
   background: #f0f7f2; border: 1px solid #b8dfc5;
-  padding: 4px 12px; border-radius: 20px;
+  padding: 4px 12px; border-radius: var(--r3);
   margin: 8px 0 16px;
 }
 
@@ -1552,7 +1579,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .local-gear-link {
   font-size: 16px; font-weight: 600; color: var(--green);
   background: #fff; border: 1px solid var(--border);
-  padding: 8px 16px; border-radius: 20px;
+  padding: 8px 16px; border-radius: var(--r3);
   transition: border-color .2s, box-shadow .2s;
 }
 .local-gear-link:hover { border-color: var(--green); box-shadow: var(--s1); }
@@ -1925,7 +1952,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   padding: 20px 24px;
   background: #f0f7f2;
   border: 1px solid #b8dfc5;
-  border-radius: 12px;
+  border-radius: var(--r2);
 }
 .trust-card__heading {
   font-size: 16px;
@@ -1969,7 +1996,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .cat-hero .hero-badge {
   display: inline-block; background: rgba(201,168,76,0.15); color: var(--gold);
   font-size: 16px; font-weight: 700; letter-spacing: 0.1em;
-  padding: 4px 16px; border-radius: 20px; margin-bottom: 16px;
+  padding: 4px 16px; border-radius: var(--r3); margin-bottom: 16px;
 }
 .cat-hero h1 {
   font-family: 'DM Serif Display', serif;
@@ -1985,7 +2012,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .hero-pill {
   display: inline-flex; align-items: center; gap: 5px;
   padding: 4px 12px; background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1); border-radius: var(--r3);
   font-size: 16px; color: rgba(255,255,255,0.7); text-decoration: none;
   transition: background 0.15s;
 }
@@ -2024,7 +2051,7 @@ select:focus-visible, [tabindex]:focus-visible {
   margin: 20px 0 8px; padding: 16px 20px;
   background: var(--cream-dark, #EAE6DD);
   border-left: 4px solid var(--gold, #C8A84B);
-  border-radius: 8px;
+  border-radius: var(--r2);
 }
 .quick-picks-title { margin: 0 0 8px; font-weight: 700; color: var(--green, #1E3A28); }
 .quick-picks-list { margin: 0; padding-left: 24px; }
@@ -2033,7 +2060,7 @@ select:focus-visible, [tabindex]:focus-visible {
 .quick-picks-badge { color: var(--muted, #3D5243); font-size: 16px; }
 
 /* ═══ BATCH 3: review structures ═══ */
-.review-glance { margin: 16px 0 8px; padding: 16px 20px; background: var(--cream-dark, #EAE6DD); border-radius: 8px; }
+.review-glance { margin: 16px 0 8px; padding: 16px 20px; background: var(--cream-dark, #EAE6DD); border-radius: var(--r2); }
 .review-glance__title { margin: 0 0 8px; font-weight: 700; color: var(--green, #1E3A28); }
 .review-glance__list { margin: 0; padding-left: 20px; }
 .review-glance__list li { margin: 4px 0; }
@@ -2046,7 +2073,7 @@ select:focus-visible, [tabindex]:focus-visible {
   .comparison-table-wrapper::after, .cmp-wrap::after {
     content: ""; position: absolute; top: 0; right: 0; bottom: 0; width: 28px;
     background: linear-gradient(to left, rgba(30,58,40,0.12), transparent);
-    pointer-events: none; border-radius: 0 8px 8px 0;
+    pointer-events: none; border-radius: 0 var(--r2) var(--r2) 0;
   }
 }
 .footer-independence { margin: 8px 0 0; font-size: 16px; opacity: 0.85; }
@@ -2079,7 +2106,7 @@ main section > p, main section ul, main section ol {
 .hero-author a { color: var(--gold, #c9a84c); font-weight: 600; }
 .hero-alt { display: none; margin: 12px 0 0; font-size: 15px; }
 .hero-alt a { color: var(--cream, #f5f0e6); text-decoration: underline; }
-.featured-review-link { display: inline-block; border: 2px solid var(--green); color: var(--green); padding: 8px 20px; border-radius: 6px; font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+.featured-review-link { display: inline-block; border: 2px solid var(--green); color: var(--green); padding: 8px 20px; border-radius: var(--r1); font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap; }
 @media (max-width: 640px) {
   .hero-secondary { display: none; }
   .hero-alt { display: block; }
@@ -2087,11 +2114,11 @@ main section > p, main section ul, main section ol {
 
 /* ═══ Brand hub product cards — July 2026 ═══ */
 .brand-prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 16px; margin: 16px 0 8px; padding: 0; list-style: none; }
-.brand-prod-card { border: 1px solid rgba(30,58,40,.15); border-radius: 10px; padding: 16px; background: #fff; display: flex; flex-direction: column; gap: 8px; }
+.brand-prod-card { border: 1px solid rgba(30,58,40,.15); border-radius: var(--r2); padding: 16px; background: #fff; display: flex; flex-direction: column; gap: 8px; }
 .brand-prod-card img { align-self: center; object-fit: contain; max-height: 105px; }
 .brand-prod-name { font-weight: 700; margin: 0; color: var(--green); font-size: 16px; }
 .brand-prod-price { margin: 0; color: var(--muted); font-size: 15px; }
-.brand-prod-cta { display: inline-block; background: var(--gold); color: var(--text); padding: 8px 16px; border-radius: 6px; font-weight: 700; font-size: 15px; text-decoration: none; align-self: flex-start; }
+.brand-prod-cta { display: inline-block; background: var(--gold); color: var(--text); padding: 8px 16px; border-radius: var(--r1); font-weight: 700; font-size: 15px; text-decoration: none; align-self: flex-start; }
 .brand-prod-seen { margin: 2px 0 0; font-size: 13.5px; color: var(--muted); line-height: 1.45; }
 
 /* ── Comparison table: sticky first column on narrow viewports ──────────────
@@ -2109,7 +2136,7 @@ main section > p, main section ul, main section ol {
     z-index: 2;
     background: #fff;
     /* separator so the pinned column reads as pinned, not overlapping */
-    box-shadow: 1px 0 0 0 var(--border, #e0ddd5);
+    box-shadow: var(--s1);
   }
   .cmp-table th:first-child { background: var(--green, #1E3A28); z-index: 3; }
   .cmp-table tr:nth-child(even) td:first-child { background: #fafaf8; }
@@ -2118,8 +2145,8 @@ main section > p, main section ul, main section ol {
 
 
 /* ── Prompt-6(b): mobile comparison table — scroll container + sticky product column ── */
-.comparison-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; }
-.cmp-table th:first-child, .cmp-table td:first-child { position: sticky; left: 0; background: #fff; z-index: 2; box-shadow: 2px 0 4px rgba(0,0,0,.06); }
+.comparison-table-wrapper { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--r2); }
+.cmp-table th:first-child, .cmp-table td:first-child { position: sticky; left: 0; background: #fff; z-index: 2; box-shadow: var(--s1); }
 .cmp-table th:first-child { background: var(--green); z-index: 3; }
 @media (max-width: 640px) {
   .comparison-table-wrapper::before { content: '← swipe to compare →'; display: block; text-align: right; font-size: 12px; color: var(--muted); padding: 2px 8px 4px; }
@@ -2173,7 +2200,7 @@ main section > p, main section ul, main section ol {
 .runner-up-cta__lead { font-size: 15px; color: var(--text, #1a1a1a); margin: 0 0 12px; font-weight: 600; }
 .runner-up-cta__btn {
   display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap;
-  justify-content: center; padding: 12px 24px; border-radius: 8px;
+  justify-content: center; padding: 12px 24px; border-radius: var(--r2);
   border: 2px solid var(--green, #1E3A28); background: #fff;
   color: var(--green, #1E3A28); text-decoration: none; font-weight: 700;
 }
@@ -2603,7 +2630,7 @@ main section > p, main section ul, main section ol {
   background: #f7f9f7;
   border-left: 3px solid var(--green);
   padding: 16px 20px;
-  border-radius: 0 6px 6px 0;
+  border-radius: 0 var(--r1) var(--r1) 0;
   margin: 0 0 16px;
   max-width: var(--prose-w);
 }
@@ -2621,7 +2648,7 @@ main section > p, main section ul, main section ol {
   height: 64px;
   flex: none;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: var(--r1);
   background: #fff;
 }
 @media (max-width: 760px) {
