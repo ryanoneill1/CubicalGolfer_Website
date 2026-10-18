@@ -1,0 +1,74 @@
+SPRINT 182 — two validators that were printing green ticks for things they were not testing
+=============================================================================================
+22 files. Upload preserving folder structure. No deletions required.
+
+This sprint started as "drain the next file of inline styles" and turned into
+something more worth doing, because measuring first turned up two guards that
+could not fail.
+
+── FINDING 1: validate-spacing-scale was reading ONE file ──────────────────
+It read src/styles/global.css and nothing else. Every component and page
+<style> block was invisible to it. Hiding in them: 73 off-grid margin/padding
+values — 14px x23, 10px x21, 18px x10, 6px x9, 22px x5, 7px x3, 13px, 9px —
+across StickyBar, ProductCard, ProductCTA, CGScore, EmailCapture, TrustBar,
+ExitIntent, TableOfContents and ten more. Components on every page of the site.
+Meanwhile the script printed "every margin/padding is on the 4pt grid".
+
+Its own header says: "A guard that cannot fail is worse than no guard: it
+reports a green tick for a condition it is not testing." It had become that.
+
+  FIXED: it now scans global.css plus all 30 component/page <style> blocks,
+  and all 73 values are snapped using the same round-half-up rule the script
+  itself prints as "nearest grid step". Ceiling stays 0.
+
+  A TRAP WORTH RECORDING: the first count came back 266, not 73.
+  golf-ball-compression-chart/index.astro contains the literal text "<style>"
+  inside an HTML comment, which opened a bogus block that ran to the real
+  </style> 240 lines later and swallowed every inline style in between — a
+  number 3.6x too big, which would have "fixed" values that were already fine.
+  Comments are stripped before blocks are found. The note is in the script.
+
+── FINDING 2: the primary affiliate button was underlined on every article ──
+Found by rendering a product card and LOOKING at it, not by any check.
+
+  .product-card__cta — the "Check Price at Bushnell" button, the thing the
+  site makes money from — was not excluded from the prose underline rules, so
+  .art-content a:not(...) won on specificity and underlined it. On every
+  article page and every comparison page.
+
+  validate-cta-geometry said "7 CTA classes share one radius and no underline"
+  the whole time, because its rule 2 tested a hand-picked list of FOUR classes
+  with css.includes(`:not(X)`) — "is X excluded ANYWHERE". Neither half of that
+  was the right question:
+     a) .product-card__cta simply was not in the list.
+     b) "anywhere" is not "in this rule". A class excluded from .art-content
+        but not .compare-body renders underlined on every comparison page.
+
+  FIXED: the exclusion is added to both prose rules, and rule 2 now derives its
+  list from the same ALL_CTA constant the geometry check uses (so adding a CTA
+  class cannot silently skip it) and checks each prose rule separately.
+
+  TWO WRONG CUTS ON THE WAY, both caught by the script's own guards:
+     - anchored the rule matcher with ^ and /m. The built CSS is minified onto
+       one line, so it matched 0 rules. The "did I see <2 rules?" guard fired.
+     - de-anchored it, and then it matched the :hover variants too, which only
+       set text-decoration-color and legitimately carry a shorter exclusion
+       list: 14 failures for 1 real defect. A check that cries wolf gets muted,
+       so it now filters to rules that actually set text-decoration:underline.
+
+VERIFICATION — full `npm run build`, and looked at
+  PROVEN FAILING, both: a 13px probe in a component <style> block fails
+  spacing-scale; removing the exclusion from the built CSS fails cta-geometry
+  with the exact message ".product-card__cta is not excluded from the
+  '.art-content' prose underline rule".
+  RENDERED: product card before (underlined button) and after (clean button).
+  All 73 spacing changes are +-1-2px; card, badge, CTA and sticky bar inspected.
+  Every other validator still green, including the 48px CTA minimum.
+
+NOT IN THIS ZIP, DELIBERATELY
+  public/images/og/*.jpg and public/downloads/*.pdf — re-encoded every build,
+  byte-identical content.
+
+F9 STATUS: unchanged at 1,371. This sprint spent its time on the two guards
+instead, which is the better trade — the inline-style count is only meaningful
+if the checks watching the codebase actually work.

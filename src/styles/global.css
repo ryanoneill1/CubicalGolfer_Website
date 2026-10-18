@@ -449,7 +449,7 @@ nav.site-nav {
 .art-content p  { font-size: var(--prose-size); line-height: var(--prose-lh); color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 12px; }
-.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt) {
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt):not(.product-card__cta) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }
@@ -902,7 +902,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 .compare-hero h1 { font-family: 'DM Serif Display', serif; font-weight: 400; font-size: clamp(28px,4vw,48px); color: #fff; margin-bottom: 16px; line-height: 1.15; }
 .compare-hero p  { font-size: 16px; color: rgba(255,255,255,.75); max-width: 600px; line-height: 1.65; }
 .compare-body { max-width: var(--content-w); margin: 0 auto; padding: 56px var(--page-px); }
-.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt) {
+.compare-body a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt):not(.product-card__cta) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }

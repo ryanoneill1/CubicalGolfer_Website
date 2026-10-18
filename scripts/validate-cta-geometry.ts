@@ -48,9 +48,43 @@ const geom = /\.aff-cta__btn[^{}]*\{[^}]*min-height:\s*48px/.test(css.replace(/\
 if (!geom) problems.push('No shared 48px min-height rule found for the boxed CTA classes.');
 
 // 2 — underline exclusions
-for (const c of ['.product-card__name-link', '.product-card__img-link', '.qp__cta', '.sb__btn']) {
-  if (!css.includes(`:not(${c})`)) {
-    problems.push(`${c} is not excluded from the prose underline rules — it will render underlined.`);
+//
+// Sprint 182: this used to test a hand-picked list of FOUR classes with
+// css.includes(`:not(X)`) — i.e. "is X excluded ANYWHERE in the stylesheet".
+// Two things were wrong with that, and both were live on the site:
+//   a) .product-card__cta — the primary affiliate button — was not in the
+//      list, was not excluded, and rendered underlined on every article page
+//      while this script printed "no underline". Found by looking at a
+//      screenshot, which is the only reason it was found at all.
+//   b) "excluded anywhere" is not the question. A class excluded from the
+//      .art-content rule but not the .compare-body one renders underlined on
+//      every comparison page. Each prose rule is now checked separately.
+// The list is ALL_CTA plus the two card links, derived from the same constant
+// the geometry check uses, so adding a CTA class cannot silently skip this.
+// NB: the built CSS is minified onto one line, so this cannot be anchored with
+// ^ and /m — the first attempt was, matched 0 rules, and the guard below caught it.
+//
+// It must also only look at rules that actually SET an underline. The second
+// attempt matched the `:hover` variants too, which only set
+// text-decoration-color and legitimately carry a shorter exclusion list; that
+// produced 14 failures for 1 real defect. A check that cries wolf gets muted,
+// so the rule body is captured and filtered on `text-decoration:underline`.
+const PROSE_RULE_RE = /\.(?:art-content|compare-body|local-body)\s+a:not\([^{]*\{([^}]*)\}/g;
+const proseRules: Array<{ head: string; sel: string }> = [];
+for (const m of css.matchAll(PROSE_RULE_RE)) {
+  if (!/text-decoration\s*:\s*underline/.test(m[1])) continue;   // hover/colour-only rules opt out
+  const sel = m[0].slice(0, m[0].indexOf('{'));
+  proseRules.push({ head: sel.slice(0, sel.indexOf(' a:not')), sel });
+}
+if (proseRules.length < 2) {
+  problems.push(`Only found ${proseRules.length} underline-setting prose rule(s) — the matcher is not seeing the stylesheet.`);
+}
+const MUST_EXCLUDE = [...ALL_CTA, '.product-card__name-link', '.product-card__img-link'];
+for (const { head, sel } of proseRules) {
+  for (const c of MUST_EXCLUDE) {
+    if (!sel.includes(`:not(${c})`)) {
+      problems.push(`${c} is not excluded from the "${head}" prose underline rule — it renders underlined there.`);
+    }
   }
 }
 
