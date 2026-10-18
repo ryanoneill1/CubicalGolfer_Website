@@ -22,7 +22,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const CEILING = 1371;   // Sprint 181: 1745 → 1371 (articles.ts tables + delta spans)
+const CEILING = 1239;   // Sprint 183: 1371 → 1239 (compression chart: 14 repeated strings → classes)
 
 const files: string[] = [];
 (function walk(dir: string) {

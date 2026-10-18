@@ -1,0 +1,65 @@
+SPRINT 183 — F9 continues: the compression chart, 206 inline styles -> 74
+==========================================================================
+Files as listed. Upload preserving folder structure. No deletions required.
+
+THE TARGET, PICKED BY MEASURING
+golf-ball-compression-chart/index.astro was the worst remaining file at 206
+inline style attributes. Grouped by exact string: 77 distinct, but the top 14
+accounted for 132 of them (64%) — and 57 strings were used exactly once.
+So: convert the 14, leave the 57 one-offs. 206 -> 74.
+
+  cb-pill (x35) + cb-pill--cream (x26)   the ball-name chips, identical but
+                                          for one background colour
+  cb-row x10, cb-note x10, cb-link x9, cb-card x6, cb-card__title x6,
+  cb-sub x6, cb-sortable x4, cb-navlink x4 (+__title, __sub x4 each),
+  cb-panel x4, cb-strong x4
+
+The classes live in the PAGE's own <style> block, not global.css — they are
+specific to this page and global.css is already 125KB. That is only safe
+because Sprint 182 taught validate-spacing-scale to read page <style> blocks;
+before it, moving these would have hidden them in a new blind spot rather than
+fixing anything. Four off-grid values were snapped on the way in, and the
+validator is what forced it:
+     padding:3px 10px    -> 3px 12px     (3px is under the 4px hairline floor)
+     margin:0 6px 6px 0  -> 0 8px 8px 0
+     margin:0 0 10px     -> 0 0 12px
+     padding:14px 16px   -> 16px
+Font sizes (14/15/17px) are lifted untouched. Those are a typography decision,
+not an inline-style cleanup, and this page has 81 sub-16px sizes that deserve
+their own conversation rather than being changed in passing.
+
+A FALSE ALARM, FIXED PROPERLY
+The first build after adding the CSS failed: "6 values off the 4pt grid",
+naming 10px, 6px, 14px and 17px. All six were inside the COMMENT I had just
+written documenting the before/after values — the scanner was reading
+"padding:3px 10px -> 3px 12px" as a live declaration.
+
+The wrong fix is to reword the comment. The right one is in the scanner, so
+validate-spacing-scale now strips CSS comments before reading declarations.
+Without that, every future sprint that documents a spacing change in a comment
+fails the build on its own prose, and the check gets muted. Re-verified after
+the fix that it still catches a real 13px probe in a component <style> block.
+
+RESULT
+  this file        206 -> 74   (-132)
+  site-wide      1,371 -> 1,239 (ceiling lowered to lock it in)
+  F9 overall     1,745 -> 1,239 (-29% since Sprint 181)
+
+VERIFICATION — full `npm run build`, and looked at
+  All 14 classes confirmed present in dist/ at the expected counts (61 pills,
+  6 cards, 10 notes, 4 panels...). RENDERED the brand sections: pills, borders,
+  left-accent cards and body copy all identical to before.
+  Checked the mechanical rewrite for damage: 0 empty class="" or style="",
+  0 tags with two class attributes, 0 mangled CSS combinators.
+  Every validator green, including spacing-scale, cta-geometry and home-rhythm.
+
+NOT IN THIS ZIP, DELIBERATELY
+  public/images/og/*.jpg and public/downloads/*.pdf — re-encoded every build,
+  content-identical.
+
+NEXT IN F9 (1,239 remaining, worst-first)
+     88  src/pages/[...slug].astro          (the article template — shared)
+     72  src/pages/golf-apparel/index.astro
+     69  src/pages/golf-tech/index.astro
+     68  src/pages/how-we-test.astro
+     58  src/pages/golf-handicap-calculator/index.astro

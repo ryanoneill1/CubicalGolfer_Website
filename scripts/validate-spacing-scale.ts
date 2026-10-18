@@ -52,15 +52,23 @@ function astroFiles(dir: string, out: string[] = []): string[] {
   return out;
 }
 
+/* Sprint 183: CSS comments are stripped before scanning. A comment in this
+ * repo routinely documents the very values a sprint changed — e.g.
+ * "padding:3px 10px -> 3px 12px" — and without this the scanner reads the
+ * BEFORE value as a live declaration and fails on prose. That is a false
+ * alarm, and a check that cries wolf gets muted, so it is fixed here rather
+ * than by forbidding anyone to write a number in a comment. */
+const stripCssComments = (css: string) => css.replace(/\/\*[\s\S]*?\*\//g, ' ');
+
 const sources: Array<{ label: string; css: string }> = [
-  { label: 'src/styles/global.css', css: fs.readFileSync('src/styles/global.css', 'utf8') },
+  { label: 'src/styles/global.css', css: stripCssComments(fs.readFileSync('src/styles/global.css', 'utf8')) },
 ];
 for (const f of astroFiles('src')) {
   const raw = fs.readFileSync(f, 'utf8')
     .replace(/<!--[\s\S]*?-->/g, ' ')        // HTML comments first - see note above
     .replace(/\{\/\*[\s\S]*?\*\/\}/g, ' ');  // and JSX comments
   for (const blk of raw.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)) {
-    sources.push({ label: f, css: blk[1] });
+    sources.push({ label: f, css: stripCssComments(blk[1]) });
   }
 }
 

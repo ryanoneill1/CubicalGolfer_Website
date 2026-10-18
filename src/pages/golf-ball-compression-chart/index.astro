@@ -288,7 +288,7 @@ function outboundFor(url: string | null | undefined): string {
     <!-- FRESHNESS BANNER -->
     <div class="freshness-banner" style="margin:16px 0 20px;padding:12px 16px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius: 0 var(--r2) var(--r2) 0;font-size:16px;color:var(--muted);display:flex;align-items:center;gap:8px;">
       <span style="font-size:16px;">✅</span>
-      <span><strong>Updated {updatedOn}</strong> — All 36 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">How we test →</a></span>
+      <span><strong>Updated {updatedOn}</strong> — All 36 balls independently purchased and tested. No manufacturer loans. <a href="/how-we-test/" class="cb-link">How we test →</a></span>
     </div>
 
     <!-- PDF DOWNLOAD -->
@@ -339,12 +339,12 @@ function outboundFor(url: string | null | undefined): string {
          uses ordinary body colours again. -->
     <figure style="margin:0 0 32px;max-width:880px;">
       <img src="/images/charts/golf-ball-compression-chart-2026.webp"
-           width="1200" height="675" loading="eager" fetchpriority="high"
-           alt="Golf ball compression chart 2026: 36 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
-           style="width:100%;height:auto;border-radius: var(--r2);display:block;" />
+ width="1200" height="675" loading="eager" fetchpriority="high"
+ alt="Golf ball compression chart 2026: 36 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
+ style="width:100%;height:auto;border-radius: var(--r2);display:block;" />
       <figcaption style="font-size:14px;color:var(--muted);margin-top:8px;">
         Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
-        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp" >See every ball in one image</a>.
+        <a href="/images/charts/golf-ball-compression-chart-2026-full.webp">See every ball in one image</a>.
       </figcaption>
     </figure>
 
@@ -406,11 +406,11 @@ function outboundFor(url: string | null | undefined): string {
         <table id="compression-data" class="cmp-table" style="width:100%;"><caption class="sr-only">Complete Golf Ball Compression Chart (2026 Data)</caption>
           <thead>
             <tr>
-              <th scope="col" data-sort="name" style="cursor:pointer;">Golf Ball ↕</th>
-              <th class="cmp-num" scope="col" data-sort="compression" style="cursor:pointer;">Compression ↕</th>
+              <th scope="col" data-sort="name" class="cb-sortable">Golf Ball ↕</th>
+              <th class="cmp-num cb-sortable" scope="col" data-sort="compression">Compression ↕</th>
               <th scope="col">Source</th>
-              <th scope="col" data-sort="cover" style="cursor:pointer;">Cover ↕</th>
-              <th class="cmp-num" scope="col" data-sort="price" style="cursor:pointer;">Price/dz ↕</th>
+              <th scope="col" data-sort="cover" class="cb-sortable">Cover ↕</th>
+              <th class="cmp-num cb-sortable" scope="col" data-sort="price">Price/dz ↕</th>
               <th class="cmp-num" scope="col">Best Speed</th>
               <th scope="col">Buy</th>
             </tr>
@@ -472,28 +472,28 @@ function outboundFor(url: string | null | undefined): string {
       <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 8px;">📋 Found your compression range?</p>
       <p style="font-size:16px;color:#fff;margin:0 0 16px;line-height:1.5;">The chart above narrows it to 5-8 balls. Here's how to pick the final one:</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-        <a href="/best-golf-balls-2026/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius: var(--r2);text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Full Ball Rankings →</p>
-          <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">14 balls tested over 35+ rounds — sorted by swing speed</p>
+        <a href="/best-golf-balls-2026/" class="cb-navlink">
+          <p class="cb-navlink__title">Full Ball Rankings →</p>
+          <p class="cb-navlink__sub">14 balls tested over 35+ rounds — sorted by swing speed</p>
         </a>
-        <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius: var(--r2);text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Pro V1 vs Chrome Soft →</p>
-          <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">The two most popular premium balls compared head-to-head</p>
+        <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/" class="cb-navlink">
+          <p class="cb-navlink__title">Pro V1 vs Chrome Soft →</p>
+          <p class="cb-navlink__sub">The two most popular premium balls compared head-to-head</p>
         </a>
-        <a href="/compare/callaway-chrome-soft-vs-kirkland-signature/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius: var(--r2);text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Chrome Soft vs Kirkland →</p>
-          <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">$27 vs $13 — is the Costco ball really as good?</p>
+        <a href="/compare/callaway-chrome-soft-vs-kirkland-signature/" class="cb-navlink">
+          <p class="cb-navlink__title">Chrome Soft vs Kirkland →</p>
+          <p class="cb-navlink__sub">$27 vs $13 — is the Costco ball really as good?</p>
         </a>
-        <a href="/gear-quiz/" style="display:block;padding:12px 16px;background:rgba(255,255,255,.12);border-radius: var(--r2);text-decoration:none;border:1px solid rgba(255,255,255,.2);">
-          <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">Take the Gear Quiz →</p>
-          <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">Answer 4 questions, get a personalized ball recommendation</p>
+        <a href="/gear-quiz/" class="cb-navlink">
+          <p class="cb-navlink__title">Take the Gear Quiz →</p>
+          <p class="cb-navlink__sub">Answer 4 questions, get a personalized ball recommendation</p>
         </a>
       </div>
     </div>
 
     <!-- ═══ TRUST LINE ═══ -->
     <p style="font-size:16px;color:var(--muted);margin:0 0 24px;padding:10px 16px;background:rgba(30,58,40,.04);border-radius: var(--r2);line-height:1.5;">
-      <strong style="color:var(--green);">How we built this chart:</strong> All 36 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" style="color:var(--green);font-weight:600;">Full methodology →</a>
+      <strong style="color:var(--green);">How we built this chart:</strong> All 36 balls independently purchased. Compression data sourced from manufacturer specs and verified against independent testing. Recommendations based on 35+ rounds of testing at swing speeds from 75-108 mph. <a href="/how-we-test/" class="cb-link">Full methodology →</a>
     </p>
 
     <!-- ═══ WHAT IS COMPRESSION ═══ -->
@@ -564,7 +564,7 @@ function outboundFor(url: string | null | undefined): string {
           <div style="margin-bottom:28px;">
             <h3 id={brand.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{brand} Golf Ball Compression Chart</h3>
             {BRAND_PAGES.has(brand) && (
-              <p style="margin:0 0 8px;"><a href={`/${brand.toLowerCase()}-golf-ball-compression-chart/`} style="color:var(--green);font-weight:600;">Full {brand} compression chart &#8594;</a></p>
+              <p style="margin:0 0 8px;"><a href={`/${brand.toLowerCase()}-golf-ball-compression-chart/`} class="cb-link">Full {brand} compression chart &#8594;</a></p>
             )}
             <p style="margin:0 0 10px;color:var(--muted);">{blurb}</p>
             <div style="overflow-x:auto;">
@@ -621,35 +621,35 @@ function outboundFor(url: string | null | undefined): string {
            of text at the bottom of the page. Same facts, same editorial notes,
            laid out as scannable cards with the balls as chips. -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:12px 0 4px;">
-        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius: var(--r2);padding:14px 16px;background:#fff;">
-          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Titleist <span style="font-weight:400;color:var(--muted);font-size:15px;">· 7 balls</span></p>
-          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TruFeel (70)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour Soft (65)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Velocity (65)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">AVX (77)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour Speed (78)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Pro V1 (87)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Pro V1x (97)</span></div>
-          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
+        <div class="cb-card">
+          <p class="cb-card__title">Titleist <span class="cb-sub">· 7 balls</span></p>
+          <div class="cb-row"><span class="cb-pill cb-pill--cream">TruFeel (70)</span><span class="cb-pill cb-pill--cream">Tour Soft (65)</span><span class="cb-pill cb-pill--cream">Velocity (65)</span><span class="cb-pill cb-pill--cream">AVX (77)</span><span class="cb-pill cb-pill--cream">Tour Speed (78)</span><span class="cb-pill cb-pill--cream">Pro V1 (87)</span><span class="cb-pill cb-pill--cream">Pro V1x (97)</span></div>
+          <p class="cb-note">The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
         </div>
-        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius: var(--r2);padding:14px 16px;background:#fff;">
-          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Callaway <span style="font-weight:400;color:var(--muted);font-size:15px;">· 4 balls</span></p>
-          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Supersoft (38)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Warbird (68)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Chrome Soft (75)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Chrome Tour (90)</span></div>
-          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
+        <div class="cb-card">
+          <p class="cb-card__title">Callaway <span class="cb-sub">· 4 balls</span></p>
+          <div class="cb-row"><span class="cb-pill cb-pill--cream">Supersoft (38)</span><span class="cb-pill cb-pill--cream">Warbird (68)</span><span class="cb-pill cb-pill--cream">Chrome Soft (75)</span><span class="cb-pill cb-pill--cream">Chrome Tour (90)</span></div>
+          <p class="cb-note">The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
         </div>
-        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius: var(--r2);padding:14px 16px;background:#fff;">
-          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">TaylorMade <span style="font-weight:400;color:var(--muted);font-size:15px;">· 5 balls</span></p>
-          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Noodle (34)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Soft Response (50)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour Response (77)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TP5 (85)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TP5x (97)</span></div>
-          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
+        <div class="cb-card">
+          <p class="cb-card__title">TaylorMade <span class="cb-sub">· 5 balls</span></p>
+          <div class="cb-row"><span class="cb-pill cb-pill--cream">Noodle (34)</span><span class="cb-pill cb-pill--cream">Soft Response (50)</span><span class="cb-pill cb-pill--cream">Tour Response (77)</span><span class="cb-pill cb-pill--cream">TP5 (85)</span><span class="cb-pill cb-pill--cream">TP5x (97)</span></div>
+          <p class="cb-note">The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
         </div>
-        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius: var(--r2);padding:14px 16px;background:#fff;">
-          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Srixon <span style="font-weight:400;color:var(--muted);font-size:15px;">· 4 balls</span></p>
-          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Soft Feel (60)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Q-Star Tour (74)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Z-Star (88)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Z-Star XV (102)</span></div>
-          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers. Srixon raised the published figure from 72 to 74 with the 2026 reworked FastLayer core.</p>
+        <div class="cb-card">
+          <p class="cb-card__title">Srixon <span class="cb-sub">· 4 balls</span></p>
+          <div class="cb-row"><span class="cb-pill cb-pill--cream">Soft Feel (60)</span><span class="cb-pill cb-pill--cream">Q-Star Tour (74)</span><span class="cb-pill cb-pill--cream">Z-Star (88)</span><span class="cb-pill cb-pill--cream">Z-Star XV (102)</span></div>
+          <p class="cb-note">The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers. Srixon raised the published figure from 72 to 74 with the 2026 reworked FastLayer core.</p>
         </div>
-        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius: var(--r2);padding:14px 16px;background:#fff;">
-          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Bridgestone <span style="font-weight:400;color:var(--muted);font-size:15px;">· 4 balls</span></p>
-          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">e12 Contact (50)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour B RX (68)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour B XS (90)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour B X (100)</span></div>
-          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
+        <div class="cb-card">
+          <p class="cb-card__title">Bridgestone <span class="cb-sub">· 4 balls</span></p>
+          <div class="cb-row"><span class="cb-pill cb-pill--cream">e12 Contact (50)</span><span class="cb-pill cb-pill--cream">Tour B RX (68)</span><span class="cb-pill cb-pill--cream">Tour B XS (90)</span><span class="cb-pill cb-pill--cream">Tour B X (100)</span></div>
+          <p class="cb-note">The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
         </div>
-        <div style="border:1px solid var(--border);border-left:4px solid var(--green);border-radius: var(--r2);padding:14px 16px;background:#fff;">
-          <p style="margin:0 0 8px;font-weight:700;font-size:17px;">Maxfli <span style="font-weight:400;color:var(--muted);font-size:15px;">· 2 balls</span></p>
-          <div style="margin:0 0 10px;"><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour S (85)</span><span style="display:inline-block;background:var(--cream);border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Tour X (100)</span></div>
-          <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">DICK'S Sporting Goods' own brand, made by Foremost in Taiwan. The Tour S is the cheapest genuine urethane ball on this chart at $39.99, and it is the only ball we chart between 78 and 87.</p>
+        <div class="cb-card">
+          <p class="cb-card__title">Maxfli <span class="cb-sub">· 2 balls</span></p>
+          <div class="cb-row"><span class="cb-pill cb-pill--cream">Tour S (85)</span><span class="cb-pill cb-pill--cream">Tour X (100)</span></div>
+          <p class="cb-note">DICK'S Sporting Goods' own brand, made by Foremost in Taiwan. The Tour S is the cheapest genuine urethane ball on this chart at $39.99, and it is the only ball we chart between 78 and 87.</p>
         </div>
       </div>
     </section>
@@ -661,44 +661,44 @@ function outboundFor(url: string | null | undefined): string {
            Now banded blocks in the same four bands the chart image and the
            FAQs use, so the page tells one consistent story. No facts changed. -->
       <div style="display:grid;gap:14px;margin:12px 0 4px;">
-        <div style="border-radius: var(--r2);overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+        <div class="cb-panel">
           <div style="background:#4F7A5B;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
-            <span style="font-weight:700;font-size:17px;">Ultra-soft</span>
+            <span class="cb-strong">Ultra-soft</span>
             <span style="font-size:20px;font-weight:700;">34-50</span>
           </div>
           <div style="padding:14px 16px;">
-            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade Noodle (34)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Supersoft (38)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Wilson DUO Soft+ (40)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade Soft Response (50)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone e12 Contact (50)</span></div>
-            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">Best for swing speeds under 85 mph.</p>
+            <div class="cb-row"><span class="cb-pill">TaylorMade Noodle (34)</span><span class="cb-pill">Callaway Supersoft (38)</span><span class="cb-pill">Wilson DUO Soft+ (40)</span><span class="cb-pill">TaylorMade Soft Response (50)</span><span class="cb-pill">Bridgestone e12 Contact (50)</span></div>
+            <p class="cb-note">Best for swing speeds under 85 mph.</p>
           </div>
         </div>
-        <div style="border-radius: var(--r2);overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+        <div class="cb-panel">
           <div style="background:#2A5038;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
-            <span style="font-weight:700;font-size:17px;">Soft-mid</span>
+            <span class="cb-strong">Soft-mid</span>
             <span style="font-size:20px;font-weight:700;">55-74</span>
           </div>
           <div style="padding:14px 16px;">
-            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Soft Feel (60)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Pro Soft (65)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Tour Soft (65)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Velocity (65)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Warbird (68)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone Tour B RX (68)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist TruFeel (70)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Wilson Chaos (70)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Pinnacle Rush (72)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Q-Star Tour (74)</span></div>
-            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">The sweet spot for most weekend golfers (85-100 mph).</p>
+            <div class="cb-row"><span class="cb-pill">Srixon Soft Feel (60)</span><span class="cb-pill">Vice Pro Soft (65)</span><span class="cb-pill">Titleist Tour Soft (65)</span><span class="cb-pill">Titleist Velocity (65)</span><span class="cb-pill">Callaway Warbird (68)</span><span class="cb-pill">Bridgestone Tour B RX (68)</span><span class="cb-pill">Titleist TruFeel (70)</span><span class="cb-pill">Wilson Chaos (70)</span><span class="cb-pill">Pinnacle Rush (72)</span><span class="cb-pill">Srixon Q-Star Tour (74)</span></div>
+            <p class="cb-note">The sweet spot for most weekend golfers (85-100 mph).</p>
           </div>
         </div>
-        <div style="border-radius: var(--r2);overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+        <div class="cb-panel">
           <div style="background:#1E3A28;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
-            <span style="font-weight:700;font-size:17px;">Mid-firm</span>
+            <span class="cb-strong">Mid-firm</span>
             <span style="font-size:20px;font-weight:700;">75-87</span>
           </div>
           <div style="padding:14px 16px;">
-            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Chrome Soft (75)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist AVX (77)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade Tour Response (77)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Tour Speed (78)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Maxfli Tour S (85)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade TP5 (85)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Pro V1 (87)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Wilson Staff Model (87)</span></div>
-            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">Tour-level balls for 90-110 mph swingers.</p>
+            <div class="cb-row"><span class="cb-pill">Callaway Chrome Soft (75)</span><span class="cb-pill">Titleist AVX (77)</span><span class="cb-pill">TaylorMade Tour Response (77)</span><span class="cb-pill">Titleist Tour Speed (78)</span><span class="cb-pill">Maxfli Tour S (85)</span><span class="cb-pill">TaylorMade TP5 (85)</span><span class="cb-pill">Titleist Pro V1 (87)</span><span class="cb-pill">Wilson Staff Model (87)</span></div>
+            <p class="cb-note">Tour-level balls for 90-110 mph swingers.</p>
           </div>
         </div>
-        <div style="border-radius: var(--r2);overflow:hidden;border:1px solid var(--border);background:var(--cream);">
+        <div class="cb-panel">
           <div style="background:#143024;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
-            <span style="font-weight:700;font-size:17px;">Firm-high</span>
+            <span class="cb-strong">Firm-high</span>
             <span style="font-size:20px;font-weight:700;">88-102</span>
           </div>
           <div style="padding:14px 16px;">
-            <div style="margin:0 0 10px;"><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Z-Star (88)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Callaway Chrome Tour (90)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone Tour B XS (90)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Pro (90)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Kirkland Signature (92)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Drive (95)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Titleist Pro V1x (97)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">TaylorMade TP5x (97)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Bridgestone Tour B X (100)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Maxfli Tour X (100)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Vice Pro Plus (100)</span><span style="display:inline-block;background:#fff;border:1px solid var(--border);border-radius:999px;padding:3px 10px;margin:0 6px 6px 0;font-size:14px;white-space:nowrap;">Srixon Z-Star XV (102)</span></div>
-            <p style="margin:0;font-size:15px;line-height:1.55;color:var(--muted);">Mostly tour balls for swing speeds above 100 mph, though the Vice Drive is a firm ionomer distance ball rather than a scoring ball.</p>
+            <div class="cb-row"><span class="cb-pill">Srixon Z-Star (88)</span><span class="cb-pill">Callaway Chrome Tour (90)</span><span class="cb-pill">Bridgestone Tour B XS (90)</span><span class="cb-pill">Vice Pro (90)</span><span class="cb-pill">Kirkland Signature (92)</span><span class="cb-pill">Vice Drive (95)</span><span class="cb-pill">Titleist Pro V1x (97)</span><span class="cb-pill">TaylorMade TP5x (97)</span><span class="cb-pill">Bridgestone Tour B X (100)</span><span class="cb-pill">Maxfli Tour X (100)</span><span class="cb-pill">Vice Pro Plus (100)</span><span class="cb-pill">Srixon Z-Star XV (102)</span></div>
+            <p class="cb-note">Mostly tour balls for swing speeds above 100 mph, though the Vice Drive is a firm ionomer distance ball rather than a scoring ball.</p>
           </div>
         </div>
       </div>
@@ -716,12 +716,12 @@ function outboundFor(url: string | null | undefined): string {
     <section class="art-section">
       <h2>More Improve Your Golf Game Guides</h2>
       <ul>
-        <li><a href="/best-golf-balls-2026/" style="color:var(--green);font-weight:600;">Best Golf Balls 2026 →</a></li>
-        <li><a href="/best-golf-balls-slow-swing-speed/" style="color:var(--green);font-weight:600;">Best Balls for Slow Swing Speeds →</a></li>
-        <li><a href="/best-golf-balls-90-mph-swing-speed/" style="color:var(--green);font-weight:600;">Best Balls for 85-100 mph →</a></li>
-        <li><a href="/best-golf-balls-for-seniors/" style="color:var(--green);font-weight:600;">Best Balls for Seniors →</a></li>
-        <li><a href="/what-golf-ball-for-high-handicapper/" style="color:var(--green);font-weight:600;">Best Ball for High Handicappers →</a></li>
-        <li><a href="/titleist-pro-v1-vs-pro-v1x/" style="color:var(--green);font-weight:600;">Pro V1 vs Pro V1x →</a></li>
+        <li><a href="/best-golf-balls-2026/" class="cb-link">Best Golf Balls 2026 →</a></li>
+        <li><a href="/best-golf-balls-slow-swing-speed/" class="cb-link">Best Balls for Slow Swing Speeds →</a></li>
+        <li><a href="/best-golf-balls-90-mph-swing-speed/" class="cb-link">Best Balls for 85-100 mph →</a></li>
+        <li><a href="/best-golf-balls-for-seniors/" class="cb-link">Best Balls for Seniors →</a></li>
+        <li><a href="/what-golf-ball-for-high-handicapper/" class="cb-link">Best Ball for High Handicappers →</a></li>
+        <li><a href="/titleist-pro-v1-vs-pro-v1x/" class="cb-link">Pro V1 vs Pro V1x →</a></li>
       </ul>
     </section>
 
@@ -729,7 +729,7 @@ function outboundFor(url: string | null | undefined): string {
 
 
   <EmbedBox
-    title="Golf Ball Compression Chart 2026"
+ title="Golf Ball Compression Chart 2026"
     embedUrl="https://www.cubicalgolfer.com/embeds/compression-chart.html"
     sourceUrl="https://www.cubicalgolfer.com/golf-ball-compression-chart/"
     sourceName="CubicalGolfer.com"
@@ -737,11 +737,11 @@ function outboundFor(url: string | null | undefined): string {
   />
 
   <StickyBar
-    name="Callaway Supersoft"
+ name="Callaway Supersoft"
     price={getAffiliateLink('callaway-supersoft').price}
     url={getAffiliateLink('callaway-supersoft').url}
     retailer={getAffiliateLink('callaway-supersoft').retailer}
-    badge="BEST VALUE"
+ badge="BEST VALUE"
   />
 </BaseLayout>
 
@@ -759,7 +759,7 @@ function outboundFor(url: string | null | undefined): string {
   function update() {
     const speed = parseInt(ss.value, 10);
     const rows = Array.from(tb.rows);
-    const matches = rows.filter(r => speed >= parseInt(r.dataset.minMph!) && speed <= parseInt(r.dataset.maxMph!))
+    const matches = rows.filter(r => speed>= parseInt(r.dataset.minMph!) && speed <= parseInt(r.dataset.maxMph!))
       .map(r => ({ name: r.dataset.name!, compression: parseInt(r.dataset.compression!), price: parseFloat(r.dataset.price!), cover: r.dataset.cover!, href: (r.querySelector('a') as HTMLAnchorElement).href }));
 
     if (!matches.length) { rb.innerHTML = '<p>No exact matches — adjust ±5 mph.</p>'; return; }
@@ -807,7 +807,7 @@ function outboundFor(url: string | null | undefined): string {
       rows.sort((a, b) => {
         const av = key === 'name' || key === 'cover' ? a.dataset[key]! : parseFloat(a.dataset[key]!);
         const bv = key === 'name' || key === 'cover' ? b.dataset[key]! : parseFloat(b.dataset[key]!);
-        return asc ? (av > bv ? 1 : -1) : (av < bv ? 1 : -1);
+        return asc ? (av> bv ? 1 : -1) : (av < bv ? 1 : -1);
       });
       rows.forEach(r => tb.appendChild(r));
       asc = !asc;
@@ -847,4 +847,49 @@ function outboundFor(url: string | null | undefined): string {
   .pick-card a { background: var(--green); color: #fff; padding: 8px 16px; text-decoration: none; border-radius: var(--r1); text-align: center; margin-top: 8px; font-size: 16px; font-weight: 600; }
   .chart-filters { display: flex; gap: 24px; margin: 12px 0; flex-wrap: wrap; align-items: center; }
   @media (max-width: 600px) { .speed-input-group { flex-direction: column; align-items: stretch; } .finder-picks { grid-template-columns: 1fr; } }
+  /* ── Sprint 183 (F9) — 132 inline styles lifted into classes ──────────────
+   * This page carried 206 inline style attributes, the most of any file after
+   * articles.ts. 64% of them were 14 repeated strings; those are the classes
+   * below. The 74 that remain are one-offs (57 of them used exactly once).
+   *
+   * Values are lifted as-is EXCEPT where the inline value was off the 4pt grid
+   * — those are snapped using the same round-half-up rule validate-spacing-
+   * scale prints, because this block is now scanned by it (Sprint 182 closed
+   * that blind spot; before it, moving these here would have hidden them
+   * again instead of fixing them):
+   *     padding:3px 10px    -> 3px 12px    (3px is under the 4px hairline floor)
+   *     margin:0 6px 6px 0  -> 0 8px 8px 0
+   *     margin:0 0 10px     -> 0 0 12px
+   *     padding:14px 16px   -> 16px
+   * Font sizes (14/15/17px) are lifted untouched — changing those is a
+   * typography decision, not an inline-style cleanup. */
+  .cb-pill {
+    display: inline-block; background: #fff;
+    border: 1px solid var(--border); border-radius: 999px;
+    padding: 3px 12px; margin: 0 8px 8px 0;
+    font-size: 14px; white-space: nowrap;
+  }
+  .cb-pill--cream { background: var(--cream); }
+  .cb-row  { margin: 0 0 12px; }
+  .cb-note { margin: 0; font-size: 15px; line-height: 1.55; color: var(--muted); }
+  .cb-link { color: var(--green); font-weight: 600; }
+  .cb-card {
+    border: 1px solid var(--border); border-left: 4px solid var(--green);
+    border-radius: var(--r2); padding: 16px; background: #fff;
+  }
+  .cb-card__title { margin: 0 0 8px; font-weight: 700; font-size: 17px; }
+  .cb-sub      { font-weight: 400; color: var(--muted); font-size: 15px; }
+  .cb-strong   { font-weight: 700; font-size: 17px; }
+  .cb-sortable { cursor: pointer; }
+  .cb-panel {
+    border-radius: var(--r2); overflow: hidden;
+    border: 1px solid var(--border); background: var(--cream);
+  }
+  .cb-navlink {
+    display: block; padding: 12px 16px; background: rgba(255,255,255,.12);
+    border-radius: var(--r2); text-decoration: none;
+    border: 1px solid rgba(255,255,255,.2);
+  }
+  .cb-navlink__title { font-size: 16px; font-weight: 700; color: #fff; margin: 0 0 4px; }
+  .cb-navlink__sub   { font-size: 16px; color: rgba(255,255,255,.7); margin: 0; }
 </style>
