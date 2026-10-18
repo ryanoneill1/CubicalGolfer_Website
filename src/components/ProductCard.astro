@@ -47,13 +47,14 @@ if (!url || !imgSrc) return;
 // Derive outbound retailer from URL hostname at build time
 const outboundTag = url.includes('amazon.com') ? 'amazon' : url.includes('bushnell') ? 'bushnell' : url.includes('playbetter') ? 'playbetter' : url.includes('golfgalaxy') || url.includes('click-101736949') ? 'golfgalaxy' : 'other';
 const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'amazon' : golfGalaxyUrl.includes('bushnell') ? 'bushnell' : golfGalaxyUrl.includes('playbetter') ? 'playbetter' : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'golfgalaxy' : 'other') : '';
+import Icon from './Icon.astro';
 ---
 
 <div class:list={["product-card", { "product-card--winner": winner }]}>
 
   {badge && (
     <div class="product-card__badge">
-      {winner && <span class="product-card__crown" aria-hidden="true">🏆</span>}
+      {winner && <span class="product-card__crown" aria-hidden="true"><Icon name="trophy" /></span>}
       {badge}
     </div>
   )}
@@ -101,7 +102,7 @@ const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'a
     )}
 
     <div class="product-card__price">{price}</div>
-    <p class="product-card__price-note">💡 {priceNote || (unmonetised ? `Sold direct by ${retailer}` : 'Prices change — click to see current price')}</p>
+    <p class="product-card__price-note"><Icon name="bulb" /> {priceNote || (unmonetised ? `Sold direct by ${retailer}` : 'Prices change — click to see current price')}</p>
   </div>
 
   <!-- CTA 3: Primary button -->

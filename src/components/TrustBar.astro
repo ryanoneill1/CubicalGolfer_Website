@@ -5,13 +5,14 @@
  * never contradict the byline/schema claims quality raters cross-check.
  */
 import { AUTHOR_PROFILE } from '../data/author';
+import Icon from './Icon.astro';
 ---
 
 <div class="tb" role="complementary" aria-label="Trust indicators">
   <div class="tb__pills">
-    <span class="tb__pill">🏆 {AUTHOR_PROFILE.testingLabel}</span>
-    <span class="tb__pill">💳 All gear independently purchased</span>
-    <span class="tb__pill">🚫 Zero sponsored content</span>
+    <span class="tb__pill"><Icon name="trophy" /> {AUTHOR_PROFILE.testingLabel}</span>
+    <span class="tb__pill"><Icon name="card" /> All gear independently purchased</span>
+    <span class="tb__pill"><Icon name="ban" /> Zero sponsored content</span>
     <span class="tb__pill">⭐ Real on-course results</span>
   </div>
 </div>

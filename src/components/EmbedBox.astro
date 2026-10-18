@@ -22,11 +22,12 @@ const {
 const iframeCode = `<iframe src="${embedUrl}" width="100%" height="${height}" style="border:none;border-radius: var(--r2);max-width:720px" title="${title}"></iframe>
 <p style="font-size:16px;margin-top:4px">Source: <a href="${sourceUrl}">${sourceName}</a></p>`;
 const linkCode = `<a href="${sourceUrl}">${title}</a> — ${sourceName}`;
+import Icon from './Icon.astro';
 ---
 
 <div class="embed-box">
   <div class="embed-box__header">
-    <span class="embed-box__icon">📋</span>
+    <span class="embed-box__icon"><Icon name="clipboard" /></span>
     <h3 class="embed-box__title">Embed / Cite This Chart</h3>
   </div>
   <p class="embed-box__desc">Free to use on your site with attribution. Copy the embed code or citation link below.</p>

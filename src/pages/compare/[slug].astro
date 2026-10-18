@@ -145,6 +145,7 @@ const compProducts: ComparisonProduct[] = [affA, affB].map((p) => ({
 }));
 schemas.push(...comparisonProductsSchema(compProducts, c.dateModified || c.datePublished));
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import Icon from '../../components/Icon.astro';
 ---
 
 <BaseLayout {meta} {schemas} activeNav="home">
@@ -157,7 +158,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
       price={winnerAff.price}
       url={winnerAff.url}
       retailer={winnerAff.retailer}
-      badge="🏆 WINNER"
+      badge="WINNER"
     />
   )}
 
@@ -180,7 +181,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
           <span class="byline-tagline" style="font-size:11px;font-weight:400;margin-left:6px">{AUTHOR_PROFILE.handicapLabel} weekend golfer, {AUTHOR_PROFILE.city}</span>
         </span>
         <span class="author-meta">
-          📅 Updated: {c.dateModified} &nbsp;·&nbsp;
+          <Icon name="calendar" /> Updated: {c.dateModified} &nbsp;·&nbsp;
           ⛳ <a href="/how-we-test/">How we test →</a>
         </span>
       </div>
@@ -344,7 +345,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 
     {/* ── QUICK WINNER ── */}
     <div class="verdict-box">
-      <p style="font-weight:700;font-size:18px;margin:0 0 12px;">🏆 Winner: {winnerName}</p>
+      <p style="font-weight:700;font-size:18px;margin:0 0 12px;"><Icon name="trophy" /> Winner: {winnerName}</p>
       <p>{c.winnerReason}</p>
       {winnerAff && (
         <a href={winnerAff.url} class="btn-buy-affiliate" style="margin-top:16px"
@@ -400,7 +401,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
     {winnerAff && (
       <div class="post-verdict-cta" style="background:var(--green);border-radius: var(--r2);padding:28px;margin:32px 0;text-align:center;">
         <p style="color:var(--gold);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:0 0 8px;">Our Pick After 20+ Rounds</p>
-        <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;">🏆 {winnerName}</p>
+        <p style="color:#fff;font-size:22px;font-weight:800;margin:0 0 6px;"><Icon name="trophy" /> {winnerName}</p>
         <p style="color:rgba(255,255,255,.8);font-size:14px;margin:0 0 16px;">
           {winnerAff.price} at {winnerAff.retailer} · Free shipping · Prices checked today
         </p>

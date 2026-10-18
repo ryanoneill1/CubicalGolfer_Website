@@ -1,0 +1,71 @@
+---
+/**
+ * Icon.astro — the site's interface icon set.
+ *
+ * ── Why this exists ────────────────────────────────────────────────────────
+ * The October 2026 design audit counted ~26 colour-emoji glyphs per page used
+ * as interface iconography (🔒 Why Trust This Guide, 📅 Updated, 💡 price note,
+ * 🏆 winner crown, ⚖️ disclosure…). None of the four golf competitors measured
+ * — MyGolfSpy, Golf Monthly, Plugged In Golf, Breaking Eighty — use emoji this
+ * way, and it was the single clearest visual difference between this site and
+ * theirs.
+ *
+ * Beyond looks, emoji are rendered by the OS: the same badge is a flat glyph on
+ * Windows, a glossy one on iOS and a different drawing again on Android. The
+ * interface literally changes shape between readers, and the glyphs cannot be
+ * recoloured to match the brand.
+ *
+ * These are 16×16 line icons on a 16-unit grid, drawn with currentColor so they
+ * inherit the colour of the text they sit beside. `aria-hidden` by default —
+ * they are decorative; the label next to them carries the meaning. Pass a
+ * `title` only when an icon is the sole carrier of meaning.
+ *
+ * NOT replaced here, deliberately:
+ *   • article `emoji:` artwork and the gear-category glyphs — those are
+ *     illustration, and deleting them leaves an empty card.
+ *   • the 🟢🔵🔴🟡 course-status markers — colour IS the information there.
+ *   • the medal glyphs inside the strip-regex in [...slug].astro, which exist
+ *     to REMOVE emoji and would break if the characters went away.
+ */
+export interface Props {
+  name: string;
+  size?: number;
+  /** Accessible name. Omit for decorative icons (the default). */
+  title?: string;
+  class?: string;
+}
+const { name, size = 16, title, class: cls = '' } = Astro.props;
+
+const P: Record<string, string> = {
+  clock:     '<circle cx="8" cy="8" r="6.2"/><path d="M8 4.4V8l2.5 1.6"/>',
+  calendar:  '<rect x="2.2" y="3.4" width="11.6" height="10.4" rx="1.6"/><path d="M2.2 6.6h11.6M5.4 2v2.6M10.6 2v2.6"/>',
+  pin:       '<path d="M8 14.2V9M5.2 2.4h5.6l-.9 3.1 1.5 1.6v1.1H4.6V7.1l1.5-1.6z"/>',
+  shield:    '<path d="M8 2.1l4.6 1.8v3.6c0 2.9-1.9 5-4.6 6.4C5.3 12.5 3.4 10.4 3.4 7.5V3.9z"/><path d="M6.1 8.1l1.4 1.4 2.6-2.8"/>',
+  alert:     '<path d="M8 2.6l5.6 9.7H2.4z"/><path d="M8 6.5v3M8 11.2v.6"/>',
+  building:  '<path d="M3.4 13.8V3.3h6.1v10.5M9.5 6.6h3.1v7.2M1.9 13.8h12.2"/><path d="M5.4 5.6h2.1M5.4 8h2.1M5.4 10.4h2.1"/>',
+  target:    '<circle cx="8" cy="8" r="6.1"/><circle cx="8" cy="8" r="3.2"/><circle cx="8" cy="8" r="0.7" fill="currentColor" stroke="none"/>',
+  flask:     '<path d="M6.5 2.1v4L3 12.1a1.2 1.2 0 001 1.8h8a1.2 1.2 0 001-1.8L9.5 6.1v-4M5.6 2.1h4.8M4.6 9.6h6.8"/>',
+  scales:    '<path d="M8 3v10.2M4.6 13.4h6.8M3 5.6h10M3 5.6L1.4 9.3h3.2zM13 5.6l-1.6 3.7h3.2z"/>',
+  calculator:'<rect x="3.2" y="2.2" width="9.6" height="11.6" rx="1.5"/><path d="M5.4 4.9h5.2M5.6 8h.1M8 8h.1M10.4 8h.1M5.6 10.8h.1M8 10.8h.1M10.4 10.8h.1"/>',
+  flag:      '<path d="M4 14.2V2.3M4 2.9l7.6 2.2L4 7.5"/>',
+  bulb:      '<path d="M6.2 11.4a4.1 4.1 0 113.6 0v1.3H6.2zM6.6 14.2h2.8"/>',
+  trophy:    '<path d="M4.8 2.4h6.4v3.4a3.2 3.2 0 11-6.4 0zM4.8 3.5H2.9v1.1a2.2 2.2 0 002 2.1M11.2 3.5h1.9v1.1a2.2 2.2 0 01-2 2.1M6.6 11.1h2.8M5.4 13.8h5.2"/>',
+  tag:       '<path d="M2.6 7.6V2.7h4.9l6 6-4.9 5z"/><circle cx="5.1" cy="5.2" r="1"/>',
+  cart:      '<circle cx="6.4" cy="13" r="1"/><circle cx="11.6" cy="13" r="1"/><path d="M1.6 2.4h2.1l1.9 8.2h7"/><path d="M5.2 5h9l-1.1 4.2"/>',
+  card:      '<rect x="1.8" y="3.6" width="12.4" height="8.8" rx="1.5"/><path d="M1.8 6.6h12.4M4.3 9.8h2.6"/>',
+  ban:       '<circle cx="8" cy="8" r="6.2"/><path d="M3.8 3.8l8.4 8.4"/>',
+  clipboard: '<path d="M6 3.1H4.4a1.3 1.3 0 00-1.3 1.3v8.3A1.3 1.3 0 004.4 14h7.2a1.3 1.3 0 001.3-1.3V4.4A1.3 1.3 0 0011.6 3.1H10"/><rect x="6" y="1.9" width="4" height="2.4" rx=".8"/>',
+  mappin:    '<path d="M8 14.1s4.4-4 4.4-7.3a4.4 4.4 0 10-8.8 0C3.6 10.1 8 14.1 8 14.1z"/><circle cx="8" cy="6.8" r="1.6"/>',
+  book:      '<path d="M2.4 3.1h4.1A1.5 1.5 0 018 4.6v9A1.3 1.3 0 006.7 12.4H2.4z"/><path d="M13.6 3.1H9.5A1.5 1.5 0 008 4.6v9a1.3 1.3 0 011.3-1.2h4.3z"/>',
+};
+const d = P[name];
+if (!d) throw new Error(`Icon: unknown name "${name}". Add it to Icon.astro.`);
+---
+<svg class={`ic ${cls}`} width={size} height={size} viewBox="0 0 16 16" fill="none"
+     stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+     aria-hidden={title ? undefined : 'true'} role={title ? 'img' : undefined} focusable="false"
+     set:html={(title ? `<title>${title}</title>` : '') + d} />
+
+<style>
+.ic { flex: none; vertical-align: -0.14em; display: inline-block; }
+</style>

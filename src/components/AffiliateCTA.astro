@@ -70,11 +70,12 @@ const dateLabel = unmonetised
   : dateChecked
   ? `Free shipping · Prices checked today`
   : `Free shipping · Prices may vary`;
+import Icon from './Icon.astro';
 ---
 
 <div class:list={['aff-cta', `aff-cta--${size}`, `aff-cta--${variant}`]}>
   {isWinner && (
-    <span class="aff-cta__winner-badge">💰 Lowest price we've seen</span>
+    <span class="aff-cta__winner-badge"><Icon name="tag" /> Lowest price we've seen</span>
   )}
   <a
     href={primaryUrl}
@@ -109,7 +110,7 @@ const dateLabel = unmonetised
   <p class="aff-cta__meta">{dateLabel}</p>
   {disclosure && (
     <p class="aff-cta__disclosure">
-      ⚖️ <em>Affiliate link — we earn a small commission at no extra cost to you.</em>
+      <Icon name="scales" /> <em>Affiliate link — we earn a small commission at no extra cost to you.</em>
     </p>
   )}
 </div>

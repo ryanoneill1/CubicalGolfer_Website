@@ -62,6 +62,7 @@ function outboundFor(url: string | null | undefined): string {
   if (url.includes('bushnell')) return 'bushnell';
   return 'other';
 }
+import Icon from './Icon.astro';
 ---
 
 <p class="chart-intro">
@@ -73,7 +74,7 @@ function outboundFor(url: string | null | undefined): string {
 </p>
 
 <p class="early-disclosure" style="font-size:14px;color:var(--muted);margin:0 0 18px;">
-  ⚖️ <em>Affiliate links — we earn a commission at no extra cost to you. It never changes which ball we rank first.</em>
+  <Icon name="scales" /> <em>Affiliate links — we earn a commission at no extra cost to you. It never changes which ball we rank first.</em>
 </p>
 
 <section>

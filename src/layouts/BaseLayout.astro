@@ -49,6 +49,7 @@ const NAV_ITEMS = [
   { label: 'Tools',             href: '/tools/',                      key: 'tools'        },
   { label: 'Gear Quiz',         href: '/gear-quiz/',                  key: 'quiz', cta: true },
 ];
+import Icon from '../components/Icon.astro';
 ---
 
 <!DOCTYPE html>
@@ -306,7 +307,7 @@ const NAV_ITEMS = [
     <div class="footer-bottom">
       <p>© 2026 Cubical Golfer · <a href="/about/" style="color:rgba(255,255,255,.7);text-decoration:underline;">Editorial Policy</a></p>
       <p class="footer-disc">
-        ⚖️ Affiliate disclosure: we earn commissions from qualifying purchases at no extra cost to you.
+        <Icon name="scales" /> Affiliate disclosure: we earn commissions from qualifying purchases at no extra cost to you.
         Products we rank are independently purchased &amp; tested; any page built from other people&rsquo;s testing says so at the top. Last updated {SITE_LAST_UPDATED}.
       </p>
     </div>

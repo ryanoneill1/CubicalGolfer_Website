@@ -24,6 +24,7 @@ const {
 } = Astro.props;
 
 const initials = name.split(' ').map(w => w[0]).join('').toUpperCase();
+import Icon from './Icon.astro';
 ---
 
 <div class="ab">
@@ -40,7 +41,7 @@ const initials = name.split(' ').map(w => w[0]).join('').toUpperCase();
       {roundsTested && <span>Tested {roundsTested} rounds</span>}
       {roundsTested && lastTested && <span> · </span>}
       {lastTested && <span>Last on-course: {lastTested}</span>}
-      {courseTested && <span class="ab__course"> · 📍 {courseTested}</span>}
+      {courseTested && <span class="ab__course"> · <Icon name="mappin" /> {courseTested}</span>}
     </p>
   </div>
   <a href="/how-we-test/" class="ab__link">How we test →</a>
