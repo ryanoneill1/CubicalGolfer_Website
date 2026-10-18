@@ -556,5 +556,77 @@ import Icon from '../components/Icon.astro';
       if (exitPopup) observer.observe(exitPopup, { childList: true, subtree: true });
     })();
   </script>
+
+  <!-- ── Sprint 177 — give wide tables a real scroll container ──────────────
+       Sprint 143 set `.art-content table { display:block; overflow-x:auto }`
+       below 760px to stop wide tables pushing the page sideways (up to 464px
+       of overflow, on the 58% of clicks that are mobile). It worked, but
+       `display:block` drops a <table> out of the accessibility tree: rows,
+       columns and header association stop being announced. 114 tables on 55
+       pages were affected, 9 of them on the compression chart.
+
+       A scrolling WRAPPER scrolls just as well and leaves the table a table.
+       Deliberately progressive: if this never runs, the Sprint 143 rule still
+       applies and nothing regresses. It also marks which tables actually
+       overflow, so the fade and hint appear only where there is more to see,
+       and makes the scroller keyboard-reachable (WCAG 2.1.1). -->
+  <script is:inline>
+    (function () {
+      var SEL = '.art-content table, .compare-body table, .local-body table, .section-body table';
+      function wrap() {
+        document.querySelectorAll(SEL).forEach(function (t) {
+          var p = t.parentElement;
+          if (p && p.classList.contains('tbl-scroll')) return;
+          if (p && (p.classList.contains('cmp-wrap') ||
+                    p.classList.contains('comparison-table-wrapper') ||
+                    p.classList.contains('spec-table-wrap'))) { p.classList.add('tbl-scroll'); return; }
+          var w = document.createElement('div');
+          w.className = 'tbl-scroll';
+          t.parentNode.insertBefore(w, t);
+          w.appendChild(t);
+        });
+      }
+      function measure() {
+        document.querySelectorAll('.tbl-scroll').forEach(function (w) {
+          var over = w.scrollWidth > w.clientWidth + 2;
+          w.classList.toggle('is-scrollable', over);
+          w.classList.toggle('at-start', w.scrollLeft <= 2);
+          w.classList.toggle('at-end', w.scrollLeft + w.clientWidth >= w.scrollWidth - 2);
+          if (over && !w.hasAttribute('tabindex')) {
+            w.setAttribute('tabindex', '0');
+            w.setAttribute('role', 'region');
+            var tr = w.querySelector('tr');
+            var cols = tr ? tr.children.length : 0;
+            w.setAttribute('aria-label', cols ? ('Table, ' + cols + ' columns, scrolls sideways') : 'Table, scrolls sideways');
+          }
+          if (!over) { w.removeAttribute('tabindex'); w.removeAttribute('role'); w.removeAttribute('aria-label'); }
+
+          var hint = w.nextElementSibling;
+          var isHint = hint && hint.classList && hint.classList.contains('tbl-hint');
+          if (over && !isHint) {
+            var h = document.createElement('p');
+            h.className = 'tbl-hint';
+            h.setAttribute('aria-hidden', 'true');
+            h.innerHTML = '<svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" ' +
+              'stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h12M5 5L2 8l3 3M11 5l3 3-3 3"/></svg>' +
+              '<span>Scroll sideways to see all columns</span>';
+            w.parentNode.insertBefore(h, w.nextSibling);
+          } else if (!over && isHint) { hint.remove(); }
+        });
+      }
+      function init() {
+        wrap(); measure();
+        document.querySelectorAll('.tbl-scroll').forEach(function (w) {
+          w.addEventListener('scroll', function () {
+            w.classList.toggle('at-start', w.scrollLeft <= 2);
+            w.classList.toggle('at-end', w.scrollLeft + w.clientWidth >= w.scrollWidth - 2);
+          }, { passive: true });
+        });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+      var t0; window.addEventListener('resize', function () { clearTimeout(t0); t0 = setTimeout(measure, 150); }, { passive: true });
+    })();
+  </script>
 </body>
 </html>

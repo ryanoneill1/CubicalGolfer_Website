@@ -94,11 +94,15 @@ const emptyStars = rating ? (5 - fullStars - (halfStar ? 1 : 0)) : 0;
       )}
     </div>
   </div>
-  <p class="qp__disclosure">
-    {tested === false
-      ? 'Not our own testing · Commission earned if you buy · Never influences our ranking'
-      : 'Independently purchased · Commission earned if you buy · Never influences our ranking'}
-  </p>
+  {/* Sprint 178 (F5) — removed. Measured document order on a buying guide:
+      early-disclosure @6,093 → FIRST affiliate link @9,264 → this one.
+      It restated a promise the reader had already been given 4,000
+      characters earlier. Sitewide the four trust promises ran to 4,446 /
+      1,974 / 1,919 / 905 repetitions in 411 wordings. Stanford web
+      credibility #9 is 'use restraint with promotional content'.
+      What remains: <EarlyDisclosure> above the first affiliate link on
+      every page, and the footer line. Both verified present on all 238
+      affiliate pages by validate-cta-geometry. */}
 </aside>
 
 <style>

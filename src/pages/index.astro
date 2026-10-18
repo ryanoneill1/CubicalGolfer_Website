@@ -97,18 +97,20 @@ import Icon from '../components/Icon.astro';
   <!-- ── HERO ── -->
   <section class="hero" aria-label="Welcome to Cubical Golfer">
     <div>
-      <div class="hero-badge" aria-hidden="true">🏌️ GEAR & HACKS FOR THE 9-5 GOLFER</div>
+      <div class="hero-badge" aria-hidden="true">GEAR &amp; HACKS FOR THE 9-5 GOLFER</div>
       <h1>Stop Guessing. Start Playing Better Golf.</h1>
       <EarlyDisclosure />
       <p class="hero-sub">Every product independently purchased and tested over {AUTHOR_PROFILE.testingRounds} real rounds by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>
         <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
-        <a href="/compare/" class="btn-outline hero-secondary">Compare Products</a>
-        <p class="hero-alt"><a href="/gear-reviews/">Browse reviews</a> · <a href="/compare/">Compare products</a></p>
+        {/* Sprint 178 — third hero CTA removed. The hero carried five calls to
+            action; Compare is already in the main nav. One primary, one secondary. */}
+        {/* Sprint 178 — removed: this repeated the two buttons immediately above it,
+            so the hero offered the same two destinations twice. */}
         <div class="hero-author">
           <img src="/images/ryan-author-photo.webp" alt="Ryan, founder of Cubical Golfer" width="44" height="44" loading="eager" />
-          <p>Tested by <a href="/about/">Ryan</a> — 10-handicap weekend golfer, Chicagoland. No sponsors, no freebies.</p>
+          <p>Tested by <a href="/about/">Ryan</a> — 10-handicap weekend golfer, Chicagoland.</p>
         </div>
       </div>
       <div class="hero-quick-links">
@@ -191,7 +193,11 @@ import Icon from '../components/Icon.astro';
       <div class="section-header">
         <p class="section-eyebrow">EDITOR'S TOP PICKS</p>
         <h2 id="picks-h">Best Golf Gear for Weekend Players</h2>
-        <p>Independently tested — {AUTHOR_PROFILE.testingRounds} real rounds. Every product has an affiliate link — we earn a small commission at no extra cost to you.</p>
+        {/* Sprint 178 — this line carried BOTH a commission disclosure and the
+            testing claim, three screens below the hero that already makes each
+            once. The disclosure now lives in exactly two places sitewide
+            (above the first affiliate link, and the footer). */}
+        <p>The gear that actually moves the needle for weekend golfers — ranked on the course, not from spec sheets.</p>
         <p style="font-size:16px;color:var(--green);font-weight:600;margin:8px 0 0;">The wrong rangefinder loses the pin in trees. The wrong ball costs 10 yards at your swing speed. The wrong driver adds slice. We tested so you don't have to guess.</p>
       </div>
       <div class="home-picks__grid">

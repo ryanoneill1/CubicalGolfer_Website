@@ -454,7 +454,7 @@ import Icon from '../components/Icon.astro';
         <span class="author-meta">
           <Icon name="clock" /> {Math.max(1, Math.round(computedWords / 220))} min read &nbsp;·&nbsp;
           <Icon name="calendar" /> Updated: {article.dateModified} &nbsp;·&nbsp;
-          ⛳ <a href="/how-we-test/">How we test →</a>
+          <Icon name="flag" /> <a href="/how-we-test/">How we test →</a>
         </span>
       </div>
       {article.tested === false
@@ -535,7 +535,15 @@ import Icon from '../components/Icon.astro';
 
   {/* ── AFFILIATE DISCLOSURE — top-of-article trust signal ── */}
   {isCommercial && (
-    <AffiliateDisclosure tested={article.tested} />
+    {/* Sprint 178 (F5) — removed. Measured document order on a buying guide:
+        early-disclosure @6,093 → FIRST affiliate link @9,264 → this one.
+        It restated a promise the reader had already been given 4,000
+        characters earlier. Sitewide the four trust promises ran to 4,446 /
+        1,974 / 1,919 / 905 repetitions in 411 wordings. Stanford web
+        credibility #9 is 'use restraint with promotional content'.
+        What remains: <EarlyDisclosure> above the first affiliate link on
+        every page, and the footer line. Both verified present on all 238
+        affiliate pages by validate-cta-geometry. */}
   )}
 
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
@@ -1330,12 +1338,15 @@ import Icon from '../components/Icon.astro';
 
     {/* AFFILIATE DISCLOSURE — required on all commercial pages */}
     {isCommercial && (
-      <div class="disclosure-box" role="note" aria-label="Affiliate disclosure">
-        Affiliate disclosure: some links on this page earn us a small commission at no extra
-        cost to you. We purchased all products independently — commissions never affect our
-        rankings or recommendations.
-        <a href="/about/" class="disclosure-link">Learn more about how we work</a>
-      </div>
+    {/* Sprint 178 (F5) — removed. Measured document order on a buying guide:
+        early-disclosure @6,093 → FIRST affiliate link @9,264 → this one.
+        It restated a promise the reader had already been given 4,000
+        characters earlier. Sitewide the four trust promises ran to 4,446 /
+        1,974 / 1,919 / 905 repetitions in 411 wordings. Stanford web
+        credibility #9 is 'use restraint with promotional content'.
+        What remains: <EarlyDisclosure> above the first affiliate link on
+        every page, and the footer line. Both verified present on all 238
+        affiliate pages by validate-cta-geometry. */}
     )}
 
     {/* UPDATE STAMP */}

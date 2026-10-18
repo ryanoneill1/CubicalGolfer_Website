@@ -2234,6 +2234,55 @@ main section > p, main section ul, main section ol {
 }
 
 
+/* ── Sprint 177 — scrollable tables that are still tables ───────────────────
+ * 1. ACCESSIBILITY. Sprint 143's `display:block` fixed real page overflow but
+ *    dropped tables out of the accessibility tree — 114 tables on 55 pages.
+ *    A wrapper scrolls just as well and leaves the table a table. The Sprint
+ *    143 rule stays below as the no-JS fallback; `.tbl-scroll > table` hands
+ *    `display:table` back wherever the wrapper exists.
+ * 2. AFFORDANCE. Measured at 375px: the rangefinder table showed 2 of 5
+ *    columns (52% hidden), the compression chart 2 of 7 (61% hidden), with
+ *    nothing but a hairline scrollbar to say so.
+ */
+.tbl-scroll {
+  position: relative;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+.tbl-scroll > table { display: table; overflow: visible; max-width: none; }
+
+.tbl-scroll.is-scrollable::before,
+.tbl-scroll.is-scrollable::after {
+  content: ""; position: sticky; top: 0; display: block;
+  width: 28px; height: 100%; pointer-events: none; z-index: 2;
+  transition: opacity .18s ease;
+}
+.tbl-scroll.is-scrollable::before {
+  left: 0; float: left; margin-right: -28px;
+  background: linear-gradient(to right, rgba(26,43,31,.13), transparent);
+}
+.tbl-scroll.is-scrollable::after {
+  right: 0; float: right; margin-left: -28px;
+  background: linear-gradient(to left, rgba(26,43,31,.13), transparent);
+}
+.tbl-scroll.at-start::before { opacity: 0; }
+.tbl-scroll.at-end::after    { opacity: 0; }
+
+.tbl-hint {
+  display: flex; align-items: center; gap: 8px;
+  margin: 8px 0 24px; font-size: 14px; color: var(--muted);
+}
+.tbl-hint svg { flex: none; }
+.tbl-scroll.is-scrollable::-webkit-scrollbar { height: 8px; }
+.tbl-scroll.is-scrollable::-webkit-scrollbar-thumb {
+  background: var(--border); border-radius: var(--r1);
+}
+.tbl-scroll.is-scrollable:focus-visible {
+  outline: 2px solid var(--green); outline-offset: 2px;
+}
+
 /* ── Sprint 176 — ONE button geometry ───────────────────────────────────────
  * Measured on /best-golf-rangefinders-2026/ before this: 36 CTAs, 8 distinct
  * heights (21/48/49/53/57/58/81/192px), 9 visual treatments, and 10 links

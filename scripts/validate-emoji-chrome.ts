@@ -29,7 +29,7 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIST = join(process.cwd(), 'dist');
-const CEILING = 479;
+const CEILING = 472;   // lowered in Sprint 178 (homepage badge emoji removed)
 
 if (!existsSync(DIST)) {
   console.log('validate-emoji-chrome: no dist/ yet — skipped (runs after astro build).');

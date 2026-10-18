@@ -182,7 +182,7 @@ import Icon from '../../components/Icon.astro';
         </span>
         <span class="author-meta">
           <Icon name="calendar" /> Updated: {c.dateModified} &nbsp;·&nbsp;
-          ⛳ <a href="/how-we-test/">How we test →</a>
+          <Icon name="flag" /> <a href="/how-we-test/">How we test →</a>
         </span>
       </div>
       <span class="verified-badge">Independently tested</span>
@@ -450,11 +450,15 @@ import Icon from '../../components/Icon.astro';
     )}
 
     {/* ── DISCLOSURE ── */}
-    <div class="disclosure-box" role="note">
-      Affiliate disclosure: some links on this page earn a small commission at no extra
-      cost to you. Products were independently purchased.
-      <a href="/about/" class="disclosure-link">Learn more about how we work</a>
-    </div>
+    {/* Sprint 178 (F5) — removed. Measured document order on a buying guide:
+        early-disclosure @6,093 → FIRST affiliate link @9,264 → this one.
+        It restated a promise the reader had already been given 4,000
+        characters earlier. Sitewide the four trust promises ran to 4,446 /
+        1,974 / 1,919 / 905 repetitions in 411 wordings. Stanford web
+        credibility #9 is 'use restraint with promotional content'.
+        What remains: <EarlyDisclosure> above the first affiliate link on
+        every page, and the footer line. Both verified present on all 238
+        affiliate pages by validate-cta-geometry. */}
 
     {/* ── UPDATE STAMP ── */}
     <div class="update-stamp">Last updated: {c.dateModified}</div>

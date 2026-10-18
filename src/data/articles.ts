@@ -10478,6 +10478,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'blue-tees-rainmaker-vs-swing-caddie-sc4-pro',
     slug: '/blue-tees-rainmaker-vs-swing-caddie-sc4-pro/',
+    thumbnail: '/images/thumbnails/blue-tees-rainmaker-vs-swing-caddie-sc4-pro-thumb.webp',
     ogImage: 'https://www.cubicalgolfer.com/images/og/blue-tees-rainmaker-vs-swing-caddie-sc4-pro.jpg',
     category: 'golf-tech',
     pageType: 'comparison',
@@ -10536,6 +10537,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'square-golf-omni-vs-garmin-r10',
     slug: '/square-golf-omni-vs-garmin-r10/',
+    thumbnail: '/images/thumbnails/square-golf-omni-vs-garmin-r10-thumb.webp',
     ogImage: 'https://www.cubicalgolfer.com/images/og/square-golf-omni-vs-garmin-r10.jpg',
     category: 'golf-tech',
     pageType: 'comparison',
