@@ -1,0 +1,75 @@
+SPRINT 180 — homepage spacing: the two things Ryan reported, and why they happened
+==================================================================================
+7 files. Upload preserving folder structure. No deletions required.
+
+THE TWO REPORTS
+  1. "NOT SURE WHERE TO START? and ⭐ FEATURED PICK are too close together"
+     Correct, and worse than described. They were not close — they were TOUCHING,
+     and the featured box also ran edge-to-edge past the card grid above it.
+       - the intent <section> had `padding:32px clamp(1.5rem,5vw,4rem) 0`
+         → a ZERO bottom padding
+       - the featured block was a bare <div> with `margin:0 0 28px`
+         → a ZERO top margin, AND no container, so no max-width and no side padding
+     Total gap between them: 0px. Now 40px, and both share one 1200px container.
+
+  2. "this section seems smooshed" (disclosure → buttons → byline → POPULAR)
+     Correct, and the cause was structural, not cosmetic. The byline was a CHILD
+     of .hero-btns, which is `display:flex; gap:12px; flex-wrap:wrap`. Ryan's
+     photo and name were being laid out as a third button. It is a sibling now.
+     The disclosure also had `margin-bottom:0`, so it sat flush on the gold
+     button; it has 28px now.
+
+WHY NEITHER WAS CAUGHT
+  Every one of those values was an inline style="". ~50 validators run on this
+  build and not one of them can see inside an inline style. This is the F9
+  inline-style problem showing up as something Ryan could see.
+
+WHAT CHANGED
+  src/pages/index.astro
+    - .hero-author lifted out of .hero-btns (structural fix for report 2)
+    - START HERE + FEATURED PICK converted from inline styles to classes
+    - inline style="" on this page: 36 → 14
+    - the featured affiliate button now carries data-outbound + data-aff-name.
+      It had NEITHER. The homepage's one featured product has been sending
+      untracked clicks this whole time; it now reports like every other CTA.
+      (validate-click-tracking: 24 → 25 attributed outbound links.)
+
+  src/styles/global.css
+    - new: .home-intent, .intent-card*, .home-featured* — all on the 4pt grid
+    - .hero .early-disclosure given a 28px bottom margin
+
+  scripts/validate-home-rhythm.ts  (NEW)
+    - requires every adjacent pair of top-level homepage sections to be ≥32px
+      apart, so this class of bug cannot return silently.
+    - It reads dist/, NOT the .astro source. The first version parsed the source
+      and keyed off indentation: it passed while skipping all six pairs it looked
+      at, and never even saw .home-featured (it lives inside an IIFE). A check
+      that reports "all clear" on the exact bug it was written for is worse than
+      no check. It now also fails loudly if it verifies 0 pairs.
+    - Carve-out: two sections with DIFFERENT backgrounds may touch — that is the
+      cream→green→cream-dark colour blocking, which is deliberate. Without that
+      exception it would fire on five correct sections and we would learn to
+      ignore it.
+    - PROVEN: re-introducing the original 32px/0 + 0 values makes it fail with
+      ".home-intent (padding-bottom 0px) → .home-featured (padding-top 0px) = 0px".
+
+  scripts/validate-emoji-chrome.ts
+    - ceiling ratcheted 472 → 467 (the converted blocks dropped five glyphs)
+
+  package.json
+    - validate-home-rhythm wired in AFTER `astro build` (it reads dist/; I first
+      put it in the pre-build chain and it failed with ENOENT, correctly)
+
+  src/data/lastmod-manifest.json, public/api/search-index.json
+    - regenerated. The search index still carried "♂️ Golf for Beginners" — the
+      orphaned glyph fixed in Sprint 179 had not been regenerated into it.
+
+NOT IN THIS ZIP, DELIBERATELY
+  public/images/og/*.jpg and public/downloads/*.pdf — re-encoded every build,
+  byte-different, content-identical. 69 files of noise against your 100 limit.
+
+VERIFICATION — full `npm run build`, not `npm run validate`
+  ✅ build + all validators pass, including the new one
+  ✅ validate-spacing-scale caught my 18px and my 10px; both fixed to grid
+  ✅ cta-geometry, contrast, design-tokens, layout-edges, click-tracking all green
+  ✅ rendered and looked at: 40px gap, edges aligned, byline no longer a flex button

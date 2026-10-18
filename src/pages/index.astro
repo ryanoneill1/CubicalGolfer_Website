@@ -9,6 +9,7 @@ import { getFeaturedArticles, getCategoryArticles } from '../lib/linking';
 import { ARTICLES } from '../data/articles';
 import { REDIRECTED_AWAY } from '../lib/sitemap-utils';
 import { COMPARISONS } from '../data/comparisons';
+import { PRODUCT_DISPLAY } from '../data/product-names';
 import { getAffiliateLink } from '../data/affiliate-links';
 
 // Top picks for homepage product grid
@@ -115,12 +116,16 @@ import Icon from '../components/Icon.astro';
         <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
         {/* Sprint 178 — third hero CTA removed. The hero carried five calls to
             action; Compare is already in the main nav. One primary, one secondary. */}
-        {/* Sprint 178 — removed: this repeated the two buttons immediately above it,
-            so the hero offered the same two destinations twice. */}
-        <div class="hero-author">
-          <img src="/images/ryan-author-photo.webp" alt="Ryan, founder of Cubical Golfer" width="44" height="44" loading="eager" />
-          <p>Tested by <a href="/about/">Ryan</a> — 10-handicap weekend golfer, Chicagoland.</p>
-        </div>
+      </div>
+      {/* Sprint 180 — the byline used to sit INSIDE .hero-btns, which is
+          `display:flex; gap:12px; flex-wrap:wrap`. That made Ryan's photo and
+          name a flex sibling of the two buttons: on wide screens it tried to
+          share their row, and on narrow ones it stacked on a 12px button gap
+          with no breathing room. It is a sibling of the button row now, not a
+          member of it. Do not move it back inside .hero-btns. */}
+      <div class="hero-author">
+        <img src="/images/ryan-author-photo.webp" alt="Ryan, founder of Cubical Golfer" width="44" height="44" loading="eager" />
+        <p>Tested by <a href="/about/">Ryan</a> — 10-handicap weekend golfer, Chicagoland.</p>
       </div>
       <div class="hero-quick-links">
         <span class="hero-quick-label">Popular:</span>
@@ -143,46 +148,72 @@ import Icon from '../components/Icon.astro';
   <TrustBar />
 
   {/* ── START HERE — route users by intent ── */}
-  <section style="padding:32px clamp(1.5rem,5vw,4rem) 0;max-width:1200px;margin:0 auto;">
-    <p style="font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--gold-text);margin:0 0 12px;text-align:center;">NOT SURE WHERE TO START?</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;">
-      <a href="/gear-quiz/" style="display:block;padding:16px;background:var(--green);border-radius: var(--r2);text-decoration:none;text-align:center;">
-        <p style="font-size:16px;font-weight:700;color:#fff;margin:0 0 4px;">🎯 By Your Game</p>
-        <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0;">4 questions → personalized picks</p>
+  {/* Sprint 180 — this section carried `padding:32px clamp(...) 0`: a ZERO
+      bottom padding, inline, where nothing could police it. The featured card
+      below had a matching zero top margin, so the two rendered touching. Both
+      now live in classes that declare top AND bottom padding, enforced by
+      scripts/validate-home-rhythm.ts. */}
+  <section class="home-intent" aria-labelledby="intent-h">
+    <p class="home-intent__eyebrow" id="intent-h">Not sure where to start?</p>
+    <div class="home-intent__grid">
+      <a href="/gear-quiz/" class="intent-card intent-card--primary">
+        <p class="intent-card__title">🎯 By Your Game</p>
+        <p class="intent-card__sub">4 questions → personalized picks</p>
       </a>
-      <a href="/best-golf-gear-under-100/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius: var(--r2);text-decoration:none;text-align:center;">
-        <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">💰 By Budget</p>
-        <p style="font-size:16px;color:var(--muted);margin:0;">Best gear under $100</p>
+      <a href="/best-golf-gear-under-100/" class="intent-card">
+        <p class="intent-card__title">💰 By Budget</p>
+        <p class="intent-card__sub">Best gear under $100</p>
       </a>
-      <a href="/best-golf-gear-2026/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius: var(--r2);text-decoration:none;text-align:center;">
-        <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;">🏆 By Category</p>
-        <p style="font-size:16px;color:var(--muted);margin:0;">#1 pick in every category</p>
+      <a href="/best-golf-gear-2026/" class="intent-card">
+        <p class="intent-card__title">🏆 By Category</p>
+        <p class="intent-card__sub">#1 pick in every category</p>
       </a>
-      <a href="/compare/" style="display:block;padding:16px;background:#fff;border:2px solid var(--border);border-radius: var(--r2);text-decoration:none;text-align:center;">
-        <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;"><Icon name="scales" /> Compare Two</p>
-        <p style="font-size:16px;color:var(--muted);margin:0;">{COMPARISONS.length + ARTICLES.filter(a => /(?:^|\/)[a-z0-9-]+-vs-[a-z0-9-]+\/?$/.test(a.slug)).length} head-to-head tests</p>
+      <a href="/compare/" class="intent-card">
+        <p class="intent-card__title"><Icon name="scales" /> Compare Two</p>
+        <p class="intent-card__sub">{COMPARISONS.length + ARTICLES.filter(a => /(?:^|\/)[a-z0-9-]+-vs-[a-z0-9-]+\/?$/.test(a.slug)).length} head-to-head tests</p>
       </a>
     </div>
   </section>
 
   {/* ── FEATURED PICK ── */}
+  {/* Sprint 180 — this was a bare <div> with `margin:0 0 28px` sitting
+      directly in the page flow: no container, so while the intent cards above
+      sit in a 1200px box with clamp() side padding, this ran edge to edge past
+      them. It now shares their container and their padding. */}
   {(() => {
     const aff = getAffiliateLink('callaway-paradym-ai-smoke-max');
     return (
-      <div class="hub-featured" style="margin:0 0 28px;padding:18px 22px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.25);border-radius: var(--r2);display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;">
-          <div style="flex:1;min-width:200px;">
-            <span style="font-size:16px;font-weight:700;color:var(--gold-text);text-transform:uppercase;letter-spacing:0.5px;">⭐ Featured Pick</span>
-            <p style="font-size:16px;font-weight:700;margin:4px 0 2px;color:var(--green);">Callaway Paradym Ai Smoke Max Driver — ~$399</p>
-            <p style="font-size:16px;margin:0;color:var(--muted);">Most forgiving driver we tested in 2026 — its AI face keeps mishits fast, so your miss still flies</p>
+      <section class="home-featured" aria-label="Featured pick">
+        <div class="home-featured__card">
+          <div class="home-featured__body">
+            <span class="home-featured__eyebrow">⭐ Featured Pick</span>
+            <p class="home-featured__name">Callaway Paradym Ai Smoke Max Driver — ~$399</p>
+            <p class="home-featured__desc">Most forgiving driver we tested in 2026 — its AI face keeps mishits fast, so your miss still flies</p>
           </div>
+          {/* Sprint 180 — this button had been an untracked affiliate link the whole
+              time: no data-outbound, no data-aff-name, so every click on the homepage's
+              one featured product landed in analytics as an anonymous outbound hit.
+              Tagged now, the same way ProductCard does it.
+              NOTE: this comment lives ABOVE the {cond && (...)} wrapper on purpose. Put
+              it inside and the parenthesised expression has two children, and Astro
+              fails the build with "Expected ) but found $$render" pointing at an
+              unrelated line. That has now cost two sprints. */}
           {aff?.url && (
-            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored" style="display:inline-block;background:var(--gold);color:var(--text);padding:10px 20px;border-radius: var(--r1);font-size:16px;font-weight:700;text-decoration:none;white-space:nowrap;">Check Price →</a>
+            <a href={aff.url} target="_blank" rel="nofollow noopener sponsored"
+               class="home-featured__cta"
+               data-outbound={aff.url.includes('amazon.com') ? 'amazon'
+                 : aff.url.includes('playbetter') ? 'playbetter'
+                 : aff.url.includes('bushnell') ? 'bushnell'
+                 : (aff.url.includes('golfgalaxy') || aff.url.includes('click-101736949')) ? 'golfgalaxy'
+                 : 'other'}
+               data-aff-name={PRODUCT_DISPLAY['callaway-paradym-ai-smoke-max']}>Check Price →</a>
           )}
           <a href="/compare/callaway-paradym-vs-taylormade-qi35/" class="featured-review-link">See Our Full Test →</a>
           {aff?.priceNote && (
-            <p style="font-size:16px;color:var(--green);background:rgba(30,58,40,.06);padding:6px 10px;border-radius: var(--r1);margin:4px 0 0;width:100%;font-weight:500;">💡 {aff.priceNote}</p>
+            <p class="home-featured__note">💡 {aff.priceNote}</p>
           )}
         </div>
+      </section>
     );
   })()}
 
