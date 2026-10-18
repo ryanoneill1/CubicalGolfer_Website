@@ -1,0 +1,56 @@
+SPRINT 179 — homepage hero de-duplication + two defects found on the way
+=========================================================================
+6 files. Upload preserving folder structure (src/..., public/...).
+No deletions required.
+
+WHAT CHANGED
+  src/pages/index.astro
+    - hero-sub reworded: drops "15+ real rounds" and "No freebies. No sponsors."
+      (both came straight back as TrustBar pills immediately below), and absorbs
+      the one original line the deleted hero-card was carrying.
+    - <aside class="hero-card"> deleted entirely (folded into the hero).
+    - <EarlyDisclosure/> moved out from between the <h1> and the lede, where it
+      was interrupting the headline->promise read. It now follows the lede and is
+      still far above the first affiliate link (Editor's Picks).
+    - unused AUTHOR_PROFILE import removed.
+
+  src/styles/global.css
+    - .hero grid 3 cols -> 2 (`minmax(320px,1fr) 1fr`); the 938px breakpoint
+      goes `1fr 340px` -> `1fr`. Both tracked the deleted hero-card.
+    - 9 dead .hero-card* rules removed (used nowhere else - verified).
+    - .hero .early-disclosure { margin-top: 20px } so it reads as a caption.
+      (18px was rejected by validate-spacing-scale - 4pt grid. Correct call.)
+
+  src/components/AffiliateCTA.astro
+    - comment-only. Lines 117-118 still claimed afd__text / disclosure-box /
+      qp__disclosure "all remain"; Sprint 178 removed all three. Corrected, and
+      it now names the two validators that enforce what's left.
+
+  src/data/articles.ts
+    - BUG FIX: titleDisplay for /golf-for-beginners/ read "♂️ Golf for Beginners".
+      The Sprint 174 emoji strip removed the golfer glyph but not the ZWJ-joined
+      gender sign, leaving an orphan live on the page. Swept all data files for
+      the same pattern - this was the only one.
+
+  src/data/lastmod-manifest.json, public/llms-full.txt
+    - regenerated (required; update-lastmod --check fails the build otherwise).
+
+NOT IN THIS ZIP, DELIBERATELY
+  public/images/og/*.jpg and public/downloads/*.pdf show as modified after every
+  build - the encoders are not byte-deterministic. No content changed. Shipping
+  69 churned binaries would eat your 100-file upload limit for nothing.
+
+VERIFICATION (full `npm run build`, not just `npm run validate`)
+  - build + all 47 validators pass
+  - "real rounds" visible on the homepage: 3 -> 1 (the TrustBar pill).
+    The other 3 hits are the meta/og/twitter description tags, which should
+    keep it.
+  - hero-card: gone from the rendered HTML
+  - disclosure statements on the homepage: 2 visible + the one-time cookie
+    banner, unchanged
+  - validate-disclosure-position: still green on all 238 affiliate pages
+
+NOT DONE, ON PURPOSE - see the chat message
+  - disclosure was NOT reduced to footer-only
+  - Rainmaker ordering was NOT switched to Golf Galaxy first (both links were
+    already rendering; only the order is in question)

@@ -165,7 +165,7 @@ Summary: Beginners lose balls. That single fact should decide what you play — 
 URL: https://www.cubicalgolfer.com/best-golf-balls-for-distance/
 Summary: Low-spin, high-launch golf balls tested for maximum carry at recreational swing speeds.
 
-## ⛳ Best Golf Balls for Seniors — Tested Picks
+## Best Golf Balls for Seniors — Tested Picks
 URL: https://www.cubicalgolfer.com/best-golf-balls-for-seniors/
 Summary: Swing speed drops with age. The right low-compression ball gives you back 10-15 yards without changing your swing. These are the only 4 we recommend.
 
@@ -233,7 +233,7 @@ Summary: Find the right GPS watch for accurate yardages, score tracking, and sho
 URL: https://www.cubicalgolfer.com/best-golf-irons-2026/
 Summary: The best game-improvement, mid-handicap, and players irons of 2026 — tested and ranked for every skill level.
 
-## 🏌️ Best Golf Irons for Seniors — Tested Picks
+## Best Golf Irons for Seniors — Tested Picks
 URL: https://www.cubicalgolfer.com/best-golf-irons-for-seniors/
 Summary: Senior golfers need irons that launch high, forgive mishits, and restore the distance lost to slower swing speeds. These 4 sets deliver all three.
 
@@ -245,7 +245,7 @@ Summary: The right putter style for your stroke type — blade, mallet, and mid-
 URL: https://www.cubicalgolfer.com/best-golf-rangefinder-beginners/
 Summary: Don't overspend on a first rangefinder. Here's what actually matters for beginners and which models deliver it at the right price.
 
-## 🏌️ Best Golf Rangefinder for Seniors — Tested Picks
+## Best Golf Rangefinder for Seniors — Tested Picks
 URL: https://www.cubicalgolfer.com/best-golf-rangefinder-for-seniors/
 Summary: Senior golfers need rangefinders that are easy to hold, easy to read in sunlight, and simple to operate with one hand. Here are the only 5 we recommend.
 
@@ -309,7 +309,7 @@ Summary: Best spikeless shoes for walking 18 — tested on wet Midwest mornings 
 URL: https://www.cubicalgolfer.com/best-wedges-for-beginners/
 Summary: Beginner-friendly wedges with extra forgiveness. These cavity-back designs make the short game less intimidating.
 
-## 🔭 Blue Tees vs Bushnell Rangefinder — Which Is Better?
+## Blue Tees vs Bushnell Rangefinder — Which Is Better?
 URL: https://www.cubicalgolfer.com/blue-tees-vs-bushnell-rangefinder/
 Summary: Blue Tees gives you 80% of Bushnell performance at 50% of the price. Here is exactly when that trade-off makes sense and when it does not.
 
@@ -337,7 +337,7 @@ Summary: A deep review of the Callaway Paradym Ai Smoke Max — the most forgivi
 URL: https://www.cubicalgolfer.com/compare/titleist-pro-v1-vs-callaway-chrome-soft/
 Summary: Pro V1 vs Chrome Soft head-to-head — distance at multiple swing speeds, greenside spin, feel, and value analysis.
 
-## ⛰️ Do I Need Slope on a Golf Rangefinder? Honest Answer
+## Do I Need Slope on a Golf Rangefinder? Honest Answer
 URL: https://www.cubicalgolfer.com/do-i-need-slope-on-rangefinder/
 Summary: Slope adjusts your yardage for uphill and downhill elevation. Here is exactly who needs it and who is wasting money on it.
 
@@ -753,7 +753,7 @@ Summary: When to hit 3-wood off the tee instead of driver — the data says more
 URL: https://www.cubicalgolfer.com/golf-distance-temperature-chart/
 Summary: Cold air is denser and a cold ball compresses less. Here is what that costs you, club by club, from 30°F to 90°F.
 
-## 🏌️‍♂️ Golf for Beginners — Complete Guide
+## Golf for Beginners — Complete Guide
 URL: https://www.cubicalgolfer.com/golf-for-beginners/
 Summary: Everything a complete beginner needs to start playing golf in 2026. Gear, fundamentals, practice routines, and realistic expectations — in one place.
 
@@ -813,7 +813,7 @@ Summary: Owning a launch monitor does not make you better. Using it with a struc
 URL: https://www.cubicalgolfer.com/how-to-lower-golf-handicap/
 Summary: Most golfers try to improve by hitting longer drives. That is the wrong approach. Here is the most efficient path to a lower handicap.
 
-## 🎯 How to Stop 3-Putting — 5 Drills That Fix It Fast
+## How to Stop 3-Putting — 5 Drills That Fix It Fast
 URL: https://www.cubicalgolfer.com/how-to-stop-3-putting/
 Summary: Three-putting costs the average weekend golfer 4-6 strokes per round. These 5 drills fix the three root causes in 2-3 sessions on the putting green.
 

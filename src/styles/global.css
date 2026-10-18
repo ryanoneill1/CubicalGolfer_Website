@@ -747,7 +747,10 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .hero {
   background: var(--green);
   padding: 72px clamp(1.5rem,5vw,4rem) 60px;
-  display: grid; grid-template-columns: minmax(320px, 1fr) 1fr 380px; gap: 32px; align-items: center;
+  /* Sprint 179 — was `minmax(320px,1fr) 1fr 380px` (text / illustration /
+     hero-card). The card is gone, so the third track goes with it and the
+     illustration takes the freed space. */
+  display: grid; grid-template-columns: minmax(320px, 1fr) 1fr; gap: 32px; align-items: center;
 }
 .hero-illustration {
   display: flex; align-items: center; justify-content: center;
@@ -773,14 +776,6 @@ table#compression-data th:not(.cmp-num), table#compression-data td:not(.cmp-num)
 .hero-stats { display: grid; grid-template-columns: repeat(4, auto); gap: 12px 32px; margin-top: 8px; }
 .hero-stat { font-size: 16px; color: rgba(255,255,255,.75); text-align: center; }
 .hero-stat strong { color: #fff; font-size: 24px; font-weight: 800; display: block; margin-bottom: 2px; }
-.hero-card { background: var(--green-card); border-radius: var(--r3); padding: 36px 36px 32px; border-left: 4px solid var(--gold); }
-.hero-card h2 { color: #fff; font-size: 24px; font-weight: 800; margin-bottom: 8px; }
-.hero-card-sub { color: rgba(255,255,255,.7); font-size: 16px; line-height: 1.5; margin-bottom: 24px; }
-.hero-card ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-.hero-card li { display: flex; align-items: flex-start; gap: 12px; color: rgba(255,255,255,.92); font-size: 16px; line-height: 1.5; }
-.hero-card-cta { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.15); }
-.hero-card-link { color: var(--gold); font-size: 16px; font-weight: 700; text-decoration: none; letter-spacing: .02em; }
-.hero-card-link:hover { text-decoration: underline; }
 .chk {
   width: 24px; height: 24px; border-radius: 50%; background: var(--gold);
   flex-shrink: 0; display: flex; align-items: center; justify-content: center;
@@ -935,7 +930,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1200px) {
-  .hero { grid-template-columns: 1fr 340px; }
+  .hero { grid-template-columns: 1fr; } /* Sprint 179 — was `1fr 340px` for the deleted hero-card */
   .hero-illustration { display: none; }
 }
 @media (max-width: 900px) {
@@ -950,7 +945,6 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   .nav-toggle { display: flex; }
   .hero { grid-template-columns: 1fr; padding: 48px 1.5rem; }
   .hero-illustration { max-width: 320px; margin: 0 auto; }
-  .hero-card { margin-top: 8px; }
   .hero-stats { grid-template-columns: repeat(4, auto); gap: 8px 20px; }
   .hero-btns { flex-direction: column; }
   .hero-btns .btn-gold, .hero-btns .btn-outline { width: 100%; text-align: center; padding: 16px; }
@@ -2162,6 +2156,9 @@ main section > p, main section ul, main section ol {
    selectors, so the colours live here instead and adapt to the background.
    FTC 16 CFR 255 requires the disclosure be clear and conspicuous. */
 .early-disclosure { margin: 8px 0 0; font-size: 16px; color: var(--muted); }
+/* Sprint 179 — in the hero it follows the lede rather than the <h1>, so it needs
+   to read as a caption instead of a third paragraph of the pitch. */
+.hero .early-disclosure { margin-top: 20px; }
 .early-disclosure a { color: var(--green); text-decoration: underline; text-underline-offset: 2px; }
 
 /* Dark hero backgrounds — white text, gold link */

@@ -1,5 +1,4 @@
 ---
-import { AUTHOR_PROFILE } from '../data/author';
 // src/pages/index.astro — Homepage
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
@@ -99,8 +98,18 @@ import Icon from '../components/Icon.astro';
     <div>
       <div class="hero-badge" aria-hidden="true">GEAR &amp; HACKS FOR THE 9-5 GOLFER</div>
       <h1>Stop Guessing. Start Playing Better Golf.</h1>
+      {/* Sprint 179 — the rounds claim appeared three times inside ~3,000 characters
+          of the hero (here, the hero-card tick list, and the TrustBar pill). The pill
+          is the only instance kept. "No freebies / No sponsors" also came straight
+          back as two TrustBar pills immediately below, so it goes too. In its place:
+          the one genuinely distinctive line the deleted hero-card was carrying. */}
+      <p class="hero-sub">Every product bought with our own money and tested on the course. Most weekend golfers overspend on clubs and underspend on the gear that actually lowers scores — a $25 putting mirror saves more strokes than a $500 driver upgrade.</p>
+      {/* Sprint 179 — moved out from between the <h1> and the lede, where it
+          broke the headline→promise read. The first affiliate link on this page is
+          down in Editor’s Picks, so this is still comfortably ahead of it and
+          validate-disclosure-position.ts still passes. Do not move it below the
+          fold — see the FTC note in EarlyDisclosure.astro. */}
       <EarlyDisclosure />
-      <p class="hero-sub">Every product independently purchased and tested over {AUTHOR_PROFILE.testingRounds} real rounds by a weekend golfer. No freebies. No sponsors. Just honest picks that save you time and money.</p>
       <div class="hero-btns">
         <a href="/gear-quiz/" class="btn-gold">Take the 60-Second Gear Quiz →</a>
         <a href="/gear-reviews/" class="btn-outline hero-secondary">Browse All Reviews</a>
@@ -125,20 +134,10 @@ import Icon from '../components/Icon.astro';
     <div class="hero-illustration">
       <img src="/images/cubicalgolfer-hero.webp" alt="Cubical Golfer — office golfer dreaming of the fairway" width="400" height="400" loading="eager" decoding="async" fetchpriority="high" class="hero-illustration-img" />
     </div>
-    <aside class="hero-card" aria-label="Why Cubical Golfer">
-      <h2>You Work All Week. Golf Is Your Reset.</h2>
-      <p class="hero-card-sub">Not tour pros. Not scratch golfers. Just 9-to-5ers who play on weekends and want to buy the right gear the first time.</p>
-      <ul>
-        <li><span class="chk" aria-hidden="true">✓</span>Know exactly what to buy before you walk into the store</li>
-        <li><span class="chk" aria-hidden="true">✓</span>Side-by-side tables so you decide in 60 seconds</li>
-        <li><span class="chk" aria-hidden="true">✓</span>{AUTHOR_PROFILE.testingRounds} real rounds — not a press event</li>
-        <li><span class="chk" aria-hidden="true">✓</span>Every product purchased with our own money</li>
-      </ul>
-      <div class="hero-card-cta">
-        <p style="font-size:16px;color:rgba(255,255,255,.7);margin:0 0 12px;line-height:1.5;">Most weekend golfers overspend on clubs and underspend on the gear that actually lowers scores. A $25 putting mirror saves more strokes than a $500 driver upgrade.</p>
-        <a href="/how-we-test/" class="hero-card-link">See how we test →</a>
-      </div>
-    </aside>
+    {/* Sprint 179 — hero-card folded into the hero. Its audience line duplicated
+        the badge ("GEAR & HACKS FOR THE 9-5 GOLFER"), two of its four ticks
+        duplicated TrustBar pills, and its one original thought (the overspend
+        line) now sits in .hero-sub above. The hero grid drops 3 cols to 2. */}
   </section>
 
   <TrustBar />

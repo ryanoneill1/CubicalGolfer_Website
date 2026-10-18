@@ -5497,7 +5497,7 @@ export const ARTICLES: Article[] = [
       { date: 'Apr 14, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title:        'Golf for Beginners — Complete Guide (Start Here)',
-    titleDisplay: '♂️ Golf for Beginners — Complete Guide',
+    titleDisplay: 'Golf for Beginners — Complete Guide',
     bottomLine: 'New to golf? Start with a complete beginner set (\$249-\$499), learn grip and stance from one lesson, play executive courses to build confidence, and focus on chipping and putting before worrying about driver distance. Our top pick: the <strong>Callaway Strata Complete Set</strong> (~$481) \u2014 inside the range above, unlike the 16-piece Ultimate at $699.99.',
     description:  'The only beginner golf guide you need in 2026. What clubs to buy, how to grip the club, how to stop slicing, what to practice, and how to track.',
     excerpt:      'Everything a complete beginner needs to start playing golf in 2026. Gear, fundamentals, practice routines, and realistic expectations — in one place.',

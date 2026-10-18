@@ -114,9 +114,13 @@ import Icon from './Icon.astro';
       trust promises were repeated 4,446 / 1,974 / 1,919 / 905 times in 411
       different wordings. Stanford's web-credibility guideline #9 is "use
       restraint with promotional content"; a disclosure read fourteen times is
-      read zero times. The page-level disclosures (early-disclosure, afd__text,
-      disclosure-box, qp__disclosure and the footer line) all remain, so every
-      page still discloses above its first affiliate link and in the footer.
+      read zero times.
+      Sprint 178 then cut the page-level stack as well: afd__text, qp__disclosure
+      and disclosure-box were all removed. What remains, and what must keep
+      remaining, is exactly two — <EarlyDisclosure/> above the first affiliate
+      link on the page, and the footer line in BaseLayout. Those two are enforced
+      by validate-disclosure-position.ts and validate-cta-geometry.ts; do not
+      remove either without reading the FTC note in EarlyDisclosure.astro first.
       The `disclosure` prop is kept so callers do not need changing and the
       line can be restored in one place. */}
 </div>
