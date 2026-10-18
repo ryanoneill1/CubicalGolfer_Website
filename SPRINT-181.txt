@@ -1,0 +1,69 @@
+SPRINT 181 — F9 begins: 374 inline styles drained, and a ratchet so they stay gone
+===================================================================================
+5 files. Upload preserving folder structure. No deletions required.
+
+THE MEASUREMENT THAT PICKED THE TARGET
+Before touching anything: 1,745 inline style="" across 49 files. Grouped by
+exact string, 66% of them are duplicates of at least five others. The two
+biggest single strings were 327 attributes between them, both in articles.ts:
+
+    194x   <span style="opacity:.55">     the bracketed delta beside a number
+    148x   padding:8px 12px               every cell of five plain tables
+
+That is 19% of the whole problem in one file, with the lowest risk on the board.
+
+WHAT CHANGED
+
+  1. Five plain <table> elements on /how-golf-launch-monitors-work/ and
+     /average-swing-speed-by-age/ had NO class and NO CSS — 180 inline styles
+     were the only thing holding them up. Now .art-table.
+     Checks made BEFORE converting, because guessing here would have been
+     visible on live pages:
+       - .cmp-table was NOT reused. It pads 12px 16px with a green header and
+         zebra stripes; these are tighter in-prose tables at 8px 12px. Folding
+         them in would have restyled all five.
+       - the bold first column is PER TABLE (3 of 5 use it, 2 do not), so it is
+         a --keycol modifier. A blanket td:first-child rule would have bolded
+         27 cells instead of 15.
+       - the unstyled <tr> in each table is always the LAST one — no rule under
+         the final row. Reproduced with tbody tr:not(:last-child).
+     Every value in the new CSS is lifted from the inline it replaces. This is
+     not a redesign.
+
+  2. 194 <span style="opacity:.55"> → <span class="cmp-delta">.
+     One declaration that was repeated 194 times.
+
+  3. scripts/validate-inline-styles.ts (NEW) — the durable part.
+     Counts literal style="" across src/ and fails if the total goes UP.
+     CEILING = 1371. Lower it when a sprint drains more; never raise it.
+     Dynamic style={...} bound to data is not counted — that cannot be a class.
+     PROVEN: adding one probe style made it fail with "1372 ... ceiling is 1371".
+
+  RESULT: 1,745 → 1,371 (-374, -21%).  articles.ts: 393 → 19.
+
+WHY THIS IS THE RIGHT NEXT PIECE OF WORK
+Sprint 180 fixed the homepage spacing Ryan reported. The REASON that bug existed
+and survived ~50 validators is that its values were inline. Inline styles beat
+every class, are invisible to every check, and cannot be fixed in one place.
+Draining them is what stops the audit findings — 26 radii, 17 shadows, 6 body
+copy sizes — from quietly growing back.
+
+VERIFICATION — full `npm run build`, and looked at, not assumed
+  ✅ build + every validator green, including the two new ones from 180/181
+  ✅ all 5 tables and all 194 spans confirmed present in dist/
+  ✅ RENDERED and inspected: 2px green header rule, hairlines between rows,
+     NO rule under the last row, bold first column only on --keycol tables,
+     deltas still dimmed. Identical to before.
+  ✅ validate-typography (248 comparison tables), validate-table-promises,
+     validate-table-scroll all still green — nothing keyed off those styles
+
+NOT IN THIS ZIP, DELIBERATELY
+  public/images/og/*.jpg and public/downloads/*.pdf — re-encoded every build,
+  byte-different, content-identical.
+
+NEXT UP IN F9 (worst-first, 1,371 remaining)
+    206  src/pages/golf-ball-compression-chart/index.astro
+     88  src/pages/[...slug].astro
+     72  src/pages/golf-apparel/index.astro
+     69  src/pages/golf-tech/index.astro
+     68  src/pages/how-we-test.astro

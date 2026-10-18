@@ -2854,3 +2854,31 @@ main section > p, main section ul, main section ol {
   padding: 12px 20px; border-radius: var(--r1);  /* was 10px inline — off the 4pt grid */
   font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap;
 }
+
+/* ═══ Article-body tables + delta figures — Sprint 181 (F9) ═══
+   Two shapes in articles.ts carried their entire appearance inline:
+
+   1. Five plain <table> elements — on /skytrak-vs-mevo-plus/ and
+      /compare/garmin-r10-vs-rapsodo-mlm2pro/ — had NO class and no CSS. Every
+      cell carried `padding:8px 12px` and every row its own border: 180 inline
+      style attributes holding up five tables. The values below are those exact
+      values, so this is a lift, not a redesign.
+      Deliberately NOT folded into .cmp-table: that is 12px 16px with a green
+      header and zebra striping, and these are tighter in-prose tables. Scoping
+      them as .cmp-table would have changed all five.
+      The bold first column is per-table, not universal — three of the five use
+      it, two do not — hence the --keycol modifier rather than a blanket
+      td:first-child rule, which would have bolded 27 cells instead of 15.
+      The last row of each table deliberately has no rule under it.
+
+   2. 194 <span style="opacity:.55"> wrapping the bracketed delta beside a
+      number in the distance/wind/temperature charts. One declaration, repeated
+      194 times, now one class. */
+.art-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 16px; }
+.art-table thead tr { border-bottom: 2px solid var(--green); text-align: left; }
+.art-table tbody tr:not(:last-child) { border-bottom: 1px solid var(--border); }
+.art-table th,
+.art-table td { padding: 8px 12px; }
+.art-table--keycol td:first-child { font-weight: 700; }
+
+.cmp-delta { opacity: .55; }
