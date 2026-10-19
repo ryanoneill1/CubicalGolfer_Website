@@ -22,7 +22,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const CEILING = 1239;   // Sprint 183: 1371 → 1239 (compression chart: 14 repeated strings → classes)
+const CEILING = 1227;   // Sprint 184: 1239 → 1227 (how-we-test section/h2; counts now exclude comments)
 
 const files: string[] = [];
 (function walk(dir: string) {
@@ -33,10 +33,22 @@ const files: string[] = [];
   }
 })('src');
 
+/* Sprint 184: comments are stripped before counting. Sprints routinely quote
+ * the inline styles they just removed, in the comment explaining why — e.g.
+ * how-we-test.astro documents the three variants it deliberately left alone.
+ * Counting those makes a sprint that removed 12 attributes report 10, and
+ * worse, a sprint could "reduce" the number by deleting documentation. The
+ * metric has to measure the markup, not the prose about it. */
+const stripComments = (src: string) =>
+  src.replace(/<!--[\s\S]*?-->/g, ' ')          // HTML comments
+     .replace(/\{\/\*[\s\S]*?\*\/\}/g, ' ')    // JSX comments
+     .replace(/\/\*[\s\S]*?\*\//g, ' ')         // CSS + JS block comments
+     .replace(/^\s*\/\/.*$/gm, ' ');            // JS line comments
+
 const counts: Array<[string, number]> = [];
 let total = 0;
 for (const f of files) {
-  const n = (readFileSync(f, 'utf8').match(/style="/g) ?? []).length;
+  const n = (stripComments(readFileSync(f, 'utf8')).match(/style="/g) ?? []).length;
   if (n) { counts.push([f, n]); total += n; }
 }
 counts.sort((a, b) => b[1] - a[1]);

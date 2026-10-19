@@ -1,0 +1,83 @@
+SPRINT 184 — the 402 off-grid values that no check could see
+=============================================================
+Files as listed. Upload preserving folder structure. No deletions required.
+
+WHY NOT [...slug].astro, THE "WORST" FILE
+It has 88 inline styles — the most left — but 73 of its 79 distinct strings
+are used EXACTLY ONCE. Extracting repeated strings would have yielded 15 of
+88, by turning one-offs into one-off classes, on the template that renders 215
+pages. Ranking the whole codebase by CONVERTIBLE attributes instead of raw
+count puts it 12th, not 1st. So it was skipped, and the measurement turned up
+something much bigger.
+
+THE REAL FINDING
+Only 36% of the remaining 1,239 inline styles sit in repeated strings, so the
+extract-to-classes technique caps out around 446 and cannot finish F9. Asking
+what the other 793 actually CONTAIN:
+
+    402   off-grid margin/padding values   <- invisible to every check
+    200   raw hex colours bypassing the colour tokens (incl. #1E3A28 = --green)
+    573   hardcoded font-sizes
+      2   raw border-radius, 0 raw box-shadow   <- these are genuinely clean
+
+Sprint 182 taught validate-spacing-scale to read component <style> blocks and
+found 73 off-grid values. The inline attributes were still invisible, and that
+is where the bulk live: 402 across 49 files — 14px x127, 10px x96, 6px x82,
+18px x55. Five and a half times what Sprint 182 fixed.
+
+WHAT CHANGED
+  scripts/validate-spacing-scale.ts
+    - now also scans inline style="" in .astro AND .ts (articles.ts carries
+      article-body HTML), with its OWN ceiling, separate from the CSS one.
+      Two ceilings because an inline value cannot be fixed by editing a rule —
+      each is a separate markup edit — and one combined ceiling could never
+      reach 0, which is the same as no ceiling. CSS stays 0; inline ratchets.
+    - INLINE_CEILING 402 -> 395 (this sprint's reduction)
+
+  scripts/validate-inline-styles.ts
+    - strips comments before counting. Sprints quote the styles they removed in
+      the comment explaining why; counting those made this sprint report -10
+      for 12 removals, and would let a future sprint "improve" the number by
+      deleting documentation. Checked every earlier figure against this: 1745,
+      1371 and 1239 were all accurate — no comment-quoted styles existed before
+      now, so nothing previously reported needs correcting.
+    - CEILING 1239 -> 1227
+
+  src/pages/how-we-test.astro
+    - the 4 plain <section>s + .hwt-principles, and the 7 identical <h2>s,
+      moved to .hwt-sec / .hwt-h2. Only the patterns with NO variants: the
+      24px section, the 18px h2, the bare h2, the two box sections and all the
+      <p>/<li> rhythm are left alone, because a blanket element rule would
+      flatten real differences. (Only 1 of the 5 zero-margin paragraphs is a
+      last-child, so the obvious p:last-child trick would NOT have covered
+      them.) h2 bottom margin snapped 14px -> 16px.
+
+PROVEN FAILING — all three independently
+  - inline off-grid goes up by one   -> fails, naming 17px
+  - the same value inside a comment  -> correctly NOT counted
+  - a 13px probe in a component <style> block -> CSS ceiling still fails at 0
+
+ONE THING I GOT WRONG, AND THE NOTE IT LEFT BEHIND
+Mid-sprint I concluded the new page styles were not being applied, because
+grepping dist/_astro/*.css for the rule found nothing while the elements
+carried their data-astro-cid-* attribute. That was wrong. Astro's
+build.inlineStylesheets default is 'auto', so a small page <style> block is
+INLINED into the page <head> instead of written to a .css file. I had moved the
+block and written a comment asserting Astro "emits no stylesheet at all";
+I then tested both positions, found they behave identically, and rewrote the
+comment to say what is actually true. A false note in the code is worse than
+no note. The rules are confirmed present in the built HTML, correctly scoped,
+on 5 sections and 7 headings.
+
+RESULT
+  inline style attributes   1,239 -> 1,227
+  off-grid inline spacing     402 ->   395  (now visible and ratcheted)
+  F9 overall                1,745 -> 1,227
+
+RECOMMENDED NEXT, and it is a question for you
+The 200 raw hex colours are the audit's colour-sprawl finding, still live.
+Several are literal restatements of tokens (#1E3A28 is --green, #fff, #333,
+#555). Replacing those with var(--token) is mechanical and safe. The rest are
+one-off greys that need a decision about whether they join the palette or get
+snapped to it. Worth doing next, or would you rather I kept draining whole
+files?

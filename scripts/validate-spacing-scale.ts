@@ -52,6 +52,17 @@ function astroFiles(dir: string, out: string[] = []): string[] {
   return out;
 }
 
+/* .ts is included for inline styles because src/data/articles.ts carries
+ * article-body HTML with style attributes in it. */
+function astroOrTs(dir: string, out: string[] = []): string[] {
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const q = path.join(dir, e.name);
+    if (e.isDirectory()) astroOrTs(q, out);
+    else if (e.name.endsWith('.astro') || e.name.endsWith('.ts')) out.push(q);
+  }
+  return out;
+}
+
 /* Sprint 183: CSS comments are stripped before scanning. A comment in this
  * repo routinely documents the very values a sprint changed — e.g.
  * "padding:3px 10px -> 3px 12px" — and without this the scanner reads the
@@ -71,6 +82,44 @@ for (const f of astroFiles('src')) {
     sources.push({ label: f, css: stripCssComments(blk[1]) });
   }
 }
+
+/* ── Sprint 184 — the inline blind spot ───────────────────────────────────
+ * Sprint 182 taught this script to read component and page <style> blocks and
+ * found 73 off-grid values. Inline style="" attributes were still invisible,
+ * and that is where the bulk of them live: 402, across 49 files —
+ * 14px x127, 10px x96, 6px x82, 18px x55. Five and a half times the number
+ * the last sprint fixed, in the one place no stylesheet rule can reach.
+ *
+ * These get their OWN ceiling rather than being folded into the CSS count,
+ * for two reasons. They cannot be fixed by editing a rule — each one is a
+ * separate edit in markup — and lumping them in would mean a single ceiling
+ * that can never reach 0, which is the same as having no ceiling at all.
+ * So: CSS stays at 0 and must stay there; inline ratchets down as F9 drains
+ * files, and each conversion sprint is measured on it.
+ */
+const INLINE_CEILING = 395;   // Sprint 184: baseline 402, how-we-test h2s snapped 14px→16px
+
+const inlineSeen = new Map<number, number>();
+const inlineByFile = new Map<string, number>();
+for (const f of astroOrTs('src')) {
+  const raw = fs.readFileSync(f, 'utf8')
+    .replace(/<!--[\s\S]*?-->/g, ' ')
+    .replace(/\{\/\*[\s\S]*?\*\/\}/g, ' ');
+  for (const attr of raw.matchAll(/style="([^"]*)"/g)) {
+    for (const d of attr[1].matchAll(/(?:^|;)\s*(?:margin|padding)(?:-top|-bottom|-left|-right)?\s*:\s*([^;]+)/g)) {
+      if (/var\(|calc\(|clamp\(/.test(d[1])) continue;
+      for (const px of d[1].match(/-?\d+(?:\.\d+)?px/g) ?? []) {
+        const v = parseFloat(px);
+        if (Math.abs(v) < 4) continue;
+        if (v % 4 !== 0) {
+          inlineSeen.set(v, (inlineSeen.get(v) ?? 0) + 1);
+          inlineByFile.set(f, (inlineByFile.get(f) ?? 0) + 1);
+        }
+      }
+    }
+  }
+}
+const inlineTotal = [...inlineSeen.values()].reduce((a, b) => a + b, 0);
 
 const offenders: { value: number; count: number }[] = [];
 const seen = new Map<number, number>();
@@ -111,8 +160,28 @@ if (total > CEILING) {
   process.exit(1);
 }
 
+if (inlineTotal > INLINE_CEILING) {
+  console.error(`\n❌ Spacing scale (inline): ${inlineTotal} off-grid value(s) in style="" attributes — ceiling ${INLINE_CEILING}.`);
+  for (const [value, count] of [...inlineSeen].sort((a, b) => b[1] - a[1]).slice(0, 8)) {
+    const near = Math.round(Math.abs(value) / 4) * 4 * Math.sign(value);
+    console.error(`   - ${value}px used ${count}× — nearest grid step is ${near}px`);
+  }
+  console.error('   Worst files:');
+  for (const [f, n] of [...inlineByFile].sort((a, b) => b[1] - a[1]).slice(0, 6)) {
+    console.error(`     ${String(n).padStart(3)}  ${f}`);
+  }
+  console.error('\n   This is a ratchet and it went UP. An inline style cannot be fixed by');
+  console.error('   editing a rule — convert the markup to a class instead.\n');
+  process.exit(1);
+}
+
 console.log(
   `✅ Spacing scale: every margin/padding ≥4px is on the 4pt grid ` +
   `(1-3px hairlines exempt) across ${sources.length} stylesheet(s) — ` +
   `global.css plus ${sources.length - 1} component/page <style> block(s).`
+);
+console.log(
+  `   Inline style="" attributes: ${inlineTotal} off-grid value(s) ` +
+  `(ceiling ${INLINE_CEILING})` +
+  (inlineTotal < INLINE_CEILING ? ` — ${INLINE_CEILING - inlineTotal} below; lower INLINE_CEILING to ${inlineTotal}.` : '.')
 );

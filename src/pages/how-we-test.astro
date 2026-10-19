@@ -151,7 +151,7 @@ const CATEGORIES = [
     </header>
     <!-- ─── WHO IS DOING THE TESTING ─── -->
     <section style="margin:0 0 36px;padding:24px;background:rgba(30,58,40,0.04);border:1px solid var(--border);border-radius: var(--r2);">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Who is doing the testing</h2>
+      <h2 class="hwt-h2">Who is doing the testing</h2>
       <div style="display:grid;grid-template-columns:140px 1fr;gap:24px;align-items:start;">
         <!-- Author photo placeholder — if you do not have one, delete this entire <div> and remove the grid columns -->
         <div>
@@ -187,8 +187,8 @@ const CATEGORIES = [
       </p>
     </section>
     <!-- ─── EDITORIAL PRINCIPLES ─── -->
-    <section class="hwt-principles" style="margin:0 0 36px;">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Editorial principles</h2>
+    <section class="hwt-principles hwt-sec">
+      <h2 class="hwt-h2">Editorial principles</h2>
       <ol style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;padding-left:22px;">
         <li style="margin:0 0 10px;"><strong>Every product is independently purchased with our own money. We do not accept manufacturer loans, freebies, or sponsored reviews.</strong> Manufacturers have no advance notice of our rankings, no approval rights, and no ability to remove a negative review. </li>
         <li style="margin:0 0 10px;"><strong>No paid placements or sponsored rankings, ever.</strong> We earn affiliate commissions when readers purchase through our links — typical rate is 3–4% from Amazon Associates and similar from Golf Galaxy / CJ. Commission rates are roughly equal across competing products and do not influence rankings.</li>
@@ -199,8 +199,8 @@ const CATEGORIES = [
       </ol>
     </section>
     <!-- ─── THE GENERAL TEST PROTOCOL ─── -->
-    <section style="margin:0 0 36px;">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">The general test protocol</h2>
+    <section class="hwt-sec">
+      <h2 class="hwt-h2">The general test protocol</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
         Every product, regardless of category, goes through the same five-step process before it can be ranked in a buying guide or comparison.
       </p>
@@ -213,8 +213,8 @@ const CATEGORIES = [
       </ol>
     </section>
     <!-- ─── CATEGORY-SPECIFIC CRITERIA ─── -->
-    <section style="margin:0 0 36px;">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">What we measure, by category</h2>
+    <section class="hwt-sec">
+      <h2 class="hwt-h2">What we measure, by category</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 24px;">
         Each product category has different things that matter. Below is the full criteria list we score against for each category, along with the minimum rounds before a product can be ranked.
       </p>
@@ -231,8 +231,8 @@ const CATEGORIES = [
       ))}
     </section>
     <!-- ─── EQUIPMENT WE OWN FOR TESTING ─── -->
-    <section style="margin:0 0 36px;">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Equipment we use for testing</h2>
+    <section class="hwt-sec">
+      <h2 class="hwt-h2">Equipment we use for testing</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
         We are transparent about the tools we use to evaluate products. This is the actual testing rig:
       </p>
@@ -247,7 +247,7 @@ const CATEGORIES = [
     </section>
     <!-- ─── CONFLICT OF INTEREST / DISCLOSURE ─── -->
     <section style="margin:0 0 36px;padding:24px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.3);border-radius: var(--r2);">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">Conflict of interest disclosure</h2>
+      <h2 class="hwt-h2">Conflict of interest disclosure</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
         Full transparency about how this site makes money and how that affects (or does not affect) our reviews:
       </p>
@@ -263,8 +263,8 @@ const CATEGORIES = [
       </p>
     </section>
     <!-- ─── WHEN WE GET IT WRONG ─── -->
-    <section style="margin:0 0 36px;">
-      <h2 style="font-size:22px;color:var(--green);margin:0 0 14px;">When we get it wrong</h2>
+    <section class="hwt-sec">
+      <h2 class="hwt-h2">When we get it wrong</h2>
       <p style="font-size:16px;line-height:1.75;color:var(--body);margin:0 0 14px;">
         We have made mistakes. When continued testing changes a verdict, we revise the review and add an update note at the top of the article — rankings on this site are living documents, not press releases.
       </p>
@@ -294,4 +294,32 @@ const CATEGORIES = [
       </p>
 </section>
   </article>
+
+  {/* Sprint 184 — a note on verifying page styles, because I got this wrong
+      once already. Astro's build.inlineStylesheets default is 'auto', so a
+      small page <style> block is INLINED into the page's <head> rather than
+      emitted as a file in dist/_astro/. Grepping dist/_astro/*.css for the
+      rule therefore finds nothing and looks exactly like a page that lost its
+      styling — the elements still carry their data-astro-cid-* attribute and
+      the build is green either way. Check the built HTML, not just the CSS
+      files. (Position relative to </BaseLayout> makes no difference here;
+      both were tested. It sits inside because that is the convention.) */}
+<style>
+  /* ── Sprint 184 (F9) — how-we-test.astro ─────────────────────────────────
+   * Only the two patterns with NO variants are converted here: the 4 plain
+   * <section> wrappers plus .hwt-principles (all margin:0 0 36px), and the 7
+   * identical <h2>s. Deliberately left alone:
+   *   - <section style="margin:0 0 24px;padding-top:24px;border-top:...">
+   *   - <h2 style="font-size:18px;...">  and one bare <h2>
+   *   - the two <section>s that also carry box backgrounds
+   *   - the <p> and <li> rhythm: 7x `margin:0 0 12px`, 5x `margin:0 0 0`,
+   *     9x `0 0 8px`, 6x `0 0 10px`. A blanket element rule would flatten
+   *     real differences — only one of the zero-margin paragraphs is a
+   *     last-child, so `p:last-child{margin:0}` would NOT have covered them.
+   *     That needs reading each one, not a regex.
+   * The h2 bottom margin is snapped 14px -> 16px, which the inline value was
+   * hiding from validate-spacing-scale until this sprint. */
+  .hwt-sec { margin: 0 0 36px; }
+  .hwt-h2  { font-size: 22px; color: var(--green); margin: 0 0 16px; }
+</style>
 </BaseLayout>
