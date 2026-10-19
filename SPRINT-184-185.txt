@@ -1,0 +1,83 @@
+SPRINTS 184 + 185 — bundled, because 184 was never pushed
+===========================================================
+Files as listed. Upload preserving folder structure. No deletions required.
+This zip contains BOTH sprints: 184 (inline spacing ratchet) was still
+unpushed when 185 was built on top of it.
+
+You asked me to do what is best for how the site looks, keeping people on it
+and buying. So I stopped draining inline styles and went looking for where the
+money actually leaks. Three things I measured and found NOT to be the problem,
+before finding one that is:
+
+  - distance to the first buy link: median 672 characters. Healthy. The 12
+    outliers are calculators, where the CTA correctly follows the result.
+  - section rhythm site-wide: zero same-background sections under 32px apart.
+    The "choppy" problem was real on the homepage and is now gone everywhere.
+  - page weight / layout shift: 1 image missing dimensions across 2,866;
+    91KB average page. Not a conversion drag.
+
+THE ONE THAT IS A PROBLEM
+    91 of 356 products (26%) send the reader to a SEARCH RESULTS PAGE
+    instead of the product — after they have already clicked.
+    159 of 179 second links are search pages.
+    61 products send BOTH links to a search.
+
+That is the most expensive click on the site being spent on a page that asks
+the reader to go find the thing themselves.
+
+I NEARLY SHIPPED A FIX BUILT ON A BAD MEASUREMENT
+My first pass said 62 of these could be fixed for free, by promoting a Golf
+Galaxy product link that was already sitting in the second slot. I opened one
+record before editing it. The Golf Galaxy link was ALSO a search page — the
+affiliate network wraps the destination as an encoded parameter
+(anrdoezrs.net/click-…?url=%2Fsearch%2FSearchDisplay%3FsearchTerm%3D), so
+matching on "searchTerm=" or "/search" finds nothing. Decoding first, the true
+number of free fixes is 2, not 62. The detector now decodes up to three times.
+
+ALSO FOUND, NOT FIXED, AND YOU SHOULD KNOW
+Only AffiliateCTA.astro honours the `primaryRetailer: 'direct'` swap flag.
+ProductCard, RecommendedGearGrid, the compare template, every category page
+and the homepage ignore it and always treat `url` as primary. So the 50
+products already set to swap render one way in the article CTA and the
+opposite way in the product card ON THE SAME PAGE. I did not touch it — it
+needs one shared resolver used by all twelve render sites, and doing that in
+the same sprint as a link-data change would make the diff unreadable.
+
+WHAT CHANGED
+  scripts/validate-deep-links.ts  (NEW)
+    Ratchets the search-link count: 91 primary, 61 both. It cannot rise without
+    someone deciding the new one is legitimate. PROVEN FAILING: turning one
+    real product link into a search link trips it at 92/62.
+    It deliberately does NOT demand zero — see below.
+
+  package.json — wired in after validate-inline-styles
+
+  Plus all of Sprint 184 (see SPRINT-184 notes in the previous zip):
+  inline off-grid spacing ratchet at 395, comment-stripping in the style
+  counter, how-we-test.astro section/h2 conversion, ceiling 1239 -> 1227.
+
+NOT EVERY SEARCH LINK IS A MISTAKE
+A putter sold by hand and length, a glove by size, a shoe by width — the
+reader must choose a variant anyway, so a search landing is honest and
+converts fine. Several priceNotes say exactly this. Splitting them: roughly 38
+are legitimately variant-driven, 53 look like genuine defects, and 20 of those
+are not referenced by any article, so fixing them earns nothing today. The
+list that actually costs you money is about 33 products, 3 of them #1 picks.
+
+WHAT I CANNOT DO, AND WHY
+Fixing these needs real product URLs — Amazon ASINs, Golf Galaxy SKUs. I can
+not invent them, and I am not able to fetch Amazon to look them up. So the
+deliverable is the worklist (separate file), ordered by what it is costing:
+#1 picks first, then by how many pages feature the product, with the price
+note shown so you can judge the variant cases yourself before changing a link.
+
+HONEST SIZING
+I am not going to put a revenue number on this. Outbound click rate is ~23%
+and Amazon EPC is $0.1223 — but I have no measurement of how much worse a
+search landing converts than a product page on YOUR traffic, and inventing a
+multiplier would be making it up. What is certain: it adds a step after the
+click you worked hardest for, on roughly a quarter of the catalogue.
+
+And the honest frame on all of it: the binding constraint on growth is still
+authority — 17 external links. Conversion work lifts what the current traffic
+is worth; it does not lift the traffic.
