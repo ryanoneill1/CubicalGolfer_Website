@@ -1,0 +1,64 @@
+SPRINTS 184-188 — REPLACES every previous zip. Upload this one only.
+======================================================================
+Preserve folder structure. No deletions required. Clean build verified twice
+with `rm -rf dist` first, the way Cloudflare does it.
+
+★ THE HEADLINE: "[object Object]" WAS VISIBLE ON 147 PAGES
+While building the column-width comparison you asked for, the screenshot
+showed the literal text "[object Object]" above the article body. It was not
+an artefact of my preview. It was on HALF YOUR SITE — 147 pages, twice each —
+as readable body text, and it had been live since Sprint 178.
+
+MY BUG. Sprint 178 removed the mid-article disclosure markup but left the
+conditional wrapping a lone JSX comment:
+
+    {isCommercial && (
+      {/* a comment */}
+    )}
+
+A lone JSX comment inside parentheses is an empty OBJECT. So the expression
+evaluates to {} and Astro prints it. The build was green. About fifty
+validators were green. Every reader and Googlebot saw "[object Object]".
+
+Nothing caught it because every check looked at structure, prices, links or
+CSS. None read the page the way a READER does.
+
+  FIXED: both conditionals removed (not emptied). 147 pages -> 0.
+  GUARDED: scripts/validate-rendered-objects.ts scans built body text for
+    [object Object], [object Promise], and bare "undefined" / "NaN", with
+    scripts, styles and JSON-LD stripped first so it cannot cry wolf.
+    PROVEN FAILING: reintroducing the exact Sprint 178 shape trips it at
+    "147 placeholder value(s) visible as body text".
+
+This is the third time this JSX-comment trap has cost something here, so the
+reasoning is written into the template and the validator, not just this note.
+
+★ ALSO FIXED: THE BUILD I BROKE LAST TIME
+validate-box-width.ts reads dist/ and I had wired it into the PRE-build chain.
+Clean checkouts have no dist/ yet, so Cloudflare died with ENOENT. It passed
+locally only because my working copy had a stale dist/.
+  1. moved after `astro build`
+  2. guarded with existsSync so a misplacement degrades to a skip
+  3. NEW scripts/validate-build-order.ts expands the whole chain and fails if
+     anything before `astro build` reads dist/ unguarded. It runs first.
+     That checker took three attempts — flagged two correct scripts, then
+     missed the real one, then flagged ITSELF. All three are written into it.
+
+★ YOUR BOX-WIDTH REPORT
+  .art-note fix: 57 boxes across 55 pages where the box ran the full shell
+  while its text was capped at the measure. Now 0, guarded.
+
+★ EVERYTHING ELSE (Sprints 184-185, still unpushed before this)
+  validate-spacing-scale now reads inline style="" (402 -> 395 off-grid).
+  validate-inline-styles strips comments before counting. F9: 1,745 -> 1,225.
+  validate-deep-links: 91 of 356 products send buyers to a search results
+    page, 61 send both links there. Ratcheted. Worklist file separate.
+  how-we-test.astro section/h2 conversion.
+
+★ STILL YOUR CALL: the column width. Nothing here changes it.
+  See column-width-A-vs-C.html — one file, two buttons, flip between them.
+    A  CURRENT   1400px shell, prose boxes at 722px  -> 133 chars/line if
+                 widened, so the boxes stay narrow and the right edge is ragged
+    C  NARROW    860px column, text fills every box at ~78 chars/line, and
+                 tables / product grids / the pick bar break out to 1200px
+  C is still my recommendation. Say the word and it is the next sprint.

@@ -533,18 +533,19 @@ import Icon from '../components/Icon.astro';
     />
   )}
 
-  {/* ── AFFILIATE DISCLOSURE — top-of-article trust signal ── */}
-  {isCommercial && (
-    {/* Sprint 178 (F5) — removed. Measured document order on a buying guide:
-        early-disclosure @6,093 → FIRST affiliate link @9,264 → this one.
-        It restated a promise the reader had already been given 4,000
-        characters earlier. Sitewide the four trust promises ran to 4,446 /
-        1,974 / 1,919 / 905 repetitions in 411 wordings. Stanford web
-        credibility #9 is 'use restraint with promotional content'.
-        What remains: <EarlyDisclosure> above the first affiliate link on
-        every page, and the footer line. Both verified present on all 238
-        affiliate pages by validate-cta-geometry. */}
-  )}
+  {/* Sprint 188 — the two {isCommercial && ( {comment} )} blocks that used to
+      sit here are GONE, not emptied. Sprint 178 removed the disclosure markup
+      inside them but left the conditional wrapping a lone JSX comment, and
+      `cond && ({})` evaluates to an OBJECT — which Astro printed as the literal
+      text "[object Object]" on 147 pages, twice each, for anyone to read.
+      Never leave a conditional wrapping only a comment. Put the comment outside
+      the braces, as this one is.
+      What the removed blocks said: Sprint 178 (F5) cut the mid-article
+      disclosure because document order on a buying guide was early-disclosure
+      @6,093 -> first affiliate link @9,264 -> this one, i.e. it restated a
+      promise given 4,000 characters earlier. What remains is <EarlyDisclosure>
+      above the first affiliate link and the footer line, both enforced by
+      validate-cta-geometry across all 238 affiliate pages. */}
 
   {/* ── ARTICLE BODY ────────────────────────────────────────────────────────── */}
   <div class="art-layout">
@@ -1336,18 +1337,6 @@ import Icon from '../components/Icon.astro';
       </div>
     )}
 
-    {/* AFFILIATE DISCLOSURE — required on all commercial pages */}
-    {isCommercial && (
-    {/* Sprint 178 (F5) — removed. Measured document order on a buying guide:
-        early-disclosure @6,093 → FIRST affiliate link @9,264 → this one.
-        It restated a promise the reader had already been given 4,000
-        characters earlier. Sitewide the four trust promises ran to 4,446 /
-        1,974 / 1,919 / 905 repetitions in 411 wordings. Stanford web
-        credibility #9 is 'use restraint with promotional content'.
-        What remains: <EarlyDisclosure> above the first affiliate link on
-        every page, and the footer line. Both verified present on all 238
-        affiliate pages by validate-cta-geometry. */}
-    )}
 
     {/* UPDATE STAMP */}
     <div class="update-stamp" aria-label="Last updated">Last updated: {article.dateModified}</div>
