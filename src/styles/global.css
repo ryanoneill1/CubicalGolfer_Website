@@ -288,7 +288,7 @@ nav.site-nav {
   font-size: clamp(26px,3.5vw,46px); color: #fff;
   margin-bottom: 16px; line-height: 1.15; max-width: 760px;
 }
-.art-excerpt { color: rgba(255,255,255,.85); font-size: 17px; line-height: 1.6; max-width: 680px; }
+.art-excerpt { color: rgba(255,255,255,.85); font-size: 17px; line-height: 1.6; max-width: 100%; }
 .art-freshness { color: rgba(255,255,255,.6); font-size: 16px; margin-top: 12px; }
 .art-tag-lg {
   display: inline-block; padding: 4px 12px; border-radius: var(--r1);
@@ -469,7 +469,7 @@ nav.site-nav {
 .art-faq,
 .update-stamp,
 .price-note {
-  max-width: var(--prose-w);
+  max-width: 100%;
 }
 /* disclosure-box and testing-note are full-width — match who-box / bottom-line-box width */
 .disclosure-box,
@@ -1683,7 +1683,7 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   text-align: center;
 }
 .art-cta h3 { color: #fff; font-size: 20px; font-weight: 700; margin-bottom: 12px; }
-.art-cta p  { color: rgba(255,255,255,.75); font-size: 16px; max-width: 480px; margin: 0 auto 24px; }
+.art-cta p  { color: rgba(255,255,255,.75); font-size: 16px; max-width: 100%; margin: 0 auto 24px; }
 
 /* ── RELATED LINKS CLUSTER: wider ── */
 .rel-cluster {
@@ -2448,7 +2448,7 @@ main section > p, main section ul, main section ol {
   .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table, .art-note,
   table, figure, aside, details
 ) *) {
-  max-width: var(--prose-w);
+  max-width: 100%;
   /* Sprint 154 — left-anchored, not centred. Centring put the prose 288px to
      the right of the h1 and the table, which both start at the shell edge:
      measured on /srixon-golf-ball-compression-chart/ as h1 at x=51 with the
@@ -2481,7 +2481,7 @@ main section > p, main section ul, main section ol {
                  .callout, .who-box, .trust-card, .update-log, .art-faq,
                  .price-note, .freshness-banner, .toc-card, .toc,
                  .trust-block, .gear-helps, .art-note) {
-  max-width: var(--prose-w);
+  max-width: 100%;
   margin-left: 0;      /* Sprint 154 — share the shell's left edge */
   margin-right: auto;
 }
@@ -2582,7 +2582,7 @@ main section > p, main section ul, main section ol {
      and a multi-line block of update text. The cap is a no-op on the pill
      (inline-flex shrink-to-fit keeps it ~257px) and is what stops the text
      variant running to 983px, past the measure and nearly to the shell edge. */
-  max-width: var(--prose-w);
+  max-width: 100%;
 }
 
 
@@ -2599,7 +2599,7 @@ main section > p, main section ul, main section ol {
 .chart-intro {
   font-size: var(--prose-size);
   line-height: 1.8;
-  max-width: var(--prose-w);
+  max-width: 100%;
   margin-left: 0;
   margin-right: auto;
 }
@@ -2608,7 +2608,7 @@ main section > p, main section ul, main section ol {
 .compare-body .early-disclosure,
 .art-content .price-note,
 .compare-body .price-note {
-  max-width: 565px;
+  max-width: 100%;
   margin-left: 0;
   margin-right: auto;
 }
@@ -2642,19 +2642,19 @@ main section > p, main section ul, main section ol {
 .compare-body p[style*="font-size: 16px"],
 .art-content li[style*="font-size:16px"],
 .compare-body p[style*="font-size:16px"],
-.compare-body li[style*="font-size:16px"] { max-width: 565px; }
+.compare-body li[style*="font-size:16px"] { max-width: 100%; }
 
 .art-content p[style*="font-size:15px"],
 .art-content p[style*="font-size: 15px"],
 .compare-body p[style*="font-size: 15px"],
 .art-content li[style*="font-size:15px"],
-.compare-body p[style*="font-size:15px"] { max-width: 529px; }
+.compare-body p[style*="font-size:15px"] { max-width: 100%; }
 
 .art-content p[style*="font-size:14px"],
 .art-content p[style*="font-size: 14px"],
 .compare-body p[style*="font-size: 14px"],
 .art-content li[style*="font-size:14px"],
-.compare-body p[style*="font-size:14px"] { max-width: 494px; }
+.compare-body p[style*="font-size:14px"] { max-width: 100%; }
 
 
 /* ── Sprint 155 — a box built from COLUMNS is data, and takes the shell ─────
@@ -2717,7 +2717,7 @@ main section > p, main section ul, main section ol {
   padding: 16px 20px;
   border-radius: 0 var(--r1) var(--r1) 0;
   margin: 0 0 16px;
-  max-width: var(--prose-w);
+  max-width: 100%;
 }
 
 
@@ -2908,3 +2908,36 @@ main section > p, main section ul, main section ol {
 }
 .art-note > :last-child { margin-bottom: 0; }
 .art-note--tip { background: #f0f7f2; border-left-width: 4px; }
+
+/* ═══ FULL-WIDTH ARTICLE BODY — Sprint 189 ═══════════════════════════════════
+ * DECISION, MADE BY RYAN, 18 Oct 2026, after seeing all three side by side in
+ * a live resizable demo. Do not quietly revert this.
+ *
+ * Every box and every paragraph in the article and comparison bodies now spans
+ * the container (--content-w, 1400px). Eleven capping rules were set to 100%:
+ * the --prose-w measure on running prose, the box list from Sprint 151b, the
+ * 565px small-print measure, the 529/494px variants keyed off inline
+ * font-size, and the one-off caps on .art-excerpt, .art-cta p and
+ * .provenance-note.
+ *
+ * WHAT THIS COSTS, measured and accepted:
+ *   window    before   after
+ *    375px    37 ch    37 ch    phones are IDENTICAL — the 722px cap never
+ *    430px    43 ch    43 ch    did anything on a screen narrower than it
+ *    768px    70 ch    79 ch
+ *   1024px    70 ch   101 ch
+ *   1440px    70 ch   127 ch    WCAG 1.4.8 guidance is 80
+ * The trade is desktop line length for one clean edge down the whole page.
+ * Ryan was shown this table and the rendered comparison before choosing.
+ *
+ * WHAT IS DELIBERATELY STILL CAPPED, and why:
+ *   .btn-gold            a button; 1300px wide is not a button
+ *   .product-img-wrap    a product photo; stretching it blows the image up
+ *   .email-strip__inner  the capture strip has its own deliberate width
+ *   .footer-brand/-disc  footer chrome, outside the article
+ *   .privacy-notice__inner  the one-time banner
+ *   --content-w itself   the page shell. "Full width" means full CONTAINER,
+ *                        not edge-to-edge on a 2560px monitor.
+ *
+ * --prose-w and --prose-size still exist and still drive the fluid type ramp.
+ * Only their use as a WIDTH CAP on body copy was removed. */

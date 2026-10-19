@@ -1,0 +1,67 @@
+SPRINTS 184-189 — FULL-WIDTH BODY, applied to all 299 pages
+=============================================================
+REPLACES every previous zip. Upload this one only. Preserve folder structure.
+No deletions required. Clean build verified with `rm -rf dist` first.
+
+★ WHAT YOU ASKED FOR, AND WHAT IT DOES
+Every box and every paragraph in the article and comparison bodies now spans
+the container. Twelve capping rules were set to 100%: the --prose-w measure on
+running prose, the Sprint 151b box list, the 565px small-print measure, the
+529/494px variants keyed off inline font-size, and one-off caps on
+.art-excerpt, .art-cta p, .update-stamp and .provenance-note.
+
+The twelfth is the one you spotted. .aff-cta — the affiliate CTA box — was NOT
+in global.css at all. Its cap lived in AffiliateCTA.astro's own <style> block,
+so a stylesheet-only pass left it narrow while everything around it widened.
+Scanning one file is how that was missed; the check now reads the built CSS,
+which contains all of it.
+
+DELIBERATELY STILL CAPPED, with the reason recorded in code:
+  .btn-gold              a button; 1300px wide is not a button
+  .product-img-wrap      a product photo; stretching it blows the image up
+  .email-strip__inner    the capture strip has its own deliberate width
+  .footer-brand/-disc    footer chrome, outside the article
+  .privacy-notice__inner the one-time banner
+  --content-w (1400px)   the page shell. "Full width" means full CONTAINER,
+                         not edge-to-edge on a 2560px monitor.
+
+★ MOBILE IS UNTOUCHED — measured, not assumed
+   375px  37 -> 37 chars/line      430px  43 -> 43
+   768px  70 -> 79               1024px  70 -> 101
+  1440px  70 -> 127
+Phones are byte-for-byte identical: the old 722px cap never applied on a
+screen narrower than it. The change only bites above ~900px.
+
+★ THE GUARD DID NOT GET DELETED, IT GOT RE-POINTED
+validate-typography enforced the cap I removed, so it would have failed every
+build. Deleting its checks would have left line length completely unguarded.
+Instead it now computes line length from the CONTAINER and refuses anything
+past 140 characters — the agreed worst case is 137. Widening --content-w to
+1900px fails it at 170. Raising that ceiling means making reading worse than
+what was agreed, which needs the same conversation again.
+New: validate-full-width.ts fails if anything in the article body gets re-capped.
+
+★ ALSO FIXED THIS SESSION
+  [object Object] was visible on 147 pages — half the site, twice each, since
+  Sprint 178. `{cond && ( {/* comment */} )}` evaluates to an empty OBJECT and
+  Astro printed it. Fixed, and validate-rendered-objects.ts now reads built
+  body text for [object Object], [object Promise], bare undefined and NaN.
+  The build I broke: validate-box-width read dist/ from the PRE-build chain.
+  Moved, guarded, plus validate-build-order.ts to catch the whole class.
+  .art-note: 57 boxes on 55 pages whose box ran the shell while their text was
+  capped. Now 0.
+  validate-deep-links: 91 of 356 products send buyers to a search results page.
+  Ratcheted; worklist file separate.
+  F9 inline styles 1,745 -> 1,225.
+
+★ FOUR DETECTORS NEEDED MORE THAN ONE ATTEMPT, all recorded in the files
+  build-order   flagged two correct scripts, then missed the real one, then
+                flagged itself
+  typography    used the smallest font against the widest column and reported
+                154 characters for a layout that renders 137
+  full-width    read .aff-cta as 100% because the class appears inside a
+                :not(:is(...)) exclusion list; then the fix used [^()]* which
+                cannot match nested parens, so a probe still passed. Parens are
+                balanced by hand now.
+Each of those produced a confident green on a condition it was not testing,
+which is the failure mode worth guarding against most.

@@ -161,34 +161,68 @@ if (!w || !f) {
       `and the type must scale together or the measure drifts mid-range.`
     );
   }
-  // Sprint 151 — the measure must sit on the PROSE, not on the container.
-  // Capping the container is what pinned the TOC card, the quick-answer box,
-  // the update log, the comparison table and the product grid all to 718px on
-  // a 1411px window. Two things have to hold, and neither is visible by
-  // reading the stylesheet casually:
-  //   1. the prose selector carries --prose-w
-  //   2. that selector excludes descendants of boxes, or the same bug recurs
-  //      one level down inside every callout and card
-  const proseRule = /:is\(p,\s*ul,\s*ol,\s*h2,\s*h3,\s*h4\)[^{]*\{[^}]*max-width:\s*var\(--prose-w\)/;
-  if (!proseRule.test(css)) {
+  /* ── Sprint 189 — the measure no longer caps body copy ───────────────────
+   * Ryan chose full-width body copy on 18 Oct 2026, after being shown the
+   * rendered comparison and this table:
+   *      375px  37ch -> 37ch   (phones identical; the cap never applied)
+   *     1024px  70ch -> 101ch
+   *     1440px  70ch -> 127ch  (WCAG 1.4.8 guidance is 80)
+   * So the checks that USED to live here — "prose must carry --prose-w" and
+   * "that rule must exclude box descendants" — are gone on purpose. They were
+   * correct for the old design and would now fail the build every time.
+   *
+   * Deleting them outright would leave line length completely unguarded, and
+   * the next person who widens --content-w would make it worse with nothing
+   * to say so. So the guard is RE-POINTED rather than removed: line length is
+   * now a function of the CONTAINER, and it may not get worse than what was
+   * actually agreed. */
+  const contentW = /--content-w:\s*(\d+)px/.exec(css);
+  if (!contentW) {
     problems.push(
-      'No rule applies --prose-w to running prose (p/ul/ol/h2/h3/h4). The ' +
-      'reading measure has to sit on the text, not on the container — capping ' +
-      'the container pinned tables, cards and callouts to the prose width too.'
+      'No --content-w px value found. Body copy now spans the container, so ' +
+      'the container width IS the line length — it has to stay a bounded px ' +
+      'value or text runs edge-to-edge on a wide monitor.'
     );
+  } else {
+    const CW = parseInt(contentW[1], 10);
+    const shell = CW - 96;                    // minus --page-px a side
+
+    /* The worst case is NOT the smallest font against the widest column.
+     * A first cut did exactly that — 18px against 1304px — and reported 154
+     * characters for a layout that renders 137, which would have sent me
+     * narrowing a container that was fine. The two clamps share one viewport
+     * ramp: the column stops growing at --content-w, and at THAT viewport the
+     * type is already partway up its own ramp. So the font must be evaluated
+     * at the viewport where the column maxes out. */
+    const ramp = /--prose-size:\s*clamp\(\s*[\d.]+px\s*,\s*([\d.]+)px\s*\+\s*([\d.]+)vw\s*,\s*([\d.]+)px/.exec(css);
+    let worst: number | null = null;
+    if (ramp) {
+      const base = parseFloat(ramp[1]), vw = parseFloat(ramp[2]) / 100, max = parseFloat(ramp[3]);
+      const sizeAtMax = Math.min(Math.max(base + vw * CW, f[0]), max);
+      worst = Math.round(shell / (AVG_CHAR_EM * sizeAtMax));
+    }
+    const AGREED_MAX = 140;   // ratchet. Measured 137 at the agreed 1400px
+                              // container. Lower it freely; raising it means
+                              // making reading worse than what was agreed, so
+                              // it needs the same conversation again.
+    if (worst !== null && worst > AGREED_MAX) {
+      problems.push(
+        `Body copy would render ~${worst} characters per line at the widest ` +
+        `(container ${CW}px). That is past the ${AGREED_MAX} agreed when ` +
+        `full-width was chosen. Narrow --content-w or raise --prose-size.`
+      );
+    }
   }
-  if (!/:not\(:is\([^)]*quick-answer-box/.test(css)) {
+
+  /* The container itself must stay bounded. Checked on the BARE .art-content
+   * rule only — a first cut matched any selector containing ".art-content",
+   * which includes the descendant rules just set to 100%, and fired on a
+   * stylesheet that was correct. */
+  const bare = /(?:^|[}\n])\s*\.art-content\s*\{([^}]*)\}/.exec(css);
+  if (!bare || !/max-width:\s*var\(--content-w\)/.test(bare[1])) {
     problems.push(
-      'The prose measure rule does not exclude descendants of boxes/cards. ' +
-      'Without that exclusion it reaches inside every callout and re-narrows ' +
-      'the paragraphs in them, which is the same defect one level down.'
-    );
-  }
-  // The container must NOT be capped at the measure any more.
-  if (/\.art-content[^{]*\{[^}]*max-width:\s*calc\(\s*var\(--prose-w\)/.test(css)) {
-    problems.push(
-      'The .art-content container is still capped at the reading measure. ' +
-      'Tables, grids and cards inherit that cap and lose the width they need.'
+      '.art-content is not bounded by --content-w. Full width means the full ' +
+      'CONTAINER, not edge-to-edge on a 2560px monitor.'
     );
   }
 }
@@ -295,4 +329,4 @@ if (problems.length) {
   console.error('\n   These control whether readers can tell where one section ends and the next begins.');
   process.exit(1);
 }
-console.log(`✅ Typography: section separator intact and not globally cancelled; prose measure capped.`);
+console.log(`✅ Typography: section separator intact and not globally cancelled; body copy spans the container, bounded by --content-w.`);

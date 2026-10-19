@@ -131,7 +131,9 @@ import Icon from './Icon.astro';
   flex-direction: column;
   gap: 6px;
   margin: 20px 0;
-  max-width: var(--prose-w, 720px);
+  max-width: 100%;   /* Sprint 189 — full-width body. This cap lived in the
+                        component, not global.css, which is why a stylesheet-only
+                        pass missed it and the affiliate box stayed narrow. */
 }
 .aff-cta__winner-badge {
   display: inline-block;
