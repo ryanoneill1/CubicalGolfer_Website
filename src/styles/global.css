@@ -1875,7 +1875,12 @@ footer { background: var(--text); padding: 56px clamp(1.5rem,5vw,4rem) 32px; }
   gap: 16px;
   max-width: var(--content-w);
   margin: 0 auto;
-  padding: 32px var(--page-px) 0;
+  /* Sprint 190 — the bottom was 0. This nav has no background of its own,
+     so its two cards sat flush against the top edge of .related-section's
+     cream band on 190 pages. Ryan spotted it; no check did, because the
+     rhythm validator only ever looked at <section> elements on the
+     HOMEPAGE, and this is a <nav> on article pages. */
+  padding: 32px var(--page-px) 48px;
 }
 .prev-next-link {
   display: flex;
@@ -2941,3 +2946,10 @@ main section > p, main section ul, main section ol {
  *
  * --prose-w and --prose-size still exist and still drive the fluid type ramp.
  * Only their use as a WIDTH CAP on body copy was removed. */
+
+/* Sprint 190 — .faq-section had no bottom spacing of its own and is followed
+ * by the green .email-strip band on the 10 brand pages, so its last answer sat
+ * flush against the colour edge. Same shape as the .prev-next-nav defect Ryan
+ * reported; found by widening the rhythm check from <section> on the homepage
+ * to every top-level block on all 299 pages. */
+.faq-section { padding-bottom: 48px; }

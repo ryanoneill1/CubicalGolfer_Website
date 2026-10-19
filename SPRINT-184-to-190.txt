@@ -1,0 +1,55 @@
+SPRINTS 184-190 — REPLACES every previous zip. Upload this one only.
+======================================================================
+Preserve folder structure. No deletions. Clean build verified with rm -rf dist.
+
+★ 1. PREVIOUS/NEXT TOUCHING THE BAND BELOW IT — 190 pages
+.prev-next-nav had `padding: 32px var(--page-px) 0` — zero bottom. It has no
+background of its own, so its two cards ended exactly where .related-section's
+cream band starts. Now 48px.
+
+WHY MY AUDIT MISSED IT, honestly: validate-home-rhythm looked at <section>
+elements ON THE HOMEPAGE ONLY. This is a <nav> on article pages. It was never
+in scope. A check narrower than its own name is how 190 pages ship something
+nobody sees. Replaced with validate-page-rhythm.ts — every top-level block,
+all 299 pages.
+
+Widening it found two more of the same shape, which are also fixed:
+   .faq-section -> .email-strip   10 brand pages
+   .hub-faq     -> .email-strip    2 pages
+It also produced SIX FALSE ALARMS before it was right, each from a different
+blind spot, and all six are documented in the file:
+   @media nesting broke the rule parser, so most rules resolved to null
+   Astro inlines small <style> blocks into the HTML, not into the .css files
+   .articles-section carries its background in an inline style attribute
+   a following block's own margin-top is a real gap and must count
+9 cases first pass -> 3 real ones.
+
+★ 2. /golf-ball-complete-guide/ — and it was SIX pages, not one
+  (a) The hero sat INSIDE <article class="art-content">. Every other page has
+      it as a sibling before it. Nested, it lost the 56px of .art-content
+      padding that separates it from what follows — and since .art-hero and
+      .quick-answer-box are BOTH var(--green), the two merged into one green
+      mass with no boundary. It was also inset to the content width instead of
+      running full-bleed. Moved out on all six.
+  (b) The FAQ was a static <div class="faq-item"><h3><p> — 32 items across six
+      pages — while 1,064 elsewhere are <details class="faq-item"><summary>,
+      which collapse and expand. All 32 converted. 1,096 interactive, 0 static.
+
+  The six: golf-ball-complete-guide, golf-simulator-complete-guide,
+  launch-monitor-buying-guide, golf-club-distance-chart,
+  golf-simulator-cost-calculator, golf-equipment-budget-planner.
+  They are hand-built pages that do not use [...slug].astro, so they drifted
+  from it and nothing compared them against it. Now two checks do.
+
+★ NEW CHECKS, both proven failing with deliberate probes
+  validate-page-rhythm.ts      fails at "190 pages .prev-next-nav -> .related-section"
+  validate-faq-interactive.ts  fails at "6 FAQ item(s) on 1 page(s) are static"
+
+★ EVERYTHING FROM SPRINTS 184-189 IS ALSO IN HERE
+  full-width body copy on all 299 pages (your choice, with the readability
+  guard re-pointed at the container and capped at 140 chars)
+  [object Object] removed from 147 pages, guarded
+  the Cloudflare build fix + validate-build-order
+  .art-note box/text width fix on 57 boxes
+  deep-links ratchet (91 of 356 products still land on a search page)
+  F9 inline styles 1,745 -> 1,225

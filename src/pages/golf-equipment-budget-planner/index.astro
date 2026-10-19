@@ -52,21 +52,28 @@ const products = {
 
 <BaseLayout {meta} {schemas} activeNav="gear-reviews">
 
+    {/* Sprint 190 — the hero must sit OUTSIDE <article class="art-content">, the
+      way [...slug].astro does it. Nested inside, it lost the 56px of
+      .art-content padding that separates it from what follows — and since both
+      .art-hero and .quick-answer-box are var(--green), the two merged into one
+      green mass with no boundary. It was also inset to the content width
+      instead of running full-bleed like every other page's hero. */}
+<header class="art-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/gear-reviews/">Gear Reviews</a><span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Budget Planner</span>
+    </nav>
+    <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Interactive Tool</p>
+    <h1>Golf Equipment Budget Planner — What to Buy First</h1>
+    <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Pick your total budget. We'll show you exactly what to buy, in what order, with specific products and prices. Every recommendation tested by us.</p>
+    <div class="author-box">
+      <img src="/images/ryan-author-photo.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
+      <div><p class="author-box__name">Ryan O.</p><p class="author-box__bio">10-handicap · Built a full bag from scratch on a budget</p></div>
+    </div>
+  </header>
+
   <article class="art-content">
-    <header class="art-hero">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
-        <a href="/gear-reviews/">Gear Reviews</a><span class="bc-sep" aria-hidden="true">›</span>
-        <span aria-current="page">Budget Planner</span>
-      </nav>
-      <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Interactive Tool</p>
-      <h1>Golf Equipment Budget Planner — What to Buy First</h1>
-      <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Pick your total budget. We'll show you exactly what to buy, in what order, with specific products and prices. Every recommendation tested by us.</p>
-      <div class="author-box">
-        <img src="/images/ryan-author-photo.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
-        <div><p class="author-box__name">Ryan O.</p><p class="author-box__bio">10-handicap · Built a full bag from scratch on a budget</p></div>
-      </div>
-    </header>
 
     <div class="trust-card">
       <p class="trust-card__heading">Why Trust This Planner</p>
@@ -134,10 +141,10 @@ const products = {
     <section id="faq" class="faq-section">
       <h2>Frequently Asked Questions</h2>
       {faqs.map((f, i) => (
-        <div class="faq-item" id={`faq-${i}`}>
-          <h3 class="faq-q">{f.q}</h3>
+<details class="faq-item" id={`faq-${i}`}>
+          <summary>{f.q}</summary>
           <p class="faq-a">{f.a}</p>
-        </div>
+        </details>
       ))}
     </section>
   </article>

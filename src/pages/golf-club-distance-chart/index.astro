@@ -53,22 +53,29 @@ const schemas = [
 
 <BaseLayout {meta} {schemas} activeNav="improve">
 
+    {/* Sprint 190 — the hero must sit OUTSIDE <article class="art-content">, the
+      way [...slug].astro does it. Nested inside, it lost the 56px of
+      .art-content padding that separates it from what follows — and since both
+      .art-hero and .quick-answer-box are var(--green), the two merged into one
+      green mass with no boundary. It was also inset to the content width
+      instead of running full-bleed like every other page's hero. */}
+<header class="art-hero">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
+      <a href="/improve-your-golf-game/">Improve</a><span class="bc-sep" aria-hidden="true">›</span>
+      <span aria-current="page">Distance Chart</span>
+    </nav>
+    <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Interactive Tool</p>
+    <h1>Golf Club Distance Chart — Enter Your Swing Speed</h1>
+    <EarlyDisclosure />
+    <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Slide to your driver swing speed and instantly see estimated carry distances for every club. Spot gaps in your bag and know which clubs to add.</p>
+    <div class="author-box">
+      <img src="/images/ryan-author-photo.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
+      <div><p class="author-box__name">Ryan O.</p><p class="author-box__bio">10-handicap · Distances verified with launch monitor data</p></div>
+    </div>
+  </header>
+
   <article class="art-content">
-    <header class="art-hero">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a><span class="bc-sep" aria-hidden="true">›</span>
-        <a href="/improve-your-golf-game/">Improve</a><span class="bc-sep" aria-hidden="true">›</span>
-        <span aria-current="page">Distance Chart</span>
-      </nav>
-      <p class="art-freshness" style="color:rgba(255,255,255,.6);">Updated May 2026 · Interactive Tool</p>
-      <h1>Golf Club Distance Chart — Enter Your Swing Speed</h1>
-      <EarlyDisclosure />
-      <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Slide to your driver swing speed and instantly see estimated carry distances for every club. Spot gaps in your bag and know which clubs to add.</p>
-      <div class="author-box">
-        <img src="/images/ryan-author-photo.webp" alt="Ryan" width="44" height="44" loading="lazy" class="author-box__avatar" onerror="this.style.display='none'" />
-        <div><p class="author-box__name">Ryan O.</p><p class="author-box__bio">10-handicap · Distances verified with launch monitor data</p></div>
-      </div>
-    </header>
 
     <div class="quick-answer-box">
       <div class="quick-answer-header">⚡ Quick Answer</div>
@@ -252,10 +259,10 @@ const schemas = [
     <section id="faq" class="faq-section">
       <h2>Frequently Asked Questions</h2>
       {faqs.map((f, i) => (
-        <div class="faq-item" id={`faq-${i}`}>
-          <h3 class="faq-q">{f.q}</h3>
+<details class="faq-item" id={`faq-${i}`}>
+          <summary>{f.q}</summary>
           <p class="faq-a">{f.a}</p>
-        </div>
+        </details>
       ))}
     </section>
   </article>
