@@ -23,10 +23,21 @@
  * left border, and has no class at all. That is the exact shape that lands in
  * the gap.
  */
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 const CEILING = 0;
+
+/* This reads dist/, so it belongs AFTER `astro build`. It was wired into the
+ * pre-build `validate` chain by mistake and took the Cloudflare build down
+ * with ENOENT on a clean checkout — my own machine had a stale dist/ from an
+ * earlier run, so it passed locally. The guard below means a misplacement can
+ * never again fail a deploy; validate-build-order.ts catches the misplacement
+ * itself. */
+if (!existsSync('dist')) {
+  console.log('validate-box-width: no dist/ yet — skipped (runs after astro build).');
+  process.exit(0);
+}
 
 const pages: string[] = [];
 (function walk(d: string) {

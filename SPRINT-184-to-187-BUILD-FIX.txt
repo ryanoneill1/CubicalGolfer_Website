@@ -1,0 +1,56 @@
+SPRINTS 184-187 — REPLACES the previous zip. That one broke your build.
+=========================================================================
+Upload preserving folder structure. No deletions required.
+If you already uploaded sprint-184-186-box-width.zip, this supersedes it —
+upload this on top and the build goes green.
+
+WHAT I BROKE, AND WHY MY TESTING DID NOT CATCH IT
+validate-box-width.ts reads dist/. I wired it into the PRE-build `validate`
+chain, which runs before `astro build`. On a clean checkout dist/ does not
+exist yet:
+
+    Error: ENOENT: no such file or directory, scandir 'dist'
+
+It passed on my machine because my working copy had a dist/ left over from an
+earlier run. A green local build is not evidence when the thing under test is
+whether a file EXISTS yet. I should have run `rm -rf dist && npm run build`
+before shipping. I have now run it twice, from empty, and it passes.
+
+Worse: I caught this exact mistake in Sprint 180 with validate-home-rhythm,
+and then made it again six sprints later. So the fix is not just "move the
+script".
+
+THREE FIXES, NOT ONE
+  1. MOVED  — validate-box-width now runs after `astro build`, beside
+     validate-home-rhythm.
+  2. GUARDED — it exits 0 with a message if dist/ is missing, so a future
+     misplacement degrades to a skipped check instead of a failed deploy.
+  3. NEW CHECK — scripts/validate-build-order.ts expands the whole build
+     chain, finds `astro build`, and fails if any step BEFORE it reads dist/
+     without an existsSync guard. It runs first, so it fails in two seconds
+     rather than after eleven minutes of work.
+
+THE NEW CHECK TOOK THREE ATTEMPTS. All three are written into the file:
+  - Matching any 'dist' string flagged check-duplicates and
+    validate-stated-counts, which name 'dist' only to SKIP it while walking
+    src/. Flagging correct code teaches people to ignore the check.
+  - Matching only `readdirSync('dist'` then MISSED the real case, because
+    validate-box-width passes it to a walker: `})('dist')`.
+  - What separates them is the character before the quote: a read passes it as
+    a call argument `('dist'`, a skip compares or lists it `=== 'dist'`.
+  - And then it flagged ITSELF, because its own source necessarily contains
+    the pattern it searches for. It now skips its own file.
+Verified in all three states: correct chain passes, misplaced+unguarded fails
+naming the script, misplaced+guarded passes.
+
+EVERYTHING ELSE IN HERE IS UNCHANGED FROM THE LAST ZIP
+  - .art-note fix: 57 boxes across 55 pages where the box ran the full shell
+    while its text was capped at the measure. Now 0, guarded.
+  - validate-deep-links: 91 of 356 products send buyers to a search results
+    page; 61 send both links there. Ratcheted.
+  - validate-spacing-scale reads inline style="" too (402 -> 395 off-grid).
+  - validate-inline-styles strips comments before counting. F9: 1,745 -> 1,225.
+  - how-we-test.astro section/h2 conversion.
+
+STILL YOUR CALL — the Quick Answer / intro box width (A, B or C from the last
+message). Nothing in this zip changes it. My recommendation is still C.
