@@ -1,0 +1,72 @@
+SPRINTS 184 + 185 + 186 — bundled; 184 and 185 were never pushed
+==================================================================
+Files as listed. Upload preserving folder structure. No deletions required.
+
+YOU FOUND A REAL BUG, AND IT WAS ON A FIFTH OF THE SITE
+The "Cubicle Golfer Tip" box: right width, text stopping short of the edge.
+That exact defect rendered 57 times across 55 pages.
+
+THE CAUSE — a gap between two rules, neither of which is wrong
+global.css governs width in two places:
+  Rule A caps p/ul/ol inside anything NOT on an exclusion list.
+  Rule B caps the BOX itself for every listed note class.
+A <div> with inline styles and NO class is on neither list. So its paragraph
+got capped at --prose-w (722px at a 1440px window) while the box ran the full
+shell (1304px) — 582px of empty colour inside a coloured box. No existing
+check could see it because each rule, examined alone, is correct.
+
+FIXED: a new .art-note class that appears on BOTH lists, so box and text always
+agree. Two of the 17 source instances live in the article template, which is
+why they multiplied to 57. 57 -> 0 site-wide.
+GUARDED: scripts/validate-box-width.ts, ceiling 0. PROVEN FAILING — reverting
+the template tip box to a classless div trips it at 6.
+
+YOUR OTHER TWO ITEMS ARE NOT A BUG, AND I HAVE NOT CHANGED THEM
+The QUICK ANSWER box and the "If you're still pacing off yardages" intro are
+narrower than the bars above and below them ON PURPOSE. A sprint before this
+one made that call deliberately and wrote down why, including the sentence:
+"There will always be space to the right of those, and that is the measure
+doing its job, not a bug."
+
+The measured trade-off, at a 1440px window:
+     full shell width ........ 1304px  -> 133 characters per line
+     prose measure ............ 722px  ->  74 characters per line
+     WCAG 1.4.8 readability ceiling ..  80 characters per line
+So the gap you are seeing is 582px, and closing it by widening the text would
+put every paragraph 66% past the readability ceiling. The site's typography
+being better than its competitors' is one of the few things the design audit
+found it already doing right.
+
+I am NOT going to flip that on my own judgement — it reverses a documented,
+measured decision and changes all 215 article pages. Three options, your call:
+
+  A  LEAVE IT. Prose boxes stay at the measure. Ragged right edge persists.
+  B  BOXES FULL WIDTH, TEXT STILL CAPPED. One clean edge — but then every
+     quick-answer box looks like the tip box you just reported as wrong:
+     582px of empty colour. I would not recommend this one.
+  C  NARROW THE WHOLE COLUMN to about 880px so text fills every box at ~78
+     characters per line, and let tables, product grids and the comparison
+     table break out wider than the column. This is what quality editorial
+     sites do, it gives you ONE clean edge, and it keeps readability.
+     This is my recommendation, and it is the biggest change of the three.
+
+Say A, B or C and I will do it as the next sprint.
+
+ALSO IN THIS ZIP (Sprints 184 and 185, previously unpushed)
+  - validate-spacing-scale now reads inline style="" too: 402 off-grid
+    spacing values were invisible to every check. Ratcheted, now 395.
+  - validate-inline-styles strips comments before counting, so a sprint cannot
+    "improve" the number by deleting documentation. All earlier figures
+    re-checked and accurate.
+  - validate-deep-links (NEW): 91 of 356 products send buyers to a SEARCH
+    results page instead of the product; 61 send BOTH links there. Ratcheted.
+    See the separate worklist file for which ones are worth your time.
+  - how-we-test.astro section/h2 conversion.
+  - F9 inline styles: 1,745 -> 1,225.
+
+VERIFICATION
+  Full `npm run build` green, every validator including the three new ones.
+  Both new detectors proven failing with deliberate probes.
+  Width resolution confirmed in the BUILT css, not assumed: .art-note is on
+  rule A's exclusion list and rule B's box list, so the box caps at the measure
+  and the text inside fills it.

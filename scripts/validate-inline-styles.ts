@@ -22,7 +22,7 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const CEILING = 1227;   // Sprint 184: 1239 → 1227 (how-we-test section/h2; counts now exclude comments)
+const CEILING = 1225;   // Sprint 184: 1239 → 1227 (how-we-test section/h2; counts now exclude comments)
 
 const files: string[] = [];
 (function walk(dir: string) {

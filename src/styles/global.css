@@ -2438,14 +2438,14 @@ main section > p, main section ul, main section ol {
   .quick-answer-box, .intro-box, .toc, .toc-card, .update-log, .testing-note,
   .disclosure-box, .who-box, .trust-card, .callout, .rec-product-box,
   .rec-gear-grid, .comparison-table-wrapper, .art-faq, .freshness-banner,
-  .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table,
+  .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table, .art-note,
   table, figure, aside, details
 ) *),
 .compare-body :is(p, ul, ol, h2, h3, h4):not(:is(
   .quick-answer-box, .intro-box, .toc, .toc-card, .update-log, .testing-note,
   .disclosure-box, .who-box, .trust-card, .callout, .rec-product-box,
   .rec-gear-grid, .comparison-table-wrapper, .art-faq, .freshness-banner,
-  .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table,
+  .aff-cta, .article-card, .update-stamp, .price-note, .cmp-table, .art-note,
   table, figure, aside, details
 ) *) {
   max-width: var(--prose-w);
@@ -2476,11 +2476,11 @@ main section > p, main section ul, main section ol {
 .art-content :is(.quick-answer-box, .intro-box, .testing-note, .disclosure-box,
                  .callout, .who-box, .trust-card, .update-log, .art-faq,
                  .price-note, .freshness-banner, .toc-card, .toc,
-                 .trust-block, .gear-helps),
+                 .trust-block, .gear-helps, .art-note),
 .compare-body :is(.quick-answer-box, .intro-box, .testing-note, .disclosure-box,
                  .callout, .who-box, .trust-card, .update-log, .art-faq,
                  .price-note, .freshness-banner, .toc-card, .toc,
-                 .trust-block, .gear-helps) {
+                 .trust-block, .gear-helps, .art-note) {
   max-width: var(--prose-w);
   margin-left: 0;      /* Sprint 154 — share the shell's left edge */
   margin-right: auto;
@@ -2882,3 +2882,29 @@ main section > p, main section ul, main section ol {
 .art-table--keycol td:first-child { font-weight: 700; }
 
 .cmp-delta { opacity: .55; }
+
+/* ═══ .art-note — Sprint 186 ═══
+   Ryan reported the "Cubicle Golfer Tip" box as the right width but with its
+   text stopping short of the edge. It was. The box was a classless <div> with
+   inline styles, which put it in a gap between the two width rules above:
+     - Rule A caps p/ul/ol inside anything NOT on its exclusion list. A
+       classless <div> is not on that list, so the PARAGRAPH was capped at
+       --prose-w (722px at a 1440px window).
+     - Rule B caps the BOX for every listed note class. A classless <div> is
+       not listed, so the BOX ran the full shell (1304px).
+   Result: a 1304px box holding 722px of text — 582px of empty colour.
+   57 of these rendered across 55 pages, from 17 inline-styled divs in source;
+   two of them live in the article template, which is why they multiply.
+
+   .art-note is now on BOTH lists, so box and text agree. The values are
+   lifted from the inline styles they replace. --tip is the lighter green
+   variant used for the contextual cross-link callout. */
+.art-note {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: rgba(30,58,40,.04);
+  border-left: 3px solid var(--green);
+  border-radius: 0 var(--r2) var(--r2) 0;
+}
+.art-note > :last-child { margin-bottom: 0; }
+.art-note--tip { background: #f0f7f2; border-left-width: 4px; }

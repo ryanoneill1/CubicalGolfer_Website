@@ -966,7 +966,7 @@ import Icon from '../components/Icon.astro';
 
           {/* Inline cubicle golfer callout — contextual cross-link inside article body */}
           {section.callout && (
-            <div style="margin:20px 0;padding:16px 20px;background:#f0f7f2;border-left:4px solid var(--green);border-radius: 0 var(--r2) var(--r2) 0;">
+            <div class="art-note art-note--tip">
               <p style="margin:0;font-size:16px;line-height:1.6;color:var(--body);">
                 <Icon name="building" /> <strong>Cubicle Golfer Tip:</strong>{' '}
                 {section.callout.text}{' '}
@@ -1233,7 +1233,7 @@ import Icon from '../components/Icon.astro';
         ];
 
       return recs.length > 0 ? (
-        <div style="margin:24px 0;padding:20px 24px;background:rgba(30,58,40,.04);border-radius: var(--r2);border-left:3px solid var(--green);">
+        <div class="art-note">
           <p style="font-size:16px;font-weight:700;color:var(--green);margin:0 0 4px;"><Icon name="target" /> Gear that helps with this</p>
           <p style="font-size:16px;color:var(--muted);margin:0 0 14px;">Every recommendation is independently purchased and tested over 40+ rounds.</p>
           <div style="display:flex;flex-direction:column;gap:10px;">
