@@ -1,146 +1,95 @@
-Sprint 191 — the two biggest pages on the site, rewritten for the SERP they
-actually land on
+Sprint 191b — build fix. The lastmod manifest I failed to ship.
 
-EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions. No build-chain changes.
+EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
 
-  src/data/articles.ts
-  src/pages/golf-club-distance-chart/index.astro
+  src/data/lastmod-manifest.json          <- the fix
+  src/data/articles.ts                    <- identical to what you already pushed
+  src/pages/golf-club-distance-chart/index.astro   <- identical to what you pushed
 
-
-── WHY ───────────────────────────────────────────────────────────────────────
-Two pages hold ~79,000 impressions — 12% of the whole site — at under 1% CTR.
-Both rank page one (positions 8.2 and 9.1). I first called this a title-length
-problem. It is not. I read both live SERPs and found two different causes.
-
-  /average-golf-handicap/
-      An AI Overview opens the SERP and states "14.2 for men and 27.5 for
-      women" — the exact figures in our own meta description. Google answers
-      the query above the fold and credits Scoring Zone, who also holds rank 1
-      with a title that is almost ours:
-          Scoring Zone   Average Golf Handicap by Age & Gender (2026 Real Data)
-          Us             Average Golf Handicap by Age & Gender (2026)
-      We were competing with a near-copy of our own title, from below, under an
-      answer box that had already given away the number.
-
-  /golf-club-distance-chart/
-      An image pack sits above every web result (Club Up Golf, Instagram, Golf
-      Sidekick — not us), plus an AI Overview printing the whole table. But
-      "People also search for" lists *golf club distance chart pdf* and
-      *printable golf club distance chart*, and a PINTEREST PIN ranks page one
-      for "Mens Golf Club Distance Chart Pdf". GSC agrees independently:
-      "golf club distance chart pdf" and "senior golf distance chart pdf" both
-      earn impressions.
-
-      We have had public/downloads/golf-club-distance-chart.pdf for months.
-      The title and meta never mentioned it.
+The two source files are byte-identical to Sprint 191. They are included only so
+this zip works whether or not that push landed cleanly. Re-uploading them is a
+no-op.
 
 
-── THE FORMULA IS ALREADY PROVEN ON THIS SITE ────────────────────────────────
-Before writing anything I checked what Sprint 135 actually achieved. It won.
+── WHAT I DID WRONG ──────────────────────────────────────────────────────────
+update-lastmod.ts --check is the FIRST thing npm run validate runs. It keeps a
+hash of every page's own source in src/data/lastmod-manifest.json. Change a
+page's content without shipping the updated manifest and the build stops:
 
-  "golf ball compression chart 2026", read live 20 Oct:
-      Google Images   positions 1 AND 2, both ours, marked "Licensable",
-                      above MyGolfSpy, Agape Golf and Cedarwood Golf — the
-                      exact three sites that owned the pack before Sprint 135
-      Web results     organic #1, above BallCaddie, Golf Insider, MyGolfSpy
+    ❌ lastmod manifest is stale — 2 page(s) changed since it was last written.
+       /average-golf-handicap/
+       /golf-club-distance-chart/
 
-And the title doing it is:
-      Golf Ball Compression Chart 2026 — 36 Balls + PDF
-with the meta ending "Free printable PDF."
+I edited both pages and shipped neither manifest entry.
 
-That is the pattern this sprint copies, verbatim in shape.
-
-Honest caveat: on the blended web SERP, the inline 3-up image strip for
-compression still shows MyGolfSpy and Cedarwood, not us. We own the Images tab,
-not the inline strip. So the image play is proven for Google Images; the inline
-strip is not guaranteed.
+This was avoidable and I should have caught it. Sprint 184-190 — the sprint
+immediately before this one — shipped src/data/lastmod-manifest.json for
+exactly this reason. It was sitting in the file list I read while building 191.
+The rule is simple and I now have it written down: if a sprint changes any
+page's content, the manifest ships with it.
 
 
-── WHAT CHANGED ──────────────────────────────────────────────────────────────
+── WHY I COULD NOT JUST RUN npm run lastmod ──────────────────────────────────
+You can't run npm locally and I have no checkout with node_modules. So I
+reproduced the script's hash function exactly and verified it against known-good
+values before touching anything:
 
-/golf-club-distance-chart/ (index.astro)
+  /golf-club-distance-chart/  is a bespoke .astro page with no ARTICLES record,
+      so its hash is sha256(file)[:16].
+      Old file -> 65a5081bea3ddfe1.  Manifest said 65a5081bea3ddfe1.  Match.
 
-  title        was  Golf Club Distance Chart — Carry by Swing Speed    (47)
-               now  Golf Club Distance Chart 2026 — 13 Clubs + PDF     (46)
+  /average-golf-handicap/  is an ARTICLES record with no .astro file, so its
+      hash is sha256(JSON.stringify(record minus dateModified/datePublished)).
+      Ran under node --experimental-strip-types so the serialisation is real
+      JS JSON.stringify, not a Python approximation.
+      Old record -> 1e6161592d6df3a3.  Manifest said 1e6161592d6df3a3.  Match.
 
-  description  was  Golf club distance chart for all 13 clubs, driver through
-                    wedge, across swing speeds of 75-115 mph. Enter your speed
-                    for a carry-distance table built for you.          (156)
-               now  Carry and total distance for all 13 clubs across driver
-                    swing speeds of 75-115 mph. Slide to your speed for a chart
-                    built for you. Free printable PDF.                 (150)
+Both reproduced the live values exactly, so the method is right, not merely
+plausible. Then the new hashes:
 
-  PDF block copy — now says "free printable", and names the 75 mph band as the
-  one most senior golfers swing in. That is true of the existing TIERS data
-  (75/85/95/105/115) and it is the only place on the page the word "senior"
-  appears, which is a query already earning impressions.
+      /golf-club-distance-chart/   65a5081bea3ddfe1 -> f9851296f7da03e8
+      /average-golf-handicap/      1e6161592d6df3a3 -> 42c1c373517ae32b
+      both lastmod -> 2026-10-20
 
-  "13 Clubs" is checked against CLUBS in src/data/club-distances.ts — 13
-  entries, Driver through LW. validate-stated-counts covers it.
-
-
-/average-golf-handicap/ (articles.ts)
-
-  title        was  Average Golf Handicap by Age & Gender (2026)        (43)
-               now  Average Golf Handicap by Age & Gender + Calculator  (50)
-
-               Keeps "average golf handicap by age" — the dominant query at
-               1,938 impressions — intact and exact. Drops the year, which was
-               the only thing separating us from Scoring Zone and separated us
-               by nothing. Adds the one thing an answer box structurally cannot
-               do: run your numbers.
-
-  description  was  ...in 2026 — men average 14.2, women 27.5...        (138)
-               now  Average golf handicap by age and gender — six age bands
-                    each for men and women, 20s through 70+. Free calculator
-                    shows where your index ranks.                       (142)
-
-               Deliberately stops leading with 14.2/27.5. Google has already
-               printed those two numbers above our result. Repeating them in
-               the snippet gives a reader who has just read them no reason to
-               click. The age bands and the calculator are things the AI
-               Overview did not provide.
-
-  bottomLine   unchanged in substance; one sentence appended pointing at
-               /golf-handicap-calculator/ for ranking against your own age band
-               rather than the all-ages average.
-
-  titleDisplay (the on-page H1) is untouched — still carries "2026 Data".
+The --check compares hashes, not dates, so the date is cosmetic to the
+validator — but 2026-10-20 is also true, which is the point of the manifest.
 
 
-── RISK I AM NOT HIDING ──────────────────────────────────────────────────────
-The distance-chart title drops the literal words "Carry by Swing Speed", which
-currently rank. The meta still carries "carry", "total", "driver swing speeds"
-and "75-115 mph", and the H1 still reads "Enter Your Swing Speed", so the terms
-remain on the page — but the exact-phrase title match goes. The compression
-page ranks #1 without "swing speed" in its title, which is why I think the
-trade is right. It is still a trade, and it is reversible in one line.
+── THE RISK I CHECKED BEFORE SHIPPING A WHOLE-FILE MANIFEST ──────────────────
+A zip replaces the entire manifest. If my base copy had drifted from yours, I
+would have silently reverted other pages' lastmods — exactly the "don't lose
+anything" failure.
 
-Changing a title that already ranks on page one can move rankings either way.
-Give it 14 days before judging, and judge on CTR in GSC, not on position.
+So I checked my copy against the LIVE sitemap: 16 article URLs sampled across
+the full date range (2026-04-19 through 2026-10-18), including the oldest and
+newest entries. 16 of 16 matched. My base copy is current.
 
-
-── VERIFIED ──────────────────────────────────────────────────────────────────
-Base files confirmed against production before editing — the live titles on
-both URLs matched the source copies exactly, so nothing newer has shipped.
-
-All 767 title/description/bottomLine/excerpt string literals in articles.ts
-parse cleanly after the edit (checked with new Function, 0 failures).
-
-No new inline styles — the inline-style ratchet at 1225 is untouched.
-No change to package.json, no change to the validator chain, nothing reads
-dist/. This sprint cannot break the Cloudflare build the way Sprint 187 did.
+And the diff of old manifest vs new is 4 lines — the two hashes and the two
+dates. 300 entries before, 300 after. Nothing else moved.
 
 
-── WHY C IS NOT IN THIS ZIP ──────────────────────────────────────────────────
-You asked for A + B + C, and C is worth doing — Sprint 135 proves it on this
-exact site. But C means a new image generator wired into npm run build, and a
-generator with a bug kills the Cloudflare build, which is precisely how I broke
-it in Sprint 187. Your own rule is one sprint at a time, confirmed between each.
+── WHAT I STILL CANNOT VERIFY ────────────────────────────────────────────────
+I cannot run the other 90 validators. Of the ones my changes could plausibly
+touch, I checked what I could reason about:
 
-So C ships as Sprint 192, immediately after you confirm this one is green. It
-will follow generate-compression-chart-image.ts exactly: two WebP files per
-page (1200x675 for the carousel, full portrait for the click-through),
-generated from club-distances.ts and the handicap table so they cannot drift,
-ImageObject schema with licence, specific alt text, committed files plus the
-generator.
+  validate-promise-delivery   Read it. Only fires on numeric count promises
+                              ("N best/tested/top/ranked/compared") in ARTICLES
+                              records. My handicap title has no number, and the
+                              distance chart is not an ARTICLES record. No risk.
+
+  validate-stated-counts      "13 Clubs" is true — CLUBS in club-distances.ts
+                              has 13 entries. The page already said "all 13
+                              clubs" in its meta and FAQ before this sprint and
+                              passed, so the claim is not new.
+
+  validate-meta-length        Could not read it — not in any copy I hold. Title
+                              50 chars, descriptions 142 and 150, all inside the
+                              60/160 bounds your existing pages already sit in.
+
+  validate-year-exposure      Could not read it. I removed "(2026)" from the
+                              handicap title. titleDisplay still carries "2026
+                              Data" and the intro still says 2026, so the year
+                              is still present on the page. If this validator
+                              requires a year in `title` specifically, it will
+                              fail and I will fix it — tell me and I will put
+                              the year back somewhere that satisfies it.
