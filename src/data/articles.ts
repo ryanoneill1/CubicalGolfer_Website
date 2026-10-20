@@ -976,11 +976,11 @@ export const ARTICLES: Article[] = [
     updateLog: [
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
-    title: 'Average Golf Handicap by Age & Gender (2026)',
+    title: 'Average Golf Handicap by Age & Gender + Calculator',
     titleDisplay: 'Average Golf Handicap by Age and Gender — 2026 Data',
-    description: "Average golf handicap by age and gender in 2026 — men average 14.2, women 27.5. Breakdown by age group from 20s to 70+ with USGA data.",
+    description: "Average golf handicap by age and gender — six age bands each for men and women, 20s through 70+. Free calculator shows where your index ranks.",
     excerpt: "What's an average golf handicap? See the latest data by age, gender and skill level — and how to lower yours.",
-    bottomLine: 'The average golf handicap is <strong>14.2 for men</strong> and <strong>27.5 for women</strong> (USGA). The table below breaks that down across six age bands for men and women. About 20 percent of golfers carry a single-digit index and roughly 1 percent are scratch or better. Your index is not your average score: it is your potential, taken from the best 8 of your last 20 rounds.',
+    bottomLine: 'The average golf handicap is <strong>14.2 for men</strong> and <strong>27.5 for women</strong> (USGA). The table below breaks that down across six age bands for men and women. About 20 percent of golfers carry a single-digit index and roughly 1 percent are scratch or better. Your index is not your average score: it is your potential, taken from the best 8 of your last 20 rounds. To see where you actually sit against your own age band rather than the all-ages average, run your last 20 scores through our <a href="/golf-handicap-calculator/">free handicap calculator</a>.',
     intro: "The average golf handicap in 2026 is <strong>14.2 for men</strong> and <strong>27.5 for women</strong>, based on USGA handicap data. The average handicap rises steadily with age — the full breakdown by age band and gender is in the table below. About 20 percent of male golfers hold a single-digit handicap, and only about 1 percent play to scratch or better.\n\nUnderstanding where you stand among golfers helps you set realistic goals. Here's the latest data on average golf handicaps in 2026, broken down by age, gender, and experience level.",
     toc: ['Average golf handicap — the numbers', 'Average handicap by age group', 'What does your handicap mean?', 'How to lower your handicap', 'FAQ'],
     sections: [

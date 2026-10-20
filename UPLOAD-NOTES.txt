@@ -1,64 +1,146 @@
-Sprint 138 — The sections were outside the layout, not just styled wrong
+Sprint 191 — the two biggest pages on the site, rewritten for the SERP they
+actually land on
 
-EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions. No build-chain changes.
 
-── WHY LAST SPRINT DID NOT MOVE THEM ─────────────────────────────────────────
-You asked twice and I did not do it. The reason was not stubbornness and it
-was not a styling problem.
+  src/data/articles.ts
+  src/pages/golf-club-distance-chart/index.astro
 
-Those four sections were sitting OUTSIDE </BaseLayout>, appended at the very
-bottom of the .astro file AFTER the <style> block:
 
-    </style>
-    <section>
-      <h2 id="by-need">Skip the Chart ...
-      <h2 id="brand-summary">Compression Chart by Brand ...
-      <h2 id="low-to-high">All 35 Balls Ranked ...
-      <h2 id="temperature">Does Temperature Affect ...
-    </section>
+── WHY ───────────────────────────────────────────────────────────────────────
+Two pages hold ~79,000 impressions — 12% of the whole site — at under 1% CTR.
+Both rank page one (positions 8.2 and 9.1). I first called this a title-length
+problem. It is not. I read both live SERPs and found two different causes.
 
-Astro renders stray markup like that by appending it to the body, which is
-exactly why it always landed below the related guides AND below the embed
-box, no matter what. Dangling markup, not a layout decision.
+  /average-golf-handicap/
+      An AI Overview opens the SERP and states "14.2 for men and 27.5 for
+      women" — the exact figures in our own meta description. Google answers
+      the query above the fold and credits Scoring Zone, who also holds rank 1
+      with a title that is almost ours:
+          Scoring Zone   Average Golf Handicap by Age & Gender (2026 Real Data)
+          Us             Average Golf Handicap by Age & Gender (2026)
+      We were competing with a near-copy of our own title, from below, under an
+      answer box that had already given away the number.
 
-In Sprint 137 I restyled those blocks in place and reported them done. I
-never checked WHERE they sat in the document, so "move them up" appeared to
-do nothing — because I had not moved anything. That is on me, and it is the
-second time this week I have confirmed a change from the source instead of
-from the rendered order.
+  /golf-club-distance-chart/
+      An image pack sits above every web result (Club Up Golf, Instagram, Golf
+      Sidekick — not us), plus an AI Overview printing the whole table. But
+      "People also search for" lists *golf club distance chart pdf* and
+      *printable golf club distance chart*, and a PINTEREST PIN ranks page one
+      for "Mens Golf Club Distance Chart Pdf". GSC agrees independently:
+      "golf club distance chart pdf" and "senior golf distance chart pdf" both
+      earn impressions.
 
-── THE FIX ───────────────────────────────────────────────────────────────────
-All four sections moved INSIDE the article, immediately after the FAQ block
-and before "More Improve Your Golf Game Guides".
+      We have had public/downloads/golf-club-distance-chart.pdf for months.
+      The title and meta never mentioned it.
 
-Rendered order now, verified by byte offset in the BUILT HTML:
 
-    Frequently Asked Questions
-    Skip the Chart — Pick by What You Need
-    Compression Chart by Brand — Quick Summary
-    All 35 Balls Ranked Low to High Compression
-    Does Temperature Affect Golf Ball Compression?
-    More Improve Your Golf Game Guides
-    </article>
-    embed box
+── THE FORMULA IS ALREADY PROVEN ON THIS SITE ────────────────────────────────
+Before writing anything I checked what Sprint 135 actually achieved. It won.
 
-The temperature section came along because it was in the same orphaned
-block. Leaving it behind would have stranded it alone below the related
-guides, which would have looked worse than before.
+  "golf ball compression chart 2026", read live 20 Oct:
+      Google Images   positions 1 AND 2, both ours, marked "Licensable",
+                      above MyGolfSpy, Agape Golf and Cedarwood Golf — the
+                      exact three sites that owned the pack before Sprint 135
+      Web results     organic #1, above BallCaddie, Golf Insider, MyGolfSpy
 
-── NOTHING LOST ──────────────────────────────────────────────────────────────
-All 35 ball names still present in the rendered page, checked against
-balls.ts. Six brand cards, four band blocks, no section duplicated. They are
-now inside <article>, so they inherit the article's spacing and width instead
-of floating free.
+And the title doing it is:
+      Golf Ball Compression Chart 2026 — 36 Balls + PDF
+with the meta ending "Free printable PDF."
 
-── WHY ONLY TWO FILES ────────────────────────────────────────────────────────
-The build regenerated all nine PDFs, but Sprint 137's renderer fix is already
-on origin, so the only difference was the embedded timestamp. I compared the
-extracted text against origin — identical, both 1 page — and reverted them
-rather than ship nine pointless binaries.
+That is the pattern this sprint copies, verbatim in shape.
+
+Honest caveat: on the blended web SERP, the inline 3-up image strip for
+compression still shows MyGolfSpy and Cedarwood, not us. We own the Images tab,
+not the inline strip. So the image play is proven for Google Images; the inline
+strip is not guaranteed.
+
+
+── WHAT CHANGED ──────────────────────────────────────────────────────────────
+
+/golf-club-distance-chart/ (index.astro)
+
+  title        was  Golf Club Distance Chart — Carry by Swing Speed    (47)
+               now  Golf Club Distance Chart 2026 — 13 Clubs + PDF     (46)
+
+  description  was  Golf club distance chart for all 13 clubs, driver through
+                    wedge, across swing speeds of 75-115 mph. Enter your speed
+                    for a carry-distance table built for you.          (156)
+               now  Carry and total distance for all 13 clubs across driver
+                    swing speeds of 75-115 mph. Slide to your speed for a chart
+                    built for you. Free printable PDF.                 (150)
+
+  PDF block copy — now says "free printable", and names the 75 mph band as the
+  one most senior golfers swing in. That is true of the existing TIERS data
+  (75/85/95/105/115) and it is the only place on the page the word "senior"
+  appears, which is a query already earning impressions.
+
+  "13 Clubs" is checked against CLUBS in src/data/club-distances.ts — 13
+  entries, Driver through LW. validate-stated-counts covers it.
+
+
+/average-golf-handicap/ (articles.ts)
+
+  title        was  Average Golf Handicap by Age & Gender (2026)        (43)
+               now  Average Golf Handicap by Age & Gender + Calculator  (50)
+
+               Keeps "average golf handicap by age" — the dominant query at
+               1,938 impressions — intact and exact. Drops the year, which was
+               the only thing separating us from Scoring Zone and separated us
+               by nothing. Adds the one thing an answer box structurally cannot
+               do: run your numbers.
+
+  description  was  ...in 2026 — men average 14.2, women 27.5...        (138)
+               now  Average golf handicap by age and gender — six age bands
+                    each for men and women, 20s through 70+. Free calculator
+                    shows where your index ranks.                       (142)
+
+               Deliberately stops leading with 14.2/27.5. Google has already
+               printed those two numbers above our result. Repeating them in
+               the snippet gives a reader who has just read them no reason to
+               click. The age bands and the calculator are things the AI
+               Overview did not provide.
+
+  bottomLine   unchanged in substance; one sentence appended pointing at
+               /golf-handicap-calculator/ for ranking against your own age band
+               rather than the all-ages average.
+
+  titleDisplay (the on-page H1) is untouched — still carries "2026 Data".
+
+
+── RISK I AM NOT HIDING ──────────────────────────────────────────────────────
+The distance-chart title drops the literal words "Carry by Swing Speed", which
+currently rank. The meta still carries "carry", "total", "driver swing speeds"
+and "75-115 mph", and the H1 still reads "Enter Your Swing Speed", so the terms
+remain on the page — but the exact-phrase title match goes. The compression
+page ranks #1 without "swing speed" in its title, which is why I think the
+trade is right. It is still a trade, and it is reversible in one line.
+
+Changing a title that already ranks on page one can move rankings either way.
+Give it 14 days before judging, and judge on CTR in GSC, not on position.
+
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
-npm run validate: PASS.  npm run build: PASS.
-Order checked by position in the built HTML, not by reading the source —
-which is the check I should have run last time.
+Base files confirmed against production before editing — the live titles on
+both URLs matched the source copies exactly, so nothing newer has shipped.
+
+All 767 title/description/bottomLine/excerpt string literals in articles.ts
+parse cleanly after the edit (checked with new Function, 0 failures).
+
+No new inline styles — the inline-style ratchet at 1225 is untouched.
+No change to package.json, no change to the validator chain, nothing reads
+dist/. This sprint cannot break the Cloudflare build the way Sprint 187 did.
+
+
+── WHY C IS NOT IN THIS ZIP ──────────────────────────────────────────────────
+You asked for A + B + C, and C is worth doing — Sprint 135 proves it on this
+exact site. But C means a new image generator wired into npm run build, and a
+generator with a bug kills the Cloudflare build, which is precisely how I broke
+it in Sprint 187. Your own rule is one sprint at a time, confirmed between each.
+
+So C ships as Sprint 192, immediately after you confirm this one is green. It
+will follow generate-compression-chart-image.ts exactly: two WebP files per
+page (1200x675 for the carousel, full portrait for the click-through),
+generated from club-distances.ts and the handicap table so they cannot drift,
+ImageObject schema with licence, specific alt text, committed files plus the
+generator.
