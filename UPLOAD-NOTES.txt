@@ -1,166 +1,125 @@
-Sprint 192 — the image play (C). Chart pictures for the two biggest pages.
+Sprint 193 — six contextual links into /black-friday-golf-deals/
 
-EXTRACT AT THE REPOSITORY ROOT. 10 files, 3 of them images. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions.
 
-  scripts/generate-distance-chart-image.ts          NEW
-  scripts/generate-handicap-chart-image.ts          NEW
-  public/images/charts/golf-club-distance-chart-2026.webp        NEW
-  public/images/charts/golf-club-distance-chart-2026-full.webp   NEW
-  public/images/charts/average-golf-handicap-by-age-2026.webp    NEW
-  package.json                       two generators into the build chain
-  src/styles/global.css              .chart-figure
-  src/pages/golf-club-distance-chart/index.astro   figure + ImageObject
-  src/data/articles.ts               figure in the handicap age-band section
-  src/data/lastmod-manifest.json     both page hashes
+  src/data/articles.ts
+  src/data/lastmod-manifest.json
+
+Black Friday is 27 November. 38 days. This is the only thing on the list with
+a closing window, which is why it went first.
 
 
-── THIS IS SPRINT 135, RUN TWICE MORE ────────────────────────────────────────
-Checked live on 20 Oct before building anything: for "golf ball compression
-chart 2026" we now hold Google Images positions 1 AND 2, both marked
-"Licensable", above MyGolfSpy, Agape Golf and Cedarwood Golf — the three sites
-that held that pack before Sprint 135 — and organic #1 on the web SERP.
+── WHAT WAS ACTUALLY WRONG ───────────────────────────────────────────────────
+Batch 1 said the page had "3 inbound internal links". I went to re-check that
+rather than trust it, and the number is right but the shape of it is worse than
+the number suggests:
 
-So this is a proven recipe on this exact site, not a theory. I copied
-generate-compression-chart-image.ts rather than reinventing it: same 16:9
-carousel candidate under 100KB, same tall full version, same specific alt text,
-same filename signal, same ImageObject with licence.
+   1  the /golf-lifestyle/ hub   — generated from ARTICLES by category,
+                                   so it is a navigational listing, not a
+                                   contextual link
+   2  /prime-day-golf-deals/     — a related-module entry
+   3  /prime-day-golf-deals/     — one in-body prose link
 
+So the page had exactly ONE contextual body link on the whole site, and it came
+from the Prime Day page — which is itself the page still telling readers the
+2026 Prime Day update "goes live when deals are announced", four months late.
 
-── WHAT THE TWO SERPS ACTUALLY LOOK LIKE ─────────────────────────────────────
-I checked both before committing to the work, because an image is worthless on
-a SERP with no image slot.
+Zero .astro files link to it. I checked.
 
-  "golf club distance chart"
-      Image pack ABOVE every organic result. Club Up Golf, Instagram, Golf
-      Sidekick. We were absent. This is the real prize.
-
-  "average golf handicap by age"
-      There IS an image block, but it sits BELOW the AI Overview and some
-      organic results — currently MyGolfSpy's "STUDY: Overall Golfer
-      Performance By Age". Worth taking. Second-order, and I would rather say
-      so than oversell it.
+The page is worth the links. Its Quick Answer gives the reader the current
+verified price of each launch monitor as the baseline a real discount has to
+beat, and its intro says plainly that it will not guess at discount percentages
+months out because nobody knows them. That is the added value Google's
+thin-affiliate policy asks for, and it carries 12 affiliate links.
 
 
-── WHY TWO IMAGES FOR THE DISTANCE CHART, ONE FOR THE HANDICAP ───────────────
-13 clubs x 5 speed bands at 16:9 puts rows at ~33px and the type with them. A
-carousel thumbnail is tiny; type nobody can read at that size wins the click
-and loses it to a bounce. So the summary carries the 8 clubs that carry the
-searches, at 25px, and the full version carries all 13.
+── THE SIX LINKS ─────────────────────────────────────────────────────────────
+One contextual sentence each, placed in a section where the link is actually
+useful rather than bolted onto the end of the page.
 
-The handicap table is 6 rows. One 16:9 holds all of it at 32px. A second file
-would add nothing, so there isn't one.
+  /best-launch-monitors-no-subscription/   in "3-Year Cost Comparison"
+      anchor: Black Friday golf deals                        ← exact match
+  /best-golf-launch-monitors-2026/         in "Best Budget: Garmin Approach R10"
+      anchor: list of launch monitor prices checked before Black Friday
+  /best-golf-rangefinders-2026/            in "What to Look For in a Golf Rangefinder"
+      anchor: Black Friday rangefinder deals
+  /best-golf-balls-2026/                   in "Choose Your Ball by What You Actually Need"
+      anchor: Black Friday golf ball deals
+  /best-christmas-golf-gifts/              in "Gifts by Budget That Golfers Actually Want"
+      anchor: what golf gear costs ahead of the Black Friday sales
+  /best-golf-gifts-for-him/                in "Gifts by Budget: $25 to $250 and Up"
+      anchor: Black Friday deals page
 
+Six links, six distinct anchors, one exact match. That follows the only large
+dataset there is on this (Zyppy, 23M links): anchor-text VARIETY is the factor
+that correlates most strongly, and having at least one exact-match anchor is
+associated with a large uplift. It is correlational, not causal, and I am not
+going to pretend otherwise — but varied descriptive anchors are also just
+better writing, so the downside is nil.
 
-── THE DRIFT PROBLEM, AND WHAT I DID ABOUT THE HANDICAP ──────────────────────
-The distance images come from CLUBS and TIERS in club-distances.ts, so they
-cannot disagree with the table. Same as compression coming from balls.ts.
-
-The handicap figures have no data module — they live in an HTML table inside
-the article's section body. Copying them into the generator would be exactly
-the drift Sprint 131 was written about (the hand-written compression embed
-shipped TruFeel at 45 for months after the table said 70).
-
-So the generator PARSES that table out of the record. If it finds anything
-other than six age bands with numeric values, the build STOPS with a message
-naming the problem. I tested that: deleted the 70+ row and re-ran —
-
-    ❌ generate-handicap-chart-image: expected 6 age bands, parsed 5
-    exit code: 1
-
-A silent fallback would draw a chart that no longer matches the page, which is
-the one failure the whole generated-art approach exists to prevent.
-
-
-── I ACTUALLY RAN THESE, AND LOOKED AT THE OUTPUT ────────────────────────────
-I installed sharp in my sandbox and ran both generators for real rather than
-shipping untested code into the build chain — which is how I broke the build in
-187. Then I rendered every image to PNG and looked at it, which is the Sprint
-135 lesson, and it caught five defects that the code ran cleanly past:
-
-  1. The gold rule under the column headers sliced straight through the Driver
-     row and its stripe. Row positions were computed from yTop independently of
-     where the rule sat. Both now derive from rowsTop so it cannot recur.
-  2. The five speed columns were bunched right, leaving ~260px of dead canvas.
-  3. On the full chart the subtitle ran into the column header row.
-  4. On the full chart the "115 MPH" header collided with the "ROLL" header.
-  5. And the 115 MPH numbers ran into the "+20 roll" text beside them.
-
-Final output:
-
-    golf-club-distance-chart-2026.webp        1200x675   42.9KB  q88
-    golf-club-distance-chart-2026-full.webp   1200x910   56.4KB  q88
-    average-golf-handicap-by-age-2026.webp    1200x675   33.6KB  q88
-
-Spot-checked the numbers against the page's own model (carry = mph x 2.44 - 6,
-times each club's ratio): 7-iron at 90 mph = 137, which is what the page's
-quick answer says. The handicap figures are the page's table, parsed.
+The first two pages get the launch-monitor links because that is where the BF
+page's verified prices actually are. /best-launch-monitors-no-subscription/ is
+the site's top commercial page by clicks, so it gets the exact-match anchor.
 
 
-── NO NEW INLINE STYLES ──────────────────────────────────────────────────────
-validate-inline-styles caps literal style="" at 1225 and only ever lets it
-fall, so a figure styled the way Sprint 135 styled its one would have pushed
-the count over and failed the build. The treatment went into global.css as
-.chart-figure instead — which is what the ratchet's own note says to do with a
-repeated style.
+── NO PRICES IN ANY OF THE SIX SENTENCES ─────────────────────────────────────
+Deliberate. validate-prose-prices, validate-section-body-prices and
+validate-same-page-prices all check figures in body copy against the registry.
+A sentence with no number cannot trip any of them. Each sentence claims only
+things the BF page actually does: that it lists checked pre-sale prices for the
+launch monitors (true, that is its Quick Answer), and that it has sections for
+rangefinders, balls and gifts (true, those are its h2s).
 
-    index.astro   39 style="" before, 39 after
-    articles.ts    7 style="" before,  7 after
-
-Width needed nothing: `figure` is already in the Sprint 151b exclusion list
-("a table, a spec grid, a product grid and a figure exist to put values side by
-side — width is the whole point of them"), so a figure already earns the shell.
-
-
-── BUILD ORDER — CHECKED, NOT ASSUMED ────────────────────────────────────────
-Both generators read src/ and write public/, so they belong BEFORE astro build,
-and that is where they sit.
-
-There is a trap here I nearly walked into: generate-DISTance-chart-image.ts
-contains the substring "dist". validate-build-order looks for scripts reading
-dist/ in the pre-build chain. I ran it against this package.json rather than
-reasoning about it:
-
-    ✅ Build order: 62 pre-build step(s) checked — none reads dist/ unguarded.
-
-Its regex matches a quoted `('dist'` or `'dist/` in a script's SOURCE, not a
-filename, and neither generator contains any dist literal at all. Verified both
-ways.
+I wrote and then cut three stronger claims — "verified pre-sale prices" applied
+to balls and to gifts — because the verified figures on that page are launch
+monitors only. The weaker sentence that is true beats the better sentence that
+is not.
 
 
-── LASTMOD ───────────────────────────────────────────────────────────────────
-The thing I forgot last sprint. Both pages changed, so both hashes ship:
+── A BUG I HIT AND WHAT IT NEARLY COST ───────────────────────────────────────
+My first insertion script assumed every section body was a plain '...' or
+"..." literal. Three went in fine, then it threw on /best-golf-balls-2026/ —
+that body is a BACKTICK template literal.
 
-    /golf-club-distance-chart/   f9851296f7da03e8 -> e51444fd0202437e
-    /average-golf-handicap/      42c1c373517ae32b -> 4b84a67f3fb6d0de
+The write happens once at the end, so nothing was written and articles.ts was
+byte-identical afterwards. I verified that with cmp before doing anything else.
+Had the script written incrementally it would have left the file half-edited.
 
-Diff against the manifest now live is 2 lines. 300 entries before and after.
-Dates stay 2026-10-20 — already today's from 191b.
-
-global.css changed but does NOT enter the manifest, and that is correct: the
-script deliberately excludes layout and chrome so a stylesheet edit cannot
-restamp 300 pages. That exclusion is the whole reason the manifest is trusted.
-
-
-── WHAT I DELIBERATELY DID NOT DO ────────────────────────────────────────────
-No ImageObject schema on the handicap page. Article pages get their schema from
-[...slug].astro and adding one would mean a template change touching all 192
-articles — real risk for the smaller of the two image slots. The img, its alt
-text and the caption are the signals Sprint 135's research put first anyway
-(alt is #1, filename #2). If the distance chart image lands in the pack and the
-handicap one does not, that is the next thing to try.
+The rescan also found the bodies use all three quote styles across these six
+records — two of them are not what a naive script would assume. The fixed
+version detects the quote character, walks the literal respecting backslash
+escapes to find its true end, and escapes the inserted text to match. For the
+template literal it checks the sentence contains no backtick and no ${ before
+inserting.
 
 
-── HONEST EXPECTATIONS ───────────────────────────────────────────────────────
-Sprint 135 took time to show. Image-pack entry is not guaranteed by correct
-markup — page authority gates it, which is why Sprint 135 noted we qualified at
-position ~6. The distance chart sits around 9.1, so it is a weaker starting
-position than compression had.
+── VERIFIED ──────────────────────────────────────────────────────────────────
+articles.ts parses: 192 articles import cleanly.
+All six sentences present, in the right section of the right page.
+Six unique anchors confirmed programmatically; exact-match anchor confirmed.
+Contextual body links to the BF page: 1 before, 7 after.
+Inline styles in articles.ts: 7 before, 7 after — ratchet untouched.
+/average-golf-handicap/ still hashes to 4b84a67f3fb6d0de, exactly what Sprint
+192 shipped, which confirms this is built on the right base and that nothing
+from the last sprint was disturbed.
 
-One more caveat I owe you from checking: on the BLENDED web SERP for
-compression, the inline 3-up image strip still shows MyGolfSpy and Cedarwood,
-not us. We own the Images tab for that query, not the inline strip. So the
-proven result is Google Images placement. The inline strip may follow and may
-not.
+lastmod: six records changed, six manifest entries updated, 300 entries before
+and after.
 
-Give it 14 days, then check Google Images for "golf club distance chart" and
-GSC Search Appearance for image impressions.
+
+── WHAT I DID NOT DO ─────────────────────────────────────────────────────────
+Did not add entries to any `related` array. Sprint 122 put a cap on those for a
+reason, and the Zyppy data says a body link with a descriptive anchor is worth
+more than another entry in a module every page already has.
+
+Did not touch /prime-day-golf-deals/. Its copy is four months stale and it
+should be fixed, but that is a content decision and a separate sprint — rolling
+it forward while also adding six links would make this one harder to judge if
+anything moves.
+
+
+── WHAT TO WATCH ─────────────────────────────────────────────────────────────
+Internal links do not move rankings in days. The realistic read is GSC
+impressions on /black-friday-golf-deals/ through November, and whether it picks
+up clicks when the deal searches start in the week before the 27th. If it is
+still flat by mid-November the constraint was never the internal links.
