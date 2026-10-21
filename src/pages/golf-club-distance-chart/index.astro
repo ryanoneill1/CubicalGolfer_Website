@@ -43,7 +43,28 @@ const refRows = CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW')
   name, vals: TIERS.map(t => Math.round((t * 2.44 - 6) * ratio)),
 }));
 
+/* Sprint 192: declare which picture on this page IS the chart. The SERP for
+   "golf club distance chart" opens with an image pack we were absent from,
+   because the chart was an HTML table and Google had no picture to pull. Same
+   move as Sprint 135, which now holds Google Images 1 and 2 for the
+   compression chart. No claim about AI Overviews — Google says plainly that
+   needs no markup. This is for Google Images. */
+const chartImageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ImageObject',
+  contentUrl: 'https://www.cubicalgolfer.com/images/charts/golf-club-distance-chart-2026.webp',
+  url: 'https://www.cubicalgolfer.com/golf-club-distance-chart/',
+  width: 1200,
+  height: 675,
+  name: 'Golf Club Distance Chart 2026',
+  caption: 'Golf club distance chart 2026: carry distance in yards for driver, 3-wood, 4-hybrid, 5-iron, 7-iron, 9-iron, pitching wedge and sand wedge across driver swing speeds of 75, 85, 95, 105 and 115 mph',
+  creditText: 'CubicalGolfer.com',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  acquireLicensePage: 'https://www.cubicalgolfer.com/golf-club-distance-chart/',
+};
+
 const schemas = [
+  chartImageSchema,
   datasetSchema({ name: 'Golf Club Distance Chart — Carry by Swing Speed', description: 'Carry and total distances for all 13 clubs across five driver swing-speed bands (75–115 mph), derived from launch-monitor testing.', url: '/golf-club-distance-chart/', dateModified: effectiveDateModified('/golf-club-distance-chart/', '2026-07-09'), keywords: ['golf club distances', 'carry distance', 'swing speed'], pdf: '/downloads/golf-club-distance-chart.pdf' }),
   articleSchema({ headline: meta.title, description: meta.description, datePublished: '2026-05-17', dateModified: effectiveDateModified('/golf-club-distance-chart/', '2026-05-17'), url: meta.canonical }),
   faqSchema(faqs),
@@ -84,6 +105,17 @@ const schemas = [
       <p class="quick-answer-more">Want club data too? The <a href={getAffiliateLink('garmin-approach-r10').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Garmin Approach R10" style="color:#fff;text-decoration:underline;">Garmin Approach R10 {getAffiliateLink('garmin-approach-r10').price}</a> adds spin and launch angle. Full chart below.</p>
     </div>
 
+
+    <figure class="chart-figure">
+      <img src="/images/charts/golf-club-distance-chart-2026.webp"
+           width="1200" height="675" loading="eager" fetchpriority="high"
+           alt="Golf club distance chart 2026: carry distance in yards for driver, 3-wood, 4-hybrid, 5-iron, 7-iron, 9-iron, pitching wedge and sand wedge across driver swing speeds of 75, 85, 95, 105 and 115 mph" />
+      <figcaption>
+        Golf club distance chart 2026 — carry in yards at five driver swing speeds.
+        <a href="/images/charts/golf-club-distance-chart-2026-full.webp">See all {CLUBS.length} clubs in one image</a>,
+        or <a href="/downloads/golf-club-distance-chart.pdf">download the printable PDF</a>.
+      </figcaption>
+    </figure>
 
     <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:#FAF8F2;border:1px solid #E5E0D5;border-radius: var(--r2);padding:16px 18px;margin:22px 0;">
       <div>

@@ -1,95 +1,166 @@
-Sprint 191b — build fix. The lastmod manifest I failed to ship.
+Sprint 192 — the image play (C). Chart pictures for the two biggest pages.
 
-EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 10 files, 3 of them images. No deletions.
 
-  src/data/lastmod-manifest.json          <- the fix
-  src/data/articles.ts                    <- identical to what you already pushed
-  src/pages/golf-club-distance-chart/index.astro   <- identical to what you pushed
-
-The two source files are byte-identical to Sprint 191. They are included only so
-this zip works whether or not that push landed cleanly. Re-uploading them is a
-no-op.
-
-
-── WHAT I DID WRONG ──────────────────────────────────────────────────────────
-update-lastmod.ts --check is the FIRST thing npm run validate runs. It keeps a
-hash of every page's own source in src/data/lastmod-manifest.json. Change a
-page's content without shipping the updated manifest and the build stops:
-
-    ❌ lastmod manifest is stale — 2 page(s) changed since it was last written.
-       /average-golf-handicap/
-       /golf-club-distance-chart/
-
-I edited both pages and shipped neither manifest entry.
-
-This was avoidable and I should have caught it. Sprint 184-190 — the sprint
-immediately before this one — shipped src/data/lastmod-manifest.json for
-exactly this reason. It was sitting in the file list I read while building 191.
-The rule is simple and I now have it written down: if a sprint changes any
-page's content, the manifest ships with it.
+  scripts/generate-distance-chart-image.ts          NEW
+  scripts/generate-handicap-chart-image.ts          NEW
+  public/images/charts/golf-club-distance-chart-2026.webp        NEW
+  public/images/charts/golf-club-distance-chart-2026-full.webp   NEW
+  public/images/charts/average-golf-handicap-by-age-2026.webp    NEW
+  package.json                       two generators into the build chain
+  src/styles/global.css              .chart-figure
+  src/pages/golf-club-distance-chart/index.astro   figure + ImageObject
+  src/data/articles.ts               figure in the handicap age-band section
+  src/data/lastmod-manifest.json     both page hashes
 
 
-── WHY I COULD NOT JUST RUN npm run lastmod ──────────────────────────────────
-You can't run npm locally and I have no checkout with node_modules. So I
-reproduced the script's hash function exactly and verified it against known-good
-values before touching anything:
+── THIS IS SPRINT 135, RUN TWICE MORE ────────────────────────────────────────
+Checked live on 20 Oct before building anything: for "golf ball compression
+chart 2026" we now hold Google Images positions 1 AND 2, both marked
+"Licensable", above MyGolfSpy, Agape Golf and Cedarwood Golf — the three sites
+that held that pack before Sprint 135 — and organic #1 on the web SERP.
 
-  /golf-club-distance-chart/  is a bespoke .astro page with no ARTICLES record,
-      so its hash is sha256(file)[:16].
-      Old file -> 65a5081bea3ddfe1.  Manifest said 65a5081bea3ddfe1.  Match.
-
-  /average-golf-handicap/  is an ARTICLES record with no .astro file, so its
-      hash is sha256(JSON.stringify(record minus dateModified/datePublished)).
-      Ran under node --experimental-strip-types so the serialisation is real
-      JS JSON.stringify, not a Python approximation.
-      Old record -> 1e6161592d6df3a3.  Manifest said 1e6161592d6df3a3.  Match.
-
-Both reproduced the live values exactly, so the method is right, not merely
-plausible. Then the new hashes:
-
-      /golf-club-distance-chart/   65a5081bea3ddfe1 -> f9851296f7da03e8
-      /average-golf-handicap/      1e6161592d6df3a3 -> 42c1c373517ae32b
-      both lastmod -> 2026-10-20
-
-The --check compares hashes, not dates, so the date is cosmetic to the
-validator — but 2026-10-20 is also true, which is the point of the manifest.
+So this is a proven recipe on this exact site, not a theory. I copied
+generate-compression-chart-image.ts rather than reinventing it: same 16:9
+carousel candidate under 100KB, same tall full version, same specific alt text,
+same filename signal, same ImageObject with licence.
 
 
-── THE RISK I CHECKED BEFORE SHIPPING A WHOLE-FILE MANIFEST ──────────────────
-A zip replaces the entire manifest. If my base copy had drifted from yours, I
-would have silently reverted other pages' lastmods — exactly the "don't lose
-anything" failure.
+── WHAT THE TWO SERPS ACTUALLY LOOK LIKE ─────────────────────────────────────
+I checked both before committing to the work, because an image is worthless on
+a SERP with no image slot.
 
-So I checked my copy against the LIVE sitemap: 16 article URLs sampled across
-the full date range (2026-04-19 through 2026-10-18), including the oldest and
-newest entries. 16 of 16 matched. My base copy is current.
+  "golf club distance chart"
+      Image pack ABOVE every organic result. Club Up Golf, Instagram, Golf
+      Sidekick. We were absent. This is the real prize.
 
-And the diff of old manifest vs new is 4 lines — the two hashes and the two
-dates. 300 entries before, 300 after. Nothing else moved.
+  "average golf handicap by age"
+      There IS an image block, but it sits BELOW the AI Overview and some
+      organic results — currently MyGolfSpy's "STUDY: Overall Golfer
+      Performance By Age". Worth taking. Second-order, and I would rather say
+      so than oversell it.
 
 
-── WHAT I STILL CANNOT VERIFY ────────────────────────────────────────────────
-I cannot run the other 90 validators. Of the ones my changes could plausibly
-touch, I checked what I could reason about:
+── WHY TWO IMAGES FOR THE DISTANCE CHART, ONE FOR THE HANDICAP ───────────────
+13 clubs x 5 speed bands at 16:9 puts rows at ~33px and the type with them. A
+carousel thumbnail is tiny; type nobody can read at that size wins the click
+and loses it to a bounce. So the summary carries the 8 clubs that carry the
+searches, at 25px, and the full version carries all 13.
 
-  validate-promise-delivery   Read it. Only fires on numeric count promises
-                              ("N best/tested/top/ranked/compared") in ARTICLES
-                              records. My handicap title has no number, and the
-                              distance chart is not an ARTICLES record. No risk.
+The handicap table is 6 rows. One 16:9 holds all of it at 32px. A second file
+would add nothing, so there isn't one.
 
-  validate-stated-counts      "13 Clubs" is true — CLUBS in club-distances.ts
-                              has 13 entries. The page already said "all 13
-                              clubs" in its meta and FAQ before this sprint and
-                              passed, so the claim is not new.
 
-  validate-meta-length        Could not read it — not in any copy I hold. Title
-                              50 chars, descriptions 142 and 150, all inside the
-                              60/160 bounds your existing pages already sit in.
+── THE DRIFT PROBLEM, AND WHAT I DID ABOUT THE HANDICAP ──────────────────────
+The distance images come from CLUBS and TIERS in club-distances.ts, so they
+cannot disagree with the table. Same as compression coming from balls.ts.
 
-  validate-year-exposure      Could not read it. I removed "(2026)" from the
-                              handicap title. titleDisplay still carries "2026
-                              Data" and the intro still says 2026, so the year
-                              is still present on the page. If this validator
-                              requires a year in `title` specifically, it will
-                              fail and I will fix it — tell me and I will put
-                              the year back somewhere that satisfies it.
+The handicap figures have no data module — they live in an HTML table inside
+the article's section body. Copying them into the generator would be exactly
+the drift Sprint 131 was written about (the hand-written compression embed
+shipped TruFeel at 45 for months after the table said 70).
+
+So the generator PARSES that table out of the record. If it finds anything
+other than six age bands with numeric values, the build STOPS with a message
+naming the problem. I tested that: deleted the 70+ row and re-ran —
+
+    ❌ generate-handicap-chart-image: expected 6 age bands, parsed 5
+    exit code: 1
+
+A silent fallback would draw a chart that no longer matches the page, which is
+the one failure the whole generated-art approach exists to prevent.
+
+
+── I ACTUALLY RAN THESE, AND LOOKED AT THE OUTPUT ────────────────────────────
+I installed sharp in my sandbox and ran both generators for real rather than
+shipping untested code into the build chain — which is how I broke the build in
+187. Then I rendered every image to PNG and looked at it, which is the Sprint
+135 lesson, and it caught five defects that the code ran cleanly past:
+
+  1. The gold rule under the column headers sliced straight through the Driver
+     row and its stripe. Row positions were computed from yTop independently of
+     where the rule sat. Both now derive from rowsTop so it cannot recur.
+  2. The five speed columns were bunched right, leaving ~260px of dead canvas.
+  3. On the full chart the subtitle ran into the column header row.
+  4. On the full chart the "115 MPH" header collided with the "ROLL" header.
+  5. And the 115 MPH numbers ran into the "+20 roll" text beside them.
+
+Final output:
+
+    golf-club-distance-chart-2026.webp        1200x675   42.9KB  q88
+    golf-club-distance-chart-2026-full.webp   1200x910   56.4KB  q88
+    average-golf-handicap-by-age-2026.webp    1200x675   33.6KB  q88
+
+Spot-checked the numbers against the page's own model (carry = mph x 2.44 - 6,
+times each club's ratio): 7-iron at 90 mph = 137, which is what the page's
+quick answer says. The handicap figures are the page's table, parsed.
+
+
+── NO NEW INLINE STYLES ──────────────────────────────────────────────────────
+validate-inline-styles caps literal style="" at 1225 and only ever lets it
+fall, so a figure styled the way Sprint 135 styled its one would have pushed
+the count over and failed the build. The treatment went into global.css as
+.chart-figure instead — which is what the ratchet's own note says to do with a
+repeated style.
+
+    index.astro   39 style="" before, 39 after
+    articles.ts    7 style="" before,  7 after
+
+Width needed nothing: `figure` is already in the Sprint 151b exclusion list
+("a table, a spec grid, a product grid and a figure exist to put values side by
+side — width is the whole point of them"), so a figure already earns the shell.
+
+
+── BUILD ORDER — CHECKED, NOT ASSUMED ────────────────────────────────────────
+Both generators read src/ and write public/, so they belong BEFORE astro build,
+and that is where they sit.
+
+There is a trap here I nearly walked into: generate-DISTance-chart-image.ts
+contains the substring "dist". validate-build-order looks for scripts reading
+dist/ in the pre-build chain. I ran it against this package.json rather than
+reasoning about it:
+
+    ✅ Build order: 62 pre-build step(s) checked — none reads dist/ unguarded.
+
+Its regex matches a quoted `('dist'` or `'dist/` in a script's SOURCE, not a
+filename, and neither generator contains any dist literal at all. Verified both
+ways.
+
+
+── LASTMOD ───────────────────────────────────────────────────────────────────
+The thing I forgot last sprint. Both pages changed, so both hashes ship:
+
+    /golf-club-distance-chart/   f9851296f7da03e8 -> e51444fd0202437e
+    /average-golf-handicap/      42c1c373517ae32b -> 4b84a67f3fb6d0de
+
+Diff against the manifest now live is 2 lines. 300 entries before and after.
+Dates stay 2026-10-20 — already today's from 191b.
+
+global.css changed but does NOT enter the manifest, and that is correct: the
+script deliberately excludes layout and chrome so a stylesheet edit cannot
+restamp 300 pages. That exclusion is the whole reason the manifest is trusted.
+
+
+── WHAT I DELIBERATELY DID NOT DO ────────────────────────────────────────────
+No ImageObject schema on the handicap page. Article pages get their schema from
+[...slug].astro and adding one would mean a template change touching all 192
+articles — real risk for the smaller of the two image slots. The img, its alt
+text and the caption are the signals Sprint 135's research put first anyway
+(alt is #1, filename #2). If the distance chart image lands in the pack and the
+handicap one does not, that is the next thing to try.
+
+
+── HONEST EXPECTATIONS ───────────────────────────────────────────────────────
+Sprint 135 took time to show. Image-pack entry is not guaranteed by correct
+markup — page authority gates it, which is why Sprint 135 noted we qualified at
+position ~6. The distance chart sits around 9.1, so it is a weaker starting
+position than compression had.
+
+One more caveat I owe you from checking: on the BLENDED web SERP for
+compression, the inline 3-up image strip still shows MyGolfSpy and Cedarwood,
+not us. We own the Images tab for that query, not the inline strip. So the
+proven result is Google Images placement. The inline strip may follow and may
+not.
+
+Give it 14 days, then check Google Images for "golf club distance chart" and
+GSC Search Appearance for image impressions.

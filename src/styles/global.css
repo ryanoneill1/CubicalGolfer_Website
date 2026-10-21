@@ -2953,3 +2953,34 @@ main section > p, main section ul, main section ol {
  * reported; found by widening the rhythm check from <section> on the homepage
  * to every top-level block on all 299 pages. */
 .faq-section { padding-bottom: 48px; }
+
+/* ═══ .chart-figure — Sprint 192 ═══════════════════════════════════════════
+ * The chart images that compete for the Google image pack.
+ *
+ * These live in a class rather than an inline style for a reason the ratchet
+ * already states: validate-inline-styles caps literal style="" at 1225 and
+ * only ever lets it fall. Sprint 135 shipped its figure with inline styles
+ * before that ratchet existed; doing the same here would push the count over
+ * the ceiling and fail the build. A repeated style belongs in global.css where
+ * the next person can find it — which is the rule, and this is the third place
+ * the same figure treatment is needed.
+ *
+ * Width is already handled: `figure` sits in the Sprint 151b exclusion list
+ * ("a table, a spec grid, a product grid and a figure exist to put values side
+ * by side — width is the whole point of them"), so a figure already earns the
+ * full shell. Nothing here re-states that. */
+.chart-figure {
+  margin: 24px 0 28px;
+}
+.chart-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--r2);
+}
+.chart-figure figcaption {
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 12px;
+}
