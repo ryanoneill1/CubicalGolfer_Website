@@ -1,125 +1,143 @@
-Sprint 193 — six contextual links into /black-friday-golf-deals/
+Sprint 194 — the generic gear sentence, and the Prime Day page that expired
 
-EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
 
-  src/data/articles.ts
-  src/data/lastmod-manifest.json
-
-Black Friday is 27 November. 38 days. This is the only thing on the list with
-a closing window, which is why it went first.
+  src/pages/[...slug].astro         the template line that caused it
+  src/data/articles.ts              32 notes + Prime Day copy
+  src/data/lastmod-manifest.json    33 records
 
 
-── WHAT WAS ACTUALLY WRONG ───────────────────────────────────────────────────
-Batch 1 said the page had "3 inbound internal links". I went to re-check that
-rather than trust it, and the number is right but the shape of it is worse than
-the number suggests:
+── FIRST, A CORRECTION TO MY OWN NUMBER ──────────────────────────────────────
+I have been calling this "50 pages with a generic sentence" and implying 50
+sentences to write. Both halves were wrong, and checking took ten minutes.
 
-   1  the /golf-lifestyle/ hub   — generated from ARTICLES by category,
-                                   so it is a navigational listing, not a
-                                   contextual link
-   2  /prime-day-golf-deals/     — a related-module entry
-   3  /prime-day-golf-deals/     — one in-body prose link
+It is ONE line of template. [...slug].astro rendered
 
-So the page had exactly ONE contextual body link on the whole site, and it came
-from the Prime Day page — which is itself the page still telling readers the
-2026 Prime Day update "goes live when deals are announced", four months late.
+    {recAff.price} — the product we use and recommend for this topic.
 
-Zero .astro files link to it. I checked.
+on every non-buying-guide page with a recommended product. That is 51 pages
+(tutorial 37, listicle 12, lifestyle 2 — buying guides, comparisons and reviews
+take a different branch and were never affected).
 
-The page is worth the links. Its Quick Answer gives the reader the current
-verified price of each launch monitor as the baseline a real discount has to
-beat, and its intro says plainly that it will not guess at discount percentages
-months out because nobody knows them. That is the added value Google's
-thin-affiliate policy asks for, and it carries 12 affiliate links.
+And those 51 pages share only 30 DISTINCT products. So the work was never 50
+sentences. It is 30, and the top 11 products alone cover 32 of the 51 pages.
 
 
-── THE SIX LINKS ─────────────────────────────────────────────────────────────
-One contextual sentence each, placed in a section where the link is actually
-useful rather than bolted onto the end of the page.
+── WHAT SHIPPED ──────────────────────────────────────────────────────────────
+The template now reads:
 
-  /best-launch-monitors-no-subscription/   in "3-Year Cost Comparison"
-      anchor: Black Friday golf deals                        ← exact match
-  /best-golf-launch-monitors-2026/         in "Best Budget: Garmin Approach R10"
-      anchor: list of launch monitor prices checked before Black Friday
-  /best-golf-rangefinders-2026/            in "What to Look For in a Golf Rangefinder"
-      anchor: Black Friday rangefinder deals
-  /best-golf-balls-2026/                   in "Choose Your Ball by What You Actually Need"
-      anchor: Black Friday golf ball deals
-  /best-christmas-golf-gifts/              in "Gifts by Budget That Golfers Actually Want"
-      anchor: what golf gear costs ahead of the Black Friday sales
-  /best-golf-gifts-for-him/                in "Gifts by Budget: $25 to $250 and Up"
-      anchor: Black Friday deals page
+    {recAff.price} — {article.recGearNote ?? 'the product we use and recommend for this topic.'}
 
-Six links, six distinct anchors, one exact match. That follows the only large
-dataset there is on this (Zyppy, 23M links): anchor-text VARIETY is the factor
-that correlates most strongly, and having at least one exact-match anchor is
-associated with a large uplift. It is correlational, not causal, and I am not
-going to pretend otherwise — but varied descriptive anchors are also just
-better writing, so the downside is nil.
+Eleven products have a real note, covering 32 pages. The remaining 19 pages
+keep the old sentence, so nothing breaks and the tail can be filled later. That
+is the same ratchet shape used elsewhere on this site: improve the number, make
+the old state harmless, never block the sprint on completeness.
 
-The first two pages get the launch-monitor links because that is where the BF
-page's verified prices actually are. /best-launch-monitors-no-subscription/ is
-the site's top commercial page by clicks, so it gets the exact-match anchor.
+    7 pages   Garmin Approach R10
+    4         Bushnell Tour V7 Shift
+    3         Putting mirror
+    3         Arccos Caddie sensors
+    3         Alignment sticks
+    2 each    Callaway Strata, FootJoy WeatherSof, Cleveland RTX 6,
+              Fiberbuilt Studio mat, Maxfli Milled 52, Paradym Ai Smoke Max
 
 
-── NO PRICES IN ANY OF THE SIX SENTENCES ─────────────────────────────────────
-Deliberate. validate-prose-prices, validate-section-body-prices and
-validate-same-page-prices all check figures in body copy against the registry.
-A sentence with no number cannot trip any of them. Each sentence claims only
-things the BF page actually does: that it lists checked pre-sale prices for the
-launch monitors (true, that is its Quick Answer), and that it has sections for
-rangefinders, balls and gifts (true, those are its h2s).
+── WHERE THE SENTENCES CAME FROM ─────────────────────────────────────────────
+I did not write these from what I know about golf equipment. Every one is
+distilled from the site's OWN existing buying-guide copy, which is already
+verified and already live. Examples, source in brackets:
 
-I wrote and then cut three stronger claims — "verified pre-sale prices" applied
-to balls and to gifts — because the verified figures on that page are launch
-monitors only. The weaker sentence that is true beats the better sentence that
-is not.
+  R10        "Doppler radar that reads the ball from behind, so it still works
+             with as little as six feet between you and the net."
+             [/best-golf-simulator-small-spaces/]
+
+  V7 Shift   "Twelve rounds across three courses before we wrote a word about
+             it, and by the third it had replaced the rangefinder that had been
+             in the bag for two years."
+             [/best-golf-rangefinders-2026/]
+
+  Fiberbuilt "Fiberglass grass tees that flex on impact like real turf, so the
+             club slides through instead of bouncing off hard rubber. That is
+             what saves your wrists."
+             [/apartment-golf-simulator-setup/]
+
+That matters for two reasons. It cannot contradict the rest of the site, and it
+contains no claim the site has not already stood behind.
+
+NO PRICES AND NO PERCENTAGES in any of the 11 — checked programmatically, 0 of
+32 notes contain either. The price already renders immediately before the note
+from the registry, and a sentence with no figure cannot trip validate-prose-
+prices, validate-section-body-prices or validate-same-page-prices.
 
 
-── A BUG I HIT AND WHAT IT NEARLY COST ───────────────────────────────────────
-My first insertion script assumed every section body was a plain '...' or
-"..." literal. Three went in fine, then it threw on /best-golf-balls-2026/ —
-that body is a BACKTICK template literal.
+── PRIME DAY ─────────────────────────────────────────────────────────────────
+The page was telling readers, on 20 October, that "the 2026 Prime Day update
+goes live when deals are announced". Prime Day 2026 was in July.
 
-The write happens once at the end, so nothing was written and articles.ts was
-byte-identical afterwards. I verified that with cmp before doing anything else.
-Had the script written incrementally it would have left the file half-edited.
+  was  <strong>Last updated: June 2026</strong> — the 2026 Prime Day update
+       goes live when deals are announced.
+  now  <strong>Prime Day 2026 has been and gone.</strong> The next one lands in
+       July 2027 and this page is rewritten when it does. What is below still
+       holds in the meantime: how to tell a real discount from a manufactured
+       one, and which categories almost never go on sale.
 
-The rescan also found the bodies use all three quote styles across these six
-records — two of them are not what a naive script would assume. The fixed
-version detects the quote character, walks the literal respecting backslash
-escapes to find its true end, and escapes the inserted text to match. For the
-template literal it checks the sentence contains no backtick and no ${ before
-inserting.
+       The sale actually coming up is Black Friday — see Black Friday golf
+       deals for the verified pre-sale prices.
+
+bottomLine rolled forward to match. The existing figures in it (buy-2-get-1,
+30-40% off) are untouched, so no price claim changed.
+
+This also means the page now points at Black Friday during the five weeks when
+that is the useful answer, which complements Sprint 193 rather than duplicating
+it.
+
+
+── TWO BUGS IN MY OWN SCRIPT, BOTH CAUGHT BEFORE ANY WRITE ───────────────────
+The inserter writes once at the end, so both failures left articles.ts
+byte-identical. I verified that with cmp after the first one rather than
+assuming it.
+
+  1. I anchored on "\n    slug: '...'". That is not universal — some records
+     put id and slug on one line: "id: 'bf-golf-deals', slug: '/black-friday-
+     golf-deals/',". And the same string appears inside every related[] entry.
+     Fixed by scanning all occurrences and taking the one not followed by
+     "label:".
+  2. I then anchored the insert on quickAnswerProduct being near the slug. On
+     /how-golf-launch-monitors-work/ it sits more than 2000 characters away.
+     Fixed by inserting after the slug line instead — field order in an object
+     literal is irrelevant, so the extra anchor bought nothing.
 
 
 ── VERIFIED ──────────────────────────────────────────────────────────────────
-articles.ts parses: 192 articles import cleanly.
-All six sentences present, in the right section of the right page.
-Six unique anchors confirmed programmatically; exact-match anchor confirmed.
-Contextual body links to the BF page: 1 before, 7 after.
-Inline styles in articles.ts: 7 before, 7 after — ratchet untouched.
-/average-golf-handicap/ still hashes to 4b84a67f3fb6d0de, exactly what Sprint
-192 shipped, which confirms this is built on the right base and that nothing
-from the last sprint was disturbed.
+  articles.ts parses — 192 articles
+  51 pages show the gear box; 32 now carry a specific note, 19 on the fallback
+  11 distinct notes, 0 leaked onto buying-guide pages
+  0 notes contain a price or a percentage
+  inline styles: articles.ts 7 before / 7 after, [...slug].astro 86 / 86
+  Sprint 192's handicap chart figure and new title: intact
+  Sprint 193's six Black Friday links: intact (10 references site-wide)
+  manifest: 33 records changed, 300 entries before and after
 
-lastmod: six records changed, six manifest entries updated, 300 entries before
-and after.
-
-
-── WHAT I DID NOT DO ─────────────────────────────────────────────────────────
-Did not add entries to any `related` array. Sprint 122 put a cap on those for a
-reason, and the Zyppy data says a body link with a descriptive anchor is worth
-more than another entry in a module every page already has.
-
-Did not touch /prime-day-golf-deals/. Its copy is four months stale and it
-should be fixed, but that is a content decision and a separate sprint — rolling
-it forward while also adding six links would make this one harder to judge if
-anything moves.
+[...slug].astro is a dynamic route, so update-lastmod deliberately skips it and
+it correctly gets no manifest entry of its own.
 
 
-── WHAT TO WATCH ─────────────────────────────────────────────────────────────
-Internal links do not move rankings in days. The realistic read is GSC
-impressions on /black-friday-golf-deals/ through November, and whether it picks
-up clicks when the deal searches start in the week before the 27th. If it is
-still flat by mid-November the constraint was never the internal links.
+── THE THIRD ITEM, WHICH I AM NOT CLAIMING ───────────────────────────────────
+I said I would re-verify the primaryRetailer inconsistency before asserting it,
+and I cannot, so I am not asserting it.
+
+affiliate-links.ts imports src/data/affiliate-programs.ts, which no sprint has
+ever shipped to me, so I cannot import the registry at all. The copy I do have
+is from Sprint 173 (16 Oct) and is four days stale. Parsing it as raw text gave
+unreliable results — my first attempt matched 7 of 30 product keys.
+
+Two ways forward, your call:
+  · include src/data/affiliate-links.ts and src/data/affiliate-programs.ts in
+    any future zip you send back, and I can check it properly; or
+  · I verify it live in the browser by rendering the pages and comparing which
+    retailer is shown for the same product across different render sites. That
+    is authoritative and needs no source files, but it is a sprint of its own.
+
+The deep-link defect is the one I would still rather fix next: 91 of 356
+products land the buy button on a search results page, and validate-deep-links
+has held the ceiling at 91 with no sprint lowering it.

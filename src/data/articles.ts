@@ -842,6 +842,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'break-90',
     slug: '/how-to-break-90/',
+    recGearNote: 'Set up over it and you can see straight away whether your eyes are over the ball and your shoulders are square. Two of our testers dropped two putts a round inside a month.',
     quickAnswerProduct: 'putting-mirror',
     category: 'improve-game',
     pageType: 'tutorial',
@@ -904,6 +905,7 @@ export const ARTICLES: Article[] = [
 {
     id: 'tips-beginners',
     slug: '/golf-tips-for-beginners/',
+    recGearNote: 'Twelve clubs, a stand bag and headcovers in one box, with a draw-biased 460cc driver aimed straight at beginners who slice.',
     quickAnswerProduct: 'callaway-strata',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-tips-for-beginners.jpg',
     thumbnail: '/images/thumbnails/tips-beginners-thumb.webp',
@@ -962,6 +964,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'handicap',
     slug: '/average-golf-handicap/',
+    recGearNote: 'The one tracker that logs every shot without you doing anything: screw the sensors into your grip ends once and the rest of the season records itself.',
     quickAnswerProduct: 'arccos-caddie-sensors',
     ogImage: 'https://www.cubicalgolfer.com/images/og/average-golf-handicap.jpg',
     thumbnail: '/images/thumbnails/handicap-thumb.webp',
@@ -1326,6 +1329,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'accessories-50',
     slug: '/best-golf-accessories-under-50/',
+    recGearNote: 'A textured palm that still grips when your hands are sweaty, a mesh back that stays cool, and it outlasts premium leather three or four times over.',
     category: 'golf-accessories',
     pageType: 'listicle',
     quickAnswerProduct: 'footjoy-weathersof-glove',
@@ -1455,6 +1459,7 @@ export const ARTICLES: Article[] = [
   {
     id: 'courses',
     slug: '/best-golf-courses-weekend-drive/',
+    recGearNote: 'Twelve rounds across three courses before we wrote a word about it, and by the third it had replaced the rangefinder that had been in the bag for two years.',
     quickAnswerProduct: 'bushnell-tour-v7-shift',
     ogImage: 'https://www.cubicalgolfer.com/images/og/best-golf-courses-weekend-drive.jpg',
     thumbnail: '/images/thumbnails/courses-thumb.webp',
@@ -2325,6 +2330,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'golf-gifts',
     slug: '/best-golf-gifts-for-him/',
+    recGearNote: 'A textured palm that still grips when your hands are sweaty, a mesh back that stays cool, and it outlasts premium leather three or four times over.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/best-golf-gifts-for-him.jpg',
     thumbnail: '/images/thumbnails/golf-gifts-thumb.webp',
     category: 'golf-accessories',
@@ -3758,6 +3764,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
 {
     id: 'how-to-chip',
     slug: '/how-to-chip-in-golf/',
+    recGearNote: 'ZipCore moves the centre of gravity closer to the face for feel on partial shots, and the heat-treated UltiZip grooves hold their spin longer than most.',
     quickAnswerProduct: 'cleveland-rtx6-52',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-chip-in-golf.jpg',
     thumbnail: '/images/thumbnails/how-to-chip-thumb.webp',
@@ -3813,6 +3820,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'stop-topping',
     slug: '/how-to-stop-topping-the-ball/',
+    recGearNote: 'Two fibreglass rods that check aim, ball position, swing path and hip rotation. The cheapest genuinely useful thing you can put in a bag.',
     quickAnswerProduct: 'alignment-sticks',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-stop-topping-the-ball.jpg',
     thumbnail: '/images/thumbnails/stop-topping-thumb.webp',
@@ -4058,6 +4066,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
 {
     id: 'how-to-use-rangefinder',
     slug: '/how-to-use-golf-rangefinder/',
+    recGearNote: 'Twelve rounds across three courses before we wrote a word about it, and by the third it had replaced the rangefinder that had been in the bag for two years.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-use-golf-rangefinder.jpg',
     thumbnail: '/images/thumbnails/how-to-use-rangefinder-thumb.webp',
     category: 'gear-reviews',
@@ -4219,6 +4228,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'garage-simulator',
     slug: '/how-to-build-garage-golf-simulator/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-build-garage-golf-simulator.jpg',
     thumbnail: '/images/thumbnails/garage-simulator-thumb.webp',
     category: 'golf-tech',
@@ -4620,6 +4630,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'slope-on-rangefinder',
     slug: '/what-is-slope-on-a-rangefinder/',
+    recGearNote: 'Twelve rounds across three courses before we wrote a word about it, and by the third it had replaced the rangefinder that had been in the bag for two years.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/what-is-slope-on-a-rangefinder.jpg',
     thumbnail: '/images/thumbnails/slope-on-rangefinder-thumb.webp',
     category: 'gear-reviews',
@@ -4684,6 +4695,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'how-far-7-iron',
     slug: '/how-far-average-golfer-hit-7-iron/',
+    recGearNote: 'The one tracker that logs every shot without you doing anything: screw the sensors into your grip ends once and the rest of the season records itself.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-far-average-golfer-hit-7-iron.jpg',
     thumbnail: '/images/thumbnails/how-far-7-iron-thumb.webp',
     category: 'improve-game',
@@ -4750,6 +4762,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'lower-handicap',
     slug: '/how-to-lower-golf-handicap/',
+    recGearNote: 'Set up over it and you can see straight away whether your eyes are over the ball and your shoulders are square. Two of our testers dropped two putts a round inside a month.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-lower-golf-handicap.jpg',
     thumbnail: '/images/thumbnails/lower-handicap-thumb.webp',
     category: 'improve-game',
@@ -4807,6 +4820,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'golf-ball-go-right',
     slug: '/why-does-my-golf-ball-go-right/',
+    recGearNote: 'Two fibreglass rods that check aim, ball position, swing path and hip rotation. The cheapest genuinely useful thing you can put in a bag.',
     quickAnswerProduct: 'alignment-sticks',
     ogImage: 'https://www.cubicalgolfer.com/images/og/why-does-my-golf-ball-go-right.jpg',
     thumbnail: '/images/thumbnails/golf-ball-go-right-thumb.webp',
@@ -4873,6 +4887,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'hit-irons-fat',
     slug: '/why-do-i-hit-irons-fat/',
+    recGearNote: 'Fiberglass grass tees that flex on impact like real turf, so the club slides through instead of bouncing off hard rubber. That is what saves your wrists.',
     quickAnswerProduct: 'fiberbuilt-studio-mat',
     ogImage: 'https://www.cubicalgolfer.com/images/og/why-do-i-hit-irons-fat.jpg',
     thumbnail: '/images/thumbnails/hit-irons-fat-thumb.webp',
@@ -5104,6 +5119,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'do-i-need-slope-rangefinder',
     slug: '/do-i-need-slope-on-rangefinder/',
+    recGearNote: 'Twelve rounds across three courses before we wrote a word about it, and by the third it had replaced the rangefinder that had been in the bag for two years.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/do-i-need-slope-on-rangefinder.jpg',
     thumbnail: '/images/thumbnails/do-i-need-slope-rangefinder-thumb.webp',
     category: 'gear-reviews',
@@ -5484,6 +5500,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'golf-for-beginners-hub',
     slug: '/golf-for-beginners/',
+    recGearNote: 'Twelve clubs, a stand bag and headcovers in one box, with a draw-biased 460cc driver aimed straight at beginners who slice.',
     quickAnswerProduct: 'callaway-strata',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-for-beginners.jpg',
     thumbnail: '/images/thumbnails/golf-for-beginners-hub-thumb.webp',
@@ -5992,6 +6009,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'gear-under-100',
     slug: '/best-golf-gear-under-100/',
+    recGearNote: 'Set up over it and you can see straight away whether your eyes are over the ball and your shoulders are square. Two of our testers dropped two putts a round inside a month.',
     category: 'golf-accessories',
     pageType: 'listicle',
     tag: 'BUYING GUIDE',
@@ -7838,6 +7856,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'arccos-mlm2pro-strokes-dropped',
     slug: '/how-i-dropped-5-strokes-arccos-mlm2pro/',
+    recGearNote: 'The one tracker that logs every shot without you doing anything: screw the sensors into your grip ends once and the rest of the season records itself.',
     thumb: 'green',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-i-dropped-5-strokes-arccos-mlm2pro.jpg',
     thumbnail: '/images/thumbnails/arccos-mlm2pro-story-thumb.webp',
@@ -7986,6 +8005,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'desk-exercises-golf-slice',
     slug: '/desk-exercises-fix-golf-slice/',
+    recGearNote: 'Two fibreglass rods that check aim, ball position, swing path and hip rotation. The cheapest genuinely useful thing you can put in a bag.',
     quickAnswerProduct: 'alignment-sticks',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/og/desk-exercises-fix-golf-slice.jpg',
@@ -9263,6 +9283,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'how-to-buy-wedges',
     slug: '/how-to-buy-wedges-4-degree-rule/',
+    recGearNote: 'A CNC-milled face at a budget price. No grind options, but the spin is consistent where it matters.',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-buy-wedges-4-degree-rule.jpg',
     thumbnail: '/images/thumbnails/buy-wedges-thumb.webp',
@@ -9344,6 +9365,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'when-to-replace-wedges',
     slug: '/when-to-replace-wedges-grooves/',
+    recGearNote: 'A CNC-milled face at a budget price. No grind options, but the spin is consistent where it matters.',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/og/when-to-replace-wedges-grooves.jpg',
     thumbnail: '/images/thumbnails/replace-wedges-thumb.webp',
@@ -9869,6 +9891,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'driver-vs-3-wood',
     slug: '/driver-vs-3-wood-off-tee/',
+    recGearNote: 'Roughly 200 balls across four range sessions and six rounds before we formed a view, and it displaced a driver that had been in the bag for eighteen months.',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/og/driver-vs-3-wood-off-tee.jpg',
     thumbnail: '/images/thumbnails/driver-vs-3wood-thumb.webp',
@@ -9959,6 +9982,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'fit-yourself-driver',
     slug: '/how-to-fit-yourself-for-driver/',
+    recGearNote: 'Roughly 200 balls across four range sessions and six rounds before we formed a view, and it displaced a driver that had been in the bag for eighteen months.',
     thumb: 'teal',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-fit-yourself-for-driver.jpg',
     thumbnail: '/images/thumbnails/fit-yourself-driver-thumb.webp',
@@ -11684,6 +11708,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'quiet-simulator',
     slug: '/quiet-golf-simulator-setup/',
+    recGearNote: 'Fiberglass grass tees that flex on impact like real turf, so the club slides through instead of bouncing off hard rubber. That is what saves your wrists.',
     quickAnswerProduct: 'fiberbuilt-studio-mat',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/og/quiet-golf-simulator-setup.jpg',
@@ -11809,6 +11834,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'sim-room-dimensions',
     slug: '/golf-simulator-room-dimensions-guide/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'green',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-simulator-room-dimensions-guide.jpg',
@@ -12165,6 +12191,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'sim-vs-range',
     slug: '/golf-simulator-vs-driving-range/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'navy',
     ogImage: 'https://www.cubicalgolfer.com/images/og/golf-simulator-vs-driving-range.jpg',
@@ -12217,6 +12244,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'improve-with-monitor',
     slug: '/how-to-improve-with-launch-monitor/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/og/how-to-improve-with-launch-monitor.jpg',
@@ -12447,6 +12475,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'wedge-bounce-guide',
     slug: '/wedge-bounce-guide/',
+    recGearNote: 'ZipCore moves the centre of gravity closer to the face for feel on partial shots, and the heat-treated UltiZip grooves hold their spin longer than most.',
     quickAnswerProduct: 'cleveland-rtx6-52',
     thumb: 'green',
     ogImage: 'https://www.cubicalgolfer.com/images/og/wedge-bounce-guide.jpg',
@@ -12707,6 +12736,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'shaft-flex-guide',
     slug: '/shaft-flex-guide/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.',
     quickAnswerProduct: 'garmin-approach-r10',
     thumb: 'brown',
     ogImage: 'https://www.cubicalgolfer.com/images/og/shaft-flex-guide.jpg',
@@ -14398,7 +14428,8 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     ],
   },
   {
-    id: 'bf-golf-deals', slug: '/black-friday-golf-deals/', category: 'golf-lifestyle', pageType: 'listicle',
+    id: 'bf-golf-deals', slug: '/black-friday-golf-deals/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.', category: 'golf-lifestyle', pageType: 'listicle',
     quickAnswerProduct: 'garmin-approach-r10',
     tag: 'DEALS', emoji: '🏷️', thumb: 'olive',
     words: '2,000', datePublished: '2026-06-06', dateModified: '2026-09-05',
@@ -14440,8 +14471,8 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     excerpt: 'Prime Day golf deals updated live — balls, accessories, and tech worth buying.',
     ogImage: 'https://www.cubicalgolfer.com/images/og/prime-day-golf-deals.jpg',
     thumbnail: '/images/thumbnails/prime-day-deals-thumb.webp',
-    bottomLine: 'Prime Day is best for golf balls (buy-2-get-1 deals), accessories (30-40% off), and Amazon-exclusive tech. This page is updated annually — check back in early July.',
-    intro: 'Amazon Prime Day (typically mid-July) is the best time to stock up on golf balls, accessories, and Amazon-exclusive golf tech. This page is updated annually with the deals worth buying.\n\n<strong>Last updated: June 2026</strong> — the 2026 Prime Day update goes live when deals are announced.\n\nFor Black Friday deals (typically better for premium equipment): <a href="/black-friday-golf-deals/">Black Friday golf deals</a>.',
+    bottomLine: 'Prime Day is best for golf balls (buy-2-get-1 deals), accessories (30-40% off), and Amazon-exclusive tech. Prime Day 2026 has passed; the next is July 2027. For the sale actually coming up, see our Black Friday golf deals page.',
+    intro: 'Amazon Prime Day (typically mid-July) is the best time to stock up on golf balls, accessories, and Amazon-exclusive golf tech. This page is updated annually with the deals worth buying.\n\n<strong>Prime Day 2026 has been and gone.</strong> The next one lands in July 2027 and this page is rewritten when it does. What is below still holds in the meantime: how to tell a real discount from a manufactured one, and which categories almost never go on sale.\n\nThe sale actually coming up is Black Friday — see <a href="/black-friday-golf-deals/">Black Friday golf deals</a> for the verified pre-sale prices.',
     toc: ['Golf Balls', 'Accessories', 'Tech and Gadgets'],
     sections: [
       { h2: 'Golf ball deals', body: 'Amazon runs the best golf ball deals on Prime Day — buy-2-get-1 or 20-30% off multi-dozen packs. Stock up on your preferred ball from our <a href="/best-golf-balls-2026/">rankings</a>. The <a href="/kirkland-signature-golf-balls/">Kirkland Signature</a> is already Amazon-priced but Prime Day sometimes adds further discounts.' , affiliateKey: 'kirkland-signature', price: '~$28/2dz', rating: 4.3, badge: 'BEST PRICE'},
@@ -14533,6 +14564,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     id: 'how-golf-launch-monitors-work',
     quickAnswerProduct: 'garmin-approach-r10',
     slug: '/how-golf-launch-monitors-work/',
+    recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.',
     ogImage: '/images/og-image.jpg',
     thumbnail: '/images/thumbnails/launch-monitors-thumb.webp',
     category: 'golf-tech',
