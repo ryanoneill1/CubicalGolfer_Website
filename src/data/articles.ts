@@ -9482,7 +9482,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     titleDisplay: 'When to Replace Your Golf Grips (It Is Costing You 3-4 Strokes)',
     description: 'When to replace golf grips — every 40 rounds or 12 months. Signs of worn grips, cost to regrip, best grips for sweaty hands, and a 7-step DIY guide.',
     excerpt: 'Worn grips cost you 3-4 strokes per round — here is when to replace, what to buy, and how to DIY for $60.',
-    bottomLine: 'Our top pick: the <strong>Golf Pride MCC Plus4</strong> (~$13/grip).',
+    bottomLine: 'Shiny, smooth patches where your thumbs and palms sit are the first sign — fresh grips are matte across the whole surface. If you practise three or more times a week, plan on every six to eight months, because range mats wear grips far faster than grass does. Our top pick when you do: the <strong>Golf Pride MCC Plus4</strong> (~$13/grip).',
     intro: 'A Golf Pride study found that worn two-year-old grips cost the average golfer 3-4 strokes per round. That is a bigger improvement than a new $599 driver. Your grips are the only contact point between your body and every club in your bag — and most golfers have not replaced them in 3+ years. Here is how to tell when they are done, what to replace them with, and whether to DIY or pay the pro shop.',
     testingNotes: 'Replacement timelines based on Golf Pride published research and manufacturer recommendations. Grip reviews based on 2 seasons of testing across 5 grip models. DIY regrip steps verified across 3 full-set regrips by the author.',
     updateLog: [
@@ -9916,7 +9916,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     titleDisplay: 'Driver vs 3-Wood Off the Tee — Which Should You Hit?',
     description: 'Driver vs 3-wood off the tee — when to leave the driver in the bag and gain strokes with a 3-wood. Data-backed decision framework for weekend golfers.',
     excerpt: 'When to hit 3-wood off the tee instead of driver — the data says more often than you think.',
-    bottomLine: 'Our top pick: the <strong>Callaway Ai Smoke Max Driver </strong>(~$499).',
+    bottomLine: '<strong>Driver on wide holes and any par-4 over 400 yards; 3-wood when there is OB or water within 25 yards of the fairway edge.</strong> The average weekend driver misses the line by 35 yards against 22 for a 3-wood, which is why the 3-wood is the right call on only three or four holes a round rather than most of them. Our top pick off the tee: the <strong>Callaway Ai Smoke Max Driver </strong>(~$499).',
     intro: "Most weekend golfers hit driver on every par-4 and par-5 by default. But data from Arccos and Shot Scope shows that golfers who hit 3-wood on tight holes score better — not because of distance, but because of dispersion. Here is the decision framework. For driver recommendations, see our <a href=\"/best-golf-drivers-forgiveness/\">best forgiving drivers guide</a>.",
     toc: ['The distance vs accuracy trade-off', 'When to hit 3-wood', 'When driver is always right', 'The Strokes Gained math', 'Course management examples', 'FAQ'],
     sections: [
@@ -10006,7 +10006,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     titleDisplay: 'How to Fit Yourself for a Driver (No Pro Shop Needed)',
     description: 'How to fit yourself for a golf driver without a pro shop — loft, shaft flex, length, and head shape guide based on your swing speed and miss pattern.',
     excerpt: 'DIY driver fitting — find the right loft, shaft, and head without paying $150 for a fitting.',
-    bottomLine: 'Our top pick: the <strong>Callaway Ai Smoke Max Driver </strong>(~$499).',
+    bottomLine: '<strong>Loft is the spec most golfers get wrong</strong>, and your swing speed sets it: under 85 mph play 12 degrees or more, 85 to 95 mph play 10.5, and 95 to 105 mph play 9.5 to 10.5. Match shaft flex to that same number, leave length standard, and you have done most of what a paid fitting would do. Our top pick after self-fitting: the <strong>Callaway Ai Smoke Max Driver </strong>(~$499).',
     intro: "A professional driver fitting costs $100-200 and is worth it for single-digit handicappers. For the rest of us, you can get 90% of the benefit by matching four variables to your swing: loft, shaft flex, shaft length, and head shape. Here is the DIY guide. For our top picks once you know your specs, see our <a href=\"/best-golf-drivers-forgiveness/\">forgiving drivers guide</a>.",
     toc: ['Step 1: Find your swing speed', 'Step 2: Choose loft', 'Step 3: Match shaft flex', 'Step 4: Length and lie', 'Step 5: Head shape for your miss', 'When to pay for a real fitting', 'FAQ'],
     sections: [
@@ -10234,7 +10234,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     titleDisplay: 'How to Choose Putter Length (No Fitting Required)',
     description: 'How to choose the right putter length based on height and posture. Simple DIY method that matches pro fitting results 90 percent of the time.',
     excerpt: 'Find your correct putter length — a DIY method that matches pro fitting 90% of the time.',
-    bottomLine: 'Our top pick: the <strong>Odyssey White Hot OG</strong> Putter (~$290).',
+    bottomLine: 'Start from your height: <strong>34 inches is standard</strong> and fits 5 feet 8 to 5 feet 11, dropping to 33 inches around 5 feet 4 and rising to 35 at 6 feet 3. Then check where your eyes sit over the ball, because arm length and posture move the answer more than height alone does. Our top pick: the <strong>Odyssey White Hot OG</strong> Putter (~$290).',
     intro: "Using the wrong putter length is the most common putting equipment mistake and the easiest to fix. Too long forces you to stand too upright with your eyes inside the ball, causing pulls. Too short forces you to crouch with your eyes outside the ball, causing pushes. The correct length puts your eyes directly over the ball with relaxed arms. Here is how to find it without paying for a fitting. For our putter recommendations once you know your length, see our <a href=\"/best-golf-putters-2026/\">best putters guide</a>.",
     toc: ['Why putter length matters', 'The height-based starting point', 'The DIY fitting method', 'How to adjust your current putter', 'Common length mistakes', 'FAQ'],
     sections: [
