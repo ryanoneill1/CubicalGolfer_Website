@@ -1131,7 +1131,19 @@ import Icon from '../components/Icon.astro';
     })()}
 
     {/* RECOMMENDED PRODUCT — tutorial/comparison pages with quickAnswerProduct but no inline CTAs */}
-    {!isBuyingGuide && article.quickAnswerProduct && (() => {
+    {/* Sprint 199 — the comment above has always said "but no inline CTAs". The
+       condition never enforced it, so on 28 pages this box rendered the SAME
+       product that already had a full product card higher up: same image, same
+       price, a second buy button, and on 11 of them a worse description (the
+       generic "the product we use and recommend for this topic" fallback,
+       because those products have no recGearNote yet).
+       /how-to-get-your-kid-into-golf/ was the one I saw rendered: the UL7 42
+       appears in the Quick Answer, again as a product card, then a third time
+       here. No CTA is lost by suppressing it — the card above already carries
+       one. Pages that genuinely have no inline CTA for the pick are unaffected. */}
+    {!isBuyingGuide && article.quickAnswerProduct
+      && !(article.sections ?? []).some((s: any) => s.affiliateKey === article.quickAnswerProduct)
+      && (() => {
       const recAff = getAffiliateLink(article.quickAnswerProduct);
       if (!recAff?.url) return null;
       const recName = productName(article.quickAnswerProduct);

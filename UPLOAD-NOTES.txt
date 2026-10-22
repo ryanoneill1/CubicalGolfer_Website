@@ -1,93 +1,90 @@
-Sprint 198 — build fix. I reverted two manifest entries from Sprint 196.
+Sprint 199 — the same product, three times, on 28 pages
 
-EXTRACT AT THE REPOSITORY ROOT. 1 file.
+EXTRACT AT THE REPOSITORY ROOT. 1 file. No deletions. No manifest change.
 
-  src/data/lastmod-manifest.json
-
-Nothing else changes. articles.ts from Sprint 197 is already in and is correct.
+  src/pages/[...slug].astro
 
 
-── WHAT I DID WRONG ──────────────────────────────────────────────────────────
-Sprint 196 updated two manifest entries, for /golf-ball-complete-guide/ and
-/golf-simulator-complete-guide/, and wrote them into sprint-196-build.
+── FIRST, A CORRECTION TO SPRINT 197 ─────────────────────────────────────────
+I said /how-to-get-your-kid-into-golf/ "did not link to /best-junior-golf-clubs/
+at all". That was wrong. The page already linked to it through the "Gear That
+Helps With This" module, which is fed by the record's `related` array.
 
-I then built Sprint 197 from sprint-192-build — a different folder, which did
-not have Sprint 196's manifest changes. So Sprint 197 shipped a manifest with
-the PRE-196 hashes for those two pages, while their .astro files in the repo
-still carry Sprint 196's content. update-lastmod compared the two and correctly
-reported them as changed:
+My check was `/best-junior-golf-clubs/.test(section.body)` — it tested one
+section's prose, not the rendered page. Sprint 197 therefore added a SECOND link
+to the same destination from the same page.
 
-    ❌ lastmod manifest is stale — 2 page(s) changed since it was last written.
-       /golf-ball-complete-guide/
-       /golf-simulator-complete-guide/
-
-This is the "don't lose anything" failure in its purest form: a whole-file
-manifest built on a stale base silently reverted work from the sprint before.
-It is the second time lastmod has broken a build in this run, and this time the
-cause was entirely mine rather than an omission.
-
-The fix is four lines — two hashes and two dates restored:
-
-    /golf-ball-complete-guide/        a4778069048435aa -> 76f13008bfb5d492
-    /golf-simulator-complete-guide/   d66630bcd5cf0daa -> 6b276c998ca41082
-
-Diffed against exactly what you pushed: 4 changed lines, nothing else, 300
-entries before and after.
+It is not harmful and I would still ship it — an in-prose contextual link sits
+where the recommendation actually is, and the large-dataset evidence favours
+body links over module links. But the finding was overstated and the check was
+too narrow. I only caught it because I read the fully rendered page this time
+instead of grepping the source.
 
 
-── ROOT CAUSE, AND WHAT I CHANGED ABOUT HOW I WORK ───────────────────────────
-I have been building each sprint from whichever previous sprint folder happened
-to hold the file I needed — 192 for articles.ts, 196 for the guide pages, 194
-for the slug template. That works until two sprints touch the same whole-file
-artifact, and then the older base wins and quietly undoes the newer work.
+── THE FINDING ───────────────────────────────────────────────────────────────
+Reading that rendered page showed the U.S. Kids UL7 42 **three times**:
 
-I have now built a single canonical CURRENT/ folder holding the true current
-state of every file I manage, assembled from the deployed lineage:
+  1. Quick Answer       "Our top pick: ... ($249.99)"  + buy button
+  2. a full product card with image, 200-word write-up, "Skip this if", buy button
+  3. "Our Recommended Gear"  — same product, same image, same price, a third buy
+     button, described as "$249.99 — the product we use and recommend for this
+     topic."
 
-    src/data/articles.ts                 191,192,193,194,195 + 197
-    src/data/lastmod-manifest.json       all of the above + 196 restored
-    src/pages/golf-ball-complete-guide/        196
-    src/pages/golf-simulator-complete-guide/   196
-    src/pages/golf-club-distance-chart/        191,192
-    src/pages/[...slug].astro                  194
-    src/styles/global.css                      192
-    package.json, scripts/                     192
+The third block is the same product the reader just finished reading about, with
+a worse description than the card immediately above it.
 
-Every future sprint gets built from CURRENT and written back to it. That
-removes the class of error entirely rather than me remembering not to make it.
+**This happens on 28 pages.** On 11 of them the duplicate carries that generic
+fallback sentence, because those products have no recGearNote from Sprint 194.
 
 
-── I ALSO RAN A FULL MANIFEST AUDIT ──────────────────────────────────────────
-Rather than fix the two entries and hope, I recomputed every hash I am able to
-compute and compared it to the manifest:
+── THE TEMPLATE WAS ALREADY SUPPOSED TO PREVENT THIS ─────────────────────────
+The block's own comment, which predates me:
 
-    192 article records   — 2 apparent mismatches, both explained below
-    3 bespoke .astro pages — 0 mismatches
+    {/* RECOMMENDED PRODUCT — tutorial/comparison pages with quickAnswerProduct
+        but no inline CTAs */}
 
-The two apparent mismatches are blind spots in my audit, NOT stale entries, and
-I deliberately left them alone:
+"but no inline CTAs" is exactly right. The condition simply never enforced it:
 
-  /golf-ball-compression-chart/
-      It is in update-lastmod's DATA_DEPS list AND has its own .astro file, so
-      its real hash is sha(recordHash + fileHash + balls.ts/ball-brands.ts).
-      My audit computed the record alone, which cannot match by construction.
+    before:  !isBuyingGuide && article.quickAnswerProduct
+    after:   !isBuyingGuide && article.quickAnswerProduct
+             && !(article.sections ?? []).some(s => s.affiliateKey === article.quickAnswerProduct)
 
-  /compare/titleist-pro-v1-vs-callaway-chrome-soft/
-      update-lastmod writes /compare/<slug>/ entries from COMPARISONS *after*
-      the ARTICLES loop, so COMPARISONS wins. My comparisons.ts copy is from
-      Sprint 158 (9 Oct) and does not contain this slug, so it was added since.
-      My audit computed it from the ARTICLES side, which is the losing branch.
-
-Both pass through this zip untouched. Worth a glance at some point: that slug
-appears to exist in both ARTICLES and COMPARISONS. check-duplicates runs on
-every build and is green, so it is probably deliberate, but I could not verify
-it with the files I hold.
+So this is not a new rule. It is the template finally doing what it says.
 
 
-── WHAT I GOT WRONG BEFORE THIS ──────────────────────────────────────────────
-I told you Sprint 196 was confirmed because sitemap-core.xml showed lastmod
-2026-10-22 on both guide pages. That was true and 196 did deploy fine. But I
-used a sitemap date as a proxy for "the build is healthy", and it only tells
-you about the build that already ran — it could not have caught a manifest I
-was about to break in the next sprint. A lastmod date is evidence about the
-past, not a check on what I am shipping next.
+── EFFECT ────────────────────────────────────────────────────────────────────
+  duplicate box removed on   28 pages
+  box still renders on       23 pages — these have no inline CTA for the pick,
+                             which is the case the block was written for
+
+**No CTA is lost anywhere.** On all 28 the product card above already carries a
+buy button to the same destination. The reader loses a repeat, not a route.
+
+The 28 include some of the better-trafficked pages: /golf-ball-compression-chart/,
+/black-friday-golf-deals/, /how-to-choose-putter-length/, /driver-loft-guide/,
+/when-to-replace-golf-grips/, /iron-fitting-guide-beginners/.
+
+
+── WHY THERE IS NO MANIFEST CHANGE ───────────────────────────────────────────
+[...slug].astro is a dynamic route. update-lastmod skips any file whose name
+contains "[" — line 120, "dynamic routes are covered above" — so it has no
+manifest entry of its own and none of the 28 article records changed. Nothing
+to ship but the one file.
+
+I checked this rather than assumed it, having broken the build twice on lastmod
+already.
+
+
+── VERIFIED ──────────────────────────────────────────────────────────────────
+  inline styles in [...slug].astro: 86 before / 86 after — ratchet untouched
+  the condition compiles as written, anchored on a unique match
+  28 / 23 split computed from the live article data, not estimated
+
+
+── SPRINT 198 CONFIRMED ──────────────────────────────────────────────────────
+Fetched /how-to-get-your-kid-into-golf/ in full. The junior-guide link renders
+in "Gear on a Budget" and the page reports Updated 2026-10-22, so Sprints 196,
+197 and 198 are all live and the manifest is consistent again.
+
+This time I confirmed by reading the rendered page rather than by checking a
+sitemap date, which is what let the Sprint 197 overstatement through.
