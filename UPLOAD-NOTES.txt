@@ -1,112 +1,123 @@
-Sprint 196 — the most-linked page on the site had one affiliate link
+Sprint 197 — Batch 6, and the point at which I think this method is done
 
-EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions.
 
-  src/pages/golf-ball-complete-guide/index.astro
-  src/pages/golf-simulator-complete-guide/index.astro
+  src/data/articles.ts
   src/data/lastmod-manifest.json
 
 
-── THE FINDING (Batch 4) ─────────────────────────────────────────────────────
-/golf-ball-complete-guide/ carries **86 inbound internal links** — more than any
-other page on the site. It is 940 rendered words and it had exactly **one**
-affiliate link.
-
-Its Quick Answer reads:
-
-    Best overall value: Callaway Supersoft ($25/dz) for most weekend golfers.
-    Best premium: Titleist Pro V1 ($55/dz) for 95+ mph swingers.
-    [ Check Supersoft Price at Amazon → ]
-
-A reader who works out they are a 95+ mph swinger and wants the Pro V1 has
-nowhere to go. And it is worse further down — "Best Ball by Handicap Level"
-names eight balls across four handicap bands (Supersoft, Srixon Soft Feel,
-Chrome Soft, Titleist AVX, Kirkland Signature, Pro V1, Pro V1x, Bridgestone
-e12). One of the eight is buyable.
-
-/golf-simulator-complete-guide/ is the same shape: names the Garmin R10 ($490)
-and the SkyTrak+ ($1,195), sells the R10 only.
-
-This is the first MONETISATION finding in five batches. Everything before it was
-content quality. The site's internal link equity is concentrated on a page that
-cannot convert.
+── BATCH 6: ZERO FINDINGS ────────────────────────────────────────────────────
+All ten pages are large buying guides carrying 23 to 25 affiliate links each at
+1,875 to 2,173 words, with 6 to 9 images. By every structural measure they are
+the healthiest pages on the site. Nothing to report.
 
 
-── THE FIX ───────────────────────────────────────────────────────────────────
-Both pages get <RecommendedGearGrid />, the component /launch-monitor-buying-
-guide/ already uses. Nothing new was invented — the component, the prop name
-(`items`) and the item shape ({ key, role, name }) are copied verbatim from that
-page's working GUIDE_GEAR usage.
+── SO I RAN THE BETTER TEST INSTEAD ──────────────────────────────────────────
+Batch 4's win did not come from reading prose. It came from a structural
+outlier in the CSV: /golf-ball-complete-guide/ had 86 inbound links and 1
+affiliate link. So rather than read Batch 6 page by page, I ran that shape
+across all 29 batches, then applied the precise test that actually worked:
 
-  golf-ball-complete-guide — four balls mapped to the handicap bands the page
-  has just finished describing:
-      callaway-supersoft   High handicap and seniors — low compression
-      srixon-soft-feel     Budget pick — soft feel, ionomer cover
-      kirkland-signature   Mid handicap — urethane without the premium
-      titleist-pro-v1      Low handicap — premium urethane, 90 to 105 mph
+    does the page NAME products, with prices, that it has no way to sell?
 
-  golf-simulator-complete-guide — the two it already names:
-      garmin-approach-r10  Entry setup — radar, works in tight spaces
-      skytrak-plus         Simulator-grade — photometric accuracy
+Not "does it have few affiliate links" — that flags every policy page and
+category hub. The defect is the internal contradiction.
 
-Placed immediately before the "All Our ... Content" hub section, so it sits
-right after the recommendations and before the onward links. The reader is told
-which one suits them, then given the button, then offered the deeper guides.
+Twelve candidates. **Eleven discarded.**
 
-All six product keys verified present in affiliate-links.ts before use.
+Nine were reviews and comparisons naming competitors — /skytrak-plus-review/
+naming the Bushnell Launch Pro, /titleist-pro-v1-review/ naming Chrome Tour and
+Vice Pro, /trackman-vs-foresight-gcquad/ naming both. That is not a defect, it
+is the behaviour Google's review guidance explicitly asks for ("what sets it
+apart from competitors"). Linking a competitor you are arguing against would be
+worse.
 
-No prices in any role string — deliberate, same rule as Sprints 193 and 194, so
-validate-prose-prices / validate-section-body-prices / validate-same-page-prices
-have nothing new to check.
+Two were my own counting error, the same one I made on launch-monitor-buying-
+guide in Batch 4:
 
-Inline styles: 3 -> 3 and 2 -> 2. The grid brings its own styling, so the
-ratchet is untouched.
+  /25-golf-accessories-every-golfer-should-own/  my key-count said 1 affiliate
+      link. The live page renders **15**. The products are linked by a
+      mechanism my getAffiliateLink() count does not see.
+  /best-golf-simulator-under-1000/  is not in the 286 live pages at all —
+      retired or redirected. I was analysing a page that no longer ships.
 
-
-── THE ONE THING I COULD NOT VERIFY ──────────────────────────────────────────
-I do not hold src/components/RecommendedGearGrid.astro — no sprint has shipped
-it to me. So I could not read the component to confirm its prop contract.
-
-What I did instead: copied the exact working usage from /launch-monitor-buying-
-guide/, which renders 12 affiliate links through this component on the live site
-today. Same prop name, same item shape, same key format. If the component takes
-anything else optionally, these two pages simply will not use it.
-
-If the build fails on this, it will fail loudly at the component boundary and
-the fix is one line. Send me RecommendedGearGrid.astro and I will confirm rather
-than infer.
+I checked the live-site rendered counts before trusting any of them, which is
+the only reason those two did not become a fix.
 
 
-── BATCHES 4 AND 5 ───────────────────────────────────────────────────────────
-Batch 4: 2 confirmed findings (above), 3 candidates discarded.
-Batch 5: 0 findings, 1 candidate discarded.
+── THE ONE REAL FINDING, AND IT IS SMALL ─────────────────────────────────────
+/how-to-get-your-kid-into-golf/ — 84 inbound links, 3 affiliate links.
 
-Discarded in Batch 4:
-  launch-monitor-buying-guide — looked like it named 7 priced products against
-      1 affiliate link. It uses RecommendedGearGrid, which emits 12. My count
-      method only saw getAffiliateLink() calls. Not a defect.
-  golf-tech — the priced mentions are inside FAQ answers on a category hub.
-      Normal.
-  gear-quiz — its result cards carry inline affiliate URLs rather than
-      getAffiliateLink() calls, so my count read 0 when the real number is not.
+In "Gear on a Budget":
 
-Discarded in Batch 5:
-  /best-golf-ball-15-handicap/ — the only page in the batch with zero `cons`
-      fields across six product sections, which looked like the "no drawbacks"
-      defect. Every section has drawbacks in prose, and better ones than a cons
-      array would hold: "carried 223 yards — 3 yards shorter than the Pro V1",
-      "lacks urethane-cover spin — chips and pitches will roll out further",
-      "less responsiveness on putts". This is the same false positive I threw
-      out in Batch 1. Do not touch this page.
+    "If they stick with it past 6 months, upgrade to a Callaway XJ ($350) or
+     TaylorMade Team TM ($400)."
 
-Running tally across five batches:
+That is an explicit upgrade recommendation, by name, with prices. Neither is
+buyable on the page, and the page's only buy path is the US Kids UL7 starter
+set — which is the set for the *earlier* stage. A parent whose kid has stuck
+with it is told exactly what to buy next and given nothing to click.
 
+**The fix is one internal link, not an affiliate button.** /best-junior-golf-
+clubs/ already exists and its sections are literally titled "Best Overall:
+Callaway XJ Junior Set", "Best Value: TaylorMade Team TM" and "When to
+Upgrade". It sells both products and covers the exact moment this sentence
+describes. The tutorial did not link to it at all.
+
+    now: "...or TaylorMade Team TM ($400) — both are covered in our
+          [junior golf club guide]."
+
+Anchor text "junior golf club guide" — descriptive, and it adds an internal
+link from an 84-inbound page into a buying guide, which helps the link graph
+as well as the reader.
+
+I deliberately did NOT add affiliate buttons here. Two reasons: a section
+carries one affiliateKey and I needed two products, and hand-writing affiliate
+anchors into prose would bypass the click tracking that validate-click-tracking
+checks. An internal link to the page that already sells them is both safer and
+editorially better on an advice page.
+
+
+── A BUG I HIT ───────────────────────────────────────────────────────────────
+First attempt wrote href="/best-junior-golf-clubs/" into a body that is a
+DOUBLE-quoted TS string, which terminated the literal early:
+
+    ReferenceError: best is not defined
+
+Caught immediately by parsing the file rather than assuming. Rebuilt from a
+clean copy using single quotes for the attribute, which is the house style in
+double-quoted bodies (the same file uses <div class='comparison-table-wrapper'>).
+
+
+── VERIFIED ──────────────────────────────────────────────────────────────────
+  articles.ts parses — 192 articles
+  the link renders in the right section
+  inline styles 7 before / 7 after
+  no new prices — the $350 and $400 are existing text, unchanged
+  manifest: 1 record updated, 300 entries before and after
+
+
+── WHY I THINK THE BATCHES ARE FINISHED ──────────────────────────────────────
   Batch 1   3 findings   4 discarded
-  Batch 2   1 finding    3 discarded   (scaled to 4 pages fixed via site scan)
+  Batch 2   1 finding    3 discarded   (scaled to 4 pages via a site-wide scan)
   Batch 3   0 findings   2 discarded
   Batch 4   2 findings   3 discarded
   Batch 5   0 findings   1 discarded
+  Batch 6   0 findings  11 discarded   (site-wide scan, not just the batch)
 
-Six findings, thirteen discarded. The discard rate is the point: more than two
-thirds of what looks like a defect from a count survives contact with the actual
-page. Every batch so far has cost more in verification than in fixing.
+Seven findings, twenty-four discarded. The discard rate is now better than
+three to one, and Batch 6's only finding came from a site-wide scan rather than
+from the batch itself — the batch contributed nothing.
+
+Batches 7 through 29 are lower priority by the CSV's own ordering than
+everything above. I would not run them.
+
+What I would do instead, in the order I would do it:
+  1. /best-golf-courses-weekend-drive/ — still unfixed from Batch 1, still
+     needs only your decision. Four affiliate links all pointing at the same
+     $399 rangefinder on a page about golf courses.
+  2. Re-verify the Black Friday prices. 36 days out, marked "verified
+     September 2026", and that page's whole value is those figures being
+     current.
+  3. Amazon Associates earnings by product. I have optimised traffic all week
+     with no visibility into what earns. That data would reorder all of this.
