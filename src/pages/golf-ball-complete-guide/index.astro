@@ -2,6 +2,20 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { effectiveDateModified } from '../../lib/freshness';
 import StickyBar from '../../components/StickyBar.astro';
+import RecommendedGearGrid from '../../components/RecommendedGearGrid.astro';
+/* Sprint 196 — this page carries 86 inbound internal links, more than any other
+   page on the site, names eight balls across the handicap bands, and had exactly
+   ONE affiliate link. A reader who worked out they want the Pro V1 had no way to
+   act on it. These four map to the bands "Best Ball by Handicap Level" already
+   describes; the component and item shape are copied from launch-monitor-buying-
+   guide, which uses the same grid. No prices in the role strings, so none of the
+   price validators has anything new to check. */
+const BALL_GEAR = [
+  { key: 'callaway-supersoft', role: 'High handicap and seniors — low compression', name: 'Callaway Supersoft' },
+  { key: 'srixon-soft-feel',   role: 'Budget pick — soft feel, ionomer cover',      name: 'Srixon Soft Feel' },
+  { key: 'kirkland-signature', role: 'Mid handicap — urethane without the premium', name: 'Kirkland Signature' },
+  { key: 'titleist-pro-v1',    role: 'Low handicap — premium urethane, 90 to 105 mph', name: 'Titleist Pro V1' },
+];
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
 
@@ -164,6 +178,8 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       <p><strong>Low handicap (under 10):</strong> Premium urethane matched to your swing speed. Titleist Pro V1 for 90-105 mph, Pro V1x for 105+. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft</a> comparison.</p>
       <p><strong>Seniors:</strong> <a href="/best-golf-balls-for-seniors/">Low compression balls</a> that maximize distance with moderate swing speeds. Callaway Supersoft, Srixon Soft Feel, or Bridgestone e12.</p>
     </section>
+
+    <RecommendedGearGrid items={BALL_GEAR} />
 
     <section id="guides">
       <h2>All Our Golf Ball Content</h2>

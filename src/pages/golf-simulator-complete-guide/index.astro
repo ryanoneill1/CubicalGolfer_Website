@@ -2,6 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { effectiveDateModified } from '../../lib/freshness';
 import StickyBar from '../../components/StickyBar.astro';
+import RecommendedGearGrid from '../../components/RecommendedGearGrid.astro';
+/* Sprint 196 — same defect as the ball guide: the page names the R10 and the
+   SkyTrak+ with prices and had one affiliate link. */
+const SIM_GEAR = [
+  { key: 'garmin-approach-r10', role: 'Entry setup — radar, works in tight spaces', name: 'Garmin Approach R10' },
+  { key: 'skytrak-plus',        role: 'Simulator-grade — photometric accuracy',     name: 'SkyTrak+' },
+];
 import TableOfContents from '../../components/TableOfContents.astro';
 import { getAffiliateLink } from '../../data/affiliate-links';
 import { articleSchema, faqSchema, breadcrumbSchema } from '../../lib/schema';
@@ -201,6 +208,9 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       </table></div>
       <p>See our <a href="/best-golf-simulator-software-2026/">full software comparison</a> with compatibility matrix for every monitor.</p>
     </section>
+
+    <RecommendedGearGrid items={SIM_GEAR} />
+
 
     <section id="guides">
       <h2>All Our Simulator & Indoor Golf Guides</h2>

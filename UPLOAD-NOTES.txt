@@ -1,143 +1,112 @@
-Sprint 194 — the generic gear sentence, and the Prime Day page that expired
+Sprint 196 — the most-linked page on the site had one affiliate link
 
 EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
 
-  src/pages/[...slug].astro         the template line that caused it
-  src/data/articles.ts              32 notes + Prime Day copy
-  src/data/lastmod-manifest.json    33 records
+  src/pages/golf-ball-complete-guide/index.astro
+  src/pages/golf-simulator-complete-guide/index.astro
+  src/data/lastmod-manifest.json
 
 
-── FIRST, A CORRECTION TO MY OWN NUMBER ──────────────────────────────────────
-I have been calling this "50 pages with a generic sentence" and implying 50
-sentences to write. Both halves were wrong, and checking took ten minutes.
+── THE FINDING (Batch 4) ─────────────────────────────────────────────────────
+/golf-ball-complete-guide/ carries **86 inbound internal links** — more than any
+other page on the site. It is 940 rendered words and it had exactly **one**
+affiliate link.
 
-It is ONE line of template. [...slug].astro rendered
+Its Quick Answer reads:
 
-    {recAff.price} — the product we use and recommend for this topic.
+    Best overall value: Callaway Supersoft ($25/dz) for most weekend golfers.
+    Best premium: Titleist Pro V1 ($55/dz) for 95+ mph swingers.
+    [ Check Supersoft Price at Amazon → ]
 
-on every non-buying-guide page with a recommended product. That is 51 pages
-(tutorial 37, listicle 12, lifestyle 2 — buying guides, comparisons and reviews
-take a different branch and were never affected).
+A reader who works out they are a 95+ mph swinger and wants the Pro V1 has
+nowhere to go. And it is worse further down — "Best Ball by Handicap Level"
+names eight balls across four handicap bands (Supersoft, Srixon Soft Feel,
+Chrome Soft, Titleist AVX, Kirkland Signature, Pro V1, Pro V1x, Bridgestone
+e12). One of the eight is buyable.
 
-And those 51 pages share only 30 DISTINCT products. So the work was never 50
-sentences. It is 30, and the top 11 products alone cover 32 of the 51 pages.
+/golf-simulator-complete-guide/ is the same shape: names the Garmin R10 ($490)
+and the SkyTrak+ ($1,195), sells the R10 only.
 
-
-── WHAT SHIPPED ──────────────────────────────────────────────────────────────
-The template now reads:
-
-    {recAff.price} — {article.recGearNote ?? 'the product we use and recommend for this topic.'}
-
-Eleven products have a real note, covering 32 pages. The remaining 19 pages
-keep the old sentence, so nothing breaks and the tail can be filled later. That
-is the same ratchet shape used elsewhere on this site: improve the number, make
-the old state harmless, never block the sprint on completeness.
-
-    7 pages   Garmin Approach R10
-    4         Bushnell Tour V7 Shift
-    3         Putting mirror
-    3         Arccos Caddie sensors
-    3         Alignment sticks
-    2 each    Callaway Strata, FootJoy WeatherSof, Cleveland RTX 6,
-              Fiberbuilt Studio mat, Maxfli Milled 52, Paradym Ai Smoke Max
+This is the first MONETISATION finding in five batches. Everything before it was
+content quality. The site's internal link equity is concentrated on a page that
+cannot convert.
 
 
-── WHERE THE SENTENCES CAME FROM ─────────────────────────────────────────────
-I did not write these from what I know about golf equipment. Every one is
-distilled from the site's OWN existing buying-guide copy, which is already
-verified and already live. Examples, source in brackets:
+── THE FIX ───────────────────────────────────────────────────────────────────
+Both pages get <RecommendedGearGrid />, the component /launch-monitor-buying-
+guide/ already uses. Nothing new was invented — the component, the prop name
+(`items`) and the item shape ({ key, role, name }) are copied verbatim from that
+page's working GUIDE_GEAR usage.
 
-  R10        "Doppler radar that reads the ball from behind, so it still works
-             with as little as six feet between you and the net."
-             [/best-golf-simulator-small-spaces/]
+  golf-ball-complete-guide — four balls mapped to the handicap bands the page
+  has just finished describing:
+      callaway-supersoft   High handicap and seniors — low compression
+      srixon-soft-feel     Budget pick — soft feel, ionomer cover
+      kirkland-signature   Mid handicap — urethane without the premium
+      titleist-pro-v1      Low handicap — premium urethane, 90 to 105 mph
 
-  V7 Shift   "Twelve rounds across three courses before we wrote a word about
-             it, and by the third it had replaced the rangefinder that had been
-             in the bag for two years."
-             [/best-golf-rangefinders-2026/]
+  golf-simulator-complete-guide — the two it already names:
+      garmin-approach-r10  Entry setup — radar, works in tight spaces
+      skytrak-plus         Simulator-grade — photometric accuracy
 
-  Fiberbuilt "Fiberglass grass tees that flex on impact like real turf, so the
-             club slides through instead of bouncing off hard rubber. That is
-             what saves your wrists."
-             [/apartment-golf-simulator-setup/]
+Placed immediately before the "All Our ... Content" hub section, so it sits
+right after the recommendations and before the onward links. The reader is told
+which one suits them, then given the button, then offered the deeper guides.
 
-That matters for two reasons. It cannot contradict the rest of the site, and it
-contains no claim the site has not already stood behind.
+All six product keys verified present in affiliate-links.ts before use.
 
-NO PRICES AND NO PERCENTAGES in any of the 11 — checked programmatically, 0 of
-32 notes contain either. The price already renders immediately before the note
-from the registry, and a sentence with no figure cannot trip validate-prose-
-prices, validate-section-body-prices or validate-same-page-prices.
+No prices in any role string — deliberate, same rule as Sprints 193 and 194, so
+validate-prose-prices / validate-section-body-prices / validate-same-page-prices
+have nothing new to check.
 
-
-── PRIME DAY ─────────────────────────────────────────────────────────────────
-The page was telling readers, on 20 October, that "the 2026 Prime Day update
-goes live when deals are announced". Prime Day 2026 was in July.
-
-  was  <strong>Last updated: June 2026</strong> — the 2026 Prime Day update
-       goes live when deals are announced.
-  now  <strong>Prime Day 2026 has been and gone.</strong> The next one lands in
-       July 2027 and this page is rewritten when it does. What is below still
-       holds in the meantime: how to tell a real discount from a manufactured
-       one, and which categories almost never go on sale.
-
-       The sale actually coming up is Black Friday — see Black Friday golf
-       deals for the verified pre-sale prices.
-
-bottomLine rolled forward to match. The existing figures in it (buy-2-get-1,
-30-40% off) are untouched, so no price claim changed.
-
-This also means the page now points at Black Friday during the five weeks when
-that is the useful answer, which complements Sprint 193 rather than duplicating
-it.
+Inline styles: 3 -> 3 and 2 -> 2. The grid brings its own styling, so the
+ratchet is untouched.
 
 
-── TWO BUGS IN MY OWN SCRIPT, BOTH CAUGHT BEFORE ANY WRITE ───────────────────
-The inserter writes once at the end, so both failures left articles.ts
-byte-identical. I verified that with cmp after the first one rather than
-assuming it.
+── THE ONE THING I COULD NOT VERIFY ──────────────────────────────────────────
+I do not hold src/components/RecommendedGearGrid.astro — no sprint has shipped
+it to me. So I could not read the component to confirm its prop contract.
 
-  1. I anchored on "\n    slug: '...'". That is not universal — some records
-     put id and slug on one line: "id: 'bf-golf-deals', slug: '/black-friday-
-     golf-deals/',". And the same string appears inside every related[] entry.
-     Fixed by scanning all occurrences and taking the one not followed by
-     "label:".
-  2. I then anchored the insert on quickAnswerProduct being near the slug. On
-     /how-golf-launch-monitors-work/ it sits more than 2000 characters away.
-     Fixed by inserting after the slug line instead — field order in an object
-     literal is irrelevant, so the extra anchor bought nothing.
+What I did instead: copied the exact working usage from /launch-monitor-buying-
+guide/, which renders 12 affiliate links through this component on the live site
+today. Same prop name, same item shape, same key format. If the component takes
+anything else optionally, these two pages simply will not use it.
+
+If the build fails on this, it will fail loudly at the component boundary and
+the fix is one line. Send me RecommendedGearGrid.astro and I will confirm rather
+than infer.
 
 
-── VERIFIED ──────────────────────────────────────────────────────────────────
-  articles.ts parses — 192 articles
-  51 pages show the gear box; 32 now carry a specific note, 19 on the fallback
-  11 distinct notes, 0 leaked onto buying-guide pages
-  0 notes contain a price or a percentage
-  inline styles: articles.ts 7 before / 7 after, [...slug].astro 86 / 86
-  Sprint 192's handicap chart figure and new title: intact
-  Sprint 193's six Black Friday links: intact (10 references site-wide)
-  manifest: 33 records changed, 300 entries before and after
+── BATCHES 4 AND 5 ───────────────────────────────────────────────────────────
+Batch 4: 2 confirmed findings (above), 3 candidates discarded.
+Batch 5: 0 findings, 1 candidate discarded.
 
-[...slug].astro is a dynamic route, so update-lastmod deliberately skips it and
-it correctly gets no manifest entry of its own.
+Discarded in Batch 4:
+  launch-monitor-buying-guide — looked like it named 7 priced products against
+      1 affiliate link. It uses RecommendedGearGrid, which emits 12. My count
+      method only saw getAffiliateLink() calls. Not a defect.
+  golf-tech — the priced mentions are inside FAQ answers on a category hub.
+      Normal.
+  gear-quiz — its result cards carry inline affiliate URLs rather than
+      getAffiliateLink() calls, so my count read 0 when the real number is not.
 
+Discarded in Batch 5:
+  /best-golf-ball-15-handicap/ — the only page in the batch with zero `cons`
+      fields across six product sections, which looked like the "no drawbacks"
+      defect. Every section has drawbacks in prose, and better ones than a cons
+      array would hold: "carried 223 yards — 3 yards shorter than the Pro V1",
+      "lacks urethane-cover spin — chips and pitches will roll out further",
+      "less responsiveness on putts". This is the same false positive I threw
+      out in Batch 1. Do not touch this page.
 
-── THE THIRD ITEM, WHICH I AM NOT CLAIMING ───────────────────────────────────
-I said I would re-verify the primaryRetailer inconsistency before asserting it,
-and I cannot, so I am not asserting it.
+Running tally across five batches:
 
-affiliate-links.ts imports src/data/affiliate-programs.ts, which no sprint has
-ever shipped to me, so I cannot import the registry at all. The copy I do have
-is from Sprint 173 (16 Oct) and is four days stale. Parsing it as raw text gave
-unreliable results — my first attempt matched 7 of 30 product keys.
+  Batch 1   3 findings   4 discarded
+  Batch 2   1 finding    3 discarded   (scaled to 4 pages fixed via site scan)
+  Batch 3   0 findings   2 discarded
+  Batch 4   2 findings   3 discarded
+  Batch 5   0 findings   1 discarded
 
-Two ways forward, your call:
-  · include src/data/affiliate-links.ts and src/data/affiliate-programs.ts in
-    any future zip you send back, and I can check it properly; or
-  · I verify it live in the browser by rendering the pages and comparing which
-    retailer is shown for the same product across different render sites. That
-    is authoritative and needs no source files, but it is a sprint of its own.
-
-The deep-link defect is the one I would still rather fix next: 91 of 356
-products land the buy button on a search results page, and validate-deep-links
-has held the ceiling at 91 with no sprint lowering it.
+Six findings, thirteen discarded. The discard rate is the point: more than two
+thirds of what looks like a defect from a count survives contact with the actual
+page. Every batch so far has cost more in verification than in fixing.
