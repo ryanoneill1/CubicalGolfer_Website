@@ -1,78 +1,71 @@
-Sprint 205 — unblock the build. 40 inline styles drained, ceiling lowered.
+Sprint 205b — URGENT. The brand chart button text is invisible on all 6 pages.
 
-EXTRACT AT THE REPOSITORY ROOT. 7 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 1 file.
 
-  src/pages/srixon-golf-ball-compression-chart/index.astro
-  src/pages/titleist-golf-ball-compression-chart/index.astro
-  src/pages/taylormade-golf-ball-compression-chart/index.astro
-  src/pages/bridgestone-golf-ball-compression-chart/index.astro
-  src/pages/callaway-golf-ball-compression-chart/index.astro
-  scripts/validate-inline-styles.ts
-  src/data/lastmod-manifest.json
+  src/styles/global.css
+
+No .astro changes, no manifest change. global.css is not hashed by
+update-lastmod, so nothing else moves.
 
 
-== WHY THIS IS FIRST =========================================================
-Your last build reported:
+== THE BUG ===================================================================
+On all six brand compression chart pages the "Open the full compression chart"
+button renders dark green text on a dark green background. Measured on the live
+Srixon page:
 
-    ✅ Inline styles: 1225 literal style="" attribute(s) (ceiling 1225)
+    computed color      rgb(30, 58, 40)
+    computed background rgb(30, 58, 40)
+    INVISIBLE           true
 
-Zero headroom. Any sprint that adds a single style="" attribute fails the build
-outright. Sprint 203 only shipped because I wrote the Vice page with classes.
-Sprint 204 only shipped because it added none. That is not a sustainable way to
-work — it means every future sprint has to route around a wall.
-
-This clears it.
-
-
-== WHAT CHANGED ==============================================================
-The five original brand compression charts carried 8 literal style=""
-attributes each — 40 between them — all duplicating the same CTA box, button
-and FAQ spacing. Sprint 203 created .brand-chart-* classes for exactly this and
-proved them on the Vice page, which has been live and correct since this
-morning.
-
-The five siblings now use those classes:
-
-    srixon       8 -> 0
-    titleist     8 -> 0
-    taylormade   8 -> 0
-    bridgestone  8 -> 0
-    callaway     8 -> 0
-
-    site total   1225 -> 1185
-    CEILING      1225 -> 1185   (locked in, per the validator's own rule:
-                                 "Lower CEILING whenever a sprint drains some")
-
-No content changed on any of the five. Their markup is now byte-identical to
-the Vice page apart from title, description, FAQ text and the siblings array —
-I diffed them with the brand name normalised out to confirm exactly that.
+The label is there, readable by Google, invisible to a human.
 
 
-== A SECOND, QUIETER GAIN ====================================================
-Those 40 attributes contained the four off-grid values that broke the build in
-Sprint 203b: 18px, 26px, 10px, 6px. Five pages x 4 values = 20 occurrences now
-gone from the separate INLINE_CEILING allowance of 395.
+== WHY ======================================================================
+global.css carries this rule:
 
-I have NOT lowered INLINE_CEILING, because I cannot see its current total from
-the files I hold — the build only prints it when it fails. Worth lowering next
-time the number is visible.
+    .art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link)
+      ... 14 :not() clauses ... { color: var(--green); }
 
+Each :not() adds class-level specificity, so that selector sits around (0,15,1).
+My .brand-chart-cta__btn is (0,1,0). It loses, and var(--green) is #1E3A28 —
+exactly the button's own background.
 
-== VERIFIED ==================================================================
-  - each page removed exactly 8, asserted per file; the script writes nothing
-    unless all five pass
-  - every swap required exactly one match, or it throws
-  - brand prop and the 5-sibling array still intact on all five, checked per file
-  - no px values added anywhere (diffed, tokens extracted: none)
-  - markup now identical to the live, working Vice page
-  - manifest: 5 entries rehashed as sha(fileHash + DATA_DEPS), 301 entries
-    before and after, nothing else touched
+The ORIGINAL pages had style="color:#fff" inline, which beat it. That is
+precisely what validate-inline-styles warns about in its own header: "Inline
+styles beat every class." Moving to classes was correct, but it dropped the
+page into a cascade the inline style had been hiding.
 
 
-== WHAT I EXPECT THE BUILD TO SAY ============================================
-    ✅ Inline styles: 1185 literal style="" attribute(s) (ceiling 1185)
+== THE FIX ===================================================================
+Added .brand-chart-cta__btn to the exclusion list on that rule, and on its
+:hover partner so the underline colour does not come back. That is the pattern
+this file already uses for every other button-shaped link inside .art-content —
+aff-cta__btn, btn-gold, cmp-buy-btn, qp__cta and nine more.
 
-If it reports anything other than 1185, my arithmetic was wrong and the ceiling
-I just set will fail the build. That is the risk of lowering a ratchet in the
-same sprint that drains it — but leaving it at 1225 would waste the gain, and
-the count is derived from your own build log plus a delta I verified per file.
+After the exclusion the only rules matching the button are:
+
+    a                       { color: inherit }        (0,0,1)
+    .brand-chart-cta__btn   { color: #fff }           (0,1,0)   <- wins
+
+Nothing else on the site carries that class, so no other page is affected.
+
+
+== HOW LONG THIS HAS BEEN LIVE ===============================================
+Since Sprint 203 deployed this morning, on the Vice page. Sprints 205 then
+spread it to the other five.
+
+
+== WHAT I GOT WRONG ==========================================================
+In Sprint 203 I verified the Vice page rendered its content — four balls, four
+FAQ answers, five sibling links, no NaN. I did not check that it rendered
+LEGIBLY. The bug was sitting there all day and I migrated five more pages onto
+it.
+
+In Sprint 205 I verified the inline count dropped by exactly 8 per file and
+that the markup matched Vice byte for byte. Both were true. Neither would ever
+have caught this, because I was checking the thing I changed rather than the
+thing the change could break.
+
+I only found it because I pulled computed styles on the live page afterwards.
+That check — getComputedStyle on anything whose styling I moved — is what I
+should run before zipping, not after pushing. It is one call.

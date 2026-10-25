@@ -449,11 +449,11 @@ nav.site-nav {
 .art-content p  { font-size: var(--prose-size); line-height: var(--prose-lh); color: var(--body); margin-bottom: 20px; }
 .art-content ul, .art-content ol { padding-left: 24px; margin-bottom: 20px; }
 .art-content li { font-size: 16px; line-height: 1.8; color: var(--body); margin-bottom: 12px; }
-.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt):not(.product-card__cta) {
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link):not(.toc-link):not(.breadcrumb a):not(.cmp-buy-btn):not(.cmp-product-link):not(.quick-answer-cta):not(.product-card__name-link):not(.product-card__img-link):not(.qp__cta):not(.sb__btn):not(.aff-cta__alt):not(.product-card__cta):not(.brand-chart-cta__btn) {
   color: var(--green); font-weight: 600; text-decoration: underline;
   text-decoration-color: rgba(30,58,40,.3); text-underline-offset: 2px;
 }
-.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):hover { text-decoration-color: var(--green); }
+.art-content a:not(.aff-cta__btn):not(.btn-gold):not(.cmp-buy-btn):not(.brand-chart-cta__btn):hover { text-decoration-color: var(--green); }
 
 /* ── PROSE CAP: text inside art-section paragraphs stays at readable width ── */
 .art-section > h2,
@@ -2985,6 +2985,13 @@ main section > p, main section ul, main section ol {
   margin-top: 12px;
 }
 
+/* Sprint 205b: .brand-chart-cta__btn is excluded from the .art-content link
+ * rule above. That rule carries ~15 :not() pseudo-classes of specificity and was
+ * overriding this button's white text with var(--green) — the same colour as its
+ * own background, so the label was invisible. The old inline style="color:#fff"
+ * beat it; a plain class does not. Exclusion is the pattern this file already
+ * uses for every other button-shaped link inside .art-content.
+ */
 /* ═══ Brand compression chart page — Sprint 203 ════════════════════════════
  * The five original brand charts (Srixon, Titleist, TaylorMade, Bridgestone,
  * Callaway) each carry 8 literal style="" attributes — 40 between them. The
