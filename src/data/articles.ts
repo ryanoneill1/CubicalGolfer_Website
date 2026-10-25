@@ -5255,7 +5255,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     },
     sections: [
       {
-        h2: 'Best Overall: Callaway Supersoft',
+        h2: 'Best Golf Ball for Seniors Overall: Callaway Supersoft',
         badge: 'BEST OVERALL', affiliateKey: 'callaway-supersoft',
         rating: 4.7,
         body: 'At 38 compression the Supersoft is designed specifically for swing speeds under 85 mph. In our testing against a Pro V1 at 79 mph swing speed, the Supersoft carried 12 yards further with the driver while maintaining comparable feel on chips and putts. The SOFT FAST CORE maximizes energy transfer at lower swing speeds in a way high-compression balls cannot.\n\nNot sure which model suits you? The <a href="/golf-ball-finder/">ball finder</a> narrows it down by swing speed, spin and budget.\n\nSpeed drives most of these choices — see the <a href="/golf-swing-speed-chart/">swing speed chart</a> for the ranges.',
@@ -5264,7 +5264,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Less greenside spin than urethane-cover tour balls', 'Not ideal for swing speeds over 88 mph'],
       },
       {
-        h2: 'Best All-Around: Srixon Soft Feel',
+        h2: 'Best All-Around Senior Golf Ball: Srixon Soft Feel',
         badge: 'BEST ALL-AROUND', rating: 4.2, affiliateKey: 'srixon-soft-feel',
         body: 'The Srixon Soft Feel hits the sweet spot for senior golfers with swing speeds between 75-90 mph. At 60 compression it delivers more distance than a Pro V1 for most seniors while maintaining better greenside feel than the Supersoft. The ionomer cover is durable enough to last a full round without scuffing.',
         price: '~$25',
@@ -5272,7 +5272,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Not quite as soft as the Supersoft for the slowest swing speeds', 'Less spin than urethane tour balls'],
       },
       {
-        h2: 'Softest Feel: TaylorMade Noodle',
+        h2: 'Softest Feeling Golf Ball for Seniors: TaylorMade Noodle',
         badge: 'RESEARCH PICK', affiliateKey: 'taylormade-noodle',
         rating: 4.4,
         body: 'At 34 compression the Noodle is the softest ball on our compression chart — softer than anything Titleist, Callaway, Srixon or Bridgestone currently makes. It is rated for swing speeds under 75 mph, which is the band a lot of golfers land in past 70. At about $19 a dozen it is also the cheapest ball here, so it is a low-risk way to find out whether a very soft ball suits you.\n\nThe trade is the cover: ionomer, not urethane, so it will not check on a pitch however soft it feels off the putter. If your scoring depends on stopping the ball on the green, look at the Vice Pro Soft further down.\n\nWe have not played this one — it is here on specification and on being the softest option available.',
@@ -5281,7 +5281,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Ionomer cover — will not check on a pitch', 'Rated only to 75 mph; above that you overcompress it', 'We have not tested this ball ourselves'],
       },
       {
-        h2: 'Best Titleist for Slower Swings: Titleist TruFeel',
+        h2: 'Best Titleist Golf Ball for Senior Swing Speeds: Titleist TruFeel',
         badge: 'RESEARCH PICK', affiliateKey: 'titleist-trufeel',
         rating: 4.5,
         body: 'If you want a Titleist and you swing under 85 mph, this is the one that actually fits. At about 70 compression the TruFeel is still the softest ball Titleist makes, and at about $25 a dozen it is a third the price of a Pro V1 — which needs 90 mph or more to compress properly and is simply the wrong ball below that.\n\nIt is ionomer-covered like most balls at this price, so treat it as a distance-and-feel ball rather than a spin ball. Verified in stock at $24.97.',
@@ -5290,7 +5290,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Ionomer cover — limited greenside spin', 'Firmer than the Supersoft or Noodle', 'We have not tested this ball ourselves'],
       },
       {
-        h2: 'Best Value: Wilson DUO Soft+',
+        h2: 'Best Budget Golf Ball for Seniors: Wilson DUO Soft+',
         badge: 'RESEARCH PICK', affiliateKey: 'wilson-duo-soft-plus',
         rating: 4.4,
         body: 'At 40 compression the DUO Soft+ sits between the Noodle and the TruFeel, and at about $25 a dozen it competes directly with the Supersoft. Wilson has been building low-compression balls longer than most, and this is the model the brand is known for.\n\nIf you are choosing between this and the Supersoft, it is close enough that price on the day should decide it. Verified in stock at $24.99.',
@@ -5299,7 +5299,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Ionomer cover — limited greenside spin', 'Less widely stocked than the Callaway or Titleist', 'We have not tested this ball ourselves'],
       },
       {
-        h2: 'Best for Straighter Shots: Bridgestone e12 Contact',
+        h2: 'Best Senior Golf Ball for Straighter Shots: Bridgestone e12 Contact',
         badge: 'TESTED', affiliateKey: 'bridgestone-e12-contact',
         rating: 4.5,
         body: 'The e12 Contact is one of the nine balls we played across a full season for our main golf ball guide. At 50 compression it is firmer than the Supersoft but still well inside the senior range, and it is rated 70 to 90 mph.\n\nIts dimple pattern is genuinely different from a standard design — raised contact points intended to reduce sidespin. If your miss is a slice that gets worse as the round goes on, that is the reason to pay about $30 rather than $25 here.',
@@ -5308,7 +5308,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Firmer than the Supersoft at 50 compression', 'About $5 more than the ionomer balls above it', 'Ionomer cover — still not a greenside-spin ball'],
       },
       {
-        h2: 'Best If You Still Want Spin: Vice Pro Soft',
+        h2: 'Best Senior Golf Ball for Greenside Spin: Vice Pro Soft',
         badge: 'RESEARCH PICK', affiliateKey: 'vice-pro-soft',
         rating: 4.6,
         body: 'Every other ball on this page has an ionomer cover, which means none of them will check on a pitch. The Vice Pro Soft is the exception: 65 compression with a urethane cover, which is an unusual combination — most balls that soft use the cheaper material.\n\nIt is rated 80 to 95 mph, so it suits the faster end of this group rather than a 70 mph swing. At about $35 it is the most expensive ball here, and worth it only if you play enough shots inside 50 yards to notice a ball that stops. If you do not, buy the Supersoft and spend the difference on lessons.',
@@ -5320,7 +5320,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { h2: 'Why Compression Matters More After 60', body: 'Swing speed drops 1 to 1.5 mph per year after 50. A golfer swinging 100 mph at 50 swings about 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely deforms — you lose 10 to 15 yards versus a 40-compression Supersoft. Rough guide: subtract your age from 130 for ideal compression. A 65-year-old should play around 65 compression. A 75-year-old around 55.' },
     
       { h2: 'The Best Ball for Each Senior Speed Range', body: '65 to 75 mph driver speed: Callaway Supersoft (38 compression) or TaylorMade Noodle (34) — maximum softness for maximum compression at slow speeds. 75 to 85 mph: Srixon Soft Feel (60) or Titleist TruFeel (70) — slightly firmer for better greenside control while still compressing fully. 85 to 90 mph: Vice Pro Soft (65) or Bridgestone e12 Contact (50) — the transition zone where some seniors can play mid-compression balls. If you do not know your speed, start with the Callaway Supersoft — it works for every senior swing speed and costs only $22 per dozen.' },
-      { h2: 'Matching Ball Compression to a Slower Swing', body: 'Swing speed drops about 1 to 1.5 mph per year after age 50. A golfer who swung 100 mph at 50 might swing 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely compresses — you lose 10 to 15 yards versus a 40-compression Supersoft that fully compresses at that speed. The general rule: subtract your age from 130 to get your approximate ideal compression. A 65-year-old should play around 65 compression, a 75-year-old around 55 compression. This is not exact science, but it gets you in the right range.' },
+      { h2: 'Low Compression Golf Balls for Seniors: Matching Compression to a Slower Swing', body: 'Swing speed drops about 1 to 1.5 mph per year after age 50. A golfer who swung 100 mph at 50 might swing 85 mph at 60 and 75 mph at 70. At 75 mph, a 100-compression Pro V1 barely compresses — you lose 10 to 15 yards versus a 40-compression Supersoft that fully compresses at that speed. The general rule: subtract your age from 130 to get your approximate ideal compression. A 65-year-old should play around 65 compression, a 75-year-old around 55 compression. This is not exact science, but it gets you in the right range.' },
       { h2: 'Do Seniors Need a Different Ball for Putting?', body: 'No. Compression affects full shots but has almost zero effect on putting speed or feel. A 38-compression Supersoft and a 100-compression Pro V1 roll identically on the green because putting impact forces are too low to compress either ball. Choose your ball based on driver and iron performance, not putting preference. If you prefer a softer feel on chips and pitches, a low-compression ball does feel noticeably different around the greens — but this is a bonus, not the primary selection criterion.' },
     ],
     faq: [
