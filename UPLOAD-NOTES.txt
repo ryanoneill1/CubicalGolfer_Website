@@ -1,109 +1,105 @@
-Sprint 201 — query-shaped section headings on /best-golf-balls-for-seniors/
+Sprint 202 — query-shaped headings across 60 roundup pages
 
-EXTRACT AT THE REPOSITORY ROOT. 2 files. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 2 files + CHANGES.txt. No deletions.
 
   src/data/articles.ts
   src/data/lastmod-manifest.json
 
 
-== WHY THIS PAGE ==============================================================
-Sprint 200 banded every page by true rank. This one came out as the single best
-target in Band D:
-
-  2,335 impressions, 50 clicks, GSC position 8.4
-  SERP competition: ZERO national publishers, FOUR peer-sized sites
-  we are already on the page, below the main result block
-
-Top 6 today: independentgolfreviews, golfballplanet, reddit, golfinsideruk,
-titleist.com.sg, dickssportinggoods. No Golf Digest, no Golf Monthly. This is a
-SERP a site our size can win — which is not true of most of the roundup pages.
-
-
-== THE ONE OBSERVABLE DIFFERENCE ==============================================
-Compared our page against independentgolfreviews.com, who ranks #1:
-
-                    ours        theirs
-  words             4,465       7,653
-  sections          14          17
-  tables            2           1
-  heading shape     product     QUERY
-
-Theirs:  "Best Low Compression Golf Balls for Seniors"
-          "Best Budget Golf Balls for Seniors"
-Ours:     "Best Overall: Callaway Supersoft"
-          "Best Value: Wilson DUO Soft+"
-
-Their headings are shaped like the searches people make. Ours are shaped like a
-product list. That is the difference I can actually observe and act on.
-
-It also matches the strongest pattern in your own data: qualified long-tail
-targets reach page 1 at 32%, generic ones at 3%.
+== THIS ZIP ALSO CONTAINS SPRINT 201 ==========================================
+Sprint 201 had not deployed when I checked — the live page and sitemap both
+still read 2026-10-18 on a cache-busted fetch. This zip was built on top of the
+201 files, so it carries BOTH changes. Whatever happened to that push, applying
+this one puts the site in the right state. Nothing is lost either way.
 
 
 == WHAT CHANGED ===============================================================
-Eight section headings. Nothing else. No body text, no products, no prices,
-no links, no claims added or removed.
+110 section headings across 60 pages. Headings only. No body text, no products,
+no prices, no links, no claims added or removed.
 
-  Best Overall: Callaway Supersoft
-    -> Best Golf Ball for Seniors Overall: Callaway Supersoft
-  Best All-Around: Srixon Soft Feel
-    -> Best All-Around Senior Golf Ball: Srixon Soft Feel
-  Softest Feel: TaylorMade Noodle
-    -> Softest Feeling Golf Ball for Seniors: TaylorMade Noodle
-  Best Titleist for Slower Swings: Titleist TruFeel
-    -> Best Titleist Golf Ball for Senior Swing Speeds: Titleist TruFeel
-  Best Value: Wilson DUO Soft+
-    -> Best Budget Golf Ball for Seniors: Wilson DUO Soft+
-  Best for Straighter Shots: Bridgestone e12 Contact
-    -> Best Senior Golf Ball for Straighter Shots: Bridgestone e12 Contact
-  Best If You Still Want Spin: Vice Pro Soft
-    -> Best Senior Golf Ball for Greenside Spin: Vice Pro Soft
-  Matching Ball Compression to a Slower Swing
-    -> Low Compression Golf Balls for Seniors: Matching Compression to a Slower Swing
+The pattern, everywhere:
 
-ONE VARIABLE ONLY. The title tag, meta description, word count and products are
-all untouched on purpose — if this moves, we know what moved it.
+    Best Overall: Titleist Pro V1
+ -> Best Golf Ball Overall: Titleist Pro V1
+
+    Best Premium: ECCO Biom C4
+ -> Best Premium Golf Shoe for Walking: ECCO Biom C4
+
+    Best Overall 2026: Garmin Approach S44
+ -> Best Golf GPS Watch Overall: Garmin Approach S44
+
+Only headings whose prefix carried NO topic noun were touched — "Best Overall",
+"Best Budget", "Best Value", "Best Premium", "Best Mid-Range", "Softest Feel"
+and similar. Headings that were already specific ("Best Carry Bag", "Best for
+Putting") were left exactly as they were.
+
+Full list of all 110 in CHANGES.txt.
 
 
-== TWO THINGS I CHECKED BEFORE TOUCHING ANYTHING ==============================
-1. ANCHORS. [...slug].astro line 148 builds section anchors from the heading
-   text, so changing a heading changes its anchor. I checked all eight old
-   anchors for inbound references: zero. Nothing internal links to them.
+== WHY ========================================================================
+Comparing /best-golf-balls-for-seniors/ against independentgolfreviews.com, who
+outranks us, the one difference I could act on was heading shape: theirs read
+like searches ("Best Low Compression Golf Balls for Seniors"), ours read like a
+product list ("Best Value: Wilson DUO Soft+").
 
-2. THE toc ARRAY. The record also carries a `toc: [...]` array that mirrors some
-   headings. My first attempt would have rewritten entries there too. I scoped
-   the replacement strictly to the `h2:` field instead.
-   Worth knowing: that toc array is ALREADY stale and wrong — it lists
-   "Best Feel: Titleist TruFeel" and "Compression Guide for Senior Golfers",
-   neither of which is a real heading. It is unused on this page (line 75 only
-   reads it when pageType === 'tutorial'; this is a buying-guide), so I left it
-   alone rather than widen the change. Pre-existing debt, flagged not fixed.
+It also matches the strongest pattern in your own data — qualified targets reach
+page 1 at 32%, generic ones at 3%.
+
+I shipped that to one page in Sprint 201 and then suggested waiting three weeks
+to see if it worked. That was the wrong call: it protected a tidy experiment at
+the cost of your traffic. Shipping it across all 60 pages gets the same
+attribution — the 60 touched pages against everything untouched — and gets it
+now instead of in November.
 
 
-== MANIFEST ===================================================================
-  /best-golf-balls-for-seniors/
-    hash    77311b48a62a4286 -> fa546dc9710a9f72
-    lastmod 2026-10-18       -> 2026-10-25
+== SCALE ======================================================================
+  pages touched                    60
+  headings rewritten              110
+  of those 60, with GSC data       57
+  impressions they carry (28d)  31,251
+  clicks they carry                318   (1.02% CTR)
+  their median position           15.9
 
-Verified before shipping:
-  - reproduced the hash function against the SHIPPED manifest: 190 of 192
-    article records match byte-for-byte. The 2 that do not are the documented
-    blind spots from Sprint 198 (the compression chart's DATA_DEPS combination,
-    and the compare slug where COMPARISONS overrides ARTICLES).
-  - manifest diff against what you last pushed: exactly 2 lines.
-  - 300 entries before, 300 after.
-  - unintended hash drift on other records: 0.
-  - articles.ts parses (the record was evaluated, not just string-matched).
+
+== TWO THINGS I BROKE AND FIXED ===============================================
+1. APOSTROPHE. My topic map contained "Men's Golf Glove". Written into a
+   single-quoted TypeScript string that produced:
+
+       h2: 'Best Premium Men's Golf Glove: Titleist Players Flex'
+
+   — a syntax error that would have failed the build. Worse, my script wrote the
+   file BEFORE parsing it, so CURRENT was left broken.
+
+   Fixed three ways: restored CURRENT from the Sprint 201 build and re-verified
+   190/192 hashes; changed the topic to "Golf Glove for Men"; and added a guard
+   that rejects any new heading containing a quote or backslash.
+
+   The real fix is the third one: the script now PARSE-CHECKS THE WHOLE FILE
+   BEFORE WRITING ANYTHING. If the parse fails, nothing is written at all.
+
+2. WORD STUTTER. The forgiving-drivers page produced "Most Forgiving Forgiving
+   Driver Overall". Added a collapse step for repeated adjacent words and
+   re-scanned all 110 — zero stutters remain.
+
+
+== VERIFIED ===================================================================
+  - parse check passes, 192 articles (unchanged count)
+  - hash reproduction against the shipped manifest: 190/192 match. The 2 that
+    do not are the documented Sprint 198 blind spots (compression chart
+    DATA_DEPS, and the compare slug where COMPARISONS overrides ARTICLES)
+  - manifest: 300 entries before, 300 after; exactly 60 entries changed
+  - unintended hash drift on untouched records: 0
+  - ANCHORS: section anchors derive from heading text, so all 110 anchors
+    change. Checked every one for inbound links across articles.ts and
+    comparisons.ts — zero references. Nothing breaks.
+  - Sprint 201's seniors headings confirmed still present
 
 
 == THE PREDICTION =============================================================
-/best-golf-balls-for-seniors/ should reach the main result block on
-"best golf balls for seniors" within 3 weeks, from its current position below it.
+The 60 touched pages should gain impressions and move up relative to the
+untouched pages over the next 3 weeks. Their baseline today: 31,251
+impressions, 318 clicks, 1.02% CTR, median position 15.9.
 
-If it has not moved by 15 November, heading shape is not the lever and I will
-say so rather than reach for a second explanation.
-
-Honest caveat: independentgolfreviews also has 71% more words and an older
-domain. I cannot prove heading shape is what separates us — I can only observe
-that it differs and that it matches your site's own qualified-vs-generic
-pattern. This is a cheap, reversible test of one variable, not a certainty.
+The untouched pages are the control. If the touched set does not separate from
+them by 15 November, heading shape is not the lever and I will say so plainly
+rather than look for a reason it secretly worked.
