@@ -22,7 +22,8 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const CEILING = 1225;   // Sprint 184: 1239 → 1227 (how-we-test section/h2; counts now exclude comments)
+const CEILING = 1185;   // Sprint 205: 1225 → 1185 (five brand charts migrated to .brand-chart-* classes)
+// Sprint 184: 1239 → 1227 (how-we-test section/h2; counts now exclude comments)
 
 const files: string[] = [];
 (function walk(dir: string) {

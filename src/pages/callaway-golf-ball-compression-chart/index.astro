@@ -41,7 +41,7 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 ---
 
 <BaseLayout {meta} {schemas} activeNav="improve">
-  <article class="art-content" style="margin:0 auto;padding:0 var(--page-px) 60px;">
+  <article class="art-content brand-chart-page">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
       <span aria-hidden="true">&#8250;</span>
@@ -54,18 +54,18 @@ const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
     <BrandCompressionChart brand="Callaway" siblings={siblings} />
 
-    <section style="background:#f8f7f4;border-radius: var(--r2);padding:18px;margin:26px 0;">
-      <p style="margin:0 0 8px;font-weight:700;">Want every brand in one table?</p>
-      <p style="margin:0 0 12px;">{FULL_CHART_BLURB}</p>
-      <a href="/golf-ball-compression-chart/" style="background:#1E3A28;color:#fff;padding:10px 20px;border-radius: var(--r2);font-weight:700;text-decoration:none;">Open the full compression chart &#8594;</a>
+    <section class="brand-chart-cta">
+      <p class="brand-chart-cta__lead">Want every brand in one table?</p>
+      <p class="brand-chart-cta__blurb">{FULL_CHART_BLURB}</p>
+      <a class="brand-chart-cta__btn" href="/golf-ball-compression-chart/">Open the full compression chart &#8594;</a>
     </section>
 
     <section>
       <h2 id="faq">Frequently Asked Questions</h2>
       {faq.map(f => (
-        <div style="margin-bottom:16px;">
-          <h3 style="margin-bottom:6px;">{f.q}</h3>
-          <p style="margin:0;">{f.a}</p>
+        <div class="brand-chart-faq__item">
+          <h3 class="brand-chart-faq__q">{f.q}</h3>
+          <p class="brand-chart-faq__a">{f.a}</p>
         </div>
       ))}
     </section>
