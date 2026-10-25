@@ -2996,8 +2996,8 @@ main section > p, main section ul, main section ol {
 .brand-chart-cta {
   background: #f8f7f4;
   border-radius: var(--r2);
-  padding: 18px;
-  margin: 26px 0;
+  padding: 20px;
+  margin: 28px 0;
 }
 .brand-chart-cta__lead  { margin: 0 0 8px; font-weight: 700; }
 .brand-chart-cta__blurb { margin: 0 0 12px; }
@@ -3005,12 +3005,12 @@ main section > p, main section ul, main section ol {
   display: inline-block;
   background: #1E3A28;
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border-radius: var(--r2);
   font-weight: 700;
   text-decoration: none;
 }
 
 .brand-chart-faq__item { margin-bottom: 16px; }
-.brand-chart-faq__q    { margin-bottom: 6px; }
+.brand-chart-faq__q    { margin-bottom: 8px; }
 .brand-chart-faq__a    { margin: 0; }
