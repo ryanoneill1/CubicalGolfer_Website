@@ -1,0 +1,76 @@
+---
+// Vice golf ball compression chart — Sprint 203.
+// Sixth page in the brand-chart family. The other five rank 1,1,2,3,4 on their
+// brand-qualified queries, and BRAND_DETAIL has carried a Vice entry since
+// Sprint 165 — the data was written, the page never built. Every number and
+// every line of commentary comes from balls.ts / ball-brands.ts, so nothing
+// here can drift from the all-brands chart.
+//
+// Unlike its five siblings this page uses classes rather than literal style=""
+// attributes, so it adds nothing to the inline-style ceiling. The classes live
+// in global.css under "brand chart page" and the other five can migrate to them
+// later, which would drain 40 from the count.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { brandFaqFacts, FULL_CHART_BLURB } from '../../data/ball-brands';
+
+const facts = brandFaqFacts('Vice');
+
+import { ROBOTS_INDEX } from '../../lib/seo';
+const meta = {
+  title: "Vice Golf Ball Compression Chart 2026 — All 4",
+  description: "Compression, cover and price for all 4 Vice golf balls, from the Pro Soft (65) to the Pro Plus (100), matched to your swing speed.",
+  canonical: 'https://www.cubicalgolfer.com/vice-golf-ball-compression-chart/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
+  ogType: 'article' as const,
+  robots: ROBOTS_INDEX,
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },
+    { label: "Vice Compression", href: "/vice-golf-ball-compression-chart/" },
+  ],
+};
+
+const faq = [
+  { q: "What is the compression of Vice golf balls?", a: facts.range },
+  { q: "Which Vice golf ball is the softest?", a: facts.softest },
+  { q: "Which Vice ball suits my swing speed?", a: "Match compression to driver speed. Under 85 mph suits the softer end of the Vice range; 85-100 mph the middle; over 100 mph the firmest. The table above lists the rated speed range for every Vice ball." },
+  { q: "How many Vice golf balls are on this chart?", a: facts.howMany },
+];
+
+const siblings = [{"brand": "Callaway", "slug": "/callaway-golf-ball-compression-chart/"}, {"brand": "Titleist", "slug": "/titleist-golf-ball-compression-chart/"}, {"brand": "TaylorMade", "slug": "/taylormade-golf-ball-compression-chart/"}, {"brand": "Bridgestone", "slug": "/bridgestone-golf-ball-compression-chart/"}, {"brand": "Srixon", "slug": "/srixon-golf-ball-compression-chart/"}];
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="improve">
+  <article class="art-content brand-chart-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">&#8250;</span>
+      <a href="/golf-ball-compression-chart/">Compression Chart</a>
+      <span aria-hidden="true">&#8250;</span>
+      <span>Vice</span>
+    </nav>
+
+    <h1>Vice Golf Ball Compression Chart</h1>
+
+    <BrandCompressionChart brand="Vice" siblings={siblings} />
+
+    <section class="brand-chart-cta">
+      <p class="brand-chart-cta__lead">Want every brand in one table?</p>
+      <p class="brand-chart-cta__blurb">{FULL_CHART_BLURB}</p>
+      <a class="brand-chart-cta__btn" href="/golf-ball-compression-chart/">Open the full compression chart &#8594;</a>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently Asked Questions</h2>
+      {faq.map(f => (
+        <div class="brand-chart-faq__item">
+          <h3 class="brand-chart-faq__q">{f.q}</h3>
+          <p class="brand-chart-faq__a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>

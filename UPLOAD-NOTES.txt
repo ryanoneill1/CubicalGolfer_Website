@@ -1,105 +1,112 @@
-Sprint 202 — query-shaped headings across 60 roundup pages
+Sprint 203 — the sixth brand compression chart: Vice
 
-EXTRACT AT THE REPOSITORY ROOT. 2 files + CHANGES.txt. No deletions.
+EXTRACT AT THE REPOSITORY ROOT. 8 files. No deletions. articles.ts NOT included
+(unchanged this sprint).
 
-  src/data/articles.ts
+  src/pages/vice-golf-ball-compression-chart/index.astro      NEW
+  src/pages/srixon-golf-ball-compression-chart/index.astro    (sibling link)
+  src/pages/titleist-golf-ball-compression-chart/index.astro  (sibling link)
+  src/pages/taylormade-golf-ball-compression-chart/index.astro(sibling link)
+  src/pages/bridgestone-golf-ball-compression-chart/index.astro (sibling link)
+  src/pages/callaway-golf-ball-compression-chart/index.astro  (sibling link)
+  src/styles/global.css                                       (new classes)
   src/data/lastmod-manifest.json
 
 
-== THIS ZIP ALSO CONTAINS SPRINT 201 ==========================================
-Sprint 201 had not deployed when I checked — the live page and sitemap both
-still read 2026-10-18 on a cache-busted fetch. This zip was built on top of the
-201 files, so it carries BOTH changes. Whatever happened to that push, applying
-this one puts the site in the right state. Nothing is lost either way.
+== WHY THIS ==================================================================
+The five brand compression charts are the best-ranking thing on the site.
+Measured on live SERPs this week:
+
+    Srixon       #1
+    Bridgestone  #1
+    Titleist     #2
+    TaylorMade   #3
+    Callaway     #4
+
+Five for five on page one, off one template. Meanwhile Vice — which has FOUR
+balls in balls.ts, the same count as Srixon, Callaway and Bridgestone — has no
+page, and the generic all-brands chart is left to cover the query. It currently
+ranks #4 for "vice golf ball compression chart", behind vicegolf.com,
+ballcaddie.com and outofboundsgolf.com.
+
+On every brand where a dedicated page exists, that page outranks what the
+generic chart was managing. That is the whole bet here, and it is the best-
+evidenced one available: a template with a 5-for-5 record, pointed at the one
+brand big enough to deserve it.
+
+I also checked Wilson and Maxfli. Both are NOT ready: BRAND_DETAIL has no entry
+for either, so BrandCompressionChart would crash on detail.lead. Vice already
+has one — written in Sprint 165. The data was there; the page was never built.
 
 
-== WHAT CHANGED ===============================================================
-110 section headings across 60 pages. Headings only. No body text, no products,
-no prices, no links, no claims added or removed.
+== NO NEW PROSE ==============================================================
+Every number and every sentence on this page is derived at build time from
+balls.ts and ball-brands.ts — the same sources the all-brands chart uses. I
+wrote no ball facts by hand, so this page cannot drift from the main chart.
 
-The pattern, everywhere:
+Vice's four balls, straight from balls.ts:
+    Vice Pro Soft    65   Urethane  $35   80-95 mph
+    Vice Pro         90   Urethane  $39   90-110 mph
+    Vice Drive       95   Ionomer   $20   95-115 mph
+    Vice Pro Plus   100   Urethane  $35   100-120 mph
 
-    Best Overall: Titleist Pro V1
- -> Best Golf Ball Overall: Titleist Pro V1
-
-    Best Premium: ECCO Biom C4
- -> Best Premium Golf Shoe for Walking: ECCO Biom C4
-
-    Best Overall 2026: Garmin Approach S44
- -> Best Golf GPS Watch Overall: Garmin Approach S44
-
-Only headings whose prefix carried NO topic noun were touched — "Best Overall",
-"Best Budget", "Best Value", "Best Premium", "Best Mid-Range", "Softest Feel"
-and similar. Headings that were already specific ("Best Carry Bag", "Best for
-Putting") were left exactly as they were.
-
-Full list of all 110 in CHANGES.txt.
+Title and description use only those figures.
 
 
-== WHY ========================================================================
-Comparing /best-golf-balls-for-seniors/ against independentgolfreviews.com, who
-outranks us, the one difference I could act on was heading shape: theirs read
-like searches ("Best Low Compression Golf Balls for Seniors"), ours read like a
-product list ("Best Value: Wilson DUO Soft+").
+== THE INLINE-STYLE CEILING — HANDLED ========================================
+validate-inline-styles has a hard ceiling of 1225 and I cannot compute the
+current site-wide total from the files I hold. A new page built like its five
+siblings would have added 8 literal style="" attributes, and if the count were
+near the ceiling that fails your build.
 
-It also matches the strongest pattern in your own data — qualified targets reach
-page 1 at 32%, generic ones at 3%.
+So the Vice page uses CSS classes and contributes ZERO. Verified by running the
+validator's own comment-stripping logic over the file: 0 matches. This sprint
+is build-safe regardless of what the current total is.
 
-I shipped that to one page in Sprint 201 and then suggested waiting three weeks
-to see if it worked. That was the wrong call: it protected a tidy experiment at
-the cost of your traffic. Shipping it across all 60 pages gets the same
-attribution — the 60 touched pages against everything untouched — and gets it
-now instead of in November.
-
-
-== SCALE ======================================================================
-  pages touched                    60
-  headings rewritten              110
-  of those 60, with GSC data       57
-  impressions they carry (28d)  31,251
-  clicks they carry                318   (1.02% CTR)
-  their median position           15.9
+The classes went into global.css, which the validator does not scan. They are
+written so the other five pages can migrate to them later — doing so would
+drain 40 attributes (5 x 8) and let you lower the ceiling.
 
 
-== TWO THINGS I BROKE AND FIXED ===============================================
-1. APOSTROPHE. My topic map contained "Men's Golf Glove". Written into a
-   single-quoted TypeScript string that produced:
+== MANIFEST ==================================================================
+These pages hash as sha(fileHash + sha(balls.ts + ball-brands.ts)) because they
+are in update-lastmod's DATA_DEPS list. Before computing anything I reproduced
+all five SHIPPED hashes from my local copies to prove those copies are current:
 
-       h2: 'Best Premium Men's Golf Glove: Titleist Players Flex'
+    /srixon-...       MATCH
+    /titleist-...     MATCH
+    /taylormade-...   MATCH
+    /bridgestone-...  MATCH
+    /callaway-...     MATCH
+    5 of 5
 
-   — a syntax error that would have failed the build. Worse, my script wrote the
-   file BEFORE parsing it, so CURRENT was left broken.
+Then recomputed. All six updated, one of them new:
 
-   Fixed three ways: restored CURRENT from the Sprint 201 build and re-verified
-   190/192 hashes; changed the topic to "Golf Glove for Men"; and added a guard
-   that rejects any new heading containing a quote or backslash.
+    srixon       2c86e92497dbe6e6 -> 2eb7ac44541fb977
+    titleist     86e53d0291b685dc -> bc5350159f943f85
+    taylormade   60676d5673fee6c6 -> 58020b5e02929a4b
+    bridgestone  d3bcdffb838612a2 -> 0036200e4f764f20
+    callaway     1a022c7c98223350 -> 8f903bdaf65f4976
+    vice         (new)            -> 859467ff94954a3b
 
-   The real fix is the third one: the script now PARSE-CHECKS THE WHOLE FILE
-   BEFORE WRITING ANYTHING. If the parse fails, nothing is written at all.
-
-2. WORD STUTTER. The forgiving-drivers page produced "Most Forgiving Forgiving
-   Driver Overall". Added a collapse step for repeated adjacent words and
-   re-scanned all 110 — zero stutters remain.
-
-
-== VERIFIED ===================================================================
-  - parse check passes, 192 articles (unchanged count)
-  - hash reproduction against the shipped manifest: 190/192 match. The 2 that
-    do not are the documented Sprint 198 blind spots (compression chart
-    DATA_DEPS, and the compare slug where COMPARISONS overrides ARTICLES)
-  - manifest: 300 entries before, 300 after; exactly 60 entries changed
-  - unintended hash drift on untouched records: 0
-  - ANCHORS: section anchors derive from heading text, so all 110 anchors
-    change. Checked every one for inbound links across articles.ts and
-    comparisons.ts — zero references. Nothing breaks.
-  - Sprint 201's seniors headings confirmed still present
+    entries 300 -> 301
+    manifest delta vs Sprint 202: 24 lines, all six pages, nothing else
 
 
-== THE PREDICTION =============================================================
-The 60 touched pages should gain impressions and move up relative to the
-untouched pages over the next 3 weeks. Their baseline today: 31,251
-impressions, 318 clicks, 1.02% CTR, median position 15.9.
+== VERIFIED ==================================================================
+  - inline styles added by this sprint: 0 (validator logic replicated)
+  - all 6 pages cross-link to the other 5 — symmetric, checked per file
+  - articles.ts untouched: still 190/192 hashes matching (same 2 known
+    Sprint 198 blind spots, unchanged)
+  - page references only brandFaqFacts('Vice') and brand="Vice"; both resolve,
+    Vice has a BRAND_DETAIL entry and 4 balls so neither path is empty
+  - the five siblings' edit is one array entry each, nothing else touched
 
-The untouched pages are the control. If the touched set does not separate from
-them by 15 November, heading shape is not the lever and I will say so plainly
-rather than look for a reason it secretly worked.
+
+== THE PREDICTION ============================================================
+/vice-golf-ball-compression-chart/ reaches page 1 for "vice golf ball
+compression chart" within 3 weeks, and displaces the generic chart currently
+sitting at #4.
+
+If it does not, the brand-template record was 5 lucky draws rather than a
+repeatable play, and I will say so.

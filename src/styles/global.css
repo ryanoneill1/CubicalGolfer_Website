@@ -2984,3 +2984,33 @@ main section > p, main section ul, main section ol {
   line-height: 1.6;
   margin-top: 12px;
 }
+
+/* ═══ Brand compression chart page — Sprint 203 ════════════════════════════
+ * The five original brand charts (Srixon, Titleist, TaylorMade, Bridgestone,
+ * Callaway) each carry 8 literal style="" attributes — 40 between them. The
+ * Vice page added in Sprint 203 uses these classes instead and contributes 0.
+ * Migrating the other five here would drain 40 from the inline-style ceiling.
+ */
+.brand-chart-page { padding-top: 0; padding-bottom: 60px; }
+
+.brand-chart-cta {
+  background: #f8f7f4;
+  border-radius: var(--r2);
+  padding: 18px;
+  margin: 26px 0;
+}
+.brand-chart-cta__lead  { margin: 0 0 8px; font-weight: 700; }
+.brand-chart-cta__blurb { margin: 0 0 12px; }
+.brand-chart-cta__btn {
+  display: inline-block;
+  background: #1E3A28;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: var(--r2);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-chart-faq__item { margin-bottom: 16px; }
+.brand-chart-faq__q    { margin-bottom: 6px; }
+.brand-chart-faq__a    { margin: 0; }
