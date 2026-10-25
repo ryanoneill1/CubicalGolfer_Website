@@ -65,6 +65,7 @@ export const GET: APIRoute = async () => {
     { loc: '/taylormade-golf-ball-compression-chart/', changefreq: 'monthly', priority: '0.80', lastmod: '2026-09-03' },
     { loc: '/srixon-golf-ball-compression-chart/', changefreq: 'monthly', priority: '0.80', lastmod: '2026-09-03' },
     { loc: '/bridgestone-golf-ball-compression-chart/', changefreq: 'monthly', priority: '0.80', lastmod: '2026-09-03' },
+    { loc: '/vice-golf-ball-compression-chart/', changefreq: 'monthly', priority: '0.80', lastmod: '2026-10-25' },
     { loc: '/golf-equipment-budget-planner/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-17' },
     { loc: '/golf-handicap-calculator/',  changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },
     { loc: '/golf-swing-speed-chart/',       changefreq: 'monthly', priority: '0.85', lastmod: '2026-05-22' },

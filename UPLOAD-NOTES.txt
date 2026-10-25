@@ -1,75 +1,93 @@
-Sprint 203b — build fix. Four spacing values I put off the 4pt grid.
+Sprint 204 — the Vice page is live but orphaned. Two real defects.
 
-EXTRACT AT THE REPOSITORY ROOT. 1 file.
+EXTRACT AT THE REPOSITORY ROOT. 3 files. No deletions.
 
-  src/styles/global.css
-
-Nothing else changes. The six .astro pages and the manifest from Sprint 203 are
-already in and correct — update-lastmod passed ("manifest matches all 301
-pages") and all 301 pages built, including /vice-golf-ball-compression-chart/.
-The build died at the very last validator.
+  src/pages/golf-ball-compression-chart/index.astro
+  src/pages/sitemap-core.xml.ts
+  src/data/lastmod-manifest.json
 
 
-== WHAT I DID WRONG ==========================================================
-The Sprint 203 CSS block used:
+== SPRINT 203 CONFIRMED, WITH A HOLE IN IT ===================================
+/vice-golf-ball-compression-chart/ is live and correct. I read the rendered
+page: all four Vice balls present, all four FAQ answers generated, five sibling
+links, no undefined or NaN anywhere.
 
-    padding: 18px          margin: 26px 0
-    padding: 10px 20px     margin-bottom: 6px
+Then I checked whether Google can find it. It cannot:
 
-validate-spacing-scale enforces a 4pt grid with CEILING = 0 for CSS. Four
-values, four failures, all mine:
+  srixon       in sitemap-core.xml
+  titleist     in sitemap-core.xml
+  taylormade   in sitemap-core.xml
+  bridgestone  in sitemap-core.xml
+  callaway     in sitemap-core.xml
+  vice         NOT IN ANY SITEMAP
 
-    ❌ Spacing scale: 4 value(s) off the 4pt grid (ceiling 0).
-       - 18px used 1× — nearest grid step is 20px
-       - 26px used 1× — nearest grid step is 28px
-       - 10px used 1× — nearest grid step is 12px
-       - 6px used 1× — nearest grid step is 8px
-
-Fixed by snapping each to the grid: 18→20, 26→28, 10→12, 6→8. Every px value
-in the block is now divisible by 4 (8, 12, 16, 20, 28, 60). Verified by
-extracting them and testing each.
-
-
-== WHY I DIDN'T CATCH IT =====================================================
-I copied those four values straight off the Srixon page, where they have lived
-as inline styles since Sprint 100. I assumed values already on the site were
-already compliant. They were not — they were merely somewhere else.
-
-The validator has TWO ceilings:
-
-    CSS files (global.css + .astro style blocks)  ceiling 0
-    style="" attributes                            ceiling 395
-
-The siblings' 18/26/10/6 have always been off-grid. They sat under the inline
-allowance of 395, where there is headroom. Moving them into global.css — which
-is the architecturally correct place and the thing that kept this sprint off
-the inline-style ceiling — moved them to a ceiling of zero.
-
-So the same decision that made the sprint safe on one validator is what broke
-it on another. I checked the ceiling I had reasoned about and not the one I had
-not. Next time I touch global.css I will grep my own block against the 4pt grid
-before zipping, which is a two-line check.
+sitemap-core.xml.ts carries a HARDCODED list — it does not walk src/pages. A
+new page is invisible to it. I shipped a page that nothing points at and no
+sitemap declares. That is on me: I verified the manifest and the build, and did
+not check the one thing a brand-new page most depends on.
 
 
-== VISUAL EFFECT =============================================================
-The Vice page will sit 2px different from its five siblings in four places
-(box padding, box margin, button padding, FAQ question margin). Invisible in
-practice, and it is the Vice page that is now on the house grid rather than the
-siblings.
+== DEFECT 2, BIGGER AND OLDER ================================================
+While checking that, I found the main compression chart — the site's biggest
+page, 2,765 impressions on one query — links to NONE of its six brand charts.
 
-Worth knowing: migrating the other five pages to these classes, which Sprint
-203 set up, would drain 40 from the inline-style ceiling AND pull four off-grid
-inline values out of the 395 allowance.
+The five brand pages all link UP to it. It links DOWN to nothing. One-way, and
+it has been that way since Sprint 100 built the first brand page.
+
+The page already renders a per-brand summary card for each manufacturer. The
+brand name in each card title was plain text. It is now a link.
 
 
-== WHAT THE BUILD CONFIRMED ==================================================
-Everything else in Sprint 203 was right, and the log proves two things I had
-reasoned about rather than measured:
+== WHAT CHANGED ==============================================================
+1. sitemap-core.xml.ts — one line, Vice added next to its five siblings.
+   lastmod there is only a fallback; lastmodFor() takes the manifest value,
+   which I verified against the live sitemap (srixon reads 2026-10-25, the
+   manifest date, not the hardcoded 2026-09-03).
 
-  "✅ lastmod: manifest matches all 301 pages"
-     — the DATA_DEPS hashes I computed were correct, all six of them.
+2. golf-ball-compression-chart/index.astro
+   - six brand card titles are now links:
+       Titleist, Callaway, TaylorMade, Srixon, Bridgestone -> their chart pages
+   - added a Vice summary card, which did not exist. My script expected one and
+     found zero, which is how I caught it rather than silently linking five.
 
-  "✅ Inline styles: 1225 literal style="" attribute(s) (ceiling 1225)"
-     — the count is EXACTLY at the ceiling. Had I built the Vice page like its
-       siblings it would have added 8 and failed. Using classes was not
-       over-caution; it was the only way this sprint could have built at all.
+   The Vice card:
+       Pro Soft (65) · Pro (90) · Drive (95) · Pro Plus (100)
+   Every figure from balls.ts. The note states only what balls.ts states: sold
+   direct to consumer, the Pro Soft is the softest urethane ball on the chart,
+   and the Drive is firm despite its name. NO PRICES are typed in it, so it
+   cannot trip the currency validators.
+
+
+== CEILING CHECKS, BOTH OF THEM ==============================================
+Last sprint I checked the ceiling I had reasoned about and not the one I had
+not. This time, both:
+
+  INLINE STYLES   compression chart: 74 before, 74 after, delta 0.
+                  The build log confirms the site total is EXACTLY 1225 of 1225,
+                  so a single added style="" would fail. All new markup uses
+                  existing cb-card / cb-pill / cb-note classes.
+
+  4PT GRID        I added no px values anywhere. Diffed the file and extracted
+                  every px token on added lines: none.
+
+
+== MANIFEST ==================================================================
+Only /golf-ball-compression-chart/ changes. sitemap-core.xml.ts is a .ts
+endpoint and update-lastmod walks .astro files only, so it has no entry.
+
+  /golf-ball-compression-chart/  83a74b111303639d -> ab5ae36159fd31c6
+                                 lastmod 2026-10-19 -> 2026-10-25
+  entries 301 -> 301
+  manifest delta: 2 lines, that page only
+
+This page hashes as sha(recordHash + sha(fileHash + DATA_DEPS)) — it has BOTH
+an articles.ts record and its own .astro. I reproduced the SHIPPED hash with
+that model before editing and it matched exactly (83a74b111303639d), which also
+closes one of the two blind spots I have been carrying since Sprint 198.
+
+
+== EXPECTED EFFECT ===========================================================
+Vice becomes discoverable at all, and all six brand charts gain an in-body link
+from the page with the most authority on the site. The five existing brand
+pages already rank 1,1,2,3,4 without that link — this should hold or improve
+them, and give Vice the start the others had.
