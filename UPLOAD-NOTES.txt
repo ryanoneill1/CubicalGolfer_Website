@@ -1,71 +1,96 @@
-Sprint 205b — URGENT. The brand chart button text is invisible on all 6 pages.
+Sprint 206 — finish the heading sweep. 127 more, 59 pages.
 
-EXTRACT AT THE REPOSITORY ROOT. 1 file.
+EXTRACT AT THE REPOSITORY ROOT. 2 files + CHANGES.txt. No deletions.
 
-  src/styles/global.css
-
-No .astro changes, no manifest change. global.css is not hashed by
-update-lastmod, so nothing else moves.
+  src/data/articles.ts
+  src/data/lastmod-manifest.json
 
 
-== THE BUG ===================================================================
-On all six brand compression chart pages the "Open the full compression chart"
-button renders dark green text on a dark green background. Measured on the live
-Srixon page:
+== WHY THERE WAS ANYTHING LEFT ===============================================
+Sprint 202 matched prefixes against a fixed whitelist of 14 exact strings —
+"Best Overall", "Best Budget", "Best Value" and so on. That was too narrow. A
+sweep of what remained found 168 headings across 68 pages still carrying a
+descriptor with no product noun:
 
-    computed color      rgb(30, 58, 40)
-    computed background rgb(30, 58, 40)
-    INVISIBLE           true
+    Best for Seniors: Bushnell Tour V7 Shift
+    Most Forgiving: Ping G430 Max
+    Best Under $25: TaylorMade Noodle
+    Best Draw Bias: Cobra DS-Adapt MAX-K
 
-The label is there, readable by Google, invisible to a human.
-
-
-== WHY ======================================================================
-global.css carries this rule:
-
-    .art-content a:not(.aff-cta__btn):not(.btn-gold):not(.rel-link)
-      ... 14 :not() clauses ... { color: var(--green); }
-
-Each :not() adds class-level specificity, so that selector sits around (0,15,1).
-My .brand-chart-cta__btn is (0,1,0). It loses, and var(--green) is #1E3A28 —
-exactly the button's own background.
-
-The ORIGINAL pages had style="color:#fff" inline, which beat it. That is
-precisely what validate-inline-styles warns about in its own header: "Inline
-styles beat every class." Moving to classes was correct, but it dropped the
-page into a cascade the inline style had been hiding.
+Those pages carry 42,879 impressions — MORE than the 31,251 Sprint 202 covered.
+I had this queued behind two new brand-chart pages worth roughly 1,000
+impressions between them. Checking the sizes first changed the order.
 
 
-== THE FIX ===================================================================
-Added .brand-chart-cta__btn to the exclusion list on that rule, and on its
-:hover partner so the underline colour does not come back. That is the pattern
-this file already uses for every other button-shaped link inside .art-content —
-aff-cta__btn, btn-gold, cmp-buy-btn, qp__cta and nine more.
+== WHAT CHANGED ==============================================================
+127 headings across 59 pages. Headings only — no body text, products, prices,
+links or claims.
 
-After the exclusion the only rules matching the button are:
+    Best for Seniors: Bushnell Tour V7 Shift
+ -> Best Rangefinder for Seniors: Bushnell Tour V7 Shift
 
-    a                       { color: inherit }        (0,0,1)
-    .brand-chart-cta__btn   { color: #fff }           (0,1,0)   <- wins
+    Most Forgiving: Ping G430 Max ($419)
+ -> Most Forgiving Driver: Ping G430 Max ($419)
 
-Nothing else on the site carries that class, so no other page is affected.
+    Best Under $25: TaylorMade Noodle
+ -> Best Golf Ball Under $25: TaylorMade Noodle
+
+    Best Overall Under $700: Square Golf
+ -> Best Overall Launch Monitor Under $700: Square Golf
+
+Four prefix shapes, each with its own rule so the noun lands in the right place
+rather than being bolted on the end:
+
+    "Best for X"          -> Best {noun} for X
+    "Best Overall Under $N" -> Best Overall {noun} Under $N
+    "Best [Value] Under $N" -> Best {noun} Under $N
+    short adjective phrase  -> {phrase} {noun}
+
+Full list of all 127 in CHANGES.txt, with the 31 skips and their reasons.
 
 
-== HOW LONG THIS HAS BEEN LIVE ===============================================
-Since Sprint 203 deployed this morning, on the Vice page. Sprints 205 then
-spread it to the other five.
+== 31 SKIPPED, ON PURPOSE ====================================================
+  13  the noun is already in the product name
+      "Best Distance: Cobra Aerojet Max Irons" would have become
+      "Best Distance Iron: Cobra Aerojet Max Irons" — Iron twice. Left alone.
+   3  the prefix itself already contains the noun ("Best Putting Aid")
+   1  result exceeded 72 characters
+  14  prefix shape my rules do not handle, and these already carry a partial
+      qualifier anyway ("Best Forgiveness Under $300", "Best Ball for a 20
+      Handicap")
+
+I found 13 of those only after tightening the guard. My first pass produced
+"Best No-Subscription Value Launch Monitor: Square Golf Launch Monitor" — the
+noun repeated in the product name. The first guard only checked the prefix
+against itself; it now checks the prefix against the product name too. 140
+proposals became 127.
 
 
-== WHAT I GOT WRONG ==========================================================
-In Sprint 203 I verified the Vice page rendered its content — four balls, four
-FAQ answers, five sibling links, no NaN. I did not check that it rendered
-LEGIBLY. The bug was sitting there all day and I migrated five more pages onto
-it.
+== VERIFIED ==================================================================
+  - parse check passes BEFORE writing, 192 articles, count unchanged
+  - every rewrite required exactly one h2 match or the script throws
+  - scoped strictly to the h2: field, so the unrendered toc arrays are untouched
+  - hash reproduction: 190/192 match, same 2 known Sprint 198 blind spots
+  - /golf-ball-compression-chart/ recomputed separately with the combined
+    record+astro+DATA_DEPS model and still matches — Sprint 204's edit survives
+  - manifest: 301 entries before and after, 0 drift outside the touched set
+  - ANCHORS: all 127 change. Checked every one for inbound links across
+    articles.ts and comparisons.ts — zero.
+  - manifest delta is 156 lines, not 236. That is 19 pages moving hash+lastmod
+    and 40 moving hash only because Sprint 202 already set them to 2026-10-25
+    today. Predicted 156, actual 156.
 
-In Sprint 205 I verified the inline count dropped by exactly 8 per file and
-that the markup matched Vice byte for byte. Both were true. Neither would ever
-have caught this, because I was checking the thing I changed rather than the
-thing the change could break.
 
-I only found it because I pulled computed styles on the live page afterwards.
-That check — getComputedStyle on anything whose styling I moved — is what I
-should run before zipping, not after pushing. It is one call.
+== COVERAGE AND PREDICTION ===================================================
+    pages touched                59
+    with 28-day GSC data         57
+    impressions they carry   35,218
+    clicks                      275
+
+Combined with Sprint 202, the heading change now covers roughly 66,000
+impressions. Pages with no unqualified headings remain the control.
+
+Same prediction as 202: the touched set separates from the untouched set within
+3 weeks. If neither 202's 60 nor 206's 59 has moved by 15 November, heading
+shape is not the lever and I will say so rather than look for a reason it
+secretly worked.

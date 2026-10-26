@@ -1,343 +1,504 @@
-FULL LIST OF 110 HEADING CHANGES ACROSS 60 PAGES
-==============================================================================
+SPRINT 206 — ALL 127 HEADING CHANGES
+==========================================================================
 
 /best-golf-rangefinders-2026/
-   - Best Overall: Bushnell Tour V7 Shift
-   + Best Golf Rangefinder Overall: Bushnell Tour V7 Shift
-   - Best Budget: Precision Pro NX9
-   + Best Budget Golf Rangefinder: Precision Pro NX9
-   - Best Premium: Bushnell Pro XE
-   + Best Premium Golf Rangefinder: Bushnell Pro XE
+   - Best Premium Alternative: Bushnell Pro X3
+   + Best Premium Alternative Rangefinder: Bushnell Pro X3
+   - Best Budget Classic: Callaway 300 Pro
+   + Best Budget Classic Rangefinder: Callaway 300 Pro
+   - Best Stabilized View: Nikon Coolshot 50i
+   + Best Stabilized View Rangefinder: Nikon Coolshot 50i
 
 /best-golf-gps-watches/
-   - Best Overall 2026: Garmin Approach S44
-   + Best Golf GPS Watch Overall: Garmin Approach S44
-   - Best Premium: Garmin Approach S70
-   + Best Premium Golf GPS Watch: Garmin Approach S70
-   - Best Mid-Range: Garmin Approach S42
-   + Best Mid-Range Golf GPS Watch: Garmin Approach S42
-   - Best Budget: Bushnell Ion Elite
-   + Best Budget Golf GPS Watch: Bushnell Ion Elite
+   - Most Tested: Garmin Approach S62
+   + Most Tested GPS Watch: Garmin Approach S62
+   - Best Auto-Shot Tracking: Shot Scope V5
+   + Best Auto-Shot Tracking GPS Watch: Shot Scope V5
 
 /best-golf-drivers-forgiveness/
-   - Most Forgiving Overall: Callaway Paradym Ai Smoke Max
-   + Most Forgiving Driver Overall: Callaway Paradym Ai Smoke Max
-   - Best Value: Cobra DS-Adapt MAX-K
-   + Best Value Forgiving Driver: Cobra DS-Adapt MAX-K
-   - Best Budget: Cleveland Launcher XL2
-   + Best Budget Forgiving Driver: Cleveland Launcher XL2
+   - Best Distance: TaylorMade Qi35 Max
+   + Best Distance Driver: TaylorMade Qi35 Max
+   - Best Value Slice Fix: Ping G430 Max (~$419)
+   + Best Value Slice Fix Driver: Ping G430 Max (~$419)
+   - Best Max Game-Improvement: Callaway Big Bertha
+   + Best Max Game-Improvement Driver: Callaway Big Bertha
+   - Best Premium Slice Fix: Ping G440 SFT (~$449)
+   + Best Premium Slice Fix Driver: Ping G440 SFT (~$449)
 
 /best-golf-irons-2026/
-   - Best All-Around: Ping G430 Irons
-   + Best All-Around Golf Iron: Ping G430 Irons
+   - Best for Beginners: Cleveland Launcher XL Halo
+   + Best Iron for Beginners: Cleveland Launcher XL Halo
+   - Best Players-Distance: Srixon ZX5 Mk II
+   + Best Players-Distance Iron: Srixon ZX5 Mk II
 
-/best-golf-swing-analyzers/
-   - Best Overall: Arccos Caddie Smart Sensors
-   + Best Golf Swing Analyzer Overall: Arccos Caddie Smart Sensors
-   - Best Budget: Swing Caddie SC4 PRO
-   + Best Budget Golf Swing Analyzer: Swing Caddie SC4 PRO
+/best-golf-apps/
+   - Best All-in-One: 18Birdies
+   + Best All-in-One Golf App: 18Birdies
+   - Best for Stats: Arccos Caddie
+   + Best Golf App for Stats: Arccos Caddie
+   - Best Pure GPS: Golfshot
+   + Best Pure GPS Golf App: Golfshot
+
+/best-ai-golf-training-tools/
+   - Best Smart Putting Sensor: Blast Motion
+   + Best Smart Putting Sensor AI Tool: Blast Motion
 
 /best-golf-balls-2026/
-   - Best Overall: Titleist Pro V1
-   + Best Golf Ball Overall: Titleist Pro V1
-   - Best Value: Srixon Soft Feel
-   + Best Value Golf Ball: Srixon Soft Feel
+   - Best All-Round: TaylorMade TP5
+   + Best All-Round Golf Ball: TaylorMade TP5
+   - Best Mid-Compression: Srixon Q-Star Tour
+   + Best Mid-Compression Golf Ball: Srixon Q-Star Tour
+   - Best Soft Feel: Callaway Chrome Soft
+   + Best Soft Feel Golf Ball: Callaway Chrome Soft
+   - Best for Slow Swing Speeds: Callaway Supersoft
+   + Best Golf Ball for Slow Swing Speeds: Callaway Supersoft
+   - Best Budget Distance: Bridgestone e12 Contact
+   + Best Budget Distance Golf Ball: Bridgestone e12 Contact
+   - Best for Slicers: Bridgestone e12 Straight
+   + Best Golf Ball for Slicers: Bridgestone e12 Straight
+   - Best Direct-to-Consumer: Vice Pro
+   + Best Direct-to-Consumer Golf Ball: Vice Pro
 
 /best-golf-gloves-hot-weather/
-   - Best Value: Callaway Dawn Patrol
-   + Best Value Golf Glove for Hot Weather: Callaway Dawn Patrol
+   - Best Ventilation: Titleist Players Flex
+   + Best Ventilation Golf Glove: Titleist Players Flex
 
 /best-golf-putters-2026/
-   - Best Overall: Odyssey White Hot OG
-   + Best Golf Putter Overall: Odyssey White Hot OG
-   - Best Premium: Scotty Cameron Phantom
-   + Best Premium Golf Putter: Scotty Cameron Phantom
-   - Best Budget: Cleveland HB Soft 2
-   + Best Budget Golf Putter: Cleveland HB Soft 2
+   - Best Stability: TaylorMade Spider Tour
+   + Best Stability Putter: TaylorMade Spider Tour
+
+/best-golf-gifts-for-him/
+   - Best Under $30: Personalized Golf Balls
+   + Best Gift Under $30: Personalized Golf Balls
+   - Best Under $15: Microfiber Golf Towel
+   + Best Gift Under $15: Microfiber Golf Towel
 
 /best-golf-shoes-for-walking/
-   - Best Premium: ECCO Biom C4
-   + Best Premium Golf Shoe for Walking: ECCO Biom C4
-   - Best Budget: Skechers Elite Vortex
-   + Best Budget Golf Shoe for Walking: Skechers Elite Vortex
+   - Best Spikeless: FootJoy Flex XP
+   + Best Spikeless Golf Shoe: FootJoy Flex XP
 
 /best-golf-gloves-for-men/
-   - Best Premium: Titleist Players Flex
-   + Best Premium Golf Glove for Men: Titleist Players Flex
+   - Best Overall for Men: FootJoy WeatherSof
+   + Best Overall for Men Golf Glove: FootJoy WeatherSof
+   - Best Wet Weather: FootJoy RainGrip
+   + Best Wet Weather Golf Glove: FootJoy RainGrip
 
 /best-golf-drivers-under-400/
-   - Best Overall 2026: Cobra DS-Adapt MAX-K
-   + Best Golf Driver Under $400 Overall: Cobra DS-Adapt MAX-K
+   - Best Forgiveness Upgrade: Callaway Big Bertha B21
+   + Best Forgiveness Upgrade Driver: Callaway Big Bertha B21
+   - Best New Budget: Cleveland Launcher XL
+   + Best New Budget Driver: Cleveland Launcher XL
 
-/best-golf-rangefinder-beginners/
-   - Best Overall: Precision Pro NX9
-   + Best Rangefinder for Beginners Overall: Precision Pro NX9
-   - Best Budget: Blue Tees Series 3 Max
-   + Best Budget Rangefinder for Beginners: Blue Tees Series 3 Max
+/best-golf-training-aids/
+   - Best Alignment: Alignment Sticks
+   + Best Alignment Training Aid: Alignment Sticks
+   - Best Impact Feedback: Impact Tape
+   + Best Impact Feedback Training Aid: Impact Tape
+   - Best Swing Tempo: Orange Whip
+   + Best Swing Tempo Training Aid: Orange Whip
+   - Best for Tempo: Lag Shot 7-Iron
+   + Best Training Aid for Tempo: Lag Shot 7-Iron
+   - Best for Putting: Putting Mirror
+   + Best Training Aid for Putting: Putting Mirror
+
+/best-golf-balls-under-30/
+   - Best Overall Under $30: Srixon Soft Feel
+   + Best Overall Golf Ball Under $30: Srixon Soft Feel
+   - Best Under $25: TaylorMade Noodle
+   + Best Golf Ball Under $25: TaylorMade Noodle
+   - Best for Slow Swings: Callaway Supersoft
+   + Best Golf Ball for Slow Swings: Callaway Supersoft
+   - Best Straight Flight: Bridgestone e12 Contact
+   + Best Straight Flight Golf Ball: Bridgestone e12 Contact
 
 /best-golf-balls-for-beginners/
-   - Softest Feel: TaylorMade Noodle
-   + Softest Feeling Golf Ball for Beginners: TaylorMade Noodle
+   - Best Overall for Beginners: Callaway Supersoft
+   + Best Overall for Beginners Golf Ball: Callaway Supersoft
+   - Best for a Slice: Bridgestone e12 Contact
+   + Best Golf Ball for a Slice: Bridgestone e12 Contact
+   - Best Value Bulk Buy: Kirkland Signature
+   + Best Value Bulk Buy Golf Ball: Kirkland Signature
 
 /best-golf-balls-under-40/
-   - Best Value: Vice Pro
-   + Best Value Golf Ball Under $40: Vice Pro
-
-/best-golf-balls-slow-swing-speed/
-   - Best Overall: Srixon Soft Feel
-   + Best Golf Ball for a Slow Swing Speed Overall: Srixon Soft Feel
-   - Best Budget: Callaway Supersoft
-   + Best Budget Golf Ball for a Slow Swing Speed: Callaway Supersoft
+   - Best Overall Under $40: Srixon Q-Star Tour
+   + Best Overall Golf Ball Under $40: Srixon Q-Star Tour
+   - Best Feel: TaylorMade Tour Response
+   + Best Feel Golf Ball: TaylorMade Tour Response
+   - Best From Titleist: Tour Soft
+   + Best From Titleist Golf Ball: Tour Soft
 
 /best-golf-rangefinders-under-200/
-   - Best Overall: Precision Pro NX9 — ~$199 (over the $200 budget)
-   + Best Rangefinder Under $200 Overall: Precision Pro NX9 — ~$199 (over the $200 budget)
+   - Best Value Under $200: Blue Tees Series 3 Max
+   + Best Rangefinder Under $200: Blue Tees Series 3 Max
 
 /best-golf-grip-trainers/
-   - Best Overall: SKLZ Golf Grip Trainer
-   + Best Golf Grip Trainer Overall: SKLZ Golf Grip Trainer
+   - Best for Connection Feedback: Tour Striker Smart Ball
+   + Best Grip Trainer for Connection Feedback: Tour Striker Smart Ball
 
-/best-gps-golf-watch-high-handicappers/
-   - Best Overall: Bushnell Ion Elite
-   + Best GPS Watch for High Handicappers Overall: Bushnell Ion Elite
-   - Best Budget: Garmin Approach S12
-   + Best Budget GPS Watch for High Handicappers: Garmin Approach S12
+/best-golf-simulator-small-spaces/
+   - Best Mid-Range Compact: Rapsodo MLM2PRO
+   + Best Mid-Range Compact Simulator: Rapsodo MLM2PRO
 
 /best-golf-rangefinder-for-seniors/
-   - Best Budget: Blue Tees Series 3 Max
-   + Best Budget Golf Rangefinder for Seniors: Blue Tees Series 3 Max
-
-/best-golf-gps-watch-under-200/
-   - Best Overall: Garmin Approach S12
-   + Best Golf GPS Watch Under $200 Overall: Garmin Approach S12
+   - Best for Seniors: Bushnell Tour V7 Shift
+   + Best Rangefinder for Seniors: Bushnell Tour V7 Shift
 
 /best-golf-launch-monitors-2026/
-   - Best Overall: Rapsodo MLM2PRO
-   + Best Golf Launch Monitor Overall: Rapsodo MLM2PRO
-   - Best Budget: Garmin Approach R10
-   + Best Budget Golf Launch Monitor: Garmin Approach R10
+   - Best Premium Portable: FlightScope Mevo Gen 2
+   + Best Premium Portable Launch Monitor: FlightScope Mevo Gen 2
+   - Best Under $200: Shot Scope LM1
+   + Best Launch Monitor Under $200: Shot Scope LM1
+   - Best for Range Sessions: Swing Caddie SC4 Pro
+   + Best Launch Monitor for Range Sessions: Swing Caddie SC4 Pro
+   - Best for Permanent Sim Builds: SkyTrak+
+   + Best Launch Monitor for Permanent Sim Builds: SkyTrak+
+   - Best Money-No-Object: Garmin Approach R50
+   + Best Money-No-Object Launch Monitor: Garmin Approach R50
+   - Most Portable: FlightScope Mevo
+   + Most Portable Launch Monitor: FlightScope Mevo
+
+/best-golf-gear-under-100/
+   - Best Budget Ball: Srixon Soft Feel
+   + Best Budget Ball Golf Gift: Srixon Soft Feel
+   - Best Range Tool: Alignment Sticks
+   + Best Range Tool Golf Gift: Alignment Sticks
 
 /best-beginner-golf-set-under-500/
-   - Best Value: Callaway Strata
-   + Best Value Beginner Golf Set Under $500: Callaway Strata
+   - Best for Growth: TaylorMade RBZ Speed Lite
+   + Best Set for Growth: TaylorMade RBZ Speed Lite
+   - Best Ultra-Budget: Wilson Profile SGI
+   + Best Ultra-Budget Set: Wilson Profile SGI
 
 /best-golf-balls-90-mph-swing-speed/
-   - Best Overall: Srixon Q-Star Tour
-   + Best Golf Ball for a 90 MPH Swing Speed Overall: Srixon Q-Star Tour
-   - Best Value: Bridgestone e12 Contact
-   + Best Value Golf Ball for a 90 MPH Swing Speed: Bridgestone e12 Contact
-
-/best-golf-ball-15-handicap/
-   - Runner-Up: Vice Pro ($33/dz)
-   + Runner-Up Golf Ball for a 15 Handicap: Vice Pro ($33/dz)
+   - Best Premium Feel: Callaway Chrome Soft
+   + Best Premium Feel Golf Ball: Callaway Chrome Soft
+   - Best Distance: Titleist Tour Speed
+   + Best Distance Golf Ball: Titleist Tour Speed
+   - Best Soft Feel: TaylorMade Tour Response
+   + Best Soft Feel Golf Ball: TaylorMade Tour Response
+   - Best Value Urethane: Vice Pro Soft
+   + Best Value Urethane Golf Ball: Vice Pro Soft
 
 /best-driver-for-high-handicapper/
-   - Best Overall: Callaway Paradym Ai Smoke Max ($399)
-   + Best High-Handicap Driver Overall: Callaway Paradym Ai Smoke Max ($399)
-   - Best Value: Cobra DS-Adapt MAX-K ($399)
-   + Best Value Driver for a High Handicapper: Cobra DS-Adapt MAX-K ($399)
-   - Best Budget: Cleveland Launcher XL2 ($299)
-   + Best Budget Driver for a High Handicapper: Cleveland Launcher XL2 ($299)
+   - Most Forgiving: Ping G430 Max ($419)
+   + Most Forgiving Driver: Ping G430 Max ($419)
+   - Best for Slicers: Callaway Paradym Ai Smoke Max D
+   + Best Driver for Slicers: Callaway Paradym Ai Smoke Max D
+   - Best for Very Slow Swingers: Callaway Big Bertha
+   + Best Driver for Very Slow Swingers: Callaway Big Bertha
+
+/best-budget-launch-monitor/
+   - Best Under $600: Garmin Approach R10
+   + Best Launch Monitor Under $600: Garmin Approach R10
+   - Best for Swing Video + Data: Rapsodo MLM2PRO
+   + Best Launch Monitor for Swing Video + Data: Rapsodo MLM2PRO
+   - Most Portable: FlightScope Mevo
+   + Most Portable Launch Monitor: FlightScope Mevo
+   - Best Under $300: Ernest Sports ES B1
+   + Best Launch Monitor Under $300: Ernest Sports ES B1
+   - Best Camera-Based: Square Golf (~$699)
+   + Best Camera-Based Launch Monitor: Square Golf (~$699)
+   - Best for Outdoor Only: Swing Caddie SC4 Pro
+   + Best Launch Monitor for Outdoor Only: Swing Caddie SC4 Pro
 
 /best-golf-swing-analyzer-iphone/
-   - Best Overall: Arccos Caddie Smart Sensors
-   + Best Golf Swing Analyzer for iPhone Overall: Arccos Caddie Smart Sensors
+   - Best for Garmin Users: Garmin CT10 Club Sensors
+   + Best Swing Analyzer for Garmin Users: Garmin CT10 Club Sensors
+
+/best-golf-training-aids-home-practice/
+   - Best for Putting: SKLZ Accelerator Pro Putting Mat
+   + Best Training Aid for Putting: SKLZ Accelerator Pro Putting Mat
+   - Best for Distance Control: Putt-A-Bout Par 3 Putting Green
+   + Best Training Aid for Distance Control: Putt-A-Bout Par 3 Putting Green
+   - Best for Arm Connection: Tour Striker Smart Ball
+   + Best Training Aid for Arm Connection: Tour Striker Smart Ball
+   - Best for Tempo: Orange Whip Trainer
+   + Best Training Aid for Tempo: Orange Whip Trainer
 
 /best-budget-launch-monitor-apartment/
-   - Best Value: Garmin Approach R10
-   + Best Value Apartment Launch Monitor: Garmin Approach R10
-   - Best Upgrade: Rapsodo MLM2PRO
-   + Best Upgrade Apartment Launch Monitor: Rapsodo MLM2PRO
+   - Best Overall Under $700: Square Golf
+   + Best Overall Launch Monitor Under $700: Square Golf
+   - Best Display: Swing Caddie SC4 Pro
+   + Best Display Launch Monitor: Swing Caddie SC4 Pro
 
 /best-junior-golf-clubs/
-   - Best Overall: Callaway XJ Junior Set
-   + Best Junior Golf Club Overall: Callaway XJ Junior Set
-   - Best Value: TaylorMade Team TM
-   + Best Value Junior Golf Club: TaylorMade Team TM
+   - Best for Serious Juniors: US Kids Tour Series
+   + Best Junior Club for Serious Juniors: US Kids Tour Series
+
+/best-golf-gifts-under-50/
+   - Best Groove Brush: $8 and Used Every Hole
+   + Best Groove Brush Gift: $8 and Used Every Hole
 
 /best-indoor-putting-green-office-home/
-   - Best Premium: BirdieBall Putting Green
-   + Best Premium Indoor Putting Green: BirdieBall Putting Green
+   - Best Desk-Size: Putt-A-Bout Par 1
+   + Best Desk-Size Putting Green: Putt-A-Bout Par 1
+   - Best Ball Return: SKLZ Accelerator Pro
+   + Best Ball Return Putting Green: SKLZ Accelerator Pro
 
 /best-training-aids-fix-slice/
-   - Best Overall: Lag Shot 7-Iron
-   + Best Training Aid to Fix a Slice Overall: Lag Shot 7-Iron
-   - Best Budget: Alignment Sticks ($12)
-   + Best Budget Training Aid to Fix a Slice: Alignment Sticks ($12)
-
-/best-golf-hitting-net-apartment-garage/
-   - Best Overall: Spornia SPG-7
-   + Best Golf Hitting Net for an Apartment Overall: Spornia SPG-7
+   - Best Visual Feedback: EyeLine Speed Trap 2.0
+   + Best Visual Feedback Training Aid: EyeLine Speed Trap 2.0
 
 /best-spikeless-golf-shoes-walking-18/
-   - Best Overall: Skechers Go Golf Elite 5
-   + Best Spikeless Golf Shoe Overall: Skechers Go Golf Elite 5
-   - Best Premium: ECCO Biom C4
-   + Best Premium Spikeless Golf Shoe: ECCO Biom C4
-   - Best Budget: FootJoy Flex XP
-   + Best Budget Spikeless Golf Shoe: FootJoy Flex XP
+   - Best Style: Nike Air Max 90 G
+   + Best Style Spikeless Shoe: Nike Air Max 90 G
 
 /best-swing-speed-trainer-over-40/
-   - Best Overall: SuperSpeed Golf Training System
-   + Best Swing Speed Trainer Overall: SuperSpeed Golf Training System
-   - Best Budget: Rypstick
-   + Best Budget Swing Speed Trainer Over 40: Rypstick
+   - Best Tech-Driven: The Stack
+   + Best Tech-Driven Swing Trainer: The Stack
+   - Best Warm-Up Tool: Orange Whip
+   + Best Warm-Up Tool Swing Trainer: Orange Whip
+
+/best-golf-driver-under-300/
+   - Best Overall Under $300: Cobra DARKSPEED X
+   + Best Overall Driver Under $300: Cobra DARKSPEED X
+   - Best Low-Spin Value: Srixon Z 785
+   + Best Low-Spin Value Driver: Srixon Z 785
 
 /best-golf-driver-slow-swing-speed/
-   - Best Premium: Ping G440 SFT
-   + Best Premium Driver for a Slow Swing Speed: Ping G440 SFT
+   - Best for Slow Swing Speeds: Callaway Paradym Ai Smoke Max
+   + Best Driver for Slow Swing Speeds: Callaway Paradym Ai Smoke Max
+   - Best Lightweight: Cleveland Launcher XL2
+   + Best Lightweight Driver: Cleveland Launcher XL2
+   - Best Draw Bias: Cobra DS-Adapt MAX-K
+   + Best Draw Bias Driver: Cobra DS-Adapt MAX-K
+   - Best Neutral Face: Cobra DS-Adapt X
+   + Best Neutral Face Driver: Cobra DS-Adapt X
 
 /best-budget-putters-under-150/
-   - Best Overall: Cleveland Huntington Beach Soft
-   + Best Putter Under $150 Overall: Cleveland Huntington Beach Soft
-
-/best-launch-monitors-no-subscription/
-   - Best Budget: Shot Scope LM1 ($199)
-   + Best Budget Launch Monitor Without a Subscription: Shot Scope LM1 ($199)
-   - Best Mid-Range: Swing Caddie SC4 Pro ($599)
-   + Best Mid-Range No-Subscription Launch Monitor: Swing Caddie SC4 Pro ($599)
-   - Best Premium: FlightScope Mevo Gen2 ($1,299)
-   + Best Premium No-Subscription Launch Monitor: FlightScope Mevo Gen2 ($1,299)
+   - Best for Beginners: Pinemeadow PGX
+   + Best Putter for Beginners: Pinemeadow PGX
+   - Best Value Blade: Wilson Staff Infinite
+   + Best Value Blade Putter: Wilson Staff Infinite
 
 /best-golf-push-carts-2026/
-   - Best Overall: KVV 3-Wheel Push Cart
-   + Best Golf Push Cart Overall: KVV 3-Wheel Push Cart
-   - Best Premium: Bag Boy Nitron Auto-Open
-   + Best Premium Golf Push Cart: Bag Boy Nitron Auto-Open
+   - Best Maneuverability: Clicgear Model 4.5
+   + Best Maneuverability Push Cart: Clicgear Model 4.5
 
 /best-golf-grips-sweaty-hands/
-   - Best Overall: Golf Pride Z-Grip Cord
-   + Best Golf Grip for Sweaty Hands Overall: Golf Pride Z-Grip Cord
-   - Best Budget: Lamkin Sonar
-   + Best Budget Golf Grip for Sweaty Hands: Lamkin Sonar
+   - Best Oversize: SuperStroke Zenergy Tour
+   + Best Oversize Grip: SuperStroke Zenergy Tour
 
-/best-golf-hitting-mats-home/
-   - Best Overall: Fiberbuilt Studio Mat
-   + Best Home Golf Hitting Mat Overall: Fiberbuilt Studio Mat
-   - Best Value: Spornia SPG Mat
-   + Best Value Home Golf Hitting Mat: Spornia SPG Mat
-   - Best Budget: Country Club Elite
-   + Best Budget Home Golf Hitting Mat: Country Club Elite
+/best-impact-screens-golf-simulator/
+   - Best for Shared Spaces: HomeCourse Retractable
+   + Best Impact Screen for Shared Spaces: HomeCourse Retractable
 
-/best-golf-simulator-projectors/
-   - Best Value: Optoma ZW350ST
-   + Best Value Golf Simulator Projector: Optoma ZW350ST
-   - Best Premium: Optoma GT2000HDR
-   + Best Premium Golf Simulator Projector: Optoma GT2000HDR
-
-/best-electric-golf-push-cart/
-   - Best Overall: MGI Zip Navigator
-   + Best Electric Golf Push Cart Overall: MGI Zip Navigator
-
-/best-golf-rain-gear-2026/
-   - Best Value: Under Armour Forefront Rain Jacket
-   + Best Value Golf Rain Gear: Under Armour Forefront Rain Jacket
-   - Best Premium: Galvin Green Gore-Tex
-   + Best Premium Golf Rain Gear: Galvin Green Gore-Tex
-   - Best Mid-Range: Zero Restriction
-   + Best Mid-Range Golf Rain Gear: Zero Restriction
+/best-golf-bags-walking-2026/
+   - Best Strap System: Ping Hoofer Lite
+   + Best Strap System Golf Bag: Ping Hoofer Lite
+   - Best Storage: Titleist Players 4
+   + Best Storage Golf Bag: Titleist Players 4
 
 /best-golf-shoes-bad-knees/
-   - Best Overall: Skechers Elite Vortex Arch Fit
-   + Best Golf Shoe for Bad Knees Overall: Skechers Elite Vortex Arch Fit
-   - Best Budget: New Balance Breeze V2
-   + Best Budget Golf Shoe for Bad Knees: New Balance Breeze V2
+   - Best Stability: FootJoy Superlites XP
+   + Best Stability Golf Shoe: FootJoy Superlites XP
+
+/best-golf-apps-for-apple-watch/
+   - Best for Shot Tracking: Arccos Caddie
+   + Best Golf App for Shot Tracking: Arccos Caddie
+
+/best-irons-under-500/
+   - Best Overall Under $500: Tour Edge Hot Launch C522 — $349.99
+   + Best Overall Iron Under $500: Tour Edge Hot Launch C522 — $349.99
 
 /best-wedges-for-beginners/
-   - Best Overall: Cleveland CBX4
-   + Best Wedge for Beginners Overall: Cleveland CBX4
+   - Best for Open-Face Shots: Callaway JAWS Full Toe
+   + Best Wedge for Open-Face Shots: Callaway JAWS Full Toe
 
 /best-hybrid-clubs-2026/
-   - Best Overall: Callaway Paradym
-   + Best Hybrid Club Overall: Callaway Paradym
-
-/best-golf-grips-2026/
-   - Best Overall: Golf Pride MCC Plus4
-   + Best Golf Grip Overall: Golf Pride MCC Plus4
+   - Most Forgiving: Ping G430
+   + Most Forgiving Hybrid: Ping G430
 
 /best-golf-gps-watch-under-300/
-   - Runner-Up: Garmin S12 ($199)
-   + Runner-Up Golf GPS Watch Under $300: Garmin S12 ($199)
+   - Best for Analytics: Shot Scope V5 ($249)
+   + Best GPS Watch for Analytics: Shot Scope V5 ($249)
+
+/best-launch-monitors-under-500/
+   - Best Overall Under $500: Garmin Approach R10 ($490)
+   + Best Overall Launch Monitor Under $500: Garmin Approach R10 ($490)
+   - Best Budget Pick: Shot Scope LM1 ($199)
+   + Best Budget Pick Launch Monitor: Shot Scope LM1 ($199)
+
+/best-golf-balls-for-distance/
+   - Best Overall for Distance: Titleist Velocity
+   + Best Overall for Distance Golf Ball: Titleist Velocity
+   - Best Budget Distance: Wilson DUO Soft+
+   + Best Budget Distance Golf Ball: Wilson DUO Soft+
 
 /best-golf-shirts/
-   - Best Overall: Nike Dri-FIT Victory
-   + Best Golf Shirt Overall: Nike Dri-FIT Victory
-   - Best Premium: FootJoy ProDry
-   + Best Premium Golf Shirt: FootJoy ProDry
-   - Best Value: Puma Cloudspun
-   + Best Value Golf Shirt: Puma Cloudspun
-
-/best-golf-pants/
-   - Best Overall: adidas Ultimate365 Pants
-   + Best Golf Pants Overall: adidas Ultimate365 Pants
-   - Best Value: Puma Jackpot Pants
-   + Best Value Golf Pants: Puma Jackpot Pants
-
-/best-golf-shorts/
-   - Best Overall: Under Armour Showdown
-   + Best Golf Shorts Overall: Under Armour Showdown
-   - Best Value: adidas Ultimate365 Shorts
-   + Best Value Golf Shorts: adidas Ultimate365 Shorts
+   - Best Stretch: adidas Ultimate365
+   + Best Stretch Golf Shirt: adidas Ultimate365
 
 /best-golf-hats/
-   - Best Overall: Titleist Tour Performance
-   + Best Golf Hat Overall: Titleist Tour Performance
-   - Best Value: Callaway CG Logo
-   + Best Value Golf Hat: Callaway CG Logo
-
-/best-golf-sunglasses/
-   - Best Premium: Maui Jim Banyans
-   + Best Premium Golf Sunglasses: Maui Jim Banyans
-   - Best Mid-Range: Tifosi Seek FC
-   + Best Mid-Range Golf Sunglasses: Tifosi Seek FC
-   - Best Budget: goodr OG
-   + Best Budget Golf Sunglasses: goodr OG
-
-/best-golf-rain-jacket/
-   - Best Overall: Galvin Green Gore-Tex
-   + Best Golf Rain Jacket Overall: Galvin Green Gore-Tex
-   - Best Value: Under Armour Forefront
-   + Best Value Golf Rain Jacket: Under Armour Forefront
-   - Best Mid-Range: FootJoy HydroLite
-   + Best Mid-Range Golf Rain Jacket: FootJoy HydroLite
+   - Best Fit System: Nike Legacy91
+   + Best Fit System Golf Hat: Nike Legacy91
 
 /best-golf-shoes/
-   - Best Overall: FootJoy Flex XP
-   + Best Golf Shoe Overall: FootJoy Flex XP
-   - Best Value: Skechers Elite Vortex
-   + Best Value Golf Shoe: Skechers Elite Vortex
+   - Best for Walking: ECCO Biom C4
+   + Best Golf Shoe for Walking: ECCO Biom C4
+   - Best Spiked: FootJoy Tour Alpha
+   + Best Spiked Golf Shoe: FootJoy Tour Alpha
+   - Best for Bad Knees: New Balance Breeze v2
+   + Best Golf Shoe for Bad Knees: New Balance Breeze v2
 
-/best-golf-towel/
-   - Best Overall: Frogger Amphibian
-   + Best Golf Towel Overall: Frogger Amphibian
-   - Best Value: Club Glove Microfiber
-   + Best Value Golf Towel: Club Glove Microfiber
+/best-golf-umbrella/
+   - Best Wind Resistance: GustBuster Pro
+   + Best Wind Resistance Umbrella: GustBuster Pro
+   - Best Coverage: Procella 68"
+   + Best Coverage Umbrella: Procella 68"
+
+/best-electric-golf-cart/
+   - Best Reliability: E-Z-GO RXV 2
+   + Best Reliability Electric Cart: E-Z-GO RXV 2
+   - Best Features: Club Car Onward
+   + Best Features Electric Cart: Club Car Onward
 
 /best-golf-cart-bag/
-   - Best Overall: Callaway Org 14
-   + Best Golf Cart Bag Overall: Callaway Org 14
-   - Best Premium: Titleist Players 4
-   + Best Premium Golf Cart Bag: Titleist Players 4
-
-/best-golf-stand-bag/
-   - Best Overall: Ping Hoofer 14
-   + Best Golf Stand Bag Overall: Ping Hoofer 14
-   - Best Value: OGIO Fuse
-   + Best Value Golf Stand Bag: OGIO Fuse
+   - Most Storage: PING 2026 Pioneer
+   + Most Storage Cart Bag: PING 2026 Pioneer
 
 /best-putters-yips/
-   - Best Overall: LAB Golf Mezz.1 Max
-   + Best Putter for the Yips Overall: LAB Golf Mezz.1 Max
-   - Best Budget: Heavy Mallet with Oversized Grip
-   + Best Budget Putter for the Yips: Heavy Mallet with Oversized Grip
+   - Best High-MOI: TaylorMade Spider GT
+   + Best High-MOI Putter: TaylorMade Spider GT
+   - Best Counterbalanced: Odyssey Stroke Lab
+   + Best Counterbalanced Putter: Odyssey Stroke Lab
+   - Best Armlock-Ready: Odyssey Two Ball Eleven
+   + Best Armlock-Ready Putter: Odyssey Two Ball Eleven
 
 /best-blade-putters-2026/
-   - Best Overall: Scotty Cameron Phantom X
-   + Best Blade Putter Overall: Scotty Cameron Phantom X
-   - Best Value: Cleveland Huntington Beach Soft
-   + Best Value Blade Putter: Cleveland Huntington Beach Soft
+   - Best Feel: Evnroll ER2
+   + Best Feel Blade Putter: Evnroll ER2
+   - Best Classic: TaylorMade TP Soto
+   + Best Classic Blade Putter: TaylorMade TP Soto
+   - Best Modern Blade: Odyssey Stroke Lab
+   + Best Modern Blade Blade Putter: Odyssey Stroke Lab
 
-/best-golf-gps-speakers-2026/
-   - Best Overall 2026: Bushnell Wingman 2
-   + Best Golf GPS Speaker Overall: Bushnell Wingman 2
+
+
+DELIBERATELY SKIPPED (31) — each with its reason
+==========================================================================
+
+/best-golf-irons-2026/
+   Best Value Now: Wilson Dynapower Irons
+   reason: noun already in product name: Wilson Dynapower Irons
+
+/best-golf-irons-2026/
+   Best Distance: Cobra Aerojet Max Irons
+   reason: noun already in product name: Cobra Aerojet Max Irons
+
+/best-golf-irons-2026/
+   Best Budget Forgiveness: Cleveland Launcher XL2 Irons
+   reason: noun already in product name: Cleveland Launcher XL2 Irons
+
+/best-golf-irons-2026/
+   Best Modern Feel: TaylorMade Qi Irons
+   reason: noun already in product name: TaylorMade Qi Irons
+
+/best-golf-irons-2026/
+   Best for a Slice: TaylorMade Stealth HD Irons
+   reason: noun already in product name: TaylorMade Stealth HD Irons
+
+/best-golf-training-aids/
+   Best Putting Aid: Putting Mirror
+   reason: stutter in prefix
+
+/best-golf-balls-under-30/
+   Best Value Per Ball: Kirkland Signature
+   reason: stutter in prefix
+
+/best-golf-balls-for-beginners/
+   Best Cheap Ball: Vice Drive
+   reason: stutter in prefix
+
+/best-golf-gps-watch-under-200/
+   Best Display: Bushnell Ion Elite — ~$199 (just inside the $200 budget)
+   reason: too long (80)
+
+/best-golf-irons-for-seniors/
+   Best for Seniors: Callaway Paradym Ai Smoke Max Irons
+   reason: noun already in product name: Callaway Paradym Ai Smoke Max Irons
+
+/best-golf-irons-for-seniors/
+   Best Value Now: Wilson Dynapower Irons
+   reason: noun already in product name: Wilson Dynapower Irons
+
+/best-golf-launch-monitors-2026/
+   Best No-Subscription Value: Square Golf Launch Monitor
+   reason: noun already in product name: Square Golf Launch Monitor
+
+/best-golf-clubs-20-handicap/
+   Best Ball for a 20 Handicap: Srixon Q-Star Tour
+   reason: prefix shape not handled: "Best Ball for a 20 Handicap"
+
+/best-golf-swing-analyzer-iphone/
+   Best Value GPS + Tracking: Shot Scope H4
+   reason: prefix shape not handled: "Best Value GPS + Tracking"
+
+/best-golf-swing-analyzer-iphone/
+   Best for Swing Data: Blast Motion Golf Swing Analyzer
+   reason: noun already in product name: Blast Motion Golf Swing Analyzer
+
+/best-golf-gifts-under-50/
+   Best Balls Under $30: Srixon Soft Feel (2 Dozen)
+   reason: prefix shape not handled: "Best Balls Under $30"
+
+/best-golf-hitting-net-apartment-garage/
+   Best for Garage: Net Return Pro
+   reason: noun already in product name: Net Return Pro
+
+/best-golf-driver-under-300/
+   Best Forgiveness Under $300: Tour Edge Hot Launch Max
+   reason: prefix shape not handled: "Best Forgiveness Under $300"
+
+/best-golf-driver-under-300/
+   Best Max-Forgiveness Under $300: Cobra DS-Adapt MAX-K (~$299)
+   reason: prefix shape not handled: "Best Max-Forgiveness Under $300"
+
+/best-golf-driver-under-300/
+   Best Lightweight Under $300: Cleveland Launcher XL2 (~$299)
+   reason: prefix shape not handled: "Best Lightweight Under $300"
+
+/best-budget-putters-under-150/
+   Also Worth a Look: Odyssey DFX — ~$170 (over the $150 budget)
+   reason: prefix shape not handled: "Also Worth a Look"
+
+/best-launch-monitors-no-subscription/
+   Also No Subscription: Square Golf ($699)
+   reason: prefix shape not handled: "Also No Subscription"
+
+/best-launch-monitors-no-subscription/
+   Also Budget, No Subscription: Ernest Sports ES B1 (~$200)
+   reason: prefix shape not handled: "Also Budget, No Subscription"
+
+/best-golf-push-carts-2026/
+   Best 4-Wheel: CaddyTek EZ V8
+   reason: prefix shape not handled: "Best 4-Wheel"
+
+/best-electric-golf-push-cart/
+   Best-Known Brand: Bag Boy Volt
+   reason: prefix shape not handled: "Best-Known Brand"
+
+/best-golf-balls-for-distance/
+   Best Under 85 mph: Callaway Supersoft
+   reason: prefix shape not handled: "Best Under 85 mph"
+
+/best-golf-balls-for-distance/
+   Best 85-100 mph: Vice Pro
+   reason: prefix shape not handled: "Best 85-100 mph"
+
+/best-golf-balls-for-distance/
+   Best 100+ mph: TaylorMade TP5
+   reason: prefix shape not handled: "Best 100+ mph"
+
+/best-golf-pants/
+   Best Slim Fit: Nike Dri-FIT Pants
+   reason: noun already in product name: Nike Dri-FIT Pants
+
+/best-golf-shorts/
+   Best Slim Fit: Nike Dri-FIT Shorts
+   reason: noun already in product name: Nike Dri-FIT Shorts
+
+/best-golf-cart-bag/
+   Best for a Cold Drink: Bag Boy Chiller Pro
+   reason: noun already in product name: Bag Boy Chiller Pro
 
