@@ -3749,7 +3749,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { slug: '/best-golf-balls-2026/', label: 'Best Golf Balls 2026' },
       { slug: '/golf-ball-compression-chart/', label: 'Golf Ball Compression Chart' },
       { slug: '/what-golf-ball-for-high-handicapper/', label: 'Best Ball for High Handicappers' },
-      { slug: '/compare/titleist-pro-v1-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft — Mid-Price Test' },
+      { slug: '/compare/srixon-q-star-tour-vs-callaway-chrome-soft/', label: 'Q-Star Tour vs Chrome Soft — Mid-Price Test' },
       { slug: '/best-golf-balls-for-seniors/', label: 'Best Golf Balls for Seniors' },
     ],
     comparisonTable: {

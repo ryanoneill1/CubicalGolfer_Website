@@ -1,33 +1,68 @@
-SPRINT 208 — the second link fix (both remaining wrong destinations)
+SPRINT 209 — three new ball comparison pages + the wrong anchors retargeted
 ==========================================================================
-Extract at the REPO ROOT. 2 files, no deletions.
+Extract at the REPO ROOT. 4 files, no deletions.
 
-WHAT CHANGED
-  src/pages/launch-monitor-buying-guide/index.astro   (lines 189-190)
+NEW PAGES (added to src/data/comparisons.ts)
+  /compare/vice-pro-vs-titleist-pro-v1/
+  /compare/callaway-supersoft-vs-srixon-soft-feel/
+  /compare/srixon-q-star-tour-vs-callaway-chrome-soft/
 
-  - <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO vs Garmin R10</a>
-  + <a href="/compare/garmin-r10-vs-rapsodo-mlm2pro/">Rapsodo MLM2PRO vs Garmin R10</a>
+  Every figure is taken from src/data/balls.ts, nothing typed by hand:
+    Vice Pro            90 compression  Urethane  $39   90-110 mph
+    Titleist Pro V1     87              Urethane  $58   90-115 mph
+    Callaway Supersoft  38              Ionomer   $27   up to 80 mph
+    Srixon Soft Feel    60              Ionomer   $25   75-95 mph
+    Srixon Q-Star Tour  74              Urethane  $40   85-100 mph
+    Callaway Chrome Soft 75             Urethane  $45   88-105 mph
 
-  - <a href="/skytrak-vs-mevo-plus/">SkyTrak+ vs Mevo Gen2</a>
-  + <a href="/compare/skytrak-plus-vs-flightscope-mevo-gen2/">SkyTrak+ vs Mevo Gen2</a>
+  All three are marked tested: false, which renders "How This Comparison Was
+  Built" and the line "we have not played these two head to head." We have
+  not, so that is what the page says.
 
-  Both anchors promised a head-to-head. The first pointed at a single-product
-  review; the second pointed at the Mevo+ page, which is a different and more
-  expensive unit than the Mevo Gen2 the anchor names.
+ANCHORS RETARGETED
+  src/pages/golf-ball-complete-guide/index.astro
+    Vice Pro vs Pro V1       /compare/pro-v1-vs-tp5/                          -> new page
+    Supersoft vs Soft Feel   /golf-ball-compression-chart/                    -> new page
+    Q-Star Tour vs Chrome Soft /compare/titleist-pro-v1-vs-callaway-chrome-soft/ -> new page
+    Also softened "We tested the most popular matchups side by side" to
+    "The matchups readers ask about most" — the old line claimed testing we
+    have not done on these three.
 
-  src/data/lastmod-manifest.json
-    /launch-monitor-buying-guide/
-      hash    fdae05956f653838 -> 64c6bace31d7532d
-      lastmod 2026-10-19       -> 2026-10-28
+  src/data/articles.ts
+    /best-golf-balls-slow-swing-speed/ related link, same Q-Star retarget.
 
 VERIFICATION
-  hash rule confirmed  : sha256(unmodified file)[:16] == fdae05956f653838,
-                         the exact pre-edit manifest entry
-  manifest entries     : 301 -> 301   (none added or removed)
-  entries changed      : 1            (this page only)
-  both destinations    : verified present in src/data/comparisons.ts and
-                         live on the site (HTTP 200)
-  other links          : untouched
+  comparisons.ts
+    parsed with node                : valid JavaScript, evaluates cleanly
+    records                         : 59 -> 62
+    existing records lost           : 0
+    existing records altered        : 0   (deep-compared field by field)
+    duplicate slugs                 : 0
+    winner is productA or productB  : all 3  (compare/[slug].astro throws otherwise)
+    product keys in AFFILIATE       : all 6 present
+    product keys in PRODUCT_DISPLAY : all 6 present (template throws otherwise)
+  articles.ts
+    parsed with node                : valid, 192 records (unchanged)
+    change                          : 1 related-link slug
+  lastmod-manifest.json
+    hash rule verified first        : reproduced all 59 existing comparison
+                                      hashes and 189 of 192 article hashes
+                                      exactly before computing new ones
+                                      (the 3 others use the documented
+                                      combined/override rules)
+    entries                         : 301 -> 304
+    entries changed                 : 5  (3 added, 2 updated)
+  routing
+    new slugs collide with ARTICLES : none
+    old link targets still exist    : pro-v1-vs-tp5, titleist-pro-v1-vs-
+                                      callaway-chrome-soft, taylormade-tp5-vs-
+                                      callaway-chrome-soft all still present
+  sitemap
+    sitemap-comparisons.xml.ts walks COMPARISONS, so the three pages are
+    listed automatically. No sitemap file needed. (Checked because the Vice
+    chart shipped orphaned in Sprint 203 for exactly this reason.)
 
-STILL TO COME
-  The 3 new ball comparison pages. No files needed from you.
+STILL OUTSTANDING
+  /golf-ball-finder/ carries the same three wrong anchors. That file is not in
+  my working copy and I would have had to retype 15KB by hand to edit it,
+  which risks corrupting it. Handling it separately — see the notes document.
