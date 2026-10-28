@@ -1,31 +1,33 @@
-SPRINT 207 — link destination fix (1 of 5)
+SPRINT 208 — the second link fix (both remaining wrong destinations)
 ==========================================================================
 Extract at the REPO ROOT. 2 files, no deletions.
 
 WHAT CHANGED
-  src/pages/golf-simulator-complete-guide/index.astro   (line 254)
+  src/pages/launch-monitor-buying-guide/index.astro   (lines 189-190)
 
-    - <a href="/rapsodo-mlm2pro-review/">Rapsodo vs Garmin R10</a>
-    + <a href="/compare/garmin-r10-vs-rapsodo-mlm2pro/">Rapsodo vs Garmin R10</a>
+  - <a href="/rapsodo-mlm2pro-review/">Rapsodo MLM2PRO vs Garmin R10</a>
+  + <a href="/compare/garmin-r10-vs-rapsodo-mlm2pro/">Rapsodo MLM2PRO vs Garmin R10</a>
 
-    The anchor promises a head-to-head; it pointed at the single-product
-    Rapsodo review. /compare/garmin-r10-vs-rapsodo-mlm2pro/ already exists
-    and is the correct destination (verified live, HTTP 200).
+  - <a href="/skytrak-vs-mevo-plus/">SkyTrak+ vs Mevo Gen2</a>
+  + <a href="/compare/skytrak-plus-vs-flightscope-mevo-gen2/">SkyTrak+ vs Mevo Gen2</a>
+
+  Both anchors promised a head-to-head. The first pointed at a single-product
+  review; the second pointed at the Mevo+ page, which is a different and more
+  expensive unit than the Mevo Gen2 the anchor names.
 
   src/data/lastmod-manifest.json
-    /golf-simulator-complete-guide/
-      hash    6b276c998ca41082 -> 14768ea4341f03d8
-      lastmod 2026-10-22       -> 2026-10-28
+    /launch-monitor-buying-guide/
+      hash    fdae05956f653838 -> 64c6bace31d7532d
+      lastmod 2026-10-19       -> 2026-10-28
 
 VERIFICATION
-  manifest entries        : 301 -> 301   (no entries added or removed)
-  entries changed         : 1            (the simulator guide only)
-  hash rule confirmed     : sha256(file)[:16] matched the pre-edit manifest
-                            entry exactly before the change was made
-  destination exists      : /compare/garmin-r10-vs-rapsodo-mlm2pro/  HTTP 200
-  other links on the page : untouched
+  hash rule confirmed  : sha256(unmodified file)[:16] == fdae05956f653838,
+                         the exact pre-edit manifest entry
+  manifest entries     : 301 -> 301   (none added or removed)
+  entries changed      : 1            (this page only)
+  both destinations    : verified present in src/data/comparisons.ts and
+                         live on the site (HTTP 200)
+  other links          : untouched
 
-NOT IN THIS ZIP (needs files I do not have — see the notes document)
-  - SkyTrak+ vs Mevo Gen2 fix on /launch-monitor-buying-guide/
-  - Rapsodo fix on /launch-monitor-buying-guide/
-  - The 3 new ball comparison pages
+STILL TO COME
+  The 3 new ball comparison pages. No files needed from you.
