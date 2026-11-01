@@ -23,9 +23,17 @@
  */
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
+import { COMPARISONS } from '../src/data/comparisons';
 
 const DIST = join(process.cwd(), 'dist');
-const PER_CTA_CEILING = 60;   // one per /compare/ page + the disclosure page quoting itself
+// One per /compare/ page, plus the disclosure page quoting itself.
+// Sprint 211: this was hardcoded at 60 and broke the build every time a
+// comparison was added — three new ball comparisons took the real count to
+// 63 and failed a guard that was not detecting a defect. Derived from
+// COMPARISONS so the number tracks the pages it is counting. The guard still
+// does its job: a per-CTA disclosure line reappearing anywhere OTHER than a
+// compare page pushes the count above this and fails.
+const PER_CTA_CEILING = COMPARISONS.length + 1;
 
 if (!existsSync(DIST)) {
   console.log('validate-cta-geometry: no dist/ yet — skipped (runs after astro build).');

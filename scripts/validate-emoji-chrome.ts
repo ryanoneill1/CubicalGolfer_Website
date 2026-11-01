@@ -29,7 +29,7 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIST = join(process.cwd(), 'dist');
-const CEILING = 467;   // lowered in Sprint 180 (homepage intent/featured blocks moved to classes)
+const CEILING = 408;   // lowered in Sprint 211 (the 'More for Cubicle Golfers' building glyph on all 62 compare pages moved to <Icon name="building"/>)
 
 if (!existsSync(DIST)) {
   console.log('validate-emoji-chrome: no dist/ yet — skipped (runs after astro build).');

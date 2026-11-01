@@ -1,68 +1,101 @@
-SPRINT 209 — three new ball comparison pages + the wrong anchors retargeted
+SPRINTS 210 + 211 — ball-finder anchors + the three build failures
 ==========================================================================
-Extract at the REPO ROOT. 4 files, no deletions.
+Extract at the REPO ROOT. 9 files, no deletions.
+Built and VERIFIED against a full `npm run build` in a clean clone of main:
+EXIT CODE 0, 100 validators passed, 0 failures.
 
-NEW PAGES (added to src/data/comparisons.ts)
-  /compare/vice-pro-vs-titleist-pro-v1/
-  /compare/callaway-supersoft-vs-srixon-soft-feel/
-  /compare/srixon-q-star-tour-vs-callaway-chrome-soft/
+--------------------------------------------------------------------------
+1. THE BUILD FAILURE YOU SENT  (validate-emoji-chrome: 470 vs ceiling 467)
+--------------------------------------------------------------------------
+Cause: each of the three new comparison pages renders one building glyph in
+the "More for Cubicle Golfers" heading. 467 + 3 = 470.
 
-  Every figure is taken from src/data/balls.ts, nothing typed by hand:
-    Vice Pro            90 compression  Urethane  $39   90-110 mph
-    Titleist Pro V1     87              Urethane  $58   90-115 mph
-    Callaway Supersoft  38              Ionomer   $27   up to 80 mph
-    Srixon Soft Feel    60              Ionomer   $25   75-95 mph
-    Srixon Q-Star Tour  74              Urethane  $40   85-100 mph
-    Callaway Chrome Soft 75             Urethane  $45   88-105 mph
+Fix, per the validator's own instruction:
+  src/pages/compare/[slug].astro
+    - <p ...>[building emoji] More for Cubicle Golfers</p>
+    + <p ...><Icon name="building" /> More for Cubicle Golfers</p>
+  Icon was already imported on that page. This removes the glyph from all 62
+  comparison pages, not just the new three.
 
-  All three are marked tested: false, which renders "How This Comparison Was
-  Built" and the line "we have not played these two head to head." We have
-  not, so that is what the page says.
+  scripts/validate-emoji-chrome.ts
+    CEILING 467 -> 408   (ratchets DOWN, as the file requires)
+  Measured: 473 before, 408 after.
 
-ANCHORS RETARGETED
-  src/pages/golf-ball-complete-guide/index.astro
-    Vice Pro vs Pro V1       /compare/pro-v1-vs-tp5/                          -> new page
-    Supersoft vs Soft Feel   /golf-ball-compression-chart/                    -> new page
-    Q-Star Tour vs Chrome Soft /compare/titleist-pro-v1-vs-callaway-chrome-soft/ -> new page
-    Also softened "We tested the most popular matchups side by side" to
-    "The matchups readers ask about most" — the old line claimed testing we
-    have not done on these three.
+--------------------------------------------------------------------------
+2. THE NEXT FAILURE, WHICH CI HAD NOT REACHED YET
+--------------------------------------------------------------------------
+validate-cta-geometry: per-CTA disclosure rendered 63 times, ceiling 60.
 
-  src/data/articles.ts
-    /best-golf-balls-slow-swing-speed/ related link, same Q-Star retarget.
+This one was NOT a defect. The ceiling's own comment reads "one per /compare/
+page + the disclosure page quoting itself" — it was 59 pages + 1 = 60. There
+are now 62 pages, so the true count is 63. The guard was failing on correct,
+FTC-required disclosure copy, and would fail again on every future comparison.
 
+  scripts/validate-cta-geometry.ts
+    - const PER_CTA_CEILING = 60;
+    + const PER_CTA_CEILING = COMPARISONS.length + 1;
+  The guard still works: a per-CTA disclosure appearing on any page that is
+  NOT a comparison page pushes the count above this and fails.
+
+--------------------------------------------------------------------------
+3. THE THIRD FAILURE — AND THE REAL STORY BEHIND THE ORIGINAL BUG
+--------------------------------------------------------------------------
+validate-redirects: 3 URLs both built and redirected; 42 internal links into
+a redirect.
+
+public/_redirects already contained these three lines, added 23 July 2026:
+
+  /compare/srixon-q-star-tour-vs-callaway-chrome-soft/ -> /compare/titleist-pro-v1-vs-callaway-chrome-soft/
+  /compare/callaway-supersoft-vs-srixon-soft-feel/     -> /golf-ball-compression-chart/
+  /compare/vice-pro-vs-titleist-pro-v1/                -> /compare/pro-v1-vs-tp5/
+
+Those are the exact three pages Sprint 209 created, redirecting to the exact
+three destinations the "wrong" anchors pointed at. The anchors were never
+random: the pages were retired and the links were pointed at the redirect
+targets. Only the anchor TEXT was left stale, which is what you spotted.
+
+Git history: the three records were added and removed on 21 July, and the
+redirects added on 23 July. No reason was recorded, and unlike every other
+retired page these three were never added to REDIRECTED_AWAY in
+src/lib/sitemap-utils.ts, which is where documented retirements live.
+
+  public/_redirects — the 3 lines above REMOVED (125 rules -> 122)
+
+A URL cannot be both a live page and a 301. You asked for the pages, so the
+redirects go. ** If those pages were retired deliberately in July, say so and
+I will reverse this instead: restore the redirects, delete the three records,
+and fix the anchor TEXT to describe where the links actually land. **
+
+--------------------------------------------------------------------------
+4. SPRINT 210 — the last three wrong anchors
+--------------------------------------------------------------------------
+  src/pages/golf-ball-finder/index.astro (lines 204-206) — the same three
+  anchors retargeted to the new comparison pages.
+
+  src/data/lastmod-manifest.json
+    /golf-ball-finder/  d8f1c501f3134a40 -> 6c5a7f786b634c52
+
+  Hash rule: /golf-ball-finder/ is a DATA_DEPS page, so its hash is
+  sha(sha(file) + sha(balls.ts + ball-brands.ts)). The plain sha(file) rule
+  was tried first, FAILED against the existing manifest entry, and
+  update-lastmod.ts was read rather than guessed.
+
+  Also included: the 3 compare thumbnails for the new pages (tracked files;
+  the build regenerates them, these keep the repo set complete).
+
+--------------------------------------------------------------------------
 VERIFICATION
-  comparisons.ts
-    parsed with node                : valid JavaScript, evaluates cleanly
-    records                         : 59 -> 62
-    existing records lost           : 0
-    existing records altered        : 0   (deep-compared field by field)
-    duplicate slugs                 : 0
-    winner is productA or productB  : all 3  (compare/[slug].astro throws otherwise)
-    product keys in AFFILIATE       : all 6 present
-    product keys in PRODUCT_DISPLAY : all 6 present (template throws otherwise)
-  articles.ts
-    parsed with node                : valid, 192 records (unchanged)
-    change                          : 1 related-link slug
-  lastmod-manifest.json
-    hash rule verified first        : reproduced all 59 existing comparison
-                                      hashes and 189 of 192 article hashes
-                                      exactly before computing new ones
-                                      (the 3 others use the documented
-                                      combined/override rules)
-    entries                         : 301 -> 304
-    entries changed                 : 5  (3 added, 2 updated)
-  routing
-    new slugs collide with ARTICLES : none
-    old link targets still exist    : pro-v1-vs-tp5, titleist-pro-v1-vs-
-                                      callaway-chrome-soft, taylormade-tp5-vs-
-                                      callaway-chrome-soft all still present
-  sitemap
-    sitemap-comparisons.xml.ts walks COMPARISONS, so the three pages are
-    listed automatically. No sitemap file needed. (Checked because the Vice
-    chart shipped orphaned in Sprint 203 for exactly this reason.)
+--------------------------------------------------------------------------
+  full `npm run build`     : EXIT 0, 100 validators passed, 0 failures
+  lastmod --check          : manifest matches all 304 pages
+  emoji                    : 408 / ceiling 408
+  per-CTA disclosure       : 63 / 63
+  redirects                : 0 problems
+  internal links           : 0 pointing at a redirect
+  manifest entries         : 304 -> 304, 1 entry changed
+  build artifacts          : NOT included — CI regenerates OG images, PDFs,
+                             search-index and llms-full.txt on every build
 
-STILL OUTSTANDING
-  /golf-ball-finder/ carries the same three wrong anchors. That file is not in
-  my working copy and I would have had to retype 15KB by hand to edit it,
-  which risks corrupting it. Handling it separately — see the notes document.
+ADVISORY the build printed, not actioned (tell me if you want it):
+  Inline styles: 375 off-grid values against a ceiling of 395 — 20 below.
+  The build suggests lowering INLINE_CEILING to 375.
