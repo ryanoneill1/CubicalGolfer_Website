@@ -1,103 +1,95 @@
-SPRINT 212 — Black Friday hub rebuilt + launch-monitor page added
+SPRINT 213 — Blue Tees Rainmaker: a $100 price error, and the page it broke
 ==========================================================================
-Extract at the REPO ROOT. 4 files, no deletions.
-Built from a clean clone of main (aa6cf31) and VERIFIED with a full
-`npm run build`: EXIT 0, 100 validators passed, 0 failures.
+Extract at the REPO ROOT. 3 files, no deletions.
+Verified with a full `npm run build`: EXIT 0, 0 failures.
 
 --------------------------------------------------------------------------
-1. HUB REBUILT — /black-friday-golf-deals/
+WHAT WAS WRONG
 --------------------------------------------------------------------------
-Expanded 5 categories -> 8, matching the query families Google's own
-autocomplete returns. H2s now use the exact phrasings people search:
+The registry carried the Blue Tees Rainmaker at ~$599, verified 16 October.
+PlayBetter sells it at $499.99 today, and Blue Tees list the same on their
+own site. Checked twice on 1 November, hours apart, so it is a real price
+drop and not a flash sale.
 
-   Black Friday golf launch monitor deals     (was "Launch monitor deals")
-   Black Friday golf simulator deals          NEW
-   Black Friday golf rangefinder deals        (was "Rangefinder deals")
-   Black Friday golf GPS watch deals          NEW
-   Black Friday golf club deals               (was "Driver deals")
-   Black Friday golf ball deals               (was "Golf ball deals")
-   Black Friday golf shoe deals               (was "Shoes and apparel deals")
-   Black Friday golf bag deals                NEW
+That is a $100 overstatement on a live product recommendation, in the
+direction that makes you look expensive to anyone who clicks through.
 
-  - FAQ expanded 2 -> 6, covering the autocomplete questions
-    ("when do they start", "is Prime Day better", "are club deals real")
-  - dateModified 2026-09-05 -> 2026-11-01
-  - Every price re-stated with the 1 Nov verification date
-  - Links to the new launch-monitor page
+It also broke a page. /blue-tees-rainmaker-vs-swing-caddie-sc4-pro/ was
+titled "Same $599, Different Buy" and its whole argument was that the two
+units cost the same so the app fee decides it. That premise is now false.
 
 --------------------------------------------------------------------------
-2. NEW PAGE — /black-friday-golf-launch-monitor-deals/
+WHAT CHANGED
 --------------------------------------------------------------------------
-Targets the ONE Black Friday SERP with no national publishers on it:
-shopindoorgolf, reddit, skytrakgolf, playbetter, thegolfwire,
-rainorshinegolf, gunghogolf, simplygolfsimulators. It is also the highest-
-commission category on the site ($5.97-$89.97/sale vs $0.66-$1.74 on balls).
+src/data/affiliate-links.ts  — blue-tees-rainmaker
+    price       ~$599      -> ~$500
+    verifiedOn  2026-10-16 -> 2026-11-01
+    priceNote   rewritten with the drop, both sources, and the app fee
 
-  5 sections (under $500 / under $1,000 / simulator grade / what to watch
-  for / is it worth waiting), 5 FAQs, 3 affiliate products, 1,900 words.
+src/data/articles.ts — /blue-tees-rainmaker-vs-swing-caddie-sc4-pro/
+  11 scoped edits. The comparison is now an honest crossover story rather
+  than a dead heat:
 
---------------------------------------------------------------------------
-3. PRICES — verified 1 November 2026, from the retailers themselves
---------------------------------------------------------------------------
-Confirmed CORRECT against live retailer pages:
-   Bushnell Tour V7 Shift   $399.99   (Bushnell)
-   Bushnell Wingman HD      $249.99   (Bushnell)
-   SkyTrak+                 $1,195    (PlayBetter structured data)
+    titleDisplay   "Same $599, Different Buy"  ->  "$100 Apart"
+    description    rewritten
+    excerpt        rewritten
+    intro          "Both of these cost $599"  ->  the real prices
+    whoFor         "$599 to spend"  ->  "around $500 to spend"
+    Price & TCO    rebuilt around the new arithmetic
+    Verdict        "cheaper from year two"  ->  "from year three"
+    dateModified   2026-10-16 -> 2026-11-01
 
-Bushnell's only live discount on 1 Nov, now named on both pages:
-   Launch Pro Simulator Bundle  $4,499.99, was $6,499.99
+  The new arithmetic, with the LAUNCH app at $79/year after a free first
+  year, unchanged from the original page:
+
+    year 1   Rainmaker $500   SC4 Pro $599    Rainmaker ahead by $99
+    year 2   Rainmaker $579   SC4 Pro $599    Rainmaker still ahead
+    year 3   Rainmaker $658   SC4 Pro $599    SC4 Pro ahead
+    year 5   Rainmaker $816   SC4 Pro $599    SC4 Pro ahead by $217
+
+  The crossover moved from year two to year three. The conclusion still
+  favours the SC4 Pro long term, but the Rainmaker is now the cheaper buy
+  for the first two years rather than a straight tie.
+
+src/data/lastmod-manifest.json — that one page rehashed
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
-  full `npm run build`   : EXIT 0, 100 validators passed, 0 failures
-  ARTICLES               : parsed with node, 192 -> 193 records
-  records lost/altered   : 0  (all 192 existing slugs present)
-  lastmod --check        : manifest matches all 305 pages
-  manifest               : 304 -> 305 entries, 2 changed
-  hash rule verified     : reproduced 189 of 192 untouched article hashes
-                           before computing new ones (the other 3 are the
-                           documented combined/override cases)
-  new page in sitemap    : yes, sitemap-articles.xml
-  Quick Answer           : 154 product pages all sell what they recommend
-  CTA integrity          : 0 pages name a pick the button does not sell
-  emoji                  : 408 / ceiling 408 (new page adds none)
-  per-CTA disclosure     : 63 / 63
-  build artifacts        : NOT included except the two new assets below;
-                           CI regenerates OG images, PDFs, search index
-
-  Included new assets (tracked file types):
-    public/images/og/black-friday-golf-launch-monitor-deals.jpg
-    public/images/thumbnails/black-friday-golf-launch-monitor-deals-thumb.webp
+  full `npm run build`      : EXIT 0, 0 failures
+  parse check before write  : both files imported with tsx (the build's own
+                              runner) BEFORE anything was written —
+                              193 article records, 356 affiliate keys
+  record set                : unchanged, 193 records
+  edits                     : scoped to this one record; every substitution
+                              asserted to match exactly once inside it
+  Internal arithmetic       : 0 mismatches (ceiling 0) — confirms the
+                              $500/$579/$658/$816 figures agree
+  Section vs own prose      : 0 contradictions across 285 priced sections
+  Table/registry drift      : 20, unchanged, still at ceiling
+  manifest                  : 305 -> 305 entries, 1 changed
+  hash rule                 : reproduced 190 of 193 untouched article hashes
+                              before computing the new one
+  rendered page re-read     : no "Same $599" / "Both list at $599" language
+                              left anywhere in the HTML
 
 --------------------------------------------------------------------------
-TWO THINGS I FOUND AND DID NOT ACT ON — both need your call
+A NOTE ON PROCESS
 --------------------------------------------------------------------------
-A. BLUE TEES RAINMAKER IS $100 OVERPRICED ON THE SITE
-   registry says ~$599 (verified 16 Oct); PlayBetter sells it at $499.99
-   today. I did not change it, because the fix cascades: the page
-   /blue-tees-rainmaker-vs-swing-caddie-sc4-pro/ is built entirely on the
-   two units costing "the same $599", and that premise is now false.
-   Fixing the price means rewriting that comparison. Separate job.
-
-B. PRECISION PRO NX9 HD LOOKS DISCONTINUED
-   precisionprogolf.com now lists Titan Elite $399.99, Titan Slope $299.99
-   and NX10 Slope $249.99. No NX9. The registry carries it at ~$199 and it
-   was the anchor product of the old rangefinder section.
-   Per your standing rule I have NOT marked it discontinued or changed its
-   link. I did stop featuring it: the rebuilt rangefinder section anchors on
-   the Bushnell Tour V7 Shift, whose $399.99 I verified today.
-
-ALSO NOTED, NOT CHANGED
-   Bushnell iON Elite: registry ~$199, Bushnell's own site $219.99 today.
-   Inline styles advisory: 375 off-grid vs ceiling 395 — free ratchet to 375.
+Two of my own safety checks were wrong during this sprint and caught
+themselves before any file was touched: a brace-balance checker that failed
+on the UNMODIFIED repo file, and a node parse that could not read the
+TypeScript. Both were replaced with a tsx import of the real file. Nothing
+was written until a real parser accepted both files.
 
 --------------------------------------------------------------------------
-THE DATE THAT MATTERS
+STILL OPEN
 --------------------------------------------------------------------------
-No retailer had published a Black Friday price on 1 November. Bushnell,
-PlayBetter and Golf Galaxy publish mid-November. Both pages say so plainly
-and carry dated pre-sale prices instead of invented discounts.
+  Precision Pro NX9 HD looks discontinued (their site now lists Titan Elite
+  $399.99, Titan Slope $299.99, NX10 $249.99 and no NX9). Registry has it at
+  ~$199. Your rule is that I check before marking anything discontinued or
+  changing its links, so it is untouched and awaiting your call.
 
-** These pages need a second pass in the week of 17 November, when the real
-deals land. That refresh is the one that must not slip. **
+  Bushnell iON Elite: registry ~$199, Bushnell's own site $219.99.
+
+  Black Friday pages need their price refresh in the week of 17 November.
