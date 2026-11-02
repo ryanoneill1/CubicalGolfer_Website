@@ -1,95 +1,92 @@
-SPRINT 213 — Blue Tees Rainmaker: a $100 price error, and the page it broke
+SPRINT 214 — ball finder unified, stale labels fixed, ratchet tightened
 ==========================================================================
-Extract at the REPO ROOT. 3 files, no deletions.
-Verified with a full `npm run build`: EXIT 0, 0 failures.
+Extract at the REPO ROOT. 4 files, no deletions.
+Verified with a full `npm run build`: EXIT 0, 100 validators, 0 failures.
 
 --------------------------------------------------------------------------
-WHAT WAS WRONG
+1. THE BALL FINDER WAS WORSE THAN I REPORTED
 --------------------------------------------------------------------------
-The registry carried the Blue Tees Rainmaker at ~$599, verified 16 October.
-PlayBetter sells it at $499.99 today, and Blue Tees list the same on their
-own site. Checked twice on 1 November, hours apart, so it is a real price
-drop and not a flash sale.
+I told you two figures disagreed with balls.ts. I checked all of them:
+16 of its 19 rows were wrong.
 
-That is a $100 overstatement on a live product recommendation, in the
-direction that makes you look expensive to anyone who clicks through.
+  Five wrong compression figures:
+     Srixon Soft Feel      finder 50   balls.ts 60
+     Vice Pro              finder 75   balls.ts 90
+     TaylorMade Tour Resp. finder 70   balls.ts 77
+     Callaway Chrome Tour  finder 87   balls.ts 90
+     Titleist AVX          finder 78   balls.ts 77
+  Plus wrong prices and wrong swing-speed bands on most rows.
 
-It also broke a page. /blue-tees-rainmaker-vs-swing-caddie-sc4-pro/ was
-titled "Same $599, Different Buy" and its whole argument was that the two
-units cost the same so the app fee decides it. That premise is now false.
+  The page told readers "Data from our compression chart, independently
+  verified" while showing different numbers to the chart.
+
+  FIX: the hardcoded array is gone. The tool now derives every ball from
+  balls.ts and cannot drift again. `feel` is computed from compression;
+  `bestFor` is the one editorial field, curated where a line was worth
+  keeping and derived from cover + speed band otherwise.
+
+  Side effect worth having: the tool went from 19 balls to 34 — it now
+  covers the whole chart instead of a hand-picked subset. Stated counts
+  on the page updated to match (they said "19" in four places).
+
+  Verified in the built HTML: 34 rows, every name present in balls.ts,
+  every compression and price matching.
 
 --------------------------------------------------------------------------
-WHAT CHANGED
+2. THIRTEEN STALE "SIMULATOR" LABELS
 --------------------------------------------------------------------------
-src/data/affiliate-links.ts  — blue-tees-rainmaker
-    price       ~$599      -> ~$500
-    verifiedOn  2026-10-16 -> 2026-11-01
-    priceNote   rewritten with the drop, both sources, and the app fee
+Related-link labels across 13 pages promised simulators and delivered the
+launch monitor roundup (the old /best-golf-simulators/ 301s there). The
+destination was right; the wording was left over from the consolidation.
 
-src/data/articles.ts — /blue-tees-rainmaker-vs-swing-caddie-sc4-pro/
-  11 scoped edits. The comparison is now an honest crossover story rather
-  than a dead heat:
+  "Best Golf Simulators (All Budgets)"    -> "Best Launch Monitors (All Budgets)"     x5
+  "Best Golf Simulators for Small Spaces" -> "Best Launch Monitors for Small Spaces"  x2
+  "Simulators Under $5,000"               -> "Launch Monitors Under $5,000"
+  "Simulator Under $5,000"                -> "Launch Monitors Under $5,000"
+  "Simulator for Beginners"               -> "Launch Monitors for Beginners"
+  "Simulator Under $1,000"                -> "Launch Monitors Under $1,000"
+  "Best Simulators for Small Spaces"      -> "Best Launch Monitors for Small Spaces"
+  "Best Simulator Under $1,000"           -> "Best Launch Monitor Under $1,000"
+  plus one inline anchor, "simulators under $1,000"
 
-    titleDisplay   "Same $599, Different Buy"  ->  "$100 Apart"
-    description    rewritten
-    excerpt        rewritten
-    intro          "Both of these cost $599"  ->  the real prices
-    whoFor         "$599 to spend"  ->  "around $500 to spend"
-    Price & TCO    rebuilt around the new arithmetic
-    Verdict        "cheaper from year two"  ->  "from year three"
-    dateModified   2026-10-16 -> 2026-11-01
-
-  The new arithmetic, with the LAUNCH app at $79/year after a free first
-  year, unchanged from the original page:
-
-    year 1   Rainmaker $500   SC4 Pro $599    Rainmaker ahead by $99
-    year 2   Rainmaker $579   SC4 Pro $599    Rainmaker still ahead
-    year 3   Rainmaker $658   SC4 Pro $599    SC4 Pro ahead
-    year 5   Rainmaker $816   SC4 Pro $599    SC4 Pro ahead by $217
-
-  The crossover moved from year two to year three. The conclusion still
-  favours the SC4 Pro long term, but the Rainmaker is now the cheaper buy
-  for the first two years rather than a straight tie.
-
-src/data/lastmod-manifest.json — that one page rehashed
+--------------------------------------------------------------------------
+3. INLINE-STYLE RATCHET
+--------------------------------------------------------------------------
+  scripts/validate-spacing-scale.ts  INLINE_CEILING 395 -> 375
+  The build's own advisory. Count is 375 and has not moved since Sprint
+  184, so this is free and locks in the gain.
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
-  full `npm run build`      : EXIT 0, 0 failures
-  parse check before write  : both files imported with tsx (the build's own
-                              runner) BEFORE anything was written —
-                              193 article records, 356 affiliate keys
-  record set                : unchanged, 193 records
-  edits                     : scoped to this one record; every substitution
-                              asserted to match exactly once inside it
-  Internal arithmetic       : 0 mismatches (ceiling 0) — confirms the
-                              $500/$579/$658/$816 figures agree
-  Section vs own prose      : 0 contradictions across 285 priced sections
-  Table/registry drift      : 20, unchanged, still at ceiling
-  manifest                  : 305 -> 305 entries, 1 changed
-  hash rule                 : reproduced 190 of 193 untouched article hashes
-                              before computing the new one
-  rendered page re-read     : no "Same $599" / "Both list at $599" language
-                              left anywhere in the HTML
+  full `npm run build`   : EXIT 0, 100 validators, 0 failures
+  parse check pre-write  : articles.ts and affiliate-links.ts imported with
+                           tsx BEFORE writing (193 records, 356 keys)
+  manifest               : regenerated with the repo's own
+                           scripts/update-lastmod.ts rather than by hand
+                           305 -> 305 entries, 14 changed, all expected
+  ball finder rendered   : 34 rows, 0 names absent from balls.ts,
+                           Soft Feel 60/$25, Vice Pro 90/$39,
+                           Chrome Soft 75/$45 all now agree with the chart
+  Compression chart      : 34 priced rows still match the registry
+  Stated ball counts     : 5 claims, all agree with balls.ts (36)
 
 --------------------------------------------------------------------------
-A NOTE ON PROCESS
+WHAT I STARTED AND BACKED OUT — needs your call
 --------------------------------------------------------------------------
-Two of my own safety checks were wrong during this sprint and caught
-themselves before any file was touched: a brace-balance checker that failed
-on the UNMODIFIED repo file, and a node parse that could not read the
-TypeScript. Both were replaced with a tsx import of the real file. Nothing
-was written until a real parser accepted both files.
+BUSHNELL iON ELITE. I changed it from ~$199 to ~$220 (Bushnell's own site
+says $219.99 today) and the build immediately caught the consequence:
 
---------------------------------------------------------------------------
-STILL OPEN
---------------------------------------------------------------------------
-  Precision Pro NX9 HD looks discontinued (their site now lists Titan Elite
-  $399.99, Titan Slope $299.99, NX10 $249.99 and no NX9). Registry has it at
-  ~$199. Your rule is that I check before marking anything discontinued or
-  changing its links, so it is untouched and awaiting your call.
+   /best-golf-gps-watch-under-200/ promises "under $200" and the iON Elite
+   is one of only TWO products in its table. At $220 the page breaks its
+   own promise, and its section heading reads "just inside the $200 budget".
 
-  Bushnell iON Elite: registry ~$199, Bushnell's own site $219.99.
+Fixing that means either dropping to a one-product roundup, retitling the
+page, or promoting a different product into the table. The obvious
+candidate is the Bushnell Phantom 3 at ~$139 in the registry — except
+Bushnell's own site shows $169.99 today, so that price is stale too.
 
-  Black Friday pages need their price refresh in the week of 17 November.
+Choosing which product headlines one of your roundups is your call, not
+mine, so I reverted the price change rather than restructure the page
+around it. The iON Elite is still at ~$199 in the registry, which is $21
+low. Nothing is broken; it is just understated.

@@ -97,7 +97,7 @@ for (const f of astroFiles('src')) {
  * So: CSS stays at 0 and must stay there; inline ratchets down as F9 drains
  * files, and each conversion sprint is measured on it.
  */
-const INLINE_CEILING = 395;   // Sprint 184: baseline 402, how-we-test h2s snapped 14px→16px
+const INLINE_CEILING = 375;   // Sprint 214: 395 → 375, the build's own advisory (20 below, no new off-grid values added since Sprint 184)
 
 const inlineSeen = new Map<number, number>();
 const inlineByFile = new Map<string, number>();

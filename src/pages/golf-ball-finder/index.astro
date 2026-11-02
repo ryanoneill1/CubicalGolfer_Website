@@ -1,12 +1,13 @@
 ---
 import { AFFILIATE } from '../../data/affiliate-links';
 import { CHART_BALL_COUNT } from '../../data/ball-brands';
+import { balls as CHART_BALLS } from '../../data/balls';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { breadcrumbSchema, faqSchema , webApplicationSchema } from '../../lib/schema';
 
 const meta = {
   title: 'Golf Ball Finder — Match Your Swing Speed to the Right Ball',
-  description: 'Find the right golf ball for your swing speed and budget. Filter 19 popular balls by compression, cover, and price.',
+  description: 'Find the right golf ball for your swing speed and budget. Filter every ball on our compression chart by compression, cover and price.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-finder/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-finder.jpg',
   ogType: 'website' as const,
@@ -26,7 +27,7 @@ const faq = [
 ];
 
 const schemas = [
-  webApplicationSchema({ name: 'Golf Ball Finder', description: 'Filter 19 tested golf balls by swing speed, budget, and feel to find your ball.', url: '/golf-ball-finder/' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+  webApplicationSchema({ name: 'Golf Ball Finder', description: 'Filter every golf ball on our compression chart by swing speed, budget and feel to find your ball.', url: '/golf-ball-finder/' }),breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 
 // Ball data — same source as the compression chart
 // Tracked buy links per ball, resolved from src/data/affiliate-links.ts.
@@ -35,27 +36,57 @@ const schemas = [
 // entry exists and they are different compressions, so both stay unlinked.
 const BALL_URLS: Record<string,string> = Object.fromEntries(
   Object.entries(AFFILIATE as any).map(([k, v]: any) => [k, v.url]));
-const balls = [
-  { name: 'TaylorMade Noodle', brand: 'TaylorMade', compression: 34, cover: 'Ionomer', feel: 'Ultra Soft', price: 20, minMph: 60, maxMph: 75, bestFor: 'Beginners, slow swings', affiliateKey: 'taylormade-noodle' },
-  { name: 'Callaway Supersoft', brand: 'Callaway', compression: 38, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 60, maxMph: 80, bestFor: 'Seniors, max distance at low speed', affiliateKey: 'callaway-supersoft' },
-  { name: 'Wilson DUO Soft+', brand: 'Wilson', compression: 40, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 60, maxMph: 80, bestFor: 'Straight flight, budget-friendly', affiliateKey: 'wilson-duo-soft-plus' },
-  { name: 'Titleist TruFeel', brand: 'Titleist', compression: 70, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 85, bestFor: 'Short-game feel on a budget', affiliateKey: 'titleist-trufeel' },
-  { name: 'Srixon Soft Feel', brand: 'Srixon', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 22, minMph: 65, maxMph: 85, bestFor: 'Best value under $25', affiliateKey: 'srixon-soft-feel' },
-  { name: 'Bridgestone e6', brand: 'Bridgestone', compression: 50, cover: 'Ionomer', feel: 'Soft', price: 25, minMph: 65, maxMph: 90, bestFor: 'Straight flight, anti-slice' },
-  { name: 'Vice Drive', brand: 'Vice', compression: 95, cover: 'Ionomer', feel: 'Firm', price: 17, minMph: 95, maxMph: 115, bestFor: 'Cheapest playable ball', affiliateKey: 'vice-drive' },
-  { name: 'Kirkland Signature', brand: 'Kirkland', compression: 92, cover: 'Urethane', feel: 'Firm', price: 28, minMph: 90, maxMph: 110, bestFor: 'Best value urethane ball', affiliateKey: 'kirkland-signature' },
-  { name: 'Srixon Q-Star Tour', brand: 'Srixon', compression: 74, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Tour spin at mid-compression', affiliateKey: 'srixon-q-star-tour' },
-  { name: 'TaylorMade Tour Response', brand: 'TaylorMade', compression: 70, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 80, maxMph: 100, bestFor: 'Distance + greenside spin', affiliateKey: 'taylormade-tour-response' },
-  { name: 'Callaway Chrome Soft', brand: 'Callaway', compression: 75, cover: 'Urethane', feel: 'Mid', price: 48, minMph: 85, maxMph: 105, bestFor: 'All-around performance', affiliateKey: 'callaway-chrome-soft' },
-  { name: 'Vice Pro', brand: 'Vice', compression: 75, cover: 'Urethane', feel: 'Mid', price: 35, minMph: 85, maxMph: 105, bestFor: 'Premium feel at mid-tier price', affiliateKey: 'vice-pro' },
-  { name: 'Titleist AVX', brand: 'Titleist', compression: 78, cover: 'Urethane', feel: 'Mid', price: 50, minMph: 85, maxMph: 105, bestFor: 'Low flight, low spin off driver', affiliateKey: 'titleist-avx' },
-  { name: 'Bridgestone Tour B RXS', brand: 'Bridgestone', compression: 78, cover: 'Urethane', feel: 'Mid', price: 45, minMph: 85, maxMph: 105, bestFor: 'Greenside spin at mid speed' },
-  { name: 'TaylorMade TP5', brand: 'TaylorMade', compression: 85, cover: 'Urethane', feel: 'Mid-Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Max distance with tour spin', affiliateKey: 'taylormade-tp5' },
-  { name: 'Callaway Chrome Tour', brand: 'Callaway', compression: 87, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 90, maxMph: 115, bestFor: 'Tour-level greenside control', affiliateKey: 'callaway-chrome-tour-2026' },
-  { name: 'Titleist Pro V1', brand: 'Titleist', compression: 87, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 90, maxMph: 115, bestFor: 'The benchmark tour ball', affiliateKey: 'titleist-pro-v1' },
-  { name: 'Titleist Pro V1x', brand: 'Titleist', compression: 97, cover: 'Urethane', feel: 'Firm', price: 55, minMph: 100, maxMph: 130, bestFor: 'High launch, high spin', affiliateKey: 'titleist-pro-v1x' },
-  { name: 'TaylorMade TP5x', brand: 'TaylorMade', compression: 97, cover: 'Urethane', feel: 'Firm', price: 50, minMph: 100, maxMph: 130, bestFor: 'Max distance for fast swings', affiliateKey: 'taylormade-tp5x' },
-];
+
+// Sprint 214 — this tool used to carry its OWN hardcoded copy of the ball
+// data. It had drifted badly: 16 of its 19 rows disagreed with balls.ts, including
+// five wrong compression figures (Srixon Soft Feel charted 50 against a published
+// 60, Vice Pro 75 against 90, TaylorMade Tour Response 70 against 77, Callaway
+// Chrome Tour 87 against 90, Titleist AVX 78 against 77) and most prices and speed
+// bands. The page told readers the data came from the compression chart while
+// showing different numbers to the chart. It is now derived, so it cannot drift.
+//
+// `feel` is computed from compression rather than stored, and `bestFor` is the one
+// editorial field: curated where we have a line worth keeping, derived from the
+// ball's own cover and speed band otherwise.
+const FEEL = (c: number) =>
+  c < 50 ? 'Ultra Soft' : c < 70 ? 'Soft' : c < 85 ? 'Mid' : c < 95 ? 'Mid-Firm' : 'Firm';
+
+const BEST_FOR: Record<string, string> = {
+  'taylormade-noodle':        'Beginners, slow swings',
+  'callaway-supersoft':       'Seniors, max distance at low speed',
+  'wilson-duo-soft-plus':     'Straight flight, budget-friendly',
+  'titleist-trufeel':         'Short-game feel on a budget',
+  'srixon-soft-feel':         'Best value under $25',
+  'vice-drive':               'Cheapest playable ball',
+  'kirkland-signature':       'Best value urethane ball',
+  'srixon-q-star-tour':       'Tour spin at mid-compression',
+  'taylormade-tour-response': 'Distance + greenside spin',
+  'callaway-chrome-soft':     'All-around performance',
+  'vice-pro':                 'Premium feel at mid-tier price',
+  'titleist-avx':             'Low flight, low spin off driver',
+  'taylormade-tp5':           'Max distance with tour spin',
+  'callaway-chrome-tour-2026':'Tour-level greenside control',
+  'titleist-pro-v1':          'The benchmark tour ball',
+  'titleist-pro-v1x':         'High launch, high spin',
+  'taylormade-tp5x':          'Max distance for fast swings',
+};
+
+const balls = CHART_BALLS
+  .filter((b: any) => !b.discontinued)
+  .map((b: any) => ({
+    name: b.name,
+    brand: b.brand,
+    compression: b.compression,
+    cover: b.cover,
+    feel: FEEL(b.compression),
+    price: b.price,
+    minMph: b.minMph,
+    maxMph: b.maxMph,
+    bestFor: BEST_FOR[b.affKey]
+      ?? `${b.cover === 'Urethane' ? 'Greenside spin' : 'Distance and durability'}, ${b.minMph}-${b.maxMph} mph`,
+    affiliateKey: b.affKey,
+  }))
+  .sort((a: any, b: any) => a.compression - b.compression);
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { ROBOTS_INDEX } from '../../lib/seo';
 ---
@@ -72,10 +103,10 @@ import { ROBOTS_INDEX } from '../../lib/seo';
       </nav>
       <h1>Golf Ball Finder — Match Your Swing Speed to the Right Ball</h1>
       <EarlyDisclosure />
-      <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Stop buying the wrong golf ball. Enter your swing speed, budget, and what you care about most — this tool filters 19 of the most-played balls and gives you a personalized recommendation in seconds. Data from our <a href="/golf-ball-compression-chart/" style="color:#C8A84B;text-decoration:underline;">compression chart</a>, independently verified.</p>
+      <p class="art-excerpt" style="color:rgba(255,255,255,.85);">Stop buying the wrong golf ball. Enter your swing speed, budget, and what you care about most — this tool filters every ball on our compression chart and gives you a personalized recommendation in seconds. Data from our <a href="/golf-ball-compression-chart/" style="color:#C8A84B;text-decoration:underline;">compression chart</a>, independently verified.</p>
     </header>
 
-    <p style="font-size:16px;color:var(--muted);margin:0 0 20px;">Last updated: June 2026. See the full <a href="/golf-ball-compression-chart/">Golf Ball Compression Chart</a> for detailed data on all {CHART_BALL_COUNT} balls.</p>
+    <p style="font-size:16px;color:var(--muted);margin:0 0 20px;">Last updated: November 2026. See the full <a href="/golf-ball-compression-chart/">Golf Ball Compression Chart</a> for detailed data on all {CHART_BALL_COUNT} balls.</p>
 
     <!-- FILTERS -->
     <section style="padding:24px;background:rgba(30,58,40,.04);border:1px solid var(--border);border-radius: var(--r2);margin:0 0 28px;">
