@@ -56,7 +56,7 @@ for (const file of astroFiles('src/pages')) {
     const url = m[0].replace(/[)'";,]+$/, '');
     // Ignore non-affiliate references (plain product pages with no tracking).
     const isAffiliate =
-      /tag=cubicalgolfer-20/.test(url) ||
+      /tag=cubicalgolfer(?:-[a-z]+)?-20/.test(url) ||
       /click-\d+-\d+/.test(url) ||
       /pxf\.io/.test(url) ||
       /ghref=/.test(url);

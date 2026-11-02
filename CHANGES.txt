@@ -1,127 +1,123 @@
-SPRINT 215 — Bushnell iON Elite repriced to ~$220, honestly framed
+SPRINT 216 — the eight tracking IDs, wired by page group
 ==========================================================================
-Extract at the REPO ROOT. 4 files, no deletions.
-Full `npm run build`: EXIT 0, 100 validators, 0 failures.
+Extract at the REPO ROOT. 8 files, no deletions.
+Full `npm run build`: EXIT 0, 102 validators, 0 failures.
 
-You chose "label it worth the stretch". That is what shipped. The job was
-bigger than the one section I showed you, and the build forced one change I
-had not anticipated. Both are below.
-
---------------------------------------------------------------------------
-1. THE PRICE WAS ASSERTED ON 8 PAGES, NOT ONE
---------------------------------------------------------------------------
-Before this sprint the site quoted the same watch at THREE different prices:
-
-   $149   /best-gps-golf-watch-high-handicappers/  (body and FAQ)
-          /best-golf-gps-watch-under-200/          (pros bullet)
-          compare/garmin-s12-vs-bushnell-ion-elite (both products at ~$149)
-   $199   six other places
-   $219.99  /black-friday-golf-deals/   (correct — written yesterday)
-
-A reader comparing two of your pages could see $149 on one and $199 on the
-other. Now every one of them reads ~$220, matching the registry and matching
-Bushnell's own site.
-
-Corrected, page by page:
-
-   /best-golf-gps-watch-under-200/        intro, quick answer, bottom line,
-                                          TOC, H2, section price, body, pros
-   /best-golf-gps-watches/                section price, body, pros bullet
-   /best-gps-golf-watch-high-handicappers/ bottom line, section price, body,
-                                          table row, FAQ, cons bullet
-   /best-golf-rangefinder-for-seniors/    section price, table row, FAQ
-   /best-golf-gps-watch-under-300/        H2, table row
-   /garmin-approach-s62-review/           "who should skip" line, table row
-   /black-friday-golf-deals/              already correct — untouched
-   compare/garmin-s12-vs-bushnell-ion-elite  description, intro, both
-                                          "better for" headings
-
-   registry  bushnell-ion-elite  ~$199 -> ~$220, verifiedOn 2026-11-01,
-             priceNote rewritten (it said "prices are stable", which is now
-             the opposite of true)
+*** THIS ZIP INCLUDES SPRINT 215. You had not pushed sprint-215-ion.zip
+*** when I built this, and both touch src/data/. Upload THIS ONE and ignore
+*** sprint-215-ion.zip — extracting both in either order is also fine, the
+*** files are identical.
 
 --------------------------------------------------------------------------
-2. THE BUILD MADE ME REMOVE THE UNDER-$200 COMPARISON TABLE
+WHAT IT DOES
 --------------------------------------------------------------------------
-validate-price-ceilings failed the moment the price went up:
+Every outbound Amazon link now carries the tracking ID of the PAGE it sits
+on, so Associates will report earnings per page group instead of one
+site-wide number.
 
-    /best-golf-gps-watch-under-200/ (ceiling $200)
-       -> TABLE ROW bushnell-ion-elite at ~$220
-
-Your own validator distinguishes a table row from prose: a row above the
-ceiling is a hard failure, a prose-only pick is a logged warning, because
-"the table is the shortlist and the title is a promise." It prints the
-remedy itself — move an upgrade pick out of the table and discuss it in
-prose.
-
-That left a one-row comparison table, which is not a comparison, so the
-table is gone. The page is now one under-$200 recommendation (Garmin S12,
-$199 list and currently $149.99 at Best Buy, Abt and Academy) plus the iON
-Elite as a clearly-labelled stretch pick. URL and title unchanged, so the
-keyword target is intact.
-
-This is the honest shape, because there is exactly ONE golf GPS watch under
-$200 in your registry. Your "I'll get a link for a third watch" option is
-the real fix for this page whenever you want it.
+    group  pages  links  tracking ID
+    lm       65    699   cubicalgolfer-lm-20
+    club     50    665   cubicalgolfer-club-20
+    ball     38    599   cubicalgolfer-ball-20
+    wear     30    497   cubicalgolfer-wear-20
+    gps      38    410   cubicalgolfer-gps-20
+    misc     66    361   cubicalgolfer-misc-20
+    gift      8    113   cubicalgolfer-gift-20
+    tool     12    101   cubicalgolfer-tool-20
+                 ------
+                  3,445 links across 307 pages
 
 --------------------------------------------------------------------------
-3. THREE OTHER ERRORS FOUND WHILE DOING IT
+WHY IT IS A POST-BUILD REWRITE, NOT 263 URL EDITS
 --------------------------------------------------------------------------
-a) A MIS-KEYED TABLE ROW — readers sent to the wrong watch.
-   /best-gps-golf-watch-high-handicappers/ had a row labelled "Garmin
-   Approach S12", priced and spec'd as the S12 (30 hrs battery), that
-   linked to affiliateKey garmin-approach-s42 — a $299 watch. Anyone
-   clicking the S12 landed on the S42. Key corrected to the S12.
+I started down the obvious path and abandoned it. The tag is hardcoded 263
+times inside affiliate-links.ts, and editing those would tag the PRODUCT —
+which tells you nothing you cannot already get from the Associates product
+report. Worse, a registry entry is shared across pages: garmin-approach-r10
+sits on your launch-monitor roundups AND on /shaft-flex-guide/.
 
-   I found this by making a mistake: I "fixed" that row's $299 to $199 to
-   match the S12 name, and validate-table-vs-registry failed because $199
-   did not match the S42 it actually linked. The validator was right and I
-   was wrong, which is how the real bug surfaced.
+Threading the page slug through 25+ components was the other option. The
+failure mode there is silent — miss one component and those links quietly
+never appear in the split, and nothing tells you.
 
-b) THE TABLE OF CONTENTS PROMISED TWO WATCHES THAT DO NOT EXIST.
-   /best-golf-gps-watch-under-200/ listed "Best Battery Life: Garmin
-   Approach S42" and "Budget Pick: Bushnell Ion Edge" — no such sections,
-   and the S42 is $299 so it could never belong on this page, while the Ion
-   Edge is not in your registry at all. The TOC also listed a "GPS Watch vs
-   Rangefinder" section that does not exist and omitted the two that do.
-   TOC now matches the four real sections.
+So the new step rewrites the tag in the built HTML, keyed off the page's own
+file path. No render site can be missed, because it operates on the final
+output rather than the code that produced it. The page path IS the group,
+which is exactly the question you are asking.
 
-c) SELF-CONTRADICTING AND FALSE CLAIMS, now fixed:
-   - intro said "For $50 more, the Bushnell Ion Elite ($199)" — $50 more
-     than $199, priced at $199, in one sentence
-   - intro said "the only 4 models we recommend under $200" on a 2-product
-     page
-   - comparison intro ended mid-sentence: "the two best GPS golf watches
-     under $200 in."
-   - two pros bullets claimed "cheapest reliable golf GPS watch available"
-     and "lowest price with all core GPS features". At $220 both are false
-     on their own pages — the Shot Scope V5 ($210) and the Garmin S12
-     ($199) undercut it. Rewritten without the superlative.
-   - an FAQ said accuracy "is the same at $149 and $499" where $149 was a
-     stale iON Elite price; now phrased as a price tier, not a product.
+  scripts/apply-tracking-ids.ts   new, runs immediately after `astro build`
+  package.json                    one insertion into the build chain
+
+SAFE BY CONSTRUCTION. It only ever swaps cubicalgolfer-20 for another ID in
+your own account. An unclassified page falls to `misc`. A link it never
+touches keeps the default tag. Worst case is an unattributed commission,
+never a lost one — and it FAILS the build if an Amazon product link carries
+no tag at all, which would be a real loss.
+
+--------------------------------------------------------------------------
+TWO VALIDATORS WIDENED — read this, it is the one thing I changed in your
+safety net
+--------------------------------------------------------------------------
+Two validators read the built HTML and looked for the literal string
+`tag=cubicalgolfer-20`. With eight IDs in play they would have failed on
+every page, so both now match the tag FAMILY:
+
+  scripts/validate-disclosure-position.ts     tag=cubicalgolfer-20
+  scripts/validate-astro-affiliate-links.ts     -> tag=cubicalgolfer(?:-[a-z]+)?-20
+
+The intent of both checks is unchanged: "this link is monetised." They still
+reject an untagged link, a foreign tag, or a tag belonging to anyone else.
+I widened them rather than removed them, and I am flagging it because
+loosening a check to make my own change pass is exactly the move that should
+be looked at twice.
+
+Nothing else in the 100 pre-existing validators was touched.
+
+--------------------------------------------------------------------------
+HOW PAGES ARE GROUPED, AND THE TWO JUDGEMENT CALLS IN IT
+--------------------------------------------------------------------------
+Rules are tested in order; first match wins. Both calls below are in the
+script's comments so the next person reading it knows they were decisions,
+not accidents.
+
+1. `gift` is tested FIRST, so /black-friday-golf-launch-monitor-deals/
+   reports as a GIFT page, not a launch-monitor one. It could defensibly go
+   either way. I chose gift because the question Q4 has to answer is "did
+   the seasonal bet earn anything", and splitting the deal pages across
+   groups makes that unreadable. Say the word and I will flip it.
+
+2. `tool` is deliberately narrow — calculators, planners, budget tools and
+   hub pages only. Charts and finders fall through to their subject, so the
+   compression chart reports as a BALL page, which is what it is.
+
+`misc` holds 66 pages: accessories, push carts, umbrellas, towels, swing
+analysers, alignment sticks, and the pages with no affiliate links at all
+(/about/, /404/). That is a real bucket, not a dumping ground — but if any
+of it turns out to earn, it is worth splitting out later.
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
-  full `npm run build`     EXIT 0, 100 validators, 0 failures
-  parse check              articles 193, comparisons 62, registry 356 keys,
-                           all imported with tsx BEFORE writing
-  price sweep              0 iON Elite price fields left at $199 or $149,
-                           checked across the whole record tree (not just
-                           `sections` — two table rows were hiding outside it)
-  rendered HTML            /best-golf-gps-watch-under-200/ contains "$149"
-                           zero times; "At $220 it sits just over our $200
-                           line"; every surviving "$199" refers to the S12
-  manifest                 regenerated with scripts/update-lastmod.ts;
-                           305 entries, exactly the 7 touched pages changed
-  price ceilings           now a logged warning (disclosed upgrade pick),
-                           not a failure
-  table/registry drift     back to 20 (ceiling 20) after the mis-key fix
-  generated artifacts      public/ reverted; only these 4 source files ship
+  full `npm run build`   EXIT 0, 102 validators, 0 failures
+  independent count      grep over dist/ for every tag, counted separately
+                         from the script's own tally; the eight totals sum
+                         to 3,445 and match it exactly
+  per-page isolation     one page sampled from each of the eight groups —
+                         every one carries ONLY its own group's tag
+  no losses              0 untagged Amazon /dp/, /gp/ or /s? links in dist
+  no stragglers          0 links left on the default cubicalgolfer-20
+  false-positive check   the bare https://www.amazon.com in
+                         <link rel="preconnect"> is correctly NOT treated as
+                         a monetised link (my first version flagged 610 of
+                         these and was wrong)
 
 --------------------------------------------------------------------------
-STILL UNDERSTATED — one price I did not touch
+AFTER YOU DEPLOY
 --------------------------------------------------------------------------
-bushnell-phantom-2 is ~$139 in the registry; Bushnell's site shows the
-Phantom 3 at $169.99. Different generation, so it is not a simple edit, and
-it is a clip-on handheld rather than a watch. Flagging, not guessing.
+Amazon's own note on the tracking-ID page says a new ID can take up to 24
+hours to be enabled for OneLink. OneLink is the international-redirect
+feature; US tracking works immediately.
+
+Reports -> by Tracking ID. Give it 4-6 weeks before reading the small
+groups. I will not draw a conclusion from any group under ~200 clicks, and
+I am writing that down in advance so I cannot talk myself into it later.
