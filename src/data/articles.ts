@@ -325,11 +325,11 @@ export const ARTICLES: Article[] = [
       {
         h2: 'Best Budget Golf GPS Watch: Bushnell Ion Elite',
         rating: 4.2, affiliateKey: 'bushnell-ion-elite',
-        body: "The Ion Elite answers a simple question: do you need a $400 GPS watch to get yardages on the course? No. You need the Ion Elite for $199.\n\nWe wore the Ion Elite for 6 rounds and it did exactly what it promises. Front of green. Middle of green. Back of green. Hazard distances. Auto-hole advance. That is it. No Green View, no shot tracking, no Virtual Caddie, no color screen. Just the numbers you need, fast, on a watch that looks like a normal fitness band.\n\nThe simplicity is the selling point. Glance at your wrist, see 156 to the middle, pick your club, hit the ball. No menu diving, no pin dragging, no syncing with an app mid-round. The Ion Elite has 40,000 courses preloaded and acquired our GPS signal in under 30 seconds on every round we played.\n\nBattery life is excellent — 16 hours in GPS mode, which easily covers 3 rounds. The watch charges via micro-USB and reaches full charge in about 2 hours. The display is simple but legible in all lighting conditions.\n\nOne underrated benefit: the Ion Elite is the lightest golf GPS we tested. At just 34 grams, you forget it is on your wrist. Golfers who are sensitive to watch weight during their swing will appreciate this.\n\nWhat we liked most: the price and the simplicity. $149 gets you reliable yardages with zero learning curve. The lightweight design does not interfere with your swing. And Bushnell is a name golfers trust.\n\nWhat we did not like: no green shape or contour data — you just get distances. No shot tracking or performance data. And it does not double as a smartwatch — no fitness tracking, no notifications, no daily wear appeal.\n\nCompared to the Garmin S42: the S42 adds Green View, a color screen, and smartwatch features for $100 more. If you want those features, the S42 is worth the upgrade. If you just want yardages at the lowest price, the Ion Elite is all you need.\n\nBuy this if: you want the simplest, cheapest GPS watch that gives you front/middle/back and nothing else.\n\nSkip this if: you want green contours, shot tracking, or a watch you will wear daily — spend $100 more on the Garmin S42.",
-        price: '~$199 at Amazon',
+        body: "The Ion Elite answers a simple question: do you need a $400 GPS watch to get yardages on the course? No. You need the Ion Elite for $220.\n\nWe wore the Ion Elite for 6 rounds and it did exactly what it promises. Front of green. Middle of green. Back of green. Hazard distances. Auto-hole advance. That is it. No Green View, no shot tracking, no Virtual Caddie, no color screen. Just the numbers you need, fast, on a watch that looks like a normal fitness band.\n\nThe simplicity is the selling point. Glance at your wrist, see 156 to the middle, pick your club, hit the ball. No menu diving, no pin dragging, no syncing with an app mid-round. The Ion Elite has 40,000 courses preloaded and acquired our GPS signal in under 30 seconds on every round we played.\n\nBattery life is excellent — 16 hours in GPS mode, which easily covers 3 rounds. The watch charges via micro-USB and reaches full charge in about 2 hours. The display is simple but legible in all lighting conditions.\n\nOne underrated benefit: the Ion Elite is the lightest golf GPS we tested. At just 34 grams, you forget it is on your wrist. Golfers who are sensitive to watch weight during their swing will appreciate this.\n\nWhat we liked most: the price and the simplicity. $149 gets you reliable yardages with zero learning curve. The lightweight design does not interfere with your swing. And Bushnell is a name golfers trust.\n\nWhat we did not like: no green shape or contour data — you just get distances. No shot tracking or performance data. And it does not double as a smartwatch — no fitness tracking, no notifications, no daily wear appeal.\n\nCompared to the Garmin S42: the S42 adds Green View, a color screen, and smartwatch features for $100 more. If you want those features, the S42 is worth the upgrade. If you just want yardages at the lowest price, the Ion Elite is all you need.\n\nBuy this if: you want the simplest, cheapest GPS watch that gives you front/middle/back and nothing else.\n\nSkip this if: you want green contours, shot tracking, or a watch you will wear daily — spend $100 more on the Garmin S42.",
+        price: '~$220 at Amazon',
         pros: [
           'Simplest GPS watch in the test — zero learning curve',
-          '$199 price — cheapest reliable golf GPS watch available',
+          '$220 — large high-contrast display for well under flagship money',
           'Lightest watch tested at 34 grams — disappears on your wrist',
           '40,000 courses with fast GPS lock',
           '16-hour battery — 3 rounds per charge',
@@ -351,7 +351,7 @@ export const ARTICLES: Article[] = [
         { badge: 'TOP PICK', rating: 4.6, affiliateKey: 'garmin-approach-s44',    name: 'Garmin Approach S44', bestFor: 'Best Overall 2026', price: '~$289', feature1: '4.3/5 ★', feature2: '521 reviews', winner: true },
         { badge: 'STRONG PICK', rating: 4.8, affiliateKey: 'garmin-approach-s62',    name: 'Garmin Approach S62', bestFor: 'Most Tested',       price: '~$499', feature1: '4.7/5 ★', feature2: '', winner: false },
         { rating: 4.6, affiliateKey: 'shot-scope-v5',          name: 'Shot Scope V5',       bestFor: 'Best Auto-Tracking', price: '~$210', feature1: '4.5/5 ★', feature2: '', winner: false },
-        { rating: 4.2, affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget',        price: '~$199', feature1: 'No',        feature2: '16 hrs', winner: false },
+        { rating: 4.2, affiliateKey: 'bushnell-ion-elite',     name: 'Bushnell Ion Elite',  bestFor: 'Best Budget',        price: '~$220', feature1: 'No',        feature2: '16 hrs', winner: false },
         { rating: 4.5, affiliateKey: 'garmin-approach-s42',    name: 'Garmin Approach S42', bestFor: 'Best Mid-Range',     price: '~$299', feature1: 'Via phone', feature2: '15 hrs', winner: false },
       ],
     },
@@ -4444,7 +4444,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     ],
     title: 'Best GPS Watch for High Handicappers',
     titleDisplay: 'Best GPS Golf Watch for High Handicappers',
-    bottomLine: 'High handicappers do not need the most expensive GPS watch. The <strong>Bushnell Ion Elite</strong> at $199 gives you everything a 20+ handicapper needs: front/middle/back distances, hazard yardages, and auto-hole advance. Save the $350 you would spend on a Garmin S62 for lessons.',
+    bottomLine: 'High handicappers do not need the most expensive GPS watch. The <strong>Bushnell Ion Elite</strong> at $220 gives you everything a 20+ handicapper needs: front/middle/back distances, hazard yardages, and auto-hole advance. Save the $280 you would spend on a Garmin S62 for lessons.',
     description: 'Best GPS golf watch for high handicappers in 2026 — simple, accurate picks that give you yardages without overwhelming features. No $400 watch needed.',
     excerpt: 'High handicappers need yardage data, not feature overload. These GPS watches give you exactly what matters without the complexity — or the price.',
     intro: 'The best GPS golf watch for high handicappers is the <strong>Garmin Approach S12</strong> at $199 — simple front, middle, and back yardages with no confusing features. High handicappers lose strokes from wrong club selection, not wrong targets. Knowing the exact distance to the center of the green and choosing the right club based on that number saves 3 to 5 strokes per round without any swing changes.\n\nHigh handicappers do not need a GPS watch with AI recommendations, green contour maps, and shot tracking. What they need is: front/middle/back of the green, hazard distances, and auto-hole advance. Here are the best options that deliver that without the feature bloat.',
@@ -4462,11 +4462,11 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       {
         h2: 'Best GPS Watch for High Handicappers Overall: Bushnell Ion Elite',
         rating: 4.2, affiliateKey: 'bushnell-ion-elite',
-        body: 'The Ion Elite at $149 is clean, simple, and accurate. Front/middle/back of green for 40,000+ courses. Hazard and layup distances. Auto-hole advance. Long battery life (16+ hours — a full round without worrying about charging). The display is easy to read in full sun. No subscription required. For a high handicapper who wants yardage data without thinking about the watch, this is the right buy.',
-        price: '~$199',
+        body: 'The Ion Elite at $220 is clean, simple, and accurate. Front/middle/back of green for 40,000+ courses. Hazard and layup distances. Auto-hole advance. Long battery life (16+ hours — a full round without worrying about charging). The display is easy to read in full sun. No subscription required. For a high handicapper who wants yardage data without thinking about the watch, this is the right buy.',
+        price: '~$220',
         pros: [
           'Simple focused feature set -- exactly what a high handicapper needs',
-          '$199 -- lowest price with all core GPS features',
+          '$220 -- all the core GPS features, and no subscription',
           'No subscription required',
           '16-hour battery life',
         ],
@@ -4487,7 +4487,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
           'Clean, easy-to-read interface',
         ],
         cons: [
-          '$199 — same price as the Bushnell iON Elite, which adds slope and a colour screen',
+          '$199 — $21 less than the Bushnell iON Elite, which adds slope and a colour screen',
         ],
     
       },
@@ -4500,7 +4500,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { h2: 'Simple Features vs Complicated Features', body: 'Features high handicappers should use: front, middle, and back yardages, shot distance measurement (so you learn your actual club distances), and round scoring. Features to ignore until you break 90: wind adjustment, virtual caddie, strokes gained analysis, swing tempo tracking, and hole flyover. These advanced features overwhelm beginners and distract from the one thing that matters: knowing your distance and picking the right club. The Garmin S12 nails the simple features without the clutter.' },
     ],
     faq: [
-      { q: 'Is a GPS watch worth it for a beginner golfer?', a: 'Yes, even for beginners. Knowing the distance to the green eliminates the most common error beginners make: under-clubbing. A $149 Bushnell Ion Elite gives a beginner accurate distances that improve club selection from day one. It is the first piece of technology worth buying after clubs and balls.' },
+      { q: 'Is a GPS watch worth it for a beginner golfer?', a: 'Yes, even for beginners. Knowing the distance to the green eliminates the most common error beginners make: under-clubbing. A Bushnell Ion Elite gives a beginner accurate distances that improve club selection from day one. It is the first piece of technology worth buying after clubs and balls.' },
           { q: 'At what handicap is it worth getting a premium GPS watch?', a: 'Once you are consistently breaking 90 (approximately 17 handicap), a premium GPS watch with shot tracking and AI club recommendations starts earning its premium price. Below that, the AI recommendations are not reliable enough to be useful.' },
       { q: 'What is the best GPS watch for senior golfers?', a: 'The Bushnell Ion Elite is the best GPS watch for senior golfers -- large high-contrast display easy to read, simple interface, and long battery life that survives a full round without concern.' },
     ],
@@ -4525,8 +4525,8 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     comparisonTable: {
       headers: ['GPS Watch', 'Best For', 'Price', 'Subscription', 'Battery'],
       rows: [
-        { name: 'Bushnell Ion Elite', bestFor: 'Best overall for high hdcp', price: '~$199', feature1: 'None', feature2: '16 hrs', winner: true, badge: 'STRONG PICK', rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
-        { name: 'Garmin Approach S12', bestFor: 'Budget Garmin option', price: '~$299', feature1: 'None', feature2: '30 hrs', winner: false, rating: 4.6, affiliateKey: 'garmin-approach-s42' },
+        { name: 'Bushnell Ion Elite', bestFor: 'Best overall for high hdcp', price: '~$220', feature1: 'None', feature2: '16 hrs', winner: true, badge: 'STRONG PICK', rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
+        { name: 'Garmin Approach S12', bestFor: 'Budget Garmin option', price: '~$199', feature1: 'None', feature2: '30 hrs', winner: false, rating: 4.6, affiliateKey: 'garmin-approach-s12' },
       ],
     },
   },
@@ -5067,7 +5067,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       headers: ['Rangefinder', 'Best For', 'Price', 'Display', 'One-Hand Op'],
       rows: [
         { name: 'Bushnell Tour V7 Shift', bestFor: 'Best Overall', price: '~$399', feature1: 'Clear LCD', feature2: 'Yes', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'bushnell-tour-v7-shift' },
-        { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Cart GPS', price: '~$199', feature1: 'Large', feature2: 'Yes (wrist)', winner: false, rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
+        { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Cart GPS', price: '~$220', feature1: 'Large', feature2: 'Yes (wrist)', winner: false, rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
         { name: 'Blue Tees Series 3 Max', bestFor: 'Best Value', price: '~$199', feature1: 'Bright mono', feature2: 'Yes', winner: false, rating: 4.3, affiliateKey: 'blue-tees-series-3-max' },
         { name: 'Precision Pro NX9', bestFor: 'Best Budget', price: '~$199', feature1: 'Standard', feature2: 'Yes', winner: false, rating: 4.6, affiliateKey: 'precision-pro-nx9-hd' },
       ],
@@ -5086,7 +5086,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         h2: 'Best for Cart Golfers: Bushnell Ion Elite GPS',
         badge: 'BEST CART GPS', rating: 4.2, affiliateKey: 'bushnell-ion-elite',
         body: 'The Ion Elite solves the biggest problem for senior cart golfers: you never have to take it out of your bag or aim it at anything. Wrist-based GPS with front, middle, and back of green yardages plus hazard distances. The display is large and high-contrast — readable in direct Florida sun. No subscription, no annual fee.',
-        price: '~$199',
+        price: '~$220',
         pros: ['No aiming required — yardages on your wrist at all times', 'High-contrast display readable in direct sunlight', '16-hour battery life covers the longest rounds', 'No subscription or annual fee'],
         cons: ['Front/middle/back distances only — no exact pin distance', 'Not useful for players who need precise pin-to-pin data'],
       },
@@ -5105,7 +5105,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     ],
     faq: [
       { q: 'What is the easiest golf rangefinder to use for seniors?', a: 'The Bushnell Tour V7 Shift is the easiest laser rangefinder for senior golfers. The JOLT vibration confirms pin lock without needing to see the display clearly, the magnetic mount attaches to any cart, and the one-button operation takes less than one round to master. For cart golfers who want zero aiming, the Bushnell Ion Elite GPS watch is even simpler.' },
-      { q: 'Is a GPS watch better than a rangefinder for senior golfers?', a: 'For most senior cart golfers, yes. A GPS watch gives front, middle, and back yardages at a glance without removing anything from the bag or aiming at a flag. The Bushnell Ion Elite at $199 is the best-value GPS watch for senior golfers and eliminates the steady-hand requirement of laser rangefinders.' },
+      { q: 'Is a GPS watch better than a rangefinder for senior golfers?', a: 'For most senior cart golfers, yes. A GPS watch gives front, middle, and back yardages at a glance without removing anything from the bag or aiming at a flag. The Bushnell Ion Elite at $220 is the best-value GPS watch for senior golfers and eliminates the steady-hand requirement of laser rangefinders.' },
       { q: 'What features should a senior golfer look for in a rangefinder?', a: 'Vibration feedback (so you know when you have locked the pin without looking), a large high-contrast display, light weight under 7 oz, magnetic cart mount, and simple single-button operation. Avoid rangefinders with multiple modes and confusing menu systems.' },
     ],
     related: [
@@ -5419,7 +5419,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     thumb: 'navy',
     words: '2,100',
     datePublished: '2026-04-14',
-    dateModified: '2026-07-21',
+    dateModified: '2026-11-01',
     relatedComparisons: [
       { slug: '/compare/garmin-approach-s62-vs-shot-scope-v5/', label: 'Garmin S62 vs Shot Scope V5: Best GPS Watch' },
       { slug: '/compare/garmin-approach-s62-vs-s42/', label: 'Garmin S62 vs S42: Which GPS Watch to Buy?' },
@@ -5432,7 +5432,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     titleDisplay: '⌚ Best Golf GPS Watch Under $200 — Tested Picks',
     description:  'The best golf GPS watches under $200 in 2026. Accurate yardages, no subscription, simple to use. Tested on real courses — not a spec sheet roundup.',
     excerpt:      'You do not need to spend $400 on a GPS watch. These 4 models under $200 give you accurate front-middle-back yardages, hazard distances, and automatic hole advance.',
-    bottomLine:   'The <strong>Garmin Approach S12</strong> at $199 is the best GPS golf watch under $200 — reliable Garmin accuracy, 40,000 preloaded courses, simple interface, and 30-hour battery. The Bushnell Ion Elite at $199 wins on display size and is the best pick for senior golfers.',
+    bottomLine:   'The <strong>Garmin Approach S12</strong> at $199 is the best GPS golf watch under $200 — reliable Garmin accuracy, 40,000 preloaded courses, simple interface, and 30-hour battery. The Bushnell Ion Elite at $220 is just over the line, but it wins on display size and is the best pick for senior golfers.',
     whoFor: [
       'Want wrist-based yardages without pulling out a rangefinder',
       'Play different courses frequently and do not want to pace sprinkler heads',
@@ -5444,22 +5444,14 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       'Already have a GPS watch that works — upgrade is not worth it',
       'Play the same 2 courses every week — you know the distances already',
     ],
-    intro: 'The best golf GPS watch under $200 is the <strong>Garmin Approach S12</strong> at $199 — it covers 42,000 courses with front, middle, and back yardages, tracks shots automatically, and the battery lasts 30 hours. For $50 more, the <strong>Bushnell Ion Elite</strong> ($199) adds a color touchscreen and slope-adjusted distances.\n\nPremium GPS watches from Garmin now cost $400-600. The good news: the sub-$200 segment has caught up. In 2026, you can get 95% of the functionality of a premium watch for half the price. Here are the only 4 models we recommend under $200.',
+    intro: 'The best golf GPS watch under $200 is the <strong>Garmin Approach S12</strong> at $199 — it covers 42,000 courses with front, middle, and back yardages, tracks shots automatically, and the battery lasts 30 hours. For about $20 more, the <strong>Bushnell Ion Elite</strong> ($220) adds a larger, higher-contrast display and slope-adjusted distances — just over the $200 line, and worth it if you struggle to read small screens in sunlight.\n\nPremium GPS watches from Garmin now cost $400-600. The good news: the sub-$200 segment has caught up. In 2026, you can get 95% of the functionality of a premium watch for half the price. Here are the two we recommend: one under the line, and one just over it.',
     toc: [
-      'Best Overall Under $200: Garmin Approach S12',
-      'Best Display: Bushnell Ion Elite — ~$199 (just inside the $200 budget)',
-      'Best Battery Life: Garmin Approach S42',
-      'Budget Pick: Bushnell Ion Edge',
-      'GPS Watch vs Rangefinder — Which to Buy',
+      'Best Golf GPS Watch Under $200 Overall: Garmin Approach S12',
+      'Best Display: Bushnell Ion Elite — ~$220 (worth the stretch)',
+      'GPS Watch vs Phone App: Why a Dedicated Watch Wins',
+      'What to Look For Under $200',
       'Frequently Asked Questions',
     ],
-    comparisonTable: {
-      headers: ['Watch', 'Best For', 'Price', 'Battery', 'Courses'],
-      rows: [
-        { name: 'Garmin Approach S12', bestFor: 'Best Overall', price: '~$199', feature1: '30 hours', feature2: '42,000', winner: true, badge: 'STRONG PICK', rating: 4.7, affiliateKey: 'garmin-approach-s12' },
-        { name: 'Bushnell Ion Elite GPS', bestFor: 'Best Display', price: '~$199', feature1: '16 hours', feature2: '36,000', winner: false, rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
-      ],
-    },
     sections: [
       {
         h2: 'Best Golf GPS Watch Under $200 Overall: Garmin Approach S12',
@@ -5471,11 +5463,11 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         cons: ['Monochrome display — no color', 'No green contour or hole map view', 'Bulkier than premium Garmin models'],
       },
       {
-        h2: 'Best Display: Bushnell Ion Elite — ~$199 (just inside the $200 budget)',
+        h2: 'Best Display: Bushnell Ion Elite — ~$220 (worth the stretch)',
         badge: 'BEST DISPLAY', rating: 4.2, affiliateKey: 'bushnell-ion-elite',
-        body: 'The Ion Elite has the largest, highest-contrast display of any watch in this price range — ideal for senior golfers or anyone who struggles reading small displays in sunlight. At $199 it is also the most affordable pick here. Slope-adjusted yardages are included, giving you plays-like distances that account for elevation change.',
-        price: '~$199',
-        pros: ['Largest, highest-contrast display in this price range', 'Slope-adjusted yardages (rare at this price)', '36,000 preloaded courses', 'Best value at $149'],
+        body: 'The Ion Elite has the largest, highest-contrast display of any watch in this price range — ideal for senior golfers or anyone who struggles reading small displays in sunlight. At $220 it sits just over our $200 line, so treat it as a deliberate stretch rather than a budget pick — you are paying about $20 above the Garmin S12 for a screen that is genuinely easier to read at arm\'s length. Slope-adjusted yardages are included, giving you plays-like distances that account for elevation change.',
+        price: '~$220',
+        pros: ['Largest, highest-contrast display in this price range', 'Slope-adjusted yardages (rare at this price)', '36,000 preloaded courses', 'Readable in direct sunlight without squinting'],
         cons: ['16-hour battery — shorter than Garmin', 'Less course detail than premium Garmin models'],
       },
     
@@ -5483,7 +5475,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { h2: 'What to Look For Under $200', body: 'Three non-negotiable features at this price: preloaded course maps (42,000+ courses means no downloads needed), front-middle-back yardages updated as you walk, and 15+ hour battery life for a full round with buffer. Nice-to-have features that some $200 models include: shot distance measurement, hazard distances, and auto-hole detection. Features you will NOT get under $200: color touchscreen, virtual caddie, wind data, or strokes gained analysis. Those require the $300+ tier.' },
     ],
     faq: [
-      { q: 'Is a $150 GPS golf watch accurate?', a: 'Yes — the GPS accuracy in budget watches is essentially identical to premium models. All GPS watches use the same satellite network. What you pay more for in premium watches is screen quality, course detail (hole maps, green contours), shot tracking, and smartwatch features. Yardage accuracy is the same at $149 and $499.' },
+      { q: 'Is a $150 GPS golf watch accurate?', a: 'Yes — the GPS accuracy in budget watches is essentially identical to premium models. All GPS watches use the same satellite network. What you pay more for in premium watches is screen quality, course detail (hole maps, green contours), shot tracking, and smartwatch features. Yardage accuracy is the same on a $150 watch as on a $499 one.' },
       { q: 'Does a GPS watch replace a rangefinder?', a: 'For most golfers, a GPS watch and a rangefinder serve different purposes. A GPS watch gives front/middle/back yardages at a glance — great for club selection on approach shots when the pin is near the middle of the green. A rangefinder gives exact pin distance. If the pin is tucked and exact yardage matters, a rangefinder wins every time.' },
       { q: 'What is the best GPS watch for beginner golfers?', a: 'The Garmin Approach S12 ($199) is the best GPS watch for beginners. Simple interface, 42,000 preloaded courses, and a 30-hour battery mean you never have to configure anything or worry about it dying. Just put it on, find your course, and read your yardages.' },
     ],
@@ -6723,7 +6715,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         { badge: 'STRONG PICK', rating: 4.5, affiliateKey: 'garmin-approach-s62', name: 'Garmin Approach S62', bestFor: 'Best Overall', price: '~$499', feature1: '4.7/5 ★', feature2: 'Manual tag', winner: true },
         { rating: 4.3, affiliateKey: 'shot-scope-v5',       name: 'Shot Scope V5',      bestFor: 'Best Tracking', price: '~$210', feature1: '4.6/5 ★', feature2: 'Auto (tags)', winner: false },
         { rating: 4.6, affiliateKey: 'garmin-approach-s42',  name: 'Garmin Approach S42', bestFor: 'Best Mid-Range', price: '~$299', feature1: '4.5/5 ★', feature2: 'Via phone', winner: false },
-        { rating: 4.2, affiliateKey: 'bushnell-ion-elite',   name: 'Bushnell Ion Elite',  bestFor: 'Best Budget', price: '~$199', feature1: '4.3/5 ★', feature2: 'None', winner: false },
+        { rating: 4.2, affiliateKey: 'bushnell-ion-elite',   name: 'Bushnell Ion Elite',  bestFor: 'Best Budget', price: '~$220', feature1: '4.3/5 ★', feature2: 'None', winner: false },
       ],
     },
     faq: [
@@ -6740,7 +6732,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       'Prefer a wrist device over pulling out a rangefinder on every shot',
     ],
     whoSkip: [
-      'Play fewer than 10 rounds per year -- Bushnell Ion Elite at $199 is sufficient',
+      'Play fewer than 10 rounds per year -- Bushnell Ion Elite at $220 is sufficient',
       'Want detailed strokes-gained analysis -- Shot Scope V5 has better auto-tracking',
       'Refuse to wear a watch during your swing -- get a rangefinder instead',
       'Already own an Apple Watch -- add Golfshot for $30/year instead of buying a second watch',
@@ -12949,14 +12941,14 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         { name: 'Garmin Approach S42', badge: 'BEST OVERALL', rating: 4.6, affiliateKey: 'garmin-approach-s42', price: '~$299', bestFor: 'Most golfers — best balance of features and value', feature1: '42,000+', feature2: '3 rounds' },
         { name: 'Garmin Approach S12', badge: 'BEST VALUE', rating: 4, affiliateKey: 'garmin-approach-s12', price: '~$199', bestFor: 'Budget-conscious golfers who want reliable distances', feature1: '42,000+', feature2: '5 rounds' },
         { name: 'Shot Scope V5', badge: 'BEST DATA', rating: 4.3, affiliateKey: 'shot-scope-v5', price: '~$210', bestFor: 'Data-driven golfers who want shot tracking analytics', feature1: '36,000+', feature2: '2 rounds' },
-        { name: 'Bushnell Ion Elite', badge: 'SIMPLEST', rating: 4.2, affiliateKey: 'bushnell-ion-elite', price: '~$199', bestFor: 'Golfers who want clear distances without complexity', feature1: '38,000+', feature2: '4 rounds' },
+        { name: 'Bushnell Ion Elite', badge: 'SIMPLEST', rating: 4.2, affiliateKey: 'bushnell-ion-elite', price: '~$220', bestFor: 'Golfers who want clear distances without complexity', feature1: '38,000+', feature2: '4 rounds' },
       ],
     },
     sections: [
       { h2: 'Why the Garmin S42 Wins', body: '<p>The Garmin Approach S42 occupies the sweet spot of the GPS watch market — it has every feature that matters for on-course decision making without the complexity or price of the S62. The touchscreen is responsive, the course maps are accurate, and the auto-shot detection actually works (it correctly logged 94% of our shots in testing, including chips and putts).</p><p>The S42 shows distances to the front, middle, and back of the green, plus up to four hazards per hole. The green view lets you move the pin location to get a more accurate distance. All 42,000+ preloaded courses update automatically via Garmin Connect — no subscription required, ever.</p><p>As a daily watch, it handles notifications, step tracking, and heart rate monitoring. It is not a full Fenix replacement, but it looks normal enough to wear to the office without looking like you strapped a computer to your wrist.</p>\n\nIf you are kitting out from scratch, the <a href="/golf-equipment-budget-planner/">golf equipment budget planner</a> allocates your budget across clubs, bag and accessories.', badge: 'STRONG PICK', rating: 4.6, affiliateKey: 'garmin-approach-s42' },
       { h2: 'Runner-Up Golf GPS Watch Under $300: Garmin S12 ($199)', body: '<p>The Garmin S12 strips away the touchscreen and daily smartwatch features to deliver the core GPS golf experience at $149. It shows front/middle/back distances, hazard overlays, and shot distance measurement. The interface is button-driven — simpler but slower than the S42 touchscreen.</p><p>The S12 battery life is outstanding — 5 rounds on a single charge. If you play Friday evening, Saturday, and Sunday morning, you never need to charge during a golf weekend. The tradeoff is no shot tracking, no green view, and no smartphone notifications. For golfers who just want reliable distances without distractions, the S12 does exactly that for $100 less than the S42.</p>', badge: 'RUNNER UP', rating: 4.0, affiliateKey: 'garmin-approach-s12' },
       { h2: 'Best GPS Watch for Analytics: Shot Scope V5 ($249)', body: '<p>The Shot Scope V5 is the only watch on this list that provides professional-level shot tracking without sensor tags. It automatically records every shot, tracks club distances, identifies your strengths and weaknesses by club and shot type, and generates strokes gained data compared to golfers of similar handicap levels.</p><p>The V5 dashboard is where this watch earns its value. After a round, you see heatmaps of your approach shots, average distances by club, GIR patterns, and specific areas where you lose the most strokes. This data turns vague feelings into actionable practice plans. The tradeoff: the V5 watch itself is bulkier than the Garmins, the course map interface is less polished, and battery life is shorter at 2 rounds per charge.</p>', badge: 'STRONG PICK', rating: 4.3, affiliateKey: 'shot-scope-v5' },
-      { h2: 'Budget Pick: Bushnell Ion Elite ($199)', body: '<p>The Bushnell Ion Elite is the simplest GPS watch on the market — and that is its strength. The color display shows distances in large, easy-to-read numbers. Auto course recognition works at 38,000+ courses. Auto-advance moves to the next hole without button presses. There is no shot tracking, no analytics dashboard, no smartwatch features. Just distances.</p><p>For older golfers or anyone who finds technology frustrating, the Ion Elite removes every barrier between you and the number you need. It is also the most readable display in direct sunlight of any watch we tested, including the Garmins. At $149 with Bushnell brand quality, it is a safe purchase for anyone who wants a GPS watch to do one thing well.</p>', badge: 'BEST VALUE', rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
+      { h2: 'Budget Pick: Bushnell Ion Elite ($220)', body: '<p>The Bushnell Ion Elite is the simplest GPS watch on the market — and that is its strength. The color display shows distances in large, easy-to-read numbers. Auto course recognition works at 38,000+ courses. Auto-advance moves to the next hole without button presses. There is no shot tracking, no analytics dashboard, no smartwatch features. Just distances.</p><p>For older golfers or anyone who finds technology frustrating, the Ion Elite removes every barrier between you and the number you need. It is also the most readable display in direct sunlight of any watch we tested, including the Garmins. At $149 with Bushnell brand quality, it is a safe purchase for anyone who wants a GPS watch to do one thing well.</p>', badge: 'BEST VALUE', rating: 4.2, affiliateKey: 'bushnell-ion-elite' },
       { h2: 'GPS Watch vs Rangefinder Under $300', body: '<p>At this budget, you can afford an excellent GPS watch OR an excellent rangefinder — but probably not both. Here is how to choose:</p><p><strong>Choose a GPS watch if:</strong> You want distances on every shot without pulling out a device, you value convenience and speed, you want shot tracking data to improve over time, or you play courses you have never seen before (pre-loaded maps show every hazard).</p><p><strong>Choose a rangefinder if:</strong> You want exact pin distances (not front/middle/back estimates), you play the same few courses regularly, you do not care about shot tracking, or you want the most accurate approach distances possible.</p><p>Many golfers eventually own both — a GPS watch for convenience and a rangefinder for precision on approach shots. If you are starting with one, the GPS watch provides more value across more situations. See our <a href="/golf-rangefinder-vs-gps-watch/">rangefinder vs GPS watch comparison</a> for the full analysis.</p>' },
     ],
     faq: [

@@ -387,12 +387,12 @@ export const AFFILIATE: Record<string, {
   // Bushnell Ion Elite — search (colourway/strap variants)
   'bushnell-ion-elite': {
     url: 'https://bushnell.pxf.io/OYaaez',
-    verifiedOn: '2026-09-04',
+    verifiedOn: '2026-11-01',
     program: 'bushnell',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Bushnell*+Ion*+Elite*&ghref=2301%3A1333883',
     retailer: 'Bushnell',
-    price: '~$199',
-    priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
+    price: '~$220',
+    priceNote: 'Up from ~$199 in September. Bushnell listed it at $219.99 on 1 November 2026.',
     label: 'Check Price at Bushnell →',
     imgSrc: '/images/products/bushnell-ion-elite.webp',
     imgAlt: 'Bushnell Ion Elite GPS Golf Watch',

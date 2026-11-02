@@ -1,92 +1,127 @@
-SPRINT 214 — ball finder unified, stale labels fixed, ratchet tightened
+SPRINT 215 — Bushnell iON Elite repriced to ~$220, honestly framed
 ==========================================================================
 Extract at the REPO ROOT. 4 files, no deletions.
-Verified with a full `npm run build`: EXIT 0, 100 validators, 0 failures.
+Full `npm run build`: EXIT 0, 100 validators, 0 failures.
+
+You chose "label it worth the stretch". That is what shipped. The job was
+bigger than the one section I showed you, and the build forced one change I
+had not anticipated. Both are below.
 
 --------------------------------------------------------------------------
-1. THE BALL FINDER WAS WORSE THAN I REPORTED
+1. THE PRICE WAS ASSERTED ON 8 PAGES, NOT ONE
 --------------------------------------------------------------------------
-I told you two figures disagreed with balls.ts. I checked all of them:
-16 of its 19 rows were wrong.
+Before this sprint the site quoted the same watch at THREE different prices:
 
-  Five wrong compression figures:
-     Srixon Soft Feel      finder 50   balls.ts 60
-     Vice Pro              finder 75   balls.ts 90
-     TaylorMade Tour Resp. finder 70   balls.ts 77
-     Callaway Chrome Tour  finder 87   balls.ts 90
-     Titleist AVX          finder 78   balls.ts 77
-  Plus wrong prices and wrong swing-speed bands on most rows.
+   $149   /best-gps-golf-watch-high-handicappers/  (body and FAQ)
+          /best-golf-gps-watch-under-200/          (pros bullet)
+          compare/garmin-s12-vs-bushnell-ion-elite (both products at ~$149)
+   $199   six other places
+   $219.99  /black-friday-golf-deals/   (correct — written yesterday)
 
-  The page told readers "Data from our compression chart, independently
-  verified" while showing different numbers to the chart.
+A reader comparing two of your pages could see $149 on one and $199 on the
+other. Now every one of them reads ~$220, matching the registry and matching
+Bushnell's own site.
 
-  FIX: the hardcoded array is gone. The tool now derives every ball from
-  balls.ts and cannot drift again. `feel` is computed from compression;
-  `bestFor` is the one editorial field, curated where a line was worth
-  keeping and derived from cover + speed band otherwise.
+Corrected, page by page:
 
-  Side effect worth having: the tool went from 19 balls to 34 — it now
-  covers the whole chart instead of a hand-picked subset. Stated counts
-  on the page updated to match (they said "19" in four places).
+   /best-golf-gps-watch-under-200/        intro, quick answer, bottom line,
+                                          TOC, H2, section price, body, pros
+   /best-golf-gps-watches/                section price, body, pros bullet
+   /best-gps-golf-watch-high-handicappers/ bottom line, section price, body,
+                                          table row, FAQ, cons bullet
+   /best-golf-rangefinder-for-seniors/    section price, table row, FAQ
+   /best-golf-gps-watch-under-300/        H2, table row
+   /garmin-approach-s62-review/           "who should skip" line, table row
+   /black-friday-golf-deals/              already correct — untouched
+   compare/garmin-s12-vs-bushnell-ion-elite  description, intro, both
+                                          "better for" headings
 
-  Verified in the built HTML: 34 rows, every name present in balls.ts,
-  every compression and price matching.
-
---------------------------------------------------------------------------
-2. THIRTEEN STALE "SIMULATOR" LABELS
---------------------------------------------------------------------------
-Related-link labels across 13 pages promised simulators and delivered the
-launch monitor roundup (the old /best-golf-simulators/ 301s there). The
-destination was right; the wording was left over from the consolidation.
-
-  "Best Golf Simulators (All Budgets)"    -> "Best Launch Monitors (All Budgets)"     x5
-  "Best Golf Simulators for Small Spaces" -> "Best Launch Monitors for Small Spaces"  x2
-  "Simulators Under $5,000"               -> "Launch Monitors Under $5,000"
-  "Simulator Under $5,000"                -> "Launch Monitors Under $5,000"
-  "Simulator for Beginners"               -> "Launch Monitors for Beginners"
-  "Simulator Under $1,000"                -> "Launch Monitors Under $1,000"
-  "Best Simulators for Small Spaces"      -> "Best Launch Monitors for Small Spaces"
-  "Best Simulator Under $1,000"           -> "Best Launch Monitor Under $1,000"
-  plus one inline anchor, "simulators under $1,000"
+   registry  bushnell-ion-elite  ~$199 -> ~$220, verifiedOn 2026-11-01,
+             priceNote rewritten (it said "prices are stable", which is now
+             the opposite of true)
 
 --------------------------------------------------------------------------
-3. INLINE-STYLE RATCHET
+2. THE BUILD MADE ME REMOVE THE UNDER-$200 COMPARISON TABLE
 --------------------------------------------------------------------------
-  scripts/validate-spacing-scale.ts  INLINE_CEILING 395 -> 375
-  The build's own advisory. Count is 375 and has not moved since Sprint
-  184, so this is free and locks in the gain.
+validate-price-ceilings failed the moment the price went up:
+
+    /best-golf-gps-watch-under-200/ (ceiling $200)
+       -> TABLE ROW bushnell-ion-elite at ~$220
+
+Your own validator distinguishes a table row from prose: a row above the
+ceiling is a hard failure, a prose-only pick is a logged warning, because
+"the table is the shortlist and the title is a promise." It prints the
+remedy itself — move an upgrade pick out of the table and discuss it in
+prose.
+
+That left a one-row comparison table, which is not a comparison, so the
+table is gone. The page is now one under-$200 recommendation (Garmin S12,
+$199 list and currently $149.99 at Best Buy, Abt and Academy) plus the iON
+Elite as a clearly-labelled stretch pick. URL and title unchanged, so the
+keyword target is intact.
+
+This is the honest shape, because there is exactly ONE golf GPS watch under
+$200 in your registry. Your "I'll get a link for a third watch" option is
+the real fix for this page whenever you want it.
+
+--------------------------------------------------------------------------
+3. THREE OTHER ERRORS FOUND WHILE DOING IT
+--------------------------------------------------------------------------
+a) A MIS-KEYED TABLE ROW — readers sent to the wrong watch.
+   /best-gps-golf-watch-high-handicappers/ had a row labelled "Garmin
+   Approach S12", priced and spec'd as the S12 (30 hrs battery), that
+   linked to affiliateKey garmin-approach-s42 — a $299 watch. Anyone
+   clicking the S12 landed on the S42. Key corrected to the S12.
+
+   I found this by making a mistake: I "fixed" that row's $299 to $199 to
+   match the S12 name, and validate-table-vs-registry failed because $199
+   did not match the S42 it actually linked. The validator was right and I
+   was wrong, which is how the real bug surfaced.
+
+b) THE TABLE OF CONTENTS PROMISED TWO WATCHES THAT DO NOT EXIST.
+   /best-golf-gps-watch-under-200/ listed "Best Battery Life: Garmin
+   Approach S42" and "Budget Pick: Bushnell Ion Edge" — no such sections,
+   and the S42 is $299 so it could never belong on this page, while the Ion
+   Edge is not in your registry at all. The TOC also listed a "GPS Watch vs
+   Rangefinder" section that does not exist and omitted the two that do.
+   TOC now matches the four real sections.
+
+c) SELF-CONTRADICTING AND FALSE CLAIMS, now fixed:
+   - intro said "For $50 more, the Bushnell Ion Elite ($199)" — $50 more
+     than $199, priced at $199, in one sentence
+   - intro said "the only 4 models we recommend under $200" on a 2-product
+     page
+   - comparison intro ended mid-sentence: "the two best GPS golf watches
+     under $200 in."
+   - two pros bullets claimed "cheapest reliable golf GPS watch available"
+     and "lowest price with all core GPS features". At $220 both are false
+     on their own pages — the Shot Scope V5 ($210) and the Garmin S12
+     ($199) undercut it. Rewritten without the superlative.
+   - an FAQ said accuracy "is the same at $149 and $499" where $149 was a
+     stale iON Elite price; now phrased as a price tier, not a product.
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
-  full `npm run build`   : EXIT 0, 100 validators, 0 failures
-  parse check pre-write  : articles.ts and affiliate-links.ts imported with
-                           tsx BEFORE writing (193 records, 356 keys)
-  manifest               : regenerated with the repo's own
-                           scripts/update-lastmod.ts rather than by hand
-                           305 -> 305 entries, 14 changed, all expected
-  ball finder rendered   : 34 rows, 0 names absent from balls.ts,
-                           Soft Feel 60/$25, Vice Pro 90/$39,
-                           Chrome Soft 75/$45 all now agree with the chart
-  Compression chart      : 34 priced rows still match the registry
-  Stated ball counts     : 5 claims, all agree with balls.ts (36)
+  full `npm run build`     EXIT 0, 100 validators, 0 failures
+  parse check              articles 193, comparisons 62, registry 356 keys,
+                           all imported with tsx BEFORE writing
+  price sweep              0 iON Elite price fields left at $199 or $149,
+                           checked across the whole record tree (not just
+                           `sections` — two table rows were hiding outside it)
+  rendered HTML            /best-golf-gps-watch-under-200/ contains "$149"
+                           zero times; "At $220 it sits just over our $200
+                           line"; every surviving "$199" refers to the S12
+  manifest                 regenerated with scripts/update-lastmod.ts;
+                           305 entries, exactly the 7 touched pages changed
+  price ceilings           now a logged warning (disclosed upgrade pick),
+                           not a failure
+  table/registry drift     back to 20 (ceiling 20) after the mis-key fix
+  generated artifacts      public/ reverted; only these 4 source files ship
 
 --------------------------------------------------------------------------
-WHAT I STARTED AND BACKED OUT — needs your call
+STILL UNDERSTATED — one price I did not touch
 --------------------------------------------------------------------------
-BUSHNELL iON ELITE. I changed it from ~$199 to ~$220 (Bushnell's own site
-says $219.99 today) and the build immediately caught the consequence:
-
-   /best-golf-gps-watch-under-200/ promises "under $200" and the iON Elite
-   is one of only TWO products in its table. At $220 the page breaks its
-   own promise, and its section heading reads "just inside the $200 budget".
-
-Fixing that means either dropping to a one-product roundup, retitling the
-page, or promoting a different product into the table. The obvious
-candidate is the Bushnell Phantom 3 at ~$139 in the registry — except
-Bushnell's own site shows $169.99 today, so that price is stale too.
-
-Choosing which product headlines one of your roundups is your call, not
-mine, so I reverted the price change rather than restructure the page
-around it. The iON Elite is still at ~$199 in the registry, which is $21
-low. Nothing is broken; it is just understated.
+bushnell-phantom-2 is ~$139 in the registry; Bushnell's site shows the
+Phantom 3 at $169.99. Different generation, so it is not a simple edit, and
+it is a clip-on handheld rather than a watch. Flagging, not guessing.
