@@ -1,111 +1,79 @@
-SPRINT 218 — one compression page per ball, generated from balls.ts
+SPRINT 219 — Bridgestone e9 added to the chart
 ==========================================================================
-Extract at the REPO ROOT. 7 files (2 new), no deletions.
-Full `npm run build`: EXIT 0, 102 validators, 0 failures. 339 pages (was 305).
+Extract at the REPO ROOT. 7 files, no deletions.
+Full `npm run build`: EXIT 0, 102 validators. 37 balls (was 36), 35 ball pages.
 
 --------------------------------------------------------------------------
-WHAT THIS IS FOR
+WHAT I FOUND, AND THE ONE THING YOU SHOULD CHECK
 --------------------------------------------------------------------------
-Search Console, 28 days to 2 November: 109 queries ask for the compression of
-ONE named ball — "titleist tour soft compression", "callaway supersoft
-compression rating", "tp5 compression". 3,053 impressions, 23 clicks, average
-position 8-11.
+You said to use the best information I had, or a similar ball. I did not have
+to estimate — but the answer is not quite the ball the query names, and that
+is worth knowing.
 
-We had the answer to every one of them in balls.ts and nowhere to put it. A
-reader asking for a single number landed on a 36-row table.
+THERE ARE TWO BRIDGESTONE e9s.
 
-Two things I checked before building, because both would have killed it:
+  e9 (e-series)      The old one. Long discontinued. Bridgestone published no
+                     compression figure for it and no independent measurement
+                     of that exact ball exists.
 
-  NOT A DATA GAP.    18 of the 19 highest-demand balls were already in
-                     balls.ts. Only the Bridgestone e9 is missing.
-  NOT AN AUTHORITY WALL. On "titleist tour soft compression" and "callaway
-                     supersoft compression rating" we are not on page 1 —
-                     while ballcaddie, foundgolfballs, mycustomgolfball,
-                     golfinsideruk, outofboundsgolf and shottalk all are.
-                     Sites our size are winning these.
+  e9 Long Drive      Launched 2023, still sold. Two-piece, seamless Surlyn
+                     cover, 330-dimple pattern, gradational core.
+                     BRIDGESTONE PUBLISHES ITS COMPRESSION: 75.
 
-What was missing was a destination. That is what this builds.
+I charted the e9 Long Drive at 75, attributed to Bridgestone (published) —
+the same bar every other sourced ball on the chart clears. No estimate, no
+borrowed figure from a similar ball.
 
-Worth having right: compression queries at position 1-3 convert at 10.54%,
-the best rate on the site — measured WITH AI Overviews present on the SERP.
+The note on the entry says all of this in plain words, so a reader searching
+"bridgestone e9 compression" lands on the current ball, gets a real sourced
+number, and is told the older e9 is a different ball with no published figure.
+That is more honest than silently charting one as the other.
+
+If you know the query is really about the old e-series ball, tell me and I
+will reword — but I would not invent a number for it, and borrowing the e12's
+would be guessing.
 
 --------------------------------------------------------------------------
-WHAT SHIPPED
+THE DATA
 --------------------------------------------------------------------------
-NEW  src/pages/golf-ball-compression/[ball].astro
-     One page per live ball (34), at /golf-ball-compression/<affKey>/.
-     EVERY FIGURE IS DERIVED FROM balls.ts — compression, cover, price, speed
-     range, source, notes, and the softer/firmer neighbours. Nothing is typed
-     by hand, so these cannot drift from the chart, the PDF or the ball finder
-     the way the finder had drifted before Sprint 214.
+  Bridgestone e9 Long Drive
+    compression 75          Bridgestone (published), via MyGolfSpy and
+                            GolfBallsWorld reporting Bridgestone's own figure
+    cover       Ionomer     Surlyn is an ionomer; charted the way the others are
+    price       ~$27/dz     $29.99 list; street has settled to about $25-27
+    speed       88-105 mph  the same band as the Callaway Chrome Soft, the
+                            other 75-compression ball on the chart, rather than
+                            a range invented for it
 
-     Each page: the number in the first sentence, a spec table, where it sits
-     among the 34, provenance where balls.ts records a source, the editorial
-     note, one affiliate CTA, the rest of that brand's range cross-linked, and
-     four FAQs built from the same data.
+  Despite the "Long Drive" name, 75 is mid, not firm. The page says so.
 
-NEW  src/pages/sitemap-ball-compression.xml.ts
-     Generated from the same array, registered in the sitemap index. Add a ball
-     to balls.ts and its page, its chart row and its sitemap entry all appear
-     together — there is no list here to forget.
+--------------------------------------------------------------------------
+WHAT ELSE HAD TO MOVE
+--------------------------------------------------------------------------
+Adding one ball touched six other things, every one found by a validator
+rather than by me:
 
-     Dates inherit from the compression chart record rather than claiming a
-     freshness of their own, because these pages restate figures it owns.
+  · five stated counts said "36 balls" across articles.ts and the chart page
+  · the Bridgestone brand-chart meta said "all 4 Bridgestone golf balls" — 5
+  · the deep-link ceiling
 
-MOD  src/pages/golf-ball-compression-chart/index.astro
-     Ball names in both tables now link to their page — 34 inbound links from
-     the site's highest-traffic page. Discontinued balls stay unlinked.
+ON THAT CEILING — read this, it is the judgement call in this sprint.
 
-MOD  scripts/update-lastmod.ts
-     Registers the 34 pages. The file walk deliberately skips dynamic routes,
-     so without this they would have been invisible to the manifest and the
-     sitemap would have gone stale silently. Hash combines the ball record AND
-     the route file, so editing either marks the page changed.
+I have no Amazon ASIN for this ball and will not fabricate one, so its buy
+link is a search URL. That pushed search-page primaries from 91 to 92 and the
+build stopped, saying: raise this only if the product genuinely has variants
+the reader must choose between, and say so in its priceNote.
 
-MOD  scripts/generate-llms-full.ts
-     Same reason — the static walk skips dynamic routes, so the coverage
-     validator failed at 82% until these were added.
-
-MOD  src/pages/sitemap.xml.ts     one new child sitemap in the index
-MOD  src/data/lastmod-manifest.json   305 -> 339 entries
+It does. The e9 Long Drive ships in white, yellow, orange and pink at one
+price. The priceNote now records that, and the ceiling is 92 with the reason
+written into the validator file. If you get a direct ASIN later, point the
+URL at it and drop the ceiling back to 91.
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
   full `npm run build`   EXIT 0, 102 validators, 0 failures
-  per-page check         all 34 pages verified against balls.ts: title carries
-                         the right compression, lede states it, price matches,
-                         description within the 158-char ceiling. 0 problems.
-  internal links         34 distinct ball-page links confirmed in the rendered
-                         compression chart
-  sitemap                34 <loc> entries
-  manifest               339 pages tracked, up from 305
-
-Four things the build caught and I fixed rather than shipped:
-  · affiliate CTA rendered before the FTC disclosure on all 34 — added
-    EarlyDisclosure above it
-  · the brand table ended flush against the cream CTA band on 32 pages —
-    fixed with a 32px rule in a stylesheet, not an inline style, so it adds
-    nothing to the inline-style ceiling
-  · numeric columns were right-aligned under left-aligned headers
-  · llms-full.txt coverage fell to 82%
-
-And two the build could NOT catch, which I found by reading the rendered page:
-  · "a ultra-soft" on every sub-50 ball — the article now follows the word
-  · the spec table read "0-80 mph" where the prose said "up to 80 mph"
-
---------------------------------------------------------------------------
-WHAT TO EXPECT, HONESTLY
---------------------------------------------------------------------------
-New pages take 4-8 weeks to settle. The optimistic case is +279 clicks a month
-if these reach the compression family's own top-3 rate; the number to plan
-against is the conservative one, roughly +77 a month, because mygolfspy and
-Today's Golfer hold top slots on several of these queries and the peers above
-us are the realistic target, not position 1.
-
-Nothing here is measurable before mid-December.
-
-NOT DONE: the Bridgestone e9 is still absent from balls.ts (98 impressions,
-position 23). Adding it needs a compression figure we can attribute, which is
-the same sourcing bar every other ball on the chart had to clear — so it is a
-data decision for you, not something I should invent.
+  new page               /golf-ball-compression/bridgestone-e9-long-drive/
+                         title and lede both state 75, attributed to Bridgestone
+  chart                  37 balls, e9 Long Drive present, 35 ball-page links
+  registry               price $26.97/dz agrees with the chart's ~$27

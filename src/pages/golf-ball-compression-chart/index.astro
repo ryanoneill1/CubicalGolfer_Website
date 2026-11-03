@@ -71,8 +71,8 @@ const article = ARTICLES.find(a => a.slug === '/golf-ball-compression-chart/')!;
 const updatedOn = effectiveDateModified('/golf-ball-compression-chart/', article.dateModified) ?? article.datePublished;
 
 const meta = {
-  title: 'Golf Ball Compression Chart 2026 — 36 Balls + PDF',
-  description: 'Sortable chart of 36 golf balls — Titleist, Callaway, TaylorMade, Srixon. Filter by brand, cover or price, or enter your swing speed. Free printable PDF.',
+  title: 'Golf Ball Compression Chart 2026 — 37 Balls + PDF',
+  description: 'Sortable chart of 37 golf balls — Titleist, Callaway, TaylorMade, Srixon. Filter by brand, cover or price, or enter your swing speed. Free printable PDF.',
   canonical: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
   ogType: 'article' as const,
@@ -147,7 +147,7 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Golf Ball Compression Chart 2026',
-  description: '36 golf balls ranked by compression rating from lowest (34) to highest (102)',
+  description: '37 golf balls ranked by compression rating from lowest (34) to highest (102)',
   numberOfItems: balls.length,
   itemListElement: balls.map((ball, i) => ({
     '@type': 'ListItem',
@@ -169,7 +169,7 @@ const chartImageSchema = {
   width: 1200,
   height: 675,
   name: 'Golf Ball Compression Chart 2026',
-  caption: 'Golf ball compression chart 2026: 36 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball',
+  caption: 'Golf ball compression chart 2026: 37 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball',
   creditText: 'CubicalGolfer.com',
   license: 'https://creativecommons.org/licenses/by/4.0/',
   acquireLicensePage: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
@@ -180,7 +180,7 @@ const datasetSchema = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
   name: 'Golf Ball Compression Chart 2026',
-  description: '36 golf balls ranked by compression rating (34–102) with cover material, price per dozen, and recommended swing speed range.',
+  description: '37 golf balls ranked by compression rating (34–102) with cover material, price per dozen, and recommended swing speed range.',
   url: 'https://www.cubicalgolfer.com/golf-ball-compression-chart/',
   creator: {
     '@type': 'Organization',
@@ -340,7 +340,7 @@ function outboundFor(url: string | null | undefined): string {
     <figure style="margin:0 0 32px;max-width:880px;">
       <img src="/images/charts/golf-ball-compression-chart-2026.webp"
  width="1200" height="675" loading="eager" fetchpriority="high"
- alt="Golf ball compression chart 2026: 36 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
+ alt="Golf ball compression chart 2026: 37 golf balls grouped into four compression bands — ultra-soft 34-50 for under 85 mph, soft-mid 55-74 for 85-100 mph, mid-firm 75-87 for 90-110 mph and firm-high 88-102 for 100+ mph — with the compression rating for each ball"
  style="width:100%;height:auto;border-radius: var(--r2);display:block;" />
       <figcaption style="font-size:14px;color:var(--muted);margin-top:8px;">
         Golf ball compression chart 2026 — all {balls.length} balls we track, grouped by compression band and swing speed.
@@ -660,7 +660,7 @@ function outboundFor(url: string | null | undefined): string {
     </section>
 
     <section>
-      <h2 id="low-to-high">All 36 Balls Ranked Low to High Compression</h2>
+      <h2 id="low-to-high">All 37 Balls Ranked Low to High Compression</h2>
       <p>The complete ranking from softest to firmest. Use this as a quick reference — the interactive filter above gives personalized recommendations, but this list shows the full spectrum at a glance.</p>
       <!-- Sprint 137: four paragraphs of comma-separated balls, bottom of page.
            Now banded blocks in the same four bands the chart image and the

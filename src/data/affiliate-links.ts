@@ -2929,6 +2929,20 @@ export const AFFILIATE: Record<string, {
       'Two-dozen box brings the per-ball cost below most ionomer competitors',
     ],
   },
+  'bridgestone-e9-long-drive': {
+    url: 'https://www.amazon.com/s?k=Bridgestone+e9+Long+Drive+golf+balls&tag=cubicalgolfer-20',
+    program: 'amazon',
+    retailer: 'Amazon',
+    verifiedOn: '2026-11-03',
+    price: '$26.97/dz',
+    priceNote: 'Sold in white, yellow, orange and pink at one price, so this opens the colour choices rather than forcing one. Listed at $29.99 a dozen by Bridgestone; street price has settled a few dollars below that.',
+    label: 'See Today\'s Price \u2192',
+    benefits: [
+      '75 compression \u2014 Bridgestone\'s published figure for the e9 Long Drive',
+      'Two-piece build with a seamless Surlyn cover and the 330-dimple pattern',
+      'Gradational core: soft inner, firmer outer, tuned for carry',
+    ],
+  },
   'bridgestone-e12-contact': {
     url: 'https://www.amazon.com/dp/B08VSB9SXM?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
