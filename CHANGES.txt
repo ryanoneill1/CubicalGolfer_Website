@@ -1,79 +1,98 @@
-SPRINT 219 — Bridgestone e9 added to the chart
+SPRINT 220 — the five Titleist compressions, sourced and corrected
 ==========================================================================
 Extract at the REPO ROOT. 7 files, no deletions.
-Full `npm run build`: EXIT 0, 102 validators. 37 balls (was 36), 35 ball pages.
+Full `npm run build`: EXIT 0, 102 validators. Sourced balls 21 -> 26 of 37.
 
 --------------------------------------------------------------------------
-WHAT I FOUND, AND THE ONE THING YOU SHOULD CHECK
+WHY: THE ANSWER TO "WHY DOES BALLCADDIE BEAT US" WAS AN ACCURACY PROBLEM
 --------------------------------------------------------------------------
-You said to use the best information I had, or a similar ball. I did not have
-to estimate — but the answer is not quite the ball the query names, and that
-is worth knowing.
+Two things it was NOT, both checked and killed before any work started:
 
-THERE ARE TWO BRIDGESTONE e9s.
+  COVERAGE.  They chart 72 balls across 19 brands, we chart 37 across 10.
+             Demand for every brand we do not carry — Mizuno, Snell, Cut,
+             PXG, Top Flite, OnCore, Tour Edge, Member's Mark — totals
+             23 IMPRESSIONS. Adding brands would have been weeks of
+             sourcing for nothing.
+  STRUCTURE. They use one page with 13 brand sections; we use six brand
+             pages. No evidence consolidating would help, and it would be a
+             large risky rebuild of the best asset on the site.
 
-  e9 (e-series)      The old one. Long discontinued. Bridgestone published no
-                     compression figure for it and no independent measurement
-                     of that exact ball exists.
-
-  e9 Long Drive      Launched 2023, still sold. Two-piece, seamless Surlyn
-                     cover, 330-dimple pattern, gradational core.
-                     BRIDGESTONE PUBLISHES ITS COMPRESSION: 75.
-
-I charted the e9 Long Drive at 75, attributed to Bridgestone (published) —
-the same bar every other sourced ball on the chart clears. No estimate, no
-borrowed figure from a similar ball.
-
-The note on the entry says all of this in plain words, so a reader searching
-"bridgestone e9 compression" lands on the current ball, gets a real sourced
-number, and is told the older e9 is a different ball with no published figure.
-That is more honest than silently charting one as the other.
-
-If you know the query is really about the old e-series ball, tell me and I
-will reword — but I would not invent a number for it, and borrowing the e12's
-would be guessing.
+What it actually was: our numbers were wrong, and theirs say where they came
+from. Our chart had 14 of 35 figures with no source at all — including all
+five Titleists, the brand with 920 impressions across 31 queries.
 
 --------------------------------------------------------------------------
-THE DATA
+WHAT CHANGED, AND WHAT EACH FIGURE IS NOW
 --------------------------------------------------------------------------
-  Bridgestone e9 Long Drive
-    compression 75          Bridgestone (published), via MyGolfSpy and
-                            GolfBallsWorld reporting Bridgestone's own figure
-    cover       Ionomer     Surlyn is an ionomer; charted the way the others are
-    price       ~$27/dz     $29.99 list; street has settled to about $25-27
-    speed       88-105 mph  the same band as the Callaway Chrome Soft, the
-                            other 75-compression ball on the chart, rather than
-                            a range invented for it
+You chose independently-measured only. Every figure below is a named gauge
+reading, not a manufacturer claim — Titleist publishes no compression figure
+for any ball, which is how these drifted in the first place.
 
-  Despite the "Long Drive" name, 75 is mid, not firm. The page says so.
+   Tour Soft    65 -> 88   MyGolfSpy's gauge; their own review calls it
+                           close to a Pro V1 in firmness. We were 23 LOW.
+   Velocity     65 -> 84   Ball Lab, 2022 model. Ball Lab has not graded a
+                           newer one, so 84 is the most recent reading that
+                           can be attributed to a named test.
+   Pro V1       87 -> 93   Ball Lab measured the 2025 ball at 92.5.
+   Pro V1x      97 -> 101  Ball Lab, 2025 model.
+   AVX          77 -> 77   UNCHANGED. Ball Lab measured the 2024 AVX at 77;
+                           our figure was already right, just unlabelled.
+
+A CORRECTION TO WHAT I TOLD YOU EARLIER. I said these looked invented. They
+were not. 87 was Ball Lab's 2023 Pro V1 reading, 97 was its 2021 Pro V1x
+reading, 77 is its current AVX reading. They were correct measurements that
+went stale as Titleist changed the balls. Only the two 65s look like they
+were never measured at all.
+
+Tour Soft's fitting range moved with it, 80-95 -> 88-105 mph, because a ball
+at 88 does not suit the swing speed a ball at 65 does.
 
 --------------------------------------------------------------------------
-WHAT ELSE HAD TO MOVE
+THE BIGGER DEFECT THIS UNCOVERED
 --------------------------------------------------------------------------
-Adding one ball touched six other things, every one found by a validator
-rather than by me:
+The compression chart carried a SECOND, HAND-TYPED COPY of balls.ts: brand
+chips ("Tour Soft (65)") and compression-band chips, roughly 40 of them, as
+literal HTML.
 
-  · five stated counts said "36 balls" across articles.ts and the chart page
-  · the Bridgestone brand-chart meta said "all 4 Bridgestone golf balls" — 5
-  · the deep-link ceiling
+The moment the table said 88, a chip two screens below still said 65 — a
+same-page contradiction of exactly the kind validate-same-page-prices exists
+to prevent, except these were hardcoded so nothing checked them.
 
-ON THAT CEILING — read this, it is the judgement call in this sprint.
-
-I have no Amazon ASIN for this ball and will not fabricate one, so its buy
-link is a search URL. That pushed search-page primaries from 91 to 92 and the
-build stopped, saying: raise this only if the product genuinely has variants
-the reader must choose between, and say so in its priceNote.
-
-It does. The e9 Long Drive ships in white, yellow, orange and pink at one
-price. The priceNote now records that, and the ceiling is 92 with the reason
-written into the validator file. If you get a direct ASIN later, point the
-URL at it and drop the ceiling back to 91.
+Both chip sets are now DERIVED from balls.ts, as are the per-brand counts and
+the band ranges. Side effect worth having: the Bridgestone card said "4 balls"
+and had said so since the e9 was added yesterday. It now counts itself.
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
-  full `npm run build`   EXIT 0, 102 validators, 0 failures
-  new page               /golf-ball-compression/bridgestone-e9-long-drive/
-                         title and lede both state 75, attributed to Bridgestone
-  chart                  37 balls, e9 Long Drive present, 35 ball-page links
-  registry               price $26.97/dz agrees with the chart's ~$27
+  full `npm run build`     EXIT 0, 102 validators, 0 failures
+  compression sources      26 of 37 sourced, up from 21; no brand credited
+                           with a figure it does not publish
+  rendered sweep           0 stale Titleist figures anywhere in dist/ —
+                           searched every HTML file for the old 65/87/97
+                           forms. Before the sweep there were 18 across 4
+                           pages that the build did not flag.
+  derived chips            Titleist now renders 70, 77, 78, 84, 88, 93, 101
+                           in compression order; bands recomputed to
+                           34-50 / 55-74 / 75-87 / 88-102
+  ball pages               all five titles and ledes carry the new figure,
+                           attributed to MyGolfSpy Ball Lab
+
+Prose the validators did NOT catch, fixed by hand after reading the rendered
+pages — 15 statements across articles.ts, comparisons.ts and the chart page,
+including two that needed rewriting rather than renumbering:
+
+  · the chart's own FAQ told readers under 90 mph to drop to the Tour Soft
+    for a softer ball. At 88 that advice is now wrong; it points to the AVX
+    and TruFeel instead, and says plainly that the Tour Soft is barely softer
+    than a Pro V1 despite the name.
+  · the Kirkland comparison said the Pro V1 was "87 on Titleist-scale
+    figures". There is no Titleist scale — they publish nothing.
+
+--------------------------------------------------------------------------
+STILL OPEN
+--------------------------------------------------------------------------
+Nine unsourced figures remain: Soft Response, e12 Contact, Vice Pro Soft,
+Tour B RX, Wilson Chaos, Tour Response, Wilson Staff Model, Tour B XS,
+Maxfli Tour X. None has Titleist's traffic, and several brands DO publish, so
+those are quicker. Say the word and they are the next sprint.

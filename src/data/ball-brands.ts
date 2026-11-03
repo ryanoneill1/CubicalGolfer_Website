@@ -375,7 +375,7 @@ export const BRAND_DETAIL = build();
 // The five brand pages each hard-coded "all 35 balls ... across ten brands"
 // (really 36 across 11) and a per-brand FAQ whose compression range and
 // "softest ball" answer were also typed by hand. Titleist's said the TruFeel
-// at 70 was its softest when Tour Soft and Velocity sit at 65 — stated two
+// at 70 was its softest when Tour Soft and Velocity were charted at 65 — stated two
 // screens below a table showing both. Same defect, same fix.
 
 /** Total balls on the all-brands chart. */

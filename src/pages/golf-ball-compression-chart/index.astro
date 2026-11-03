@@ -27,6 +27,30 @@ import { getAffiliateLink } from '../../data/affiliate-links';
 // otherwise — the three below are the ones balls.ts itself nominates for
 // slow swingers. Only the numbers are computed.
 const ball = (name: string) => (BALLS as any[]).find(b => b.name === name)!;
+
+// Sprint 220 — the brand chips and compression-band chips further down this
+// page were a SECOND, hand-typed copy of balls.ts. When the five Titleist
+// figures were corrected against MyGolfSpy's gauge, the table printed 88 for
+// the Tour Soft while a chip two screens below still said 65 — a same-page
+// contradiction of exactly the kind validate-same-page-prices exists to stop,
+// except these chips were literal HTML so nothing checked them. Derived now.
+// Discontinued balls are included: they were in the old chips, and a reader
+// looking up a ball they already own still needs its number.
+const CHIPS = [...(BALLS as any[])].sort((a, b) => a.compression - b.compression);
+const chipLabel = (b: any) =>
+  `${b.name.startsWith(b.brand) ? b.name.slice(b.brand.length).trim() : b.name} (${b.compression})`;
+const brandChips = (brand: string) => CHIPS.filter(b => b.brand === brand);
+// Boundaries are editorial and deliberately unchanged; the numbers shown for
+// each band are derived from whichever balls actually fall inside it.
+const BANDS: Record<string, [number, number]> = {
+  'Ultra-soft': [0, 54], 'Soft-mid': [55, 74], 'Mid-firm': [75, 87], 'Firm-high': [88, 999],
+};
+const bandChips = (name: string) =>
+  CHIPS.filter(b => b.compression >= BANDS[name][0] && b.compression <= BANDS[name][1]);
+const bandRange = (name: string) => {
+  const s = bandChips(name);
+  return s.length ? `${s[0].compression}-${s[s.length - 1].compression}` : '—';
+};
 const slowPick = ball('Callaway Supersoft');
 const slowAlt  = ball('Wilson DUO Soft+');
 const slowBudget = [ball('TaylorMade Noodle'), slowAlt, slowPick]
@@ -123,8 +147,8 @@ const faqs = [
   { q: "Does Titleist publish golf ball compression ratings?", a: "No. Titleist does not publish a compression figure for any ball in its line, including the Pro V1, Pro V1x, AVX, Tour Soft, Velocity and TruFeel. Every Titleist compression number you see online is an independent measurement or an estimate, which is why they vary so widely between sources. Costco does the same with the Kirkland Signature, so the 92 in the chart above is MyGolfSpy Ball Lab’s measured average rather than a manufacturer specification." },
   { q: "Which golf ball compression numbers are measured and which are published by the manufacturer?", a: "On this chart, the Source column marks each one. Callaway, TaylorMade, Srixon, Bridgestone, Wilson and Vice publish their own compression figures, and where they do we use the manufacturer number. Titleist and Costco publish nothing, so those rows carry an independent measurement instead — MyGolfSpy’s 2026 ball test for the TruFeel and MyGolfSpy Ball Lab for the Kirkland Signature. Mixing the two scales in one comparison is the most common reason two charts appear to contradict each other." },
   { q: 'What golf ball compression should I use?', a: 'Match compression to your driver swing speed. Under 85 mph: play compression 35-65. Between 85-100 mph: play compression 65-90. Over 100 mph: play compression 90-102. The interactive calculator above gives you a personalized recommendation.' },
-  { q: 'Does golf ball compression affect distance?', a: 'Yes. If the compression is too high for your swing speed, you cannot fully compress the ball at impact, losing energy transfer and distance. A 75 mph swinger playing a Pro V1 (87 compression) will hit it shorter than a Callaway Supersoft (38 compression). The right compression maximizes energy transfer for YOUR speed.' },
-  { q: 'What is the compression of a Titleist Pro V1?', a: 'The Titleist Pro V1 has a compression of 87. It is designed for swing speeds of 90-115 mph. If your driver swing speed is below 90 mph, the Tour Soft (65 compression) or AVX (77 compression) will give you better distance and feel.' },
+  { q: 'Does golf ball compression affect distance?', a: 'Yes. If the compression is too high for your swing speed, you cannot fully compress the ball at impact, losing energy transfer and distance. A 75 mph swinger playing a Pro V1 (93 compression) will hit it shorter than a Callaway Supersoft (38 compression). The right compression maximizes energy transfer for YOUR speed.' },
+  { q: 'What is the compression of a Titleist Pro V1?', a: 'Titleist publishes no compression figure for any ball. MyGolfSpy Ball Lab measured the 2025 Pro V1 at 92.5, which we chart as 93. It suits swing speeds of 90-115 mph. Below 90 mph the AVX (77) or TruFeel (70) will give you better distance and feel — not the Tour Soft, which despite the name gauges at 88 and is barely softer than the Pro V1.' },
   { q: 'What compression is a Callaway Supersoft?', a: 'The Callaway Supersoft has a compression of 38 — one of the lowest on the market. It is ideal for swing speeds under 80 mph, seniors, and beginners. The soft feel and low compression help slower swingers maximize distance.' },
   { q: 'What is a good compression for a senior golfer?', a: 'Most senior golfers benefit from compression between 35-65. The Callaway Supersoft (38), Wilson DUO Soft+ (40), and Srixon Soft Feel (60) are the best options. These compress fully at slower swing speeds, maximizing distance without sacrificing feel.' },
   { q: 'Is higher or lower compression better?', a: 'Neither — it depends on your swing speed. Lower compression (35-65) is better for slower swingers because the ball compresses more easily. Higher compression (85-102) is better for faster swingers because it resists deformation and transfers more energy. Playing the wrong compression in either direction costs distance.' },
@@ -622,38 +646,38 @@ function outboundFor(url: string | null | undefined): string {
            laid out as scannable cards with the balls as chips. -->
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:12px 0 4px;">
         <div class="cb-card">
-          <p class="cb-card__title"><a href="/titleist-golf-ball-compression-chart/">Titleist</a> <span class="cb-sub">· 7 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">TruFeel (70)</span><span class="cb-pill cb-pill--cream">Tour Soft (65)</span><span class="cb-pill cb-pill--cream">Velocity (65)</span><span class="cb-pill cb-pill--cream">AVX (77)</span><span class="cb-pill cb-pill--cream">Tour Speed (78)</span><span class="cb-pill cb-pill--cream">Pro V1 (87)</span><span class="cb-pill cb-pill--cream">Pro V1x (97)</span></div>
+          <p class="cb-card__title"><a href="/titleist-golf-ball-compression-chart/">Titleist</a> <span class="cb-sub">· {brandChips('Titleist').length} balls</span></p>
+          <div class="cb-row">{brandChips('Titleist').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">The lineup spans the full compression range. See our <a href="/compare/titleist-pro-v1-vs-callaway-chrome-soft/">Pro V1 vs Chrome Soft comparison</a> for the head-to-head data. Most weekend golfers should play the Tour Soft or AVX — the Pro V1 is overkill below 90 mph.</p>
         </div>
         <div class="cb-card">
-          <p class="cb-card__title"><a href="/callaway-golf-ball-compression-chart/">Callaway</a> <span class="cb-sub">· 4 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">Supersoft (38)</span><span class="cb-pill cb-pill--cream">Warbird (68)</span><span class="cb-pill cb-pill--cream">Chrome Soft (75)</span><span class="cb-pill cb-pill--cream">Chrome Tour (90)</span></div>
+          <p class="cb-card__title"><a href="/callaway-golf-ball-compression-chart/">Callaway</a> <span class="cb-sub">· {brandChips('Callaway').length} balls</span></p>
+          <div class="cb-row">{brandChips('Callaway').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">The Supersoft-to-Chrome Soft jump is the biggest compression gap in any brand — there is no Callaway ball between 38 and 68.</p>
         </div>
         <div class="cb-card">
-          <p class="cb-card__title"><a href="/taylormade-golf-ball-compression-chart/">TaylorMade</a> <span class="cb-sub">· 5 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">Noodle (34)</span><span class="cb-pill cb-pill--cream">Soft Response (50)</span><span class="cb-pill cb-pill--cream">Tour Response (77)</span><span class="cb-pill cb-pill--cream">TP5 (85)</span><span class="cb-pill cb-pill--cream">TP5x (97)</span></div>
+          <p class="cb-card__title"><a href="/taylormade-golf-ball-compression-chart/">TaylorMade</a> <span class="cb-sub">· {brandChips('TaylorMade').length} balls</span></p>
+          <div class="cb-row">{brandChips('TaylorMade').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">The Tour Response at $35 is the best value in the TaylorMade lineup.</p>
         </div>
         <div class="cb-card">
-          <p class="cb-card__title"><a href="/srixon-golf-ball-compression-chart/">Srixon</a> <span class="cb-sub">· 4 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">Soft Feel (60)</span><span class="cb-pill cb-pill--cream">Q-Star Tour (74)</span><span class="cb-pill cb-pill--cream">Z-Star (88)</span><span class="cb-pill cb-pill--cream">Z-Star XV (102)</span></div>
+          <p class="cb-card__title"><a href="/srixon-golf-ball-compression-chart/">Srixon</a> <span class="cb-sub">· {brandChips('Srixon').length} balls</span></p>
+          <div class="cb-row">{brandChips('Srixon').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">The Q-Star Tour is the standout — a urethane cover at $40, and the softest urethane Srixon makes, for 85-100 mph swingers. Srixon raised the published figure from 72 to 74 with the 2026 reworked FastLayer core.</p>
         </div>
         <div class="cb-card">
-          <p class="cb-card__title"><a href="/bridgestone-golf-ball-compression-chart/">Bridgestone</a> <span class="cb-sub">· 4 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">e12 Contact (50)</span><span class="cb-pill cb-pill--cream">Tour B RX (68)</span><span class="cb-pill cb-pill--cream">Tour B XS (90)</span><span class="cb-pill cb-pill--cream">Tour B X (100)</span></div>
+          <p class="cb-card__title"><a href="/bridgestone-golf-ball-compression-chart/">Bridgestone</a> <span class="cb-sub">· {brandChips('Bridgestone').length} balls</span></p>
+          <div class="cb-row">{brandChips('Bridgestone').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">The e12 Contact unique dimple design genuinely reduces slices for mid-handicappers.</p>
         </div>
         <div class="cb-card">
-          <p class="cb-card__title"><a href="/vice-golf-ball-compression-chart/">Vice</a> <span class="cb-sub">· 4 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">Pro Soft (65)</span><span class="cb-pill cb-pill--cream">Pro (90)</span><span class="cb-pill cb-pill--cream">Drive (95)</span><span class="cb-pill cb-pill--cream">Pro Plus (100)</span></div>
+          <p class="cb-card__title"><a href="/vice-golf-ball-compression-chart/">Vice</a> <span class="cb-sub">· {brandChips('Vice').length} balls</span></p>
+          <div class="cb-row">{brandChips('Vice').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">Sold direct to consumer rather than through pro shops. The Pro Soft at 65 is the softest urethane ball on this chart. Despite the name, the Drive is one of the firmest Vice makes at 95 — it is a distance ball, not a soft one.</p>
         </div>
         <div class="cb-card">
-          <p class="cb-card__title">Maxfli <span class="cb-sub">· 2 balls</span></p>
-          <div class="cb-row"><span class="cb-pill cb-pill--cream">Tour S (85)</span><span class="cb-pill cb-pill--cream">Tour X (100)</span></div>
+          <p class="cb-card__title">Maxfli <span class="cb-sub">· {brandChips('Maxfli').length} balls</span></p>
+          <div class="cb-row">{brandChips('Maxfli').map((b: any) => <span class="cb-pill cb-pill--cream">{chipLabel(b)}</span>)}</div>
           <p class="cb-note">DICK'S Sporting Goods' own brand, made by Foremost in Taiwan. The Tour S is the cheapest genuine urethane ball on this chart at $39.99, and it is the only ball we chart between 78 and 87.</p>
         </div>
       </div>
@@ -669,40 +693,40 @@ function outboundFor(url: string | null | undefined): string {
         <div class="cb-panel">
           <div style="background:#4F7A5B;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
             <span class="cb-strong">Ultra-soft</span>
-            <span style="font-size:20px;font-weight:700;">34-50</span>
+            <span style="font-size:20px;font-weight:700;">{bandRange('Ultra-soft')}</span>
           </div>
           <div style="padding:14px 16px;">
-            <div class="cb-row"><span class="cb-pill">TaylorMade Noodle (34)</span><span class="cb-pill">Callaway Supersoft (38)</span><span class="cb-pill">Wilson DUO Soft+ (40)</span><span class="cb-pill">TaylorMade Soft Response (50)</span><span class="cb-pill">Bridgestone e12 Contact (50)</span></div>
+            <div class="cb-row">{bandChips('Ultra-soft').map((b: any) => <span class="cb-pill">{b.name} ({b.compression})</span>)}</div>
             <p class="cb-note">Best for swing speeds under 85 mph.</p>
           </div>
         </div>
         <div class="cb-panel">
           <div style="background:#2A5038;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
             <span class="cb-strong">Soft-mid</span>
-            <span style="font-size:20px;font-weight:700;">55-74</span>
+            <span style="font-size:20px;font-weight:700;">{bandRange('Soft-mid')}</span>
           </div>
           <div style="padding:14px 16px;">
-            <div class="cb-row"><span class="cb-pill">Srixon Soft Feel (60)</span><span class="cb-pill">Vice Pro Soft (65)</span><span class="cb-pill">Titleist Tour Soft (65)</span><span class="cb-pill">Titleist Velocity (65)</span><span class="cb-pill">Callaway Warbird (68)</span><span class="cb-pill">Bridgestone Tour B RX (68)</span><span class="cb-pill">Titleist TruFeel (70)</span><span class="cb-pill">Wilson Chaos (70)</span><span class="cb-pill">Pinnacle Rush (72)</span><span class="cb-pill">Srixon Q-Star Tour (74)</span></div>
+            <div class="cb-row">{bandChips('Soft-mid').map((b: any) => <span class="cb-pill">{b.name} ({b.compression})</span>)}</div>
             <p class="cb-note">The sweet spot for most weekend golfers (85-100 mph).</p>
           </div>
         </div>
         <div class="cb-panel">
           <div style="background:#1E3A28;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
             <span class="cb-strong">Mid-firm</span>
-            <span style="font-size:20px;font-weight:700;">75-87</span>
+            <span style="font-size:20px;font-weight:700;">{bandRange('Mid-firm')}</span>
           </div>
           <div style="padding:14px 16px;">
-            <div class="cb-row"><span class="cb-pill">Callaway Chrome Soft (75)</span><span class="cb-pill">Titleist AVX (77)</span><span class="cb-pill">TaylorMade Tour Response (77)</span><span class="cb-pill">Titleist Tour Speed (78)</span><span class="cb-pill">Maxfli Tour S (85)</span><span class="cb-pill">TaylorMade TP5 (85)</span><span class="cb-pill">Titleist Pro V1 (87)</span><span class="cb-pill">Wilson Staff Model (87)</span></div>
+            <div class="cb-row">{bandChips('Mid-firm').map((b: any) => <span class="cb-pill">{b.name} ({b.compression})</span>)}</div>
             <p class="cb-note">Tour-level balls for 90-110 mph swingers.</p>
           </div>
         </div>
         <div class="cb-panel">
           <div style="background:#143024;color:#fff;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;">
             <span class="cb-strong">Firm-high</span>
-            <span style="font-size:20px;font-weight:700;">88-102</span>
+            <span style="font-size:20px;font-weight:700;">{bandRange('Firm-high')}</span>
           </div>
           <div style="padding:14px 16px;">
-            <div class="cb-row"><span class="cb-pill">Srixon Z-Star (88)</span><span class="cb-pill">Callaway Chrome Tour (90)</span><span class="cb-pill">Bridgestone Tour B XS (90)</span><span class="cb-pill">Vice Pro (90)</span><span class="cb-pill">Kirkland Signature (92)</span><span class="cb-pill">Vice Drive (95)</span><span class="cb-pill">Titleist Pro V1x (97)</span><span class="cb-pill">TaylorMade TP5x (97)</span><span class="cb-pill">Bridgestone Tour B X (100)</span><span class="cb-pill">Maxfli Tour X (100)</span><span class="cb-pill">Vice Pro Plus (100)</span><span class="cb-pill">Srixon Z-Star XV (102)</span></div>
+            <div class="cb-row">{bandChips('Firm-high').map((b: any) => <span class="cb-pill">{b.name} ({b.compression})</span>)}</div>
             <p class="cb-note">Mostly tour balls for swing speeds above 100 mph, though the Vice Drive is a firm ionomer distance ball rather than a scoring ball.</p>
           </div>
         </div>
