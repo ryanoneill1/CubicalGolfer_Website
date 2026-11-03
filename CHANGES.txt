@@ -1,98 +1,79 @@
-SPRINT 220 — the five Titleist compressions, sourced and corrected
+SPRINT 221 — five more figures measured, and the advice re-pointed
 ==========================================================================
 Extract at the REPO ROOT. 7 files, no deletions.
-Full `npm run build`: EXIT 0, 102 validators. Sourced balls 21 -> 26 of 37.
+Full `npm run build`: EXIT 0, 102 validators. Sourced 26 -> 27 of 37;
+measured figures 8 -> 13.
+
+*** THIS WAS NEVER SHIPPED BEFORE. You said "pushed, confirm" but GitHub
+*** HEAD is still a6fbba3 (Sprint 220) and all five figures below were still
+*** at their old values. I had finished this work and never handed you the
+*** zip — my mistake, not a failed upload.
 
 --------------------------------------------------------------------------
-WHY: THE ANSWER TO "WHY DOES BALLCADDIE BEAT US" WAS AN ACCURACY PROBLEM
+THE FIGURES
 --------------------------------------------------------------------------
-Two things it was NOT, both checked and killed before any work started:
+   Noodle        34 -> 69   Ball Lab. TaylorMade MARKETS 34; the gauge says
+                            69. The single worst gap on the chart.
+   Supersoft     38 -> 44   Ball Lab, 2026 model (47 on the 2023).
+   Tour Response 77 -> 73   Ball Lab, 2022 model. Was unsourced.
+   TP5           85 -> 87   Ball Lab. A 2026 reading of 91.5 is reported
+                            secondhand; I could not confirm it on Ball Lab's
+                            own page, so 87 stands and the note says so.
+   Chrome Tour   90 -> 91   Ball Lab, 2026 model.
 
-  COVERAGE.  They chart 72 balls across 19 brands, we chart 37 across 10.
-             Demand for every brand we do not carry — Mizuno, Snell, Cut,
-             PXG, Top Flite, OnCore, Tour Edge, Member's Mark — totals
-             23 IMPRESSIONS. Adding brands would have been weeks of
-             sourcing for nothing.
-  STRUCTURE. They use one page with 13 brand sections; we use six brand
-             pages. No evidence consolidating would help, and it would be a
-             large risky rebuild of the best asset on the site.
-
-What it actually was: our numbers were wrong, and theirs say where they came
-from. Our chart had 14 of 35 figures with no source at all — including all
-five Titleists, the brand with 920 impressions across 31 queries.
-
---------------------------------------------------------------------------
-WHAT CHANGED, AND WHAT EACH FIGURE IS NOW
---------------------------------------------------------------------------
-You chose independently-measured only. Every figure below is a named gauge
-reading, not a manufacturer claim — Titleist publishes no compression figure
-for any ball, which is how these drifted in the first place.
-
-   Tour Soft    65 -> 88   MyGolfSpy's gauge; their own review calls it
-                           close to a Pro V1 in firmness. We were 23 LOW.
-   Velocity     65 -> 84   Ball Lab, 2022 model. Ball Lab has not graded a
-                           newer one, so 84 is the most recent reading that
-                           can be attributed to a named test.
-   Pro V1       87 -> 93   Ball Lab measured the 2025 ball at 92.5.
-   Pro V1x      97 -> 101  Ball Lab, 2025 model.
-   AVX          77 -> 77   UNCHANGED. Ball Lab measured the 2024 AVX at 77;
-                           our figure was already right, just unlabelled.
-
-A CORRECTION TO WHAT I TOLD YOU EARLIER. I said these looked invented. They
-were not. 87 was Ball Lab's 2023 Pro V1 reading, 97 was its 2021 Pro V1x
-reading, 77 is its current AVX reading. They were correct measurements that
-went stale as Titleist changed the balls. Only the two 65s look like they
-were never measured at all.
-
-Tour Soft's fitting range moved with it, 80-95 -> 88-105 mph, because a ball
-at 88 does not suit the swing speed a ball at 65 does.
+NOT CHANGED, because I could not attribute a measurement: Callaway Warbird,
+Chrome Soft, Srixon Z-Star. Third-party charts quote figures for all three;
+none traces back to a named gauge reading, and restating a competitor's
+number as fact is the thing this whole exercise exists to stop.
 
 --------------------------------------------------------------------------
-THE BIGGER DEFECT THIS UNCOVERED
+THE PART THAT MATTERED MORE: THE ADVICE
 --------------------------------------------------------------------------
-The compression chart carried a SECOND, HAND-TYPED COPY of balls.ts: brand
-chips ("Tour Soft (65)") and compression-band chips, roughly 40 of them, as
-literal HTML.
+The Noodle at 69 is not a slow-swing ball, and the chart's softest ball is no
+longer the Supersoft. That broke 79 statements across 13 pages — 30 of them
+recommendations, 13 on /best-golf-balls-for-seniors/ alone.
 
-The moment the table said 88, a chip two screens below still said 65 — a
-same-page contradiction of exactly the kind validate-same-page-prices exists
-to prevent, except these were hardcoded so nothing checked them.
+47 were plain figures and were renumbered. 10 could not be renumbered because
+the sentence itself was now false, and those were rewritten:
 
-Both chip sets are now DERIVED from balls.ts, as are the per-brand counts and
-the band ranges. Side effect worth having: the Bridgestone card said "4 balls"
-and had said so since the e9 was added yesterday. It now counts itself.
+  · "At 34 compression the Noodle is the softest ball we track... the pick
+    for a beginner with a genuinely slow swing" — now points at the Wilson
+    DUO Soft+ (40) and Callaway Supersoft (44), and says plainly that Ball
+    Lab gauges the Noodle at double TaylorMade's claim.
+  · "65 to 75 mph: Supersoft or TaylorMade Noodle (34)" — now Supersoft or
+    DUO Soft+.
+  · "The Noodle (34), Supersoft and DUO Soft+ all sit in that band" — the
+    Noodle no longer does; replaced with the Soft Response (50).
+  · a link whose anchor text read "TaylorMade Noodle at 34 compression"
+  · the TaylorMade range sentence listed the Noodle first as the soft end;
+    at 69 it sits between the Soft Response and the Tour Response.
+
+The softest three on the chart are now Wilson DUO Soft+ 40, Callaway
+Supersoft 44, TaylorMade Soft Response 50.
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
-  full `npm run build`     EXIT 0, 102 validators, 0 failures
-  compression sources      26 of 37 sourced, up from 21; no brand credited
-                           with a figure it does not publish
-  rendered sweep           0 stale Titleist figures anywhere in dist/ —
-                           searched every HTML file for the old 65/87/97
-                           forms. Before the sweep there were 18 across 4
-                           pages that the build did not flag.
-  derived chips            Titleist now renders 70, 77, 78, 84, 88, 93, 101
-                           in compression order; bands recomputed to
-                           34-50 / 55-74 / 75-87 / 88-102
-  ball pages               all five titles and ledes carry the new figure,
-                           attributed to MyGolfSpy Ball Lab
-
-Prose the validators did NOT catch, fixed by hand after reading the rendered
-pages — 15 statements across articles.ts, comparisons.ts and the chart page,
-including two that needed rewriting rather than renumbering:
-
-  · the chart's own FAQ told readers under 90 mph to drop to the Tour Soft
-    for a softer ball. At 88 that advice is now wrong; it points to the AVX
-    and TruFeel instead, and says plainly that the Tour Soft is barely softer
-    than a Pro V1 despite the name.
-  · the Kirkland comparison said the Pro V1 was "87 on Titleist-scale
-    figures". There is no Titleist scale — they publish nothing.
+  full `npm run build`   EXIT 0, 102 validators, 0 failures
+  brand-copy validator   caught three brand meta descriptions I had missed
+                         (Callaway "Supersoft (38)" and "Chrome Tour (90)",
+                         TaylorMade "Noodle (34)" as its softest) — fixed
+  rendered sweep         every remaining match for the old figures is inside
+                         copy that deliberately cites them, e.g. "marketed at
+                         34 but MyGolfSpy Ball Lab measures it at 69"
+  chips                  derived since Sprint 220, so the brand and band
+                         chips re-sorted themselves with no edit
 
 --------------------------------------------------------------------------
-STILL OPEN
+STILL TO DO
 --------------------------------------------------------------------------
-Nine unsourced figures remain: Soft Response, e12 Contact, Vice Pro Soft,
-Tour B RX, Wilson Chaos, Tour Response, Wilson Staff Model, Tour B XS,
-Maxfli Tour X. None has Titleist's traffic, and several brands DO publish, so
-those are quicker. Say the word and they are the next sprint.
+You asked me to research all 13 remaining manufacturer figures. I got through
+five before web search hit its session limit (resets 12:20pm CT). Still on a
+published or absent figure: Warbird, Chrome Soft, Z-Star, Z-Star XV,
+Q-Star Tour, Soft Feel, DUO Soft+, Vice Pro, Pro Plus, Pro Soft, Drive,
+Tour B X, Tour B XS, Tour B RX, e12 Contact, Soft Response, Wilson Chaos,
+Staff Model, Maxfli Tour S, Tour X, e9 Long Drive.
+
+Worth knowing before that work: every manufacturer figure checked so far has
+been softer than the gauge — Noodle 34 vs 69, Supersoft 38 vs 44, TP5 85 vs
+87. Expect the remaining published numbers to move up, not down.
