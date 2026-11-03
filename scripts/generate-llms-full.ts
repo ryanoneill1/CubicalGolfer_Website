@@ -16,6 +16,7 @@
 import { ARTICLES } from '../src/data/articles.ts';
 import { COMPARISONS } from '../src/data/comparisons.ts';
 import { CITIES } from '../src/data/cities.ts';
+import { balls as BALLS } from '../src/data/balls.ts';
 import fs from 'fs';
 
 const SITE = 'https://www.cubicalgolfer.com';
@@ -59,6 +60,22 @@ for (const city of CITIES as any[]) {
     url: `${SITE}/courses/${city.slug}/`,
     summary: clean(city.intro ?? ''),
     sort: `3${city.slug}`,
+  });
+}
+
+// Sprint 218 — one page per ball from balls.ts, rendered by the
+// golf-ball-compression/[ball].astro dynamic route. The static-page walk below
+// skips dynamic routes, so without this loop 34 live pages would be missing
+// from llms-full.txt and the coverage validator would fail.
+for (const b of (BALLS as any[]).filter(x => !x.discontinued)) {
+  entries.push({
+    title: `${b.name} Compression — ${b.compression}`,
+    url: `${SITE}/golf-ball-compression/${b.affKey}/`,
+    summary: clean(
+      `${b.name} compression is ${b.compression}, a ${b.cover.toLowerCase()}-cover ball rated for ` +
+      `${b.minMph}-${b.maxMph} mph swing speeds at about $${b.price} a dozen.`,
+    ),
+    sort: `4${b.affKey}`,
   });
 }
 

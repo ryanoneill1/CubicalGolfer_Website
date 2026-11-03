@@ -60,6 +60,7 @@ import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 import { CITIES } from '../src/data/cities';
 import { BRANDS } from '../src/data/brands';
+import { balls as BALLS } from '../src/data/balls';
 
 const MANIFEST = 'src/data/lastmod-manifest.json';
 const CHECK = process.argv.includes('--check');
@@ -95,6 +96,23 @@ function currentPages(): Record<string, { hash: string; seed?: string }> {
   }
   for (const b of BRANDS as any[]) {
     out[`/brands/${b.slug}/`] = { hash: recordHash(b), seed: b.dateModified };
+  }
+
+  // Sprint 218 — one page per ball, generated from balls.ts by
+  // src/pages/golf-ball-compression/[ball].astro. The visible content is that
+  // ball's record rendered through that route, so BOTH feed the hash: editing
+  // a ball's compression or notes, or the template itself, must mark the page
+  // changed. The walk below skips dynamic routes, so registering them here is
+  // the only thing standing between these pages and a silently stale sitemap.
+  {
+    const routeHash = sha(fs.readFileSync('src/pages/golf-ball-compression/[ball].astro', 'utf-8'));
+    // They restate figures the compression chart owns, so they inherit its
+    // date rather than claiming freshness of their own.
+    const chart = (ARTICLES as any[]).find(a => String(a.slug) === '/golf-ball-compression-chart/');
+    const seed = chart?.dateModified ?? chart?.datePublished;
+    for (const b of (BALLS as any[]).filter(x => !x.discontinued)) {
+      out[`/golf-ball-compression/${b.affKey}/`] = { hash: sha(recordHash(b) + routeHash), seed };
+    }
   }
 
   // Pages whose visible content comes from a data file rather than their own

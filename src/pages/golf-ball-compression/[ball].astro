@@ -1,0 +1,241 @@
+---
+// src/pages/golf-ball-compression/[ball].astro — Sprint 218.
+//
+// WHY THIS EXISTS. Search Console, 28 days to 2 November 2026: 109 queries ask
+// for the compression of ONE named ball — "titleist tour soft compression",
+// "callaway supersoft compression rating", "tp5 compression". 3,053
+// impressions, 23 clicks, average position 8-11. We hold the answer to every
+// one of them in balls.ts and had nowhere to put it: a reader asking for a
+// single number landed on a 36-row table.
+//
+// Peer-sized sites — ballcaddie, foundgolfballs, mycustomgolfball,
+// golfinsideruk, outofboundsgolf — outrank us on these because they have a
+// destination per ball and we did not. It is not a data gap and not an
+// authority wall.
+//
+// Worth having right: compression queries at position 1-3 convert at 10.54%,
+// the best rate on the site, measured WITH AI Overviews present.
+//
+// EVERY FIGURE COMES FROM balls.ts. Nothing here is typed by hand, so these
+// pages cannot drift from the chart, the PDF or the ball finder the way the
+// finder did before Sprint 214.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AffiliateCTA from '../../components/AffiliateCTA.astro';
+import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { balls } from '../../data/balls';
+import { AFFILIATE } from '../../data/affiliate-links';
+import { ROBOTS_INDEX } from '../../lib/seo';
+import { FULL_CHART_BLURB } from '../../data/ball-brands';
+
+const LIVE = (balls as any[]).filter(b => !b.discontinued);
+
+export async function getStaticPaths() {
+  const { balls: all } = await import('../../data/balls');
+  return (all as any[])
+    .filter(b => !b.discontinued)
+    .map(b => ({ params: { ball: b.affKey }, props: { ball: b } }));
+}
+
+const { ball } = Astro.props as { ball: any };
+
+// ── Derived, never typed ────────────────────────────────────────────────────
+const sorted = [...LIVE].sort((a, b) => a.compression - b.compression);
+const idx = sorted.findIndex(b => b.affKey === ball.affKey);
+const softer = idx > 0 ? sorted[idx - 1] : null;
+const firmer = idx < sorted.length - 1 ? sorted[idx + 1] : null;
+const softerThan = sorted.filter(b => b.compression > ball.compression).length;
+const firmerThan = sorted.filter(b => b.compression < ball.compression).length;
+
+const FEEL = (c: number) =>
+  c < 50 ? 'ultra-soft' : c < 70 ? 'soft' : c < 85 ? 'mid' : c < 95 ? 'mid-firm' : 'firm';
+const feel = FEEL(ball.compression);
+// 'a ultra-soft' read badly on every sub-50 ball; the article has to follow
+// the word, not be hardcoded.
+const anFeel = /^[aeiou]/i.test(feel) ? 'an' : 'a';
+// minMph is 0 for balls with no lower bound, and '0-80 mph' in the table
+// contradicted the prose, which already said 'up to 80 mph'.
+const speedCell = ball.minMph === 0 ? `Up to ${ball.maxMph} mph` : `${ball.minMph}\u2013${ball.maxMph} mph`;
+
+const brandBalls = LIVE.filter(b => b.brand === ball.brand).sort((a, b) => a.compression - b.compression);
+const BRAND_CHART: Record<string, string> = {
+  Titleist: '/titleist-golf-ball-compression-chart/',
+  Callaway: '/callaway-golf-ball-compression-chart/',
+  TaylorMade: '/taylormade-golf-ball-compression-chart/',
+  Bridgestone: '/bridgestone-golf-ball-compression-chart/',
+  Srixon: '/srixon-golf-ball-compression-chart/',
+  Vice: '/vice-golf-ball-compression-chart/',
+};
+const brandChart = BRAND_CHART[ball.brand] ?? null;
+
+const aff = (AFFILIATE as any)[ball.affKey];
+const slug = `/golf-ball-compression/${ball.affKey}/`;
+
+// Description must stay under the 158-char ceiling validate-meta-length
+// enforces, so it is assembled from the shortest true form and measured.
+const desc =
+  `${ball.name} compression is ${ball.compression} — ${anFeel} ${feel} ${ball.cover.toLowerCase()}-cover ball ` +
+  `built for ${ball.minMph === 0 ? `swing speeds up to ${ball.maxMph} mph` : `${ball.minMph}-${ball.maxMph} mph swing speeds`}. ` +
+  `Where it sits among ${LIVE.length} balls.`;
+
+const meta = {
+  title: `${ball.name} Compression — ${ball.compression} Rating (2026)`,
+  description: desc.length > 158 ? desc.slice(0, 155).trimEnd() + '…' : desc,
+  canonical: `https://www.cubicalgolfer.com${slug}`,
+  ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
+  ogType: 'article' as const,
+  robots: ROBOTS_INDEX,
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },
+    { label: `${ball.name} Compression`, href: slug },
+  ],
+};
+
+const speedFit =
+  ball.minMph === 0
+    ? `any swing speed up to ${ball.maxMph} mph`
+    : `driver swing speeds of ${ball.minMph} to ${ball.maxMph} mph`;
+
+const faq = [
+  {
+    q: `What is the compression of the ${ball.name}?`,
+    a: `The ${ball.name} has a compression rating of ${ball.compression}${ball.source ? `, per ${ball.source.replace(/\s*\(.*\)$/, '')}` : ''}. That puts it in the ${feel} range and makes it softer than ${softerThan} of the ${LIVE.length} balls on our compression chart.`,
+  },
+  {
+    q: `What swing speed suits the ${ball.name}?`,
+    a: `A compression of ${ball.compression} is matched to ${speedFit}. Below that range the ball will not fully compress and you lose distance; above it you gain little and give up feel.`,
+  },
+  {
+    q: `Is the ${ball.name} a soft or firm golf ball?`,
+    a: `At ${ball.compression} it is ${feel}. ${softer ? `The nearest softer ball on our chart is the ${softer.name} at ${softer.compression}.` : 'It is the softest ball on our chart.'} ${firmer ? `The nearest firmer ball is the ${firmer.name} at ${firmer.compression}.` : 'It is the firmest ball on our chart.'}`,
+  },
+  {
+    q: `How much does the ${ball.name} cost?`,
+    a: `About $${ball.price} a dozen at the time of our last price check. It has a ${ball.cover.toLowerCase()} cover, which is the main driver of greenside spin.`,
+  },
+];
+
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="improve">
+  <article class="art-content brand-chart-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">&#8250;</span>
+      <a href="/golf-ball-compression-chart/">Compression Chart</a>
+      <span aria-hidden="true">&#8250;</span>
+      <span>{ball.name}</span>
+    </nav>
+
+    <h1>{ball.name} Compression</h1>
+
+    <EarlyDisclosure />
+
+    <p class="lede">
+      The <strong>{ball.name} has a compression rating of {ball.compression}</strong> — {anFeel} {feel},
+      {' '}{ball.cover.toLowerCase()}-cover ball matched to {speedFit}.
+      {ball.source && <> That figure comes from {ball.source.replace(/\s*\(.*\)$/, '')}.</>}
+    </p>
+
+    <h2>{ball.name} specifications</h2>
+    <div class="table-wrap">
+      <table class="cmp-table">
+        <tbody>
+          <tr><th scope="row">Compression</th><td>{ball.compression}</td></tr>
+          <tr><th scope="row">Feel</th><td>{feel.charAt(0).toUpperCase() + feel.slice(1)}</td></tr>
+          <tr><th scope="row">Cover</th><td>{ball.cover}</td></tr>
+          <tr><th scope="row">Swing speed</th><td>{speedCell}</td></tr>
+          <tr><th scope="row">Price</th><td>~${ball.price}/dozen</td></tr>
+          <tr><th scope="row">Brand</th><td>{ball.brand}</td></tr>
+          {ball.source && <tr><th scope="row">Source</th><td>{ball.source}</td></tr>}
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Where {ball.compression} sits on the compression scale</h2>
+    <p>
+      Of the {LIVE.length} balls on our compression chart, the {ball.name} is softer than {softerThan}
+      {' '}and firmer than {firmerThan}.
+      {softer && <> Its nearest softer neighbour is the <strong>{softer.name}</strong> at {softer.compression}.</>}
+      {firmer && <> Its nearest firmer neighbour is the <strong>{firmer.name}</strong> at {firmer.compression}.</>}
+    </p>
+    <p>
+      Compression measures how much a ball deforms at impact. Match it to your driver speed and the
+      ball returns the energy you put into it; miss the range and you either leave distance behind
+      or lose the soft feel you paid for. The full
+      {' '}<a href="/golf-ball-compression-chart/">golf ball compression chart</a> ranks every ball we
+      track, and the <a href="/golf-ball-finder/">golf ball finder</a> narrows it to your own speed.
+    </p>
+
+    <h2>Who the {ball.name} suits</h2>
+    <p>{ball.notes}</p>
+
+    {aff && (
+      <AffiliateCTA
+        url={aff.url}
+        price={aff.price}
+        name={ball.name}
+        retailer={aff.retailer}
+        label={aff.label}
+        disclosure={true}
+        size="md"
+      />
+    )}
+
+    {brandBalls.length > 1 && (
+      <>
+        <h2>Other {ball.brand} balls by compression</h2>
+        <div class="table-wrap">
+          <table class="cmp-table">
+            <thead><tr><th scope="col">Ball</th><th class="cmp-num" scope="col">Compression</th><th scope="col">Cover</th><th class="cmp-num" scope="col">Swing speed</th></tr></thead>
+            <tbody>
+              {brandBalls.map((b: any) => (
+                <tr>
+                  <td>{b.affKey === ball.affKey
+                    ? <strong>{b.name}</strong>
+                    : <a href={`/golf-ball-compression/${b.affKey}/`}>{b.name}</a>}</td>
+                  <td class="cmp-num">{b.compression}</td>
+                  <td>{b.cover}</td>
+                  <td class="cmp-num">{b.minMph}–{b.maxMph} mph</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {brandChart && (
+          <p>
+            See the full <a href={brandChart}>{ball.brand} compression chart</a> for cover, price and
+            swing-speed detail on every {ball.brand} ball.
+          </p>
+        )}
+      </>
+    )}
+
+    <section class="brand-chart-cta">
+      <p class="brand-chart-cta__lead">Want every ball in one table?</p>
+      <p class="brand-chart-cta__blurb">{FULL_CHART_BLURB}</p>
+      <a class="brand-chart-cta__btn" href="/golf-ball-compression-chart/">Open the full compression chart &#8594;</a>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently Asked Questions</h2>
+      {faq.map(f => (
+        <div class="brand-chart-faq__item">
+          <h3 class="brand-chart-faq__q">{f.q}</h3>
+          <p class="brand-chart-faq__a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  /* The brand table is the last plain block before the cream CTA band, so it
+     needs its own bottom gap or the final row sits exactly where the colour
+     starts. 32px keeps it on the 4pt grid validate-spacing-scale enforces,
+     and living here rather than in a style="" attribute keeps it off the
+     inline-style ceiling. */
+  .brand-chart-page .table-wrap { margin-bottom: 32px; }
+</style>

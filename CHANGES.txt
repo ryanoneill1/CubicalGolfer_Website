@@ -1,123 +1,111 @@
-SPRINT 216 — the eight tracking IDs, wired by page group
+SPRINT 218 — one compression page per ball, generated from balls.ts
 ==========================================================================
-Extract at the REPO ROOT. 8 files, no deletions.
-Full `npm run build`: EXIT 0, 102 validators, 0 failures.
-
-*** THIS ZIP INCLUDES SPRINT 215. You had not pushed sprint-215-ion.zip
-*** when I built this, and both touch src/data/. Upload THIS ONE and ignore
-*** sprint-215-ion.zip — extracting both in either order is also fine, the
-*** files are identical.
+Extract at the REPO ROOT. 7 files (2 new), no deletions.
+Full `npm run build`: EXIT 0, 102 validators, 0 failures. 339 pages (was 305).
 
 --------------------------------------------------------------------------
-WHAT IT DOES
+WHAT THIS IS FOR
 --------------------------------------------------------------------------
-Every outbound Amazon link now carries the tracking ID of the PAGE it sits
-on, so Associates will report earnings per page group instead of one
-site-wide number.
+Search Console, 28 days to 2 November: 109 queries ask for the compression of
+ONE named ball — "titleist tour soft compression", "callaway supersoft
+compression rating", "tp5 compression". 3,053 impressions, 23 clicks, average
+position 8-11.
 
-    group  pages  links  tracking ID
-    lm       65    699   cubicalgolfer-lm-20
-    club     50    665   cubicalgolfer-club-20
-    ball     38    599   cubicalgolfer-ball-20
-    wear     30    497   cubicalgolfer-wear-20
-    gps      38    410   cubicalgolfer-gps-20
-    misc     66    361   cubicalgolfer-misc-20
-    gift      8    113   cubicalgolfer-gift-20
-    tool     12    101   cubicalgolfer-tool-20
-                 ------
-                  3,445 links across 307 pages
+We had the answer to every one of them in balls.ts and nowhere to put it. A
+reader asking for a single number landed on a 36-row table.
 
---------------------------------------------------------------------------
-WHY IT IS A POST-BUILD REWRITE, NOT 263 URL EDITS
---------------------------------------------------------------------------
-I started down the obvious path and abandoned it. The tag is hardcoded 263
-times inside affiliate-links.ts, and editing those would tag the PRODUCT —
-which tells you nothing you cannot already get from the Associates product
-report. Worse, a registry entry is shared across pages: garmin-approach-r10
-sits on your launch-monitor roundups AND on /shaft-flex-guide/.
+Two things I checked before building, because both would have killed it:
 
-Threading the page slug through 25+ components was the other option. The
-failure mode there is silent — miss one component and those links quietly
-never appear in the split, and nothing tells you.
+  NOT A DATA GAP.    18 of the 19 highest-demand balls were already in
+                     balls.ts. Only the Bridgestone e9 is missing.
+  NOT AN AUTHORITY WALL. On "titleist tour soft compression" and "callaway
+                     supersoft compression rating" we are not on page 1 —
+                     while ballcaddie, foundgolfballs, mycustomgolfball,
+                     golfinsideruk, outofboundsgolf and shottalk all are.
+                     Sites our size are winning these.
 
-So the new step rewrites the tag in the built HTML, keyed off the page's own
-file path. No render site can be missed, because it operates on the final
-output rather than the code that produced it. The page path IS the group,
-which is exactly the question you are asking.
+What was missing was a destination. That is what this builds.
 
-  scripts/apply-tracking-ids.ts   new, runs immediately after `astro build`
-  package.json                    one insertion into the build chain
-
-SAFE BY CONSTRUCTION. It only ever swaps cubicalgolfer-20 for another ID in
-your own account. An unclassified page falls to `misc`. A link it never
-touches keeps the default tag. Worst case is an unattributed commission,
-never a lost one — and it FAILS the build if an Amazon product link carries
-no tag at all, which would be a real loss.
+Worth having right: compression queries at position 1-3 convert at 10.54%,
+the best rate on the site — measured WITH AI Overviews present on the SERP.
 
 --------------------------------------------------------------------------
-TWO VALIDATORS WIDENED — read this, it is the one thing I changed in your
-safety net
+WHAT SHIPPED
 --------------------------------------------------------------------------
-Two validators read the built HTML and looked for the literal string
-`tag=cubicalgolfer-20`. With eight IDs in play they would have failed on
-every page, so both now match the tag FAMILY:
+NEW  src/pages/golf-ball-compression/[ball].astro
+     One page per live ball (34), at /golf-ball-compression/<affKey>/.
+     EVERY FIGURE IS DERIVED FROM balls.ts — compression, cover, price, speed
+     range, source, notes, and the softer/firmer neighbours. Nothing is typed
+     by hand, so these cannot drift from the chart, the PDF or the ball finder
+     the way the finder had drifted before Sprint 214.
 
-  scripts/validate-disclosure-position.ts     tag=cubicalgolfer-20
-  scripts/validate-astro-affiliate-links.ts     -> tag=cubicalgolfer(?:-[a-z]+)?-20
+     Each page: the number in the first sentence, a spec table, where it sits
+     among the 34, provenance where balls.ts records a source, the editorial
+     note, one affiliate CTA, the rest of that brand's range cross-linked, and
+     four FAQs built from the same data.
 
-The intent of both checks is unchanged: "this link is monetised." They still
-reject an untagged link, a foreign tag, or a tag belonging to anyone else.
-I widened them rather than removed them, and I am flagging it because
-loosening a check to make my own change pass is exactly the move that should
-be looked at twice.
+NEW  src/pages/sitemap-ball-compression.xml.ts
+     Generated from the same array, registered in the sitemap index. Add a ball
+     to balls.ts and its page, its chart row and its sitemap entry all appear
+     together — there is no list here to forget.
 
-Nothing else in the 100 pre-existing validators was touched.
+     Dates inherit from the compression chart record rather than claiming a
+     freshness of their own, because these pages restate figures it owns.
 
---------------------------------------------------------------------------
-HOW PAGES ARE GROUPED, AND THE TWO JUDGEMENT CALLS IN IT
---------------------------------------------------------------------------
-Rules are tested in order; first match wins. Both calls below are in the
-script's comments so the next person reading it knows they were decisions,
-not accidents.
+MOD  src/pages/golf-ball-compression-chart/index.astro
+     Ball names in both tables now link to their page — 34 inbound links from
+     the site's highest-traffic page. Discontinued balls stay unlinked.
 
-1. `gift` is tested FIRST, so /black-friday-golf-launch-monitor-deals/
-   reports as a GIFT page, not a launch-monitor one. It could defensibly go
-   either way. I chose gift because the question Q4 has to answer is "did
-   the seasonal bet earn anything", and splitting the deal pages across
-   groups makes that unreadable. Say the word and I will flip it.
+MOD  scripts/update-lastmod.ts
+     Registers the 34 pages. The file walk deliberately skips dynamic routes,
+     so without this they would have been invisible to the manifest and the
+     sitemap would have gone stale silently. Hash combines the ball record AND
+     the route file, so editing either marks the page changed.
 
-2. `tool` is deliberately narrow — calculators, planners, budget tools and
-   hub pages only. Charts and finders fall through to their subject, so the
-   compression chart reports as a BALL page, which is what it is.
+MOD  scripts/generate-llms-full.ts
+     Same reason — the static walk skips dynamic routes, so the coverage
+     validator failed at 82% until these were added.
 
-`misc` holds 66 pages: accessories, push carts, umbrellas, towels, swing
-analysers, alignment sticks, and the pages with no affiliate links at all
-(/about/, /404/). That is a real bucket, not a dumping ground — but if any
-of it turns out to earn, it is worth splitting out later.
+MOD  src/pages/sitemap.xml.ts     one new child sitemap in the index
+MOD  src/data/lastmod-manifest.json   305 -> 339 entries
 
 --------------------------------------------------------------------------
 VERIFICATION
 --------------------------------------------------------------------------
   full `npm run build`   EXIT 0, 102 validators, 0 failures
-  independent count      grep over dist/ for every tag, counted separately
-                         from the script's own tally; the eight totals sum
-                         to 3,445 and match it exactly
-  per-page isolation     one page sampled from each of the eight groups —
-                         every one carries ONLY its own group's tag
-  no losses              0 untagged Amazon /dp/, /gp/ or /s? links in dist
-  no stragglers          0 links left on the default cubicalgolfer-20
-  false-positive check   the bare https://www.amazon.com in
-                         <link rel="preconnect"> is correctly NOT treated as
-                         a monetised link (my first version flagged 610 of
-                         these and was wrong)
+  per-page check         all 34 pages verified against balls.ts: title carries
+                         the right compression, lede states it, price matches,
+                         description within the 158-char ceiling. 0 problems.
+  internal links         34 distinct ball-page links confirmed in the rendered
+                         compression chart
+  sitemap                34 <loc> entries
+  manifest               339 pages tracked, up from 305
+
+Four things the build caught and I fixed rather than shipped:
+  · affiliate CTA rendered before the FTC disclosure on all 34 — added
+    EarlyDisclosure above it
+  · the brand table ended flush against the cream CTA band on 32 pages —
+    fixed with a 32px rule in a stylesheet, not an inline style, so it adds
+    nothing to the inline-style ceiling
+  · numeric columns were right-aligned under left-aligned headers
+  · llms-full.txt coverage fell to 82%
+
+And two the build could NOT catch, which I found by reading the rendered page:
+  · "a ultra-soft" on every sub-50 ball — the article now follows the word
+  · the spec table read "0-80 mph" where the prose said "up to 80 mph"
 
 --------------------------------------------------------------------------
-AFTER YOU DEPLOY
+WHAT TO EXPECT, HONESTLY
 --------------------------------------------------------------------------
-Amazon's own note on the tracking-ID page says a new ID can take up to 24
-hours to be enabled for OneLink. OneLink is the international-redirect
-feature; US tracking works immediately.
+New pages take 4-8 weeks to settle. The optimistic case is +279 clicks a month
+if these reach the compression family's own top-3 rate; the number to plan
+against is the conservative one, roughly +77 a month, because mygolfspy and
+Today's Golfer hold top slots on several of these queries and the peers above
+us are the realistic target, not position 1.
 
-Reports -> by Tracking ID. Give it 4-6 weeks before reading the small
-groups. I will not draw a conclusion from any group under ~200 clicks, and
-I am writing that down in advance so I cannot talk myself into it later.
+Nothing here is measurable before mid-December.
+
+NOT DONE: the Bridgestone e9 is still absent from balls.ts (98 impressions,
+position 23). Adding it needs a compression figure we can attribute, which is
+the same sourcing bar every other ball on the chart had to clear — so it is a
+data decision for you, not something I should invent.

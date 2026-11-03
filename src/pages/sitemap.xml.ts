@@ -26,6 +26,7 @@ export const GET: APIRoute = async () => {
     `  <sitemap>\n    <loc>${DOMAIN}/sitemap-core.xml</loc>\n    <lastmod>${latestCore}</lastmod>\n  </sitemap>\n` +
     `  <sitemap>\n    <loc>${DOMAIN}/sitemap-articles.xml</loc>\n    <lastmod>${latestArticle}</lastmod>\n  </sitemap>\n` +
     `  <sitemap>\n    <loc>${DOMAIN}/sitemap-comparisons.xml</loc>\n    <lastmod>${latestComp}</lastmod>\n  </sitemap>\n` +
+    `  <sitemap>\n    <loc>${DOMAIN}/sitemap-ball-compression.xml</loc>\n    <lastmod>${latestCore}</lastmod>\n  </sitemap>\n` +
     `</sitemapindex>\n`;
 
   return new Response(xml, {
