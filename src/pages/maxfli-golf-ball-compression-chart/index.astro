@@ -1,0 +1,73 @@
+---
+// Maxfli golf ball compression chart — Sprint 224.
+// Targets the brand-qualified query cluster only. The unqualified head term
+// stays with the all-brands chart (the site's biggest earner); rationale and
+// the GSC evidence are documented in BrandCompressionChart.astro.
+//
+// Added in Sprint 224 because Maxfli was the one brand on the chart with
+// real brand-qualified demand and no page of its own: 268 impressions at position 8.6 over 90 days.
+// Every figure on the page derives from balls.ts / ball-brands.ts.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
+import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { brandFaqFacts, FULL_CHART_BLURB, siblingsOf } from '../../data/ball-brands';
+
+const facts = brandFaqFacts('Maxfli');
+
+const meta = {
+  title: "Maxfli Golf Ball Compression Chart 2026 \u2014 All 2",
+  description: "Compression, cover and price for both Maxfli golf balls, the Tour S (85) and Tour X (100), matched to your swing speed.",
+  canonical: 'https://www.cubicalgolfer.com/maxfli-golf-ball-compression-chart/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
+  ogType: 'article' as const,
+  robots: ROBOTS_INDEX,
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },
+    { label: "Maxfli Compression", href: "/maxfli-golf-ball-compression-chart/" },
+  ],
+};
+
+const faq = [
+  { q: "What is the compression of Maxfli golf balls?", a: facts.range },
+  { q: "Which Maxfli golf ball is the softest?", a: facts.softest },
+  { q: "Which Maxfli ball suits my swing speed?", a: "Maxfli makes no soft ball. The Tour S is rated 85-100 mph and the Tour X 105-130 mph, so if your driver speed is under 85 mph neither is built for you \u2014 the full chart has softer options from other brands. The table above lists the rated speed range for both Maxfli balls." },
+  { q: "How many Maxfli golf balls are on this chart?", a: facts.howMany },
+];
+
+const siblings = siblingsOf('Maxfli');
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="improve">
+  <article class="art-content brand-chart-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">&#8250;</span>
+      <a href="/golf-ball-compression-chart/">Compression Chart</a>
+      <span aria-hidden="true">&#8250;</span>
+      <span>Maxfli</span>
+    </nav>
+
+    <h1>Maxfli Golf Ball Compression Chart</h1>
+
+    <BrandCompressionChart brand="Maxfli" siblings={siblings} />
+
+    <section class="brand-chart-cta">
+      <p class="brand-chart-cta__lead">Want every brand in one table?</p>
+      <p class="brand-chart-cta__blurb">{FULL_CHART_BLURB}</p>
+      <a class="brand-chart-cta__btn" href="/golf-ball-compression-chart/">Open the full compression chart &#8594;</a>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently Asked Questions</h2>
+      {faq.map(f => (
+        <div class="brand-chart-faq__item">
+          <h3 class="brand-chart-faq__q">{f.q}</h3>
+          <p class="brand-chart-faq__a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>

@@ -366,10 +366,110 @@ function build(): Record<string, { lead: string; pick: string; watch: string }> 
     };
   }
 
+  // ── Wilson ────────────────────────────────────────────────────────────────
+  {
+    const bs = of('Wilson');
+    const duo = bs[0];                                  // DUO Soft+ 46
+    const chaos = bs.find(b => short(b) === 'Chaos')!;  // 70, chart's cheapest
+    const staff = bs[bs.length - 1];                    // Staff Model 96, urethane
+    const v1 = of('Titleist').find(b => short(b) === 'Pro V1')!;
+    const softerCount = softerThan(duo);
+    const ladder = staff.compression - duo.compression;
+    const spanOf = (br: string) => { const x = of(br); return x.length > 1 ? x[x.length - 1].compression - x[0].compression : 0; };
+    const widestSpan = BRANDS.every(br => spanOf(br) <= ladder);
+    // The brand with the most balls that still covers less ground than Wilson's three.
+    const bigger = BRANDS
+      .filter(br => br !== 'Wilson' && of(br).length > bs.length && spanOf(br) < ladder)
+      .map(br => ({ brand: br, count: plural(of(br).length, 'ball') , n: of(br).length }))
+      .sort((a, b) => b.n - a.n)[0];
+
+    out.Wilson = {
+      lead:
+        `Wilson spans ${ladder} compression points with ${plural(bs.length, 'ball')} — ` +
+        `${span(bs)}, ` +
+        (widestSpan
+          ? `the widest range of any brand on this chart` +
+            (bigger ? `, wider than ${bigger.brand} manages with ${bigger.count}` : ``)
+          : `an unusually wide range for ${plural(bs.length, 'model')}`) +
+        `. Prices run ${priceRange(bs)}, and both ends of the ladder are MyGolfSpy gauge readings rather ` +
+        `than Wilson's own published figures.`,
+      pick:
+        `${short(staff)} at ${staff.compression} compression and ${money(staff.price)} is the argument for ` +
+        `this brand. It is a cast-urethane tour ball rated ${speed(staff)} that costs ` +
+        `${money(v1.price - staff.price)} less than a Pro V1 — ${money(staff.price)} against ` +
+        `${money(v1.price)} — and at ${staff.compression} compression it is actually ` +
+        `${Math.abs(staff.compression - v1.compression)} ` +
+        `${staff.compression > v1.compression ? 'points firmer than' : 'points softer than'} ` +
+        `the Pro V1's ${v1.compression}, not a softer club-golfer substitute for it. ` +
+        `At the other end, ${short(duo)} at ${duo.compression} is the ` +
+        (softerCount === 0 ? `softest ball on this chart` :
+         softerCount === 1 ? `second-softest ball on this chart` :
+         `${inWords(softerCount + 1)}th-softest ball on this chart`) +
+        `, ${money(duo.price)} a dozen and rated ${speed(duo)} — the one to play if you are losing distance ` +
+        `because you cannot compress a firmer ball.`,
+      watch:
+        `${short(chaos)} at ${money(chaos.price)} is ` +
+        (chaos.price === chartCheapest.price
+          ? `the cheapest ball on this chart of any brand or cover`
+          : `near the cheapest on this chart`) +
+        `, and that is the whole point of it — a ${chaos.compression}-compression ionomer ball rated ` +
+        `${speed(chaos)} that you will not mind losing. We have not found an independent gauge reading for ` +
+        `it, so treat its number as approximate in a way the DUO Soft+ and Staff Model figures are not. ` +
+        `There is nothing between ${chaos.compression} and ${staff.compression} in this lineup, so the ` +
+        `85–95 mph player picking Wilson chooses between a ball built down to a price and a full tour ball. ` +
+        `For the cheap end of the whole field see our ` +
+        `<a href='/best-golf-balls-under-30/'>best golf balls under $30</a>.`,
+    };
+  }
+
+  // ── Maxfli ────────────────────────────────────────────────────────────────
+  {
+    const bs = of('Maxfli');
+    const s = bs[0];                 // Tour S 85
+    const x = bs[bs.length - 1];     // Tour X 100
+    const v1 = of('Titleist').find(b => short(b) === 'Pro V1')!;
+    const softestOnChart = ALL.slice().sort((a, b) => a.compression - b.compression)[0];
+
+    out.Maxfli = {
+      lead:
+        `Maxfli is the shortest lineup on this chart and the only one with no soft option at all: ` +
+        `${plural(bs.length, 'ball')}, both urethane, running ${span(bs)} compression. ` +
+        `Nothing it makes sits below ${s.compression}, so a swing under ${s.minMph} mph has no Maxfli to play — ` +
+        `the chart's softest ball is the ${softestOnChart.name} at ${softestOnChart.compression}.`,
+      pick:
+        `${short(x)} at ${x.compression} compression and ${money(x.price)} is the one worth knowing about, ` +
+        `because it inverts the usual pricing: it is ${x.compression - s.compression} points firmer than ` +
+        `${short(s)} and ${money(s.price - x.price)} cheaper. At ${money(x.price)} it is one of the least ` +
+        `expensive urethane balls here, against ${money(v1.price)} for a Pro V1. Rated ${speed(x)}, it wants ` +
+        `genuine clubhead speed — this is not a ball that rewards a smooth tempo.`,
+      watch:
+        `Neither Maxfli figure is an independent measurement. ${short(s)} carries Maxfli's published ` +
+        `number and we have found no gauge reading for ${short(x)} at all, so both should be read as ` +
+        `approximate next to the balls on this chart that cite a MyGolfSpy test. Maxfli is also a ` +
+        `DICK'S Sporting Goods house brand, which is why these two link to Golf Galaxy rather than Amazon — ` +
+        `you will not find them discounted across as many retailers as a Titleist or a Callaway.`,
+    };
+  }
+
   return out;
 }
 
 export const BRAND_DETAIL = build();
+
+/** Brands with a dedicated /{brand}-golf-ball-compression-chart/ page.
+ *  Derived from BRAND_DETAIL: a brand gets a page when it has commentary.
+ *  These used to be a hand-typed JSON array repeated inside all five pages —
+ *  adding Wilson and Maxfli would have meant editing seven copies, which is
+ *  exactly how the compression figures drifted in the first place. */
+export const BRAND_PAGES: { brand: string; slug: string }[] =
+  Object.keys(BRAND_DETAIL).map(brand => ({
+    brand,
+    slug: `/${brand.toLowerCase()}-golf-ball-compression-chart/`,
+  }));
+
+/** Every brand page except this one, for the cross-links on a brand page. */
+export const siblingsOf = (brand: string) =>
+  BRAND_PAGES.filter(p => p.brand !== brand);
 
 // ── Derived facts the brand pages need outside the commentary ──────────────
 // The five brand pages each hard-coded "all 35 balls ... across ten brands"

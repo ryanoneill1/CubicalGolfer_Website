@@ -1,0 +1,73 @@
+---
+// Wilson golf ball compression chart — Sprint 224.
+// Targets the brand-qualified query cluster only. The unqualified head term
+// stays with the all-brands chart (the site's biggest earner); rationale and
+// the GSC evidence are documented in BrandCompressionChart.astro.
+//
+// Added in Sprint 224 because Wilson was the one brand on the chart with
+// real brand-qualified demand and no page of its own: 155 impressions at position 7.1 over 90 days, and zero clicks.
+// Every figure on the page derives from balls.ts / ball-brands.ts.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ROBOTS_INDEX } from '../../lib/seo';
+import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
+import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import { brandFaqFacts, FULL_CHART_BLURB, siblingsOf } from '../../data/ball-brands';
+
+const facts = brandFaqFacts('Wilson');
+
+const meta = {
+  title: "Wilson Golf Ball Compression Chart 2026 \u2014 All 3",
+  description: "Compression, cover and price for all 3 Wilson golf balls, from the DUO Soft+ (46) to the Staff Model (96), matched to your swing speed.",
+  canonical: 'https://www.cubicalgolfer.com/wilson-golf-ball-compression-chart/',
+  ogImage: 'https://www.cubicalgolfer.com/images/og/golf-ball-compression-chart.jpg',
+  ogType: 'article' as const,
+  robots: ROBOTS_INDEX,
+  breadcrumbs: [
+    { label: 'Home', href: '/' },
+    { label: 'Compression Chart', href: '/golf-ball-compression-chart/' },
+    { label: "Wilson Compression", href: "/wilson-golf-ball-compression-chart/" },
+  ],
+};
+
+const faq = [
+  { q: "What is the compression of Wilson golf balls?", a: facts.range },
+  { q: "Which Wilson golf ball is the softest?", a: facts.softest },
+  { q: "Which Wilson ball suits my swing speed?", a: "Match compression to driver speed. The DUO Soft+ suits swings up to 80 mph, the Chaos 85-100 mph, and the Staff Model 95-115 mph. There is nothing in the Wilson lineup between 70 and 96 compression, so the 85-95 mph player chooses between a budget ionomer ball and a full tour ball. The table above lists the rated speed range for every Wilson ball." },
+  { q: "How many Wilson golf balls are on this chart?", a: facts.howMany },
+];
+
+const siblings = siblingsOf('Wilson');
+const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
+---
+
+<BaseLayout {meta} {schemas} activeNav="improve">
+  <article class="art-content brand-chart-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span aria-hidden="true">&#8250;</span>
+      <a href="/golf-ball-compression-chart/">Compression Chart</a>
+      <span aria-hidden="true">&#8250;</span>
+      <span>Wilson</span>
+    </nav>
+
+    <h1>Wilson Golf Ball Compression Chart</h1>
+
+    <BrandCompressionChart brand="Wilson" siblings={siblings} />
+
+    <section class="brand-chart-cta">
+      <p class="brand-chart-cta__lead">Want every brand in one table?</p>
+      <p class="brand-chart-cta__blurb">{FULL_CHART_BLURB}</p>
+      <a class="brand-chart-cta__btn" href="/golf-ball-compression-chart/">Open the full compression chart &#8594;</a>
+    </section>
+
+    <section>
+      <h2 id="faq">Frequently Asked Questions</h2>
+      {faq.map(f => (
+        <div class="brand-chart-faq__item">
+          <h3 class="brand-chart-faq__q">{f.q}</h3>
+          <p class="brand-chart-faq__a">{f.a}</p>
+        </div>
+      ))}
+    </section>
+  </article>
+</BaseLayout>

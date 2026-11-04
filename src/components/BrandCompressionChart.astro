@@ -14,7 +14,7 @@
 // is the site's biggest earner. Every ball and every line of brand commentary
 // comes from balls.ts / ball-brands.ts, so nothing here can drift.
 import { balls as BALLS } from '../data/balls.ts';
-import { BRAND_DETAIL } from '../data/ball-brands';
+import { BRAND_DETAIL, CHART_BALL_COUNT } from '../data/ball-brands';
 import { AFFILIATE, getAffiliateLink } from '../data/affiliate-links';
 
 interface Props { brand: string; siblings: { brand: string; slug: string }[]; }
@@ -144,6 +144,6 @@ import Icon from './Icon.astro';
     {siblings.map(s => (
       <li><a href={s.slug}>{s.brand} Golf Ball Compression Chart</a></li>
     ))}
-    <li><a href="/golf-ball-compression-chart/"><strong>All 36 balls in one chart</strong></a> — every brand ranked together, with a free printable PDF.</li>
+    <li><a href="/golf-ball-compression-chart/"><strong>All {CHART_BALL_COUNT} balls in one chart</strong></a> — every brand ranked together, with a free printable PDF.</li>
   </ul>
 </section>

@@ -13,7 +13,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BrandCompressionChart from '../../components/BrandCompressionChart.astro';
 import { breadcrumbSchema, faqSchema } from '../../lib/schema';
-import { brandFaqFacts, FULL_CHART_BLURB } from '../../data/ball-brands';
+import { brandFaqFacts, FULL_CHART_BLURB, siblingsOf } from '../../data/ball-brands';
 
 const facts = brandFaqFacts('Vice');
 
@@ -39,7 +39,7 @@ const faq = [
   { q: "How many Vice golf balls are on this chart?", a: facts.howMany },
 ];
 
-const siblings = [{"brand": "Callaway", "slug": "/callaway-golf-ball-compression-chart/"}, {"brand": "Titleist", "slug": "/titleist-golf-ball-compression-chart/"}, {"brand": "TaylorMade", "slug": "/taylormade-golf-ball-compression-chart/"}, {"brand": "Bridgestone", "slug": "/bridgestone-golf-ball-compression-chart/"}, {"brand": "Srixon", "slug": "/srixon-golf-ball-compression-chart/"}];
+const siblings = siblingsOf('Vice');
 const schemas = [breadcrumbSchema(meta.breadcrumbs), faqSchema(faq)];
 ---
 
