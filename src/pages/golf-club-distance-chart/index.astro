@@ -1,5 +1,5 @@
 ---
-import { CLUBS, TIERS } from '../../data/club-distances';
+import { CLUBS, TIERS, HYBRIDS } from '../../data/club-distances';
 import { effectiveDateModified } from '../../lib/freshness';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
@@ -39,6 +39,11 @@ const rows90 = CLUBS.map(([name, ratio, roll, type]) => {
   const color = type==='wood' ? 'var(--green,#1E3A28)' : type==='hybrid' ? 'var(--gold,#C9A84C)' : type==='iron' ? '#4a7c5f' : '#8B7355';
   return { name, carry, total, pct, color };
 });
+// Sprint 227: hybrid rows on the same scale as refRows, for the hybrid section.
+const hybridRows = HYBRIDS.map(([name, ratio, roll, replaces]) => ({
+  name, roll, replaces,
+  vals: TIERS.map(t => Math.round((t * 2.44 - 6) * ratio)),
+}));
 const refRows = CLUBS.filter(([n]) => !n.startsWith('GW') && !n.startsWith('LW')).map(([name, ratio]) => ({
   name, vals: TIERS.map(t => Math.round((t * 2.44 - 6) * ratio)),
 }));
@@ -229,6 +234,32 @@ const schemas = [
         </table>
       </div>
       <p style="font-size:16px;color:var(--muted,#888);">Carry only — add 5-20 yards of roll depending on club and fairway firmness. 75 mph ≈ many senior golfers · 95 mph ≈ average male amateur · 115 mph ≈ tour speed. Related: our <a href="/golf-swing-speed-chart/">swing speed chart</a> breaks these bands down by age and handicap.</p>
+    </section>
+
+    <section>
+      <h2 id="hybrid-distance-chart">Hybrid Distance Chart</h2>
+      <p>The bag chart above carries one hybrid, because almost nobody plays four hybrids <em>and</em> a full set of long irons. If you are shopping hybrids rather than reading a bag chart, here is the whole family on the same scale — carry in yards, by driver swing speed.</p>
+      <div class="cmp-wrap">
+        <table class="cmp-table"><caption class="sr-only">Hybrid carry distance by driver swing speed</caption>
+          <thead><tr><th scope="col">Hybrid</th><th scope="col">Replaces</th>{TIERS.map(t => <th class="cmp-num" scope="col">{t} mph</th>)}</tr></thead>
+          <tbody>
+            {hybridRows.map(r => (
+              <tr>
+                <td class="hyb-name">{r.name}</td>
+                <td class="hyb-swap">{r.replaces}</td>
+                {r.vals.map(v => <td class="cmp-num">{v}</td>)}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="chart-note">Carry only. Hybrids spin less than the iron they replace, so add roughly {hybridRows[0].roll} yards of roll on a 3-hybrid down to {hybridRows[hybridRows.length - 1].roll} on a 6-hybrid — a yard or two more than the equivalent iron.</p>
+
+      <h3>A hybrid does not add distance. That is not what it is for.</h3>
+      <p>Read the table again and notice what is <em>not</em> there: a 5-hybrid carries the same number as a 5-iron. So does a 6-hybrid against a 6-iron. If you were expecting the hybrid to be ten yards longer, that figure comes from marketing copy rather than from a launch monitor.</p>
+      <p>What the hybrid actually buys you is height and a softer landing. The centre of gravity sits lower and further back than in an iron, so the ball launches higher off the same loft and drops more steeply onto the green instead of running through it. On a long approach that is the difference between holding the surface and chasing into the back bunker — which matters more than a yardage number.</p>
+      <p>The real gain is further up the bag. Our 13-club chart starts at the 5-iron because most weekend golfers have already given up on the 3- and 4-iron, and with good reason: those clubs need speed most amateurs do not have. A 3- or 4-hybrid covers that same distance from a clubhead that launches the ball without demanding a perfect strike. That is where a hybrid earns its place — not replacing a 7-iron you already hit well.</p>
+      <p class="chart-note">Choosing between models: <a href="/best-hybrid-clubs-2026/">best hybrids 2026</a> · <a href="/hybrid-vs-long-iron/">hybrid vs long iron</a></p>
     </section>
 
     <section>

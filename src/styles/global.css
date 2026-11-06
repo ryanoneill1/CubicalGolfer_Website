@@ -3021,3 +3021,9 @@ main section > p, main section ul, main section ol {
 .brand-chart-faq__item { margin-bottom: 16px; }
 .brand-chart-faq__q    { margin-bottom: 8px; }
 .brand-chart-faq__a    { margin: 0; }
+
+/* Sprint 227 — hybrid distance table cells. Inline styles here would push the
+   literal-style ratchet in validate-inline-styles.ts above its ceiling, which
+   is the whole point of that ratchet: new styling belongs in the stylesheet. */
+.hyb-name { font-weight: 600; white-space: nowrap; }
+.hyb-swap { white-space: nowrap; color: var(--muted); }
