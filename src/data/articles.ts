@@ -14462,6 +14462,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   },
   {
     id: 'bf-launch-monitor-deals', slug: '/black-friday-golf-launch-monitor-deals/',
+    thumbnail: '/images/thumbnails/black-friday-golf-launch-monitor-deals-thumb.webp',
     recGearNote: 'Doppler radar that reads the ball from behind, so it still works with as little as six feet between you and the net.', category: 'golf-tech', pageType: 'listicle',
     quickAnswerProduct: 'garmin-approach-r10',
     tag: 'DEALS', thumb: 'navy',
@@ -14839,7 +14840,8 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'putters-yips',
     slug: '/best-putters-yips/',
-    thumb: 'purple',
+
+    ogImage: 'https://www.cubicalgolfer.com/images/og/best-putters-yips.jpg',    thumb: 'purple',
     thumbnail: '/images/thumbnails/putters-yips-thumb.webp',
     words: '2,200',
     category: 'gear-reviews',
@@ -14986,7 +14988,8 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'best-blade-putters',
     slug: '/best-blade-putters-2026/',
-    thumb: 'navy',
+
+    ogImage: 'https://www.cubicalgolfer.com/images/og/best-blade-putters-2026.jpg',    thumb: 'navy',
     thumbnail: '/images/thumbnails/blade-putters-thumb.webp',
     words: '2,400',
     category: 'gear-reviews',
@@ -15142,7 +15145,8 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'golf-desk-accessories',
     slug: '/golf-desk-accessories-office/',
-    thumbnail: '/images/thumbnails/golf-desk-accessories-thumb.webp',
+
+    ogImage: 'https://www.cubicalgolfer.com/images/og/golf-desk-accessories-office.jpg',    thumbnail: '/images/thumbnails/golf-desk-accessories-thumb.webp',
     category: 'golf-lifestyle',
     pageType: 'listicle',
     tag: 'LISTICLE',
