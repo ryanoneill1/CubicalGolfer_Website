@@ -2676,13 +2676,13 @@ export const AFFILIATE: Record<string, {
 
   'bushnell-launch-pro': {
     url: 'https://bushnell.pxf.io/4aLLGM',
-    verifiedOn: '2026-11-05',
+    verifiedOn: '2026-11-07',
     program: 'bushnell',
     golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell-launch-pro&crid=1O0RGUWVXD74&sprefix=bridgestone-tour-b-xs%2Caps%2C371&linkCode=ll2&tag=cubicalgolfer-20&linkId=5e4ac84f33ffe810257c4067a4602ec5&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Bushnell',
     primaryRetailer: 'direct',
     price: '~$2,999',
-    priceNote: 'On sale at \$2,499.99 at PlayBetter, a \$500 saving against the \$2,999.99 regular price (checked 5 November 2026). PlayBetter caps the promo by inventory rather than a date, so it can end without notice \u2014 the \$2,999 figure quoted across the site is the regular price you measure that discount against. Bundles are cut separately: the Launch Pro Simulator Bundle is \$4,499.99 from \$6,499.99.',
+    priceNote: 'On sale at \$1,995 at PlayBetter, a \$1,000 saving against the \$2,999.99 regular price (checked 7 November 2026 — the discount was \$500 two days earlier and has since doubled). PlayBetter caps the promo by inventory rather than a date, so it can move again or end without notice \u2014 the \$2,999 figure quoted across the site is the regular price you measure that discount against. Bundles are cut separately: the Launch Pro Simulator Bundle is \$4,499.99 from \$6,499.99.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/bushnell-launch-pro.webp',
     imgAlt: 'Bushnell Launch Pro Circle B Launch Monitor',
