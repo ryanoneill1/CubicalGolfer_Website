@@ -244,12 +244,12 @@ export const AFFILIATE: Record<string, {
 
   'blue-tees-series-3-max': {
     url: 'https://www.amazon.com/dp/B09DLJ37TW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Blue*+Tees*+Series*+3*+Max*&ghref=2301%3A1333883',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$199',
-    priceNote: 'Verified 2026-08-23: $199.98, 4.4 stars across 1,314 reviews. Note Blue Tees sells three similar-looking units — this is the Series 3 Max+ with the slope switch, not the Captain Pro or the Player+ GPS speaker.',
+    price: '$179.98',
+    priceNote: 'Verified 7 November 2026: $179.98, down from $199.98 in August. 4.4 stars across 1,314 reviews. Note Blue Tees sells three similar-looking units — this is the Series 3 Max+ with the slope switch, not the Captain Pro or the Player+ GPS speaker.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/blue-tees-series-3-max.webp',
     imgAlt: 'Blue Tees Series 3 Max Golf Rangefinder',
@@ -263,13 +263,13 @@ export const AFFILIATE: Record<string, {
 
   // Garmin Approach Z82 — ASIN B085T56B2X ✅ verified (official Garmin listing)
   'garmin-approach-z82': {
-    verifiedOn: '2026-09-12',
+    verifiedOn: '2026-11-07',
     asin: 'B085T56B2X',
     url: 'https://www.amazon.com/dp/B085T56B2X?&linkCode=ll2&tag=cubicalgolfer-20&linkId=fdcfca3305996c6d7b9833f63aae27b5&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+Z82*&ghref=2301%3A1333883',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$578',
+    price: '$546.12',
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/garmin-approach-z82.webp',
@@ -314,8 +314,8 @@ export const AFFILIATE: Record<string, {
     program: 'golfgalaxy',
     golfGalaxyUrl: 'https://www.amazon.com/dp/B083BJSYZ9?th=1&linkCode=ll2&tag=cubicalgolfer-20&linkId=e72a18832542c8be1be00a9e4e7c02cf&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Golf Galaxy',
-    price: '~$499',
-    verifiedOn: '2026-09-06',
+    price: '$459.90',
+    verifiedOn: '2026-11-07',
     primaryRetailer: 'direct',
     priceNote: 'Drops $30-50 during holiday sales. Current price is typical.',
     label: 'See Today\'s Price →',
@@ -331,11 +331,11 @@ export const AFFILIATE: Record<string, {
   // Garmin Approach S42 — search (multiple colourway variants)
   'garmin-approach-s44': {
     url: 'https://www.amazon.com/dp/B0DRZ1WN36?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$289',
-    priceNote: 'Verified 2026-08-23: $289.00, 4.3 stars across 521 reviews. Stock runs thin on individual colours — check the colour selector if the buy box shows only one left.',
+    price: '$299.99',
+    priceNote: 'Verified 7 November 2026: $299.99, up from $289.00 in August. 4.3 stars across 521 reviews. Stock runs thin on individual colours — check the colour selector if the buy box shows only one left.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/garmin-approach-s44.webp',
     imgAlt: 'Garmin Approach S44 golf GPS smartwatch',
@@ -445,7 +445,7 @@ export const AFFILIATE: Record<string, {
   },
 
   // Cobra Aerojet Max — search (shaft/loft variants)
-  // Cobra DS-Adapt MAX-K — ASIN B0DC88GLHK ✅ verified live 9 Aug 2026: $299.99,
+  // Cobra DS-Adapt MAX-K — ASIN B0DC85FK5P ✅ verified live 9 Aug 2026: $299.99,
   // In Stock, sold by Amazon. Replaces the Aerojet Max, which Amazon lists as
   // "Currently unavailable" and which Golf Galaxy no longer carries at all — its
   // search lands on a women's used demo fairway wood.
@@ -1209,9 +1209,9 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/dp/B0FQ68NC53?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '$399.99',
-    verifiedOn: '2026-09-24',
-    priceNote: 'Verified in stock on Amazon on 24 Sep 2026.',
+    price: '$299.99',
+    verifiedOn: '2026-11-07',
+    priceNote: 'Verified on Amazon on 7 Nov 2026.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/odyssey-s2s-ai-dual-putter.webp',
     imgAlt: 'Odyssey S2S Ai-Dual Putter',
@@ -1555,9 +1555,9 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/dp/B0G4DD97GN?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '$199.00',
-    verifiedOn: '2026-09-25',
-    priceNote: 'Verified in stock on Amazon on 25 Sep 2026, sold by Alphard Golf Inc.',
+    price: '$169.90',
+    verifiedOn: '2026-11-07',
+    priceNote: 'Verified on Amazon on 7 Nov 2026.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/alphard-cybercart-push-plus.webp',
     imgAlt: 'Alphard Cybercart Push+ manual three-wheel push cart (not the electric Cybercart)',
@@ -1764,12 +1764,12 @@ export const AFFILIATE: Record<string, {
   },
 
   'cobra-ds-adapt-max-k': {
-    asin: 'B0DC88GLHK',
-    url: 'https://www.amazon.com/dp/B0DC88GLHK?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0DC85FK5P',
+    url: 'https://www.amazon.com/dp/B0DC85FK5P?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$299',
-    verifiedOn: '2026-09-07',
+    price: '$299.00',
+    verifiedOn: '2026-11-07',
     priceNote: 'Current-generation head at a previous-generation price.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/cobra-ds-adapt-max-k.webp',
@@ -1822,18 +1822,18 @@ export const AFFILIATE: Record<string, {
 
   // ── GOLF BALLS ───────────────────────────────────────────────────────────
 
-  // Titleist Pro V1 (2026 gen, 25th anniversary) — ASIN B0BR2YF8T6 ✅ verified
+  // Titleist Pro V1 (2026 gen, 25th anniversary) — ASIN B0DPN6VNK1 ✅ verified
   'titleist-pro-v1': {
     heroVerdictLine: '★ Still the gold standard — the ball every other brand is trying to beat in 2026.',
     heroWhoFor: 'Golfers with 95+ mph swing speed who want tour-level spin and consistency.',
-    asin: 'B0BR2YF8T6',
+    asin: 'B0DPN6VNK1',
     url: 'https://www.amazon.com/dp/B0DPN6VNK1?linkId=a1b9f83335c538286346ca2aeddba41c&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     verifiedOn: '2026-09-01',
     program: 'amazon',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Pro%2520V1%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
     price: '~$58/dozen',
-    priceNote: 'Verified 2026-09-01 on the live page: $57.99, in stock, 622 reviews, 6K+ bought in the past month. Owner-supplied listing, chosen over an equally live alternative because this one carries four times the sales velocity.',
+    priceNote: 'Verified 7 November 2026: $57.99 a dozen, in stock, shipped and sold by Amazon.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-pro-v1.webp',
     imgAlt: 'Titleist Pro V1 Golf Balls 2026',
@@ -2083,9 +2083,9 @@ export const AFFILIATE: Record<string, {
 
   // ── BEGINNER SETS ─────────────────────────────────────────────────────────
 
-  // Wilson Profile SGI Men's Complete Set — ASIN B09X2FJ9XX ✅ verified
+  // Wilson Profile SGI Men's Complete Set — ASIN B07HN4LLQN ✅ verified
   'wilson-profile-sgi': {
-    asin: 'B09X2FJ9XX',
+    asin: 'B07HN4LLQN',
     url: 'https://www.amazon.com/dp/B07HN4LLQN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     verifiedOn: '2026-08-23',
     program: 'amazon',
@@ -2108,12 +2108,12 @@ export const AFFILIATE: Record<string, {
   // Callaway Strata Complete Set — search (varies by piece count / gender)
   'callaway-strata': {
     url: 'https://www.amazon.com/dp/B07H2HQJR5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$481',
+    price: '$374.99',
     primaryRetailer: 'direct',
-    priceNote: 'Verified 2026-08-23: $481.21, 4.6 stars across 5,478 reviews — by far the largest review base of any set on this page. We previously listed ~$455 and linked to an Amazon search rather than the product.',
+    priceNote: 'Verified 7 November 2026: $374.99 on Amazon, in stock and sold by Amazon — down from $481.21 in August. Still 4.6 stars across 5,478 reviews, by far the largest review base of any set on this page.',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Strata%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26beginIndex%3D0%26DSGsearchType%3DKeyword%26pageSize%3D48',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-strata.webp',
@@ -2148,13 +2148,14 @@ export const AFFILIATE: Record<string, {
 
   // FootJoy WeatherSof — ASIN B072LZV5Z6 ✅ verified (sold by FJ directly)
   'footjoy-weathersof-glove': {
-    url: 'https://www.amazon.com/FootJoy-Mens-WeatherSof-Glove-White/dp/B09HCM416D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-22',
+    url: 'https://www.amazon.com/dp/B0CCK7L2FK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0CCK7L2FK',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520WeatherSof%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$22',
-    priceNote: 'Verified at $21.58 on 2026-08-22 for a single glove. Multi-packs are priced separately elsewhere on the site.',
+    price: '$12.97',
+    priceNote: 'Verified 7 November 2026: $12.97 for a single glove, shipped and sold by Amazon. The listing we previously used went unavailable; this is the current one, and it is well below the $21.58 we recorded in August. Two-packs are a separate listing at about $22.97.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-weathersof-glove.webp',
     imgAlt: 'FootJoy WeatherSof Golf Glove',
@@ -2188,12 +2189,12 @@ export const AFFILIATE: Record<string, {
   // Callaway Dawn Patrol Glove — search (size variants)
   'callaway-dawn-patrol': {
     url: 'https://www.amazon.com/dp/B0CJGMTP8D?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-09-01',
+    verifiedOn: '2026-11-07',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Dawn%2520Patrol%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$10',
-    priceNote: 'Verified 2026-09-01 on the live page: $9.95, 584 reviews, title reads Callaway Golf Dawn Patrol Glove. Only 7 units showing at time of check, so watch this one. Converted from an Amazon search link; the product title was read on the page rather than trusting the top search result.',
+    price: '$19.97',
+    priceNote: 'Verified 7 November 2026: $19.97, shipped and sold by Amazon. That is up sharply from the $9.95 we recorded in September, so treat the earlier figure as gone rather than a deal to wait for.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-dawn-patrol.webp',
     imgAlt: 'Callaway Dawn Patrol Golf Glove',
@@ -2275,8 +2276,8 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/Blast-Analyzes-Highlights-Compatible-Technology/dp/B00UNFHKUK?crid=KDAFPPZX2G4L&dib_tag=se&keywords=Blast%2BMotion%2BSensor&qid=1785682045&sprefix=blast%2Bmotion%2Bsensor%2Caps%2C194&sr=8-2&linkCode=ll2&tag=cubicalgolfer-20&linkId=011cf9ee23c0ab94060616e2f785acc2&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     retailer: 'Amazon',
-    verifiedOn: '2026-09-10',
-    price: '~$150',
+    verifiedOn: '2026-11-07',
+    price: '$174.99',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/blast-motion-sensor.webp',
@@ -2300,10 +2301,10 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Swing*+Caddie*+SC4*+Pro*+launch*+monitor*&ghref=2301%3A1333883',
     retailer: 'Amazon',
-    price: '~$599',
-    verifiedOn: '2026-09-13',
+    price: '$499.99',
+    verifiedOn: '2026-11-07',
     primaryRetailer: 'direct',
-    priceNote: '$599.99 at Amazon and at Voice Caddie direct, checked 13 September 2026 — up from $499.98 in early August, so this is a genuine rise rather than a promotion that has ended. Amazon has no direct offer on this listing at the moment, only third-party sellers, so it is worth comparing PlayBetter before you buy.',
+    priceNote: 'Verified 7 November 2026: $499.99 at Amazon, back down from the $599.99 it reached in September. That rise is why it was flagged as priced out of our under-$500 page; at $499.99 it belongs there again. Worth comparing PlayBetter before you buy.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/swing-caddie-sc4-pro.webp',
     imgAlt: 'Voice Caddie Swing Caddie SC4 PRO Launch Monitor',
@@ -2338,12 +2339,13 @@ export const AFFILIATE: Record<string, {
 
   // Alignment sticks 2-pack
   'alignment-sticks': {
-    url: 'https://www.amazon.com/GoSports-Golf-Alignment-Training-Sticks/dp/B0FD9QWW5N?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B082N7L7QN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B082N7L7QN',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DAlignment%2520Sticks%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$12',
-    priceNote: 'Training aid prices are stable. Rarely discounted below listed price.',
+    price: '$14.99',
+    priceNote: 'Verified 7 November 2026: $14.99 for the GoSports set, shipped and sold by Amazon. The listing we previously used went unavailable; this is the current one.',
     label: 'See Options on Amazon →',
     imgSrc: '/images/products/alignment-sticks.webp',
     imgAlt: 'GoSports Golf Alignment Sticks 2-Pack, 48 inch fiberglass',
@@ -2507,17 +2509,17 @@ export const AFFILIATE: Record<string, {
   },
   'cleveland-hb-soft-2': {
     url: 'https://www.amazon.com/dp/B0CP9SPLK7?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-22',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
-    retailer: 'Amazon', price: '$142.60',
-    priceNote: 'Verified at $142.60 on 2026-08-22 (Model 10.5). Successor to the HB Soft Milled.', label: 'See Today\'s Price →',
+    retailer: 'Amazon', price: '$151.02',
+    priceNote: 'Verified at $151.02 on 7 November 2026 (Model 10.5), up from $142.60 in August. Successor to the HB Soft Milled.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/cleveland-hb-soft-milled.webp',
     imgAlt: 'Cleveland HB Soft 2 Putter',
   
     benefits: [
       'Milled face for consistent roll from any lie',
       'High-MOI mallet resists twisting on mishits',
-      'Best value premium putter under $150',
+      'Best value premium putter on this list',
     ],
   },
   'taylormade-spider-tour': {
@@ -2551,10 +2553,10 @@ export const AFFILIATE: Record<string, {
   },
   'titleist-players-4': {
     url: 'https://www.amazon.com/dp/B0BX6XNNS8?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DTitleist%2520Players%25204%2520StaDry%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon', price: '~$279',
+    retailer: 'Amazon', price: '$199.99',
     primaryRetailer: 'direct',
     priceNote: 'Verified 2026-08-23 as the correct product (4.7 stars, 281 reviews), but Amazon showed no buy-box price on the day we checked — it sells through third-party sellers, so the price you see may vary.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/titleist-players-4.webp',
@@ -2568,11 +2570,11 @@ export const AFFILIATE: Record<string, {
   },
   'callaway-fairway-14': {
     url: 'https://www.amazon.com/dp/B0CJ5XX57R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-09-01',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Fairway%252014%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    retailer: 'Amazon', price: '~$250',
-    priceNote: '$249.99, in stock, 296 reviews (checked 1 September 2026). Links to the Callaway Golf Fairway 14 Stand Bag specifically.', label: 'See Today\'s Price →',
+    retailer: 'Amazon', price: '$239.99',
+    priceNote: 'Verified 7 November 2026: $239.99, in stock, down from $249.99 in September. Links to the Callaway Golf Fairway 14 Stand Bag specifically.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-fairway-14.webp',
     imgAlt: 'Callaway Fairway 14 Cart Bag',
     benefits: [
@@ -2639,8 +2641,8 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/dp/B0CF65RTZW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ffootjoy-mens-2022-tour-alpha-golf-shoesprevious-season-style-21fjymtrlph22whtbgsh%2F21fjymtrlph22whtbgsh%3FenteredSearchTerm%3DFootJoy%2520Tour%2520Alpha',
-    retailer: 'Amazon', verifiedOn: '2026-09-10',
-    price: '~$130',
+    retailer: 'Amazon', verifiedOn: '2026-11-07',
+    price: '$113.06',
     primaryRetailer: 'direct',
     priceNote: 'Last season\'s colors drop 30-40%. Performance is identical.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/footjoy-tour-alpha.webp',
@@ -2731,12 +2733,12 @@ export const AFFILIATE: Record<string, {
 
   'foresight-gcquad': {
     url: 'https://www.amazon.com/dp/B0GKQNGSTX?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Foresight*+GCQuad*&ghref=2301%3A1333883',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$15,999',
-    priceNote: 'Verified 2026-08-23: $15,999.00 on Amazon, only 9 in stock. We previously listed this at ~$14,500, which was $1,499 low. This is professional-grade kit — if you are comparing it to a $600 consumer unit, the gap is real but so is the price.',
+    price: '$15,162',
+    priceNote: 'Verified 7 November 2026: $15,162.46 on Amazon, shipped and sold by Amazon with 7 in stock. Down from $15,999 in August. This is professional-grade kit — if you are comparing it to a $600 consumer unit, the gap is real but so is the price.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/foresight-gcquad.webp',
     imgAlt: 'Foresight Sports GCQuad Launch Monitor',
@@ -2968,7 +2970,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DGolf%2520Hitting%2520Net%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$297', verifiedOn: '2026-09-04',
+    price: '$349.99', verifiedOn: '2026-11-07',
     priceNote: 'Prices are stable. Current price is in line with the 6-month average.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/spornia-spg-net.webp',
@@ -2997,11 +2999,11 @@ export const AFFILIATE: Record<string, {
   },
   'benq-short-throw-projector': {
     url: 'https://www.amazon.com/dp/B076MHKTFH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$949',
-    priceNote: 'Verified 2026-08-23: $949.00, 4.5 stars across 682 reviews. We previously listed a generic \'BenQ short-throw\' at ~$1,799 whose link returned a $499 portable LED projector — not a short-throw at all. The TH671ST is a genuine short throw, which is the whole point in a room where the projector sits close to the screen.',
+    price: '$849',
+    priceNote: 'Verified 7 November 2026: $849.00, sold by the BenQ store, down from $949 in August. 4.5 stars across 682 reviews. The TH671ST is a genuine short throw, which is the whole point in a room where the projector sits close to the screen.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/benq-th671st-projector.webp',
     imgAlt: 'BenQ TH671ST short-throw projector for a golf simulator',
@@ -3099,7 +3101,7 @@ export const AFFILIATE: Record<string, {
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DResistance%2520Bands%2520Golf%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$25',
+    price: '$9.98',
     priceNote: 'Great value at this price point. Rarely drops lower.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/resistance-bands-golf.webp',
@@ -3287,12 +3289,12 @@ export const AFFILIATE: Record<string, {
   },
   'superspeed-golf-set': {
     url: 'https://www.amazon.com/dp/B073SZXD2Q?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSuperSpeed%2520Golf%2520Set%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$140',
-    priceNote: 'Verified 2026-08-23: $139.99, 4.6 stars across 1,298 reviews. We previously listed ~$199. Buy carefully — the top Amazon result for this product is the Junior Allstar set for ages 8 to 11. This is the adult system.',
+    price: '$125.98',
+    priceNote: 'Verified 7 November 2026: $125.98, down from $139.99 in August. 4.6 stars across 1,298 reviews. Buy carefully — the top Amazon result for this product is the Junior Allstar set for ages 8 to 11. This is the adult system.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/superspeed-golf-set.webp',
     imgAlt: 'SuperSpeed Golf Training System',
@@ -3355,9 +3357,9 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/dp/B0B4ZDD7Y2?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     retailer: 'Amazon',
-    verifiedOn: '2026-09-07',
-    price: '~$136',
-    priceNote: '$135.67 list across colourways ($134.58-$140). An Amazon coupon has been bringing it to about $90 — check the listing for the current offer.',
+    verifiedOn: '2026-11-07',
+    price: '$123.09',
+    priceNote: 'Verified 7 November 2026: $123.09, down from the $135.67 list we recorded in August. Price varies by colourway — check the listing for the current offer.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/skechers-go-golf-elite-5.webp',
     imgAlt: 'Skechers Go Golf Elite 5 Spikeless Shoes',
@@ -3956,7 +3958,7 @@ export const AFFILIATE: Record<string, {
   // (261 results, zero Rukket). No product photo in the repo yet, so imgSrc is intentionally omitted.
   'gosports-hitting-net': {
     url: 'https://www.amazon.com/dp/B079JDQKV4?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-09-06',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
     benefits: [
@@ -3966,8 +3968,8 @@ export const AFFILIATE: Record<string, {
     ],
     imgSrc: '/images/products/GoSports_net.webp',
     imgAlt: 'GoSports golf practice hitting net set up indoors',
-    price: '~$76',
-    priceNote: 'Budget nets move on deal cycles. $76 is in line with the recent range.',
+    price: '$89.99',
+    priceNote: 'Verified 7 November 2026: $89.99, up from the ~$76 we listed in August. Budget nets move on deal cycles, so this one is worth re-checking.',
     label: 'Check Price at Amazon →',
   },
   'scotty-cameron-phantom-x': {
@@ -4498,11 +4500,11 @@ export const AFFILIATE: Record<string, {
   // ── Month 1 New Products ──────────────────────────────────────────────
   'voice-caddie-sc200plus': {
     url: 'https://www.amazon.com/dp/B07R8JV36B?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-22',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '$209.99',
-    priceNote: 'Verified in stock at $209.99 on 2026-08-22.',
+    price: '$179.99',
+    priceNote: 'Verified in stock at $179.99 on 7 November 2026, down from $209.99 in August.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/voice-caddie-sc200plus.webp',
     imgAlt: 'Voice Caddie SC200Plus launch monitor',
@@ -4579,12 +4581,12 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'bag-boy-nitron': {
-    verifiedOn: '2026-09-12',
+    verifiedOn: '2026-11-07',
     url: 'https://www.amazon.com/dp/B0FM2W8M21?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DBag%2520Boy%2520Nitron%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$310',
+    price: '$319.95',
     priceNote: 'Spring prices are highest. Best deals in late fall and winter.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bag-boy-nitron.webp',
@@ -4725,9 +4727,9 @@ export const AFFILIATE: Record<string, {
   'optoma-gt2000hdr': {
     url: 'https://www.amazon.com/Optoma-GT2000HDR-Compact-Theater-Projector/dp/B0C5BBCXRK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
-    retailer: 'Amazon', price: '~$1,199',
-    verifiedOn: '2026-09-07',
-    priceNote: 'New condition is $1,199.99. Amazon often shows a cheaper open-box unit in the buy box (recently $999) - stock is limited and the price reverts when it sells.', label: 'Check Price at Amazon →',
+    retailer: 'Amazon', price: '$999.99',
+    verifiedOn: '2026-11-07',
+    priceNote: 'Verified 7 November 2026: $999.99 on Amazon, in stock and sold by Amazon. August list was $1,199.99, so the cheaper figure is now the buy-box price rather than an open-box unit.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/optoma-gt2000hdr.webp', imgAlt: 'Optoma GT2000HDR short throw golf simulator projector',
   },
   'bag-boy-volt-electric': {
@@ -4743,8 +4745,8 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.amazon.com/dp/B0CTLQFN7C?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fmgi-zip-navigator-electric-caddie-26mgiagolfh54z3mciusk%2F26mgiagolfh54z3mciusk',
     program: 'amazon',
-    retailer: 'Amazon', price: '~$1,695',
-    verifiedOn: '2026-09-07',
+    retailer: 'Amazon', price: '$1,521',
+    verifiedOn: '2026-11-07',
     priceNote: 'The most-reviewed electric caddy on Amazon at 298 ratings — the longest track record of anything in this category.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/mgi-zip-navigator.webp', imgAlt: 'MGI Zip Navigator electric golf caddy',
   },
@@ -4918,13 +4920,14 @@ export const AFFILIATE: Record<string, {
 
   // ═══ MISSING PRICE FIXES — June 2026 ═══
   'garmin-approach-s70': {
-    url: 'https://www.amazon.com/dp/B0CBW67NLW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    url: 'https://www.amazon.com/dp/B0C5BHTNMK?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0C5BHTNMK',
     verifiedOn: '2026-08-22',
     golfGalaxyUrl: 'https://www.playbetter.com/search?type=article%2Cpage%2Cproduct&q=Garmin*+Approach*+S70*&ghref=2301%3A1333883',
     program: 'amazon',
     retailer: 'Amazon',
     price: '$654.99',
-    priceNote: 'Verified at $654.99 on 2026-08-22. Amazon mostly sells the S70 in bundles at $705-714; this is the plain watch.',
+    priceNote: 'Verified at $654.99 on 7 November 2026 for the plain 42mm watch. We moved to this listing because the one we linked before had a single reseller unit at $954.98 — well above the price Garmin charges. Amazon also sells the S70 in bundles at higher prices.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/garmin-s70.webp', imgAlt: 'Garmin Approach S70 GPS golf watch',
   },
@@ -5216,12 +5219,12 @@ export const AFFILIATE: Record<string, {
   'nike-dri-fit-victory-polo': {
     url: `https://www.amazon.com/dp/B07RYBFRM1?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
-    retailer: 'Amazon', price: '~$47', priceNote: 'Sold as one listing across many colours and sizes; the exact price varies by the combination you pick.', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$39.99', priceNote: 'Verified 7 November 2026: $39.99, in stock on Amazon, down from the ~$47 we listed previously. Sold as one listing across many colours and sizes, so the exact price varies by the option selected.', label: `See Today's Price →`,
     imgSrc: '/images/products/nike-dri-fit-victory-polo.webp', imgAlt: 'Nike Dri-FIT Victory golf polo shirt',
     benefits: [
       'Dri-FIT fabric genuinely wicks through 18 holes in humidity',
       'Athletic fit works for most body types without being tight',
-      'At $45, strong value — buy multiples for weekly rotation',
+      'At $39.99, strong value — buy multiples for weekly rotation',
     ],
   },
   'footjoy-prodry-polo': {
@@ -5324,7 +5327,7 @@ export const AFFILIATE: Record<string, {
   'titleist-tour-performance-hat': {
     url: `https://www.amazon.com/dp/B0DSGMZT8R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
-    retailer: 'Amazon', price: '~$35', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$40.00', label: `See Today's Price →`,
     imgSrc: '/images/products/titleist-tour-performance-hat.webp', imgAlt: 'Titleist Tour Performance golf hat',
         benefits: [
       'Sweatband never saturated to dripping across 28 rounds, including 90°F days',
@@ -5357,10 +5360,10 @@ export const AFFILIATE: Record<string, {
   // ═══ ACCESSORIES — Sunglasses ═══
   'maui-jim-banyans-golf': {
     url: `https://www.amazon.com/dp/B002FU6UKW?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
-    verifiedOn: '2026-09-17',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
-    retailer: 'Amazon', price: '~$249',
-    priceNote: '$249.00 at Amazon (checked 17 September 2026), consistent across the Banyans frame colours.', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$166.93',
+    priceNote: 'Verified 7 November 2026: $166.93 at Amazon, in stock — well below the $249.00 we recorded on 17 September 2026. Price is consistent across the Banyans frame colours.', label: `See Today's Price →`,
     imgSrc: '/images/products/maui-jim-banyans-golf.webp', imgAlt: 'Maui Jim Banyans golf sunglasses',
         benefits: [
       'HCL Bronze lens gives the most natural colour reproduction we tested — true-to-life with added contrast',
@@ -5377,10 +5380,10 @@ export const AFFILIATE: Record<string, {
   // ═══ ACCESSORIES — Rain Gear ═══
   'under-armour-forefront-rain-jacket': {
     url: 'https://www.amazon.com/dp/B078BSYZBH?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-22',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
-    retailer: 'Amazon', price: '$59.97',
-    priceNote: 'Verified in stock at $59.97 on 2026-08-22. Replaces the discontinued Storm rain jacket.', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$80.97',
+    priceNote: 'Verified in stock at $80.97 on 7 November 2026, up from $59.97 in August. Replaces the discontinued Storm rain jacket.', label: `See Today's Price →`,
     imgSrc: '/images/products/under-armour-storm-rain-jacket.webp', imgAlt: 'Under Armour Forefront Rain Jacket',
         benefits: [
       'Handles moderate rain for two to three hours before moisture starts to seep through at the shoulders',
@@ -5439,10 +5442,10 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/club-car-onward-cart.webp', imgAlt: 'Club Car Onward electric golf cart, lifted, white with black canopy',
   },
   'callaway-org-14-cart-bag': {
-    verifiedOn: '2026-09-12',
+    verifiedOn: '2026-11-07',
     url: `https://www.amazon.com/dp/B0D9R3B5HT?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
-    retailer: 'Amazon', price: '~$265', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$243.11', label: `See Today's Price →`,
     imgSrc: '/images/products/callaway-org-14-cart-bag.webp', imgAlt: 'Callaway Org 14 cart bag',
     benefits: [
       '11 pockets with excellent organization',
@@ -5466,7 +5469,7 @@ export const AFFILIATE: Record<string, {
   'ogio-fuse-stand-bag': {
     url: `https://www.amazon.com/dp/B0D9R3RZST?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
-    retailer: 'Amazon', price: '~$170', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$164.87', label: `See Today's Price →`,
     imgSrc: '/images/products/ogio-fuse-stand-bag.webp', imgAlt: 'Ogio Fuse stand bag',
     benefits: [
       '14-way top prevents club tangling',
@@ -5510,11 +5513,11 @@ export const AFFILIATE: Record<string, {
   // ── Golf GPS speakers & cart speakers (Sprint 80, verified 2026-08-23) ────
   'bushnell-wingman-mini': {
     url: 'https://www.amazon.com/dp/B0C6CTMVJS?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$90',
-    priceNote: 'Verified 2026-08-23: $89.98, 4.7 stars across 82 reviews. Amazon lists each colour as a separate listing — this is the black one, and the orange is the same price. Research pick: we have not tested it.',
+    price: '$109.99',
+    priceNote: 'Verified 7 November 2026: $109.99, up from $89.98 in August. 4.7 stars across 82 reviews. Amazon lists each colour as a separate listing — this is the black one.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bushnell-wingman-mini.webp', imgAlt: 'Bushnell Wingman Mini GPS speaker mounted on a golf cart bar',
     benefits: [
@@ -5525,11 +5528,11 @@ export const AFFILIATE: Record<string, {
   },
   'bushnell-wingman-2': {
     url: 'https://www.amazon.com/dp/B0CZ7M97D5?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$140',
-    priceNote: 'Verified 2026-08-23: $139.98, 4.7 stars across 315 reviews. Research pick: we have not tested it ourselves.',
+    price: '$169.99',
+    priceNote: 'Verified 7 November 2026: $169.99, up from $139.98 in August. 4.7 stars across 315 reviews. Research pick: we have not tested it ourselves.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/bushnell-wingman-2.webp', imgAlt: 'Bushnell Wingman 2 GPS Bluetooth golf speaker',
     benefits: [
@@ -5555,12 +5558,12 @@ export const AFFILIATE: Record<string, {
   },
   'blue-tees-player-pro': {
     url: 'https://www.amazon.com/dp/B0GS38DYWC?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fblue-tees-player-pro-speaker-26bluagolfplyrprspyfq%2F26bluagolfplyrprspyfq',
-    price: '~$200',
-    priceNote: 'Verified 2026-08-23: $199.98 at Amazon and $199.99 at Golf Galaxy — the same money either way — with 4.0 stars across 203 reviews. It is a 2026 release, so that review base is still small. Research pick: we have not tested it.',
+    price: '$179.98',
+    priceNote: 'Verified 7 November 2026: $179.98 at Amazon, down from $199.98 in August. 4.0 stars across 203 reviews — it is a 2026 release, so that review base is still small. Research pick: we have not tested it.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/blue-tees-player-pro.webp', imgAlt: 'Blue Tees Golf Player Pro GPS speaker with colour touchscreen',
     benefits: [
@@ -5571,11 +5574,11 @@ export const AFFILIATE: Record<string, {
   },
   'golfbuddy-voice-2s-plus': {
     url: 'https://www.amazon.com/dp/B08BTB2H2Y?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-08-23',
+    verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '~$85',
-    priceNote: 'Verified 2026-08-23: $84.99, 4.5 stars across 1,893 reviews — the most-reviewed device on this page. Note this is a clip-on talking GPS, not a Bluetooth music speaker. Research pick: we have not tested it.',
+    price: '$94',
+    priceNote: 'Verified 7 November 2026: $94.00, up from $84.99 in August. 4.5 stars across 1,893 reviews — the most-reviewed device on this page. Note this is a clip-on talking GPS, not a Bluetooth music speaker. Research pick: we have not tested it.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/golfbuddy-voice-2s-plus.webp', imgAlt: 'GolfBuddy Voice 2S+ clip-on talking golf GPS',
     benefits: [
