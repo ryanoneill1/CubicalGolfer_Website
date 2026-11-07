@@ -59,13 +59,36 @@ const TAG: Record<string, string> = {
  * Charts and finders fall through to their subject, so the compression chart
  * reports as a ball page, which is what it is.
  */
+/**
+ * ── Sprint 228: the model names had gone stale ────────────────────────────
+ * These rules name specific products, and the product line-up moved on while
+ * the rules did not. `club` listed the TaylorMade Qi10 but not the Qi35 or
+ * Qi4d that replaced it; `gps` listed the Garmin Approach S series but not the
+ * Z rangefinders; `lm` listed the Garmin R10 but not the Approach R50.
+ *
+ * The cost was not a broken link — every link was still tagged. The cost was
+ * that 66 pages carrying 286 Amazon links fell through to `misc`, including
+ * five driver and wedge comparisons, a Garmin launch-monitor review and a
+ * rangefinder comparison. `misc` was the second-largest bucket, which would
+ * have made the whole point of the split — "which CATEGORY earns" — impossible
+ * to read once the data arrived.
+ *
+ * Fixed four days after the tags went live, so the reporting window starts
+ * clean rather than needing the clock restarted.
+ *
+ * Deliberately still falling through to `misc`: alignment sticks, indoor
+ * putting greens and the general accessory round-ups. `tool` is documented
+ * below as calculators and hubs only, so a physical training aid does not
+ * belong there, and inventing a group for three pages would be worse than
+ * leaving them in the bucket that exists for exactly this.
+ */
 const RULES: Array<[string, RegExp]> = [
   ['gift', /(gift|black-friday|prime-day|christmas|stocking|holiday)/],
-  ['lm',   /(launch-monitor|simulator|skytrak|mevo|rapsodo|mlm2pro|gc3|gcquad|trackman|uneekor|swing-caddie|flightscope|foresight|square-golf|launch-pro|rainmaker|garmin-r10|r10|projector|hitting-(mat|net)|impact-screen)/],
-  ['gps',  /(rangefinder|gps|watch|ion-elite|ion-edge|approach-s|phantom|nx9|tour-v|wingman|shot-scope|voice-caddie|golfbuddy|slope|arccos)/],
+  ['lm',   /(launch-monitor|simulator|skytrak|mevo|rapsodo|mlm2pro|gc3|gcquad|trackman|uneekor|swing-caddie|flightscope|foresight|square-golf|launch-pro|rainmaker|garmin-r10|r10|approach-r\d|swing-analyzer|projector|hitting-(mat|net)|net-return|spornia|fiberbuilt|studio-mat|country-club-elite|impact-screen)/],
+  ['gps',  /(rangefinder|gps|watch|ion-elite|ion-edge|approach-s|approach-z|phantom|nx9|tour-v|wingman|shot-scope|voice-caddie|golfbuddy|slope|arccos|golf-apps)/],
   ['ball', /(ball|compression|pro-v1|chrome-soft|chrome-tour|supersoft|soft-feel|q-star|tour-response|noodle|kirkland|vice|avx|velocity|e12|tour-b)/],
-  ['club', /(driver|iron|wedge|putter|hybrid|shaft|loft|3-wood|fairway|grip|club-distance|strata|callaway-ai|qi10|darkspeed|stealth|paradym|golf-set|golf-clubs|junior-golf|left-handed)/],
-  ['wear', /(shoe|glove|pant|short|shirt|polo|rain|sunglass|bag|apparel|lifestyle|hat|cap|belt|sock|outerwear|jacket)/],
+  ['club', /(driver|iron|wedge|putter|hybrid|shaft|loft|3-wood|fairway|grip|club-distance|strata|callaway-ai|qi10|qi35|qi4d|aerojet|vokey|jaws|lab-golf|mezz|launcher-xl|sm11|rtx|g430|gt2|darkspeed|stealth|paradym|golf-set|golf-clubs|junior-golf|left-handed)/],
+  ['wear', /(shoe|glove|pant|short|shirt|polo|rain|sunglass|bag|apparel|lifestyle|hat|cap|belt|sock|outerwear|jacket|towel|umbrella|push-cart|electric-golf-cart|golf-cart)/],
   ['tool', /(calculator|planner|checker|budget|cost|\/tools\/|golf-tech|gear-reviews|best-golf-gear|room-|brands)/],
 ];
 
