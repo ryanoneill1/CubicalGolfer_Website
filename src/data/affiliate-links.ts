@@ -2166,6 +2166,28 @@ export const AFFILIATE: Record<string, {
       ],
   },
 
+  // FootJoy WeatherSof 2-pack — ASIN B0CCK7PWJV, verified live 10 Nov 2026: $22.97,
+  // in stock, shipped and sold by Amazon. Added because /best-golf-gloves-for-men/
+  // has a section headed 'Best Glove Set: FootJoy WeatherSof 2-Pack' that pointed at
+  // the single-glove listing and described a 3-pack at $36 that nobody could verify.
+  'footjoy-weathersof-glove-2pack': {
+    url: 'https://www.amazon.com/dp/B0CCK7PWJV?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0CCK7PWJV',
+    verifiedOn: '2026-11-10',
+    program: 'amazon',
+    retailer: 'Amazon',
+    price: '$22.97',
+    priceNote: 'Verified 10 November 2026: $22.97 for the two-pack, in stock, shipped and sold by Amazon. The single glove is a separate listing at $12.97.',
+    label: 'See Today\'s Price →',
+    imgSrc: '/images/products/footjoy-weathersof-glove.webp',
+    imgAlt: 'FootJoy WeatherSof Golf Glove 2-Pack',
+    benefits: [
+        'Two gloves for roughly $11 each — cheaper per glove than buying singles',
+        '#1 selling golf glove in the world',
+        'SofTrex material grips in heat and light moisture',
+      ],
+  },
+
   // Titleist Players Flex — search (size/hand variants prevent single ASIN)
   // FIXED: Previously this incorrectly pointed to FootJoy WeatherSof (B072LZV5Z6).
   'titleist-players-flex': {
@@ -2509,10 +2531,10 @@ export const AFFILIATE: Record<string, {
   },
   'cleveland-hb-soft-2': {
     url: 'https://www.amazon.com/dp/B0CP9SPLK7?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
-    verifiedOn: '2026-11-07',
+    verifiedOn: '2026-11-10',
     program: 'amazon',
-    retailer: 'Amazon', price: '$151.02',
-    priceNote: 'Verified at $151.02 on 7 November 2026 (Model 10.5), up from $142.60 in August. Successor to the HB Soft Milled.', label: 'See Today\'s Price →',
+    retailer: 'Amazon', price: '$157.54',
+    priceNote: 'Verified at $157.54 on 10 November 2026 (Model 10.5), 17 in stock and sold by Amazon. Successor to the HB Soft Milled.', label: 'See Today\'s Price →',
     imgSrc: '/images/products/cleveland-hb-soft-milled.webp',
     imgAlt: 'Cleveland HB Soft 2 Putter',
   
@@ -5259,7 +5281,7 @@ export const AFFILIATE: Record<string, {
   'adidas-ultimate365-pants': {
     url: `https://www.amazon.com/dp/B0FDSMQ9V9?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl`,
     program: 'amazon',
-    retailer: 'Amazon', price: '~$54', priceNote: 'Sold as one listing across many colours and sizes; the exact price varies by the combination you pick.', label: `See Today's Price →`,
+    retailer: 'Amazon', price: '$89.04', priceNote: 'Verified 10 November 2026: $89.04, in stock, shipped and sold by Amazon. We previously listed ~$54; the $51.95 we saw on 7 November was a single remaining unit, not the standing price.', label: `See Today's Price →`,
     imgSrc: '/images/products/adidas-ultimate365-pants.webp', imgAlt: 'Adidas Ultimate365 golf pants',
         benefits: [
       '4-way stretch lets you squat for a putt read with no pull at the knees',

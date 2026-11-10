@@ -208,7 +208,7 @@ export const COMPARISONS: Comparison[] = [
 
   {
     slug: 'garmin-approach-s62-vs-s42',
-    toc: ['S62 vs S42 at a glance', 'What the extra $200 buys you', 'Who should buy the S62', 'Who should buy the S42'],
+    toc: ['S62 vs S42 at a glance', 'What the extra $160 buys you', 'Who should buy the S62', 'Who should buy the S42'],
     thumbnail: '/images/thumbnails/compare-garmin-approach-s62-vs-s42.webp',
     title: 'Garmin S62 vs S42: Which GPS Watch to Buy?',
     description: 'Garmin S62 vs S42: both are excellent GPS golf watches, but the S62 costs $200 more. The exact feature differences, and which golfer should pay the premium.',
@@ -248,7 +248,7 @@ export const COMPARISONS: Comparison[] = [
     productA:      'blue-tees-series-3-max',
     productB:      'bushnell-tour-v7-shift',
     winner:        'bushnell-tour-v7-shift',
-    winnerReason:  'The Bushnell Tour V7 Shift has noticeably better optics and the JOLT vibration feedback is the best available. For golfers who play in bright sunlight or compete in tournaments, it justifies the extra $160 premium. For recreational golfers on a budget, the Blue Tees is the smarter buy.',
+    winnerReason:  'The Bushnell Tour V7 Shift has noticeably better optics and the JOLT vibration feedback is the best available. For golfers who play in bright sunlight or compete in tournaments, it justifies the $219 premium. For recreational golfers on a budget, the Blue Tees is the smarter buy.',
     intro:         'Blue Tees has built a strong reputation for offering 80% of Bushnell performance at 50% of the price. But is that trade-off worth it? We tested both over 30+ rounds across 4 courses.',
         sections: [
       { h2: 'Pin Acquisition Speed and Accuracy', body: '<p>The Bushnell locks pins in under 0.3 seconds. The Blue Tees takes 0.5-0.8 seconds. Both deliver plus or minus 1 yard accuracy under 200 yards. At 250+ yards, the Bushnell is more reliable, acquiring the flag on first press 9 of 10 times versus 7 of 10 for the Blue Tees.</p>' },

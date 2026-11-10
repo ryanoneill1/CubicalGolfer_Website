@@ -37,7 +37,7 @@ import path from 'path';
  * saying $2,999, and the pages were right. Assuming the registry wins would
  * have made 78 correct statements wrong.
  */
-const THRESHOLD = 1;
+const THRESHOLD = 0;   // was 1, carrying the Odyssey Stroke Lab conflict; Sprint 231 fixed it (10 Nov 2026)
 
 const money = (s: string) => Number(s.replace(/[$,]/g, ''));
 

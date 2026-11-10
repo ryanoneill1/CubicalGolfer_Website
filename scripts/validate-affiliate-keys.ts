@@ -138,6 +138,9 @@ const BRAND_MAP: [string, string][] = [
   ['callaway chev dry',             'callaway-chev-dry'],
   ['callaway reva',                 'callaway-reva-driver'],
   ['titleist players flex',         'titleist-players-flex'],
+  // The 2-pack is its own SKU (B0CCK7PWJV, $22.97). Longest phrase wins, so this
+  // must stay above the bare 'footjoy weathersof' entry below it.
+  ['footjoy weathersof 2-pack',     'footjoy-weathersof-glove-2pack'],
   ['footjoy weathersof',            'footjoy-weathersof-glove'],
   ['footjoy raingrip',              'footjoy-raingrip'],
   ['callaway dawn patrol',          'callaway-dawn-patrol'],

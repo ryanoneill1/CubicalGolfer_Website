@@ -1,6 +1,7 @@
 // AUTO-GENERATED display names for AFFILIATE keys — reviewed by hand.
 // Regenerate with the same brand dictionary if products are added.
 export const PRODUCT_DISPLAY: Record<string, string> = {
+  'footjoy-weathersof-glove-2pack': "FootJoy WeatherSof Golf Glove 2-Pack",
   // Sprint 173 — the 17 registry keys that had no canonical display name.
   // Without one, AffiliateCTA fell back to the section heading, so clicks on
   // these products were logged as 'Our Verdict', 'Accuracy Comparison' and the
