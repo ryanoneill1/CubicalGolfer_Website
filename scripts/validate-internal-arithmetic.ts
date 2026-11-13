@@ -74,7 +74,16 @@ for (const a of all) {
     if (!body) continue;
 
     // ── Rule A: "$a + $b = $c" ───────────────────────────────────────────
-    for (const m of body.matchAll(/\$\s*([\d,]+(?:\.\d+)?)\s*(?:\+|plus)\s*\$?\s*([\d,]+(?:\.\d+)?)\s*=\s*\$?\s*([\d,]+(?:\.\d+)?)/gi)) {
+    // A short label may sit between a figure and the operator — "$175 sensors
+    // + $99/year = $472" is the same claim as "$175 + $99 = $472", and the
+    // tighter original missed it on /arccos-caddie-review/ for months. The gap
+    // may not contain $, = or a digit, so it cannot swallow another term.
+    const UNIT = String.raw`(?:\/\s*(?:yr|year|mo|month|dz|dozen))?`;
+    const GAP = String.raw`(?:\s*[A-Za-z][A-Za-z\s-]{0,14})?\s*`;
+    const ruleA = new RegExp(
+      String.raw`\$\s*([\d,]+(?:\.\d+)?)` + UNIT + GAP + String.raw`(?:\+|plus)\s*\$?\s*([\d,]+(?:\.\d+)?)` +
+      UNIT + GAP + String.raw`=\s*\$?\s*([\d,]+(?:\.\d+)?)`, 'gi');
+    for (const m of body.matchAll(ruleA)) {
       const [x, y, z] = [m[1], m[2], m[3]].map(money);
       if (![x, y, z].every(isFinite)) continue;
       if (Math.abs(x + y - z) > 0.5)
@@ -143,6 +152,58 @@ for (const a of all) {
       const noPeriod = items.filter(i => !i.period).reduce((s, i) => s + i.price, 0);
       if (isFinite(stated) && Math.abs(withAll - stated) > 0.5 && Math.abs(noPeriod - stated) > 0.5)
         report(slug, `parts list sums to $${noPeriod.toLocaleString()} (or $${withAll.toLocaleString()} counting per-period items), but the page states a total of $${stated.toLocaleString()}`);
+    }
+
+    // ── Rule E: an inline prose parts list followed by a stated total ────
+    // The shape Rules A-D all miss. A build written as prose — "monitor
+    // ($490), net ($350), mat ($99), mount ($25). Total: $964." — has no "=",
+    // no "N x", no <table> and no <li>, so nothing looked at it. Six live
+    // totals were wrong behind that gap on 13 Nov 2026, four of them because a
+    // component price moved and the total stayed where it was:
+    //
+    //   /how-to-build-garage-golf-simulator/   stated $873, parts summed $764
+    //   /apartment-golf-simulator-setup/       stated $1,313, parts summed $1,263
+    //   /best-golf-simulator-under-5000/       stated $2,644, parts summed $2,694
+    //   /best-golf-simulator-under-5000/       stated $4,257, parts summed $4,721
+    //
+    // Ranges are skipped, as everywhere else here: a part written "$100 to
+    // $200" has no single value to add.
+    {
+      const totRe = /(?:Total:?\s*(is\s*|roughly\s*|about\s*|around\s*)?|equals\s+|comes to\s+)(~\s*)?\$([\d,]+(?:\.\d{2})?)/i;
+      const tot = body.match(totRe);
+      // Only the span that actually holds the parts matters. Checking the whole
+      // body for a range was too blunt: "I practice 3-4 times per week", sitting
+      // two sentences after the total, switched the rule off entirely — which is
+      // how the first draft of this rule missed two of the six defects it was
+      // written for. A range BETWEEN the parts and the total is still fatal,
+      // because "$100 to $200" has no single value to add.
+      if (tot && tot.index !== undefined) {
+        const span = body.slice(0, tot.index);
+        // A part can be priced per dozen or per year inside the same list
+        // ("Ball: Srixon Q-Star Tour ($40/dz)"). Pages differ on whether such
+        // an item belongs in the total, so — as in Rule D — the page is
+        // credited if its stated figure matches either reading.
+        const parts = [...span.matchAll(/\(\$([\d,]+(?:\.\d{2})?)(\/\s*(?:dz|dozen|mo|month|yr|year))?\)/g)];
+        if (parts.length >= 3) {
+          const first = parts[0].index ?? 0;
+          if (!isRange(span.slice(first))) {
+            const vals = parts.map(m => money(m[1]));
+            const unitOnly = parts.filter(m => !m[2]).map(m => money(m[1]));
+            const stated = money(tot[3]);
+            const sum = vals.reduce((a, b) => a + b, 0);
+            const sumNoPer = unitOnly.reduce((a, b) => a + b, 0);
+            // "roughly $1,240" for a $1,239 build is honest writing, not a
+            // broken sum. A hedged total is compared at the nearest $10; an
+            // exact one is held to the cent.
+            const hedged = Boolean((tot[1] && !/^is\s*$/i.test(tot[1])) || tot[2]);
+            const r10 = (v: number) => Math.round(v / 10) * 10;
+            const gap = (v: number) => hedged ? Math.abs(r10(v) - r10(stated)) : Math.abs(v - stated);
+            const off = Math.min(gap(sum), gap(sumNoPer));
+            if (isFinite(stated) && off > 0.5)
+              report(slug, `inline parts (${vals.map(v => '$' + v.toLocaleString()).join(' + ')}) sum to $${sum.toLocaleString()}, but the page states a total of $${stated.toLocaleString()}`);
+          }
+        }
+      }
     }
   }
 }

@@ -2256,9 +2256,9 @@ export const AFFILIATE: Record<string, {
     program: 'amazon',
     golfGalaxyUrl: 'https://www.anrdoezrs.net/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DArccos%2520Smart%2520Sensors%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    price: '~$175 + $99/yr',
+    price: '$249.99',
     verifiedOn: '2026-09-06',
-    priceNote: 'Gen 4 (16 sensors) at $174.99, in stock. The first year of Arccos membership is included; $99/yr applies from year two.',
+    priceNote: 'Verified 13 November 2026: $249.99 for the Gen 4 16-sensor set, in stock, fulfilled by Amazon. The first year of Arccos membership is included in that price; $99/yr applies from year two, so three years costs $447.99.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/arccos-caddie-sensors.webp',
     imgAlt: 'Arccos Caddie Smart Sensors Gen 4',
@@ -2360,6 +2360,22 @@ export const AFFILIATE: Record<string, {
   // ── ACCESSORIES ──────────────────────────────────────────────────────────
 
   // Alignment sticks 2-pack
+  'superstroke-alignment-sticks': {
+    asin: 'B09YYX7C6R',
+    url: 'https://www.amazon.com/dp/B09YYX7C6R?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    program: 'amazon',
+    retailer: 'Amazon',
+    price: '$29.99',
+    verifiedOn: '2026-11-13',
+    priceNote: 'Verified 13 November 2026: $29.99, in stock, shipped and sold by SuperStroke Golf. Twice the price of a generic fiberglass pair, for a better-finished stick that does the same job.',
+    label: 'Check Price at Amazon \u2192',
+    imgAlt: 'SuperStroke 45-inch fiberglass golf alignment sticks',
+    benefits: [
+        '45-inch fiberglass rods from a known grip and training brand',
+        'Same drills as any alignment stick — alignment, path, ball position',
+        'A step up in finish, not in function, over a generic pair',
+      ],
+  },
   'alignment-sticks': {
     url: 'https://www.amazon.com/dp/B082N7L7QN?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     asin: 'B082N7L7QN',
@@ -4789,15 +4805,7 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/ping-hoofer-lite.webp', imgAlt: 'Ping Hoofer Lite stand bag',
     verifiedOn: '2026-09-24',
   },
-  'titleist-players-4-bag': {
-    url: 'https://www.amazon.com/s?k=titleist-players-4-bag&crid=15X65IZGWEUS3&sprefix=titleist-players-4-bag%2Caps%2C238&linkCode=ll2&tag=cubicalgolfer-20&linkId=1c7734665a5c9f0c5c32893d79dd4db8&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Ftitleist-2023-players-4-stand-bag-23ttlu2023plyrs4sbaga%2F23ttlu2023plyrs4sbaga%3Fcolor%3DBlack%252FBlack%252FRed',
-    program: 'amazon',
-    retailer: 'Amazon', price: '~$250',
-    priceNote: 'Golf bag prices are stable. End-of-season clearance saves 20%.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/titleist-players-4-bag.webp', imgAlt: 'Titleist Players 4 stand bag',
-  },
-  'footjoy-superlites-xp': {
+'footjoy-superlites-xp': {
     url: 'https://www.amazon.com/s?k=footjoy-superlites-xp&crid=1CRSZRK0KVF53&sprefix=footjoy-superlites-xp%2Caps%2C229&linkCode=ll2&tag=cubicalgolfer-20&linkId=a100f53e45ccd76438dea36d36ce22fa&language=en_US&ref_=as_li_ss_tl',
     golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DFootJoy%2520Superlites%2520XP%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'amazon',

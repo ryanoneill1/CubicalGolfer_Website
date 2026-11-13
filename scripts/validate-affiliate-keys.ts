@@ -164,6 +164,7 @@ const BRAND_MAP: [string, string][] = [
   ['lamkin crossline',              'lamkin-crossline-cord'],
   ['winn dri-tac',                  'winn-dri-tac'],
   ['superstroke zenergy tour',      'superstroke-zenergy-tour'],
+  ['superstroke alignment',        'superstroke-alignment-sticks'],
   ['superstroke traxion',           'superstroke-traxion-grip'],
   ['superstroke zenergy',           'superstroke-zenergy-tour'],
   ['spornia spg',                   'spornia-spg-net'],
