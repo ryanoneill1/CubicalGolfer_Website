@@ -5607,8 +5607,8 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-11-07',
     program: 'amazon',
     retailer: 'Amazon',
-    price: '$94',
-    priceNote: 'Verified 7 November 2026: $94.00, up from $84.99 in August. 4.5 stars across 1,893 reviews — the most-reviewed device on this page. Note this is a clip-on talking GPS, not a Bluetooth music speaker. Research pick: we have not tested it.',
+    price: '$99.00',
+    priceNote: 'Verified 13 November 2026: $99.00, up from $94.00 on 7 November and $84.99 in August. The buy box is currently a third-party seller rather than Amazon, and the listing now shows far fewer ratings than it did in August — treat the price as unsettled. This is a clip-on talking GPS, not a Bluetooth music speaker. Research pick: we have not tested it.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/golfbuddy-voice-2s-plus.webp', imgAlt: 'GolfBuddy Voice 2S+ clip-on talking golf GPS',
     benefits: [

@@ -853,6 +853,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
     updateLog: [
+      { date: 'Sep 7, 2026', note: 'Product pricing re-checked against the live retailer listing.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: "How to Break 90 in Golf: Weekend Golfer's Exact Roadmap",
@@ -1047,6 +1048,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
     updateLog: [
+      { date: 'Nov 13, 2026', note: 'Arccos repriced to the verified $249.99 bundle with the first year of membership included; the other devices on this page re-checked against live listings the same day.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best Golf Swing Analyzers 2026 — Tested',
@@ -1202,6 +1204,7 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/garmin-approach-s62-vs-s70/', label: 'Garmin Approach S62 vs S70' },
     ],
     updateLog: [
+      { date: 'Nov 13, 2026', note: 'All four products on this page re-checked against live retailer listings.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best AI Golf Training Tools (Home Practice That Works)',
@@ -1291,6 +1294,7 @@ export const ARTICLES: Article[] = [
       { slug: '/compare/garmin-approach-s62-vs-s70/', label: 'Garmin Approach S62 vs S70' },
     ],
     updateLog: [
+      { date: 'Nov 13, 2026', note: 'Shot-tracking sensor pricing corrected to $249.99, and the five-accessory starter total corrected to $67 to match the items listed.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: '25 Golf Accessories Every Golfer Should Own',
@@ -1341,6 +1345,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
     updateLog: [
+      { date: 'Nov 13, 2026', note: 'Arccos corrected to $249.99 from a stale $179. Six of the products here were re-checked against live listings on 7 November.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best Golf Accessories Under $50 in 2026 (Ranked by Impact)',
@@ -1426,6 +1431,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-21',
     updateLog: [
+      { date: 'Sep 7, 2026', note: 'Product pricing re-checked against the live retailer listing.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'How to Play More Golf: 7 Ways to Sneak In Rounds (2026)',
@@ -1474,6 +1480,7 @@ export const ARTICLES: Article[] = [
     datePublished: '2026-03-24',
     dateModified: '2026-07-08',
     updateLog: [
+      { date: 'Sep 7, 2026', note: 'Product pricing re-checked against the live retailer listing.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best Golf Courses Within a Weekend Drive — List',
@@ -1792,6 +1799,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
     ],
     updateLog: [
+      { date: 'Nov 7, 2026', note: 'All four gloves re-checked against live retailer listings.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best Golf Gloves for Hot Weather (Tested in 90°+ Heat)',
@@ -2010,6 +2018,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     datePublished: '2026-03-25',
     dateModified: '2026-07-21',
     updateLog: [
+      { date: 'Nov 7, 2026', note: 'Six of the seven bags re-checked against live retailer listings.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Best Golf Bags — Carry, Cart, and Stand (Tested)',
@@ -2273,6 +2282,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { slug: '/compare/pro-v1-vs-tp5/', label: 'Pro V1 vs TP5' },
     ],
     updateLog: [
+      { date: 'Sep 17, 2026', note: 'Both balls re-checked against live retailer listings.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Titleist Pro V1 vs Pro V1x: Which Should You Play?',
@@ -2345,6 +2355,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     quickAnswerProduct: 'footjoy-weathersof-glove',
     dateModified: '2026-07-23',
     updateLog: [
+      { date: 'Nov 13, 2026', note: 'Arccos corrected to $249.99 (it was listed at ~$175 plus a yearly fee, which is no longer how it is sold). Remaining prices last re-checked 7 November.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: "Best Golf Gifts for Him 2026 — Tested Picks",
@@ -2428,6 +2439,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     datePublished: '2026-03-25',
     dateModified: '2026-07-13',
     updateLog: [
+      { date: 'Nov 10, 2026', note: 'All eight shoes re-checked against live retailer listings.' },
       { date: 'Mar 25, 2026', note: 'Annual freshness review — verified pricing and availability.' },
     ],
     title: 'Most Comfortable Golf Shoes 2026 — 4 Tested',
@@ -8313,7 +8325,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     sections: [
       { h2: 'Stocking Stuffers Under $25', body: "Alignment sticks ($15) — used by every Tour pro, the most versatile training aid in golf. Groove cleaning brush ($8) — most golfers have never properly cleaned their club grooves. Divot repair tool with ball marker ($10) — a quality metal one replaces the cheap plastic ones that break. Golf-themed desk accessories ($15-$20) — a putting cup or desktop tee holder for the office golfer. These are small, useful, and will not end up in a drawer." },
       { h2: 'Great Gifts Under $50', body: "Titleist Pro V1 dozen ($55, sometimes $48 on sale) — the gold standard. FootJoy WeatherSof 3-pack ($36) — fresh gloves for a full season. Putting mirror ($40) — the training aid that actually works. Rain gloves ($18/pair) — the gift they did not know they needed. Impact tape ($12) — shows exactly where the ball hits the clubface." },
-      { h2: 'Impressive Gifts Under $100', body: "A premium golf towel set ($30-$40), a quality golf book like Harvey Penick\'s Little Red Book ($15), and a sleeve of personalized Pro V1s ($25) combine to make a $60-$80 gift basket that looks like you spent $150. For the data-loving golfer, the Arccos Caddie sensor set is the obvious present — but it is $249.99, not a sub-$100 gift, so it sits in the Premium tier below rather than here." },
+      { h2: 'Impressive Gifts Under $100', affiliateKey: 'wellputt-mat', rating: 4.4, body: "A premium golf towel set ($30-$40), a quality golf book like Harvey Penick\'s Little Red Book ($15), and a sleeve of personalized Pro V1s ($25) combine to make a $60-$80 gift basket that looks like you spent $150. For the data-loving golfer, the Arccos Caddie sensor set is the obvious present — but it is $249.99, not a sub-$100 gift, so it sits in the Premium tier below rather than here.\n\nIf you would rather give one thing than a basket, the Wellputt 10ft putting mat at $89 is the pick in this tier. It is the rare golf gift with no sizing risk, it gets used indoors in exactly the months it is given, and the alignment guides on it mean a beginner gets something out of it on day one." },
       { h2: 'Premium Gifts Around $300', badge: 'BEST OVERALL', body: "The Garmin Approach S42 GPS watch ($299) is the sweet spot. It provides instant front/center/back yardages on 42,000 courses worldwide with zero subscription fees, and it works as a regular fitness watch the other 6 days of the week. For the golfer who does not have a GPS device, this is a game-changer they will wear daily.", price: '~$299', affiliateKey: 'garmin-approach-s42', rating: 4.6,
         pros: ['No subscription — free lifetime course updates', 'Works as a daily fitness watch', 'Instant yardages without pulling out a phone'],
         cons: ['$299 is a real investment', 'Does not have slope adjustment (that is the S62)'],
