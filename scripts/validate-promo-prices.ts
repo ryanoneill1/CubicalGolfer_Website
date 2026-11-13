@@ -77,6 +77,16 @@ const PROMO_WATCH: Record<string, Watch> = {
                                    note: 'Left at the regular price throughout; never drifted.' },
   'garmin-approach-z30':         { regular: 489.99, promo: 449.99, seen: '2026-11-10',
                                    note: 'Registry has carried 449.99 since September — treat as standing unless it rises.' },
+  // Added 13 November 2026 from the Black Friday recheck. Each was read on the live
+  // listing with its discount badge, two weeks before Black Friday.
+  'garmin-approach-s12':          { regular: 199.99, promo: 149.99, seen: '2026-11-13',
+                                   note: '25% off and featured on the Black Friday hub as a live deal.' },
+  'garmin-approach-z30':          { regular: 449.99, promo: 399.99, seen: '2026-11-13',
+                                   note: 'Showed a 489.99 typical on 7 Nov, then 449.99, now 399.99 — this listing moves.' },
+  'rapsodo-mlm2pro':              { regular: 599.00, promo: 549.98, seen: '2026-11-13',
+                                   note: 'New unit at Amazon, sold by Rapsodo. Not the certified pre-owned listing PlayBetter carries near the same figure.' },
+  'flightscope-mevo-gen2':        { regular: 1299.00, promo: 1149.00, seen: '2026-11-13',
+                                   note: 'Held the same 150 discount from 5 to 13 November.' },
   'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-10',
                                    note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it.' },
 };

@@ -31,7 +31,14 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 
-const THRESHOLD = 20;   // ratchet: 49 -> 47 (Sprint 166) -> 20 (Sprint 169)
+// ratchet: 49 -> 47 (Sprint 166) -> 20 (Sprint 169) -> 6 (Sprint 233, 13 Nov 2026).
+// Sprint 233 cleared 18 rows: 13 Garmin R10 rows left behind when the registry moved
+// to $499.99, 4 Cleveland HB Soft 2 rows from Sprint 232, and 1 adidas pants row. It
+// also retargeted 3 FootJoy rows onto the new 2-pack key, which is where their $22.97
+// always belonged. The 6 remaining are pre-existing and named in SPRINT-233.md.
+// Table and registry both live in this repo, so only an edit can move this number —
+// an exact ceiling is safe here in a way it would not be for a live-web figure.
+const THRESHOLD = 6;
 const SEVERE_CEILING = 4;
 
 const money = (s: string) => Number(s.replace(/,/g, ''));
