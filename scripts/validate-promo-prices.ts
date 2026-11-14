@@ -72,7 +72,8 @@ const PROMO_WATCH: Record<string, Watch> = {
   'callaway-strata':             { regular: 499.00, promo: 374.99, seen: '2026-11-10' },
   'voice-caddie-sc200plus':      { regular: 229.99, promo: 179.99, seen: '2026-11-10' },
   'superspeed-golf-set':         { regular: 139.99, promo: 125.98, seen: '2026-11-10' },
-  'mgi-zip-navigator':           { regular: 1695.00, promo: 1527.47, seen: '2026-11-10' },
+  'mgi-zip-navigator':           { regular: 1693.59, promo: 1527.47, seen: '2026-11-14',
+                                   note: 'Listed typical price read 1,695.00 on 10 Nov and 1,693.59 on 14 Nov.' },
   'precision-pro-nx9-hd':        { regular: 199.98, promo: 161.49, seen: '2026-11-10',
                                    note: 'Left at the regular price throughout; never drifted.' },
   'garmin-approach-z30':         { regular: 489.99, promo: 449.99, seen: '2026-11-10',
@@ -88,7 +89,7 @@ const PROMO_WATCH: Record<string, Watch> = {
   'flightscope-mevo-gen2':        { regular: 1299.00, promo: 1149.00, seen: '2026-11-13',
                                    note: 'Held the same 150 discount from 5 to 13 November.' },
   'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-10',
-                                   note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it.' },
+                                   note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it. RESOLVED 14 Nov 2026: Sprint 233 flagged that three readings with no strike-through suggested $499.99 had become standing. PlayBetter lists the same unit at $599.99 on 14 Nov, so $599.97 is still the regular price and this entry stays as it is.' },
 };
 
 /**

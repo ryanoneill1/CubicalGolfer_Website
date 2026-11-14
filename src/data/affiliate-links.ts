@@ -2345,7 +2345,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'PlayBetter',
     price: '~$1,195',
     primaryRetailer: 'direct',
-    priceNote: 'Showing sold out at PlayBetter on 5 November 2026 at its \$1,195 price \u2014 \$1,300 off the \$2,495 list with a 1-year Foresight Course Play package included. Worth checking stock before you plan around it; PlayBetter billed this as a 30-day promotion.',
+    priceNote: 'Sold out at PlayBetter on 14 November 2026 in both new and certified pre-owned. PlayBetter now describes the SkyTrak+ as no longer available and directs buyers to the SkyTrak ST MAX at \$1,695. Previously listed sold out on 5 November 2026 at its \$1,195 price \u2014 \$1,300 off the \$2,495 list with a 1-year Foresight Course Play package included. Worth checking stock before you plan around it; PlayBetter billed this as a 30-day promotion.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/skytrak-plus.webp',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
