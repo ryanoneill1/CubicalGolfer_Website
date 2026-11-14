@@ -237,7 +237,7 @@ export const PRODUCT_DISPLAY: Record<string, string> = {
   'lamkin-crossline-cord': "Lamkin Crossline Cord",
   'winn-dri-tac': "Winn Dri-Tac",
   'superstroke-zenergy-tour': "SuperStroke S-Tech",
-  'callaway-big-bertha': "Callaway Big Bertha",
+  'callaway-big-bertha-b21-driver': "Callaway Big Bertha B21",
   'cleveland-huntington-beach': "Cleveland Huntington Beach",
   'cobra-ds-adapt-x-driver': "Cobra DS-Adapt X Driver",
   'evnroll-er2': "Evnroll ER2",

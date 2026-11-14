@@ -1846,13 +1846,14 @@ export const AFFILIATE: Record<string, {
 
   // Callaway Chrome Tour 2026 — search (very new Jan 2026, single ASIN not yet stable)
   'callaway-chrome-tour-2026': {
+    asin: 'B0FX3CZ31B',
     url: 'https://www.amazon.com/dp/B0FX3CZ31B?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
     golfGalaxyUrl: 'https://www.kqzyfj.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DCallaway%2520Chrome%2520Tour%25202026%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     retailer: 'Amazon',
-    verifiedOn: '2026-09-17',
+    verifiedOn: '2026-11-14',
     price: '$57.99/dz',
-    priceNote: '$57.99 a dozen at Amazon, in stock (checked 17 September 2026).',
+    priceNote: '$57.99 a dozen is the Amazon list price; discounted 14% to $50.00 and in stock when checked 14 November 2026.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/callaway-chrome-tour-2026.webp',
     imgAlt: 'Callaway Chrome Tour 2026 Golf Balls',
@@ -3828,7 +3829,7 @@ export const AFFILIATE: Record<string, {
       'The step-up set for 20+ handicap iron play',
     ],
   },
-  'callaway-big-bertha': {
+  'callaway-big-bertha-b21-driver': {
     asin: 'B08BQDPPS9',
     url: 'https://www.amazon.com/Callaway-Bertha-Graphite-Regular-Degrees/dp/B08BQDPPS9?crid=IJS2IOANMCC5&dib_tag=se&keywords=Callaway%2BBig%2BBertha%2BB21%2BDriver&qid=1785683140&sprefix=callaway%2Bbig%2Bbertha%2Bb21%2Bdriver%2Caps%2C328&sr=8-1&linkCode=ll2&tag=cubicalgolfer-20&linkId=2f05dd5820757ea6bcffff91881eaf33&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -3839,7 +3840,7 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Price is typical for this category. Check link for any current promotions.',
     label: 'Check Price at Amazon →',
     imgSrc: '/images/products/callaway-big-bertha.webp',
-    imgAlt: 'Callaway Big Bertha driver',
+    imgAlt: 'Callaway Big Bertha B21 driver',
         benefits: [
       'Launches higher than anything else in its class — aimed at swing speeds under 80 mph that struggle to get airborne',
       'Built-in draw bias and offset hosel help a slicer square the face',

@@ -38,7 +38,7 @@ const VERIFIED = {
   'square-golf-launch-monitor':    [699,  'PlayBetter $699.99'],
   'callaway-rogue-st-max':         [299,  'Amazon $299.99'],
   'callaway-paradym-ai-smoke-max': [399,  'Amazon $399.99'],
-  'callaway-big-bertha':           [349,  'Amazon $349.95 (B21)'],
+  'callaway-big-bertha-b21-driver': [349, 'Amazon $349.95 (B21)'],
   'garmin-approach-s12':           [199,  'Golf Galaxy /p/ $199.99'],
   'garmin-approach-s62':           [499,  'Golf Galaxy /p/ $499.99'],
   'flightscope-mevo-gen2':         [1299, 'PlayBetter $1,299.00'],

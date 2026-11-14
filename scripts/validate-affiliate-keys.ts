@@ -232,19 +232,6 @@ const SKIP_SUBSTRINGS = [
   'the verdict',
 ];
 
-// Comparison rows whose name/key disagreement is a REAL open question waiting on
-// a decision from Ryan, not a bug to be silently fixed. Changing a row's link
-// changes which product a reader buys, so these are held, listed here, and
-// raised in the sprint report — never quietly allowlisted. Each entry must say
-// what the decision is. The goal is an empty list.
-//
-//  /golf-ball-compression-chart/ row "Callaway Chrome Tour"
-//    bestFor '95-115 mph' and compression 90 both match Chrome Tour
-//    (balls.ts: 91, band 95-120). The price ($44.99/dz) and the key
-//    (callaway-chrome-soft) are both Chrome Soft's, copied from the row
-//    directly above it. Fixing it moves the link to callaway-chrome-tour-2026
-//    and the displayed price to $57.99/dz — a price RISE on the page that is
-//    29% of site clicks. Awaiting Ryan's go-ahead (asked 14 Nov 2026).
 // Pairs of registry keys that name the SAME product under two entries. The rows
 // that link them are not wrong; the REGISTRY is carrying duplicate debt, and the
 // name check below would otherwise report a row for linking the wrong twin.
@@ -262,18 +249,13 @@ const EQUIVALENT_KEYS: [string, string][] = [
   ['spornia-spg-net', 'spornia-spg-7'],
 ];
 
-//  /best-golf-drivers-under-400/ row "Callaway Big Bertha B21"
-//    NOT a row bug. The row links callaway-big-bertha (~$349) and the whole page
-//    — section h2 and body prose — calls that product the B21 driver at ~$349.
-//    The row name is right; the REGISTRY key is a short form that omits "b21",
-//    which lets the name match callaway-big-bertha-b21-irons instead. The open
-//    question is whether to rename the registry key to
-//    callaway-big-bertha-b21-driver. Renaming a key touches every page that
-//    links it, so it is Ryan's call, not a drive-by edit.
-const ROW_HOLD: [string, string, string][] = [
-  ['/golf-ball-compression-chart/', 'Callaway Chrome Tour', 'callaway-chrome-soft'],
-  ['/best-golf-drivers-under-400/', 'Callaway Big Bertha B21', 'callaway-big-bertha'],
-];
+// Comparison rows whose name/key disagreement is a REAL open question waiting on
+// a decision from Ryan, not a bug to be silently fixed. Changing a row's link
+// changes which product a reader buys, so these are held, listed here, and
+// raised in the sprint report — never quietly allowlisted. Each entry must say
+// what the decision is. The goal is an empty list, and it is currently empty:
+// both Sprint 240 holds were decided and fixed in Sprint 241.
+const ROW_HOLD: [string, string, string][] = [];
 
 let errors = 0;
 let checked = 0;

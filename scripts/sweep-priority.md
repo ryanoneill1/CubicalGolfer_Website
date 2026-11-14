@@ -44,6 +44,6 @@ CI verifies ~9% of listings because Amazon blocks datacentre IPs; this is the qu
 | 37 | `callaway-strata-ultimate-16` | $699 | $35 | 0 | never | Golf Galaxy | 105 |
 | 38 | `taylormade-spider-5k-zt` | $399 | $32 | 0 | never | Golf Galaxy | 96 |
 | 39 | `odyssey-stroke-lab` | $199 | $16 | 2 | never | Golf Galaxy | 96 |
-| 40 | `callaway-big-bertha` | $349 | $10 | 3 | never | Amazon | 94 |
+| 40 | `callaway-big-bertha-b21-driver` | $349 | $10 | 3 | never | Amazon | 94 |
 
 157 of 205 products over $40 have never been verified.
