@@ -1,9 +1,20 @@
 #!/usr/bin/env node
 // scripts/validate-affiliate-keys.ts
 // Fails the build if any article section has an affiliateKey that doesn't
-// match the product brand mentioned in its h2.
+// match the product brand mentioned in its h2 — and, since Sprint 240, if any
+// comparison TABLE ROW has an affiliateKey that doesn't match the product its
+// own `name` field names.
+//
+// Why the row check exists: twice now a product fix has been applied to a
+// section and survived, wrong, in that section's comparison row. Sprint 238
+// retargeted the hitting-mats section to the Spornia tri-turf; the row beside
+// it still named, priced and linked the NET, and `validate-table-vs-registry`
+// passed it because the net's price was correctly the net's price. A row that
+// is internally consistent and still points at the wrong product is invisible
+// to every price validator we have. Only the name-to-key relation catches it.
 
 import { ARTICLES } from '../src/data/articles.ts';
+import { AFFILIATE } from '../src/data/affiliate-links.ts';
 
 // Brand keywords (in h2) → expected affiliateKey
 // Order matters: most specific match wins, so list more specific entries first.
@@ -46,6 +57,7 @@ const BRAND_MAP: [string, string][] = [
   ['drive pro clone',                'under-armour-drive-pro-clone-shoes'],
   ['blade tour si',                  'skechers-blade-tour-si-shoes'],
   ['maxfli xcw',                     'maxfli-xcw-wedge'],
+  ['skechers elite vortex',         'skechers-elite-vortex'],
   ['skechers pure si',               'skechers-pure-si-shoes'],
   ['reebok nano',                    'reebok-nano-golf-shoes'],
   ['adipower 26',                    'adidas-adipower-26-shoes'],
@@ -220,8 +232,53 @@ const SKIP_SUBSTRINGS = [
   'the verdict',
 ];
 
+// Comparison rows whose name/key disagreement is a REAL open question waiting on
+// a decision from Ryan, not a bug to be silently fixed. Changing a row's link
+// changes which product a reader buys, so these are held, listed here, and
+// raised in the sprint report — never quietly allowlisted. Each entry must say
+// what the decision is. The goal is an empty list.
+//
+//  /golf-ball-compression-chart/ row "Callaway Chrome Tour"
+//    bestFor '95-115 mph' and compression 90 both match Chrome Tour
+//    (balls.ts: 91, band 95-120). The price ($44.99/dz) and the key
+//    (callaway-chrome-soft) are both Chrome Soft's, copied from the row
+//    directly above it. Fixing it moves the link to callaway-chrome-tour-2026
+//    and the displayed price to $57.99/dz — a price RISE on the page that is
+//    29% of site clicks. Awaiting Ryan's go-ahead (asked 14 Nov 2026).
+// Pairs of registry keys that name the SAME product under two entries. The rows
+// that link them are not wrong; the REGISTRY is carrying duplicate debt, and the
+// name check below would otherwise report a row for linking the wrong twin.
+// Listed, not hidden — each pair is a consolidation job (cf. the Titleist
+// Players 4 bag key, Sprint 234):
+//   sklz-accelerator-*  — putting-mat is a Golf Galaxy search link; -pro is an
+//     Amazon SEARCH link whose URL still carries a `skechers-go-golf-elite-5`
+//     sprefix copy-paste artifact. Same product, neither verified to an ASIN.
+//   spornia-spg-net / spornia-spg-7 — both ~$350 and both called SPG-7, but they
+//     point at DIFFERENT ASINs (B07NHJSG3R vs B079P7WZPH). Rows link
+//     spornia-spg-net, the one verified live at $349.99 in Sprint 237. Whether
+//     B079P7WZPH is a variant or a stale duplicate needs a live check.
+const EQUIVALENT_KEYS: [string, string][] = [
+  ['sklz-accelerator-putting-mat', 'sklz-accelerator-pro'],
+  ['spornia-spg-net', 'spornia-spg-7'],
+];
+
+//  /best-golf-drivers-under-400/ row "Callaway Big Bertha B21"
+//    NOT a row bug. The row links callaway-big-bertha (~$349) and the whole page
+//    — section h2 and body prose — calls that product the B21 driver at ~$349.
+//    The row name is right; the REGISTRY key is a short form that omits "b21",
+//    which lets the name match callaway-big-bertha-b21-irons instead. The open
+//    question is whether to rename the registry key to
+//    callaway-big-bertha-b21-driver. Renaming a key touches every page that
+//    links it, so it is Ryan's call, not a drive-by edit.
+const ROW_HOLD: [string, string, string][] = [
+  ['/golf-ball-compression-chart/', 'Callaway Chrome Tour', 'callaway-chrome-soft'],
+  ['/best-golf-drivers-under-400/', 'Callaway Big Bertha B21', 'callaway-big-bertha'],
+];
+
 let errors = 0;
 let checked = 0;
+let rowsChecked = 0;
+const heldRows = new Set<string>();
 
 for (const article of ARTICLES) {
   for (const section of (article as any).sections ?? []) {
@@ -253,9 +310,103 @@ for (const article of ARTICLES) {
   }
 }
 
+// ---- comparison table rows (Sprint 240) ----
+for (const article of ARTICLES) {
+  const slug = (article as any).slug;
+  for (const row of (article as any).comparisonTable?.rows ?? []) {
+    if (!row.affiliateKey || row.affiliateKey === '') continue;
+    const name = (row.name ?? '').toLowerCase();
+    if (!name) continue;
+
+    rowsChecked++;
+    // Same longest-phrase-first resolution as the section check above: a family
+    // can hold several SKUs, so only the most specific phrase present can name a key.
+    const matches = BRAND_MAP.filter(([brand]) => name.includes(brand))
+      .sort((a, b) => b[0].length - a[0].length);
+    if (matches.length === 0) continue;
+
+    const [brand, expectedKey] = matches[0];
+    if (row.affiliateKey === expectedKey) continue;
+
+    if (ROW_HOLD.some(([s, n, k]) => s === slug && n === row.name && k === row.affiliateKey)) {
+      const id = `${slug}|${row.name}|${row.affiliateKey}`;
+      if (!heldRows.has(id)) {
+        heldRows.add(id);
+        console.log(`   HELD (awaiting decision): ${slug} row "${row.name}" -> ${row.affiliateKey}`);
+      }
+      continue;
+    }
+
+    console.error(
+      `ROW MISMATCH in ${slug}\n` +
+      `  Row name:      "${row.name}"\n` +
+      `  Mentions:      "${brand}"\n` +
+      `  Expected key:  ${expectedKey}\n` +
+      `  Found key:     ${row.affiliateKey}\n` +
+      `  Row price:     ${row.price ?? '(none)'}\n`
+    );
+    errors++;
+  }
+}
+
+// ---- row name vs the product its key actually names (Sprint 240) ----
+// The BRAND_MAP check above only judges rows whose name appears in the map, so a
+// row naming anything else passes unexamined — that is how a row named "Callaway
+// Chrome Soft" could link callaway-chrome-tour-2026 unnoticed. This check needs no
+// map: an affiliate key is a slug of its product's name, so the row's own words can
+// be scored against it. A row is reported ONLY when some OTHER registry key accounts
+// for every word in the row's name while the linked key does not. That relative test
+// is what keeps bundle and configuration rows ("Radar + Net (basic)", "R10 Budget
+// Setup") quiet: nothing matches them better, so nothing is claimed. A looser
+// absolute test flagged 72 of 537 rows, almost all of them legitimate abbreviations.
+const words = (s: string): string[] =>
+  (s || '').toLowerCase().replace(/\+/g, ' plus ').replace(/[^a-z0-9]+/g, ' ').split(/\s+/).filter(Boolean);
+const NAME_FILLER = new Set(['golf', 'the', 'a', 'an', 'and', 'with', 'for', 'set', 'mens', 'womens', 'plus']);
+const KEY_WORDS: [string, Set<string>][] = Object.keys(AFFILIATE as any).map(k => [k, new Set(words(k))]);
+const twin = (a: string, b: string) =>
+  EQUIVALENT_KEYS.some(([x, y]) => (x === a && y === b) || (x === b && y === a));
+
+for (const article of ARTICLES) {
+  const slug = (article as any).slug;
+  for (const row of (article as any).comparisonTable?.rows ?? []) {
+    if (!row.affiliateKey || !row.name) continue;
+    const rw = words(row.name).filter(t => !NAME_FILLER.has(t));
+    if (rw.length === 0) continue;
+
+    const linkedWords = new Set(words(row.affiliateKey));
+    const linkedScore = rw.filter(t => linkedWords.has(t)).length;
+    if (linkedScore === rw.length) continue; // the key already accounts for the whole name
+
+    const rivals = KEY_WORDS
+      .filter(([k]) => k !== row.affiliateKey && !twin(k, row.affiliateKey))
+      .filter(([, kw]) => rw.every(t => kw.has(t)))
+      .map(([k]) => k);
+    if (rivals.length === 0) continue;
+
+    if (ROW_HOLD.some(([s, n, k]) => s === slug && n === row.name && k === row.affiliateKey)) {
+      const id = `${slug}|${row.name}|${row.affiliateKey}`;
+      if (!heldRows.has(id)) {
+        heldRows.add(id);
+        console.log(`   HELD (awaiting decision): ${slug} row "${row.name}" -> ${row.affiliateKey}`);
+      }
+      continue;
+    }
+
+    console.error(
+      `ROW NAMES A DIFFERENT PRODUCT in ${slug}\n` +
+      `  Row name:      "${row.name}"  (price ${row.price ?? 'none'})\n` +
+      `  Links:         ${row.affiliateKey}  — accounts for ${linkedScore}/${rw.length} of the name\n` +
+      `  Fully matched: ${rivals.slice(0, 3).join(', ')}\n` +
+      `  Either the row's name or its link is wrong. Check the row's price against\n` +
+      `  both registry entries to see which one the row is really about.\n`
+    );
+    errors++;
+  }
+}
+
 if (errors > 0) {
   console.error(`\n❌ ${errors} affiliate-key mismatch(es) detected. Fix in src/data/articles.ts before building.`);
   process.exit(1);
 } else {
-  console.log(`✅ Affiliate key validation passed for ${ARTICLES.length} articles (${checked} sections checked).`);
+  console.log(`✅ Affiliate key validation passed for ${ARTICLES.length} articles (${checked} sections, ${rowsChecked} table rows checked, ${heldRows.size} held).`);
 }
