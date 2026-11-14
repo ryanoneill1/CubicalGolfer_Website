@@ -29,7 +29,12 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIST = join(process.cwd(), 'dist');
-const CEILING = 408;   // lowered in Sprint 211 (the 'More for Cubicle Golfers' building glyph on all 62 compare pages moved to <Icon name="building"/>)
+const CEILING = 410;   // 408 after Sprint 211 (the 'More for Cubicle Golfers' building
+                       // glyph on all 62 compare pages moved to <Icon name="building"/>).
+                       // 408 -> 410 in Sprint 237: one new article,
+                       // /best-golf-hitting-net-and-mat/, carrying the same `emoji`
+                       // card glyph every other article has. A new page costs two
+                       // rendered glyphs; this is not chrome creeping back in.
 
 if (!existsSync(DIST)) {
   console.log('validate-emoji-chrome: no dist/ yet — skipped (runs after astro build).');
