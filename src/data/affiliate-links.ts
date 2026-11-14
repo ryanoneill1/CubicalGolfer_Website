@@ -2343,9 +2343,9 @@ export const AFFILIATE: Record<string, {
     verifiedOn: '2026-11-05',
     program: 'playbetter',
     retailer: 'PlayBetter',
-    price: '~$1,195',
+    price: '$995',
     primaryRetailer: 'direct',
-    priceNote: 'Sold out at PlayBetter on 14 November 2026 in both new and certified pre-owned. PlayBetter now describes the SkyTrak+ as no longer available and directs buyers to the SkyTrak ST MAX at \$1,695. Previously listed sold out on 5 November 2026 at its \$1,195 price \u2014 \$1,300 off the \$2,495 list with a 1-year Foresight Course Play package included. Worth checking stock before you plan around it; PlayBetter billed this as a 30-day promotion.',
+    priceNote: 'Verified 14 November 2026: \$995 on Amazon, in stock, shipped and sold by SkyTrak Golf, listed as the previous generation. PlayBetter is sold out in both new and certified pre-owned and points buyers to the SkyTrak ST MAX at \$1,695. The \$995 is the lowest this unit has been and it is still the cheaper, more capable half of the Launch Pro comparison.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/skytrak-plus.webp',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
@@ -4711,12 +4711,20 @@ export const AFFILIATE: Record<string, {
 
   // ── Month 2-5 New Products ────────────────────────────────────────────
   'spornia-spg-hitting-mat': {
-    url: 'https://www.amazon.com/s?k=spornia-spg-hitting-mat&crid=18N9YRR80YX51&sprefix=spornia-spg-hitting-mat%2Caps%2C195&linkCode=ll2&tag=cubicalgolfer-20&linkId=7cea979579ddab554b22dc34cb78e40a&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSpornia%2520SPG%2520Hitting%2520Mat%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
+    asin: 'B07CYN1WVD',
+    url: 'https://www.amazon.com/dp/B07CYN1WVD?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
-    retailer: 'Amazon', price: '~$399', verifiedOn: '2026-09-04',
-    priceNote: 'Simulator gear drops 10-20% during Black Friday. Big investment — worth waiting for sales.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/spornia-spg-hitting-mat.webp', imgAlt: 'Spornia SPG golf hitting mat',
+    retailer: 'Amazon',
+    price: '$399.99',
+    verifiedOn: '2026-11-14',
+    priceNote: 'Verified 14 November 2026: \$399.99, in stock. The tri-turf 25x16in hitting surface \u2014 fairway, rough and tee lies side by side. Previously this key carried an unverifiable Amazon search link, and the mats guide linked the Spornia net by mistake.',
+    label: 'Check Price at Amazon \u2192',
+    imgSrc: '/images/products/spornia-spg-hitting-mat.webp', imgAlt: 'Spornia SPG tri-turf golf hitting mat',
+    benefits: [
+        'Three lies in one mat \u2014 fairway, rough and tee',
+        'Sits on top of an existing surface rather than replacing it',
+        'The cheap way to add lie variety to a net setup',
+      ],
   },
   'country-club-elite-mat': {
     url: 'https://www.amazon.com/dp/B0048GP25U?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',

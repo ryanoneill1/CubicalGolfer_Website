@@ -167,6 +167,7 @@ const BRAND_MAP: [string, string][] = [
   ['superstroke alignment',        'superstroke-alignment-sticks'],
   ['superstroke traxion',           'superstroke-traxion-grip'],
   ['superstroke zenergy',           'superstroke-zenergy-tour'],
+  ['spornia spg tri-turf',          'spornia-spg-hitting-mat'],
   ['spornia spg',                   'spornia-spg-net'],
   ['rukket haack',                  'rukket-haack-net'],
   ['net return pro',                'net-return-pro'],
