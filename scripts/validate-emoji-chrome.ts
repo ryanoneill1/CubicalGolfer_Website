@@ -29,7 +29,11 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
 const DIST = join(process.cwd(), 'dist');
-const CEILING = 410;   // 408 after Sprint 211 (the 'More for Cubicle Golfers' building
+// Raised 410 -> 413 on 15 November 2026: /golf-simulator-without-subscription/ is a new
+// article and carries the same `emoji` card glyph every article carries, which renders
+// three times (card, hub tile, related list). This is not interface chrome creeping back
+// in — it is one more article. Same reason as the 408 -> 410 raise in Sprint 237.
+const CEILING = 413;   // 408 after Sprint 211 (the 'More for Cubicle Golfers' building
                        // glyph on all 62 compare pages moved to <Icon name="building"/>).
                        // 408 -> 410 in Sprint 237: one new article,
                        // /best-golf-hitting-net-and-mat/, carrying the same `emoji`
