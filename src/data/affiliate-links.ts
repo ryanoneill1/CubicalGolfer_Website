@@ -2710,7 +2710,7 @@ export const AFFILIATE: Record<string, {
     benefits: [
       'Tracks 14+ data metrics including spin and launch angle',
       'Works indoors and outdoors — waterproof and pocket-sized',
-      'Free E6 Connect sim play with Bandon Dunes included',
+      'Works with E6 Connect, GSPro and Awesome Golf — third-party software sold separately',
     ],
   },
 
