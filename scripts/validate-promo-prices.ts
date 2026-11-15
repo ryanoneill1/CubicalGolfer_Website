@@ -51,46 +51,13 @@
  * already written down as "this one is a sale".
  */
 
+import { readFileSync } from 'node:fs';
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
+import { PROMO_WATCH } from '../src/data/promo-watch.ts';
 
-type Watch = {
-  regular: number;   // the struck-through "typical price" on the live listing
-  promo: number;     // the sale figure seen at the same time
-  seen: string;      // when it was read
-  note?: string;
-};
+// The watch list now lives in src/data/promo-watch.ts because validate-prose-prices
+// needs the same data (page copy may quote a live deal price from 15 Nov 2026).
 
-/**
- * Observed on live Amazon listings, 7 and 10 November 2026.
- * The SC4 Pro entry is intentionally present and intentionally failing-adjacent:
- * its registry price is the promo figure by an explicit decision (Ryan, 10 Nov),
- * so it is listed with `promo` equal to the registry value and is excluded from
- * the failure by the ACCEPTED set below rather than by being omitted — the
- * exposure should stay visible rather than disappear from the file.
- */
-const PROMO_WATCH: Record<string, Watch> = {
-  'callaway-strata':             { regular: 499.00, promo: 374.99, seen: '2026-11-10' },
-  'voice-caddie-sc200plus':      { regular: 229.99, promo: 179.99, seen: '2026-11-10' },
-  'superspeed-golf-set':         { regular: 139.99, promo: 125.98, seen: '2026-11-10' },
-  'mgi-zip-navigator':           { regular: 1693.59, promo: 1527.47, seen: '2026-11-14',
-                                   note: 'Listed typical price read 1,695.00 on 10 Nov and 1,693.59 on 14 Nov.' },
-  'precision-pro-nx9-hd':        { regular: 199.98, promo: 161.49, seen: '2026-11-10',
-                                   note: 'Left at the regular price throughout; never drifted.' },
-  'garmin-approach-z30':         { regular: 489.99, promo: 449.99, seen: '2026-11-10',
-                                   note: 'Registry has carried 449.99 since September — treat as standing unless it rises.' },
-  // Added 13 November 2026 from the Black Friday recheck. Each was read on the live
-  // listing with its discount badge, two weeks before Black Friday.
-  'garmin-approach-s12':          { regular: 199.99, promo: 149.99, seen: '2026-11-13',
-                                   note: '25% off and featured on the Black Friday hub as a live deal.' },
-  'garmin-approach-z30':          { regular: 449.99, promo: 399.99, seen: '2026-11-13',
-                                   note: 'Showed a 489.99 typical on 7 Nov, then 449.99, now 399.99 — this listing moves.' },
-  'rapsodo-mlm2pro':              { regular: 599.00, promo: 549.98, seen: '2026-11-13',
-                                   note: 'New unit at Amazon, sold by Rapsodo. Not the certified pre-owned listing PlayBetter carries near the same figure.' },
-  'flightscope-mevo-gen2':        { regular: 1299.00, promo: 1149.00, seen: '2026-11-13',
-                                   note: 'Held the same 150 discount from 5 to 13 November.' },
-  'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-10',
-                                   note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it. RESOLVED 14 Nov 2026: Sprint 233 flagged that three readings with no strike-through suggested $499.99 had become standing. PlayBetter lists the same unit at $599.99 on 14 Nov, so $599.97 is still the regular price and this entry stays as it is.' },
-};
 
 /**
  * Keys where the registry is knowingly set to the promotional figure.
@@ -100,6 +67,14 @@ const PROMO_WATCH: Record<string, Watch> = {
 const ACCEPTED = new Set<string>([
   'swing-caddie-sc4-pro',   // 10 Nov 2026 — explicit decision; recheck on the Black Friday cadence
   'garmin-approach-z30',    // carried since September; behaves as the standing price
+  // 15 Nov 2026 — the $209.99 has held on the live listing since 7 September, ten
+  // weeks, sold by Shot Scope itself. Amazon still badges it a "Limited time deal"
+  // and shows a $249.99 strike, but a deal that outlasts a quarter is the price.
+  // Same test applied to the SC4 Pro in Sprint 236, which went the other way
+  // because a second retailer still listed the regular figure.
+  // Recheck after Black Friday: if it rises to $249.99 the registry moves with it,
+  // and the five pages in this key's `quotedOn` need re-sweeping.
+  'shot-scope-v5',
 ]);
 
 const num = (v: unknown): number | null => {
@@ -113,6 +88,27 @@ const num = (v: unknown): number | null => {
 const problems: string[] = [];
 const accepted: string[] = [];
 let watched = 0;
+
+/**
+ * Duplicate-key guard. PROMO_WATCH is a `Record`, so a key written twice is not
+ * an error — the later entry silently replaces the earlier one and the earlier
+ * observation is never checked against anything. That happened to
+ * garmin-approach-z30, which carried two contradictory records from 10 and 13
+ * November until 15 November. A Record cannot be inspected for this after the
+ * fact, so the check reads the source text.
+ */
+{
+  const src = readFileSync(new URL('../src/data/promo-watch.ts', import.meta.url), 'utf8');
+  const body = src.slice(src.indexOf('export const PROMO_WATCH'));
+  const keys = [...body.matchAll(/^\s{2}'([a-z0-9-]+)':/gm)].map(m => m[1]);
+  const dupes = [...new Set(keys.filter((k, i) => keys.indexOf(k) !== i))];
+  if (dupes.length) {
+    console.error(`\n\u274c PROMO_WATCH has duplicate key(s): ${dupes.join(', ')}`);
+    console.error('   A Record keeps only the last one, so the earlier observation is silently dropped.');
+    console.error('   Merge them into a single entry and record both readings in its note.\n');
+    process.exit(1);
+  }
+}
 
 for (const [key, w] of Object.entries(PROMO_WATCH)) {
   const rec = (AFFILIATE as Record<string, any>)[key];
@@ -148,7 +144,7 @@ if (problems.length) {
     '   the moment it ends, which is the direction that loses the click — and it can\n' +
     '   leave a page\'s editorial verdict resting on a discount.\n' +
     '   If a promotion has genuinely become the standing price, update `regular` in\n' +
-    '   scripts/validate-promo-prices.ts and write down why.\n',
+    '   src/data/promo-watch.ts and write down why.\n',
   );
   process.exit(1);
 }

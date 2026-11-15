@@ -23,6 +23,7 @@
 // wolf gets switched off.
 
 import { AFFILIATE } from '../src/data/affiliate-links';
+import { PROMO_WATCH } from '../src/data/promo-watch.ts';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
 import fs from 'fs';
@@ -166,6 +167,21 @@ for (const a of sources) {
       // A price that explains what it buys is not the unit price:
       //   "Bushnell Launch Pro ($600 for FSX Pro + optional subscription)"
       if (/^\s*(for|of|with|toward)\b/i.test(trailing)) continue;
+
+      // A LIVE DEAL price is correct copy, not drift.
+      //
+      // Ryan's decision, 15 November 2026: evergreen pages may quote the deal
+      // price where one is live, refreshed on each sweep. The registry keeps the
+      // REGULAR price (validate-promo-prices enforces that), so a deal figure in
+      // copy would otherwise read as a contradiction of the registry.
+      //
+      // The honest version of that decision is this: a deal price is only
+      // accepted when the promotion is RECORDED in src/data/promo-watch.ts, with
+      // the regular price, the date it was read, and the pages that quote it. An
+      // unrecorded low figure is still a failure. That file is the sweep list for
+      // when the sale ends — which is the whole reason this is allowed to pass.
+      const watch = (PROMO_WATCH as Record<string, { promo: number }>)[key];
+      if (watch && Math.max(said / watch.promo, watch.promo / said) < 1.05) continue;
 
       // Ignore trivial drift; we are hunting wrong numbers, not rounding.
       if (Math.max(said / reg, reg / said) < 1.2) continue;

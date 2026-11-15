@@ -70,6 +70,7 @@
  */
 
 import { AFFILIATE } from '../src/data/affiliate-links.ts';
+import { PROMO_WATCH } from '../src/data/promo-watch.ts';
 import { PRODUCT_DISPLAY } from '../src/data/product-names.ts';
 import fs from 'fs';
 
@@ -183,6 +184,19 @@ for (const file of FILES) {
         if (claimedBy(src, at) !== key) continue;
 
         assertions++;
+
+        // A LIVE DEAL price is correct copy, not a stale figure.
+        //
+        // Ryan's decision, 15 November 2026: pages may quote the deal price where
+        // one is live. The registry keeps the REGULAR price, so a deal figure
+        // beside a product name would otherwise read as contradicting it.
+        // Accepted only when the promotion is RECORDED in src/data/promo-watch.ts
+        // with its regular price, the date read, and the pages that quote it —
+        // that file is the sweep list for when the sale ends. An unrecorded low
+        // figure still fails, which is the point.
+        const watch = (PROMO_WATCH as Record<string, { promo: number }>)[key];
+        if (watch && Math.abs(v - watch.promo) / watch.promo <= 0.05) continue;
+
         const gap = Math.abs(v - reg);
         if (gap < MIN_ABS) continue;
         if (gap / reg <= TOLERANCE) continue;
