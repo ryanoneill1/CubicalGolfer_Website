@@ -2090,7 +2090,7 @@ export const COMPARISONS: Comparison[] = [
     tested: true,
     testMode: 'home',
     title: "Spornia SPG vs Net Return Pro Golf Net",
-    description: "Spornia SPG at $350 vs Net Return Pro at $795. Both return the ball to your feet — the $445 gap buys frame, size and lifespan, not accuracy.",
+    description: "Spornia SPG at $350 vs Net Return Pro at $695. Both return the ball to your feet — the $345 gap buys frame, size and lifespan, not accuracy.",
     productA: "spornia-spg-net",
     productB: "net-return-pro",
     winner: "spornia-spg-net",
