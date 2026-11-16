@@ -86,12 +86,24 @@ export const PROMO_WATCH: Record<string, Watch> = {
   'garmin-approach-z30':         { regular: 449.99, promo: 399.99, seen: '2026-11-13',
                                    note: 'Typical read 489.99 on 7 Nov, 449.99 on 10 Nov, promo 399.99 on 13 Nov — this listing moves. Registry has carried 449.99 since September; treat as standing unless it rises.' },
 
-  'rapsodo-mlm2pro':             { regular: 599.00, promo: 549.98, seen: '2026-11-13',
-                                   note: 'New unit at Amazon, sold by Rapsodo. Not the certified pre-owned listing PlayBetter carries near the same figure.' },
-  'flightscope-mevo-gen2':       { regular: 1299.00, promo: 1149.00, seen: '2026-11-13',
-                                   note: 'Held the same 150 discount from 5 to 13 November.' },
+  'rapsodo-mlm2pro':             { regular: 599.00, promo: 549.99, seen: '2026-11-16',
+                                   note: 'Re-read 16 Nov: PlayBetter has the NEW unit at 549.99 with 12 of 12 variants in stock, against their own 754.99 compare-at. That corroborates 549.99 as the live promo and 599 as the regular, so the registry stays at 599. An earlier note here said PlayBetter only carried a certified pre-owned listing near this figure; that is no longer true.' },
+  'flightscope-mevo-gen2':       { regular: 1299.00, promo: 1149.00, seen: '2026-11-16',
+                                   note: 'Held the same 150 discount from 5 to 16 November — three readings over eleven days. PlayBetter shows 1149.00 with 8 of 8 variants in stock. Registry stays at 1299 because that is still the regular price everywhere it is listed.' },
   'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-10',
                                    note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it. RESOLVED 14 Nov 2026: Sprint 233 flagged that three readings with no strike-through suggested $499.99 had become standing. PlayBetter lists the same unit at $599.99 on 14 Nov, so $599.97 is still the regular price and this entry stays as it is.' },
+
+  /**
+   * Added 16 November 2026. The registry carries 995 for this unit, which is
+   * the PROMO figure, not the regular — Amazon badges it as a 30-day low with
+   * a 1,195.00 typical price, and PlayBetter listed 1,195 before selling out.
+   * ACCEPTED rather than repriced: Sprint 238 set 995 deliberately and 47
+   * figures across 27 pages derive from it, so moving it is its own sprint.
+   * This entry exists so the exposure is recorded instead of invisible — if
+   * the 995 ends, these are the pages that go wrong.
+   */
+  'skytrak-plus':                { regular: 1195.00, promo: 995.00, seen: '2026-11-16',
+                                   note: 'Amazon: 995.00 new, -17%, flagged 30-day low against a 1,195.00 typical price, in stock and sold by SkyTrak Golf, badged previous generation. PlayBetter is sold out and points buyers to the SkyTrak ST MAX at 1,695. Registry deliberately holds the 995.' },
 
   // Added 15 November 2026. The GPS family went on deal between the 14 Nov sweep
   // and this one, which is why these are here a week before the next full sweep.

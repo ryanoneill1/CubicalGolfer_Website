@@ -2337,14 +2337,15 @@ export const AFFILIATE: Record<string, {
 
   // SkyTrak+ Launch Monitor — search (primarily sold direct / specialty retail)
   'skytrak-plus': {
-    url: 'https://www.playbetter.com/products/skytrak-plus-golf-launch-monitor-simulator?ghref=2301%3A1333883',
-    verifiedOn: '2026-11-05',
-    program: 'playbetter',
-    retailer: 'PlayBetter',
+    url: 'https://www.amazon.com/dp/B0C7HGQLF7?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    asin: 'B0C7HGQLF7',
+    verifiedOn: '2026-11-16',
+    golfGalaxyUrl: 'https://www.playbetter.com/products/skytrak-plus-golf-launch-monitor-simulator?ghref=2301%3A1333883',
+    program: 'amazon',
+    retailer: 'Amazon',
     price: '$995',
-    primaryRetailer: 'direct',
-    priceNote: 'Verified 14 November 2026: \$995 on Amazon, in stock, shipped and sold by SkyTrak Golf, listed as the previous generation. PlayBetter is sold out in both new and certified pre-owned and points buyers to the SkyTrak ST MAX at \$1,695. The \$995 is the lowest this unit has been and it is still the cheaper, more capable half of the Launch Pro comparison.',
-    label: 'See Today\'s Price →',
+    priceNote: 'Verified 16 November 2026: \$995 new on Amazon, in stock for next-day delivery, shipped and sold by SkyTrak Golf, and flagged as a 30-day low against a \$1,195 typical price. The listing is badged previous generation — the SkyTrak ST MAX is the current model at \$1,695. Buy this one for the price; buy the ST MAX for the newer hardware.',
+    label: 'Check Price at Amazon →',
     imgSrc: '/images/products/skytrak-plus.webp',
     imgAlt: 'SkyTrak+ Home Golf Simulator Launch Monitor',
   
@@ -2352,6 +2353,126 @@ export const AFFILIATE: Record<string, {
       '4 high-speed cameras for photometric spin accuracy',
       'Integrates with E6 Connect and TGC 2019 simulators',
       'Professional-grade data: ball speed, spin axis, launch',
+    ],
+  },
+
+  // ── PLAYBETTER STUDIO PACKAGES & 2026 LAUNCH MONITORS ────────────────────
+  // Added 16 November 2026 from PlayBetter's live golf-deals collection. These
+  // carry no imgSrc on purpose: photos come from Ryan, and a product with no
+  // image can still be compared in a table — only a full selling section needs
+  // one. Prices and the dollars-off figures are PlayBetter's own, read on the
+  // product pages and cross-checked against their promo banner, which states
+  // \$1,000 off the SimStudio packages with named exceptions.
+
+  'skytrak-st-max': {
+    url: 'https://www.playbetter.com/products/skytrak-st-max-golf-launch-monitor-simulator?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$1,695', verifiedOn: '2026-11-16',
+    priceNote: 'The current-generation SkyTrak, \$1,695 at PlayBetter and in stock on 16 November 2026, down from \$3,443.99. It replaces the SkyTrak+, which PlayBetter has sold out of — the + is still available new on Amazon at \$995 if price matters more than the newer hardware.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Current-generation SkyTrak hardware, replacing the +',
+      'Photometric ball and club data for indoor simulator play',
+      'Ships with a year of Foresight course play included',
+    ],
+  },
+
+  'playbetter-garage-simstudio': {
+    url: 'https://www.playbetter.com/products/playbetter-garage-simstudio-home-golf-simulator-package?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$2,995', verifiedOn: '2026-11-16',
+    priceNote: 'A complete garage studio for \$2,995 in the entry SimStudio 10 size, \$1,000 off, read on 16 November 2026. Includes the enclosure, impact screen, a 5x5 hitting mat, putting turf, side barriers and a 3,600-lumen short-throw golf projector. No launch monitor — bring your own. Larger sizes run to \$7,994.99.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Everything but the launch monitor in one purchase',
+      'Sized for a standard garage bay',
+      'Includes the projector, which is usually a separate decision',
+    ],
+  },
+
+  'playbetter-simstudio-complete': {
+    url: 'https://www.playbetter.com/products/playbetter-simstudio-home-golf-simulator-package?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$2,995', verifiedOn: '2026-11-16',
+    priceNote: 'The same complete studio build in four depths — 8, 10, 12 and 13 foot — from \$2,995 in the entry size, \$1,000 off, read 16 November 2026. Enclosure, impact screen, hitting mat, putting turf, side barriers and a 3,600-lumen short-throw golf projector. Launch monitor sold separately.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Four studio depths, so it fits the room you actually have',
+      'Screen, enclosure, mats and projector in one order',
+      'Pairs with any launch monitor you already own',
+    ],
+  },
+
+  'square-golf-simstudio-complete': {
+    url: 'https://www.playbetter.com/products/square-golf-simulator-launch-monitor-home-studio-package?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$3,694.99', verifiedOn: '2026-11-16',
+    priceNote: 'Square Golf launch monitor plus the full SimStudio build for \$3,694.99, \$1,000 off, read 16 November 2026. The cheapest route here to a complete simulator with the monitor included.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Complete simulator with the launch monitor included',
+      'Square Golf reads ball, club and putting',
+      'Cheapest all-in studio package on this list',
+    ],
+  },
+
+  'garmin-r50-simstudio-complete': {
+    url: 'https://www.playbetter.com/products/garmin-approach-r50-home-golf-simulator-studio-package?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$7,494.99', verifiedOn: '2026-11-16',
+    priceNote: 'The Garmin Approach R50 with the full SimStudio build, \$7,494.99 on 16 November 2026 — PlayBetter state \$1,500 off this one. The R50 drives a projector over HDMI with no gaming PC, which is what the price buys.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'R50 runs a projector over HDMI with no PC needed',
+      'Ten-inch touchscreen on the unit itself',
+      'Full enclosure, screen, mats and projector included',
+    ],
+  },
+
+  'foresight-gc3-simstudio-complete': {
+    url: 'https://www.playbetter.com/products/foresight-gc3-with-link-golf-launch-monitor-studio-package?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$6,995', verifiedOn: '2026-11-16',
+    priceNote: 'Foresight GC3 with the full SimStudio build at \$6,995 on 16 November 2026, which PlayBetter put at \$4,000 off, with a protective case thrown in. A gaming PC is required and sold separately.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Foresight photometric accuracy in a studio bundle',
+      'Protective metal case included at this price',
+      'Complete enclosure, screen, mats and projector',
+    ],
+  },
+
+  'uneekor-eye-xo2': {
+    url: 'https://www.playbetter.com/products/uneekor-eye-xo2-golf-launch-monitor?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$7,999', verifiedOn: '2026-11-16',
+    priceNote: 'Verified 16 November 2026: \$7,999 at PlayBetter against a \$12,700 typical price, with two Swing Optix cameras and a year of AI Trainer included. Overhead-mounted, and a gaming PC is required and sold separately. Mounting position is critical to the data, so read the installation guide before drilling.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Three high-speed cameras for ball and club data',
+      'Overhead mount keeps the floor clear',
+      'Swing Optix cameras bundled at this price',
+    ],
+  },
+
+  'trackman-io-simstudio': {
+    url: 'https://www.playbetter.com/products/trackman-io-with-playbetter-simstudio-complete-package?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$16,990', verifiedOn: '2026-11-16',
+    priceNote: 'Trackman iO with the full SimStudio build, \$16,990 on 16 November 2026 against \$28,790 — the largest dollar discount in PlayBetter\'s catalogue. This is commercial-grade equipment and it is on this page for reference rather than as a recommendation for a home build.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Trackman accuracy, ceiling-mounted',
+      'Complete studio build included',
+      'Reference point for what the top of the market costs',
     ],
   },
 

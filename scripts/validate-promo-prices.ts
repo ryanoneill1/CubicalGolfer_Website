@@ -75,6 +75,17 @@ const ACCEPTED = new Set<string>([
   // Recheck after Black Friday: if it rises to $249.99 the registry moves with it,
   // and the five pages in this key's `quotedOn` need re-sweeping.
   'shot-scope-v5',
+  // 16 Nov 2026 — Amazon has the SkyTrak+ at $995 new, badged a 30-day low against
+  // a $1,195 typical price, in stock and sold by SkyTrak Golf. The registry has
+  // carried $995 since Sprint 238 and 47 figures across 27 pages derive from it,
+  // so this is ACCEPTED rather than repriced: moving it is its own sprint.
+  // Two things make it lower-risk than it looks. The unit is badged previous
+  // generation, with the SkyTrak ST MAX now the current model at $1,695 — so the
+  // $995 is a clearance direction of travel, not a sale that snaps back. And
+  // PlayBetter, which listed $1,195, has sold out entirely.
+  // Recheck at the Black Friday sweep. If $995 ends, the pages to fix are every
+  // one quoting a SkyTrak+ build total.
+  'skytrak-plus',
 ]);
 
 const num = (v: unknown): number | null => {

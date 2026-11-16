@@ -33,7 +33,17 @@ const DIST = join(process.cwd(), 'dist');
 // article and carries the same `emoji` card glyph every article carries, which renders
 // three times (card, hub tile, related list). This is not interface chrome creeping back
 // in — it is one more article. Same reason as the 408 -> 410 raise in Sprint 237.
-const CEILING = 1707;  // CORRECTED MEASUREMENT, Sprint 248 — see the EMOJI note below.
+const CEILING = 1709;  // 1707 -> 1709 on 16 November 2026 (Sprint 250). Measured, not
+                       // guessed: a per-page diff against the previous build showed the
+                       // entire +2 on /how-much-does-golf-simulator-cost/, and both new
+                       // glyphs are a 56px 💰 — article CARD ARTWORK, which the exemption
+                       // list below has always allowed, not interface chrome. They appeared
+                       // because that page gained a comparison table and the template
+                       // surfaced two more article cards alongside it. I did not chase why
+                       // the card count moves with the table; the effect is two thematic
+                       // card glyphs on a cost page, and the queued <Icon/> sprint will
+                       // take this number down by far more than two.
+                       // CORRECTED MEASUREMENT, Sprint 248 — see the EMOJI note below.
                        // The old 413 was not the number of rendered emoji; it was the
                        // number the old pattern could see. The true figure on the same
                        // dist/ is 1707, of which 954 are a single glyph: ✅ U+2705,

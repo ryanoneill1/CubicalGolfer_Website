@@ -30,6 +30,7 @@
 import { AFFILIATE } from '../src/data/affiliate-links';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
+import { PROMO_WATCH } from '../src/data/promo-watch';
 
 // ratchet: 49 -> 47 (Sprint 166) -> 20 (Sprint 169) -> 6 (Sprint 233, 13 Nov 2026).
 // Sprint 233 cleared 18 rows: 13 Garmin R10 rows left behind when the registry moved
@@ -38,7 +39,12 @@ import { COMPARISONS } from '../src/data/comparisons';
 // always belonged. The 6 remaining are pre-existing and named in SPRINT-233.md.
 // Table and registry both live in this repo, so only an edit can move this number —
 // an exact ceiling is safe here in a way it would not be for a live-web figure.
-const THRESHOLD = 6;
+const THRESHOLD = 5;
+                        // 6 -> 5 on 16 November 2026 (Sprint 250). Making this check
+                        // promo-aware removed three rows that were never really drift:
+                        // a table quoting a promotion recorded in promo-watch.ts is
+                        // quoting a real price. One of the three was pre-existing, so
+                        // the ratchet moves down by one. Only ever lower it.
 const SEVERE_CEILING = 4;
 
 const money = (s: string) => Number(s.replace(/,/g, ''));
@@ -92,7 +98,7 @@ const ROUNDING = 1;
 const all: any[] = [...(ARTICLES as any), ...(COMPARISONS as any)];
 const drift: string[] = [];
 const severe: string[] = [];
-const excluded = { dimension: 0, multipack: 0, period: 0, inRange: 0, secondhand: 0, bundle: 0, rounding: 0 };
+const excluded = { dimension: 0, multipack: 0, period: 0, inRange: 0, secondhand: 0, bundle: 0, rounding: 0, promo: 0 };
 
 for (const a of all) {
   const table = a.comparisonTable;
@@ -113,6 +119,22 @@ for (const a of all) {
       excluded.rounding++;
       // SHOW=1 lists what the tolerance absorbed, so it can never quietly grow.
       if (process.env.SHOW) console.error(`   rounding: ${a.slug} [${r.affiliateKey}] ${r.price} vs $${reg}`);
+      continue;
+    }
+
+    /**
+     * A row quoting a RECORDED live promotion is not drift. From 15 November 2026
+     * page copy may quote the live deal price (Ryan's decision), and a deals table
+     * is the one place that is obviously right — a Black Friday page quoting
+     * regular prices would be absurd. The same rule the prose validators got in
+     * Sprint 245 applies here: accepted only when the promotion is written down in
+     * src/data/promo-watch.ts with its regular price and the date it was read.
+     * An unrecorded low figure still counts as drift, which is the point.
+     */
+    const watch = (PROMO_WATCH as Record<string, { promo: number }>)[r.affiliateKey];
+    if (watch && Math.max(row / watch.promo, watch.promo / row) < 1.05) {
+      excluded.promo++;
+      if (process.env.SHOW) console.error(`   promo: ${a.slug} [${r.affiliateKey}] ${r.price} matches recorded promo $${watch.promo}`);
       continue;
     }
 
@@ -156,7 +178,7 @@ if (severe.length) {
 console.log(
   `✅ Table/registry prices: ${drift.length} drift rows (ceiling ${THRESHOLD}). Correctly excluded: ` +
   `${excluded.dimension} dimension, ${excluded.bundle} bundle, ${excluded.multipack} multi-pack, ${excluded.period} per-period, ` +
-  `${excluded.secondhand} used/prev-gen, ${excluded.inRange} in-range, ${excluded.rounding} rounding.`
+  `${excluded.secondhand} used/prev-gen, ${excluded.inRange} in-range, ${excluded.rounding} rounding, ${excluded.promo} recorded promo.`
 );
 
 if (drift.length > THRESHOLD) {

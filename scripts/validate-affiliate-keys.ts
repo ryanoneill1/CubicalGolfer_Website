@@ -112,6 +112,22 @@ const BRAND_MAP: [string, string][] = [
   ['scotty cameron phantom 9.2r',   'scotty-cameron-phantom-9-2r'],
   ['shot scope g6',                 'shot-scope-g6'],
   ['foresight gc3',                 'foresight-gc3'],
+  // Added 16 November 2026 (Sprint 250). PlayBetter studio packages contain the
+  // bare launch monitor and are named after it, so "Foresight GC3 SimStudio
+  // COMPLETE" matched 'foresight gc3' and the guard expected the bare monitor's
+  // key. These longer phrases take priority because BRAND_MAP matches are sorted
+  // longest-first, which is the designed way to disambiguate a package from the
+  // product inside it. Do NOT put these in EQUIVALENT_KEYS: a $6,995 studio
+  // build and a bare monitor are different products at different prices, and
+  // treating them as interchangeable is the class of bug this guard exists for.
+  ['foresight gc3 simstudio',       'foresight-gc3-simstudio-complete'],
+  ['garmin r50 simstudio',          'garmin-r50-simstudio-complete'],
+  ['square golf simstudio',         'square-golf-simstudio-complete'],
+  ['playbetter garage simstudio',   'playbetter-garage-simstudio'],
+  ['playbetter simstudio complete', 'playbetter-simstudio-complete'],
+  ['trackman io simstudio',         'trackman-io-simstudio'],
+  ['skytrak st max',                'skytrak-st-max'],
+  ['uneekor eye xo2',               'uneekor-eye-xo2'],
   ['titleist pro v1x',               'titleist-pro-v1x'],
   ['titleist pro v1',                'titleist-pro-v1'],
   ['callaway chrome tour 2026',      'callaway-chrome-tour-2026'],
