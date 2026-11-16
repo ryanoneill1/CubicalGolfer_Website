@@ -662,7 +662,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Golf Galaxy',
     price: '$179.99',
     verifiedOn: '2026-09-23',
-    priceNote: 'Succeeds the V5. Verified in stock at Golf Galaxy on 23 Sep 2026.',
+    priceNote: 'Newer than the V5 and cheaper, but it is the distances-only model: colour hole maps and hazard yardages, with no automatic shot tracking and no strokes-gained stats. Pick the V5 if you want those. Verified in stock at Golf Galaxy on 23 Sep 2026.',
     label: 'Check Price at Golf Galaxy →',
     imgSrc: '/images/products/shot-scope-g6.webp',
     imgAlt: 'Shot Scope G6 GPS Watch',

@@ -32,8 +32,10 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 // four colours at one price. A search page is the correct destination there —
 // the reason is recorded in its priceNote, as this check asks. Raised for that
 // product, not to make a build pass.
-const CEILING = 92;          // measured Sprint 185 — lower it, never raise it
-const BOTH_CEILING = 61;     // products where BOTH links go to a search
+const CEILING = 90;          // measured Sprint 185 at 92; lowered to 90 in Sprint 248 after
+                             // Sprint 247 moved four sim products off Amazon search links onto
+                             // PlayBetter product pages. Lower it, never raise it.
+const BOTH_CEILING = 60;     // products where BOTH links go to a search (was 61 pre-Sprint 248)
 
 const decodeDeep = (u: string): string => {
   let s = u;
