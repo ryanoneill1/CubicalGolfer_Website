@@ -13279,6 +13279,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
 
   {
     slug: '/garmin-approach-r10-review/',
+    comparisonTable: { headers: ['Model', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'The Unit Reviewed Here', price: '~$490', feature1: 'Best value radar', winner: false, rating: 4.3 },
+      { affiliateKey: 'shot-scope-lm1', name: 'Shot Scope LM1', bestFor: 'Cheapest Honest Data', price: '$199.99', feature1: 'No subscription, no sim', winner: false, rating: 4.0 },
+      { affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Better Ball Data', price: '~$599', feature1: 'Camera plus radar', winner: false, rating: 4.5 },
+      { affiliateKey: 'square-golf-launch-monitor', name: 'Square Golf', bestFor: 'Indoor Accuracy', price: '~$699', feature1: 'Reads putting too', winner: false, rating: 4.4 },
+    ] },
     title: 'Garmin Approach R10 Review — Best Budget Launch Monitor?',
     titleDisplay: 'Garmin Approach R10 Review — Tested by a Weekend Golfer',
     tag: 'REVIEW',
@@ -13340,6 +13346,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   },
   {
     slug: '/taylormade-qi35-review/',
+    comparisonTable: { headers: ['Model', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'taylormade-qi35-max', name: 'TaylorMade Qi35 Max', bestFor: 'The Driver Reviewed Here', price: '$449.98', feature1: 'Forgiveness at the price', winner: false, rating: 4.6 },
+      { affiliateKey: 'cobra-darkspeed-x', name: 'Cobra DarkSpeed X', bestFor: 'Best Value', price: '~$299', feature1: 'Lower price, less forgiving', winner: false, rating: 4.4 },
+      { affiliateKey: 'ping-g440-max-driver-2026', name: 'Ping G440 Max', bestFor: 'Closest Rival', price: '$449.00', feature1: 'Same money, firmer feel', winner: false, rating: 4.7 },
+      { affiliateKey: 'taylormade-qi4d-driver', name: 'TaylorMade Qi4D', bestFor: 'The Newer TaylorMade', price: '$649.99', feature1: 'Current flagship', winner: false, rating: 4.6 },
+    ] },
     title: 'TaylorMade Qi35 Driver Review — Worth the Upgrade?',
     titleDisplay: 'TaylorMade Qi35 Review — Tested by a Weekend Golfer',
     tag: 'REVIEW',
@@ -13489,6 +13501,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'kirkland-golf-balls',
     slug: '/kirkland-signature-golf-balls/',
+    comparisonTable: { headers: ['Ball', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'kirkland-signature', name: 'Kirkland Signature', bestFor: 'The Ball Reviewed Here', price: '~$22/dz', feature1: 'Most ball for the money', winner: false, rating: 4.4 },
+      { affiliateKey: 'callaway-warbird', name: 'Callaway Warbird', bestFor: 'Same Money, Big Brand', price: '~$22/dz', feature1: 'Distance over feel', winner: false, rating: 4.1 },
+      { affiliateKey: 'bridgestone-e12-contact', name: 'Bridgestone e12 Contact', bestFor: 'Small Step Up', price: '$29.97/dz', feature1: 'Straighter for most', winner: false, rating: 4.5 },
+      { affiliateKey: 'titleist-pro-v1', name: 'Titleist Pro V1', bestFor: 'The Benchmark', price: '~$58/dozen', feature1: 'What Kirkland is judged against', winner: false, rating: 4.9 },
+    ] },
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'kirkland-signature',
@@ -13635,6 +13653,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'bushnell-launch-pro-rev',
     slug: '/bushnell-launch-pro-review/',
+    comparisonTable: { headers: ['Model', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'The Unit Reviewed Here', price: '~$2,999', feature1: 'Foresight accuracy', winner: false, rating: 4.7 },
+      { affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'A Third of the Price', price: '$995', feature1: 'Simulator grade, cheaper', winner: false, rating: 4.6 },
+      { affiliateKey: 'garmin-approach-r50', name: 'Garmin Approach R50', bestFor: 'No Gaming PC', price: '$4,499.99', feature1: 'Screen and HDMI built in', winner: false, rating: 4.5 },
+      { affiliateKey: 'foresight-gc3', name: 'Foresight GC3', bestFor: 'The Step Up', price: '$6,999.00', feature1: 'Same family, more data', winner: false, rating: 4.8 },
+    ] },
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'bushnell-launch-pro',
@@ -13704,6 +13728,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'garmin-r50-rev',
     slug: '/garmin-approach-r50-review/',
+    comparisonTable: { headers: ['Model', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'garmin-approach-r50', name: 'Garmin Approach R50', bestFor: 'The Unit Reviewed Here', price: '$4,499.99', feature1: 'All-in-one, no PC', winner: false, rating: 4.5 },
+      { affiliateKey: 'rapsodo-mlm2pro', name: 'Rapsodo MLM2PRO', bestFor: 'Far Cheaper', price: '~$599', feature1: 'Phone-based, good enough', winner: false, rating: 4.5 },
+      { affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Cheapest Simulator Grade', price: '$995', feature1: 'Needs a PC or tablet', winner: false, rating: 4.6 },
+      { affiliateKey: 'foresight-gc3', name: 'Foresight GC3', bestFor: 'More Accuracy', price: '$6,999.00', feature1: 'Photometric, PC required', winner: false, rating: 4.8 },
+    ] },
     toc: ['R50 vs R10 vs SkyTrak+ compared', 'Who the R50 is for', 'The big upgrade: measured spin', 'Outdoor and indoor performance', 'Garmin ecosystem integration', 'Value against the alternatives', 'The verdict'],
     category: 'gear-reviews',
     pageType: 'review',
@@ -13775,6 +13805,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'skytrak-plus-rev',
     slug: '/skytrak-plus-review/',
+    comparisonTable: { headers: ['Model', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'The Unit Reviewed Here', price: '$995', feature1: 'Best price-to-accuracy', winner: false, rating: 4.6 },
+      { affiliateKey: 'garmin-approach-r10', name: 'Garmin Approach R10', bestFor: 'Half the Money', price: '~$490', feature1: 'Radar, less spin detail', winner: false, rating: 4.3 },
+      { affiliateKey: 'skytrak-st-max', name: 'SkyTrak ST MAX', bestFor: 'The Current Model', price: '$1,695', feature1: 'Replaces the +', winner: false, rating: 4.6 },
+      { affiliateKey: 'bushnell-launch-pro', name: 'Bushnell Launch Pro', bestFor: 'Best Accuracy', price: '~$2,999', feature1: 'Foresight tech, software tiers', winner: false, rating: 4.7 },
+    ] },
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'skytrak-plus',
@@ -13844,6 +13880,12 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
   {
     id: 'mevo-plus-rev',
     slug: '/mevo-plus-review/',
+    comparisonTable: { headers: ['Model', 'Best For', 'Price', 'Verdict'], rows: [
+      { affiliateKey: 'flightscope-mevo-plus', name: 'FlightScope Mevo Plus', bestFor: 'The Unit Reviewed Here', price: '~$1,839', feature1: 'Indoor and outdoor radar', winner: false, rating: 4.5 },
+      { affiliateKey: 'flightscope-mevo-gen2', name: 'FlightScope Mevo Gen2', bestFor: 'Same Brand, Less Money', price: '~$1,299', feature1: 'Lifetime E6 included', winner: false, rating: 4.6 },
+      { affiliateKey: 'skytrak-plus', name: 'SkyTrak+', bestFor: 'Cheaper and Photometric', price: '$995', feature1: 'Indoor strength', winner: false, rating: 4.6 },
+      { affiliateKey: 'skytrak-st-max', name: 'SkyTrak ST MAX', bestFor: 'Similar Money, Newer', price: '$1,695', feature1: 'Current SkyTrak', winner: false, rating: 4.6 },
+    ] },
     category: 'gear-reviews',
     pageType: 'review',
     quickAnswerProduct: 'flightscope-mevo-plus',

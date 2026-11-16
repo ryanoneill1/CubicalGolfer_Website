@@ -33,7 +33,26 @@ const DIST = join(process.cwd(), 'dist');
 // article and carries the same `emoji` card glyph every article carries, which renders
 // three times (card, hub tile, related list). This is not interface chrome creeping back
 // in — it is one more article. Same reason as the 408 -> 410 raise in Sprint 237.
-const CEILING = 1709;  // 1707 -> 1709 on 16 November 2026 (Sprint 250). Measured, not
+const CEILING = 1729;  // 1709 -> 1729 on 16 November 2026 (Sprint 252). Seven product
+                       // reviews gained a comparison table with three alternatives each,
+                       // and EVERY PRODUCT ROW RENDERS ITS OWN CATEGORY GLYPH — 📡 for a
+                       // launch monitor, 🏌 for a driver, ⛳ for a ball. 3 x 7 = +21, and
+                       // the measured delta was +20. Product card artwork, same exempt
+                       // class as the article card glyph.
+                       //
+                       // ── The structural problem this exposes ───────────────────────
+                       // This is the SECOND raise in one day. The cause is not chrome
+                       // creeping back: it is that this ratchet is coupled to product
+                       // count, so every product we add to a page pushes it up by ~3.
+                       // A check meant to stop emoji being used as interface currently
+                       // penalises adding inventory, which is the opposite of useful.
+                       // The queued <Icon/> sprint fixes this permanently — once table
+                       // rows render SVG instead of glyphs, product density stops moving
+                       // this number at all, and it can go back to only ever falling.
+                       // Until then, raises like this one need the measurement written
+                       // down, as here.
+                       //
+                       // Previous: 1707 -> 1709 on 16 November 2026 (Sprint 250). Measured, not
                        // guessed: a per-page diff against the previous build showed the
                        // entire +2 on /how-much-does-golf-simulator-cost/, and both new
                        // glyphs are a 56px 💰 — article CARD ARTWORK, which the exemption
