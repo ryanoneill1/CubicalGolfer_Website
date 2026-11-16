@@ -2356,6 +2356,40 @@ export const AFFILIATE: Record<string, {
     ],
   },
 
+  // ── THE NET RETURN RANGE ──────────────────────────────────────────────────
+  // Added 16 November 2026. PlayBetter stocks three Net Return products beyond
+  // the Pro net we already carried; these two fill real gaps. Prices read on
+  // the product pages on 16 November. No imgSrc — photos come from Ryan, and a
+  // product without one can still be compared in a table.
+
+  'net-return-pro-turf': {
+    url: 'https://www.playbetter.com/products/the-net-return-pro-turf?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$599', verifiedOn: '2026-11-16',
+    priceNote: 'Verified 16 November 2026: $599 at PlayBetter, in stock. Six feet wide by ten long, 42oz nylon on a 5mm foam backing, and it rolls up like a carpet for storage. Built for the Net Return system so the ball keeps returning, and it doubles as a ten-foot putting surface, which is the part most mats cannot do.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Six by ten feet — far longer than a standard 5x5 range mat',
+      'Doubles as a ten-foot putting green',
+      'Rolls up for storage instead of needing a dedicated bay',
+    ],
+  },
+
+  'net-return-jr-v2': {
+    url: 'https://www.playbetter.com/products/the-net-return-pro-series-jr-v2-golf-net?ghref=2301%3A1333883',
+    program: 'playbetter',
+    retailer: 'PlayBetter',
+    price: '$295', verifiedOn: '2026-11-16',
+    priceNote: 'Verified 16 November 2026: $295 at PlayBetter, in stock. The compact Net Return — same automatic ball return and aluminium frame as the Pro, in a footprint that fits a room the full-size net does not. Takes real golf balls for full swings and chipping, and works for other sports too.',
+    label: 'Check Price at PlayBetter →',
+    benefits: [
+      'Automatic ball return in an apartment-sized footprint',
+      'Takes real golf balls, not just foam',
+      'Less than half the price of the full-size Pro',
+    ],
+  },
+
   // ── PLAYBETTER STUDIO PACKAGES & 2026 LAUNCH MONITORS ────────────────────
   // Added 16 November 2026 from PlayBetter's live golf-deals collection. These
   // carry no imgSrc on purpose: photos come from Ryan, and a product with no

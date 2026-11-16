@@ -7755,6 +7755,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         { rating: 4.5, affiliateKey: 'fiberbuilt-studio-mat', name: 'Fiberbuilt Studio Mat', bestFor: 'Joint-friendly turf', price: '~$499', feature1: '4.5/5 ★', feature2: 'Hitting Mat', winner: false },
         { rating: 4.4, affiliateKey: 'benq-short-throw-projector', name: 'BenQ TH671ST Short-Throw', bestFor: 'Big-screen upgrade', price: '$849', feature1: '4.4/5 ★', feature2: 'Projector (Optional)', winner: false },
         { affiliateKey: 'diy-impact-screen-enclosure', name: 'DIY Impact Screen Kit', bestFor: 'Ball containment', price: '~$299', feature1: '4.3/5 ★', feature2: 'Enclosure (Optional)', winner: false, rating: 4.3 },
+      { affiliateKey: 'net-return-jr-v2', name: 'Net Return Jr. V2', bestFor: 'Compact auto-return', price: '$295', feature1: '4.5/5 ★', feature2: 'Practice Net', winner: false, rating: 4.5 },
       ],
     },
     faq: [
@@ -8965,6 +8966,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
       { badge: 'STRONG PICK', affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best Net Overall', price: '$349.99', feature1: 'Net', feature2: 'Yes', winner: true, rating: 4.7 },
       { affiliateKey: 'gosports-hitting-net', name: 'GoSports 10x7', bestFor: 'Best Value Net', price: '$89.99', feature1: 'Net', feature2: 'No', winner: false, rating: 4.4 },
       { affiliateKey: 'country-club-elite-mat', name: 'Country Club Elite 5x5', bestFor: 'Best Mat', price: '~$599', feature1: 'Mat', feature2: '—', winner: false, rating: 4.8 },
+      { affiliateKey: 'net-return-pro-turf', name: 'Net Return Pro Turf', bestFor: 'Best Mat + Putting Surface', price: '$599', feature1: 'Mat', feature2: 'Yes', winner: false, rating: 4.6 },
     ]},
     faq: [
       { q: 'Should I buy a golf net and mat together or separately?', a: 'Together, but not evenly. The net and mat are used in the same session and buying one without the other leaves you hitting off the floor, which is the thing that causes injuries. Split the budget heavily toward the mat.' },
@@ -9024,7 +9026,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         pros: ['7x7 version fits rooms the Spornia cannot', 'Ball return built in — no collecting between swings', 'At $76 it is the cheapest way to hit real balls indoors'],
         cons: ['No side barriers — the Spornia catches wider mishits', 'Lightweight frame is built for breakdown, not permanence', 'Two sizes share one listing — check you order the one that fits'],
       },
-      { h2: 'Best for Garage: Net Return Pro', badge: 'BEST PREMIUM', body: "The Net Return Pro ($695) is the Cadillac of golf nets. The patented auto-return system sends every ball back to you at the perfect height for re-teeing. The frame is commercial-grade steel that will outlast your golf career. It is too large for most apartments (10 ft wide) but perfect for a garage where it can live permanently. If you have the space and budget, this is the net you buy once and never replace.", price: '$695', rating: 4.7, affiliateKey: 'net-return-pro',
+      { h2: 'Best for Garage: Net Return Pro', badge: 'BEST PREMIUM', body: "The Net Return Pro ($695) is the Cadillac of golf nets. The patented auto-return system sends every ball back to you at the perfect height for re-teeing. The frame is commercial-grade steel that will outlast your golf career. It is too large for most apartments (10 ft wide) but perfect for a garage where it can live permanently. If you have the space and budget, this is the net you buy once and never replace.\n\nIf you want the automatic ball return and do not have ten feet, the Net Return Jr. V2 is the same idea in a smaller frame at $295 — real golf balls, same aluminium build, less than half the price. It is the honest answer for an apartment, which the full-size Pro is not.", price: '$695', rating: 4.7, affiliateKey: 'net-return-pro',
         pros: ['Best auto-return in the industry', 'Commercial-grade build quality', 'Designed for permanent garage installation'],
         cons: ['$695 is premium pricing', 'Too large for apartments', 'Heavy — not portable'],
       },
@@ -9046,6 +9048,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
         { badge: 'STRONG PICK', affiliateKey: 'spornia-spg-net', name: 'Spornia SPG-7', bestFor: 'Best Overall', price: '$349.99', feature1: '4.6/5 ★', winner: true, rating: 4.6 },
         { rating: 4.6, affiliateKey: 'gosports-hitting-net', name: 'GoSports 10x7 / 7x7', bestFor: 'Best Budget', price: '$89.99', feature1: '4.6/5 ★', winner: false },
         { rating: 4.7, affiliateKey: 'net-return-pro', name: 'Net Return Pro', bestFor: 'Best Garage', price: '$695', feature1: '4.7/5 ★', winner: false },
+      { rating: 4.5, affiliateKey: 'net-return-jr-v2', name: 'Net Return Jr. V2', bestFor: 'Best Compact Auto-Return', price: '$295', feature1: '4.5/5 ★', winner: false },
       ],
     },
     faq: [

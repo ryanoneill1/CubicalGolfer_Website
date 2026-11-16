@@ -128,6 +128,11 @@ const BRAND_MAP: [string, string][] = [
   ['trackman io simstudio',         'trackman-io-simstudio'],
   ['skytrak st max',                'skytrak-st-max'],
   ['uneekor eye xo2',               'uneekor-eye-xo2'],
+  // Same longest-match reasoning as the studio packages: "Net Return Pro Turf"
+  // contains "net return pro", and the Jr. is a different net at a different
+  // price, so both need their own phrase ahead of the bare Pro.
+  ['net return pro turf',           'net-return-pro-turf'],
+  ['net return jr',                 'net-return-jr-v2'],
   ['titleist pro v1x',               'titleist-pro-v1x'],
   ['titleist pro v1',                'titleist-pro-v1'],
   ['callaway chrome tour 2026',      'callaway-chrome-tour-2026'],
