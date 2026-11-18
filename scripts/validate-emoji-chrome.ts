@@ -33,12 +33,29 @@ const DIST = join(process.cwd(), 'dist');
 // article and carries the same `emoji` card glyph every article carries, which renders
 // three times (card, hub tile, related list). This is not interface chrome creeping back
 // in — it is one more article. Same reason as the 408 -> 410 raise in Sprint 237.
-const CEILING = 1729;  // 1709 -> 1729 on 16 November 2026 (Sprint 252). Seven product
-                       // reviews gained a comparison table with three alternatives each,
-                       // and EVERY PRODUCT ROW RENDERS ITS OWN CATEGORY GLYPH — 📡 for a
-                       // launch monitor, 🏌 for a driver, ⛳ for a ball. 3 x 7 = +21, and
-                       // the measured delta was +20. Product card artwork, same exempt
-                       // class as the article card glyph.
+const CEILING = 1730;  // 1729 -> 1730 on 17 November 2026 (Sprint 254).
+                       //
+                       // ── CORRECTION to the Sprint 252 note below ───────────────────
+                       // That note claimed "every product row renders its own category
+                       // glyph". That is WRONG, and this sprint disproved it. Table rows
+                       // render <Icon/> SVGs — the build reports 3,560 of them. What
+                       // actually emits a glyph is the PRODUCT CARD's hidden image
+                       // fallback: <span style="font-size:56px">{page emoji}</span>,
+                       // display:none, sitting behind the product photo in case it fails
+                       // to load. The page shows cards for its first three table rows
+                       // only, and a card emits a fallback only when its product has an
+                       // imgSrc.
+                       //
+                       // So /how-much-does-golf-simulator-cost/ went 6 -> 7 glyphs for a
+                       // reason that has nothing to do with row count: its old top three
+                       // rows were r10, mevo-gen2 and garage-simstudio, and the SimStudio
+                       // has no photo, so only two fallbacks rendered. The new price
+                       // ladder puts r10, mlm2pro and square-golf on top — all three have
+                       // photos — so the third fallback appeared. Measured, attributed to
+                       // the exact three cards, same exempt artwork class.
+                       //
+                       // The Sprint 252 delta of +20 therefore had some other cause. I
+                       // have not re-derived it and am not going to assert one here.
                        //
                        // ── The structural problem this exposes ───────────────────────
                        // This is the SECOND raise in one day. The cause is not chrome

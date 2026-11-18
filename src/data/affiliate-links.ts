@@ -4147,6 +4147,20 @@ export const AFFILIATE: Record<string, {
   // GoSports 10x7 / 7x7 hitting net — ASIN B079JDQKV4, verified live 2026-09-06 at $76.48,
   // In Stock, 4.6★ / 5,203 reviews. Replaces the Rukket HAACK, which has no Amazon listing at all
   // (261 results, zero Rukket). No product photo in the repo yet, so imgSrc is intentionally omitted.
+  'gosports-elite-hitting-mat': {
+    url: 'https://www.amazon.com/dp/B08BXBDRDY?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
+    verifiedOn: '2026-11-17',
+    program: 'amazon',
+    retailer: 'Amazon',
+    price: '$149.99',
+    priceNote: 'Verified 17 November 2026: \$149.99, in stock, Amazon\'s Choice on 3,658 ratings. The Elite is 5x4 ft with 15 mm turf and three rubber tees. It is the cheapest mat on this site that takes a full driver swing \u2014 everything below it is a chipping pad, and everything above it starts at \$349.99.',
+    label: 'Check Price at Amazon \u2192',
+    benefits: [
+      '5x4 ft hitting surface \u2014 room to stand on the mat, not beside it',
+      '15 mm turf over a rubber base, rated for thousands of shots',
+      'The budget build\'s mat: a full swing surface under \$150',
+    ],
+  },
   'gosports-hitting-net': {
     url: 'https://www.amazon.com/dp/B079JDQKV4?linkCode=ll1&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     verifiedOn: '2026-11-07',
