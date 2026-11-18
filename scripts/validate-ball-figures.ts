@@ -1,0 +1,180 @@
+#!/usr/bin/env node
+/**
+ * validate-ball-figures.ts — ball figures typed into a page, not read from balls.ts.
+ *
+ * ── The gap this closes ────────────────────────────────────────────────────
+ * validate-chart-vs-registry.ts checks the `balls` ARRAY against the affiliate
+ * registry. validate-brand-copy.ts checks the per-brand write-ups. Neither
+ * looks at figures typed by hand into the page's own JSX, and on 17 November
+ * 2026 that is where three wrong numbers were sitting — in the "Our Top Pick
+ * for Each Swing Speed" block on /golf-ball-compression-chart/, the page
+ * carrying ~28% of the site's impressions:
+ *
+ *     Callaway Supersoft    card said 38    balls.ts measured 44
+ *     Titleist Pro V1       card said 87    balls.ts measured 93
+ *     Titleist Tour Soft    card said 65    balls.ts measured 88   <- 23 points
+ *
+ * The Tour Soft card is the one a reader at 85-100 mph is steered to. It also
+ * described an ionomer ball as having "urethane-like feel", and the Supersoft
+ * card claimed "under $25/dozen" against a registry price of $27.
+ *
+ * The page's own Sprint 169 comment predicted exactly this — "a figure typed
+ * beside a product name drifts the moment balls.ts moves" — and `pill()` was
+ * built to stop it. That one block never got converted, so the prediction came
+ * true in the only place still exposed to it.
+ *
+ * ── What this checks, across every page under src/pages ────────────────────
+ *   A  An object literal carrying both a ball's `name:` and a literal
+ *      `compression:` — the picks-block shape. The number must equal balls.ts.
+ *   B  A ball name followed within 140 chars by "$N a dozen | per dozen |
+ *      /dozen | /dz". The dollar figure must equal the balls.ts price.
+ *   C  A ball name followed within 140 chars by "at N compression" or
+ *      "compression of N". The number must equal balls.ts.
+ *   D  A ball flagged `discontinued: true` in balls.ts named inside a `faq`
+ *      answer. ballUrl() deliberately strips the buy button from those rows,
+ *      so an FAQ that recommends one sends the reader to a dead end. This is
+ *      what the "cheapest Titleist urethane" answer did with the Tour Speed
+ *      while ball-brands.ts, in the same repo, already resolved that question
+ *      to the AVX.
+ *
+ * Ceiling 0. Every one of these is derivable from balls.ts, so there is no
+ * legitimate reason to type one — the fix is always to read the record.
+ */
+import fs from 'fs';
+import path from 'path';
+import { balls as BALLS } from '../src/data/balls.ts';
+
+const CEILING = 0;
+
+type Ball = { name: string; compression: number; price: number; discontinued?: boolean };
+const byName = new Map<string, Ball>();
+for (const b of BALLS as any[]) byName.set(b.name, b);
+// Longest names first so "Titleist Pro V1x" is tested before "Titleist Pro V1".
+const names = [...byName.keys()].sort((a, b) => b.length - a.length);
+const esc = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+function pages(): Array<{ file: string; text: string }> {
+  const out: Array<{ file: string; text: string }> = [];
+  const walk = (dir: string) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { walk(full); continue; }
+      if (!e.name.endsWith('.astro')) continue;
+      // Strip comments first. The page documents its OWN past drift in prose
+      // comments — the Sprint 169 note quotes 'Vice Pro at "$33/dz, 80
+      // compression"' verbatim — and scanning those reports the historical
+      // figure as a live error. Whitespace-preserving replacement keeps the
+      // remaining offsets honest.
+      const raw = fs.readFileSync(full, 'utf8');
+      const blank = (m: string) => m.replace(/[^\n]/g, ' ');
+      const text = raw
+        .replace(/\/\*[\s\S]*?\*\//g, blank)
+        .replace(/\{\s*\/\*[\s\S]*?\*\/\s*\}/g, blank)
+        .replace(/^[ \t]*\/\/.*$/gm, blank);
+      out.push({ file: full, text });
+    }
+  };
+  walk('src/pages');
+  return out;
+}
+
+type Fault = { file: string; rule: string; ball: string; said: string; real: string };
+const faults: Fault[] = [];
+let checked = 0;
+
+for (const { file, text } of pages()) {
+  // ── A. object literals holding a ball name and a typed compression ──────
+  for (const m of text.matchAll(/\{[^{}]*?name:\s*'([^']+)'[^{}]*?\}/g)) {
+    const b = byName.get(m[1]);
+    if (!b) continue;
+    const c = m[0].match(/compression:\s*'?(\d+)'?/);
+    if (!c) continue;
+    checked++;
+    if (+c[1] !== b.compression)
+      faults.push({ file, rule: 'A typed compression in an object literal', ball: b.name, said: c[1], real: String(b.compression) });
+  }
+
+  // ── B/C. a ball name with a figure close behind it in prose ─────────────
+  //
+  // The window STOPS at the next ball name. Without that stop a regex happily
+  // leaps a second product and blames the first for its price: an early run of
+  // this check reported "Vice Pro: page says $19" from a sentence whose $19
+  // belonged to the Vice Drive two clauses later. A figure only counts against
+  // a ball if no other ball's name sits between them.
+  const anyName = new RegExp(names.map(esc).join('|'), 'g');
+  for (const n of names) {
+    const b = byName.get(n)!;
+    const hit = new RegExp(esc(n), 'g');
+    for (const h of text.matchAll(hit)) {
+      const from = h.index! + n.length;
+      // "Titleist Pro V1" is a substring of "Titleist Pro V1x". Without a
+      // boundary check the Pro V1 claims the Pro V1x's price, which is how an
+      // early run of this check reported Pro V1 at $55 from a Pro V1x row.
+      if (/^[A-Za-z0-9]/.test(text.slice(from, from + 1))) continue;
+      // A name that is the PREFIX of a longer product not in balls.ts would
+      // otherwise steal that product's figures: "Srixon Z-Star XV at 102" was
+      // reported against the Z-Star's 85 because the XV is not a chart row.
+      // If what follows is another capitalised or all-caps product word, this
+      // is a different ball and none of our business.
+      if (/^ (?:[A-Z][a-z]+|[A-Z]{1,3}\d*|\d+)\b/.test(text.slice(from, from + 12))
+          && !/^ (?:at|is|was|costs?|has|sits|measures?|and|or|in|on|for|vs|a|the|to)\b/i.test(text.slice(from, from + 12))) continue;
+      // where does the next DIFFERENT ball name start?
+      anyName.lastIndex = from;
+      let stop = Math.min(from + 140, text.length);
+      let o: RegExpExecArray | null;
+      while ((o = anyName.exec(text))) {
+        if (o[0] === n && o.index === h.index) continue;
+        if (o.index >= from) { stop = Math.min(stop, o.index); break; }
+      }
+      // and never run past the end of the sentence
+      const dot = text.indexOf('.', from);
+      if (dot >= 0) stop = Math.min(stop, dot);
+      const win = text.slice(from, stop);
+
+      // Three shapes that look like a price and are not one:
+      //   a RANGE  "$22-$50 a dozen"  — a street spread, both ends legitimate
+      //   a DELTA  "$19 a dozen cheaper" — a saving, not a price
+      //   a FLOOR  "from $45 a dozen"    — deliberately open-ended
+      const pm = win.match(/(\$\d+(?:\.\d+)?\s*[-–]\s*)?\$(\d+)(?:\.\d+)?\s*(?:a dozen|per dozen|\/dozen|\/dz)(\s*(?:cheaper|less|more|dearer|below|above|under|over|apart|difference|gap))?/);
+      const isRange = !!(pm && pm[1]);
+      const isDelta = !!(pm && pm[3]);
+      const isFloor = !!(pm && /\b(?:from|starts? at|as little as|up to)\s*\$?$/.test(win.slice(0, pm.index)));
+      if (pm && !isRange && !isDelta && !isFloor) {
+        checked++;
+        if (+pm[2] !== b.price)
+          faults.push({ file, rule: 'B price per dozen in prose', ball: n, said: '$' + pm[2], real: '$' + b.price });
+      }
+      const cm = win.match(/at (\d+) compression|compression of (\d+)/);
+      if (cm) {
+        const said = cm[1] || cm[2];
+        checked++;
+        if (+said !== b.compression)
+          faults.push({ file, rule: 'C compression in prose', ball: n, said, real: String(b.compression) });
+      }
+    }
+  }
+
+  // ── D. a discontinued ball recommended inside an FAQ answer ─────────────
+  const faqBlock = text.match(/const faqs?\s*(?::[^=]*)?=\s*\[[\s\S]*?\n\];/);
+  if (faqBlock) {
+    for (const n of names) {
+      const b = byName.get(n)!;
+      if (!b.discontinued) continue;
+      if (faqBlock[0].includes(n)) {
+        checked++;
+        faults.push({ file, rule: 'D discontinued ball named in an FAQ answer', ball: n, said: 'recommended', real: 'discontinued in balls.ts — ballUrl() gives it no button' });
+      }
+    }
+  }
+}
+
+if (faults.length > CEILING) {
+  console.log(`\n❌ Ball figures typed into pages: ${faults.length} disagree with balls.ts (ceiling ${CEILING}).\n`);
+  for (const f of faults)
+    console.log(`   ${f.file}\n      [${f.rule}] ${f.ball}: page says ${f.said}, balls.ts says ${f.real}`);
+  console.log(`\n   balls.ts is the single source of truth. Read the record instead of typing`);
+  console.log(`   the figure — the page already has a ball() helper and a pill() renderer.\n`);
+  process.exit(1);
+}
+
+console.log(`✅ Ball figures: ${checked} figure(s) across ${pages().length} page(s) all agree with balls.ts, no discontinued ball recommended in an FAQ (ceiling ${CEILING}).`);
