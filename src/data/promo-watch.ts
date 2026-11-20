@@ -58,6 +58,14 @@ export type Watch = {
  * omitted — the exposure should stay visible rather than disappear from the file.
  */
 export const PROMO_WATCH: Record<string, Watch> = {
+  // Dates note, 20 November 2026: the sweep on the 20th re-read EVERY entry in
+  // this file. Only the entries whose figures moved had their `seen` date
+  // bumped at the time, which left five saying they were last read on the
+  // 13th-16th when they had in fact been confirmed unchanged on the 20th —
+  // garmin-approach-s12, garmin-approach-z30, swing-caddie-sc4-pro,
+  // skytrak-plus and shot-scope-v5. Corrected here. A `seen` date means
+  // "read on this day", not "changed on this day".
+
   // Retired in the 20 November 2026 sweep, because their promotions ended and
   // no copy quotes a deal for them any more — which is what this file says to
   // do rather than leaving an entry with promo == regular:
@@ -81,7 +89,7 @@ export const PROMO_WATCH: Record<string, Watch> = {
 
   // Added 13 November 2026 from the Black Friday recheck. Each was read on the
   // live listing with its discount badge, two weeks before Black Friday.
-  'garmin-approach-s12':         { regular: 199.99, promo: 149.99, seen: '2026-11-15',
+  'garmin-approach-s12':         { regular: 199.99, promo: 149.99, seen: '2026-11-20',
                                    note: 'Re-read 15 Nov: still $149.99, -25%, flagged "lowest price in 30 days". Unchanged since 13 Nov.',
                                    quotedOn: ['/black-friday-golf-deals/', '/best-golf-gps-watch-under-300/',
                                               '/25-golf-accessories-every-golfer-should-own/',
@@ -96,7 +104,7 @@ export const PROMO_WATCH: Record<string, Watch> = {
    * listing moves. The duplicate-key guard in validate-promo-prices now makes
    * that class of mistake fail the build instead of vanishing.
    */
-  'garmin-approach-z30':         { regular: 449.99, promo: 399.99, seen: '2026-11-13',
+  'garmin-approach-z30':         { regular: 449.99, promo: 399.99, seen: '2026-11-20',
                                    note: 'Typical read 489.99 on 7 Nov, 449.99 on 10 Nov, promo 399.99 on 13 Nov — this listing moves. Registry has carried 449.99 since September; treat as standing unless it rises.' },
 
   // ── Added in the 20 November 2026 Black Friday sweep ──────────────────────
@@ -125,7 +133,7 @@ export const PROMO_WATCH: Record<string, Watch> = {
                                    note: 'Re-read 20 Nov in the Black Friday sweep: the price depends on the ball bundle — 549.99 with 12 Callaway Chrome Tour RPT balls, 399.99 with 3, both in stock against a 699.99 compare-at. The promo figure here stays 549.99 — that is the headline deal PlayBetter markets and the figure our copy quotes. The 399.99 three-ball variant is recorded in the registry priceNote instead; making it the promo figure here broke the drift exclusion for every page quoting 549.99. Earlier, 16 Nov: PlayBetter had the NEW unit at 549.99 with 12 of 12 variants in stock, against their own 754.99 compare-at. That corroborates 549.99 as the live promo and 599 as the regular, so the registry stays at 599. An earlier note here said PlayBetter only carried a certified pre-owned listing near this figure; that is no longer true.' },
   'flightscope-mevo-gen2':       { regular: 1299.00, promo: 1149.00, seen: '2026-11-20',
                                    note: 'Held the same 150 discount from 5 to 20 November — four readings over fifteen days, including the Black Friday sweep. PlayBetter shows 1149.00 with 8 of 8 variants in stock. Registry stays at 1299 because that is still the regular price everywhere it is listed.' },
-  'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-10',
+  'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-20',
                                    note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it. RESOLVED 14 Nov 2026: Sprint 233 flagged that three readings with no strike-through suggested $499.99 had become standing. PlayBetter lists the same unit at $599.99 on 14 Nov, so $599.97 is still the regular price and this entry stays as it is.' },
 
   /**
@@ -137,13 +145,13 @@ export const PROMO_WATCH: Record<string, Watch> = {
    * This entry exists so the exposure is recorded instead of invisible — if
    * the 995 ends, these are the pages that go wrong.
    */
-  'skytrak-plus':                { regular: 1195.00, promo: 995.00, seen: '2026-11-16',
+  'skytrak-plus':                { regular: 1195.00, promo: 995.00, seen: '2026-11-20',
                                    note: 'Amazon: 995.00 new, -17%, flagged 30-day low against a 1,195.00 typical price, in stock and sold by SkyTrak Golf, badged previous generation. PlayBetter is sold out and points buyers to the SkyTrak ST MAX at 1,695. Registry deliberately holds the 995.' },
 
   // Added 15 November 2026. The GPS family went on deal between the 14 Nov sweep
   // and this one, which is why these are here a week before the next full sweep.
   // Each was read on its live Amazon listing on 15 November.
-  'shot-scope-v5':               { regular: 249.99, promo: 209.99, seen: '2026-11-15',
+  'shot-scope-v5':               { regular: 249.99, promo: 209.99, seen: '2026-11-20',
                                    note: 'Sold by Shot Scope, in stock, -16% "Limited time deal". The $209.99 has now held since 7 September, so it behaves like the standing price even though Amazon still badges it as a deal. Registry carries ~$210 for that reason.',
                                    quotedOn: ['/best-golf-gps-watches/', '/arccos-caddie-review/',
                                               '/arccos-vs-garmin-shot-tracking/', '/garmin-approach-s62-review/',
