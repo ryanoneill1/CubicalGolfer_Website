@@ -86,10 +86,32 @@ export const PROMO_WATCH: Record<string, Watch> = {
   'garmin-approach-z30':         { regular: 449.99, promo: 399.99, seen: '2026-11-13',
                                    note: 'Typical read 489.99 on 7 Nov, 449.99 on 10 Nov, promo 399.99 on 13 Nov — this listing moves. Registry has carried 449.99 since September; treat as standing unless it rises.' },
 
-  'rapsodo-mlm2pro':             { regular: 599.00, promo: 549.99, seen: '2026-11-16',
-                                   note: 'Re-read 16 Nov: PlayBetter has the NEW unit at 549.99 with 12 of 12 variants in stock, against their own 754.99 compare-at. That corroborates 549.99 as the live promo and 599 as the regular, so the registry stays at 599. An earlier note here said PlayBetter only carried a certified pre-owned listing near this figure; that is no longer true.' },
-  'flightscope-mevo-gen2':       { regular: 1299.00, promo: 1149.00, seen: '2026-11-16',
-                                   note: 'Held the same 150 discount from 5 to 16 November — three readings over eleven days. PlayBetter shows 1149.00 with 8 of 8 variants in stock. Registry stays at 1299 because that is still the regular price everywhere it is listed.' },
+  // ── Added in the 20 November 2026 Black Friday sweep ──────────────────────
+  // Read from PlayBetter's own /products/<handle>.js, not from the marketing
+  // email that prompted the check. Three of these are products whose PRIMARY
+  // link is elsewhere; they are listed because our copy now quotes the deal.
+  'foresight-gcquad':            { regular: 15999.00, promo: 9999.00, seen: '2026-11-20',
+                                   note: 'Black Friday: $6,000 off, the largest dollar discount in the catalogue, plus a year of Foresight+ Silver. Registry stays at 15999 — that is the compare-at on the live listing.',
+                                   quotedOn: ['/how-much-does-golf-simulator-cost/'] },
+  'bushnell-launch-pro':         { regular: 2999.99, promo: 2495.00, seen: '2026-11-20',
+                                   note: 'The promo SHRANK. It was 1995.00 on 7 November (a 1,000 saving); on 20 November PlayBetter lists 2495.00, a 505 saving. Five pieces of copy claimed the deeper figure and were corrected in this sweep. Watch this one: it has moved twice in a fortnight in both directions.',
+                                   quotedOn: ['/best-golf-simulators/', '/bushnell-launch-pro-vs-skytrak-plus/'] },
+  // uneekor-eye-xo2 is deliberately NOT listed here. Adding it in the 20 Nov
+  // sweep made validate-promo-prices fail, correctly: it would have asserted
+  // 12700 as the regular price, and 7999 is the only figure we have ever seen
+  // charged (16 and 20 November). 12700 is a list price PlayBetter appears to
+  // discount permanently, which is a compare-at, not a promotion.
+  'garmin-approach-s44':         { regular: 299.99, promo: 249.99, seen: '2026-11-20',
+                                   note: 'PlayBetter only — Amazon remains the primary link at 299.99 by Ryan\'s decision on 20 Nov (secondary link added, primary unchanged). Silver/Black out of stock at PlayBetter, Silver/Twilight in.' },
+  'shot-scope-g6':               { regular: 179.99, promo: 149.99, seen: '2026-11-20',
+                                   note: 'PlayBetter only — Golf Galaxy remains the primary link at 179.99.' },
+  'bushnell-wingman-2':          { regular: 169.99, promo: 99.99, seen: '2026-11-20',
+                                   note: 'PlayBetter only — Amazon remains the primary link at 169.99. 41% off is the deepest cut found in this sweep.' },
+
+  'rapsodo-mlm2pro':             { regular: 599.00, promo: 549.99, seen: '2026-11-20',
+                                   note: 'Re-read 20 Nov in the Black Friday sweep: the price depends on the ball bundle — 549.99 with 12 Callaway Chrome Tour RPT balls, 399.99 with 3, both in stock against a 699.99 compare-at. The promo figure here stays 549.99 — that is the headline deal PlayBetter markets and the figure our copy quotes. The 399.99 three-ball variant is recorded in the registry priceNote instead; making it the promo figure here broke the drift exclusion for every page quoting 549.99. Earlier, 16 Nov: PlayBetter had the NEW unit at 549.99 with 12 of 12 variants in stock, against their own 754.99 compare-at. That corroborates 549.99 as the live promo and 599 as the regular, so the registry stays at 599. An earlier note here said PlayBetter only carried a certified pre-owned listing near this figure; that is no longer true.' },
+  'flightscope-mevo-gen2':       { regular: 1299.00, promo: 1149.00, seen: '2026-11-20',
+                                   note: 'Held the same 150 discount from 5 to 20 November — four readings over fifteen days, including the Black Friday sweep. PlayBetter shows 1149.00 with 8 of 8 variants in stock. Registry stays at 1299 because that is still the regular price everywhere it is listed.' },
   'swing-caddie-sc4-pro':        { regular: 599.97, promo: 499.99, seen: '2026-11-10',
                                    note: 'ACCEPTED: registry deliberately holds the promo figure (decision 10 Nov 2026). The "Back Under $500" section on /best-budget-launch-monitor-apartment/ depends on it. RESOLVED 14 Nov 2026: Sprint 233 flagged that three readings with no strike-through suggested $499.99 had become standing. PlayBetter lists the same unit at $599.99 on 14 Nov, so $599.97 is still the regular price and this entry stays as it is.' },
 
