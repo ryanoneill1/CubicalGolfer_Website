@@ -51,11 +51,11 @@ import { ARTICLES } from '../src/data/articles';
 
 /** Ratchets. Measured 20 Nov 2026. Only ever edit downward. */
 const CEILING: Record<string, number> = {
-  'buying-guide': 322,
+  'buying-guide': 313,
   'tutorial':     267,
   'review':       110,
-  'comparison':    83,
-  'listicle':      46,   // 55 before /best-golf-gifts-for-him/ was fixed
+  'comparison':    80,
+  'listicle':      38,   // 55 -> 46 (gift page) -> 38 (/average-golf-handicap/)
   'lifestyle':      7,
   'local':          0,
 };
