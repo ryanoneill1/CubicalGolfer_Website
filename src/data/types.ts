@@ -56,6 +56,13 @@ export interface Section {
   callout?:      string;    // Callout text (e.g. "Editor's Note")
   sectionImage?: string;    // Section illustration image path
   sectionImageAlt?: string; // Alt text for section image
+  /**
+   * Why this section deliberately carries no product. Set it and
+   * validate-section-products.ts stops counting the section as a gap.
+   * The value is the REASON, not `true`, so the next person can tell a
+   * considered decision from a box someone ticked to silence a validator.
+   */
+  noProduct?:    string;
 }
 
 export interface RelatedLink {
