@@ -58,13 +58,26 @@ export type Watch = {
  * omitted — the exposure should stay visible rather than disappear from the file.
  */
 export const PROMO_WATCH: Record<string, Watch> = {
-  'callaway-strata':             { regular: 499.00, promo: 374.99, seen: '2026-11-10' },
-  'voice-caddie-sc200plus':      { regular: 229.99, promo: 179.99, seen: '2026-11-10' },
-  'superspeed-golf-set':         { regular: 139.99, promo: 125.98, seen: '2026-11-10' },
-  'mgi-zip-navigator':           { regular: 1693.59, promo: 1527.47, seen: '2026-11-14',
-                                   note: 'Listed typical price read 1,695.00 on 10 Nov and 1,693.59 on 14 Nov.' },
-  'precision-pro-nx9-hd':        { regular: 199.98, promo: 161.49, seen: '2026-11-10',
-                                   note: 'Left at the regular price throughout; never drifted.' },
+  // Retired in the 20 November 2026 sweep, because their promotions ended and
+  // no copy quotes a deal for them any more — which is what this file says to
+  // do rather than leaving an entry with promo == regular:
+  //
+  //   superspeed-golf-set   125.98 on 10 Nov, back to 139.99 on 20 Nov
+  //   garmin-approach-s62   399.90 on 15 Nov from a third-party seller
+  //                         (Top Sports), gone on 20 Nov, back to 459.90
+  //   garmin-approach-s42   249.99 on 15 Nov from a reseller, gone on 20 Nov
+  //
+  // Each product's registry priceNote now carries that history, which is the
+  // version a reader actually sees next to the buy button.
+
+  'callaway-strata':             { regular: 499.00, promo: 339.99, seen: '2026-11-20',
+                                   note: 'Deepened: 374.99 on 10 Nov, 339.99 on 20 Nov — now badged "Lowest price in 30 days", -32%. The biggest consumer-level cut in this sweep.' },
+  'voice-caddie-sc200plus':      { regular: 223.99, promo: 167.99, seen: '2026-11-20',
+                                   note: 'Explicit "Black Friday Deal" badge on 20 Nov at 167.99, -25%. Deepened from 179.99 on 10 Nov. Amazon\'s own typical price also drifted down, 229.99 to 223.99, so the regular here moves with it.' },
+  'mgi-zip-navigator':           { regular: 1654.16, promo: 1341.00, seen: '2026-11-20',
+                                   note: 'Explicit "Black Friday Deal" plus a "365-day low price" flag on 20 Nov: 1,341.00, -19%. Deepened hard from 1,527.47 on 14 Nov. The listed typical keeps sliding too — 1,695.00 on 10 Nov, 1,693.59 on 14 Nov, 1,654.16 on 20 Nov — which is why the REGISTRY still carries 1,695 and is now above Amazon\'s own typical. Worth a decision on whether 1,695 is still the right regular.' },
+  'precision-pro-nx9-hd':        { regular: 199.98, promo: 161.49, seen: '2026-11-20',
+                                   note: 'Left at the regular price throughout; never drifted. Re-read 20 Nov: still 161.49, -19%, no Black Friday badge \u2014 it has now held for ten days.' },
 
   // Added 13 November 2026 from the Black Friday recheck. Each was read on the
   // live listing with its discount badge, two weeks before Black Friday.
@@ -135,11 +148,4 @@ export const PROMO_WATCH: Record<string, Watch> = {
                                    quotedOn: ['/best-golf-gps-watches/', '/arccos-caddie-review/',
                                               '/arccos-vs-garmin-shot-tracking/', '/garmin-approach-s62-review/',
                                               '/how-to-sneak-in-more-golf-rounds/'] },
-  'garmin-approach-s62':         { regular: 459.90, promo: 399.90, seen: '2026-11-15',
-                                   note: 'Explicit "Black Friday Deal" badge: $60 off a $459.90 strike, 16 left, sold by a third party (Top Sports). The registry keeps 459.90 as the regular. This is the one to re-read first after Black Friday.',
-                                   quotedOn: ['/garmin-approach-s62-review/', '/arccos-caddie-review/',
-                                              '/best-gps-golf-watch-high-handicappers/'] },
-  'garmin-approach-s42':         { regular: 299.99, promo: 249.99, seen: '2026-11-15',
-                                   note: 'List $299.99 with a "Limited time deal"; buy box is a third-party reseller (AMZDistributor), so the $249.99 is a reseller figure rather than Garmin or Amazon. Quoted on the gift pages, which are read for weeks — recheck before Christmas.',
-                                   quotedOn: ['/best-christmas-golf-gifts/', '/best-golf-gifts-for-couples/'] },
 };
