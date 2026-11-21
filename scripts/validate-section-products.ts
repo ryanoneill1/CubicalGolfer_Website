@@ -51,10 +51,10 @@ import { ARTICLES } from '../src/data/articles';
 
 /** Ratchets. Measured 20 Nov 2026. Only ever edit downward. */
 const CEILING: Record<string, number> = {
-  'buying-guide': 313,
+  'buying-guide': 287,
   'tutorial':     267,
   'review':       110,
-  'comparison':    80,
+  'comparison':    62,
   'listicle':      38,   // 55 -> 46 (gift page) -> 38 (/average-golf-handicap/)
   'lifestyle':      7,
   'local':          0,
