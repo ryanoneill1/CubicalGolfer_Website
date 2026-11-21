@@ -4686,22 +4686,6 @@ export const AFFILIATE: Record<string, {
       ],
   },
 
-  'sklz-accelerator-pro': {
-    url: 'https://www.amazon.com/s?k=sklz-accelerator-pro&crid=1DQTJCNAP33OO&sprefix=skechers-go-golf-elite-5%2Caps%2C274&linkCode=ll2&tag=cubicalgolfer-20&linkId=5057e45ae31497697c80106ab198c79c&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSKLZ%2520Accelerator%2520Pro%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    retailer: 'Amazon',
-    price: '~$40',
-    priceNote: 'Great value at this price point. Rarely drops lower.',
-    label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/sklz-accelerator-putting-mat.webp',
-    imgAlt: 'SKLZ Accelerator Pro putting mat',
-    benefits: [
-      'Teaches arm connection alongside grip',
-      'Works for chipping and full swing practice',
-      'Used by PGA teaching professionals',
-    ],
-  },
 
   // ── Month 1 New Products ──────────────────────────────────────────────
   'voice-caddie-sc200plus': {
@@ -4855,17 +4839,6 @@ export const AFFILIATE: Record<string, {
     imgSrc: '/images/products/lamkin-sonar.webp',
     imgAlt: 'Lamkin Sonar golf grip',
   },
-  'wellputt-mat-10ft': {
-    url: 'https://www.amazon.com/s?k=wellputt-mat-10ft&crid=2DG1F94N44DVS&sprefix=wellputt-mat%2Caps%2C229&linkCode=ll2&tag=cubicalgolfer-20&linkId=c6a9fb7f4ca22fc601ed23d4ff114df0&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWellputt%2520Mat%252010ft%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    retailer: 'Amazon',
-    price: '~$99',
-    priceNote: 'Great value at this price point. Rarely drops lower.',
-    label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/wellputt-mat-10ft.webp',
-    imgAlt: 'Wellputt 10-foot putting mat',
-  },
   'putt-out-trainer': {
     url: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3Dputtout%2520trainer%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
     program: 'golfgalaxy',
@@ -4965,14 +4938,6 @@ export const AFFILIATE: Record<string, {
     priceNote: 'Re-checked 20 November 2026: $1,341.00 with a Black Friday Deal badge and a 365-day low flag, 19 percent off. Amazon lists the typical price at $1,654.16 and that figure has been sliding all month. The most-reviewed electric caddy on Amazon at 298 ratings — the longest track record in the category.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/mgi-zip-navigator.webp', imgAlt: 'MGI Zip Navigator electric golf caddy',
   },
-  'sun-mountain-25-bag': {
-    url: 'https://www.amazon.com/s?k=sun-mountain-25-bag&crid=3164G4IHIXEYM&sprefix=sun-mountain-25-bag%2Caps%2C225&linkCode=ll2&tag=cubicalgolfer-20&linkId=cb7aab7384409a81004877cfb86ddb0b&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DSun%2520Mountain%252025%2520Bag%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    retailer: 'Amazon', price: '~$230',
-    priceNote: 'Golf bag prices are stable. End-of-season clearance saves 20%.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/sun-mountain-25-bag.webp', imgAlt: 'Sun Mountain 2.5 stand bag',
-  },
   'ping-hoofer-lite': {
     url: 'https://www.tkqlhce.com/click-101736949-17026083?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fp%2Fping-2026-hoofer-lite-stand-bag-25pinagolf2026hfrlcum%2F25pinagolf2026hfrlcum',
     program: 'golfgalaxy',
@@ -5070,14 +5035,6 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon', price: '~$8',
     priceNote: 'Great value at this price point. Rarely drops lower.', label: 'Check Price at Amazon →',
     imgSrc: '/images/products/golf-pride-cp2-wrap-jumbo.webp', imgAlt: 'Golf Pride CP2 Wrap Jumbo grip for arthritis',
-  },
-  'winn-dri-tac-oversize': {
-    url: 'https://www.amazon.com/s?k=winn-dri-tac-oversize&i=sporting&crid=RINPIGA22DP1&sprefix=winn-dri-tac-oversize%2Csporting%2C160&linkCode=ll2&tag=cubicalgolfer-20&linkId=99d860a7e4d0c349414759da13420476&language=en_US&ref_=as_li_ss_tl',
-    golfGalaxyUrl: 'https://www.jdoqocy.com/click-101736949-17037566?url=https%3A%2F%2Fwww.golfgalaxy.com%2Fsearch%2FSearchDisplay%3FsearchTerm%3DWinn%2520Dri-Tac%2520Oversize%26storeId%3D10701%26catalogId%3D10051%26langId%3D-1%26sType%3DSimpleSearch%26resultCatEntryType%3D2%26showResultsPage%3Dtrue%26fromPage%3DSearch%26searchSource%3DQ%26pageView%3D%26beginIndex%3D0%26DSGsearchType%3DKeyword%26selectedStore%3D1521',
-    program: 'amazon',
-    retailer: 'Amazon', price: '~$7',
-    priceNote: 'Great value at this price point. Rarely drops lower.', label: 'Check Price at Amazon →',
-    imgSrc: '/images/products/winn-dri-tac-oversize.webp', imgAlt: 'Winn Dri-Tac oversize golf grip',
   },
 
 
