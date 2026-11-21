@@ -57,7 +57,19 @@ import { balls as BALLS } from '../src/data/balls.ts';
  * Correct prose was NOT edited to make this number go down. Fix the window
  * first, re-measure, then lower this. Only ever edit downward.
  */
-const CEILING = 10;
+/**
+ * Ratchet. 22 Nov 2026: 10 -> 2 after two guard bugs were fixed (a qualifier
+ * before the price, and a window crossing an array boundary) and four stale
+ * figures corrected.
+ *
+ * The 2 remaining are both the SAME product: TaylorMade Noodle comparison-table
+ * rows at $20 against balls.ts's $19. Its registry entry has no dated price
+ * check, so there is no trustworthy side to align to — fixing either would be
+ * a guess. One live price check closes this to 0.
+ *
+ * Only ever edit downward.
+ */
+const CEILING = 2;
 
 type Ball = { name: string; compression: number; price: number; discontinued?: boolean };
 const byName = new Map<string, Ball>();
@@ -147,6 +159,18 @@ for (const { file, text } of pages()) {
       // and never run past the end of the sentence
       const dot = text.indexOf('.', from);
       if (dot >= 0) stop = Math.min(stop, dot);
+      // nor out of the string literal it started in: these records are single
+      // lines, so a window that crosses "', '" has left the sentence entirely
+      // and is reading an unrelated field.
+      // ONLY structural ends — the close of an array or object, or a newline.
+      // NOT a plain field separator: a comparison-table row legitimately runs
+      // name: '...' , affiliateKey: '...', price: '~$38/dz', and that price IS
+      // a claim about that ball. Cutting at "', " killed 25 real checks and
+      // silently dropped the Noodle $20-vs-$19 fault out of the count.
+      for (const edge of ['],', '];', '},', '};', '\n']) {
+        const e = text.indexOf(edge, from);
+        if (e >= 0) stop = Math.min(stop, e);
+      }
       const win = text.slice(from, stop);
 
       // Three shapes that look like a price and are not one:
@@ -157,7 +181,14 @@ for (const { file, text } of pages()) {
       const isRange = !!(pm && pm[1]);
       const isDelta = !!(pm && pm[3]);
       const isFloor = !!(pm && /\b(?:from|starts? at|as little as|up to)\s*\$?$/.test(win.slice(0, pm.index)));
-      if (pm && !isRange && !isDelta && !isFloor) {
+      // A qualifier BEFORE the figure is as disqualifying as one after it.
+      // "the extra $10 a dozen", "without paying $50 per dozen" and
+      // "whether $40 a dozen beats..." are a delta, a threshold and a
+      // rhetorical comparison — none is the ball's price. The original check
+      // only looked forward, which is how all three were reported as faults.
+      const LEAD_NOT_A_PRICE = /\b(?:extra|additional|more|less|another|without (?:paying|spending)|whether|versus|vs\.?|compared to|beats?|than|over|under|save[sd]?|saving)\s+(?:about\s+|roughly\s+|around\s+)?~?\$?$/i;
+      const isLeadQualified = !!(pm && LEAD_NOT_A_PRICE.test(win.slice(0, pm.index)));
+      if (pm && !isRange && !isDelta && !isFloor && !isLeadQualified) {
         checked++;
         if (+pm[2] !== b.price)
           faults.push({ file, rule: 'B price per dozen in prose', ball: n, said: '$' + pm[2], real: '$' + b.price });
