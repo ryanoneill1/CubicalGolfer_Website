@@ -188,7 +188,19 @@ const schemas = [
 
     <section>
       <h2>Don't Know Your Swing Speed?</h2>
-      <p>The most accurate method: use a <a href="/best-golf-launch-monitors-2026/">launch monitor</a>. Budget options like the <a href="/best-launch-monitors-no-subscription/">Shot Scope LM1 ($199)</a> display your speed on a built-in screen. Most golf stores also offer free swing speed checks.</p>
+      <p>The most accurate method: use a <a href="/best-golf-launch-monitors-2026/">launch monitor</a>. Budget options like the <a href="/best-launch-monitors-no-subscription/">Shot Scope LM1 ({getAffiliateLink('shot-scope-lm1').price})</a> display your speed on a built-in screen. Most golf stores also offer free swing speed checks.
+      <div class="buy-row">
+        <p class="buy-row__lead">Measure it yourself:</p>
+        <div class="buy-row__list">
+          {[{ k: 'shot-scope-lm1', label: 'Shot Scope LM1' }, { k: 'garmin-approach-r10', label: 'Garmin Approach R10' }].map(it => (
+            <a href={getAffiliateLink(it.k).url} target="_blank" rel="nofollow noopener sponsored"
+               data-outbound="amazon" data-aff-name={it.label} data-cta-location="dont-know-speed"
+               class="buy-row__btn">
+              {it.label} <span class="buy-row__price">{getAffiliateLink(it.k).price}</span> →
+            </a>
+          ))}
+        </div>
+      </div></p>
       <p><strong>Quick estimate from driver carry:</strong></p>
       <table class="cmp-table"><caption class="sr-only">Dont Know Your Swing Speed</caption>
         <thead><tr><th scope="col">Driver Carry</th><th class="cmp-num" scope="col">Estimated Speed</th></tr></thead>

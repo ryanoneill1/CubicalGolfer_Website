@@ -168,6 +168,18 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     <section>
       <h2>How to Measure Your Swing Speed Accurately</h2>
       <p>One swing tells you almost nothing — speed varies 3-6 mph shot to shot even for consistent players. The protocol that produces a trustworthy number: warm up fully, then hit <strong>10 driver swings at your normal on-course effort</strong> (not hero swings), throw out the fastest and slowest, and average the remaining eight.</p>
+      <div class="buy-row">
+        <p class="buy-row__lead">Measure it at home:</p>
+        <div class="buy-row__list">
+          {[{ k: 'shot-scope-lm1', label: 'Shot Scope LM1' }, { k: 'garmin-approach-r10', label: 'Garmin Approach R10' }].map(it => (
+            <a href={getAffiliateLink(it.k).url} target="_blank" rel="nofollow noopener sponsored"
+               data-outbound="amazon" data-aff-name={it.label} data-cta-location="measure-speed"
+               class="buy-row__btn">
+              {it.label} <span class="buy-row__price">{getAffiliateLink(it.k).price}</span> →
+            </a>
+          ))}
+        </div>
+      </div>
       <p>Measure with the driver first since every chart and flex recommendation keys off it, then spot-check your 7-iron against the ratio ladder above. Radar and camera units both handle speed well outdoors — it is the easiest number in golf to measure — so even budget devices produce reliable readings here. Avoid measuring into a strong wind with radar units, and give camera units proper lighting indoors.</p>
       <p>Re-test twice a season. Speed drifts down through winter layoffs and creeps up when you're playing three times a week, and a 4-5 mph seasonal swing is enough to change your ideal ball and flex.</p>
     </section>

@@ -3030,10 +3030,10 @@ main section > p, main section ul, main section ol {
 
 
 /* ── Swing-speed buy rows on the compression chart (Sprint 268) ── */
-.ball-buy-row { margin: 20px 0 4px; }
-.ball-buy-row__lead { font-size: 16px; font-weight: 700; color: var(--green); margin: 0 0 12px; }
-.ball-buy-row__list { display: flex; flex-wrap: wrap; gap: 12px; }
-.ball-buy-row__btn {
+.ball-buy-row, .buy-row { margin: 20px 0 4px; }
+.ball-buy-row__lead, .buy-row__lead { font-size: 16px; font-weight: 700; color: var(--green); margin: 0 0 12px; }
+.ball-buy-row__list, .buy-row__list { display: flex; flex-wrap: wrap; gap: 12px; }
+.ball-buy-row__btn, .buy-row__btn {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--gold); color: #1a1a1a;
   font-weight: 700; font-size: 15px;
@@ -3041,5 +3041,5 @@ main section > p, main section ul, main section ol {
   text-decoration: none; white-space: nowrap;
   transition: background .2s;
 }
-.ball-buy-row__btn:hover { background: var(--gold-dark); }
-.ball-buy-row__price { font-weight: 600; opacity: .75; }
+.ball-buy-row__btn:hover, .buy-row__btn:hover { background: var(--gold-dark); }
+.ball-buy-row__price, .buy-row__price { font-weight: 600; opacity: .75; }

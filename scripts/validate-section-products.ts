@@ -48,6 +48,8 @@
  * number growing and lets it fall as pages are worked.
  */
 import { ARTICLES } from '../src/data/articles';
+import fs from 'fs';
+import path from 'path';
 
 /** Ratchets. Measured 20 Nov 2026. Only ever edit downward. */
 const CEILING: Record<string, number> = {
@@ -112,6 +114,51 @@ if (failed) {
   console.error(`   it needs no photograph. If the section should sell nothing, say why`);
   console.error(`   in \`noProduct\` and this check will leave it alone.\n`);
   process.exit(1);
+}
+
+/* ══════════ STANDALONE .astro PAGES ══════════
+ * This guard imported ARTICLES and nothing else, so every hand-written page
+ * under src/pages was invisible to it — including /golf-ball-compression-chart/,
+ * which is 29% of all site clicks and was selling in 4 of its 15 sections when
+ * Sprint 268 found it by hand. Fixing a page a guard cannot see is temporary.
+ *
+ * These pages have no `pageType` and no `noProduct` field, so they get one
+ * flat ratchet rather than per-type ones. It is a blunt number on purpose: its
+ * only job is to stop the count going UP while the editorial work happens.
+ */
+const ASTRO_DRY_CEILING = 191;   // measured 22 Nov 2026, after Sprints 268-269
+{
+  const SELLS = /getAffiliateLink\(|AFFILIATE\[|<ProductCard|<AffiliateButton|buyRow\(|ballUrl\(|amzn\.to|class="buy-row"|class="ball-buy-row"/;
+  let astroSections = 0, astroSelling = 0;
+  const worst: Record<string, number> = {};
+  const walk = (dir: string) => {
+    for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, e.name);
+      if (e.isDirectory()) { if (!e.name.includes('[')) walk(full); continue; }
+      if (!e.name.endsWith('.astro') || e.name.includes('[')) continue;
+      const text = fs.readFileSync(full, 'utf8');
+      const parts = text.split(/<h2\b/);
+      if (parts.length < 2) continue;
+      const secs = parts.slice(1);
+      astroSections += secs.length;
+      const selling = secs.filter(x => SELLS.test(x)).length;
+      astroSelling += selling;
+      if (secs.length - selling > 0) worst[full] = secs.length - selling;
+    }
+  };
+  walk('src/pages');
+  const astroDry = astroSections - astroSelling;
+  if (astroDry > ASTRO_DRY_CEILING) {
+    console.error(`\n❌ standalone .astro pages: ${astroDry} h2 section(s) with no buy path (ceiling ${ASTRO_DRY_CEILING}).`);
+    Object.entries(worst).sort((a, b) => b[1] - a[1]).slice(0, 8)
+      .forEach(([f, c]) => console.error(`   ${String(c).padStart(2)}  ${f}`));
+    console.error(`\n   These are hand-written pages, so there is no \`items\` array to fill —`);
+    console.error(`   add a buy row with getAffiliateLink(), the way the compression chart`);
+    console.error(`   and the distance chart do. Never type a price into one.\n`);
+    process.exit(1);
+  }
+  console.log(`✅ Standalone pages: ${astroSections} h2 section(s) across hand-written pages — ${astroDry} without a buy path (ceiling ${ASTRO_DRY_CEILING}).`);
+  if (astroDry < ASTRO_DRY_CEILING) console.log(`   ${ASTRO_DRY_CEILING - astroDry} below the ceiling — lower ASTRO_DRY_CEILING to ${astroDry}.`);
 }
 
 const parts = Object.entries(byType).sort((a, b) => b[1].length - a[1].length)

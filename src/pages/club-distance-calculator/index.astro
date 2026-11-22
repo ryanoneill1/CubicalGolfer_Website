@@ -124,6 +124,18 @@ const clubs = [
       <h2 style="font-size:18px;color:var(--green);margin:0 0 12px;">How to use this chart on the course</h2>
       <p style="font-size:16px;line-height:1.7;">These numbers are carry-distance estimates based on average recreational-golfer ratios. Your actual distances will vary based on strike quality, wind, elevation, and temperature. The most useful way to use this chart: pick the club that matches your target carry distance, then adjust one club up or down for wind and elevation. For more precise numbers, track your distances with a <a href="/best-golf-launch-monitors-2026/">launch monitor</a> or a <a href="/best-golf-gps-watches/">GPS watch</a> with shot tracking.</p>
       <p style="font-size:16px;line-height:1.7;margin:12px 0 0;">If your real distances do not match this chart, the most common reasons are: <a href="/how-to-fix-your-slice/">a slice that costs distance</a>, inconsistent center-face contact, or a shaft flex that does not match your swing speed. A basic club fitting can diagnose all three — see our <a href="/iron-fitting-guide-beginners/">iron fitting guide</a> for what to expect.</p>
+      <div class="buy-row">
+        <p class="buy-row__lead">Get the yardage these numbers need:</p>
+        <div class="buy-row__list">
+          {[{ k: 'blue-tees-series-3-max', label: 'Blue Tees Series 3 Max' }, { k: 'bushnell-tour-v7-shift', label: 'Bushnell Tour V7 Shift' }].map(it => (
+            <a href={getAffiliateLink(it.k).url} target="_blank" rel="nofollow noopener sponsored"
+               data-outbound="amazon" data-aff-name={it.label} data-cta-location="calculator-course-use"
+               class="buy-row__btn">
+              {it.label} <span class="buy-row__price">{getAffiliateLink(it.k).price}</span> →
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
 
     <!-- RELATED -->
