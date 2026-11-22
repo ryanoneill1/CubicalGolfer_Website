@@ -69,7 +69,7 @@ import { balls as BALLS } from '../src/data/balls.ts';
  *
  * Only ever edit downward.
  */
-const CEILING = 2;
+const CEILING = 0;
 
 type Ball = { name: string; compression: number; price: number; discontinued?: boolean };
 const byName = new Map<string, Ball>();

@@ -50,7 +50,7 @@ import path from 'path';
  *
  * Only ever edit downward.
  */
-const CEILING = 2;
+const CEILING = 0;
 
 const A = AFFILIATE as Record<string, any>;
 const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
