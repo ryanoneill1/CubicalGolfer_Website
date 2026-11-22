@@ -220,6 +220,7 @@ export const AFFILIATE: Record<string, {
 
   // Blue Tees Series 3 Max — search (ASIN varies by colour variant)
   'blue-tees-rainmaker': {
+    recurring: '$79/year for the LAUNCH app after a free first year',
     // Golf Galaxy pays 8% to PlayBetter's 5%, but its listing is In-Store
     // Purchase Only, so an online click there cannot convert. PlayBetter is
     // the primary for that reason; the Golf Galaxy link stays as the secondary
@@ -1711,6 +1712,7 @@ export const AFFILIATE: Record<string, {
   },
 
   'arccos-air-sensors': {
+    recurring: '$199.99/year from year two — the first year is included in the hardware price',
     asin: 'B0GK29YQFT',
     url: 'https://www.amazon.com/dp/B0GK29YQFT?&linkCode=ll2&tag=cubicalgolfer-20&language=en_US&ref_=as_li_ss_tl',
     program: 'amazon',
@@ -2251,6 +2253,7 @@ export const AFFILIATE: Record<string, {
 
   // Arccos Caddie Smart Sensors (3rd Gen) — ASIN B0B5TW3HNG ✅ verified
   'arccos-caddie-sensors': {
+    recurring: '$199.99/year from year two — the first year is included in the hardware price',
     heroVerdictLine: '★ The only gear upgrade that gets smarter the more you play — AI caddie is legit.',
     heroWhoFor: 'Data-driven golfers who want to know exactly where they lose strokes each round.',
     asin: 'B0DSVQ6BNR',
@@ -2260,7 +2263,7 @@ export const AFFILIATE: Record<string, {
     retailer: 'Amazon',
     price: '$249.99',
     verifiedOn: '2026-09-06',
-    priceNote: 'Verified 13 November 2026: $249.99 for the Gen 4 16-sensor set, in stock, fulfilled by Amazon. The first year of Arccos membership is included in that price; $99/yr applies from year two, so three years costs $447.99.',
+    priceNote: 'Verified 13 November 2026: $249.99 for the Gen 4 16-sensor set, in stock, fulfilled by Amazon. The first year of Arccos membership is included in that price; $199.99/yr applies from year two, so three years costs $649.97.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/arccos-caddie-sensors.webp',
     imgAlt: 'Arccos Caddie Smart Sensors Gen 4',
@@ -4226,6 +4229,7 @@ export const AFFILIATE: Record<string, {
   },
   // ── Apps & Software ─────────────────────────────────────────────────────────
   'the-grint': {
+    recurring: '$9.99/month Premium (free tier carries the USGA handicap)',
     url: 'https://www.thegrint.com/',
     program: 'direct',
     retailer: 'TheGrint',
@@ -4240,6 +4244,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   '18birdies': {
+    recurring: '$11.99/month or $99/year Premium (free tier available)',
     url: 'https://18birdies.com/',
     program: 'direct',
     retailer: '18Birdies',
@@ -4254,6 +4259,7 @@ export const AFFILIATE: Record<string, {
     ],
   },
   'golfshot': {
+    recurring: '$79.99/year Golfshot Pro · $99.99/year Golfshot Champions (free tier available)',
     url: 'https://golfshot.com/',
     program: 'direct',
     retailer: 'Golfshot',
