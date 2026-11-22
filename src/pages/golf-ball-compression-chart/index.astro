@@ -117,6 +117,27 @@ const balls = BALLS;
 // hardcoded ASINs on this page were dead Amazon 404s (verified 2026-08-22) on the
 // page carrying 28% of the site's impressions, and no build check could see them
 // because they never went through the affiliate registry.
+/**
+ * A compact buy row for the swing-speed sections.
+ *
+ * These three sections were the largest hole on the site: each one names the
+ * balls it recommends and, until Sprint 268, offered no way to buy any of
+ * them. The row renders only balls that have a live registry link, and reads
+ * every figure from balls.ts / the registry so no number can drift here again.
+ */
+function buyRow(names: string[]) {
+  return names
+    .map(nm => {
+      const b = ball(nm);
+      if (!b || (b as any).discontinued) return null;
+      const key = (b as any).affKey;
+      const aff = key ? (AFFILIATE as any)[key] : null;
+      if (!aff?.url) return null;
+      return { name: b.name, key, price: aff.price, url: aff.url, compression: b.compression };
+    })
+    .filter(Boolean) as Array<{ name: string; key: string; price: string; url: string; compression: number }>;
+}
+
 function ballUrl(ball: typeof balls[0]): string | null {
   // Prefer the registry: it is the maintained, validated source and six sprints of
   // ASIN verification live there. This page kept its own ball table, so that work
@@ -565,18 +586,54 @@ function outboundFor(url: string | null | undefined): string {
       <p>The <strong>{slowPick.name}</strong> ({slowPick.compression} compression, ${slowPick.price}/dz) is the best ball for swing speeds under 75 mph. It compresses fully even at very slow speeds, maximizing distance. The <strong>{slowAlt.name}</strong> ({slowAlt.compression}, ${slowAlt.price}/dz) is the budget alternative. See our full <a href="/best-golf-balls-for-seniors/">best balls for seniors guide</a>.</p>
       <h3>Best Budget Options Under ${budgetCap}/dozen</h3>
       <p>The <strong>{slowBudget[0].name}</strong> at ${slowBudget[0].price}/dozen is the cheapest of these, and it is rated up to {slowBudget[0].maxMph} mph — which is the point: the chart has cheaper balls, but they need more clubhead speed than you have. The <strong>{slowBudget[1].name}</strong> (${slowBudget[1].price}/dz) and <strong>{slowBudget[2].name}</strong> (${slowBudget[2].price}/dz) round out the set. All three have ionomer covers — durable, consistent, and no greenside spin to speak of.</p>
+      <div class="ball-buy-row">
+        <p class="ball-buy-row__lead">Buy the under-85 mph picks:</p>
+        <div class="ball-buy-row__list">
+          {buyRow(['Callaway Supersoft', 'Wilson DUO Soft+', 'TaylorMade Noodle']).map(b => (
+            <a href={b.url} target="_blank" rel="nofollow noopener sponsored"
+               data-outbound="amazon" data-aff-name={b.name} data-cta-location="swing-speed-section"
+               class="ball-buy-row__btn">
+              {b.name} <span class="ball-buy-row__price">{b.price}</span> →
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
 
     <section>
       <h2 id="85-100">Best Golf Balls for Swing Speed 85–100 mph</h2>
       <p>This is where most weekend golfers land — and where the most options exist. Compression 65-90 is your range. The key decision: ionomer cover (cheaper, less spin) or urethane cover (more spin around greens, premium price).</p>
       <p>Our top picks: <Fragment set:html={pill('Kirkland Signature', { cover: true, label: 'compression' })} /> for value, <Fragment set:html={pill('Srixon Q-Star Tour', { cover: true })} /> for the best balance, and <Fragment set:html={pill('Callaway Chrome Soft', { cover: true })} /> for premium performance. See our <a href="/best-golf-balls-90-mph-swing-speed/">full 85-100 mph guide</a>.</p>
+      <div class="ball-buy-row">
+        <p class="ball-buy-row__lead">Buy the 85–100 mph picks:</p>
+        <div class="ball-buy-row__list">
+          {buyRow(['Kirkland Signature', 'Srixon Q-Star Tour', 'Callaway Chrome Soft']).map(b => (
+            <a href={b.url} target="_blank" rel="nofollow noopener sponsored"
+               data-outbound="amazon" data-aff-name={b.name} data-cta-location="swing-speed-section"
+               class="ball-buy-row__btn">
+              {b.name} <span class="ball-buy-row__price">{b.price}</span> →
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
 
     <section>
       <h2 id="over-100">Best Golf Balls for Swing Speed Over 100 mph</h2>
       <p>Above 100 mph, you can compress any ball on the market. The choice becomes about spin, feel, and control rather than distance. Compression 85-102 is your range.</p>
       <p>The <Fragment set:html={pill('Titleist Pro V1', { label: 'compression' })} /> remains the gold standard — consistent flight, excellent greenside spin, and the ball every tour player trusts. The <Fragment set:html={pill('TaylorMade TP5')} /> and <Fragment set:html={pill('Srixon Z-Star')} /> are the best alternatives. Budget pick: <Fragment set:html={pill('Vice Pro', { cover: true, label: 'compression' })} />.</p>
+      <div class="ball-buy-row">
+        <p class="ball-buy-row__lead">Buy the over-100 mph picks:</p>
+        <div class="ball-buy-row__list">
+          {buyRow(['Titleist Pro V1', 'TaylorMade TP5', 'Srixon Z-Star', 'Vice Pro']).map(b => (
+            <a href={b.url} target="_blank" rel="nofollow noopener sponsored"
+               data-outbound="amazon" data-aff-name={b.name} data-cta-location="swing-speed-section"
+               class="ball-buy-row__btn">
+              {b.name} <span class="ball-buy-row__price">{b.price}</span> →
+            </a>
+          ))}
+        </div>
+      </div>
     </section>
 
     <!-- ═══ BRAND SUB-TABLES ═══ -->
