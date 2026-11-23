@@ -97,4 +97,49 @@ if (bad.length) {
   process.exit(1);
 }
 
+/* ── Brand chart titles ────────────────────────────────────────────────────
+ * Sprint 273: /bridgestone-golf-ball-compression-chart/ shipped "All 4" while
+ * balls.ts held five Bridgestone balls. The CLAIM regex above could not see it
+ * because it requires the word "balls" after the number and the title says
+ * "All 4". These pages render every ball of their brand including retired ones
+ * (BrandCompressionChart does not filter `discontinued`), so the number each
+ * title must match is that brand's full roster.
+ */
+const BRAND_DIR = /^(.+)-golf-ball-compression-chart$/;
+const TITLE_ALL = /title: "([^"]*?)\\u2014 All (\d+)"/;
+const TITLE_ALL_EM = /title: "([^"]*?)— All (\d+)"/;
+const brandBad: string[] = [];
+let brandChecked = 0;
+
+for (const dir of readdirSync(join(ROOT, 'src', 'pages'))) {
+  const m = dir.match(BRAND_DIR);
+  if (!m) continue;
+  const file = join(ROOT, 'src', 'pages', dir, 'index.astro');
+  let src: string;
+  try { src = readFileSync(file, 'utf8'); } catch { continue; }
+  const hit = src.match(TITLE_ALL) ?? src.match(TITLE_ALL_EM);
+  if (!hit) continue;
+
+  const slug = m[1];
+  const brand = (balls as Array<Record<string, any>>)
+    .map(b => String(b.brand))
+    .find(b => b.toLowerCase().replace(/[^a-z]/g, '') === slug.replace(/[^a-z]/g, ''));
+  if (!brand) continue;
+
+  brandChecked++;
+  const roster = (balls as Array<Record<string, any>>).filter(b => b.brand === brand).length;
+  const says = Number(hit[2]);
+  if (says !== roster) {
+    brandBad.push(`src/pages/${dir}/index.astro title says "All ${says}" — balls.ts has ${roster} ${brand} ball(s).`);
+  }
+}
+
+if (brandBad.length) {
+  console.error(`\n❌ Brand chart counts: ${brandBad.length} title(s) disagree with balls.ts.\n`);
+  brandBad.forEach(m => console.error('   ' + m));
+  console.error('\n   These titles are what Google prints. Add the ball, update the title.\n');
+  process.exit(1);
+}
+
 console.log(`✅ Stated ball counts: ${claims} claim(s) checked, all agree with balls.ts (${EXPECTED}).`);
+console.log(`✅ Brand chart counts: ${brandChecked} brand title(s) match their roster.`);
