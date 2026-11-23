@@ -1,6 +1,6 @@
-# Live listing check — 2026-11-16
+# Live listing check — 2026-11-23
 
-**Coverage: 11 of 169 listings actually verified (7%).**
+**Coverage: 7 of 170 listings actually verified (4%).**
 
 ⚠️ **LOW COVERAGE — this run proves very little.** Amazon blocked most requests; treat a clean result as unknown, not safe.
 
@@ -10,13 +10,17 @@ Drift threshold 10%.
 |---|---|---|
 | **DEAD** | 0 | Amazon says the page is gone — the buy button goes nowhere |
 | **NO_PRICE** | 0 | Listing exists but nothing is purchasable |
-| **DRIFT** | 0 | Live price differs from the registry by >10% |
-| OK | 11 | Priced and within tolerance |
-| *could not check* | 158 | Blocked or errored — **not** a problem, just unknown |
+| **DRIFT** | 3 | Live price differs from the registry by >10% |
+| OK | 4 | Priced and within tolerance |
+| *could not check* | 163 | Blocked or errored — **not** a problem, just unknown |
 
-## Nothing needs attention
+## Needs attention
 
-Every listing that could be checked is live, priced and within tolerance — but that is only 11 of 169. The rest were never reached.
+| Product | Status | Registry | Live | Drift | Note |
+|---|---|---|---|---|---|
+| `arccos-air-sensors` | **DRIFT** | $326.38 | $249.99 | -23% | registry says $326.38, listing says $249.99 |
+| `nike-dri-fit-victory-polo` | **DRIFT** | $39.99 | $45.00 | +13% | registry says $39.99, listing says $45.00 |
+| `resistance-bands-golf` | **DRIFT** | $9.98 | $8.48 | -15% | registry says $9.98, listing says $8.48 |
 
 ## Could not check
 
@@ -26,10 +30,12 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `flightscope-mevo` — Amazon served a robot check — nothing learned, re-run later
 - `precision-pro-nx9-hd` — Amazon served a robot check — nothing learned, re-run later
 - `blue-tees-series-3-max` — Amazon served a robot check — nothing learned, re-run later
+- `garmin-approach-z82` — Amazon served a robot check — nothing learned, re-run later
 - `bushnell-pro-xe` — Amazon served a robot check — nothing learned, re-run later
 - `garmin-approach-s44` — Amazon served a robot check — nothing learned, re-run later
 - `garmin-approach-s42` — Amazon served a robot check — nothing learned, re-run later
 - `callaway-paradym-ai-smoke-max` — Amazon served a robot check — nothing learned, re-run later
+- `taylormade-qi35-max` — Amazon served a robot check — nothing learned, re-run later
 - `garmin-approach-z30` — Amazon served a robot check — nothing learned, re-run later
 - `spornia-spg-8-xl` — Amazon served a robot check — nothing learned, re-run later
 - `pxg-0311xp-gen8-irons` — Amazon served a robot check — nothing learned, re-run later
@@ -38,6 +44,7 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `odyssey-s2s-ai-dual-putter` — Amazon served a robot check — nothing learned, re-run later
 - `izzo-high-roller-travel-cover` — Amazon served a robot check — nothing learned, re-run later
 - `big-max-blade-ip-2-cart` — Amazon served a robot check — nothing learned, re-run later
+- `abacus-bounce-waterproof-hoodie` — Amazon served a robot check — nothing learned, re-run later
 - `mileseey-genesonic-pro-speaker` — Amazon served a robot check — nothing learned, re-run later
 - `pinned-sound-stick-pro-speaker` — Amazon served a robot check — nothing learned, re-run later
 - `alphard-cybercart-push-plus` — Amazon served a robot check — nothing learned, re-run later
@@ -46,11 +53,11 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `divot-board-mini` — Amazon served a robot check — nothing learned, re-run later
 - `pxg-players-glove` — Amazon served a robot check — nothing learned, re-run later
 - `mgi-e-boost-cart` — Amazon served a robot check — nothing learned, re-run later
-- `arccos-air-sensors` — Amazon served a robot check — nothing learned, re-run later
 - `sun-mountain-speed-cart-x` — Amazon served a robot check — nothing learned, re-run later
 - `travismathew-nuage-mega-shoes` — Amazon served a robot check — nothing learned, re-run later
 - `cobra-ds-adapt-max-k` — Amazon served a robot check — nothing learned, re-run later
 - `cobra-aerojet-max` — Amazon served a robot check — nothing learned, re-run later
+- `titleist-pro-v1` — Amazon served a robot check — nothing learned, re-run later
 - `callaway-chrome-tour-2026` — Amazon served a robot check — nothing learned, re-run later
 - `taylormade-tp5` — Amazon served a robot check — nothing learned, re-run later
 - `srixon-soft-feel` — Amazon served a robot check — nothing learned, re-run later
@@ -65,9 +72,9 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `footjoy-weathersof-glove` — Amazon served a robot check — nothing learned, re-run later
 - `footjoy-weathersof-glove-2pack` — Amazon served a robot check — nothing learned, re-run later
 - `titleist-players-flex` — Amazon served a robot check — nothing learned, re-run later
-- `callaway-dawn-patrol` — Amazon served a robot check — nothing learned, re-run later
 - `footjoy-raingrip` — Amazon served a robot check — nothing learned, re-run later
 - `arccos-caddie-sensors` — Amazon served a robot check — nothing learned, re-run later
+- `blast-motion-sensor` — Amazon served a robot check — nothing learned, re-run later
 - `skytrak-plus` — Amazon served a robot check — nothing learned, re-run later
 - `superstroke-alignment-sticks` — Amazon served a robot check — nothing learned, re-run later
 - `alignment-sticks` — Amazon served a robot check — nothing learned, re-run later
@@ -79,7 +86,6 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `cleveland-hb-soft-2` — Amazon served a robot check — nothing learned, re-run later
 - `taylormade-spider-tour` — Amazon served a robot check — nothing learned, re-run later
 - `titleist-players-4` — Amazon served a robot check — nothing learned, re-run later
-- `callaway-fairway-14` — Amazon served a robot check — nothing learned, re-run later
 - `titleist-pro-v1x` — Amazon served a robot check — nothing learned, re-run later
 - `footjoy-flex-xp` — Amazon served a robot check — nothing learned, re-run later
 - `footjoy-tour-alpha` — Amazon served a robot check — nothing learned, re-run later
@@ -91,7 +97,6 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `bridgestone-e12-contact` — Amazon served a robot check — nothing learned, re-run later
 - `spornia-spg-net` — Amazon served a robot check — nothing learned, re-run later
 - `benq-short-throw-projector` — Amazon served a robot check — nothing learned, re-run later
-- `resistance-bands-golf` — Amazon served a robot check — nothing learned, re-run later
 - `putt-a-bout-putting-green` — Amazon served a robot check — nothing learned, re-run later
 - `wellputt-mat` — Amazon served a robot check — nothing learned, re-run later
 - `superspeed-golf-set` — Amazon served a robot check — nothing learned, re-run later
@@ -103,7 +108,6 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `golf-pride-mcc-plus4` — Amazon served a robot check — nothing learned, re-run later
 - `winn-dri-tac` — Amazon served a robot check — nothing learned, re-run later
 - `superstroke-zenergy-tour` — Amazon served a robot check — nothing learned, re-run later
-- `callaway-big-bertha-b21-irons` — Amazon served a robot check — nothing learned, re-run later
 - `callaway-big-bertha-b21-driver` — Amazon served a robot check — nothing learned, re-run later
 - `cleveland-huntington-beach` — Amazon served a robot check — nothing learned, re-run later
 - `cobra-ds-adapt-x-driver` — Amazon served a robot check — nothing learned, re-run later
@@ -111,6 +115,7 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `odyssey-two-ball-eleven` — Amazon served a robot check — nothing learned, re-run later
 - `orange-whip-trainer` — Amazon served a robot check — nothing learned, re-run later
 - `taylormade-tp-soto` — Amazon served a robot check — nothing learned, re-run later
+- `gosports-elite-hitting-mat` — Amazon served a robot check — nothing learned, re-run later
 - `gosports-hitting-net` — Amazon served a robot check — nothing learned, re-run later
 - `scotty-cameron-phantom-x` — Amazon served a robot check — nothing learned, re-run later
 - `taylormade-spider-gt` — Amazon served a robot check — nothing learned, re-run later
@@ -120,6 +125,7 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `titleist-trufeel` — Amazon served a robot check — nothing learned, re-run later
 - `vice-drive` — Amazon served a robot check — nothing learned, re-run later
 - `vice-pro-soft` — Amazon served a robot check — nothing learned, re-run later
+- `titleist-tour-soft` — Amazon served a robot check — nothing learned, re-run later
 - `titleist-velocity` — Amazon served a robot check — nothing learned, re-run later
 - `bridgestone-tour-b-rx` — Amazon served a robot check — nothing learned, re-run later
 - `kirkland-signature` — Amazon served a robot check — nothing learned, re-run later
@@ -144,6 +150,7 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `alphard-cybercart` — Amazon served a robot check — nothing learned, re-run later
 - `kvv-push-cart` — Amazon served a robot check — nothing learned, re-run later
 - `bag-boy-nitron` — Amazon served a robot check — nothing learned, re-run later
+- `clicgear-model-45` — Amazon served a robot check — nothing learned, re-run later
 - `caddytek-ez-v8` — Amazon served a robot check — nothing learned, re-run later
 - `golf-pride-z-grip` — Amazon served a robot check — nothing learned, re-run later
 - `spornia-spg-hitting-mat` — Amazon served a robot check — nothing learned, re-run later
@@ -156,13 +163,14 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `oakley-prizm-golf` — Amazon served a robot check — nothing learned, re-run later
 - `tifosi-seek-fc` — Amazon served a robot check — nothing learned, re-run later
 - `cleveland-launcher-xl-senior` — Amazon served a robot check — nothing learned, re-run later
+- `nikon-coolshot-50i` — Amazon served a robot check — nothing learned, re-run later
 - `callaway-300-pro` — Amazon served a robot check — nothing learned, re-run later
 - `titleist-gt2-driver` — Amazon served a robot check — nothing learned, re-run later
 - `taylormade-sim2-max` — Amazon served a robot check — nothing learned, re-run later
 - `cleveland-launcher-xl2-driver` — Amazon served a robot check — nothing learned, re-run later
+- `apple-watch-ultra-golf` — Amazon served a robot check — nothing learned, re-run later
 - `spornia-spg-7` — Amazon served a robot check — nothing learned, re-run later
 - `callaway-paradym-hybrid` — Amazon served a robot check — nothing learned, re-run later
-- `nike-dri-fit-victory-polo` — Amazon served a robot check — nothing learned, re-run later
 - `adidas-ultimate365-polo` — Amazon served a robot check — nothing learned, re-run later
 - `adidas-ultimate365-pants` — Amazon served a robot check — nothing learned, re-run later
 - `titleist-tour-performance-hat` — Amazon served a robot check — nothing learned, re-run later
@@ -170,6 +178,7 @@ Re-run to retry; raise `DELAY_MS` if many appear here.
 - `goodr-golf-sunglasses` — Amazon served a robot check — nothing learned, re-run later
 - `under-armour-forefront-rain-jacket` — Amazon served a robot check — nothing learned, re-run later
 - `club-glove-microfiber-towel` — Amazon served a robot check — nothing learned, re-run later
+- `callaway-org-14-cart-bag` — Amazon served a robot check — nothing learned, re-run later
 - `ogio-fuse-stand-bag` — Amazon served a robot check — nothing learned, re-run later
 - `tour-edge-hot-launch-max-driver` — Amazon served a robot check — nothing learned, re-run later
 - `bushnell-pro-x3` — Amazon served a robot check — nothing learned, re-run later

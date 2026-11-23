@@ -1,4 +1,4 @@
-# Live URL check — 2026-11-16
+# Live URL check — 2026-11-23
 
 318 sitemap URLs checked against https://www.cubicalgolfer.com.
 
