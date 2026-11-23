@@ -15854,7 +15854,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     updateLog: [
       { date: 'Aug 16, 2026', note: 'Published — chart computed from the published per-club temperature rule.' },
     ],
-    title: 'Golf Distance Temperature Chart — How Much You Lose in Cold',
+    title: 'Golf Distance Temperature Chart 2026 — Cold Loss + PDF',
     titleDisplay: 'Golf Distance by Temperature: How Many Yards Cold Costs You',
     bottomLine: 'Below 75°F you lose roughly 2 yards per 10°F with a driver and about 1.3 with a wedge. At 40°F your 150-yard 7-iron plays about 144. The chart below covers every club from 30°F to 90°F.',
     description: 'How many yards you lose in cold weather, by club and temperature. A lookup chart from 30°F to 90°F, plus why short irons lose proportionally more.',
@@ -15918,7 +15918,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     updateLog: [
       { date: 'Aug 16, 2026', note: 'Published — charts computed from the published wind rule.' },
     ],
-    title: 'Golf Wind Adjustment Chart — Headwind, Tailwind, Crosswind',
+    title: 'Golf Wind Adjustment Chart 2026 — Yardage + Free PDF',
     titleDisplay: 'Golf Wind Chart: How Many Yards Wind Actually Costs You',
     bottomLine: 'A headwind adds about 1 yard per mph. A tailwind only gives back half a yard per mph. So a 10 mph headwind costs you 10 yards, while the same wind behind you returns just 5. Charts for every club below.',
     description: 'How many yards to add or subtract for wind, by club and wind speed. Headwind, tailwind and crosswind lookup charts, plus why the two do not cancel out.',
@@ -15986,7 +15986,7 @@ When the November sales land, our <a href="/black-friday-golf-deals/">Black Frid
     updateLog: [
       { date: 'Aug 20, 2026', note: 'Published — every figure computed from the Stimpmeter definition.' },
     ],
-    title: 'Golf Green Speed Chart — What Stimp Does to Your Putt',
+    title: 'Golf Green Speed Chart 2026 — Stimp Ratings + PDF',
     titleDisplay: 'Green Speed Chart: What Stimp Actually Does to Your Putt',
     bottomLine: 'On a green stimping 10, a 2 percent downslope plays like <strong>stimp 15.6</strong> — faster than any tournament green you will ever see. Slope changes green speed far more than the number on the pin sheet does. Charts for distance, break and slope below.',
     description: 'What green speed does to a putt: how far the same stroke rolls at stimp 8 through 13, how much more the ball breaks, and why downhill putts play faster.',
