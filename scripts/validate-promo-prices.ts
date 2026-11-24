@@ -86,6 +86,19 @@ const ACCEPTED = new Set<string>([
   // Recheck at the Black Friday sweep. If $995 ends, the pages to fix are every
   // one quoting a SkyTrak+ build total.
   'skytrak-plus',
+  // 24 Nov 2026 — Black Friday re-sweep. All three were logged on 20 Nov as
+  // 'PlayBetter only, the primary retailer stays higher'. For Black Friday the
+  // PRIMARY retailers have MATCHED, so the registry was overstating what a
+  // reader actually pays. Ryan's decision that day: move the registry onto the
+  // live figures rather than hold the regular and footnote the deal.
+  // These are ACCEPTED rather than repriced-in-the-watch-list because the cuts
+  // look Black-Friday-shaped (the Wingman 2 is -41%), so the regular prices are
+  // still the honest 'typical' and belong in PROMO_WATCH.
+  // RECHECK FIRST THING AFTER BLACK FRIDAY: if these revert, the registry and
+  // the 19 prose figures changed in Sprint 274 move back together.
+  'bushnell-wingman-2',
+  'garmin-approach-s44',
+  'shot-scope-g6',
 ]);
 
 const num = (v: unknown): number | null => {
