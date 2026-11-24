@@ -151,6 +151,15 @@ export const PROMO_WATCH: Record<string, Watch> = {
   // Added 15 November 2026. The GPS family went on deal between the 14 Nov sweep
   // and this one, which is why these are here a week before the next full sweep.
   // Each was read on its live Amazon listing on 15 November.
+  // Added 24 November 2026. The chart price was ~$35 and stale; Amazon reads
+  // $27.49 as a Black Friday figure against a $38.97 typical. Ryan's decision
+  // that day was to quote the live price, the same call made for the Wingman 2,
+  // the Approach S44 and the Shot Scope G6 in the Black Friday re-sweep. The
+  // regular is recorded here so the pages quoting $27 can be found when it ends.
+  'vice-pro-soft':               { regular: 38.97, promo: 27.49, seen: '2026-11-24',
+                                   note: 'Amazon: $27.49 a dozen, in stock, against a $38.97 price it has otherwise held. The compression chart, the ball guide and the soft-ball comparisons all quote this figure.',
+                                   quotedOn: ['/golf-ball-compression-chart/'] },
+
   'shot-scope-v5':               { regular: 249.99, promo: 209.99, seen: '2026-11-24',
                                    note: 'Sold by Shot Scope, in stock, -16% "Limited time deal". The $209.99 has now held since 7 September, so it behaves like the standing price even though Amazon still badges it as a deal. Registry carries ~$210 for that reason.',
                                    quotedOn: ['/best-golf-gps-watches/', '/arccos-caddie-review/',

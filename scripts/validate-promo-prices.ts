@@ -99,6 +99,15 @@ const ACCEPTED = new Set<string>([
   'bushnell-wingman-2',
   'garmin-approach-s44',
   'shot-scope-g6',
+  // 24 Nov 2026 — the compression chart carried ~$35 for the Vice Pro Soft while
+  // Amazon read $27.49, badged Black Friday against a $38.97 typical. Ryan chose
+  // the live figure, consistent with the three keys above. The chart is the
+  // highest-traffic page on the site and pipes this number straight into the
+  // table a reader sees, so an understatement here is the costly direction.
+  // RECHECK AFTER BLACK FRIDAY with the three above: if it reverts to $38.97 the
+  // registry, balls.ts and the six prose figures changed in Sprint 275 move back
+  // together, and the chart row goes with them.
+  'vice-pro-soft',
 ]);
 
 const num = (v: unknown): number | null => {
