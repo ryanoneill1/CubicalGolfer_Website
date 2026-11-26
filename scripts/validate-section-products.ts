@@ -53,7 +53,7 @@ import path from 'path';
 
 /** Ratchets. Measured 20 Nov 2026. Only ever edit downward. */
 const CEILING: Record<string, number> = {
-  'buying-guide': 247,
+  'buying-guide': 212,   // 247 -> 212 (Sprint 277: 21 sections gained items, 14 declared productless)
   'tutorial':     267,
   'review':       109,
   'comparison':    57,
