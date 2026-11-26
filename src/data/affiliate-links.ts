@@ -2874,13 +2874,13 @@ export const AFFILIATE: Record<string, {
 
   'bushnell-launch-pro': {
     url: 'https://bushnell.pxf.io/4aLLGM',
-    verifiedOn: '2026-11-13',
+    verifiedOn: '2026-11-26',
     program: 'bushnell',
     golfGalaxyUrl: 'https://www.amazon.com/s?k=bushnell-launch-pro&crid=1O0RGUWVXD74&sprefix=bridgestone-tour-b-xs%2Caps%2C371&linkCode=ll2&tag=cubicalgolfer-20&linkId=5e4ac84f33ffe810257c4067a4602ec5&language=en_US&ref_=as_li_ss_tl',
     retailer: 'Bushnell',
     primaryRetailer: 'direct',
     price: '~$2,999',
-    priceNote: 'Regular price $2,999.99, confirmed on Bushnell’s own site 13 November 2026, in stock. PlayBetter has the Circle B Edition at $2,495 as of 20 November 2026 — a $505 saving. Worth knowing before you hold out for better: it went as low as $1,995 earlier in November and has come back up since, so this discount moves in both directions, with the promo banner live and stock showing; the discount is capped by promo inventory rather than a date, so it can end without notice. Re-checked 13 November.',
+    priceNote: 'BLACK FRIDAY, read 26 November 2026: Bushnell’s own site now has it at $2,495, down from the $2,999.99 regular price — a $504.99 saving, in stock. On 20 November only PlayBetter had that figure; both have it today, and PlayBetter also carries the Circle B Edition at $2,495. Worth knowing before you hold out for better: it went as low as $1,995 earlier in November and has come back up since, so this discount moves in both directions, with the promo banner live and stock showing; the discount is capped by promo inventory rather than a date, so it can end without notice. Re-checked 13 November.',
     label: 'See Today\'s Price →',
     imgSrc: '/images/products/bushnell-launch-pro.webp',
     imgAlt: 'Bushnell Launch Pro Circle B Launch Monitor',
