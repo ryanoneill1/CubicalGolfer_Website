@@ -37,6 +37,43 @@ const money = (s: unknown) => parseFloat(String(s).replace(/[$,\s]/g, ''));
 const isRange = (s: string) => /[\d,]\s*(?:-|–|—|to)\s*\$?\s*[\d,]/.test(s);
 const strip = (s: string) => s.replace(/<[^>]+>/g, '').trim();
 
+/**
+ * A stated total, in either word order, with whether the writer hedged it.
+ *
+ * Sprint 281. Rules D and E each carried their own version of this and the two
+ * disagreed, so the same sentence was judged differently depending on whether
+ * it was marked up as a list or written as prose. Worse, both only looked for
+ * the LEADING form — "Total: $66" — and /best-golf-gifts-under-50/ wrote
+ * "cost $66 total for all three", which is the same claim with the word moved.
+ * That sentence was wrong by $13 and this file passed it for weeks.
+ *
+ * "roughly", "about", "around" and a leading ~ all count as hedges. A bare
+ * "Total is $873" does not: "is" is not a hedge, it is just a verb.
+ */
+const LEADING_TOTAL = /(?:Total:?\s*(is\s*|roughly\s*|about\s*|around\s*)?|equals\s+|comes to\s+)(~\s*)?\$([\d,]+(?:\.\d{2})?)/i;
+const TRAILING_TOTAL = /(?:cost|costs|comes to|totals?|adds up to|is)\s+(roughly\s*|about\s*|around\s*)?(~\s*)?\$([\d,]+(?:\.\d{2})?)\s+(?:in\s+)?total\b/i;
+
+function statedTotal(text: string): { value: number; hedged: boolean; index: number } | null {
+  const m = text.match(LEADING_TOTAL) ?? text.match(TRAILING_TOTAL);
+  if (!m || m.index === undefined) return null;
+  const value = money(m[3]);
+  if (!isFinite(value)) return null;
+  // m[1] is the hedge word (or "is", which is not one); m[2] is a leading tilde.
+  const hedged = Boolean((m[1] && !/^is\s*$/i.test(m[1])) || m[2]);
+  return { value, hedged, index: m.index };
+}
+
+/**
+ * How far a candidate sum is from the stated figure. A hedged total is honest
+ * writing for a build a few dollars either side, so it is compared at the
+ * nearest $10; an exact one is held to the cent. Several candidate sums are
+ * allowed because pages differ on whether per-period parts belong in a total,
+ * and the page is credited if ANY reading matches.
+ */
+const r10 = (v: number) => Math.round(v / 10) * 10;
+const offBy = (candidates: number[], stated: number, hedged: boolean) =>
+  Math.min(...candidates.map(v => (hedged ? Math.abs(r10(v) - r10(stated)) : Math.abs(v - stated))));
+
 const problems: string[] = [];
 const seen = new Set<string>();
 const report = (slug: string, detail: string) => {
@@ -145,13 +182,15 @@ for (const a of all) {
     // credited if its stated total matches the sum EITHER with or without them.
     const items = [...body.matchAll(/<li>([^<]*?)[—–-]\s*\$([\d,]+)([^<]*)<\/li>/g)]
       .map(m => ({ price: money(m[2]), period: /\/\s*(yr|year|mo|month)/i.test(m[3] + m[1]) }));
-    const tm2 = body.match(/Total:?\s*(?:is\s*|roughly\s*|about\s*)?\$([\d,]+)/i);
+    const tm2 = statedTotal(body);
     if (items.length >= 3 && tm2) {
-      const stated = money(tm2[1]);
       const withAll = items.reduce((s, i) => s + i.price, 0);
       const noPeriod = items.filter(i => !i.period).reduce((s, i) => s + i.price, 0);
-      if (isFinite(stated) && Math.abs(withAll - stated) > 0.5 && Math.abs(noPeriod - stated) > 0.5)
-        report(slug, `parts list sums to $${noPeriod.toLocaleString()} (or $${withAll.toLocaleString()} counting per-period items), but the page states a total of $${stated.toLocaleString()}`);
+      // Sprint 281: this used to hold a hedged total to the cent while Rule E
+      // allowed it $10, so "Total: roughly $1,240" for a $1,239 build passed as
+      // prose and failed as a list. Both now go through offBy().
+      if (offBy([withAll, noPeriod], tm2.value, tm2.hedged) > 0.5)
+        report(slug, `parts list sums to $${noPeriod.toLocaleString()} (or $${withAll.toLocaleString()} counting per-period items), but the page states a total of $${tm2.value.toLocaleString()}`);
     }
 
     // ── Rule E: an inline prose parts list followed by a stated total ────
@@ -169,15 +208,14 @@ for (const a of all) {
     // Ranges are skipped, as everywhere else here: a part written "$100 to
     // $200" has no single value to add.
     {
-      const totRe = /(?:Total:?\s*(is\s*|roughly\s*|about\s*|around\s*)?|equals\s+|comes to\s+)(~\s*)?\$([\d,]+(?:\.\d{2})?)/i;
-      const tot = body.match(totRe);
+      const tot = statedTotal(body);
       // Only the span that actually holds the parts matters. Checking the whole
       // body for a range was too blunt: "I practice 3-4 times per week", sitting
       // two sentences after the total, switched the rule off entirely — which is
       // how the first draft of this rule missed two of the six defects it was
       // written for. A range BETWEEN the parts and the total is still fatal,
       // because "$100 to $200" has no single value to add.
-      if (tot && tot.index !== undefined) {
+      if (tot) {
         const span = body.slice(0, tot.index);
         // A part can be priced per dozen or per year inside the same list
         // ("Ball: Srixon Q-Star Tour ($40/dz)"). Pages differ on whether such
@@ -189,18 +227,10 @@ for (const a of all) {
           if (!isRange(span.slice(first))) {
             const vals = parts.map(m => money(m[1]));
             const unitOnly = parts.filter(m => !m[2]).map(m => money(m[1]));
-            const stated = money(tot[3]);
             const sum = vals.reduce((a, b) => a + b, 0);
             const sumNoPer = unitOnly.reduce((a, b) => a + b, 0);
-            // "roughly $1,240" for a $1,239 build is honest writing, not a
-            // broken sum. A hedged total is compared at the nearest $10; an
-            // exact one is held to the cent.
-            const hedged = Boolean((tot[1] && !/^is\s*$/i.test(tot[1])) || tot[2]);
-            const r10 = (v: number) => Math.round(v / 10) * 10;
-            const gap = (v: number) => hedged ? Math.abs(r10(v) - r10(stated)) : Math.abs(v - stated);
-            const off = Math.min(gap(sum), gap(sumNoPer));
-            if (isFinite(stated) && off > 0.5)
-              report(slug, `inline parts (${vals.map(v => '$' + v.toLocaleString()).join(' + ')}) sum to $${sum.toLocaleString()}, but the page states a total of $${stated.toLocaleString()}`);
+            if (offBy([sum, sumNoPer], tot.value, tot.hedged) > 0.5)
+              report(slug, `inline parts (${vals.map(v => '$' + v.toLocaleString()).join(' + ')}) sum to $${sum.toLocaleString()}, but the page states a total of $${tot.value.toLocaleString()}`);
           }
         }
       }
