@@ -75,6 +75,20 @@ const schemas = [
   faqSchema(faqs),
   breadcrumbSchema(meta.breadcrumbs),
 ];
+
+/* Sprint 283. Retailer for click tracking, derived from the URL rather than
+ * typed. Must live here and not in an attribute: a tag parser that reads
+ * <a ...> stops at the first '>', so an inline arrow function silently cuts
+ * every later attribute off — which is how the first attempt at this hid
+ * data-aff-name from validate-click-tracking. */
+function outboundFor(url: string | null | undefined): string {
+  if (!url) return 'other';
+  if (url.includes('amazon.com')) return 'amazon';
+  if (url.includes('golfgalaxy.com') || url.includes('dickssportinggoods.com') || /tkqlhce|anrdoezrs|jdoqocy|kqzyfj/.test(url)) return 'golfgalaxy';
+  if (url.includes('playbetter')) return 'playbetter';
+  if (url.includes('bushnell')) return 'bushnell';
+  return 'other';
+}
 ---
 
 <BaseLayout {meta} {schemas} activeNav="improve">
@@ -106,7 +120,7 @@ const schemas = [
     <div class="quick-answer-box">
       <div class="quick-answer-header">⚡ Quick Answer</div>
       <p class="quick-answer-text">At 90 mph driver speed, expect roughly 214 yards of driver carry, 137 with a 7-iron and 105 with a pitching wedge. Slide to your own speed below for all 13 clubs. These are averages built from launch-monitor data — the only way to know <em>your</em> numbers is to measure them.</p>
-      <a href={getAffiliateLink('shot-scope-lm1').url} class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Shot Scope LM1" data-cta-location="quick-answer" data-aff-name="Shot Scope Lm1">Cheapest way to measure: Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} — Check Price →</a>
+      <a href={getAffiliateLink('shot-scope-lm1').url} class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored" data-outbound={outboundFor(getAffiliateLink('shot-scope-lm1').url)} data-aff-name="Shot Scope LM1" data-cta-location="quick-answer" data-aff-name="Shot Scope Lm1">Cheapest way to measure: Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} — Check Price →</a>
       <p class="quick-answer-more">Want club data too? The <a href={getAffiliateLink('garmin-approach-r10').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Garmin Approach R10" style="color:#fff;text-decoration:underline;">Garmin Approach R10 {getAffiliateLink('garmin-approach-r10').price}</a> adds spin and launch angle. Full chart below.</p>
     </div>
 
@@ -172,7 +186,10 @@ const schemas = [
           25 yards, that is a club you are missing, and it is the most common gap in a weekend bag. A
           hybrid fills it more reliably than a 3- or 4-iron for most swing speeds.
         </p>
-        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
+        <div class="buy-row__list">
+          <a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" class="buy-row__btn">Ping G430 Hybrid <span class="ball-buy-row__price">{getAffiliateLink('ping-g430-hybrid').price}</span> →</a>
+          <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" class="buy-row__btn">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price}</a>
+        </div>
         <p style="font-size:15px;color:var(--muted);margin:10px 0 0;">
           More on gapping: <a href="/best-hybrid-clubs-2026/">best hybrids</a> ·
           <a href="/golf-club-distance-chart/">full distance chart</a> ·
@@ -194,7 +211,7 @@ const schemas = [
         <div class="buy-row__list">
           {[{ k: 'shot-scope-lm1', label: 'Shot Scope LM1' }, { k: 'garmin-approach-r10', label: 'Garmin Approach R10' }].map(it => (
             <a href={getAffiliateLink(it.k).url} target="_blank" rel="nofollow noopener sponsored"
-               data-outbound="amazon" data-aff-name={it.label} data-cta-location="dont-know-speed"
+               data-outbound={outboundFor(getAffiliateLink(it.k).url)} data-aff-name={it.label} data-cta-location="dont-know-speed"
                class="buy-row__btn">
               {it.label} <span class="buy-row__price">{getAffiliateLink(it.k).price}</span> →
             </a>
@@ -271,6 +288,13 @@ const schemas = [
       <p>Read the table again and notice what is <em>not</em> there: a 5-hybrid carries the same number as a 5-iron. So does a 6-hybrid against a 6-iron. If you were expecting the hybrid to be ten yards longer, that figure comes from marketing copy rather than from a launch monitor.</p>
       <p>What the hybrid actually buys you is height and a softer landing. The centre of gravity sits lower and further back than in an iron, so the ball launches higher off the same loft and drops more steeply onto the green instead of running through it. On a long approach that is the difference between holding the surface and chasing into the back bunker — which matters more than a yardage number.</p>
       <p>The real gain is further up the bag. Our 13-club chart starts at the 5-iron because most weekend golfers have already given up on the 3- and 4-iron, and with good reason: those clubs need speed most amateurs do not have. A 3- or 4-hybrid covers that same distance from a clubhead that launches the ball without demanding a perfect strike. That is where a hybrid earns its place — not replacing a 7-iron you already hit well.</p>
+      <div class="buy-row">
+        <p class="buy-row__lead">Buy the two hybrids in this chart:</p>
+        <div class="buy-row__list">
+          <a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="hybrid-chart" class="buy-row__btn">Ping G430 Hybrid <span class="ball-buy-row__price">{getAffiliateLink('ping-g430-hybrid').price}</span> →</a>
+          <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="hybrid-chart" class="buy-row__btn">Callaway Paradym Hybrid <span class="ball-buy-row__price">{getAffiliateLink('callaway-paradym-hybrid').price}</span> →</a>
+        </div>
+      </div>
       <p class="chart-note">Choosing between models: <a href="/best-hybrid-clubs-2026/">best hybrids 2026</a> · <a href="/hybrid-vs-long-iron/">hybrid vs long iron</a></p>
     </section>
 
@@ -297,7 +321,7 @@ const schemas = [
 
       <div class="art-note" style="margin:0 0 20px;padding:14px 18px;background:rgba(30,58,40,.05);border-left:3px solid var(--green);border-radius: 0 var(--r2) var(--r2) 0;">
         <p style="margin:0 0 10px;font-size:16px;line-height:1.6;"><strong>Measuring the session.</strong> Both routes above need a number you trust. A budget launch monitor gives you carry indoors or out; a rangefinder gives you the distance to the marker you just hit to, which is all the open-range method needs. Either beats guessing, and both are about $199.</p>
-        <p style="margin:0;"><a href={getAffiliateLink('shot-scope-lm1').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Shot Scope LM1" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} →</a> <a href={getAffiliateLink('precision-pro-nx9-hd').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Precision Pro NX9 HD" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Precision Pro NX9 HD {getAffiliateLink('precision-pro-nx9-hd').price} →</a></p>
+        <p style="margin:0;"><a href={getAffiliateLink('shot-scope-lm1').url} target="_blank" rel="nofollow noopener sponsored" data-outbound={outboundFor(getAffiliateLink('shot-scope-lm1').url)} data-aff-name="Shot Scope LM1" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} →</a> <a href={getAffiliateLink('precision-pro-nx9-hd').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Precision Pro NX9 HD" data-cta-location="gapping-session" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Precision Pro NX9 HD {getAffiliateLink('precision-pro-nx9-hd').price} →</a></p>
       </div>
 
     <section>

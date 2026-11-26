@@ -22,7 +22,11 @@
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const CEILING = 1185;   // Sprint 205: 1225 → 1185 (five brand charts migrated to .brand-chart-* classes)
+const CEILING = 1182;   // Sprint 205: 1225 → 1185 (five brand charts migrated to .brand-chart-*
+                       // classes). Sprint 283: 1185 → 1182 — the distance chart's gapping
+                       // buttons moved to the .buy-row classes that already existed for the
+                       // compression chart, so two buy rows on that page are now the same
+                       // markup instead of one inline-styled copy of the other.
 // Sprint 184: 1239 → 1227 (how-we-test section/h2; counts now exclude comments)
 
 const files: string[] = [];

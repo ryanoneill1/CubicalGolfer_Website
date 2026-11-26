@@ -33,6 +33,20 @@ const schemas = [
 
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
 import { ROBOTS_INDEX } from '../../lib/seo';
+
+/* Sprint 283. Retailer for click tracking, derived from the URL rather than
+ * typed. Must live here and not in an attribute: a tag parser that reads
+ * <a ...> stops at the first '>', so an inline arrow function silently cuts
+ * every later attribute off — which is how the first attempt at this hid
+ * data-aff-name from validate-click-tracking. */
+function outboundFor(url: string | null | undefined): string {
+  if (!url) return 'other';
+  if (url.includes('amazon.com')) return 'amazon';
+  if (url.includes('golfgalaxy.com') || url.includes('dickssportinggoods.com') || /tkqlhce|anrdoezrs|jdoqocy|kqzyfj/.test(url)) return 'golfgalaxy';
+  if (url.includes('playbetter')) return 'playbetter';
+  if (url.includes('bushnell')) return 'bushnell';
+  return 'other';
+}
 ---
 
 <BaseLayout {meta} {schemas} activeNav="tools">
@@ -53,7 +67,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
     <div class="quick-answer-box">
       <div class="quick-answer-header">⚡ Quick Answer</div>
       <p class="quick-answer-text">Tour pros average 114 mph with driver, scratch golfers 104, mid-handicappers 93 and seniors 75. Speed drops roughly 3–5 mph per club down the bag. You cannot judge this by feel or by how far the ball goes — carry distance depends on strike quality as much as speed.</p>
-      <a href={getAffiliateLink('shot-scope-lm1').url} class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Shot Scope LM1" data-cta-location="quick-answer" data-aff-name="Shot Scope Lm1">Measure it: Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} — Check Price →</a>
+      <a href={getAffiliateLink('shot-scope-lm1').url} class="quick-answer-cta" target="_blank" rel="nofollow noopener sponsored" data-outbound={outboundFor(getAffiliateLink('shot-scope-lm1').url)} data-aff-name="Shot Scope LM1" data-cta-location="quick-answer" data-aff-name="Shot Scope Lm1">Measure it: Shot Scope LM1 {getAffiliateLink('shot-scope-lm1').price} — Check Price →</a>
       <p class="quick-answer-more">Most golf shops will check your speed free. If you want it at home, the <a href={getAffiliateLink('garmin-approach-r10').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Garmin Approach R10" style="color:#fff;text-decoration:underline;">Garmin Approach R10 {getAffiliateLink('garmin-approach-r10').price}</a> adds club and spin data.</p>
     </div>
 
@@ -173,7 +187,7 @@ import { ROBOTS_INDEX } from '../../lib/seo';
         <div class="buy-row__list">
           {[{ k: 'shot-scope-lm1', label: 'Shot Scope LM1' }, { k: 'garmin-approach-r10', label: 'Garmin Approach R10' }].map(it => (
             <a href={getAffiliateLink(it.k).url} target="_blank" rel="nofollow noopener sponsored"
-               data-outbound="amazon" data-aff-name={it.label} data-cta-location="measure-speed"
+               data-outbound={outboundFor(getAffiliateLink(it.k).url)} data-aff-name={it.label} data-cta-location="measure-speed"
                class="buy-row__btn">
               {it.label} <span class="buy-row__price">{getAffiliateLink(it.k).price}</span> →
             </a>

@@ -126,9 +126,22 @@ if (failed) {
  * flat ratchet rather than per-type ones. It is a blunt number on purpose: its
  * only job is to stop the count going UP while the editorial work happens.
  */
-const ASTRO_DRY_CEILING = 191;   // measured 22 Nov 2026, after Sprints 268-269
+const ASTRO_DRY_CEILING = 184;   // 191 -> 184 (Sprint 283: 5 of the drop is the SELLS
+                                 // rule above finally measuring a buy path rather than a
+                                 // mention of the module; 2 are real new buy paths on the
+                                 // compression and distance charts)
 {
-  const SELLS = /getAffiliateLink\(|AFFILIATE\[|<ProductCard|<AffiliateButton|buyRow\(|ballUrl\(|amzn\.to|class="buy-row"|class="ball-buy-row"/;
+  /* Sprint 283. This used to include `getAffiliateLink(`, which is ALSO how a
+   * page pulls a price without linking anywhere — /golf-club-distance-chart/
+   * quotes our registry figure inside an internal link to another guide. So a
+   * section could be credited as selling with no outbound link in it, while a
+   * section selling through a plain sponsored anchor went uncounted because it
+   * never names the module. Measured across all 212 sections, the old rule saw
+   * 21 selling / 191 dry and this one sees 26 / 186: the guard was crediting
+   * five fewer sections than genuinely sell. What counts now is evidence of an
+   * outbound path — a sponsored anchor, a product component, or one of this
+   * repo's buy-row helpers. */
+  const SELLS = /rel=["'][^"']*sponsored|<ProductCard|<AffiliateButton|buyRow\(|ballUrl\(|class="buy-row"|class="ball-buy-row"/;
   let astroSections = 0, astroSelling = 0;
   const worst: Record<string, number> = {};
   const walk = (dir: string) => {
