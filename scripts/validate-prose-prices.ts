@@ -26,6 +26,7 @@ import { AFFILIATE } from '../src/data/affiliate-links';
 import { PROMO_WATCH } from '../src/data/promo-watch.ts';
 import { ARTICLES } from '../src/data/articles';
 import { COMPARISONS } from '../src/data/comparisons';
+import { PRODUCT_DISPLAY } from '../src/data/product-names';
 import fs from 'fs';
 import path from 'path';
 
@@ -96,15 +97,28 @@ const names: Array<{ key: string; name: string; reg: number }> = [];
   // entire false-positive population on the first run.
   const keysByName = new Map<string, Set<string>>();
   const nameByKey = new Map<string, string>();
+  const learn = (key: string, nm: string) => {
+    if (!key || !nm || nm.length < 8) return;
+    if (!keysByName.has(nm)) keysByName.set(nm, new Set());
+    keysByName.get(nm)!.add(key);
+    if (!nameByKey.has(key)) nameByKey.set(key, nm);
+  };
   for (const a of all)
     for (const r of (a.comparisonTable?.rows ?? [])) {
       if (!r?.affiliateKey || !r?.name) continue;
-      const nm = String(r.name).trim();
-      if (nm.length < 8) continue;
-      if (!keysByName.has(nm)) keysByName.set(nm, new Set());
-      keysByName.get(nm)!.add(r.affiliateKey);
-      if (!nameByKey.has(r.affiliateKey)) nameByKey.set(r.affiliateKey, nm);
+      learn(r.affiliateKey, String(r.name).trim());
     }
+  /* Sprint 279. Comparison rows alone covered 256 keys. 108 of the 360 priced
+   * registry products appear in NO comparison row, so nothing said about them
+   * in prose was ever checked — 30% of the catalogue, including the Titleist
+   * GT1 and GT3 drivers, the Blue Tees Rainmaker and most of the bag range.
+   * PRODUCT_DISPLAY is the hand-reviewed canonical name per key (it exists so
+   * click tracking logs a product rather than a section heading), so it is the
+   * right second source. Dictionary 256 -> 363 keys, and the site still passed,
+   * which was worth distrusting: planting "$1 Titleist GT1 Driver" (a key with
+   * no comparison row anywhere) fails with this loop and passes without it. */
+  for (const [key, nm] of Object.entries(PRODUCT_DISPLAY as Record<string, string>))
+    learn(key, String(nm).trim());
   let ambiguous = 0;
   for (const [key, name] of nameByKey) {
     if ((keysByName.get(name)?.size ?? 0) > 1) { ambiguous++; continue; }
@@ -141,6 +155,23 @@ for (const a of sources) {
       // "Impact screen: $199 Fiberbuilt mat: $449" — the price BEFORE a product
       // name belongs to the previous line item, and that produced every
       // remaining false positive. Only a price that FOLLOWS the name counts.
+      //
+      // RE-TESTED AND REJECTED AGAIN, Sprint 279. The Supersoft carried $22,
+      // $25 and $27 across the site and every wrong figure was in the leading
+      // form, so it looked worth another attempt. Implemented with an 18-char
+      // window and no colon, comma or second product name allowed inside it,
+      // the pattern produced 48 hits and nearly all were false, because English
+      // binds a leading price to the preposition after it rather than to the
+      // next product named:
+      //   "you can stretch to $399 for the Cobra DS-Adapt MAX-K"  budget ceiling
+      //   "a starter set for $300 to $400 (the Callaway Strata…)"  a range
+      //   "add $35 for the FootJoy Flex XP waterproof instead"     upgrade delta
+      //   "it sits $99 below the Square Golf"                      a difference
+      //   "spend $2K+ for Bushnell Launch Pro"                     "$2" of "$2K"
+      //   "the Launch Pro (~$2,999) delivers Foresight GC3 hardware"
+      //                                        the PREVIOUS product's price
+      // The nine real figures it found were corrected by hand in Sprint 279.
+      // Do not re-enable this without a new idea about the preposition.
       const m = mA;
       if (!m) continue;
 
