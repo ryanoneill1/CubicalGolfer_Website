@@ -1,4 +1,5 @@
 ---
+import { retailerOf } from '../lib/retailer';
 /**
  * AffiliateCTA.astro
  * Prominent "Buy Now" / "Check Price" CTA block.
@@ -80,7 +81,7 @@ import Icon from './Icon.astro';
   <a
     href={primaryUrl}
     class="aff-cta__btn"
-    data-outbound={primaryUrl.includes("amazon.com") ? "amazon" : primaryUrl.includes("bushnell") ? "bushnell" : primaryUrl.includes("playbetter") ? "playbetter" : primaryUrl.includes("golfgalaxy") || primaryUrl.includes("click-101736949") ? "golfgalaxy" : "other"}
+    data-outbound={retailerOf(primaryUrl)}
     target="_blank"
     rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
     aria-label={unmonetised ? `Get ${name} from ${primaryRetailerName}` : `Check price for ${name} at ${primaryRetailerName}`}
@@ -97,7 +98,7 @@ import Icon from './Icon.astro';
     <a
       href={secondaryUrl}
       class="aff-cta__btn aff-cta__btn--gg"
-      data-outbound={secondaryUrl.includes("amazon.com") ? "amazon" : secondaryUrl.includes("bushnell") ? "bushnell" : secondaryUrl.includes("playbetter") ? "playbetter" : secondaryUrl.includes("golfgalaxy") || secondaryUrl.includes("click-101736949") ? "golfgalaxy" : "other"}
+      data-outbound={retailerOf(secondaryUrl)}
       target="_blank"
       rel={unmonetised ? "nofollow noopener" : "nofollow noopener sponsored"}
       aria-label={unmonetised ? `Get ${name} from ${secondaryRetailer}` : `Check price for ${name} at ${secondaryRetailer}`}

@@ -1,4 +1,5 @@
 ---
+import { retailerOf, retailerName as sharedName } from '../lib/retailer';
 /**
  * RecommendedGearGrid.astro — Multi-product recommendation cards.
  *
@@ -25,17 +26,12 @@ const cards = items
   .filter((it) => it.aff?.url);
 
 function retailerName(url: string): string {
-  const r = retailerOf(url);
-  return r === 'amazon' ? 'Amazon' : r === 'bushnell' ? 'Bushnell' : r === 'playbetter' ? 'PlayBetter' : r === 'golfgalaxy' ? 'Golf Galaxy' : 'Retailer';
+  return sharedName(url);
 }
-function retailerOf(url: string): string {
-  try { const h = new URL(url).hostname;
-    if (h.includes('amazon')) return 'amazon';
-    if (h.includes('bushnell')) return 'bushnell';
-    if (h.includes('playbetter')) return 'playbetter';
-    return 'other';
-  } catch { return 'other'; }
-}
+// Sprint 286: this read the HOSTNAME, and every Golf Galaxy link here is a CJ
+// redirect whose hostname is www.tkqlhce.com or a sibling. It returned 'other'
+// for all of them, which printed "Check Price at Retailer" on 17 live buttons.
+// Now shared with every other call site, and it resolves the destination.
 ---
 
 {cards.length > 0 && (

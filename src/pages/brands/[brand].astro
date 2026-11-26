@@ -1,4 +1,5 @@
 ---
+import { retailerOf } from '../../lib/retailer';
 // src/pages/brands/[brand].astro — Brand hub pages (review-2 item #41)
 // Everything below the authored intro derives from live site data:
 // reviews, comparisons, and roundup appearances are computed at build time.
@@ -161,7 +162,7 @@ import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
               <div class="brand-prod-body">
                 <p class="brand-prod-name">{p.name}</p>
                 {p.aff?.price && <p class="brand-prod-price">{p.aff.price}</p>}
-                {p.aff?.url && <a href={p.aff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={p.aff.url.includes('amazon.com') ? 'amazon' : p.aff.url.includes('pxf.io') ? 'bushnell' : p.aff.url.includes('playbetter') ? 'playbetter' : 'other'} data-aff-name={p.name} class="brand-prod-cta">Check Price →</a>}
+                {p.aff?.url && <a href={p.aff.url} target="_blank" rel="nofollow noopener sponsored" data-outbound={retailerOf(p.aff.url)} data-aff-name={p.name} class="brand-prod-cta">Check Price →</a>}
                 <p class="brand-prod-seen">Featured in: {p.seen.map((s, si) => (<span>{si > 0 && ' · '}<a href={s.slug}>{s.title.length > 34 ? s.title.slice(0, 32) + '…' : s.title}</a></span>))}</p>
               </div>
             </div>

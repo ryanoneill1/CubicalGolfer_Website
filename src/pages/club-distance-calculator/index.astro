@@ -1,4 +1,5 @@
 ---
+import { retailerOf } from '../../lib/retailer';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { ROBOTS_INDEX } from '../../lib/seo';
 import EarlyDisclosure from '../../components/EarlyDisclosure.astro';
@@ -109,7 +110,7 @@ const clubs = [
           25 yards, that is a club you are missing, and it is the most common gap in a weekend bag. A
           hybrid fills it more reliably than a 3- or 4-iron for most swing speeds.
         </p>
-        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound="amazon" data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
+        <p style="margin:0;"><a href={getAffiliateLink('ping-g430-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound={retailerOf(getAffiliateLink('ping-g430-hybrid').url)} data-aff-name="Ping G430 Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Ping G430 Hybrid {getAffiliateLink('ping-g430-hybrid').price} →</a> <a href={getAffiliateLink('callaway-paradym-hybrid').url} target="_blank" rel="nofollow noopener sponsored" data-outbound={retailerOf(getAffiliateLink('callaway-paradym-hybrid').url)} data-aff-name="Callaway Paradym Hybrid" data-cta-location="gapping" style="background:var(--gold);color:#1a1a1a;font-weight:700;padding:7px 13px;border-radius: var(--r1);text-decoration:none;font-size:15px;white-space:nowrap;">Callaway Paradym Hybrid {getAffiliateLink('callaway-paradym-hybrid').price} →</a></p>
         <p style="font-size:15px;color:var(--muted);margin:10px 0 0;">
           More on gapping: <a href="/best-hybrid-clubs-2026/">best hybrids</a> ·
           <a href="/golf-club-distance-chart/">full distance chart</a> ·
@@ -129,7 +130,7 @@ const clubs = [
         <div class="buy-row__list">
           {[{ k: 'blue-tees-series-3-max', label: 'Blue Tees Series 3 Max' }, { k: 'bushnell-tour-v7-shift', label: 'Bushnell Tour V7 Shift' }].map(it => (
             <a href={getAffiliateLink(it.k).url} target="_blank" rel="nofollow noopener sponsored"
-               data-outbound="amazon" data-aff-name={it.label} data-cta-location="calculator-course-use"
+               data-outbound={retailerOf(getAffiliateLink(it.k).url)} data-aff-name={it.label} data-cta-location="calculator-course-use"
                class="buy-row__btn">
               {it.label} <span class="buy-row__price">{getAffiliateLink(it.k).price}</span> →
             </a>

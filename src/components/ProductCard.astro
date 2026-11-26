@@ -1,4 +1,5 @@
 ---
+import { retailerOf } from '../lib/retailer';
 /**
  * ProductCard.astro — ENHANCED
  * Reusable affiliate product card with 3 CTA placements:
@@ -45,7 +46,7 @@ const {
 if (!url || !imgSrc) return;
 
 // Derive outbound retailer from URL hostname at build time
-const outboundTag = url.includes('amazon.com') ? 'amazon' : url.includes('bushnell') ? 'bushnell' : url.includes('playbetter') ? 'playbetter' : url.includes('golfgalaxy') || url.includes('click-101736949') ? 'golfgalaxy' : 'other';
+const outboundTag = retailerOf(url);   // Sprint 286: shared resolver, destination-based
 const ggOutboundTag = golfGalaxyUrl ? (golfGalaxyUrl.includes('amazon.com') ? 'amazon' : golfGalaxyUrl.includes('bushnell') ? 'bushnell' : golfGalaxyUrl.includes('playbetter') ? 'playbetter' : golfGalaxyUrl.includes('golfgalaxy') || golfGalaxyUrl.includes('click-101736949') ? 'golfgalaxy' : 'other') : '';
 import Icon from './Icon.astro';
 ---

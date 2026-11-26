@@ -1,4 +1,5 @@
 ---
+import { retailerOf } from '../../lib/retailer';
 import { AUTHOR_PROFILE } from '../../data/author';
 import { balls as BALLS } from '../../data/balls.ts';
 import { BRAND_DETAIL, CHART_BALL_COUNT } from '../../data/ball-brands';
@@ -261,14 +262,6 @@ import { ROBOTS_INDEX } from '../../lib/seo';
 // Tour S) reported their clicks to Plausible as Amazon clicks. The chart is
 // ~35% of site clicks, so that quietly inflated the Amazon EPC the whole
 // affiliate model is built on. Derive it from the destination instead.
-function outboundFor(url: string | null | undefined): string {
-  if (!url) return 'other';
-  if (url.includes('amazon.com')) return 'amazon';
-  if (url.includes('golfgalaxy.com') || url.includes('dickssportinggoods.com')) return 'golfgalaxy';
-  if (url.includes('playbetter')) return 'playbetter';
-  if (url.includes('bushnell')) return 'bushnell';
-  return 'other';
-}
 ---
 <BaseLayout meta={meta} schemas={schemas}>
 
@@ -469,7 +462,7 @@ function outboundFor(url: string | null | undefined): string {
                 <td>{ball.cover}</td>
                 <td class="cmp-num">~${ball.price}</td>
                 <td class="cmp-num">{ball.minMph}–{ball.maxMph} mph</td>
-                <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(ball))} data-aff-name={ball.name} class={ball.badge ? 'cmp-buy-btn cmp-buy-btn--pick' : 'cmp-buy-btn'}>Check price</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
+                <td>{ballUrl(ball) ? <a href={ballUrl(ball)} rel="sponsored nofollow noopener" target="_blank" data-outbound={retailerOf(ballUrl(ball))} data-aff-name={ball.name} class={ball.badge ? 'cmp-buy-btn cmp-buy-btn--pick' : 'cmp-buy-btn'}>Check price</a> : <span style="color:var(--muted);white-space:nowrap;">Discontinued</span>}</td>
               </tr>
             ))}
           </tbody>
@@ -561,7 +554,7 @@ function outboundFor(url: string | null | undefined): string {
     <section>
       <h2 id="find-swing-speed">How to Find Your Swing Speed</h2>
       <h3>Measure With a Launch Monitor</h3>
-      <p>The most accurate method. Budget options like the <a href={getAffiliateLink('shot-scope-lm1').url} target="_blank" rel="nofollow noopener sponsored" data-outbound={outboundFor(getAffiliateLink('shot-scope-lm1').url)} data-aff-name="Shot Scope LM1" data-cta-location="find-swing-speed">Shot Scope LM1 ({getAffiliateLink('shot-scope-lm1').price}, no subscription)</a> display your club speed on a built-in screen — and there is <a href="/best-launch-monitors-no-subscription/">a fuller comparison of the no-subscription units</a> if you want club data too. Most golf stores also offer free swing speed checks — ask at your local Golf Galaxy or PGA Tour Superstore.</p>
+      <p>The most accurate method. Budget options like the <a href={getAffiliateLink('shot-scope-lm1').url} target="_blank" rel="nofollow noopener sponsored" data-outbound={retailerOf(getAffiliateLink('shot-scope-lm1').url)} data-aff-name="Shot Scope LM1" data-cta-location="find-swing-speed">Shot Scope LM1 ({getAffiliateLink('shot-scope-lm1').price}, no subscription)</a> display your club speed on a built-in screen — and there is <a href="/best-launch-monitors-no-subscription/">a fuller comparison of the no-subscription units</a> if you want club data too. Most golf stores also offer free swing speed checks — ask at your local Golf Galaxy or PGA Tour Superstore.</p>
       <h3>Estimate from Your 7-Iron Carry Distance</h3>
       <p>If you don't have a launch monitor, your 7-iron carry distance is a reliable proxy. Use the "I don't know my speed" button in the calculator above, or reference this table:</p>
       <div style="overflow-x:auto;">
@@ -591,7 +584,7 @@ function outboundFor(url: string | null | undefined): string {
         <div class="ball-buy-row__list">
           {buyRow(['Callaway Supersoft', 'Wilson DUO Soft+', 'TaylorMade Noodle']).map(b => (
             <a href={b.url} target="_blank" rel="nofollow noopener sponsored"
-               data-outbound="amazon" data-aff-name={b.name} data-cta-location="swing-speed-section"
+               data-outbound={retailerOf(b.url)} data-aff-name={b.name} data-cta-location="swing-speed-section"
                class="ball-buy-row__btn">
               {b.name} <span class="ball-buy-row__price">{b.price}</span> →
             </a>
@@ -609,7 +602,7 @@ function outboundFor(url: string | null | undefined): string {
         <div class="ball-buy-row__list">
           {buyRow(['Kirkland Signature', 'Srixon Q-Star Tour', 'Callaway Chrome Soft']).map(b => (
             <a href={b.url} target="_blank" rel="nofollow noopener sponsored"
-               data-outbound="amazon" data-aff-name={b.name} data-cta-location="swing-speed-section"
+               data-outbound={retailerOf(b.url)} data-aff-name={b.name} data-cta-location="swing-speed-section"
                class="ball-buy-row__btn">
               {b.name} <span class="ball-buy-row__price">{b.price}</span> →
             </a>
@@ -627,7 +620,7 @@ function outboundFor(url: string | null | undefined): string {
         <div class="ball-buy-row__list">
           {buyRow(['Titleist Pro V1', 'TaylorMade TP5', 'Srixon Z-Star', 'Vice Pro']).map(b => (
             <a href={b.url} target="_blank" rel="nofollow noopener sponsored"
-               data-outbound="amazon" data-aff-name={b.name} data-cta-location="swing-speed-section"
+               data-outbound={retailerOf(b.url)} data-aff-name={b.name} data-cta-location="swing-speed-section"
                class="ball-buy-row__btn">
               {b.name} <span class="ball-buy-row__price">{b.price}</span> →
             </a>
@@ -664,7 +657,7 @@ function outboundFor(url: string | null | undefined): string {
                   {brandBalls.map(b => (
                     <tr>
                       <td>{b.discontinued ? b.name : <a href={`/golf-ball-compression/${b.affKey}/`}>{b.name}</a>}</td><td class="cmp-num">{b.compression}</td><td>{b.cover}</td><td class="cmp-num">~${b.price}</td><td class="cmp-num">{b.minMph}–{b.maxMph} mph</td>
-                      <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={outboundFor(ballUrl(b))} data-aff-name={b.name} class={b.badge ? 'cmp-buy-btn cmp-buy-btn--pick' : 'cmp-buy-btn'}>Check price</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
+                      <td>{ballUrl(b) ? <a href={ballUrl(b)} rel="sponsored nofollow noopener" target="_blank" data-outbound={retailerOf(ballUrl(b))} data-aff-name={b.name} class={b.badge ? 'cmp-buy-btn cmp-buy-btn--pick' : 'cmp-buy-btn'}>Check price</a> : <span style="color:var(--muted);">Discontinued</span>}</td>
                     </tr>
                   ))}
                 </tbody>
