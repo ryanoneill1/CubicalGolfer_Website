@@ -149,6 +149,16 @@ export const PROMO_WATCH: Record<string, Watch> = {
   'skytrak-plus':                { regular: 1095.00, promo: 795.00, seen: '2026-11-26',
                                    note: 'Amazon: 995.00 new, -17%, flagged 30-day low against a 1,195.00 typical price, in stock and sold by SkyTrak Golf, badged previous generation. PlayBetter is sold out and points buyers to the SkyTrak ST MAX at 1,695. Registry deliberately holds the 995.' },
 
+  // Added 26 November 2026, Sprint 280. The registry price IS the deal price here:
+  // $7,999 against a $12,700 original. The entry exists because that exposure
+  // was invisible before — this unit was referenced by no page at all, so a
+  // promotion ending would have gone unnoticed until someone read the listing.
+  // It is now named and linked on /how-much-does-golf-simulator-cost/ and
+  // /best-golf-launch-monitors-2026/, which are the pages to re-sweep.
+  'uneekor-eye-xo2':             { regular: 12700.00, promo: 7999.00, seen: '2026-11-26',
+                                   note: 'PlayBetter: $7,999 against a $12,700 original, in stock, with two Swing Optix 2.0 cameras ($1,700) and a year of AI Trainer included. Held at $7,999 across three readings — 16, 20 and 26 November. The costed Premium Build on /how-much-does-golf-simulator-cost/ totals $10,137 using this figure, so if the deal ends that total moves with it.',
+                                   quotedOn: ['/how-much-does-golf-simulator-cost/', '/best-golf-launch-monitors-2026/'] },
+
   // Added 15 November 2026. The GPS family went on deal between the 14 Nov sweep
   // and this one, which is why these are here a week before the next full sweep.
   // Each was read on its live Amazon listing on 15 November.

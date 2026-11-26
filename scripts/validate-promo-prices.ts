@@ -108,6 +108,15 @@ const ACCEPTED = new Set<string>([
   // registry, balls.ts and the six prose figures changed in Sprint 275 move back
   // together, and the chart row goes with them.
   'vice-pro-soft',
+  // 26 Nov 2026 — the Uneekor EYE XO2 registry price is the deal figure: $7,999
+  // against a $12,700 original. ACCEPTED rather than repriced because $7,999 is
+  // what a reader pays today and the only costed build quoting it derives its
+  // $10,137 total from that figure. Three readings at $7,999 (16, 20, 26 Nov)
+  // and the discount has not moved, so this behaves like clearance rather than
+  // a weekend sale. RECHECK AFTER BLACK FRIDAY with the others: if it reverts,
+  // the Premium Build total on /how-much-does-golf-simulator-cost/ has to be
+  // recomputed, not just the price swapped.
+  'uneekor-eye-xo2',
 ]);
 
 const num = (v: unknown): number | null => {

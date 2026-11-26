@@ -2491,8 +2491,8 @@ export const AFFILIATE: Record<string, {
     url: 'https://www.playbetter.com/products/uneekor-eye-xo2-golf-launch-monitor?ghref=2301%3A1333883',
     program: 'playbetter',
     retailer: 'PlayBetter',
-    price: '$7,999', verifiedOn: '2026-11-16',
-    priceNote: 'Re-verified 20 November 2026 in the Black Friday sweep, unchanged: \$7,999 at PlayBetter against a \$12,700 typical price, with two Swing Optix cameras and a year of AI Trainer included. Overhead-mounted, and a gaming PC is required and sold separately. Mounting position is critical to the data, so read the installation guide before drilling.',
+    price: '$7,999', verifiedOn: '2026-11-26',
+    priceNote: 'BLACK FRIDAY, re-read 26 November 2026: \$7,999 at PlayBetter against a \$12,700 original — \$4,701 off, in stock — and the listing includes two Swing Optix 2.0 cameras, a \$1,700 add-on, plus a year of AI Trainer. The cameras are what give this unit overhead club-face video, so they are the reason to buy it now rather than a sweetener. Previously read unchanged at \$7,999 on 16 and 20 November, with two Swing Optix cameras and a year of AI Trainer included. Overhead-mounted, and a gaming PC is required and sold separately. Mounting position is critical to the data, so read the installation guide before drilling.',
     label: 'Check Price at PlayBetter →',
     benefits: [
       'Three high-speed cameras for ball and club data',
