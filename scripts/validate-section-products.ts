@@ -126,10 +126,76 @@ if (failed) {
  * flat ratchet rather than per-type ones. It is a blunt number on purpose: its
  * only job is to stop the count going UP while the editorial work happens.
  */
-const ASTRO_DRY_CEILING = 184;   // 191 -> 184 (Sprint 283: 5 of the drop is the SELLS
-                                 // rule above finally measuring a buy path rather than a
-                                 // mention of the module; 2 are real new buy paths on the
-                                 // compression and distance charts)
+/* Page classes that cannot honestly carry a buy path, Sprint 284, on Ryan's
+ * decision of 26 November. The count existed to drive editorial work and
+ * instead spent five sprints telling us the privacy policy does not sell
+ * anything. Each entry carries its reason, deliberately: this is the same
+ * principle as the section-level `noProduct` field — a sentence someone had to
+ * write is harder to apply thoughtlessly than a flag, and the next person can
+ * tell a considered decision from a hidden one.
+ *
+ * A page added later is NOT excluded by default. If it belongs in a class,
+ * put it here with a reason; if it does not, it counts.
+ */
+const EXCLUDED: Record<string, string> = {
+  // ── Legal and policy ──────────────────────────────────────────────────────
+  'terms':                 'Terms of service. Nothing here is a purchase decision.',
+  'privacy-policy':        'Privacy policy. Nothing here is a purchase decision.',
+  'cookie-policy':         'Cookie policy. Nothing here is a purchase decision.',
+  'affiliate-disclosure':  'The page that explains how we get paid. A buy button on it would be a joke at the reader\'s expense.',
+
+  // ── Trust and editorial ───────────────────────────────────────────────────
+  'about':                 'Who we are. Not a product page.',
+  'contact':               'Contact details.',
+  'how-we-test':           'Our testing methodology. The whole value of this page is that it is not selling anything — the same reasoning behind validate-reader-facing-notes.',
+
+  // ── Hubs and indexes: they list other pages ───────────────────────────────
+  'index':                 'The home page. It routes readers to the guides that make the argument.',
+  'compare':               'An index of comparison pages.',
+  'brands':                'An index of brand pages.',
+  'courses':               'An index of course content.',
+  'tools':                 'An index of the calculators.',
+  'gear-reviews':          'An index of reviews.',
+  'golf-apparel':          'A category hub listing apparel guides.',
+  'golf-accessories':      'A category hub listing accessory guides.',
+  'golf-lifestyle':        'A category hub.',
+  'golf-tech':             'A category hub listing the tech guides.',
+  'improve-your-golf-game': 'A category hub listing the instruction guides.',
+  '404':                   'The not-found page.',
+
+  // ── Interactive tools: the RESULT is the recommendation ───────────────────
+  // Their h2 sections are instructions and method. The buy path is in the
+  // result panel, which no h2 scan can see — /gear-quiz/ sells a Callaway
+  // Supersoft from inside its own result logic.
+  'gear-quiz':                     'A quiz. Its h2s are instructions; the product comes from the result logic.',
+  'golf-ball-finder':              'A finder. Its h2s are instructions; the product comes from the result logic.',
+  'golf-handicap-calculator':      'A calculator. Its h2s explain the method.',
+  'club-distance-calculator':      'A calculator. Its h2s explain the method.',
+  'golf-simulator-cost-calculator': 'A calculator. Its h2s explain the method.',
+  'golf-equipment-budget-planner': 'A planner. Its h2s explain the method.',
+  'launch-monitor-room-checker':   'A room-dimension checker. Its h2s explain the method.',
+
+  // ── Sold by a component the h2 scan cannot read ───────────────────────────
+  // Each brand chart has exactly ONE h2 — "Frequently Asked Questions" — and
+  // every buy link on the page is rendered inside <BrandCompressionChart>,
+  // which does carry sponsored anchors. Counting these as dry was wrong twice
+  // over: the section is an FAQ, and the page sells perfectly well.
+  'bridgestone-golf-ball-compression-chart': 'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'callaway-golf-ball-compression-chart':    'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'maxfli-golf-ball-compression-chart':      'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'srixon-golf-ball-compression-chart':      'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'taylormade-golf-ball-compression-chart':  'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'titleist-golf-ball-compression-chart':    'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'vice-golf-ball-compression-chart':        'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+  'wilson-golf-ball-compression-chart':      'One h2, an FAQ. Buy links come from BrandCompressionChart.',
+};
+
+/* 191 -> 184 (Sprint 283: the SELLS rule started measuring a buy path rather
+ * than a mention of the affiliate module, plus two real new buy paths on the
+ * compression and distance charts) -> 50 (Sprint 284: 134 sections across the
+ * classes above come out of the count). What remains is seven pages, three of
+ * them the highest-traffic pages on the site. */
+const ASTRO_DRY_CEILING = 50;
 {
   /* Sprint 283. This used to include `getAffiliateLink(`, which is ALSO how a
    * page pulls a price without linking anywhere — /golf-club-distance-chart/
@@ -142,13 +208,17 @@ const ASTRO_DRY_CEILING = 184;   // 191 -> 184 (Sprint 283: 5 of the drop is the
    * outbound path — a sponsored anchor, a product component, or one of this
    * repo's buy-row helpers. */
   const SELLS = /rel=["'][^"']*sponsored|<ProductCard|<AffiliateButton|buyRow\(|ballUrl\(|class="buy-row"|class="ball-buy-row"/;
-  let astroSections = 0, astroSelling = 0;
+  let astroSections = 0, astroSelling = 0, excluded = 0;
   const worst: Record<string, number> = {};
   const walk = (dir: string) => {
     for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
       const full = path.join(dir, e.name);
       if (e.isDirectory()) { if (!e.name.includes('[')) walk(full); continue; }
       if (!e.name.endsWith('.astro') || e.name.includes('[')) continue;
+      const slug = full.replace(/^src[\/\\]pages[\/\\]/, '')
+                       .replace(/[\/\\]index\.astro$/, '')
+                       .replace(/\.astro$/, '');
+      if (EXCLUDED[slug]) { excluded++; continue; }
       const text = fs.readFileSync(full, 'utf8');
       const parts = text.split(/<h2\b/);
       if (parts.length < 2) continue;
@@ -170,7 +240,7 @@ const ASTRO_DRY_CEILING = 184;   // 191 -> 184 (Sprint 283: 5 of the drop is the
     console.error(`   and the distance chart do. Never type a price into one.\n`);
     process.exit(1);
   }
-  console.log(`✅ Standalone pages: ${astroSections} h2 section(s) across hand-written pages — ${astroDry} without a buy path (ceiling ${ASTRO_DRY_CEILING}).`);
+  console.log(`✅ Standalone pages: ${astroSections} h2 section(s) across hand-written pages — ${astroDry} without a buy path (ceiling ${ASTRO_DRY_CEILING}); ${excluded} page(s) excluded by class with a reason.`);
   if (astroDry < ASTRO_DRY_CEILING) console.log(`   ${ASTRO_DRY_CEILING - astroDry} below the ceiling — lower ASTRO_DRY_CEILING to ${astroDry}.`);
 }
 
